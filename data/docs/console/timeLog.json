@@ -8,7 +8,7 @@
         {
             "name": "Console API",
             "href": "https://console.spec.whatwg.org/#timelog",
-            "description": "The definition of 'console.timeLog()' in the 'Console API' specification."
+            "description": "console.timeLog() - Console API"
         }
     ]
 }

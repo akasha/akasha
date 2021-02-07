@@ -8,12 +8,12 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondragover",
-            "description": "The definition of 'ondragover' in the 'HTML Living Standard' specification."
+            "description": "ondragover - HTML Living Standard"
         },
         {
             "name": "HTML 5.1",
             "href": "https://www.w3.org/TR/html51/index.html#ix-handler-ondragover",
-            "description": "The definition of 'ondragover' in the 'HTML 5.1' specification."
+            "description": "ondragover - HTML 5.1"
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#dom-document-createelementns",
-            "description": "The definition of 'Document.createElementNS()' in the 'DOM' specification."
+            "description": "Document.createElementNS() - DOM"
         }
     ]
 }

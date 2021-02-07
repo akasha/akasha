@@ -8,7 +8,7 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#dom-shadowroot-mode",
-            "description": "The definition of 'ShadowRoot.mode' in the 'DOM' specification."
+            "description": "ShadowRoot.mode - DOM"
         }
     ]
 }

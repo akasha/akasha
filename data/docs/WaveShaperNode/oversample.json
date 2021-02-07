@@ -8,7 +8,7 @@
         {
             "name": "Web Audio API",
             "href": "https://webaudio.github.io/web-audio-api/#dom-waveshapernode-oversample",
-            "description": "The definition of 'oversample' in the 'Web Audio API' specification."
+            "description": "oversample - Web Audio API"
         }
     ]
 }

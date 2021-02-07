@@ -8,12 +8,12 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#dom-range-startcontainer",
-            "description": "The definition of 'startContainer ' in the 'DOM' specification."
+            "description": "startContainer  - DOM"
         },
         {
             "name": "Static Range",
             "href": "https://w3c.github.io/staticrange/#dom-staticrange-startcontainer",
-            "description": "The definition of 'startContainer' in the 'Static Range' specification."
+            "description": "startContainer - Static Range"
         }
     ]
 }

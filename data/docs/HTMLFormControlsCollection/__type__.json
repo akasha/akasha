@@ -8,12 +8,12 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/infrastructure.html#htmlformcontrolscollection",
-            "description": "The definition of 'HTMLFormControlsCollection' in the 'HTML Living Standard' specification."
+            "description": "HTMLFormControlsCollection - HTML Living Standard"
         },
         {
             "name": "HTML5",
             "href": "https://www.w3.org/TR/html52/infrastructure.html#htmlformcontrolscollection",
-            "description": "The definition of 'HTMLFormControlsCollection' in the 'HTML5' specification."
+            "description": "HTMLFormControlsCollection - HTML5"
         }
     ]
 }

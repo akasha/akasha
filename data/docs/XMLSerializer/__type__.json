@@ -8,7 +8,7 @@
         {
             "name": "DOM Parsing and Serialization",
             "href": "https://w3c.github.io/DOM-Parsing/#the-xmlserializer-interface",
-            "description": "The definition of 'XMLSerializer' in the 'DOM Parsing and Serialization' specification."
+            "description": "XMLSerializer - DOM Parsing and Serialization"
         }
     ]
 }

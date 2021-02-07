@@ -8,7 +8,7 @@
         {
             "name": "Efficient Script Yielding",
             "href": "https://w3c.github.io/setImmediate/#si-setImmediate",
-            "description": "The definition of 'setImmediate' in the 'Efficient Script Yielding' specification."
+            "description": "setImmediate - Efficient Script Yielding"
         }
     ]
 }

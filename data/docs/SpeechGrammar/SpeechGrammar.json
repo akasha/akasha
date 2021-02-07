@@ -8,7 +8,7 @@
         {
             "name": "Web Speech API",
             "href": "https://wicg.github.io/speech-api/dom-speechgrammar-speechgrammar",
-            "description": "The definition of 'SpeechGrammar()' in the 'Web Speech API' specification."
+            "description": "SpeechGrammar() - Web Speech API"
         }
     ]
 }

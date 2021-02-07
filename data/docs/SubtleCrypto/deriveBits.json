@@ -8,7 +8,7 @@
         {
             "name": "Web Cryptography API",
             "href": "https://www.w3.org/TR/WebCryptoAPI/#dfn-SubtleCrypto-method-deriveBits",
-            "description": "The definition of 'SubtleCrypto.deriveBits()' in the 'Web Cryptography API' specification."
+            "description": "SubtleCrypto.deriveBits() - Web Cryptography API"
         }
     ]
 }

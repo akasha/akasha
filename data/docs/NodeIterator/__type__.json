@@ -8,12 +8,12 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#nodeiterator",
-            "description": "The definition of 'NodeIterator' in the 'DOM' specification."
+            "description": "NodeIterator - DOM"
         },
         {
             "name": "Document Object Model (DOM) Level 2 Traversal and Range Specification",
             "href": "https://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Iterator-overview",
-            "description": "The definition of 'NodeIterator' in the 'Document Object Model (DOM) Level 2 Traversal and Range Specification' specification."
+            "description": "NodeIterator - Document Object Model (DOM) Level 2 Traversal and Range Specification"
         }
     ]
 }

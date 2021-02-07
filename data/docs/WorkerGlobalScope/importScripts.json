@@ -8,7 +8,7 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/#dom-workerglobalscope-importscripts",
-            "description": "The definition of 'importScripts()' in the 'HTML Living Standard' specification."
+            "description": "importScripts() - HTML Living Standard"
         }
     ]
 }

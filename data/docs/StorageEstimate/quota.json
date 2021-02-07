@@ -8,7 +8,7 @@
         {
             "name": "Storage",
             "href": "https://storage.spec.whatwg.org/#dom-storageestimate-quota",
-            "description": "The definition of 'quota' in the 'Storage' specification."
+            "description": "quota - Storage"
         }
     ]
 }

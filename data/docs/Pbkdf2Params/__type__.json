@@ -8,7 +8,7 @@
         {
             "name": "Web Cryptography API",
             "href": "https://www.w3.org/TR/WebCryptoAPI/#dfn-Pbkdf2Params",
-            "description": "The definition of 'SubtleCrypto.Pbkdf2Params' in the 'Web Cryptography API' specification."
+            "description": "SubtleCrypto.Pbkdf2Params - Web Cryptography API"
         }
     ]
 }

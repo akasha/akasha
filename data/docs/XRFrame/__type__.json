@@ -8,7 +8,7 @@
         {
             "name": "WebXR Device API",
             "href": "https://immersive-web.github.io/webxr/#xrframe-interface",
-            "description": "The definition of 'XRFrame' in the 'WebXR Device API' specification."
+            "description": "XRFrame - WebXR Device API"
         }
     ]
 }

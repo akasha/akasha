@@ -8,7 +8,7 @@
         {
             "name": "XMLHttpRequest",
             "href": "https://xhr.spec.whatwg.org/#the-open()-method",
-            "description": "The definition of 'open()' in the 'XMLHttpRequest' specification."
+            "description": "open() - XMLHttpRequest"
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "WebXR Device API",
             "href": "https://immersive-web.github.io/webxr/#dom-xrrenderstate-baselayer",
-            "description": "The definition of 'XRRenderState.baseLayer' in the 'WebXR Device API' specification."
+            "description": "XRRenderState.baseLayer - WebXR Device API"
         }
     ]
 }

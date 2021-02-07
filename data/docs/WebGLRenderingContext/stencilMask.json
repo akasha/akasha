@@ -8,12 +8,12 @@
         {
             "name": "WebGL 1.0",
             "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3",
-            "description": "The definition of 'stencilMask' in the 'WebGL 1.0' specification."
+            "description": "stencilMask - WebGL 1.0"
         },
         {
             "name": "OpenGL ES 2.0",
             "href": "https://www.khronos.org/opengles/sdk/docs/man/xhtml/glStencilMask.xml",
-            "description": "The definition of 'glStencilMask' in the 'OpenGL ES 2.0' specification."
+            "description": "glStencilMask - OpenGL ES 2.0"
         }
     ]
 }

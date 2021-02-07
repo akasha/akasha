@@ -8,7 +8,7 @@
         {
             "name": "WebRTC 1.0: Real-time Communication Between Browsers",
             "href": "https://w3c.github.io/webrtc-pc/#dom-datachannel-protocol",
-            "description": "The definition of 'RTCDataChannel.protocol' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification."
+            "description": "RTCDataChannel.protocol - WebRTC 1.0: Real-time Communication Between Browsers"
         }
     ]
 }

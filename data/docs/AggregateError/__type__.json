@@ -8,7 +8,7 @@
         {
             "name": "Promise.any",
             "href": "https://tc39.es/proposal-promise-any/#sec-aggregate-error-objects",
-            "description": "The definition of 'AggregateError' in the 'Promise.any' specification."
+            "description": "AggregateError - Promise.any"
         }
     ]
 }

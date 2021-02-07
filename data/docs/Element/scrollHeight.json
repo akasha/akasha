@@ -8,7 +8,7 @@
         {
             "name": "CSS Object Model (CSSOM) View Module",
             "href": "https://drafts.csswg.org/cssom-view/#dom-element-scrollheight",
-            "description": "The definition of 'Element.scrollHeight' in the 'CSS Object Model (CSSOM) View Module' specification."
+            "description": "Element.scrollHeight - CSS Object Model (CSSOM) View Module"
         }
     ]
 }

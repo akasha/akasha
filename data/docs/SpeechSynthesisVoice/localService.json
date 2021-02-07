@@ -8,7 +8,7 @@
         {
             "name": "Web Speech API",
             "href": "https://wicg.github.io/speech-api/#dom-speechsynthesisvoice-localservice",
-            "description": "The definition of 'localService' in the 'Web Speech API' specification."
+            "description": "localService - Web Speech API"
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "Intersection Observer",
             "href": "https://w3c.github.io/IntersectionObserver/#dom-intersectionobserverinit-rootmargin",
-            "description": "The definition of 'IntersectionObserver.rootMargin' in the 'Intersection Observer' specification."
+            "description": "IntersectionObserver.rootMargin - Intersection Observer"
         }
     ]
 }

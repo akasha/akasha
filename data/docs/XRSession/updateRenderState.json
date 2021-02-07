@@ -8,7 +8,7 @@
         {
             "name": "WebXR Device API",
             "href": "https://immersive-web.github.io/webxr/#dom-xrsession-updaterenderstate",
-            "description": "The definition of 'XRSession.updateRenderState()' in the 'WebXR Device API' specification."
+            "description": "XRSession.updateRenderState() - WebXR Device API"
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "Screen Orientation API",
             "href": "https://w3c.github.io/screen-orientation/#dom-screenorientation-angle",
-            "description": "The definition of 'angle' in the 'Screen Orientation API' specification."
+            "description": "angle - Screen Orientation API"
         }
     ]
 }

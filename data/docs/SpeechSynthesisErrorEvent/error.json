@@ -8,7 +8,7 @@
         {
             "name": "Web Speech API",
             "href": "https://wicg.github.io/speech-api/#dom-speechsynthesiserrorevent-error",
-            "description": "The definition of 'error' in the 'Web Speech API' specification."
+            "description": "error - Web Speech API"
         }
     ]
 }

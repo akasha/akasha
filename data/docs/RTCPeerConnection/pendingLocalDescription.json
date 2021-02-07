@@ -8,7 +8,7 @@
         {
             "name": "WebRTC 1.0: Real-time Communication Between Browsers",
             "href": "https://w3c.github.io/webrtc-pc/#dom-peerconnection-pendinglocaldesc",
-            "description": "The definition of 'RTCPeerConnection.pendingLocalDescription' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification."
+            "description": "RTCPeerConnection.pendingLocalDescription - WebRTC 1.0: Real-time Communication Between Browsers"
         }
     ]
 }

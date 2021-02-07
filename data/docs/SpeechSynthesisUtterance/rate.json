@@ -8,7 +8,7 @@
         {
             "name": "Web Speech API",
             "href": "https://wicg.github.io/speech-api/#dom-speechsynthesisutterance-rate",
-            "description": "The definition of 'rate' in the 'Web Speech API' specification."
+            "description": "rate - Web Speech API"
         }
     ]
 }

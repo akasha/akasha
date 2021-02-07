@@ -8,7 +8,7 @@
         {
             "name": "Navigation Timing",
             "href": "https://www.w3.org/TR/navigation-timing/#performancetiming",
-            "description": "The definition of 'PerformanceTiming' in the 'Navigation Timing' specification."
+            "description": "PerformanceTiming - Navigation Timing"
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "Service Workers",
             "href": "https://w3c.github.io/ServiceWorker/#windowclient",
-            "description": "The definition of 'WindowClient' in the 'Service Workers' specification."
+            "description": "WindowClient - Service Workers"
         }
     ]
 }

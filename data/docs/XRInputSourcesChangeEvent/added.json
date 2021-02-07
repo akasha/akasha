@@ -8,7 +8,7 @@
         {
             "name": "WebXR Device API",
             "href": "https://immersive-web.github.io/webxr/#dom-xrinputsourceschangeevent-added",
-            "description": "The definition of 'XRInputSourcesChangeEvent.added' in the 'WebXR Device API' specification."
+            "description": "XRInputSourcesChangeEvent.added - WebXR Device API"
         }
     ]
 }

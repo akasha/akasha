@@ -8,7 +8,7 @@
         {
             "name": "WebRTC 1.0: Real-time Communication Between Browsers",
             "href": "https://w3c.github.io/webrtc-pc/#dom-rtcrtptransceiver-currentdirection",
-            "description": "The definition of 'RTCRtpTransceiver.currentDirection' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification."
+            "description": "RTCRtpTransceiver.currentDirection - WebRTC 1.0: Real-time Communication Between Browsers"
         }
     ]
 }

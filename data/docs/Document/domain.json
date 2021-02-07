@@ -8,7 +8,7 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/origin.html#relaxing-the-same-origin-restriction",
-            "description": "The definition of 'document.domain' in the 'HTML Living Standard' specification."
+            "description": "document.domain - HTML Living Standard"
         }
     ]
 }

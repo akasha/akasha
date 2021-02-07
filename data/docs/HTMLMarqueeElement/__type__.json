@@ -8,22 +8,22 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/obsolete.html#htmlmarqueeelement",
-            "description": "The definition of 'HTMLMarqueeElement' in the 'HTML Living Standard' specification."
+            "description": "HTMLMarqueeElement - HTML Living Standard"
         },
         {
             "name": "HTML 5.2",
             "href": "https://www.w3.org/TR/html52/obsolete.html#htmlmarqueeelement",
-            "description": "The definition of 'HTMLMarqueeElement' in the 'HTML 5.2' specification."
+            "description": "HTMLMarqueeElement - HTML 5.2"
         },
         {
             "name": "HTML 5.1",
             "href": "https://www.w3.org/TR/html51/obsolete.html#htmlmarqueeelement-htmlmarqueeelement",
-            "description": "The definition of 'HTMLMarqueeElement' in the 'HTML 5.1' specification."
+            "description": "HTMLMarqueeElement - HTML 5.1"
         },
         {
             "name": "HTML5",
             "href": "https://www.w3.org/TR/html52/obsolete.html#htmlmarqueeelement",
-            "description": "The definition of 'HTMLMarqueeElement' in the 'HTML5' specification."
+            "description": "HTMLMarqueeElement - HTML5"
         }
     ]
 }

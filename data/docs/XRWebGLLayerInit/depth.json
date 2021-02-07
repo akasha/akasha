@@ -8,7 +8,7 @@
         {
             "name": "WebXR Device API",
             "href": "https://immersive-web.github.io/webxr/#dom-xrwebgllayerinit-depth",
-            "description": "The definition of 'XRWebGLLayerInit.depth' in the 'WebXR Device API' specification."
+            "description": "XRWebGLLayerInit.depth - WebXR Device API"
         }
     ]
 }

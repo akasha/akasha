@@ -8,7 +8,7 @@
         {
             "name": "WebRTC 1.0: Real-time Communication Between Browsers",
             "href": "https://w3c.github.io/webrtc-pc/#event-track",
-            "description": "The definition of 'track' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification."
+            "description": "track - WebRTC 1.0: Real-time Communication Between Browsers"
         }
     ],
     "eventName": "track",

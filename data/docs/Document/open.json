@@ -8,12 +8,12 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/#dom-document-open",
-            "description": "The definition of 'document.open()' in the 'HTML Living Standard' specification."
+            "description": "document.open() - HTML Living Standard"
         },
         {
             "name": "Document Object Model (DOM) Level 2 HTML Specification",
             "href": "https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-72161170",
-            "description": "The definition of 'document.open()' in the 'Document Object Model (DOM) Level 2 HTML Specification' specification."
+            "description": "document.open() - Document Object Model (DOM) Level 2 HTML Specification"
         }
     ]
 }

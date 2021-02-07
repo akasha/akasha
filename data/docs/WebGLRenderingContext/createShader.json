@@ -8,12 +8,12 @@
         {
             "name": "WebGL 1.0",
             "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9",
-            "description": "The definition of 'createShader' in the 'WebGL 1.0' specification."
+            "description": "createShader - WebGL 1.0"
         },
         {
             "name": "OpenGL ES 2.0",
             "href": "https://www.khronos.org/opengles/sdk/docs/man/xhtml/glCreateShader.xml",
-            "description": "The definition of 'glCreateShader' in the 'OpenGL ES 2.0' specification."
+            "description": "glCreateShader - OpenGL ES 2.0"
         }
     ]
 }

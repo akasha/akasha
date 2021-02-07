@@ -8,7 +8,7 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#interface-shadowroot",
-            "description": "The definition of 'Interface ShadowRoot' in the 'DOM' specification."
+            "description": "Interface ShadowRoot - DOM"
         }
     ]
 }

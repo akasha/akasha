@@ -8,7 +8,7 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/#dom-offscreencanvas-getcontext",
-            "description": "The definition of 'OffscreenCanvas.getContext()' in the 'HTML Living Standard' specification."
+            "description": "OffscreenCanvas.getContext() - HTML Living Standard"
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#dom-element-closest",
-            "description": "The definition of 'Element.closest()' in the 'DOM' specification."
+            "description": "Element.closest() - DOM"
         }
     ]
 }

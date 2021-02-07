@@ -8,7 +8,7 @@
         {
             "name": "File API",
             "href": "https://w3c.github.io/FileAPI/#dfn-size",
-            "description": "The definition of 'Blob.size' in the 'File API' specification."
+            "description": "Blob.size - File API"
         }
     ]
 }

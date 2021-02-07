@@ -8,7 +8,7 @@
         {
             "name": "Push API",
             "href": "https://w3c.github.io/push-api/#dom-serviceworkerglobalscope-onpush",
-            "description": "The definition of 'onpush' in the 'Push API' specification."
+            "description": "onpush - Push API"
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "EXT_shader_texture_lod",
             "href": "https://www.khronos.org/registry/webgl/extensions/EXT_shader_texture_lod/",
-            "description": "The definition of 'EXT_shader_texture_lod' in the 'EXT_shader_texture_lod' specification."
+            "description": "EXT_shader_texture_lod - EXT_shader_texture_lod"
         }
     ]
 }

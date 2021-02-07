@@ -8,7 +8,7 @@
         {
             "name": "Pointer Lock",
             "href": "https://w3c.github.io/pointerlock/#extensions-to-the-document-interface",
-            "description": "The definition of 'Document' in the 'Pointer Lock' specification."
+            "description": "Document - Pointer Lock"
         }
     ]
 }

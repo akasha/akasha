@@ -8,22 +8,22 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#interface-namednodemap",
-            "description": "The definition of 'NamedNodeMap' in the 'DOM' specification."
+            "description": "NamedNodeMap - DOM"
         },
         {
             "name": "Document Object Model (DOM) Level 3 Core Specification",
             "href": "https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-1780488922",
-            "description": "The definition of 'NamedNodeMap' in the 'Document Object Model (DOM) Level 3 Core Specification' specification."
+            "description": "NamedNodeMap - Document Object Model (DOM) Level 3 Core Specification"
         },
         {
             "name": "Document Object Model (DOM) Level 2 Core Specification",
             "href": "https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-1780488922",
-            "description": "The definition of 'NamedNodeMap' in the 'Document Object Model (DOM) Level 2 Core Specification' specification."
+            "description": "NamedNodeMap - Document Object Model (DOM) Level 2 Core Specification"
         },
         {
             "name": "Document Object Model (DOM) Level 1 Specification",
             "href": "https://www.w3.org/TR/REC-DOM-Level-1/core.html#ID-1780488922",
-            "description": "The definition of 'NamedNodeMap' in the 'Document Object Model (DOM) Level 1 Specification' specification."
+            "description": "NamedNodeMap - Document Object Model (DOM) Level 1 Specification"
         }
     ]
 }

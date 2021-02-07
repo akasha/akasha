@@ -8,7 +8,7 @@
         {
             "name": "WebXR Device API",
             "href": "https://immersive-web.github.io/webxr/#dom-xrview-transform",
-            "description": "The definition of 'XRView.transform' in the 'WebXR Device API' specification."
+            "description": "XRView.transform - WebXR Device API"
         }
     ]
 }

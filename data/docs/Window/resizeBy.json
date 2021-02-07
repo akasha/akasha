@@ -8,7 +8,7 @@
         {
             "name": "CSS Object Model (CSSOM) View Module",
             "href": "https://drafts.csswg.org/cssom-view/#dom-window-resizeby",
-            "description": "The definition of 'window.resizeBy()' in the 'CSS Object Model (CSSOM) View Module' specification."
+            "description": "window.resizeBy() - CSS Object Model (CSSOM) View Module"
         }
     ]
 }

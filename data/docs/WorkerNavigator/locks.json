@@ -8,7 +8,7 @@
         {
             "name": "Web Locks API",
             "href": "https://wicg.github.io/web-locks/#navigator-mixins",
-            "description": "The definition of 'locks' in the 'Web Locks API' specification."
+            "description": "locks - Web Locks API"
         }
     ]
 }

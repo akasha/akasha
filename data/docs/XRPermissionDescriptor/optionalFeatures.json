@@ -8,7 +8,7 @@
         {
             "name": "WebXR Device API",
             "href": "https://immersive-web.github.io/webxr/#dom-xrpermissiondescriptor-optionalfeatures",
-            "description": "The definition of 'XRPermissionDescriptor.optionalFeatures' in the 'WebXR Device API' specification."
+            "description": "XRPermissionDescriptor.optionalFeatures - WebXR Device API"
         }
     ]
 }

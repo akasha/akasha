@@ -8,7 +8,7 @@
         {
             "name": "ECMAScript (ECMA-262)",
             "href": "https://tc39.es/ecma262/#sec-math.cosh",
-            "description": "The definition of 'Math.cosh' in the 'ECMAScript (ECMA-262)' specification."
+            "description": "Math.cosh - ECMAScript (ECMA-262)"
         }
     ]
 }

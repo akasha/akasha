@@ -8,12 +8,12 @@
         {
             "name": "Input Events Level 2",
             "href": "https://w3c.github.io/input-events/#interface-InputEvent",
-            "description": "The definition of 'InputEvent' in the 'Input Events Level 2' specification."
+            "description": "InputEvent - Input Events Level 2"
         },
         {
             "name": "UI Events",
             "href": "https://w3c.github.io/uievents/#interface-inputevent",
-            "description": "The definition of 'InputEvent' in the 'UI Events' specification."
+            "description": "InputEvent - UI Events"
         }
     ]
 }

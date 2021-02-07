@@ -8,12 +8,12 @@
         {
             "name": "Pointer Events – Level 2",
             "href": "https://www.w3.org/TR/pointerevents2/#dom-pointerevent-pointerid",
-            "description": "The definition of 'pointerId' in the 'Pointer Events &ndash; Level 2' specification."
+            "description": "pointerId - Pointer Events &ndash; Level 2"
         },
         {
             "name": "Pointer Events",
             "href": "https://www.w3.org/TR/pointerevents1/#widl-PointerEventInit-pointerId",
-            "description": "The definition of 'pointerId' in the 'Pointer Events' specification."
+            "description": "pointerId - Pointer Events"
         }
     ]
 }

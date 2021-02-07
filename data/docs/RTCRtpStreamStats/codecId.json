@@ -8,7 +8,7 @@
         {
             "name": "Identifiers for WebRTC's Statistics API",
             "href": "https://w3c.github.io/webrtc-stats/#dom-rtcrtpstreamstats-codecid",
-            "description": "The definition of 'RTCRtpStreamStats.codecId' in the 'Identifiers for WebRTC's Statistics API' specification."
+            "description": "RTCRtpStreamStats.codecId - Identifiers for WebRTC's Statistics API"
         }
     ]
 }

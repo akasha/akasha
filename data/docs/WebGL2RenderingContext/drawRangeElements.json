@@ -8,12 +8,12 @@
         {
             "name": "WebGL 2.0",
             "href": "https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.9",
-            "description": "The definition of 'drawRangeElements' in the 'WebGL 2.0' specification."
+            "description": "drawRangeElements - WebGL 2.0"
         },
         {
             "name": "OpenGL ES 3.0",
             "href": "https://www.khronos.org/opengles/sdk/docs/man3/html/glDrawRangeElements.xhtml",
-            "description": "The definition of 'glDrawRangeElements' in the 'OpenGL ES 3.0' specification."
+            "description": "glDrawRangeElements - OpenGL ES 3.0"
         }
     ]
 }

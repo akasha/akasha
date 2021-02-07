@@ -8,12 +8,12 @@
         {
             "name": "Pointer Events – Level 2",
             "href": "https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointerup",
-            "description": "The definition of 'onpointerup' in the 'Pointer Events &ndash; Level 2' specification."
+            "description": "onpointerup - Pointer Events &ndash; Level 2"
         },
         {
             "name": "Pointer Events",
             "href": "https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointerup",
-            "description": "The definition of 'onpointerup' in the 'Pointer Events' specification."
+            "description": "onpointerup - Pointer Events"
         }
     ]
 }

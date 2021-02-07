@@ -8,7 +8,7 @@
         {
             "name": "Navigation Timing",
             "href": "https://www.w3.org/TR/navigation-timing/#dom-performancetiming-secureconnectionstart",
-            "description": "The definition of 'PerformanceTiming.secureConnectionStart' in the 'Navigation Timing' specification."
+            "description": "PerformanceTiming.secureConnectionStart - Navigation Timing"
         }
     ]
 }

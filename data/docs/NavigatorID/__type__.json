@@ -8,12 +8,12 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/#navigatorid",
-            "description": "The definition of 'NavigatorID' in the 'HTML Living Standard' specification."
+            "description": "NavigatorID - HTML Living Standard"
         },
         {
             "name": "HTML5",
             "href": "https://www.w3.org/TR/html52/#navigatorid",
-            "description": "The definition of 'NavigatorID' in the 'HTML5' specification."
+            "description": "NavigatorID - HTML5"
         }
     ]
 }

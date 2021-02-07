@@ -8,7 +8,7 @@
         {
             "name": "WebXR Device API",
             "href": "https://immersive-web.github.io/webxr/#dom-xrreferencespace-getoffsetreferencespace",
-            "description": "The definition of 'getOffsetReferenceSpace()' in the 'WebXR Device API' specification."
+            "description": "getOffsetReferenceSpace() - WebXR Device API"
         }
     ]
 }

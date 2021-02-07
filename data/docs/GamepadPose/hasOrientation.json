@@ -8,7 +8,7 @@
         {
             "name": "Gamepad Extensions",
             "href": "https://w3c.github.io/gamepad/extensions.html#dom-gamepadpose-hasorientation",
-            "description": "The definition of 'hasOrientation' in the 'Gamepad Extensions' specification."
+            "description": "hasOrientation - Gamepad Extensions"
         }
     ]
 }

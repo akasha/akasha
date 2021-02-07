@@ -8,7 +8,7 @@
         {
             "name": "Web Speech API",
             "href": "https://wicg.github.io/speech-api/#dom-speechrecognition-stop",
-            "description": "The definition of 'stop()' in the 'Web Speech API' specification."
+            "description": "stop() - Web Speech API"
         }
     ]
 }

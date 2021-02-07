@@ -8,7 +8,7 @@
         {
             "name": "Web Audio API",
             "href": "https://webaudio.github.io/web-audio-api/#dom-pannernode-coneouterangle",
-            "description": "The definition of 'coneOuterAngle' in the 'Web Audio API' specification."
+            "description": "coneOuterAngle - Web Audio API"
         }
     ]
 }

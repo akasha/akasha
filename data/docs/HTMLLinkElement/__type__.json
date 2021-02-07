@@ -12,27 +12,27 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/#htmllinkelement",
-            "description": "The definition of 'HTMLLinkElement' in the 'HTML Living Standard' specification."
+            "description": "HTMLLinkElement - HTML Living Standard"
         },
         {
             "name": "HTML 5.1",
             "href": "https://www.w3.org/TR/html51/document-metadata.html#the-link-element",
-            "description": "The definition of 'HTMLLinkElement' in the 'HTML 5.1' specification."
+            "description": "HTMLLinkElement - HTML 5.1"
         },
         {
             "name": "HTML5",
             "href": "https://www.w3.org/TR/html52/document-metadata.html#the-link-element",
-            "description": "The definition of 'HTMLLinkElement' in the 'HTML5' specification."
+            "description": "HTMLLinkElement - HTML5"
         },
         {
             "name": "Document Object Model (DOM) Level 2 HTML Specification",
             "href": "https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-35143001",
-            "description": "The definition of 'HTMLLinkElement' in the 'Document Object Model (DOM) Level 2 HTML Specification' specification."
+            "description": "HTMLLinkElement - Document Object Model (DOM) Level 2 HTML Specification"
         },
         {
             "name": "Document Object Model (DOM) Level 1 Specification",
             "href": "https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-35143001",
-            "description": "The definition of 'HTMLLinkElement' in the 'Document Object Model (DOM) Level 1 Specification' specification."
+            "description": "HTMLLinkElement - Document Object Model (DOM) Level 1 Specification"
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "CSS Object Model (CSSOM) View Module",
             "href": "https://drafts.csswg.org/cssom-view/#dom-window-scroll",
-            "description": "The definition of 'window.scroll()' in the 'CSS Object Model (CSSOM) View Module' specification."
+            "description": "window.scroll() - CSS Object Model (CSSOM) View Module"
         }
     ]
 }

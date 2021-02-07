@@ -8,7 +8,7 @@
         {
             "name": "Selection API",
             "href": "https://w3c.github.io/selection-api/#idl-def-selection-",
-            "description": "The definition of 'Selection: toString()' in the 'Selection API' specification."
+            "description": "Selection: toString() - Selection API"
         }
     ]
 }

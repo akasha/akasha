@@ -8,7 +8,7 @@
         {
             "name": "Web Bluetooth",
             "href": "https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattdescriptor-uuid",
-            "description": "The definition of 'uuid' in the 'Web Bluetooth' specification."
+            "description": "uuid - Web Bluetooth"
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/#handler-tracklist-onremovetrack",
-            "description": "The definition of 'TextTrackList: onremovetrack' in the 'HTML Living Standard' specification."
+            "description": "TextTrackList: onremovetrack - HTML Living Standard"
         }
     ]
 }

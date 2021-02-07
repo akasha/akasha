@@ -8,7 +8,7 @@
         {
             "name": "Encrypted Media Extensions",
             "href": "https://w3c.github.io/encrypted-media/#dom-mediakeysystemaccess-keysystem",
-            "description": "The definition of 'keySystem' in the 'Encrypted Media Extensions' specification."
+            "description": "keySystem - Encrypted Media Extensions"
         }
     ]
 }

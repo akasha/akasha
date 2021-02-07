@@ -8,7 +8,7 @@
         {
             "name": "Web Bluetooth",
             "href": "https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattcharacteristic-getdescriptor",
-            "description": "The definition of 'getDescriptor()' in the 'Web Bluetooth' specification."
+            "description": "getDescriptor() - Web Bluetooth"
         }
     ]
 }

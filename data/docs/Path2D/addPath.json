@@ -8,7 +8,7 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/scripting.html#dom-path2d-addpath",
-            "description": "The definition of 'Path2D.addPath()' in the 'HTML Living Standard' specification."
+            "description": "Path2D.addPath() - HTML Living Standard"
         }
     ]
 }

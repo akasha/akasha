@@ -8,7 +8,7 @@
         {
             "name": "Service Workers",
             "href": "https://w3c.github.io/ServiceWorker/#serviceworkercontainer",
-            "description": "The definition of 'ServiceWorkerContainer' in the 'Service Workers' specification."
+            "description": "ServiceWorkerContainer - Service Workers"
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "Push API",
             "href": "https://w3c.github.io/push-api/#pushevent-interface",
-            "description": "The definition of 'PushEvent' in the 'Push API' specification."
+            "description": "PushEvent - Push API"
         }
     ]
 }

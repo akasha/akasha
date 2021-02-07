@@ -8,7 +8,7 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/#dom-hyperlink-port",
-            "description": "The definition of 'HTMLHyperlinkElementUtils.port' in the 'HTML Living Standard' specification."
+            "description": "HTMLHyperlinkElementUtils.port - HTML Living Standard"
         }
     ]
 }

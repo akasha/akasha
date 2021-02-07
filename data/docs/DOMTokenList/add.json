@@ -8,7 +8,7 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#dom-domtokenlist-add",
-            "description": "The definition of 'add()' in the 'DOM' specification."
+            "description": "add() - DOM"
         }
     ]
 }

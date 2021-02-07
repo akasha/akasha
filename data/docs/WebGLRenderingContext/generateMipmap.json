@@ -8,17 +8,17 @@
         {
             "name": "WebGL 1.0",
             "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8",
-            "description": "The definition of 'generateMipmap' in the 'WebGL 1.0' specification."
+            "description": "generateMipmap - WebGL 1.0"
         },
         {
             "name": "OpenGL ES 2.0",
             "href": "https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGenerateMipmap.xml",
-            "description": "The definition of 'glGenerateMipmap' in the 'OpenGL ES 2.0' specification."
+            "description": "glGenerateMipmap - OpenGL ES 2.0"
         },
         {
             "name": "OpenGL ES 3.0",
             "href": "https://www.khronos.org/opengles/sdk/docs/man3/html/glGenerateMipmap.xhtml",
-            "description": "The definition of 'glGenerateMipmap' in the 'OpenGL ES 3.0' specification."
+            "description": "glGenerateMipmap - OpenGL ES 3.0"
         }
     ]
 }

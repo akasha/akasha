@@ -8,7 +8,7 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/indices.html#event-toggle",
-            "description": "The definition of 'toggle event' in the 'HTML Living Standard' specification."
+            "description": "toggle event - HTML Living Standard"
         }
     ],
     "eventName": "toggle",

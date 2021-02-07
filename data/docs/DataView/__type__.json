@@ -8,7 +8,7 @@
         {
             "name": "ECMAScript (ECMA-262)",
             "href": "https://tc39.es/ecma262/#sec-dataview-objects",
-            "description": "The definition of 'DataView' in the 'ECMAScript (ECMA-262)' specification."
+            "description": "DataView - ECMAScript (ECMA-262)"
         }
     ]
 }

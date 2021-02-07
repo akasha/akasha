@@ -8,7 +8,7 @@
         {
             "name": "Storage",
             "href": "https://storage.spec.whatwg.org/#dom-storageestimate-usage",
-            "description": "The definition of 'usage' in the 'Storage' specification."
+            "description": "usage - Storage"
         }
     ]
 }

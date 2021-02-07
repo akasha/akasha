@@ -8,7 +8,7 @@
         {
             "name": "ECMAScript (ECMA-262)",
             "href": "https://tc39.es/ecma262/#sec-get-regexp.prototype.unicode",
-            "description": "The definition of 'RegExp.prototype.unicode' in the 'ECMAScript (ECMA-262)' specification."
+            "description": "RegExp.prototype.unicode - ECMAScript (ECMA-262)"
         }
     ]
 }

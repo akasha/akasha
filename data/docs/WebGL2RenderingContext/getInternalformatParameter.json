@@ -8,12 +8,12 @@
         {
             "name": "WebGL 2.0",
             "href": "https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.5",
-            "description": "The definition of 'getInternalFormatParameter' in the 'WebGL 2.0' specification."
+            "description": "getInternalFormatParameter - WebGL 2.0"
         },
         {
             "name": "OpenGL ES 3.0",
             "href": "https://www.khronos.org/opengles/sdk/docs/man3/html/glGetInternalformativ.xhtml",
-            "description": "The definition of 'glGetInternalformativ' in the 'OpenGL ES 3.0' specification."
+            "description": "glGetInternalformativ - OpenGL ES 3.0"
         }
     ]
 }

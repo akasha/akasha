@@ -8,17 +8,17 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#dom-event-stoppropagation",
-            "description": "The definition of 'Event.stopPropagation()' in the 'DOM' specification."
+            "description": "Event.stopPropagation() - DOM"
         },
         {
             "name": "DOM4",
             "href": "https://www.w3.org/TR/dom/#dom-event-stoppropagation",
-            "description": "The definition of 'Event.stopPropagation()' in the 'DOM4' specification."
+            "description": "Event.stopPropagation() - DOM4"
         },
         {
             "name": "Document Object Model (DOM) Level 2 Events Specification",
             "href": "https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-Event-stopPropagation",
-            "description": "The definition of 'Event.stopPropagation()' in the 'Document Object Model (DOM) Level 2 Events Specification' specification."
+            "description": "Event.stopPropagation() - Document Object Model (DOM) Level 2 Events Specification"
         }
     ]
 }

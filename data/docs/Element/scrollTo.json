@@ -8,7 +8,7 @@
         {
             "name": "CSS Object Model (CSSOM) View Module",
             "href": "https://drafts.csswg.org/cssom-view/#dom-element-scrollto-options-options",
-            "description": "The definition of 'element.scrollTo()' in the 'CSS Object Model (CSSOM) View Module' specification."
+            "description": "element.scrollTo() - CSS Object Model (CSSOM) View Module"
         }
     ]
 }

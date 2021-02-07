@@ -8,7 +8,7 @@
         {
             "name": "Pointer Lock",
             "href": "https://w3c.github.io/pointerlock/#dom-element-requestpointerlock",
-            "description": "The definition of 'requestPointerLock()' in the 'Pointer Lock' specification."
+            "description": "requestPointerLock() - Pointer Lock"
         }
     ]
 }

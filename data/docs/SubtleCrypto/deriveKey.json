@@ -8,7 +8,7 @@
         {
             "name": "Web Cryptography API",
             "href": "https://www.w3.org/TR/WebCryptoAPI/#dfn-SubtleCrypto-method-deriveKey",
-            "description": "The definition of 'SubtleCrypto.deriveKey()' in the 'Web Cryptography API' specification."
+            "description": "SubtleCrypto.deriveKey() - Web Cryptography API"
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "OES_texture_half_float",
             "href": "https://www.khronos.org/registry/webgl/extensions/OES_texture_half_float/",
-            "description": "The definition of 'OES_texture_half_float' in the 'OES_texture_half_float' specification."
+            "description": "OES_texture_half_float - OES_texture_half_float"
         }
     ]
 }

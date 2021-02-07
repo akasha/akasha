@@ -8,17 +8,17 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/interaction.html#datatransferitem",
-            "description": "The definition of 'DataTransferItem' in the 'HTML Living Standard' specification."
+            "description": "DataTransferItem - HTML Living Standard"
         },
         {
             "name": "HTML 5.1",
             "href": "https://www.w3.org/TR/html51/editing.html#datatransferitem",
-            "description": "The definition of 'DataTransferItem' in the 'HTML 5.1' specification."
+            "description": "DataTransferItem - HTML 5.1"
         },
         {
             "name": "File and Directory Entries API",
             "href": "https://wicg.github.io/entries-api/#dom-datatransferitem-webkitgetasentry",
-            "description": "The definition of 'DataTransferItem.webkitGetAsEntry()' in the 'File and Directory Entries API' specification."
+            "description": "DataTransferItem.webkitGetAsEntry() - File and Directory Entries API"
         }
     ]
 }

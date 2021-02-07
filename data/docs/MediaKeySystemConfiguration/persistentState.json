@@ -8,7 +8,7 @@
         {
             "name": "Encrypted Media Extensions",
             "href": "https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-persistentstate",
-            "description": "The definition of 'persistentState' in the 'Encrypted Media Extensions' specification."
+            "description": "persistentState - Encrypted Media Extensions"
         }
     ]
 }

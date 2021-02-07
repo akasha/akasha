@@ -8,7 +8,7 @@
         {
             "name": "Navigation Timing",
             "href": "https://www.w3.org/TR/navigation-timing/#dom-performancetiming-domloading",
-            "description": "The definition of 'PerformanceTiming.domLoading' in the 'Navigation Timing' specification."
+            "description": "PerformanceTiming.domLoading - Navigation Timing"
         }
     ]
 }

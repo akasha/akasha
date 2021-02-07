@@ -308,7 +308,8 @@ public final class MdnDocScanner
                     .text()
                     .substring( name.length() )
                     .trim()
-                    .replace( "that specification", "the '" + name + "' specification" );
+                    .replace( "that specification", "the '" + name + "' specification" )
+                    .replaceFirst( "^The definition of '(.*)' in the '(.*)' specification.$", "$1 - $2" );
                 if ( !refDescription.isEmpty() )
                 {
                   ref.setDescription( StringUtil.encodeHtml( refDescription ) );

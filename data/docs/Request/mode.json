@@ -8,7 +8,7 @@
         {
             "name": "Fetch",
             "href": "https://fetch.spec.whatwg.org/#dom-request-mode",
-            "description": "The definition of 'mode' in the 'Fetch' specification."
+            "description": "mode - Fetch"
         }
     ]
 }

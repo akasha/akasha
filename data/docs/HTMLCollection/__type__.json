@@ -8,7 +8,7 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#htmlcollection",
-            "description": "The definition of 'HTMLCollection' in the 'DOM' specification."
+            "description": "HTMLCollection - DOM"
         }
     ]
 }

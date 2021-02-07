@@ -8,7 +8,7 @@
         {
             "name": "WebXR Device API",
             "href": "https://immersive-web.github.io/webxr/#xrsystem-interface",
-            "description": "The definition of 'XRSystem' in the 'WebXR Device API' specification."
+            "description": "XRSystem - WebXR Device API"
         }
     ]
 }

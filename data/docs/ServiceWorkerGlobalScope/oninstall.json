@@ -8,7 +8,7 @@
         {
             "name": "Service Workers",
             "href": "https://w3c.github.io/ServiceWorker/#service-worker-global-scope-event-handlers",
-            "description": "The definition of 'Event Handlers' in the 'Service Workers' specification."
+            "description": "Event Handlers - Service Workers"
         }
     ]
 }

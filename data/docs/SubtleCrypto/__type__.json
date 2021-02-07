@@ -8,7 +8,7 @@
         {
             "name": "Web Cryptography API",
             "href": "https://www.w3.org/TR/WebCryptoAPI/#subtlecrypto-interface",
-            "description": "The definition of 'SubtleCrypto' in the 'Web Cryptography API' specification."
+            "description": "SubtleCrypto - Web Cryptography API"
         }
     ]
 }

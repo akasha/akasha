@@ -8,12 +8,12 @@
         {
             "name": "Web Audio API",
             "href": "https://webaudio.github.io/web-audio-api/#dom-audionode-connect",
-            "description": "The definition of 'connect() to an AudioNode' in the 'Web Audio API' specification."
+            "description": "connect() to an AudioNode - Web Audio API"
         },
         {
             "name": "Web Audio API",
             "href": "https://webaudio.github.io/web-audio-api/#dom-audionode-connect-destinationparam-output",
-            "description": "The definition of 'connect() to an AudioParam' in the 'Web Audio API' specification."
+            "description": "connect() to an AudioParam - Web Audio API"
         }
     ]
 }

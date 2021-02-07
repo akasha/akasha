@@ -8,12 +8,12 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#dom-range-deletecontents",
-            "description": "The definition of 'Range.deleteContents()' in the 'DOM' specification."
+            "description": "Range.deleteContents() - DOM"
         },
         {
             "name": "Document Object Model (DOM) Level 2 Traversal and Range Specification",
             "href": "https://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level2-Range-method-deleteContents",
-            "description": "The definition of 'Range.deleteContents()' in the 'Document Object Model (DOM) Level 2 Traversal and Range Specification' specification."
+            "description": "Range.deleteContents() - Document Object Model (DOM) Level 2 Traversal and Range Specification"
         }
     ]
 }

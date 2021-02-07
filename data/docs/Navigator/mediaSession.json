@@ -8,7 +8,7 @@
         {
             "name": "Media Session Standard",
             "href": "https://w3c.github.io/mediasession/#dom-navigator-mediasession",
-            "description": "The definition of 'navigator.mediaSession' in the 'Media Session Standard' specification."
+            "description": "navigator.mediaSession - Media Session Standard"
         }
     ]
 }

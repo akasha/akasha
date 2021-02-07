@@ -8,7 +8,7 @@
         {
             "name": "Media Capture and Streams",
             "href": "https://w3c.github.io/mediacapture-main/#dom-mediastream-onremovetrack",
-            "description": "The definition of 'MediaStream.onremovetrack' in the 'Media Capture and Streams' specification."
+            "description": "MediaStream.onremovetrack - Media Capture and Streams"
         }
     ]
 }

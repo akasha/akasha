@@ -8,12 +8,12 @@
         {
             "name": "WebGL 2.0",
             "href": "https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.15",
-            "description": "The definition of 'deleteTransformFeedback' in the 'WebGL 2.0' specification."
+            "description": "deleteTransformFeedback - WebGL 2.0"
         },
         {
             "name": "OpenGL ES 3.0",
             "href": "https://www.khronos.org/opengles/sdk/docs/man3/html/glDeleteTransformFeedbacks.xhtml",
-            "description": "The definition of 'glDeleteTransformFeedbacks' in the 'OpenGL ES 3.0' specification."
+            "description": "glDeleteTransformFeedbacks - OpenGL ES 3.0"
         }
     ]
 }

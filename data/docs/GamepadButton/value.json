@@ -8,7 +8,7 @@
         {
             "name": "Gamepad",
             "href": "https://w3c.github.io/gamepad/#dom-gamepadbutton-value",
-            "description": "The definition of 'GamepadButton.value' in the 'Gamepad' specification."
+            "description": "GamepadButton.value - Gamepad"
         }
     ]
 }

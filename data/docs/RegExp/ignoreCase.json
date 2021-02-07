@@ -8,7 +8,7 @@
         {
             "name": "ECMAScript (ECMA-262)",
             "href": "https://tc39.es/ecma262/#sec-get-regexp.prototype.ignorecase",
-            "description": "The definition of 'RegExp.prototype.ignoreCase' in the 'ECMAScript (ECMA-262)' specification."
+            "description": "RegExp.prototype.ignoreCase - ECMAScript (ECMA-262)"
         }
     ]
 }

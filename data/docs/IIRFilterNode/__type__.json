@@ -8,7 +8,7 @@
         {
             "name": "Web Audio API",
             "href": "https://webaudio.github.io/web-audio-api/#iirfilternode",
-            "description": "The definition of 'IIRFilterNode' in the 'Web Audio API' specification."
+            "description": "IIRFilterNode - Web Audio API"
         }
     ]
 }

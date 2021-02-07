@@ -8,7 +8,7 @@
         {
             "name": "Push API",
             "href": "https://w3c.github.io/push-api/#dom-pushmessagedata-arraybuffer",
-            "description": "The definition of 'arrayBuffer()' in the 'Push API' specification."
+            "description": "arrayBuffer() - Push API"
         }
     ]
 }

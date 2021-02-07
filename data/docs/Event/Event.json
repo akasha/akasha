@@ -8,7 +8,7 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#dom-event-event",
-            "description": "The definition of 'Event()' in the 'DOM' specification."
+            "description": "Event() - DOM"
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "Service Workers",
             "href": "https://w3c.github.io/ServiceWorker/#clients",
-            "description": "The definition of 'Clients' in the 'Service Workers' specification."
+            "description": "Clients - Service Workers"
         }
     ]
 }

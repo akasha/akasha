@@ -8,12 +8,12 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/interaction.html#datatransfer",
-            "description": "The definition of 'DataTransfer' in the 'HTML Living Standard' specification."
+            "description": "DataTransfer - HTML Living Standard"
         },
         {
             "name": "HTML 5.1",
             "href": "https://www.w3.org/TR/html51/editing.html#the-datatransfer-interface",
-            "description": "The definition of 'DataTransfer' in the 'HTML 5.1' specification."
+            "description": "DataTransfer - HTML 5.1"
         }
     ]
 }

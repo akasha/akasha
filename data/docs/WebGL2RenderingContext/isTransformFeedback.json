@@ -8,12 +8,12 @@
         {
             "name": "WebGL 2.0",
             "href": "https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.15",
-            "description": "The definition of 'isTransformFeedback' in the 'WebGL 2.0' specification."
+            "description": "isTransformFeedback - WebGL 2.0"
         },
         {
             "name": "OpenGL ES 3.0",
             "href": "https://www.khronos.org/opengles/sdk/docs/man3/html/glIsTransformFeedback.xhtml",
-            "description": "The definition of 'glIsTransformFeedback' in the 'OpenGL ES 3.0' specification."
+            "description": "glIsTransformFeedback - OpenGL ES 3.0"
         }
     ]
 }

@@ -8,12 +8,12 @@
         {
             "name": "Indexed Database API 2.0",
             "href": "https://www.w3.org/TR/IndexedDB/#idbopendbrequest",
-            "description": "The definition of 'IDBOpenDBRequest' in the 'Indexed Database API 2.0' specification."
+            "description": "IDBOpenDBRequest - Indexed Database API 2.0"
         },
         {
             "name": "Indexed Database API 2.0",
             "href": "https://www.w3.org/TR/IndexedDB/#idbopendbrequest",
-            "description": "The definition of 'IDBOpenDBRequest' in the 'Indexed Database API 2.0' specification."
+            "description": "IDBOpenDBRequest - Indexed Database API 2.0"
         }
     ]
 }

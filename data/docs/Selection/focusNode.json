@@ -8,7 +8,7 @@
         {
             "name": "Selection API",
             "href": "https://w3c.github.io/selection-api/#dom-selection-focusnode",
-            "description": "The definition of 'Selection.focusNode' in the 'Selection API' specification."
+            "description": "Selection.focusNode - Selection API"
         }
     ]
 }

@@ -8,17 +8,17 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#dom-element-classname",
-            "description": "The definition of 'element.className' in the 'DOM' specification."
+            "description": "element.className - DOM"
         },
         {
             "name": "DOM4",
             "href": "https://www.w3.org/TR/dom/#dom-element-classname",
-            "description": "The definition of 'element.className' in the 'DOM4' specification."
+            "description": "element.className - DOM4"
         },
         {
             "name": "Document Object Model (DOM) Level 2 HTML Specification",
             "href": "https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-95362176",
-            "description": "The definition of 'element.className' in the 'Document Object Model (DOM) Level 2 HTML Specification' specification."
+            "description": "element.className - Document Object Model (DOM) Level 2 HTML Specification"
         }
     ]
 }

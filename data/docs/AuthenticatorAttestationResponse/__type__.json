@@ -8,7 +8,7 @@
         {
             "name": "Web Authentication: An API for accessing Public Key Credentials Level 1",
             "href": "https://w3c.github.io/webauthn/#authenticatorattestationresponse",
-            "description": "The definition of 'AuthenticatorAttestationResponse interface' in the 'Web Authentication: An API for accessing Public Key Credentials Level 1' specification."
+            "description": "AuthenticatorAttestationResponse interface - Web Authentication: An API for accessing Public Key Credentials Level 1"
         }
     ]
 }

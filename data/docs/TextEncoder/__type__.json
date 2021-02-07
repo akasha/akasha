@@ -8,7 +8,7 @@
         {
             "name": "Encoding",
             "href": "https://encoding.spec.whatwg.org/#interface-textencoder",
-            "description": "The definition of 'TextEncoder' in the 'Encoding' specification."
+            "description": "TextEncoder - Encoding"
         }
     ]
 }

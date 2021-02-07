@@ -8,12 +8,12 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/#htmltrackelement",
-            "description": "The definition of 'HTMLTrackElement' in the 'HTML Living Standard' specification."
+            "description": "HTMLTrackElement - HTML Living Standard"
         },
         {
             "name": "HTML5",
             "href": "https://www.w3.org/TR/html52/embedded-content-0.html#the-track-element",
-            "description": "The definition of 'HTMLTrackElement' in the 'HTML5' specification."
+            "description": "HTMLTrackElement - HTML5"
         }
     ]
 }

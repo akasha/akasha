@@ -8,22 +8,22 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#dom-event-currenttarget",
-            "description": "The definition of 'Event.currentTarget' in the 'DOM' specification."
+            "description": "Event.currentTarget - DOM"
         },
         {
             "name": "DOM4",
             "href": "https://www.w3.org/TR/dom/#dom-event-currenttarget",
-            "description": "The definition of 'Event.currentTarget' in the 'DOM4' specification."
+            "description": "Event.currentTarget - DOM4"
         },
         {
             "name": "Document Object Model (DOM) Level 3 Events Specification",
             "href": "https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#dfn-current-event-target",
-            "description": "The definition of 'current event target' in the 'Document Object Model (DOM) Level 3 Events Specification' specification."
+            "description": "current event target - Document Object Model (DOM) Level 3 Events Specification"
         },
         {
             "name": "Document Object Model (DOM) Level 2 Events Specification",
             "href": "https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-Event-currentTarget",
-            "description": "The definition of 'Event.currentTarget' in the 'Document Object Model (DOM) Level 2 Events Specification' specification."
+            "description": "Event.currentTarget - Document Object Model (DOM) Level 2 Events Specification"
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "File API",
             "href": "https://w3c.github.io/FileAPI/#readAsDataText",
-            "description": "The definition of 'readAsText()' in the 'File API' specification."
+            "description": "readAsText() - File API"
         }
     ]
 }

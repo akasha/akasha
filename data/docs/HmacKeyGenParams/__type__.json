@@ -8,7 +8,7 @@
         {
             "name": "Web Cryptography API",
             "href": "https://www.w3.org/TR/WebCryptoAPI/#dfn-HmacKeyGenParams",
-            "description": "The definition of 'SubtleCrypto.HmacKeyGenParams' in the 'Web Cryptography API' specification."
+            "description": "SubtleCrypto.HmacKeyGenParams - Web Cryptography API"
         }
     ]
 }

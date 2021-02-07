@@ -8,7 +8,7 @@
         {
             "name": "URL",
             "href": "https://url.spec.whatwg.org/#dom-urlsearchparams-set",
-            "description": "The definition of 'set()' in the 'URL' specification."
+            "description": "set() - URL"
         }
     ]
 }

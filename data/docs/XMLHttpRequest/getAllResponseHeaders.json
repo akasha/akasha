@@ -8,7 +8,7 @@
         {
             "name": "XMLHttpRequest",
             "href": "https://xhr.spec.whatwg.org/#the-getallresponseheaders()-method",
-            "description": "The definition of 'getAllResponseHeaders()' in the 'XMLHttpRequest' specification."
+            "description": "getAllResponseHeaders() - XMLHttpRequest"
         }
     ]
 }

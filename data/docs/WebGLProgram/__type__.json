@@ -8,7 +8,7 @@
         {
             "name": "WebGL 1.0",
             "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.6",
-            "description": "The definition of 'WebGLProgram' in the 'WebGL 1.0' specification."
+            "description": "WebGLProgram - WebGL 1.0"
         }
     ]
 }

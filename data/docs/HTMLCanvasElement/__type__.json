@@ -8,12 +8,12 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/#htmlcanvaselement",
-            "description": "The definition of 'HTMLCanvasElement' in the 'HTML Living Standard' specification."
+            "description": "HTMLCanvasElement - HTML Living Standard"
         },
         {
             "name": "Media Capture from DOM Elements",
             "href": "https://w3c.github.io/mediacapture-fromelement/#html-canvas-element-media-capture-extensions",
-            "description": "The definition of 'HTMLCanvasElement' in the 'Media Capture from DOM Elements' specification."
+            "description": "HTMLCanvasElement - Media Capture from DOM Elements"
         }
     ]
 }

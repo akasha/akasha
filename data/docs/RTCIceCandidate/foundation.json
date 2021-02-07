@@ -8,7 +8,7 @@
         {
             "name": "WebRTC 1.0: Real-time Communication Between Browsers",
             "href": "https://w3c.github.io/webrtc-pc/#dom-rtcicecandidate-foundation",
-            "description": "The definition of 'RTCIceCandidate.foundation' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification."
+            "description": "RTCIceCandidate.foundation - WebRTC 1.0: Real-time Communication Between Browsers"
         }
     ]
 }

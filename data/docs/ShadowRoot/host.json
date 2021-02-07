@@ -8,7 +8,7 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#dom-shadowroot-host",
-            "description": "The definition of 'ShadowRoot.host' in the 'DOM' specification."
+            "description": "ShadowRoot.host - DOM"
         }
     ]
 }

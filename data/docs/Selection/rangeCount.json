@@ -8,7 +8,7 @@
         {
             "name": "Selection API",
             "href": "https://w3c.github.io/selection-api/#dom-selection-rangecount",
-            "description": "The definition of 'Selection.rangeCount' in the 'Selection API' specification."
+            "description": "Selection.rangeCount - Selection API"
         }
     ]
 }

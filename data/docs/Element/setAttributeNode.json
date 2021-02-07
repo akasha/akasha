@@ -8,7 +8,7 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#dom-element-setattributenode",
-            "description": "The definition of 'setAttributeNode()' in the 'DOM' specification."
+            "description": "setAttributeNode() - DOM"
         }
     ]
 }

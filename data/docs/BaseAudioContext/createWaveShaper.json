@@ -8,7 +8,7 @@
         {
             "name": "Web Audio API",
             "href": "https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-createwaveshaper",
-            "description": "The definition of 'createWaveShaper()' in the 'Web Audio API' specification."
+            "description": "createWaveShaper() - Web Audio API"
         }
     ]
 }

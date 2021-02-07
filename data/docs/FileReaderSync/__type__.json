@@ -8,7 +8,7 @@
         {
             "name": "File API",
             "href": "https://w3c.github.io/FileAPI/#FileReaderSync",
-            "description": "The definition of 'FileReaderSync' in the 'File API' specification."
+            "description": "FileReaderSync - File API"
         }
     ]
 }

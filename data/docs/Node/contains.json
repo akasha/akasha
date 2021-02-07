@@ -8,7 +8,7 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#dom-node-contains",
-            "description": "The definition of 'Node.contains()' in the 'DOM' specification."
+            "description": "Node.contains() - DOM"
         }
     ]
 }

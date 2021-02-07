@@ -8,12 +8,12 @@
         {
             "name": "Pointer Events – Level 2",
             "href": "https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointerleave",
-            "description": "The definition of 'onpointerleave' in the 'Pointer Events &ndash; Level 2' specification."
+            "description": "onpointerleave - Pointer Events &ndash; Level 2"
         },
         {
             "name": "Pointer Events",
             "href": "https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointerleave",
-            "description": "The definition of 'onpointerleave' in the 'Pointer Events' specification."
+            "description": "onpointerleave - Pointer Events"
         }
     ]
 }

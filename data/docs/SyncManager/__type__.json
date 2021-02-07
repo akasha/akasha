@@ -8,7 +8,7 @@
         {
             "name": "Web Background Synchronization",
             "href": "https://wicg.github.io/background-sync/spec/#sync-manager-interface",
-            "description": "The definition of 'SyncManager' in the 'Web Background Synchronization' specification."
+            "description": "SyncManager - Web Background Synchronization"
         }
     ]
 }

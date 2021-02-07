@@ -8,12 +8,12 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/history.html#dom-location-assign",
-            "description": "The definition of 'Location.assign()' in the 'HTML Living Standard' specification."
+            "description": "Location.assign() - HTML Living Standard"
         },
         {
             "name": "HTML5",
             "href": "https://www.w3.org/TR/html52/browsers.html#dom-location-assign",
-            "description": "The definition of 'Location.assign()' in the 'HTML5' specification."
+            "description": "Location.assign() - HTML5"
         }
     ]
 }

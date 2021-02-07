@@ -8,7 +8,7 @@
         {
             "name": "WebXR Device API",
             "href": "https://immersive-web.github.io/webxr/#xrpose-interface",
-            "description": "The definition of 'XRPose' in the 'WebXR Device API' specification."
+            "description": "XRPose - WebXR Device API"
         }
     ]
 }

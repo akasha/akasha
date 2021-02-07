@@ -8,7 +8,7 @@
         {
             "name": "Web Authentication: An API for accessing Public Key Credentials Level 1",
             "href": "https://w3c.github.io/webauthn/#dom-publickeycredentialrequestoptions-challenge",
-            "description": "The definition of 'challenge' in the 'Web Authentication: An API for accessing Public Key Credentials Level 1' specification."
+            "description": "challenge - Web Authentication: An API for accessing Public Key Credentials Level 1"
         }
     ]
 }

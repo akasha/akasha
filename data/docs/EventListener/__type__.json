@@ -8,12 +8,12 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#callbackdef-eventlistener",
-            "description": "The definition of 'EventListener' in the 'DOM' specification."
+            "description": "EventListener - DOM"
         },
         {
             "name": "Document Object Model (DOM) Level 2 Events Specification",
             "href": "https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventListener",
-            "description": "The definition of 'EventListener' in the 'Document Object Model (DOM) Level 2 Events Specification' specification."
+            "description": "EventListener - Document Object Model (DOM) Level 2 Events Specification"
         }
     ]
 }

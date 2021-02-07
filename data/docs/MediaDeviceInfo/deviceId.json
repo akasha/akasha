@@ -8,7 +8,7 @@
         {
             "name": "Media Capture and Streams",
             "href": "https://w3c.github.io/mediacapture-main/#dom-mediadeviceinfo-deviceid",
-            "description": "The definition of 'deviceId' in the 'Media Capture and Streams' specification."
+            "description": "deviceId - Media Capture and Streams"
         }
     ]
 }

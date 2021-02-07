@@ -8,7 +8,7 @@
         {
             "name": "Web Cryptography API",
             "href": "https://www.w3.org/TR/WebCryptoAPI/#dfn-RsaOaepParams",
-            "description": "The definition of 'SubtleCrypto.RsaOaepParams' in the 'Web Cryptography API' specification."
+            "description": "SubtleCrypto.RsaOaepParams - Web Cryptography API"
         }
     ]
 }

@@ -8,12 +8,12 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/#navigatorlanguage",
-            "description": "The definition of 'NavigatorLanguage' in the 'HTML Living Standard' specification."
+            "description": "NavigatorLanguage - HTML Living Standard"
         },
         {
             "name": "HTML5",
             "href": "https://www.w3.org/TR/html52/#navigatorlanguage",
-            "description": "The definition of 'NavigatorLanguage' in the 'HTML5' specification."
+            "description": "NavigatorLanguage - HTML5"
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "Web Speech API",
             "href": "https://wicg.github.io/speech-api/#dom-speechsynthesisutterance-onmark",
-            "description": "The definition of 'onmark' in the 'Web Speech API' specification."
+            "description": "onmark - Web Speech API"
         }
     ]
 }

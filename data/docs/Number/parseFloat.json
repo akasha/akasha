@@ -8,7 +8,7 @@
         {
             "name": "ECMAScript (ECMA-262)",
             "href": "https://tc39.es/ecma262/#sec-number.parsefloat",
-            "description": "The definition of 'Number.parseFloat' in the 'ECMAScript (ECMA-262)' specification."
+            "description": "Number.parseFloat - ECMAScript (ECMA-262)"
         }
     ]
 }

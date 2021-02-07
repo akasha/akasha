@@ -8,7 +8,7 @@
         {
             "name": "Geolocation API",
             "href": "https://w3c.github.io/geolocation-api/#dom-geolocationcoordinates-altitudeaccuracy",
-            "description": "The definition of 'GeolocationCoordinates.altitudeAccuracy' in the 'Geolocation API' specification."
+            "description": "GeolocationCoordinates.altitudeAccuracy - Geolocation API"
         }
     ]
 }

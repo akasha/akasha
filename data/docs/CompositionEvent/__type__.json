@@ -8,12 +8,12 @@
         {
             "name": "UI Events",
             "href": "https://w3c.github.io/uievents/#interface-compositionevent",
-            "description": "The definition of 'CompositionEvent' in the 'UI Events' specification."
+            "description": "CompositionEvent - UI Events"
         },
         {
             "name": "Document Object Model (DOM) Level 3 Events Specification",
             "href": "https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#idl-compositionevent",
-            "description": "The definition of 'CompositionEvent' in the 'Document Object Model (DOM) Level 3 Events Specification' specification."
+            "description": "CompositionEvent - Document Object Model (DOM) Level 3 Events Specification"
         }
     ]
 }

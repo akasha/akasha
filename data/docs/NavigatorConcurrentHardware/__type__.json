@@ -8,7 +8,7 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/#navigator.hardwareconcurrency",
-            "description": "The definition of 'NavigatorConcurrentHardware' in the 'HTML Living Standard' specification."
+            "description": "NavigatorConcurrentHardware - HTML Living Standard"
         }
     ]
 }

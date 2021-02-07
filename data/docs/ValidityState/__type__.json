@@ -8,17 +8,17 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#validitystate",
-            "description": "The definition of 'ValidityState' in the 'HTML Living Standard' specification."
+            "description": "ValidityState - HTML Living Standard"
         },
         {
             "name": "HTML 5.1",
             "href": "https://www.w3.org/TR/html51/sec-forms.html#validitystate-validitystate",
-            "description": "The definition of 'ValidityState' in the 'HTML 5.1' specification."
+            "description": "ValidityState - HTML 5.1"
         },
         {
             "name": "HTML5",
             "href": "https://www.w3.org/TR/html52/forms.html#validitystate",
-            "description": "The definition of 'ValidityState' in the 'HTML5' specification."
+            "description": "ValidityState - HTML5"
         }
     ]
 }

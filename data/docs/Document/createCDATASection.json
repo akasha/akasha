@@ -8,7 +8,7 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#dom-document-createcdatasection",
-            "description": "The definition of 'document.createCDATASection' in the 'DOM' specification."
+            "description": "document.createCDATASection - DOM"
         }
     ]
 }

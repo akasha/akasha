@@ -8,7 +8,7 @@
         {
             "name": "Web Speech API",
             "href": "https://wicg.github.io/speech-api/#dom-speechsynthesisutterance-onresume",
-            "description": "The definition of 'onresume' in the 'Web Speech API' specification."
+            "description": "onresume - Web Speech API"
         }
     ]
 }

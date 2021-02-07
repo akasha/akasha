@@ -8,7 +8,7 @@
         {
             "name": "WebXR Device API",
             "href": "https://immersive-web.github.io/webxr/#dom-xrwebgllayerinit-ignoredepthvalues",
-            "description": "The definition of 'XRWebGLLayerInit.ignoreDepthValues' in the 'WebXR Device API' specification."
+            "description": "XRWebGLLayerInit.ignoreDepthValues - WebXR Device API"
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "Geolocation API",
             "href": "https://w3c.github.io/geolocation-api/#position_error_interface",
-            "description": "The definition of 'GeolocationPositionError' in the 'Geolocation API' specification."
+            "description": "GeolocationPositionError - Geolocation API"
         }
     ]
 }

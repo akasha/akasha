@@ -8,7 +8,7 @@
         {
             "name": "Notifications API",
             "href": "https://notifications.spec.whatwg.org/#image-resource",
-            "description": "The definition of 'image' in the 'Notifications API' specification."
+            "description": "image - Notifications API"
         }
     ]
 }

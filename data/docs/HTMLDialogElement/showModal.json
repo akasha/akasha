@@ -8,12 +8,12 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/forms.html#dom-dialog-showmodal",
-            "description": "The definition of 'showModal()' in the 'HTML Living Standard' specification."
+            "description": "showModal() - HTML Living Standard"
         },
         {
             "name": "HTML 5.1",
             "href": "https://www.w3.org/TR/html51/interactive-elements.html#dom-htmldialogelement-showmodal",
-            "description": "The definition of 'showModal()' in the 'HTML 5.1' specification."
+            "description": "showModal() - HTML 5.1"
         }
     ]
 }

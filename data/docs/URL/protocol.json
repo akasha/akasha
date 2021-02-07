@@ -8,7 +8,7 @@
         {
             "name": "URL",
             "href": "https://url.spec.whatwg.org/#dom-url-protocol",
-            "description": "The definition of 'protocol' in the 'URL' specification."
+            "description": "protocol - URL"
         }
     ]
 }

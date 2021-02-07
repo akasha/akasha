@@ -8,7 +8,7 @@
         {
             "name": "Encrypted Media Extensions",
             "href": "https://w3c.github.io/encrypted-media/#dom-mediakeymessageevent-messagetype",
-            "description": "The definition of 'messageType' in the 'Encrypted Media Extensions' specification."
+            "description": "messageType - Encrypted Media Extensions"
         }
     ]
 }

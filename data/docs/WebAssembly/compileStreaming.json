@@ -8,7 +8,7 @@
         {
             "name": "WebAssembly features for web embedding",
             "href": "https://webassembly.org/docs/web/#webassemblycompilestreaming",
-            "description": "The definition of 'compileStreaming()' in the 'WebAssembly features for web embedding' specification."
+            "description": "compileStreaming() - WebAssembly features for web embedding"
         }
     ]
 }

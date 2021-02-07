@@ -8,7 +8,7 @@
         {
             "name": "Navigation Timing",
             "href": "https://www.w3.org/TR/navigation-timing/#dom-performancetiming-loadeventstart",
-            "description": "The definition of 'PerformanceTiming.loadEventStart' in the 'Navigation Timing' specification."
+            "description": "PerformanceTiming.loadEventStart - Navigation Timing"
         }
     ]
 }

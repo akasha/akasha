@@ -8,7 +8,7 @@
         {
             "name": "WebXR Device API",
             "href": "https://immersive-web.github.io/webxr/#xrinputsourcearray-interface",
-            "description": "The definition of 'XRInputSourceArray' in the 'WebXR Device API' specification."
+            "description": "XRInputSourceArray - WebXR Device API"
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "Notifications API",
             "href": "https://notifications.spec.whatwg.org/#dom-notification-lang",
-            "description": "The definition of 'lang' in the 'Notifications API' specification."
+            "description": "lang - Notifications API"
         }
     ]
 }

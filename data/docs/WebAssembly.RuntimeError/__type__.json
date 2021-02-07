@@ -8,12 +8,12 @@
         {
             "name": "WebAssembly JavaScript Interface",
             "href": "https://webassembly.github.io/spec/js-api/#exceptiondef-runtimeerror",
-            "description": "The definition of 'WebAssembly constructors' in the 'WebAssembly JavaScript Interface' specification."
+            "description": "WebAssembly constructors - WebAssembly JavaScript Interface"
         },
         {
             "name": "ECMAScript (ECMA-262)",
             "href": "https://tc39.es/ecma262/#sec-native-error-types-used-in-this-standard",
-            "description": "The definition of 'NativeError' in the 'ECMAScript (ECMA-262)' specification."
+            "description": "NativeError - ECMAScript (ECMA-262)"
         }
     ]
 }

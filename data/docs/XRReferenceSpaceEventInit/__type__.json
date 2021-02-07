@@ -8,7 +8,7 @@
         {
             "name": "WebXR Device API",
             "href": "https://immersive-web.github.io/webxr/#dictdef-xrreferencespaceeventinit",
-            "description": "The definition of 'XRReferenceSpaceEventInit' in the 'WebXR Device API' specification."
+            "description": "XRReferenceSpaceEventInit - WebXR Device API"
         }
     ]
 }

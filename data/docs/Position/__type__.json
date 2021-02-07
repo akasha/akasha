@@ -8,7 +8,7 @@
         {
             "name": "Geolocation API",
             "href": "https://w3c.github.io/geolocation-api/#position_interface",
-            "description": "The definition of 'GeolocationPosition' in the 'Geolocation API' specification."
+            "description": "GeolocationPosition - Geolocation API"
         }
     ]
 }

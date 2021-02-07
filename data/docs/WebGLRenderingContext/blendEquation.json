@@ -8,17 +8,17 @@
         {
             "name": "WebGL 1.0",
             "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3",
-            "description": "The definition of 'blendEquation' in the 'WebGL 1.0' specification."
+            "description": "blendEquation - WebGL 1.0"
         },
         {
             "name": "OpenGL ES 2.0",
             "href": "https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBlendEquation.xml",
-            "description": "The definition of 'glBlendEquation' in the 'OpenGL ES 2.0' specification."
+            "description": "glBlendEquation - OpenGL ES 2.0"
         },
         {
             "name": "OpenGL ES 3.0",
             "href": "https://www.khronos.org/opengles/sdk/docs/man3/html/glBlendEquation.xml",
-            "description": "The definition of 'glBlendEquation' in the 'OpenGL ES 3.0' specification."
+            "description": "glBlendEquation - OpenGL ES 3.0"
         }
     ]
 }

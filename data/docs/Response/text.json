@@ -8,7 +8,7 @@
         {
             "name": "Fetch",
             "href": "https://fetch.spec.whatwg.org/#dom-body-text",
-            "description": "The definition of 'text()' in the 'Fetch' specification."
+            "description": "text() - Fetch"
         }
     ]
 }

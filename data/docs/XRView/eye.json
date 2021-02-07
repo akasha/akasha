@@ -8,7 +8,7 @@
         {
             "name": "WebXR Device API",
             "href": "https://immersive-web.github.io/webxr/#dom-xrview-eye",
-            "description": "The definition of 'XRView.eye' in the 'WebXR Device API' specification."
+            "description": "XRView.eye - WebXR Device API"
         }
     ]
 }

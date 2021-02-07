@@ -8,7 +8,7 @@
         {
             "name": "Push API",
             "href": "https://w3c.github.io/push-api/#dom-pushmessagedata-blob",
-            "description": "The definition of 'blob()' in the 'Push API' specification."
+            "description": "blob() - Push API"
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "WebVR 1.1",
             "href": "https://immersive-web.github.io/webvr/spec/1.1/#gamepad-getvrdisplays-attribute",
-            "description": "The definition of 'displayId' in the 'WebVR 1.1' specification."
+            "description": "displayId - WebVR 1.1"
         }
     ]
 }

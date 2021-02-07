@@ -8,7 +8,7 @@
         {
             "name": "Web Animations",
             "href": "https://drafts.csswg.org/web-animations-1/#dom-animation-effect",
-            "description": "The definition of 'Animation.effect' in the 'Web Animations' specification."
+            "description": "Animation.effect - Web Animations"
         }
     ]
 }

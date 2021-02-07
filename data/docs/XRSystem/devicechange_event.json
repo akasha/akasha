@@ -8,7 +8,7 @@
         {
             "name": "WebXR Device API",
             "href": "https://immersive-web.github.io/webxr/#eventdef-xrsystem-devicechange",
-            "description": "The definition of 'devicechange event' in the 'WebXR Device API' specification."
+            "description": "devicechange event - WebXR Device API"
         }
     ],
     "eventName": "devicechange",

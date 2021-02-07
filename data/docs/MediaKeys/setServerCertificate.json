@@ -8,7 +8,7 @@
         {
             "name": "Encrypted Media Extensions",
             "href": "https://w3c.github.io/encrypted-media/#dom-mediakeys-setservercertificate",
-            "description": "The definition of 'setServerCertificate()' in the 'Encrypted Media Extensions' specification."
+            "description": "setServerCertificate() - Encrypted Media Extensions"
         }
     ]
 }

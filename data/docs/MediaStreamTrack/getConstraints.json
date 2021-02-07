@@ -8,7 +8,7 @@
         {
             "name": "Media Capture and Streams",
             "href": "https://w3c.github.io/mediacapture-main/#dom-mediastreamtrack-getconstraints",
-            "description": "The definition of 'getConstraints()' in the 'Media Capture and Streams' specification."
+            "description": "getConstraints() - Media Capture and Streams"
         }
     ]
 }

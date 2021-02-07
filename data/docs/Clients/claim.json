@@ -8,7 +8,7 @@
         {
             "name": "Service Workers",
             "href": "https://w3c.github.io/ServiceWorker/#clients-claim",
-            "description": "The definition of 'claim()' in the 'Service Workers' specification."
+            "description": "claim() - Service Workers"
         }
     ]
 }

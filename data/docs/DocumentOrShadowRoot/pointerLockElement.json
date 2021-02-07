@@ -8,7 +8,7 @@
         {
             "name": "Pointer Lock",
             "href": "https://w3c.github.io/pointerlock/#extensions-to-the-documentorshadowroot-mixin",
-            "description": "The definition of 'pointerLockElement' in the 'Pointer Lock' specification."
+            "description": "pointerLockElement - Pointer Lock"
         }
     ]
 }

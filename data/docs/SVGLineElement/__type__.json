@@ -8,12 +8,12 @@
         {
             "name": "Scalable Vector Graphics (SVG) 2",
             "href": "https://svgwg.org/svg2-draft/shapes.html#InterfaceSVGLineElement",
-            "description": "The definition of 'SVGLineElement' in the 'Scalable Vector Graphics (SVG) 2' specification."
+            "description": "SVGLineElement - Scalable Vector Graphics (SVG) 2"
         },
         {
             "name": "Scalable Vector Graphics (SVG) 1.1 (Second Edition)",
             "href": "https://www.w3.org/TR/SVG11/shapes.html#InterfaceSVGLineElement",
-            "description": "The definition of 'SVGLineElement' in the 'Scalable Vector Graphics (SVG) 1.1 (Second Edition)' specification."
+            "description": "SVGLineElement - Scalable Vector Graphics (SVG) 1.1 (Second Edition)"
         }
     ]
 }

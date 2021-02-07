@@ -8,12 +8,12 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/media.html#audiotracklist",
-            "description": "The definition of 'AudioTrackList' in the 'HTML Living Standard' specification."
+            "description": "AudioTrackList - HTML Living Standard"
         },
         {
             "name": "HTML5",
             "href": "https://www.w3.org/TR/html52/embedded-content-0.html#audiotracklist",
-            "description": "The definition of 'AudioTrackList' in the 'HTML5' specification."
+            "description": "AudioTrackList - HTML5"
         }
     ]
 }

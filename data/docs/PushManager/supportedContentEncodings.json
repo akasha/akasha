@@ -8,7 +8,7 @@
         {
             "name": "Push API",
             "href": "https://w3c.github.io/push-api/#dom-pushmanager-supportedcontentencodings",
-            "description": "The definition of 'supportedContentEncodings' in the 'Push API' specification."
+            "description": "supportedContentEncodings - Push API"
         }
     ]
 }

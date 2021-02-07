@@ -8,7 +8,7 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/#handler-workerglobalscope-ononline",
-            "description": "The definition of 'WorkerGlobalScope.ononline' in the 'HTML Living Standard' specification."
+            "description": "WorkerGlobalScope.ononline - HTML Living Standard"
         }
     ]
 }

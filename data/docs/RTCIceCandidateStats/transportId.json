@@ -8,7 +8,7 @@
         {
             "name": "Identifiers for WebRTC's Statistics API",
             "href": "https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatestats-transportid",
-            "description": "The definition of 'RTCIceCandidateStats.transportId' in the 'Identifiers for WebRTC's Statistics API' specification."
+            "description": "RTCIceCandidateStats.transportId - Identifiers for WebRTC's Statistics API"
         }
     ]
 }

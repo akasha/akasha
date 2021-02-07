@@ -8,12 +8,12 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/interaction.html#datatransferitemlist",
-            "description": "The definition of 'DataTransferItemList' in the 'HTML Living Standard' specification."
+            "description": "DataTransferItemList - HTML Living Standard"
         },
         {
             "name": "HTML 5.1",
             "href": "https://www.w3.org/TR/html51/editing.html#datatransferitemlist",
-            "description": "The definition of 'DataTransferItemList' in the 'HTML 5.1' specification."
+            "description": "DataTransferItemList - HTML 5.1"
         }
     ]
 }

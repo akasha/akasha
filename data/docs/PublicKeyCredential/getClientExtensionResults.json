@@ -8,7 +8,7 @@
         {
             "name": "Web Authentication: An API for accessing Public Key Credentials Level 1",
             "href": "https://w3c.github.io/webauthn/#dom-publickeycredential-getclientextensionresults",
-            "description": "The definition of 'getClientExtensionResults()' in the 'Web Authentication: An API for accessing Public Key Credentials Level 1' specification."
+            "description": "getClientExtensionResults() - Web Authentication: An API for accessing Public Key Credentials Level 1"
         }
     ]
 }

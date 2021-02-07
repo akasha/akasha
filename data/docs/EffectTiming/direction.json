@@ -8,7 +8,7 @@
         {
             "name": "Web Animations",
             "href": "https://drafts.csswg.org/web-animations-1/#enumdef-playbackdirection",
-            "description": "The definition of 'direction' in the 'Web Animations' specification."
+            "description": "direction - Web Animations"
         }
     ]
 }

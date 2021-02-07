@@ -8,7 +8,7 @@
         {
             "name": "Web Cryptography API",
             "href": "https://www.w3.org/TR/WebCryptoAPI/#dfn-EcKeyGenParams",
-            "description": "The definition of 'SubtleCrypto.EcKeyGenParams' in the 'Web Cryptography API' specification."
+            "description": "SubtleCrypto.EcKeyGenParams - Web Cryptography API"
         }
     ]
 }

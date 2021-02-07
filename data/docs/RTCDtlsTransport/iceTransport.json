@@ -8,7 +8,7 @@
         {
             "name": "WebRTC 1.0: Real-time Communication Between Browsers",
             "href": "https://w3c.github.io/webrtc-pc/#dom-rtcdtlstransport-icetransport",
-            "description": "The definition of 'RTCDtlsTransport.iceTransport' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification."
+            "description": "RTCDtlsTransport.iceTransport - WebRTC 1.0: Real-time Communication Between Browsers"
         }
     ]
 }

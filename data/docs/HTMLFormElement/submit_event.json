@@ -8,22 +8,22 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/indices.html#event-submit",
-            "description": "The definition of 'submit' in the 'HTML Living Standard' specification."
+            "description": "submit - HTML Living Standard"
         },
         {
             "name": "HTML 5.2",
             "href": "https://www.w3.org/TR/html52/fullindex.html#eventdef-global-submit",
-            "description": "The definition of 'submit' in the 'HTML 5.2' specification."
+            "description": "submit - HTML 5.2"
         },
         {
             "name": "HTML 5.1",
             "href": "https://www.w3.org/TR/html51/fullindex.html#eventdef-global-submit",
-            "description": "The definition of 'submit' in the 'HTML 5.1' specification."
+            "description": "submit - HTML 5.1"
         },
         {
             "name": "HTML5",
             "href": "https://www.w3.org/TR/html52/index.html#events-0",
-            "description": "The definition of 'submit' in the 'HTML5' specification."
+            "description": "submit - HTML5"
         }
     ],
     "eventName": "submit",

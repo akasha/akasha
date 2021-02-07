@@ -8,7 +8,7 @@
         {
             "name": "WebGL 1.0",
             "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#DOM-WebGLRenderingContext-drawingBufferHeight",
-            "description": "The definition of 'WebGLRenderingContext.drawingBufferHeight' in the 'WebGL 1.0' specification."
+            "description": "WebGLRenderingContext.drawingBufferHeight - WebGL 1.0"
         }
     ]
 }

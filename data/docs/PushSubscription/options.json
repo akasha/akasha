@@ -8,7 +8,7 @@
         {
             "name": "Push API",
             "href": "https://w3c.github.io/push-api/#dom-pushsubscription-options",
-            "description": "The definition of 'options' in the 'Push API' specification."
+            "description": "options - Push API"
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "Selection API",
             "href": "https://w3c.github.io/selection-api/#dom-selection-containsnode",
-            "description": "The definition of 'Selection.containsNode()' in the 'Selection API' specification."
+            "description": "Selection.containsNode() - Selection API"
         }
     ]
 }

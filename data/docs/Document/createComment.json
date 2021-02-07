@@ -8,7 +8,7 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#dom-document-createcomment",
-            "description": "The definition of 'document.createComment' in the 'DOM' specification."
+            "description": "document.createComment - DOM"
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "Console API",
             "href": "https://console.spec.whatwg.org/#count",
-            "description": "The definition of 'console.countReset()' in the 'Console API' specification."
+            "description": "console.countReset() - Console API"
         }
     ]
 }

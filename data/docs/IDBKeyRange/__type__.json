@@ -8,12 +8,12 @@
         {
             "name": "Indexed Database API 2.0",
             "href": "https://www.w3.org/TR/IndexedDB/#idbkeyrange",
-            "description": "The definition of 'IDBKeyRange' in the 'Indexed Database API 2.0' specification."
+            "description": "IDBKeyRange - Indexed Database API 2.0"
         },
         {
             "name": "Indexed Database API 2.0",
             "href": "https://www.w3.org/TR/IndexedDB/#keyrange",
-            "description": "The definition of 'IDBKeyRange' in the 'Indexed Database API 2.0' specification."
+            "description": "IDBKeyRange - Indexed Database API 2.0"
         }
     ]
 }

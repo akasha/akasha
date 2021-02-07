@@ -8,7 +8,7 @@
         {
             "name": "Service Workers",
             "href": "https://w3c.github.io/ServiceWorker/#navigation-preload-manager",
-            "description": "The definition of 'NavigationPreloadManager' in the 'Service Workers' specification."
+            "description": "NavigationPreloadManager - Service Workers"
         }
     ]
 }

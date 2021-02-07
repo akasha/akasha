@@ -8,7 +8,7 @@
         {
             "name": "Web Speech API",
             "href": "https://wicg.github.io/speech-api/#dom-speechsynthesis-pending",
-            "description": "The definition of 'pending' in the 'Web Speech API' specification."
+            "description": "pending - Web Speech API"
         }
     ]
 }

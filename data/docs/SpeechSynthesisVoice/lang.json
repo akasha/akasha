@@ -8,7 +8,7 @@
         {
             "name": "Web Speech API",
             "href": "https://wicg.github.io/speech-api/#dom-speechsynthesisvoice-lang",
-            "description": "The definition of 'lang' in the 'Web Speech API' specification."
+            "description": "lang - Web Speech API"
         }
     ]
 }

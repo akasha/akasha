@@ -8,7 +8,7 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#dom-document-createdocumentfragment",
-            "description": "The definition of 'Document.createDocumentFragment()' in the 'DOM' specification."
+            "description": "Document.createDocumentFragment() - DOM"
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "WebXR Device API",
             "href": "https://immersive-web.github.io/webxr/#dom-xrsession-requestanimationframe",
-            "description": "The definition of 'XRSession.requestAnimationFrame' in the 'WebXR Device API' specification."
+            "description": "XRSession.requestAnimationFrame - WebXR Device API"
         }
     ]
 }

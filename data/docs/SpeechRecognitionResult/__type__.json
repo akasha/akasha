@@ -8,7 +8,7 @@
         {
             "name": "Web Speech API",
             "href": "https://wicg.github.io/speech-api/#speechreco-result",
-            "description": "The definition of 'SpeechRecognitionResult' in the 'Web Speech API' specification."
+            "description": "SpeechRecognitionResult - Web Speech API"
         }
     ]
 }

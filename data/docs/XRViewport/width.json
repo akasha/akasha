@@ -8,7 +8,7 @@
         {
             "name": "WebXR Device API",
             "href": "https://immersive-web.github.io/webxr/#dom-xrviewport-width",
-            "description": "The definition of 'XRViewport.width' in the 'WebXR Device API' specification."
+            "description": "XRViewport.width - WebXR Device API"
         }
     ]
 }

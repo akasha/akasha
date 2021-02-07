@@ -8,7 +8,7 @@
         {
             "name": "Storage",
             "href": "https://storage.spec.whatwg.org/#navigatorstorage",
-            "description": "The definition of 'navigator.storage' in the 'Storage' specification."
+            "description": "navigator.storage - Storage"
         }
     ]
 }

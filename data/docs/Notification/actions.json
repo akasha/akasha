@@ -8,7 +8,7 @@
         {
             "name": "Notifications API",
             "href": "https://notifications.spec.whatwg.org/#dom-notification-actions",
-            "description": "The definition of 'actions' in the 'Notifications API' specification."
+            "description": "actions - Notifications API"
         }
     ]
 }

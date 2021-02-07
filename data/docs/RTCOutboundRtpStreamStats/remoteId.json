@@ -8,7 +8,7 @@
         {
             "name": "Identifiers for WebRTC's Statistics API",
             "href": "https://w3c.github.io/webrtc-stats/#dom-RTCOutboundRtpStreamStats-remoteid",
-            "description": "The definition of 'RTCOutboundRtpStreamStats.remoteId' in the 'Identifiers for WebRTC's Statistics API' specification."
+            "description": "RTCOutboundRtpStreamStats.remoteId - Identifiers for WebRTC's Statistics API"
         }
     ]
 }

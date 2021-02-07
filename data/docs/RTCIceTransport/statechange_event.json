@@ -8,7 +8,7 @@
         {
             "name": "WebRTC 1.0: Real-time Communication Between Browsers",
             "href": "https://w3c.github.io/webrtc-pc/#event-icetransport-statechange",
-            "description": "The definition of 'statechange' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification."
+            "description": "statechange - WebRTC 1.0: Real-time Communication Between Browsers"
         }
     ],
     "eventName": "statechange",

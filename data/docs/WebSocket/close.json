@@ -8,7 +8,7 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/web-sockets.html#dom-websocket-close",
-            "description": "The definition of 'WebSocket.close()' in the 'HTML Living Standard' specification."
+            "description": "WebSocket.close() - HTML Living Standard"
         }
     ]
 }

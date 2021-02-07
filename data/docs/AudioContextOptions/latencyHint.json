@@ -8,7 +8,7 @@
         {
             "name": "Web Audio API",
             "href": "https://webaudio.github.io/web-audio-api/#dom-audiocontextoptions-latencyhint",
-            "description": "The definition of 'AudioContextOptions.latencyHint' in the 'Web Audio API' specification."
+            "description": "AudioContextOptions.latencyHint - Web Audio API"
         }
     ]
 }

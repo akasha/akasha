@@ -8,7 +8,7 @@
         {
             "name": "URL",
             "href": "https://url.spec.whatwg.org/#interface-urlsearchparams",
-            "description": "The definition of 'entries() (see &quot;iterable&quot;)' in the 'URL' specification."
+            "description": "entries() (see &quot;iterable&quot;) - URL"
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "WebXR Device API",
             "href": "https://immersive-web.github.io/webxr/#dom-xrsession-requestreferencespace",
-            "description": "The definition of 'requestReferenceSpace()' in the 'WebXR Device API' specification."
+            "description": "requestReferenceSpace() - WebXR Device API"
         }
     ]
 }

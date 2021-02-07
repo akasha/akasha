@@ -8,7 +8,7 @@
         {
             "name": "WebXR Device API",
             "href": "https://immersive-web.github.io/webxr/#eventdef-xrreferencespace-reset",
-            "description": "The definition of 'reset event' in the 'WebXR Device API' specification."
+            "description": "reset event - WebXR Device API"
         }
     ],
     "eventName": "reset",

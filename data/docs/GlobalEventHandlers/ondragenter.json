@@ -8,12 +8,12 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondragenter",
-            "description": "The definition of 'ondragenter' in the 'HTML Living Standard' specification."
+            "description": "ondragenter - HTML Living Standard"
         },
         {
             "name": "HTML 5.1",
             "href": "https://www.w3.org/TR/html51/index.html#ix-handler-ondragenter",
-            "description": "The definition of 'ondragenter' in the 'HTML 5.1' specification."
+            "description": "ondragenter - HTML 5.1"
         }
     ]
 }

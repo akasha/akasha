@@ -8,7 +8,7 @@
         {
             "name": "Static Range",
             "href": "https://w3c.github.io/staticrange/#dom-staticrange-torange",
-            "description": "The definition of 'toRange()' in the 'Static Range' specification."
+            "description": "toRange() - Static Range"
         }
     ]
 }

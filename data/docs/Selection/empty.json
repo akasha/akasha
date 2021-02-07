@@ -8,7 +8,7 @@
         {
             "name": "Selection API",
             "href": "https://w3c.github.io/selection-api/#dom-selection-removeallranges",
-            "description": "The definition of 'Selection.removeAllRanges()' in the 'Selection API' specification."
+            "description": "Selection.removeAllRanges() - Selection API"
         }
     ]
 }

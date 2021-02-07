@@ -8,7 +8,7 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#dom-attr-namespaceuri",
-            "description": "The definition of 'Attr: namespaceURI' in the 'DOM' specification."
+            "description": "Attr: namespaceURI - DOM"
         }
     ]
 }

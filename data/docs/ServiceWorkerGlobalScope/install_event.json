@@ -8,7 +8,7 @@
         {
             "name": "Service Workers",
             "href": "https://w3c.github.io/ServiceWorker/#service-worker-global-scope-install-event",
-            "description": "The definition of 'install' in the 'Service Workers' specification."
+            "description": "install - Service Workers"
         }
     ],
     "eventName": "install",

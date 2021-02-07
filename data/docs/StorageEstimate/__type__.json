@@ -8,7 +8,7 @@
         {
             "name": "Storage",
             "href": "https://storage.spec.whatwg.org/#dictdef-storageestimate",
-            "description": "The definition of 'StorageEstimate' in the 'Storage' specification."
+            "description": "StorageEstimate - Storage"
         }
     ]
 }

@@ -8,57 +8,57 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#interface-document",
-            "description": "The definition of 'Document' in the 'DOM' specification."
+            "description": "Document - DOM"
         },
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/dom.html#the-document-object",
-            "description": "The definition of 'Document' in the 'HTML Living Standard' specification."
+            "description": "Document - HTML Living Standard"
         },
         {
             "name": "CSS Object Model (CSSOM) View Module",
             "href": "https://drafts.csswg.org/cssom-view/#extensions-to-the-document-interface",
-            "description": "The definition of 'Document' in the 'CSS Object Model (CSSOM) View Module' specification."
+            "description": "Document - CSS Object Model (CSSOM) View Module"
         },
         {
             "name": "Pointer Lock",
             "href": "https://w3c.github.io/pointerlock/#extensions-to-the-document-interface",
-            "description": "The definition of 'Document' in the 'Pointer Lock' specification."
+            "description": "Document - Pointer Lock"
         },
         {
             "name": "Page Visibility (Second Edition)",
             "href": "https://www.w3.org/TR/page-visibility/#extensions-to-the-document-interface",
-            "description": "The definition of 'Document' in the 'Page Visibility (Second Edition)' specification."
+            "description": "Document - Page Visibility (Second Edition)"
         },
         {
             "name": "Selection API",
             "href": "https://w3c.github.io/selection-api/#extensions-to-document-interface",
-            "description": "The definition of 'Document' in the 'Selection API' specification."
+            "description": "Document - Selection API"
         },
         {
             "name": "DOM4",
             "href": "https://www.w3.org/TR/dom/#interface-document",
-            "description": "The definition of 'Document' in the 'DOM4' specification."
+            "description": "Document - DOM4"
         },
         {
             "name": "Document Object Model (DOM) Level 3 Core Specification",
             "href": "https://www.w3.org/TR/DOM-Level-3-Core/#i-Document",
-            "description": "The definition of 'Document' in the 'Document Object Model (DOM) Level 3 Core Specification' specification."
+            "description": "Document - Document Object Model (DOM) Level 3 Core Specification"
         },
         {
             "name": "Document Object Model (DOM) Level 3 XPath Specification",
             "href": "https://www.w3.org/TR/DOM-Level-3-XPath/xpath.html#XPathEvaluator",
-            "description": "The definition of 'XPathEvaluator' in the 'Document Object Model (DOM) Level 3 XPath Specification' specification."
+            "description": "XPathEvaluator - Document Object Model (DOM) Level 3 XPath Specification"
         },
         {
             "name": "Document Object Model (DOM) Level 2 Core Specification",
             "href": "https://www.w3.org/TR/DOM-Level-2-Core/#i-Document",
-            "description": "The definition of 'Document' in the 'Document Object Model (DOM) Level 2 Core Specification' specification."
+            "description": "Document - Document Object Model (DOM) Level 2 Core Specification"
         },
         {
             "name": "Document Object Model (DOM) Level 1 Specification",
             "href": "https://www.w3.org/TR/REC-DOM-Level-1/#i-Document",
-            "description": "The definition of 'Document' in the 'Document Object Model (DOM) Level 1 Specification' specification."
+            "description": "Document - Document Object Model (DOM) Level 1 Specification"
         }
     ]
 }

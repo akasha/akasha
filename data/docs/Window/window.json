@@ -8,17 +8,17 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/#dom-window",
-            "description": "The definition of 'Window.window' in the 'HTML Living Standard' specification."
+            "description": "Window.window - HTML Living Standard"
         },
         {
             "name": "HTML 5.1",
             "href": "https://www.w3.org/TR/html51/browsers.html#dom-window",
-            "description": "The definition of 'Window.window' in the 'HTML 5.1' specification."
+            "description": "Window.window - HTML 5.1"
         },
         {
             "name": "HTML5",
             "href": "https://www.w3.org/TR/html52/browsers.html#dom-window",
-            "description": "The definition of 'Window.window' in the 'HTML5' specification."
+            "description": "Window.window - HTML5"
         }
     ]
 }

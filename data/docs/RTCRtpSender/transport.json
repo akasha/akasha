@@ -8,7 +8,7 @@
         {
             "name": "WebRTC 1.0: Real-time Communication Between Browsers",
             "href": "https://w3c.github.io/webrtc-pc/#dom-rtcrtpsender-transport",
-            "description": "The definition of 'RTCRtpSender.transport' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification."
+            "description": "RTCRtpSender.transport - WebRTC 1.0: Real-time Communication Between Browsers"
         }
     ]
 }

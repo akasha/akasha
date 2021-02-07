@@ -8,7 +8,7 @@
         {
             "name": "Fetch",
             "href": "https://fetch.spec.whatwg.org/#dom-headers",
-            "description": "The definition of 'Headers()' in the 'Fetch' specification."
+            "description": "Headers() - Fetch"
         }
     ]
 }

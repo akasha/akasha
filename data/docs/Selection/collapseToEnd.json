@@ -8,7 +8,7 @@
         {
             "name": "Selection API",
             "href": "https://w3c.github.io/selection-api/#dom-selection-collapsetoend",
-            "description": "The definition of 'Selection.collapseToEnd()' in the 'Selection API' specification."
+            "description": "Selection.collapseToEnd() - Selection API"
         }
     ]
 }

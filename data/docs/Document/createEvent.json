@@ -8,7 +8,7 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#dom-document-createevent",
-            "description": "The definition of 'document.createEvent' in the 'DOM' specification."
+            "description": "document.createEvent - DOM"
         }
     ]
 }

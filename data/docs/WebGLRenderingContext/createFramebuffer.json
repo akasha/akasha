@@ -8,12 +8,12 @@
         {
             "name": "WebGL 1.0",
             "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.6",
-            "description": "The definition of 'createFramebuffer' in the 'WebGL 1.0' specification."
+            "description": "createFramebuffer - WebGL 1.0"
         },
         {
             "name": "OpenGL ES 2.0",
             "href": "https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGenFramebuffers.xml",
-            "description": "The definition of 'glGenFramebuffers' in the 'OpenGL ES 2.0' specification."
+            "description": "glGenFramebuffers - OpenGL ES 2.0"
         }
     ]
 }

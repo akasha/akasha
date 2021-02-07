@@ -8,7 +8,7 @@
         {
             "name": "WebXR Device API",
             "href": "https://immersive-web.github.io/webxr/#dom-xrframe-getviewerpose",
-            "description": "The definition of 'XRFrame.getViewerPose()' in the 'WebXR Device API' specification."
+            "description": "XRFrame.getViewerPose() - WebXR Device API"
         }
     ]
 }

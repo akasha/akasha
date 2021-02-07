@@ -8,7 +8,7 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/#handler-abstractworker-onerror",
-            "description": "The definition of 'AbstractWorker.onerror' in the 'HTML Living Standard' specification."
+            "description": "AbstractWorker.onerror - HTML Living Standard"
         }
     ]
 }

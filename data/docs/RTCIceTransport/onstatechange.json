@@ -8,7 +8,7 @@
         {
             "name": "WebRTC 1.0: Real-time Communication Between Browsers",
             "href": "https://w3c.github.io/webrtc-pc/#dom-rtcicetransport-onstatechange",
-            "description": "The definition of 'RTCIceTransport.onstatechange' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification."
+            "description": "RTCIceTransport.onstatechange - WebRTC 1.0: Real-time Communication Between Browsers"
         }
     ]
 }

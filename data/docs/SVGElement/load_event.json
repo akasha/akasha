@@ -8,7 +8,7 @@
         {
             "name": "Scalable Vector Graphics (SVG) 2",
             "href": "https://svgwg.org/svg2-draft/single-page.html#interact-LoadEvent",
-            "description": "The definition of 'load' in the 'Scalable Vector Graphics (SVG) 2' specification."
+            "description": "load - Scalable Vector Graphics (SVG) 2"
         }
     ],
     "eventName": "load",

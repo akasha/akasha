@@ -8,7 +8,7 @@
         {
             "name": "Encrypted Media Extensions",
             "href": "https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-audiocapabilities",
-            "description": "The definition of 'audioCapabilities' in the 'Encrypted Media Extensions' specification."
+            "description": "audioCapabilities - Encrypted Media Extensions"
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "Storage",
             "href": "https://storage.spec.whatwg.org/#dom-storagemanager-estimate",
-            "description": "The definition of 'estimate()' in the 'Storage' specification."
+            "description": "estimate() - Storage"
         }
     ]
 }

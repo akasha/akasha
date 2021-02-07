@@ -8,7 +8,7 @@
         {
             "name": "Media Capture and Streams",
             "href": "https://w3c.github.io/mediacapture-main/#dom-mediatrackconstraintset-latency",
-            "description": "The definition of 'latency' in the 'Media Capture and Streams' specification."
+            "description": "latency - Media Capture and Streams"
         }
     ]
 }

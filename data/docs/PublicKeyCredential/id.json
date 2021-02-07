@@ -8,12 +8,12 @@
         {
             "name": "Web Authentication: An API for accessing Public Key Credentials Level 1",
             "href": "https://w3c.github.io/webauthn/#iface-pkcredential",
-            "description": "The definition of 'id' in the 'Web Authentication: An API for accessing Public Key Credentials Level 1' specification."
+            "description": "id - Web Authentication: An API for accessing Public Key Credentials Level 1"
         },
         {
             "name": "Credential Management Level 1",
             "href": "https://w3c.github.io/webappsec-credential-management/#dom-credential-id",
-            "description": "The definition of 'id' in the 'Credential Management Level 1' specification."
+            "description": "id - Credential Management Level 1"
         }
     ]
 }

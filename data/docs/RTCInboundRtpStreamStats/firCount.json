@@ -8,7 +8,7 @@
         {
             "name": "Identifiers for WebRTC's Statistics API",
             "href": "https://w3c.github.io/webrtc-stats/#dom-rtcinboundrtpstreamstats-fircount",
-            "description": "The definition of 'RTCInboundRtpStreamStats.firCount' in the 'Identifiers for WebRTC's Statistics API' specification."
+            "description": "RTCInboundRtpStreamStats.firCount - Identifiers for WebRTC's Statistics API"
         }
     ]
 }

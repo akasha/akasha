@@ -8,7 +8,7 @@
         {
             "name": "WebRTC 1.0: Real-time Communication Between Browsers",
             "href": "https://w3c.github.io/webrtc-pc/#event-icecandidateerror",
-            "description": "The definition of 'icecandidateerror' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification."
+            "description": "icecandidateerror - WebRTC 1.0: Real-time Communication Between Browsers"
         }
     ],
     "eventName": "icecandidateerror",

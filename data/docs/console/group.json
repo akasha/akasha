@@ -8,7 +8,7 @@
         {
             "name": "Console API",
             "href": "https://console.spec.whatwg.org/#group",
-            "description": "The definition of 'console.group()' in the 'Console API' specification."
+            "description": "console.group() - Console API"
         }
     ]
 }

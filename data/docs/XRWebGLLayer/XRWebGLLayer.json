@@ -8,7 +8,7 @@
         {
             "name": "WebXR Device API",
             "href": "https://immersive-web.github.io/webxr/#dom-xrwebgllayer-xrwebgllayer",
-            "description": "The definition of 'XRWebGLLayer()' in the 'WebXR Device API' specification."
+            "description": "XRWebGLLayer() - WebXR Device API"
         }
     ]
 }

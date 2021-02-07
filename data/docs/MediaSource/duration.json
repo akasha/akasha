@@ -8,7 +8,7 @@
         {
             "name": "Media Source Extensions",
             "href": "https://w3c.github.io/media-source/#idl-def-mediasource-duration",
-            "description": "The definition of 'duration' in the 'Media Source Extensions' specification."
+            "description": "duration - Media Source Extensions"
         }
     ]
 }

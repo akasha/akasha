@@ -8,7 +8,7 @@
         {
             "name": "Service Workers",
             "href": "https://w3c.github.io/ServiceWorker/#service-worker-url",
-            "description": "The definition of 'scriptURL' in the 'Service Workers' specification."
+            "description": "scriptURL - Service Workers"
         }
     ]
 }

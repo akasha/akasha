@@ -8,7 +8,7 @@
         {
             "name": "Service Workers",
             "href": "https://w3c.github.io/ServiceWorker/#dom-serviceworkerglobalscope-onmessage",
-            "description": "The definition of 'ServiceWorkerContainer: onmessage' in the 'Service Workers' specification."
+            "description": "ServiceWorkerContainer: onmessage - Service Workers"
         }
     ]
 }

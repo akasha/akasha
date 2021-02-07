@@ -8,7 +8,7 @@
         {
             "name": "CSS Transitions",
             "href": "https://drafts.csswg.org/css-transitions/#transitionstart",
-            "description": "The definition of 'transitionstart' in the 'CSS Transitions' specification."
+            "description": "transitionstart - CSS Transitions"
         }
     ],
     "eventName": "transitionstart",

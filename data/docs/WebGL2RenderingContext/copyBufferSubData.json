@@ -8,12 +8,12 @@
         {
             "name": "WebGL 2.0",
             "href": "https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.3",
-            "description": "The definition of 'copyBufferSubData' in the 'WebGL 2.0' specification."
+            "description": "copyBufferSubData - WebGL 2.0"
         },
         {
             "name": "OpenGL ES 3.0",
             "href": "https://www.khronos.org/opengles/sdk/docs/man3/html/glCopyBufferSubData.xhtml",
-            "description": "The definition of 'glCopyBufferSubData' in the 'OpenGL ES 3.0' specification."
+            "description": "glCopyBufferSubData - OpenGL ES 3.0"
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "Web Audio API",
             "href": "https://webaudio.github.io/web-audio-api/#ConvolverNode",
-            "description": "The definition of 'ConvolverNode' in the 'Web Audio API' specification."
+            "description": "ConvolverNode - Web Audio API"
         }
     ]
 }

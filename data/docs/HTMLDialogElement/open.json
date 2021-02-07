@@ -8,12 +8,12 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/forms.html#dom-dialog-open",
-            "description": "The definition of 'open' in the 'HTML Living Standard' specification."
+            "description": "open - HTML Living Standard"
         },
         {
             "name": "HTML 5.1",
             "href": "https://www.w3.org/TR/html51/interactive-elements.html#dom-htmldialogelement-open",
-            "description": "The definition of 'open' in the 'HTML 5.1' specification."
+            "description": "open - HTML 5.1"
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "Web Audio API",
             "href": "https://webaudio.github.io/web-audio-api/#dom-analysernode-mindecibels",
-            "description": "The definition of 'minDecibels' in the 'Web Audio API' specification."
+            "description": "minDecibels - Web Audio API"
         }
     ]
 }

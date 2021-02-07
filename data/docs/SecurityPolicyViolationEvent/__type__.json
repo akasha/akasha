@@ -8,12 +8,12 @@
         {
             "name": "Content Security Policy Level 2",
             "href": "https://w3c.github.io/webappsec-csp/2/#firing-securitypolicyviolationevent-events",
-            "description": "The definition of 'SecurityPolicyViolationEvent' in the 'Content Security Policy Level 2' specification."
+            "description": "SecurityPolicyViolationEvent - Content Security Policy Level 2"
         },
         {
             "name": "Content Security Policy Level 3",
             "href": "https://w3c.github.io/webappsec-csp/#report-violation",
-            "description": "The definition of 'SecurityPolicyViolationEvent' in the 'Content Security Policy Level 3' specification."
+            "description": "SecurityPolicyViolationEvent - Content Security Policy Level 3"
         }
     ]
 }

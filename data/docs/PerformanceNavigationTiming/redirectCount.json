@@ -8,7 +8,7 @@
         {
             "name": "Navigation Timing Level 2",
             "href": "https://w3c.github.io/navigation-timing/#dom-performancenavigationtiming-redirectcount",
-            "description": "The definition of 'redirectCount' in the 'Navigation Timing Level 2' specification."
+            "description": "redirectCount - Navigation Timing Level 2"
         }
     ]
 }

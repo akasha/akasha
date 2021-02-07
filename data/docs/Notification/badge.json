@@ -8,7 +8,7 @@
         {
             "name": "Notifications API",
             "href": "https://notifications.spec.whatwg.org/#dom-notification-badge",
-            "description": "The definition of 'badge' in the 'Notifications API' specification."
+            "description": "badge - Notifications API"
         }
     ]
 }

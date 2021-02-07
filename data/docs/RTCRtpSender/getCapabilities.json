@@ -8,7 +8,7 @@
         {
             "name": "WebRTC 1.0: Real-time Communication Between Browsers",
             "href": "https://w3c.github.io/webrtc-pc/#dom-rtcrtpsender-getcapabilities",
-            "description": "The definition of 'RTCRtpSender.getCapabilities()' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification."
+            "description": "RTCRtpSender.getCapabilities() - WebRTC 1.0: Real-time Communication Between Browsers"
         }
     ]
 }

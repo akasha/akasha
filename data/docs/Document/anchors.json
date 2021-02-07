@@ -8,12 +8,12 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/#dom-document-anchors",
-            "description": "The definition of 'Document.anchors' in the 'HTML Living Standard' specification."
+            "description": "Document.anchors - HTML Living Standard"
         },
         {
             "name": "Document Object Model (DOM) Level 2 HTML Specification",
             "href": "https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-7577272",
-            "description": "The definition of 'Document.anchors' in the 'Document Object Model (DOM) Level 2 HTML Specification' specification."
+            "description": "Document.anchors - Document Object Model (DOM) Level 2 HTML Specification"
         }
     ]
 }

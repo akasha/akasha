@@ -8,7 +8,7 @@
         {
             "name": "WebRTC 1.0: Real-time Communication Between Browsers",
             "href": "https://w3c.github.io/webrtc-pc/#dom-rtcrtpencodingparameters-maxbitrate",
-            "description": "The definition of 'RTCRtpEncodingParameters.maxBitrate' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification."
+            "description": "RTCRtpEncodingParameters.maxBitrate - WebRTC 1.0: Real-time Communication Between Browsers"
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "Web Audio API",
             "href": "https://webaudio.github.io/web-audio-api/#AudioDestinationNode",
-            "description": "The definition of 'AudioDestinationNode' in the 'Web Audio API' specification."
+            "description": "AudioDestinationNode - Web Audio API"
         }
     ]
 }

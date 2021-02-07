@@ -8,7 +8,7 @@
         {
             "name": "ECMAScript (ECMA-262)",
             "href": "https://tc39.es/ecma262/#sec-get-arraybuffer.prototype.bytelength",
-            "description": "The definition of 'ArrayBuffer.prototype.byteLength' in the 'ECMAScript (ECMA-262)' specification."
+            "description": "ArrayBuffer.prototype.byteLength - ECMAScript (ECMA-262)"
         }
     ]
 }

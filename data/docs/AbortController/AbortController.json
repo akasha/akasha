@@ -8,7 +8,7 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#dom-abortcontroller-abortcontroller",
-            "description": "The definition of 'AbortController()' in the 'DOM' specification."
+            "description": "AbortController() - DOM"
         }
     ]
 }

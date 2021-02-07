@@ -8,7 +8,7 @@
         {
             "name": "Fullscreen API",
             "href": "https://fullscreen.spec.whatwg.org/#dictdef-fullscreenoptions",
-            "description": "The definition of 'FullscreenOptions' in the 'Fullscreen API' specification."
+            "description": "FullscreenOptions - Fullscreen API"
         }
     ]
 }

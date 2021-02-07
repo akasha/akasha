@@ -8,7 +8,7 @@
         {
             "name": "Web Audio API",
             "href": "https://webaudio.github.io/web-audio-api/#dom-mediastreamaudiosourcenode-mediastream",
-            "description": "The definition of 'MediaStreamAudioSourceNode.mediaStream' in the 'Web Audio API' specification."
+            "description": "MediaStreamAudioSourceNode.mediaStream - Web Audio API"
         }
     ]
 }

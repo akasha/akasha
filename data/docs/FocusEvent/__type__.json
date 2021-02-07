@@ -8,12 +8,12 @@
         {
             "name": "UI Events",
             "href": "https://w3c.github.io/uievents/#interface-focusevent",
-            "description": "The definition of 'FocusEvent' in the 'UI Events' specification."
+            "description": "FocusEvent - UI Events"
         },
         {
             "name": "Document Object Model (DOM) Level 3 Events Specification",
             "href": "https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#interface-focusevent",
-            "description": "The definition of 'FocusEvent' in the 'Document Object Model (DOM) Level 3 Events Specification' specification."
+            "description": "FocusEvent - Document Object Model (DOM) Level 3 Events Specification"
         }
     ]
 }

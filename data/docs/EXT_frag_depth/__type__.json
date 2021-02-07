@@ -8,7 +8,7 @@
         {
             "name": "EXT_frag_depth",
             "href": "https://www.khronos.org/registry/webgl/extensions/EXT_frag_depth/",
-            "description": "The definition of 'EXT_frag_depth' in the 'EXT_frag_depth' specification."
+            "description": "EXT_frag_depth - EXT_frag_depth"
         }
     ]
 }

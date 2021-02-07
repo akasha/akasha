@@ -8,12 +8,12 @@
         {
             "name": "Identifiers for WebRTC's Statistics API",
             "href": "https://w3c.github.io/webrtc-stats/#dom-rtcinboundrtpstreamstats-nackcount",
-            "description": "The definition of 'RTCInboundRtpStreamStats: nackCount' in the 'Identifiers for WebRTC's Statistics API' specification."
+            "description": "RTCInboundRtpStreamStats: nackCount - Identifiers for WebRTC's Statistics API"
         },
         {
             "name": "Identifiers for WebRTC's Statistics API",
             "href": "https://w3c.github.io/webrtc-stats/#dom-rtcoutboundrtpstreamstats-nackcount",
-            "description": "The definition of 'RTCOutboundRtpStreamStats: nackCount' in the 'Identifiers for WebRTC's Statistics API' specification."
+            "description": "RTCOutboundRtpStreamStats: nackCount - Identifiers for WebRTC's Statistics API"
         }
     ]
 }

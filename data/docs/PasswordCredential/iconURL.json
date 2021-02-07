@@ -8,7 +8,7 @@
         {
             "name": "Credential Management Level 1",
             "href": "https://w3c.github.io/webappsec-credential-management/#dom-credentialuserdata-iconurl",
-            "description": "The definition of 'iconURL' in the 'Credential Management Level 1' specification."
+            "description": "iconURL - Credential Management Level 1"
         }
     ]
 }

@@ -8,12 +8,12 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/#attr-img-name",
-            "description": "The definition of 'HTMLImageElement.name' in the 'HTML Living Standard' specification."
+            "description": "HTMLImageElement.name - HTML Living Standard"
         },
         {
             "name": "HTML 4.01 Specification",
             "href": "https://www.w3.org/TR/html401/struct/objects.html#adef-name-IMG",
-            "description": "The definition of 'HTMLImageElement.name' in the 'HTML 4.01 Specification' specification."
+            "description": "HTMLImageElement.name - HTML 4.01 Specification"
         }
     ]
 }

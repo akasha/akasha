@@ -8,7 +8,7 @@
         {
             "name": "Pointer Events – Level 3",
             "href": "https://w3c.github.io/pointerevents/#dom-pointerevent-getcoalescedevents",
-            "description": "The definition of 'getCoalescedEvents()' in the 'Pointer Events &ndash; Level 3' specification."
+            "description": "getCoalescedEvents() - Pointer Events &ndash; Level 3"
         }
     ]
 }

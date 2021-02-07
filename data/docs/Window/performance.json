@@ -8,7 +8,7 @@
         {
             "name": "High Resolution Time",
             "href": "https://www.w3.org/TR/hr-time-1/#performance",
-            "description": "The definition of 'window.performance' in the 'High Resolution Time' specification."
+            "description": "window.performance - High Resolution Time"
         }
     ]
 }

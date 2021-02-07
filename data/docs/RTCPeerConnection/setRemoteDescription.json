@@ -8,7 +8,7 @@
         {
             "name": "WebRTC 1.0: Real-time Communication Between Browsers",
             "href": "https://w3c.github.io/webrtc-pc/#dom-peerconnection-setremotedescription",
-            "description": "The definition of 'RTCPeerConnection.setRemoteDescription()' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification."
+            "description": "RTCPeerConnection.setRemoteDescription() - WebRTC 1.0: Real-time Communication Between Browsers"
         }
     ]
 }

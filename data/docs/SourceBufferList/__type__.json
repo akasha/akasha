@@ -8,7 +8,7 @@
         {
             "name": "Media Source Extensions",
             "href": "https://w3c.github.io/media-source/#sourcebufferlist",
-            "description": "The definition of 'SourceBufferList' in the 'Media Source Extensions' specification."
+            "description": "SourceBufferList - Media Source Extensions"
         }
     ]
 }

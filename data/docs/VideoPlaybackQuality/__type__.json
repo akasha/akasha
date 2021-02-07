@@ -8,7 +8,7 @@
         {
             "name": "Media Playback Quality",
             "href": "https://w3c.github.io/media-playback-quality/#idl-def-videoplaybackquality",
-            "description": "The definition of 'VideoPlaybackQuality' in the 'Media Playback Quality' specification."
+            "description": "VideoPlaybackQuality - Media Playback Quality"
         }
     ]
 }

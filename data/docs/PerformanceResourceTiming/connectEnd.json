@@ -8,7 +8,7 @@
         {
             "name": "Resource Timing Level 1",
             "href": "https://www.w3.org/TR/resource-timing-1/#dom-performanceresourcetiming-connectend",
-            "description": "The definition of 'connectEnd' in the 'Resource Timing Level 1' specification."
+            "description": "connectEnd - Resource Timing Level 1"
         }
     ]
 }

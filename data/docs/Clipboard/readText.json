@@ -8,7 +8,7 @@
         {
             "name": "Clipboard API and events",
             "href": "https://w3c.github.io/clipboard-apis/#dom-clipboard-readtext",
-            "description": "The definition of 'readText()' in the 'Clipboard API and events' specification."
+            "description": "readText() - Clipboard API and events"
         }
     ]
 }

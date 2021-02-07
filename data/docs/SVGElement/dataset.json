@@ -8,17 +8,17 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/dom.html#dom-dataset",
-            "description": "The definition of 'HTMLElement.dataset' in the 'HTML Living Standard' specification."
+            "description": "HTMLElement.dataset - HTML Living Standard"
         },
         {
             "name": "HTML 5.1",
             "href": "https://www.w3.org/TR/html51/dom.html#dom-dataset",
-            "description": "The definition of 'HTMLElement.dataset' in the 'HTML 5.1' specification."
+            "description": "HTMLElement.dataset - HTML 5.1"
         },
         {
             "name": "HTML5",
             "href": "https://www.w3.org/TR/html52/dom.html#dom-dataset",
-            "description": "The definition of 'HTMLElement.dataset' in the 'HTML5' specification."
+            "description": "HTMLElement.dataset - HTML5"
         }
     ]
 }

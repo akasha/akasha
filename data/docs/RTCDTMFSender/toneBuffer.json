@@ -8,7 +8,7 @@
         {
             "name": "WebRTC 1.0: Real-time Communication Between Browsers",
             "href": "https://w3c.github.io/webrtc-pc/#dom-RTCDTMFSender-tonebuffer",
-            "description": "The definition of 'RTCDTMFSender.toneBuffer' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification."
+            "description": "RTCDTMFSender.toneBuffer - WebRTC 1.0: Real-time Communication Between Browsers"
         }
     ]
 }

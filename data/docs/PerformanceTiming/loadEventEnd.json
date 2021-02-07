@@ -8,7 +8,7 @@
         {
             "name": "Navigation Timing",
             "href": "https://www.w3.org/TR/navigation-timing/#dom-performancetiming-loadedeventend",
-            "description": "The definition of 'PerformanceTiming.loadEventEnd' in the 'Navigation Timing' specification."
+            "description": "PerformanceTiming.loadEventEnd - Navigation Timing"
         }
     ]
 }

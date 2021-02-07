@@ -8,27 +8,27 @@
         {
             "name": "WebGL 1.0",
             "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3",
-            "description": "The definition of 'pixelStorei' in the 'WebGL 1.0' specification."
+            "description": "pixelStorei - WebGL 1.0"
         },
         {
             "name": "WebGL 1.0",
             "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#PIXEL_STORAGE_PARAMETERS",
-            "description": "The definition of 'Pixel Storage Parameters' in the 'WebGL 1.0' specification."
+            "description": "Pixel Storage Parameters - WebGL 1.0"
         },
         {
             "name": "OpenGL ES 2.0",
             "href": "https://www.khronos.org/opengles/sdk/docs/man/xhtml/glPixelStorei.xml",
-            "description": "The definition of 'glPixelStorei' in the 'OpenGL ES 2.0' specification."
+            "description": "glPixelStorei - OpenGL ES 2.0"
         },
         {
             "name": "WebGL 2.0",
             "href": "https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.2",
-            "description": "The definition of 'pixelStorei' in the 'WebGL 2.0' specification."
+            "description": "pixelStorei - WebGL 2.0"
         },
         {
             "name": "OpenGL ES 3.0",
             "href": "https://www.khronos.org/opengles/sdk/docs/man3/html/glPixelStorei.xhtml",
-            "description": "The definition of 'glPixelStorei' in the 'OpenGL ES 3.0' specification."
+            "description": "glPixelStorei - OpenGL ES 3.0"
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "Web Speech API",
             "href": "https://wicg.github.io/speech-api/#dom-speechsynthesisutterance-pitch",
-            "description": "The definition of 'pitch' in the 'Web Speech API' specification."
+            "description": "pitch - Web Speech API"
         }
     ]
 }

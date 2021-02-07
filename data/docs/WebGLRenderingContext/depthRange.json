@@ -8,12 +8,12 @@
         {
             "name": "WebGL 1.0",
             "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3",
-            "description": "The definition of 'depthRange' in the 'WebGL 1.0' specification."
+            "description": "depthRange - WebGL 1.0"
         },
         {
             "name": "OpenGL ES 2.0",
             "href": "https://www.khronos.org/opengles/sdk/docs/man/xhtml/glDepthRangef.xml",
-            "description": "The definition of 'glDepthRangef' in the 'OpenGL ES 2.0' specification."
+            "description": "glDepthRangef - OpenGL ES 2.0"
         }
     ]
 }

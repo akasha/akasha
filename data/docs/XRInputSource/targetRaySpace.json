@@ -8,7 +8,7 @@
         {
             "name": "WebXR Device API",
             "href": "https://immersive-web.github.io/webxr/#dom-xrinputsource-targetrayspace",
-            "description": "The definition of 'XRInputSource.targetRaySpace' in the 'WebXR Device API' specification."
+            "description": "XRInputSource.targetRaySpace - WebXR Device API"
         }
     ]
 }

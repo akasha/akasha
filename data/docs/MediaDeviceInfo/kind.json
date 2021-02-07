@@ -8,7 +8,7 @@
         {
             "name": "Media Capture and Streams",
             "href": "https://w3c.github.io/mediacapture-main/#dom-mediadeviceinfo-kind",
-            "description": "The definition of 'kind' in the 'Media Capture and Streams' specification."
+            "description": "kind - Media Capture and Streams"
         }
     ]
 }

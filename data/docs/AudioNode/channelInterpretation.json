@@ -8,7 +8,7 @@
         {
             "name": "Web Audio API",
             "href": "https://webaudio.github.io/web-audio-api/#dom-audionode-channelinterpretation",
-            "description": "The definition of 'channelInterpretation' in the 'Web Audio API' specification."
+            "description": "channelInterpretation - Web Audio API"
         }
     ]
 }

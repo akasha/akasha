@@ -8,7 +8,7 @@
         {
             "name": "WebXR Device API",
             "href": "https://immersive-web.github.io/webxr/#dom-xrrigidtransform-inverse",
-            "description": "The definition of 'XRRigidTransform.inverse' in the 'WebXR Device API' specification."
+            "description": "XRRigidTransform.inverse - WebXR Device API"
         }
     ]
 }

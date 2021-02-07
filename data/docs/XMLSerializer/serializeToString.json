@@ -8,7 +8,7 @@
         {
             "name": "DOM Parsing and Serialization",
             "href": "https://w3c.github.io/DOM-Parsing/#dom-xmlserializer-serializetostring",
-            "description": "The definition of 'serializeToString()' in the 'DOM Parsing and Serialization' specification."
+            "description": "serializeToString() - DOM Parsing and Serialization"
         }
     ]
 }

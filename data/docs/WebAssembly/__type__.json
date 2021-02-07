@@ -8,7 +8,7 @@
         {
             "name": "WebAssembly JavaScript Interface",
             "href": "https://webassembly.github.io/spec/js-api/#webassembly-namespace",
-            "description": "The definition of 'WebAssembly' in the 'WebAssembly JavaScript Interface' specification."
+            "description": "WebAssembly - WebAssembly JavaScript Interface"
         }
     ]
 }

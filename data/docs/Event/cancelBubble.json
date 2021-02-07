@@ -8,7 +8,7 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#dom-event-cancelbubble",
-            "description": "The definition of 'cancelBubble' in the 'DOM' specification."
+            "description": "cancelBubble - DOM"
         }
     ]
 }

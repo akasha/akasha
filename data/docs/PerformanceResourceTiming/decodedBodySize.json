@@ -8,7 +8,7 @@
         {
             "name": "Resource Timing Level 2",
             "href": "https://www.w3.org/TR/resource-timing-2/#dom-performanceresourcetiming-decodedbodysize",
-            "description": "The definition of 'decodedBodySize' in the 'Resource Timing Level 2' specification."
+            "description": "decodedBodySize - Resource Timing Level 2"
         }
     ]
 }

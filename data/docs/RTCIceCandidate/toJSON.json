@@ -8,7 +8,7 @@
         {
             "name": "WebRTC 1.0: Real-time Communication Between Browsers",
             "href": "https://w3c.github.io/webrtc-pc/#dom-rtcicecandidate-tojson",
-            "description": "The definition of 'RTCIceCandidate.toJSON()' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification."
+            "description": "RTCIceCandidate.toJSON() - WebRTC 1.0: Real-time Communication Between Browsers"
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "Notifications API",
             "href": "https://notifications.spec.whatwg.org/#dom-notification-onerror",
-            "description": "The definition of 'onerror' in the 'Notifications API' specification."
+            "description": "onerror - Notifications API"
         }
     ]
 }

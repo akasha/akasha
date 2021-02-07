@@ -8,7 +8,7 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#dom-node-nodename",
-            "description": "The definition of 'nodeName' in the 'DOM' specification."
+            "description": "nodeName - DOM"
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "URL",
             "href": "https://url.spec.whatwg.org/#dom-urlsearchparams-delete",
-            "description": "The definition of 'delete()' in the 'URL' specification."
+            "description": "delete() - URL"
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "WebXR Device API",
             "href": "https://immersive-web.github.io/webxr/#dom-xrsystem-issessionsupported",
-            "description": "The definition of 'isSessionSupported()' in the 'WebXR Device API' specification."
+            "description": "isSessionSupported() - WebXR Device API"
         }
     ]
 }

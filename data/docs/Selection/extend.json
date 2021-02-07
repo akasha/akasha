@@ -8,7 +8,7 @@
         {
             "name": "Selection API",
             "href": "https://w3c.github.io/selection-api/#dom-selection-extend",
-            "description": "The definition of 'Selection.extend()' in the 'Selection API' specification."
+            "description": "Selection.extend() - Selection API"
         }
     ]
 }

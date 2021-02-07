@@ -8,7 +8,7 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/#the-datatransferitemlist-interface",
-            "description": "The definition of 'DataTransferItem getter' in the 'HTML Living Standard' specification."
+            "description": "DataTransferItem getter - HTML Living Standard"
         }
     ]
 }

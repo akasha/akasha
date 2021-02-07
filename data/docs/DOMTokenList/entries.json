@@ -8,7 +8,7 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#domtokenlist",
-            "description": "The definition of 'entries() (as iterable&lt;Node&gt;)' in the 'DOM' specification."
+            "description": "entries() (as iterable&lt;Node&gt;) - DOM"
         }
     ]
 }

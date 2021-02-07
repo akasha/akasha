@@ -8,7 +8,7 @@
         {
             "name": "Web Speech API",
             "href": "https://wicg.github.io/speech-api/#dom-speechrecognition-onsoundstart",
-            "description": "The definition of 'onsoundstart' in the 'Web Speech API' specification."
+            "description": "onsoundstart - Web Speech API"
         }
     ]
 }

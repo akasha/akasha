@@ -8,7 +8,7 @@
         {
             "name": "Media Capture and Streams",
             "href": "https://w3c.github.io/mediacapture-main/#dom-ulongrange",
-            "description": "The definition of 'ULongRange' in the 'Media Capture and Streams' specification."
+            "description": "ULongRange - Media Capture and Streams"
         }
     ]
 }

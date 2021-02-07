@@ -8,7 +8,7 @@
         {
             "name": "CSS Transitions",
             "href": "https://drafts.csswg.org/css-transitions/#transitioncancel",
-            "description": "The definition of 'transitioncancel' in the 'CSS Transitions' specification."
+            "description": "transitioncancel - CSS Transitions"
         }
     ],
     "eventName": "transitioncancel",

@@ -8,7 +8,7 @@
         {
             "name": "Web Animations",
             "href": "https://drafts.csswg.org/web-animations-1/#dom-keyframeeffect-setkeyframes",
-            "description": "The definition of 'KeyframeEffect.setKeyframes()' in the 'Web Animations' specification."
+            "description": "KeyframeEffect.setKeyframes() - Web Animations"
         }
     ]
 }

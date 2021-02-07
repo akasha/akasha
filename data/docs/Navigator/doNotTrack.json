@@ -8,7 +8,7 @@
         {
             "name": "Tracking Preference Expression (DNT)",
             "href": "https://www.w3.org/TR/tracking-dnt/#dom-navigator-donottrack",
-            "description": "The definition of 'Navigator.doNotTrack' in the 'Tracking Preference Expression (DNT)' specification."
+            "description": "Navigator.doNotTrack - Tracking Preference Expression (DNT)"
         }
     ]
 }

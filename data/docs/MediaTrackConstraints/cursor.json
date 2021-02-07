@@ -8,7 +8,7 @@
         {
             "name": "Screen Capture",
             "href": "https://w3c.github.io/mediacapture-screen-share/#dom-mediatrackconstraintset-cursor",
-            "description": "The definition of 'MediaTrackConstraints.cursor' in the 'Screen Capture' specification."
+            "description": "MediaTrackConstraints.cursor - Screen Capture"
         }
     ]
 }

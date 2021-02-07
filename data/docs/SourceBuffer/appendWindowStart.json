@@ -8,7 +8,7 @@
         {
             "name": "Media Source Extensions",
             "href": "https://w3c.github.io/media-source/#idl-def-sourcebuffer-appendwindowstart",
-            "description": "The definition of 'appendWindowStart' in the 'Media Source Extensions' specification."
+            "description": "appendWindowStart - Media Source Extensions"
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "DeviceOrientation Event Specification",
             "href": "https://w3c.github.io/deviceorientation/#dom-devicemotioneventrotationrate-alpha",
-            "description": "The definition of 'DeviceMotionEventRotationRate: alpha' in the 'DeviceOrientation Event Specification' specification."
+            "description": "DeviceMotionEventRotationRate: alpha - DeviceOrientation Event Specification"
         }
     ]
 }

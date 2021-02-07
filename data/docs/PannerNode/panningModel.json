@@ -8,7 +8,7 @@
         {
             "name": "Web Audio API",
             "href": "https://webaudio.github.io/web-audio-api/#dom-pannernode-panningmodel",
-            "description": "The definition of 'panningModel' in the 'Web Audio API' specification."
+            "description": "panningModel - Web Audio API"
         }
     ]
 }

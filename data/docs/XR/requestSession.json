@@ -8,7 +8,7 @@
         {
             "name": "WebXR Device API",
             "href": "https://immersive-web.github.io/webxr/#dom-xrsystem-requestsession",
-            "description": "The definition of 'requestSession()' in the 'WebXR Device API' specification."
+            "description": "requestSession() - WebXR Device API"
         }
     ]
 }

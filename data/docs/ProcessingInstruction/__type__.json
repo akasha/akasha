@@ -8,7 +8,7 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#processinginstruction",
-            "description": "The definition of 'ProcessingInstruction' in the 'DOM' specification."
+            "description": "ProcessingInstruction - DOM"
         },
         {
             "name": "XML specification",

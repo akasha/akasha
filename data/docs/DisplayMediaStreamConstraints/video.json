@@ -8,7 +8,7 @@
         {
             "name": "Screen Capture",
             "href": "https://w3c.github.io/mediacapture-screen-share/#dom-displaymediastreamconstraints-video",
-            "description": "The definition of 'DisplayMediaStreamConstraints.video' in the 'Screen Capture' specification."
+            "description": "DisplayMediaStreamConstraints.video - Screen Capture"
         }
     ]
 }

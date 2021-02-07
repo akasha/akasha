@@ -8,12 +8,12 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/#htmldatalistelement",
-            "description": "The definition of 'HTMLDataListElement' in the 'HTML Living Standard' specification."
+            "description": "HTMLDataListElement - HTML Living Standard"
         },
         {
             "name": "HTML5",
             "href": "https://www.w3.org/TR/html52/forms.html#the-datalist-element",
-            "description": "The definition of 'HTMLDataListElement' in the 'HTML5' specification."
+            "description": "HTMLDataListElement - HTML5"
         }
     ]
 }

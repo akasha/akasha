@@ -8,7 +8,7 @@
         {
             "name": "WebXR Device API",
             "href": "https://immersive-web.github.io/webxr/#dom-xrwebgllayerinit-framebufferscalefactor",
-            "description": "The definition of 'XRWebGLLayerInit.framebufferScaleFactor' in the 'WebXR Device API' specification."
+            "description": "XRWebGLLayerInit.framebufferScaleFactor - WebXR Device API"
         }
     ]
 }

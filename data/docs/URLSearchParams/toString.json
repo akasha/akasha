@@ -8,7 +8,7 @@
         {
             "name": "URL",
             "href": "https://url.spec.whatwg.org/#interface-urlsearchparams",
-            "description": "The definition of 'toString() (see &quot;stringifier&quot;)' in the 'URL' specification."
+            "description": "toString() (see &quot;stringifier&quot;) - URL"
         }
     ]
 }

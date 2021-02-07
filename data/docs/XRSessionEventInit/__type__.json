@@ -8,7 +8,7 @@
         {
             "name": "WebXR Device API",
             "href": "https://immersive-web.github.io/webxr/#dictdef-xrsessioneventinit",
-            "description": "The definition of 'XRSessionEventInit' in the 'WebXR Device API' specification."
+            "description": "XRSessionEventInit - WebXR Device API"
         }
     ]
 }

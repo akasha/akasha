@@ -8,7 +8,7 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#dom-node-isdefaultnamespace",
-            "description": "The definition of 'Node: isDefaultNamespace' in the 'DOM' specification."
+            "description": "Node: isDefaultNamespace - DOM"
         }
     ]
 }

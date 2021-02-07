@@ -8,17 +8,17 @@
         {
             "name": "Pointer Events – Level 3",
             "href": "https://w3c.github.io/pointerevents/#pointerevent-interface",
-            "description": "The definition of 'PointerEvent' in the 'Pointer Events &ndash; Level 3' specification."
+            "description": "PointerEvent - Pointer Events &ndash; Level 3"
         },
         {
             "name": "Pointer Events – Level 2",
             "href": "https://www.w3.org/TR/pointerevents2/#pointerevent-interface",
-            "description": "The definition of 'PointerEvent' in the 'Pointer Events &ndash; Level 2' specification."
+            "description": "PointerEvent - Pointer Events &ndash; Level 2"
         },
         {
             "name": "Pointer Events",
             "href": "https://www.w3.org/TR/pointerevents1/#pointerevent-interface",
-            "description": "The definition of 'PointerEvent' in the 'Pointer Events' specification."
+            "description": "PointerEvent - Pointer Events"
         }
     ]
 }

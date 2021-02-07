@@ -8,12 +8,12 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/interaction.html#dom-datatransfer-types",
-            "description": "The definition of 'types' in the 'HTML Living Standard' specification."
+            "description": "types - HTML Living Standard"
         },
         {
             "name": "HTML 5.1",
             "href": "https://www.w3.org/TR/html51/editing.html#dom-datatransfer-types",
-            "description": "The definition of 'types' in the 'HTML 5.1' specification."
+            "description": "types - HTML 5.1"
         }
     ]
 }

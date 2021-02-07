@@ -8,7 +8,7 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/#handler-workerglobalscope-onerror",
-            "description": "The definition of 'WorkerGlobalScope.onerror' in the 'HTML Living Standard' specification."
+            "description": "WorkerGlobalScope.onerror - HTML Living Standard"
         }
     ]
 }

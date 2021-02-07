@@ -8,7 +8,7 @@
         {
             "name": "ECMAScript (ECMA-262)",
             "href": "https://tc39.es/ecma262/#sec-boolean.prototype.valueof",
-            "description": "The definition of 'Boolean.prototype.valueOf' in the 'ECMAScript (ECMA-262)' specification."
+            "description": "Boolean.prototype.valueOf - ECMAScript (ECMA-262)"
         }
     ]
 }

@@ -8,12 +8,12 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/#dom-video-videoheight",
-            "description": "The definition of 'HTMLVideoElement.videoHeight' in the 'HTML Living Standard' specification."
+            "description": "HTMLVideoElement.videoHeight - HTML Living Standard"
         },
         {
             "name": "HTML5",
             "href": "https://www.w3.org/TR/html52/semantics-embedded-content.html#dom-htmlvideoelement-videoheight",
-            "description": "The definition of 'HTMLVideoElement.videoHeight' in the 'HTML5' specification."
+            "description": "HTMLVideoElement.videoHeight - HTML5"
         }
     ]
 }

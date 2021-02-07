@@ -8,7 +8,7 @@
         {
             "name": "Identifiers for WebRTC's Statistics API",
             "href": "https://w3c.github.io/webrtc-stats/#dom-RTCOutboundRtpStreamStats-lastpacketsenttimestamp",
-            "description": "The definition of 'RTCOutboundRtpStreamStats.lastPacketSentTimestamp' in the 'Identifiers for WebRTC's Statistics API' specification."
+            "description": "RTCOutboundRtpStreamStats.lastPacketSentTimestamp - Identifiers for WebRTC's Statistics API"
         }
     ]
 }

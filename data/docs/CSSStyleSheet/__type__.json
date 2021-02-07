@@ -8,12 +8,12 @@
         {
             "name": "CSS Object Model (CSSOM)",
             "href": "https://drafts.csswg.org/cssom/#cssstylesheet",
-            "description": "The definition of 'CSSStyleSheet' in the 'CSS Object Model (CSSOM)' specification."
+            "description": "CSSStyleSheet - CSS Object Model (CSSOM)"
         },
         {
             "name": "Document Object Model (DOM) Level 2 Style Specification",
             "href": "https://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSStyleSheet",
-            "description": "The definition of 'CSSStyleSheet' in the 'Document Object Model (DOM) Level 2 Style Specification' specification."
+            "description": "CSSStyleSheet - Document Object Model (DOM) Level 2 Style Specification"
         }
     ]
 }

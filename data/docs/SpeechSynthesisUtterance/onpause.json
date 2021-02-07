@@ -8,7 +8,7 @@
         {
             "name": "Web Speech API",
             "href": "https://wicg.github.io/speech-api/#dom-speechsynthesisutterance-onpause",
-            "description": "The definition of 'onpause' in the 'Web Speech API' specification."
+            "description": "onpause - Web Speech API"
         }
     ]
 }

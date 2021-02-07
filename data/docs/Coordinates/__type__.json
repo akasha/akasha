@@ -8,7 +8,7 @@
         {
             "name": "Geolocation API",
             "href": "https://w3c.github.io/geolocation-api/#coordinates_interface",
-            "description": "The definition of 'GeolocationCoordinates' in the 'Geolocation API' specification."
+            "description": "GeolocationCoordinates - Geolocation API"
         }
     ]
 }

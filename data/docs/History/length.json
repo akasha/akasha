@@ -8,12 +8,12 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/history.html#dom-history-length",
-            "description": "The definition of 'History.length' in the 'HTML Living Standard' specification."
+            "description": "History.length - HTML Living Standard"
         },
         {
             "name": "HTML5",
             "href": "https://www.w3.org/TR/html52/browsers.html#dom-history-length",
-            "description": "The definition of 'History.length' in the 'HTML5' specification."
+            "description": "History.length - HTML5"
         }
     ]
 }

@@ -8,12 +8,12 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/forms.html#dom-cva-reportvalidity",
-            "description": "The definition of 'HTMLFormElement.reportValidity()' in the 'HTML Living Standard' specification."
+            "description": "HTMLFormElement.reportValidity() - HTML Living Standard"
         },
         {
             "name": "HTML 5.1",
             "href": "https://www.w3.org/TR/html51/semantics.html#the-constraint-validation-api",
-            "description": "The definition of 'HTMLFormElement.reportValidity()' in the 'HTML 5.1' specification."
+            "description": "HTMLFormElement.reportValidity() - HTML 5.1"
         }
     ]
 }

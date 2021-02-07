@@ -8,7 +8,7 @@
         {
             "name": "CSS Object Model (CSSOM) View Module",
             "href": "https://drafts.csswg.org/cssom-view/#dom-window-screeny",
-            "description": "The definition of 'Window.screenY' in the 'CSS Object Model (CSSOM) View Module' specification."
+            "description": "Window.screenY - CSS Object Model (CSSOM) View Module"
         }
     ]
 }

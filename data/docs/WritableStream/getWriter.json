@@ -8,7 +8,7 @@
         {
             "name": "Streams",
             "href": "https://streams.spec.whatwg.org/#ws-get-writer",
-            "description": "The definition of 'getWriter()' in the 'Streams' specification."
+            "description": "getWriter() - Streams"
         }
     ]
 }

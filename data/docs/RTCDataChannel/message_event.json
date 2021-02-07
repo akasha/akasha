@@ -8,7 +8,7 @@
         {
             "name": "WebRTC 1.0: Real-time Communication Between Browsers",
             "href": "https://w3c.github.io/webrtc-pc/#event-datachannel-message",
-            "description": "The definition of 'the &lt;code&gt;message&lt;/code&gt; event' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification."
+            "description": "the &lt;code&gt;message&lt;/code&gt; event - WebRTC 1.0: Real-time Communication Between Browsers"
         }
     ],
     "eventName": "message",

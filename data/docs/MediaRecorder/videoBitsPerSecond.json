@@ -8,7 +8,7 @@
         {
             "name": "MediaStream Recording",
             "href": "https://w3c.github.io/mediacapture-record/#dom-mediarecorder-videobitspersecond",
-            "description": "The definition of 'videoBitsPerSecond' in the 'MediaStream Recording' specification."
+            "description": "videoBitsPerSecond - MediaStream Recording"
         }
     ]
 }

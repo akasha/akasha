@@ -8,7 +8,7 @@
         {
             "name": "Screen Capture",
             "href": "https://w3c.github.io/mediacapture-screen-share/#dom-displaymediastreamconstraints-audio",
-            "description": "The definition of 'DisplayMediaStreamConstraints.audio' in the 'Screen Capture' specification."
+            "description": "DisplayMediaStreamConstraints.audio - Screen Capture"
         }
     ]
 }

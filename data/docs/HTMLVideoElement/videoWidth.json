@@ -8,12 +8,12 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/#dom-video-videowidth",
-            "description": "The definition of 'HTMLVideoElement.videoWidth' in the 'HTML Living Standard' specification."
+            "description": "HTMLVideoElement.videoWidth - HTML Living Standard"
         },
         {
             "name": "HTML5",
             "href": "https://www.w3.org/TR/html52/semantics-embedded-content.html#dom-htmlvideoelement-videowidth",
-            "description": "The definition of 'HTMLVideoElement.videoWidth' in the 'HTML5' specification."
+            "description": "HTMLVideoElement.videoWidth - HTML5"
         }
     ]
 }

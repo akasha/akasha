@@ -8,7 +8,7 @@
         {
             "name": "UI Events",
             "href": "https://w3c.github.io/uievents/#interface-keyboardevent",
-            "description": "The definition of 'KeyboardEvent' in the 'UI Events' specification."
+            "description": "KeyboardEvent - UI Events"
         }
     ]
 }

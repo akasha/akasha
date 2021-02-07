@@ -8,7 +8,7 @@
         {
             "name": "Encoding",
             "href": "https://encoding.spec.whatwg.org/#dom-textencoder-encodeinto",
-            "description": "The definition of 'TextEncoder.encode()' in the 'Encoding' specification."
+            "description": "TextEncoder.encode() - Encoding"
         }
     ]
 }

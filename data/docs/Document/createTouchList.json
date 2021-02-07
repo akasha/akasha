@@ -8,7 +8,7 @@
         {
             "name": "Touch Events",
             "href": "https://www.w3.org/TR/touch-events/#widl-Document-createTouchList-TouchList-Touch-touches",
-            "description": "The definition of 'Document.createTouchList()' in the 'Touch Events' specification."
+            "description": "Document.createTouchList() - Touch Events"
         }
     ]
 }

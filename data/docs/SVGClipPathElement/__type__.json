@@ -8,12 +8,12 @@
         {
             "name": "CSS Masking Module Level 1",
             "href": "https://drafts.fxtf.org/css-masking-1/#InterfaceSVGClipPathElement",
-            "description": "The definition of 'SVGClipPathElement' in the 'CSS Masking Module Level 1' specification."
+            "description": "SVGClipPathElement - CSS Masking Module Level 1"
         },
         {
             "name": "Scalable Vector Graphics (SVG) 1.1 (Second Edition)",
             "href": "https://www.w3.org/TR/SVG11/masking.html#InterfaceSVGClipPathElement",
-            "description": "The definition of 'SVGClipPathElement' in the 'Scalable Vector Graphics (SVG) 1.1 (Second Edition)' specification."
+            "description": "SVGClipPathElement - Scalable Vector Graphics (SVG) 1.1 (Second Edition)"
         }
     ]
 }

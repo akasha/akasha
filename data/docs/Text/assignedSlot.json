@@ -8,7 +8,7 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#dom-slotable-assignedslot",
-            "description": "The definition of 'assignedSlot' in the 'DOM' specification."
+            "description": "assignedSlot - DOM"
         }
     ]
 }

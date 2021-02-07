@@ -8,12 +8,12 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/browsers.html#dom-frames",
-            "description": "The definition of 'Window.frames' in the 'HTML Living Standard' specification."
+            "description": "Window.frames - HTML Living Standard"
         },
         {
             "name": "HTML5",
             "href": "https://www.w3.org/TR/html52/browsers.html#dom-frames",
-            "description": "The definition of 'Window.frames' in the 'HTML5' specification."
+            "description": "Window.frames - HTML5"
         }
     ]
 }

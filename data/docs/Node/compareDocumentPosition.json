@@ -8,12 +8,12 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#dom-node-comparedocumentposition",
-            "description": "The definition of 'Node.compareDocumentPosition()' in the 'DOM' specification."
+            "description": "Node.compareDocumentPosition() - DOM"
         },
         {
             "name": "Document Object Model (DOM) Level 3 Core Specification",
             "href": "https://www.w3.org/TR/DOM-Level-3-Core/core.html#Node3-compareDocumentPosition",
-            "description": "The definition of 'Node.compareDocumentPosition()' in the 'Document Object Model (DOM) Level 3 Core Specification' specification."
+            "description": "Node.compareDocumentPosition() - Document Object Model (DOM) Level 3 Core Specification"
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "XMLHttpRequest",
             "href": "https://xhr.spec.whatwg.org/#dom-progressevent-loaded",
-            "description": "The definition of 'ProgressEvent.loaded' in the 'XMLHttpRequest' specification."
+            "description": "ProgressEvent.loaded - XMLHttpRequest"
         }
     ]
 }

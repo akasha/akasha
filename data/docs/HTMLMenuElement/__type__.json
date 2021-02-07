@@ -8,17 +8,17 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/grouping-content.html#htmlmenuelement",
-            "description": "The definition of 'HTMLMenuElement' in the 'HTML Living Standard' specification."
+            "description": "HTMLMenuElement - HTML Living Standard"
         },
         {
             "name": "HTML 5.2",
             "href": "https://www.w3.org/TR/html52/grouping-content.html#htmlmenuelement",
-            "description": "The definition of 'HTMLMenuElement' in the 'HTML 5.2' specification."
+            "description": "HTMLMenuElement - HTML 5.2"
         },
         {
             "name": "HTML 5.1",
             "href": "https://www.w3.org/TR/html51/interactive-elements.html#htmlmenuelement-htmlmenuelement",
-            "description": "The definition of 'HTMLMenuElement' in the 'HTML 5.1' specification."
+            "description": "HTMLMenuElement - HTML 5.1"
         }
     ]
 }

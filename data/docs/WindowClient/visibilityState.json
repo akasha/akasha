@@ -8,7 +8,7 @@
         {
             "name": "Service Workers",
             "href": "https://w3c.github.io/ServiceWorker/#dom-windowclient-visibilitystate",
-            "description": "The definition of 'visibilityState' in the 'Service Workers' specification."
+            "description": "visibilityState - Service Workers"
         }
     ]
 }

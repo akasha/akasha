@@ -8,7 +8,7 @@
         {
             "name": "Push API",
             "href": "https://w3c.github.io/push-api/#dom-pushsubscription-unsubscribe",
-            "description": "The definition of 'unsubscribe()' in the 'Push API' specification."
+            "description": "unsubscribe() - Push API"
         }
     ]
 }

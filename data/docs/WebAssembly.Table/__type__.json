@@ -8,7 +8,7 @@
         {
             "name": "WebAssembly JavaScript Interface",
             "href": "https://webassembly.github.io/spec/js-api/#tables",
-            "description": "The definition of 'Table' in the 'WebAssembly JavaScript Interface' specification."
+            "description": "Table - WebAssembly JavaScript Interface"
         }
     ]
 }

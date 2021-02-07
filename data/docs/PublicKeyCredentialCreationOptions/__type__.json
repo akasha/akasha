@@ -8,7 +8,7 @@
         {
             "name": "Web Authentication: An API for accessing Public Key Credentials Level 1",
             "href": "https://w3c.github.io/webauthn/#dictdef-publickeycredentialcreationoptions",
-            "description": "The definition of 'PublicKeyCredentialCreationOptions dictionary' in the 'Web Authentication: An API for accessing Public Key Credentials Level 1' specification."
+            "description": "PublicKeyCredentialCreationOptions dictionary - Web Authentication: An API for accessing Public Key Credentials Level 1"
         }
     ]
 }

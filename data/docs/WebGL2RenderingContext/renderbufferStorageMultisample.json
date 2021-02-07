@@ -8,12 +8,12 @@
         {
             "name": "WebGL 2.0",
             "href": "https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.5",
-            "description": "The definition of 'glRenderbufferStorageMultisample' in the 'WebGL 2.0' specification."
+            "description": "glRenderbufferStorageMultisample - WebGL 2.0"
         },
         {
             "name": "OpenGL ES 3.0",
             "href": "https://www.khronos.org/opengles/sdk/docs/man3/html/glRenderbufferStorageMultisample.xhtml",
-            "description": "The definition of 'glRenderbufferStorageMultisample' in the 'OpenGL ES 3.0' specification."
+            "description": "glRenderbufferStorageMultisample - OpenGL ES 3.0"
         }
     ]
 }

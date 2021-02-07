@@ -8,7 +8,7 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/webappapis.html#dom-navigator-cookieenabled",
-            "description": "The definition of 'Navigator.cookieEnabled' in the 'HTML Living Standard' specification."
+            "description": "Navigator.cookieEnabled - HTML Living Standard"
         }
     ]
 }

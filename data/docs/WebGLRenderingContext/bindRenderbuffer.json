@@ -8,12 +8,12 @@
         {
             "name": "WebGL 1.0",
             "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.7",
-            "description": "The definition of 'bindRenderbuffer' in the 'WebGL 1.0' specification."
+            "description": "bindRenderbuffer - WebGL 1.0"
         },
         {
             "name": "OpenGL ES 2.0",
             "href": "https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBindRenderbuffer.xml",
-            "description": "The definition of 'glBindRenderbuffer' in the 'OpenGL ES 2.0' specification."
+            "description": "glBindRenderbuffer - OpenGL ES 2.0"
         }
     ]
 }

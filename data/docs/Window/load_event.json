@@ -8,12 +8,12 @@
         {
             "name": "UI Events",
             "href": "https://w3c.github.io/uievents/#event-type-load",
-            "description": "The definition of 'load' in the 'UI Events' specification."
+            "description": "load - UI Events"
         },
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/#delay-the-load-event",
-            "description": "The definition of 'load event' in the 'HTML Living Standard' specification."
+            "description": "load event - HTML Living Standard"
         }
     ],
     "eventName": "load",

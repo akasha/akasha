@@ -8,7 +8,7 @@
         {
             "name": "Resource Timing Level 2",
             "href": "https://www.w3.org/TR/resource-timing-2/#dom-performanceresourcetiming-transfersize",
-            "description": "The definition of 'transferSize' in the 'Resource Timing Level 2' specification."
+            "description": "transferSize - Resource Timing Level 2"
         }
     ]
 }

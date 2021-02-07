@@ -8,7 +8,7 @@
         {
             "name": "Media Source Extensions",
             "href": "https://w3c.github.io/media-source/#idl-def-sourcebuffer-texttracks",
-            "description": "The definition of 'textTracks' in the 'Media Source Extensions' specification."
+            "description": "textTracks - Media Source Extensions"
         }
     ]
 }

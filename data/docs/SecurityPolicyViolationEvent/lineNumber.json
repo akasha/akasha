@@ -8,7 +8,7 @@
         {
             "name": "Content Security Policy Level 3",
             "href": "https://w3c.github.io/webappsec-csp/#dom-securitypolicyviolationevent-linenumber",
-            "description": "The definition of 'lineNumber' in the 'Content Security Policy Level 3' specification."
+            "description": "lineNumber - Content Security Policy Level 3"
         }
     ]
 }

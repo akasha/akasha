@@ -8,12 +8,12 @@
         {
             "name": "WebGL 2.0",
             "href": "https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.13",
-            "description": "The definition of 'deleteSampler' in the 'WebGL 2.0' specification."
+            "description": "deleteSampler - WebGL 2.0"
         },
         {
             "name": "OpenGL ES 3.0",
             "href": "https://www.khronos.org/opengles/sdk/docs/man3/html/glDeleteSamplers.xhtml",
-            "description": "The definition of 'glDeleteSamplers' in the 'OpenGL ES 3.0' specification."
+            "description": "glDeleteSamplers - OpenGL ES 3.0"
         }
     ]
 }

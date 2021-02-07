@@ -8,12 +8,12 @@
         {
             "name": "WebGL 1.0",
             "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9",
-            "description": "The definition of 'isShader' in the 'WebGL 1.0' specification."
+            "description": "isShader - WebGL 1.0"
         },
         {
             "name": "OpenGL ES 2.0",
             "href": "https://www.khronos.org/opengles/sdk/docs/man/xhtml/glIsShader.xml",
-            "description": "The definition of 'glIsShader' in the 'OpenGL ES 2.0' specification."
+            "description": "glIsShader - OpenGL ES 2.0"
         }
     ]
 }

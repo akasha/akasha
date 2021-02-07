@@ -8,7 +8,7 @@
         {
             "name": "Shadow Parts",
             "href": "https://drafts.csswg.org/css-shadow-parts-1/#idl",
-            "description": "The definition of 'Element.part' in the 'Shadow Parts' specification."
+            "description": "Element.part - Shadow Parts"
         }
     ]
 }

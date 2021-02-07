@@ -8,7 +8,7 @@
         {
             "name": "CSS Object Model (CSSOM) View Module",
             "href": "https://drafts.csswg.org/cssom-view/#dom-window-screenx",
-            "description": "The definition of 'Window.screenX' in the 'CSS Object Model (CSSOM) View Module' specification."
+            "description": "Window.screenX - CSS Object Model (CSSOM) View Module"
         }
     ]
 }

@@ -8,17 +8,17 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/text-level-semantics.html#dom-time-datetime",
-            "description": "The definition of 'HTMLTimeElement' in the 'HTML Living Standard' specification."
+            "description": "HTMLTimeElement - HTML Living Standard"
         },
         {
             "name": "HTML 5.1",
             "href": "https://www.w3.org/TR/html51/text-level-semantics.html#dom-time-datetime",
-            "description": "The definition of 'HTMLTimeElement' in the 'HTML 5.1' specification."
+            "description": "HTMLTimeElement - HTML 5.1"
         },
         {
             "name": "HTML5",
             "href": "https://www.w3.org/TR/html52/text-level-semantics.html#dom-time-datetime",
-            "description": "The definition of 'HTMLTimeElement' in the 'HTML5' specification."
+            "description": "HTMLTimeElement - HTML5"
         }
     ]
 }

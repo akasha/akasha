@@ -8,7 +8,7 @@
         {
             "name": "Media Source Extensions",
             "href": "https://w3c.github.io/media-source/#dom-mediasource-istypesupported",
-            "description": "The definition of 'isTypeSupported()' in the 'Media Source Extensions' specification."
+            "description": "isTypeSupported() - Media Source Extensions"
         }
     ]
 }

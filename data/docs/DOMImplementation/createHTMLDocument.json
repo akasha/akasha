@@ -8,7 +8,7 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#dom-domimplementation-createhtmldocument",
-            "description": "The definition of 'DOMImplementation.createHTMLDocument' in the 'DOM' specification."
+            "description": "DOMImplementation.createHTMLDocument - DOM"
         }
     ]
 }

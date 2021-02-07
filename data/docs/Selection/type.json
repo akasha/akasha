@@ -8,7 +8,7 @@
         {
             "name": "Selection API",
             "href": "https://w3c.github.io/selection-api/#dom-selection-type",
-            "description": "The definition of 'Selection.type' in the 'Selection API' specification."
+            "description": "Selection.type - Selection API"
         }
     ]
 }

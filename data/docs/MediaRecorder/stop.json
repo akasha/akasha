@@ -8,7 +8,7 @@
         {
             "name": "MediaStream Recording",
             "href": "https://w3c.github.io/mediacapture-record/#dom-mediarecorder-stop",
-            "description": "The definition of 'MediaRecorder.stop()' in the 'MediaStream Recording' specification."
+            "description": "MediaRecorder.stop() - MediaStream Recording"
         }
     ]
 }

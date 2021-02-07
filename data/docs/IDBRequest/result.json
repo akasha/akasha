@@ -8,12 +8,12 @@
         {
             "name": "Indexed Database API 2.0",
             "href": "https://www.w3.org/TR/IndexedDB/#dom-idbrequest-result",
-            "description": "The definition of 'result' in the 'Indexed Database API 2.0' specification."
+            "description": "result - Indexed Database API 2.0"
         },
         {
             "name": "Indexed Database API Draft",
             "href": "https://w3c.github.io/IndexedDB/#dom-idbrequest-result",
-            "description": "The definition of 'result' in the 'Indexed Database API Draft' specification."
+            "description": "result - Indexed Database API Draft"
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "ECMAScript (ECMA-262)",
             "href": "https://tc39.es/ecma262/#sec-symbol.toprimitive",
-            "description": "The definition of 'Symbol.toPrimitive' in the 'ECMAScript (ECMA-262)' specification."
+            "description": "Symbol.toPrimitive - ECMAScript (ECMA-262)"
         }
     ]
 }

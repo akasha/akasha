@@ -8,7 +8,7 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#dom-element-getelementsbyclassname",
-            "description": "The definition of 'Element.getElementsByClassName()' in the 'DOM' specification."
+            "description": "Element.getElementsByClassName() - DOM"
         }
     ]
 }

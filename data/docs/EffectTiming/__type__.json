@@ -8,7 +8,7 @@
         {
             "name": "Web Animations",
             "href": "https://drafts.csswg.org/web-animations-1/#the-effecttiming-dictionaries",
-            "description": "The definition of 'EffectTiming' in the 'Web Animations' specification."
+            "description": "EffectTiming - Web Animations"
         }
     ]
 }

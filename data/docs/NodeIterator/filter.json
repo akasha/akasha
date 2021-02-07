@@ -8,12 +8,12 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#dom-nodeiterator-filter",
-            "description": "The definition of 'NodeIterator.filter' in the 'DOM' specification."
+            "description": "NodeIterator.filter - DOM"
         },
         {
             "name": "Document Object Model (DOM) Level 2 Traversal and Range Specification",
             "href": "https://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-NodeIterator-filter",
-            "description": "The definition of 'NodeIterator.filter' in the 'Document Object Model (DOM) Level 2 Traversal and Range Specification' specification."
+            "description": "NodeIterator.filter - Document Object Model (DOM) Level 2 Traversal and Range Specification"
         }
     ]
 }

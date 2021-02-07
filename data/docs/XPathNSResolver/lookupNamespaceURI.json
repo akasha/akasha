@@ -8,7 +8,7 @@
         {
             "name": "Document Object Model (DOM) Level 3 XPath Specification",
             "href": "https://www.w3.org/TR/DOM-Level-3-XPath/xpath.html#XPathNSResolver-lookupNamespaceURI",
-            "description": "The definition of 'XPathNSResolver.lookupNamespaceURI()' in the 'Document Object Model (DOM) Level 3 XPath Specification' specification."
+            "description": "XPathNSResolver.lookupNamespaceURI() - Document Object Model (DOM) Level 3 XPath Specification"
         }
     ]
 }

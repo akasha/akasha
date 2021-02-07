@@ -8,7 +8,7 @@
         {
             "name": "Input Events Level 2",
             "href": "https://w3c.github.io/input-events/#dom-inputevent-datatransfer",
-            "description": "The definition of 'dataTransfer' in the 'Input Events Level 2' specification."
+            "description": "dataTransfer - Input Events Level 2"
         }
     ]
 }

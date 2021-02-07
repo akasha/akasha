@@ -8,12 +8,12 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/#dom-document-close",
-            "description": "The definition of 'document.close()' in the 'HTML Living Standard' specification."
+            "description": "document.close() - HTML Living Standard"
         },
         {
             "name": "Document Object Model (DOM) Level 2 HTML Specification",
             "href": "https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-98948567",
-            "description": "The definition of 'document.close()' in the 'Document Object Model (DOM) Level 2 HTML Specification' specification."
+            "description": "document.close() - Document Object Model (DOM) Level 2 HTML Specification"
         }
     ]
 }

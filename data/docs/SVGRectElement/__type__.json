@@ -8,12 +8,12 @@
         {
             "name": "Scalable Vector Graphics (SVG) 2",
             "href": "https://svgwg.org/svg2-draft/shapes.html#InterfaceSVGRectElement",
-            "description": "The definition of 'SVGRectElement' in the 'Scalable Vector Graphics (SVG) 2' specification."
+            "description": "SVGRectElement - Scalable Vector Graphics (SVG) 2"
         },
         {
             "name": "Scalable Vector Graphics (SVG) 1.1 (Second Edition)",
             "href": "https://www.w3.org/TR/SVG11/shapes.html#InterfaceSVGRectElement",
-            "description": "The definition of 'SVGRectElement' in the 'Scalable Vector Graphics (SVG) 1.1 (Second Edition)' specification."
+            "description": "SVGRectElement - Scalable Vector Graphics (SVG) 1.1 (Second Edition)"
         }
     ]
 }

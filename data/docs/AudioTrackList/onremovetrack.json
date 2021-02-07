@@ -8,12 +8,12 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/#handler-tracklist-onremovetrack",
-            "description": "The definition of 'AudioTrackList.onremovetrack' in the 'HTML Living Standard' specification."
+            "description": "AudioTrackList.onremovetrack - HTML Living Standard"
         },
         {
             "name": "HTML5",
             "href": "https://www.w3.org/TR/html52/embedded-content-0.html#dom-audiotracklist-onremovetrack",
-            "description": "The definition of 'AudioTrackList.onremovetrack' in the 'HTML5' specification."
+            "description": "AudioTrackList.onremovetrack - HTML5"
         }
     ]
 }

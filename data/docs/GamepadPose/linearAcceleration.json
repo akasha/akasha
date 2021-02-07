@@ -8,7 +8,7 @@
         {
             "name": "Gamepad Extensions",
             "href": "https://w3c.github.io/gamepad/extensions.html#dom-gamepadpose-linearacceleration",
-            "description": "The definition of 'linearAcceleration' in the 'Gamepad Extensions' specification."
+            "description": "linearAcceleration - Gamepad Extensions"
         }
     ]
 }

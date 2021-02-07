@@ -8,7 +8,7 @@
         {
             "name": "Web Animations",
             "href": "https://drafts.csswg.org/web-animations-1/#dom-keyframeeffect-target",
-            "description": "The definition of 'keyframeEffect' in the 'Web Animations' specification."
+            "description": "keyframeEffect - Web Animations"
         }
     ]
 }

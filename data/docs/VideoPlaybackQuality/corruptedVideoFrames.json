@@ -8,7 +8,7 @@
         {
             "name": "Media Playback Quality",
             "href": "https://w3c.github.io/media-playback-quality/#dom-videoplaybackquality-corruptedvideoframes",
-            "description": "The definition of 'VideoPlaybackQuality: corruptedVideoFrames' in the 'Media Playback Quality' specification."
+            "description": "VideoPlaybackQuality: corruptedVideoFrames - Media Playback Quality"
         }
     ]
 }

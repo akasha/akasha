@@ -8,7 +8,7 @@
         {
             "name": "UI Events",
             "href": "https://w3c.github.io/uievents/#event-type-auxclick",
-            "description": "The definition of 'onauxclick' in the 'UI Events' specification."
+            "description": "onauxclick - UI Events"
         }
     ]
 }

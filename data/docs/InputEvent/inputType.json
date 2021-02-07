@@ -8,7 +8,7 @@
         {
             "name": "UI Events",
             "href": "https://w3c.github.io/uievents/#dom-inputevent-inputtype",
-            "description": "The definition of 'inputType' in the 'UI Events' specification."
+            "description": "inputType - UI Events"
         }
     ]
 }

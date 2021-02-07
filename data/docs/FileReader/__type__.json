@@ -8,7 +8,7 @@
         {
             "name": "File API",
             "href": "https://w3c.github.io/FileAPI/#dfn-filereader",
-            "description": "The definition of 'FileReader' in the 'File API' specification."
+            "description": "FileReader - File API"
         }
     ]
 }

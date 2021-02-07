@@ -8,7 +8,7 @@
         {
             "name": "Gamepad",
             "href": "https://w3c.github.io/gamepad/#dom-gamepad-index",
-            "description": "The definition of 'Gamepad.index' in the 'Gamepad' specification."
+            "description": "Gamepad.index - Gamepad"
         }
     ]
 }

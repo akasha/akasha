@@ -8,7 +8,7 @@
         {
             "name": "URL",
             "href": "https://url.spec.whatwg.org/#dom-url-tojson",
-            "description": "The definition of 'toJSON()' in the 'URL' specification."
+            "description": "toJSON() - URL"
         }
     ]
 }

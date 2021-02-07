@@ -8,7 +8,7 @@
         {
             "name": "Web Periodic Background Synchronization",
             "href": "https://wicg.github.io/periodic-background-sync/#extensions-to-serviceworkerregistration",
-            "description": "The definition of 'onperiodicsync' in the 'Web Periodic Background Synchronization' specification."
+            "description": "onperiodicsync - Web Periodic Background Synchronization"
         }
     ]
 }

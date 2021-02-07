@@ -8,7 +8,7 @@
         {
             "name": "Service Workers",
             "href": "https://w3c.github.io/ServiceWorker/#serviceworkerglobalscope-interface",
-            "description": "The definition of 'ServiceWorkerGlobalScope' in the 'Service Workers' specification."
+            "description": "ServiceWorkerGlobalScope - Service Workers"
         }
     ]
 }

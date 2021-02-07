@@ -8,7 +8,7 @@
         {
             "name": "Notifications API",
             "href": "https://notifications.spec.whatwg.org/#dom-notification-vibrate",
-            "description": "The definition of 'vibrate' in the 'Notifications API' specification."
+            "description": "vibrate - Notifications API"
         }
     ]
 }

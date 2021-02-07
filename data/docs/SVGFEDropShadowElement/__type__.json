@@ -8,7 +8,7 @@
         {
             "name": "Filter Effects Module Level 1",
             "href": "https://drafts.fxtf.org/filter-effects/#InterfaceSVGFEDropShadowElement",
-            "description": "The definition of 'SVGFEDropShadowElement' in the 'Filter Effects Module Level 1' specification."
+            "description": "SVGFEDropShadowElement - Filter Effects Module Level 1"
         }
     ]
 }

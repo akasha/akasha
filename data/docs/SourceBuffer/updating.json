@@ -8,7 +8,7 @@
         {
             "name": "Media Source Extensions",
             "href": "https://w3c.github.io/media-source/#idl-def-sourcebuffer-updating",
-            "description": "The definition of 'updating' in the 'Media Source Extensions' specification."
+            "description": "updating - Media Source Extensions"
         }
     ]
 }

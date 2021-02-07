@@ -8,7 +8,7 @@
         {
             "name": "Secure Contexts",
             "href": "https://w3c.github.io/webappsec-secure-contexts/#dom-windoworworkerglobalscope-issecurecontext",
-            "description": "The definition of 'WindowOrWorkerGlobalScope.isSecureContext' in the 'Secure Contexts' specification."
+            "description": "WindowOrWorkerGlobalScope.isSecureContext - Secure Contexts"
         }
     ]
 }

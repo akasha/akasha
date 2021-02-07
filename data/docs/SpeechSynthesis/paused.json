@@ -8,7 +8,7 @@
         {
             "name": "Web Speech API",
             "href": "https://wicg.github.io/speech-api/#dom-speechsynthesis-paused",
-            "description": "The definition of 'paused' in the 'Web Speech API' specification."
+            "description": "paused - Web Speech API"
         }
     ]
 }

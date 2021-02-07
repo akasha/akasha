@@ -8,7 +8,7 @@
         {
             "name": "Web Cryptography API",
             "href": "https://www.w3.org/TR/WebCryptoAPI/#dfn-Crypto",
-            "description": "The definition of 'Crypto.subtle' in the 'Web Cryptography API' specification."
+            "description": "Crypto.subtle - Web Cryptography API"
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "Selection API",
             "href": "https://w3c.github.io/selection-api/#dom-selection-selectallchildren",
-            "description": "The definition of 'Selection.selectAllChildren()' in the 'Selection API' specification."
+            "description": "Selection.selectAllChildren() - Selection API"
         }
     ]
 }

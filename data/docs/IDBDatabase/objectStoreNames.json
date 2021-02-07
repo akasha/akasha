@@ -8,12 +8,12 @@
         {
             "name": "Indexed Database API 2.0",
             "href": "https://www.w3.org/TR/IndexedDB/#dom-idbdatabase-objectstorenames",
-            "description": "The definition of 'objectStoreNames' in the 'Indexed Database API 2.0' specification."
+            "description": "objectStoreNames - Indexed Database API 2.0"
         },
         {
             "name": "Indexed Database API Draft",
             "href": "https://w3c.github.io/IndexedDB/#dom-idbdatabase-objectstorenames",
-            "description": "The definition of 'objectStoreNames' in the 'Indexed Database API Draft' specification."
+            "description": "objectStoreNames - Indexed Database API Draft"
         }
     ]
 }

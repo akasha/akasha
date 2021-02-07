@@ -8,7 +8,7 @@
         {
             "name": "Identifiers for WebRTC's Statistics API",
             "href": "https://w3c.github.io/webrtc-stats/#dom-RTCOutboundRtpStreamStats-qpsum",
-            "description": "The definition of 'RTCOutboundRtpStreamStats.qpSum' in the 'Identifiers for WebRTC's Statistics API' specification."
+            "description": "RTCOutboundRtpStreamStats.qpSum - Identifiers for WebRTC's Statistics API"
         }
     ]
 }

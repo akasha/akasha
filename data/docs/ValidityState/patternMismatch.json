@@ -8,17 +8,17 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/constraints.html#dom-validitystate-patternmismatch",
-            "description": "The definition of 'ValidityState.patternMismatch' in the 'HTML Living Standard' specification."
+            "description": "ValidityState.patternMismatch - HTML Living Standard"
         },
         {
             "name": "HTML 5.1",
             "href": "https://www.w3.org/TR/html51/sec-forms.html#dom-validitystate-patternmismatch",
-            "description": "The definition of 'ValidityState.patternMismatch' in the 'HTML 5.1' specification."
+            "description": "ValidityState.patternMismatch - HTML 5.1"
         },
         {
             "name": "HTML5",
             "href": "https://www.w3.org/TR/html52/forms.html#dom-validitystate-patternmismatch",
-            "description": "The definition of 'ValidityState.patternMismatch' in the 'HTML5' specification."
+            "description": "ValidityState.patternMismatch - HTML5"
         }
     ]
 }

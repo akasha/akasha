@@ -8,7 +8,7 @@
         {
             "name": "WebXR Device API",
             "href": "https://immersive-web.github.io/webxr/#dom-xrsystem-ondevicechange",
-            "description": "The definition of 'ondevicechange ' in the 'WebXR Device API' specification."
+            "description": "ondevicechange  - WebXR Device API"
         }
     ]
 }

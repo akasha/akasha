@@ -8,7 +8,7 @@
         {
             "name": "Web Animations",
             "href": "https://drafts.csswg.org/web-animations-1/#dom-animation-playbackrate",
-            "description": "The definition of 'Animation.playbackRate' in the 'Web Animations' specification."
+            "description": "Animation.playbackRate - Web Animations"
         }
     ]
 }

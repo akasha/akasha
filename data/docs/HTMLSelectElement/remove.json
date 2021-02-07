@@ -8,22 +8,22 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/#dom-select-remove",
-            "description": "The definition of 'HTMLSelectElement.remove()' in the 'HTML Living Standard' specification."
+            "description": "HTMLSelectElement.remove() - HTML Living Standard"
         },
         {
             "name": "HTML5",
             "href": "https://www.w3.org/TR/html52/forms.html#dom-select-remove",
-            "description": "The definition of 'HTMLSelectElement.remove()' in the 'HTML5' specification."
+            "description": "HTMLSelectElement.remove() - HTML5"
         },
         {
             "name": "Document Object Model (DOM) Level 2 HTML Specification",
             "href": "https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-33404570",
-            "description": "The definition of 'HTMLSelectElement.remove()' in the 'Document Object Model (DOM) Level 2 HTML Specification' specification."
+            "description": "HTMLSelectElement.remove() - Document Object Model (DOM) Level 2 HTML Specification"
         },
         {
             "name": "Document Object Model (DOM) Level 1 Specification",
             "href": "https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-33404570",
-            "description": "The definition of 'HTMLSelectElement.remove()' in the 'Document Object Model (DOM) Level 1 Specification' specification."
+            "description": "HTMLSelectElement.remove() - Document Object Model (DOM) Level 1 Specification"
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "Media Capture and Streams",
             "href": "https://w3c.github.io/mediacapture-main/#dom-mediastream-getvideotracks",
-            "description": "The definition of 'getVideoTracks()' in the 'Media Capture and Streams' specification."
+            "description": "getVideoTracks() - Media Capture and Streams"
         }
     ]
 }

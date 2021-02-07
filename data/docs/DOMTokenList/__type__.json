@@ -8,7 +8,7 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#interface-domtokenlist",
-            "description": "The definition of 'DOMTokenList' in the 'DOM' specification."
+            "description": "DOMTokenList - DOM"
         }
     ]
 }

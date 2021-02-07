@@ -8,7 +8,7 @@
         {
             "name": "Pointer Events – Level 2",
             "href": "https://www.w3.org/TR/pointerevents2/#the-gotpointercapture-event",
-            "description": "The definition of 'ongotpointercapture' in the 'Pointer Events &ndash; Level 2' specification."
+            "description": "ongotpointercapture - Pointer Events &ndash; Level 2"
         }
     ]
 }

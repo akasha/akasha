@@ -8,7 +8,7 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#dom-domtokenlist-remove",
-            "description": "The definition of 'remove()' in the 'DOM' specification."
+            "description": "remove() - DOM"
         }
     ]
 }

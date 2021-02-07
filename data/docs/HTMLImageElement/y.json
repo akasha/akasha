@@ -8,7 +8,7 @@
         {
             "name": "CSS Object Model (CSSOM) View Module",
             "href": "https://drafts.csswg.org/cssom-view/#dom-htmlimageelement-y",
-            "description": "The definition of 'HTMLImageElement.y' in the 'CSS Object Model (CSSOM) View Module' specification."
+            "description": "HTMLImageElement.y - CSS Object Model (CSSOM) View Module"
         }
     ]
 }

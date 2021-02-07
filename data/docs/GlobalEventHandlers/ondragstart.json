@@ -8,12 +8,12 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondragstart",
-            "description": "The definition of 'ondragstart' in the 'HTML Living Standard' specification."
+            "description": "ondragstart - HTML Living Standard"
         },
         {
             "name": "HTML 5.1",
             "href": "https://www.w3.org/TR/html51/index.html#ix-handler-ondragstart",
-            "description": "The definition of 'ondragstart' in the 'HTML 5.1' specification."
+            "description": "ondragstart - HTML 5.1"
         }
     ]
 }

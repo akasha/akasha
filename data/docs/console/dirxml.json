@@ -8,7 +8,7 @@
         {
             "name": "Console API",
             "href": "https://console.spec.whatwg.org/#dirxml",
-            "description": "The definition of 'console.dirxml()' in the 'Console API' specification."
+            "description": "console.dirxml() - Console API"
         }
     ]
 }

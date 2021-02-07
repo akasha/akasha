@@ -8,12 +8,12 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/interaction.html#dom-dragevent-datatransfer",
-            "description": "The definition of 'DragEvent.dataTransfer' in the 'HTML Living Standard' specification."
+            "description": "DragEvent.dataTransfer - HTML Living Standard"
         },
         {
             "name": "HTML 5.1",
             "href": "https://www.w3.org/TR/html51/editing.html#dom-dragevent-datatransfer",
-            "description": "The definition of 'DragEvent.dataTransfer' in the 'HTML 5.1' specification."
+            "description": "DragEvent.dataTransfer - HTML 5.1"
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "Media Source Extensions",
             "href": "https://w3c.github.io/media-source/#dom-sourcebuffer-remove",
-            "description": "The definition of 'remove()' in the 'Media Source Extensions' specification."
+            "description": "remove() - Media Source Extensions"
         }
     ]
 }

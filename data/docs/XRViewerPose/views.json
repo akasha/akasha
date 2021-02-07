@@ -8,7 +8,7 @@
         {
             "name": "WebXR Device API",
             "href": "https://immersive-web.github.io/webxr/#dom-xrviewerpose-views",
-            "description": "The definition of 'XRViewerPose.views' in the 'WebXR Device API' specification."
+            "description": "XRViewerPose.views - WebXR Device API"
         }
     ]
 }

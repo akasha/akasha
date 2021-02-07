@@ -8,7 +8,7 @@
         {
             "name": "Navigation Timing",
             "href": "https://www.w3.org/TR/navigation-timing/#sec-window.performance-attribute",
-            "description": "The definition of 'Performance.navigation' in the 'Navigation Timing' specification."
+            "description": "Performance.navigation - Navigation Timing"
         }
     ]
 }

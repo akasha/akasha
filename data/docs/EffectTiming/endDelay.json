@@ -8,7 +8,7 @@
         {
             "name": "Web Animations",
             "href": "https://drafts.csswg.org/web-animations-1/#end-delay",
-            "description": "The definition of 'endDelay' in the 'Web Animations' specification."
+            "description": "endDelay - Web Animations"
         }
     ]
 }

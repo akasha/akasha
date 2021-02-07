@@ -8,12 +8,12 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/#dom-document-forms",
-            "description": "The definition of 'Document.forms' in the 'HTML Living Standard' specification."
+            "description": "Document.forms - HTML Living Standard"
         },
         {
             "name": "Document Object Model (DOM) Level 2 HTML Specification",
             "href": "https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-1689064",
-            "description": "The definition of 'Document.forms' in the 'Document Object Model (DOM) Level 2 HTML Specification' specification."
+            "description": "Document.forms - Document Object Model (DOM) Level 2 HTML Specification"
         }
     ]
 }

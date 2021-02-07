@@ -8,12 +8,12 @@
         {
             "name": "Indexed Database API 2.0",
             "href": "https://www.w3.org/TR/IndexedDB/#idbdatabase",
-            "description": "The definition of 'IDBDatabase' in the 'Indexed Database API 2.0' specification."
+            "description": "IDBDatabase - Indexed Database API 2.0"
         },
         {
             "name": "Indexed Database API 2.0",
             "href": "https://www.w3.org/TR/IndexedDB/#database-interface",
-            "description": "The definition of 'IDBDatabase' in the 'Indexed Database API 2.0' specification."
+            "description": "IDBDatabase - Indexed Database API 2.0"
         }
     ]
 }

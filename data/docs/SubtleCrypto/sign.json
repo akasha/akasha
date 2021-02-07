@@ -8,7 +8,7 @@
         {
             "name": "Web Cryptography API",
             "href": "https://www.w3.org/TR/WebCryptoAPI/#dfn-SubtleCrypto-method-sign",
-            "description": "The definition of 'SubtleCrypto.sign()' in the 'Web Cryptography API' specification."
+            "description": "SubtleCrypto.sign() - Web Cryptography API"
         }
     ]
 }

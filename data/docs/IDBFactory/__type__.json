@@ -8,7 +8,7 @@
         {
             "name": "Indexed Database API 2.0",
             "href": "https://www.w3.org/TR/IndexedDB/#factory-interface",
-            "description": "The definition of 'IDBFactory' in the 'Indexed Database API 2.0' specification."
+            "description": "IDBFactory - Indexed Database API 2.0"
         }
     ]
 }

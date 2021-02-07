@@ -8,7 +8,7 @@
         {
             "name": "Fetch",
             "href": "https://fetch.spec.whatwg.org/#dom-request-referrerpolicy",
-            "description": "The definition of 'referrerPolicy' in the 'Fetch' specification."
+            "description": "referrerPolicy - Fetch"
         }
     ]
 }

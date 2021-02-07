@@ -8,7 +8,7 @@
         {
             "name": "Identifiers for WebRTC's Statistics API",
             "href": "https://w3c.github.io/webrtc-stats/#dom-rtcinboundrtpstreamstats-bytesreceived",
-            "description": "The definition of 'RTCInboundRtpStreamStats.bytesReceived' in the 'Identifiers for WebRTC's Statistics API' specification."
+            "description": "RTCInboundRtpStreamStats.bytesReceived - Identifiers for WebRTC's Statistics API"
         }
     ]
 }

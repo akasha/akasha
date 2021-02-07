@@ -8,7 +8,7 @@
         {
             "name": "Web Audio API",
             "href": "https://webaudio.github.io/web-audio-api/#dom-dynamicscompressornode-attack",
-            "description": "The definition of 'attack' in the 'Web Audio API' specification."
+            "description": "attack - Web Audio API"
         }
     ]
 }

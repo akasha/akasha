@@ -8,7 +8,7 @@
         {
             "name": "Encrypted Media Extensions",
             "href": "https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-initdatatypes",
-            "description": "The definition of 'initDataTypes' in the 'Encrypted Media Extensions' specification."
+            "description": "initDataTypes - Encrypted Media Extensions"
         }
     ]
 }

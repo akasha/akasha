@@ -8,7 +8,7 @@
         {
             "name": "Notifications API",
             "href": "https://notifications.spec.whatwg.org/#dom-notificationevent-notificationevent",
-            "description": "The definition of 'NotificationEvent() constructor' in the 'Notifications API' specification."
+            "description": "NotificationEvent() constructor - Notifications API"
         }
     ]
 }

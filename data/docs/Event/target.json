@@ -8,17 +8,17 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#dom-event-target",
-            "description": "The definition of 'Event.target' in the 'DOM' specification."
+            "description": "Event.target - DOM"
         },
         {
             "name": "DOM4",
             "href": "https://www.w3.org/TR/dom/#dom-event-target",
-            "description": "The definition of 'Event.target' in the 'DOM4' specification."
+            "description": "Event.target - DOM4"
         },
         {
             "name": "Document Object Model (DOM) Level 2 Events Specification",
             "href": "https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-Event-target",
-            "description": "The definition of 'Event.target' in the 'Document Object Model (DOM) Level 2 Events Specification' specification."
+            "description": "Event.target - Document Object Model (DOM) Level 2 Events Specification"
         }
     ]
 }

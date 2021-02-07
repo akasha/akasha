@@ -8,7 +8,7 @@
         {
             "name": "EXT_sRGB",
             "href": "https://www.khronos.org/registry/webgl/extensions/EXT_sRGB/",
-            "description": "The definition of 'EXT_sRGB' in the 'EXT_sRGB' specification."
+            "description": "EXT_sRGB - EXT_sRGB"
         }
     ]
 }

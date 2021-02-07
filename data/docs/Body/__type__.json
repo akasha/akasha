@@ -8,7 +8,7 @@
         {
             "name": "Fetch",
             "href": "https://fetch.spec.whatwg.org/#body-mixin",
-            "description": "The definition of 'Body' in the 'Fetch' specification."
+            "description": "Body - Fetch"
         }
     ]
 }

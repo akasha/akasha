@@ -8,7 +8,7 @@
         {
             "name": "Notifications API",
             "href": "https://notifications.spec.whatwg.org/#dom-notification-timestamp",
-            "description": "The definition of 'timestamp' in the 'Notifications API' specification."
+            "description": "timestamp - Notifications API"
         }
     ]
 }

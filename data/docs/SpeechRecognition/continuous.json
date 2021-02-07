@@ -8,7 +8,7 @@
         {
             "name": "Web Speech API",
             "href": "https://wicg.github.io/speech-api/#dom-speechrecognition-continuous",
-            "description": "The definition of 'continuous' in the 'Web Speech API' specification."
+            "description": "continuous - Web Speech API"
         }
     ]
 }

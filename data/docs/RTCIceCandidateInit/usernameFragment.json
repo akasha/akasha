@@ -8,7 +8,7 @@
         {
             "name": "WebRTC 1.0: Real-time Communication Between Browsers",
             "href": "https://w3c.github.io/webrtc-pc/#dom-rtcicecandidateinit-usernamefragment",
-            "description": "The definition of 'RTCIceCandidateInit.usernameFragment' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification."
+            "description": "RTCIceCandidateInit.usernameFragment - WebRTC 1.0: Real-time Communication Between Browsers"
         }
     ]
 }

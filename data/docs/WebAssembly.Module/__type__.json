@@ -8,7 +8,7 @@
         {
             "name": "WebAssembly JavaScript Interface",
             "href": "https://webassembly.github.io/spec/js-api/#modules",
-            "description": "The definition of 'WebAssembly.Module()' in the 'WebAssembly JavaScript Interface' specification."
+            "description": "WebAssembly.Module() - WebAssembly JavaScript Interface"
         }
     ]
 }

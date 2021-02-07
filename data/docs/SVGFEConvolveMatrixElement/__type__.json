@@ -8,12 +8,12 @@
         {
             "name": "Filter Effects Module Level 1",
             "href": "https://drafts.fxtf.org/filter-effects/#InterfaceSVGFEConvolveMatrixElement",
-            "description": "The definition of 'SVGFEConvolveMatrixElement' in the 'Filter Effects Module Level 1' specification."
+            "description": "SVGFEConvolveMatrixElement - Filter Effects Module Level 1"
         },
         {
             "name": "Scalable Vector Graphics (SVG) 1.1 (Second Edition)",
             "href": "https://www.w3.org/TR/SVG11/filters.html#InterfaceSVGFEConvolveMatrixElement",
-            "description": "The definition of 'SVGFEConvolveMatrixElement' in the 'Scalable Vector Graphics (SVG) 1.1 (Second Edition)' specification."
+            "description": "SVGFEConvolveMatrixElement - Scalable Vector Graphics (SVG) 1.1 (Second Edition)"
         }
     ]
 }

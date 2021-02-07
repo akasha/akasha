@@ -8,7 +8,7 @@
         {
             "name": "Service Workers",
             "href": "https://w3c.github.io/ServiceWorker/#dom-serviceworkerregistration-scope",
-            "description": "The definition of 'ServiceWorkerRegistration.scope' in the 'Service Workers' specification."
+            "description": "ServiceWorkerRegistration.scope - Service Workers"
         }
     ]
 }

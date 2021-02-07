@@ -8,7 +8,7 @@
         {
             "name": "Intersection Observer",
             "href": "https://w3c.github.io/IntersectionObserver/#dom-intersectionobserver-thresholds",
-            "description": "The definition of 'IntersectionObserver.thresholds' in the 'Intersection Observer' specification."
+            "description": "IntersectionObserver.thresholds - Intersection Observer"
         }
     ]
 }

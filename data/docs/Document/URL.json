@@ -8,7 +8,7 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#dom-document-url",
-            "description": "The definition of 'Document.URL' in the 'DOM' specification."
+            "description": "Document.URL - DOM"
         }
     ]
 }

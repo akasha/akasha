@@ -8,7 +8,7 @@
         {
             "name": "Service Workers",
             "href": "https://w3c.github.io/ServiceWorker/#dom-windowclient-navigate",
-            "description": "The definition of 'navigate()' in the 'Service Workers' specification."
+            "description": "navigate() - Service Workers"
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "File and Directory Entries API",
             "href": "https://wicg.github.io/entries-api/#dom-htmlinputelement-webkitdirectory",
-            "description": "The definition of 'webkitdirectory' in the 'File and Directory Entries API' specification."
+            "description": "webkitdirectory - File and Directory Entries API"
         }
     ]
 }

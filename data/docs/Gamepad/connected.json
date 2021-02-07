@@ -8,7 +8,7 @@
         {
             "name": "Gamepad",
             "href": "https://w3c.github.io/gamepad/#dom-gamepad-connected",
-            "description": "The definition of 'Gamepad.connected' in the 'Gamepad' specification."
+            "description": "Gamepad.connected - Gamepad"
         }
     ]
 }

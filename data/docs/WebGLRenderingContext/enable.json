@@ -8,17 +8,17 @@
         {
             "name": "WebGL 1.0",
             "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3",
-            "description": "The definition of 'enable' in the 'WebGL 1.0' specification."
+            "description": "enable - WebGL 1.0"
         },
         {
             "name": "OpenGL ES 2.0",
             "href": "https://www.khronos.org/opengles/sdk/docs/man/xhtml/glEnable.xml",
-            "description": "The definition of 'glEnable' in the 'OpenGL ES 2.0' specification."
+            "description": "glEnable - OpenGL ES 2.0"
         },
         {
             "name": "OpenGL ES 3.0",
             "href": "https://www.khronos.org/opengles/sdk/docs/man3/html/glEnable.xhtml",
-            "description": "The definition of 'glEnable' in the 'OpenGL ES 3.0' specification."
+            "description": "glEnable - OpenGL ES 3.0"
         }
     ]
 }

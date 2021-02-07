@@ -8,7 +8,7 @@
         {
             "name": "Web Authentication: An API for accessing Public Key Credentials Level 1",
             "href": "https://w3c.github.io/webauthn/#dom-authenticatorattestationresponse-attestationobject",
-            "description": "The definition of 'attestationObject' in the 'Web Authentication: An API for accessing Public Key Credentials Level 1' specification."
+            "description": "attestationObject - Web Authentication: An API for accessing Public Key Credentials Level 1"
         }
     ]
 }

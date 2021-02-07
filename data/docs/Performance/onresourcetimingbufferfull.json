@@ -8,7 +8,7 @@
         {
             "name": "Resource Timing Level 1",
             "href": "https://www.w3.org/TR/resource-timing-1/#dom-performance-onresourcetimingbufferfull",
-            "description": "The definition of 'onresourcetimingbufferfull' in the 'Resource Timing Level 1' specification."
+            "description": "onresourcetimingbufferfull - Resource Timing Level 1"
         }
     ]
 }

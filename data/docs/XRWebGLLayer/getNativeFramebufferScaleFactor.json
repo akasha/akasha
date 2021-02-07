@@ -8,7 +8,7 @@
         {
             "name": "WebXR Device API",
             "href": "https://immersive-web.github.io/webxr/#dom-xrwebgllayer-getnativeframebufferscalefactor",
-            "description": "The definition of 'static XRWebGLLayer.getNativeFramebufferScaleFactor()' in the 'WebXR Device API' specification."
+            "description": "static XRWebGLLayer.getNativeFramebufferScaleFactor() - WebXR Device API"
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "Web IDL",
             "href": "https://heycam.github.io/webidl/#idl-DOMException",
-            "description": "The definition of 'constructor' in the 'Web IDL' specification."
+            "description": "constructor - Web IDL"
         }
     ]
 }

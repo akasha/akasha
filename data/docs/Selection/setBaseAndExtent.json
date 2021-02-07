@@ -8,7 +8,7 @@
         {
             "name": "Selection API",
             "href": "https://w3c.github.io/selection-api/#dom-selection-setbaseandextent",
-            "description": "The definition of 'Selection.setBaseAndExtent()' in the 'Selection API' specification."
+            "description": "Selection.setBaseAndExtent() - Selection API"
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "Web Audio API",
             "href": "https://webaudio.github.io/web-audio-api/#dom-audiolistener-setposition",
-            "description": "The definition of 'setPosition()' in the 'Web Audio API' specification."
+            "description": "setPosition() - Web Audio API"
         }
     ]
 }

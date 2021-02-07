@@ -8,12 +8,12 @@
         {
             "name": "WebGL 1.0",
             "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8",
-            "description": "The definition of 'isTexture' in the 'WebGL 1.0' specification."
+            "description": "isTexture - WebGL 1.0"
         },
         {
             "name": "OpenGL ES 2.0",
             "href": "https://www.khronos.org/opengles/sdk/docs/man/xhtml/glIsTexture.xml",
-            "description": "The definition of 'glIsTexture' in the 'OpenGL ES 2.0' specification."
+            "description": "glIsTexture - OpenGL ES 2.0"
         }
     ]
 }

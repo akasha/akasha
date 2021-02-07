@@ -8,7 +8,7 @@
         {
             "name": "Web Audio API",
             "href": "https://webaudio.github.io/web-audio-api/#dom-analysernode-getfloattimedomaindata",
-            "description": "The definition of 'getFloatTimeDomainData()' in the 'Web Audio API' specification."
+            "description": "getFloatTimeDomainData() - Web Audio API"
         }
     ]
 }

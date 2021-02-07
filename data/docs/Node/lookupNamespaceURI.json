@@ -8,7 +8,7 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#dom-node-lookupnamespaceuri",
-            "description": "The definition of 'Node: lookupNamespaceURI' in the 'DOM' specification."
+            "description": "Node: lookupNamespaceURI - DOM"
         }
     ]
 }

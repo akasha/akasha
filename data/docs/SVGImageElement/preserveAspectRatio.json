@@ -8,12 +8,12 @@
         {
             "name": "Scalable Vector Graphics (SVG) 2",
             "href": "https://svgwg.org/svg2-draft/coords.html#PreserveAspectRatioAttribute",
-            "description": "The definition of 'preserveAspectRatio' in the 'Scalable Vector Graphics (SVG) 2' specification."
+            "description": "preserveAspectRatio - Scalable Vector Graphics (SVG) 2"
         },
         {
             "name": "Scalable Vector Graphics (SVG) 1.1 (Second Edition)",
             "href": "https://www.w3.org/TR/SVG11/coords.html#PreserveAspectRatioAttribute",
-            "description": "The definition of 'preserveAspectRatio' in the 'Scalable Vector Graphics (SVG) 1.1 (Second Edition)' specification."
+            "description": "preserveAspectRatio - Scalable Vector Graphics (SVG) 1.1 (Second Edition)"
         }
     ]
 }

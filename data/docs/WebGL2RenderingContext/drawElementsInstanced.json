@@ -8,12 +8,12 @@
         {
             "name": "WebGL 2.0",
             "href": "https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.9",
-            "description": "The definition of 'drawElementsInstanced' in the 'WebGL 2.0' specification."
+            "description": "drawElementsInstanced - WebGL 2.0"
         },
         {
             "name": "OpenGL ES 3.0",
             "href": "https://www.khronos.org/opengles/sdk/docs/man3/html/glDrawElementsInstanced.xhtml",
-            "description": "The definition of 'glDrawElementsInstanced' in the 'OpenGL ES 3.0' specification."
+            "description": "glDrawElementsInstanced - OpenGL ES 3.0"
         }
     ]
 }

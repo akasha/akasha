@@ -8,12 +8,12 @@
         {
             "name": "WebGL 2.0",
             "href": "https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.7",
-            "description": "The definition of 'getFragDataLocation' in the 'WebGL 2.0' specification."
+            "description": "getFragDataLocation - WebGL 2.0"
         },
         {
             "name": "OpenGL ES 3.0",
             "href": "https://www.khronos.org/opengles/sdk/docs/man3/html/glGetFragDataLocation.xhtml",
-            "description": "The definition of 'glGetFragDataLocation' in the 'OpenGL ES 3.0' specification."
+            "description": "glGetFragDataLocation - OpenGL ES 3.0"
         }
     ]
 }

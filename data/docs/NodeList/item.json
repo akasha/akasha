@@ -8,7 +8,7 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#dom-nodelist-item",
-            "description": "The definition of 'NodeList: item' in the 'DOM' specification."
+            "description": "NodeList: item - DOM"
         }
     ]
 }

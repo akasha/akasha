@@ -8,17 +8,17 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#dom-node-clonenode",
-            "description": "The definition of 'Node.cloneNode()' in the 'DOM' specification."
+            "description": "Node.cloneNode() - DOM"
         },
         {
             "name": "Document Object Model (DOM) Level 3 Core Specification",
             "href": "https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-3A0ED0A4",
-            "description": "The definition of 'Node.cloneNode()' in the 'Document Object Model (DOM) Level 3 Core Specification' specification."
+            "description": "Node.cloneNode() - Document Object Model (DOM) Level 3 Core Specification"
         },
         {
             "name": "Document Object Model (DOM) Level 2 Core Specification",
             "href": "https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-3A0ED0A4",
-            "description": "The definition of 'Node.cloneNode()' in the 'Document Object Model (DOM) Level 2 Core Specification' specification."
+            "description": "Node.cloneNode() - Document Object Model (DOM) Level 2 Core Specification"
         }
     ]
 }

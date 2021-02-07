@@ -8,7 +8,7 @@
         {
             "name": "WebXR Device API",
             "href": "https://immersive-web.github.io/webxr/#xrspace-interface",
-            "description": "The definition of 'XRSpace' in the 'WebXR Device API' specification."
+            "description": "XRSpace - WebXR Device API"
         }
     ]
 }

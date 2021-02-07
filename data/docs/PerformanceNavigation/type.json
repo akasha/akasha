@@ -8,7 +8,7 @@
         {
             "name": "Navigation Timing",
             "href": "https://www.w3.org/TR/navigation-timing/#dom-performancenavigation-type",
-            "description": "The definition of 'PerformanceNavigation.type' in the 'Navigation Timing' specification."
+            "description": "PerformanceNavigation.type - Navigation Timing"
         }
     ]
 }

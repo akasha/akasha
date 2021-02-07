@@ -8,7 +8,7 @@
         {
             "name": "Web Audio API",
             "href": "https://webaudio.github.io/web-audio-api/#dom-pannernode-rollofffactor",
-            "description": "The definition of 'rolloffFactor' in the 'Web Audio API' specification."
+            "description": "rolloffFactor - Web Audio API"
         }
     ]
 }

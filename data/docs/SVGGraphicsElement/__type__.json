@@ -8,7 +8,7 @@
         {
             "name": "Scalable Vector Graphics (SVG) 2",
             "href": "https://svgwg.org/svg2-draft/types.html#InterfaceSVGGraphicsElement",
-            "description": "The definition of 'SVGGraphicsElement' in the 'Scalable Vector Graphics (SVG) 2' specification."
+            "description": "SVGGraphicsElement - Scalable Vector Graphics (SVG) 2"
         }
     ]
 }

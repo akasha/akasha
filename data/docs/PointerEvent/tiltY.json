@@ -8,12 +8,12 @@
         {
             "name": "Pointer Events – Level 2",
             "href": "https://www.w3.org/TR/pointerevents2/#dom-pointerevent-tilty",
-            "description": "The definition of 'tiltY' in the 'Pointer Events &ndash; Level 2' specification."
+            "description": "tiltY - Pointer Events &ndash; Level 2"
         },
         {
             "name": "Pointer Events",
             "href": "https://www.w3.org/TR/pointerevents1/#widl-PointerEventInit-tiltY",
-            "description": "The definition of 'tiltY' in the 'Pointer Events' specification."
+            "description": "tiltY - Pointer Events"
         }
     ]
 }

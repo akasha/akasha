@@ -8,7 +8,7 @@
         {
             "name": "Media Playback Quality",
             "href": "https://w3c.github.io/media-playback-quality/#videoplaybackquality-interface",
-            "description": "The definition of 'VideoPlaybackQuality.totalVideoFrames' in the 'Media Playback Quality' specification."
+            "description": "VideoPlaybackQuality.totalVideoFrames - Media Playback Quality"
         }
     ]
 }

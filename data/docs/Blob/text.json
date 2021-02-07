@@ -8,7 +8,7 @@
         {
             "name": "File API",
             "href": "https://w3c.github.io/FileAPI/#dom-blob-text",
-            "description": "The definition of 'Blob.text()' in the 'File API' specification."
+            "description": "Blob.text() - File API"
         }
     ]
 }

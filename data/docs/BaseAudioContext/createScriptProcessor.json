@@ -8,7 +8,7 @@
         {
             "name": "Web Audio API",
             "href": "https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-createscriptprocessor",
-            "description": "The definition of 'createScriptProcessor' in the 'Web Audio API' specification."
+            "description": "createScriptProcessor - Web Audio API"
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "Content Index API",
             "href": "https://wicg.github.io/content-index/spec/#extensions-to-service-worker-global",
-            "description": "The definition of 'contentdelete' in the 'Content Index API' specification."
+            "description": "contentdelete - Content Index API"
         }
     ]
 }

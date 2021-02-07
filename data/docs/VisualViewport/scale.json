@@ -8,7 +8,7 @@
         {
             "name": "Visual Viewport API",
             "href": "https://wicg.github.io/visual-viewport/#dom-visualviewport-scale",
-            "description": "The definition of 'scale' in the 'Visual Viewport API' specification."
+            "description": "scale - Visual Viewport API"
         }
     ]
 }

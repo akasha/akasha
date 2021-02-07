@@ -8,7 +8,7 @@
         {
             "name": "WebRTC 1.0: Real-time Communication Between Browsers",
             "href": "https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnection-oniceconnectionstatechange",
-            "description": "The definition of 'RTCPeerConnection.oniceconnectionstatechange' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification."
+            "description": "RTCPeerConnection.oniceconnectionstatechange - WebRTC 1.0: Real-time Communication Between Browsers"
         }
     ]
 }

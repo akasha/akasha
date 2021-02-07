@@ -8,7 +8,7 @@
         {
             "name": "WebXR Device API",
             "href": "https://immersive-web.github.io/webxr/#xrrenderstate-interface",
-            "description": "The definition of 'XRRenderState' in the 'WebXR Device API' specification."
+            "description": "XRRenderState - WebXR Device API"
         }
     ]
 }

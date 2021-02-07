@@ -8,7 +8,7 @@
         {
             "name": "Identifiers for WebRTC's Statistics API",
             "href": "https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatestats-deleted",
-            "description": "The definition of 'RTCIceCandidateStats.deleted' in the 'Identifiers for WebRTC's Statistics API' specification."
+            "description": "RTCIceCandidateStats.deleted - Identifiers for WebRTC's Statistics API"
         }
     ]
 }

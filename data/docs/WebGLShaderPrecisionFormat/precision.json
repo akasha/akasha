@@ -8,7 +8,7 @@
         {
             "name": "WebGL 1.0",
             "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#DOM-WebGLShaderPrecisionFormat-precision",
-            "description": "The definition of 'WebGLShaderPrecisionFormat.precision' in the 'WebGL 1.0' specification."
+            "description": "WebGLShaderPrecisionFormat.precision - WebGL 1.0"
         }
     ]
 }

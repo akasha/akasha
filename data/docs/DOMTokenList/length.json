@@ -8,7 +8,7 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#dom-domtokenlist-length",
-            "description": "The definition of 'length' in the 'DOM' specification."
+            "description": "length - DOM"
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "WebRTC 1.0: Real-time Communication Between Browsers",
             "href": "https://w3c.github.io/webrtc-pc/#dom-datachannel-readystate",
-            "description": "The definition of 'RTCDataChannel.readyState' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification."
+            "description": "RTCDataChannel.readyState - WebRTC 1.0: Real-time Communication Between Browsers"
         }
     ]
 }

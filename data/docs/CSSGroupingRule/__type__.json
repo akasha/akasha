@@ -8,7 +8,7 @@
         {
             "name": "CSS Object Model (CSSOM)",
             "href": "https://drafts.csswg.org/cssom/#cssgroupingrule",
-            "description": "The definition of 'CSSGroupingRule' in the 'CSS Object Model (CSSOM)' specification."
+            "description": "CSSGroupingRule - CSS Object Model (CSSOM)"
         }
     ]
 }

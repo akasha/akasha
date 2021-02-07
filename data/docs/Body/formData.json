@@ -8,7 +8,7 @@
         {
             "name": "Fetch",
             "href": "https://fetch.spec.whatwg.org/#dom-body-formdata",
-            "description": "The definition of 'formData()' in the 'Fetch' specification."
+            "description": "formData() - Fetch"
         }
     ]
 }

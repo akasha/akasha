@@ -8,7 +8,7 @@
         {
             "name": "Web Speech API",
             "href": "https://wicg.github.io/speech-api/#dom-speechrecognition-onresult",
-            "description": "The definition of 'onresult' in the 'Web Speech API' specification."
+            "description": "onresult - Web Speech API"
         }
     ]
 }

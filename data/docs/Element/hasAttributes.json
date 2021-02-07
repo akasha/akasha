@@ -8,17 +8,17 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#dom-element-hasattributes",
-            "description": "The definition of 'Element.hasAttributes()' in the 'DOM' specification."
+            "description": "Element.hasAttributes() - DOM"
         },
         {
             "name": "Document Object Model (DOM) Level 3 Core Specification",
             "href": "https://www.w3.org/TR/DOM-Level-3-Core/#ID-NodeHasAttrs",
-            "description": "The definition of 'hasAttributes()' in the 'Document Object Model (DOM) Level 3 Core Specification' specification."
+            "description": "hasAttributes() - Document Object Model (DOM) Level 3 Core Specification"
         },
         {
             "name": "Document Object Model (DOM) Level 2 Core Specification",
             "href": "https://www.w3.org/TR/DOM-Level-2-Core/#ID-NodeHasAttrs",
-            "description": "The definition of 'hasAttributes()' in the 'Document Object Model (DOM) Level 2 Core Specification' specification."
+            "description": "hasAttributes() - Document Object Model (DOM) Level 2 Core Specification"
         }
     ]
 }

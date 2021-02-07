@@ -8,7 +8,7 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/custom-elements.html#dom-customelementregistry-upgrade",
-            "description": "The definition of 'customElements.upgrade()' in the 'HTML Living Standard' specification."
+            "description": "customElements.upgrade() - HTML Living Standard"
         }
     ]
 }

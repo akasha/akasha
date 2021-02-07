@@ -8,7 +8,7 @@
         {
             "name": "Web Background Synchronization",
             "href": "https://wicg.github.io/background-sync/spec/#sync-event",
-            "description": "The definition of 'tag' in the 'Web Background Synchronization' specification."
+            "description": "tag - Web Background Synchronization"
         }
     ]
 }

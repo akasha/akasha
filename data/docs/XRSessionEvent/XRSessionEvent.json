@@ -8,7 +8,7 @@
         {
             "name": "WebXR Device API",
             "href": "https://immersive-web.github.io/webxr/#dom-xrsessionevent-xrsessionevent",
-            "description": "The definition of 'XRSessionEvent() constructor' in the 'WebXR Device API' specification."
+            "description": "XRSessionEvent() constructor - WebXR Device API"
         }
     ]
 }

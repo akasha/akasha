@@ -8,7 +8,7 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#dom-nodelist-length",
-            "description": "The definition of 'NodeList: length' in the 'DOM' specification."
+            "description": "NodeList: length - DOM"
         }
     ]
 }

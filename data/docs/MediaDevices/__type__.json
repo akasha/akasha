@@ -8,7 +8,7 @@
         {
             "name": "Media Capture and Streams",
             "href": "https://w3c.github.io/mediacapture-main/#mediadevices",
-            "description": "The definition of 'MediaDevices' in the 'Media Capture and Streams' specification."
+            "description": "MediaDevices - Media Capture and Streams"
         }
     ]
 }

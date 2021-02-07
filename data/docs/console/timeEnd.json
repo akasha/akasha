@@ -8,7 +8,7 @@
         {
             "name": "Console API",
             "href": "https://console.spec.whatwg.org/#timeend",
-            "description": "The definition of 'console.timeEnd()' in the 'Console API' specification."
+            "description": "console.timeEnd() - Console API"
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "WebVR 1.1",
             "href": "https://immersive-web.github.io/webvr/spec/1.1/#dom-window-onvrdisplayactivate",
-            "description": "The definition of 'vrdisplayactivate' in the 'WebVR 1.1' specification."
+            "description": "vrdisplayactivate - WebVR 1.1"
         }
     ],
     "eventName": "vrdisplayactivate",

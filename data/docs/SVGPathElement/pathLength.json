@@ -8,7 +8,7 @@
         {
             "name": "Scalable Vector Graphics (SVG) 1.1 (Second Edition)",
             "href": "https://www.w3.org/TR/SVG11/paths.html#__svg__SVGPathElement__pathLength",
-            "description": "The definition of 'SVGPathElement.pathLength' in the 'Scalable Vector Graphics (SVG) 1.1 (Second Edition)' specification."
+            "description": "SVGPathElement.pathLength - Scalable Vector Graphics (SVG) 1.1 (Second Edition)"
         }
     ]
 }

@@ -8,22 +8,22 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/tabular-data.html#dom-table-caption",
-            "description": "The definition of 'HTMLTableElement.caption' in the 'HTML Living Standard' specification."
+            "description": "HTMLTableElement.caption - HTML Living Standard"
         },
         {
             "name": "HTML5",
             "href": "https://www.w3.org/TR/html52/tabular-data.html#dom-table-caption",
-            "description": "The definition of 'HTMLTableElement.caption' in the 'HTML5' specification."
+            "description": "HTMLTableElement.caption - HTML5"
         },
         {
             "name": "Document Object Model (DOM) Level 2 HTML Specification",
             "href": "https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-14594520",
-            "description": "The definition of 'HTMLTableElement.caption' in the 'Document Object Model (DOM) Level 2 HTML Specification' specification."
+            "description": "HTMLTableElement.caption - Document Object Model (DOM) Level 2 HTML Specification"
         },
         {
             "name": "Document Object Model (DOM) Level 1 Specification",
             "href": "https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-14594520",
-            "description": "The definition of 'HTMLTableElement.caption' in the 'Document Object Model (DOM) Level 1 Specification' specification."
+            "description": "HTMLTableElement.caption - Document Object Model (DOM) Level 1 Specification"
         }
     ]
 }

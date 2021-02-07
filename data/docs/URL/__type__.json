@@ -8,12 +8,12 @@
         {
             "name": "File API",
             "href": "https://w3c.github.io/FileAPI/#creating-revoking",
-            "description": "The definition of 'URL' in the 'File API' specification."
+            "description": "URL - File API"
         },
         {
             "name": "URL",
             "href": "https://url.spec.whatwg.org/#api",
-            "description": "The definition of 'API' in the 'URL' specification."
+            "description": "API - URL"
         }
     ]
 }

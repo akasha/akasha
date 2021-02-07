@@ -8,7 +8,7 @@
         {
             "name": "Console API",
             "href": "https://console.spec.whatwg.org/#info",
-            "description": "The definition of 'console.info()' in the 'Console API' specification."
+            "description": "console.info() - Console API"
         }
     ]
 }

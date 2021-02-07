@@ -8,7 +8,7 @@
         {
             "name": "Web Audio API",
             "href": "https://webaudio.github.io/web-audio-api/#the-scriptprocessornode-interface---deprecated",
-            "description": "The definition of 'ScriptProcessorNode' in the 'Web Audio API' specification."
+            "description": "ScriptProcessorNode - Web Audio API"
         }
     ]
 }

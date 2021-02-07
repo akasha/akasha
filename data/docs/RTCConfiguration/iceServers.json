@@ -8,7 +8,7 @@
         {
             "name": "WebRTC 1.0: Real-time Communication Between Browsers",
             "href": "https://w3c.github.io/webrtc-pc/#dom-rtcconfiguration-iceservers",
-            "description": "The definition of 'RTCConfiguration.iceServers' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification."
+            "description": "RTCConfiguration.iceServers - WebRTC 1.0: Real-time Communication Between Browsers"
         }
     ]
 }

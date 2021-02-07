@@ -8,7 +8,7 @@
         {
             "name": "Web Audio API",
             "href": "https://webaudio.github.io/web-audio-api/#dom-pannernode-maxdistance",
-            "description": "The definition of 'maxDistance' in the 'Web Audio API' specification."
+            "description": "maxDistance - Web Audio API"
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#dom-domtokenlist-toggle",
-            "description": "The definition of 'toggle()' in the 'DOM' specification."
+            "description": "toggle() - DOM"
         }
     ]
 }

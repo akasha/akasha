@@ -8,12 +8,12 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#xmldocument",
-            "description": "The definition of 'XMLDocument' in the 'DOM' specification."
+            "description": "XMLDocument - DOM"
         },
         {
             "name": "DOM4",
             "href": "https://www.w3.org/TR/dom/#xmldocument",
-            "description": "The definition of 'XMLDocument' in the 'DOM4' specification."
+            "description": "XMLDocument - DOM4"
         }
     ]
 }

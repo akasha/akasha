@@ -8,7 +8,7 @@
         {
             "name": "Intersection Observer",
             "href": "https://w3c.github.io/IntersectionObserver/#dom-intersectionobserverentry-boundingclientrect",
-            "description": "The definition of 'IntersectionObserverEntry.boundingClientRect' in the 'Intersection Observer' specification."
+            "description": "IntersectionObserverEntry.boundingClientRect - Intersection Observer"
         }
     ]
 }

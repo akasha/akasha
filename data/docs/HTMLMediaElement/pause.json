@@ -8,12 +8,12 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/embedded-content.html#dom-media-pause",
-            "description": "The definition of 'pause()' in the 'HTML Living Standard' specification."
+            "description": "pause() - HTML Living Standard"
         },
         {
             "name": "HTML5",
             "href": "https://www.w3.org/TR/html52/embedded-content-0.html#dom-media-pause",
-            "description": "The definition of 'pause()' in the 'HTML5' specification."
+            "description": "pause() - HTML5"
         }
     ]
 }

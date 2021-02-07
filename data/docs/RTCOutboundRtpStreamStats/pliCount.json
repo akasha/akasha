@@ -8,7 +8,7 @@
         {
             "name": "Identifiers for WebRTC's Statistics API",
             "href": "https://w3c.github.io/webrtc-stats/#dom-RTCOutboundRtpStreamStats-plicount",
-            "description": "The definition of 'RTCOutboundRtpStreamStats.pliCount' in the 'Identifiers for WebRTC's Statistics API' specification."
+            "description": "RTCOutboundRtpStreamStats.pliCount - Identifiers for WebRTC's Statistics API"
         }
     ]
 }

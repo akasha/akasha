@@ -8,7 +8,7 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#dom-attr-localname",
-            "description": "The definition of 'Attr.localName' in the 'DOM' specification."
+            "description": "Attr.localName - DOM"
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "WebXR Device API",
             "href": "https://immersive-web.github.io/webxr/#dom-xrwebgllayerinit-stencil",
-            "description": "The definition of 'XRWebGLLayerInit.stencil' in the 'WebXR Device API' specification."
+            "description": "XRWebGLLayerInit.stencil - WebXR Device API"
         }
     ]
 }

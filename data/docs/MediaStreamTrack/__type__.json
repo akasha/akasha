@@ -8,12 +8,12 @@
         {
             "name": "Identity for WebRTC",
             "href": "https://w3c.github.io/webrtc-identity/#isolated-track",
-            "description": "The definition of 'Isolated tracks' in the 'Identity for WebRTC' specification."
+            "description": "Isolated tracks - Identity for WebRTC"
         },
         {
             "name": "Media Capture and Streams",
             "href": "https://w3c.github.io/mediacapture-main/#mediastreamtrack",
-            "description": "The definition of 'MediaStreamTrack' in the 'Media Capture and Streams' specification."
+            "description": "MediaStreamTrack - Media Capture and Streams"
         }
     ]
 }

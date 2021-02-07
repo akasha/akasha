@@ -8,7 +8,7 @@
         {
             "name": "WebRTC 1.0: Real-time Communication Between Browsers",
             "href": "https://w3c.github.io/webrtc-pc/#event-negotiation",
-            "description": "The definition of 'negotiationneeded' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification."
+            "description": "negotiationneeded - WebRTC 1.0: Real-time Communication Between Browsers"
         }
     ],
     "eventName": "negotiationneeded",

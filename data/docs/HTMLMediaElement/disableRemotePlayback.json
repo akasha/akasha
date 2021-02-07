@@ -8,7 +8,7 @@
         {
             "name": "Remote Playback API",
             "href": "https://w3c.github.io/remote-playback/#the-disableremoteplayback-attribute",
-            "description": "The definition of 'disableRemotePlayback' in the 'Remote Playback API' specification."
+            "description": "disableRemotePlayback - Remote Playback API"
         }
     ]
 }

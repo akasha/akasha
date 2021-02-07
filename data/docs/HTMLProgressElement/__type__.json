@@ -8,17 +8,17 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/#htmlprogresselement",
-            "description": "The definition of 'HTMLProgressElement' in the 'HTML Living Standard' specification."
+            "description": "HTMLProgressElement - HTML Living Standard"
         },
         {
             "name": "HTML 5.1",
             "href": "https://www.w3.org/TR/html51/forms.html#the-progress-element",
-            "description": "The definition of 'HTMLProgressElement' in the 'HTML 5.1' specification."
+            "description": "HTMLProgressElement - HTML 5.1"
         },
         {
             "name": "HTML5",
             "href": "https://www.w3.org/TR/html52/forms.html#the-progress-element",
-            "description": "The definition of 'HTMLProgressElement' in the 'HTML5' specification."
+            "description": "HTMLProgressElement - HTML5"
         }
     ]
 }

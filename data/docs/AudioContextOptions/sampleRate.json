@@ -8,7 +8,7 @@
         {
             "name": "Web Audio API",
             "href": "https://webaudio.github.io/web-audio-api/#dom-audiocontextoptions-samplerate",
-            "description": "The definition of 'AudioContextOptions.sampleRate' in the 'Web Audio API' specification."
+            "description": "AudioContextOptions.sampleRate - Web Audio API"
         }
     ]
 }

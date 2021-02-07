@@ -8,7 +8,7 @@
         {
             "name": "WebRTC 1.0: Real-time Communication Between Browsers",
             "href": "https://w3c.github.io/webrtc-pc/#dom-rtctrackeventinit-track",
-            "description": "The definition of 'RTCTrackEventInit.track' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification."
+            "description": "RTCTrackEventInit.track - WebRTC 1.0: Real-time Communication Between Browsers"
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/#handler-worker-onmessageerror",
-            "description": "The definition of 'onmessageerror' in the 'HTML Living Standard' specification."
+            "description": "onmessageerror - HTML Living Standard"
         }
     ]
 }

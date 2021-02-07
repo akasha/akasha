@@ -8,7 +8,7 @@
         {
             "name": "WebRTC 1.0: Real-time Communication Between Browsers",
             "href": "https://w3c.github.io/webrtc-pc/#dom-rtcrtptransceiver-stop",
-            "description": "The definition of 'RTCRtpTransceiver.stop()' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification."
+            "description": "RTCRtpTransceiver.stop() - WebRTC 1.0: Real-time Communication Between Browsers"
         }
     ]
 }

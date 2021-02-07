@@ -8,7 +8,7 @@
         {
             "name": "Resource Timing Level 1",
             "href": "https://www.w3.org/TR/resource-timing-1/#dom-performanceresourcetiming-redirectstart",
-            "description": "The definition of 'redirectStart' in the 'Resource Timing Level 1' specification."
+            "description": "redirectStart - Resource Timing Level 1"
         }
     ]
 }

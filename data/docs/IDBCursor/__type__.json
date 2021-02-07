@@ -8,12 +8,12 @@
         {
             "name": "Indexed Database API 2.0",
             "href": "https://www.w3.org/TR/IndexedDB/#cursor-interface",
-            "description": "The definition of 'cursor' in the 'Indexed Database API 2.0' specification."
+            "description": "cursor - Indexed Database API 2.0"
         },
         {
             "name": "Indexed Database API 2.0",
             "href": "https://www.w3.org/TR/IndexedDB/#cursor-interface",
-            "description": "The definition of 'cursor' in the 'Indexed Database API 2.0' specification."
+            "description": "cursor - Indexed Database API 2.0"
         }
     ]
 }

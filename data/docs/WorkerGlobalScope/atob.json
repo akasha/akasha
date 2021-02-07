@@ -8,17 +8,17 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/#dom-atob",
-            "description": "The definition of 'WindowOrWorkerGlobalScope.atob()' in the 'HTML Living Standard' specification."
+            "description": "WindowOrWorkerGlobalScope.atob() - HTML Living Standard"
         },
         {
             "name": "HTML 5.1",
             "href": "https://www.w3.org/TR/html51/#dom-windowbase64-atob",
-            "description": "The definition of 'WindowBase64.atob()' in the 'HTML 5.1' specification."
+            "description": "WindowBase64.atob() - HTML 5.1"
         },
         {
             "name": "HTML5",
             "href": "https://www.w3.org/TR/html52/#dom-windowbase64-atob",
-            "description": "The definition of 'WindowBase64.atob()' in the 'HTML5' specification."
+            "description": "WindowBase64.atob() - HTML5"
         }
     ]
 }

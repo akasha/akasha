@@ -8,7 +8,7 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/#handler-worker-onmessage",
-            "description": "The definition of 'Worker.onmessage' in the 'HTML Living Standard' specification."
+            "description": "Worker.onmessage - HTML Living Standard"
         }
     ]
 }

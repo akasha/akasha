@@ -8,7 +8,7 @@
         {
             "name": "Web Share API",
             "href": "https://w3c.github.io/web-share/#share-method",
-            "description": "The definition of 'share()' in the 'Web Share API' specification."
+            "description": "share() - Web Share API"
         }
     ]
 }

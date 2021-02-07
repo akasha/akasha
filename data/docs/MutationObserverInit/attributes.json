@@ -8,7 +8,7 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#dom-mutationobserverinit-attributes",
-            "description": "The definition of 'MutationObserverInit.attributes' in the 'DOM' specification."
+            "description": "MutationObserverInit.attributes - DOM"
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "File and Directory Entries API",
             "href": "https://wicg.github.io/entries-api/#dom-file-webkitrelativepath",
-            "description": "The definition of 'webkitRelativePath' in the 'File and Directory Entries API' specification."
+            "description": "webkitRelativePath - File and Directory Entries API"
         }
     ]
 }

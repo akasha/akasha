@@ -8,7 +8,7 @@
         {
             "name": "CSS Transitions",
             "href": "https://drafts.csswg.org/css-transitions/#transitionend",
-            "description": "The definition of 'transitionend' in the 'CSS Transitions' specification."
+            "description": "transitionend - CSS Transitions"
         }
     ],
     "eventName": "transitionend",

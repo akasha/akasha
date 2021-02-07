@@ -8,12 +8,12 @@
         {
             "name": "WebGL 2.0",
             "href": "https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.15",
-            "description": "The definition of 'createTransformFeedback' in the 'WebGL 2.0' specification."
+            "description": "createTransformFeedback - WebGL 2.0"
         },
         {
             "name": "OpenGL ES 3.0",
             "href": "https://www.khronos.org/opengles/sdk/docs/man3/html/glGenTransformFeedbacks.xhtml",
-            "description": "The definition of 'glGenTransformFeedbacks' in the 'OpenGL ES 3.0' specification."
+            "description": "glGenTransformFeedbacks - OpenGL ES 3.0"
         }
     ]
 }

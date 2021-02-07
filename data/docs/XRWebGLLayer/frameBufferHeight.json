@@ -8,7 +8,7 @@
         {
             "name": "WebXR Device API",
             "href": "https://immersive-web.github.io/webxr/#dom-xrwebgllayer-framebufferheight",
-            "description": "The definition of 'XRWebGLLayer.framebufferHeight' in the 'WebXR Device API' specification."
+            "description": "XRWebGLLayer.framebufferHeight - WebXR Device API"
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "Media Capture and Streams",
             "href": "https://w3c.github.io/mediacapture-main/#dom-mediatracksettings-framerate",
-            "description": "The definition of 'frameRate' in the 'Media Capture and Streams' specification."
+            "description": "frameRate - Media Capture and Streams"
         }
     ]
 }

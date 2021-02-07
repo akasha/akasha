@@ -8,7 +8,7 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/#dom-context-2d-drawimage",
-            "description": "The definition of 'CanvasRenderingContext2D: drawImage' in the 'HTML Living Standard' specification."
+            "description": "CanvasRenderingContext2D: drawImage - HTML Living Standard"
         }
     ]
 }

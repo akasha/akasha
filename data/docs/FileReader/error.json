@@ -8,7 +8,7 @@
         {
             "name": "File API",
             "href": "https://w3c.github.io/FileAPI/#dom-filereader-error",
-            "description": "The definition of 'FileReader: error' in the 'File API' specification."
+            "description": "FileReader: error - File API"
         }
     ]
 }

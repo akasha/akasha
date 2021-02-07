@@ -8,7 +8,7 @@
         {
             "name": "Notifications API",
             "href": "https://notifications.spec.whatwg.org/#dom-notification-requireinteraction",
-            "description": "The definition of 'requireInteraction' in the 'Notifications API' specification."
+            "description": "requireInteraction - Notifications API"
         }
     ]
 }

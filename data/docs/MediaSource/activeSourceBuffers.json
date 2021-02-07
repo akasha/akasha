@@ -8,7 +8,7 @@
         {
             "name": "Media Source Extensions",
             "href": "https://w3c.github.io/media-source/#idl-def-mediasource-activesourcebuffers",
-            "description": "The definition of 'activeSourceBuffers' in the 'Media Source Extensions' specification."
+            "description": "activeSourceBuffers - Media Source Extensions"
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "Navigation Timing",
             "href": "https://www.w3.org/TR/navigation-timing/#dom-performancetiming-domainlookupend",
-            "description": "The definition of 'PerformanceTiming.domainLookupEnd' in the 'Navigation Timing' specification."
+            "description": "PerformanceTiming.domainLookupEnd - Navigation Timing"
         }
     ]
 }

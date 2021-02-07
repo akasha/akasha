@@ -8,7 +8,7 @@
         {
             "name": "Service Workers",
             "href": "https://w3c.github.io/ServiceWorker/#dom-fetchevent-respondwith",
-            "description": "The definition of 'respondWith()' in the 'Service Workers' specification."
+            "description": "respondWith() - Service Workers"
         }
     ]
 }

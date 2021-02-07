@@ -8,7 +8,7 @@
         {
             "name": "Scalable Vector Graphics (SVG) 2",
             "href": "https://svgwg.org/svg2-draft/single-page.html#interact-ErrorEvent",
-            "description": "The definition of 'error' in the 'Scalable Vector Graphics (SVG) 2' specification."
+            "description": "error - Scalable Vector Graphics (SVG) 2"
         }
     ],
     "eventName": "error",

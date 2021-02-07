@@ -8,7 +8,7 @@
         {
             "name": "Encrypted Media Extensions",
             "href": "https://w3c.github.io/encrypted-media/#dom-mediakeys-createsession",
-            "description": "The definition of 'createSession()' in the 'Encrypted Media Extensions' specification."
+            "description": "createSession() - Encrypted Media Extensions"
         }
     ]
 }

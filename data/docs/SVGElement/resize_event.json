@@ -8,7 +8,7 @@
         {
             "name": "Scalable Vector Graphics (SVG) 2",
             "href": "https://svgwg.org/svg2-draft/single-page.html#changes-interact",
-            "description": "The definition of 'event changes in SVG2' in the 'Scalable Vector Graphics (SVG) 2' specification."
+            "description": "event changes in SVG2 - Scalable Vector Graphics (SVG) 2"
         }
     ],
     "eventName": "resize",

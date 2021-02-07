@@ -8,7 +8,7 @@
         {
             "name": "Web Speech API",
             "href": "https://wicg.github.io/speech-api/#dom-speechgrammarlist-addfromstring",
-            "description": "The definition of 'addFromString()' in the 'Web Speech API' specification."
+            "description": "addFromString() - Web Speech API"
         }
     ]
 }

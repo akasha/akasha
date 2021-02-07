@@ -8,12 +8,12 @@
         {
             "name": "WebGL 2.0",
             "href": "https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.17",
-            "description": "The definition of 'createVertexArray' in the 'WebGL 2.0' specification."
+            "description": "createVertexArray - WebGL 2.0"
         },
         {
             "name": "OpenGL ES 3.0",
             "href": "https://www.khronos.org/opengles/sdk/docs/man3/html/glGenVertexArrays.xhtml",
-            "description": "The definition of 'glGenVertexArrays' in the 'OpenGL ES 3.0' specification."
+            "description": "glGenVertexArrays - OpenGL ES 3.0"
         }
     ]
 }

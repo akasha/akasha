@@ -8,7 +8,7 @@
         {
             "name": "Streams",
             "href": "https://streams.spec.whatwg.org/#ts-class",
-            "description": "The definition of 'TransformStream' in the 'Streams' specification."
+            "description": "TransformStream - Streams"
         }
     ]
 }

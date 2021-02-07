@@ -8,7 +8,7 @@
         {
             "name": "Media Playback Quality",
             "href": "https://w3c.github.io/media-playback-quality/#dom-htmlvideoelement-getvideoplaybackquality",
-            "description": "The definition of 'HTMLVideoElement.getVideoPlaybackQuality()' in the 'Media Playback Quality' specification."
+            "description": "HTMLVideoElement.getVideoPlaybackQuality() - Media Playback Quality"
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "Web Audio API",
             "href": "https://webaudio.github.io/web-audio-api/#dom-analysernode-analysernode",
-            "description": "The definition of 'AnalyserNode() constructor' in the 'Web Audio API' specification."
+            "description": "AnalyserNode() constructor - Web Audio API"
         }
     ]
 }

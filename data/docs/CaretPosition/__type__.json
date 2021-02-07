@@ -8,7 +8,7 @@
         {
             "name": "CSS Object Model (CSSOM) View Module",
             "href": "https://drafts.csswg.org/cssom-view/#caret-position",
-            "description": "The definition of 'CaretPosition' in the 'CSS Object Model (CSSOM) View Module' specification."
+            "description": "CaretPosition - CSS Object Model (CSSOM) View Module"
         }
     ]
 }

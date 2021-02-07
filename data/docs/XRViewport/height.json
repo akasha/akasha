@@ -8,7 +8,7 @@
         {
             "name": "WebXR Device API",
             "href": "https://immersive-web.github.io/webxr/#dom-xrviewport-height",
-            "description": "The definition of 'XRViewport.height' in the 'WebXR Device API' specification."
+            "description": "XRViewport.height - WebXR Device API"
         }
     ]
 }

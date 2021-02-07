@@ -8,7 +8,7 @@
         {
             "name": "Notifications API",
             "href": "https://notifications.spec.whatwg.org/#dom-notification-renotify",
-            "description": "The definition of 'renotify' in the 'Notifications API' specification."
+            "description": "renotify - Notifications API"
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#dom-node-parentelement",
-            "description": "The definition of 'parentElement' in the 'DOM' specification."
+            "description": "parentElement - DOM"
         }
     ]
 }

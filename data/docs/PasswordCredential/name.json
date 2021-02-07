@@ -8,7 +8,7 @@
         {
             "name": "Credential Management Level 1",
             "href": "https://w3c.github.io/webappsec-credential-management/#dom-credentialuserdata-name",
-            "description": "The definition of 'name' in the 'Credential Management Level 1' specification."
+            "description": "name - Credential Management Level 1"
         }
     ]
 }

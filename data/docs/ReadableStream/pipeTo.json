@@ -8,7 +8,7 @@
         {
             "name": "Streams",
             "href": "https://streams.spec.whatwg.org/#rs-pipe-to",
-            "description": "The definition of 'pipeTo()' in the 'Streams' specification."
+            "description": "pipeTo() - Streams"
         }
     ]
 }

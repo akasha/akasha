@@ -8,7 +8,7 @@
         {
             "name": "WebXR Device API",
             "href": "https://immersive-web.github.io/webxr/#dom-xrinputsource-profiles",
-            "description": "The definition of 'XRInputSource.profiles' in the 'WebXR Device API' specification."
+            "description": "XRInputSource.profiles - WebXR Device API"
         }
     ]
 }

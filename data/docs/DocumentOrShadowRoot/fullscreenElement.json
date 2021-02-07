@@ -8,7 +8,7 @@
         {
             "name": "Fullscreen API",
             "href": "https://fullscreen.spec.whatwg.org/#dom-document-fullscreenelement",
-            "description": "The definition of 'Document.fullscreenElement' in the 'Fullscreen API' specification."
+            "description": "Document.fullscreenElement - Fullscreen API"
         }
     ]
 }

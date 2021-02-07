@@ -8,7 +8,7 @@
         {
             "name": "Media Source Extensions",
             "href": "https://w3c.github.io/media-source/#idl-def-sourcebuffer-buffered",
-            "description": "The definition of 'buffered' in the 'Media Source Extensions' specification."
+            "description": "buffered - Media Source Extensions"
         }
     ]
 }

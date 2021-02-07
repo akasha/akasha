@@ -8,7 +8,7 @@
         {
             "name": "Web Cryptography API",
             "href": "https://www.w3.org/TR/WebCryptoAPI/#dfn-SubtleCrypto-method-verify",
-            "description": "The definition of 'SubtleCrypto.verify()' in the 'Web Cryptography API' specification."
+            "description": "SubtleCrypto.verify() - Web Cryptography API"
         }
     ]
 }

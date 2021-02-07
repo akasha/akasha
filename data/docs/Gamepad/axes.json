@@ -8,7 +8,7 @@
         {
             "name": "Gamepad",
             "href": "https://w3c.github.io/gamepad/#dom-gamepad-axes",
-            "description": "The definition of 'Gamepad.axes' in the 'Gamepad' specification."
+            "description": "Gamepad.axes - Gamepad"
         }
     ]
 }

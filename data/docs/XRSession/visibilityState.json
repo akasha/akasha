@@ -8,7 +8,7 @@
         {
             "name": "WebXR Device API",
             "href": "https://immersive-web.github.io/webxr/#dom-xrsession-visibilitystate",
-            "description": "The definition of 'XRSession.visibilityState' in the 'WebXR Device API' specification."
+            "description": "XRSession.visibilityState - WebXR Device API"
         }
     ]
 }

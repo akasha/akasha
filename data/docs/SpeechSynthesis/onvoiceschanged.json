@@ -8,7 +8,7 @@
         {
             "name": "Web Speech API",
             "href": "https://wicg.github.io/speech-api/#dom-speechsynthesis-onvoiceschanged",
-            "description": "The definition of 'onvoiceschanged' in the 'Web Speech API' specification."
+            "description": "onvoiceschanged - Web Speech API"
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "CSS Object Model (CSSOM) View Module",
             "href": "https://drafts.csswg.org/cssom-view/#the-mediaquerylist-interface",
-            "description": "The definition of 'MediaQueryList' in the 'CSS Object Model (CSSOM) View Module' specification."
+            "description": "MediaQueryList - CSS Object Model (CSSOM) View Module"
         }
     ]
 }

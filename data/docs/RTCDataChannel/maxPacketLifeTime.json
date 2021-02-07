@@ -8,7 +8,7 @@
         {
             "name": "WebRTC 1.0: Real-time Communication Between Browsers",
             "href": "https://w3c.github.io/webrtc-pc/#dom-datachannel-maxpacketlifetime",
-            "description": "The definition of 'RTCDataChannel.maxPacketLifeTime' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification."
+            "description": "RTCDataChannel.maxPacketLifeTime - WebRTC 1.0: Real-time Communication Between Browsers"
         }
     ]
 }

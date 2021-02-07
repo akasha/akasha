@@ -8,7 +8,7 @@
         {
             "name": "Streams",
             "href": "https://streams.spec.whatwg.org/#rs-locked",
-            "description": "The definition of 'locked' in the 'Streams' specification."
+            "description": "locked - Streams"
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "Media Capture and Streams",
             "href": "https://w3c.github.io/mediacapture-main/#dom-mediatracksupportedconstraints-width",
-            "description": "The definition of 'width' in the 'Media Capture and Streams' specification."
+            "description": "width - Media Capture and Streams"
         }
     ]
 }

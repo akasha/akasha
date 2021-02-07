@@ -8,7 +8,7 @@
         {
             "name": "Media Capture and Streams",
             "href": "https://w3c.github.io/mediacapture-main/#event-mediastreamtrack-unmute",
-            "description": "The definition of 'unmute' in the 'Media Capture and Streams' specification."
+            "description": "unmute - Media Capture and Streams"
         }
     ],
     "eventName": "unmute",

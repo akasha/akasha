@@ -8,12 +8,12 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#interface-staticrange",
-            "description": "The definition of 'StaticRange' in the 'DOM' specification."
+            "description": "StaticRange - DOM"
         },
         {
             "name": "Static Range",
             "href": "https://w3c.github.io/staticrange/#interface-staticrange",
-            "description": "The definition of 'StaticRange' in the 'Static Range' specification."
+            "description": "StaticRange - Static Range"
         }
     ]
 }

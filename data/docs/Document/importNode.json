@@ -8,12 +8,12 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#dom-document-importnode",
-            "description": "The definition of 'document.importNode()' in the 'DOM' specification."
+            "description": "document.importNode() - DOM"
         },
         {
             "name": "Document Object Model (DOM) Level 2 Core Specification",
             "href": "https://www.w3.org/TR/DOM-Level-2-Core/core.html#Core-Document-importNode",
-            "description": "The definition of 'document.importNode()' in the 'Document Object Model (DOM) Level 2 Core Specification' specification."
+            "description": "document.importNode() - Document Object Model (DOM) Level 2 Core Specification"
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "Web Speech API",
             "href": "https://wicg.github.io/speech-api/#dom-speechsynthesis-getvoices",
-            "description": "The definition of 'getVoices()' in the 'Web Speech API' specification."
+            "description": "getVoices() - Web Speech API"
         }
     ]
 }

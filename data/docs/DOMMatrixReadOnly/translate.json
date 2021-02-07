@@ -8,7 +8,7 @@
         {
             "name": "Geometry Interfaces Module Level 1",
             "href": "https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-translate",
-            "description": "The definition of 'DOMMatrixReadOnly.translate()' in the 'Geometry Interfaces Module Level 1' specification."
+            "description": "DOMMatrixReadOnly.translate() - Geometry Interfaces Module Level 1"
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "Web Authentication: An API for accessing Public Key Credentials Level 1",
             "href": "https://w3c.github.io/webauthn/#dom-authenticatorassertionresponse-authenticatordata",
-            "description": "The definition of 'authenticatorData' in the 'Web Authentication: An API for accessing Public Key Credentials Level 1' specification."
+            "description": "authenticatorData - Web Authentication: An API for accessing Public Key Credentials Level 1"
         }
     ]
 }

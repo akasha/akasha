@@ -8,7 +8,7 @@
         {
             "name": "Selection API",
             "href": "https://w3c.github.io/selection-api/#dom-selection-anchornode",
-            "description": "The definition of 'Selection.anchorNode' in the 'Selection API' specification."
+            "description": "Selection.anchorNode - Selection API"
         }
     ]
 }

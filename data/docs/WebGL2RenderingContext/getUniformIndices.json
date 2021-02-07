@@ -8,12 +8,12 @@
         {
             "name": "WebGL 2.0",
             "href": "https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.16",
-            "description": "The definition of 'getUniformIndices' in the 'WebGL 2.0' specification."
+            "description": "getUniformIndices - WebGL 2.0"
         },
         {
             "name": "OpenGL ES 3.0",
             "href": "https://www.khronos.org/opengles/sdk/docs/man3/html/glGetUniformIndices.xhtml",
-            "description": "The definition of 'glGetUniformIndices' in the 'OpenGL ES 3.0' specification."
+            "description": "glGetUniformIndices - OpenGL ES 3.0"
         }
     ]
 }

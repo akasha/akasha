@@ -8,7 +8,7 @@
         {
             "name": "Notifications API",
             "href": "https://notifications.spec.whatwg.org/#dom-serviceworkerglobalscope-onnotificationclick",
-            "description": "The definition of 'onnotificationclick' in the 'Notifications API' specification."
+            "description": "onnotificationclick - Notifications API"
         }
     ]
 }

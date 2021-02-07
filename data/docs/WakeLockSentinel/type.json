@@ -8,7 +8,7 @@
         {
             "name": "Screen Wake Lock API",
             "href": "https://w3c.github.io/screen-wake-lock/#the-wakelocktype-enum",
-            "description": "The definition of 'WakeLockType' in the 'Screen Wake Lock API' specification."
+            "description": "WakeLockType - Screen Wake Lock API"
         }
     ]
 }

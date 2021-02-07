@@ -8,7 +8,7 @@
         {
             "name": "Device Memory 1",
             "href": "https://w3c.github.io/device-memory/#sec-device-memory-js-api",
-            "description": "The definition of 'deviceMemory' in the 'Device Memory 1' specification."
+            "description": "deviceMemory - Device Memory 1"
         }
     ]
 }

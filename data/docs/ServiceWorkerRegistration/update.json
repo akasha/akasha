@@ -8,7 +8,7 @@
         {
             "name": "Service Workers",
             "href": "https://w3c.github.io/ServiceWorker/#service-worker-registration-update",
-            "description": "The definition of 'ServiceWorkerRegistration.update()' in the 'Service Workers' specification."
+            "description": "ServiceWorkerRegistration.update() - Service Workers"
         }
     ]
 }

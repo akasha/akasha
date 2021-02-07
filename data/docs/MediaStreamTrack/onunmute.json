@@ -8,7 +8,7 @@
         {
             "name": "Media Capture and Streams",
             "href": "https://w3c.github.io/mediacapture-main/#dom-mediastreamtrack-onunmute",
-            "description": "The definition of 'MediaStreamTrack.onunmute' in the 'Media Capture and Streams' specification."
+            "description": "MediaStreamTrack.onunmute - Media Capture and Streams"
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "Screen Capture",
             "href": "https://w3c.github.io/mediacapture-screen-share/#dom-mediatracksupportedconstraints-displaysurface",
-            "description": "The definition of 'MediaTrackSupportedConstraints.displaySurface' in the 'Screen Capture' specification."
+            "description": "MediaTrackSupportedConstraints.displaySurface - Screen Capture"
         }
     ]
 }

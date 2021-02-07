@@ -8,12 +8,12 @@
         {
             "name": "Referrer Policy",
             "href": "https://w3c.github.io/webappsec-referrer-policy/#referrer-policy-delivery-referrer-attribute",
-            "description": "The definition of 'referrerpolicy attribute' in the 'Referrer Policy' specification."
+            "description": "referrerpolicy attribute - Referrer Policy"
         },
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/#dom-iframe-referrerpolicy",
-            "description": "The definition of 'HTMLIFrameElement: referrerPolicy' in the 'HTML Living Standard' specification."
+            "description": "HTMLIFrameElement: referrerPolicy - HTML Living Standard"
         }
     ]
 }

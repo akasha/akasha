@@ -8,12 +8,12 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/media.html#the-trackevent-interface",
-            "description": "The definition of 'TrackEvent' in the 'HTML Living Standard' specification."
+            "description": "TrackEvent - HTML Living Standard"
         },
         {
             "name": "HTML5",
             "href": "https://www.w3.org/TR/html52/embedded-content-0.html#trackevent",
-            "description": "The definition of 'TrackEvent' in the 'HTML5' specification."
+            "description": "TrackEvent - HTML5"
         }
     ]
 }

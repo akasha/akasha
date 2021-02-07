@@ -8,7 +8,7 @@
         {
             "name": "WebXR Device API",
             "href": "https://immersive-web.github.io/webxr/#xrboundedreferencespace-interface",
-            "description": "The definition of 'XRBoundedReferenceSpace' in the 'WebXR Device API' specification."
+            "description": "XRBoundedReferenceSpace - WebXR Device API"
         }
     ]
 }

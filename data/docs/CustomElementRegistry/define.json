@@ -8,7 +8,7 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/custom-elements.html#dom-customelementregistry-define",
-            "description": "The definition of 'customElements.define()' in the 'HTML Living Standard' specification."
+            "description": "customElements.define() - HTML Living Standard"
         }
     ]
 }

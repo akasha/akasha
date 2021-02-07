@@ -8,7 +8,7 @@
         {
             "name": "Web Audio API",
             "href": "https://webaudio.github.io/web-audio-api/#dom-offlineaudiocontext-length",
-            "description": "The definition of 'length' in the 'Web Audio API' specification."
+            "description": "length - Web Audio API"
         }
     ]
 }

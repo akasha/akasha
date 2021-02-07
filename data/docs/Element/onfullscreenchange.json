@@ -8,7 +8,7 @@
         {
             "name": "Fullscreen API",
             "href": "https://fullscreen.spec.whatwg.org/#handler-document-onfullscreenchange",
-            "description": "The definition of 'onfullscreenchange' in the 'Fullscreen API' specification."
+            "description": "onfullscreenchange - Fullscreen API"
         }
     ]
 }

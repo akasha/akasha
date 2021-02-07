@@ -8,7 +8,7 @@
         {
             "name": "MediaStream Recording",
             "href": "https://w3c.github.io/mediacapture-record/#dom-mediarecorder-state",
-            "description": "The definition of 'MediaRecorder.state' in the 'MediaStream Recording' specification."
+            "description": "MediaRecorder.state - MediaStream Recording"
         }
     ]
 }

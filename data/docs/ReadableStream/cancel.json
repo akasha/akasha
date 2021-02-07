@@ -8,7 +8,7 @@
         {
             "name": "Streams",
             "href": "https://streams.spec.whatwg.org/#rs-cancel",
-            "description": "The definition of 'cancel()' in the 'Streams' specification."
+            "description": "cancel() - Streams"
         }
     ]
 }

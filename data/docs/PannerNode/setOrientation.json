@@ -8,7 +8,7 @@
         {
             "name": "Web Audio API",
             "href": "https://webaudio.github.io/web-audio-api/#dom-pannernode-setorientation",
-            "description": "The definition of 'setOrientation()' in the 'Web Audio API' specification."
+            "description": "setOrientation() - Web Audio API"
         }
     ]
 }

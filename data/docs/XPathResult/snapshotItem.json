@@ -8,7 +8,7 @@
         {
             "name": "Document Object Model (DOM) Level 3 XPath Specification",
             "href": "https://www.w3.org/TR/DOM-Level-3-XPath/xpath.html#XPathResult-snapshotItem",
-            "description": "The definition of 'XPathResult.snapshotItem()' in the 'Document Object Model (DOM) Level 3 XPath Specification' specification."
+            "description": "XPathResult.snapshotItem() - Document Object Model (DOM) Level 3 XPath Specification"
         }
     ]
 }

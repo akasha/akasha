@@ -8,17 +8,17 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#dom-parentnode-queryselectorall",
-            "description": "The definition of 'querySelector()' in the 'DOM' specification."
+            "description": "querySelector() - DOM"
         },
         {
             "name": "Selectors API Level 2",
             "href": "https://dev.w3.org/2006/webapi/selectors-api2/#queryselectorall",
-            "description": "The definition of 'querySelectorAll()' in the 'Selectors API Level 2' specification."
+            "description": "querySelectorAll() - Selectors API Level 2"
         },
         {
             "name": "Selectors API Level 1",
             "href": "https://www.w3.org/TR/selectors-api/#queryselectorall",
-            "description": "The definition of 'querySelectorAll()' in the 'Selectors API Level 1' specification."
+            "description": "querySelectorAll() - Selectors API Level 1"
         }
     ]
 }

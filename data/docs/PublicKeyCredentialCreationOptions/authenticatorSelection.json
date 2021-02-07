@@ -8,7 +8,7 @@
         {
             "name": "Web Authentication: An API for accessing Public Key Credentials Level 1",
             "href": "https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-authenticatorselection",
-            "description": "The definition of 'authenticatorSelection' in the 'Web Authentication: An API for accessing Public Key Credentials Level 1' specification."
+            "description": "authenticatorSelection - Web Authentication: An API for accessing Public Key Credentials Level 1"
         }
     ]
 }

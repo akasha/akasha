@@ -8,7 +8,7 @@
         {
             "name": "Notifications API",
             "href": "https://notifications.spec.whatwg.org/#dom-notification-permission",
-            "description": "The definition of 'permission' in the 'Notifications API' specification."
+            "description": "permission - Notifications API"
         }
     ]
 }

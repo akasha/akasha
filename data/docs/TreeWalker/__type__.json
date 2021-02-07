@@ -8,12 +8,12 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#interface-treewalker",
-            "description": "The definition of 'TreeWalker' in the 'DOM' specification."
+            "description": "TreeWalker - DOM"
         },
         {
             "name": "Document Object Model (DOM) Level 2 Traversal and Range Specification",
             "href": "https://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-TreeWalker",
-            "description": "The definition of 'TreeWalker' in the 'Document Object Model (DOM) Level 2 Traversal and Range Specification' specification."
+            "description": "TreeWalker - Document Object Model (DOM) Level 2 Traversal and Range Specification"
         }
     ]
 }

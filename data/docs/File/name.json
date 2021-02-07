@@ -8,7 +8,7 @@
         {
             "name": "File API",
             "href": "https://w3c.github.io/FileAPI/#file-attrs",
-            "description": "The definition of 'name' in the 'File API' specification."
+            "description": "name - File API"
         }
     ]
 }

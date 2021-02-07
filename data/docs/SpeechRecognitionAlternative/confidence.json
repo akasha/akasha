@@ -8,7 +8,7 @@
         {
             "name": "Web Speech API",
             "href": "https://wicg.github.io/speech-api/#dom-speechrecognitionalternative-confidence",
-            "description": "The definition of 'confidence' in the 'Web Speech API' specification."
+            "description": "confidence - Web Speech API"
         }
     ]
 }

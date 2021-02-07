@@ -8,7 +8,7 @@
         {
             "name": "WebXR Device API",
             "href": "https://immersive-web.github.io/webxr/#dom-xrwebgllayer-framebufferwidth",
-            "description": "The definition of 'XRWebGLLayer.framebufferWidth' in the 'WebXR Device API' specification."
+            "description": "XRWebGLLayer.framebufferWidth - WebXR Device API"
         }
     ]
 }

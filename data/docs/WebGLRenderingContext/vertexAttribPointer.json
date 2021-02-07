@@ -8,12 +8,12 @@
         {
             "name": "WebGL 1.0",
             "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10",
-            "description": "The definition of 'vertexAttribPointer' in the 'WebGL 1.0' specification."
+            "description": "vertexAttribPointer - WebGL 1.0"
         },
         {
             "name": "OpenGL ES 2.0",
             "href": "https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttribPointer.xml",
-            "description": "The definition of 'glVertexAttribPointer' in the 'OpenGL ES 2.0' specification."
+            "description": "glVertexAttribPointer - OpenGL ES 2.0"
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "WebXR Device API",
             "href": "https://immersive-web.github.io/webxr/#dom-xrwebgllayer-antialias",
-            "description": "The definition of 'XRWebGLLayer.antialias' in the 'WebXR Device API' specification."
+            "description": "XRWebGLLayer.antialias - WebXR Device API"
         }
     ]
 }

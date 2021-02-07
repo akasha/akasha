@@ -8,7 +8,7 @@
         {
             "name": "Notifications API",
             "href": "https://notifications.spec.whatwg.org/#dom-serviceworkerregistration-getnotifications",
-            "description": "The definition of 'ServiceWorkerRegistration.getNotifications()' in the 'Notifications API' specification."
+            "description": "ServiceWorkerRegistration.getNotifications() - Notifications API"
         }
     ]
 }

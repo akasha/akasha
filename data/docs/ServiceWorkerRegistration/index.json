@@ -8,7 +8,7 @@
         {
             "name": "Content Index API",
             "href": "https://wicg.github.io/content-index/spec/#extensions-to-service-worker-registration",
-            "description": "The definition of 'index' in the 'Content Index API' specification."
+            "description": "index - Content Index API"
         }
     ]
 }

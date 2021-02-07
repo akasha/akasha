@@ -8,7 +8,7 @@
         {
             "name": "WebAssembly features for web embedding",
             "href": "https://webassembly.org/docs/web/#webassemblyinstantiatestreaming",
-            "description": "The definition of 'instantiateStreaming()' in the 'WebAssembly features for web embedding' specification."
+            "description": "instantiateStreaming() - WebAssembly features for web embedding"
         }
     ]
 }

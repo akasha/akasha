@@ -8,7 +8,7 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#dom-node-getrootnode",
-            "description": "The definition of 'getRootNode()' in the 'DOM' specification."
+            "description": "getRootNode() - DOM"
         }
     ]
 }

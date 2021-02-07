@@ -8,7 +8,7 @@
         {
             "name": "High Resolution Time Level 2",
             "href": "https://www.w3.org/TR/hr-time-2/#dom-performance-tojson",
-            "description": "The definition of 'toJSON() serializer' in the 'High Resolution Time Level 2' specification."
+            "description": "toJSON() serializer - High Resolution Time Level 2"
         }
     ]
 }

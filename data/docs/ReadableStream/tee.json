@@ -8,7 +8,7 @@
         {
             "name": "Streams",
             "href": "https://streams.spec.whatwg.org/#rs-tee",
-            "description": "The definition of 'tee()' in the 'Streams' specification."
+            "description": "tee() - Streams"
         }
     ]
 }

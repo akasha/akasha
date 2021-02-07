@@ -8,7 +8,7 @@
         {
             "name": "Web Bluetooth",
             "href": "https://webbluetoothcg.github.io/web-bluetooth/#bluetoothremotegattservice",
-            "description": "The definition of 'BluetoothRemoteGATTService' in the 'Web Bluetooth' specification."
+            "description": "BluetoothRemoteGATTService - Web Bluetooth"
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "Web Audio API",
             "href": "https://webaudio.github.io/web-audio-api/#dom-analysernode-maxdecibels",
-            "description": "The definition of 'maxDecibels' in the 'Web Audio API' specification."
+            "description": "maxDecibels - Web Audio API"
         }
     ]
 }

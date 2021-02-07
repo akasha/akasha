@@ -8,12 +8,12 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#interface-nondocumenttypechildnode",
-            "description": "The definition of 'NonDocumentTypeChildNode' in the 'DOM' specification."
+            "description": "NonDocumentTypeChildNode - DOM"
         },
         {
             "name": "Element Traversal Specification",
             "href": "https://www.w3.org/TR/ElementTraversal/#interface-elementTraversal",
-            "description": "The definition of 'ElementTraversal' in the 'Element Traversal Specification' specification."
+            "description": "ElementTraversal - Element Traversal Specification"
         }
     ]
 }

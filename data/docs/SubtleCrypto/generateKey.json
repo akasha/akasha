@@ -8,7 +8,7 @@
         {
             "name": "Web Cryptography API",
             "href": "https://www.w3.org/TR/WebCryptoAPI/#dfn-SubtleCrypto-method-generateKey",
-            "description": "The definition of 'SubtleCrypto.generateKey()' in the 'Web Cryptography API' specification."
+            "description": "SubtleCrypto.generateKey() - Web Cryptography API"
         }
     ]
 }

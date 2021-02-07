@@ -8,7 +8,7 @@
         {
             "name": "CSS Object Model (CSSOM) View Module",
             "href": "https://drafts.csswg.org/cssom-view/#dictdef-scrolltooptions",
-            "description": "The definition of 'ScrollToOptions' in the 'CSS Object Model (CSSOM) View Module' specification."
+            "description": "ScrollToOptions - CSS Object Model (CSSOM) View Module"
         }
     ]
 }

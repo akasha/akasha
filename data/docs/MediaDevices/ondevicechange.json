@@ -8,7 +8,7 @@
         {
             "name": "Media Capture and Streams",
             "href": "https://w3c.github.io/mediacapture-main/#dom-mediadevices-ondevicechange",
-            "description": "The definition of 'ondevicechange' in the 'Media Capture and Streams' specification."
+            "description": "ondevicechange - Media Capture and Streams"
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "WebVR 1.1",
             "href": "https://immersive-web.github.io/webvr/spec/1.1/#dom-window-onvrdisplayblur",
-            "description": "The definition of 'vrdisplayblur' in the 'WebVR 1.1' specification."
+            "description": "vrdisplayblur - WebVR 1.1"
         }
     ],
     "eventName": "vrdisplayblur",

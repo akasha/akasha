@@ -8,7 +8,7 @@
         {
             "name": "Indexed Database API Draft",
             "href": "https://w3c.github.io/IndexedDB/#dom-idbobjectstore-getkey",
-            "description": "The definition of 'getKey()' in the 'Indexed Database API Draft' specification."
+            "description": "getKey() - Indexed Database API Draft"
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#dom-element-namespaceuri",
-            "description": "The definition of 'Element: namespaceURI' in the 'DOM' specification."
+            "description": "Element: namespaceURI - DOM"
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "Media Capture and Streams",
             "href": "https://w3c.github.io/mediacapture-main/#dom-mediastream-clone",
-            "description": "The definition of 'MediaStream.clone()' in the 'Media Capture and Streams' specification."
+            "description": "MediaStream.clone() - Media Capture and Streams"
         }
     ]
 }

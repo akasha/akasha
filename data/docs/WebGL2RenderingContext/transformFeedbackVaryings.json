@@ -8,12 +8,12 @@
         {
             "name": "WebGL 2.0",
             "href": "https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.15",
-            "description": "The definition of 'transformFeedbackVaryings' in the 'WebGL 2.0' specification."
+            "description": "transformFeedbackVaryings - WebGL 2.0"
         },
         {
             "name": "OpenGL ES 3.0",
             "href": "https://www.khronos.org/opengles/sdk/docs/man3/html/glTransformFeedbackVaryings.xhtml",
-            "description": "The definition of 'glTransformFeedbackVaryings' in the 'OpenGL ES 3.0' specification."
+            "description": "glTransformFeedbackVaryings - OpenGL ES 3.0"
         }
     ]
 }

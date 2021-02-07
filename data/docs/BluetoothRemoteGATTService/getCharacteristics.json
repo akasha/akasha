@@ -8,7 +8,7 @@
         {
             "name": "Web Bluetooth",
             "href": "https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattservice-getcharacteristics",
-            "description": "The definition of 'getCharacteristics()' in the 'Web Bluetooth' specification."
+            "description": "getCharacteristics() - Web Bluetooth"
         }
     ]
 }

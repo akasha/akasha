@@ -8,17 +8,17 @@
         {
             "name": "WebGL 1.0",
             "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#COMPRESSEDTEXSUBIMAGE2D",
-            "description": "The definition of 'compressedTexSubImage2D' in the 'WebGL 1.0' specification."
+            "description": "compressedTexSubImage2D - WebGL 1.0"
         },
         {
             "name": "OpenGL ES 2.0",
             "href": "https://www.khronos.org/opengles/sdk/docs/man/xhtml/glCompressedTexSubImage2D.xml",
-            "description": "The definition of 'glCompressedTexSubImage2D' in the 'OpenGL ES 2.0' specification."
+            "description": "glCompressedTexSubImage2D - OpenGL ES 2.0"
         },
         {
             "name": "OpenGL ES 3.0",
             "href": "https://www.khronos.org/opengles/sdk/docs/man3/html/glCompressedTexSubImage2D.xhtml",
-            "description": "The definition of 'glCompressedTexSubImage2D' in the 'OpenGL ES 3.0' specification."
+            "description": "glCompressedTexSubImage2D - OpenGL ES 3.0"
         }
     ]
 }

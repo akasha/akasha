@@ -8,7 +8,7 @@
         {
             "name": "WebXR Device API",
             "href": "https://immersive-web.github.io/webxr/#dom-xrboundedreferencespace-boundsgeometry",
-            "description": "The definition of 'boundsGeometry' in the 'WebXR Device API' specification."
+            "description": "boundsGeometry - WebXR Device API"
         }
     ]
 }

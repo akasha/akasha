@@ -8,7 +8,7 @@
         {
             "name": "Fetch",
             "href": "https://fetch.spec.whatwg.org/#dom-request-referrer",
-            "description": "The definition of 'referrer' in the 'Fetch' specification."
+            "description": "referrer - Fetch"
         }
     ]
 }

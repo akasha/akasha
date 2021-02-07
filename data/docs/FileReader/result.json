@@ -8,7 +8,7 @@
         {
             "name": "File API",
             "href": "https://w3c.github.io/FileAPI/#dom-filereader-result",
-            "description": "The definition of 'result' in the 'File API' specification."
+            "description": "result - File API"
         }
     ]
 }

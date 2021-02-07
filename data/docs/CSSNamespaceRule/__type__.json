@@ -8,7 +8,7 @@
         {
             "name": "CSS Object Model (CSSOM)",
             "href": "https://drafts.csswg.org/cssom/#the-cssnamespacerule-interface",
-            "description": "The definition of 'CSSNamespaceRule' in the 'CSS Object Model (CSSOM)' specification."
+            "description": "CSSNamespaceRule - CSS Object Model (CSSOM)"
         }
     ]
 }

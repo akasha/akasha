@@ -8,7 +8,7 @@
         {
             "name": "Reporting API",
             "href": "https://w3c.github.io/reporting/#interface-reporting-observer",
-            "description": "The definition of 'ReportingObserver' in the 'Reporting API' specification."
+            "description": "ReportingObserver - Reporting API"
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "Fetch",
             "href": "https://fetch.spec.whatwg.org/#dom-body-blob",
-            "description": "The definition of 'blob()' in the 'Fetch' specification."
+            "description": "blob() - Fetch"
         }
     ]
 }

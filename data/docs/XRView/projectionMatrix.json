@@ -8,7 +8,7 @@
         {
             "name": "WebXR Device API",
             "href": "https://immersive-web.github.io/webxr/#dom-xrview-projectionmatrix",
-            "description": "The definition of 'XRView.projectionMatrix' in the 'WebXR Device API' specification."
+            "description": "XRView.projectionMatrix - WebXR Device API"
         }
     ]
 }

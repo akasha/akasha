@@ -8,17 +8,17 @@
         {
             "name": "CSS Painting API Level 1",
             "href": "https://drafts.css-houdini.org/css-paint-api-1/#dom-css-paintworklet",
-            "description": "The definition of 'paintWorklet' in the 'CSS Painting API Level 1' specification."
+            "description": "paintWorklet - CSS Painting API Level 1"
         },
         {
             "name": "CSS Object Model (CSSOM)",
             "href": "https://drafts.csswg.org/cssom/#the-css.escape()-method",
-            "description": "The definition of 'CSS' in the 'CSS Object Model (CSSOM)' specification."
+            "description": "CSS - CSS Object Model (CSSOM)"
         },
         {
             "name": "CSS Conditional Rules Module Level 3",
             "href": "https://drafts.csswg.org/css-conditional-3/#the-css-interface",
-            "description": "The definition of 'CSS' in the 'CSS Conditional Rules Module Level 3' specification."
+            "description": "CSS - CSS Conditional Rules Module Level 3"
         }
     ]
 }

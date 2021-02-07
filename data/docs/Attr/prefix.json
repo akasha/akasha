@@ -8,12 +8,12 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#dom-attr-prefix",
-            "description": "The definition of 'Attr: prefix' in the 'DOM' specification."
+            "description": "Attr: prefix - DOM"
         },
         {
             "name": "DOM4",
             "href": "https://www.w3.org/TR/dom/#dom-attr-prefix",
-            "description": "The definition of 'Attr.prefix' in the 'DOM4' specification."
+            "description": "Attr.prefix - DOM4"
         }
     ]
 }

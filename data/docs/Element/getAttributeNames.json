@@ -8,7 +8,7 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#dom-element-getattributenames",
-            "description": "The definition of 'Element.getAttributeNames' in the 'DOM' specification."
+            "description": "Element.getAttributeNames - DOM"
         }
     ]
 }

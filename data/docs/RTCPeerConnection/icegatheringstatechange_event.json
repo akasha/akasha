@@ -8,7 +8,7 @@
         {
             "name": "WebRTC 1.0: Real-time Communication Between Browsers",
             "href": "https://w3c.github.io/webrtc-pc/#event-icegatheringstatechange",
-            "description": "The definition of 'icecandidatestatechange' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification."
+            "description": "icecandidatestatechange - WebRTC 1.0: Real-time Communication Between Browsers"
         }
     ],
     "eventName": "icegatheringstatechange",

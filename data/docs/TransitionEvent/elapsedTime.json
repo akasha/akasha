@@ -8,7 +8,7 @@
         {
             "name": "CSS Transitions",
             "href": "https://drafts.csswg.org/css-transitions/#Events-TransitionEvent-elapsedTime",
-            "description": "The definition of 'TransitionEvent.elapsedTime' in the 'CSS Transitions' specification."
+            "description": "TransitionEvent.elapsedTime - CSS Transitions"
         }
     ]
 }

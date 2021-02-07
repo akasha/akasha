@@ -8,17 +8,17 @@
         {
             "name": "Pointer Events",
             "href": "https://www.w3.org/TR/pointerevents1/#widl-PointerEventInit-pointerType",
-            "description": "The definition of 'pointerType' in the 'Pointer Events' specification."
+            "description": "pointerType - Pointer Events"
         },
         {
             "name": "Pointer Events – Level 2",
             "href": "https://www.w3.org/TR/pointerevents2/#dom-pointerevent-pointertype",
-            "description": "The definition of 'pointerType' in the 'Pointer Events &ndash; Level 2' specification."
+            "description": "pointerType - Pointer Events &ndash; Level 2"
         },
         {
             "name": "CSS Object Model (CSSOM) View Module",
             "href": "https://drafts.csswg.org/cssom-view/#extensions-to-the-mouseevent-interface",
-            "description": "The definition of 'MouseEvent' in the 'CSS Object Model (CSSOM) View Module' specification."
+            "description": "MouseEvent - CSS Object Model (CSSOM) View Module"
         }
     ]
 }

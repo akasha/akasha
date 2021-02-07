@@ -8,7 +8,7 @@
         {
             "name": "Web Audio API",
             "href": "https://webaudio.github.io/web-audio-api/#dom-audionode-channelcountmode",
-            "description": "The definition of 'channelCountMode' in the 'Web Audio API' specification."
+            "description": "channelCountMode - Web Audio API"
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "Pointer Events – Level 2",
             "href": "https://www.w3.org/TR/pointerevents2/#dom-pointerevent-tangentialpressure",
-            "description": "The definition of 'tangentialPressure' in the 'Pointer Events &ndash; Level 2' specification."
+            "description": "tangentialPressure - Pointer Events &ndash; Level 2"
         }
     ]
 }

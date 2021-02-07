@@ -8,7 +8,7 @@
         {
             "name": "Web Animations",
             "href": "https://drafts.csswg.org/web-animations-1/#dom-animation-pause",
-            "description": "The definition of 'play()' in the 'Web Animations' specification."
+            "description": "play() - Web Animations"
         }
     ]
 }

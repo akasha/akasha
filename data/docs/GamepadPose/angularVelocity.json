@@ -8,7 +8,7 @@
         {
             "name": "Gamepad Extensions",
             "href": "https://w3c.github.io/gamepad/extensions.html#dom-gamepadpose-angularvelocity",
-            "description": "The definition of 'angularVelocity' in the 'Gamepad Extensions' specification."
+            "description": "angularVelocity - Gamepad Extensions"
         }
     ]
 }

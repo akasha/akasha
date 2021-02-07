@@ -8,7 +8,7 @@
         {
             "name": "Web Animations",
             "href": "https://drafts.csswg.org/web-animations-1/#dom-document-timeline",
-            "description": "The definition of 'document.timeline' in the 'Web Animations' specification."
+            "description": "document.timeline - Web Animations"
         }
     ]
 }

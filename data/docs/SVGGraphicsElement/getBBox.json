@@ -8,7 +8,7 @@
         {
             "name": "Scalable Vector Graphics (SVG) 1.1 (Second Edition)",
             "href": "https://www.w3.org/TR/SVG11/types.html#__svg__SVGLocatable__getBBox",
-            "description": "The definition of 'getBBox' in the 'Scalable Vector Graphics (SVG) 1.1 (Second Edition)' specification."
+            "description": "getBBox - Scalable Vector Graphics (SVG) 1.1 (Second Edition)"
         }
     ]
 }

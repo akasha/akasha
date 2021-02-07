@@ -8,7 +8,7 @@
         {
             "name": "CSS Object Model (CSSOM)",
             "href": "https://drafts.csswg.org/cssom/#the-medialist-interface",
-            "description": "The definition of 'MediaList' in the 'CSS Object Model (CSSOM)' specification."
+            "description": "MediaList - CSS Object Model (CSSOM)"
         }
     ]
 }

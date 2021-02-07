@@ -8,7 +8,7 @@
         {
             "name": "Media Capture and Streams",
             "href": "https://w3c.github.io/mediacapture-main/#dom-mediastreamtrack-getcapabilities",
-            "description": "The definition of 'getCapabilities()' in the 'Media Capture and Streams' specification."
+            "description": "getCapabilities() - Media Capture and Streams"
         }
     ]
 }

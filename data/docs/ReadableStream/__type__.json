@@ -8,7 +8,7 @@
         {
             "name": "Streams",
             "href": "https://streams.spec.whatwg.org/#rs-class",
-            "description": "The definition of 'ReadableStream' in the 'Streams' specification."
+            "description": "ReadableStream - Streams"
         }
     ]
 }

@@ -8,12 +8,12 @@
         {
             "name": "Filter Effects Module Level 1",
             "href": "https://drafts.fxtf.org/filter-effects/#InterfaceSVGFETurbulenceElement",
-            "description": "The definition of 'SVGFETurbulenceElement' in the 'Filter Effects Module Level 1' specification."
+            "description": "SVGFETurbulenceElement - Filter Effects Module Level 1"
         },
         {
             "name": "Scalable Vector Graphics (SVG) 1.1 (Second Edition)",
             "href": "https://www.w3.org/TR/SVG11/filters.html#InterfaceSVGFETurbulenceElement",
-            "description": "The definition of 'SVGFETurbulenceElement' in the 'Scalable Vector Graphics (SVG) 1.1 (Second Edition)' specification."
+            "description": "SVGFETurbulenceElement - Scalable Vector Graphics (SVG) 1.1 (Second Edition)"
         }
     ]
 }

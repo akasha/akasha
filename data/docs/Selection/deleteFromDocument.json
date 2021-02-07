@@ -8,7 +8,7 @@
         {
             "name": "Selection API",
             "href": "https://w3c.github.io/selection-api/#dom-selection-deletefromdocument",
-            "description": "The definition of 'Selection.deleteFromDocument()' in the 'Selection API' specification."
+            "description": "Selection.deleteFromDocument() - Selection API"
         }
     ]
 }

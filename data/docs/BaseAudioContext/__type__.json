@@ -8,7 +8,7 @@
         {
             "name": "Web Audio API",
             "href": "https://webaudio.github.io/web-audio-api/#BaseAudioContext",
-            "description": "The definition of 'BaseAudioContext' in the 'Web Audio API' specification."
+            "description": "BaseAudioContext - Web Audio API"
         }
     ]
 }

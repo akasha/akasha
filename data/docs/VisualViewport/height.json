@@ -8,7 +8,7 @@
         {
             "name": "Visual Viewport API",
             "href": "https://wicg.github.io/visual-viewport/#dom-visualviewport-height",
-            "description": "The definition of 'height' in the 'Visual Viewport API' specification."
+            "description": "height - Visual Viewport API"
         }
     ]
 }

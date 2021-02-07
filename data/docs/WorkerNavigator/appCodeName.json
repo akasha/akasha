@@ -8,7 +8,7 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/#dom-navigator-appcodename",
-            "description": "The definition of 'NavigatorID.appCodeName' in the 'HTML Living Standard' specification."
+            "description": "NavigatorID.appCodeName - HTML Living Standard"
         }
     ]
 }

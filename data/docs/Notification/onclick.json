@@ -8,7 +8,7 @@
         {
             "name": "Notifications API",
             "href": "https://notifications.spec.whatwg.org/#dom-notification-onclick",
-            "description": "The definition of 'onclick' in the 'Notifications API' specification."
+            "description": "onclick - Notifications API"
         }
     ]
 }

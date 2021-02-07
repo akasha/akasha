@@ -8,7 +8,7 @@
         {
             "name": "Encrypted Media Extensions",
             "href": "https://w3c.github.io/encrypted-media/#mediakeystatusmap-interface",
-            "description": "The definition of 'MediaKeyStatusMap' in the 'Encrypted Media Extensions' specification."
+            "description": "MediaKeyStatusMap - Encrypted Media Extensions"
         }
     ]
 }

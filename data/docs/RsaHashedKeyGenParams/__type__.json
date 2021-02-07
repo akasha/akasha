@@ -8,7 +8,7 @@
         {
             "name": "Web Cryptography API",
             "href": "https://www.w3.org/TR/WebCryptoAPI/#dfn-RsaHashedKeyGenParams",
-            "description": "The definition of 'SubtleCrypto.RsaHashedKeyGenParams' in the 'Web Cryptography API' specification."
+            "description": "SubtleCrypto.RsaHashedKeyGenParams - Web Cryptography API"
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "Web Audio API",
             "href": "https://webaudio.github.io/web-audio-api/#dom-gainnode-gain",
-            "description": "The definition of 'gain' in the 'Web Audio API' specification."
+            "description": "gain - Web Audio API"
         }
     ]
 }

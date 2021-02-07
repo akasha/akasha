@@ -8,7 +8,7 @@
         {
             "name": "CSS Object Model (CSSOM) View Module",
             "href": "https://drafts.csswg.org/cssom-view/#the-geometryutils-interface",
-            "description": "The definition of 'GeometryUtils' in the 'CSS Object Model (CSSOM) View Module' specification."
+            "description": "GeometryUtils - CSS Object Model (CSSOM) View Module"
         }
     ]
 }

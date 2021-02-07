@@ -8,7 +8,7 @@
         {
             "name": "Web Speech API",
             "href": "https://wicg.github.io/speech-api/#dom-speechsynthesisutterance-text",
-            "description": "The definition of 'text' in the 'Web Speech API' specification."
+            "description": "text - Web Speech API"
         }
     ]
 }

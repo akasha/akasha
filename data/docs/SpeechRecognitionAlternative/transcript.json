@@ -8,7 +8,7 @@
         {
             "name": "Web Speech API",
             "href": "https://wicg.github.io/speech-api/#dom-speechrecognitionalternative-transcript",
-            "description": "The definition of 'transcript' in the 'Web Speech API' specification."
+            "description": "transcript - Web Speech API"
         }
     ]
 }

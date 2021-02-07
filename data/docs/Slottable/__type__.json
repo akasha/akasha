@@ -8,7 +8,7 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#slotable",
-            "description": "The definition of 'Slottable' in the 'DOM' specification."
+            "description": "Slottable - DOM"
         }
     ]
 }

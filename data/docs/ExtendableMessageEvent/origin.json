@@ -8,7 +8,7 @@
         {
             "name": "Service Workers",
             "href": "https://w3c.github.io/ServiceWorker/#dom-extendablemessageevent-origin",
-            "description": "The definition of 'ExtendableMessageEvent.origin' in the 'Service Workers' specification."
+            "description": "ExtendableMessageEvent.origin - Service Workers"
         }
     ]
 }

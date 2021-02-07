@@ -8,17 +8,17 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#dom-eventtarget-addeventlistener",
-            "description": "The definition of 'EventTarget.addEventListener()' in the 'DOM' specification."
+            "description": "EventTarget.addEventListener() - DOM"
         },
         {
             "name": "DOM4",
             "href": "https://www.w3.org/TR/dom/#dom-eventtarget-addeventlistener",
-            "description": "The definition of 'EventTarget.addEventListener()' in the 'DOM4' specification."
+            "description": "EventTarget.addEventListener() - DOM4"
         },
         {
             "name": "Document Object Model (DOM) Level 2 Events Specification",
             "href": "https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventTarget-addEventListener",
-            "description": "The definition of 'EventTarget.addEventListener()' in the 'Document Object Model (DOM) Level 2 Events Specification' specification."
+            "description": "EventTarget.addEventListener() - Document Object Model (DOM) Level 2 Events Specification"
         }
     ]
 }

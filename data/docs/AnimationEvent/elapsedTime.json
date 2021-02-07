@@ -8,7 +8,7 @@
         {
             "name": "CSS Animations",
             "href": "https://drafts.csswg.org/css-animations/#dom-animationevent-elapsedtime",
-            "description": "The definition of 'AnimationEvent.elapsedTime' in the 'CSS Animations' specification."
+            "description": "AnimationEvent.elapsedTime - CSS Animations"
         }
     ]
 }

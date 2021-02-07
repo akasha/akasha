@@ -8,7 +8,7 @@
         {
             "name": "ECMAScript (ECMA-262)",
             "href": "https://tc39.es/ecma262/#sec-nativeerror-constructors",
-            "description": "The definition of 'NativeError constructor' in the 'ECMAScript (ECMA-262)' specification."
+            "description": "NativeError constructor - ECMAScript (ECMA-262)"
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "Push API",
             "href": "https://w3c.github.io/push-api/#dom-pushsubscription-endpoint",
-            "description": "The definition of 'endPoint' in the 'Push API' specification."
+            "description": "endPoint - Push API"
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "Web Audio API",
             "href": "https://webaudio.github.io/web-audio-api/#audioworkletglobalscope",
-            "description": "The definition of 'AudioWorkletGlobalScope' in the 'Web Audio API' specification."
+            "description": "AudioWorkletGlobalScope - Web Audio API"
         }
     ]
 }

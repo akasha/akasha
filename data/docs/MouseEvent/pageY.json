@@ -8,12 +8,12 @@
         {
             "name": "CSS Object Model (CSSOM) View Module",
             "href": "https://drafts.csswg.org/cssom-view/#dom-mouseevent-pagey",
-            "description": "The definition of 'pageY' in the 'CSS Object Model (CSSOM) View Module' specification."
+            "description": "pageY - CSS Object Model (CSSOM) View Module"
         },
         {
             "name": "Touch Events",
             "href": "https://www.w3.org/TR/touch-events/#widl-Touch-pageY",
-            "description": "The definition of 'pageY' in the 'Touch Events' specification."
+            "description": "pageY - Touch Events"
         }
     ]
 }

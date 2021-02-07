@@ -8,7 +8,7 @@
         {
             "name": "Document Object Model (DOM) Level 3 Events Specification",
             "href": "https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#interface-FocusEvent",
-            "description": "The definition of 'FocusEvent()' in the 'Document Object Model (DOM) Level 3 Events Specification' specification."
+            "description": "FocusEvent() - Document Object Model (DOM) Level 3 Events Specification"
         }
     ]
 }

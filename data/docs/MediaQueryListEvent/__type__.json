@@ -8,7 +8,7 @@
         {
             "name": "CSS Object Model (CSSOM) View Module",
             "href": "https://drafts.csswg.org/cssom-view/#mediaquerylistevent",
-            "description": "The definition of 'MediaQueryListEvent' in the 'CSS Object Model (CSSOM) View Module' specification."
+            "description": "MediaQueryListEvent - CSS Object Model (CSSOM) View Module"
         }
     ]
 }

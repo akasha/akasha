@@ -8,7 +8,7 @@
         {
             "name": "ECMAScript (ECMA-262)",
             "href": "https://tc39.es/ecma262/#sec-%25typedarray%25.prototype.slice",
-            "description": "The definition of '%TypedArray%.prototype.slice' in the 'ECMAScript (ECMA-262)' specification."
+            "description": "%TypedArray%.prototype.slice - ECMAScript (ECMA-262)"
         }
     ]
 }

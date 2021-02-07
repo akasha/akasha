@@ -8,7 +8,7 @@
         {
             "name": "WebVTT: The Web Video Text Tracks Format",
             "href": "https://w3c.github.io/webvtt/#dom-vttcue-vttcue",
-            "description": "The definition of 'VTTCue()' in the 'WebVTT: The Web Video Text Tracks Format' specification."
+            "description": "VTTCue() - WebVTT: The Web Video Text Tracks Format"
         }
     ]
 }

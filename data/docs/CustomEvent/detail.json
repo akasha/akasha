@@ -8,7 +8,7 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#dom-customevent-detail",
-            "description": "The definition of 'detail' in the 'DOM' specification."
+            "description": "detail - DOM"
         }
     ]
 }

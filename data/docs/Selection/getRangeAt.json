@@ -8,7 +8,7 @@
         {
             "name": "Selection API",
             "href": "https://w3c.github.io/selection-api/#dom-selection-getrangeat",
-            "description": "The definition of 'Selection: getRangeAt()' in the 'Selection API' specification."
+            "description": "Selection: getRangeAt() - Selection API"
         }
     ]
 }

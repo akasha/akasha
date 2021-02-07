@@ -8,7 +8,7 @@
         {
             "name": "MediaStream Recording",
             "href": "https://w3c.github.io/mediacapture-record/#dom-mediarecordererrorevent-mediarecordererrorevent",
-            "description": "The definition of 'MediaRecorderErrorEvent()' in the 'MediaStream Recording' specification."
+            "description": "MediaRecorderErrorEvent() - MediaStream Recording"
         }
     ]
 }

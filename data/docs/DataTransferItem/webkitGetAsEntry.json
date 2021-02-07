@@ -8,7 +8,7 @@
         {
             "name": "File and Directory Entries API",
             "href": "https://wicg.github.io/entries-api/#dom-datatransferitem-webkitgetasentry",
-            "description": "The definition of 'webkitGetAsEntry()' in the 'File and Directory Entries API' specification."
+            "description": "webkitGetAsEntry() - File and Directory Entries API"
         }
     ]
 }

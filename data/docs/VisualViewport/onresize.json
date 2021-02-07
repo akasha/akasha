@@ -8,7 +8,7 @@
         {
             "name": "Visual Viewport API",
             "href": "https://wicg.github.io/visual-viewport/#dom-visualviewport-onresize",
-            "description": "The definition of 'onresize' in the 'Visual Viewport API' specification."
+            "description": "onresize - Visual Viewport API"
         }
     ]
 }

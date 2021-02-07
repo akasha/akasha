@@ -8,12 +8,12 @@
         {
             "name": "WebGL 2.0",
             "href": "https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.8",
-            "description": "The definition of 'uniform' in the 'WebGL 2.0' specification."
+            "description": "uniform - WebGL 2.0"
         },
         {
             "name": "OpenGL ES 3.0",
             "href": "https://www.khronos.org/opengles/sdk/docs/man3/html/glUniform.xhtml",
-            "description": "The definition of 'glUniform' in the 'OpenGL ES 3.0' specification."
+            "description": "glUniform - OpenGL ES 3.0"
         }
     ]
 }

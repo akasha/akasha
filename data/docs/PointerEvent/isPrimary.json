@@ -8,12 +8,12 @@
         {
             "name": "Pointer Events – Level 2",
             "href": "https://www.w3.org/TR/pointerevents2/#dom-pointerevent-isprimary",
-            "description": "The definition of 'isPrimary' in the 'Pointer Events &ndash; Level 2' specification."
+            "description": "isPrimary - Pointer Events &ndash; Level 2"
         },
         {
             "name": "Pointer Events",
             "href": "https://www.w3.org/TR/pointerevents1/#widl-PointerEvent-isPrimary",
-            "description": "The definition of 'isPrimary' in the 'Pointer Events' specification."
+            "description": "isPrimary - Pointer Events"
         }
     ]
 }

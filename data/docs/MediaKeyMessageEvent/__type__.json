@@ -8,7 +8,7 @@
         {
             "name": "Encrypted Media Extensions",
             "href": "https://w3c.github.io/encrypted-media/#mediakeymessageevent",
-            "description": "The definition of 'MediaKeyMessageEvent' in the 'Encrypted Media Extensions' specification."
+            "description": "MediaKeyMessageEvent - Encrypted Media Extensions"
         }
     ]
 }

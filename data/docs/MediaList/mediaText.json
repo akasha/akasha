@@ -8,7 +8,7 @@
         {
             "name": "CSS Object Model (CSSOM)",
             "href": "https://drafts.csswg.org/cssom/#dom-medialist-mediatext",
-            "description": "The definition of 'mediaText' in the 'CSS Object Model (CSSOM)' specification."
+            "description": "mediaText - CSS Object Model (CSSOM)"
         }
     ]
 }

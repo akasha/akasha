@@ -8,7 +8,7 @@
         {
             "name": "WebXR Device API",
             "href": "https://immersive-web.github.io/webxr/#dom-xrreferencespaceevent-transform",
-            "description": "The definition of 'XRReferenceSpaceEvent.transform' in the 'WebXR Device API' specification."
+            "description": "XRReferenceSpaceEvent.transform - WebXR Device API"
         }
     ]
 }

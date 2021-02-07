@@ -8,7 +8,7 @@
         {
             "name": "Server Timing",
             "href": "https://w3c.github.io/server-timing/#servertiming-attribute",
-            "description": "The definition of 'serverTiming' in the 'Server Timing' specification."
+            "description": "serverTiming - Server Timing"
         }
     ]
 }

@@ -8,12 +8,12 @@
         {
             "name": "Performance Timeline Level 2",
             "href": "https://w3c.github.io/performance-timeline/#dom-performance-getentriesbyname",
-            "description": "The definition of 'getEntriesByName()' in the 'Performance Timeline Level 2' specification."
+            "description": "getEntriesByName() - Performance Timeline Level 2"
         },
         {
             "name": "Performance Timeline",
             "href": "https://www.w3.org/TR/performance-timeline/#dom-performance-getentriesbyname",
-            "description": "The definition of 'getEntriesByName()' in the 'Performance Timeline' specification."
+            "description": "getEntriesByName() - Performance Timeline"
         }
     ]
 }

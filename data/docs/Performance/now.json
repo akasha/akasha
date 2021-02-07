@@ -8,12 +8,12 @@
         {
             "name": "High Resolution Time Level 2",
             "href": "https://www.w3.org/TR/hr-time-2/#dom-performance-now",
-            "description": "The definition of 'performance.now()' in the 'High Resolution Time Level 2' specification."
+            "description": "performance.now() - High Resolution Time Level 2"
         },
         {
             "name": "High Resolution Time",
             "href": "https://www.w3.org/TR/hr-time-1/#dom-performance-now",
-            "description": "The definition of 'performance.now()' in the 'High Resolution Time' specification."
+            "description": "performance.now() - High Resolution Time"
         }
     ]
 }

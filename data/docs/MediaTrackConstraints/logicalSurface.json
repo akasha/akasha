@@ -8,7 +8,7 @@
         {
             "name": "Screen Capture",
             "href": "https://w3c.github.io/mediacapture-screen-share/#dom-mediatrackconstraintset-logicalsurface",
-            "description": "The definition of 'MediaTrackConstraints.logicalSurface' in the 'Screen Capture' specification."
+            "description": "MediaTrackConstraints.logicalSurface - Screen Capture"
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "WebXR Device API",
             "href": "https://immersive-web.github.io/webxr/#xrpermissionstatus",
-            "description": "The definition of 'XRPermissionStatus' in the 'WebXR Device API' specification."
+            "description": "XRPermissionStatus - WebXR Device API"
         }
     ]
 }

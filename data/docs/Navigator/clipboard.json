@@ -8,7 +8,7 @@
         {
             "name": "Clipboard API and events",
             "href": "https://w3c.github.io/clipboard-apis/#navigator-clipboard",
-            "description": "The definition of 'navigator.clipboard' in the 'Clipboard API and events' specification."
+            "description": "navigator.clipboard - Clipboard API and events"
         }
     ]
 }

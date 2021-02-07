@@ -8,7 +8,7 @@
         {
             "name": "Intersection Observer",
             "href": "https://w3c.github.io/IntersectionObserver/#dom-intersectionobserverentry-rootbounds",
-            "description": "The definition of 'IntersectionObserverEntry.rootBounds' in the 'Intersection Observer' specification."
+            "description": "IntersectionObserverEntry.rootBounds - Intersection Observer"
         }
     ]
 }

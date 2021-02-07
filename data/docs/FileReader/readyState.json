@@ -8,7 +8,7 @@
         {
             "name": "File API",
             "href": "https://w3c.github.io/FileAPI/#dom-filereader-readystate",
-            "description": "The definition of 'readyState' in the 'File API' specification."
+            "description": "readyState - File API"
         }
     ]
 }

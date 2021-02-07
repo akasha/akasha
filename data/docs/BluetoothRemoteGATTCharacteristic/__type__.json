@@ -8,7 +8,7 @@
         {
             "name": "Web Bluetooth",
             "href": "https://webbluetoothcg.github.io/web-bluetooth/#bluetoothremotegattcharacteristic",
-            "description": "The definition of 'BluetoothRemoteGATTCharacteristic' in the 'Web Bluetooth' specification."
+            "description": "BluetoothRemoteGATTCharacteristic - Web Bluetooth"
         }
     ]
 }

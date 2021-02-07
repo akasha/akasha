@@ -8,7 +8,7 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/web-sockets.html#the-closeevent-interface",
-            "description": "The definition of 'CloseEvent' in the 'HTML Living Standard' specification."
+            "description": "CloseEvent - HTML Living Standard"
         }
     ]
 }

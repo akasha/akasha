@@ -8,7 +8,7 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/#dom-messageevent-lasteventid",
-            "description": "The definition of 'MessageEvent: lastEventId' in the 'HTML Living Standard' specification."
+            "description": "MessageEvent: lastEventId - HTML Living Standard"
         }
     ]
 }

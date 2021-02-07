@@ -8,7 +8,7 @@
         {
             "name": "Service Workers",
             "href": "https://w3c.github.io/ServiceWorker/#cache-matchall",
-            "description": "The definition of 'Cache: matchAll' in the 'Service Workers' specification."
+            "description": "Cache: matchAll - Service Workers"
         }
     ]
 }

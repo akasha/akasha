@@ -8,7 +8,7 @@
         {
             "name": "Encoding",
             "href": "https://encoding.spec.whatwg.org/#dom-textencoder-encode",
-            "description": "The definition of 'TextEncoder.prototype.encode()' in the 'Encoding' specification."
+            "description": "TextEncoder.prototype.encode() - Encoding"
         }
     ]
 }

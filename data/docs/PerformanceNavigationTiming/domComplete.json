@@ -8,7 +8,7 @@
         {
             "name": "Navigation Timing Level 2",
             "href": "https://w3c.github.io/navigation-timing/#dom-performancenavigationtiming-domcomplete",
-            "description": "The definition of 'domComplete' in the 'Navigation Timing Level 2' specification."
+            "description": "domComplete - Navigation Timing Level 2"
         }
     ]
 }

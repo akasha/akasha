@@ -8,7 +8,7 @@
         {
             "name": "Streams",
             "href": "https://streams.spec.whatwg.org/#rs-pipe-through",
-            "description": "The definition of 'pipeThrough()' in the 'Streams' specification."
+            "description": "pipeThrough() - Streams"
         }
     ]
 }

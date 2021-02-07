@@ -8,7 +8,7 @@
         {
             "name": "Web Animations",
             "href": "https://drafts.csswg.org/web-animations-1/#dom-animationeffect-updatetiming",
-            "description": "The definition of 'AnimationEffect.updateTiming()' in the 'Web Animations' specification."
+            "description": "AnimationEffect.updateTiming() - Web Animations"
         }
     ]
 }

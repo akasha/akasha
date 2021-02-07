@@ -8,7 +8,7 @@
         {
             "name": "Media Source Extensions",
             "href": "https://w3c.github.io/media-source/#dom-mediasource-endofstream",
-            "description": "The definition of 'endOfStream()' in the 'Media Source Extensions' specification."
+            "description": "endOfStream() - Media Source Extensions"
         }
     ]
 }

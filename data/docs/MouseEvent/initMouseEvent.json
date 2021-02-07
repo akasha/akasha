@@ -8,12 +8,12 @@
         {
             "name": "Document Object Model (DOM) Level 3 Events Specification",
             "href": "https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#idl-interface-MouseEvent-initializers",
-            "description": "The definition of 'MouseEvent.initMouseEvent()' in the 'Document Object Model (DOM) Level 3 Events Specification' specification."
+            "description": "MouseEvent.initMouseEvent() - Document Object Model (DOM) Level 3 Events Specification"
         },
         {
             "name": "Document Object Model (DOM) Level 2 Events Specification",
             "href": "https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-Event-initMouseEvent",
-            "description": "The definition of 'MouseEvent.initMouseEvent()' in the 'Document Object Model (DOM) Level 2 Events Specification' specification."
+            "description": "MouseEvent.initMouseEvent() - Document Object Model (DOM) Level 2 Events Specification"
         }
     ]
 }

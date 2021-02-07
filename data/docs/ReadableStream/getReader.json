@@ -8,7 +8,7 @@
         {
             "name": "Streams",
             "href": "https://streams.spec.whatwg.org/#rs-get-reader",
-            "description": "The definition of 'getReader()' in the 'Streams' specification."
+            "description": "getReader() - Streams"
         }
     ]
 }

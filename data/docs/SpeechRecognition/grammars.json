@@ -8,7 +8,7 @@
         {
             "name": "Web Speech API",
             "href": "https://wicg.github.io/speech-api/#dom-speechrecognition-grammars",
-            "description": "The definition of 'grammars' in the 'Web Speech API' specification."
+            "description": "grammars - Web Speech API"
         }
     ]
 }

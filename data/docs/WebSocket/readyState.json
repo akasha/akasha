@@ -8,7 +8,7 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/#dom-websocket-readystate",
-            "description": "The definition of 'WebSocket: readyState' in the 'HTML Living Standard' specification."
+            "description": "WebSocket: readyState - HTML Living Standard"
         }
     ]
 }

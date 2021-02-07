@@ -8,22 +8,22 @@
         {
             "name": "WebGL 1.0",
             "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.7",
-            "description": "The definition of 'getRenderbufferParameter' in the 'WebGL 1.0' specification."
+            "description": "getRenderbufferParameter - WebGL 1.0"
         },
         {
             "name": "OpenGL ES 2.0",
             "href": "https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetRenderbufferParameteriv.xml",
-            "description": "The definition of 'glGetRenderbufferParameteriv' in the 'OpenGL ES 2.0' specification."
+            "description": "glGetRenderbufferParameteriv - OpenGL ES 2.0"
         },
         {
             "name": "WebGL 2.0",
             "href": "https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.5",
-            "description": "The definition of 'getRenderbufferParameter' in the 'WebGL 2.0' specification."
+            "description": "getRenderbufferParameter - WebGL 2.0"
         },
         {
             "name": "OpenGL ES 3.0",
             "href": "https://www.khronos.org/opengles/sdk/docs/man3/html/glGetRenderbufferParameteriv.xhtml",
-            "description": "The definition of 'glGetRenderbufferParameteriv' in the 'OpenGL ES 3.0' specification."
+            "description": "glGetRenderbufferParameteriv - OpenGL ES 3.0"
         }
     ]
 }

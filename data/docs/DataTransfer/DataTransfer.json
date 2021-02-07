@@ -8,7 +8,7 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/#dom-datatransfer",
-            "description": "The definition of 'the DataTransfer() constructor' in the 'HTML Living Standard' specification."
+            "description": "the DataTransfer() constructor - HTML Living Standard"
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "Web Audio API",
             "href": "https://webaudio.github.io/web-audio-api/#dom-offlineaudiocontext-oncomplete",
-            "description": "The definition of 'oncomplete' in the 'Web Audio API' specification."
+            "description": "oncomplete - Web Audio API"
         }
     ]
 }

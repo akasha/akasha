@@ -8,7 +8,7 @@
         {
             "name": "CSS Object Model (CSSOM) View Module",
             "href": "https://drafts.csswg.org/cssom-view/#dom-mouseevent-offsety",
-            "description": "The definition of 'MouseEvent' in the 'CSS Object Model (CSSOM) View Module' specification."
+            "description": "MouseEvent - CSS Object Model (CSSOM) View Module"
         }
     ]
 }

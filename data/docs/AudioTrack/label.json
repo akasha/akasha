@@ -8,12 +8,12 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/media.html#dom-audiotrack-label",
-            "description": "The definition of 'AudioTrack.label' in the 'HTML Living Standard' specification."
+            "description": "AudioTrack.label - HTML Living Standard"
         },
         {
             "name": "HTML5",
             "href": "https://www.w3.org/TR/html52/embedded-content-0.html#dom-audiotrack-label",
-            "description": "The definition of 'AudioTrack.label' in the 'HTML5' specification."
+            "description": "AudioTrack.label - HTML5"
         }
     ]
 }

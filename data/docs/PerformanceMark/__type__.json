@@ -8,12 +8,12 @@
         {
             "name": "User Timing Level 2",
             "href": "https://w3c.github.io/user-timing/#performancemark",
-            "description": "The definition of 'PerformanceMark' in the 'User Timing Level 2' specification."
+            "description": "PerformanceMark - User Timing Level 2"
         },
         {
             "name": "User Timing",
             "href": "https://www.w3.org/TR/user-timing/#performancemark",
-            "description": "The definition of 'PerformanceMark' in the 'User Timing' specification."
+            "description": "PerformanceMark - User Timing"
         }
     ]
 }

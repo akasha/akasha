@@ -8,7 +8,7 @@
         {
             "name": "Selection API",
             "href": "https://w3c.github.io/selection-api/#dom-selection-anchoroffset",
-            "description": "The definition of 'Selection.anchorOffset' in the 'Selection API' specification."
+            "description": "Selection.anchorOffset - Selection API"
         }
     ]
 }

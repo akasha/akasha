@@ -8,7 +8,7 @@
         {
             "name": "WebXR Augmented Reality Module",
             "href": "https://immersive-web.github.io/webxr-ar-module/#xrenvironmentblendmode-enum",
-            "description": "The definition of 'XRSession.environmentBlendMode' in the 'WebXR Augmented Reality Module' specification."
+            "description": "XRSession.environmentBlendMode - WebXR Augmented Reality Module"
         }
     ]
 }

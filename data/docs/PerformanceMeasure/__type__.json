@@ -8,12 +8,12 @@
         {
             "name": "User Timing Level 2",
             "href": "https://w3c.github.io/user-timing/#dom-performance-measure",
-            "description": "The definition of 'PerformanceMeasure' in the 'User Timing Level 2' specification."
+            "description": "PerformanceMeasure - User Timing Level 2"
         },
         {
             "name": "User Timing",
             "href": "https://www.w3.org/TR/user-timing/#performancemeasure",
-            "description": "The definition of 'PerformanceMeasure' in the 'User Timing' specification."
+            "description": "PerformanceMeasure - User Timing"
         }
     ]
 }

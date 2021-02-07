@@ -8,7 +8,7 @@
         {
             "name": "WebRTC 1.0: Real-time Communication Between Browsers",
             "href": "https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnection-restartice",
-            "description": "The definition of 'RTCPeerConnection.restartIce()' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification."
+            "description": "RTCPeerConnection.restartIce() - WebRTC 1.0: Real-time Communication Between Browsers"
         }
     ]
 }

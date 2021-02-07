@@ -8,7 +8,7 @@
         {
             "name": "WebXR Device API",
             "href": "https://immersive-web.github.io/webxr/#dictdef-xrinputsourceschangeeventinit",
-            "description": "The definition of 'XRInputSourcesChangeEventInit' in the 'WebXR Device API' specification."
+            "description": "XRInputSourcesChangeEventInit - WebXR Device API"
         }
     ]
 }

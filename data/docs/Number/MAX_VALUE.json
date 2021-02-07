@@ -8,7 +8,7 @@
         {
             "name": "ECMAScript (ECMA-262)",
             "href": "https://tc39.es/ecma262/#sec-number.max_value",
-            "description": "The definition of 'Number.MAX_VALUE' in the 'ECMAScript (ECMA-262)' specification."
+            "description": "Number.MAX_VALUE - ECMAScript (ECMA-262)"
         }
     ]
 }

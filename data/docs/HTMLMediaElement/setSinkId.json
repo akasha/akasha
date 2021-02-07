@@ -8,7 +8,7 @@
         {
             "name": "Audio Output Devices API",
             "href": "https://w3c.github.io/mediacapture-output/#dom-htmlmediaelement-setsinkid",
-            "description": "The definition of 'sinkId' in the 'Audio Output Devices API' specification."
+            "description": "sinkId - Audio Output Devices API"
         }
     ]
 }

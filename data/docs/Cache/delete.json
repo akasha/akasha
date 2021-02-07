@@ -8,7 +8,7 @@
         {
             "name": "Service Workers",
             "href": "https://w3c.github.io/ServiceWorker/#cache-delete",
-            "description": "The definition of 'Cache: delete' in the 'Service Workers' specification."
+            "description": "Cache: delete - Service Workers"
         }
     ]
 }

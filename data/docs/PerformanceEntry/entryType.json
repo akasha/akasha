@@ -8,12 +8,12 @@
         {
             "name": "Performance Timeline Level 2",
             "href": "https://w3c.github.io/performance-timeline/#dom-performanceentry-entrytype",
-            "description": "The definition of 'entryType' in the 'Performance Timeline Level 2' specification."
+            "description": "entryType - Performance Timeline Level 2"
         },
         {
             "name": "Performance Timeline",
             "href": "https://www.w3.org/TR/performance-timeline/#dom-performanceentry-entrytype",
-            "description": "The definition of 'entryType' in the 'Performance Timeline' specification."
+            "description": "entryType - Performance Timeline"
         }
     ]
 }

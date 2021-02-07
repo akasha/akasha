@@ -8,7 +8,7 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#dom-document-compatmode",
-            "description": "The definition of 'compatMode' in the 'DOM' specification."
+            "description": "compatMode - DOM"
         }
     ]
 }

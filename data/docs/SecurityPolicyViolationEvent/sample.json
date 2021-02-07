@@ -8,7 +8,7 @@
         {
             "name": "Content Security Policy Level 3",
             "href": "https://w3c.github.io/webappsec-csp/#dom-securitypolicyviolationevent-sample",
-            "description": "The definition of 'sample' in the 'Content Security Policy Level 3' specification."
+            "description": "sample - Content Security Policy Level 3"
         }
     ]
 }

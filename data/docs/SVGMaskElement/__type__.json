@@ -8,12 +8,12 @@
         {
             "name": "CSS Masking Module Level 1",
             "href": "https://drafts.fxtf.org/css-masking-1/#InterfaceSVGMaskElement",
-            "description": "The definition of 'SVGMaskElement' in the 'CSS Masking Module Level 1' specification."
+            "description": "SVGMaskElement - CSS Masking Module Level 1"
         },
         {
             "name": "Scalable Vector Graphics (SVG) 1.1 (Second Edition)",
             "href": "https://www.w3.org/TR/SVG11/masking.html#InterfaceSVGMaskElement",
-            "description": "The definition of 'SVGMaskElement' in the 'Scalable Vector Graphics (SVG) 1.1 (Second Edition)' specification."
+            "description": "SVGMaskElement - Scalable Vector Graphics (SVG) 1.1 (Second Edition)"
         }
     ]
 }

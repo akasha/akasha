@@ -8,12 +8,12 @@
         {
             "name": "Indexed Database API 2.0",
             "href": "https://www.w3.org/TR/IndexedDB/#dom-idbcursor-primarykey",
-            "description": "The definition of 'primaryKey' in the 'Indexed Database API 2.0' specification."
+            "description": "primaryKey - Indexed Database API 2.0"
         },
         {
             "name": "Indexed Database API Draft",
             "href": "https://w3c.github.io/IndexedDB/#dom-idbcursor-primarykey",
-            "description": "The definition of 'primaryKey' in the 'Indexed Database API Draft' specification."
+            "description": "primaryKey - Indexed Database API Draft"
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "Shadow DOM",
             "href": "https://w3c.github.io/webcomponents/spec/shadow/#extensions-to-the-documentorshadowroot-mixin",
-            "description": "The definition of 'DocumentOrShadowRoot' in the 'Shadow DOM' specification."
+            "description": "DocumentOrShadowRoot - Shadow DOM"
         }
     ]
 }

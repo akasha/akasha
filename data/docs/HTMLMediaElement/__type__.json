@@ -8,17 +8,17 @@
         {
             "name": "Encrypted Media Extensions",
             "href": "https://w3c.github.io/encrypted-media/#introduction",
-            "description": "The definition of 'Encrypted Media Extensions' in the 'Encrypted Media Extensions' specification."
+            "description": "Encrypted Media Extensions - Encrypted Media Extensions"
         },
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/the-video-element.html#htmlmediaelement",
-            "description": "The definition of 'HTMLMediaElement' in the 'HTML Living Standard' specification."
+            "description": "HTMLMediaElement - HTML Living Standard"
         },
         {
             "name": "HTML5",
             "href": "https://www.w3.org/TR/html52/embedded-content-0.html#htmlmediaelement",
-            "description": "The definition of 'HTMLMediaElement' in the 'HTML5' specification."
+            "description": "HTMLMediaElement - HTML5"
         }
     ]
 }

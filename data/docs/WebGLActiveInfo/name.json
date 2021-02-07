@@ -8,7 +8,7 @@
         {
             "name": "WebGL 1.0",
             "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#DOM-WebGLActiveInfo-name",
-            "description": "The definition of 'WebGLActiveInfo.name' in the 'WebGL 1.0' specification."
+            "description": "WebGLActiveInfo.name - WebGL 1.0"
         }
     ]
 }

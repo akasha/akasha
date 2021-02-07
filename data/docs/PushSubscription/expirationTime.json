@@ -8,7 +8,7 @@
         {
             "name": "Push API",
             "href": "https://w3c.github.io/push-api/#dom-pushsubscription-expirationtime",
-            "description": "The definition of 'expirationTime' in the 'Push API' specification."
+            "description": "expirationTime - Push API"
         }
     ]
 }

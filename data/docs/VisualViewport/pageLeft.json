@@ -8,7 +8,7 @@
         {
             "name": "Visual Viewport API",
             "href": "https://wicg.github.io/visual-viewport/#dom-visualviewport-pageleft",
-            "description": "The definition of 'pageLeft' in the 'Visual Viewport API' specification."
+            "description": "pageLeft - Visual Viewport API"
         }
     ]
 }

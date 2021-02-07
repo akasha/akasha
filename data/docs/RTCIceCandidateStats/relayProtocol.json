@@ -8,7 +8,7 @@
         {
             "name": "Identifiers for WebRTC's Statistics API",
             "href": "https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatestats-relayprotocol",
-            "description": "The definition of 'RTCIceCandidateStats.relayProtocol' in the 'Identifiers for WebRTC's Statistics API' specification."
+            "description": "RTCIceCandidateStats.relayProtocol - Identifiers for WebRTC's Statistics API"
         }
     ]
 }

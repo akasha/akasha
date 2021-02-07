@@ -8,7 +8,7 @@
         {
             "name": "CSS Conditional Rules Module Level 3",
             "href": "https://drafts.csswg.org/css-conditional-3/#the-csssupportsrule-interface",
-            "description": "The definition of 'CSSSupportsRule' in the 'CSS Conditional Rules Module Level 3' specification."
+            "description": "CSSSupportsRule - CSS Conditional Rules Module Level 3"
         }
     ]
 }

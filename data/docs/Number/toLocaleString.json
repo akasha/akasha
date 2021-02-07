@@ -8,12 +8,12 @@
         {
             "name": "ECMAScript (ECMA-262)",
             "href": "https://tc39.es/ecma262/#sec-number.prototype.tolocalestring",
-            "description": "The definition of 'Number.prototype.toLocaleString' in the 'ECMAScript (ECMA-262)' specification."
+            "description": "Number.prototype.toLocaleString - ECMAScript (ECMA-262)"
         },
         {
             "name": "ECMAScript Internationalization API (ECMA-402)",
             "href": "https://tc39.es/ecma402/#sup-number.prototype.tolocalestring",
-            "description": "The definition of 'Number.prototype.toLocaleString' in the 'ECMAScript Internationalization API (ECMA-402)' specification."
+            "description": "Number.prototype.toLocaleString - ECMAScript Internationalization API (ECMA-402)"
         }
     ]
 }

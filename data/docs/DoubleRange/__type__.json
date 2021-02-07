@@ -8,7 +8,7 @@
         {
             "name": "Media Capture and Streams",
             "href": "https://w3c.github.io/mediacapture-main/#dom-doublerange",
-            "description": "The definition of 'DoubleRange' in the 'Media Capture and Streams' specification."
+            "description": "DoubleRange - Media Capture and Streams"
         }
     ]
 }

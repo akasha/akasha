@@ -8,7 +8,7 @@
         {
             "name": "InputDeviceCapabilities",
             "href": "https://wicg.github.io/InputDeviceCapabilities/#dom-uievent-sourcecapabilities",
-            "description": "The definition of 'sourceCapabilities' in the 'InputDeviceCapabilities' specification."
+            "description": "sourceCapabilities - InputDeviceCapabilities"
         }
     ]
 }

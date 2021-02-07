@@ -8,7 +8,7 @@
         {
             "name": "Console API",
             "href": "https://console.spec.whatwg.org/#time",
-            "description": "The definition of 'console.time()' in the 'Console API' specification."
+            "description": "console.time() - Console API"
         }
     ]
 }

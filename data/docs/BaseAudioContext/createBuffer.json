@@ -8,7 +8,7 @@
         {
             "name": "Web Audio API",
             "href": "https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-createbuffer",
-            "description": "The definition of 'createBuffer()' in the 'Web Audio API' specification."
+            "description": "createBuffer() - Web Audio API"
         }
     ]
 }

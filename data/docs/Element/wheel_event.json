@@ -8,7 +8,7 @@
         {
             "name": "UI Events",
             "href": "https://w3c.github.io/uievents/#event-type-wheel",
-            "description": "The definition of 'wheel' in the 'UI Events' specification."
+            "description": "wheel - UI Events"
         }
     ],
     "eventName": "wheel",

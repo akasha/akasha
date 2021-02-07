@@ -8,7 +8,7 @@
         {
             "name": "WebDriver",
             "href": "https://w3c.github.io/webdriver/#dom-navigatorautomationinformation-webdriver",
-            "description": "The definition of 'webdriver' in the 'WebDriver' specification."
+            "description": "webdriver - WebDriver"
         }
     ]
 }

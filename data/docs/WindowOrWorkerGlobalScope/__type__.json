@@ -8,7 +8,7 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/webappapis.html#windoworworkerglobalscope-mixin",
-            "description": "The definition of 'WindowOrWorkerGlobalScope mixin' in the 'HTML Living Standard' specification."
+            "description": "WindowOrWorkerGlobalScope mixin - HTML Living Standard"
         }
     ]
 }

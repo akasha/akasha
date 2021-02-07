@@ -8,7 +8,7 @@
         {
             "name": "Web Animations",
             "href": "https://drafts.csswg.org/web-animations-1/#dom-animation-reverse",
-            "description": "The definition of 'reverse()' in the 'Web Animations' specification."
+            "description": "reverse() - Web Animations"
         }
     ]
 }

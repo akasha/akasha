@@ -8,7 +8,7 @@
         {
             "name": "Resource Timing Level 1",
             "href": "https://www.w3.org/TR/resource-timing-1/#dom-performanceresourcetiming-responseend",
-            "description": "The definition of 'responseEnd' in the 'Resource Timing Level 1' specification."
+            "description": "responseEnd - Resource Timing Level 1"
         }
     ]
 }

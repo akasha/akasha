@@ -8,7 +8,7 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/#dom-videotracklist-gettrackbyid",
-            "description": "The definition of 'VideoTrackList.getTrackById()' in the 'HTML Living Standard' specification."
+            "description": "VideoTrackList.getTrackById() - HTML Living Standard"
         }
     ]
 }

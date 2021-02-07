@@ -8,7 +8,7 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/interaction.html#dndevents",
-            "description": "The definition of 'drop event' in the 'HTML Living Standard' specification."
+            "description": "drop event - HTML Living Standard"
         }
     ],
     "eventName": "drop",

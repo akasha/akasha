@@ -8,7 +8,7 @@
         {
             "name": "Fetch",
             "href": "https://fetch.spec.whatwg.org/#dom-response-redirect",
-            "description": "The definition of 'redirect()' in the 'Fetch' specification."
+            "description": "redirect() - Fetch"
         }
     ]
 }

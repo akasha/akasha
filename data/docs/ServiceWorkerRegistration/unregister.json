@@ -8,7 +8,7 @@
         {
             "name": "Service Workers",
             "href": "https://w3c.github.io/ServiceWorker/navigator-service-worker-unregister",
-            "description": "The definition of 'ServiceWorkerRegistration.unregister()' in the 'Service Workers' specification."
+            "description": "ServiceWorkerRegistration.unregister() - Service Workers"
         }
     ]
 }

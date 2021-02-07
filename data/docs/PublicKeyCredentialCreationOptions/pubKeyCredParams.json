@@ -8,7 +8,7 @@
         {
             "name": "Web Authentication: An API for accessing Public Key Credentials Level 1",
             "href": "https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-pubkeycredparams",
-            "description": "The definition of 'pubKeyCredParams' in the 'Web Authentication: An API for accessing Public Key Credentials Level 1' specification."
+            "description": "pubKeyCredParams - Web Authentication: An API for accessing Public Key Credentials Level 1"
         }
     ]
 }

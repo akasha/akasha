@@ -8,7 +8,7 @@
         {
             "name": "Web Bluetooth",
             "href": "https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattcharacteristic-readvalue",
-            "description": "The definition of 'readValue()' in the 'Web Bluetooth' specification."
+            "description": "readValue() - Web Bluetooth"
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "Web Cryptography API",
             "href": "https://www.w3.org/TR/WebCryptoAPI/#dfn-SubtleCrypto-method-wrapKey",
-            "description": "The definition of 'SubtleCrypto.wrapKey()' in the 'Web Cryptography API' specification."
+            "description": "SubtleCrypto.wrapKey() - Web Cryptography API"
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "WebXR Device API",
             "href": "https://immersive-web.github.io/webxr/#dom-xrsession-cancelanimationframe",
-            "description": "The definition of 'XRSession.cancelAnimationFrame' in the 'WebXR Device API' specification."
+            "description": "XRSession.cancelAnimationFrame - WebXR Device API"
         }
     ]
 }

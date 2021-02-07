@@ -8,7 +8,7 @@
         {
             "name": "URL",
             "href": "https://url.spec.whatwg.org/#dom-urlsearchparams-sort",
-            "description": "The definition of 'sort()' in the 'URL' specification."
+            "description": "sort() - URL"
         }
     ]
 }

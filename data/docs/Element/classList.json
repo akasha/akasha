@@ -8,12 +8,12 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#dom-element-classlist",
-            "description": "The definition of 'Element.classList' in the 'DOM' specification."
+            "description": "Element.classList - DOM"
         },
         {
             "name": "DOM4",
             "href": "https://www.w3.org/TR/dom/#dom-element-classlist",
-            "description": "The definition of 'Element.classList' in the 'DOM4' specification."
+            "description": "Element.classList - DOM4"
         }
     ]
 }

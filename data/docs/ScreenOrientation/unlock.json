@@ -8,7 +8,7 @@
         {
             "name": "Screen Orientation API",
             "href": "https://w3c.github.io/screen-orientation/#dom-screenorientation-unlock",
-            "description": "The definition of 'unlock()' in the 'Screen Orientation API' specification."
+            "description": "unlock() - Screen Orientation API"
         }
     ]
 }

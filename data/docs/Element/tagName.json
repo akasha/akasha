@@ -8,7 +8,7 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#dom-element-tagname",
-            "description": "The definition of 'Element: tagName' in the 'DOM' specification."
+            "description": "Element: tagName - DOM"
         }
     ]
 }

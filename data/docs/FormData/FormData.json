@@ -8,7 +8,7 @@
         {
             "name": "XMLHttpRequest",
             "href": "https://xhr.spec.whatwg.org/#dom-formdata",
-            "description": "The definition of 'FormData()' in the 'XMLHttpRequest' specification."
+            "description": "FormData() - XMLHttpRequest"
         }
     ]
 }

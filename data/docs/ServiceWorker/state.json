@@ -8,7 +8,7 @@
         {
             "name": "Service Workers",
             "href": "https://w3c.github.io/ServiceWorker/#service-worker-state",
-            "description": "The definition of 'state' in the 'Service Workers' specification."
+            "description": "state - Service Workers"
         }
     ]
 }

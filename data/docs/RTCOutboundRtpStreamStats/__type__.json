@@ -8,7 +8,7 @@
         {
             "name": "WebRTC 1.0: Real-time Communication Between Browsers",
             "href": "https://w3c.github.io/webrtc-pc/#outboundrtpstats-dict*",
-            "description": "The definition of 'RTCOutboundRtpStreamStats' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification."
+            "description": "RTCOutboundRtpStreamStats - WebRTC 1.0: Real-time Communication Between Browsers"
         }
     ]
 }

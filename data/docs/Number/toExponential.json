@@ -8,7 +8,7 @@
         {
             "name": "ECMAScript (ECMA-262)",
             "href": "https://tc39.es/ecma262/#sec-number.prototype.toexponential",
-            "description": "The definition of 'Number.prototype.toExponential' in the 'ECMAScript (ECMA-262)' specification."
+            "description": "Number.prototype.toExponential - ECMAScript (ECMA-262)"
         }
     ]
 }

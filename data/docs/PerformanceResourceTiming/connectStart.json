@@ -8,7 +8,7 @@
         {
             "name": "Resource Timing Level 1",
             "href": "https://www.w3.org/TR/resource-timing-1/#dom-performanceresourcetiming-connectstart",
-            "description": "The definition of 'connectStart' in the 'Resource Timing Level 1' specification."
+            "description": "connectStart - Resource Timing Level 1"
         }
     ]
 }

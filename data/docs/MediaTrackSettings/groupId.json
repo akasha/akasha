@@ -8,7 +8,7 @@
         {
             "name": "Media Capture and Streams",
             "href": "https://w3c.github.io/mediacapture-main/#dom-mediatracksettings-groupid",
-            "description": "The definition of 'groupId' in the 'Media Capture and Streams' specification."
+            "description": "groupId - Media Capture and Streams"
         }
     ]
 }

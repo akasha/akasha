@@ -8,7 +8,7 @@
         {
             "name": "WebXR Device API",
             "href": "https://immersive-web.github.io/webxr/#dom-xrinputsource-gripspace",
-            "description": "The definition of 'XRInputSource.gripSpace' in the 'WebXR Device API' specification."
+            "description": "XRInputSource.gripSpace - WebXR Device API"
         }
     ]
 }

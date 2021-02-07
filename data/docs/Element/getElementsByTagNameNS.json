@@ -8,17 +8,17 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#dom-element-getelementsbytagnamens",
-            "description": "The definition of 'Element.getElementsByTagNameNS()' in the 'DOM' specification."
+            "description": "Element.getElementsByTagNameNS() - DOM"
         },
         {
             "name": "Document Object Model (DOM) Level 3 Core Specification",
             "href": "https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-A6C90942",
-            "description": "The definition of 'Element.getElementsByTagNameNS()' in the 'Document Object Model (DOM) Level 3 Core Specification' specification."
+            "description": "Element.getElementsByTagNameNS() - Document Object Model (DOM) Level 3 Core Specification"
         },
         {
             "name": "Document Object Model (DOM) Level 2 Core Specification",
             "href": "https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-A6C90942",
-            "description": "The definition of 'Element.getElementsByTagNameNS()' in the 'Document Object Model (DOM) Level 2 Core Specification' specification."
+            "description": "Element.getElementsByTagNameNS() - Document Object Model (DOM) Level 2 Core Specification"
         }
     ]
 }

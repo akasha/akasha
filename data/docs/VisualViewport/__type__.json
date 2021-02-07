@@ -8,7 +8,7 @@
         {
             "name": "Visual Viewport API",
             "href": "https://wicg.github.io/visual-viewport/#the-visualviewport-interface",
-            "description": "The definition of 'VisualViewport' in the 'Visual Viewport API' specification."
+            "description": "VisualViewport - Visual Viewport API"
         }
     ]
 }

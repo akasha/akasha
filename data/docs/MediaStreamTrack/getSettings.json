@@ -8,7 +8,7 @@
         {
             "name": "Media Capture and Streams",
             "href": "https://w3c.github.io/mediacapture-main/#dom-mediastreamtrack-getsettings",
-            "description": "The definition of 'getSettings()' in the 'Media Capture and Streams' specification."
+            "description": "getSettings() - Media Capture and Streams"
         }
     ]
 }

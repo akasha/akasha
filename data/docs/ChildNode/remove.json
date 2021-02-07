@@ -8,7 +8,7 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#dom-childnode-remove",
-            "description": "The definition of 'ChildNode.remove' in the 'DOM' specification."
+            "description": "ChildNode.remove - DOM"
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#dom-domtokenlist-value",
-            "description": "The definition of 'value' in the 'DOM' specification."
+            "description": "value - DOM"
         }
     ]
 }

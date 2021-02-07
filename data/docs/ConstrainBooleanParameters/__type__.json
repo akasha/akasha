@@ -8,7 +8,7 @@
         {
             "name": "Media Capture and Streams",
             "href": "https://w3c.github.io/mediacapture-main/#dom-constrainboolean",
-            "description": "The definition of 'ConstrainBoolean' in the 'Media Capture and Streams' specification."
+            "description": "ConstrainBoolean - Media Capture and Streams"
         }
     ]
 }

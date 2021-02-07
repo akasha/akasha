@@ -8,32 +8,32 @@
         {
             "name": "CSS Object Model (CSSOM) View Module",
             "href": "https://drafts.csswg.org/cssom-view/#extensions-to-the-mouseevent-interface",
-            "description": "The definition of 'MouseEvent' in the 'CSS Object Model (CSSOM) View Module' specification."
+            "description": "MouseEvent - CSS Object Model (CSSOM) View Module"
         },
         {
             "name": "Pointer Lock",
             "href": "https://w3c.github.io/pointerlock/#extensions-to-the-mouseevent-interface",
-            "description": "The definition of 'MouseEvent' in the 'Pointer Lock' specification."
+            "description": "MouseEvent - Pointer Lock"
         },
         {
             "name": "CSS Object Model (CSSOM) View Module",
             "href": "https://drafts.csswg.org/cssom-view/#extensions-to-the-mouseevent-interface",
-            "description": "The definition of 'MouseEvent' in the 'CSS Object Model (CSSOM) View Module' specification."
+            "description": "MouseEvent - CSS Object Model (CSSOM) View Module"
         },
         {
             "name": "UI Events",
             "href": "https://w3c.github.io/uievents/#interface-mouseevent",
-            "description": "The definition of 'MouseEvent' in the 'UI Events' specification."
+            "description": "MouseEvent - UI Events"
         },
         {
             "name": "Document Object Model (DOM) Level 3 Events Specification",
             "href": "https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#events-mouseevents",
-            "description": "The definition of 'MouseEvent' in the 'Document Object Model (DOM) Level 3 Events Specification' specification."
+            "description": "MouseEvent - Document Object Model (DOM) Level 3 Events Specification"
         },
         {
             "name": "Document Object Model (DOM) Level 2 Events Specification",
             "href": "https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-MouseEvent",
-            "description": "The definition of 'MouseEvent' in the 'Document Object Model (DOM) Level 2 Events Specification' specification."
+            "description": "MouseEvent - Document Object Model (DOM) Level 2 Events Specification"
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "ECMAScript (ECMA-262)",
             "href": "https://tc39.es/ecma262/#sec-symbol.matchall",
-            "description": "The definition of 'Symbol.matchAll' in the 'ECMAScript (ECMA-262)' specification."
+            "description": "Symbol.matchAll - ECMAScript (ECMA-262)"
         }
     ]
 }

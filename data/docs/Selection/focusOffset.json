@@ -8,7 +8,7 @@
         {
             "name": "Selection API",
             "href": "https://w3c.github.io/selection-api/#dom-selection-focusoffset",
-            "description": "The definition of 'Selection.focusOffset' in the 'Selection API' specification."
+            "description": "Selection.focusOffset - Selection API"
         }
     ]
 }

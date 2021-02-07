@@ -8,17 +8,17 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/editing.html#dom-iscontenteditable",
-            "description": "The definition of 'HTMLElement.contenteditable' in the 'HTML Living Standard' specification."
+            "description": "HTMLElement.contenteditable - HTML Living Standard"
         },
         {
             "name": "HTML 5.1",
             "href": "https://www.w3.org/TR/html51/editing.html#dom-iscontenteditable",
-            "description": "The definition of 'HTMLElement.contenteditable' in the 'HTML 5.1' specification."
+            "description": "HTMLElement.contenteditable - HTML 5.1"
         },
         {
             "name": "HTML5",
             "href": "https://www.w3.org/TR/html52/editing.html#dom-iscontenteditable",
-            "description": "The definition of 'HTMLElement.contenteditable' in the 'HTML5' specification."
+            "description": "HTMLElement.contenteditable - HTML5"
         }
     ]
 }

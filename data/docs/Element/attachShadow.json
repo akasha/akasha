@@ -8,7 +8,7 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#dom-element-attachshadow",
-            "description": "The definition of 'attachShadow()' in the 'DOM' specification."
+            "description": "attachShadow() - DOM"
         }
     ]
 }

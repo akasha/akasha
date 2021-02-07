@@ -8,7 +8,7 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#dom-node-ownerdocument",
-            "description": "The definition of 'Node: ownerDocument' in the 'DOM' specification."
+            "description": "Node: ownerDocument - DOM"
         }
     ]
 }

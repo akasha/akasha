@@ -8,7 +8,7 @@
         {
             "name": "WebVR 1.1",
             "href": "https://immersive-web.github.io/webvr/spec/1.1/#dom-window-onvrdisplaypresentchange",
-            "description": "The definition of 'onvrdisplaypresentchange' in the 'WebVR 1.1' specification."
+            "description": "onvrdisplaypresentchange - WebVR 1.1"
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "Push API",
             "href": "https://w3c.github.io/push-api/#dom-pushmanager-getsubscription",
-            "description": "The definition of 'getSubscription()' in the 'Push API' specification."
+            "description": "getSubscription() - Push API"
         }
     ]
 }

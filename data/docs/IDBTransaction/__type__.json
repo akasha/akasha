@@ -8,12 +8,12 @@
         {
             "name": "Indexed Database API 2.0",
             "href": "https://www.w3.org/TR/IndexedDB/#transaction",
-            "description": "The definition of 'IDBTransaction' in the 'Indexed Database API 2.0' specification."
+            "description": "IDBTransaction - Indexed Database API 2.0"
         },
         {
             "name": "Indexed Database API 2.0",
             "href": "https://www.w3.org/TR/IndexedDB/#transaction",
-            "description": "The definition of 'IDBTransaction' in the 'Indexed Database API 2.0' specification."
+            "description": "IDBTransaction - Indexed Database API 2.0"
         }
     ]
 }

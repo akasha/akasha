@@ -8,7 +8,7 @@
         {
             "name": "Scalable Vector Graphics (SVG) 2",
             "href": "https://svgwg.org/svg2-draft/types.html#__svg__SVGGeometryElement__isPointInStroke",
-            "description": "The definition of 'SVGGeometryElement.isPointInStroke()' in the 'Scalable Vector Graphics (SVG) 2' specification."
+            "description": "SVGGeometryElement.isPointInStroke() - Scalable Vector Graphics (SVG) 2"
         }
     ]
 }

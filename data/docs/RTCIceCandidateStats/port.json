@@ -8,7 +8,7 @@
         {
             "name": "Identifiers for WebRTC's Statistics API",
             "href": "https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatestats-port",
-            "description": "The definition of 'RTCIceCandidateStats.port' in the 'Identifiers for WebRTC's Statistics API' specification."
+            "description": "RTCIceCandidateStats.port - Identifiers for WebRTC's Statistics API"
         }
     ]
 }

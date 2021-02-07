@@ -8,7 +8,7 @@
         {
             "name": "Content Security Policy Level 3",
             "href": "https://w3c.github.io/webappsec-csp/#dom-securitypolicyviolationevent-blockeduri",
-            "description": "The definition of 'blockedURI' in the 'Content Security Policy Level 3' specification."
+            "description": "blockedURI - Content Security Policy Level 3"
         }
     ]
 }

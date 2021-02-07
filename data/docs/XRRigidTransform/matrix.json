@@ -8,7 +8,7 @@
         {
             "name": "WebXR Device API",
             "href": "https://immersive-web.github.io/webxr/#dom-xrrigidtransform-matrix",
-            "description": "The definition of 'XRRigidTransform.matrix' in the 'WebXR Device API' specification."
+            "description": "XRRigidTransform.matrix - WebXR Device API"
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "WebXR Device API",
             "href": "https://immersive-web.github.io/webxr/#dom-xrreferencespace-onreset",
-            "description": "The definition of 'onreset' in the 'WebXR Device API' specification."
+            "description": "onreset - WebXR Device API"
         }
     ]
 }

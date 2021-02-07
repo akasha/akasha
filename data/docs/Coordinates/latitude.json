@@ -8,7 +8,7 @@
         {
             "name": "Geolocation API",
             "href": "https://w3c.github.io/geolocation-api/#dom-geolocationcoordinates-latitude",
-            "description": "The definition of 'GeolocationCoordinates.latitude' in the 'Geolocation API' specification."
+            "description": "GeolocationCoordinates.latitude - Geolocation API"
         }
     ]
 }

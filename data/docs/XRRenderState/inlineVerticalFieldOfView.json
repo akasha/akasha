@@ -8,7 +8,7 @@
         {
             "name": "WebXR Device API",
             "href": "https://immersive-web.github.io/webxr/#dom-xrrenderstate-inlineVerticalFieldOfView",
-            "description": "The definition of 'XRRenderState.inlineVerticalFieldOfView' in the 'WebXR Device API' specification."
+            "description": "XRRenderState.inlineVerticalFieldOfView - WebXR Device API"
         }
     ]
 }

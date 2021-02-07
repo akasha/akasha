@@ -8,7 +8,7 @@
         {
             "name": "Gamepad Extensions",
             "href": "https://w3c.github.io/gamepad/extensions.html#dom-gamepad-hand",
-            "description": "The definition of 'hand' in the 'Gamepad Extensions' specification."
+            "description": "hand - Gamepad Extensions"
         }
     ]
 }

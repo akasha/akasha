@@ -8,7 +8,7 @@
         {
             "name": "Visual Viewport API",
             "href": "https://wicg.github.io/visual-viewport/#dom-window-visualviewport",
-            "description": "The definition of 'visualViewport' in the 'Visual Viewport API' specification."
+            "description": "visualViewport - Visual Viewport API"
         }
     ]
 }

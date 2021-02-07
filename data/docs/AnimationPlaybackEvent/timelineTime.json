@@ -8,7 +8,7 @@
         {
             "name": "Web Animations",
             "href": "https://drafts.csswg.org/web-animations-1/#dom-animationplaybackevent-timelinetime",
-            "description": "The definition of 'AnimationPlaybackEvent.timelineTime' in the 'Web Animations' specification."
+            "description": "AnimationPlaybackEvent.timelineTime - Web Animations"
         }
     ]
 }

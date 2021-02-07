@@ -8,7 +8,7 @@
         {
             "name": "WebRTC 1.0: Real-time Communication Between Browsers",
             "href": "https://w3c.github.io/webrtc-pc/#dom-peerconnection-ice-connection-state",
-            "description": "The definition of 'RTCPeerConnection.iceConnectionState' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification."
+            "description": "RTCPeerConnection.iceConnectionState - WebRTC 1.0: Real-time Communication Between Browsers"
         }
     ]
 }

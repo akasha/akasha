@@ -8,12 +8,12 @@
         {
             "name": "Service Workers",
             "href": "https://w3c.github.io/ServiceWorker/#serviceworkerregistration",
-            "description": "The definition of 'ServiceWorkerRegistration' in the 'Service Workers' specification."
+            "description": "ServiceWorkerRegistration - Service Workers"
         },
         {
             "name": "Push API",
             "href": "https://w3c.github.io/push-api/#dom-serviceworkerregistration-pushmanager",
-            "description": "The definition of 'PushManager' in the 'Push API' specification."
+            "description": "PushManager - Push API"
         },
         {
             "name": "Notifications API",

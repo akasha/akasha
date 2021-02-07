@@ -8,7 +8,7 @@
         {
             "name": "Encrypted Media Extensions",
             "href": "https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-videocapabilities",
-            "description": "The definition of 'videoCapabilities' in the 'Encrypted Media Extensions' specification."
+            "description": "videoCapabilities - Encrypted Media Extensions"
         }
     ]
 }

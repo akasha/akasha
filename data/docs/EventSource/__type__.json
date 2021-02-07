@@ -8,7 +8,7 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/server-sent-events.html#the-eventsource-interface",
-            "description": "The definition of 'EventSource' in the 'HTML Living Standard' specification."
+            "description": "EventSource - HTML Living Standard"
         }
     ]
 }

@@ -8,12 +8,12 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/media.html#dom-media-load",
-            "description": "The definition of 'HTMLMediaElement.load()' in the 'HTML Living Standard' specification."
+            "description": "HTMLMediaElement.load() - HTML Living Standard"
         },
         {
             "name": "HTML5",
             "href": "https://www.w3.org/TR/html52/semantics-embedded-content.html#dom-htmlmediaelement-load",
-            "description": "The definition of 'HTMLMediaElement.load()' in the 'HTML5' specification."
+            "description": "HTMLMediaElement.load() - HTML5"
         }
     ]
 }

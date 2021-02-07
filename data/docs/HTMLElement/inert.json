@@ -8,7 +8,7 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/interaction.html#inert-subtrees",
-            "description": "The definition of 'HTMLElement.inert' in the 'HTML Living Standard' specification."
+            "description": "HTMLElement.inert - HTML Living Standard"
         }
     ]
 }

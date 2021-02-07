@@ -8,12 +8,12 @@
         {
             "name": "WebGL 2.0",
             "href": "https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.2",
-            "description": "The definition of 'getIndexedParameter' in the 'WebGL 2.0' specification."
+            "description": "getIndexedParameter - WebGL 2.0"
         },
         {
             "name": "OpenGL ES 3.0",
             "href": "https://www.khronos.org/opengles/sdk/docs/man3/html/glGet.xhtml",
-            "description": "The definition of 'glGet' in the 'OpenGL ES 3.0' specification."
+            "description": "glGet - OpenGL ES 3.0"
         }
     ]
 }

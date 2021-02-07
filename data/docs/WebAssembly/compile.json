@@ -8,7 +8,7 @@
         {
             "name": "WebAssembly JavaScript Interface",
             "href": "https://webassembly.github.io/spec/js-api/#dom-webassembly-compile",
-            "description": "The definition of 'compile()' in the 'WebAssembly JavaScript Interface' specification."
+            "description": "compile() - WebAssembly JavaScript Interface"
         }
     ]
 }

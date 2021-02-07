@@ -8,7 +8,7 @@
         {
             "name": "WebXR Device API",
             "href": "https://immersive-web.github.io/webxr/#dom-xrpose-emulatedposition",
-            "description": "The definition of 'XRPose.emulatedPosition' in the 'WebXR Device API' specification."
+            "description": "XRPose.emulatedPosition - WebXR Device API"
         }
     ]
 }

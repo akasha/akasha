@@ -8,7 +8,7 @@
         {
             "name": "Web Animations",
             "href": "https://drafts.csswg.org/web-animations-1/#enumdef-fillmode",
-            "description": "The definition of 'fill' in the 'Web Animations' specification."
+            "description": "fill - Web Animations"
         }
     ]
 }
