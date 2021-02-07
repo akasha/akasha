@@ -7,8 +7,8 @@
     "refs": [
         {
             "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-%typedarray%.prototype.foreach",
-            "description": "The definition of '%TypedArray%.prototype.forEach' in the 'ECMAScript (ECMA-262)' specification."
+            "href": "https://tc39.es/ecma262/#sec-%25typedarray%25.prototype.foreach",
+            "description": "TypedArray.forEach - ECMAScript (ECMA-262)"
         }
     ]
 }

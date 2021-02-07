@@ -1,0 +1,14 @@
+
+{
+    "kind": "Method",
+    "name": "TypedArray.at",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/at",
+    "description": "The at() method takes an integer value and returns the item at that index, allowing for positive and negative integers. Negative integers count back from the last item in the array.",
+    "refs": [
+        {
+            "name": "Relative Indexing Method",
+            "href": "https://tc39.es/proposal-relative-indexing-method/#sec-%25typedarray.prototype%25-additions",
+            "description": "TypedArray.at - Relative Indexing Method"
+        }
+    ]
+}

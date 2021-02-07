@@ -7,8 +7,8 @@
     "refs": [
         {
             "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-%typedarray%.prototype.tostring",
-            "description": "The definition of 'Array.prototype.toString' in the 'ECMAScript (ECMA-262)' specification."
+            "href": "https://tc39.es/ecma262/#sec-%25typedarray%25.prototype.tostring",
+            "description": "TypedArray.toString - ECMAScript (ECMA-262)"
         }
     ]
 }

@@ -7,8 +7,8 @@
     "refs": [
         {
             "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-%typedarray%.prototype.fill",
-            "description": "The definition of 'TypedArray.prototype.fill' in the 'ECMAScript (ECMA-262)' specification."
+            "href": "https://tc39.es/ecma262/#sec-%25typedarray%25.prototype.fill",
+            "description": "TypedArray.fill - ECMAScript (ECMA-262)"
         }
     ]
 }
