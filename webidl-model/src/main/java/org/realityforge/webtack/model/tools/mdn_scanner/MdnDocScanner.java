@@ -386,7 +386,7 @@ public final class MdnDocScanner
     final List<String> constructorNames = new ArrayList<>();
     final List<String> propertyNames = new ArrayList<>();
     final List<String> methodsNames = new ArrayList<>();
-    for ( final Element element : document.select( ".quick-links > div > ol > li > details > summary" ) )
+    for ( final Element element : document.select( "#sidebar-quicklinks > div > ol > li > a" ) )
     {
       final String sectionType = element.text();
       if ( sectionType.equalsIgnoreCase( "Methods" ) )
@@ -402,7 +402,7 @@ public final class MdnDocScanner
         element.parent().select( "ol > li > a > code" ).stream().map( Element::text ).forEach( constructorNames::add );
       }
     }
-    for ( final Element element : document.select( ".quick-links > div > ol > li > a > strong" ) )
+    for ( final Element element : document.select( "#sidebar-quicklinks > div > ol > li > a" ) )
     {
       final String sectionType = element.text();
       if ( sectionType.equalsIgnoreCase( "Methods" ) )
