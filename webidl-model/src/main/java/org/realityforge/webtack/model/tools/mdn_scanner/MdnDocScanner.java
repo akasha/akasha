@@ -391,15 +391,33 @@ public final class MdnDocScanner
       final String sectionType = element.text();
       if ( sectionType.equalsIgnoreCase( "Methods" ) )
       {
-        element.parent().select( "ol > li > a > code" ).stream().map( Element::text ).forEach( methodsNames::add );
+        element
+          .parent()
+          .select( "ol > li > a > code" )
+          .stream()
+          .map( Element::text )
+          .filter( v -> !v.contains( "." ) || v.startsWith( typeName + "." ) )
+          .forEach( methodsNames::add );
       }
       else if ( sectionType.equalsIgnoreCase( "Properties" ) )
       {
-        element.parent().select( "ol > li > a > code" ).stream().map( Element::text ).forEach( propertyNames::add );
+        element
+          .parent()
+          .select( "ol > li > a > code" )
+          .stream()
+          .map( Element::text )
+          .filter( v -> !v.contains( "." ) || v.startsWith( typeName + "." ) )
+          .forEach( propertyNames::add );
       }
       else if ( sectionType.equalsIgnoreCase( "Constructor" ) || sectionType.equalsIgnoreCase( "Constructors" ) )
       {
-        element.parent().select( "ol > li > a > code" ).stream().map( Element::text ).forEach( constructorNames::add );
+        element
+          .parent()
+          .select( "ol > li > a > code" )
+          .stream()
+          .map( Element::text )
+          .filter( v -> !v.contains( "." ) || v.startsWith( typeName + "." ) )
+          .forEach( constructorNames::add );
       }
     }
     for ( final Element element : document.select( "#sidebar-quicklinks > div > ol > li > a" ) )
