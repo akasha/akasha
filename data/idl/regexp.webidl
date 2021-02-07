@@ -29,7 +29,7 @@ interface RegExpResult {
   readonly attribute RegExpGroups? groups;
 
   readonly attribute unsigned long length;
-  getter DOMString ( unsigned long index );
+  getter DOMString? ( unsigned long index );
 };
 
 [JavaSubPackage=core, LegacyNoInterfaceObject]
