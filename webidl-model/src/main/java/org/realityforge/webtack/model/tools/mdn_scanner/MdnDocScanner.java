@@ -279,7 +279,7 @@ public final class MdnDocScanner
                                                      .replaceAll( "\\s+", " " ) ) );
 
       entry.setRefs( null );
-      final Element standardsElement = document.selectFirst( "#Specifications + table.standard-table" );
+      final Element standardsElement = document.selectFirst( "#specifications + div > table.standard-table" );
       if ( null != standardsElement )
       {
         final List<ExternalRef> refs = new ArrayList<>();
