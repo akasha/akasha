@@ -396,6 +396,7 @@ public final class MdnDocScanner
     final List<String> constructorNames = new ArrayList<>();
     final List<String> propertyNames = new ArrayList<>();
     final List<String> methodsNames = new ArrayList<>();
+    final List<String> eventNames = new ArrayList<>();
     for ( final Element element : document.select( "#sidebar-quicklinks > div > ol > li > a" ) )
     {
       final String sectionType = element.text();
@@ -418,6 +419,16 @@ public final class MdnDocScanner
           .map( Element::text )
           .filter( v -> !v.contains( "." ) || v.startsWith( typeName + "." ) )
           .forEach( propertyNames::add );
+      }
+      else if ( sectionType.equalsIgnoreCase( "Events" ) )
+      {
+        element
+          .parent()
+          .select( "ol > li > a > code" )
+          .stream()
+          .map( Element::text )
+          .filter( v -> !v.contains( "." ) || v.startsWith( typeName + "." ) )
+          .forEach( eventNames::add );
       }
       else if ( sectionType.equalsIgnoreCase( "Constructor" ) || sectionType.equalsIgnoreCase( "Constructors" ) )
       {
@@ -564,38 +575,15 @@ public final class MdnDocScanner
         .distinct()
         .forEach( method -> queueRequest( DocKind.Method, typeName, method ) );
     }
-    final List<String> events =
-      document
-        .select( "#Events + p + dl > dt > a[href$=\"_event\"] > code, " +
-                 "#Events + dl > dt > a[href$=\"_event\"] > code, " +
+    eventNames.forEach( event -> queueRequest( DocKind.Event, typeName, event ) );
 
-                 // SpeechSynthesisUtterance among others nests <a/> in code
-                 "#Events + p + dl > dt > code > a[href$=\"_event\"], " +
-                 "#Events + dl > dt > code > a[href$=\"_event\"], " +
-
-                 "[id*='_events'] + p + dl > dt > a[href$=\"_event\"] > code, " +
-                 // This pattern added for Window docs
-                 "[id*='_events'] + dl > dt > a[href$=\"_event\"] > code" )
-        .stream()
-        .map( Element::text )
-        // Strip out the type name that sometimes appears in the documentation
-        .map( text -> text.replaceAll( "^" + localName + "\\.", "" ) )
-        .map( text -> text.replaceAll( "^" + typeName + "\\.", "" ) )
-        .filter( SourceVersion::isName )
-        .collect( Collectors.toList() );
-    if ( !events.isEmpty() )
-    {
-      events.forEach( event -> queueRequest( DocKind.Event, typeName, event ) );
-
-      // Not all doc pages explicitly list onx event handlers as properties so we try and scrape the page
-      // to try and find them
-      events
-        .stream()
-        .map( e -> "on" + e )
-        .filter( e -> !document.select( "a[href$=\"/" + localName + "/" + e + "\"]" ).isEmpty() )
-        .filter( e -> !document.select( "a[href$=\"/" + typeName + "/" + e + "\"]" ).isEmpty() )
-        .forEach( property -> queueRequest( DocKind.Property, typeName, property ) );
-    }
+    // Not all doc pages explicitly list onx event handlers as properties so we try and scrape the page
+    // to try and find them
+    eventNames
+      .stream()
+      .map( e -> "on" + e )
+      .filter( e -> !document.select( "a[href$=\"/" + typeName + "/" + e + "\"]" ).isEmpty() )
+      .forEach( property -> queueRequest( DocKind.Property, typeName, property ) );
   }
 
   private String deriveName( @Nonnull final DocKind kind, @Nonnull final EntryIndex entryIndex )
