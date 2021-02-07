@@ -298,19 +298,9 @@ public final class MdnDocScanner
               if ( !href.isEmpty() )
               {
                 final URL h = new URL( href );
-                final String refDescription =
-                  a
-                    .text()
-                    .substring( name.length() )
-                    .trim()
-                    .replace( "that specification", "the '" + name + "' specification" );
                 final ExternalRef ref = new ExternalRef();
                 ref.setName( name );
                 ref.setHref( new URI( h.getProtocol(), h.getHost(), h.getPath(), h.getRef() ).toASCIIString() );
-                if ( !refDescription.isEmpty() )
-                {
-                  ref.setDescription( StringUtil.encodeHtml( refDescription ) );
-                }
                 refs.add( ref );
               }
             }
