@@ -1,0 +1,14 @@
+
+{
+    "kind": "Property",
+    "name": "Symbol.match",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/match",
+    "description": "The Symbol.match well-known symbol specifies the matching of a regular expression against a string. This function is called by the String.prototype.match() method.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-symbol.match",
+            "description": "The definition of 'Symbol.match' in the 'ECMAScript (ECMA-262)' specification."
+        }
+    ]
+}

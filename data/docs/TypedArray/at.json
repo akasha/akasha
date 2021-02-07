@@ -8,7 +8,7 @@
         {
             "name": "Relative Indexing Method",
             "href": "https://tc39.es/proposal-relative-indexing-method/#sec-%25typedarray.prototype%25-additions",
-            "description": "TypedArray.at - Relative Indexing Method"
+            "description": "The definition of 'Relative Indexing Method' in the 'Relative Indexing Method' specification."
         }
     ]
 }

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Error.toSource",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/toSource",
+    "description": "The toSource() method returns code that could eval to the same error."
+}

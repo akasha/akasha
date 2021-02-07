@@ -3,5 +3,37 @@
     "kind": "Type",
     "name": "CSSRule",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/CSSRule",
-    "description": "The CSSRule interface represents a single CSS rule. There are several types of rules, listed in the Type constants section below."
+    "description": "The CSSRule interface represents a single CSS rule. There are several types of rules which inherit properties from CSSRule.",
+    "refs": [
+        {
+            "name": "CSS Object Model (CSSOM)",
+            "href": "https://drafts.csswg.org/cssom/#css-rules",
+            "description": "The definition of 'CSSRule' in the 'CSS Object Model (CSSOM)' specification."
+        },
+        {
+            "name": "CSS Animations Level 1",
+            "href": "https://drafts.csswg.org/css-animations-1/#interface-cssrule",
+            "description": "The definition of 'CSSRule' in the 'CSS Animations Level 1' specification."
+        },
+        {
+            "name": "CSS Fonts Module Level 4",
+            "href": "https://drafts.csswg.org/css-fonts-4/#om-fontfeaturevalues",
+            "description": "The definition of 'CSSRule' in the 'CSS Fonts Module Level 4' specification."
+        },
+        {
+            "name": "CSS Counter Styles Level 3",
+            "href": "https://drafts.csswg.org/css-counter-styles-3/#extentions-to-cssrule-interface",
+            "description": "The definition of 'CSSRule' in the 'CSS Counter Styles Level 3' specification."
+        },
+        {
+            "name": "CSS Conditional Rules Module Level 3",
+            "href": "https://drafts.csswg.org/css-conditional-3/#extentions-to-cssrule-interface",
+            "description": "The definition of 'CSSRule' in the 'CSS Conditional Rules Module Level 3' specification."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 Style Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSRule",
+            "description": "The definition of 'CSSRule' in the 'Document Object Model (DOM) Level 2 Style Specification' specification."
+        }
+    ]
 }

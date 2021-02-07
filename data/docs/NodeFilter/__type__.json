@@ -3,5 +3,17 @@
     "kind": "Type",
     "name": "NodeFilter",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/NodeFilter",
-    "description": "A NodeFilter interface represents an object used to filter the nodes in a NodeIterator or TreeWalker. A NodeFilter knows nothing about the document or traversing nodes; it only knows how to evaluate a single node against the provided filter."
+    "description": "A NodeFilter interface represents an object used to filter the nodes in a NodeIterator or TreeWalker. A NodeFilter knows nothing about the document or traversing nodes; it only knows how to evaluate a single node against the provided filter.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#interface-nodefilter",
+            "description": "The definition of 'NodeFilter' in the 'DOM' specification."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 Traversal and Range Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-NodeFilter",
+            "description": "The definition of 'NodeFilter' in the 'Document Object Model (DOM) Level 2 Traversal and Range Specification' specification."
+        }
+    ]
 }

@@ -1,11 +1,11 @@
 
 {
     "name": "HTMLButtonElement",
-    "lastModifiedAt": 1604976391170,
+    "lastModifiedAt": 1612676292603,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604976387364
+            "lastModifiedAt": 1612573606000
         },
         {
             "name": "disabled",

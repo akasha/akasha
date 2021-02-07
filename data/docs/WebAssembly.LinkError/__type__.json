@@ -3,5 +3,17 @@
     "kind": "Type",
     "name": "WebAssembly.LinkError",
     "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/LinkError",
-    "description": "The WebAssembly.LinkError object indicates an error during module instantiation (besides traps from the start function)."
+    "description": "The WebAssembly.LinkError object indicates an error during module instantiation (besides traps from the start function).",
+    "refs": [
+        {
+            "name": "WebAssembly JavaScript Interface",
+            "href": "https://webassembly.github.io/spec/js-api/#exceptiondef-linkerror",
+            "description": "The definition of 'LinkError' in the 'WebAssembly JavaScript Interface' specification."
+        },
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-native-error-types-used-in-this-standard",
+            "description": "The definition of 'NativeError' in the 'ECMAScript (ECMA-262)' specification."
+        }
+    ]
 }

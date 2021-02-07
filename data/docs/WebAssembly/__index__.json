@@ -1,63 +1,63 @@
 
 {
     "name": "WebAssembly",
-    "lastModifiedAt": 1604978378393,
+    "lastModifiedAt": 1612676730374,
     "entries": [
         {
             "name": "CompileError",
-            "lastModifiedAt": 1597621523697
+            "lastModifiedAt": 1612573596000
         },
         {
             "name": "Global",
-            "lastModifiedAt": 1597621540452
+            "lastModifiedAt": 1612573596000
         },
         {
             "name": "Instance",
-            "lastModifiedAt": 1597621531369
+            "lastModifiedAt": 1612573596000
         },
         {
             "name": "LinkError",
-            "lastModifiedAt": 1597621535458
+            "lastModifiedAt": 1612573596000
         },
         {
             "name": "Memory",
-            "lastModifiedAt": 1597621498931
+            "lastModifiedAt": 1612573596000
         },
         {
             "name": "Module",
-            "lastModifiedAt": 1599391566094
+            "lastModifiedAt": 1612573596000
         },
         {
             "name": "RuntimeError",
-            "lastModifiedAt": 1597621532678
+            "lastModifiedAt": 1612573596000
         },
         {
             "name": "Table",
-            "lastModifiedAt": 1599279921545
+            "lastModifiedAt": 1612573596000
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1597621541962
+            "lastModifiedAt": 1612573596000
         },
         {
             "name": "compile",
-            "lastModifiedAt": 1597621542923
+            "lastModifiedAt": 1612573596000
         },
         {
             "name": "compileStreaming",
-            "lastModifiedAt": 1599391536924
+            "lastModifiedAt": 1612573596000
         },
         {
             "name": "instantiate",
-            "lastModifiedAt": 1597621542249
+            "lastModifiedAt": 1612573596000
         },
         {
             "name": "instantiateStreaming",
-            "lastModifiedAt": 1597621542666
+            "lastModifiedAt": 1612573596000
         },
         {
             "name": "validate",
-            "lastModifiedAt": 1597621544464
+            "lastModifiedAt": 1612573596000
         }
     ]
 }

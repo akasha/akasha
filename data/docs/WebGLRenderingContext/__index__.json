@@ -1,11 +1,11 @@
 
 {
     "name": "WebGLRenderingContext",
-    "lastModifiedAt": 1604978535272,
+    "lastModifiedAt": 1612676753504,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604978450385
+            "lastModifiedAt": 1612573642000
         },
         {
             "name": "activeTexture",

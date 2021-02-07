@@ -3,7 +3,7 @@
     "kind": "Type",
     "name": "SVGLinearGradientElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGLinearGradientElement",
-    "description": "The SVGLinearGradientElement interface corresponds to the linearGradient element.",
+    "description": "The SVGLinearGradientElement interface corresponds to the &lt;linearGradient&gt; element.",
     "refs": [
         {
             "name": "Scalable Vector Graphics (SVG) 2",

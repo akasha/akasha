@@ -3,7 +3,7 @@
     "kind": "Type",
     "name": "SpeechRecognitionAlternative",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionAlternative",
-    "description": "The SpeechRecognitionAlternative interface of the Web Speech API represents a single word that has been recognised by the speech recognition service.",
+    "description": "The SpeechRecognitionAlternative interface of the Web Speech API represents a single word that has been recognized by the speech recognition service.",
     "refs": [
         {
             "name": "Web Speech API",

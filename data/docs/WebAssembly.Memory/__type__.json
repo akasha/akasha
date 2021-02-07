@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "WebAssembly.Memory",
     "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory",
-    "description": "The WebAssembly.Memory object is a resizable ArrayBuffer or SharedArrayBuffer that holds the raw bytes of memory accessed by a WebAssembly Instance."
+    "description": "The WebAssembly.Memory object is a resizable ArrayBuffer or SharedArrayBuffer that holds the raw bytes of memory accessed by a WebAssembly Instance.",
+    "refs": [
+        {
+            "name": "WebAssembly JavaScript Interface",
+            "href": "https://webassembly.github.io/spec/js-api/#memories",
+            "description": "The definition of 'Memory' in the 'WebAssembly JavaScript Interface' specification."
+        }
+    ]
 }

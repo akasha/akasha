@@ -1,11 +1,11 @@
 
 {
     "name": "RTCIceCandidatePairStats",
-    "lastModifiedAt": 1604975265800,
+    "lastModifiedAt": 1612676479325,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604448900454
+            "lastModifiedAt": 1612573610000
         },
         {
             "name": "availableIncomingBitrate",

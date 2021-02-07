@@ -3,5 +3,17 @@
     "kind": "Type",
     "name": "StyleSheet",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/StyleSheet",
-    "description": "An object implementing the StyleSheet interface represents a single style sheet. CSS style sheets will further implement the more specialized CSSStyleSheet interface."
+    "description": "An object implementing the StyleSheet interface represents a single style sheet. CSS style sheets will further implement the more specialized CSSStyleSheet interface.",
+    "refs": [
+        {
+            "name": "CSS Object Model (CSSOM)",
+            "href": "https://drafts.csswg.org/cssom/#stylesheet",
+            "description": "The definition of 'StyleSheet' in the 'CSS Object Model (CSSOM)' specification."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 Style Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-Style/stylesheets.html#StyleSheets-StyleSheet",
+            "description": "The definition of 'StyleSheet' in the 'Document Object Model (DOM) Level 2 Style Specification' specification."
+        }
+    ]
 }

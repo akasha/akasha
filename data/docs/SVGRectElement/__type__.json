@@ -3,7 +3,7 @@
     "kind": "Type",
     "name": "SVGRectElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGRectElement",
-    "description": "The SVGRectElement interface provides access to the properties of rect elements, as well as methods to manipulate them.",
+    "description": "The SVGRectElement interface provides access to the properties of &lt;rect&gt; elements, as well as methods to manipulate them.",
     "refs": [
         {
             "name": "Scalable Vector Graphics (SVG) 2",

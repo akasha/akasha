@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "Window",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window",
-    "description": "The Window interface represents a window containing a DOM document; the document property points to the DOM document loaded in that window."
+    "description": "The Window interface represents a window containing a DOM document; the document property points to the DOM document loaded in that window.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#the-window-object",
+            "description": "The definition of 'Window' in the 'HTML Living Standard' specification."
+        }
+    ]
 }

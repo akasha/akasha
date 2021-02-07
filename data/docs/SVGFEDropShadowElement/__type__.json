@@ -3,7 +3,7 @@
     "kind": "Type",
     "name": "SVGFEDropShadowElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGFEDropShadowElement",
-    "description": "The SVGFEDropShadowElement interface corresponds to the feDropShadow element.",
+    "description": "The SVGFEDropShadowElement interface corresponds to the &lt;feDropShadow&gt; element.",
     "refs": [
         {
             "name": "Filter Effects Module Level 1",

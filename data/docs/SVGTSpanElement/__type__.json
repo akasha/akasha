@@ -3,7 +3,7 @@
     "kind": "Type",
     "name": "SVGTSpanElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGTSpanElement",
-    "description": "The SVGTSpanElement interface represents a tspan element.",
+    "description": "The SVGTSpanElement interface represents a &lt;tspan&gt; element.",
     "refs": [
         {
             "name": "Scalable Vector Graphics (SVG) 2",

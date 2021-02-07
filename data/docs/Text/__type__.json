@@ -3,7 +3,7 @@
     "kind": "Type",
     "name": "Text",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Text",
-    "description": "The Text interface represents the textual content of Element or Attr.",
+    "description": "The Text interface represents the textual content of Element or Attr. ",
     "refs": [
         {
             "name": "DOM",

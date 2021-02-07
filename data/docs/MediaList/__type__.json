@@ -3,7 +3,7 @@
     "kind": "Type",
     "name": "MediaList",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaList",
-    "description": "The MediaList interface represents the media queries of a stylesheet, e.g. those set using a link element's media attribute.",
+    "description": "The MediaList interface represents the media queries of a stylesheet, e.g. those set using a &lt;link&gt; element's media attribute.",
     "refs": [
         {
             "name": "CSS Object Model (CSSOM)",

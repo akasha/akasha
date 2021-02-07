@@ -3,7 +3,7 @@
     "kind": "Type",
     "name": "SVGFECompositeElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGFECompositeElement",
-    "description": "The SVGFECompositeElement interface corresponds to the feComposite element.",
+    "description": "The SVGFECompositeElement interface corresponds to the &lt;feComposite&gt; element.",
     "refs": [
         {
             "name": "Filter Effects Module Level 1",

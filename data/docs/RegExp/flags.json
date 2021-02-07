@@ -1,0 +1,14 @@
+
+{
+    "kind": "Property",
+    "name": "RegExp.flags",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/flags",
+    "description": "The flags property returns a string consisting of the flags of the current regular expression object.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-get-regexp.prototype.flags",
+            "description": "The definition of 'RegExp.prototype.flags' in the 'ECMAScript (ECMA-262)' specification."
+        }
+    ]
+}

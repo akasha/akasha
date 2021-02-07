@@ -1,7 +1,7 @@
 
 {
     "name": "Symbol",
-    "lastModifiedAt": 1606209008548,
+    "lastModifiedAt": 1612676629978,
     "entries": [
         {
             "name": "Symbol",
@@ -12,12 +12,76 @@
             "lastModifiedAt": 1606209005664
         },
         {
+            "name": "asyncIterator",
+            "lastModifiedAt": 1612573595000
+        },
+        {
+            "name": "description",
+            "lastModifiedAt": 1612573595000
+        },
+        {
+            "name": "hasInstance",
+            "lastModifiedAt": 1612573595000
+        },
+        {
+            "name": "isConcatSpreadable",
+            "lastModifiedAt": 1612573595000
+        },
+        {
+            "name": "iterator",
+            "lastModifiedAt": 1612573595000
+        },
+        {
             "name": "keyFor",
             "lastModifiedAt": 1606209008236
         },
         {
+            "name": "match",
+            "lastModifiedAt": 1612573595000
+        },
+        {
+            "name": "matchAll",
+            "lastModifiedAt": 1612573595000
+        },
+        {
             "name": "prototype",
             "lastModifiedAt": 1606209008548
+        },
+        {
+            "name": "replace",
+            "lastModifiedAt": 1612573595000
+        },
+        {
+            "name": "search",
+            "lastModifiedAt": 1612573595000
+        },
+        {
+            "name": "species",
+            "lastModifiedAt": 1612573595000
+        },
+        {
+            "name": "split",
+            "lastModifiedAt": 1612573595000
+        },
+        {
+            "name": "toPrimitive",
+            "lastModifiedAt": 1612573595000
+        },
+        {
+            "name": "toString",
+            "lastModifiedAt": 1612573595000
+        },
+        {
+            "name": "toStringTag",
+            "lastModifiedAt": 1612573595000
+        },
+        {
+            "name": "unscopables",
+            "lastModifiedAt": 1612573595000
+        },
+        {
+            "name": "valueOf",
+            "lastModifiedAt": 1612573595000
         }
     ]
 }

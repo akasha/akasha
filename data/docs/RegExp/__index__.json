@@ -1,11 +1,63 @@
 
 {
     "name": "RegExp",
-    "lastModifiedAt": 1612437861257,
+    "lastModifiedAt": 1612676532641,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1612370552000
+            "lastModifiedAt": 1612573596000
+        },
+        {
+            "name": "compile",
+            "lastModifiedAt": 1612573596000
+        },
+        {
+            "name": "dotAll",
+            "lastModifiedAt": 1612573596000
+        },
+        {
+            "name": "exec",
+            "lastModifiedAt": 1612573596000
+        },
+        {
+            "name": "flags",
+            "lastModifiedAt": 1612573596000
+        },
+        {
+            "name": "global",
+            "lastModifiedAt": 1612573596000
+        },
+        {
+            "name": "ignoreCase",
+            "lastModifiedAt": 1612573596000
+        },
+        {
+            "name": "multiline",
+            "lastModifiedAt": 1612573596000
+        },
+        {
+            "name": "prototype",
+            "lastModifiedAt": 1612573596000
+        },
+        {
+            "name": "source",
+            "lastModifiedAt": 1612573596000
+        },
+        {
+            "name": "sticky",
+            "lastModifiedAt": 1612573596000
+        },
+        {
+            "name": "test",
+            "lastModifiedAt": 1612573596000
+        },
+        {
+            "name": "toString",
+            "lastModifiedAt": 1612573596000
+        },
+        {
+            "name": "unicode",
+            "lastModifiedAt": 1612573596000
         }
     ]
 }

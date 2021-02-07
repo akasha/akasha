@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "MediaStreamAudioDestinationNode",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamAudioDestinationNode",
-    "description": "Inherits properties from its parent, AudioNode."
+    "description": "The MediaStreamAudioDestinationNode interface represents an audio destination consisting of a WebRTC MediaStream with a single AudioMediaStreamTrack, which can be used in a similar way to a MediaStream obtained from Navigator.getUserMedia().",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#mediastreamaudiodestinationnode",
+            "description": "The definition of 'MediaStreamAudioDestinationNode' in the 'Web Audio API' specification."
+        }
+    ]
 }

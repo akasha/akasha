@@ -3,7 +3,7 @@
     "kind": "Type",
     "name": "SVGFEDistantLightElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGFEDistantLightElement",
-    "description": "The SVGFEDistantLightElement interface corresponds to the feDistantLight element.",
+    "description": "The SVGFEDistantLightElement interface corresponds to the &lt;feDistantLight&gt; element.",
     "refs": [
         {
             "name": "Filter Effects Module Level 1",

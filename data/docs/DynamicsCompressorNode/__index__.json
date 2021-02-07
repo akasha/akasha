@@ -1,7 +1,7 @@
 
 {
     "name": "DynamicsCompressorNode",
-    "lastModifiedAt": 1604976010020,
+    "lastModifiedAt": 1612676266771,
     "entries": [
         {
             "name": "DynamicsCompressorNode",
@@ -9,7 +9,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1604976003674
+            "lastModifiedAt": 1612573615000
         },
         {
             "name": "attack",

@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "WebAssembly.Global",
     "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Global",
-    "description": "A WebAssembly.Global object represents a global variable instance, accessible from both JavaScript and importable/exportable across one or more WebAssembly.Module instances. This allows dynamic linking of multiple modules."
+    "description": "A WebAssembly.Global object represents a global variable instance, accessible from both JavaScript and importable/exportable across one or more WebAssembly.Module instances. This allows dynamic linking of multiple modules.",
+    "refs": [
+        {
+            "name": "WebAssembly JavaScript Interface",
+            "href": "https://webassembly.github.io/spec/js-api/#globals",
+            "description": "The definition of 'WebAssembly.Global()' in the 'WebAssembly JavaScript Interface' specification."
+        }
+    ]
 }

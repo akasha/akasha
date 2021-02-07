@@ -3,7 +3,7 @@
     "kind": "Type",
     "name": "HTMLButtonElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLButtonElement",
-    "description": "The HTMLButtonElement interface provides properties and methods (beyond the regular HTMLElement interface it also has available to it by inheritance) for manipulating button elements.",
+    "description": "The HTMLButtonElement interface provides properties and methods (beyond the regular HTMLElement interface it also has available to it by inheritance) for manipulating &lt;button&gt; elements.",
     "refs": [
         {
             "name": "HTML Living Standard",

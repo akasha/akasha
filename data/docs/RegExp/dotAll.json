@@ -1,0 +1,14 @@
+
+{
+    "kind": "Property",
+    "name": "RegExp.dotAll",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/dotAll",
+    "description": "The dotAll property indicates whether or not the &quot;s&quot; flag is used with the regular expression. dotAll is a read-only property of an individual regular expression instance.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-get-regexp.prototype.dotAll",
+            "description": "The definition of 'RegExp.prototype.dotAll' in the 'ECMAScript (ECMA-262)' specification."
+        }
+    ]
+}

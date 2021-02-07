@@ -3,7 +3,7 @@
     "kind": "Type",
     "name": "HTMLSelectElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement",
-    "description": "The HTMLSelectElement interface represents a select HTML Element. These elements also share all of the properties and methods of other HTML elements via the HTMLElement interface.",
+    "description": "The HTMLSelectElement interface represents a &lt;select&gt; HTML Element. These elements also share all of the properties and methods of other HTML elements via the HTMLElement interface.",
     "refs": [
         {
             "name": "HTML Living Standard",

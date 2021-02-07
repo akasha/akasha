@@ -3,7 +3,7 @@
     "kind": "Type",
     "name": "SVGFETileElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGFETileElement",
-    "description": "The SVGFETileElement interface corresponds to the feTile element.",
+    "description": "The SVGFETileElement interface corresponds to the &lt;feTile&gt; element.",
     "refs": [
         {
             "name": "Filter Effects Module Level 1",

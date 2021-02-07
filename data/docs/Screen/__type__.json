@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "Screen",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Screen",
-    "description": "The Screen interface represents a screen, usually the one on which the current window is being rendered, and is obtained using window.screen."
+    "description": "The Screen interface represents a screen, usually the one on which the current window is being rendered, and is obtained using window.screen.",
+    "refs": [
+        {
+            "name": "CSS Object Model (CSSOM) View Module",
+            "href": "https://drafts.csswg.org/cssom-view/#the-screen-interface",
+            "description": "The definition of 'Screen' in the 'CSS Object Model (CSSOM) View Module' specification."
+        }
+    ]
 }

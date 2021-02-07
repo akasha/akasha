@@ -1,11 +1,11 @@
 
 {
     "name": "HTMLDialogElement",
-    "lastModifiedAt": 1604976417020,
+    "lastModifiedAt": 1612676295828,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604976413074
+            "lastModifiedAt": 1612573620000
         },
         {
             "name": "close",

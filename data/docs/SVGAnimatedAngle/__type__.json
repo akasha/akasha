@@ -3,5 +3,5 @@
     "kind": "Type",
     "name": "SVGAnimatedAngle",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGAnimatedAngle",
-    "description": "The SVGAnimatedAngle interface is used for attributes of basic type angle which can be animated."
+    "description": "The SVGAnimatedAngle interface is used for attributes of basic type &lt;angle&gt; which can be animated."
 }

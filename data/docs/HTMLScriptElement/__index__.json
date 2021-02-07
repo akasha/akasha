@@ -1,11 +1,11 @@
 
 {
     "name": "HTMLScriptElement",
-    "lastModifiedAt": 1604976693514,
+    "lastModifiedAt": 1612676319188,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604976689523
+            "lastModifiedAt": 1612573611000
         },
         {
             "name": "referrerPolicy",

@@ -6,9 +6,9 @@
     "description": "The AnimationEvent interface represents events providing information related to animations.",
     "refs": [
         {
-            "name": "CSS Animations",
-            "href": "https://drafts.csswg.org/css-animations/#interface-animationevent",
-            "description": "The definition of 'AnimationEvent' in the 'CSS Animations' specification."
+            "name": "CSS Animations Level 1",
+            "href": "https://drafts.csswg.org/css-animations-1/#interface-animationevent",
+            "description": "The definition of 'AnimationEvent' in the 'CSS Animations Level 1' specification."
         }
     ]
 }

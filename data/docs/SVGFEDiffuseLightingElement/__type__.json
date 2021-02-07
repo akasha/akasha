@@ -3,7 +3,7 @@
     "kind": "Type",
     "name": "SVGFEDiffuseLightingElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGFEDiffuseLightingElement",
-    "description": "The SVGFEDiffuseLightingElement interface corresponds to the feDiffuseLighting element.",
+    "description": "The SVGFEDiffuseLightingElement interface corresponds to the &lt;feDiffuseLighting&gt; element.",
     "refs": [
         {
             "name": "Filter Effects Module Level 1",

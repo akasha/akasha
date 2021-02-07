@@ -3,7 +3,7 @@
     "kind": "Type",
     "name": "HTMLObjectElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLObjectElement",
-    "description": "The HTMLObjectElement interface provides special properties and methods (beyond those on the HTMLElement interface it also has available to it by inheritance) for manipulating the layout and presentation of object element, representing external resources.",
+    "description": "The HTMLObjectElement interface provides special properties and methods (beyond those on the HTMLElement interface it also has available to it by inheritance) for manipulating the layout and presentation of &lt;object&gt; element, representing external resources.",
     "refs": [
         {
             "name": "HTML Living Standard",

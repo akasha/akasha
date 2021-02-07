@@ -1,0 +1,14 @@
+
+{
+    "kind": "Property",
+    "name": "Math.SQRT2",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/SQRT2",
+    "description": "The Math.SQRT2 property represents the square root of 2, approximately 1.414:",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-math.sqrt2",
+            "description": "The definition of 'Math.SQRT2' in the 'ECMAScript (ECMA-262)' specification."
+        }
+    ]
+}

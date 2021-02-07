@@ -3,7 +3,7 @@
     "kind": "Type",
     "name": "HTMLOutputElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLOutputElement",
-    "description": "The HTMLOutputElement interface provides properties and methods (beyond those inherited from HTMLElement) for manipulating the layout and presentation of output elements.",
+    "description": "The HTMLOutputElement interface provides properties and methods (beyond those inherited from HTMLElement) for manipulating the layout and presentation of &lt;output&gt; elements.",
     "refs": [
         {
             "name": "HTML Living Standard",

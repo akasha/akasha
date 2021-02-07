@@ -3,7 +3,7 @@
     "kind": "Type",
     "name": "SVGViewElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGViewElement",
-    "description": "The SVGViewElement interface provides access to the properties of view elements, as well as methods to manipulate them.",
+    "description": "The SVGViewElement interface provides access to the properties of &lt;view&gt; elements, as well as methods to manipulate them.",
     "refs": [
         {
             "name": "Scalable Vector Graphics (SVG) 2",

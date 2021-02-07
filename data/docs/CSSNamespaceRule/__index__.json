@@ -1,11 +1,11 @@
 
 {
     "name": "CSSNamespaceRule",
-    "lastModifiedAt": 1604975506777,
+    "lastModifiedAt": 1612676260762,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604975505690
+            "lastModifiedAt": 1612573616000
         },
         {
             "name": "namespaceURI",

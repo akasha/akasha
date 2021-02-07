@@ -3,7 +3,7 @@
     "kind": "Type",
     "name": "SVGStopElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGStopElement",
-    "description": "The SVGStopElement interface corresponds to the stop element.",
+    "description": "The SVGStopElement interface corresponds to the &lt;stop&gt; element.",
     "refs": [
         {
             "name": "Scalable Vector Graphics (SVG) 2",

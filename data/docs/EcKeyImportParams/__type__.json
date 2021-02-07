@@ -3,7 +3,7 @@
     "kind": "Type",
     "name": "EcKeyImportParams",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/EcKeyImportParams",
-    "description": "See the examples for SubtleCrypto.importKey().",
+    "description": "A DOMString representing the name of the elliptic curve to use. This may be any of the following names for NIST-approved curves:",
     "refs": [
         {
             "name": "Web Cryptography API",

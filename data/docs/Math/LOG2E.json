@@ -1,0 +1,14 @@
+
+{
+    "kind": "Property",
+    "name": "Math.LOG2E",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/LOG2E",
+    "description": "The Math.LOG2E property represents the base 2 logarithm of e, approximately 1.442:",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-math.log2e",
+            "description": "The definition of 'Math.LOG2E' in the 'ECMAScript (ECMA-262)' specification."
+        }
+    ]
+}

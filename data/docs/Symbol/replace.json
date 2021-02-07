@@ -1,0 +1,14 @@
+
+{
+    "kind": "Property",
+    "name": "Symbol.replace",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/replace",
+    "description": "The Symbol.replace well-known symbol specifies the method that replaces matched substrings of a string. This function is called by the String.prototype.replace() method.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-symbol.replace",
+            "description": "The definition of 'Symbol.replace' in the 'ECMAScript (ECMA-262)' specification."
+        }
+    ]
+}

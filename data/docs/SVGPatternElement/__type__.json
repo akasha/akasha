@@ -3,7 +3,7 @@
     "kind": "Type",
     "name": "SVGPatternElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGPatternElement",
-    "description": "The SVGPatternElement interface corresponds to the pattern element.",
+    "description": "The SVGPatternElement interface corresponds to the &lt;pattern&gt; element.",
     "refs": [
         {
             "name": "Scalable Vector Graphics (SVG) 2",

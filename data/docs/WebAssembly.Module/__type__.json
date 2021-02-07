@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "WebAssembly.Module",
     "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module",
-    "description": "A WebAssembly.Module object contains stateless WebAssembly code that has already been compiled by the browser &mdash; this can be efficiently shared with Workers, and instantiated multiple times."
+    "description": "A WebAssembly.Module object contains stateless WebAssembly code that has already been compiled by the browser &mdash; this can be efficiently shared with Workers, and instantiated multiple times. ",
+    "refs": [
+        {
+            "name": "WebAssembly JavaScript Interface",
+            "href": "https://webassembly.github.io/spec/js-api/#modules",
+            "description": "The definition of 'WebAssembly.Module()' in the 'WebAssembly JavaScript Interface' specification."
+        }
+    ]
 }

@@ -3,7 +3,7 @@
     "kind": "Type",
     "name": "SVGFEMorphologyElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGFEMorphologyElement",
-    "description": "The SVGFEMorphologyElement interface corresponds to the feMorphology element.",
+    "description": "The SVGFEMorphologyElement interface corresponds to the &lt;feMorphology&gt; element.",
     "refs": [
         {
             "name": "Filter Effects Module Level 1",

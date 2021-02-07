@@ -3,7 +3,7 @@
     "kind": "Type",
     "name": "XRWebGLLayer",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayer",
-    "description": "The XRWebGLLayer interface of the WebXR Device API provides a linkage between the WebXR device (or simulated XR device, in the case of an inline session) and a WebGL context used to render the scene for display on the device.",
+    "description": "The XRWebGLLayer interface of the WebXR Device API provides a linkage between the WebXR device (or simulated XR device, in the case of an inline session) and a WebGL context used to render the scene for display on the device. In particular, it provides access to the WebGL framebuffer and viewport to ease access to the context.The XRWebGLLayer interface of the WebXR Device API provides a linkage between the WebXR device (or simulated XR device, in the case of an inline session) and a WebGL context used to render the scene for display on the device.Although XRWebGLLayer is currently the only type of framebuffer layer supported by WebGL, it's entirely possible that future updates to the WebXR specification may allow for other layer types and corresponding image sources.",
     "refs": [
         {
             "name": "WebXR Device API",

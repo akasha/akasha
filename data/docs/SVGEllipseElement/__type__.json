@@ -3,7 +3,7 @@
     "kind": "Type",
     "name": "SVGEllipseElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGEllipseElement",
-    "description": "The SVGEllipseElement interface provides access to the properties of ellipse elements.",
+    "description": "The SVGEllipseElement interface provides access to the properties of &lt;ellipse&gt; elements.",
     "refs": [
         {
             "name": "Scalable Vector Graphics (SVG) 2",

@@ -3,7 +3,7 @@
     "kind": "Type",
     "name": "SVGFETurbulenceElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGFETurbulenceElement",
-    "description": "The SVGFETurbulenceElement interface corresponds to the feTurbulence element.",
+    "description": "The SVGFETurbulenceElement interface corresponds to the &lt;feTurbulence&gt; element.",
     "refs": [
         {
             "name": "Filter Effects Module Level 1",

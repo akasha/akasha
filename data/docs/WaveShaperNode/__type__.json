@@ -3,7 +3,7 @@
     "kind": "Type",
     "name": "WaveShaperNode",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WaveShaperNode",
-    "description": "A WaveShaperNode always has exactly one input and one output.",
+    "description": "The WaveShaperNode interface represents a non-linear distorter. It is an AudioNode that uses a curve to apply a wave shaping distortion to the signal. Beside obvious distortion effects, it is often used to add a warm feeling to the signal.",
     "refs": [
         {
             "name": "Web Audio API",

@@ -3,7 +3,7 @@
     "kind": "Type",
     "name": "HTMLStyleElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLStyleElement",
-    "description": "The HTMLStyleElement interface represents a style element. It inherits properties and methods from its parent, HTMLElement, and from LinkStyle.",
+    "description": "The HTMLStyleElement interface represents a &lt;style&gt; element. It inherits properties and methods from its parent, HTMLElement, and from LinkStyle.",
     "refs": [
         {
             "name": "HTML Living Standard",

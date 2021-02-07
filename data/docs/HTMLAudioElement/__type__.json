@@ -3,7 +3,7 @@
     "kind": "Type",
     "name": "HTMLAudioElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudioElement",
-    "description": "The HTMLAudioElement interface provides access to the properties of audio elements, as well as methods to manipulate them.",
+    "description": "The HTMLAudioElement interface provides access to the properties of &lt;audio&gt; elements, as well as methods to manipulate them.",
     "refs": [
         {
             "name": "HTML Living Standard",

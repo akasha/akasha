@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "WebSocket",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebSocket",
-    "description": "The WebSocket object provides the API for creating and managing a WebSocket connection to a server, as well as for sending and receiving data on the connection."
+    "description": "The WebSocket object provides the API for creating and managing a WebSocket connection to a server, as well as for sending and receiving data on the connection.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#network",
+            "description": "The definition of 'WebSocket' in the 'HTML Living Standard' specification."
+        }
+    ]
 }

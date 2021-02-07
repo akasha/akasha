@@ -3,7 +3,7 @@
     "kind": "Type",
     "name": "SVGFEFloodElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGFEFloodElement",
-    "description": "The SVGFEFloodElement interface corresponds to the feFlood element.",
+    "description": "The SVGFEFloodElement interface corresponds to the &lt;feFlood&gt; element.",
     "refs": [
         {
             "name": "Filter Effects Module Level 1",

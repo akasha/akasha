@@ -3,5 +3,17 @@
     "kind": "Type",
     "name": "NodeIterator",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/NodeIterator",
-    "description": "The NodeIterator interface represents an iterator over the members of a list of the nodes in a subtree of the DOM. The nodes will be returned in document order."
+    "description": "The NodeIterator interface represents an iterator over the members of a list of the nodes in a subtree of the DOM. The nodes will be returned in document order.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#nodeiterator",
+            "description": "The definition of 'NodeIterator' in the 'DOM' specification."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 Traversal and Range Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Iterator-overview",
+            "description": "The definition of 'NodeIterator' in the 'Document Object Model (DOM) Level 2 Traversal and Range Specification' specification."
+        }
+    ]
 }

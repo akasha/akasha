@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "CSSNamespaceRule",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/CSSNamespaceRule",
-    "description": "The CSSNamespaceRule interface describes an object representing a single CSS @namespace at-rule. It implements the CSSRule interface, with a type value of 10 (CSSRule.NAMESPACE_RULE)."
+    "description": "The CSSNamespaceRule interface describes an object representing a single CSS @namespace at-rule.",
+    "refs": [
+        {
+            "name": "CSS Object Model (CSSOM)",
+            "href": "https://drafts.csswg.org/cssom/#the-cssnamespacerule-interface",
+            "description": "The definition of 'CSSNamespaceRule' in the 'CSS Object Model (CSSOM)' specification."
+        }
+    ]
 }

@@ -3,5 +3,5 @@
     "kind": "Type",
     "name": "HTMLFontElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLFontElement",
-    "description": "Implements the document object model (DOM) representation of the font element. The HTML Font Element font defines the font size, font face and color of text."
+    "description": "Implements the document object model (DOM) representation of the font element. The HTML Font Element &lt;font&gt; defines the font size, font face and color of text."
 }

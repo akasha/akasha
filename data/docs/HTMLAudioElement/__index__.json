@@ -1,7 +1,7 @@
 
 {
     "name": "HTMLAudioElement",
-    "lastModifiedAt": 1604976371717,
+    "lastModifiedAt": 1612676289803,
     "entries": [
         {
             "name": "Audio",
@@ -9,7 +9,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1604976370983
+            "lastModifiedAt": 1612573613000
         }
     ]
 }

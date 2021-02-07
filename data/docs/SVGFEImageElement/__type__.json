@@ -3,7 +3,7 @@
     "kind": "Type",
     "name": "SVGFEImageElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGFEImageElement",
-    "description": "The SVGFEImageElement interface corresponds to the feImage element.",
+    "description": "The SVGFEImageElement interface corresponds to the &lt;feImage&gt; element.",
     "refs": [
         {
             "name": "Filter Effects Module Level 1",

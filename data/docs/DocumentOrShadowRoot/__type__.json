@@ -3,7 +3,7 @@
     "kind": "Type",
     "name": "DocumentOrShadowRoot",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DocumentOrShadowRoot",
-    "description": "The DocumentOrShadowRoot mixin of the Shadow DOM API provides APIs that are shared between documents and shadow roots. The following features are included in both Document and ShadowRoot.",
+    "description": "The DocumentOrShadowRoot mixin of the Shadow DOM API provides APIs that are shared between documents and shadow roots. The following features are included in both Document and ShadowRoot. ",
     "refs": [
         {
             "name": "Shadow DOM",

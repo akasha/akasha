@@ -1,7 +1,7 @@
 
 {
     "name": "Error",
-    "lastModifiedAt": 1606593454482,
+    "lastModifiedAt": 1612676270458,
     "entries": [
         {
             "name": "Error",
@@ -34,6 +34,14 @@
         {
             "name": "stack",
             "lastModifiedAt": 1606560322396
+        },
+        {
+            "name": "toSource",
+            "lastModifiedAt": 1612573599000
+        },
+        {
+            "name": "toString",
+            "lastModifiedAt": 1612573599000
         }
     ]
 }

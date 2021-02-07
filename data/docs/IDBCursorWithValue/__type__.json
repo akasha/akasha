@@ -11,9 +11,9 @@
             "description": "The definition of 'IDBCursorWithValue' in the 'Indexed Database API 2.0' specification."
         },
         {
-            "name": "Indexed Database API Draft",
-            "href": "https://w3c.github.io/IndexedDB/#idbcursorwithvalue",
-            "description": "The definition of 'IDBCursorWithValue' in the 'Indexed Database API Draft' specification."
+            "name": "Indexed Database API 2.0",
+            "href": "https://www.w3.org/TR/IndexedDB/#idbcursorwithvalue",
+            "description": "The definition of 'IDBCursorWithValue' in the 'Indexed Database API 2.0' specification."
         }
     ]
 }

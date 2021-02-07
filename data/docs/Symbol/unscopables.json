@@ -1,0 +1,14 @@
+
+{
+    "kind": "Property",
+    "name": "Symbol.unscopables",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/unscopables",
+    "description": "The Symbol.unscopables well-known symbol is used to specify an object value of whose own and inherited property names are excluded from the with environment bindings of the associated object.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-symbol.unscopables",
+            "description": "The definition of 'Symbol.unscopables' in the 'ECMAScript (ECMA-262)' specification."
+        }
+    ]
+}

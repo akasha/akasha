@@ -1,0 +1,14 @@
+
+{
+    "kind": "Property",
+    "name": "Math.PI",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/PI",
+    "description": "The Math.PI property represents the ratio of the circumference of a circle to its diameter, approximately 3.14159:",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-math.pi",
+            "description": "The definition of 'Math.PI' in the 'ECMAScript (ECMA-262)' specification."
+        }
+    ]
+}

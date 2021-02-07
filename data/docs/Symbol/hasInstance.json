@@ -1,0 +1,14 @@
+
+{
+    "kind": "Property",
+    "name": "Symbol.hasInstance",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/hasInstance",
+    "description": "The Symbol.hasInstance well-known symbol is used to determine if a constructor object recognizes an object as its instance. The instanceof operator's behavior can be customized by this symbol.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-symbol.hasinstance",
+            "description": "The definition of 'Symbol.hasInstance' in the 'ECMAScript (ECMA-262)' specification."
+        }
+    ]
+}

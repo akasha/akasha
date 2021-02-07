@@ -3,7 +3,7 @@
     "kind": "Type",
     "name": "SVGTitleElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGTitleElement",
-    "description": "The SVGTitleElement interface corresponds to the title element.",
+    "description": "The SVGTitleElement interface corresponds to the &lt;title&gt; element.",
     "refs": [
         {
             "name": "Scalable Vector Graphics (SVG) 2",

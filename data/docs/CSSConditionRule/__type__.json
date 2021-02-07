@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "CSSConditionRule",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/CSSConditionRule",
-    "description": "An object implementing the CSSConditionRule interface represents a single condition CSS at-rule, which consists of a condition and a statement block. It is a child of CSSGroupingRule."
+    "description": "An object implementing the CSSConditionRule interface represents a single condition CSS at-rule, which consists of a condition and a statement block.",
+    "refs": [
+        {
+            "name": "CSS Conditional Rules Module Level 3",
+            "href": "https://drafts.csswg.org/css-conditional-3/#the-cssconditionrule-interface",
+            "description": "The definition of 'CSSConditionRule' in the 'CSS Conditional Rules Module Level 3' specification."
+        }
+    ]
 }

@@ -1,0 +1,14 @@
+
+{
+    "kind": "Property",
+    "name": "Symbol.toPrimitive",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive",
+    "description": "The Symbol.toPrimitive is a symbol that specifies a function valued property that is called to convert an object to a corresponding primitive value.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-symbol.toprimitive",
+            "description": "The definition of 'Symbol.toPrimitive' in the 'ECMAScript (ECMA-262)' specification."
+        }
+    ]
+}

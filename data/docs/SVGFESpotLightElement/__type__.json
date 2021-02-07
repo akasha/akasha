@@ -3,7 +3,7 @@
     "kind": "Type",
     "name": "SVGFESpotLightElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGFESpotLightElement",
-    "description": "The SVGFESpotLightElement interface corresponds to the feSpotLight element.",
+    "description": "The SVGFESpotLightElement interface corresponds to the &lt;feSpotLight&gt; element.",
     "refs": [
         {
             "name": "Filter Effects Module Level 1",

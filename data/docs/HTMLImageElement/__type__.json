@@ -3,7 +3,7 @@
     "kind": "Type",
     "name": "HTMLImageElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement",
-    "description": "The HTMLImageElement interface represents an HTML img element, providing the properties and methods used to manipulate image elements.",
+    "description": "The HTMLImageElement interface represents an HTML &lt;img&gt; element, providing the properties and methods used to manipulate image elements.",
     "refs": [
         {
             "name": "CSS Object Model (CSSOM) View Module",

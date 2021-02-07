@@ -3,7 +3,7 @@
     "kind": "Type",
     "name": "SVGAElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGAElement",
-    "description": "The SVGAElement interface provides access to the properties of a element, as well as methods to manipulate them.",
+    "description": "The SVGAElement interface provides access to the properties of &lt;a&gt; element, as well as methods to manipulate them.",
     "refs": [
         {
             "name": "Scalable Vector Graphics (SVG) 2",

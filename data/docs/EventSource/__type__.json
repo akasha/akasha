@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "EventSource",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/EventSource",
-    "description": "The EventSource interface is web content's interface to server-sent events. An EventSource instance opens a persistent connection to an HTTP server, which sends events in text/event-stream format."
+    "description": "The EventSource interface is web content's interface to server-sent events. An EventSource instance opens a persistent connection to an HTTP server, which sends events in text/event-stream format.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/server-sent-events.html#the-eventsource-interface",
+            "description": "The definition of 'EventSource' in the 'HTML Living Standard' specification."
+        }
+    ]
 }

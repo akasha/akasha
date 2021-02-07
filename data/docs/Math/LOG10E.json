@@ -1,0 +1,14 @@
+
+{
+    "kind": "Property",
+    "name": "Math.LOG10E",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/LOG10E",
+    "description": "The Math.LOG10E property represents the base 10 logarithm of e, approximately 0.434:",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-math.log10e",
+            "description": "The definition of 'Math.LOG10E' in the 'ECMAScript (ECMA-262)' specification."
+        }
+    ]
+}

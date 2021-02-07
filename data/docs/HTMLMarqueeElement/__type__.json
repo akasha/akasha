@@ -3,7 +3,7 @@
     "kind": "Type",
     "name": "HTMLMarqueeElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMarqueeElement",
-    "description": "The HTMLMarqueeElement interface provides methods to manipulate marquee elements.",
+    "description": "The HTMLMarqueeElement interface provides methods to manipulate &lt;marquee&gt; elements.",
     "refs": [
         {
             "name": "HTML Living Standard",

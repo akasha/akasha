@@ -1,0 +1,14 @@
+
+{
+    "kind": "Method",
+    "name": "RegExp.test",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test",
+    "description": "The test() method executes a search for a match between a regular expression and a specified string. Returns true or false.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-regexp.prototype.test",
+            "description": "The definition of 'RegExp.test' in the 'ECMAScript (ECMA-262)' specification."
+        }
+    ]
+}

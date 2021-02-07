@@ -1,7 +1,7 @@
 
 {
     "name": "DOMRect",
-    "lastModifiedAt": 1604975726862,
+    "lastModifiedAt": 1612676262496,
     "entries": [
         {
             "name": "DOMRect",
@@ -9,7 +9,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1604975726296
+            "lastModifiedAt": 1612573620000
         }
     ]
 }

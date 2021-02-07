@@ -3,7 +3,7 @@
     "kind": "Type",
     "name": "SVGScriptElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGScriptElement",
-    "description": "The SVGScriptElement interface corresponds to the SVG script element.",
+    "description": "The SVGScriptElement interface corresponds to the SVG &lt;script&gt; element.",
     "refs": [
         {
             "name": "Scalable Vector Graphics (SVG) 2",

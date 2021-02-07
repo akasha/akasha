@@ -3,7 +3,7 @@
     "kind": "Type",
     "name": "SVGStyleElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGStyleElement",
-    "description": "The SVGStyleElement interface corresponds to the SVG style element.",
+    "description": "The SVGStyleElement interface corresponds to the SVG &lt;style&gt; element.",
     "refs": [
         {
             "name": "Scalable Vector Graphics (SVG) 2",

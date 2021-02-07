@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "TextMetrics",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/TextMetrics",
-    "description": "The TextMetrics interface represents the dimensions of a piece of text in the canvas; a textMetrics() instance can be retrieved using the CanvasRenderingContext2D.measureText() method."
+    "description": "The TextMetrics interface represents the dimensions of a piece of text in the canvas; a TextMetrics instance can be retrieved using the CanvasRenderingContext2D.measureText() method.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/the-canvas-element.html#textmetrics",
+            "description": "The definition of 'TextMetrics' in the 'HTML Living Standard' specification."
+        }
+    ]
 }

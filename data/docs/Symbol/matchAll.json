@@ -1,0 +1,14 @@
+
+{
+    "kind": "Property",
+    "name": "Symbol.matchAll",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/matchAll",
+    "description": "The Symbol.matchAll well-known symbol returns an iterator, that yields matches of the regular expression against a string. This function is called by the String.prototype.matchAll() method.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-symbol.matchall",
+            "description": "The definition of 'Symbol.matchAll' in the 'ECMAScript (ECMA-262)' specification."
+        }
+    ]
+}

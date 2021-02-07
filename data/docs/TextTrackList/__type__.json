@@ -3,7 +3,7 @@
     "kind": "Type",
     "name": "TextTrackList",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/TextTrackList",
-    "description": "The TextTrackList interface is used to represent a list of the text tracks defined by the track element, with each track represented by a separate textTrack object in the list.",
+    "description": "The TextTrackList interface is used to represent a list of the text tracks defined by the &lt;track&gt; element, with each track represented by a separate textTrack object in the list.",
     "refs": [
         {
             "name": "HTML Living Standard",

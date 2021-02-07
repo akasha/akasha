@@ -1,7 +1,7 @@
 
 {
     "name": "FederatedCredential",
-    "lastModifiedAt": 1604976182772,
+    "lastModifiedAt": 1612676276193,
     "entries": [
         {
             "name": "FederatedCredential",
@@ -9,7 +9,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1604970175491
+            "lastModifiedAt": 1612573608000
         },
         {
             "name": "protocol",

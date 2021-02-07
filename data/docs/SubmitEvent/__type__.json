@@ -3,7 +3,7 @@
     "kind": "Type",
     "name": "SubmitEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SubmitEvent",
-    "description": "The SubmitEvent interface defines the object used to represent an HTML form's submit event. This event is fired at the form when the form's submit action is invoked.",
+    "description": "The SubmitEvent interface defines the object used to represent an HTML form's submit event. This event is fired at the &lt;form&gt; when the form's submit action is invoked.",
     "refs": [
         {
             "name": "HTML Living Standard",

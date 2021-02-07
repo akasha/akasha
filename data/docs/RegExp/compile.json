@@ -1,0 +1,14 @@
+
+{
+    "kind": "Method",
+    "name": "RegExp.compile",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/compile",
+    "description": "The deprecated compile() method is used to (re-)compile a regular expression during execution of a script. It is basically the same as the RegExp constructor.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-regexp.prototype.compile",
+            "description": "The definition of 'RegExp.prototype.compile' in the 'ECMAScript (ECMA-262)' specification."
+        }
+    ]
+}

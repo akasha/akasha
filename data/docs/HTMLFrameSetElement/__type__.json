@@ -3,7 +3,7 @@
     "kind": "Type",
     "name": "HTMLFrameSetElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLFrameSetElement",
-    "description": "The HTMLFrameSetElement interface provides special properties (beyond those of the regular HTMLElement interface they also inherit) for manipulating frameset elements.",
+    "description": "The HTMLFrameSetElement interface provides special properties (beyond those of the regular HTMLElement interface they also inherit) for manipulating &lt;frameset&gt; elements.",
     "refs": [
         {
             "name": "HTML Living Standard",

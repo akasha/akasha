@@ -3,7 +3,7 @@
     "kind": "Type",
     "name": "SVGSVGElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGSVGElement",
-    "description": "The SVGSVGElement interface provides access to the properties of svg elements, as well as methods to manipulate them. This interface contains also various miscellaneous commonly-used utility methods, such as matrix operations and the ability to control the time of redraw on visual rendering devices.",
+    "description": "The SVGSVGElement interface provides access to the properties of &lt;svg&gt; elements, as well as methods to manipulate them. This interface contains also various miscellaneous commonly-used utility methods, such as matrix operations and the ability to control the time of redraw on visual rendering devices.",
     "refs": [
         {
             "name": "Scalable Vector Graphics (SVG) 2",

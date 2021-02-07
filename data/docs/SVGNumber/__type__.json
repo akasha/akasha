@@ -3,7 +3,7 @@
     "kind": "Type",
     "name": "SVGNumber",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGNumber",
-    "description": "The SVGNumber interface corresponds to the number basic data type.",
+    "description": "The SVGNumber interface corresponds to the &lt;number&gt; basic data type.",
     "refs": [
         {
             "name": "Scalable Vector Graphics (SVG) 2",

@@ -1,0 +1,14 @@
+
+{
+    "kind": "Property",
+    "name": "Symbol.asyncIterator",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/asyncIterator",
+    "description": "The Symbol.asyncIterator well-known symbol specifies the default AsyncIterator for an object. If this property is set on an object, it is an async iterable and can be used in a for await...of loop.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-symbol.asynciterator",
+            "description": "The definition of 'Symbol.asyncIterator' in the 'ECMAScript (ECMA-262)' specification."
+        }
+    ]
+}

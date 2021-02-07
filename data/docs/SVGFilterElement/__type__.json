@@ -3,7 +3,7 @@
     "kind": "Type",
     "name": "SVGFilterElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGFilterElement",
-    "description": "The SVGFilterElement interface provides access to the properties of filter elements, as well as methods to manipulate them.",
+    "description": "The SVGFilterElement interface provides access to the properties of &lt;filter&gt; elements, as well as methods to manipulate them.",
     "refs": [
         {
             "name": "Filter Effects Module Level 1",

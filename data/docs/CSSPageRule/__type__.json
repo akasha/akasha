@@ -3,7 +3,7 @@
     "kind": "Type",
     "name": "CSSPageRule",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/CSSPageRule",
-    "description": "CSSPageRule is an interface representing a single CSS @page rule. It implements the CSSRule interface with a type value of 6 (CSSRule.PAGE_RULE).",
+    "description": "CSSPageRule represents a single CSS @page rule.",
     "refs": [
         {
             "name": "CSS Object Model (CSSOM)",

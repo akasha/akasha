@@ -3,7 +3,7 @@
     "kind": "Type",
     "name": "HTMLPreElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLPreElement",
-    "description": "The HTMLPreElement interface exposes specific properties and methods (beyond those of the HTMLElement interface it also has available to it by inheritance) for manipulating a block of preformatted text (pre).",
+    "description": "The HTMLPreElement interface exposes specific properties and methods (beyond those of the HTMLElement interface it also has available to it by inheritance) for manipulating a block of preformatted text (&lt;pre&gt;).",
     "refs": [
         {
             "name": "HTML Living Standard",

@@ -8,7 +8,7 @@
         {
             "name": "ECMAScript (ECMA-262)",
             "href": "https://tc39.es/ecma262/#sec-%25typedarray%25.prototype.reverse",
-            "description": "TypedArray.reverse - ECMAScript (ECMA-262)"
+            "description": "The definition of 'TypedArray.prototype.reverse' in the 'ECMAScript (ECMA-262)' specification."
         }
     ]
 }

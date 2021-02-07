@@ -3,17 +3,12 @@
     "kind": "Type",
     "name": "IDBFactory",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBFactory",
-    "description": "In the following code snippet, we make a request to open a database, and include handlers for the success and error cases. For a full working example, see our To-do Notifications app (view example live.)",
+    "description": "The IDBFactory interface of the IndexedDB API lets applications asynchronously access the indexed databases. The object that implements the interface is window.indexedDB. You open &mdash; that is, create and access &mdash; and delete a database with this object, and not directly with IDBFactory.",
     "refs": [
         {
             "name": "Indexed Database API 2.0",
-            "href": "https://www.w3.org/TR/IndexedDB/#idbfactory",
+            "href": "https://www.w3.org/TR/IndexedDB/#factory-interface",
             "description": "The definition of 'IDBFactory' in the 'Indexed Database API 2.0' specification."
-        },
-        {
-            "name": "Indexed Database API Draft",
-            "href": "https://w3c.github.io/IndexedDB/#factory-interface",
-            "description": "The definition of 'IDBFactory' in the 'Indexed Database API Draft' specification."
         }
     ]
 }

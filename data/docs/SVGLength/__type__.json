@@ -3,5 +3,5 @@
     "kind": "Type",
     "name": "SVGLength",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGLength",
-    "description": "The SVGLength interface correspond to the length basic data type."
+    "description": "The SVGLength interface correspond to the &lt;length&gt; basic data type."
 }

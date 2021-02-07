@@ -3,7 +3,7 @@
     "kind": "Type",
     "name": "FederatedCredential",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/FederatedCredential",
-    "description": "The FederatedCredential interface of the the Credential Management API provides information about credentials from a federated identity provider. A federated identity provider is an entity that a website trusts to correctly authenticate a user, and that provides an API for that purpose. OpenID Connect is an example of a federated identity provider framework.",
+    "description": "The FederatedCredential interface of the Credential Management API provides information about credentials from a federated identity provider. A federated identity provider is an entity that a website trusts to correctly authenticate a user, and that provides an API for that purpose. OpenID Connect is an example of a federated identity provider framework.",
     "refs": [
         {
             "name": "Credential Management Level 1",

@@ -3,7 +3,7 @@
     "kind": "Type",
     "name": "HkdfParams",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HkdfParams",
-    "description": "See the examples for SubtleCrypto.deriveKey().",
+    "description": "A DOMString representing the digest algorithm to use. This may be one of:",
     "refs": [
         {
             "name": "Web Cryptography API",

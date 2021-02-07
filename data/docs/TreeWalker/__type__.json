@@ -3,5 +3,17 @@
     "kind": "Type",
     "name": "TreeWalker",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/TreeWalker",
-    "description": "The TreeWalker object represents the nodes of a document subtree and a position within them."
+    "description": "The TreeWalker object represents the nodes of a document subtree and a position within them.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#interface-treewalker",
+            "description": "The definition of 'TreeWalker' in the 'DOM' specification."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 Traversal and Range Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-TreeWalker",
+            "description": "The definition of 'TreeWalker' in the 'Document Object Model (DOM) Level 2 Traversal and Range Specification' specification."
+        }
+    ]
 }

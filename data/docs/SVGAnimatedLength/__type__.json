@@ -3,5 +3,5 @@
     "kind": "Type",
     "name": "SVGAnimatedLength",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGAnimatedLength",
-    "description": "The SVGAnimatedLength interface is used for attributes of basic type length which can be animated."
+    "description": "The SVGAnimatedLength interface is used for attributes of basic type &lt;length&gt; which can be animated."
 }

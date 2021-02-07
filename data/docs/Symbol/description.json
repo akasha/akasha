@@ -1,0 +1,14 @@
+
+{
+    "kind": "Property",
+    "name": "Symbol.description",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/description",
+    "description": "The read-only description property is a string returning the optional description of Symbol objects.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-symbol.prototype.description",
+            "description": "The definition of 'get Symbol.prototype.description' in the 'ECMAScript (ECMA-262)' specification."
+        }
+    ]
+}

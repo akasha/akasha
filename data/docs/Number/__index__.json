@@ -1,7 +1,7 @@
 
 {
     "name": "Number",
-    "lastModifiedAt": 1606684309412,
+    "lastModifiedAt": 1612676447896,
     "entries": [
         {
             "name": "EPSILON",
@@ -45,7 +45,7 @@
         },
         {
             "name": "isFinite",
-            "lastModifiedAt": 1606684303519
+            "lastModifiedAt": 1612573598000
         },
         {
             "name": "isInteger",

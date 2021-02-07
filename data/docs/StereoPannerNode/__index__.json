@@ -1,7 +1,7 @@
 
 {
     "name": "StereoPannerNode",
-    "lastModifiedAt": 1604978171550,
+    "lastModifiedAt": 1612676608661,
     "entries": [
         {
             "name": "StereoPannerNode",
@@ -9,7 +9,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1604978170277
+            "lastModifiedAt": 1612573606000
         },
         {
             "name": "pan",

@@ -1,8 +1,40 @@
 
 {
     "name": "Math",
-    "lastModifiedAt": 1605992735527,
+    "lastModifiedAt": 1612676402992,
     "entries": [
+        {
+            "name": "E",
+            "lastModifiedAt": 1612573597000
+        },
+        {
+            "name": "LN10",
+            "lastModifiedAt": 1612573597000
+        },
+        {
+            "name": "LN2",
+            "lastModifiedAt": 1612573598000
+        },
+        {
+            "name": "LOG10E",
+            "lastModifiedAt": 1612573597000
+        },
+        {
+            "name": "LOG2E",
+            "lastModifiedAt": 1612573597000
+        },
+        {
+            "name": "PI",
+            "lastModifiedAt": 1612573597000
+        },
+        {
+            "name": "SQRT1_2",
+            "lastModifiedAt": 1612573597000
+        },
+        {
+            "name": "SQRT2",
+            "lastModifiedAt": 1612573597000
+        },
         {
             "name": "__type__",
             "lastModifiedAt": 1605992688519
@@ -53,7 +85,7 @@
         },
         {
             "name": "cos",
-            "lastModifiedAt": 1605992716438
+            "lastModifiedAt": 1612573597000
         },
         {
             "name": "cosh",
@@ -101,7 +133,7 @@
         },
         {
             "name": "max",
-            "lastModifiedAt": 1605992726892
+            "lastModifiedAt": 1612573597000
         },
         {
             "name": "min",

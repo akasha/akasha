@@ -3,7 +3,7 @@
     "kind": "Type",
     "name": "SVGFEGaussianBlurElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGFEGaussianBlurElement",
-    "description": "The SVGFEGaussianBlurElement interface corresponds to the feGaussianBlur element.",
+    "description": "The SVGFEGaussianBlurElement interface corresponds to the &lt;feGaussianBlur&gt; element.",
     "refs": [
         {
             "name": "Filter Effects Module Level 1",

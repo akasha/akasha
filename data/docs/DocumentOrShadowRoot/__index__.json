@@ -1,11 +1,11 @@
 
 {
     "name": "DocumentOrShadowRoot",
-    "lastModifiedAt": 1604975992711,
+    "lastModifiedAt": 1612676266660,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604975984017
+            "lastModifiedAt": 1612573647000
         },
         {
             "name": "activeElement",

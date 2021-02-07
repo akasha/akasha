@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "WebAssembly",
     "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly",
-    "description": "The WebAssembly JavaScript object acts as the namespace for all WebAssembly-related functionality."
+    "description": "The WebAssembly JavaScript object acts as the namespace for all WebAssembly-related functionality.",
+    "refs": [
+        {
+            "name": "WebAssembly JavaScript Interface",
+            "href": "https://webassembly.github.io/spec/js-api/#webassembly-namespace",
+            "description": "The definition of 'WebAssembly' in the 'WebAssembly JavaScript Interface' specification."
+        }
+    ]
 }

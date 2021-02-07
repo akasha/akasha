@@ -3,7 +3,7 @@
     "kind": "Type",
     "name": "SVGRadialGradientElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGRadialGradientElement",
-    "description": "The SVGRadialGradientElement interface corresponds to the RadialGradient element.",
+    "description": "The SVGRadialGradientElement interface corresponds to the &lt;RadialGradient&gt; element.",
     "refs": [
         {
             "name": "Scalable Vector Graphics (SVG) 2",

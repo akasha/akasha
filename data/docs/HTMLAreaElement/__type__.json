@@ -3,7 +3,7 @@
     "kind": "Type",
     "name": "HTMLAreaElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLAreaElement",
-    "description": "The HTMLAreaElement interface provides special properties and methods (beyond those of the regular object HTMLElement interface it also has available to it by inheritance) for manipulating the layout and presentation of area elements.",
+    "description": "The HTMLAreaElement interface provides special properties and methods (beyond those of the regular object HTMLElement interface it also has available to it by inheritance) for manipulating the layout and presentation of &lt;area&gt; elements.",
     "refs": [
         {
             "name": "HTML Living Standard",

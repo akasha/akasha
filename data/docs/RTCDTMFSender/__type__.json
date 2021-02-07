@@ -3,7 +3,7 @@
     "kind": "Type",
     "name": "RTCDTMFSender",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDTMFSender",
-    "description": "Listen to these events using addEventListener() or by assigning an event listener to the oneventname property of this interface.",
+    "description": "The RTCDTMFSender interface provides a mechanism for transmitting DTMF codes on a WebRTC RTCPeerConnection. You gain access to the connection's RTCDTMFSender through the RTCRtpSender.dtmf property on the audio track you wish to send DTMF with.",
     "refs": [
         {
             "name": "WebRTC 1.0: Real-time Communication Between Browsers",

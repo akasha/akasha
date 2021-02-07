@@ -3,7 +3,7 @@
     "kind": "Type",
     "name": "SVGPathElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGPathElement",
-    "description": "The SVGPathElement interface corresponds to the path element.",
+    "description": "The SVGPathElement interface corresponds to the &lt;path&gt; element.",
     "refs": [
         {
             "name": "Scalable Vector Graphics (SVG) 2",

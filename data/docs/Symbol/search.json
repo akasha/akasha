@@ -1,0 +1,14 @@
+
+{
+    "kind": "Property",
+    "name": "Symbol.search",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/search",
+    "description": "The Symbol.search well-known symbol specifies the method that returns the index within a string that matches the regular expression. This function is called by the String.prototype.search() method.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-symbol.search",
+            "description": "The definition of 'Symbol.search' in the 'ECMAScript (ECMA-262)' specification."
+        }
+    ]
+}

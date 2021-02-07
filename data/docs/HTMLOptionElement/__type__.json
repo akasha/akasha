@@ -3,7 +3,7 @@
     "kind": "Type",
     "name": "HTMLOptionElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLOptionElement",
-    "description": "The HTMLOptionElement interface represents option elements and inherits all classes and methods of the HTMLElement interface.",
+    "description": "The HTMLOptionElement interface represents &lt;option&gt; elements and inherits all classes and methods of the HTMLElement interface.",
     "refs": [
         {
             "name": "HTML Living Standard",

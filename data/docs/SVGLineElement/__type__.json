@@ -3,7 +3,7 @@
     "kind": "Type",
     "name": "SVGLineElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGLineElement",
-    "description": "The SVGLineElement interface provides access to the properties of line elements, as well as methods to manipulate them.",
+    "description": "The SVGLineElement interface provides access to the properties of &lt;line&gt; elements, as well as methods to manipulate them.",
     "refs": [
         {
             "name": "Scalable Vector Graphics (SVG) 2",

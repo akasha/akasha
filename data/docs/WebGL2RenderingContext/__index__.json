@@ -1,11 +1,11 @@
 
 {
     "name": "WebGL2RenderingContext",
-    "lastModifiedAt": 1604978442796,
+    "lastModifiedAt": 1612676748464,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604978395925
+            "lastModifiedAt": 1612573638000
         },
         {
             "name": "beginQuery",

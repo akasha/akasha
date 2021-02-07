@@ -3,7 +3,7 @@
     "kind": "Method",
     "name": "Number.isFinite",
     "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isFinite",
-    "description": "The Number.isFinite() method determines whether the passed value is a finite number &mdash; that is, it checks that a number is neither positive nor negative Infinity, since JavaScript has both.",
+    "description": "The Number.isFinite() method determines whether the passed value is a finite number &mdash; that is, it checks that the type of a given value is Number, and the number is neither positive Infinity, negative Infinity, nor NaN.",
     "refs": [
         {
             "name": "ECMAScript (ECMA-262)",

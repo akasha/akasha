@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "MediaStreamAudioSourceNode",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamAudioSourceNode",
-    "description": "The MediaStreamAudioSourceNode interface is a type of AudioNode which operates as an audio source whose media is received from a MediaStream obtained using the WebRTC or Media Capture and Streams APIs."
+    "description": "The MediaStreamAudioSourceNode interface is a type of AudioNode which operates as an audio source whose media is received from a MediaStream obtained using the WebRTC or Media Capture and Streams APIs.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#mediastreamaudiosourcenode",
+            "description": "The definition of 'MediaStreamAudioSourceNode' in the 'Web Audio API' specification."
+        }
+    ]
 }

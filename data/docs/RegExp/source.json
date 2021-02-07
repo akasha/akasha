@@ -1,0 +1,14 @@
+
+{
+    "kind": "Property",
+    "name": "RegExp.source",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/source",
+    "description": "The source property returns a String containing the source text of the regexp object, and it doesn't contain the two forward slashes on both sides and any flags.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-get-regexp.prototype.source",
+            "description": "The definition of 'RegExp.prototype.source' in the 'ECMAScript (ECMA-262)' specification."
+        }
+    ]
+}

@@ -3,7 +3,7 @@
     "kind": "Type",
     "name": "SVGFEFuncRElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGFEFuncRElement",
-    "description": "The SVGFEFuncRElement interface corresponds to the feFuncR element.",
+    "description": "The SVGFEFuncRElement interface corresponds to the &lt;feFuncR&gt; element.",
     "refs": [
         {
             "name": "Filter Effects Module Level 1",

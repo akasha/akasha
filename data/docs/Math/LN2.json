@@ -1,0 +1,14 @@
+
+{
+    "kind": "Property",
+    "name": "Math.LN2",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/LN2",
+    "description": "The Math.LN2 property represents the natural logarithm of 2, approximately 0.693:",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-math.ln2",
+            "description": "The definition of 'Math.LN2' in the 'ECMAScript (ECMA-262)' specification."
+        }
+    ]
+}

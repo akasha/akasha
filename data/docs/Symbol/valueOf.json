@@ -1,0 +1,14 @@
+
+{
+    "kind": "Method",
+    "name": "Symbol.valueOf",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/valueOf",
+    "description": "The valueOf() method returns the primitive value of a Symbol object.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-symbol.prototype.valueof",
+            "description": "The definition of 'Symbol.prototype.valueOf' in the 'ECMAScript (ECMA-262)' specification."
+        }
+    ]
+}

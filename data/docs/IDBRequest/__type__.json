@@ -3,7 +3,7 @@
     "kind": "Type",
     "name": "IDBRequest",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBRequest",
-    "description": "The request object does not initially contain any information about the result of the operation, but once information becomes available, an event is fired on the request, and the information becomes available through the properties of the IDBRequest instance.",
+    "description": "The IDBRequest interface of the IndexedDB API provides access to results of asynchronous requests to databases and database objects using event handler attributes. Each reading and writing operation on a database is done using a request.",
     "refs": [
         {
             "name": "Indexed Database API 2.0",
@@ -11,9 +11,9 @@
             "description": "The definition of 'IDBRequest' in the 'Indexed Database API 2.0' specification."
         },
         {
-            "name": "Indexed Database API Draft",
-            "href": "https://w3c.github.io/IndexedDB/#request-api",
-            "description": "The definition of 'IDBRequest' in the 'Indexed Database API Draft' specification."
+            "name": "Indexed Database API 2.0",
+            "href": "https://www.w3.org/TR/IndexedDB/#request-api",
+            "description": "The definition of 'IDBRequest' in the 'Indexed Database API 2.0' specification."
         }
     ]
 }

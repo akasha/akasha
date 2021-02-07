@@ -3,7 +3,7 @@
     "kind": "Type",
     "name": "SVGPolylineElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGPolylineElement",
-    "description": "The SVGPolylineElement interface provides access to the properties of polyline elements, as well as methods to manipulate them.",
+    "description": "The SVGPolylineElement interface provides access to the properties of &lt;polyline&gt; elements, as well as methods to manipulate them.",
     "refs": [
         {
             "name": "Scalable Vector Graphics (SVG) 2",

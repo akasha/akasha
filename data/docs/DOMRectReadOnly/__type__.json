@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "DOMRectReadOnly",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DOMRectReadOnly",
-    "description": "The DOMRectReadOnly interface specifies the standard properties used by DOMRect to define a rectangle whose properties are immutable."
+    "description": "The DOMRectReadOnly interface specifies the standard properties used by DOMRect to define a rectangle whose properties are immutable.",
+    "refs": [
+        {
+            "name": "Geometry Interfaces Module Level 1",
+            "href": "https://drafts.fxtf.org/geometry/#DOMRect",
+            "description": "The definition of 'DOMRectReadOnly' in the 'Geometry Interfaces Module Level 1' specification."
+        }
+    ]
 }

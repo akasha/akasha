@@ -3,7 +3,7 @@
     "kind": "Type",
     "name": "IDBObjectStore",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore",
-    "description": "This example shows a variety of different uses of object stores, from updating the data structure with IDBObjectStore.createIndex inside an onupgradeneeded function, to adding a new item to our object store with IDBObjectStore.add. For a full working example, see our To-do Notifications app (view example live.)",
+    "description": "The IDBObjectStore interface of the IndexedDB API represents an object store in a database. Records within an object store are sorted according to their keys. This sorting enables fast insertion, look-up, and ordered retrieval.",
     "refs": [
         {
             "name": "Indexed Database API 2.0",
@@ -11,9 +11,9 @@
             "description": "The definition of 'IDBObjectStore' in the 'Indexed Database API 2.0' specification."
         },
         {
-            "name": "Indexed Database API Draft",
-            "href": "https://w3c.github.io/IndexedDB/#object-store-interface",
-            "description": "The definition of 'IDBObjectStore' in the 'Indexed Database API Draft' specification."
+            "name": "Indexed Database API 2.0",
+            "href": "https://www.w3.org/TR/IndexedDB/#object-store-interface",
+            "description": "The definition of 'IDBObjectStore' in the 'Indexed Database API 2.0' specification."
         }
     ]
 }

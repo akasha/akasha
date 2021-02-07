@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "WebAssembly.validate",
     "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/validate",
-    "description": "The WebAssembly.validate() function validates a given typed array of WebAssembly binary code, returning whether the bytes form a valid wasm module (true) or not (false)."
+    "description": "The WebAssembly.validate() function validates a given typed array of WebAssembly binary code, returning whether the bytes form a valid wasm module (true) or not (false).",
+    "refs": [
+        {
+            "name": "WebAssembly JavaScript Interface",
+            "href": "https://webassembly.github.io/spec/js-api/#dom-webassembly-validate",
+            "description": "The definition of 'validate()' in the 'WebAssembly JavaScript Interface' specification."
+        }
+    ]
 }

@@ -1,0 +1,14 @@
+
+{
+    "kind": "Property",
+    "name": "RegExp.ignoreCase",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase",
+    "description": "The ignoreCase property indicates whether or not the &quot;i&quot; flag is used with the regular expression. ignoreCase is a read-only property of an individual regular expression instance.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-get-regexp.prototype.ignorecase",
+            "description": "The definition of 'RegExp.prototype.ignoreCase' in the 'ECMAScript (ECMA-262)' specification."
+        }
+    ]
+}

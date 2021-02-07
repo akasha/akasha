@@ -3,7 +3,7 @@
     "kind": "Type",
     "name": "SVGMaskElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGMaskElement",
-    "description": "The SVGMaskElement interface provides access to the properties of mask elements, as well as methods to manipulate them.",
+    "description": "The SVGMaskElement interface provides access to the properties of &lt;mask&gt; elements, as well as methods to manipulate them.",
     "refs": [
         {
             "name": "CSS Masking Module Level 1",

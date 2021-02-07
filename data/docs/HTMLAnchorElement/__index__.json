@@ -1,11 +1,11 @@
 
 {
     "name": "HTMLAnchorElement",
-    "lastModifiedAt": 1604976349250,
+    "lastModifiedAt": 1612676288412,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604976316968
+            "lastModifiedAt": 1612573603000
         },
         {
             "name": "download",

@@ -3,7 +3,7 @@
     "kind": "Type",
     "name": "HTMLTrackElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLTrackElement",
-    "description": "The HTMLTrackElement interface represents an HTML track element within the DOM. This element can be used as a child of either audio or video to specify a text track containing information such as closed captions or subtitles.",
+    "description": "The HTMLTrackElement interface represents an HTML &lt;track&gt; element within the DOM. This element can be used as a child of either &lt;audio&gt; or &lt;video&gt; to specify a text track containing information such as closed captions or subtitles.",
     "refs": [
         {
             "name": "HTML Living Standard",

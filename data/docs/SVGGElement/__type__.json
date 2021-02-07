@@ -3,7 +3,7 @@
     "kind": "Type",
     "name": "SVGGElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGGElement",
-    "description": "The SVGGElement interface corresponds to the g element.",
+    "description": "The SVGGElement interface corresponds to the &lt;g&gt; element.",
     "refs": [
         {
             "name": "Scalable Vector Graphics (SVG) 2",

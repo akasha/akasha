@@ -3,7 +3,7 @@
     "kind": "Type",
     "name": "SVGFEPointLightElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGFEPointLightElement",
-    "description": "The SVGFEPointLightElement interface corresponds to the fePointLight element.",
+    "description": "The SVGFEPointLightElement interface corresponds to the &lt;fePointLight&gt; element.",
     "refs": [
         {
             "name": "Filter Effects Module Level 1",

@@ -3,7 +3,7 @@
     "kind": "Type",
     "name": "SVGFEBlendElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGFEBlendElement",
-    "description": "The SVGFEBlendElement interface corresponds to the feBlend element.",
+    "description": "The SVGFEBlendElement interface corresponds to the &lt;feBlend&gt; element.",
     "refs": [
         {
             "name": "Filter Effects Module Level 1",

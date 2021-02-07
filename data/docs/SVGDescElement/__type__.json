@@ -3,7 +3,7 @@
     "kind": "Type",
     "name": "SVGDescElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGDescElement",
-    "description": "The SVGDescElement interface corresponds to the desc element.",
+    "description": "The SVGDescElement interface corresponds to the &lt;desc&gt; element.",
     "refs": [
         {
             "name": "Scalable Vector Graphics (SVG) 2",

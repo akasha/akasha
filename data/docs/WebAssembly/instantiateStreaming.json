@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "WebAssembly.instantiateStreaming",
     "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiateStreaming",
-    "description": "The WebAssembly.instantiateStreaming() function compiles and instantiates a WebAssembly module directly from a streamed underlying source. This is the most efficient, optimized way to load wasm code."
+    "description": "The WebAssembly.instantiateStreaming() function compiles and instantiates a WebAssembly module directly from a streamed underlying source. This is the most efficient, optimized way to load wasm code.",
+    "refs": [
+        {
+            "name": "WebAssembly features for web embedding",
+            "href": "https://webassembly.org/docs/web/#webassemblyinstantiatestreaming",
+            "description": "The definition of 'instantiateStreaming()' in the 'WebAssembly features for web embedding' specification."
+        }
+    ]
 }
