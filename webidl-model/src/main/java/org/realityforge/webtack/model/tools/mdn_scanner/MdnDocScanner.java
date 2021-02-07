@@ -479,15 +479,6 @@ public final class MdnDocScanner
       }
     }
 
-    document
-      .select( "#Constructors + p + dl > dt > a > code, " +
-               "#Constructors + dl > dt > a > code" +
-               "#Constructor + p + dl > dt > a > code, " +
-               "#Constructor + dl > dt > a > code" )
-      .stream()
-      .map( Element::text )
-      .forEach( constructorNames::add );
-
     constructorNames
       .stream()
       // Strip the brackets at end of constructors
@@ -495,26 +486,6 @@ public final class MdnDocScanner
       .filter( SourceVersion::isName )
       .distinct()
       .forEach( constructor -> queueRequest( DocKind.Constructor, typeName, constructor ) );
-
-    document
-      .select( "#Properties + p + dl > dt > a > code, " +
-               "#Properties + dl > dt > a > code, " +
-
-               // GlobalEventHandlers has event handler properties here
-               "#Properties > dl > dt > a > code, " +
-
-               // XRSessionInit has dictionary members that are not cross-linked as does other dictionaries here
-               "#Properties + p + dl > dt > code, " +
-
-               // Sometimes events section actually lists event handler properties
-               "#Events + p + dl > dt > a:not([href$=\"_event\"]) > code, " +
-               "#Events + dl > dt > a:not([href$=\"_event\"]) > code, " +
-
-               // Some regular js methods such as those for WebAssembly
-               "#Instance_properties + dl > dt > a > code" )
-      .stream()
-      .map( Element::text )
-      .forEach( propertyNames::add );
 
     propertyNames
       .stream()
@@ -528,18 +499,6 @@ public final class MdnDocScanner
       .sorted()
       .distinct()
       .forEach( property -> queueRequest( DocKind.Property, typeName, property ) );
-
-    methodsNames.addAll( document
-                           .select( "#Methods + p + dl > dt > a > code, " +
-                                    "#Methods + dl > dt > a code, " +
-                                    "#Static_methods + p + dl > dt > a > code, " +
-                                    "#Static_methods + dl > dt > a > code, " +
-
-                                    // Some regular js methods such as those for WebAssembly
-                                    "#Instance_methods + dl > dt > a > code" )
-                           .stream()
-                           .map( Element::text )
-                           .collect( Collectors.toList() ) );
 
     final List<String> methods =
       methodsNames
