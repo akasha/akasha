@@ -526,11 +526,13 @@ public final class MdnDocScanner
       methods
         .stream()
         .filter( m -> m.equals( localName ) || m.equals( typeName ) )
+        .distinct()
         .forEach( property -> queueRequest( DocKind.Constructor, typeName, typeName ) );
 
       methods
         .stream()
         .filter( m -> !m.equals( localName ) && !m.equals( typeName ) )
+        .distinct()
         .forEach( method -> queueRequest( DocKind.Method, typeName, method ) );
     }
     final List<String> events =
