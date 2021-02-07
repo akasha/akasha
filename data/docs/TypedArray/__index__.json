@@ -1,15 +1,15 @@
 
 {
     "name": "TypedArray",
-    "lastModifiedAt": 1612674405154,
+    "lastModifiedAt": 1612676184802,
     "entries": [
         {
             "name": "BYTES_PER_ELEMENT",
-            "lastModifiedAt": 0
+            "lastModifiedAt": 1612573597000
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 0
+            "lastModifiedAt": 1612573596000
         },
         {
             "name": "at",
@@ -93,7 +93,7 @@
         },
         {
             "name": "name",
-            "lastModifiedAt": 0
+            "lastModifiedAt": 1612573597000
         },
         {
             "name": "of",
@@ -101,7 +101,7 @@
         },
         {
             "name": "prototype",
-            "lastModifiedAt": 0
+            "lastModifiedAt": 1612573596000
         },
         {
             "name": "reduce",
@@ -145,7 +145,7 @@
         },
         {
             "name": "values",
-            "lastModifiedAt": 0
+            "lastModifiedAt": 1612573597000
         }
     ]
 }

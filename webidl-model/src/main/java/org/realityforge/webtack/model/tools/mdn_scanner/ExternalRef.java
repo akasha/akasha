@@ -2,11 +2,12 @@ package org.realityforge.webtack.model.tools.mdn_scanner;
 
 import javax.json.bind.annotation.JsonbPropertyOrder;
 
-@JsonbPropertyOrder( { "name", "href" } )
+@JsonbPropertyOrder( { "name", "href", "description" } )
 public class ExternalRef
 {
   private String name;
   private String href;
+  private String description;
 
   public String getName()
   {
@@ -26,5 +27,15 @@ public class ExternalRef
   public void setHref( final String href )
   {
     this.href = href;
+  }
+
+  public String getDescription()
+  {
+    return description;
+  }
+
+  public void setDescription( final String description )
+  {
+    this.description = description;
   }
 }

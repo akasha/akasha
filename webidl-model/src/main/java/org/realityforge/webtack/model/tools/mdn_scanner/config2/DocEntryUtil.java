@@ -26,7 +26,8 @@ public final class DocEntryUtil
     {
       for ( final ExternalRef ref : refs )
       {
-        blockTags.add( seeTag( ref.getName(), ref.getHref() ) );
+        final String description = ref.getDescription();
+        blockTags.add( seeTag( null == description ? ref.getName() : description, ref.getHref() ) );
       }
     }
     return new DocumentationElement( docEntry.getDescription(),

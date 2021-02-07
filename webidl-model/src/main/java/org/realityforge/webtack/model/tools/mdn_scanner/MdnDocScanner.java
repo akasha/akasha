@@ -301,6 +301,16 @@ public final class MdnDocScanner
                 final ExternalRef ref = new ExternalRef();
                 ref.setName( name );
                 ref.setHref( new URI( h.getProtocol(), h.getHost(), h.getPath(), h.getRef() ).toASCIIString() );
+                final String refDescription =
+                  a
+                    .text()
+                    .substring( name.length() )
+                    .trim()
+                    .replace( "that specification", "the '" + name + "' specification" );
+                if ( !refDescription.isEmpty() )
+                {
+                  ref.setDescription( StringUtil.encodeHtml( refDescription ) );
+                }
                 refs.add( ref );
               }
             }
