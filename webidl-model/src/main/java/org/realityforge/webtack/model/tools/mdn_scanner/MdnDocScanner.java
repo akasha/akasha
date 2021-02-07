@@ -272,7 +272,11 @@ public final class MdnDocScanner
       // Replace any non-breaking-space characters with a space as that is the best way for downstream consumers
       // Then replace any other special characters with their equivalent html entities as the description is
       // expected to be HTML "phrasing content" soo that it can easily be added to javadoc like tools
-      entry.setDescription( StringUtil.encodeHtml( description.replace( '\u00A0', ' ' ).replace( ' ', ' ' ) ) );
+      entry.setDescription( StringUtil.encodeHtml( description
+                                                     .replace( '\n', ' ' )
+                                                     .replace( '\u00A0', ' ' )
+                                                     .replace( ' ', ' ' )
+                                                     .replaceAll( "\\s+", " " ) ) );
 
       entry.setRefs( null );
       final Element standardsElement = document.selectFirst( "#Specifications + table.standard-table" );
