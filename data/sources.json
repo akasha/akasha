@@ -473,6 +473,11 @@
         "url": "https://www.khronos.org/registry/webgl/extensions/EXT_sRGB/"
     },
     {
+        "lastModifiedTime": 1613109788000,
+        "name": "webgl_ext_texture_compression_rgtc",
+        "url": "https://www.khronos.org/registry/webgl/extensions/EXT_texture_compression_rgtc/"
+    },
+    {
         "lastModifiedTime": 1602107713000,
         "name": "webgl_ext_texture_filter_anisotropic",
         "url": "https://www.khronos.org/registry/webgl/extensions/EXT_texture_filter_anisotropic/"
