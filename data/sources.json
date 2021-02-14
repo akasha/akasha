@@ -253,11 +253,6 @@
         "name": "regexp"
     },
     {
-        "lastModifiedTime": 1613109788000,
-        "name": "webgl_khr_parallel_shader_compile",
-        "url": "https://www.khronos.org/registry/webgl/extensions/KHR_parallel_shader_compile/"
-    },
-    {
         "lastModifiedTime": 1603134845000,
         "name": "reporting",
         "url": "https://w3c.github.io/reporting/"
@@ -483,14 +478,24 @@
         "url": "https://www.khronos.org/registry/webgl/extensions/EXT_texture_filter_anisotropic/"
     },
     {
-        "lastModifiedTime": 1606267137000,
-        "name": "webgl_extensions_webgl_multi_draw",
-        "url": "https://www.khronos.org/registry/webgl/extensions/WEBGL_multi_draw/"
+        "lastModifiedTime": 1613109788000,
+        "name": "webgl_ext_texture_norm16",
+        "url": "https://www.khronos.org/registry/webgl/extensions/EXT_texture_norm16/"
+    },
+    {
+        "lastModifiedTime": 1613109788000,
+        "name": "webgl_khr_parallel_shader_compile",
+        "url": "https://www.khronos.org/registry/webgl/extensions/KHR_parallel_shader_compile/"
     },
     {
         "lastModifiedTime": 1602107713000,
         "name": "webgl_lose_context",
         "url": "https://www.khronos.org/registry/webgl/extensions/WEBGL_lose_context/"
+    },
+    {
+        "lastModifiedTime": 1606267137000,
+        "name": "webgl_multi_draw",
+        "url": "https://www.khronos.org/registry/webgl/extensions/WEBGL_multi_draw/"
     },
     {
         "lastModifiedTime": 1602107713000,

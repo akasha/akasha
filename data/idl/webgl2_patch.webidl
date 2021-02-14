@@ -268,6 +268,15 @@ const enum TextureInternalFormat {
   WebGL2RenderingContext.DEPTH24_STENCIL8,
   //WebGL2RenderingContext.DEPTH32F_STENCIL,
 
+  EXT_texture_norm16.R16_EXT,
+  EXT_texture_norm16.R16_SNORM_EXT,
+  EXT_texture_norm16.RG16_EXT,
+  EXT_texture_norm16.RG16_SNORM_EXT,
+  EXT_texture_norm16.RGB16_EXT,
+  EXT_texture_norm16.RGB16_SNORM_EXT,
+  EXT_texture_norm16.RGBA16_EXT,
+  EXT_texture_norm16.RGBA16_SNORM_EXT,
+
   EXT_sRGB.SRGB_EXT,
   EXT_sRGB.SRGB_ALPHA_EXT
 };
