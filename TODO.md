@@ -6,6 +6,9 @@ complete as there is too much un-said.
 
 # MVP Release
 
+* Add string constants to all webgl extensions to make acquiring extensions easy ...
+  but make sure it is java-only and does not flow through to closure externs
+
 * Rename output to avoid naming clash with elemental2
   - Atomix
   - Atomical
