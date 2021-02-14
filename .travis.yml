@@ -3,10 +3,8 @@ dist: trusty
 jdk:
   - oraclejdk8
 rvm:
-  - 2.3.1
+  - 2.6.6
 install:
-  - rvm install ruby-2.3.1
-  - rvm use 2.3.1
   - gem install bundler
   - bundle install
 script: buildr clean package
