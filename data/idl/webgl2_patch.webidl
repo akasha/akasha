@@ -405,3 +405,61 @@ const enum ProgramParameterType {
   WebGL2RenderingContext.TRANSFORM_FEEDBACK_VARYINGS,
   WebGL2RenderingContext.ACTIVE_UNIFORM_BLOCKS
 };
+
+const enum RenderbufferStorageTarget {
+  WebGL2RenderingContext.RENDERBUFFER
+};
+
+const enum RenderbufferStorageInternalFormat {
+  WebGL2RenderingContext.RGBA4,
+  WebGL2RenderingContext.RGB565,
+  WebGL2RenderingContext.RGB5_A1,
+  WebGL2RenderingContext.DEPTH_COMPONENT16,
+  WebGL2RenderingContext.STENCIL_INDEX8,
+  WebGL2RenderingContext.DEPTH_STENCIL,
+  WebGL2RenderingContext.R8,
+  WebGL2RenderingContext.R8UI,
+  WebGL2RenderingContext.R8I,
+  WebGL2RenderingContext.R16UI,
+  WebGL2RenderingContext.R16I,
+  WebGL2RenderingContext.R32UI,
+  WebGL2RenderingContext.R32I,
+  WebGL2RenderingContext.RG8,
+  WebGL2RenderingContext.RG8UI,
+  WebGL2RenderingContext.RG8I,
+  WebGL2RenderingContext.RG16UI,
+  WebGL2RenderingContext.RG16I,
+  WebGL2RenderingContext.RG32UI,
+  WebGL2RenderingContext.RG32I,
+  WebGL2RenderingContext.RGB8,
+  WebGL2RenderingContext.RGBA8,
+  WebGL2RenderingContext.SRGB8_ALPHA8,
+  WebGL2RenderingContext.RGB10_A2,
+  WebGL2RenderingContext.RGBA8UI,
+  WebGL2RenderingContext.RGBA8I,
+  WebGL2RenderingContext.RGB10_A2UI,
+  WebGL2RenderingContext.RGBA16UI,
+  WebGL2RenderingContext.RGBA16I,
+  WebGL2RenderingContext.RGBA32I,
+  WebGL2RenderingContext.RGBA32UI,
+  WebGL2RenderingContext.DEPTH_COMPONENT24,
+  WebGL2RenderingContext.DEPTH_COMPONENT32F,
+  WebGL2RenderingContext.DEPTH24_STENCIL8,
+  WebGL2RenderingContext.DEPTH32F_STENCIL8,
+
+  WEBGL_color_buffer_float.RGBA32F_EXT,
+
+  EXT_sRGB.SRGB8_ALPHA8_EXT,
+
+  //EXT_color_buffer_float.R16F,
+  //EXT_color_buffer_float.RG16F,
+  //EXT_color_buffer_float.RGBA16F,
+  //EXT_color_buffer_float.R32F,
+  //EXT_color_buffer_float.RG32F,
+  //EXT_color_buffer_float.RGBA32F,
+  //EXT_color_buffer_float.R11F_G11F_B10F,
+
+  EXT_texture_norm16.R16_EXT,
+  EXT_texture_norm16.RG16_EXT,
+  EXT_texture_norm16.RGBA16_EXT
+};

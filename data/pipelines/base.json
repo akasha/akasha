@@ -1286,6 +1286,30 @@
       "description": "Tighten up the parameter types",
       "sourceSelector": "name=webgl.*",
       "config": {
+        "expectedChangeCount": 1,
+        "elementNamePattern": "^WebGL2RenderingContext$",
+        "operationNamePattern": "^renderbufferStorage$",
+        "argumentNamePattern": "^internalformat$",
+        "type": "RenderbufferStorageInternalFormat"
+      }
+    },
+    {
+      "name": "ChangeArgumentType",
+      "description": "Tighten up the parameter types",
+      "sourceSelector": "name=webgl.*",
+      "config": {
+        "expectedChangeCount": 1,
+        "elementNamePattern": "^WebGL2RenderingContext$",
+        "operationNamePattern": "^renderbufferStorage$",
+        "argumentNamePattern": "^target$",
+        "type": "RenderbufferStorageTarget"
+      }
+    },
+    {
+      "name": "ChangeArgumentType",
+      "description": "Tighten up the parameter types",
+      "sourceSelector": "name=webgl.*",
+      "config": {
         "expectedChangeCount": 5,
         "elementNamePattern": "^WebGL2RenderingContext$",
         "operationNamePattern": "^texImage2D$",
