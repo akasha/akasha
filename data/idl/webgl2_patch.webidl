@@ -383,3 +383,15 @@ const enum ShaderParameterType {
   WebGL2RenderingContext.COMPILE_STATUS,
   WebGL2RenderingContext.SHADER_TYPE
 };
+
+const enum ProgramParameterType {
+  WebGL2RenderingContext.DELETE_STATUS,
+  WebGL2RenderingContext.LINK_STATUS,
+  WebGL2RenderingContext.VALIDATE_STATUS,
+  WebGL2RenderingContext.ATTACHED_SHADERS,
+  WebGL2RenderingContext.ACTIVE_ATTRIBUTES,
+  WebGL2RenderingContext.ACTIVE_UNIFORMS,
+  WebGL2RenderingContext.TRANSFORM_FEEDBACK_BUFFER_MODE,
+  WebGL2RenderingContext.TRANSFORM_FEEDBACK_VARYINGS,
+  WebGL2RenderingContext.ACTIVE_UNIFORM_BLOCKS
+};
