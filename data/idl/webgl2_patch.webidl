@@ -385,6 +385,7 @@ const enum ShaderParameterType {
 };
 
 const enum ProgramParameterType {
+  KHR_parallel_shader_compile.COMPLETION_STATUS_KHR,
   WebGL2RenderingContext.DELETE_STATUS,
   WebGL2RenderingContext.LINK_STATUS,
   WebGL2RenderingContext.VALIDATE_STATUS,

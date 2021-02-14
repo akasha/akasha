@@ -253,6 +253,11 @@
         "name": "regexp"
     },
     {
+        "lastModifiedTime": 1613109788000,
+        "name": "webgl_khr_parallel_shader_compile",
+        "url": "https://www.khronos.org/registry/webgl/extensions/KHR_parallel_shader_compile/"
+    },
+    {
         "lastModifiedTime": 1603134845000,
         "name": "reporting",
         "url": "https://w3c.github.io/reporting/"
