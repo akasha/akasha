@@ -1,0 +1,13 @@
+
+{
+    "kind": "Type",
+    "name": "EXT_float_blend",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/EXT_float_blend",
+    "description": "The WebGL API's EXT_float_blend extension allows blending and draw buffers with 32-bit floating-point components.",
+    "refs": [
+        {
+            "name": "EXT_float_blend",
+            "href": "https://www.khronos.org/registry/webgl/extensions/EXT_float_blend/"
+        }
+    ]
+}

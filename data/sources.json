@@ -458,6 +458,11 @@
         "url": "https://www.khronos.org/registry/webgl/extensions/EXT_blend_minmax/"
     },
     {
+        "lastModifiedTime": 1613109788000,
+        "name": "webgl_ext_float_blend",
+        "url": "https://www.khronos.org/registry/webgl/extensions/EXT_float_blend/"
+    },
+    {
         "lastModifiedTime": 1602107713000,
         "name": "webgl_ext_frag_depth",
         "url": "https://www.khronos.org/registry/webgl/extensions/EXT_frag_depth/"
