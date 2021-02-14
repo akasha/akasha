@@ -377,3 +377,9 @@ const enum WebGLContextError {
   WebGL2RenderingContext.OUT_OF_MEMORY,
   WebGL2RenderingContext.CONTEXT_LOST_WEBGL
 };
+
+const enum ShaderParameterType {
+  WebGL2RenderingContext.DELETE_STATUS,
+  WebGL2RenderingContext.COMPILE_STATUS,
+  WebGL2RenderingContext.SHADER_TYPE
+};
