@@ -451,13 +451,14 @@ const enum RenderbufferStorageInternalFormat {
 
   EXT_sRGB.SRGB8_ALPHA8_EXT,
 
-  //EXT_color_buffer_float.R16F,
-  //EXT_color_buffer_float.RG16F,
-  //EXT_color_buffer_float.RGBA16F,
-  //EXT_color_buffer_float.R32F,
-  //EXT_color_buffer_float.RG32F,
-  //EXT_color_buffer_float.RGBA32F,
-  //EXT_color_buffer_float.R11F_G11F_B10F,
+  // When EXT_color_buffer_float is enabled
+  WebGL2RenderingContext.R16F,
+  WebGL2RenderingContext.RG16F,
+  WebGL2RenderingContext.RGBA16F,
+  WebGL2RenderingContext.R32F,
+  WebGL2RenderingContext.RG32F,
+  WebGL2RenderingContext.RGBA32F,
+  WebGL2RenderingContext.R11F_G11F_B10F,
 
   EXT_texture_norm16.R16_EXT,
   EXT_texture_norm16.RG16_EXT,

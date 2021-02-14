@@ -459,6 +459,11 @@
     },
     {
         "lastModifiedTime": 1613109788000,
+        "name": "webgl_ext_color_buffer_float",
+        "url": "https://www.khronos.org/registry/webgl/extensions/EXT_color_buffer_float/"
+    },
+    {
+        "lastModifiedTime": 1613109788000,
         "name": "webgl_ext_float_blend",
         "url": "https://www.khronos.org/registry/webgl/extensions/EXT_float_blend/"
     },
