@@ -1,5 +1,8 @@
 # Patch qualifies File symbol as ::File and required to support later rubies
 
+# This require is needed to avoid partial loading of CGI library causing crashes
+require 'cgi'
+
 module URI
   class Generic
     def download(target, options = nil)
@@ -118,6 +121,11 @@ module URI
   end
 
   class FILE
+    def real_path #:nodoc:
+      real_path = Buildr::Util.win_os? && path =~ /^\/[a-zA-Z]:\// ? path[1..-1] : path
+      CGI.unescape(real_path)
+    end
+
     def upload(source, options = nil)
       super
       if ::File === source then
