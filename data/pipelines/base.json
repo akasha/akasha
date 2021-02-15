@@ -1282,6 +1282,16 @@
       }
     },
     {
+      "name": "ChangeAttributeType",
+      "sourceSelector": "name=webgl.*",
+      "config": {
+        "expectedChangeCount": 1,
+        "elementNamePattern": "^WebGLActiveInfo$",
+        "attributeNamePattern": "^type$",
+        "type": "ActiveInfoDataType"
+      }
+    },
+    {
       "name": "ChangeArgumentType",
       "description": "Tighten up the parameter types",
       "sourceSelector": "name=webgl.*",
