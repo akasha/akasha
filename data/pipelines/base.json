@@ -308,36 +308,33 @@
       }
     },
     {
-      "name": "RemoveMember",
-      "description": "Change the type to convert to a const enumeration for improved typing",
+      "name": "ChangeAttributeType",
       "sourceSelector": "name=geolocation_api",
       "config": {
         "expectedRemoveCount": 1,
         "elementNamePattern": "^PositionError$",
-        "memberNamePattern": "^code$",
-        "types": ["interface_type"]
+        "attributeNamePattern": "^code$",
+        "type": "PositionErrorCode"
       }
     },
     {
-      "name": "RemoveMember",
-      "description": "Change the type to convert to a const enumeration for improved typing",
+      "name": "ChangeAttributeType",
       "sourceSelector": "name=navigation_timing",
       "config": {
         "expectedRemoveCount": 1,
         "elementNamePattern": "^PerformanceNavigation$",
-        "memberNamePattern": "^type$",
-        "types": ["interface_type"]
+        "attributeNamePattern": "^type$",
+        "type": "PerformanceNavigationType"
       }
     },
     {
-      "name": "RemoveMember",
-      "description": "Change the type to convert to a const enumeration for improved typing",
+      "name": "ChangeAttributeType",
       "sourceSelector": "name=cssom",
       "config": {
         "expectedRemoveCount": 1,
         "elementNamePattern": "^CSSRule$",
-        "memberNamePattern": "^type$",
-        "types": ["interface_type"]
+        "attributeNamePattern": "^type$",
+        "type": "CSSRuleType"
       }
     },
     {
@@ -364,245 +361,285 @@
       }
     },
     {
-      "name": "RemoveMember",
-      "description": "Change the type of the type attribute to an enumeration for improved typing",
+      "name": "ChangeAttributeType",
       "sourceSelector": "name=whatwg_html",
       "config": {
         "expectedRemoveCount": 1,
         "elementNamePattern": "^HTMLButtonElement$",
-        "memberNamePattern": "^type$",
-        "types": ["interface_type"]
+        "attributeNamePattern": "^type$",
+        "type": "ButtonType"
       }
     },
     {
-      "name": "RemoveMember",
-      "description": "Change the type of the method/enctype attributes to an enumeration for improved typing",
+      "name": "ChangeAttributeType",
+      "sourceSelector": "name=whatwg_html",
+      "config": {
+        "expectedRemoveCount": 1,
+        "elementNamePattern": "^HTMLFormElement$",
+        "attributeNamePattern": "^method$",
+        "type": "FormMethodType"
+      }
+    },
+    {
+      "name": "ChangeAttributeType",
+      "sourceSelector": "name=whatwg_html",
+      "config": {
+        "expectedRemoveCount": 1,
+        "elementNamePattern": "^HTMLFormElement$",
+        "attributeNamePattern": "^enctype$",
+        "type": "FormEncodingType"
+      }
+    },
+    {
+      "name": "ChangeAttributeType",
       "sourceSelector": "name=whatwg_html",
       "config": {
         "expectedRemoveCount": 2,
-        "elementNamePattern": "^HTMLFormElement$",
-        "memberNamePattern": "^(method|enctype)$",
-        "types": ["interface_type"]
+        "elementNamePattern": "^(HTMLButtonElement|HTMLInputElement)$",
+        "attributeNamePattern": "^formMethod$",
+        "type": "FormMethodType"
       }
     },
     {
-      "name": "RemoveMember",
-      "description": "Change the type of the formMethod/formEnctype attributes to an enumeration for improved typing",
+      "name": "ChangeAttributeType",
       "sourceSelector": "name=whatwg_html",
       "config": {
-        "expectedRemoveCount": 4,
+        "expectedRemoveCount": 2,
         "elementNamePattern": "^(HTMLButtonElement|HTMLInputElement)$",
-        "memberNamePattern": "^(formMethod|formEnctype)$",
-        "types": ["interface_type"]
+        "attributeNamePattern": "^formEnctype$",
+        "type": "FormEncodingType"
       }
     },
     {
-      "name": "RemoveMember",
-      "description": "Change the type to convert to a const enumeration for improved typing",
+      "name": "ChangeAttributeType",
       "sourceSelector": "name=whatwg_html",
       "config": {
         "expectedRemoveCount": 1,
         "elementNamePattern": "^ApplicationCache$",
-        "memberNamePattern": "^status$",
-        "types": ["interface_type"]
+        "attributeNamePattern": "^status$",
+        "type": "ApplicationCacheStatus"
       }
     },
     {
-      "name": "RemoveMember",
-      "description": "Change the type to convert to a const enumeration for improved typing",
+      "name": "ChangeAttributeType",
       "sourceSelector": "name=whatwg_html",
       "config": {
         "expectedRemoveCount": 1,
         "elementNamePattern": "^EventSource$",
-        "memberNamePattern": "^readyState$",
-        "types": ["interface_type"]
+        "attributeNamePattern": "^readyState$",
+        "type": "EventSourceReadyState"
       }
     },
     {
-      "name": "RemoveMember",
-      "description": "Change the type to convert to a const enumeration for improved typing",
+      "name": "ChangeAttributeType",
       "sourceSelector": "name=whatwg_html",
       "config": {
         "expectedRemoveCount": 1,
         "elementNamePattern": "^HTMLTrackElement$",
-        "memberNamePattern": "^readyState$",
-        "types": ["interface_type"]
+        "attributeNamePattern": "^readyState$",
+        "type": "HTMLTrackElementReadyState"
       }
     },
     {
-      "name": "RemoveMember",
-      "description": "Change the type to convert to a const enumeration for improved typing",
+      "name": "ChangeAttributeType",
       "sourceSelector": "name=whatwg_html",
       "config": {
         "expectedRemoveCount": 1,
         "elementNamePattern": "^MediaError$",
-        "memberNamePattern": "^code$",
-        "types": ["interface_type"]
+        "attributeNamePattern": "^code$",
+        "type": "MediaErrorCode"
       }
     },
     {
-      "name": "RemoveMember",
-      "description": "Change the type to convert to a const enumeration for improved typing",
+      "name": "ChangeAttributeType",
       "sourceSelector": "name=whatwg_html",
       "config": {
-        "expectedRemoveCount": 2,
+        "expectedRemoveCount": 1,
         "elementNamePattern": "^HTMLMediaElement$",
-        "memberNamePattern": "^(readyState|networkState)$",
-        "types": ["interface_type"]
+        "attributeNamePattern": "^(readyState|networkState)$",
+        "type": "HTMLMediaElementNetworkState"
       }
     },
     {
-      "name": "RemoveMember",
-      "description": "Change the type to convert to a const enumeration for improved typing",
+      "name": "ChangeAttributeType",
+      "sourceSelector": "name=whatwg_html",
+      "config": {
+        "expectedRemoveCount": 1,
+        "elementNamePattern": "^HTMLMediaElement$",
+        "attributeNamePattern": "^readyState$",
+        "type": "HTMLMediaElementReadyState"
+      }
+    },
+    {
+      "name": "ChangeAttributeType",
       "sourceSelector": "name=whatwg_html",
       "config": {
         "expectedRemoveCount": 1,
         "elementNamePattern": "^WebSocket$",
-        "memberNamePattern": "^readyState$",
-        "types": ["interface_type"]
+        "attributeNamePattern": "^readyState$",
+        "type": "WebSocketReadyState"
       }
     },
     {
-      "name": "RemoveMember",
-      "description": "Change the type of the autocomplete attribute to an enumeration for improved typing",
+      "name": "ChangeAttributeType",
       "sourceSelector": "name=whatwg_html",
       "config": {
-        "expectedRemoveCount": 4,
-        "elementNamePattern": "^(HTMLTextAreaElement|HTMLSelectElement|HTMLInputElement|HTMLFormElement)$",
-        "memberNamePattern": "^autocomplete$",
-        "types": ["interface_type"]
+        "expectedRemoveCount": 3,
+        "elementNamePattern": "^(HTMLTextAreaElement|HTMLSelectElement|HTMLInputElement)$",
+        "attributeNamePattern": "^autocomplete$",
+        "type": "AutocompleteType"
       }
     },
     {
-      "name": "RemoveMember",
-      "description": "Change the type of the crossOrigin attribute to an enumeration for improved typing",
+      "name": "ChangeAttributeType",
+      "sourceSelector": "name=whatwg_html",
+      "config": {
+        "expectedRemoveCount": 1,
+        "elementNamePattern": "^HTMLFormElement$",
+        "attributeNamePattern": "^autocomplete$",
+        "type": "FormAutocompleteType"
+      }
+    },
+    {
+      "name": "ChangeAttributeType",
       "sourceSelector": "name=whatwg_html",
       "config": {
         "expectedRemoveCount": 4,
         "elementNamePattern": "^(HTMLMediaElement|HTMLLinkElement|HTMLImageElement|HTMLScriptElement)$",
-        "memberNamePattern": "^crossOrigin$",
-        "types": ["interface_type"]
+        "attributeNamePattern": "^crossOrigin$",
+        "type": "CrossOriginType?"
       }
     },
     {
-      "name": "RemoveMember",
-      "description": "Change the type of the referrerPolicy attribute to an enumeration for improved typing",
+      "name": "ChangeAttributeType",
       "sourceSelector": "name=whatwg_html",
       "config": {
         "expectedRemoveCount": 6,
         "elementNamePattern": "^(HTMLAnchorElement|HTMLAreaElement|HTMLIFrameElement|HTMLImageElement|HTMLLinkElement|HTMLScriptElement)$",
-        "memberNamePattern": "^referrerPolicy$",
-        "types": ["interface_type"]
+        "attributeNamePattern": "^referrerPolicy$",
+        "type": "ReferrerPolicy"
       }
     },
     {
-      "name": "RemoveMember",
-      "description": "Change the type of the loading attribute to an enumeration for improved typing",
+      "name": "ChangeAttributeType",
       "sourceSelector": "name=whatwg_html",
       "config": {
         "expectedRemoveCount": 2,
         "elementNamePattern": "^(HTMLIFrameElement|HTMLImageElement)$",
-        "memberNamePattern": "^loading$",
-        "types": ["interface_type"]
+        "attributeNamePattern": "^loading$",
+        "type": "LoadingType"
       }
     },
     {
-      "name": "RemoveMember",
-      "description": "Change the type of the kind attribute to an enumeration for improved typing",
+      "name": "ChangeAttributeType",
       "sourceSelector": "name=whatwg_html",
       "config": {
         "expectedRemoveCount": 1,
         "elementNamePattern": "^HTMLTrackElement$",
-        "memberNamePattern": "^kind$",
-        "types": ["interface_type"]
+        "attributeNamePattern": "^kind$",
+        "type": "TrackKind"
       }
     },
     {
-      "name": "RemoveMember",
-      "description": "Change the type of the wrap attribute to an enumeration for improved typing",
+      "name": "ChangeAttributeType",
       "sourceSelector": "name=whatwg_html",
       "config": {
         "expectedRemoveCount": 1,
         "elementNamePattern": "^HTMLTextAreaElement$",
-        "memberNamePattern": "^wrap$",
-        "types": ["interface_type"]
+        "attributeNamePattern": "^wrap$",
+        "type": "WrapType"
       }
     },
     {
-      "name": "RemoveMember",
-      "description": "Change the type of the scope attribute to an enumeration for improved typing",
+      "name": "ChangeAttributeType",
       "sourceSelector": "name=whatwg_html",
       "config": {
         "expectedRemoveCount": 1,
         "elementNamePattern": "^HTMLTableCellElement$",
-        "memberNamePattern": "^scope$",
-        "types": ["interface_type"]
+        "attributeNamePattern": "^scope$",
+        "type": "ScopeType"
       }
     },
     {
-      "name": "RemoveMember",
-      "description": "Change the type of the type attribute to an enumeration for improved typing",
+      "name": "ChangeAttributeType",
       "sourceSelector": "name=whatwg_html",
       "config": {
         "expectedRemoveCount": 1,
         "elementNamePattern": "^HTMLInputElement$",
-        "memberNamePattern": "^type$",
-        "types": ["interface_type"]
+        "attributeNamePattern": "^type$",
+        "type": "InputType"
       }
     },
     {
-      "name": "RemoveMember",
-      "description": "Change the type of the preload attribute to an enumeration for improved typing",
+      "name": "ChangeAttributeType",
       "sourceSelector": "name=whatwg_html",
       "config": {
         "expectedRemoveCount": 1,
         "elementNamePattern": "^HTMLMediaElement$",
-        "memberNamePattern": "^preload$",
-        "types": ["interface_type"]
+        "attributeNamePattern": "^preload$",
+        "type": "MediaPreloadType"
       }
     },
     {
-      "name": "RemoveMember",
-      "description": "Change the type of the inputMode attribute to an enumeration for improved typing",
+      "name": "ChangeAttributeType",
       "sourceSelector": "name=whatwg_html",
       "config": {
         "expectedRemoveCount": 1,
         "elementNamePattern": "^ElementContentEditable$",
-        "memberNamePattern": "^inputMode$",
-        "types": ["mixin"]
+        "attributeNamePattern": "^inputMode$",
+        "type": "InputModeType"
       }
     },
     {
-      "name": "RemoveMember",
-      "description": "Change the type of the autocapitalize/dir attributes to an enumeration for improved typing",
-      "sourceSelector": "name=whatwg_html",
-      "config": {
-        "expectedRemoveCount": 2,
-        "elementNamePattern": "^HTMLElement$",
-        "memberNamePattern": "^(autocapitalize|dir)$",
-        "types": ["interface_type"]
-      }
-    },
-    {
-      "name": "RemoveMember",
-      "description": "Remove the member to change the type of the getContext operation for improved typing",
+      "name": "ChangeAttributeType",
       "sourceSelector": "name=whatwg_html",
       "config": {
         "expectedRemoveCount": 1,
-        "elementNamePattern": "^HTMLCanvasElement$",
-        "memberNamePattern": "^getContext$",
-        "types": ["interface_type"]
+        "elementNamePattern": "^HTMLElement$",
+        "attributeNamePattern": "^autocapitalize$",
+        "type": "AutocapitalizeType"
       }
     },
     {
-      "name": "RemoveMember",
-      "description": "Change the type of the type attribute to a const enumeration for improved typing",
+      "name": "ChangeAttributeType",
+      "sourceSelector": "name=whatwg_html",
+      "config": {
+        "expectedRemoveCount": 1,
+        "elementNamePattern": "^HTMLElement$",
+        "attributeNamePattern": "^dir$",
+        "type": "DirType"
+      }
+    },
+    {
+      "name": "ChangeArgumentType",
+      "sourceSelector": "name=whatwg_html",
+      "config": {
+        "expectedChangeCount": 1,
+        "elementNamePattern": "^HTMLCanvasElement$",
+        "operationNamePattern": "^getContext$",
+        "argumentNamePattern": "^contextId$",
+        "type": "RenderContextType"
+      }
+    },
+    {
+      "name": "ChangeArgumentType",
+      "sourceSelector": "name=whatwg_html",
+      "config": {
+        "expectedChangeCount": 1,
+        "elementNamePattern": "^HTMLCanvasElement$",
+        "operationNamePattern": "^getContext$",
+        "argumentNamePattern": "^options$",
+        "type": "(CanvasRenderingContext2DSettings or ImageBitmapRenderingContextSettings or WebGLContextAttributes)"
+      }
+    },
+    {
+      "name": "ChangeAttributeType",
       "sourceSelector": "name=whatwg_xhr",
       "config": {
         "expectedRemoveCount": 1,
         "elementNamePattern": "^XMLHttpRequest$",
-        "memberNamePattern": "^readyState$",
-        "types": ["interface_type"]
+        "attributeNamePattern": "^readyState$",
+        "type": "XMLHttpRequestReadyState"
       }
     },
     {
@@ -694,58 +731,53 @@
       }
     },
     {
-      "name": "RemoveMember",
-      "description": "Change the type of the type attribute to a const enumeration for improved typing",
+      "name": "ChangeAttributeType",
       "sourceSelector": "name=uievents",
       "config": {
         "expectedRemoveCount": 1,
         "elementNamePattern": "^KeyboardEvent$",
-        "memberNamePattern": "^location$",
-        "types": ["interface_type"]
+        "attributeNamePattern": "^location$",
+        "type": "KeyboardEventLocation"
       }
     },
     {
-      "name": "RemoveMember",
-      "description": "Change the type of the type attribute to a const enumeration for improved typing",
+      "name": "ChangeAttributeType",
       "sourceSelector": "name=uievents",
       "config": {
         "expectedRemoveCount": 1,
         "elementNamePattern": "^WheelEvent$",
-        "memberNamePattern": "^deltaMode$",
-        "types": ["interface_type"]
+        "attributeNamePattern": "^deltaMode$",
+        "type": "WheelEventDeltaMode"
       }
     },
     {
-      "name": "RemoveMember",
-      "description": "Change the type of the type attribute to a const enumeration for improved typing",
+      "name": "ChangeAttributeType",
       "sourceSelector": "name=whatwg_dom",
       "config": {
         "expectedRemoveCount": 1,
         "elementNamePattern": "^Event$",
-        "memberNamePattern": "^eventPhase$",
-        "types": ["interface_type"]
+        "attributeNamePattern": "^eventPhase$",
+        "type": "EventPhase"
       }
     },
     {
-      "name": "RemoveMember",
-      "description": "Change the type of the type attribute to a const enumeration for improved typing",
+      "name": "ChangeAttributeType",
       "sourceSelector": "name=whatwg_dom",
       "config": {
         "expectedRemoveCount": 1,
         "elementNamePattern": "^XPathResult$",
-        "memberNamePattern": "^resultType$",
-        "types": ["interface_type"]
+        "attributeNamePattern": "^resultType$",
+        "type": "XPathResultResultType"
       }
     },
     {
-      "name": "RemoveMember",
-      "description": "Change the type of the type attribute to a const enumeration for improved typing",
+      "name": "ChangeAttributeType",
       "sourceSelector": "name=whatwg_dom",
       "config": {
         "expectedRemoveCount": 1,
         "elementNamePattern": "^Node$",
-        "memberNamePattern": "^nodeType$",
-        "types": ["interface_type"]
+        "attributeNamePattern": "^nodeType$",
+        "type": "NodeType"
       }
     },
     {
@@ -824,14 +856,13 @@
       }
     },
     {
-      "name": "RemoveMember",
-      "description": "Change the type to convert to a const enumeration for improved typing",
+      "name": "ChangeAttributeType",
       "sourceSelector": "name=fileapi",
       "config": {
         "expectedRemoveCount": 1,
         "elementNamePattern": "^FileReader$",
-        "memberNamePattern": "^readyState$",
-        "types": ["interface_type"]
+        "attributeNamePattern": "^readyState$",
+        "type": "FileReaderReadyState"
       }
     },
     {

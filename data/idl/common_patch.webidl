@@ -26,9 +26,5 @@ const enum DOMExceptionCode {
   DOMException.DATA_CLONE_ERR
 };
 
-partial interface DOMException {
-  readonly attribute DOMException code;
-};
-
 [JavaSubPackage=core, MarkerType]
 typedef ( TypedArray or DataView ) ArrayBufferView;

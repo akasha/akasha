@@ -260,26 +260,6 @@ enum AutocompleteType {
   "pager"
 };
 
-partial interface HTMLTextAreaElement {
-  [CEReactions]
-  attribute AutocompleteType autocomplete;
-};
-
-partial interface HTMLSelectElement {
-  [CEReactions]
-  attribute AutocompleteType autocomplete;
-};
-
-partial interface HTMLInputElement {
-  [CEReactions]
-  attribute AutocompleteType autocomplete;
-};
-
-partial interface HTMLFormElement {
-  [CEReactions]
-  attribute FormAutocompleteType autocomplete;
-};
-
 /**
  * An enumeration describing the behavior of the button.
  */
@@ -301,11 +281,6 @@ enum ButtonType {
    * This is an experimental feature.
    */
   "menu"
-};
-
-partial interface HTMLButtonElement {
-  [CEReactions]
-  attribute ButtonType type;
 };
 
 /**
@@ -356,13 +331,6 @@ enum DirType {
   "auto"
 };
 
-partial interface HTMLElement {
-  [CEReactions]
-  attribute AutocapitalizeType autocapitalize;
-  [CEReactions]
-  attribute DirType dir;
-};
-
 /**
  * An enumeration specifying the HTTP method to submit the form with.
  */
@@ -397,27 +365,6 @@ enum FormEncodingType {
    * Introduced by HTML5 for debugging purposes.
    */
   "text/plain"
-};
-
-partial interface HTMLFormElement {
-  [CEReactions]
-  attribute FormMethodType method;
-  [CEReactions]
-  attribute FormEncodingType enctype;
-};
-
-partial interface HTMLInputElement {
-  [CEReactions]
-  attribute FormMethodType formMethod;
-  [CEReactions]
-  attribute FormEncodingType formEnctype;
-};
-
-partial interface HTMLButtonElement {
-  [CEReactions]
-  attribute FormMethodType formMethod;
-  [CEReactions]
-  attribute FormEncodingType formEnctype;
 };
 
 /**
@@ -467,11 +414,6 @@ enum InputModeType {
    * access and so on. Inputs that require a URL should typically use <code>&lt;input type="url"&gt;</code> instead.
    */
   "url"
-};
-
-partial interface mixin ElementContentEditable {
-  [CEReactions]
-  attribute InputModeType inputMode;
 };
 
 /**
@@ -578,11 +520,6 @@ enum InputType {
   "week"
 };
 
-partial interface HTMLInputElement {
-  [CEReactions]
-  attribute InputType type;
-};
-
 /**
  * An enumerated value to provide a hint to the browser about what the author thinks will lead to the best user experience.
  */
@@ -599,11 +536,6 @@ enum MediaPreloadType {
    * Indicates that the whole audio file can be downloaded, even if the user is not expected to use it.
    */
   "auto"
-};
-
-partial interface HTMLMediaElement {
-  [CEReactions]
-  attribute MediaPreloadType preload;
 };
 
 /**
@@ -626,26 +558,6 @@ enum CrossOriginType {
    * image will be tainted and its usage restricted.
    */
   "use-credentials"
-};
-
-partial interface HTMLMediaElement {
-  [CEReactions]
-  attribute CrossOriginType? crossOrigin;
-};
-
-partial interface HTMLLinkElement {
-  [CEReactions]
-  attribute CrossOriginType? crossOrigin;
-};
-
-partial interface HTMLImageElement {
-  [CEReactions]
-  attribute CrossOriginType? crossOrigin;
-};
-
-partial interface HTMLScriptElement {
-  [CEReactions]
-  attribute CrossOriginType? crossOrigin;
 };
 
 /**
@@ -674,11 +586,6 @@ enum ScopeType {
    * The default value.
    */
   "auto"
-};
-
-partial interface HTMLTableCellElement {
-  [CEReactions]
-  attribute ScopeType scope;
 };
 
 /**
@@ -721,36 +628,6 @@ enum ReferrerPolicy {
   "unsafe-url"
 };
 
-partial interface HTMLAnchorElement {
-  [CEReactions]
-  attribute ReferrerPolicy referrerPolicy;
-};
-
-partial interface HTMLAreaElement {
-  [CEReactions]
-  attribute ReferrerPolicy referrerPolicy;
-};
-
-partial interface HTMLIFrameElement {
-  [CEReactions]
-  attribute ReferrerPolicy referrerPolicy;
-};
-
-partial interface HTMLImageElement {
-  [CEReactions]
-  attribute ReferrerPolicy referrerPolicy;
-};
-
-partial interface HTMLLinkElement {
-  [CEReactions]
-  attribute ReferrerPolicy referrerPolicy;
-};
-
-partial interface HTMLScriptElement {
-  [CEReactions]
-  attribute ReferrerPolicy referrerPolicy;
-};
-
 /**
  * An enumerated value to indicate how the browser should load the resource.
  */
@@ -767,16 +644,6 @@ enum LoadingType {
    * content in most typical use cases.
    */
   "lazy"
-};
-
-partial interface HTMLIFrameElement {
-  [CEReactions]
-  attribute LoadingType loading;
-};
-
-partial interface HTMLImageElement {
-  [CEReactions]
-  attribute LoadingType loading;
 };
 
 /**
@@ -811,11 +678,6 @@ enum TrackKind {
   "metadata"
 };
 
-partial interface HTMLTrackElement {
-  [CEReactions]
-  attribute TrackKind kind;
-};
-
 /**
  * An enumerated value to indicate how the control wraps text.
  */
@@ -831,11 +693,6 @@ enum WrapType {
    * not insert any additional line breaks. This is the default value.
    */
   "soft"
-};
-
-partial interface HTMLTextAreaElement {
-  [CEReactions]
-  attribute DOMString wrap;
 };
 
 /**
@@ -864,10 +721,6 @@ enum RenderContextType {
   "bitmaprenderer"
 };
 
-partial interface HTMLCanvasElement {
-  RenderingContext? getContext( RenderContextType contextId, optional (CanvasRenderingContext2DSettings or ImageBitmapRenderingContextSettings or WebGLContextAttributes) options = null );
-};
-
 const enum ApplicationCacheStatus {
   ApplicationCache.UNCACHED,
   ApplicationCache.IDLE,
@@ -877,18 +730,10 @@ const enum ApplicationCacheStatus {
   ApplicationCache.OBSOLETE
 };
 
-partial interface ApplicationCache {
-  readonly attribute ApplicationCacheStatus status;
-};
-
 const enum EventSourceReadyState {
   EventSource.CONNECTING,
   EventSource.OPEN,
   EventSource.CLOSED
-};
-
-partial interface EventSource {
-  readonly attribute EventSourceReadyState readyState;
 };
 
 const enum WebSocketReadyState {
@@ -898,10 +743,6 @@ const enum WebSocketReadyState {
   WebSocket.CLOSED
 };
 
-partial interface WebSocket {
-  readonly attribute WebSocketReadyState readyState;
-};
-
 const enum HTMLTrackElementReadyState {
   HTMLTrackElement.NONE,
   HTMLTrackElement.LOADING,
@@ -909,19 +750,11 @@ const enum HTMLTrackElementReadyState {
   HTMLTrackElement.ERROR
 };
 
-partial interface HTMLTrackElement {
-  readonly attribute HTMLTrackElementReadyState readyState;
-};
-
 const enum MediaErrorCode {
   MediaError.MEDIA_ERR_ABORTED,
   MediaError.MEDIA_ERR_NETWORK,
   MediaError.MEDIA_ERR_DECODE,
   MediaError.MEDIA_ERR_SRC_NOT_SUPPORTED
-};
-
-partial interface MediaError {
-  readonly attribute MediaErrorCode code;
 };
 
 const enum HTMLMediaElementReadyState {
@@ -937,11 +770,6 @@ const enum HTMLMediaElementNetworkState {
   HTMLMediaElement.NETWORK_IDLE,
   HTMLMediaElement.NETWORK_LOADING,
   HTMLMediaElement.NETWORK_NO_SOURCE
-};
-
-partial interface HTMLMediaElement {
-  readonly attribute HTMLMediaElementNetworkState networkState;
-  readonly attribute HTMLMediaElementReadyState readyState;
 };
 
 partial dictionary PostMessageOptions {

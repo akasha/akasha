@@ -2,14 +2,13 @@
   "sourceSelector": "name=common name=common_patch",
   "stages": [
     {
-      "name": "RemoveMember",
-      "description": "Attribute redefined with better typing",
+      "name": "ChangeAttributeType",
       "sourceSelector": "name=common",
       "config": {
         "expectedRemoveCount": 1,
         "elementNamePattern": "^DOMException$",
-        "memberNamePattern": "^code$",
-        "types": ["interface_type"]
+        "attributeNamePattern": "^code$",
+        "type": "DOMException"
       }
     },
     {

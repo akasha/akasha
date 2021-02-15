@@ -3,7 +3,3 @@ const enum PositionErrorCode {
   PositionError.POSITION_UNAVAILABLE,
   PositionError.TIMEOUT
 };
-
-partial interface PositionError {
-  readonly attribute PositionErrorCode code;
-};

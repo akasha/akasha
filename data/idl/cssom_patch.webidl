@@ -14,7 +14,3 @@ const enum CSSRuleType {
   CSSRule.FONT_FEATURE_VALUES_RULE,
   CSSRule.FONT_PALETTE_VALUES_RULE
 };
-
-partial interface CSSRule {
-  readonly attribute CSSRuleType type;
-};

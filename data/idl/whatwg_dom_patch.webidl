@@ -5,10 +5,6 @@ const enum EventPhase {
   Event.BUBBLING_PHASE
 };
 
-partial interface Event {
-  readonly attribute EventPhase eventPhase;
-};
-
 const enum RangeCompareType {
   Range.START_TO_START,
   Range.START_TO_END,
@@ -29,10 +25,6 @@ const enum XPathResultResultType {
   XPathResult.FIRST_ORDERED_NODE_TYPE
 };
 
-partial interface XPathResult {
-  readonly attribute XPathResultResultType resultType;
-};
-
 const enum NodeType {
   Node.ELEMENT_NODE,
   Node.ATTRIBUTE_NODE,
@@ -46,8 +38,4 @@ const enum NodeType {
   Node.DOCUMENT_TYPE_NODE,
   Node.DOCUMENT_FRAGMENT_NODE,
   Node.NOTATION_NODE
-};
-
-partial interface Node {
-  readonly attribute NodeType nodeType;
 };

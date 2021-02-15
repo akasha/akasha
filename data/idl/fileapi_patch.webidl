@@ -8,7 +8,3 @@ const enum FileReaderReadyState {
   FileReader.LOADING,
   FileReader.DONE
 };
-
-partial interface FileReader {
-  readonly attribute FileReaderReadyState readyState;
-};

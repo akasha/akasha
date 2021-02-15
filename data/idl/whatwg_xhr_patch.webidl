@@ -6,6 +6,3 @@ const enum XMLHttpRequestReadyState {
   XMLHttpRequest.DONE
 };
 
-partial interface XMLHttpRequest {
-  readonly attribute XMLHttpRequestReadyState readyState;
-};
