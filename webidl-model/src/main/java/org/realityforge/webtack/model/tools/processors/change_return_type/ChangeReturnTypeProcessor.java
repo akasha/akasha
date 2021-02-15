@@ -83,7 +83,6 @@ final class ChangeReturnTypeProcessor
     {
       _lastElementMatched = false;
     }
-
   }
 
   @Nullable
@@ -99,7 +98,6 @@ final class ChangeReturnTypeProcessor
     {
       _lastElementMatched = false;
     }
-
   }
 
   @Nullable
@@ -131,7 +129,6 @@ final class ChangeReturnTypeProcessor
     {
       _lastElementMatched = false;
     }
-
   }
 
   @Nullable
@@ -147,7 +144,6 @@ final class ChangeReturnTypeProcessor
     {
       _lastElementMatched = false;
     }
-
   }
 
   @Nullable
@@ -163,7 +159,6 @@ final class ChangeReturnTypeProcessor
     {
       _lastElementMatched = false;
     }
-
   }
 
   @Nullable
