@@ -4,13 +4,11 @@ import java.util.Objects;
 import java.util.regex.Pattern;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
-import org.realityforge.webtack.model.DictionaryDefinition;
 import org.realityforge.webtack.model.InterfaceDefinition;
 import org.realityforge.webtack.model.MixinDefinition;
 import org.realityforge.webtack.model.NamedDefinition;
 import org.realityforge.webtack.model.NamespaceDefinition;
 import org.realityforge.webtack.model.OperationMember;
-import org.realityforge.webtack.model.PartialDictionaryDefinition;
 import org.realityforge.webtack.model.PartialInterfaceDefinition;
 import org.realityforge.webtack.model.PartialMixinDefinition;
 import org.realityforge.webtack.model.PartialNamespaceDefinition;
@@ -159,29 +157,6 @@ final class ChangeReturnTypeProcessor
     {
       _lastElementMatched = false;
     }
-  }
-
-  @Nullable
-  @Override
-  protected DictionaryDefinition transformDictionary( @Nonnull final DictionaryDefinition input )
-  {
-    _lastElementMatched = matches( input );
-    try
-    {
-      return super.transformDictionary( input );
-    }
-    finally
-    {
-      _lastElementMatched = false;
-    }
-  }
-
-  @Nullable
-  @Override
-  protected PartialDictionaryDefinition transformPartialDictionary( @Nonnull final PartialDictionaryDefinition input )
-  {
-    _lastElementMatched = matches( input );
-    return super.transformPartialDictionary( input );
   }
 
   private boolean matches( @Nonnull final NamedDefinition input )
