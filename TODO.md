@@ -10,6 +10,9 @@ complete as there is too much un-said.
   - https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getParameter
     but also add https://developer.mozilla.org/en-US/docs/Web/API/WEBGL_debug_renderer_info
 
+* Add a processor that changes the type of a dictionary member etc to specific type and change `PostMessageOptions`
+  patch in whatwg_html_path.
+
 * Add WebGL extension https://www.khronos.org/registry/webgl/extensions/EXT_disjoint_timer_query_webgl2/
 
 * Consider adding other extensions from https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getExtension
