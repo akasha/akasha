@@ -5,4 +5,3 @@ const enum XMLHttpRequestReadyState {
   XMLHttpRequest.LOADING,
   XMLHttpRequest.DONE
 };
-
