@@ -183,32 +183,6 @@ public class JsObject
 
   public static native JsObject fromEntries( JsIterable<Object> iter );
 
-  public static native <T> ObjectPropertyDescriptor getOwnPropertyDescriptor( T obj,
-                                                                              GetOwnPropertyDescriptorPropUnionType prop );
-
-  @JsOverlay
-  public static <T> ObjectPropertyDescriptor getOwnPropertyDescriptor( T obj, Object prop )
-  {
-    return getOwnPropertyDescriptor( obj, Js.<GetOwnPropertyDescriptorPropUnionType>uncheckedCast( prop ) );
-  }
-
-  @JsOverlay
-  public static <T> ObjectPropertyDescriptor getOwnPropertyDescriptor( T obj, String prop )
-  {
-    return getOwnPropertyDescriptor(
-      obj, Js.<GetOwnPropertyDescriptorPropUnionType>uncheckedCast( prop ) );
-  }
-
-  public static native JsPropertyMap<ObjectPropertyDescriptor> getOwnPropertyDescriptors(
-    JsObject obj );
-
-  @JsOverlay
-  public static JsPropertyMap<ObjectPropertyDescriptor> getOwnPropertyDescriptors(
-    Object obj )
-  {
-    return getOwnPropertyDescriptors( Js.uncheckedCast( obj ) );
-  }
-
   public static native JsArray<String> getOwnPropertyNames( JsObject obj );
 
   @JsOverlay
