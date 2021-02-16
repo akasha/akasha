@@ -1,5 +1,6 @@
 package com.example;
 
+import elemental3.lang.JsArray;
 import elemental3.lang.JsIterator;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -9,7 +10,6 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-import jsinterop.base.Js;
 
 /**
  * A test for a read-write maplike.
@@ -58,18 +58,18 @@ public class SomeOtherType {
 
   @JsType(
       isNative = true,
-      name = "?",
-      namespace = JsPackage.GLOBAL
+      namespace = JsPackage.GLOBAL,
+      name = "Array"
   )
-  public interface Entry {
+  public static final class Entry extends JsArray<Object> {
     @JsOverlay
-    default int key() {
-      return Js.asArray( this )[ 0 ].cast();
+    public int key() {
+      return getAtAsAny( 0 ).asInt();
     }
 
     @JsOverlay
-    default int value() {
-      return Js.asArray( this )[ 1 ].cast();
+    public int value() {
+      return getAtAsAny( 1 ).asInt();
     }
   }
 

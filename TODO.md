@@ -74,8 +74,6 @@ complete as there is too much un-said.
 
 # Java Generation
 
-* Ensure `Entry` class is modelled consistently in output as either a concrete array with accessors or as interface with accessors.
-
 * Add `JsIterator<X>` to generated types if we know the underlying type is an iterator.
 
 * Consider supporting multiple exposure sets and thus multiple `GlobalX` interfaces in output library. Then figure out a way to support multiple `Global` objects.

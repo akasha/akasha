@@ -1504,54 +1504,18 @@ final class JsinteropAction
   {
     final Type keyType = iterable.getKeyType();
     assert null != keyType;
-    generatePairIterableEntry( iterable, type );
+    generateEntry( "key", toTypeName( keyType ), toTypeName( iterable.getValueType() ), type );
     generateIterableKeysMethod( idlName, toTypeName( keyType ), type );
     generateIterableValuesMethod( idlName, iterable, type );
     generateIterableEntriesMethod( idlName, type );
     generateIterableForEachMethod( idlName, iterable, toTypeName( keyType ), "key", type );
   }
 
-  private void generatePairIterableEntry( @Nonnull final IterableMember iterable, @Nonnull final TypeSpec.Builder type )
-  {
-    final Type keyType = iterable.getKeyType();
-    assert null != keyType;
-    type.addType( TypeSpec
-                    .classBuilder( "Entry" )
-                    .addModifiers( Modifier.PUBLIC, Modifier.STATIC, Modifier.FINAL )
-                    .superclass( ParameterizedTypeName.get( lookupClassName( Kind.Sequence.name() ), TypeName.OBJECT ) )
-                    .addAnnotation( AnnotationSpec
-                                      .builder( JsinteropTypes.JS_TYPE )
-                                      .addMember( "isNative", "true" )
-                                      .addMember( "namespace", "$T.GLOBAL", JsinteropTypes.JS_PACKAGE )
-                                      .addMember( "name", "$S", "Array" )
-                                      .build() )
-                    // Note that in the future @Nonnull and cast() in value method definition may not work
-                    // if primitive types or nullables are returned but works for current specs so we can
-                    // fix it if needed in the future
-                    .addMethod( MethodSpec.methodBuilder( "key" )
-                                  .addModifiers( Modifier.PUBLIC, Modifier.FINAL )
-                                  .addAnnotation( JsinteropTypes.JS_OVERLAY )
-                                  .addAnnotation( BasicTypes.NONNULL )
-                                  .returns( toTypeName( keyType ) )
-                                  .addStatement( "return getAtAsAny( 0 ).cast()" )
-                                  .build() )
-                    // Note that in the future @Nonnull and cast() in value method definition may not work
-                    // if primitive types or nullables are returned but works for current specs so we can
-                    // fix it if needed in the future
-                    .addMethod( MethodSpec.methodBuilder( "value" )
-                                  .addModifiers( Modifier.PUBLIC, Modifier.FINAL )
-                                  .addAnnotation( JsinteropTypes.JS_OVERLAY )
-                                  .addAnnotation( BasicTypes.NONNULL )
-                                  .returns( toTypeName( iterable.getValueType() ) )
-                                  .addStatement( "return getAtAsAny( 0 ).cast()" )
-                                  .build() ).build() );
-  }
-
   private void generateValueIterableElements( @Nonnull final String idlName,
                                               @Nonnull final IterableMember iterable,
                                               @Nonnull final TypeSpec.Builder type )
   {
-    generateValueIterableEntry( iterable, type );
+    generateEntry( "index", TypeName.INT, toTypeName( iterable.getValueType() ), type );
     generateIterableKeysMethod( idlName, TypeName.DOUBLE, type );
     generateIterableValuesMethod( idlName, iterable, type );
     generateIterableEntriesMethod( idlName, type );
@@ -1681,37 +1645,6 @@ final class JsinteropAction
         .returns( ParameterizedTypeName.get( lookupClassName( "Iterator" ), toTypeName( iterable.getValueType() ) ) );
     maybeAddJavadoc( getDocumentationElement( idlName, methodName ), method );
     type.addMethod( method.build() );
-  }
-
-  private void generateValueIterableEntry( @Nonnull final IterableMember iterable,
-                                           @Nonnull final TypeSpec.Builder type )
-  {
-    type.addType( TypeSpec
-                    .classBuilder( "Entry" )
-                    .addModifiers( Modifier.PUBLIC, Modifier.STATIC, Modifier.FINAL )
-                    .superclass( ParameterizedTypeName.get( lookupClassName( Kind.Sequence.name() ), TypeName.OBJECT ) )
-                    .addAnnotation( AnnotationSpec
-                                      .builder( JsinteropTypes.JS_TYPE )
-                                      .addMember( "isNative", "true" )
-                                      .addMember( "namespace", "$T.GLOBAL", JsinteropTypes.JS_PACKAGE )
-                                      .addMember( "name", "$S", "Array" )
-                                      .build() )
-                    .addMethod( MethodSpec.methodBuilder( "index" )
-                                  .addModifiers( Modifier.PUBLIC, Modifier.FINAL )
-                                  .addAnnotation( JsinteropTypes.JS_OVERLAY )
-                                  .returns( TypeName.INT )
-                                  .addStatement( "return getAtAsAny( 0 ).asInt()" )
-                                  .build() )
-                    // Note that in the future @Nonnull and cast() in value method definition may not work
-                    // if primitive types or nullables are returned but works for current specs so we can
-                    // fix it if needed in the future
-                    .addMethod( MethodSpec.methodBuilder( "value" )
-                                  .addModifiers( Modifier.PUBLIC, Modifier.FINAL )
-                                  .addAnnotation( JsinteropTypes.JS_OVERLAY )
-                                  .addAnnotation( BasicTypes.NONNULL )
-                                  .returns( toTypeName( iterable.getValueType() ) )
-                                  .addStatement( "return getAtAsAny( 1 ).cast()" )
-                                  .build() ).build() );
   }
 
   private void generateOperations( @Nonnull final List<OperationMember> operations,
@@ -2052,28 +1985,8 @@ final class JsinteropAction
     maybeAddJavadoc( getDocumentationElement( definitionName, "values" ), values );
     type.addMethod( values.build() );
 
-    type.addType( TypeSpec
-                    .interfaceBuilder( "Entry" )
-                    .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
-                    .addAnnotation( AnnotationSpec
-                                      .builder( JsinteropTypes.JS_TYPE )
-                                      .addMember( "isNative", "true" )
-                                      .addMember( "name", "$S", "?" )
-                                      .addMember( "namespace", "$T.GLOBAL", JsinteropTypes.JS_PACKAGE )
-                                      .build() )
-                    .addMethod( MethodSpec.methodBuilder( "key" )
-                                  .addAnnotation( JsinteropTypes.JS_OVERLAY )
-                                  .addModifiers( Modifier.PUBLIC, Modifier.DEFAULT )
-                                  .returns( keyType )
-                                  .addStatement( "return $T.asArray( this )[ 0 ].cast()", JsinteropTypes.JS )
-                                  .build() )
-                    .addMethod( MethodSpec.methodBuilder( "value" )
-                                  .addAnnotation( JsinteropTypes.JS_OVERLAY )
-                                  .addModifiers( Modifier.PUBLIC, Modifier.DEFAULT )
-                                  .returns( valueType )
-                                  .addStatement( "return $T.asArray( this )[ 1 ].cast()", JsinteropTypes.JS )
-                                  .build() )
-                    .build() );
+    generateEntry( "key", keyType, valueType, type );
+
     final MethodSpec.Builder entries =
       MethodSpec
         .methodBuilder( "entries" )
@@ -2204,6 +2117,93 @@ final class JsinteropAction
         type.addMethod( clear.build() );
       }
     }
+  }
+
+  private void completeEntryAccessorMethod( @Nonnull final MethodSpec.Builder method,
+                                            @Nonnull final TypeName type,
+                                            final int index )
+  {
+    // This code assumes that keys and values are non-nullable and this is true with current
+    // set of specs so we can deal with nullability when/if it is required
+    final String accessorMethod;
+    if ( TypeName.BOOLEAN == type )
+    {
+      accessorMethod = "asBoolean";
+    }
+    else if ( TypeName.BYTE == type )
+    {
+      accessorMethod = "asByte";
+    }
+    else if ( TypeName.CHAR == type )
+    {
+      accessorMethod = "asChar";
+    }
+    else if ( TypeName.SHORT == type )
+    {
+      accessorMethod = "asShort";
+    }
+    else if ( TypeName.INT == type )
+    {
+      accessorMethod = "asInt";
+    }
+    else if ( TypeName.LONG == type )
+    {
+      accessorMethod = "asLong";
+    }
+    else if ( TypeName.FLOAT == type )
+    {
+      accessorMethod = "asFloat";
+    }
+    else if ( TypeName.DOUBLE == type )
+    {
+      accessorMethod = "asDouble";
+    }
+    else if ( BasicTypes.STRING.equals( type ) )
+    {
+      method.addAnnotation( BasicTypes.NONNULL );
+      accessorMethod = "asString";
+    }
+    else
+    {
+      method.addAnnotation( BasicTypes.NONNULL );
+      accessorMethod = "cast";
+    }
+    method.addStatement( "return getAtAsAny( " + index + " ).$N()", accessorMethod );
+  }
+
+  private void generateEntry( @Nonnull final String keyMethodName,
+                              @Nonnull final TypeName keyType,
+                              @Nonnull final TypeName valueType,
+                              @Nonnull final TypeSpec.Builder type )
+  {
+    final MethodSpec.Builder keyMethod =
+      MethodSpec
+        .methodBuilder( keyMethodName )
+        .addModifiers( Modifier.PUBLIC )
+        .addAnnotation( JsinteropTypes.JS_OVERLAY )
+        .returns( keyType );
+    completeEntryAccessorMethod( keyMethod, keyType, 0 );
+
+    final MethodSpec.Builder valueMethod = MethodSpec
+      .methodBuilder( "value" )
+      .addModifiers( Modifier.PUBLIC )
+      .addAnnotation( JsinteropTypes.JS_OVERLAY )
+      .returns( valueType );
+    completeEntryAccessorMethod( valueMethod, valueType, 1 );
+
+    type.addType( TypeSpec
+                    .classBuilder( "Entry" )
+                    .addModifiers( Modifier.PUBLIC, Modifier.STATIC, Modifier.FINAL )
+                    .superclass( ParameterizedTypeName.get( lookupClassName( Kind.Sequence.name() ),
+                                                            TypeName.OBJECT ) )
+                    .addAnnotation( AnnotationSpec
+                                      .builder( JsinteropTypes.JS_TYPE )
+                                      .addMember( "isNative", "true" )
+                                      .addMember( "namespace", "$T.GLOBAL", JsinteropTypes.JS_PACKAGE )
+                                      .addMember( "name", "$S", "Array" )
+                                      .build() )
+                    .addMethod( keyMethod.build() )
+                    .addMethod( valueMethod.build() ).build() );
   }
 
   private void addNullabilityAnnotationIfRequired( @Nonnull final Type type,

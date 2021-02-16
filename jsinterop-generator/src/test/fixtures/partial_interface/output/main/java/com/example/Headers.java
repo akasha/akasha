@@ -64,14 +64,14 @@ public final class Headers {
   public static final class Entry extends JsArray<Object> {
     @JsOverlay
     @Nonnull
-    public final String key() {
-      return getAtAsAny( 0 ).cast();
+    public String key() {
+      return getAtAsAny( 0 ).asString();
     }
 
     @JsOverlay
     @Nonnull
-    public final String value() {
-      return getAtAsAny( 0 ).cast();
+    public String value() {
+      return getAtAsAny( 1 ).asString();
     }
   }
 
