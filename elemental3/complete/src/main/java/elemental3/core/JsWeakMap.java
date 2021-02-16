@@ -1,5 +1,7 @@
 package elemental3.core;
 
+import elemental3.lang.JsArray;
+import elemental3.lang.JsIterable;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import jsinterop.annotations.JsOverlay;

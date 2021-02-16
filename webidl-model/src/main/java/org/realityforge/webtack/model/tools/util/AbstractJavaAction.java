@@ -177,6 +177,7 @@ public abstract class AbstractJavaAction
     return _idlToJavaTypeMapping.computeIfAbsent( idlType, t -> _packageName + "." + idlType );
   }
 
+  @SuppressWarnings( "BooleanMethodIsAlwaysInverted" )
   protected boolean isIdlTypePredefined( @Nonnull final String idlName )
   {
     return _predefinedIdlToJavaTypeMapping.containsKey( idlName );
@@ -409,10 +410,10 @@ public abstract class AbstractJavaAction
     tryRegisterIdlToJavaTypeMapping( Kind.Any.name(), "jsinterop.base.Any" );
     tryRegisterIdlToJavaTypeMapping( Kind.Object.name(), "java.lang.Object" );
     tryRegisterIdlToJavaTypeMapping( Kind.Promise.name(), "elemental3.promise.Promise" );
-    tryRegisterIdlToJavaTypeMapping( Kind.Sequence.name(), "elemental3.core.JsArray" );
-    tryRegisterIdlToJavaTypeMapping( "Iterator", "elemental3.core.JsIterator" );
-    tryRegisterIdlToJavaTypeMapping( "Iterable", "elemental3.core.JsIterable" );
-    tryRegisterIdlToJavaTypeMapping( "IteratorIterable", "elemental3.core.JsIteratorIterable" );
+    tryRegisterIdlToJavaTypeMapping( Kind.Sequence.name(), "elemental3.lang.JsArray" );
+    tryRegisterIdlToJavaTypeMapping( "Iterator", "elemental3.lang.JsIterator" );
+    tryRegisterIdlToJavaTypeMapping( "Iterable", "elemental3.lang.JsIterable" );
+    tryRegisterIdlToJavaTypeMapping( "IteratorIterable", "elemental3.lang.JsIteratorIterable" );
   }
 
   @Nonnull

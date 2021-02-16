@@ -1,5 +1,7 @@
 package elemental3.core;
 
+import elemental3.lang.JsArray;
+import elemental3.lang.JsIterable;
 import jsinterop.annotations.JsFunction;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;

@@ -1,6 +1,6 @@
 package elemental3.promise;
 
-import elemental3.core.JsIterator;
+import elemental3.lang.JsIterator;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import jsinterop.annotations.JsMethod;

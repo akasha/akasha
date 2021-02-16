@@ -4,6 +4,6 @@ EventTarget=com.example.EventTarget
 Node=com.example.Node
 NodeFilter=com.example.NodeFilter
 OnActionHandler=com.example.OnActionHandler
-Sequence=elemental3.core.JsArray
+Sequence=elemental3.lang.JsArray
 SpeechRecognitionErrorCode=com.example.SpeechRecognitionErrorCode
 Window=com.example.Window

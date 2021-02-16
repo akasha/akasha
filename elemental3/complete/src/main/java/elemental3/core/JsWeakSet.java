@@ -1,5 +1,6 @@
 package elemental3.core;
 
+import elemental3.lang.JsIterable;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;

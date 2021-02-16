@@ -1,4 +1,4 @@
-package elemental3.core;
+package elemental3.lang;
 
 import javaemul.internal.ArrayStamper;
 import javax.annotation.Nonnull;

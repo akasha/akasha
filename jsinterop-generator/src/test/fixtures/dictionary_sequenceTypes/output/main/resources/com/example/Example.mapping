@@ -1,2 +1,2 @@
-Sequence=elemental3.core.JsArray
+Sequence=elemental3.lang.JsArray
 XRSessionInit=com.example.XRSessionInit

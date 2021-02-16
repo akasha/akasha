@@ -1,4 +1,4 @@
-package elemental3.core;
+package elemental3.lang;
 
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;

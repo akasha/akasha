@@ -1,6 +1,5 @@
 <module>
   <inherits name='jsinterop.base.Base'/>
-  <inherits name='elemental3.promise.Promise'/>
 
   <source path=''/>
 </module>

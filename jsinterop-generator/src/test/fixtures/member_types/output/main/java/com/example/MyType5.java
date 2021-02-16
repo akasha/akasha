@@ -1,9 +1,9 @@
 package com.example;
 
-import elemental3.core.JsArray;
-import elemental3.core.JsIterable;
-import elemental3.core.JsIterator;
-import elemental3.core.JsIteratorIterable;
+import elemental3.lang.JsArray;
+import elemental3.lang.JsIterable;
+import elemental3.lang.JsIterator;
+import elemental3.lang.JsIteratorIterable;
 import elemental3.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;

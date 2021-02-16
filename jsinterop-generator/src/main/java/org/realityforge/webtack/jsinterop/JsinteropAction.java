@@ -757,6 +757,7 @@ final class JsinteropAction
     final String gwtModuleContent =
       "<module>\n" +
       "  <inherits name='jsinterop.base.Base'/>\n" +
+      "  <inherits name='elemental3.lang.Lang'/>\n" +
       "  <inherits name='elemental3.promise.Promise'/>\n" +
       "\n" +
       "  <source path=''/>\n" +

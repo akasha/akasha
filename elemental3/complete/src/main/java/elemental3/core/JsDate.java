@@ -1,5 +1,6 @@
 package elemental3.core;
 
+import elemental3.lang.JsArray;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
