@@ -40,8 +40,6 @@ complete as there is too much un-said.
   i.e. the logical equivalent of `GlobalWindow extends Window implements GlobalObject`. The methods/fields mixed
   in are documented at https://tc39.es/ecma262/#sec-value-properties-of-the-global-object
 
-* Update all the patches to use `ChangeReturnType` processor if possible.
-
 # Docs Integration
 
 * Process docs and any words that match an original/non-synthetic word then convert into {@link MyType}
@@ -112,9 +110,6 @@ Generate host element factories: Events would need to be specially handled to ma
 * `translate` is `yes` or `no` in html where it is boolean at IDL level
 
 # Other
-
-* Add a processor that changes the type of a operation, attribute, dictionary member etc to specific type.
-  Change the way we enhance schemas for adding `enum` and `const enum` support to libraries.
 
 * Convert several other ECMA namespaces/types from https://tc39.es/ecma262/ to WebIDL
 
