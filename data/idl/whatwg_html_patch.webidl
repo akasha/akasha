@@ -771,7 +771,3 @@ const enum HTMLMediaElementNetworkState {
   HTMLMediaElement.NETWORK_LOADING,
   HTMLMediaElement.NETWORK_NO_SOURCE
 };
-
-partial dictionary PostMessageOptions {
-  sequence<Transferable> transfer = [];
-};

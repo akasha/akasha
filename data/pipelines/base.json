@@ -359,14 +359,13 @@
       }
     },
     {
-      "name": "RemoveMember",
-      "description": "Change the type of the transfer member to Transferable",
+      "name": "ChangeDictionaryMemberType",
       "sourceSelector": "name=whatwg_html",
       "config": {
         "expectedRemoveCount": 1,
-        "elementNamePattern": "^PostMessageOptions$",
-        "memberNamePattern": "^transfer$",
-        "types": ["dictionary"]
+        "dictionaryNamePattern": "^PostMessageOptions$",
+        "dictionaryMemberNamePattern": "^transfer$",
+        "type": "sequence<Transferable>"
       }
     },
     {
