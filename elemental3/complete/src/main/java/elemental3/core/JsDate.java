@@ -5,6 +5,7 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
+import jsinterop.base.JsPropertyMap;
 
 @JsType( name = "Date", isNative = true, namespace = JsPackage.GLOBAL )
 public class JsDate
@@ -304,7 +305,7 @@ public class JsDate
   public native String toLocaleDateString();
 
   @JsOverlay
-  public final String toLocaleDateString( JsArray<String> locales, JsObject options )
+  public final String toLocaleDateString( JsArray<String> locales, JsPropertyMap<Object> options )
   {
     return toLocaleDateString(
       Js.<ToLocaleDateStringLocalesUnionType>uncheckedCast( locales ), options );
@@ -323,14 +324,14 @@ public class JsDate
   }
 
   @JsOverlay
-  public final String toLocaleDateString( String locales, JsObject options )
+  public final String toLocaleDateString( String locales, JsPropertyMap<Object> options )
   {
     return toLocaleDateString(
       Js.<ToLocaleDateStringLocalesUnionType>uncheckedCast( locales ), options );
   }
 
   @JsOverlay
-  public final String toLocaleDateString( String[] locales, JsObject options )
+  public final String toLocaleDateString( String[] locales, JsPropertyMap<Object> options )
   {
     return toLocaleDateString( Js.<JsArray<String>>uncheckedCast( locales ), options );
   }
@@ -360,7 +361,7 @@ public class JsDate
   }
 
   public native String toLocaleDateString(
-    ToLocaleDateStringLocalesUnionType locales, JsObject options );
+    ToLocaleDateStringLocalesUnionType locales, JsPropertyMap<Object> options );
 
   @JsOverlay
   public final String toLocaleDateString(
@@ -376,7 +377,7 @@ public class JsDate
   public native String toLocaleString();
 
   @JsOverlay
-  public final String toLocaleString( JsArray<String> locales, JsObject options )
+  public final String toLocaleString( JsArray<String> locales, JsPropertyMap<Object> options )
   {
     return toLocaleString(
       Js.<ToLocaleStringLocalesUnionType>uncheckedCast( locales ), options );
@@ -395,14 +396,14 @@ public class JsDate
   }
 
   @JsOverlay
-  public final String toLocaleString( String locales, JsObject options )
+  public final String toLocaleString( String locales, JsPropertyMap<Object> options )
   {
     return toLocaleString(
       Js.<ToLocaleStringLocalesUnionType>uncheckedCast( locales ), options );
   }
 
   @JsOverlay
-  public final String toLocaleString( String[] locales, JsObject options )
+  public final String toLocaleString( String[] locales, JsPropertyMap<Object> options )
   {
     return toLocaleString( Js.<JsArray<String>>uncheckedCast( locales ), options );
   }
@@ -432,7 +433,7 @@ public class JsDate
   }
 
   public native String toLocaleString(
-    ToLocaleStringLocalesUnionType locales, JsObject options );
+    ToLocaleStringLocalesUnionType locales, JsPropertyMap<Object> options );
 
   @JsOverlay
   public final String toLocaleString(
@@ -446,7 +447,7 @@ public class JsDate
   public native String toLocaleTimeString();
 
   @JsOverlay
-  public final String toLocaleTimeString( JsArray<String> locales, JsObject options )
+  public final String toLocaleTimeString( JsArray<String> locales, JsPropertyMap<Object> options )
   {
     return toLocaleTimeString(
       Js.<ToLocaleTimeStringLocalesUnionType>uncheckedCast( locales ), options );
@@ -465,14 +466,14 @@ public class JsDate
   }
 
   @JsOverlay
-  public final String toLocaleTimeString( String locales, JsObject options )
+  public final String toLocaleTimeString( String locales, JsPropertyMap<Object> options )
   {
     return toLocaleTimeString(
       Js.<ToLocaleTimeStringLocalesUnionType>uncheckedCast( locales ), options );
   }
 
   @JsOverlay
-  public final String toLocaleTimeString( String[] locales, JsObject options )
+  public final String toLocaleTimeString( String[] locales, JsPropertyMap<Object> options )
   {
     return toLocaleTimeString( Js.<JsArray<String>>uncheckedCast( locales ), options );
   }
@@ -502,7 +503,7 @@ public class JsDate
   }
 
   public native String toLocaleTimeString(
-    ToLocaleTimeStringLocalesUnionType locales, JsObject options );
+    ToLocaleTimeStringLocalesUnionType locales, JsPropertyMap<Object> options );
 
   @JsOverlay
   public final String toLocaleTimeString(
