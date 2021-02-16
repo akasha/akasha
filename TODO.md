@@ -15,6 +15,11 @@ complete as there is too much un-said.
 
 * Add WebGL extension https://www.khronos.org/registry/webgl/extensions/EXT_disjoint_timer_query_webgl2/
 
+* Why does `JsPropertyMap` not have a keys method? A result of no `JsArray`? Replace `JsObject.keys()` through
+  apps with `PropertyMap.forEach` and remove freeze from react4j codebase
+
+* Move the JsIterable and friends or `elemental3.lang` package
+
 * Consider adding other extensions from https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getExtension
 
 * Add string constants to all webgl extensions to make acquiring extensions easy ...
