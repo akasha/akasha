@@ -6,6 +6,14 @@ complete as there is too much un-said.
 
 # MVP Release
 
+* Correctly type
+  - https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getParameter
+    but also add https://developer.mozilla.org/en-US/docs/Web/API/WEBGL_debug_renderer_info
+
+* Add WebGL extension https://www.khronos.org/registry/webgl/extensions/EXT_disjoint_timer_query_webgl2/
+
+* Consider adding other extensions from https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getExtension
+
 * Add string constants to all webgl extensions to make acquiring extensions easy ...
   but make sure it is java-only and does not flow through to closure externs
 
