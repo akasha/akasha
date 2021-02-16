@@ -6,6 +6,7 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
+import jsinterop.base.JsPropertyMap;
 
 @JsType( name = "String", isNative = true, namespace = JsPackage.GLOBAL )
 public class JsString
@@ -286,7 +287,7 @@ public class JsString
   public native String link( String hrefAttribute );
 
   @JsOverlay
-  public final int localeCompare( String compareString, JsArray<String> locales, JsObject options )
+  public final int localeCompare( String compareString, JsArray<String> locales, JsPropertyMap<Object> options )
   {
     return localeCompare(
       compareString, Js.<LocaleCompareLocalesUnionType>uncheckedCast( locales ), options );
@@ -306,7 +307,7 @@ public class JsString
   }
 
   public native int localeCompare(
-    String compareString, LocaleCompareLocalesUnionType locales, JsObject options );
+    String compareString, LocaleCompareLocalesUnionType locales, JsPropertyMap<Object> options );
 
   @JsOverlay
   public final int localeCompare(
@@ -319,14 +320,14 @@ public class JsString
     String compareString, LocaleCompareLocalesUnionType locales );
 
   @JsOverlay
-  public final int localeCompare( String compareString, String locales, JsObject options )
+  public final int localeCompare( String compareString, String locales, JsPropertyMap<Object> options )
   {
     return localeCompare(
       compareString, Js.<LocaleCompareLocalesUnionType>uncheckedCast( locales ), options );
   }
 
   @JsOverlay
-  public final int localeCompare( String compareString, String[] locales, JsObject options )
+  public final int localeCompare( String compareString, String[] locales, JsPropertyMap<Object> options )
   {
     return localeCompare( compareString, Js.<JsArray<String>>uncheckedCast( locales ), options );
   }
