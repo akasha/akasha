@@ -82,8 +82,6 @@ complete as there is too much un-said.
   value X then arg2 must be of type Y. To create the overlay method we may need to define an extended attribute on
   operation that defines scenario.
 
-* Currently we type a lot interfaces as `?`. This stops renames in J2CL world for any method implemented by interface. However we can't make them named types as then they would attempt to use named types in GWT which would make casts break. Names in `@JsType(isNative=true)` are effectively `extern`s whereas in j2cl they are just binding to types and we need an extern to avoid renames.
-
 # React4j Host Element Factories
 
 Generate host element factories: Events would need to be specially handled to map to reacts event system but we could control whether we generate a capture handler using the `[NoBubble]` attribute on events.
