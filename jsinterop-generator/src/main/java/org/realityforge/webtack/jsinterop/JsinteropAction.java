@@ -238,14 +238,15 @@ final class JsinteropAction
     final WebIDLSchema schema = getSchema();
 
     final ConstEnumerationValue firstValue = definition.getValues().get( 0 );
-    final ConstMember constant =
-      schema
-        .getInterfaceByName( firstValue.getInterfaceName() )
-        .getConstantByName( firstValue.getConstName() );
+    final ConstMember constant = getConstant( firstValue );
     final boolean isInteger = schema.resolveType( constant.getType() ).getKind().isInteger();
 
     final AnnotationSpec.Builder annotation = AnnotationSpec.builder( BasicTypes.MAGIC_CONSTANT );
-    for ( final ConstEnumerationValue value : definition.getValues() )
+    final List<ConstEnumerationValue> sortedConstants =
+      definition.getValues().stream().sorted( ( o1, o2 ) -> {
+        return sortByValue( isInteger, o1, o2 );
+      } ).collect( Collectors.toList() );
+    for ( final ConstEnumerationValue value : sortedConstants )
     {
       annotation.addMember( isInteger ? "intValues" : "stringValues",
                             "$T.$N",
@@ -327,6 +328,35 @@ final class JsinteropAction
                     .build() );
 
     writeTopLevelType( name, type );
+  }
+
+  private int sortByValue( final boolean isInteger, @Nonnull final ConstEnumerationValue o1, @Nonnull final ConstEnumerationValue o2 )
+  {
+    final ConstMember c1 = getConstant( o1 );
+    final ConstMember c2 = getConstant( o2 );
+    final String v1 = c1.getValue().getValue();
+    final String v2 = c2.getValue().getValue();
+    assert null != v1;
+    assert null != v2;
+    final int value =
+      isInteger ?
+      Integer.compare( parseNumericConstantValue( v1 ), parseNumericConstantValue( v2 ) ) :
+      v1.compareTo( v2 );
+    return 0 == value ?
+           ( o1.getInterfaceName() + o1.getConstName() ).compareTo( o2.getInterfaceName() + o2.getConstName() ) :
+           value;
+  }
+
+  private int parseNumericConstantValue( @Nonnull final String value )
+  {
+    final boolean isHex = value.startsWith( "0x" );
+    return Integer.parseInt( isHex ? value.substring( 2 ) : value, isHex ? 16 : 10 );
+  }
+
+  @Nonnull
+  private ConstMember getConstant( @Nonnull final ConstEnumerationValue value )
+  {
+    return getSchema().getInterfaceByName( value.getInterfaceName() ).getConstantByName( value.getConstName() );
   }
 
   private void writeTypeCatalog()

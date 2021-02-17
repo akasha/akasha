@@ -9,8 +9,6 @@ complete as there is too much un-said.
 * Why does `JsPropertyMap` not have a keys method? A result of no `JsArray`? Replace `JsObject.keys()` through
   apps with `PropertyMap.forEach`
 
-* Sort constants in const enums by their underlying value
-
 * Rename output to avoid naming clash with elemental2
   - Atomix
   - Atomical
