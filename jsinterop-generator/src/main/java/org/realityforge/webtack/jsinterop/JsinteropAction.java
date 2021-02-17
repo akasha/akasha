@@ -1079,7 +1079,7 @@ final class JsinteropAction
     type.addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_TYPE )
                           .addMember( "isNative", "true" )
                           .addMember( "namespace", "$T.GLOBAL", JsinteropTypes.JS_PACKAGE )
-                          .addMember( "name", "$S", "?" )
+                          .addMember( "name", "$S", "Object" )
                           .build() );
     maybeAddCustomAnnotations( definition, type );
     maybeAddJavadoc( definition, type );
