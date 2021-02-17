@@ -867,7 +867,8 @@ final class JsinteropAction
         .interfaceBuilder( javaName )
         .addModifiers( Modifier.PUBLIC );
     writeGeneratedAnnotation( type );
-    type.addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_TYPE )
+    type.addAnnotation( AnnotationSpec
+                          .builder( JsinteropTypes.JS_TYPE )
                           .addMember( "isNative", "true" )
                           .addMember( "namespace", "$T.GLOBAL", JsinteropTypes.JS_PACKAGE )
                           .addMember( "name", "$S", "?" )
@@ -1451,7 +1452,8 @@ final class JsinteropAction
         .addModifiers( Modifier.PUBLIC );
     writeGeneratedAnnotation( type );
     maybeAddJavadoc( definition, type );
-    type.addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_TYPE )
+    type.addAnnotation( AnnotationSpec
+                          .builder( JsinteropTypes.JS_TYPE )
                           .addMember( "isNative", "true" )
                           .addMember( "namespace", "$T.GLOBAL", JsinteropTypes.JS_PACKAGE )
                           .addMember( "name", "$S", "?" )
