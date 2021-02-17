@@ -11,10 +11,6 @@ complete as there is too much un-said.
 
 * Sort constants in const enums by their underlying value
 
-* Consider adding extensions from https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getExtension
-  * EXT_disjoint_timer_query
-  * EXT_disjoint_timer_query_webgl2
-
 * Rename output to avoid naming clash with elemental2
   - Atomix
   - Atomical

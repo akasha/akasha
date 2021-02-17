@@ -483,6 +483,16 @@
         "url": "https://www.khronos.org/registry/webgl/extensions/EXT_color_buffer_half_float/"
     },
     {
+        "lastModifiedTime": 1613496485000,
+        "name": "webgl_ext_disjoint_timer_query",
+        "url": "https://www.khronos.org/registry/webgl/extensions/EXT_disjoint_timer_query/"
+    },
+    {
+        "lastModifiedTime": 1613496485000,
+        "name": "webgl_ext_disjoint_timer_query_webgl2",
+        "url": "https://www.khronos.org/registry/webgl/extensions/EXT_disjoint_timer_query_webgl2/"
+    },
+    {
         "lastModifiedTime": 1613109788000,
         "name": "webgl_ext_float_blend",
         "url": "https://www.khronos.org/registry/webgl/extensions/EXT_float_blend/"
@@ -538,6 +548,10 @@
         "url": "https://www.khronos.org/registry/webgl/extensions/WEBGL_multi_draw/"
     },
     {
+        "lastModifiedTime": 0,
+        "name": "webgl_oculus_multiview"
+    },
+    {
         "lastModifiedTime": 1602107713000,
         "name": "webgl_oes_element_index_uint",
         "url": "https://www.khronos.org/registry/webgl/extensions/OES_element_index_uint/"
@@ -576,10 +590,6 @@
         "lastModifiedTime": 1602107713000,
         "name": "webgl_oes_vertex_array_object",
         "url": "https://www.khronos.org/registry/webgl/extensions/OES_vertex_array_object/"
-    },
-    {
-        "lastModifiedTime": 0,
-        "name": "webgl_oculus_multiview"
     },
     {
         "lastModifiedTime": 1613496485000,

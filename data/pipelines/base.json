@@ -22,6 +22,7 @@
           "Uint8ClampedArray": ["TypedArray"],
           "Float32Array": ["TypedArray"],
           "Float64Array": ["TypedArray"],
+          "EXT_disjoint_timer_query_webgl2": ["EXT_disjoint_timer_query"],
           "WebGL2RenderingContext": ["WebGLRenderingContext"]
         },
         "memberAliases": {

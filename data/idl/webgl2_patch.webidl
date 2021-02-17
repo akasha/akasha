@@ -654,15 +654,14 @@ const enum WebGLParameterName {
   WebGL2RenderingContext.UNPACK_SKIP_ROWS,
   WebGL2RenderingContext.VERTEX_ARRAY_BINDING,
 
+  EXT_disjoint_timer_query_webgl2.TIMESTAMP_EXT,
+  EXT_disjoint_timer_query_webgl2.GPU_DISJOINT_EXT,
   OVR_multiview2.MAX_VIEWS_OVR,
   OCULUS_multiview.MAX_VIEWS_OVR,
   EXT_texture_filter_anisotropic.MAX_TEXTURE_MAX_ANISOTROPY_EXT,
 
   WEBGL_debug_renderer_info.UNMASKED_VENDOR_WEBGL,
   WEBGL_debug_renderer_info.UNMASKED_RENDERER_WEBGL
-
-  //EXT_disjoint_timer_query.TIMESTAMP_EXT,
-  //EXT_disjoint_timer_query.GPU_DISJOINT_EXT,
 };
 
 /**
@@ -697,6 +696,7 @@ typedef (
  [MarkerType]
 typedef (
   EXT_color_buffer_float or
+  EXT_disjoint_timer_query_webgl2 or
   EXT_texture_norm16 or
   OCULUS_multiview or
   OVR_multiview2 or
@@ -710,6 +710,7 @@ typedef (
 typedef (
   ANGLE_instanced_arrays or
   EXT_blend_minmax or
+  EXT_disjoint_timer_query or
   EXT_frag_depth or
   EXT_shader_texture_lod or
   EXT_sRGB or
@@ -727,6 +728,7 @@ typedef (
 const enum WebGLExtensionName {
   EXT_color_buffer_half_float.NAME,
   EXT_color_buffer_float.NAME,
+  EXT_disjoint_timer_query_webgl2.NAME,
   EXT_float_blend.NAME,
   EXT_texture_compression_bptc.NAME,
   EXT_texture_compression_rgtc.NAME,
@@ -746,6 +748,7 @@ const enum WebGLExtensionName {
   WEBGL_debug_renderer_info.NAME,
   WEBGL_debug_shaders.NAME,
   WEBGL_depth_texture.NAME,
+  WEBGL_lose_context.NAME,
   WEBGL_lose_context.NAME,
   WEBGL_multi_draw.NAME
 };
@@ -928,3 +931,14 @@ partial interface OCULUS_multiview {
   [JavaOnly]
   const DOMString NAME = "OCULUS_multiview";
 };
+
+partial interface EXT_disjoint_timer_query {
+  [JavaOnly]
+  const DOMString NAME = "EXT_disjoint_timer_query";
+};
+
+partial interface EXT_disjoint_timer_query_webgl2 {
+  [JavaOnly]
+  const DOMString NAME = "EXT_disjoint_timer_query_webgl2";
+};
+
