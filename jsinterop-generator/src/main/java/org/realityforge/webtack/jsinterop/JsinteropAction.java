@@ -243,9 +243,7 @@ final class JsinteropAction
 
     final AnnotationSpec.Builder annotation = AnnotationSpec.builder( BasicTypes.MAGIC_CONSTANT );
     final List<ConstEnumerationValue> sortedConstants =
-      definition.getValues().stream().sorted( ( o1, o2 ) -> {
-        return sortByValue( isInteger, o1, o2 );
-      } ).collect( Collectors.toList() );
+      definition.getValues().stream().sorted( ( o1, o2 ) -> sortByValue( isInteger, o1, o2 ) ).collect( Collectors.toList() );
     for ( final ConstEnumerationValue value : sortedConstants )
     {
       annotation.addMember( isInteger ? "intValues" : "stringValues",
