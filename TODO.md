@@ -15,7 +15,6 @@ complete as there is too much un-said.
   * EXT_disjoint_timer_query
   * EXT_disjoint_timer_query_webgl2
   * OVR_multiview2
-  * WEBGL_compressed_texture_atc
   * WEBGL_compressed_texture_etc
   * WEBGL_compressed_texture_etc1
   * WEBGL_compressed_texture_pvrtc
