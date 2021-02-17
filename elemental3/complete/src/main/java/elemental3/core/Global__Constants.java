@@ -8,5 +8,4 @@ class Global__Constants
 {
   static double Infinity;
   static double NaN;
-  static Object undefined;
 }

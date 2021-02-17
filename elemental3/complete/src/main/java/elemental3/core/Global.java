@@ -12,6 +12,4 @@ public class Global
   @JsOverlay
   public static final double NaN = Global__Constants.NaN;
   public static Arguments arguments;
-  @JsOverlay
-  public static final Object undefined = Global__Constants.undefined;
 }
