@@ -1285,6 +1285,16 @@
       }
     },
     {
+      "name": "ChangeReturnType",
+      "sourceSelector": "name=webgl.*",
+      "config": {
+        "expectedChangeCount": 1,
+        "elementNamePattern": "^WebGL2RenderingContext$",
+        "operationNamePattern": "^getExtension$",
+        "type": "WebGLExtension"
+      }
+    },
+    {
       "name": "ChangeArgumentType",
       "description": "Tighten up the parameter types",
       "sourceSelector": "name=webgl.*",
