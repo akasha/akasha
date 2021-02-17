@@ -679,6 +679,7 @@ typedef (
   WEBGL_compressed_texture_astc or
   WEBGL_compressed_texture_etc or
   WEBGL_compressed_texture_etc1 or
+  WEBGL_compressed_texture_pvrtc or
   WEBGL_compressed_texture_s3tc or
   WEBGL_compressed_texture_s3tc_srgb or
   WEBGL_debug_renderer_info or
@@ -733,6 +734,7 @@ const enum WebGLExtensionName {
   WEBGL_compressed_texture_astc.NAME,
   WEBGL_compressed_texture_etc.NAME,
   WEBGL_compressed_texture_etc1.NAME,
+  WEBGL_compressed_texture_pvrtc.NAME,
   WEBGL_compressed_texture_s3tc.NAME,
   WEBGL_compressed_texture_s3tc_srgb.NAME,
   WEBGL_debug_renderer_info.NAME,
@@ -904,4 +906,9 @@ partial interface WEBGL_compressed_texture_etc {
 partial interface WEBGL_compressed_texture_etc1 {
   [JavaOnly]
   const DOMString NAME = "WEBGL_compressed_texture_etc1";
+};
+
+partial interface WEBGL_compressed_texture_pvrtc {
+  [JavaOnly]
+  const DOMString NAME = "WEBGL_compressed_texture_pvrtc";
 };

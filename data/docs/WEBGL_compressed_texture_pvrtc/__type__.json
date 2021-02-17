@@ -1,0 +1,14 @@
+
+{
+    "kind": "Type",
+    "name": "WEBGL_compressed_texture_pvrtc",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WEBGL_compressed_texture_pvrtc",
+    "description": "The WEBGL_compressed_texture_pvrtc extension is part of the WebGL API and exposes four PVRTC compressed texture formats.",
+    "refs": [
+        {
+            "name": "WEBGL_compressed_texture_pvrtc",
+            "href": "https://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_pvrtc/",
+            "description": "WEBGL_compressed_texture_pvrtc - WEBGL_compressed_texture_pvrtc"
+        }
+    ]
+}
