@@ -507,3 +507,142 @@ const enum ActiveInfoDataType {
   WebGL2RenderingContext.UNSIGNED_INT_SAMPLER_CUBE,
   WebGL2RenderingContext.UNSIGNED_INT_SAMPLER_2D_ARRAY
 };
+
+// The following patches add a name constant to extensions to make using these extensions
+// more idiomatic to java. The constants do not exist in the underlying model so should
+// not appear in other outputs such as closure externs.
+
+partial interface ANGLE_instanced_arrays {
+  [JavaOnly]
+  const DOMString NAME = "ANGLE_instanced_arrays";
+};
+
+partial interface WEBGL_color_buffer_float {
+  [JavaOnly]
+  const DOMString NAME = "WEBGL_color_buffer_float";
+};
+
+partial interface WEBGL_compressed_texture_astc {
+  [JavaOnly]
+  const DOMString NAME = "WEBGL_compressed_texture_astc";
+};
+
+partial interface WEBGL_compressed_texture_s3tc {
+  [JavaOnly]
+  const DOMString NAME = "WEBGL_compressed_texture_s3tc";
+};
+
+partial interface WEBGL_compressed_texture_s3tc_srgb {
+  [JavaOnly]
+  const DOMString NAME = "WEBGL_compressed_texture_s3tc_srgb";
+};
+
+partial interface WEBGL_debug_renderer_info {
+  [JavaOnly]
+  const DOMString NAME = "WEBGL_debug_renderer_info";
+};
+
+partial interface WEBGL_debug_shaders {
+  [JavaOnly]
+  const DOMString NAME = "WEBGL_debug_shaders";
+};
+
+partial interface WEBGL_depth_texture {
+  [JavaOnly]
+  const DOMString NAME = "WEBGL_depth_texture";
+};
+
+partial interface WEBGL_draw_buffers {
+  [JavaOnly]
+  const DOMString NAME = "WEBGL_draw_buffers";
+};
+
+partial interface EXT_blend_minmax {
+  [JavaOnly]
+  const DOMString NAME = "EXT_blend_minmax";
+};
+
+partial interface EXT_color_buffer_float {
+  [JavaOnly]
+  const DOMString NAME = "EXT_color_buffer_float";
+};
+
+partial interface EXT_float_blend {
+  [JavaOnly]
+  const DOMString NAME = "EXT_float_blend";
+};
+
+partial interface EXT_frag_depth {
+  [JavaOnly]
+  const DOMString NAME = "EXT_frag_depth";
+};
+
+partial interface EXT_shader_texture_lod {
+  [JavaOnly]
+  const DOMString NAME = "EXT_shader_texture_lod";
+};
+
+partial interface EXT_sRGB {
+  [JavaOnly]
+  const DOMString NAME = "EXT_sRGB";
+};
+
+partial interface EXT_texture_compression_rgtc {
+  [JavaOnly]
+  const DOMString NAME = "EXT_texture_compression_rgtc";
+};
+
+partial interface EXT_texture_filter_anisotropic {
+  [JavaOnly]
+  const DOMString NAME = "EXT_texture_filter_anisotropic";
+};
+
+partial interface EXT_texture_norm16 {
+  [JavaOnly]
+  const DOMString NAME = "EXT_texture_norm16";
+};
+
+partial interface KHR_parallel_shader_compile {
+  [JavaOnly]
+  const DOMString NAME = "KHR_parallel_shader_compile";
+};
+
+partial interface WEBGL_lose_context {
+  [JavaOnly]
+  const DOMString NAME = "WEBGL_lose_context";
+};
+
+partial interface WEBGL_multi_draw {
+  [JavaOnly]
+  const DOMString NAME = "WEBGL_multi_draw";
+};
+
+partial interface OES_element_index_uint {
+  [JavaOnly]
+  const DOMString NAME = "OES_element_index_uint";
+};
+
+partial interface OES_standard_derivatives {
+  [JavaOnly]
+  const DOMString NAME = "OES_standard_derivatives";
+};
+
+partial interface OES_texture_float_linear {
+  [JavaOnly]
+  const DOMString NAME = "OES_texture_float_linear";
+};
+
+partial interface OES_texture_half_float {
+  [JavaOnly]
+  const DOMString NAME = "OES_texture_half_float";
+};
+
+partial interface OES_texture_half_float_linear {
+  [JavaOnly]
+  const DOMString NAME = "OES_texture_half_float_linear";
+};
+
+partial interface OES_vertex_array_object {
+  [JavaOnly]
+  const DOMString NAME = "OES_vertex_array_object";
+};

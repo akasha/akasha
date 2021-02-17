@@ -70,6 +70,13 @@ public final class ExtendedAttributes
    */
   @Nonnull
   public static final String JAVA_SEQUENCE_TYPE = "JavaSequenceType";
+  /**
+   * A custom extended property that indicates that the element only exists in the java binding
+   * and should be omitted when emitting to other languages. This is usually used on java-only
+   * constant values.
+   */
+  @Nonnull
+  public static final String JAVA_ONLY = "JavaOnly";
 
   private ExtendedAttributes()
   {
