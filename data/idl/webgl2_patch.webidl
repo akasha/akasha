@@ -654,13 +654,14 @@ const enum WebGLParameterName {
   WebGL2RenderingContext.UNPACK_SKIP_ROWS,
   WebGL2RenderingContext.VERTEX_ARRAY_BINDING,
 
+  OVR_multiview2.MAX_VIEWS_OVR,
   EXT_texture_filter_anisotropic.MAX_TEXTURE_MAX_ANISOTROPY_EXT,
+
   WEBGL_debug_renderer_info.UNMASKED_VENDOR_WEBGL,
   WEBGL_debug_renderer_info.UNMASKED_RENDERER_WEBGL
 
   //EXT_disjoint_timer_query.TIMESTAMP_EXT,
   //EXT_disjoint_timer_query.GPU_DISJOINT_EXT,
-  //OVR_multiview2.MAX_VIEWS_OVR,
 };
 
 /**
@@ -696,6 +697,7 @@ typedef (
 typedef (
   EXT_color_buffer_float or
   EXT_texture_norm16 or
+  OVR_multiview2 or
   WebGLCommonExtension
 ) WebGLExtension;
 
@@ -731,6 +733,7 @@ const enum WebGLExtensionName {
   KHR_parallel_shader_compile.NAME,
   OES_texture_float_linear.NAME,
   OES_texture_half_float_linear.NAME,
+  OVR_multiview2.NAME,
   WEBGL_compressed_texture_astc.NAME,
   WEBGL_compressed_texture_etc.NAME,
   WEBGL_compressed_texture_etc1.NAME,
@@ -911,4 +914,9 @@ partial interface WEBGL_compressed_texture_etc1 {
 partial interface WEBGL_compressed_texture_pvrtc {
   [JavaOnly]
   const DOMString NAME = "WEBGL_compressed_texture_pvrtc";
+};
+
+partial interface OVR_multiview2 {
+  [JavaOnly]
+  const DOMString NAME = "OVR_multiview2";
 };
