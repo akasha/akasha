@@ -14,8 +14,6 @@ complete as there is too much un-said.
 * Consider adding extensions from https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getExtension
   * EXT_disjoint_timer_query
   * EXT_disjoint_timer_query_webgl2
-  * OVR_multiview2
-  * OCULUS_multiview
 
 * Rename output to avoid naming clash with elemental2
   - Atomix
