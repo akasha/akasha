@@ -9,6 +9,8 @@ complete as there is too much un-said.
 * Why does `JsPropertyMap` not have a keys method? A result of no `JsArray`? Replace `JsObject.keys()` through
   apps with `PropertyMap.forEach`
 
+* Sort constants in const enums by their underlying value
+
 * Consider adding extensions from https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getExtension
   * EXT_disjoint_timer_query
   * EXT_disjoint_timer_query_webgl2
