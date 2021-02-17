@@ -243,7 +243,11 @@ final class JsinteropAction
 
     final AnnotationSpec.Builder annotation = AnnotationSpec.builder( BasicTypes.MAGIC_CONSTANT );
     final List<ConstEnumerationValue> sortedConstants =
-      definition.getValues().stream().sorted( ( o1, o2 ) -> sortByValue( isInteger, o1, o2 ) ).collect( Collectors.toList() );
+      definition
+        .getValues()
+        .stream()
+        .sorted( ( o1, o2 ) -> sortByValue( isInteger, o1, o2 ) )
+        .collect( Collectors.toList() );
     for ( final ConstEnumerationValue value : sortedConstants )
     {
       annotation.addMember( isInteger ? "intValues" : "stringValues",
@@ -328,7 +332,9 @@ final class JsinteropAction
     writeTopLevelType( name, type );
   }
 
-  private int sortByValue( final boolean isInteger, @Nonnull final ConstEnumerationValue o1, @Nonnull final ConstEnumerationValue o2 )
+  private int sortByValue( final boolean isInteger,
+                           @Nonnull final ConstEnumerationValue o1,
+                           @Nonnull final ConstEnumerationValue o2 )
   {
     final ConstMember c1 = getConstant( o1 );
     final ConstMember c2 = getConstant( o2 );
