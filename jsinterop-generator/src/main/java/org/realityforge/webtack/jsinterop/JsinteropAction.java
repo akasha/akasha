@@ -418,35 +418,8 @@ final class JsinteropAction
     while ( null != definition )
     {
       generateStaticAttributes( definition.getAttributes(), type, true );
-
-      for ( final OperationMember operation : definition.getOperations() )
-      {
-        final OperationMember.Kind operationKind = operation.getKind();
-        if ( OperationMember.Kind.DEFAULT == operationKind ||
-             (
-               ( OperationMember.Kind.STRINGIFIER == operationKind ||
-                 OperationMember.Kind.GETTER == operationKind ||
-                 OperationMember.Kind.SETTER == operationKind ||
-                 OperationMember.Kind.DELETER == operationKind ) &&
-               null != operation.getName() ) )
-        {
-          generateDelegateOperation( operation, type, true );
-        }
-      }
-      for ( final EventMember event : definition.getEvents() )
-      {
-        final CallbackInterfaceDefinition callbackInterface =
-          schema.findCallbackInterfaceByName( event.getEventType().getName() + "Listener" );
-        if ( null != callbackInterface )
-        {
-          generateGlobalAddEventListener( event, 0, type );
-          generateGlobalAddEventListener( event, 1, type );
-          generateGlobalAddEventListener( event, 2, type );
-          generateGlobalRemoveEventListener( event, 0, type );
-          generateGlobalRemoveEventListener( event, 1, type );
-          generateGlobalRemoveEventListener( event, 2, type );
-        }
-      }
+      generateGlobalOperationsMethods( type, definition.getOperations() );
+      generateGlobalEventsMethods( type, schema, definition.getEvents() );
       final String inherits = definition.getInherits();
       definition = null == inherits ? null : schema.getInterfaceByName( inherits );
     }
@@ -464,6 +437,42 @@ final class JsinteropAction
     }
 
     writeTopLevelType( "$Global", type );
+  }
+
+  private void generateGlobalOperationsMethods( final TypeSpec.Builder type, final List<OperationMember> operations )
+  {
+    for ( final OperationMember operation : operations )
+    {
+      final OperationMember.Kind operationKind = operation.getKind();
+      if ( OperationMember.Kind.DEFAULT == operationKind ||
+           (
+             ( OperationMember.Kind.STRINGIFIER == operationKind ||
+               OperationMember.Kind.GETTER == operationKind ||
+               OperationMember.Kind.SETTER == operationKind ||
+               OperationMember.Kind.DELETER == operationKind ) &&
+             null != operation.getName() ) )
+      {
+        generateDelegateOperation( operation, type, true );
+      }
+    }
+  }
+
+  private void generateGlobalEventsMethods( final TypeSpec.Builder type, final WebIDLSchema schema, final List<EventMember> events )
+  {
+    for ( final EventMember event : events )
+    {
+      final CallbackInterfaceDefinition callbackInterface =
+        schema.findCallbackInterfaceByName( event.getEventType().getName() + "Listener" );
+      if ( null != callbackInterface )
+      {
+        generateGlobalAddEventListener( event, 0, type );
+        generateGlobalAddEventListener( event, 1, type );
+        generateGlobalAddEventListener( event, 2, type );
+        generateGlobalRemoveEventListener( event, 0, type );
+        generateGlobalRemoveEventListener( event, 1, type );
+        generateGlobalRemoveEventListener( event, 2, type );
+      }
+    }
   }
 
   private void generateStaticConstants( @Nonnull final List<ConstMember> constants,
