@@ -67,23 +67,7 @@ const enum FramebufferAttachment {
   WebGL2RenderingContext.COLOR_ATTACHMENT12,
   WebGL2RenderingContext.COLOR_ATTACHMENT13,
   WebGL2RenderingContext.COLOR_ATTACHMENT14,
-  WebGL2RenderingContext.COLOR_ATTACHMENT15,
-  WEBGL_draw_buffers.COLOR_ATTACHMENT0_WEBGL,
-  WEBGL_draw_buffers.COLOR_ATTACHMENT1_WEBGL,
-  WEBGL_draw_buffers.COLOR_ATTACHMENT2_WEBGL,
-  WEBGL_draw_buffers.COLOR_ATTACHMENT3_WEBGL,
-  WEBGL_draw_buffers.COLOR_ATTACHMENT4_WEBGL,
-  WEBGL_draw_buffers.COLOR_ATTACHMENT5_WEBGL,
-  WEBGL_draw_buffers.COLOR_ATTACHMENT6_WEBGL,
-  WEBGL_draw_buffers.COLOR_ATTACHMENT7_WEBGL,
-  WEBGL_draw_buffers.COLOR_ATTACHMENT8_WEBGL,
-  WEBGL_draw_buffers.COLOR_ATTACHMENT9_WEBGL,
-  WEBGL_draw_buffers.COLOR_ATTACHMENT10_WEBGL,
-  WEBGL_draw_buffers.COLOR_ATTACHMENT11_WEBGL,
-  WEBGL_draw_buffers.COLOR_ATTACHMENT12_WEBGL,
-  WEBGL_draw_buffers.COLOR_ATTACHMENT13_WEBGL,
-  WEBGL_draw_buffers.COLOR_ATTACHMENT14_WEBGL,
-  WEBGL_draw_buffers.COLOR_ATTACHMENT15_WEBGL
+  WebGL2RenderingContext.COLOR_ATTACHMENT15
 };
 
 const enum RenderbufferTargetType {
@@ -161,7 +145,6 @@ const enum TexelDataType {
   WEBGL_depth_texture.UNSIGNED_INT_24_8_WEBGL,
   WebGL2RenderingContext.INT,
   WebGL2RenderingContext.HALF_FLOAT,
-  OES_texture_half_float.HALF_FLOAT_OES,
   WebGL2RenderingContext.FLOAT,
   WebGL2RenderingContext.UNSIGNED_INT_2_10_10_10_REV,
   WebGL2RenderingContext.UNSIGNED_INT_10F_11F_11F_REV,
@@ -275,10 +258,7 @@ const enum TextureInternalFormat {
   EXT_texture_norm16.RGB16_EXT,
   EXT_texture_norm16.RGB16_SNORM_EXT,
   EXT_texture_norm16.RGBA16_EXT,
-  EXT_texture_norm16.RGBA16_SNORM_EXT,
-
-  EXT_sRGB.SRGB_EXT,
-  EXT_sRGB.SRGB_ALPHA_EXT
+  EXT_texture_norm16.RGBA16_SNORM_EXT
 };
 
 const enum TextureFormat {
@@ -448,8 +428,6 @@ const enum RenderbufferStorageInternalFormat {
   WebGL2RenderingContext.DEPTH32F_STENCIL8,
 
   WEBGL_color_buffer_float.RGBA32F_EXT,
-
-  EXT_sRGB.SRGB8_ALPHA8_EXT,
 
   // When EXT_color_buffer_float is enabled
   WebGL2RenderingContext.R16F,
@@ -674,31 +652,12 @@ const enum WebGLParameterName {
   WebGL2RenderingContext.VERTEX_ARRAY_BINDING,
 
   EXT_texture_filter_anisotropic.MAX_TEXTURE_MAX_ANISOTROPY_EXT,
-  OES_standard_derivatives.FRAGMENT_SHADER_DERIVATIVE_HINT_OES,
-  WEBGL_draw_buffers.MAX_COLOR_ATTACHMENTS_WEBGL,
-  WEBGL_draw_buffers.MAX_DRAW_BUFFERS_WEBGL,
-  WEBGL_draw_buffers.DRAW_BUFFER0_WEBGL,
-  WEBGL_draw_buffers.DRAW_BUFFER1_WEBGL,
-  WEBGL_draw_buffers.DRAW_BUFFER2_WEBGL,
-  WEBGL_draw_buffers.DRAW_BUFFER3_WEBGL,
-  WEBGL_draw_buffers.DRAW_BUFFER4_WEBGL,
-  WEBGL_draw_buffers.DRAW_BUFFER5_WEBGL,
-  WEBGL_draw_buffers.DRAW_BUFFER6_WEBGL,
-  WEBGL_draw_buffers.DRAW_BUFFER7_WEBGL,
-  WEBGL_draw_buffers.DRAW_BUFFER8_WEBGL,
-  WEBGL_draw_buffers.DRAW_BUFFER9_WEBGL,
-  WEBGL_draw_buffers.DRAW_BUFFER10_WEBGL,
-  WEBGL_draw_buffers.DRAW_BUFFER11_WEBGL,
-  WEBGL_draw_buffers.DRAW_BUFFER12_WEBGL,
-  WEBGL_draw_buffers.DRAW_BUFFER13_WEBGL,
-  WEBGL_draw_buffers.DRAW_BUFFER14_WEBGL,
-  WEBGL_draw_buffers.DRAW_BUFFER15_WEBGL,
   WEBGL_debug_renderer_info.UNMASKED_VENDOR_WEBGL,
-  WEBGL_debug_renderer_info.UNMASKED_RENDERER_WEBGL,
+  WEBGL_debug_renderer_info.UNMASKED_RENDERER_WEBGL
+
   //EXT_disjoint_timer_query.TIMESTAMP_EXT,
   //EXT_disjoint_timer_query.GPU_DISJOINT_EXT,
   //OVR_multiview2.MAX_VIEWS_OVR,
-  OES_vertex_array_object.VERTEX_ARRAY_BINDING_OES
 };
 
 // The following patches add a name constant to extensions to make using these extensions
