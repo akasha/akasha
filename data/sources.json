@@ -159,6 +159,10 @@
         "url": "https://www.w3.org/TR/geometry-1/"
     },
     {
+        "lastModifiedTime": 0,
+        "name": "global"
+    },
+    {
         "lastModifiedTime": 1574544682000,
         "name": "hr_time_2",
         "url": "https://www.w3.org/TR/hr-time-2/"
