@@ -82,6 +82,11 @@ public final class ExtendedAttributes
    */
   @Nonnull
   public static final String NO_FLATTEN = "NoFlatten";
+  /**
+   * A custom extended property that indicates that a mixin should be included in the global object.
+   */
+  @Nonnull
+  public static final String GLOBAL_OBJECT = "GlobalObject";
 
   private ExtendedAttributes()
   {

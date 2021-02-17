@@ -1,0 +1,3 @@
+$Global=com.example.Global
+$GlobalWindow=com.example.GlobalWindow
+Window=com.example.Window
