@@ -7,12 +7,30 @@ const enum ReadyStateType2 {
   XMLHttpRequest2.DONE
 };
 
+const enum WebGLExtensionName {
+  EXT_color_buffer_float.NAME,
+  EXT_float_blend.NAME,
+  KHR_parallel_shader_compile.NAME
+};
+
 const enum ReadyStateType {
   XMLHttpRequest.UNSENT,
   XMLHttpRequest.OPENED,
   XMLHttpRequest.HEADERS_RECEIVED,
   XMLHttpRequest.LOADING,
   XMLHttpRequest.DONE
+};
+
+interface EXT_color_buffer_float {
+  const DOMString NAME = "EXT_color_buffer_float";
+};
+
+interface EXT_float_blend {
+  const DOMString NAME = "EXT_float_blend";
+};
+
+interface KHR_parallel_shader_compile {
+  const DOMString NAME = "KHR_parallel_shader_compile";
 };
 
 [Exposed=(Window,DedicatedWorker,SharedWorker)]

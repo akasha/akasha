@@ -59,11 +59,11 @@ final class ConstEnumerationValidator
                 "of other constants in the const enumeration which are of type " + valueType;
               errors.add( new ValidationError( value, message, true ) );
             }
-            if ( !actualType.getKind().isInteger() )
+            if ( !actualType.getKind().isInteger() && !actualType.getKind().isString() )
             {
               final String message =
                 "Constant named '" + value.getConstName() + "' referenced by const enumeration named '" +
-                definition.getName() + "' has a type of " + actualType + " which is not an integer type";
+                definition.getName() + "' has a type of " + actualType + " which is not an integer or string type";
               errors.add( new ValidationError( value, message, true ) );
             }
           }

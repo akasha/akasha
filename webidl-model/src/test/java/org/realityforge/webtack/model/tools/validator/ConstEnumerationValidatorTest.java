@@ -17,7 +17,7 @@ public final class ConstEnumerationValidatorTest
   public void invalid_const_type()
   {
     assertErrorPresent( validate( loadTestLocalSchema( "invalid_const_type" + WebIDLSchema.EXTENSION ), 1 ),
-                        "Constant named 'DONE' referenced by const enumeration named 'XMLHttpRequestReadyStateType' has a type of double which is not an integer type" );
+                        "Constant named 'DONE' referenced by const enumeration named 'XMLHttpRequestReadyStateType' has a type of double which is not an integer or string type" );
   }
 
   @Test

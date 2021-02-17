@@ -235,20 +235,26 @@ final class JsinteropAction
     writeGeneratedAnnotation( type );
     type.addAnnotation( Documented.class );
 
+    final WebIDLSchema schema = getSchema();
+
+    final ConstEnumerationValue firstValue = definition.getValues().get( 0 );
+    final ConstMember constant =
+      schema
+        .getInterfaceByName( firstValue.getInterfaceName() )
+        .getConstantByName( firstValue.getConstName() );
+    final boolean isInteger = schema.resolveType( constant.getType() ).getKind().isInteger();
+
     final AnnotationSpec.Builder annotation = AnnotationSpec.builder( BasicTypes.MAGIC_CONSTANT );
     for ( final ConstEnumerationValue value : definition.getValues() )
     {
-      annotation.addMember( "intValues", "$T.$N", lookupClassName( value.getInterfaceName() ), value.getConstName() );
+      annotation.addMember( isInteger ? "intValues" : "stringValues",
+                            "$T.$N",
+                            lookupClassName( value.getInterfaceName() ),
+                            value.getConstName() );
     }
     type.addAnnotation( annotation.build() );
 
-    final ConstEnumerationValue value = definition.getValues().get( 0 );
-    final WebIDLSchema schema = getSchema();
-    final TypeName enumType =
-      toTypeName( schema
-                    .getInterfaceByName( value.getInterfaceName() )
-                    .getConstantByName( value.getConstName() )
-                    .getType() );
+    final TypeName enumType = toTypeName( constant.getType() );
 
     final List<Object> params = new ArrayList<>();
     final List<String> descriptions = new ArrayList<>();
@@ -264,27 +270,38 @@ final class JsinteropAction
         .peek( v -> describeParams.add( lookupClassName( v.getInterfaceName() ) ) )
         .peek( v -> describeParams.add( v.getConstName() ) )
         .peek( v -> describeParams.add( v.getConstName() ) )
-        .peek( v -> describeBlocks.add( "$T.$N == value ? $S : " ) )
-        .map( v -> "$T.$N == value" )
+        .peek( v -> describeBlocks.add( isInteger ? "$T.$N == value ? $S : " : "$T.$N.equals( value ) ? $S : " ) )
+        .map( v -> isInteger ? "$T.$N == value" : "$T.$N.equals( value )" )
         .collect( Collectors.joining( " || " ) );
 
+    final ParameterSpec.Builder parameter = ParameterSpec.builder( enumType, "value", Modifier.FINAL );
+    if ( !isInteger )
+    {
+      parameter.addAnnotation( BasicTypes.NONNULL );
+    }
+
+    final MethodSpec.Builder castMethod =
+      MethodSpec
+        .methodBuilder( "cast" )
+        .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+        .addAnnotation( self )
+        .addParameter( parameter.build() )
+        .addStatement( "assertValid( value )" )
+        .addStatement( "return value" )
+        .returns( enumType );
+    if ( !isInteger )
+    {
+      castMethod.addAnnotation( BasicTypes.NONNULL );
+    }
     type.addType( TypeSpec
                     .classBuilder( "Validator" )
                     .addModifiers( Modifier.PUBLIC, Modifier.STATIC, Modifier.FINAL )
                     .addMethod( MethodSpec.constructorBuilder().addModifiers( Modifier.PRIVATE ).build() )
-                    .addMethod( MethodSpec
-                                  .methodBuilder( "cast" )
-                                  .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
-                                  .addAnnotation( self )
-                                  .addParameter( ParameterSpec.builder( enumType, "value", Modifier.FINAL ).build() )
-                                  .addStatement( "assertValid( value )" )
-                                  .addStatement( "return value" )
-                                  .returns( enumType )
-                                  .build() )
+                    .addMethod( castMethod.build() )
                     .addMethod( MethodSpec
                                   .methodBuilder( "assertValid" )
                                   .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
-                                  .addParameter( ParameterSpec.builder( enumType, "value", Modifier.FINAL ).build() )
+                                  .addParameter( parameter.build() )
                                   .addStatement( "assert isValid( value ) : \"@" + simpleName +
                                                  " annotated value must be one of [" +
                                                  String.join( ", ", descriptions ) +
@@ -295,7 +312,7 @@ final class JsinteropAction
                                   .methodBuilder( "isValid" )
                                   .returns( TypeName.BOOLEAN )
                                   .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
-                                  .addParameter( ParameterSpec.builder( enumType, "value", Modifier.FINAL ).build() )
+                                  .addParameter( parameter.build() )
                                   .addStatement( "return " + test, params.toArray() )
                                   .build() )
                     .addMethod( MethodSpec
@@ -303,7 +320,7 @@ final class JsinteropAction
                                   .addAnnotation( BasicTypes.NONNULL )
                                   .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
                                   .returns( BasicTypes.STRING )
-                                  .addParameter( ParameterSpec.builder( enumType, "value", Modifier.FINAL ).build() )
+                                  .addParameter( parameter.build() )
                                   .addStatement( "return " + String.join( "", describeBlocks ) +
                                                  "\"Unknown value \" + value", describeParams.toArray() )
                                   .build() )
