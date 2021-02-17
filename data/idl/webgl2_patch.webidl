@@ -666,6 +666,25 @@ const enum WebGLParameterName {
  [MarkerType]
 typedef ( EXT_color_buffer_float or EXT_float_blend or EXT_texture_compression_rgtc or EXT_texture_filter_anisotropic or EXT_texture_norm16 or KHR_parallel_shader_compile or OES_texture_float_linear or OES_texture_half_float_linear or WEBGL_compressed_texture_astc or WEBGL_compressed_texture_s3tc or WEBGL_compressed_texture_s3tc_srgb or WEBGL_debug_renderer_info or WEBGL_debug_shaders or WEBGL_depth_texture or WEBGL_lose_context or WEBGL_multi_draw ) WebGLExtension;
 
+const enum WebGLExtensionName {
+  EXT_color_buffer_float.NAME,
+  EXT_float_blend.NAME,
+  EXT_texture_compression_rgtc.NAME,
+  EXT_texture_filter_anisotropic.NAME,
+  EXT_texture_norm16.NAME,
+  KHR_parallel_shader_compile.NAME,
+  OES_texture_float_linear.NAME,
+  OES_texture_half_float_linear.NAME,
+  WEBGL_compressed_texture_astc.NAME,
+  WEBGL_compressed_texture_s3tc.NAME,
+  WEBGL_compressed_texture_s3tc_srgb.NAME,
+  WEBGL_debug_renderer_info.NAME,
+  WEBGL_debug_shaders.NAME,
+  WEBGL_depth_texture.NAME,
+  WEBGL_lose_context.NAME,
+  WEBGL_multi_draw.NAME
+};
+
 /**
  * WebGL1 extension.
  */

@@ -1285,6 +1285,17 @@
       }
     },
     {
+      "name": "ChangeArgumentType",
+      "sourceSelector": "name=webgl.*",
+      "config": {
+        "expectedChangeCount": 1,
+        "elementNamePattern": "^WebGL2RenderingContext$",
+        "operationNamePattern": "^getExtension$",
+        "argumentNamePattern": "^name$",
+        "type": "WebGLExtensionName"
+      }
+    },
+    {
       "name": "ChangeReturnType",
       "sourceSelector": "name=webgl.*",
       "config": {
