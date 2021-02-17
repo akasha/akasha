@@ -40,6 +40,7 @@ import org.realityforge.webtack.model.SourceInterval;
 import org.realityforge.webtack.model.TypedefDefinition;
 import org.realityforge.webtack.model.WebIDLSchema;
 import org.realityforge.webtack.model.tools.spi.Processor;
+import org.realityforge.webtack.model.tools.util.ExtendedAttributes;
 
 /**
  * Flatten the types.
@@ -62,6 +63,7 @@ final class FlattenProcessor
     final Map<String, InterfaceDefinition> interfaces = new HashMap<>();
     final Map<String, List<PartialInterfaceDefinition>> partialInterfaces = new HashMap<>();
     final Map<String, MixinDefinition> mixins = new HashMap<>();
+    final Map<String, MixinDefinition> mixinsToKeep = new HashMap<>();
     final Map<String, NamespaceDefinition> namespaces = new HashMap<>();
 
     for ( final DictionaryDefinition definition : schema.getDictionaries() )
@@ -80,7 +82,12 @@ final class FlattenProcessor
     {
       final String name = definition.getName();
       final List<PartialMixinDefinition> partials = schema.findPartialMixinsByName( name );
-      mixins.put( name, partials.isEmpty() ? definition : merge( definition, partials ) );
+      final MixinDefinition completeMixin = partials.isEmpty() ? definition : merge( definition, partials );
+      mixins.put( name, completeMixin );
+      if ( completeMixin.isNoArgsExtendedAttributePresent( ExtendedAttributes.NO_FLATTEN ) )
+      {
+        mixinsToKeep.put( name, completeMixin );
+      }
     }
     for ( final InterfaceDefinition definition : schema.getInterfaces() )
     {
@@ -122,7 +129,7 @@ final class FlattenProcessor
                                .stream()
                                .collect( Collectors.toMap( ConstEnumerationDefinition::getName, Function.identity() ) ),
                              interfaces,
-                             Collections.emptyMap(),
+                             mixinsToKeep,
                              Collections.emptyList(),
                              namespaces,
                              Collections.emptyMap(),

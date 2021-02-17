@@ -77,6 +77,11 @@ public final class ExtendedAttributes
    */
   @Nonnull
   public static final String JAVA_ONLY = "JavaOnly";
+  /**
+   * A custom extended property that indicates that a mixin should be kept and omitted in the FlattenProcessor.
+   */
+  @Nonnull
+  public static final String NO_FLATTEN = "NoFlatten";
 
   private ExtendedAttributes()
   {
