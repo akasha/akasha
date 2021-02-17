@@ -677,6 +677,7 @@ typedef (
   OES_texture_float_linear or
   OES_texture_half_float_linear or
   WEBGL_compressed_texture_astc or
+  WEBGL_compressed_texture_etc or
   WEBGL_compressed_texture_s3tc or
   WEBGL_compressed_texture_s3tc_srgb or
   WEBGL_debug_renderer_info or
@@ -729,6 +730,7 @@ const enum WebGLExtensionName {
   OES_texture_float_linear.NAME,
   OES_texture_half_float_linear.NAME,
   WEBGL_compressed_texture_astc.NAME,
+  WEBGL_compressed_texture_etc.NAME,
   WEBGL_compressed_texture_s3tc.NAME,
   WEBGL_compressed_texture_s3tc_srgb.NAME,
   WEBGL_debug_renderer_info.NAME,
@@ -890,4 +892,9 @@ partial interface OES_fbo_render_mipmap {
 partial interface EXT_texture_compression_bptc {
   [JavaOnly]
   const DOMString NAME = "EXT_texture_compression_bptc";
+};
+
+partial interface WEBGL_compressed_texture_etc {
+  [JavaOnly]
+  const DOMString NAME = "WEBGL_compressed_texture_etc";
 };

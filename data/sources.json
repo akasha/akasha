@@ -423,6 +423,11 @@
         "url": "https://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_astc/"
     },
     {
+        "lastModifiedTime": 1613496485000,
+        "name": "webgl_compressed_texture_etc",
+        "url": "https://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_etc/"
+    },
+    {
         "lastModifiedTime": 1602107713000,
         "name": "webgl_compressed_texture_s3tc",
         "url": "https://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_s3tc/"
