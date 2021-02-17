@@ -10,12 +10,24 @@ complete as there is too much un-said.
   - https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getParameter
     but also add https://developer.mozilla.org/en-US/docs/Web/API/WEBGL_debug_renderer_info
 
-* Add WebGL extension https://www.khronos.org/registry/webgl/extensions/EXT_disjoint_timer_query_webgl2/
-
 * Why does `JsPropertyMap` not have a keys method? A result of no `JsArray`? Replace `JsObject.keys()` through
   apps with `PropertyMap.forEach`
 
-* Consider adding other extensions from https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getExtension
+* Consider adding extensions from https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getExtension
+  * EXT_color_buffer_half_float
+  * EXT_disjoint_timer_query
+  * EXT_disjoint_timer_query_webgl2
+  * EXT_texture_compression_bptc
+  * OES_fbo_render_mipmap
+  * OVR_multiview2
+  * WEBGL_compressed_texture_atc
+  * WEBGL_compressed_texture_etc
+  * WEBGL_compressed_texture_etc1
+  * WEBGL_compressed_texture_pvrtc
+
+* Add a `MarkerType` that is a union of every extension that can be returned from `gl.getExtension()`. (Note that those compatible with WebGL1 versus WebGL2 is slightly different)
+
+* Add a const enum for every extension name that can be returned from `gl.getExtension()` and make sure getExtension parameter is typed with that key.  (Note that those compatible with WebGL1 versus WebGL2 is slightly different)
 
 * Rename output to avoid naming clash with elemental2
   - Atomix
