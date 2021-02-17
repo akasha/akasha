@@ -34,13 +34,6 @@ final class ConstEnumerationValidator
             definition.getName() + "' references an unknown type named '" + value.getInterfaceName() + "'";
           errors.add( new ValidationError( value, message, true ) );
         }
-        else if ( !names.add( value.getConstName() ) )
-        {
-          final String message =
-            "Const Enumeration named '" + definition.getName() + "' contains multiple " +
-            "constants named '" + value.getConstName() + "'";
-          errors.add( new ValidationError( value, message, true ) );
-        }
         else
         {
           final ConstMember constant = type.findConstantByName( value.getConstName() );

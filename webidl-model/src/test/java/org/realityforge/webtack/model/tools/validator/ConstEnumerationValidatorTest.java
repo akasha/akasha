@@ -14,13 +14,6 @@ public final class ConstEnumerationValidatorTest
   }
 
   @Test
-  public void duplicate_constants()
-  {
-    assertErrorPresent( validate( loadTestLocalSchema( "duplicate_constants" + WebIDLSchema.EXTENSION ), 1 ),
-                        "Const Enumeration named 'XMLHttpRequestReadyStateType' contains multiple constants named 'OPENED'" );
-  }
-
-  @Test
   public void invalid_const_type()
   {
     assertErrorPresent( validate( loadTestLocalSchema( "invalid_const_type" + WebIDLSchema.EXTENSION ), 1 ),
