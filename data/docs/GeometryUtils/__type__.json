@@ -3,7 +3,7 @@
     "kind": "Type",
     "name": "GeometryUtils",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/GeometryUtils",
-    "description": "The GeometryUtils interface provides different utility function to retrieve geometry information about DOM nodes.",
+    "description": "The GeometryUtils interface provides utility methods to retrieve geometry information about DOM nodes.",
     "refs": [
         {
             "name": "CSS Object Model (CSSOM) View Module",

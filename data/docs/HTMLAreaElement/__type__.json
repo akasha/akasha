@@ -9,21 +9,6 @@
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/#htmlareaelement",
             "description": "HTMLAreaElement - HTML Living Standard"
-        },
-        {
-            "name": "HTML5",
-            "href": "https://www.w3.org/TR/html52/embedded-content-0.html#the-area-element",
-            "description": "HTMLAreaElement - HTML5"
-        },
-        {
-            "name": "Document Object Model (DOM) Level 2 HTML Specification",
-            "href": "https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-26019118",
-            "description": "HTMLAreaElement - Document Object Model (DOM) Level 2 HTML Specification"
-        },
-        {
-            "name": "Document Object Model (DOM) Level 1 Specification",
-            "href": "https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-26019118",
-            "description": "HTMLAreaElement - Document Object Model (DOM) Level 1 Specification"
         }
     ]
 }

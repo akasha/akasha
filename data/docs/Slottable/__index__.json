@@ -1,11 +1,11 @@
 
 {
     "name": "Slottable",
-    "lastModifiedAt": 1612676600098,
+    "lastModifiedAt": 1613604763623,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1612573615000
+            "lastModifiedAt": 1613525205000
         },
         {
             "name": "assignedSlot",
