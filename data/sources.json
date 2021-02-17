@@ -578,6 +578,10 @@
         "url": "https://www.khronos.org/registry/webgl/extensions/OES_vertex_array_object/"
     },
     {
+        "lastModifiedTime": 0,
+        "name": "webgl_oculus_multiview"
+    },
+    {
         "lastModifiedTime": 1613496485000,
         "name": "webgl_ovr_multiview2",
         "url": "https://www.khronos.org/registry/webgl/extensions/OVR_multiview2/"

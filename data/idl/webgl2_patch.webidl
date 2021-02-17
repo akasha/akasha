@@ -655,6 +655,7 @@ const enum WebGLParameterName {
   WebGL2RenderingContext.VERTEX_ARRAY_BINDING,
 
   OVR_multiview2.MAX_VIEWS_OVR,
+  OCULUS_multiview.MAX_VIEWS_OVR,
   EXT_texture_filter_anisotropic.MAX_TEXTURE_MAX_ANISOTROPY_EXT,
 
   WEBGL_debug_renderer_info.UNMASKED_VENDOR_WEBGL,
@@ -697,6 +698,7 @@ typedef (
 typedef (
   EXT_color_buffer_float or
   EXT_texture_norm16 or
+  OCULUS_multiview or
   OVR_multiview2 or
   WebGLCommonExtension
 ) WebGLExtension;
@@ -733,6 +735,7 @@ const enum WebGLExtensionName {
   KHR_parallel_shader_compile.NAME,
   OES_texture_float_linear.NAME,
   OES_texture_half_float_linear.NAME,
+  OCULUS_multiview.NAME,
   OVR_multiview2.NAME,
   WEBGL_compressed_texture_astc.NAME,
   WEBGL_compressed_texture_etc.NAME,
@@ -919,4 +922,9 @@ partial interface WEBGL_compressed_texture_pvrtc {
 partial interface OVR_multiview2 {
   [JavaOnly]
   const DOMString NAME = "OVR_multiview2";
+};
+
+partial interface OCULUS_multiview {
+  [JavaOnly]
+  const DOMString NAME = "OCULUS_multiview";
 };
