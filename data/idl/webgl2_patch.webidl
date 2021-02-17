@@ -705,6 +705,7 @@ typedef (
   EXT_frag_depth or
   EXT_shader_texture_lod or
   EXT_sRGB or
+  OES_fbo_render_mipmap or
   OES_element_index_uint or
   OES_standard_derivatives or
   OES_texture_float or
@@ -877,4 +878,9 @@ partial interface OES_texture_half_float_linear {
 partial interface OES_vertex_array_object {
   [JavaOnly]
   const DOMString NAME = "OES_vertex_array_object";
+};
+
+partial interface OES_fbo_render_mipmap {
+  [JavaOnly]
+  const DOMString NAME = "OES_fbo_render_mipmap";
 };

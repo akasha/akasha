@@ -523,6 +523,11 @@
         "url": "https://www.khronos.org/registry/webgl/extensions/OES_element_index_uint/"
     },
     {
+        "lastModifiedTime": 1613496485000,
+        "name": "webgl_oes_fbo_render_mipmap",
+        "url": "https://www.khronos.org/registry/webgl/extensions/OES_fbo_render_mipmap/"
+    },
+    {
         "lastModifiedTime": 1602107713000,
         "name": "webgl_oes_standard_derivatives",
         "url": "https://www.khronos.org/registry/webgl/extensions/OES_standard_derivatives/"
