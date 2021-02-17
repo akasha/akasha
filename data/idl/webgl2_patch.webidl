@@ -668,7 +668,7 @@ const enum WebGLParameterName {
  */
  [MarkerType]
 typedef (
-  EXT_color_buffer_half_float
+  EXT_color_buffer_half_float or
   EXT_float_blend or
   KHR_parallel_shader_compile or
   EXT_texture_compression_rgtc or
