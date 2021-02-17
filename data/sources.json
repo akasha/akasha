@@ -488,6 +488,11 @@
         "url": "https://www.khronos.org/registry/webgl/extensions/EXT_sRGB/"
     },
     {
+        "lastModifiedTime": 1613496485000,
+        "name": "webgl_ext_texture_compression_bptc",
+        "url": "https://www.khronos.org/registry/webgl/extensions/EXT_texture_compression_bptc/"
+    },
+    {
         "lastModifiedTime": 1613109788000,
         "name": "webgl_ext_texture_compression_rgtc",
         "url": "https://www.khronos.org/registry/webgl/extensions/EXT_texture_compression_rgtc/"

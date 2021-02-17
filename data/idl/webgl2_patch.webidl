@@ -671,6 +671,7 @@ typedef (
   EXT_color_buffer_half_float or
   EXT_float_blend or
   KHR_parallel_shader_compile or
+  EXT_texture_compression_bptc or
   EXT_texture_compression_rgtc or
   EXT_texture_filter_anisotropic or
   OES_texture_float_linear or
@@ -720,6 +721,7 @@ const enum WebGLExtensionName {
   EXT_color_buffer_half_float.NAME,
   EXT_color_buffer_float.NAME,
   EXT_float_blend.NAME,
+  EXT_texture_compression_bptc.NAME,
   EXT_texture_compression_rgtc.NAME,
   EXT_texture_filter_anisotropic.NAME,
   EXT_texture_norm16.NAME,
@@ -883,4 +885,9 @@ partial interface OES_vertex_array_object {
 partial interface OES_fbo_render_mipmap {
   [JavaOnly]
   const DOMString NAME = "OES_fbo_render_mipmap";
+};
+
+partial interface EXT_texture_compression_bptc {
+  [JavaOnly]
+  const DOMString NAME = "EXT_texture_compression_bptc";
 };

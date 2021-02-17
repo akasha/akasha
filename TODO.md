@@ -12,7 +12,6 @@ complete as there is too much un-said.
 * Consider adding extensions from https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getExtension
   * EXT_disjoint_timer_query
   * EXT_disjoint_timer_query_webgl2
-  * EXT_texture_compression_bptc
   * OVR_multiview2
   * WEBGL_compressed_texture_atc
   * WEBGL_compressed_texture_etc
