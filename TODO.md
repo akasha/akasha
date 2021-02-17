@@ -61,7 +61,10 @@ complete as there is too much un-said.
 
 * Add `JsIterator<X>` to generated types if we know the underlying type is an iterator.
 
-* Consider supporting multiple exposure sets and thus multiple `GlobalX` interfaces in output library. Then figure out a way to support multiple `Global` objects.
+* Consider supporting multiple exposure sets and thus multiple `GlobalX` interfaces in output library. Then
+  figure out a way to support multiple `Global` objects. We may also need to support an interface to represent
+  `[GlobalObject]` mixins and make sure all our global objects implement that and maybe that it is also exposed
+  as a static accessor somewhere.
 
 * Add the ability to designate root types in the graph that either identify nodes to keep or nodes to remove
   and anything that is removed has all references to it removed. This is a way of partitioning the graph into
