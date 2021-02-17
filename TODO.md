@@ -25,6 +25,8 @@ complete as there is too much un-said.
 
 * Add missing methods to typed array types
 
+* Update `JsDate` and `JsString` to be more java-like
+
 # Docs Integration
 
 * Process docs and any words that match an original/non-synthetic word then convert into {@link MyType}
@@ -92,8 +94,6 @@ Generate host element factories: Events would need to be specially handled to ma
 * `translate` is `yes` or `no` in html where it is boolean at IDL level
 
 # Other
-
-* Convert several other ECMA namespaces/types from https://tc39.es/ecma262/ to WebIDL
 
 * Add some additional apis from:
   - https://github.com/w3c/webref/tree/master/ed/idl
