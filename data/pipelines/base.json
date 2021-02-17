@@ -1277,6 +1277,18 @@
       "description": "Tighten up the parameter types",
       "sourceSelector": "name=webgl.*",
       "config": {
+        "expectedChangeCount": 1,
+        "elementNamePattern": "^WebGL2RenderingContext$",
+        "operationNamePattern": "^getParameter$",
+        "argumentNamePattern": "^pname$",
+        "type": "WebGLParameterName"
+      }
+    },
+    {
+      "name": "ChangeArgumentType",
+      "description": "Tighten up the parameter types",
+      "sourceSelector": "name=webgl.*",
+      "config": {
         "expectedChangeCount": 3,
         "elementNamePattern": "^WebGL2RenderingContext$",
         "operationNamePattern": "^(bindFramebuffer|framebufferTexture2D|framebufferRenderbuffer)$",

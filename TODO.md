@@ -6,10 +6,6 @@ complete as there is too much un-said.
 
 # MVP Release
 
-* Correctly type
-  - https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getParameter
-    but also add https://developer.mozilla.org/en-US/docs/Web/API/WEBGL_debug_renderer_info
-
 * Why does `JsPropertyMap` not have a keys method? A result of no `JsArray`? Replace `JsObject.keys()` through
   apps with `PropertyMap.forEach`
 
