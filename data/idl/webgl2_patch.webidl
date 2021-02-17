@@ -660,6 +660,18 @@ const enum WebGLParameterName {
   //OVR_multiview2.MAX_VIEWS_OVR,
 };
 
+/**
+ * WebGL2 extension.
+ */
+ [MarkerType]
+typedef ( EXT_color_buffer_float or EXT_float_blend or EXT_texture_compression_rgtc or EXT_texture_filter_anisotropic or EXT_texture_norm16 or KHR_parallel_shader_compile or OES_texture_float_linear or OES_texture_half_float_linear or WEBGL_compressed_texture_astc or WEBGL_compressed_texture_s3tc or WEBGL_compressed_texture_s3tc_srgb or WEBGL_debug_renderer_info or WEBGL_debug_shaders or WEBGL_depth_texture or WEBGL_lose_context or WEBGL_multi_draw ) WebGLExtension;
+
+/**
+ * WebGL1 extension.
+ */
+ [MarkerType]
+typedef ( ANGLE_instanced_arrays or  EXT_blend_minmax or EXT_float_blend or EXT_frag_depth or EXT_shader_texture_lod or EXT_sRGB or EXT_texture_compression_rgtc or EXT_texture_filter_anisotropic or KHR_parallel_shader_compile or OES_element_index_uint or OES_standard_derivatives or OES_texture_float or OES_texture_float_linear or OES_texture_half_float or OES_texture_half_float_linear or OES_vertex_array_object or WEBGL_color_buffer_float or WEBGL_compressed_texture_astc or WEBGL_compressed_texture_s3tc or WEBGL_compressed_texture_s3tc_srgb or WEBGL_debug_renderer_info or WEBGL_debug_shaders or WEBGL_depth_texture or WEBGL_draw_buffers or WEBGL_lose_context or WEBGL_multi_draw ) WebGL1Extension;
+
 // The following patches add a name constant to extensions to make using these extensions
 // more idiomatic to java. The constants do not exist in the underlying model so should
 // not appear in other outputs such as closure externs.
