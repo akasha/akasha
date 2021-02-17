@@ -22,10 +22,6 @@ complete as there is too much un-said.
   * WEBGL_compressed_texture_pvrtc
   * OCULUS_multiview
 
-* Add a `MarkerType` that is a union of every extension that can be returned from `gl.getExtension()`. (Note that those compatible with WebGL1 versus WebGL2 is slightly different)
-
-* Add a const enum for every extension name that can be returned from `gl.getExtension()` and make sure getExtension parameter is typed with that key.  (Note that those compatible with WebGL1 versus WebGL2 is slightly different)
-
 * Rename output to avoid naming clash with elemental2
   - Atomix
   - Atomical
