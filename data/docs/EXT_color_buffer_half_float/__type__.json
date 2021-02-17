@@ -1,0 +1,14 @@
+
+{
+    "kind": "Type",
+    "name": "EXT_color_buffer_half_float",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/EXT_color_buffer_half_float",
+    "description": "The EXT_color_buffer_half_float extension is part of the WebGL API and adds the ability to render to 16-bit floating-point color buffers.",
+    "refs": [
+        {
+            "name": "EXT_color_buffer_half_float",
+            "href": "https://www.khronos.org/registry/webgl/extensions/EXT_color_buffer_half_float/",
+            "description": "EXT_color_buffer_half_float - EXT_color_buffer_half_float"
+        }
+    ]
+}

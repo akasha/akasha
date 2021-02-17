@@ -438,6 +438,9 @@ const enum RenderbufferStorageInternalFormat {
   WebGL2RenderingContext.RGBA32F,
   WebGL2RenderingContext.R11F_G11F_B10F,
 
+  EXT_color_buffer_half_float.RGBA16F_EXT,
+  EXT_color_buffer_half_float.RGBA16F_EXT,
+
   EXT_texture_norm16.R16_EXT,
   EXT_texture_norm16.RG16_EXT,
   EXT_texture_norm16.RGBA16_EXT
@@ -665,6 +668,7 @@ const enum WebGLParameterName {
  */
  [MarkerType]
 typedef (
+  EXT_color_buffer_half_float
   EXT_float_blend or
   KHR_parallel_shader_compile or
   EXT_texture_compression_rgtc or
@@ -712,6 +716,7 @@ typedef (
 ) WebGL1Extension;
 
 const enum WebGLExtensionName {
+  EXT_color_buffer_half_float.NAME,
   EXT_color_buffer_float.NAME,
   EXT_float_blend.NAME,
   EXT_texture_compression_rgtc.NAME,
@@ -733,6 +738,11 @@ const enum WebGLExtensionName {
 // The following patches add a name constant to extensions to make using these extensions
 // more idiomatic to java. The constants do not exist in the underlying model so should
 // not appear in other outputs such as closure externs.
+
+partial interface EXT_color_buffer_half_float {
+  [JavaOnly]
+  const DOMString NAME = "EXT_color_buffer_half_float";
+};
 
 partial interface ANGLE_instanced_arrays {
   [JavaOnly]

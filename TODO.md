@@ -10,7 +10,6 @@ complete as there is too much un-said.
   apps with `PropertyMap.forEach`
 
 * Consider adding extensions from https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getExtension
-  * EXT_color_buffer_half_float
   * EXT_disjoint_timer_query
   * EXT_disjoint_timer_query_webgl2
   * EXT_texture_compression_bptc
