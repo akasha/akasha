@@ -1,0 +1,14 @@
+
+{
+    "kind": "Type",
+    "name": "WEBGL_compressed_texture_etc1",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WEBGL_compressed_texture_etc1",
+    "description": "The WEBGL_compressed_texture_etc1 extension is part of the WebGL API and exposes the ETC1 compressed texture format.",
+    "refs": [
+        {
+            "name": "WEBGL_compressed_texture_etc1",
+            "href": "https://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_etc1/",
+            "description": "WEBGL_compressed_texture_etc1 - WEBGL_compressed_texture_etc1"
+        }
+    ]
+}
