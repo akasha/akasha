@@ -1447,7 +1447,7 @@
         "elementNamePattern": "^WebGL2RenderingContext$",
         "operationNamePattern": "^vertexAttribPointer$",
         "argumentNamePattern": "^type$",
-        "type": "AttributeDataType"
+        "type": "AttributeComponentDataType"
       }
     },
     {
@@ -1459,7 +1459,7 @@
         "elementNamePattern": "^WebGL2RenderingContext$",
         "operationNamePattern": "^vertexAttribIPointer$",
         "argumentNamePattern": "^type$",
-        "type": "AttributeIntegerDataType"
+        "type": "AttributeComponentIntegerDataType"
       }
     },
     {

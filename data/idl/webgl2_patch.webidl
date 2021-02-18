@@ -26,7 +26,7 @@ const enum BufferTargetType {
   WebGL2RenderingContext.PIXEL_UNPACK_BUFFER
 };
 
-const enum AttributeDataType {
+const enum AttributeComponentDataType {
   WebGL2RenderingContext.BYTE,
   WebGL2RenderingContext.UNSIGNED_BYTE,
   WebGL2RenderingContext.SHORT,
@@ -35,7 +35,7 @@ const enum AttributeDataType {
   WebGL2RenderingContext.HALF_FLOAT
 };
 
-const enum AttributeIntegerDataType {
+const enum AttributeComponentIntegerDataType {
   WebGL2RenderingContext.BYTE,
   WebGL2RenderingContext.UNSIGNED_BYTE,
   WebGL2RenderingContext.SHORT,
