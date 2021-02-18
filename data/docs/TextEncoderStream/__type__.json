@@ -1,0 +1,14 @@
+
+{
+    "kind": "Type",
+    "name": "TextEncoderStream",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/TextEncoderStream",
+    "description": "The TextEncoderStream interface of the Encoding API converts a stream of strings into bytes in the UTF-8 encoding. It is the streaming equivalent of TextEncoder.",
+    "refs": [
+        {
+            "name": "Encoding",
+            "href": "https://encoding.spec.whatwg.org/#interface-textencoderstream",
+            "description": "TextEncoderStream - Encoding"
+        }
+    ]
+}

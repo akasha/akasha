@@ -29,7 +29,7 @@ interface FormData {
   undefined set( USVString name, Blob blobValue, optional USVString filename );
 };
 
-[Exposed=(Window,DedicatedWorker,SharedWorker)]
+[Exposed=(Window,Worker)]
 interface ProgressEvent : Event {
   readonly attribute boolean lengthComputable;
   readonly attribute unsigned long long loaded;

@@ -12,21 +12,21 @@ interface Selection {
   readonly attribute boolean isCollapsed;
   readonly attribute unsigned long rangeCount;
   readonly attribute DOMString type;
-  void addRange( Range range );
-  void collapse( Node? node, optional unsigned long offset = 0 );
-  void collapseToEnd();
-  void collapseToStart();
+  undefined addRange( Range range );
+  undefined collapse( Node? node, optional unsigned long offset = 0 );
+  undefined collapseToEnd();
+  undefined collapseToStart();
   boolean containsNode( Node node, optional boolean allowPartialContainment = false );
   [CEReactions]
-  void deleteFromDocument();
-  void empty();
-  void extend( Node node, optional unsigned long offset = 0 );
+  undefined deleteFromDocument();
+  undefined empty();
+  undefined extend( Node node, optional unsigned long offset = 0 );
   Range getRangeAt( unsigned long index );
-  void removeAllRanges();
-  void removeRange( Range range );
-  void selectAllChildren( Node node );
-  void setBaseAndExtent( Node anchorNode, unsigned long anchorOffset, Node focusNode, unsigned long focusOffset );
-  void setPosition( Node? node, optional unsigned long offset = 0 );
+  undefined removeAllRanges();
+  undefined removeRange( Range range );
+  undefined selectAllChildren( Node node );
+  undefined setBaseAndExtent( Node anchorNode, unsigned long anchorOffset, Node focusNode, unsigned long focusOffset );
+  undefined setPosition( Node? node, optional unsigned long offset = 0 );
   stringifier;
 };
 

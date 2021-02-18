@@ -424,16 +424,6 @@
       "sourceSelector": "name=whatwg_html",
       "config": {
         "expectedRemoveCount": 1,
-        "elementNamePattern": "^ApplicationCache$",
-        "attributeNamePattern": "^status$",
-        "type": "ApplicationCacheStatus"
-      }
-    },
-    {
-      "name": "ChangeAttributeType",
-      "sourceSelector": "name=whatwg_html",
-      "config": {
-        "expectedRemoveCount": 1,
         "elementNamePattern": "^EventSource$",
         "attributeNamePattern": "^readyState$",
         "type": "EventSourceReadyState"

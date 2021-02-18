@@ -62,6 +62,8 @@ enum PanningModelType {
   "equalpower"
 };
 
+callback AudioWorkletProcessCallback = boolean ( FrozenArray<FrozenArray<Float32Array>> inputs, FrozenArray<FrozenArray<Float32Array>> outputs, object parameters );
+
 callback AudioWorkletProcessorConstructor = AudioWorkletProcessor ( object options );
 
 callback DecodeErrorCallback = undefined ( DOMException error );

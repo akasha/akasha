@@ -37,6 +37,7 @@ callback interface XPathNSResolver {
 dictionary AddEventListenerOptions : EventListenerOptions {
   boolean once = false;
   boolean passive = false;
+  AbortSignal signal;
 };
 
 dictionary CustomEventInit : EventInit {
@@ -620,7 +621,7 @@ interface XPathResult {
 
 partial interface Window {
   [Replaceable]
-  readonly attribute any event;
+  readonly attribute ( Event or undefined ) event;
 };
 
 CharacterData includes ChildNode;

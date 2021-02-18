@@ -721,15 +721,6 @@ enum RenderContextType {
   "bitmaprenderer"
 };
 
-const enum ApplicationCacheStatus {
-  ApplicationCache.UNCACHED,
-  ApplicationCache.IDLE,
-  ApplicationCache.CHECKING,
-  ApplicationCache.DOWNLOADING,
-  ApplicationCache.UPDATEREADY,
-  ApplicationCache.OBSOLETE
-};
-
 const enum EventSourceReadyState {
   EventSource.CONNECTING,
   EventSource.OPEN,

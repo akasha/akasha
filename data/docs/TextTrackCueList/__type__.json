@@ -1,0 +1,14 @@
+
+{
+    "kind": "Type",
+    "name": "TextTrackCueList",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/TextTrackCueList",
+    "description": "The TextTrackCueList interface represents a dynamically updating list of TextTrackCue objects.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#texttrackcuelist",
+            "description": "TextTrackCueList - HTML Living Standard"
+        }
+    ]
+}

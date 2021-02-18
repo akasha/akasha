@@ -65,7 +65,7 @@ interface RTCIdentityProviderGlobalScope : WorkerGlobalScope {
 
 [Exposed=RTCIdentityProviderGlobalScope]
 interface RTCIdentityProviderRegistrar {
-  void register( RTCIdentityProvider idp );
+  undefined register( RTCIdentityProvider idp );
 };
 
 partial interface MediaStreamTrack {
@@ -82,5 +82,5 @@ partial interface RTCPeerConnection {
   readonly attribute DOMString? idpLoginUrl;
   readonly attribute Promise<RTCIdentityAssertion> peerIdentity;
   Promise<DOMString> getIdentityAssertion();
-  void setIdentityProvider( DOMString provider, optional RTCIdentityProviderOptions options = {} );
+  undefined setIdentityProvider( DOMString provider, optional RTCIdentityProviderOptions options = {} );
 };

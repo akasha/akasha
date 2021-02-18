@@ -354,11 +354,11 @@ interface mixin CanvasFilters {
 };
 
 interface mixin CanvasImageData {
-  ImageData createImageData( long sw, long sh );
+  ImageData createImageData( [EnforceRange] long sw, [EnforceRange] long sh );
   ImageData createImageData( ImageData imagedata );
-  ImageData getImageData( long sx, long sy, long sw, long sh );
-  undefined putImageData( ImageData imagedata, long dx, long dy );
-  undefined putImageData( ImageData imagedata, long dx, long dy, long dirtyX, long dirtyY, long dirtyWidth, long dirtyHeight );
+  ImageData getImageData( [EnforceRange] long sx, [EnforceRange] long sy, [EnforceRange] long sw, [EnforceRange] long sh );
+  undefined putImageData( ImageData imagedata, [EnforceRange] long dx, [EnforceRange] long dy );
+  undefined putImageData( ImageData imagedata, [EnforceRange] long dx, [EnforceRange] long dy, [EnforceRange] long dirtyX, [EnforceRange] long dirtyY, [EnforceRange] long dirtyWidth, [EnforceRange] long dirtyHeight );
 };
 
 interface mixin CanvasImageSmoothing {
@@ -367,11 +367,11 @@ interface mixin CanvasImageSmoothing {
 };
 
 interface mixin CanvasPath {
-  undefined arc( unrestricted double x, unrestricted double y, unrestricted double radius, unrestricted double startAngle, unrestricted double endAngle, optional boolean anticlockwise = false );
+  undefined arc( unrestricted double x, unrestricted double y, unrestricted double radius, unrestricted double startAngle, unrestricted double endAngle, optional boolean counterclockwise = false );
   undefined arcTo( unrestricted double x1, unrestricted double y1, unrestricted double x2, unrestricted double y2, unrestricted double radius );
   undefined bezierCurveTo( unrestricted double cp1x, unrestricted double cp1y, unrestricted double cp2x, unrestricted double cp2y, unrestricted double x, unrestricted double y );
   undefined closePath();
-  undefined ellipse( unrestricted double x, unrestricted double y, unrestricted double radiusX, unrestricted double radiusY, unrestricted double rotation, unrestricted double startAngle, unrestricted double endAngle, optional boolean anticlockwise = false );
+  undefined ellipse( unrestricted double x, unrestricted double y, unrestricted double radiusX, unrestricted double radiusY, unrestricted double rotation, unrestricted double startAngle, unrestricted double endAngle, optional boolean counterclockwise = false );
   undefined lineTo( unrestricted double x, unrestricted double y );
   undefined moveTo( unrestricted double x, unrestricted double y );
   undefined quadraticCurveTo( unrestricted double cpx, unrestricted double cpy, unrestricted double x, unrestricted double y );
@@ -660,28 +660,6 @@ partial interface mixin NavigatorID {
   readonly attribute DOMString oscpu;
   [Exposed=Window]
   boolean taintEnabled();
-};
-
-[SecureContext, Exposed=Window]
-interface ApplicationCache : EventTarget {
-  const unsigned short CHECKING = 2;
-  const unsigned short DOWNLOADING = 3;
-  const unsigned short IDLE = 1;
-  const unsigned short OBSOLETE = 5;
-  const unsigned short UNCACHED = 0;
-  const unsigned short UPDATEREADY = 4;
-  readonly attribute unsigned short status;
-  attribute EventHandler oncached;
-  attribute EventHandler onchecking;
-  attribute EventHandler ondownloading;
-  attribute EventHandler onerror;
-  attribute EventHandler onnoupdate;
-  attribute EventHandler onobsolete;
-  attribute EventHandler onprogress;
-  attribute EventHandler onupdateready;
-  undefined abort();
-  undefined swapCache();
-  undefined update();
 };
 
 [Exposed=Window]
@@ -1484,9 +1462,6 @@ interface HTMLMarqueeElement : HTMLElement {
   attribute unsigned long hspace;
   [CEReactions]
   attribute long loop;
-  attribute EventHandler onbounce;
-  attribute EventHandler onfinish;
-  attribute EventHandler onstart;
   [CEReactions]
   attribute unsigned long scrollAmount;
   [CEReactions]
@@ -2186,17 +2161,17 @@ interface MessagePort : EventTarget {
 
 [Exposed=Window]
 interface MimeType {
-  readonly attribute DOMString description;
-  readonly attribute Plugin enabledPlugin;
-  readonly attribute DOMString suffixes;
-  readonly attribute DOMString type;
+  readonly attribute undefined description;
+  readonly attribute undefined enabledPlugin;
+  readonly attribute undefined suffixes;
+  readonly attribute undefined type;
 };
 
-[Exposed=Window, LegacyUnenumerableNamedProperties]
+[Exposed=Window]
 interface MimeTypeArray {
   readonly attribute unsigned long length;
-  getter MimeType? item( unsigned long index );
-  getter MimeType? namedItem( DOMString name );
+  object? namedItem( DOMString name );
+  getter object? item( unsigned long index );
 };
 
 [Exposed=Window]
@@ -2231,22 +2206,22 @@ interface Path2D {
   undefined addPath( Path2D path, optional DOMMatrix2DInit transform = {} );
 };
 
-[Exposed=Window, LegacyUnenumerableNamedProperties]
+[Exposed=Window]
 interface Plugin {
-  readonly attribute DOMString description;
-  readonly attribute DOMString filename;
-  readonly attribute unsigned long length;
-  readonly attribute DOMString name;
-  getter MimeType? item( unsigned long index );
-  getter MimeType? namedItem( DOMString name );
+  readonly attribute undefined description;
+  readonly attribute undefined filename;
+  readonly attribute undefined length;
+  readonly attribute undefined name;
+  undefined namedItem( DOMString name );
+  getter undefined item( unsigned long index );
 };
 
-[Exposed=Window, LegacyUnenumerableNamedProperties]
+[Exposed=Window]
 interface PluginArray {
   readonly attribute unsigned long length;
-  undefined refresh( optional boolean reload = false );
-  getter Plugin? item( unsigned long index );
-  getter Plugin? namedItem( DOMString name );
+  object? namedItem( DOMString name );
+  undefined refresh();
+  getter object? item( unsigned long index );
 };
 
 [Exposed=Window]
@@ -2441,8 +2416,6 @@ interface WebSocket : EventTarget {
 
 [Global=Window, Exposed=Window, LegacyUnenumerableNamedProperties]
 interface Window : EventTarget {
-  [SecureContext]
-  readonly attribute ApplicationCache applicationCache;
   readonly attribute boolean closed;
   readonly attribute CustomElementRegistry customElements;
   [LegacyUnforgeable]
@@ -2460,7 +2433,7 @@ interface Window : EventTarget {
   [Replaceable]
   readonly attribute BarProp menubar;
   readonly attribute Navigator navigator;
-  readonly attribute boolean originIsolated;
+  readonly attribute boolean originAgentCluster;
   [Replaceable]
   readonly attribute WindowProxy? parent;
   [Replaceable]

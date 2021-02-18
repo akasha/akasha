@@ -240,8 +240,8 @@ dictionary RTCOfferOptions : RTCOfferAnswerOptions {
 dictionary RTCPeerConnectionIceErrorEventInit : EventInit {
   DOMString? address;
   required unsigned short errorCode;
+  USVString errorText;
   unsigned short? port;
-  USVString statusText;
   DOMString url;
 };
 
@@ -320,7 +320,6 @@ dictionary RTCRtpSendParameters : RTCRtpParameters {
 };
 
 dictionary RTCRtpSynchronizationSource : RTCRtpContributingSource {
-  boolean voiceActivityFlag;
 };
 
 dictionary RTCRtpTransceiverInit {
@@ -500,7 +499,7 @@ interface RTCPeerConnection : EventTarget {
   undefined restartIce();
   undefined setConfiguration( optional RTCConfiguration configuration = {} );
   Promise<undefined> setLocalDescription( optional RTCLocalSessionDescriptionInit description = {} );
-  Promise<undefined> setLocalDescription( optional RTCLocalSessionDescriptionInit description = {}, VoidFunction successCallback, RTCPeerConnectionErrorCallback failureCallback );
+  Promise<undefined> setLocalDescription( RTCLocalSessionDescriptionInit description, VoidFunction successCallback, RTCPeerConnectionErrorCallback failureCallback );
   Promise<undefined> setRemoteDescription( RTCSessionDescriptionInit description );
   Promise<undefined> setRemoteDescription( RTCSessionDescriptionInit description, VoidFunction successCallback, RTCPeerConnectionErrorCallback failureCallback );
 };
