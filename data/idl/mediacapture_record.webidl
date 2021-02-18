@@ -1,12 +1,12 @@
 enum BitrateMode {
-  "cbr",
-  "vbr"
+  "constant",
+  "variable"
 };
 
 enum RecordingState {
   "inactive",
-  "recording",
-  "paused"
+  "paused",
+  "recording"
 };
 
 dictionary BlobEventInit {
@@ -19,21 +19,22 @@ dictionary MediaRecorderErrorEventInit : EventInit {
 };
 
 dictionary MediaRecorderOptions {
-  BitrateMode audioBitrateMode = "vbr";
+  BitrateMode audioBitrateMode = "variable";
   unsigned long audioBitsPerSecond;
   unsigned long bitsPerSecond;
   DOMString mimeType = "";
   unsigned long videoBitsPerSecond;
 };
 
-[Exposed=Window, Constructor( DOMString type, BlobEventInit eventInitDict )]
+[Exposed=Window]
 interface BlobEvent : Event {
   [SameObject]
   readonly attribute Blob data;
   readonly attribute DOMHighResTimeStamp timecode;
+  constructor( DOMString type, BlobEventInit eventInitDict );
 };
 
-[Exposed=Window, Constructor( MediaStream stream, optional MediaRecorderOptions options = {} )]
+[Exposed=Window]
 interface MediaRecorder : EventTarget {
   readonly attribute BitrateMode audioBitrateMode;
   readonly attribute unsigned long audioBitsPerSecond;
@@ -48,15 +49,17 @@ interface MediaRecorder : EventTarget {
   attribute EventHandler onstart;
   attribute EventHandler onstop;
   static boolean isTypeSupported( DOMString type );
-  void pause();
-  void requestData();
-  void resume();
-  void start( optional unsigned long timeslice );
-  void stop();
+  constructor( MediaStream stream, optional MediaRecorderOptions options = {} );
+  undefined pause();
+  undefined requestData();
+  undefined resume();
+  undefined start( optional unsigned long timeslice );
+  undefined stop();
 };
 
-[Exposed=Window, Constructor( DOMString type, MediaRecorderErrorEventInit eventInitDict )]
+[Exposed=Window]
 interface MediaRecorderErrorEvent : Event {
   [SameObject]
   readonly attribute DOMException error;
+  constructor( DOMString type, MediaRecorderErrorEventInit eventInitDict );
 };

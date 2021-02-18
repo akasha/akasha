@@ -1,0 +1,19 @@
+
+{
+    "kind": "Type",
+    "name": "CSSImportRule",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/CSSImportRule",
+    "description": "The CSSImportRule interface represents an @import at-rule.",
+    "refs": [
+        {
+            "name": "CSS Object Model (CSSOM)",
+            "href": "https://drafts.csswg.org/cssom/#cssimportrule",
+            "description": "CSSImportRule - CSS Object Model (CSSOM)"
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 Style Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSImportRule",
+            "description": "CSSImportRule - Document Object Model (DOM) Level 2 Style Specification"
+        }
+    ]
+}

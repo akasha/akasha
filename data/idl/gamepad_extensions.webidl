@@ -26,8 +26,17 @@ interface GamepadPose {
   readonly attribute Float32Array? position;
 };
 
+[Exposed=Window, SecureContext]
+interface GamepadTouch {
+  readonly attribute Float32Array position;
+  readonly attribute Uint32Array? surfaceDimensions;
+  readonly attribute octet surfaceId;
+  readonly attribute unsigned long touchId;
+};
+
 partial interface Gamepad {
   readonly attribute GamepadHand hand;
   readonly attribute FrozenArray<GamepadHapticActuator> hapticActuators;
   readonly attribute GamepadPose? pose;
+  readonly attribute FrozenArray<GamepadTouch>? touchEvents;
 };

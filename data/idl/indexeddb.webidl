@@ -59,9 +59,9 @@ interface IDBCursor {
   [SameObject]
   readonly attribute IDBRequest request;
   readonly attribute ( IDBObjectStore or IDBIndex ) source;
-  void advance( [EnforceRange] unsigned long count );
-  void continue( optional any key );
-  void continuePrimaryKey( any key, any primaryKey );
+  undefined advance( [EnforceRange] unsigned long count );
+  undefined continue( optional any key );
+  undefined continuePrimaryKey( any key, any primaryKey );
   [NewObject]
   IDBRequest delete();
   [NewObject]
@@ -82,10 +82,10 @@ interface IDBDatabase : EventTarget {
   attribute EventHandler onclose;
   attribute EventHandler onerror;
   attribute EventHandler onversionchange;
-  void close();
+  undefined close();
   [NewObject]
   IDBObjectStore createObjectStore( DOMString name, optional IDBObjectStoreParameters options = {} );
-  void deleteObjectStore( DOMString name );
+  undefined deleteObjectStore( DOMString name );
   [NewObject]
   IDBTransaction transaction( ( DOMString or sequence<DOMString> ) storeNames, optional IDBTransactionMode mode = "readonly", optional IDBTransactionOptions options = {} );
 };
@@ -159,7 +159,7 @@ interface IDBObjectStore {
   IDBIndex createIndex( DOMString name, ( DOMString or sequence<DOMString> ) keyPath, optional IDBIndexParameters options = {} );
   [NewObject]
   IDBRequest delete( any query );
-  void deleteIndex( DOMString name );
+  undefined deleteIndex( DOMString name );
   [NewObject]
   IDBRequest get( any query );
   [NewObject]
@@ -205,8 +205,8 @@ interface IDBTransaction : EventTarget {
   attribute EventHandler onabort;
   attribute EventHandler oncomplete;
   attribute EventHandler onerror;
-  void abort();
-  void commit();
+  undefined abort();
+  undefined commit();
   IDBObjectStore objectStore( DOMString name );
 };
 

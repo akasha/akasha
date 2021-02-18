@@ -1,3 +1,10 @@
+enum CSSBoxType {
+  "border",
+  "content",
+  "margin",
+  "padding"
+};
+
 enum ScrollBehavior {
   "auto",
   "smooth"
@@ -8,6 +15,18 @@ enum ScrollLogicalPosition {
   "end",
   "nearest",
   "start"
+};
+
+typedef ( Text or Element or CSSPseudoElement or Document ) GeometryNode;
+
+dictionary BoxQuadOptions {
+  CSSBoxType box = "border";
+  GeometryNode relativeTo;
+};
+
+dictionary ConvertCoordinateOptions {
+  CSSBoxType fromBox = "border";
+  CSSBoxType toBox = "border";
 };
 
 dictionary MediaQueryListEventInit : EventInit {
@@ -34,6 +53,13 @@ partial dictionary MouseEventInit {
   double clientY = 0.0;
   double screenX = 0.0;
   double screenY = 0.0;
+};
+
+interface mixin GeometryUtils {
+  DOMPoint convertPointFromNode( DOMPointInit point, GeometryNode from, optional ConvertCoordinateOptions options = {} );
+  DOMQuad convertQuadFromNode( DOMQuadInit quad, GeometryNode from, optional ConvertCoordinateOptions options = {} );
+  DOMQuad convertRectFromNode( DOMRectReadOnly rect, GeometryNode from, optional ConvertCoordinateOptions options = {} );
+  sequence<DOMQuad> getBoxQuads( optional BoxQuadOptions options = {} );
 };
 
 [Exposed=Window]
@@ -172,3 +198,11 @@ partial interface Window {
   undefined scrollTo( optional ScrollToOptions options = {} );
   undefined scrollTo( unrestricted double x, unrestricted double y );
 };
+
+CSSPseudoElement includes GeometryUtils;
+
+Document includes GeometryUtils;
+
+Element includes GeometryUtils;
+
+Text includes GeometryUtils;

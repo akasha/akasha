@@ -29,14 +29,9 @@ typedef ( double or ConstrainDoubleRange ) ConstrainDouble;
 
 typedef ( [Clamp] unsigned long or ConstrainULongRange ) ConstrainULong;
 
-typedef object MediaStreamError;
-
-callback NavigatorUserMediaErrorCallback = undefined ( MediaStreamError error );
+callback NavigatorUserMediaErrorCallback = undefined ( DOMException error );
 
 callback NavigatorUserMediaSuccessCallback = undefined ( MediaStream stream );
-
-dictionary Capabilities {
-};
 
 dictionary ConstrainBooleanParameters {
   boolean exact;
@@ -58,13 +53,6 @@ dictionary ConstrainULongRange : ULongRange {
   unsigned long exact;
   [Clamp]
   unsigned long ideal;
-};
-
-dictionary ConstraintSet {
-};
-
-dictionary Constraints : ConstraintSet {
-  sequence<ConstraintSet> advanced;
 };
 
 dictionary DoubleRange {
@@ -157,9 +145,6 @@ dictionary MediaTrackSupportedConstraints {
   boolean width = true;
 };
 
-dictionary Settings {
-};
-
 dictionary ULongRange {
   [Clamp]
   unsigned long max;
@@ -230,6 +215,12 @@ interface MediaStreamTrackEvent : Event {
   [SameObject]
   readonly attribute MediaStreamTrack track;
   constructor( DOMString type, MediaStreamTrackEventInit eventInitDict );
+};
+
+[Exposed=Window]
+interface OverconstrainedError : DOMException {
+  readonly attribute DOMString constraint;
+  constructor( DOMString constraint, optional DOMString message = "" );
 };
 
 partial interface MediaDevices {
