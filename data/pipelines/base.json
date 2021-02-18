@@ -1293,7 +1293,7 @@
         "expectedChangeCount": 1,
         "elementNamePattern": "^WebGL2RenderingContext$",
         "operationNamePattern": "^getExtension$",
-        "type": "WebGLExtension"
+        "type": "WebGLExtension?"
       }
     },
     {
