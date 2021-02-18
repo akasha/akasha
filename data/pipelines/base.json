@@ -1511,6 +1511,19 @@
     },
     {
       "name": "AddExtendedAttributeToArgument",
+      "description": "Specify vertex dimensions",
+      "sourceSelector": "name=webgl.*",
+      "config": {
+        "expectedAddCount": 23,
+        "elementNamePattern": "^WebGL2RenderingContext$",
+        "operationNamePattern": "^(getActiveAttrib|bindAttribLocation|disableVertexAttribArray|enableVertexAttribArray|getVertexAttrib|getVertexAttribOffset|vertexAttrib1f|vertexAttrib1fv|vertexAttrib2f|vertexAttrib2fv|vertexAttrib3f|vertexAttrib3fv|vertexAttrib4f|vertexAttrib4fv|vertexAttribPointer|bindBufferBase|bindBufferRange|vertexAttribDivisor|vertexAttribI4i|vertexAttribI4iv|vertexAttribI4ui|vertexAttribI4uiv|vertexAttribIPointer)$",
+        "argumentNamePattern": "^index$",
+        "extendedAttribute": "JavaAnnotation=\"elemental3.gl.AttributeIndex\""
+      }
+    },
+
+    {
+      "name": "AddExtendedAttributeToArgument",
       "description": "Annotate a couple of method arguments that are expected to contain GLSL fragments",
       "sourceSelector": "name=webgl.*",
       "config": {
