@@ -489,6 +489,34 @@ const enum ActiveInfoDataType {
   WebGL2RenderingContext.UNSIGNED_INT_SAMPLER_2D_ARRAY
 };
 
+const enum AttributeDataType {
+  WebGL2RenderingContext.FLOAT,
+  WebGL2RenderingContext.FLOAT_VEC2,
+  WebGL2RenderingContext.FLOAT_VEC3,
+  WebGL2RenderingContext.FLOAT_VEC4,
+  WebGL2RenderingContext.INT,
+  WebGL2RenderingContext.INT_VEC2,
+  WebGL2RenderingContext.INT_VEC3,
+  WebGL2RenderingContext.INT_VEC4,
+  WebGL2RenderingContext.BOOL,
+  WebGL2RenderingContext.BOOL_VEC2,
+  WebGL2RenderingContext.BOOL_VEC3,
+  WebGL2RenderingContext.BOOL_VEC4,
+  WebGL2RenderingContext.FLOAT_MAT2,
+  WebGL2RenderingContext.FLOAT_MAT3,
+  WebGL2RenderingContext.FLOAT_MAT4,
+  WebGL2RenderingContext.UNSIGNED_INT,
+  WebGL2RenderingContext.UNSIGNED_INT_VEC2,
+  WebGL2RenderingContext.UNSIGNED_INT_VEC3,
+  WebGL2RenderingContext.UNSIGNED_INT_VEC4,
+  WebGL2RenderingContext.FLOAT_MAT2x3,
+  WebGL2RenderingContext.FLOAT_MAT2x4,
+  WebGL2RenderingContext.FLOAT_MAT3x2,
+  WebGL2RenderingContext.FLOAT_MAT3x4,
+  WebGL2RenderingContext.FLOAT_MAT4x2,
+  WebGL2RenderingContext.FLOAT_MAT4x3
+};
+
 const enum WebGLParameterName {
   WebGL2RenderingContext.ACTIVE_TEXTURE,
   WebGL2RenderingContext.ALIASED_LINE_WIDTH_RANGE,
