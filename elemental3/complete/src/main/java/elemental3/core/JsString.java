@@ -357,8 +357,6 @@ public class JsString
 
   public native String padStart( int targetLength );
 
-  public native String quote();
-
   public native String repeat( int count );
 
   @JsOverlay
