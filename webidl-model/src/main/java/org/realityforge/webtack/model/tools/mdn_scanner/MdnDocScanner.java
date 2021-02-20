@@ -278,7 +278,8 @@ public final class MdnDocScanner
                                                      .replace( '\n', ' ' )
                                                      .replace( '\u00A0', ' ' )
                                                      .replace( ' ', ' ' )
-                                                     .replaceAll( "\\s+", " " ) ) );
+                                                     .replaceAll( "\\s+", " " )
+                                                     .trim() ) );
 
       entry.setRefs( null );
       final Element standardsElement = document.selectFirst( "#specifications + div > table.standard-table" );
