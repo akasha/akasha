@@ -2,6 +2,7 @@ package elemental3.core;
 
 import elemental3.lang.JsArray;
 import elemental3.lang.JsIterable;
+import javax.annotation.Nonnull;
 import jsinterop.annotations.JsFunction;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
@@ -150,76 +151,6 @@ public class JsString
     default boolean isRegExp()
     {
       return this instanceof RegExp;
-    }
-
-    @SuppressWarnings( "ConstantConditions" )
-    @JsOverlay
-    default boolean isString()
-    {
-      return (Object) this instanceof String;
-    }
-  }
-
-  @JsType( isNative = true, name = "?", namespace = JsPackage.GLOBAL )
-  public interface ToLocaleLowerCaseLocalesUnionType
-  {
-    @JsOverlay
-    static ToLocaleLowerCaseLocalesUnionType of( Object o )
-    {
-      return Js.cast( o );
-    }
-
-    @JsOverlay
-    default JsArray<String> asJsArray()
-    {
-      return Js.cast( this );
-    }
-
-    @JsOverlay
-    default String asString()
-    {
-      return Js.asString( this );
-    }
-
-    @JsOverlay
-    default boolean isJsArray()
-    {
-      return this instanceof JsArray;
-    }
-
-    @SuppressWarnings( "ConstantConditions" )
-    @JsOverlay
-    default boolean isString()
-    {
-      return (Object) this instanceof String;
-    }
-  }
-
-  @JsType( isNative = true, name = "?", namespace = JsPackage.GLOBAL )
-  public interface ToLocaleUpperCaseLocalesUnionType
-  {
-    @JsOverlay
-    static ToLocaleUpperCaseLocalesUnionType of( Object o )
-    {
-      return Js.cast( o );
-    }
-
-    @JsOverlay
-    default JsArray<String> asJsArray()
-    {
-      return Js.cast( this );
-    }
-
-    @JsOverlay
-    default String asString()
-    {
-      return Js.asString( this );
-    }
-
-    @JsOverlay
-    default boolean isJsArray()
-    {
-      return this instanceof JsArray;
     }
 
     @SuppressWarnings( "ConstantConditions" )
@@ -451,49 +382,11 @@ public class JsString
 
   public native String substring( int start );
 
-  public native String toLocaleLowerCase();
+  @Nonnull
+  public native String toLocaleLowerCase( @Nonnull String... locales );
 
-  @JsOverlay
-  public final String toLocaleLowerCase( JsArray<String> locales )
-  {
-    return toLocaleLowerCase( Js.<ToLocaleLowerCaseLocalesUnionType>uncheckedCast( locales ) );
-  }
-
-  @JsOverlay
-  public final String toLocaleLowerCase( String locales )
-  {
-    return toLocaleLowerCase( Js.<ToLocaleLowerCaseLocalesUnionType>uncheckedCast( locales ) );
-  }
-
-  @JsOverlay
-  public final String toLocaleLowerCase( String[] locales )
-  {
-    return toLocaleLowerCase( Js.<JsArray<String>>uncheckedCast( locales ) );
-  }
-
-  public native String toLocaleLowerCase( ToLocaleLowerCaseLocalesUnionType locales );
-
-  public native String toLocaleUpperCase();
-
-  @JsOverlay
-  public final String toLocaleUpperCase( JsArray<String> locales )
-  {
-    return toLocaleUpperCase( Js.<ToLocaleUpperCaseLocalesUnionType>uncheckedCast( locales ) );
-  }
-
-  @JsOverlay
-  public final String toLocaleUpperCase( String locales )
-  {
-    return toLocaleUpperCase( Js.<ToLocaleUpperCaseLocalesUnionType>uncheckedCast( locales ) );
-  }
-
-  @JsOverlay
-  public final String toLocaleUpperCase( String[] locales )
-  {
-    return toLocaleUpperCase( Js.<JsArray<String>>uncheckedCast( locales ) );
-  }
-
-  public native String toLocaleUpperCase( ToLocaleUpperCaseLocalesUnionType locales );
+  @Nonnull
+  public native String toLocaleUpperCase( @Nonnull String... locales );
 
   public native String toLowerCase();
 
