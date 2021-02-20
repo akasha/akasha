@@ -4,51 +4,14 @@ import elemental3.lang.JsArray;
 import elemental3.lang.JsIterable;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
-import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
 
 @JsType( name = "String", isNative = true, namespace = JsPackage.GLOBAL )
 public class JsString
   implements JsIterable<String>
 {
-  @JsType( isNative = true, name = "?", namespace = JsPackage.GLOBAL )
-  public interface LocaleCompareLocalesUnionType
-  {
-    @JsOverlay
-    static LocaleCompareLocalesUnionType of( Object o )
-    {
-      return Js.cast( o );
-    }
-
-    @JsOverlay
-    default JsArray<String> asJsArray()
-    {
-      return Js.cast( this );
-    }
-
-    @JsOverlay
-    default String asString()
-    {
-      return Js.asString( this );
-    }
-
-    @JsOverlay
-    default boolean isJsArray()
-    {
-      return this instanceof JsArray;
-    }
-
-    @SuppressWarnings( "ConstantConditions" )
-    @JsOverlay
-    default boolean isString()
-    {
-      return (Object) this instanceof String;
-    }
-  }
-
   public static native String fromCharCode( int... var_args );
 
   public static native String fromCodePoint( int codePoint, int... var_args );
@@ -89,78 +52,25 @@ public class JsString
 
   public native int lastIndexOf( String searchValue );
 
-  @JsOverlay
-  public final int localeCompare( String compareString, JsArray<String> locales, JsPropertyMap<Object> options )
-  {
-    return localeCompare(
-      compareString, Js.<LocaleCompareLocalesUnionType>uncheckedCast( locales ), options );
-  }
+  public native int localeCompare( @Nonnull String compareString );
 
-  @JsOverlay
-  public final int localeCompare( String compareString, JsArray<String> locales, Object options )
-  {
-    return localeCompare( compareString, locales, Js.uncheckedCast( options ) );
-  }
+  public native int localeCompare( @Nonnull String compareString, @Nonnull String[] locales );
 
-  @JsOverlay
-  public final int localeCompare( String compareString, JsArray<String> locales )
-  {
-    return localeCompare(
-      compareString, Js.<LocaleCompareLocalesUnionType>uncheckedCast( locales ) );
-  }
+  public native int localeCompare( @Nonnull String compareString,
+                                   @Nonnull String[] locales,
+                                   @Nonnull JsPropertyMap<Object> options );
 
-  public native int localeCompare(
-    String compareString, LocaleCompareLocalesUnionType locales, JsPropertyMap<Object> options );
+  public native int localeCompare( @Nonnull String compareString, @Nonnull JsArray<String> locales );
 
-  @JsOverlay
-  public final int localeCompare(
-    String compareString, LocaleCompareLocalesUnionType locales, Object options )
-  {
-    return localeCompare( compareString, locales, Js.uncheckedCast( options ) );
-  }
+  public native int localeCompare( @Nonnull String compareString,
+                                   @Nonnull JsArray<String> locales,
+                                   @Nonnull JsPropertyMap<Object> options );
 
-  public native int localeCompare(
-    String compareString, LocaleCompareLocalesUnionType locales );
+  public native int localeCompare( @Nonnull String compareString, @Nonnull String locale );
 
-  @JsOverlay
-  public final int localeCompare( String compareString, String locales, JsPropertyMap<Object> options )
-  {
-    return localeCompare(
-      compareString, Js.<LocaleCompareLocalesUnionType>uncheckedCast( locales ), options );
-  }
-
-  @JsOverlay
-  public final int localeCompare( String compareString, String[] locales, JsPropertyMap<Object> options )
-  {
-    return localeCompare( compareString, Js.<JsArray<String>>uncheckedCast( locales ), options );
-  }
-
-  @JsOverlay
-  public final int localeCompare( String compareString, String locales, Object options )
-  {
-    return localeCompare( compareString, locales, Js.uncheckedCast( options ) );
-  }
-
-  @JsOverlay
-  public final int localeCompare( String compareString, String[] locales, Object options )
-  {
-    return localeCompare( compareString, locales, Js.uncheckedCast( options ) );
-  }
-
-  @JsOverlay
-  public final int localeCompare( String compareString, String locales )
-  {
-    return localeCompare(
-      compareString, Js.<LocaleCompareLocalesUnionType>uncheckedCast( locales ) );
-  }
-
-  @JsOverlay
-  public final int localeCompare( String compareString, String[] locales )
-  {
-    return localeCompare( compareString, Js.<JsArray<String>>uncheckedCast( locales ) );
-  }
-
-  public native int localeCompare( String compareString );
+  public native int localeCompare( @Nonnull String compareString,
+                                   @Nonnull String locale,
+                                   @Nonnull JsPropertyMap<Object> options );
 
   public native JsArray<String> match( Object regexp );
 
