@@ -49,41 +49,6 @@ public class JsString
     }
   }
 
-  @JsType( isNative = true, name = "?", namespace = JsPackage.GLOBAL )
-  public interface SearchPatternUnionType
-  {
-    @JsOverlay
-    static SearchPatternUnionType of( Object o )
-    {
-      return Js.cast( o );
-    }
-
-    @JsOverlay
-    default RegExp asRegExp()
-    {
-      return Js.cast( this );
-    }
-
-    @JsOverlay
-    default String asString()
-    {
-      return Js.asString( this );
-    }
-
-    @JsOverlay
-    default boolean isRegExp()
-    {
-      return this instanceof RegExp;
-    }
-
-    @SuppressWarnings( "ConstantConditions" )
-    @JsOverlay
-    default boolean isString()
-    {
-      return (Object) this instanceof String;
-    }
-  }
-
   public static native String fromCharCode( int... var_args );
 
   public static native String fromCodePoint( int codePoint, int... var_args );
@@ -219,19 +184,9 @@ public class JsString
   @Nonnull
   public native String replace( @Nonnull String pattern, @Nonnull String replacement );
 
-  @JsOverlay
-  public final int search( RegExp pattern )
-  {
-    return search( Js.<SearchPatternUnionType>uncheckedCast( pattern ) );
-  }
+  public native int search( @Nonnull RegExp pattern );
 
-  public native int search( SearchPatternUnionType pattern );
-
-  @JsOverlay
-  public final int search( String pattern )
-  {
-    return search( Js.<SearchPatternUnionType>uncheckedCast( pattern ) );
-  }
+  public native int search( @Nonnull String pattern );
 
   public native String slice( int begin, int end );
 
