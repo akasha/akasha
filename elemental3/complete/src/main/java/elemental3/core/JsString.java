@@ -244,14 +244,6 @@ public class JsString
   {
   }
 
-  public native String anchor();
-
-  public native String big();
-
-  public native String blink();
-
-  public native String bold();
-
   public native String charAt( int index );
 
   public native int charCodeAt();
@@ -266,12 +258,6 @@ public class JsString
 
   public native boolean endsWith( String searchString );
 
-  public native String fixed();
-
-  public native String fontcolor( String color );
-
-  public native String fontsize( int size );
-
   public native boolean includes( String searchString, int position );
 
   public native boolean includes( String searchString );
@@ -280,13 +266,9 @@ public class JsString
 
   public native int indexOf( String searchValue );
 
-  public native String italics();
-
   public native int lastIndexOf( String searchValue, int fromIndex );
 
   public native int lastIndexOf( String searchValue );
-
-  public native String link( String hrefAttribute );
 
   @JsOverlay
   public final int localeCompare( String compareString, JsArray<String> locales, JsPropertyMap<Object> options )
@@ -457,8 +439,6 @@ public class JsString
 
   public native String slice( int begin );
 
-  public native String small();
-
   public native JsArray<String> split();
 
   public native JsArray<String> split( Object separator, int limit );
@@ -469,19 +449,9 @@ public class JsString
 
   public native boolean startsWith( String searchString );
 
-  public native String strike();
-
-  public native String sub();
-
-  public native String substr( int start, int length );
-
-  public native String substr( int start );
-
   public native String substring( int start, int end );
 
   public native String substring( int start );
-
-  public native String sup();
 
   public native String toLocaleLowerCase();
 
@@ -528,8 +498,6 @@ public class JsString
   public native String toLocaleUpperCase( ToLocaleUpperCaseLocalesUnionType locales );
 
   public native String toLowerCase();
-
-  public native String toSource();
 
   @JsMethod( name = "toString" )
   public native String toString_();
