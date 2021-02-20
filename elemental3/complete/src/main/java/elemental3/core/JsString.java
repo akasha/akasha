@@ -3,7 +3,6 @@ package elemental3.core;
 import elemental3.lang.JsArray;
 import elemental3.lang.JsIterable;
 import javax.annotation.Nonnull;
-import jsinterop.annotations.JsFunction;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -40,82 +39,6 @@ public class JsString
     default boolean isJsArray()
     {
       return this instanceof JsArray;
-    }
-
-    @SuppressWarnings( "ConstantConditions" )
-    @JsOverlay
-    default boolean isString()
-    {
-      return (Object) this instanceof String;
-    }
-  }
-
-  @JsType( isNative = true, name = "?", namespace = JsPackage.GLOBAL )
-  public interface ReplacePatternUnionType
-  {
-    @JsOverlay
-    static ReplacePatternUnionType of( Object o )
-    {
-      return Js.cast( o );
-    }
-
-    @JsOverlay
-    default RegExp asRegExp()
-    {
-      return Js.cast( this );
-    }
-
-    @JsOverlay
-    default String asString()
-    {
-      return Js.asString( this );
-    }
-
-    @JsOverlay
-    default boolean isRegExp()
-    {
-      return this instanceof RegExp;
-    }
-
-    @SuppressWarnings( "ConstantConditions" )
-    @JsOverlay
-    default boolean isString()
-    {
-      return (Object) this instanceof String;
-    }
-  }
-
-  @JsFunction
-  public interface ReplaceReplacementFn
-  {
-    Object onInvoke( String p0, Object... p1 );
-  }
-
-  @JsType( isNative = true, name = "?", namespace = JsPackage.GLOBAL )
-  public interface ReplaceReplacementUnionType
-  {
-    @JsOverlay
-    static ReplaceReplacementUnionType of( Object o )
-    {
-      return Js.cast( o );
-    }
-
-    @JsOverlay
-    default ReplaceReplacementFn asReplaceReplacementFn()
-    {
-      return Js.cast( this );
-    }
-
-    @JsOverlay
-    default String asString()
-    {
-      return Js.asString( this );
-    }
-
-    @JsOverlay
-    default boolean isReplaceReplacementFn()
-    {
-      return this instanceof ReplaceReplacementFn;
     }
 
     @SuppressWarnings( "ConstantConditions" )
@@ -290,65 +213,11 @@ public class JsString
 
   public native String repeat( int count );
 
-  @JsOverlay
-  public final String replace( RegExp pattern, ReplaceReplacementFn replacement )
-  {
-    return replace(
-      Js.<ReplacePatternUnionType>uncheckedCast( pattern ),
-      Js.<ReplaceReplacementUnionType>uncheckedCast( replacement ) );
-  }
+  @Nonnull
+  public native String replace( @Nonnull RegExp pattern, @Nonnull String replacement );
 
-  @JsOverlay
-  public final String replace( RegExp pattern, ReplaceReplacementUnionType replacement )
-  {
-    return replace( Js.<ReplacePatternUnionType>uncheckedCast( pattern ), replacement );
-  }
-
-  @JsOverlay
-  public final String replace( RegExp pattern, String replacement )
-  {
-    return replace(
-      Js.<ReplacePatternUnionType>uncheckedCast( pattern ),
-      Js.<ReplaceReplacementUnionType>uncheckedCast( replacement ) );
-  }
-
-  @JsOverlay
-  public final String replace(
-    ReplacePatternUnionType pattern, ReplaceReplacementFn replacement )
-  {
-    return replace( pattern, Js.<ReplaceReplacementUnionType>uncheckedCast( replacement ) );
-  }
-
-  public native String replace(
-    ReplacePatternUnionType pattern, ReplaceReplacementUnionType replacement );
-
-  @JsOverlay
-  public final String replace( ReplacePatternUnionType pattern, String replacement )
-  {
-    return replace( pattern, Js.<ReplaceReplacementUnionType>uncheckedCast( replacement ) );
-  }
-
-  @JsOverlay
-  public final String replace( String pattern, ReplaceReplacementFn replacement )
-  {
-    return replace(
-      Js.<ReplacePatternUnionType>uncheckedCast( pattern ),
-      Js.<ReplaceReplacementUnionType>uncheckedCast( replacement ) );
-  }
-
-  @JsOverlay
-  public final String replace( String pattern, ReplaceReplacementUnionType replacement )
-  {
-    return replace( Js.<ReplacePatternUnionType>uncheckedCast( pattern ), replacement );
-  }
-
-  @JsOverlay
-  public final String replace( String pattern, String replacement )
-  {
-    return replace(
-      Js.<ReplacePatternUnionType>uncheckedCast( pattern ),
-      Js.<ReplaceReplacementUnionType>uncheckedCast( replacement ) );
-  }
+  @Nonnull
+  public native String replace( @Nonnull String pattern, @Nonnull String replacement );
 
   @JsOverlay
   public final int search( RegExp pattern )
