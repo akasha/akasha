@@ -1521,7 +1521,17 @@
         "extendedAttribute": "JavaAnnotation=\"elemental3.gl.AttributeIndex\""
       }
     },
-
+    {
+      "name": "ChangeArgumentType",
+      "sourceSelector": "name=webgl.*",
+      "config": {
+        "expectedChangeCount": 1,
+        "elementNamePattern": "^WebGL2RenderingContext$",
+        "operationNamePattern": "^getVertexAttribOffset$",
+        "argumentNamePattern": "^pname$",
+        "type": "VertexAttribOffsetParameterName"
+      }
+    },
     {
       "name": "AddExtendedAttributeToArgument",
       "description": "Annotate a couple of method arguments that are expected to contain GLSL fragments",

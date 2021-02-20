@@ -517,6 +517,10 @@ const enum AttributeDataType {
   WebGL2RenderingContext.FLOAT_MAT4x3
 };
 
+const enum VertexAttribOffsetParameterName {
+  WebGL2RenderingContext.VERTEX_ATTRIB_ARRAY_POINTER
+};
+
 const enum UniformDataType {
   WebGL2RenderingContext.FLOAT,
   WebGL2RenderingContext.FLOAT_VEC2,
