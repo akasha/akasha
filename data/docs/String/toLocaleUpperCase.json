@@ -1,0 +1,19 @@
+
+{
+    "kind": "Method",
+    "name": "String.toLocaleUpperCase",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toLocaleUpperCase",
+    "description": "The toLocaleUpperCase() method returns the calling string value converted to upper case, according to any locale-specific case mappings.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-string.prototype.tolocaleuppercase",
+            "description": "String.prototype.toLocaleUpperCase - ECMAScript (ECMA-262)"
+        },
+        {
+            "name": "ECMAScript Internationalization API (ECMA-402)",
+            "href": "https://tc39.es/ecma402/#sup-string.prototype.tolocaleuppercase",
+            "description": "String.prototype.toLocaleUpperCase - ECMAScript Internationalization API (ECMA-402)"
+        }
+    ]
+}

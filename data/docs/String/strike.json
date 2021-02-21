@@ -1,0 +1,14 @@
+
+{
+    "kind": "Method",
+    "name": "String.strike",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/strike",
+    "description": "The strike() method creates a &lt;strike&gt; HTML element that causes a string to be displayed as struck-out text.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-string.prototype.strike",
+            "description": "String.prototype.strike - ECMAScript (ECMA-262)"
+        }
+    ]
+}

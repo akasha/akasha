@@ -1,0 +1,14 @@
+
+{
+    "kind": "Method",
+    "name": "String.repeat",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/repeat",
+    "description": "The repeat() method constructs and returns a new string which contains the specified number of copies of the string on which it was called, concatenated together.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-string.prototype.repeat",
+            "description": "String.prototype.repeat - ECMAScript (ECMA-262)"
+        }
+    ]
+}

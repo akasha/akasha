@@ -1,0 +1,14 @@
+
+{
+    "kind": "Method",
+    "name": "String.toUpperCase",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase",
+    "description": "The toUpperCase() method returns the calling string value converted to uppercase (the value will be converted to a string if it isn't one).",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-string.prototype.touppercase",
+            "description": "String.prototype.toUpperCase - ECMAScript (ECMA-262)"
+        }
+    ]
+}

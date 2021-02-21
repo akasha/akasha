@@ -1,0 +1,14 @@
+
+{
+    "kind": "Method",
+    "name": "String.matchAll",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll",
+    "description": "The matchAll() method returns an iterator of all results matching a string against a regular expression, including capturing groups.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-string.prototype.matchall",
+            "description": "String.prototype.matchAll - ECMAScript (ECMA-262)"
+        }
+    ]
+}

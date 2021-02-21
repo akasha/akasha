@@ -1,0 +1,14 @@
+
+{
+    "kind": "Method",
+    "name": "String.substr",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/substr",
+    "description": "The substr() method returns a portion of the string, starting at the specified index and extending for a given number of characters afterwards.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-string.prototype.substr",
+            "description": "String.prototype.substr - ECMAScript (ECMA-262)"
+        }
+    ]
+}

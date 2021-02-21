@@ -1,0 +1,14 @@
+
+{
+    "kind": "Method",
+    "name": "String.replace",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace",
+    "description": "The replace() method returns a new string with some or all matches of a pattern replaced by a replacement.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-string.prototype.replace",
+            "description": "String.prototype.replace - ECMAScript (ECMA-262)"
+        }
+    ]
+}

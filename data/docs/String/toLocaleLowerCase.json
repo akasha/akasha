@@ -1,0 +1,19 @@
+
+{
+    "kind": "Method",
+    "name": "String.toLocaleLowerCase",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toLocaleLowerCase",
+    "description": "The toLocaleLowerCase() method returns the calling string value converted to lower case, according to any locale-specific case mappings.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-string.prototype.tolocalelowercase",
+            "description": "String.prototype.toLocaleLowerCase - ECMAScript (ECMA-262)"
+        },
+        {
+            "name": "ECMAScript Internationalization API (ECMA-402)",
+            "href": "https://tc39.es/ecma402/#sup-string.prototype.tolocalelowercase",
+            "description": "String.prototype.toLocaleLowerCase - ECMAScript Internationalization API (ECMA-402)"
+        }
+    ]
+}

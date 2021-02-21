@@ -1,0 +1,14 @@
+
+{
+    "kind": "Method",
+    "name": "String.match",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match",
+    "description": "The match() method retrieves the result of matching a string against a regular expression.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-string.prototype.match",
+            "description": "String.prototype.match - ECMAScript (ECMA-262)"
+        }
+    ]
+}

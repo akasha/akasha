@@ -1,0 +1,14 @@
+
+{
+    "kind": "Method",
+    "name": "String.toLowerCase",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase",
+    "description": "The toLowerCase() method returns the calling string value converted to lower case.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-string.prototype.tolowercase",
+            "description": "String.prototype.toLowerCase - ECMAScript (ECMA-262)"
+        }
+    ]
+}

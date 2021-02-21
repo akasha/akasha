@@ -1,0 +1,14 @@
+
+{
+    "kind": "Method",
+    "name": "String.trimStart",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trimStart",
+    "description": "The trimStart() method removes whitespace from the beginning of a string. trimLeft() is an alias of this method.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-string.prototype.trimstart",
+            "description": " String.prototype.trimStart - ECMAScript (ECMA-262)"
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+
+{
+    "kind": "Method",
+    "name": "String.startsWith",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/startsWith",
+    "description": "The startsWith() method determines whether a string begins with the characters of a specified string, returning true or false as appropriate.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-string.prototype.startswith",
+            "description": "String.prototype.startsWith - ECMAScript (ECMA-262)"
+        }
+    ]
+}

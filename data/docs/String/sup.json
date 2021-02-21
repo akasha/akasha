@@ -1,0 +1,14 @@
+
+{
+    "kind": "Method",
+    "name": "String.sup",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/sup",
+    "description": "The sup() method creates a &lt;sup&gt; HTML element that causes a string to be displayed as superscript.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-string.prototype.sup",
+            "description": "String.prototype.sup - ECMAScript (ECMA-262)"
+        }
+    ]
+}
