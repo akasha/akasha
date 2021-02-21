@@ -61,7 +61,7 @@ complete as there is too much un-said.
 
 # Java Generation
 
-* Add `JsIterator<X>` to generated types if we know the underlying type is an iterator.
+* Any type that defines a `[@@iterator]()` method should implement `JsIterator<X>`.
 
 * Consider supporting multiple exposure sets and thus multiple `GlobalX` interfaces in output library. Then
   figure out a way to support multiple `Global` objects. We may also need to support an interface to represent
