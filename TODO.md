@@ -25,7 +25,7 @@ complete as there is too much un-said.
 
 * Add missing methods to typed array types
 
-* Update `JsDate` and `JsString` to be more java-like
+* Update `JsDate` to be more java-like
 
 # Docs Integration
 
