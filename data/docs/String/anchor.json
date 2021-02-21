@@ -1,0 +1,14 @@
+
+{
+    "kind": "Method",
+    "name": "String.anchor",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/anchor",
+    "description": "The anchor() method creates a string beginning with an &lt;a name=&quot;...&quot;&gt; start tag, then some text, and then an &lt;/a&gt; end tag.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-string.prototype.anchor",
+            "description": "String.prototype.anchor - ECMAScript (ECMA-262)"
+        }
+    ]
+}

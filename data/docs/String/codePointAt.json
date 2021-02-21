@@ -1,0 +1,14 @@
+
+{
+    "kind": "Method",
+    "name": "String.codePointAt",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/codePointAt",
+    "description": "The codePointAt() method returns a non-negative integer that is the UTF-16 code point value.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-string.prototype.codepointat",
+            "description": "String.prototype.codePointAt - ECMAScript (ECMA-262)"
+        }
+    ]
+}

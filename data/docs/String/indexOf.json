@@ -1,0 +1,14 @@
+
+{
+    "kind": "Method",
+    "name": "String.indexOf",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf",
+    "description": "The indexOf() method returns the index within the calling String object of the first occurrence of the specified value, starting the search at fromIndex. Returns -1 if the value is not found.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-string.prototype.indexof",
+            "description": "String.prototype.indexOf - ECMAScript (ECMA-262)"
+        }
+    ]
+}

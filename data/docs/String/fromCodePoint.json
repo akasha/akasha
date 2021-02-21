@@ -1,0 +1,14 @@
+
+{
+    "kind": "Method",
+    "name": "String.fromCodePoint",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/fromCodePoint",
+    "description": "The static String.fromCodePoint() method returns a string created by using the specified sequence of code points.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-string.fromcodepoint",
+            "description": "String.fromCodePoint - ECMAScript (ECMA-262)"
+        }
+    ]
+}

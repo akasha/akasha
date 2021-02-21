@@ -1,0 +1,14 @@
+
+{
+    "kind": "Method",
+    "name": "String.fontcolor",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/fontcolor",
+    "description": "The fontcolor() method creates a &lt;font&gt; HTML element that causes a string to be displayed in the specified font color.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-string.prototype.fontcolor",
+            "description": "String.prototype.fontcolor - ECMAScript (ECMA-262)"
+        }
+    ]
+}

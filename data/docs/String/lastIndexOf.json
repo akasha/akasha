@@ -1,0 +1,14 @@
+
+{
+    "kind": "Method",
+    "name": "String.lastIndexOf",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/lastIndexOf",
+    "description": "The lastIndexOf() method returns the index within the calling String object of the last occurrence of the specified value, searching backwards from fromIndex. Returns -1 if the value is not found.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-string.prototype.lastindexof",
+            "description": "String.prototype.lastIndexOf - ECMAScript (ECMA-262)"
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+
+{
+    "kind": "Method",
+    "name": "String.charAt",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/charAt",
+    "description": "The String object's charAt() method returns a new string consisting of the single UTF-16 code unit located at the specified offset into the string.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-string.prototype.charat",
+            "description": "String.prototype.charAt - ECMAScript (ECMA-262)"
+        }
+    ]
+}

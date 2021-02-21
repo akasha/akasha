@@ -1,0 +1,14 @@
+
+{
+    "kind": "Method",
+    "name": "String.includes",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes",
+    "description": "The includes() method determines whether one string may be found within another string, returning true or false as appropriate.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-string.prototype.includes",
+            "description": "String.prototype.includes - ECMAScript (ECMA-262)"
+        }
+    ]
+}

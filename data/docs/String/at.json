@@ -1,0 +1,14 @@
+
+{
+    "kind": "Method",
+    "name": "String.at",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/at",
+    "description": "The at() method takes an integer value and returns a new String consisting of the single UTF-16 code unit located at the specified offset. This method allows for positive and negative integers. Negative integers count back from the last string character.",
+    "refs": [
+        {
+            "name": "Relative Indexing Method",
+            "href": "https://tc39.es/proposal-relative-indexing-method/#sec-string-prototype-additions",
+            "description": "Relative Indexing Method - Relative Indexing Method"
+        }
+    ]
+}

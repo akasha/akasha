@@ -1,0 +1,14 @@
+
+{
+    "kind": "Method",
+    "name": "String.fontsize",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/fontsize",
+    "description": "The fontsize() method creates a &lt;font&gt; HTML element that causes a string to be displayed in the specified font size.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-string.prototype.fontsize",
+            "description": "String.prototype.fontsize - ECMAScript (ECMA-262)"
+        }
+    ]
+}

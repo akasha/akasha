@@ -1,0 +1,211 @@
+
+{
+    "name": "String",
+    "lastModifiedAt": 1613944980978,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1613785062000
+        },
+        {
+            "name": "anchor",
+            "lastModifiedAt": 1613785062000
+        },
+        {
+            "name": "at",
+            "lastModifiedAt": 1613785062000
+        },
+        {
+            "name": "big",
+            "lastModifiedAt": 1613785062000
+        },
+        {
+            "name": "blink",
+            "lastModifiedAt": 1613785062000
+        },
+        {
+            "name": "bold",
+            "lastModifiedAt": 1613785062000
+        },
+        {
+            "name": "charAt",
+            "lastModifiedAt": 1613785062000
+        },
+        {
+            "name": "charCodeAt",
+            "lastModifiedAt": 1613785062000
+        },
+        {
+            "name": "codePointAt",
+            "lastModifiedAt": 1613785062000
+        },
+        {
+            "name": "concat",
+            "lastModifiedAt": 1613785062000
+        },
+        {
+            "name": "endsWith",
+            "lastModifiedAt": 1613785062000
+        },
+        {
+            "name": "fixed",
+            "lastModifiedAt": 1613785062000
+        },
+        {
+            "name": "fontcolor",
+            "lastModifiedAt": 1613785062000
+        },
+        {
+            "name": "fontsize",
+            "lastModifiedAt": 1613785062000
+        },
+        {
+            "name": "fromCharCode",
+            "lastModifiedAt": 1613785062000
+        },
+        {
+            "name": "fromCodePoint",
+            "lastModifiedAt": 1613785062000
+        },
+        {
+            "name": "includes",
+            "lastModifiedAt": 1613785062000
+        },
+        {
+            "name": "indexOf",
+            "lastModifiedAt": 1613785062000
+        },
+        {
+            "name": "italics",
+            "lastModifiedAt": 1613785062000
+        },
+        {
+            "name": "lastIndexOf",
+            "lastModifiedAt": 1613785062000
+        },
+        {
+            "name": "link",
+            "lastModifiedAt": 1613785062000
+        },
+        {
+            "name": "localeCompare",
+            "lastModifiedAt": 1613785062000
+        },
+        {
+            "name": "match",
+            "lastModifiedAt": 1613785062000
+        },
+        {
+            "name": "matchAll",
+            "lastModifiedAt": 1613785062000
+        },
+        {
+            "name": "normalize",
+            "lastModifiedAt": 1613785062000
+        },
+        {
+            "name": "padEnd",
+            "lastModifiedAt": 1613785062000
+        },
+        {
+            "name": "padStart",
+            "lastModifiedAt": 1613785062000
+        },
+        {
+            "name": "prototype",
+            "lastModifiedAt": 1613785062000
+        },
+        {
+            "name": "raw",
+            "lastModifiedAt": 1613785062000
+        },
+        {
+            "name": "repeat",
+            "lastModifiedAt": 1613785062000
+        },
+        {
+            "name": "replace",
+            "lastModifiedAt": 1613785062000
+        },
+        {
+            "name": "replaceAll",
+            "lastModifiedAt": 1613785062000
+        },
+        {
+            "name": "search",
+            "lastModifiedAt": 1613785062000
+        },
+        {
+            "name": "slice",
+            "lastModifiedAt": 1613785062000
+        },
+        {
+            "name": "small",
+            "lastModifiedAt": 1613785062000
+        },
+        {
+            "name": "split",
+            "lastModifiedAt": 1613785062000
+        },
+        {
+            "name": "startsWith",
+            "lastModifiedAt": 1613785062000
+        },
+        {
+            "name": "strike",
+            "lastModifiedAt": 1613785062000
+        },
+        {
+            "name": "sub",
+            "lastModifiedAt": 1613785062000
+        },
+        {
+            "name": "substr",
+            "lastModifiedAt": 1613785062000
+        },
+        {
+            "name": "substring",
+            "lastModifiedAt": 1613785062000
+        },
+        {
+            "name": "sup",
+            "lastModifiedAt": 1613785062000
+        },
+        {
+            "name": "toLocaleLowerCase",
+            "lastModifiedAt": 1613785062000
+        },
+        {
+            "name": "toLocaleUpperCase",
+            "lastModifiedAt": 1613785062000
+        },
+        {
+            "name": "toLowerCase",
+            "lastModifiedAt": 1613785062000
+        },
+        {
+            "name": "toString",
+            "lastModifiedAt": 1613785062000
+        },
+        {
+            "name": "toUpperCase",
+            "lastModifiedAt": 1613785062000
+        },
+        {
+            "name": "trim",
+            "lastModifiedAt": 1613785062000
+        },
+        {
+            "name": "trimEnd",
+            "lastModifiedAt": 1613785062000
+        },
+        {
+            "name": "trimStart",
+            "lastModifiedAt": 1613785062000
+        },
+        {
+            "name": "valueOf",
+            "lastModifiedAt": 1613785062000
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+
+{
+    "kind": "Method",
+    "name": "String.big",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/big",
+    "description": "The big() method creates a &lt;big&gt; HTML element that causes a string to be displayed in a big font.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-string.prototype.big",
+            "description": "String.prototype.big - ECMAScript (ECMA-262)"
+        }
+    ]
+}

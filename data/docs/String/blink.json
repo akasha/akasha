@@ -1,0 +1,14 @@
+
+{
+    "kind": "Method",
+    "name": "String.blink",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/blink",
+    "description": "The blink() method creates a &lt;blink&gt; HTML element that causes a string to blink.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-string.prototype.blink",
+            "description": "String.prototype.blink - ECMAScript (ECMA-262)"
+        }
+    ]
+}
