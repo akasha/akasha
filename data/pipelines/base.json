@@ -885,7 +885,7 @@
         "elementNamePattern": "^.*$",
         "operationNamePattern": "^.*$",
         "argumentNamePattern": "^mode$",
-        "type": "DrawPrimitiveType"
+        "type": "DrawMode"
       }
     },
     {
@@ -1411,7 +1411,7 @@
         "elementNamePattern": "^WebGL2RenderingContext$",
         "operationNamePattern": "^(drawArrays|drawArraysInstanced|drawElements|drawElementsInstanced|drawRangeElements)$",
         "argumentNamePattern": "^mode$",
-        "type": "DrawPrimitiveType"
+        "type": "DrawMode"
       }
     },
     {

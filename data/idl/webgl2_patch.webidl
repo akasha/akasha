@@ -153,7 +153,7 @@ const enum TexelDataType {
   WebGL2RenderingContext.FLOAT_32_UNSIGNED_INT_24_8_REV
 };
 
-const enum DrawPrimitiveType {
+const enum DrawMode {
   WebGL2RenderingContext.POINTS,
   WebGL2RenderingContext.LINE_STRIP,
   WebGL2RenderingContext.LINE_LOOP,
