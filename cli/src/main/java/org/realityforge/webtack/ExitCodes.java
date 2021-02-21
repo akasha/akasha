@@ -26,6 +26,7 @@ final class ExitCodes
   static final int ERROR_DOC_SOURCE_UNEXPECTED_ERROR_CODE = 22;
   static final int ERROR_BAD_TIMESTAMP_READ_ERROR_CODE = 23;
   static final int ERROR_BAD_TIMESTAMP_WRITE_ERROR_CODE = 24;
+  static final int ERROR_DOC_SOURCE_TYPE_NOT_PRESENT_CODE = 25;
 
   private ExitCodes()
   {

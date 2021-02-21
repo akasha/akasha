@@ -195,7 +195,16 @@ final class FetchDocsCommand
     }
     for ( final String typeName : typeNames )
     {
-      final DocIndex docIndex = context.docRuntime().getIndexForType( typeName );
+      final DocIndex docIndex = context.docRuntime().findIndexForType( typeName );
+      if ( null == docIndex )
+      {
+        context
+          .environment()
+          .logger()
+          .log( Level.WARNING, "Failed to load locate specified type " + typeName + ". " +
+                               "Try adding type before attempting to fetch type." );
+        return ExitCodes.ERROR_DOC_SOURCE_TYPE_NOT_PRESENT_CODE;
+      }
       final long lastModifiedAt = docIndex.getContent().getLastModifiedAt();
       if ( _sinceLastUpdatedAt > 0 && lastModifiedAt > _sinceLastUpdatedAt )
       {
