@@ -27,7 +27,7 @@ complete as there is too much un-said.
 
 * Update `JsDate` to be more java-like
 
-* Figure out a better way to name `Validator` class nested in const enums.
+* Figure out a better way to name `Validator` class nested in const enums. Util? Kit?
 
 # Docs Integration
 
