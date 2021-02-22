@@ -194,7 +194,7 @@
       "sourceSelector": "name=indexeddb",
       "config": {
         "namePattern": "^.*$",
-        "extendedAttribute": "JavaSubPackage=indexeddb"
+        "extendedAttribute": "JavaSubPackage=idb"
       }
     },
     {

@@ -27,8 +27,6 @@ complete as there is too much un-said.
 
 * Update `JsDate` to be more java-like
 
-* Rename `indexdb` package to `idb`.
-
 * Figure out a better way to name `Validator` class nested in const enums.
 
 # Docs Integration
