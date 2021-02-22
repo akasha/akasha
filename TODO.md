@@ -31,8 +31,6 @@ complete as there is too much un-said.
 
 * Figure out a better way to name `Validator` class nested in const enums.
 
-* Move `Performance` types and related into package `perf`.
-
 # Docs Integration
 
 * Process docs and any words that match an original/non-synthetic word then convert into {@link MyType}
