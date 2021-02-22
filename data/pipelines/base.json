@@ -146,6 +146,14 @@
     },
     {
       "name": "AddExtendedAttribute",
+      "sourceSelector": "name=webcrypto",
+      "config": {
+        "namePattern": "^.*$",
+        "extendedAttribute": "JavaSubPackage=crypto"
+      }
+    },
+    {
+      "name": "AddExtendedAttribute",
       "description": "Package up the elements defined by ECMA into a separate package to model behaviour of elemental2-core",
       "sourceSelector": "name=common",
       "config": {

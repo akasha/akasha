@@ -33,8 +33,6 @@ complete as there is too much un-said.
 
 * Move `Performance` types and related into package `perf`.
 
-* Move `webcrypto` spec to `crypto`.
-
 # Docs Integration
 
 * Process docs and any words that match an original/non-synthetic word then convert into {@link MyType}
