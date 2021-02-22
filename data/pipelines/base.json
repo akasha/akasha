@@ -199,6 +199,14 @@
     },
     {
       "name": "AddExtendedAttribute",
+      "sourceSelector": "name=clipboard_apis",
+      "config": {
+        "namePattern": "^.*$",
+        "extendedAttribute": "JavaSubPackage=clipboard"
+      }
+    },
+    {
+      "name": "AddExtendedAttribute",
       "sourceSelector": "name=hr_time_2 name=navigation_timing name=navigation_timing_patch name=performance_timeline name=resource_timing name=user_timing_2",
       "config": {
         "namePattern": "^.*$",
