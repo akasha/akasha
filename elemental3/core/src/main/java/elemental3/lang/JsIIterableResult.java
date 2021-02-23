@@ -4,7 +4,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType( isNative = true, name = "IIterableResult", namespace = JsPackage.GLOBAL )
+@JsType( isNative = true, name = "Object", namespace = JsPackage.GLOBAL )
 public interface JsIIterableResult<T>
 {
   @JsProperty
