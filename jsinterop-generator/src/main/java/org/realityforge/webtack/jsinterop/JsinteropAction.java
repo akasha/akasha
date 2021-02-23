@@ -832,13 +832,11 @@ final class JsinteropAction
   @Nonnull
   private List<MixinDefinition> getGlobalMixins( @Nonnull final WebIDLSchema schema )
   {
-    final List<MixinDefinition> globalMixins =
-      schema
-        .getMixins()
-        .stream()
-        .filter( m -> m.isNoArgsExtendedAttributePresent( ExtendedAttributes.GLOBAL_OBJECT ) )
-        .collect( Collectors.toList() );
-    return globalMixins;
+    return schema
+      .getMixins()
+      .stream()
+      .filter( m -> m.isNoArgsExtendedAttributePresent( ExtendedAttributes.GLOBAL_OBJECT ) )
+      .collect( Collectors.toList() );
   }
 
   private void writeGwtModule()
