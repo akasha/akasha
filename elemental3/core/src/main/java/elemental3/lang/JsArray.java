@@ -34,7 +34,7 @@ public class JsArray<T>
 
   @JsOverlay
   @Nonnull
-  public static <T> JsArray<T> asJsArray( @Nonnull T[] array )
+  public static <T> JsArray<T> asJsArray( @Nonnull final T[] array )
   {
     return Js.uncheckedCast( array );
   }
@@ -69,12 +69,12 @@ public class JsArray<T>
   public int length;
 
   @SafeVarargs
-  public JsArray( @Nonnull T... items )
+  public JsArray( @Nonnull final T... items )
   {
   }
 
   @JsOverlay
-  public final T[] asArray( @Nonnull T[] reference )
+  public final T[] asArray( @Nonnull final T[] reference )
   {
     return ArrayStamper.stampJavaTypeInfo( this, reference );
   }
