@@ -8,7 +8,7 @@ import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
 
 @JsType( isNative = true, name = "IIterableResult", namespace = JsPackage.GLOBAL )
-public interface JsIIterableResult<VALUE>
+public interface JsIIterableResult<T>
 {
   @JsOverlay
   static <T> JsIIterableResult<T> create()
@@ -17,7 +17,7 @@ public interface JsIIterableResult<VALUE>
   }
 
   @JsProperty
-  VALUE getValue();
+  T getValue();
 
   @JsProperty
   boolean isDone();
@@ -26,5 +26,5 @@ public interface JsIIterableResult<VALUE>
   void setDone( boolean done );
 
   @JsProperty
-  void setValue( VALUE value );
+  void setValue( T value );
 }
