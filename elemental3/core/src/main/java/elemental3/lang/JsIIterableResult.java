@@ -12,10 +12,4 @@ public interface JsIIterableResult<T>
 
   @JsProperty
   boolean isDone();
-
-  @JsProperty
-  void setDone( boolean done );
-
-  @JsProperty
-  void setValue( T value );
 }
