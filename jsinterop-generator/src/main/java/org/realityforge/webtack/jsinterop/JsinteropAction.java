@@ -3252,7 +3252,7 @@ final class JsinteropAction
   }
 
   @Nonnull
-  private String derivePackagePrefix( final @Nonnull NamedDefinition definition )
+  private String derivePackagePrefix( @Nonnull final NamedDefinition definition )
   {
     final String declaredSubPackage = definition.getIdentValue( ExtendedAttributes.JAVA_SUB_PACKAGE );
     final String subPackage =
