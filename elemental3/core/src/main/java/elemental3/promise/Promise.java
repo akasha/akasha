@@ -1,9 +1,11 @@
 package elemental3.promise;
 
-import elemental3.lang.JsIterator;
+import elemental3.lang.JsArray;
+import elemental3.lang.JsIterable;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -47,7 +49,11 @@ public class Promise<T>
    */
   @SafeVarargs
   @Nonnull
-  public static native <V> Promise<V[]> all( @Nonnull Promise<? extends V>... promises );
+  @JsOverlay
+  public static <V> Promise<JsArray<V>> all( @Nonnull final Promise<? extends V>... promises )
+  {
+    return all( JsArray.of( promises ) );
+  }
 
   /**
    * The Promise.all() method takes an iterable of promises as an input, and returns a single Promise
@@ -62,7 +68,7 @@ public class Promise<T>
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all">Promise.all - MDN</a>
    */
   @Nonnull
-  public static native <V> Promise<V[]> all( @Nonnull JsIterator<Promise<? extends V>> promises );
+  public static native <V> Promise<JsArray<V>> all( @Nonnull JsIterable<Promise<? extends V>> promises );
 
   /**
    * Promise.any() takes an iterable of Promise objects and, as soon as one of the promises in the
@@ -78,7 +84,11 @@ public class Promise<T>
    */
   @SafeVarargs
   @Nonnull
-  public static native <V> Promise<V> any( @Nonnull Promise<? extends V>... promises );
+  @JsOverlay
+  public static <V> Promise<V> any( @Nonnull final Promise<? extends V>... promises )
+  {
+    return any( JsArray.of( promises ) );
+  }
 
   /**
    * Promise.any() takes an iterable of Promise objects and, as soon as one of the promises in the
@@ -93,7 +103,7 @@ public class Promise<T>
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/any">Promise.any - MDN</a>
    */
   @Nonnull
-  public static native <V> Promise<V> any( @Nonnull JsIterator<Promise<? extends V>> promises );
+  public static native <V> Promise<V> any( @Nonnull JsIterable<Promise<? extends V>> promises );
 
   /**
    * The Promise.race() method returns a promise that fulfills or rejects as soon as one of the promises in an iterable fulfills or rejects, with the value or reason from that promise.
@@ -105,7 +115,11 @@ public class Promise<T>
    */
   @SafeVarargs
   @Nonnull
-  public static native <V> Promise<V> race( @Nonnull Promise<? extends V>... promises );
+  @JsOverlay
+  public static <V> Promise<V> race( @Nonnull final Promise<? extends V>... promises )
+  {
+    return race( JsArray.of( promises ) );
+  }
 
   /**
    * The Promise.race() method returns a promise that fulfills or rejects as soon as one of the promises in an iterable fulfills or rejects, with the value or reason from that promise.
@@ -116,7 +130,7 @@ public class Promise<T>
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/race">Promise.race - MDN</a>
    */
   @Nonnull
-  public static native <V> Promise<V> race( @Nonnull JsIterator<Promise<? extends V>> promises );
+  public static native <V> Promise<V> race( @Nonnull JsIterable<Promise<? extends V>> promises );
 
   /**
    * Returns a new Promise object that is resolved with the given value.
