@@ -434,7 +434,7 @@ final class JsinteropAction
 
     for ( final NamespaceDefinition namespace : schema.getNamespaces() )
     {
-      final String methodName = NamingUtil.camelCase( safeJsPropertyMethodName( namespace.getName() ) );
+      final String methodName = NamingUtil.camelCase( safeJsPropertyMethodName( namespace.getName(), false ) );
       type.addMethod( MethodSpec
                         .methodBuilder( methodName )
                         .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
@@ -465,7 +465,9 @@ final class JsinteropAction
     }
   }
 
-  private void generateGlobalEventsMethods( final TypeSpec.Builder type, final WebIDLSchema schema, final List<EventMember> events )
+  private void generateGlobalEventsMethods( final TypeSpec.Builder type,
+                                            final WebIDLSchema schema,
+                                            final List<EventMember> events )
   {
     for ( final EventMember event : events )
     {
@@ -548,7 +550,7 @@ final class JsinteropAction
     final Type actualType = schema.resolveType( attributeType );
     final String name = attribute.getName();
     final TypeName actualJavaType = toTypeName( actualType );
-    final String methodName = safeJsPropertyMethodName( name );
+    final String methodName = safeJsPropertyMethodName( name, TypeName.BOOLEAN.equals( actualJavaType ) );
     final MethodSpec.Builder method =
       MethodSpec
         .methodBuilder( methodName )
@@ -579,7 +581,7 @@ final class JsinteropAction
     final Type actualType = schema.resolveType( attributeType );
     final String name = attribute.getName();
     final TypeName actualJavaType = toTypeName( actualType );
-    final String methodName = safeJsPropertyMethodName( name );
+    final String methodName = safeJsPropertyMethodName( name, TypeName.BOOLEAN.equals( actualJavaType ) );
     final MethodSpec.Builder method =
       MethodSpec
         .methodBuilder( methodName )
@@ -805,7 +807,7 @@ final class JsinteropAction
     {
       final String name = namespace.getName();
       type.addMethod( MethodSpec
-                        .methodBuilder( NamingUtil.camelCase( safeJsPropertyMethodName( name ) ) )
+                        .methodBuilder( NamingUtil.camelCase( safeJsPropertyMethodName( name, false ) ) )
                         .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
                         .returns( lookupClassName( namespace.getName() ) )
                         .addAnnotation( AnnotationSpec
@@ -1203,7 +1205,7 @@ final class JsinteropAction
   {
     final MethodSpec.Builder method =
       MethodSpec
-        .methodBuilder( safeJsPropertyMethodName( member.getName() ) )
+        .methodBuilder( safeJsPropertyMethodName( member.getName(), TypeName.BOOLEAN.equals( javaType ) ) )
         .addModifiers( Modifier.PUBLIC, Modifier.ABSTRACT )
         .returns( javaType );
     method.addAnnotation( AnnotationSpec
@@ -1824,7 +1826,7 @@ final class JsinteropAction
                       .returns( lookupClassName( definition.getName() ) )
                       .addStatement( "return $T.$N()",
                                      lookupClassName( "$Global" ),
-                                     NamingUtil.camelCase( safeJsPropertyMethodName( definition.getName() ) ) )
+                                     NamingUtil.camelCase( safeJsPropertyMethodName( definition.getName(), false ) ) )
                       .addJavadoc( "Return the '" + definition.getName() + "' namespace object.\n" +
                                    "\n" +
                                    "@return the '" + definition.getName() + "' namespace object\n" )
@@ -2428,7 +2430,7 @@ final class JsinteropAction
     final TypeName actualJavaType = toTypeName( actualType );
     final MethodSpec.Builder method =
       MethodSpec
-        .methodBuilder( safeJsPropertyMethodName( name ) )
+        .methodBuilder( safeJsPropertyMethodName( name, TypeName.BOOLEAN.equals( actualJavaType ) ) )
         .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
         .returns( actualJavaType )
         .addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_PROPERTY ).addMember( "name", "$S", name ).build() );

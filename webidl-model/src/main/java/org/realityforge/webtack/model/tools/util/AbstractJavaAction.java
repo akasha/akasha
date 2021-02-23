@@ -258,9 +258,9 @@ public abstract class AbstractJavaAction
   }
 
   @Nonnull
-  protected String safeJsPropertyMethodName( @Nonnull final String name )
+  protected String safeJsPropertyMethodName( @Nonnull final String name, final boolean isBooleanValue )
   {
-    if ( "is".equals( name ) )
+    if ( "is".equals( name ) || ( !isBooleanValue && name.matches( "^is[A-Z].*" ) ) )
     {
       // This method is a work around for a bug in GWTs validation of properties
       // https://github.com/gwtproject/gwt/issues/9703
