@@ -76,7 +76,7 @@ module Buildr
       desc 'Antlr tasks'
       project.task('antlr' => [t])
 
-      target_dir
+      t
     end
   end
 end
