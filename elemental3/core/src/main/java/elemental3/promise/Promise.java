@@ -50,6 +50,7 @@ public class Promise<T>
   @SafeVarargs
   @Nonnull
   @JsOverlay
+  @SuppressWarnings( "varargs" )
   public static <V> Promise<JsArray<V>> all( @Nonnull final Promise<? extends V>... promises )
   {
     return all( JsArray.of( promises ) );
@@ -85,6 +86,7 @@ public class Promise<T>
   @SafeVarargs
   @Nonnull
   @JsOverlay
+  @SuppressWarnings( "varargs" )
   public static <V> Promise<V> any( @Nonnull final Promise<? extends V>... promises )
   {
     return any( JsArray.of( promises ) );
@@ -116,6 +118,7 @@ public class Promise<T>
   @SafeVarargs
   @Nonnull
   @JsOverlay
+  @SuppressWarnings( "varargs" )
   public static <V> Promise<V> race( @Nonnull final Promise<? extends V>... promises )
   {
     return race( JsArray.of( promises ) );
