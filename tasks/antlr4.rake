@@ -38,7 +38,7 @@ module Buildr
 
         cp = Buildr.artifacts(self.dependencies).each(&:invoke).map(&:to_s)
 
-        Java::Commands.java 'org.antlr.v4.Tool', *(args + [{ :classpath => cp, :verbose => true, :dir => options[:directory] }])
+        Java::Commands.java 'org.antlr.v4.Tool', *(args + [{ :classpath => cp, :verbose => true}])
       end
     end
 

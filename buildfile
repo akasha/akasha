@@ -92,7 +92,7 @@ define 'webtack' do
     }
     test.options[:java_args] = %w(-ea)
     test.compile.with :gir,
-                      Java.tools_jar,
+                      Buildr::Util.tools_jar,
                       # Next dependency ensures the jar is built so can be used in tests but is not directly referenced
                       project('elemental3:core').package(:jar)
     test.compile.enhance do |d|
@@ -122,7 +122,7 @@ define 'webtack' do
     }
     test.options[:java_args] = %w(-ea)
     test.compile.with :gir,
-                      Java.tools_jar,
+                      Buildr::Util.tools_jar,
                       # Next dependency ensures the jar is built so can be used in tests but is not directly referenced
                       project('elemental3:core').package(:jar)
     test.compile.enhance do |d|
