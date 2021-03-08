@@ -1,11 +1,11 @@
 
 {
     "name": "CSSRule",
-    "lastModifiedAt": 1613606228773,
+    "lastModifiedAt": 1615176490022,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1612573615000
+            "lastModifiedAt": 1614823217000
         },
         {
             "name": "cssText",

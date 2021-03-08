@@ -22,12 +22,12 @@
         },
         {
             "name": "CSS Counter Styles Level 3",
-            "href": "https://drafts.csswg.org/css-counter-styles-3/#extentions-to-cssrule-interface",
+            "href": "https://drafts.csswg.org/css-counter-styles-3/#extensions-to-cssrule-interface",
             "description": "CSSRule - CSS Counter Styles Level 3"
         },
         {
             "name": "CSS Conditional Rules Module Level 3",
-            "href": "https://drafts.csswg.org/css-conditional-3/#extentions-to-cssrule-interface",
+            "href": "https://drafts.csswg.org/css-conditional-3/#extensions-to-cssrule-interface",
             "description": "CSSRule - CSS Conditional Rules Module Level 3"
         },
         {

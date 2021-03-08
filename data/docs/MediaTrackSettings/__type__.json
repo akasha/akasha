@@ -6,9 +6,14 @@
     "description": "The MediaTrackSettings dictionary is used to return the current values configured for each of a MediaStreamTrack's settings. These values will adhere as closely as possible to any constraints previously described using a MediaTrackConstraints object and set using applyConstraints(), and will adhere to the default constraints for any properties whose constraints haven't been changed, or whose customized constraints couldn't be matched.",
     "refs": [
         {
+            "name": "Media Capture and Streams",
+            "href": "https://w3c.github.io/mediacapture-main/#media-track-settings",
+            "description": "MediaTrackSettings - Media Capture and Streams"
+        },
+        {
             "name": "Screen Capture",
-            "href": "https://w3c.github.io/mediacapture-screen-share/#dom-mediatracksettings",
-            "description": "MediaTrackSettings - Screen Capture"
+            "href": "https://w3c.github.io/mediacapture-screen-share/#extensions-to-mediatracksettings",
+            "description": "MediaTrackSettings extensions - Screen Capture"
         }
     ]
 }
