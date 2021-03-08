@@ -293,4 +293,12 @@ public abstract class AbstractTest
       throw new IllegalStateException( e );
     }
   }
+
+  protected final void assertNotSame( @Nullable final Object actual, @Nullable final Object expected )
+  {
+    if ( actual == expected )
+    {
+      fail( "Objects expected to be not the same: " + actual + " vs " + expected );
+    }
+  }
 }
