@@ -212,7 +212,7 @@ public final class TypeTest
     final String emittedIDL = writer.toString();
     final Type element = WebIDLModelParser.parse( createParser( emittedIDL + " someVar" ).type() );
     assertEquals( element, element );
-    assertEquals( element.hashCode(), element.hashCode() );
+    assertEquals( element.hashCode(), actual.hashCode() );
 
     assertTrue( element.equiv( actual ) );
     assertNotSame( element, actual );
