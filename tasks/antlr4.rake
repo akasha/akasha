@@ -54,15 +54,15 @@ module Buildr
       t = file(target_dir => input_file) do |task|
         package_dir = "#{target_dir}/#{options[:package].gsub('.','/')}"
         mkdir_p package_dir
-        args << "-o" << package_dir
-        args << "-lib" << File.dirname(input_file)
+        args << '-o' << package_dir
+        args << '-lib' << File.dirname(input_file)
 
-        args << "-package" << options[:package] if options[:package]
-        args << "-Werror"
-        args << "-visitor" if !options[:visitor].nil? && options[:visitor]
-        args << "-no-visitor" if !options[:visitor].nil? && !options[:visitor]
-        args << "-listener" if !options[:listener].nil? && options[:listener]
-        args << "-no-listener" if !options[:listener].nil? && !options[:listener]
+        args << '-package' << options[:package] if options[:package]
+        args << '-Werror'
+        args << '-visitor' if !options[:visitor].nil? && options[:visitor]
+        args << '-no-visitor' if !options[:visitor].nil? && !options[:visitor]
+        args << '-listener' if !options[:listener].nil? && options[:listener]
+        args << '-no-listener' if !options[:listener].nil? && !options[:listener]
         args << input_file
         begin
           Antlr4.antlr(args, :directory => package_dir)
@@ -73,8 +73,8 @@ module Buildr
         touch target_dir
       end
 
-      desc "Antlr tasks"
-      project.task("antlr" => [t])
+      desc 'Antlr tasks'
+      project.task('antlr' => [t])
 
       target_dir
     end
