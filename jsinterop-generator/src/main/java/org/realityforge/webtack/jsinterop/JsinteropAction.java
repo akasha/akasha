@@ -284,9 +284,9 @@ final class JsinteropAction
       parameter.addAnnotation( BasicTypes.NONNULL );
     }
 
-    final MethodSpec.Builder castMethod =
+    final MethodSpec.Builder requireValidMethod =
       MethodSpec
-        .methodBuilder( "cast" )
+        .methodBuilder( "requireValid" )
         .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
         .addAnnotation( self )
         .addParameter( parameter.build() )
@@ -295,13 +295,13 @@ final class JsinteropAction
         .returns( enumType );
     if ( !isInteger )
     {
-      castMethod.addAnnotation( BasicTypes.NONNULL );
+      requireValidMethod.addAnnotation( BasicTypes.NONNULL );
     }
     type.addType( TypeSpec
                     .classBuilder( "Validator" )
                     .addModifiers( Modifier.PUBLIC, Modifier.STATIC, Modifier.FINAL )
                     .addMethod( MethodSpec.constructorBuilder().addModifiers( Modifier.PRIVATE ).build() )
-                    .addMethod( castMethod.build() )
+                    .addMethod( requireValidMethod.build() )
                     .addMethod( MethodSpec
                                   .methodBuilder( "assertValid" )
                                   .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
@@ -3038,7 +3038,7 @@ final class JsinteropAction
                     .addModifiers( Modifier.PUBLIC, Modifier.STATIC, Modifier.FINAL )
                     .addMethod( MethodSpec.constructorBuilder().addModifiers( Modifier.PRIVATE ).build() )
                     .addMethod( MethodSpec
-                                  .methodBuilder( "cast" )
+                                  .methodBuilder( "requireValid" )
                                   .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
                                   .addAnnotation( self )
                                   .addParameter( ParameterSpec

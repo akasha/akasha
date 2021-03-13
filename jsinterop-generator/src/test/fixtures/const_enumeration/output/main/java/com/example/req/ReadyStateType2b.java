@@ -22,7 +22,7 @@ public @interface ReadyStateType2b {
     }
 
     @ReadyStateType2b
-    public static int cast(final int value) {
+    public static int requireValid(final int value) {
       assertValid( value );
       return value;
     }

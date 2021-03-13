@@ -21,7 +21,7 @@ public @interface WebGLExtensionName {
 
     @WebGLExtensionName
     @Nonnull
-    public static String cast(@Nonnull final String value) {
+    public static String requireValid(@Nonnull final String value) {
       assertValid( value );
       return value;
     }
