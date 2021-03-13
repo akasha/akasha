@@ -9,15 +9,7 @@ complete as there is too much un-said.
 * Why does `JsPropertyMap` not have a keys method? A result of no `JsArray`? Replace `JsObject.keys()` through
   apps with `PropertyMap.forEach`
 
-* Rename output to avoid naming clash with elemental2
-  - Atomix
-  - Atomical
-  - Elementix
-  - Elementrix
-  - Elemix
-  - eLemix
-  - fission
-  - atomize
+* Rename output package to `Akasha` to avoid to naming clash with elemental2
 
 * Figure out a way how to manage which versions of the elemental3 packages have been deployed. We
   have currently deployed `org.realityforge.webtack:webtack-elemental3-complete:jar:0.03` to maven central
