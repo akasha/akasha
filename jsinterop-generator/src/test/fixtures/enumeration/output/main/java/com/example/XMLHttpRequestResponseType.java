@@ -32,8 +32,8 @@ public @interface XMLHttpRequestResponseType {
   @Nonnull
   String text = "text";
 
-  final class Validator {
-    private Validator() {
+  final class Util {
+    private Util() {
     }
 
     @XMLHttpRequestResponseType

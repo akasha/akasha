@@ -24,8 +24,8 @@ public @interface PermissionState {
   @Nonnull
   String prompt = "prompt";
 
-  final class Validator {
-    private Validator() {
+  final class Util {
+    private Util() {
     }
 
     @PermissionState

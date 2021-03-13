@@ -23,8 +23,8 @@ public @interface OverSampleType {
   @Nonnull
   String none = "none";
 
-  final class Validator {
-    private Validator() {
+  final class Util {
+    private Util() {
     }
 
     @OverSampleType

@@ -298,7 +298,7 @@ final class JsinteropAction
       requireValidMethod.addAnnotation( BasicTypes.NONNULL );
     }
     type.addType( TypeSpec
-                    .classBuilder( "Validator" )
+                    .classBuilder( "Util" )
                     .addModifiers( Modifier.PUBLIC, Modifier.STATIC, Modifier.FINAL )
                     .addMethod( MethodSpec.constructorBuilder().addModifiers( Modifier.PRIVATE ).build() )
                     .addMethod( requireValidMethod.build() )
@@ -3034,7 +3034,7 @@ final class JsinteropAction
         .collect( Collectors.joining( " || " ) );
 
     type.addType( TypeSpec
-                    .classBuilder( "Validator" )
+                    .classBuilder( "Util" )
                     .addModifiers( Modifier.PUBLIC, Modifier.STATIC, Modifier.FINAL )
                     .addMethod( MethodSpec.constructorBuilder().addModifiers( Modifier.PRIVATE ).build() )
                     .addMethod( MethodSpec

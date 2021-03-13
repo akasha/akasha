@@ -24,8 +24,8 @@ public @interface SpeechRecognitionErrorCode {
   @Nonnull
   String aborted = "aborted";
 
-  final class Validator {
-    private Validator() {
+  final class Util {
+    private Util() {
     }
 
     @SpeechRecognitionErrorCode

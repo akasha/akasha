@@ -17,8 +17,8 @@ import org.intellij.lang.annotations.MagicConstant;
     }
 )
 public @interface ReadyStateType {
-  final class Validator {
-    private Validator() {
+  final class Util {
+    private Util() {
     }
 
     @ReadyStateType

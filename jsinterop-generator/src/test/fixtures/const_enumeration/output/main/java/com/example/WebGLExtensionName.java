@@ -15,8 +15,8 @@ import org.intellij.lang.annotations.MagicConstant;
     }
 )
 public @interface WebGLExtensionName {
-  final class Validator {
-    private Validator() {
+  final class Util {
+    private Util() {
     }
 
     @WebGLExtensionName

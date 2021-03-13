@@ -20,8 +20,8 @@ public @interface TxMode {
   @Nonnull
   String requires_new = "requires_new";
 
-  final class Validator {
-    private Validator() {
+  final class Util {
+    private Util() {
     }
 
     @TxMode
