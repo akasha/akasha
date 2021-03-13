@@ -27,8 +27,6 @@ complete as there is too much un-said.
 
 * Update `JsDate` to be more java-like
 
-* Figure out a better way to name `Validator` class nested in const enums. Util? Kit?
-
 # Docs Integration
 
 * Process docs and any words that match an original/non-synthetic word then convert into {@link MyType}
