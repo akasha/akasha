@@ -25,6 +25,7 @@ public final class GlobalWindow extends Window {
       name = "CSS"
   )
   @Nonnull
+  @Deprecated
   public native CSSNamespace css();
 
   /**
