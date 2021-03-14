@@ -43,7 +43,7 @@ interface Number {
   DOMString toExponential(optional long fractionDigits);
   DOMString toFixed(optional long digits);
 
-  // Note: toLocaleString has not been specified as we have seen no usage of it in the wild and
+  // Note: The toLocale* method has not been defined as we have seen no usage of it in the wild and
   // it is somewhat complex to define
   // DOMString toLocaleString(...);
 
