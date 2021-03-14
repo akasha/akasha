@@ -1,8 +1,8 @@
 [JavaSubPackage=core]
 interface RegExp {
-  [JavaAnnotation="elemental3.core.RegExpLanguage"]
+  [JavaAnnotation="akasha.core.RegExpLanguage"]
   readonly attribute DOMString source;
-  [JavaAnnotation="elemental3.core.RegExpFlags"]
+  [JavaAnnotation="akasha.core.RegExpFlags"]
   readonly attribute DOMString flags;
   readonly attribute boolean dotAll;
   readonly attribute boolean global;
@@ -12,7 +12,7 @@ interface RegExp {
   readonly attribute boolean unicode;
   attribute unsigned long lastIndex;
 
-  constructor( [JavaAnnotation="elemental3.core.RegExpLanguage"] DOMString pattern, [JavaAnnotation="elemental3.core.RegExpFlags"] optional DOMString flags = "" );
+  constructor( [JavaAnnotation="akasha.core.RegExpLanguage"] DOMString pattern, [JavaAnnotation="akasha.core.RegExpFlags"] optional DOMString flags = "" );
 
   RegExpResult? exec( DOMString text );
 

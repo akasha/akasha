@@ -51,7 +51,7 @@ public final class AddExtendedAttributeToMemberProcessorTest
                                 () -> createProcessor( new TestProgressListener(),
                                                        "^(WebGL2RenderingContext|WebGLRenderingContext)$",
                                                        "^getShaderSource$",
-                                                       "JavaAnnotation=\"elemental3.gl.GLSL\"",
+                                                       "JavaAnnotation=\"akasha.gl.GLSL\"",
                                                        1 ) );
   }
 

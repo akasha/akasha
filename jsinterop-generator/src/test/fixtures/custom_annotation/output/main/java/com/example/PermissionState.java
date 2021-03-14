@@ -1,7 +1,7 @@
 package com.example;
 
-import elemental3.MyAnnotation;
-import elemental3.MyAnnotation2;
+import akasha.MyAnnotation;
+import akasha.MyAnnotation2;
 import java.lang.annotation.Documented;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;

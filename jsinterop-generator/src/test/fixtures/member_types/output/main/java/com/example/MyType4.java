@@ -1,10 +1,10 @@
 package com.example;
 
-import elemental3.lang.JsArray;
-import elemental3.lang.JsIterable;
-import elemental3.lang.JsIterator;
-import elemental3.lang.JsIteratorIterable;
-import elemental3.promise.Promise;
+import akasha.lang.JsArray;
+import akasha.lang.JsIterable;
+import akasha.lang.JsIterator;
+import akasha.lang.JsIteratorIterable;
+import akasha.promise.Promise;
 import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;

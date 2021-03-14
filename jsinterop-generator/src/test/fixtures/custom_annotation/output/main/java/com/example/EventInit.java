@@ -1,6 +1,6 @@
 package com.example;
 
-import elemental3.MyAnnotation;
+import akasha.MyAnnotation;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsOverlay;

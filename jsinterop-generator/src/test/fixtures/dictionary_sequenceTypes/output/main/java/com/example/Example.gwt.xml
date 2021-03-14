@@ -1,7 +1,7 @@
 <module>
   <inherits name='jsinterop.base.Base'/>
-  <inherits name='elemental3.lang.Lang'/>
-  <inherits name='elemental3.promise.Promise'/>
+  <inherits name='akasha.lang.Lang'/>
+  <inherits name='akasha.promise.Promise'/>
 
   <source path=''/>
 </module>

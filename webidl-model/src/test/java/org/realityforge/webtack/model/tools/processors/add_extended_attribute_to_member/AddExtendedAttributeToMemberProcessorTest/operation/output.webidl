@@ -1,6 +1,6 @@
 interface WebGL2RenderingContext {
   long long getShaderSomething( WebGLShader shader );
-  [JavaAnnotation="elemental3.gl.GLSL"]
+  [JavaAnnotation="akasha.gl.GLSL"]
   DOMString? getShaderSource( WebGLShader shader );
 };
 
@@ -11,7 +11,7 @@ interface WebGL345RenderingContext {
 
 interface WebGLRenderingContext {
   long long getShaderSomething( WebGLShader shader );
-  [JavaAnnotation="elemental3.gl.GLSL"]
+  [JavaAnnotation="akasha.gl.GLSL"]
   DOMString? getShaderSource( WebGLShader shader );
 };
 

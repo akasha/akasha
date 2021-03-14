@@ -1,7 +1,7 @@
 package com.example;
 
-import elemental3.MyAnnotation;
-import elemental3.gl.GLSL;
+import akasha.MyAnnotation;
+import akasha.gl.GLSL;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;

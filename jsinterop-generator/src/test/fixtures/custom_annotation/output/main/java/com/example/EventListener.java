@@ -1,8 +1,8 @@
 package com.example;
 
-import elemental3.MyAnnotation;
-import elemental3.MyAnnotation2;
-import elemental3.MyAnnotation3;
+import akasha.MyAnnotation;
+import akasha.MyAnnotation2;
+import akasha.MyAnnotation3;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;

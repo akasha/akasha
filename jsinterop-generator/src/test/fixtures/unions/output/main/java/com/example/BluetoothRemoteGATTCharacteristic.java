@@ -1,6 +1,6 @@
 package com.example;
 
-import elemental3.promise.Promise;
+import akasha.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;

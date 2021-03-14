@@ -101,7 +101,7 @@
       "name": "Jsinterop",
       "config": {
         "outputDirectory": "data/output/bluetooth",
-        "packageName": "elemental3"
+        "packageName": "akasha"
       }
     }
   ]

@@ -1,9 +1,9 @@
 package com.example;
 
-import elemental3.lang.JsArray;
-import elemental3.lang.JsIterable;
-import elemental3.lang.JsIterator;
-import elemental3.lang.JsIteratorIterable;
+import akasha.lang.JsArray;
+import akasha.lang.JsIterable;
+import akasha.lang.JsIterator;
+import akasha.lang.JsIteratorIterable;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsOverlay;

@@ -1,41 +1,41 @@
-[JavaAnnotation="elemental3.MyAnnotation"]
+[JavaAnnotation="akasha.MyAnnotation"]
 enum PermissionState {
   "denied",
-  [JavaAnnotation="elemental3.MyAnnotation2"] "granted",
+  [JavaAnnotation="akasha.MyAnnotation2"] "granted",
   "prompt"
 };
 
-[JavaAnnotation="elemental3.MyAnnotation"]
+[JavaAnnotation="akasha.MyAnnotation"]
 typedef ( DOMString or double ) MyTypedefedUnion;
 
-[JavaAnnotation="elemental3.MyAnnotation"]
+[JavaAnnotation="akasha.MyAnnotation"]
 namespace CSS {
-  [JavaAnnotation="elemental3.MyAnnotation2"]
+  [JavaAnnotation="akasha.MyAnnotation2"]
   DOMString escape( DOMString ident );
 };
 
-[JavaAnnotation="elemental3.MyAnnotation"]
-callback MyEventHandler = undefined ( [JavaAnnotation="elemental3.MyAnnotation2"] Event event );
+[JavaAnnotation="akasha.MyAnnotation"]
+callback MyEventHandler = undefined ( [JavaAnnotation="akasha.MyAnnotation2"] Event event );
 
-[JavaAnnotation="elemental3.MyAnnotation"]
+[JavaAnnotation="akasha.MyAnnotation"]
 callback interface EventListener {
-  [JavaAnnotation="elemental3.MyAnnotation3"]
-  undefined handleEvent( [JavaAnnotation="elemental3.MyAnnotation2"] Event event );
+  [JavaAnnotation="akasha.MyAnnotation3"]
+  undefined handleEvent( [JavaAnnotation="akasha.MyAnnotation2"] Event event );
 };
 
-[JavaAnnotation="elemental3.MyAnnotation"]
+[JavaAnnotation="akasha.MyAnnotation"]
 dictionary EventInit {
-  [JavaAnnotation="elemental3.MyAnnotation"]
+  [JavaAnnotation="akasha.MyAnnotation"]
   boolean bubbles = false;
 };
 
 interface Event {
 };
 
-[JavaAnnotation="elemental3.MyAnnotation"]
+[JavaAnnotation="akasha.MyAnnotation"]
 interface WebGL2RenderingContext {
-  [JavaAnnotation="elemental3.gl.GLSL"]
-  DOMString? getShaderSource( [JavaAnnotation="elemental3.MyAnnotation"] WebGLShader shader );
+  [JavaAnnotation="akasha.gl.GLSL"]
+  DOMString? getShaderSource( [JavaAnnotation="akasha.MyAnnotation"] WebGLShader shader );
 };
 
 interface WebGLShader {

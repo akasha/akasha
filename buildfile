@@ -87,14 +87,14 @@ define 'webtack' do
     test.options[:properties] = {
       'webtack.jsinterop-generator.gwtc' => ENV['GWT'] == 'no' ? 'false' : 'true',
       'webtack.jsinterop-generator.fixture_dir' => _('src/test/fixtures'),
-      'webtack.jsinterop-generator.fixture.libs' => "#{GWT_DEPS.collect{|a| artifact(a).to_s}.join(':')}:#{project('elemental3:core').package(:jar).to_s}",
-      'webtack.jsinterop-generator.gwt_dev.libs' => "#{GWT_DEPS.collect{|a| artifact(a).to_s}.join(':')}:#{Buildr::GWT.dependencies('2.9.0').collect {|d| artifact(d).to_s }.join(':')}:#{project('elemental3:core').package(:jar).to_s}"
+      'webtack.jsinterop-generator.fixture.libs' => "#{GWT_DEPS.collect{|a| artifact(a).to_s}.join(':')}:#{project('akasha:core').package(:jar).to_s}",
+      'webtack.jsinterop-generator.gwt_dev.libs' => "#{GWT_DEPS.collect{|a| artifact(a).to_s}.join(':')}:#{Buildr::GWT.dependencies('2.9.0').collect {|d| artifact(d).to_s }.join(':')}:#{project('akasha:core').package(:jar).to_s}"
     }
     test.options[:java_args] = %w(-ea)
     test.compile.with :gir,
                       Buildr::Util.tools_jar,
                       # Next dependency ensures the jar is built so can be used in tests but is not directly referenced
-                      project('elemental3:core').package(:jar)
+                      project('akasha:core').package(:jar)
     test.compile.enhance do |d|
       GWT_DEPS.collect {|a| artifact(a).invoke }
       Buildr::GWT.dependencies('2.9.0').collect {|a| artifact(a).invoke }
@@ -117,14 +117,14 @@ define 'webtack' do
     test.options[:properties] = {
       'webtack.react4j-generator.gwtc' => ENV['GWT'] == 'no' ? 'false' : 'true',
       'webtack.react4j-generator.fixture_dir' => _('src/test/fixtures'),
-      'webtack.react4j-generator.fixture.libs' => "#{REACT4J_DEPS.collect{|a| artifact(a).to_s}.join(':')}:#{project('elemental3:core').package(:jar).to_s}",
-      'webtack.react4j-generator.gwt_dev.libs' => "#{REACT4J_DEPS.collect{|a| artifact(a).to_s}.join(':')}:#{Buildr::GWT.dependencies('2.9.0').collect {|d| artifact(d).to_s }.join(':')}:#{project('elemental3:core').package(:jar).to_s}"
+      'webtack.react4j-generator.fixture.libs' => "#{REACT4J_DEPS.collect{|a| artifact(a).to_s}.join(':')}:#{project('akasha:core').package(:jar).to_s}",
+      'webtack.react4j-generator.gwt_dev.libs' => "#{REACT4J_DEPS.collect{|a| artifact(a).to_s}.join(':')}:#{Buildr::GWT.dependencies('2.9.0').collect {|d| artifact(d).to_s }.join(':')}:#{project('akasha:core').package(:jar).to_s}"
     }
     test.options[:java_args] = %w(-ea)
     test.compile.with :gir,
                       Buildr::Util.tools_jar,
                       # Next dependency ensures the jar is built so can be used in tests but is not directly referenced
-                      project('elemental3:core').package(:jar)
+                      project('akasha:core').package(:jar)
     test.compile.enhance do |d|
       REACT4J_DEPS.collect {|a| artifact(a).invoke }
       Buildr::GWT.dependencies('2.9.0').collect {|a| artifact(a).invoke }
@@ -166,7 +166,7 @@ define 'webtack' do
     test.using :testng
   end
 
-  define 'elemental3' do
+  define 'akasha' do
     %w(core speech bluetooth main react4j).each do |pipeline|
 
       name = 'main' == pipeline ? 'complete' : pipeline
@@ -176,7 +176,7 @@ define 'webtack' do
 
       desc "Elemental3 #{name}"
       define name do
-        project.layout[:target, :generated] = "#{WORKSPACE_DIR}/generated/elemental3/#{name}"
+        project.layout[:target, :generated] = "#{WORKSPACE_DIR}/generated/akasha/#{name}"
 
         extra_deps = []
         if 'core' == pipeline
@@ -197,7 +197,7 @@ define 'webtack' do
         compile.using :javac
 
         deps = artifacts('react4j' == pipeline ? REACT4J_DEPS : GWT_DEPS)
-        deps << [project('elemental3:core')] unless pipeline == 'core'
+        deps << [project('akasha:core')] unless pipeline == 'core'
         compile.with deps
 
         gwt_enhance(project, :extra_deps => extra_deps)
@@ -227,7 +227,7 @@ define 'webtack' do
 
   ipr.add_testng_configuration('jsinterop-generator',
                                :module => 'jsinterop-generator',
-                               :jvm_args => "-ea -Dwebtack.output_fixture_data=true -Dwebtack.jsinterop-generator.fixture_dir=src/test/fixtures -Dwebtack.jsinterop-generator.gwtc=true -Dwebtack.jsinterop-generator.fixture.libs=#{GWT_DEPS.collect{|a| artifact(a).to_s}.join(':')}:#{project('elemental3:core').project._(:target, :main, :idea, :classes)} -Dwebtack.jsinterop-generator.gwt_dev.libs=#{Buildr::GWT.dependencies('2.9.0').collect {|d| artifact(d).to_s }.join(':')}:#{project('elemental3:core').project._(:target, :main, :idea, :classes)}")
+                               :jvm_args => "-ea -Dwebtack.output_fixture_data=true -Dwebtack.jsinterop-generator.fixture_dir=src/test/fixtures -Dwebtack.jsinterop-generator.gwtc=true -Dwebtack.jsinterop-generator.fixture.libs=#{GWT_DEPS.collect{|a| artifact(a).to_s}.join(':')}:#{project('akasha:core').project._(:target, :main, :idea, :classes)} -Dwebtack.jsinterop-generator.gwt_dev.libs=#{Buildr::GWT.dependencies('2.9.0').collect {|d| artifact(d).to_s }.join(':')}:#{project('akasha:core').project._(:target, :main, :idea, :classes)}")
 
   ipr.add_testng_configuration('react4j-generator',
                                :module => 'react4j-generator',

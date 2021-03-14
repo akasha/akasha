@@ -1,6 +1,6 @@
 EventInit=com.example.EventInit
 OptionalAnyDict=com.example.OptionalAnyDict
-Promise=elemental3.promise.Promise
+Promise=akasha.promise.Promise
 PromiseRejectionEventInit=com.example.PromiseRejectionEventInit
 RequiredAnyDict=com.example.RequiredAnyDict
 Storage=com.example.Storage

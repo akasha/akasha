@@ -16,8 +16,8 @@
         "predefinedTypeMapping": [
           "data/pipelines/complete_predefined.mapping"
         ],
-        "outputDirectory": "elemental3/complete/generated",
-        "packageName": "elemental3",
+        "outputDirectory": "akasha/complete/generated",
+        "packageName": "akasha",
         "globalInterface": "Window"
       }
     }

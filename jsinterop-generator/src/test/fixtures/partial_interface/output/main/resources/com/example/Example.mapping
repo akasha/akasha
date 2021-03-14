@@ -1,9 +1,9 @@
 DOMTokenList=com.example.DOMTokenList
 Headers=com.example.Headers
-Iterator=elemental3.lang.JsIterator
+Iterator=akasha.lang.JsIterator
 Object=java.lang.Object
 RTCStatsReport=com.example.RTCStatsReport
-Sequence=elemental3.lang.JsArray
+Sequence=akasha.lang.JsArray
 SomeMapLikeDefiningOverrides=com.example.SomeMapLikeDefiningOverrides
 SomeOtherType=com.example.SomeOtherType
 SpeechSynthesis=com.example.SpeechSynthesis

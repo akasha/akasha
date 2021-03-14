@@ -116,7 +116,7 @@
       "name": "Jsinterop",
       "config": {
         "outputDirectory": "data/output/speech",
-        "packageName": "elemental3"
+        "packageName": "akasha"
       }
     }
   ]

@@ -1,6 +1,6 @@
 package com.example;
 
-import elemental3.lang.JsArray;
+import akasha.lang.JsArray;
 import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
