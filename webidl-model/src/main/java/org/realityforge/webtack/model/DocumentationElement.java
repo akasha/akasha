@@ -47,6 +47,11 @@ public final class DocumentationElement
     return _blockTags;
   }
 
+  public boolean hasDeprecatedTag()
+  {
+    return getBlockTags().stream().anyMatch( t -> t.getName().equals( "deprecated" ) );
+  }
+
   @Override
   public boolean equals( final Object o )
   {

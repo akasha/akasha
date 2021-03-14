@@ -806,16 +806,22 @@ final class JsinteropAction
     for ( final NamespaceDefinition namespace : schema.getNamespaces() )
     {
       final String name = namespace.getName();
-      type.addMethod( MethodSpec
-                        .methodBuilder( NamingUtil.camelCase( safeJsPropertyMethodName( name, false ) ) )
-                        .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
-                        .returns( lookupClassName( namespace.getName() ) )
-                        .addAnnotation( AnnotationSpec
-                                          .builder( JsinteropTypes.JS_PROPERTY )
-                                          .addMember( "name", "$S", name )
-                                          .build() )
-                        .addAnnotation( BasicTypes.NONNULL )
-                        .build() );
+      final MethodSpec.Builder namespaceMethod =
+        MethodSpec
+        .methodBuilder( NamingUtil.camelCase( safeJsPropertyMethodName( name, false ) ) )
+        .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
+        .returns( lookupClassName( namespace.getName() ) )
+        .addAnnotation( AnnotationSpec
+                          .builder( JsinteropTypes.JS_PROPERTY )
+                          .addMember( "name", "$S", name )
+                          .build() )
+        .addAnnotation( BasicTypes.NONNULL );
+      final DocumentationElement documentation = namespace.getDocumentation();
+      if ( null != documentation && documentation.hasDeprecatedTag() )
+      {
+        namespaceMethod.addAnnotation( Deprecated.class );
+      }
+      type.addMethod( namespaceMethod.build() );
     }
 
     for ( final MixinDefinition mixin : getGlobalMixins( schema ) )
@@ -3129,6 +3135,10 @@ final class JsinteropAction
     if ( null != documentation )
     {
       type.addJavadoc( asJavadoc( documentation ) );
+      if ( documentation.hasDeprecatedTag() )
+      {
+        type.addAnnotation( Deprecated.class );
+      }
     }
   }
 
@@ -3138,6 +3148,10 @@ final class JsinteropAction
     if ( null != documentation )
     {
       field.addJavadoc( asJavadoc( documentation ) );
+      if ( documentation.hasDeprecatedTag() )
+      {
+        field.addAnnotation( Deprecated.class );
+      }
     }
   }
 
@@ -3147,6 +3161,10 @@ final class JsinteropAction
     if ( null != documentation )
     {
       method.addJavadoc( asJavadoc( documentation ) );
+      if ( documentation.hasDeprecatedTag() )
+      {
+        method.addAnnotation( Deprecated.class );
+      }
     }
   }
 
@@ -3173,7 +3191,10 @@ final class JsinteropAction
     final List<DocumentationBlockTag> blockTags = documentation.getBlockTags();
     if ( !blockTags.isEmpty() )
     {
-      docs.append( "\n" );
+      if ( 0 != docs.length() )
+      {
+        docs.append( "\n" );
+      }
       for ( final DocumentationBlockTag tag : blockTags )
       {
         docs.append( "@" );

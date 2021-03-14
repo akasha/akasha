@@ -1,0 +1,16 @@
+$Global=com.example.Global
+$GlobalWindow=com.example.GlobalWindow
+$StaticCSS=com.example.CSS
+AddEventListenerOptions=com.example.AddEventListenerOptions
+CSS=com.example.CSSNamespace
+Event=com.example.Event
+EventInit=com.example.EventInit
+EventListener=com.example.EventListener
+EventListenerOptions=com.example.EventListenerOptions
+EventTarget=com.example.EventTarget
+MyEventHandler=com.example.MyEventHandler
+MyTypedefedUnion=com.example.MyTypedefedUnion
+OtherEventListener=com.example.OtherEventListener
+OtherType=com.example.OtherType
+PermissionState=com.example.PermissionState
+Window=com.example.Window

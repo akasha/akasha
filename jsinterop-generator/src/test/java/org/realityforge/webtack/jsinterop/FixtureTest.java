@@ -33,7 +33,10 @@ public final class FixtureTest
       validatorRuleConfig.allowDanglingInterfacePartials = true;
     }
     String globalInterface = null;
-    if ( "global_interface".equals( scenario ) || "namespaces".equals( scenario ) || "global_object".equals( scenario ) )
+    if ( "global_interface".equals( scenario ) ||
+         "namespaces".equals( scenario ) ||
+         "global_object".equals( scenario ) ||
+         "deprecated".equals( scenario ) )
     {
       globalInterface = "Window";
     }

@@ -1,0 +1,7 @@
+<module>
+  <inherits name='jsinterop.base.Base'/>
+  <inherits name='akasha.lang.Lang'/>
+  <inherits name='akasha.promise.Promise'/>
+
+  <source path=''/>
+</module>
