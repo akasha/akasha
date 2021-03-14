@@ -217,6 +217,10 @@ define 'webtack' do
 
   iml.excluded_directories << project._('tmp')
 
+  ipr.add_component('JavacSettings') do |xml|
+    xml.option(:name => 'ADDITIONAL_OPTIONS_STRING', :value => ' -Xlint:all,-serial -Werror -Xmaxerrs 10000 -Xmaxwarns 10000')
+  end
+
   ipr.add_default_testng_configuration(:jvm_args => '-ea -Dwebtack.output_fixture_data=false -Dwebtack.fixture_dir=webidl-model/src/test/resources')
 
   ipr.add_testng_configuration('webidl-parser', :module => 'webidl-parser', :jvm_args => '-ea')
