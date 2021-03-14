@@ -102,6 +102,10 @@
         "url": "https://drafts.csswg.org/cssom-view/"
     },
     {
+        "lastModifiedTime": 0,
+        "name": "date"
+    },
+    {
         "lastModifiedTime": 1606947387000,
         "name": "deviceorientation",
         "url": "https://w3c.github.io/deviceorientation/"
