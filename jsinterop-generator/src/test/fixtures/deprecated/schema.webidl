@@ -96,9 +96,6 @@ interface EventTarget {
 interface OtherType {
 };
 
-/**
- * @deprecated
- */
 [Global=Window, Exposed=Window, LegacyUnenumerableNamedProperties]
 interface Window : EventTarget {
   /**
