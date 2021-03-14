@@ -27,6 +27,7 @@ public final class CSS {
    * @return the 'CSS' namespace object
    */
   @Nonnull
+  @Deprecated
   public static CSSNamespace namespace() {
     return Global.css();
   }

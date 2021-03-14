@@ -135,6 +135,7 @@ public final class Global {
   }
 
   @Nonnull
+  @Deprecated
   public static CSSNamespace css() {
     return globalThis().css();
   }

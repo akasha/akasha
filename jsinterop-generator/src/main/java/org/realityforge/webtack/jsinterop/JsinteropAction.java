@@ -435,13 +435,19 @@ final class JsinteropAction
     for ( final NamespaceDefinition namespace : schema.getNamespaces() )
     {
       final String methodName = NamingUtil.camelCase( safeJsPropertyMethodName( namespace.getName(), false ) );
-      type.addMethod( MethodSpec
-                        .methodBuilder( methodName )
-                        .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
-                        .returns( lookupClassName( namespace.getName() ) )
-                        .addAnnotation( BasicTypes.NONNULL )
-                        .addStatement( "return globalThis().$N()", methodName )
-                        .build() );
+      final MethodSpec.Builder namespaceMethod =
+        MethodSpec
+          .methodBuilder( methodName )
+          .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+          .returns( lookupClassName( namespace.getName() ) )
+          .addAnnotation( BasicTypes.NONNULL )
+          .addStatement( "return globalThis().$N()", methodName );
+      final DocumentationElement documentation = namespace.getDocumentation();
+      if ( null != documentation && documentation.hasDeprecatedTag() )
+      {
+        namespaceMethod.addAnnotation( Deprecated.class );
+      }
+      type.addMethod( namespaceMethod.build() );
     }
 
     writeTopLevelType( "$Global", type );
@@ -1826,17 +1832,24 @@ final class JsinteropAction
     }
     type.addMethod( MethodSpec.constructorBuilder().addModifiers( Modifier.PRIVATE ).build() );
 
-    type.addMethod( MethodSpec.methodBuilder( "namespace" )
-                      .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
-                      .addAnnotation( BasicTypes.NONNULL )
-                      .returns( lookupClassName( definition.getName() ) )
-                      .addStatement( "return $T.$N()",
-                                     lookupClassName( "$Global" ),
-                                     NamingUtil.camelCase( safeJsPropertyMethodName( definition.getName(), false ) ) )
-                      .addJavadoc( "Return the '" + definition.getName() + "' namespace object.\n" +
-                                   "\n" +
-                                   "@return the '" + definition.getName() + "' namespace object\n" )
-                      .build() );
+    final MethodSpec.Builder namespaceMethod =
+      MethodSpec
+        .methodBuilder( "namespace" )
+        .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+        .addAnnotation( BasicTypes.NONNULL )
+        .returns( lookupClassName( definition.getName() ) )
+        .addStatement( "return $T.$N()",
+                       lookupClassName( "$Global" ),
+                       NamingUtil.camelCase( safeJsPropertyMethodName( definition.getName(), false ) ) )
+        .addJavadoc( "Return the '" + definition.getName() + "' namespace object.\n" +
+                     "\n" +
+                     "@return the '" + definition.getName() + "' namespace object\n" );
+    final DocumentationElement documentation = definition.getDocumentation();
+    if ( null != documentation && documentation.hasDeprecatedTag() )
+    {
+      namespaceMethod.addAnnotation( Deprecated.class );
+    }
+    type.addMethod( namespaceMethod.build() );
 
     writeTopLevelType( idlName, type );
   }
