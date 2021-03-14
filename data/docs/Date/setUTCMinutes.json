@@ -1,0 +1,14 @@
+
+{
+    "kind": "Method",
+    "name": "Date.setUTCMinutes",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/setUTCMinutes",
+    "description": "The setUTCMinutes() method sets the minutes for a specified date according to universal time.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-date.prototype.setutcminutes",
+            "description": "Date.prototype.setUTCMinutes - ECMAScript (ECMA-262)"
+        }
+    ]
+}

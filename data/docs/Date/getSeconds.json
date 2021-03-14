@@ -1,0 +1,14 @@
+
+{
+    "kind": "Method",
+    "name": "Date.getSeconds",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getSeconds",
+    "description": "The getSeconds() method returns the seconds in the specified date according to local time.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-date.prototype.getseconds",
+            "description": "Date.prototype.getSeconds - ECMAScript (ECMA-262)"
+        }
+    ]
+}

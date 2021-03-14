@@ -1,0 +1,19 @@
+
+{
+    "kind": "Method",
+    "name": "Date.toLocaleTimeString",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleTimeString",
+    "description": "The toLocaleTimeString() method returns a string with a language sensitive representation of the time portion of this date. The new locales and options arguments let applications specify the language whose formatting conventions should be used and customize the behavior of the function. In older implementations, which ignore the locales and options arguments, the locale used and the form of the string returned are entirely implementation dependent.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-date.prototype.tolocaletimestring",
+            "description": "Date.prototype.toLocaleTimeString - ECMAScript (ECMA-262)"
+        },
+        {
+            "name": "ECMAScript Internationalization API (ECMA-402)",
+            "href": "https://tc39.es/ecma402/#sup-date.prototype.tolocaletimestring",
+            "description": "Date.prototype.toLocaleTimeString - ECMAScript Internationalization API (ECMA-402)"
+        }
+    ]
+}

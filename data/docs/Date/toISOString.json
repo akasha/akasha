@@ -1,0 +1,14 @@
+
+{
+    "kind": "Method",
+    "name": "Date.toISOString",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString",
+    "description": "The toISOString() method returns a string in simplified extended ISO format (ISO 8601), which is always 24 or 27 characters long (YYYY-MM-DDTHH:mm:ss.sssZ or &plusmn;YYYYYY-MM-DDTHH:mm:ss.sssZ, respectively). The timezone is always zero UTC offset, as denoted by the suffix &quot;Z&quot;.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-date.prototype.toisostring",
+            "description": "Date.prototype.toISOString - ECMAScript (ECMA-262)"
+        }
+    ]
+}

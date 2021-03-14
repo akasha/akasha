@@ -1,0 +1,14 @@
+
+{
+    "kind": "Method",
+    "name": "Date.setDate",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/setDate",
+    "description": "The setDate() method sets the day of the Date object relative to the beginning of the currently set month.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-date.prototype.setdate",
+            "description": "Date.prototype.setDate - ECMAScript (ECMA-262)"
+        }
+    ]
+}

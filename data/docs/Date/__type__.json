@@ -1,0 +1,14 @@
+
+{
+    "kind": "Type",
+    "name": "Date",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date",
+    "description": "JavaScript Date objects represent a single moment in time in a platform-independent format.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-date-objects",
+            "description": "Date - ECMAScript (ECMA-262)"
+        }
+    ]
+}

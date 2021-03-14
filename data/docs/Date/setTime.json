@@ -1,0 +1,14 @@
+
+{
+    "kind": "Method",
+    "name": "Date.setTime",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/setTime",
+    "description": "The setTime() method sets the Date object to the time represented by a number of milliseconds since January 1, 1970, 00:00:00 UTC.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-date.prototype.settime",
+            "description": "Date.prototype.setTime - ECMAScript (ECMA-262)"
+        }
+    ]
+}

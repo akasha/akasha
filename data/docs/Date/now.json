@@ -1,0 +1,14 @@
+
+{
+    "kind": "Method",
+    "name": "Date.now",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/now",
+    "description": "The static Date.now() method returns the number of milliseconds elapsed since January 1, 1970 00:00:00 UTC.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-date.now",
+            "description": "Date.now - ECMAScript (ECMA-262)"
+        }
+    ]
+}

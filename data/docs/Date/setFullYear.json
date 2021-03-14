@@ -1,0 +1,14 @@
+
+{
+    "kind": "Method",
+    "name": "Date.setFullYear",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/setFullYear",
+    "description": "The setFullYear() method sets the full year for a specified date according to local time. Returns new timestamp.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-date.prototype.setfullyear",
+            "description": "Date.prototype.setFullYear - ECMAScript (ECMA-262)"
+        }
+    ]
+}

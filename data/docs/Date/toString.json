@@ -1,0 +1,14 @@
+
+{
+    "kind": "Method",
+    "name": "Date.toString",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toString",
+    "description": "The toString() method returns a string representing the specified Date object.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-date.prototype.tostring",
+            "description": "Date.prototype.toString - ECMAScript (ECMA-262)"
+        }
+    ]
+}

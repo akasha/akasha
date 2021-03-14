@@ -1,0 +1,14 @@
+
+{
+    "kind": "Method",
+    "name": "Date.getMinutes",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getMinutes",
+    "description": "The getMinutes() method returns the minutes in the specified date according to local time.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-date.prototype.getminutes",
+            "description": "Date.prototype.getMinutes - ECMAScript (ECMA-262)"
+        }
+    ]
+}

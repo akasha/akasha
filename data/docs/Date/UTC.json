@@ -1,0 +1,14 @@
+
+{
+    "kind": "Method",
+    "name": "Date.UTC",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/UTC",
+    "description": "The Date.UTC() method accepts parameters similar to the Date constructor, but treats them as UTC. It returns the number of milliseconds since January 1, 1970, 00:00:00 UTC.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-date.utc",
+            "description": "Date.UTC - ECMAScript (ECMA-262)"
+        }
+    ]
+}

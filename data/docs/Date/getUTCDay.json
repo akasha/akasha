@@ -1,0 +1,14 @@
+
+{
+    "kind": "Method",
+    "name": "Date.getUTCDay",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getUTCDay",
+    "description": "The getUTCDay() method returns the day of the week in the specified date according to universal time, where 0 represents Sunday.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-date.prototype.getutcday",
+            "description": "Date.prototype.getUTCDay - ECMAScript (ECMA-262)"
+        }
+    ]
+}

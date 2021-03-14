@@ -1,0 +1,14 @@
+
+{
+    "kind": "Method",
+    "name": "Date.toJSON",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toJSON",
+    "description": "The toJSON() method returns a string representation of the Date object.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-date.prototype.tojson",
+            "description": "Date.prototype.toJSON - ECMAScript (ECMA-262)"
+        }
+    ]
+}

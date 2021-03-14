@@ -1,0 +1,14 @@
+
+{
+    "kind": "Method",
+    "name": "Date.getUTCMilliseconds",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getUTCMilliseconds",
+    "description": "The getUTCMilliseconds() method returns the milliseconds portion of the time object's value.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-date.prototype.getutcmilliseconds",
+            "description": "Date.prototype.getUTCMilliseconds - ECMAScript (ECMA-262)"
+        }
+    ]
+}

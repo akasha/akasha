@@ -1,0 +1,14 @@
+
+{
+    "kind": "Method",
+    "name": "Date.getHours",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getHours",
+    "description": "The getHours() method returns the hour for the specified date, according to local time.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-date.prototype.gethours",
+            "description": "Date.prototype.getHours - ECMAScript (ECMA-262)"
+        }
+    ]
+}

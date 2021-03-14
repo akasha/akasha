@@ -1,0 +1,14 @@
+
+{
+    "kind": "Method",
+    "name": "Date.setHours",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/setHours",
+    "description": "The setHours() method sets the hours for a specified date according to local time, and returns the number of milliseconds since January 1, 1970 00:00:00 UTC until the time represented by the updated Date instance.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-date.prototype.sethours",
+            "description": "Date.prototype.setHours - ECMAScript (ECMA-262)"
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+
+{
+    "kind": "Method",
+    "name": "Date.valueOf",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/valueOf",
+    "description": "The valueOf() method returns the primitive value of a Date object.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-date.prototype.valueof",
+            "description": "Date.prototype.valueOf - ECMAScript (ECMA-262)"
+        }
+    ]
+}

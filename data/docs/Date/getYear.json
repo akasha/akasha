@@ -1,0 +1,14 @@
+
+{
+    "kind": "Method",
+    "name": "Date.getYear",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getYear",
+    "description": "The getYear() method returns the year in the specified date according to local time. Because getYear() does not return full years (&quot;year 2000 problem&quot;), it is no longer used and has been replaced by the getFullYear() method.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-date.prototype.getyear",
+            "description": "Date.prototype.getYear - ECMAScript (ECMA-262)"
+        }
+    ]
+}

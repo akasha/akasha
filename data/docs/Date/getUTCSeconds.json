@@ -1,0 +1,14 @@
+
+{
+    "kind": "Method",
+    "name": "Date.getUTCSeconds",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getUTCSeconds",
+    "description": "The getUTCSeconds() method returns the seconds in the specified date according to universal time.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-date.prototype.getutcseconds",
+            "description": "Date.prototype.getUTCSeconds - ECMAScript (ECMA-262)"
+        }
+    ]
+}

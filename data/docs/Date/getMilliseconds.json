@@ -1,0 +1,14 @@
+
+{
+    "kind": "Method",
+    "name": "Date.getMilliseconds",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getMilliseconds",
+    "description": "The getMilliseconds() method returns the milliseconds in the specified date according to local time.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-date.prototype.getmilliseconds",
+            "description": "Date.prototype.getMilliseconds - ECMAScript (ECMA-262)"
+        }
+    ]
+}

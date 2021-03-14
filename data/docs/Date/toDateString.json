@@ -1,0 +1,14 @@
+
+{
+    "kind": "Method",
+    "name": "Date.toDateString",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toDateString",
+    "description": "The toDateString() method returns the date portion of a Date object in English in the following format separated by spaces:",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-date.prototype.todatestring",
+            "description": "Date.prototype.toDateString - ECMAScript (ECMA-262)"
+        }
+    ]
+}

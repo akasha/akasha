@@ -1,0 +1,14 @@
+
+{
+    "kind": "Method",
+    "name": "Date.toUTCString",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toUTCString",
+    "description": "The toUTCString() method converts a date to a string, using the UTC time zone.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-date.prototype.toutcstring",
+            "description": "Date.prototype.toUTCString - ECMAScript (ECMA-262)"
+        }
+    ]
+}
