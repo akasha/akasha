@@ -1612,8 +1612,6 @@ interface HTMLObjectElement : HTMLElement {
   [CEReactions]
   attribute DOMString type;
   [CEReactions]
-  attribute DOMString useMap;
-  [CEReactions]
   attribute DOMString width;
   [HTMLConstructor]
   constructor();
@@ -1818,6 +1816,8 @@ interface HTMLSlotElement : HTMLElement {
 [Exposed=Window]
 interface HTMLSourceElement : HTMLElement {
   [CEReactions]
+  attribute unsigned long height;
+  [CEReactions]
   attribute DOMString media;
   [CEReactions]
   attribute DOMString sizes;
@@ -1827,6 +1827,8 @@ interface HTMLSourceElement : HTMLElement {
   attribute USVString srcset;
   [CEReactions]
   attribute DOMString type;
+  [CEReactions]
+  attribute unsigned long width;
   [HTMLConstructor]
   constructor();
 };
@@ -2065,8 +2067,8 @@ interface History {
   undefined back();
   undefined forward();
   undefined go( optional long delta = 0 );
-  undefined pushState( any data, DOMString title, optional USVString? url = null );
-  undefined replaceState( any data, DOMString title, optional USVString? url = null );
+  undefined pushState( any data, DOMString unused, optional USVString? url = null );
+  undefined replaceState( any data, DOMString unused, optional USVString? url = null );
 };
 
 [Exposed=(Window,Worker), Serializable, Transferable]
@@ -2766,6 +2768,8 @@ partial interface HTMLObjectElement {
   attribute unsigned long hspace;
   [CEReactions]
   attribute DOMString standby;
+  [CEReactions]
+  attribute DOMString useMap;
   [CEReactions]
   attribute unsigned long vspace;
 };

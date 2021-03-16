@@ -23,6 +23,6 @@ interface PerformanceResourceTiming : PerformanceEntry {
 
 partial interface Performance {
   attribute EventHandler onresourcetimingbufferfull;
-  void clearResourceTimings();
-  void setResourceTimingBufferSize( unsigned long maxSize );
+  undefined clearResourceTimings();
+  undefined setResourceTimingBufferSize( unsigned long maxSize );
 };

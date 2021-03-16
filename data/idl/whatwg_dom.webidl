@@ -147,6 +147,8 @@ interface AbortController {
 interface AbortSignal : EventTarget {
   readonly attribute boolean aborted;
   attribute EventHandler onabort;
+  [NewObject]
+  static AbortSignal abort();
 };
 
 [Exposed=Window]

@@ -1,6 +1,6 @@
 typedef unsigned long long GLuint64EXT;
 
-[LegacyNoInterfaceObject]
+[Exposed=(Window,Worker), LegacyNoInterfaceObject]
 interface EXT_disjoint_timer_query {
   const GLenum CURRENT_QUERY_EXT = 0x8865;
   const GLenum GPU_DISJOINT_EXT = 0x8FBB;
@@ -20,6 +20,6 @@ interface EXT_disjoint_timer_query {
   undefined queryCounterEXT( WebGLTimerQueryEXT query, GLenum target );
 };
 
-[LegacyNoInterfaceObject]
+[Exposed=(Window,Worker), LegacyNoInterfaceObject]
 interface WebGLTimerQueryEXT : WebGLObject {
 };

@@ -1,4 +1,4 @@
-[LegacyNoInterfaceObject]
+[Exposed=(Window,Worker), LegacyNoInterfaceObject]
 interface WEBGL_compressed_texture_astc {
   const GLenum COMPRESSED_RGBA_ASTC_10x10_KHR = 0x93BB;
   const GLenum COMPRESSED_RGBA_ASTC_10x5_KHR = 0x93B8;

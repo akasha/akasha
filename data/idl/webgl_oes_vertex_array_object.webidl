@@ -1,4 +1,4 @@
-[LegacyNoInterfaceObject]
+[Exposed=(Window,Worker), LegacyNoInterfaceObject]
 interface OES_vertex_array_object {
   const GLenum VERTEX_ARRAY_BINDING_OES = 0x85B5;
   undefined bindVertexArrayOES( WebGLVertexArrayObjectOES? arrayObject );
@@ -8,6 +8,6 @@ interface OES_vertex_array_object {
   GLboolean isVertexArrayOES( WebGLVertexArrayObjectOES? arrayObject );
 };
 
-[LegacyNoInterfaceObject]
+[Exposed=(Window,Worker), LegacyNoInterfaceObject]
 interface WebGLVertexArrayObjectOES : WebGLObject {
 };

@@ -1,4 +1,4 @@
-[LegacyNoInterfaceObject]
+[Exposed=(Window,Worker), LegacyNoInterfaceObject]
 interface WEBGL_compressed_texture_etc {
   const GLenum COMPRESSED_R11_EAC = 0x9270;
   const GLenum COMPRESSED_RG11_EAC = 0x9272;

@@ -1,4 +1,4 @@
-[LegacyNoInterfaceObject]
+[Exposed=(Window,Worker), LegacyNoInterfaceObject]
 interface WEBGL_draw_buffers {
   const GLenum COLOR_ATTACHMENT0_WEBGL = 0x8CE0;
   const GLenum COLOR_ATTACHMENT10_WEBGL = 0x8CEA;

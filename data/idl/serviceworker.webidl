@@ -51,7 +51,7 @@ dictionary ExtendableMessageEventInit : ExtendableEventInit {
 
 dictionary FetchEventInit : ExtendableEventInit {
   DOMString clientId = "";
-  Promise<void> handled;
+  Promise<undefined> handled;
   Promise<any> preloadResponse;
   DOMString replacesClientId = "";
   required Request request;
@@ -81,19 +81,19 @@ partial interface mixin WindowOrWorkerGlobalScope {
 [SecureContext, Exposed=(Window,Worker)]
 interface Cache {
   [NewObject]
-  Promise<void> add( RequestInfo request );
+  Promise<undefined> add( RequestInfo request );
   [NewObject]
-  Promise<void> addAll( sequence<RequestInfo> requests );
+  Promise<undefined> addAll( sequence<RequestInfo> requests );
   [NewObject]
   Promise<boolean> delete( RequestInfo request, optional CacheQueryOptions options = {} );
   [NewObject]
   Promise<FrozenArray<Request>> keys( optional RequestInfo request, optional CacheQueryOptions options = {} );
   [NewObject]
-  Promise<any> match( RequestInfo request, optional CacheQueryOptions options = {} );
+  Promise<( Response or undefined )> match( RequestInfo request, optional CacheQueryOptions options = {} );
   [NewObject]
   Promise<FrozenArray<Response>> matchAll( optional RequestInfo request, optional CacheQueryOptions options = {} );
   [NewObject]
-  Promise<void> put( RequestInfo request, Response response );
+  Promise<undefined> put( RequestInfo request, Response response );
 };
 
 [SecureContext, Exposed=(Window,Worker)]
@@ -105,7 +105,7 @@ interface CacheStorage {
   [NewObject]
   Promise<sequence<DOMString>> keys();
   [NewObject]
-  Promise<any> match( RequestInfo request, optional MultiCacheQueryOptions options = {} );
+  Promise<( Response or undefined )> match( RequestInfo request, optional MultiCacheQueryOptions options = {} );
   [NewObject]
   Promise<Cache> open( DOMString cacheName );
 };
@@ -116,16 +116,16 @@ interface Client {
   readonly attribute DOMString id;
   readonly attribute ClientType type;
   readonly attribute USVString url;
-  void postMessage( any message, sequence<object> transfer );
-  void postMessage( any message, optional PostMessageOptions options = {} );
+  undefined postMessage( any message, sequence<object> transfer );
+  undefined postMessage( any message, optional PostMessageOptions options = {} );
 };
 
 [Exposed=ServiceWorker]
 interface Clients {
   [NewObject]
-  Promise<void> claim();
+  Promise<undefined> claim();
   [NewObject]
-  Promise<any> get( DOMString id );
+  Promise<( Client or undefined )> get( DOMString id );
   [NewObject]
   Promise<FrozenArray<Client>> matchAll( optional ClientQueryOptions options = {} );
   [NewObject]
@@ -135,7 +135,7 @@ interface Clients {
 [Exposed=ServiceWorker]
 interface ExtendableEvent : Event {
   constructor( DOMString type, optional ExtendableEventInit eventInitDict = {} );
-  void waitUntil( Promise<any> f );
+  undefined waitUntil( Promise<any> f );
 };
 
 [Exposed=ServiceWorker]
@@ -152,22 +152,22 @@ interface ExtendableMessageEvent : ExtendableEvent {
 [Exposed=ServiceWorker]
 interface FetchEvent : ExtendableEvent {
   readonly attribute DOMString clientId;
-  readonly attribute Promise<void> handled;
+  readonly attribute Promise<undefined> handled;
   readonly attribute Promise<any> preloadResponse;
   readonly attribute DOMString replacesClientId;
   [SameObject]
   readonly attribute Request request;
   readonly attribute DOMString resultingClientId;
   constructor( DOMString type, FetchEventInit eventInitDict );
-  void respondWith( Promise<Response> r );
+  undefined respondWith( Promise<Response> r );
 };
 
 [SecureContext, Exposed=(Window,Worker)]
 interface NavigationPreloadManager {
-  Promise<void> disable();
-  Promise<void> enable();
+  Promise<undefined> disable();
+  Promise<undefined> enable();
   Promise<NavigationPreloadState> getState();
-  Promise<void> setHeaderValue( ByteString value );
+  Promise<undefined> setHeaderValue( ByteString value );
 };
 
 [SecureContext, Exposed=(Window,Worker)]
@@ -175,8 +175,8 @@ interface ServiceWorker : EventTarget {
   readonly attribute USVString scriptURL;
   readonly attribute ServiceWorkerState state;
   attribute EventHandler onstatechange;
-  void postMessage( any message, sequence<object> transfer );
-  void postMessage( any message, optional PostMessageOptions options = {} );
+  undefined postMessage( any message, sequence<object> transfer );
+  undefined postMessage( any message, optional PostMessageOptions options = {} );
 };
 
 [SecureContext, Exposed=(Window,Worker)]
@@ -187,12 +187,12 @@ interface ServiceWorkerContainer : EventTarget {
   attribute EventHandler onmessage;
   attribute EventHandler onmessageerror;
   [NewObject]
-  Promise<any> getRegistration( optional USVString clientURL = "" );
+  Promise<( ServiceWorkerRegistration or undefined )> getRegistration( optional USVString clientURL = "" );
   [NewObject]
   Promise<FrozenArray<ServiceWorkerRegistration>> getRegistrations();
   [NewObject]
   Promise<ServiceWorkerRegistration> register( USVString scriptURL, optional RegistrationOptions options = {} );
-  void startMessages();
+  undefined startMessages();
 };
 
 [Global=(Worker,ServiceWorker), Exposed=ServiceWorker]
@@ -209,7 +209,7 @@ interface ServiceWorkerGlobalScope : WorkerGlobalScope {
   attribute EventHandler onmessage;
   attribute EventHandler onmessageerror;
   [NewObject]
-  Promise<void> skipWaiting();
+  Promise<undefined> skipWaiting();
 };
 
 [SecureContext, Exposed=(Window,Worker)]
@@ -225,7 +225,7 @@ interface ServiceWorkerRegistration : EventTarget {
   [NewObject]
   Promise<boolean> unregister();
   [NewObject]
-  Promise<void> update();
+  Promise<undefined> update();
 };
 
 [Exposed=ServiceWorker]

@@ -1,6 +1,10 @@
 typedef sequence<PerformanceEntry> PerformanceEntryList;
 
-callback PerformanceObserverCallback = void ( PerformanceObserverEntryList entries, PerformanceObserver observer, optional boolean hasDroppedEntry = false );
+callback PerformanceObserverCallback = undefined ( PerformanceObserverEntryList entries, PerformanceObserver observer, optional PerformanceObserverCallbackOptions options = {} );
+
+dictionary PerformanceObserverCallbackOptions {
+  unsigned long long droppedEntriesCount;
+};
 
 dictionary PerformanceObserverInit {
   boolean buffered;
@@ -23,8 +27,8 @@ interface PerformanceObserver {
   [SameObject]
   static readonly attribute FrozenArray<DOMString> supportedEntryTypes;
   constructor( PerformanceObserverCallback callback );
-  void disconnect();
-  void observe( optional PerformanceObserverInit options = {} );
+  undefined disconnect();
+  undefined observe( optional PerformanceObserverInit options = {} );
   PerformanceEntryList takeRecords();
 };
 

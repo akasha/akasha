@@ -13,7 +13,7 @@ interface SyncEvent : ExtendableEvent {
 [Exposed=(Window,Worker)]
 interface SyncManager {
   Promise<sequence<DOMString>> getTags();
-  Promise<void> register( DOMString tag );
+  Promise<undefined> register( DOMString tag );
 };
 
 partial interface ServiceWorkerGlobalScope {
