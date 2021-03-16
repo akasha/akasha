@@ -3,7 +3,7 @@
     "kind": "Method",
     "name": "String.includes",
     "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes",
-    "description": "The includes() method determines whether one string may be found within another string, returning true or false as appropriate.",
+    "description": "The includes() method performs a case-sensitive search to determine whether one string may be found within another string, returning true or false as appropriate.",
     "refs": [
         {
             "name": "ECMAScript (ECMA-262)",

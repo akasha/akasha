@@ -1,7 +1,7 @@
 
 {
     "name": "String",
-    "lastModifiedAt": 1615195644461,
+    "lastModifiedAt": 1615895246060,
     "entries": [
         {
             "name": "__type__",
@@ -69,7 +69,7 @@
         },
         {
             "name": "includes",
-            "lastModifiedAt": 1613785062000
+            "lastModifiedAt": 1615859820000
         },
         {
             "name": "indexOf",
