@@ -15,6 +15,10 @@ def gwt_enhance(project, options = {})
     a.is_a?(String) ? file(a) : a
   end
 
+  if !!project.compile.options[:processor] || (project.compile.options[:processor].nil? && !(project.compile.options[:processor_path] || []).empty?)
+    extra_deps += [project.file(project._(:generated, 'processors/main/java'))]
+  end
+
   project.compile.with Buildr::GWT.dependencies(project.gwt_detect_version(Buildr.artifacts(:gwt_user)))
 
   dependencies = project.compile.dependencies + extra_deps
@@ -33,15 +37,15 @@ def gwt_enhance(project, options = {})
   end
 
   unless modules_complete
-    base_synthetic_module_dir = project._(:target, :generated, :synthetic_gwt_module, :main, :resources)
+    base_synthetic_module_dir = project._(:generated, :synthetic_gwt_module, :main, :resources)
     t = project.task('gwt_synthetic_module') do
       gwt_modules.each do |gwt_module|
         file = "#{base_synthetic_module_dir}/#{gwt_module.gsub('.', '/')}Test.gwt.xml"
         mkdir_p File.dirname(file)
         IO.write(file, <<CONTENT)
 <module>
-  <inherits name="#{gwt_module}"/>
-  <inherits name="com.google.gwt.user.User"/>
+  <inherits name='#{gwt_module}'/>
+  <inherits name='com.google.gwt.user.User'/>
   <source path='ignored'/>
   <collapse-all-properties/>
 </module>
@@ -78,9 +82,7 @@ CONTENT
     assets.each do |path|
       j.include("#{path}/*")
     end
-    (project.compile.sources + project.iml.main_generated_resource_directories + project.iml.main_generated_source_directories).flatten.collect{|d|d.to_s}.compact.each do |dep|
-      j.include("#{dep}/*")
-    end
+    j.include("#{project._(:source, :main, :java)}/*")
   end if package_jars
 
   config = {}
@@ -88,7 +90,7 @@ CONTENT
     config[gwt_module] = false
   end
   project.iml.add_gwt_facet(config, :settings => {
-      :compilerMaxHeapSize => '1024',
-      :compilerParameters => '-draftCompile -localWorkers 2 -strict'
+    :compilerMaxHeapSize => '1024',
+    :compilerParameters => '-draftCompile -localWorkers 2 -strict'
   }, :gwt_dev_artifact => :gwt_dev)
 end
