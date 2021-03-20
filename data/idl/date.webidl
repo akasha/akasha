@@ -1,7 +1,7 @@
 
 // Note that this is more accurately represented as "unsigned long long" but
 // the jsinterop generator would map this to long but for consistency with elemental2
-// API we have decided to map this to double instead... 
+// API we have decided to map this to double instead...
 typedef double Timestamp;
 //typedef unsigned long long Timestamp;
 
