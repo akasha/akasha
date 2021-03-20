@@ -5,8 +5,8 @@ jdk:
 rvm:
   - 2.7.2
 install:
-- rvm install ruby-2.7.2
-- rvm use 2.7.2
+  - rvm install ruby-2.7.2
+  - rvm use 2.7.2
   - gem install bundler
   - bundle install
 script: buildr clean package
