@@ -5,6 +5,8 @@ require 'buildr/single_intermediate_layout'
 require 'buildr/top_level_generate_dir'
 require 'buildr/jacoco'
 
+Buildr::MavenCentral.define_publish_tasks(:profile_name => 'org.realityforge', :username => 'realityforge')
+
 JSONB_DEPS = [:jsonb_api, :yasson, :javax_json]
 PACKAGED_DEPS = [:getopt4j, :jsoup] + JSONB_DEPS + Buildr::Antlr4.runtime_dependencies
 # GWT dependencies required for compiling generated code
