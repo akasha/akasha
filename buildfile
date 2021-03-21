@@ -285,6 +285,7 @@ task('generate:all').enhance([file(File.expand_path("#{File.dirname(__FILE__)}/w
 
 Buildr.projects.each do |project|
   unless %w(akasha:complete).include?(project.name)
+    project.task('install').actions.clear
     project.task('upload').actions.clear
   end
 end
