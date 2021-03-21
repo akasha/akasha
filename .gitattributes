@@ -4,6 +4,7 @@
 *.json text
 *.md text
 *.rake text
+*.rb text
 *.webidl text
 *.xml text
 *.yaml text

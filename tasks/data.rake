@@ -1,3 +1,15 @@
+WORKSPACE_DIR = File.expand_path(File.dirname(__FILE__) + '/..')
+
+def in_dir(dir)
+  current = Dir.pwd
+  begin
+    Dir.chdir(dir)
+    yield
+  ensure
+    Dir.chdir(current)
+  end
+end
+
 def run_webtack(args)
   pkg = Buildr.project('akasha:webtack:cli').package(:jar, :classifier => 'all')
   pkg.invoke
