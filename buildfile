@@ -14,8 +14,7 @@ GWT_DEPS = [
   :javax_annotation,
   :jetbrains_annotations,
   :jsinterop_annotations,
-  :jsinterop_base,
-  :gwt_user
+  :jsinterop_base
 ]
 
 REACT4J_DEPS = [
@@ -89,7 +88,7 @@ define 'akasha' do
     test.options[:properties] = {
       'webtack.jsinterop-generator.gwtc' => ENV['GWT'] == 'no' ? 'false' : 'true',
       'webtack.jsinterop-generator.fixture_dir' => _('src/test/fixtures'),
-      'webtack.jsinterop-generator.fixture.libs' => "#{GWT_DEPS.collect { |a| artifact(a).to_s }.join(':')}:#{project('akasha:core').package(:jar).to_s}",
+      'webtack.jsinterop-generator.fixture.libs' => "#{GWT_DEPS.collect { |a| artifact(a).to_s }.join(':')}:#{artifact(:gwt_user)}:#{project('akasha:core').package(:jar).to_s}",
       'webtack.jsinterop-generator.gwt_dev.libs' => "#{GWT_DEPS.collect { |a| artifact(a).to_s }.join(':')}:#{Buildr::GWT.dependencies('2.9.0').collect { |d| artifact(d).to_s }.join(':')}:#{project('akasha:core').package(:jar).to_s}"
     }
     test.options[:java_args] = %w(-ea)
@@ -119,7 +118,7 @@ define 'akasha' do
     test.options[:properties] = {
       'webtack.react4j-generator.gwtc' => ENV['GWT'] == 'no' ? 'false' : 'true',
       'webtack.react4j-generator.fixture_dir' => _('src/test/fixtures'),
-      'webtack.react4j-generator.fixture.libs' => "#{REACT4J_DEPS.collect { |a| artifact(a).to_s }.join(':')}:#{project('akasha:core').package(:jar).to_s}",
+      'webtack.react4j-generator.fixture.libs' => "#{REACT4J_DEPS.collect { |a| artifact(a).to_s }.join(':')}:#{artifact(:gwt_user)}:#{project('akasha:core').package(:jar).to_s}",
       'webtack.react4j-generator.gwt_dev.libs' => "#{REACT4J_DEPS.collect { |a| artifact(a).to_s }.join(':')}:#{Buildr::GWT.dependencies('2.9.0').collect { |d| artifact(d).to_s }.join(':')}:#{project('akasha:core').package(:jar).to_s}"
     }
     test.options[:java_args] = %w(-ea)
@@ -187,21 +186,35 @@ define 'akasha' do
     package(:javadoc)
   end
 
-  %w(speech bluetooth complete react4j).each do |name|
+  desc "Akasha complete"
+  define 'complete', :base_dir => "#{WORKSPACE_DIR}/akasha/complete" do
+    src_dir = file("#{project._(:target, :generated)}/webtack/main/java" => ["data:run_complete_pipeline"])
+    compile.sources << src_dir
+    iml.main_generated_source_directories << src_dir
+
+    doc.options.merge!('Xdoclint:all,-reference,-missing' => true)
+
+    compile.using :javac
+
+    deps = artifacts(GWT_DEPS) + [project('akasha:core')]
+    compile.with deps
+
+    gwt_enhance(project, :extra_deps => [src_dir])
+
+    pom.include_transitive_dependencies << deps
+    pom.dependency_filter = Proc.new { |dep| dep[:scope].to_s != 'test' && deps.include?(dep[:artifact]) }
+
+    package(:jar)
+    package(:sources)
+    package(:javadoc)
+  end
+
+  %w(speech bluetooth).each do |name|
     desc "Akasha #{name}"
     define name, :base_dir => "#{WORKSPACE_DIR}/akasha/#{name}" do
-      extra_deps = []
-      if 'complete' == name
-        src_dir = file("#{project._(:target, :generated)}/webtack/main/java" => ["data:run_#{name}_pipeline"])
-        project.compile.sources << src_dir
-        project.iml.main_generated_source_directories << src_dir
-        extra_deps << src_dir
-      else
-        src_dir = file("#{WORKSPACE_DIR}/data/output/#{name}/main/java" => ["data:run_#{name}_pipeline"])
-        project.compile.sources << src_dir
-        extra_deps << src_dir
-        project.layout[:target, :generated] = "#{WORKSPACE_DIR}/target/akasha-#{name}/generated"
-      end
+      src_dir = file("#{WORKSPACE_DIR}/data/output/#{name}/main/java" => ["data:run_#{name}_pipeline"])
+      compile.sources << src_dir
+      project.layout[:target, :generated] = "#{WORKSPACE_DIR}/target/akasha-#{name}/generated"
 
       doc.options.merge!('Xdoclint:all,-reference,-missing' => true)
 
@@ -211,7 +224,7 @@ define 'akasha' do
       deps << [project('akasha:core')]
       compile.with deps
 
-      gwt_enhance(project, :extra_deps => extra_deps)
+      gwt_enhance(project, :extra_deps => [src_dir])
 
       pom.include_transitive_dependencies << deps
       pom.dependency_filter = Proc.new { |dep| dep[:scope].to_s != 'test' && deps.include?(dep[:artifact]) }
@@ -220,7 +233,7 @@ define 'akasha' do
       package(:sources)
       package(:javadoc)
 
-      project.no_iml unless 'main' == name
+      project.no_iml
     end
   end
 
