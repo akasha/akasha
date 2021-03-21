@@ -4,7 +4,7 @@
     {
       "name": "Emit",
       "config": {
-        "filePattern": "data/output/main/complete.webidl"
+        "filePattern": "data/output/complete/complete.webidl"
       }
     },
     {
@@ -16,7 +16,7 @@
         "predefinedTypeMapping": [
           "data/pipelines/complete_predefined.mapping"
         ],
-        "outputDirectory": "akasha/complete/generated",
+        "outputDirectory": "akasha/complete/generated/webtack",
         "packageName": "akasha",
         "globalInterface": "Window"
       }
