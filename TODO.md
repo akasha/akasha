@@ -13,8 +13,6 @@ complete as there is too much un-said.
   have currently deployed `org.realityforge.webtack:webtack-elemental3-complete:jar:0.03` to maven central
   but have no way to automate the upload, release and bump of the version number.
 
-* Rework the complete module so that core is merged in and single file override occurs
-
 * Add missing methods to typed array types
 
 # Docs Integration

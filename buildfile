@@ -192,14 +192,23 @@ define 'akasha' do
     compile.sources << src_dir
     iml.main_generated_source_directories << src_dir
 
+    core_src_path = "#{project._(:target, :generated)}/core/main/java"
+    core_src_dir = file(core_src_path) do
+      mkdir_p core_src_path
+      FileUtils.cp_r "#{WORKSPACE_DIR}/akasha/core/src/main/java", File.dirname(core_src_path)
+      FileUtils.rm "#{core_src_path}/akasha/lang/JsIterable.java"
+    end
+    compile.sources << core_src_dir
+    iml.main_generated_source_directories << core_src_dir
+
     doc.options.merge!('Xdoclint:all,-reference,-missing' => true)
 
     compile.using :javac
 
-    deps = artifacts(GWT_DEPS) + [project('akasha:core')]
+    deps = artifacts(GWT_DEPS)
     compile.with deps
 
-    gwt_enhance(project, :extra_deps => [src_dir])
+    gwt_enhance(project, :extra_deps => [src_dir, core_src_dir])
 
     pom.include_transitive_dependencies << deps
     pom.dependency_filter = Proc.new { |dep| dep[:scope].to_s != 'test' && deps.include?(dep[:artifact]) }
