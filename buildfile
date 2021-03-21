@@ -177,8 +177,6 @@ define 'akasha' do
 
     desc "Elemental3 #{name}"
     define name, :base_dir => "#{WORKSPACE_DIR}/akasha/#{name}" do
-      project.layout[:target, :generated] = "#{WORKSPACE_DIR}/generated/akasha/#{name}"
-
       extra_deps = []
       if 'core' == pipeline
         compile.options.lint = 'all,-serial,-rawtypes,-unchecked'
@@ -191,6 +189,7 @@ define 'akasha' do
         src_dir = file("#{WORKSPACE_DIR}/data/output/#{pipeline}/main/java" => ["data:run_#{pipeline}_pipeline"])
         project.compile.sources << src_dir
         extra_deps << src_dir
+        project.layout[:target, :generated] = "#{WORKSPACE_DIR}/target/akasha-#{name}/generated"
       end
 
       doc.options.merge!('Xdoclint:all,-reference,-missing' => true)
