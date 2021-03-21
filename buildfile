@@ -188,10 +188,6 @@ define 'akasha' do
   end
 
   %w(speech bluetooth complete react4j).each do |name|
-
-    # react4j is not yet ready for testing
-    next if 'react4j' == name
-
     desc "Akasha #{name}"
     define name, :base_dir => "#{WORKSPACE_DIR}/akasha/#{name}" do
       extra_deps = []
@@ -211,7 +207,7 @@ define 'akasha' do
 
       compile.using :javac
 
-      deps = artifacts('react4j' == name ? REACT4J_DEPS : GWT_DEPS)
+      deps = artifacts(GWT_DEPS)
       deps << [project('akasha:core')]
       compile.with deps
 
