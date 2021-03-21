@@ -3038,9 +3038,6 @@ final class JsinteropAction
       }
     }
 
-    final EnumerationValue value = definition.getValues().get( 0 );
-    final WebIDLSchema schema = getSchema();
-
     final List<Object> params = new ArrayList<>();
     final String test =
       definition
