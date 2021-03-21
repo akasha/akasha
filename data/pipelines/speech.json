@@ -115,6 +115,9 @@
     {
       "name": "Jsinterop",
       "config": {
+        "predefinedTypeMapping": [
+          "data/pipelines/common_predefined.mapping"
+        ],
         "outputDirectory": "data/output/speech",
         "packageName": "akasha"
       }

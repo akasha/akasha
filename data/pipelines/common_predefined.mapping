@@ -1,0 +1,6 @@
+Any=jsinterop.base.Any
+Promise=akasha.promise.Promise
+Sequence=akasha.lang.JsArray
+Iterator=akasha.lang.JsIterator
+Iterable=akasha.lang.JsIterable
+IteratorIterable=akasha.lang.JsIteratorIterable

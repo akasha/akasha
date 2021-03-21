@@ -407,13 +407,7 @@ public abstract class AbstractJavaAction
 
   protected void registerDefaultTypeMapping()
   {
-    tryRegisterIdlToJavaTypeMapping( Kind.Any.name(), "jsinterop.base.Any" );
     tryRegisterIdlToJavaTypeMapping( Kind.Object.name(), "java.lang.Object" );
-    tryRegisterIdlToJavaTypeMapping( Kind.Promise.name(), "akasha.promise.Promise" );
-    tryRegisterIdlToJavaTypeMapping( Kind.Sequence.name(), "akasha.lang.JsArray" );
-    tryRegisterIdlToJavaTypeMapping( "Iterator", "akasha.lang.JsIterator" );
-    tryRegisterIdlToJavaTypeMapping( "Iterable", "akasha.lang.JsIterable" );
-    tryRegisterIdlToJavaTypeMapping( "IteratorIterable", "akasha.lang.JsIteratorIterable" );
   }
 
   @Nonnull

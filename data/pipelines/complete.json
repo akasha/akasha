@@ -14,6 +14,7 @@
           "data/pipelines/types.mapping"
         ],
         "predefinedTypeMapping": [
+          "data/pipelines/common_predefined.mapping",
           "data/pipelines/complete_predefined.mapping"
         ],
         "outputDirectory": "akasha/complete/generated/webtack",

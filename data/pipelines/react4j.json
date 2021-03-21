@@ -12,6 +12,7 @@
       "config": {
         "outputDirectory": "data/output/react4j",
         "predefinedTypeMapping": [
+          "data/pipelines/common_predefined.mapping",
           "akasha/complete/generated/main/resources/akasha/Akasha.mapping"
         ],
         "packageName": "react4j.dom2"
