@@ -2,4 +2,4 @@ ImageBitmap=com.example.ImageBitmap
 MessagePort=com.example.MessagePort
 Object=java.lang.Object
 PostMessageOptions=com.example.PostMessageOptions
-Sequence=akasha.lang.JsArray
+Sequence=com.example.JsArray

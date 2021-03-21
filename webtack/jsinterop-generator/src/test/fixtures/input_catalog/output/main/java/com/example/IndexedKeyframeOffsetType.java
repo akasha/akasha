@@ -1,6 +1,5 @@
 package com.example;
 
-import com.biz.MyArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -24,7 +23,7 @@ public interface IndexedKeyframeOffsetType {
 
   @JsOverlay
   @Nonnull
-  static IndexedKeyframeOffsetType of(@Nonnull final MyArray<Double> value) {
+  static IndexedKeyframeOffsetType of(@Nonnull final JsArray<Double> value) {
     return Js.cast( value );
   }
 

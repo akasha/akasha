@@ -3,6 +3,8 @@ package org.realityforge.webtack.jsinterop;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.List;
 import javax.annotation.Nonnull;
 import org.realityforge.webtack.model.tools.validator.ValidatorRuleConfig;
 import org.testng.annotations.DataProvider;
@@ -40,6 +42,19 @@ public final class FixtureTest
     {
       globalInterface = "Window";
     }
-    generateCode( directory, globalInterface, validatorRuleConfig );
+
+
+    final String commonDir = "alt_inherit".equals( scenario ) ? "_other_common_code" : "_common_code";
+    final List<String> gwtInherits = new ArrayList<>();
+    if("alt_inherit".equals( scenario ))
+    {
+      gwtInherits.add( "com.other.Other" );
+    }
+    generateCode( directory,
+                  directory.getParent().resolve( commonDir ),
+                  loadWebIDLSchema( directory.resolve( "schema.webidl" ) ),
+                  globalInterface,
+                  validatorRuleConfig,
+                  gwtInherits );
   }
 }

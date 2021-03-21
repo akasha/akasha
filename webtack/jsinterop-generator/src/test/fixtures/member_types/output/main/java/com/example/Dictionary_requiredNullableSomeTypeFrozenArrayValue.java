@@ -1,6 +1,5 @@
 package com.example;
 
-import akasha.lang.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;

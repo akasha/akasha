@@ -1,4 +1,4 @@
 IDBIndex=com.example.IDBIndex
 IDBIndexParameters=com.example.IDBIndexParameters
 IDBObjectStore=com.example.IDBObjectStore
-Sequence=akasha.lang.JsArray
+Sequence=com.example.JsArray

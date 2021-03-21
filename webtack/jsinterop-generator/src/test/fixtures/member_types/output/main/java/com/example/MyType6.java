@@ -1,10 +1,5 @@
 package com.example;
 
-import akasha.lang.JsArray;
-import akasha.lang.JsIterable;
-import akasha.lang.JsIterator;
-import akasha.lang.JsIteratorIterable;
-import akasha.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -68,7 +63,7 @@ public class MyType6 {
   public static float floatValue;
 
   @Nonnull
-  public static Promise<JsArray<Double>> longLongPromiseValue;
+  public static JsPromise<JsArray<Double>> longLongPromiseValue;
 
   public static int longLongValue;
 
@@ -129,7 +124,7 @@ public class MyType6 {
   public static JsArray<Double> nullableShortFrozenArrayValue;
 
   @Nonnull
-  public static Promise<Double> nullableShortPromiseValue;
+  public static JsPromise<Double> nullableShortPromiseValue;
 
   @Nullable
   public static JsArray<Double> nullableShortSequenceValue;
@@ -141,7 +136,7 @@ public class MyType6 {
   public static JsArray<SomeType> nullableSomeTypeFrozenArrayValue;
 
   @Nonnull
-  public static Promise<SomeType> nullableSomeTypePromiseValue;
+  public static JsPromise<SomeType> nullableSomeTypePromiseValue;
 
   @Nullable
   public static JsArray<SomeType> nullableSomeTypeSequenceValue;
@@ -188,7 +183,7 @@ public class MyType6 {
   public static JsArray<Double> shortFrozenArrayValue;
 
   @Nonnull
-  public static Promise<Double> shortPromiseValue;
+  public static JsPromise<Double> shortPromiseValue;
 
   @Nonnull
   public static JsArray<Double> shortSequenceValue;
@@ -199,7 +194,7 @@ public class MyType6 {
   public static JsArray<SomeType> someTypeFrozenArrayValue;
 
   @Nonnull
-  public static Promise<SomeType> someTypePromiseValue;
+  public static JsPromise<SomeType> someTypePromiseValue;
 
   @Nonnull
   public static JsArray<SomeType> someTypeSequenceValue;
@@ -227,7 +222,7 @@ public class MyType6 {
   public static String usvStringValue;
 
   @Nonnull
-  public static Promise<Void> voidPromiseValue;
+  public static JsPromise<Void> voidPromiseValue;
 
   protected MyType6() {
   }

@@ -1,7 +1,5 @@
 package com.example;
 
-import akasha.lang.JsArray;
-import akasha.promise.Promise;
 import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -105,7 +103,7 @@ public class Event {
   public native String type();
 
   @Nonnull
-  public native Promise<Any> anyInReturnedPromise();
+  public native JsPromise<Any> anyInReturnedPromise();
 
   public native void anyParameter(@DoNotAutobox @Nullable Object value);
 

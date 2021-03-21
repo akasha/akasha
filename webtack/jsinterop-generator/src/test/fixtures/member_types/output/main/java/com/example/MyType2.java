@@ -1,10 +1,5 @@
 package com.example;
 
-import akasha.lang.JsArray;
-import akasha.lang.JsIterable;
-import akasha.lang.JsIterator;
-import akasha.lang.JsIteratorIterable;
-import akasha.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -65,7 +60,7 @@ public class MyType2 {
   public float floatValue;
 
   @Nonnull
-  public Promise<JsArray<Double>> longLongPromiseValue;
+  public JsPromise<JsArray<Double>> longLongPromiseValue;
 
   public int longLongValue;
 
@@ -126,7 +121,7 @@ public class MyType2 {
   public JsArray<Double> nullableShortFrozenArrayValue;
 
   @Nonnull
-  public Promise<Double> nullableShortPromiseValue;
+  public JsPromise<Double> nullableShortPromiseValue;
 
   @Nullable
   public JsArray<Double> nullableShortSequenceValue;
@@ -138,7 +133,7 @@ public class MyType2 {
   public JsArray<SomeType> nullableSomeTypeFrozenArrayValue;
 
   @Nonnull
-  public Promise<SomeType> nullableSomeTypePromiseValue;
+  public JsPromise<SomeType> nullableSomeTypePromiseValue;
 
   @Nullable
   public JsArray<SomeType> nullableSomeTypeSequenceValue;
@@ -185,7 +180,7 @@ public class MyType2 {
   public JsArray<Double> shortFrozenArrayValue;
 
   @Nonnull
-  public Promise<Double> shortPromiseValue;
+  public JsPromise<Double> shortPromiseValue;
 
   @Nonnull
   public JsArray<Double> shortSequenceValue;
@@ -196,7 +191,7 @@ public class MyType2 {
   public JsArray<SomeType> someTypeFrozenArrayValue;
 
   @Nonnull
-  public Promise<SomeType> someTypePromiseValue;
+  public JsPromise<SomeType> someTypePromiseValue;
 
   @Nonnull
   public JsArray<SomeType> someTypeSequenceValue;
@@ -224,7 +219,7 @@ public class MyType2 {
   public String usvStringValue;
 
   @Nonnull
-  public Promise<Void> voidPromiseValue;
+  public JsPromise<Void> voidPromiseValue;
 
   protected MyType2() {
   }

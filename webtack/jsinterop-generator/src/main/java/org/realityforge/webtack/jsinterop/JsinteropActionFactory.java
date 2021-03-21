@@ -4,6 +4,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.stream.Stream;
 import javax.annotation.Nonnull;
@@ -22,6 +23,7 @@ public final class JsinteropActionFactory
   public String globalInterface;
   public List<String> predefinedTypeMapping;
   public List<String> externalTypeMapping;
+  public List<String> gwtInherits;
   public boolean generateGwtModule = true;
   public boolean generateTypeCatalog = true;
   public boolean enableMagicConstants = true;
@@ -93,6 +95,7 @@ public final class JsinteropActionFactory
                                 predefinedTypeMappingPaths,
                                 externalTypeMappingPaths,
                                 generateGwtModule,
+                                null == gwtInherits ? Collections.emptyList() : gwtInherits,
                                 generateTypeCatalog,
                                 enableMagicConstants );
   }

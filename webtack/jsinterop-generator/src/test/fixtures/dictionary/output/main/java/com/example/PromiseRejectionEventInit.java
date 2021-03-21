@@ -1,6 +1,5 @@
 package com.example;
 
-import akasha.promise.Promise;
 import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -22,7 +21,7 @@ import jsinterop.base.JsPropertyMap;
 public interface PromiseRejectionEventInit extends EventInit {
   @JsOverlay
   @Nonnull
-  static PromiseRejectionEventInit create(@Nonnull final Promise<Any> promise) {
+  static PromiseRejectionEventInit create(@Nonnull final JsPromise<Any> promise) {
     return Js.<PromiseRejectionEventInit>uncheckedCast( JsPropertyMap.of() ).promise( promise );
   }
 
@@ -30,14 +29,14 @@ public interface PromiseRejectionEventInit extends EventInit {
       name = "promise"
   )
   @Nonnull
-  Promise<Any> promise();
+  JsPromise<Any> promise();
 
   @JsProperty
-  void setPromise(@Nonnull Promise<Any> promise);
+  void setPromise(@Nonnull JsPromise<Any> promise);
 
   @JsOverlay
   @Nonnull
-  default PromiseRejectionEventInit promise(@Nonnull final Promise<Any> promise) {
+  default PromiseRejectionEventInit promise(@Nonnull final JsPromise<Any> promise) {
     setPromise( promise );
     return this;
   }

@@ -1,10 +1,5 @@
 package com.example;
 
-import akasha.lang.JsArray;
-import akasha.lang.JsIterable;
-import akasha.lang.JsIterator;
-import akasha.lang.JsIteratorIterable;
-import akasha.promise.Promise;
 import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -215,12 +210,12 @@ public class MyType4 {
   public static native int longLongMethod(int v1);
 
   @Nonnull
-  public static native Promise<JsArray<Double>> longLongPromiseMethod(
-      @Nonnull Promise<JsArray<Double>> v1, @Nonnull Promise<JsArray<Double>> v2);
+  public static native JsPromise<JsArray<Double>> longLongPromiseMethod(
+      @Nonnull JsPromise<JsArray<Double>> v1, @Nonnull JsPromise<JsArray<Double>> v2);
 
   @Nonnull
-  public static native Promise<JsArray<Double>> longLongPromiseMethod(
-      @Nonnull Promise<JsArray<Double>> v1);
+  public static native JsPromise<JsArray<Double>> longLongPromiseMethod(
+      @Nonnull JsPromise<JsArray<Double>> v1);
 
   public static native int longMethod(int v1, int v2);
 
@@ -398,11 +393,11 @@ public class MyType4 {
   public static native Double nullableShortMethod(@Nullable Double v1);
 
   @Nonnull
-  public static native Promise<Double> nullableShortPromiseMethod(@Nonnull Promise<Double> v1,
-      @Nonnull Promise<Double> v2);
+  public static native JsPromise<Double> nullableShortPromiseMethod(@Nonnull JsPromise<Double> v1,
+      @Nonnull JsPromise<Double> v2);
 
   @Nonnull
-  public static native Promise<Double> nullableShortPromiseMethod(@Nonnull Promise<Double> v1);
+  public static native JsPromise<Double> nullableShortPromiseMethod(@Nonnull JsPromise<Double> v1);
 
   @Nullable
   public static native JsArray<Double> nullableShortSequenceMethod(@Nullable JsArray<Double> v1,
@@ -442,12 +437,12 @@ public class MyType4 {
   public static native SomeType nullableSomeTypeMethod(@Nullable SomeType v1);
 
   @Nonnull
-  public static native Promise<SomeType> nullableSomeTypePromiseMethod(
-      @Nonnull Promise<SomeType> v1, @Nonnull Promise<SomeType> v2);
+  public static native JsPromise<SomeType> nullableSomeTypePromiseMethod(
+      @Nonnull JsPromise<SomeType> v1, @Nonnull JsPromise<SomeType> v2);
 
   @Nonnull
-  public static native Promise<SomeType> nullableSomeTypePromiseMethod(
-      @Nonnull Promise<SomeType> v1);
+  public static native JsPromise<SomeType> nullableSomeTypePromiseMethod(
+      @Nonnull JsPromise<SomeType> v1);
 
   @Nullable
   public static native JsArray<SomeType> nullableSomeTypeSequenceMethod(
@@ -533,11 +528,11 @@ public class MyType4 {
   public static native short shortMethod(short v1);
 
   @Nonnull
-  public static native Promise<Double> shortPromiseMethod(@Nonnull Promise<Double> v1,
-      @Nonnull Promise<Double> v2);
+  public static native JsPromise<Double> shortPromiseMethod(@Nonnull JsPromise<Double> v1,
+      @Nonnull JsPromise<Double> v2);
 
   @Nonnull
-  public static native Promise<Double> shortPromiseMethod(@Nonnull Promise<Double> v1);
+  public static native JsPromise<Double> shortPromiseMethod(@Nonnull JsPromise<Double> v1);
 
   @Nonnull
   public static native JsArray<Double> shortSequenceMethod(@Nonnull JsArray<Double> v1,
@@ -575,11 +570,11 @@ public class MyType4 {
   public static native SomeType someTypeMethod(@Nonnull SomeType v1);
 
   @Nonnull
-  public static native Promise<SomeType> someTypePromiseMethod(@Nonnull Promise<SomeType> v1,
-      @Nonnull Promise<SomeType> v2);
+  public static native JsPromise<SomeType> someTypePromiseMethod(@Nonnull JsPromise<SomeType> v1,
+      @Nonnull JsPromise<SomeType> v2);
 
   @Nonnull
-  public static native Promise<SomeType> someTypePromiseMethod(@Nonnull Promise<SomeType> v1);
+  public static native JsPromise<SomeType> someTypePromiseMethod(@Nonnull JsPromise<SomeType> v1);
 
   @Nonnull
   public static native JsArray<SomeType> someTypeSequenceMethod(@Nonnull JsArray<SomeType> v1,
@@ -646,9 +641,9 @@ public class MyType4 {
       @Nonnull JsPropertyMap<String> v1);
 
   @Nonnull
-  public static native Promise<Void> voidPromiseMethod(@Nonnull Promise<Void> v1,
-      @Nonnull Promise<Void> v2);
+  public static native JsPromise<Void> voidPromiseMethod(@Nonnull JsPromise<Void> v1,
+      @Nonnull JsPromise<Void> v2);
 
   @Nonnull
-  public static native Promise<Void> voidPromiseMethod(@Nonnull Promise<Void> v1);
+  public static native JsPromise<Void> voidPromiseMethod(@Nonnull JsPromise<Void> v1);
 }

@@ -119,17 +119,11 @@ public abstract class AbstractTest
   }
 
   protected final void generateCode( @Nonnull final Path directory,
+                                     @Nonnull final Path commonDirectory,
+                                     @Nonnull final WebIDLSchema schema,
                                      @Nullable final String globalInterface,
-                                     @Nonnull final ValidatorRuleConfig validator )
-    throws Exception
-  {
-    generateCode( directory, loadWebIDLSchema( directory.resolve( "schema.webidl" ) ), globalInterface, validator );
-  }
-
-  private void generateCode( @Nonnull final Path directory,
-                             @Nonnull final WebIDLSchema schema,
-                             @Nullable final String globalInterface,
-                             @Nonnull final ValidatorRuleConfig validator )
+                                     @Nonnull final ValidatorRuleConfig validator,
+                                     @Nonnull final List<String> gwtInherits )
     throws Exception
   {
     final Collection<ValidationError> errors = ValidatorTool.create( validator ).validate( schema );
@@ -154,17 +148,22 @@ public abstract class AbstractTest
     final Path workingDirectory = getWorkingDir();
     final Path inputDirectory = directory.resolve( "input" );
     final Path inputJavaDirectory = inputDirectory.resolve( "main" ).resolve( "java" );
+    final Path commonInput = commonDirectory.resolve( "input" );
+    final Path commonInputJavaDirectory = commonInput.resolve( "main" ).resolve( "java" );
     final Path outputDirectory = workingDirectory.resolve( "output" );
     final List<Path> inputTypeCatalogs =
       collectFilesWithExtension( ".mapping", inputDirectory.resolve( "main" ).resolve( "resources" ) );
+    final List<Path> externalTypeMappingPaths =
+      collectFilesWithExtension( ".mapping", commonInput.resolve( "main" ).resolve( "resources" ) );
     final JsinteropAction action =
       new JsinteropAction( newPipelineContext( directory ),
                            outputDirectory,
                            "com.example",
                            globalInterface,
                            inputTypeCatalogs,
-                           new ArrayList<>(),
+                           externalTypeMappingPaths,
                            true,
+                           gwtInherits,
                            true,
                            true );
     action.process( schema );
@@ -192,6 +191,11 @@ public abstract class AbstractTest
     {
       sourceFiles.addAll( collectFilesWithExtension( ".java", inputJavaDirectory ) );
       sourceDirectories.add( inputJavaDirectory );
+    }
+    if ( Files.exists( commonInputJavaDirectory ) )
+    {
+      sourceFiles.addAll( collectFilesWithExtension( ".java", commonInputJavaDirectory ) );
+      sourceDirectories.add( commonInputJavaDirectory );
     }
 
     ensureGeneratedCodeCompiles( sourceDirectories, sourceFiles, classpathEntries );

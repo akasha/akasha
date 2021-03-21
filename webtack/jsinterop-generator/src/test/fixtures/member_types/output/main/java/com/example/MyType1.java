@@ -1,10 +1,5 @@
 package com.example;
 
-import akasha.lang.JsArray;
-import akasha.lang.JsIterable;
-import akasha.lang.JsIterator;
-import akasha.lang.JsIteratorIterable;
-import akasha.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -213,7 +208,7 @@ public class MyType1 {
       name = "readonlyNullableShortPromiseValue"
   )
   @Nonnull
-  public native Promise<Double> readonlyNullableShortPromiseValue();
+  public native JsPromise<Double> readonlyNullableShortPromiseValue();
 
   @JsProperty(
       name = "readonlyNullableShortSequenceValue"
@@ -237,7 +232,7 @@ public class MyType1 {
       name = "readonlyNullableSomeTypePromiseValue"
   )
   @Nonnull
-  public native Promise<SomeType> readonlyNullableSomeTypePromiseValue();
+  public native JsPromise<SomeType> readonlyNullableSomeTypePromiseValue();
 
   @JsProperty(
       name = "readonlyNullableSomeTypeSequenceValue"
@@ -308,7 +303,7 @@ public class MyType1 {
       name = "readonlyShortPromiseValue"
   )
   @Nonnull
-  public native Promise<Double> readonlyShortPromiseValue();
+  public native JsPromise<Double> readonlyShortPromiseValue();
 
   @JsProperty(
       name = "readonlyShortSequenceValue"
@@ -331,7 +326,7 @@ public class MyType1 {
       name = "readonlySomeTypePromiseValue"
   )
   @Nonnull
-  public native Promise<SomeType> readonlySomeTypePromiseValue();
+  public native JsPromise<SomeType> readonlySomeTypePromiseValue();
 
   @JsProperty(
       name = "readonlySomeTypeSequenceValue"
@@ -380,7 +375,7 @@ public class MyType1 {
       name = "readonlyVoidPromiseValue"
   )
   @Nonnull
-  public native Promise<Void> readonlyVoidPromiseValue();
+  public native JsPromise<Void> readonlyVoidPromiseValue();
 
   @JsProperty(
       name = "requiredAnyIterableValue"

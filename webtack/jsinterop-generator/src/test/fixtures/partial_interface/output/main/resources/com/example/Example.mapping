@@ -1,9 +1,9 @@
 DOMTokenList=com.example.DOMTokenList
 Headers=com.example.Headers
-Iterator=akasha.lang.JsIterator
+Iterator=com.example.JsIterator
 Object=java.lang.Object
 RTCStatsReport=com.example.RTCStatsReport
-Sequence=akasha.lang.JsArray
+Sequence=com.example.JsArray
 SomeMapLikeDefiningOverrides=com.example.SomeMapLikeDefiningOverrides
 SomeOtherType=com.example.SomeOtherType
 SpeechSynthesis=com.example.SpeechSynthesis

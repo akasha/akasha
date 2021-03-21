@@ -80,6 +80,8 @@ final class JsinteropAction
   private final Pattern _linkMatcher = Pattern.compile( "\\{@link ([^ }]*)" );
   @Nullable
   private final String _globalInterface;
+  @Nonnull
+  private final List<String> _gwtInherits;
   private final boolean _generateGwtModule;
   private final boolean _generateTypeCatalog;
 
@@ -90,6 +92,7 @@ final class JsinteropAction
                    @Nonnull final List<Path> predefinedTypeMappingPaths,
                    @Nonnull final List<Path> externalTypeMappingPaths,
                    final boolean generateGwtModule,
+                   @Nonnull final List<String> gwtInherits,
                    final boolean generateTypeCatalog,
                    final boolean enableMagicConstants )
   {
@@ -101,6 +104,7 @@ final class JsinteropAction
            externalTypeMappingPaths );
     _globalInterface = globalInterface;
     _generateGwtModule = generateGwtModule;
+    _gwtInherits = Objects.requireNonNull( gwtInherits );
     _generateTypeCatalog = generateTypeCatalog;
   }
 
@@ -815,14 +819,14 @@ final class JsinteropAction
       final String name = namespace.getName();
       final MethodSpec.Builder namespaceMethod =
         MethodSpec
-        .methodBuilder( NamingUtil.camelCase( safeJsPropertyMethodName( name, false ) ) )
-        .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
-        .returns( lookupClassName( namespace.getName() ) )
-        .addAnnotation( AnnotationSpec
-                          .builder( JsinteropTypes.JS_PROPERTY )
-                          .addMember( "name", "$S", name )
-                          .build() )
-        .addAnnotation( BasicTypes.NONNULL );
+          .methodBuilder( NamingUtil.camelCase( safeJsPropertyMethodName( name, false ) ) )
+          .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
+          .returns( lookupClassName( namespace.getName() ) )
+          .addAnnotation( AnnotationSpec
+                            .builder( JsinteropTypes.JS_PROPERTY )
+                            .addMember( "name", "$S", name )
+                            .build() )
+          .addAnnotation( BasicTypes.NONNULL );
       final DocumentationElement documentation = namespace.getDocumentation();
       if ( null != documentation && documentation.hasDeprecatedTag() )
       {
@@ -857,14 +861,17 @@ final class JsinteropAction
   private void writeGwtModule()
     throws IOException
   {
-    final String gwtModuleContent =
-      "<module>\n" +
-      "  <inherits name='jsinterop.base.Base'/>\n" +
-      "  <inherits name='akasha.lang.Lang'/>\n" +
-      "  <inherits name='akasha.promise.Promise'/>\n" +
-      "\n" +
-      "  <source path=''/>\n" +
-      "</module>\n";
+    final StringBuilder sb = new StringBuilder();
+    sb.append( "<module>\n" );
+    sb.append( "  <inherits name='jsinterop.base.Base'/>\n" );
+    for ( final String gwtInherit : _gwtInherits )
+    {
+      sb.append( "  <inherits name='").append( gwtInherit ).append( "'/>\n" );
+    }
+    sb.append( "\n" );
+    sb.append( "  <source path=''/>\n" );
+    sb.append( "</module>\n" );
+    final String gwtModuleContent = sb.toString();
     final String name = NamingUtil.uppercaseFirstCharacter( getLeafPackageName() );
     writeResourceFile( getMainJavaDirectory(), name + ".gwt.xml", gwtModuleContent.getBytes( StandardCharsets.UTF_8 ) );
   }

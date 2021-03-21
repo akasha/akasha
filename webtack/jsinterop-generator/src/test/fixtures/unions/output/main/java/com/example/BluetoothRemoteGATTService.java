@@ -1,7 +1,5 @@
 package com.example;
 
-import akasha.lang.JsArray;
-import akasha.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
@@ -18,26 +16,26 @@ public class BluetoothRemoteGATTService extends EventTarget {
   }
 
   @Nonnull
-  public native Promise<BluetoothRemoteGATTService> getIncludedService(
+  public native JsPromise<BluetoothRemoteGATTService> getIncludedService(
       @Nonnull BluetoothServiceUUID service);
 
   @Nonnull
-  public native Promise<BluetoothRemoteGATTService> getIncludedService(@Nonnull String service);
+  public native JsPromise<BluetoothRemoteGATTService> getIncludedService(@Nonnull String service);
 
   @Nonnull
-  public native Promise<BluetoothRemoteGATTService> getIncludedService(int service);
+  public native JsPromise<BluetoothRemoteGATTService> getIncludedService(int service);
 
   @Nonnull
-  public native Promise<JsArray<BluetoothRemoteGATTService>> getIncludedServices(
+  public native JsPromise<JsArray<BluetoothRemoteGATTService>> getIncludedServices(
       @Nonnull BluetoothServiceUUID service);
 
   @Nonnull
-  public native Promise<JsArray<BluetoothRemoteGATTService>> getIncludedServices(
+  public native JsPromise<JsArray<BluetoothRemoteGATTService>> getIncludedServices(
       @Nonnull String service);
 
   @Nonnull
-  public native Promise<JsArray<BluetoothRemoteGATTService>> getIncludedServices(int service);
+  public native JsPromise<JsArray<BluetoothRemoteGATTService>> getIncludedServices(int service);
 
   @Nonnull
-  public native Promise<JsArray<BluetoothRemoteGATTService>> getIncludedServices();
+  public native JsPromise<JsArray<BluetoothRemoteGATTService>> getIncludedServices();
 }

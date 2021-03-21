@@ -1,6 +1,5 @@
 package com.example;
 
-import com.biz.MyArray;
 import com.biz.MyEventHandler1;
 import com.biz.MyEventListener;
 import com.biz.MyIDBIndex;
@@ -32,7 +31,7 @@ public class IDBObjectStore {
       @Nonnull MyIDBIndexParameters options);
 
   @Nonnull
-  public native MyIDBIndex createIndex(@Nonnull String name, @Nonnull MyArray<String> keyPath,
+  public native MyIDBIndex createIndex(@Nonnull String name, @Nonnull JsArray<String> keyPath,
       @Nonnull MyIDBIndexParameters options);
 
   @Nonnull
@@ -43,7 +42,7 @@ public class IDBObjectStore {
   public native MyIDBIndex createIndex(@Nonnull String name, @Nonnull String keyPath);
 
   @Nonnull
-  public native MyIDBIndex createIndex(@Nonnull String name, @Nonnull MyArray<String> keyPath);
+  public native MyIDBIndex createIndex(@Nonnull String name, @Nonnull JsArray<String> keyPath);
 
   @Nonnull
   public native MyIDBIndex createIndex(@Nonnull String name, @Nonnull String[] keyPath);

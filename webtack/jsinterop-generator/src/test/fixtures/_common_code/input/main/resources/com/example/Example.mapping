@@ -1,0 +1,6 @@
+Promise=com.example.JsPromise
+Sequence=com.example.JsArray
+Iterable=com.example.JsIterable
+Iterator=com.example.JsIterator
+IteratorIterable=com.example.JsIteratorIterable
+Any=com.example.Any

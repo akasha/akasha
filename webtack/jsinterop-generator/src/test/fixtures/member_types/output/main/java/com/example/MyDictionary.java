@@ -1,10 +1,5 @@
 package com.example;
 
-import akasha.lang.JsArray;
-import akasha.lang.JsIterable;
-import akasha.lang.JsIterator;
-import akasha.lang.JsIteratorIterable;
-import akasha.promise.Promise;
 import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -681,15 +676,15 @@ public interface MyDictionary {
   @JsProperty(
       name = "nullableShortPromiseValue"
   )
-  Promise<Double> nullableShortPromiseValue();
+  JsPromise<Double> nullableShortPromiseValue();
 
   @JsProperty
-  void setNullableShortPromiseValue(@Nonnull Promise<Double> nullableShortPromiseValue);
+  void setNullableShortPromiseValue(@Nonnull JsPromise<Double> nullableShortPromiseValue);
 
   @JsOverlay
   @Nonnull
   default MyDictionary nullableShortPromiseValue(
-      @Nonnull final Promise<Double> nullableShortPromiseValue) {
+      @Nonnull final JsPromise<Double> nullableShortPromiseValue) {
     setNullableShortPromiseValue( nullableShortPromiseValue );
     return this;
   }
@@ -761,15 +756,15 @@ public interface MyDictionary {
   @JsProperty(
       name = "nullableSomeTypePromiseValue"
   )
-  Promise<SomeType> nullableSomeTypePromiseValue();
+  JsPromise<SomeType> nullableSomeTypePromiseValue();
 
   @JsProperty
-  void setNullableSomeTypePromiseValue(@Nonnull Promise<SomeType> nullableSomeTypePromiseValue);
+  void setNullableSomeTypePromiseValue(@Nonnull JsPromise<SomeType> nullableSomeTypePromiseValue);
 
   @JsOverlay
   @Nonnull
   default MyDictionary nullableSomeTypePromiseValue(
-      @Nonnull final Promise<SomeType> nullableSomeTypePromiseValue) {
+      @Nonnull final JsPromise<SomeType> nullableSomeTypePromiseValue) {
     setNullableSomeTypePromiseValue( nullableSomeTypePromiseValue );
     return this;
   }
@@ -1031,15 +1026,15 @@ public interface MyDictionary {
   @JsProperty(
       name = "sequencePromiseValue"
   )
-  Promise<JsArray<Double>> sequencePromiseValue();
+  JsPromise<JsArray<Double>> sequencePromiseValue();
 
   @JsProperty
-  void setSequencePromiseValue(@Nonnull Promise<JsArray<Double>> sequencePromiseValue);
+  void setSequencePromiseValue(@Nonnull JsPromise<JsArray<Double>> sequencePromiseValue);
 
   @JsOverlay
   @Nonnull
   default MyDictionary sequencePromiseValue(
-      @Nonnull final Promise<JsArray<Double>> sequencePromiseValue) {
+      @Nonnull final JsPromise<JsArray<Double>> sequencePromiseValue) {
     setSequencePromiseValue( sequencePromiseValue );
     return this;
   }
@@ -1062,14 +1057,14 @@ public interface MyDictionary {
   @JsProperty(
       name = "shortPromiseValue"
   )
-  Promise<Double> shortPromiseValue();
+  JsPromise<Double> shortPromiseValue();
 
   @JsProperty
-  void setShortPromiseValue(@Nonnull Promise<Double> shortPromiseValue);
+  void setShortPromiseValue(@Nonnull JsPromise<Double> shortPromiseValue);
 
   @JsOverlay
   @Nonnull
-  default MyDictionary shortPromiseValue(@Nonnull final Promise<Double> shortPromiseValue) {
+  default MyDictionary shortPromiseValue(@Nonnull final JsPromise<Double> shortPromiseValue) {
     setShortPromiseValue( shortPromiseValue );
     return this;
   }
@@ -1135,14 +1130,15 @@ public interface MyDictionary {
   @JsProperty(
       name = "someTypePromiseValue"
   )
-  Promise<SomeType> someTypePromiseValue();
+  JsPromise<SomeType> someTypePromiseValue();
 
   @JsProperty
-  void setSomeTypePromiseValue(@Nonnull Promise<SomeType> someTypePromiseValue);
+  void setSomeTypePromiseValue(@Nonnull JsPromise<SomeType> someTypePromiseValue);
 
   @JsOverlay
   @Nonnull
-  default MyDictionary someTypePromiseValue(@Nonnull final Promise<SomeType> someTypePromiseValue) {
+  default MyDictionary someTypePromiseValue(
+      @Nonnull final JsPromise<SomeType> someTypePromiseValue) {
     setSomeTypePromiseValue( someTypePromiseValue );
     return this;
   }
@@ -1315,14 +1311,14 @@ public interface MyDictionary {
   @JsProperty(
       name = "voidPromiseValue"
   )
-  Promise<Void> voidPromiseValue();
+  JsPromise<Void> voidPromiseValue();
 
   @JsProperty
-  void setVoidPromiseValue(@Nonnull Promise<Void> voidPromiseValue);
+  void setVoidPromiseValue(@Nonnull JsPromise<Void> voidPromiseValue);
 
   @JsOverlay
   @Nonnull
-  default MyDictionary voidPromiseValue(@Nonnull final Promise<Void> voidPromiseValue) {
+  default MyDictionary voidPromiseValue(@Nonnull final JsPromise<Void> voidPromiseValue) {
     setVoidPromiseValue( voidPromiseValue );
     return this;
   }

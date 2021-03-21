@@ -1,6 +1,5 @@
 package com.example;
 
-import akasha.promise.Promise;
 import com.example.web_assembly.Module;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -18,5 +17,5 @@ public final class WebAssemblyNamespace {
   }
 
   @Nonnull
-  public native Promise<Module> compile(@Nonnull ArrayBuffer bytes);
+  public native JsPromise<Module> compile(@Nonnull ArrayBuffer bytes);
 }

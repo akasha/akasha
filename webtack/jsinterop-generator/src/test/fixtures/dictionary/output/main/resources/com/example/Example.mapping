@@ -1,6 +1,6 @@
 EventInit=com.example.EventInit
 OptionalAnyDict=com.example.OptionalAnyDict
-Promise=akasha.promise.Promise
+Promise=com.example.JsPromise
 PromiseRejectionEventInit=com.example.PromiseRejectionEventInit
 RequiredAnyDict=com.example.RequiredAnyDict
 Storage=com.example.Storage

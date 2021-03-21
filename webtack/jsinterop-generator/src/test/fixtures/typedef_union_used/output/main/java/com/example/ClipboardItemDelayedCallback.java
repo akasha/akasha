@@ -1,6 +1,5 @@
 package com.example;
 
-import akasha.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsFunction;
@@ -10,5 +9,5 @@ import jsinterop.annotations.JsFunction;
 @FunctionalInterface
 public interface ClipboardItemDelayedCallback {
   @Nonnull
-  Promise<ClipboardItemDataType> onInvoke();
+  JsPromise<ClipboardItemDataType> onInvoke();
 }
