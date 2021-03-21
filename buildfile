@@ -168,25 +168,40 @@ define 'akasha' do
     test.using :testng
   end
 
-  %w(core speech bluetooth main react4j).each do |pipeline|
+  desc "Akasha Core"
+  define 'core', :base_dir => "#{WORKSPACE_DIR}/akasha/core" do
+    doc.options.merge!('Xdoclint:all,-reference,-missing' => true)
 
-    name = 'main' == pipeline ? 'complete' : pipeline
+    compile.using :javac
+
+    deps = GWT_DEPS
+    compile.with deps
+
+    gwt_enhance(project)
+
+    pom.include_transitive_dependencies << deps
+    pom.dependency_filter = Proc.new { |dep| dep[:scope].to_s != 'test' && deps.include?(dep[:artifact]) }
+
+    package(:jar)
+    package(:sources)
+    package(:javadoc)
+  end
+
+  %w(speech bluetooth complete react4j).each do |name|
 
     # react4j is not yet ready for testing
-    next if 'react4j' == pipeline
+    next if 'react4j' == name
 
     desc "Akasha #{name}"
     define name, :base_dir => "#{WORKSPACE_DIR}/akasha/#{name}" do
       extra_deps = []
-      if 'core' == pipeline
-        compile.options.lint = 'all,-serial,-rawtypes,-unchecked'
-      elsif 'main' == pipeline
-        src_dir = file("#{project._(:target, :generated)}/main/java" => ["data:run_#{pipeline}_pipeline"])
+      if 'complete' == name
+        src_dir = file("#{project._(:target, :generated)}/webtack/main/java" => ["data:run_#{name}_pipeline"])
         project.compile.sources << src_dir
         project.iml.main_generated_source_directories << src_dir
         extra_deps << src_dir
       else
-        src_dir = file("#{WORKSPACE_DIR}/data/output/#{pipeline}/main/java" => ["data:run_#{pipeline}_pipeline"])
+        src_dir = file("#{WORKSPACE_DIR}/data/output/#{name}/main/java" => ["data:run_#{name}_pipeline"])
         project.compile.sources << src_dir
         extra_deps << src_dir
         project.layout[:target, :generated] = "#{WORKSPACE_DIR}/target/akasha-#{name}/generated"
@@ -196,8 +211,8 @@ define 'akasha' do
 
       compile.using :javac
 
-      deps = artifacts('react4j' == pipeline ? REACT4J_DEPS : GWT_DEPS)
-      deps << [project('akasha:core')] unless pipeline == 'core'
+      deps = artifacts('react4j' == name ? REACT4J_DEPS : GWT_DEPS)
+      deps << [project('akasha:core')]
       compile.with deps
 
       gwt_enhance(project, :extra_deps => extra_deps)
@@ -209,7 +224,7 @@ define 'akasha' do
       package(:sources)
       package(:javadoc)
 
-      project.no_iml unless 'main' == pipeline || 'core' == pipeline
+      project.no_iml unless 'main' == name
     end
   end
 
