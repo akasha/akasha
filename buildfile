@@ -21,9 +21,9 @@ REACT4J_DEPS = [
   :react4j_dom
 ] + GWT_DEPS
 
-desc 'WebTack: Fetch and process WebIDL to generate Source Code'
-define 'webtack' do
-  project.group = 'org.realityforge.webtack'
+desc 'Akasha: Fetch and process WebIDL to generate Source Code'
+define 'akasha' do
+  project.group = 'org.realityforge.akasha'
   compile.options.source = '1.8'
   compile.options.target = '1.8'
   compile.options.lint = 'all,-serial'
@@ -166,53 +166,50 @@ define 'webtack' do
     test.using :testng
   end
 
-  define 'akasha' do
-    %w(core speech bluetooth main react4j).each do |pipeline|
+  %w(core speech bluetooth main react4j).each do |pipeline|
 
-      name = 'main' == pipeline ? 'complete' : pipeline
+    name = 'main' == pipeline ? 'complete' : pipeline
 
-      # react4j is not yet ready for testing
-      next if 'react4j' == pipeline
+    # react4j is not yet ready for testing
+    next if 'react4j' == pipeline
 
-      desc "Elemental3 #{name}"
-      define name do
-        project.layout[:target, :generated] = "#{WORKSPACE_DIR}/generated/akasha/#{name}"
+    desc "Elemental3 #{name}"
+    define name, :base_dir => "#{WORKSPACE_DIR}/akasha/#{name}" do
+      project.layout[:target, :generated] = "#{WORKSPACE_DIR}/generated/akasha/#{name}"
 
-        extra_deps = []
-        if 'core' == pipeline
-          compile.options.lint = 'all,-serial,-rawtypes,-unchecked'
-        elsif 'main' == pipeline
-          src_dir = file("#{project._(:generated)}/main/java" => ["data:run_#{pipeline}_pipeline"])
-          project.compile.sources << src_dir
-          project.iml.main_generated_source_directories << src_dir
-          extra_deps << src_dir
-        else
-          src_dir = file("#{WORKSPACE_DIR}/data/output/#{pipeline}/main/java" => ["data:run_#{pipeline}_pipeline"])
-          project.compile.sources << src_dir
-          extra_deps << src_dir
-        end
-
-        project.doc.options.merge!('Xdoclint:all,-reference,-missing' => true)
-
-        compile.using :javac
-
-        deps = artifacts('react4j' == pipeline ? REACT4J_DEPS : GWT_DEPS)
-        deps << [project('akasha:core')] unless pipeline == 'core'
-        compile.with deps
-
-        gwt_enhance(project, :extra_deps => extra_deps)
-
-        pom.include_transitive_dependencies << deps
-        pom.dependency_filter = Proc.new { |dep| dep[:scope].to_s != 'test' && deps.include?(dep[:artifact]) }
-
-        package(:jar)
-        package(:sources)
-        package(:javadoc)
-
-        project.no_iml unless 'main' == pipeline || 'core' == pipeline
+      extra_deps = []
+      if 'core' == pipeline
+        compile.options.lint = 'all,-serial,-rawtypes,-unchecked'
+      elsif 'main' == pipeline
+        src_dir = file("#{project._(:generated)}/main/java" => ["data:run_#{pipeline}_pipeline"])
+        project.compile.sources << src_dir
+        project.iml.main_generated_source_directories << src_dir
+        extra_deps << src_dir
+      else
+        src_dir = file("#{WORKSPACE_DIR}/data/output/#{pipeline}/main/java" => ["data:run_#{pipeline}_pipeline"])
+        project.compile.sources << src_dir
+        extra_deps << src_dir
       end
+
+      doc.options.merge!('Xdoclint:all,-reference,-missing' => true)
+
+      compile.using :javac
+
+      deps = artifacts('react4j' == pipeline ? REACT4J_DEPS : GWT_DEPS)
+      deps << [project('akasha:core')] unless pipeline == 'core'
+      compile.with deps
+
+      gwt_enhance(project, :extra_deps => extra_deps)
+
+      pom.include_transitive_dependencies << deps
+      pom.dependency_filter = Proc.new { |dep| dep[:scope].to_s != 'test' && deps.include?(dep[:artifact]) }
+
+      package(:jar)
+      package(:sources)
+      package(:javadoc)
+
+      project.no_iml unless 'main' == pipeline || 'core' == pipeline
     end
-    project.no_iml
   end
 
   iml.excluded_directories << project._('tmp')
@@ -249,3 +246,9 @@ end
 
 desc 'Generate source artifacts'
 task('generate:all').enhance([file(File.expand_path("#{File.dirname(__FILE__)}/webidl-parser/generated/antlr/main/java"))])
+
+Buildr.projects.each do |project|
+  unless %w(akasha:main).include?(project.name)
+    project.task('upload').actions.clear
+  end
+end
