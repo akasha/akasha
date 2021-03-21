@@ -76,6 +76,7 @@ final class JsinteropAction
   /**
    * Pattern matcher used to process link annotations.
    */
+  @Nonnull
   private final Pattern _linkMatcher = Pattern.compile( "\\{@link ([^ }]*)" );
   @Nullable
   private final String _globalInterface;
