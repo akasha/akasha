@@ -1761,20 +1761,6 @@ final class JsinteropAction
       .forEach( operation -> generateOperation( operation, type ) );
   }
 
-  private void generateInterfaceOperation( @Nonnull final OperationMember operation,
-                                           @Nonnull final TypeSpec.Builder type )
-  {
-    final OperationMember.Kind operationKind = operation.getKind();
-    if ( OperationMember.Kind.DEFAULT == operationKind )
-    {
-      generateDefaultOperation( operation, type );
-    }
-    else if ( OperationMember.Kind.STRINGIFIER == operationKind && null != operation.getName() )
-    {
-      generateDefaultOperation( operation, type );
-    }
-  }
-
   private void generateNamespace( @Nonnull final NamespaceDefinition definition )
     throws IOException
   {
