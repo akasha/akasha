@@ -2,7 +2,8 @@ require File.expand_path(File.dirname(__FILE__) + '/release_tool.rb')
 
 Buildr::ReleaseTool.define_release_task do |t|
   t.extract_version
-  t.zapwhite
+  # Zapwhite alters fixture data and thus can not be run
+  #t.zapwhite
   t.ensure_git_clean
   t.verify_no_todo
   t.cleanup_staging
