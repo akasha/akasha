@@ -175,7 +175,7 @@ define 'akasha' do
     # react4j is not yet ready for testing
     next if 'react4j' == pipeline
 
-    desc "Elemental3 #{name}"
+    desc "Akasha #{name}"
     define name, :base_dir => "#{WORKSPACE_DIR}/akasha/#{name}" do
       extra_deps = []
       if 'core' == pipeline
