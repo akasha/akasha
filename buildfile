@@ -88,8 +88,8 @@ define 'akasha' do
     test.options[:properties] = {
       'webtack.jsinterop-generator.gwtc' => ENV['GWT'] == 'no' ? 'false' : 'true',
       'webtack.jsinterop-generator.fixture_dir' => _('src/test/fixtures'),
-      'webtack.jsinterop-generator.fixture.libs' => "#{JSINTEROP_DEPS.collect { |a| artifact(a).to_s }.join(':')}:#{artifact(:gwt_user)}:#{project('akasha:core').package(:jar).to_s}",
-      'webtack.jsinterop-generator.gwt_dev.libs' => "#{JSINTEROP_DEPS.collect { |a| artifact(a).to_s }.join(':')}:#{Buildr::GWT.dependencies('2.9.0').collect { |d| artifact(d).to_s }.join(':')}:#{project('akasha:core').package(:jar).to_s}"
+      'webtack.jsinterop-generator.fixture.libs' => "#{JSINTEROP_DEPS.collect { |a| artifact(a).to_s }.join(':')}:#{artifact(:gwt_user)}:#{project('akasha:core').package(:jar)}",
+      'webtack.jsinterop-generator.gwt_dev.libs' => "#{Buildr::GWT.dependencies('2.9.0').collect { |d| artifact(d).to_s }.join(':')}"
     }
     test.options[:java_args] = %w(-ea)
     test.compile.with :gir,
@@ -118,8 +118,8 @@ define 'akasha' do
     test.options[:properties] = {
       'webtack.react4j-generator.gwtc' => ENV['GWT'] == 'no' ? 'false' : 'true',
       'webtack.react4j-generator.fixture_dir' => _('src/test/fixtures'),
-      'webtack.react4j-generator.fixture.libs' => "#{REACT4J_DEPS.collect { |a| artifact(a).to_s }.join(':')}:#{artifact(:gwt_user)}:#{project('akasha:core').package(:jar).to_s}",
-      'webtack.react4j-generator.gwt_dev.libs' => "#{REACT4J_DEPS.collect { |a| artifact(a).to_s }.join(':')}:#{Buildr::GWT.dependencies('2.9.0').collect { |d| artifact(d).to_s }.join(':')}:#{project('akasha:core').package(:jar).to_s}"
+      'webtack.react4j-generator.fixture.libs' => "#{REACT4J_DEPS.collect { |a| artifact(a).to_s }.join(':')}:#{artifact(:gwt_user)}:#{project('akasha:core').package(:jar)}",
+      'webtack.react4j-generator.gwt_dev.libs' => "#{Buildr::GWT.dependencies('2.9.0').collect { |d| artifact(d).to_s }.join(':')}"
     }
     test.options[:java_args] = %w(-ea)
     test.compile.with :gir,
@@ -197,6 +197,8 @@ define 'akasha' do
       mkdir_p core_src_path
       FileUtils.cp_r "#{WORKSPACE_DIR}/akasha/core/src/main/java", File.dirname(core_src_path)
       FileUtils.rm "#{core_src_path}/akasha/lang/JsIterable.java"
+      FileUtils.rm "#{core_src_path}/akasha/lang/Lang.gwt.xml"
+      FileUtils.rm "#{core_src_path}/akasha/promise/Promise.gwt.xml"
     end
     compile.sources << core_src_dir
     iml.main_generated_source_directories << core_src_dir
@@ -258,11 +260,11 @@ define 'akasha' do
 
   ipr.add_testng_configuration('jsinterop-generator',
                                :module => 'jsinterop-generator',
-                               :jvm_args => "-ea -Dwebtack.output_fixture_data=true -Dwebtack.jsinterop-generator.fixture_dir=src/test/fixtures -Dwebtack.jsinterop-generator.gwtc=true -Dwebtack.jsinterop-generator.fixture.libs=#{JSINTEROP_DEPS.collect { |a| artifact(a).to_s }.join(':')}:#{project('akasha:core').project._(:target, :main, :idea, :classes)} -Dwebtack.jsinterop-generator.gwt_dev.libs=#{Buildr::GWT.dependencies('2.9.0').collect { |d| artifact(d).to_s }.join(':')}:#{project('akasha:core').project._(:target, :main, :idea, :classes)}")
+                               :jvm_args => "-ea -Dwebtack.output_fixture_data=true -Dwebtack.jsinterop-generator.fixture_dir=src/test/fixtures -Dwebtack.jsinterop-generator.gwtc=false -Dwebtack.jsinterop-generator.fixture.libs=#{JSINTEROP_DEPS.collect { |a| artifact(a).to_s }.join(':')}:#{artifact(:gwt_user)}:#{project('akasha:core').package(:jar)} -Dwebtack.jsinterop-generator.gwt_dev.libs=#{Buildr::GWT.dependencies('2.9.0').collect { |d| artifact(d).to_s }.join(':')}")
 
   ipr.add_testng_configuration('react4j-generator',
                                :module => 'react4j-generator',
-                               :jvm_args => "-ea -Dwebtack.output_fixture_data=true -Dwebtack.react4j-generator.fixture_dir=src/test/fixtures -Dwebtack.react4j-generator.gwtc=true -Dwebtack.react4j-generator.fixture.libs=#{REACT4J_DEPS.collect { |a| artifact(a).to_s }.join(':')} -Dwebtack.react4j-generator.gwt_dev.libs=#{Buildr::GWT.dependencies('2.9.0').collect { |d| artifact(d).to_s }.join(':')}")
+                               :jvm_args => "-ea -Dwebtack.output_fixture_data=true -Dwebtack.react4j-generator.fixture_dir=src/test/fixtures -Dwebtack.react4j-generator.gwtc=false -Dwebtack.react4j-generator.fixture.libs=#{REACT4J_DEPS.collect { |a| artifact(a).to_s }.join(':')}:#{artifact(:gwt_user)}:#{project('akasha:core').package(:jar)} -Dwebtack.react4j-generator.gwt_dev.libs=#{Buildr::GWT.dependencies('2.9.0').collect { |d| artifact(d).to_s }.join(':')}")
 
   ipr.add_java_configuration(project('cli'), 'org.realityforge.webtack.Main', :name => 'Run - bluetooth', :dir => 'file://$PROJECT_DIR$', :args => '-d data run bluetooth')
 
