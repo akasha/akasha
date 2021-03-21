@@ -181,7 +181,7 @@ define 'akasha' do
       if 'core' == pipeline
         compile.options.lint = 'all,-serial,-rawtypes,-unchecked'
       elsif 'main' == pipeline
-        src_dir = file("#{project._(:generated)}/main/java" => ["data:run_#{pipeline}_pipeline"])
+        src_dir = file("#{project._(:target, :generated)}/main/java" => ["data:run_#{pipeline}_pipeline"])
         project.compile.sources << src_dir
         project.iml.main_generated_source_directories << src_dir
         extra_deps << src_dir
