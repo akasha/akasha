@@ -10,7 +10,7 @@ Buildr::MavenCentral.define_publish_tasks(:profile_name => 'org.realityforge', :
 JSONB_DEPS = [:jsonb_api, :yasson, :javax_json]
 PACKAGED_DEPS = [:getopt4j, :jsoup] + JSONB_DEPS + Buildr::Antlr4.runtime_dependencies
 # GWT dependencies required for compiling generated code
-GWT_DEPS = [
+JSINTEROP_DEPS = [
   :javax_annotation,
   :jetbrains_annotations,
   :jsinterop_annotations,
@@ -20,7 +20,7 @@ GWT_DEPS = [
 REACT4J_DEPS = [
   :react4j_core,
   :react4j_dom
-] + GWT_DEPS
+] + JSINTEROP_DEPS
 
 desc 'Akasha: Fetch and process WebIDL to generate Source Code'
 define 'akasha' do
@@ -88,8 +88,8 @@ define 'akasha' do
     test.options[:properties] = {
       'webtack.jsinterop-generator.gwtc' => ENV['GWT'] == 'no' ? 'false' : 'true',
       'webtack.jsinterop-generator.fixture_dir' => _('src/test/fixtures'),
-      'webtack.jsinterop-generator.fixture.libs' => "#{GWT_DEPS.collect { |a| artifact(a).to_s }.join(':')}:#{artifact(:gwt_user)}:#{project('akasha:core').package(:jar).to_s}",
-      'webtack.jsinterop-generator.gwt_dev.libs' => "#{GWT_DEPS.collect { |a| artifact(a).to_s }.join(':')}:#{Buildr::GWT.dependencies('2.9.0').collect { |d| artifact(d).to_s }.join(':')}:#{project('akasha:core').package(:jar).to_s}"
+      'webtack.jsinterop-generator.fixture.libs' => "#{JSINTEROP_DEPS.collect { |a| artifact(a).to_s }.join(':')}:#{artifact(:gwt_user)}:#{project('akasha:core').package(:jar).to_s}",
+      'webtack.jsinterop-generator.gwt_dev.libs' => "#{JSINTEROP_DEPS.collect { |a| artifact(a).to_s }.join(':')}:#{Buildr::GWT.dependencies('2.9.0').collect { |d| artifact(d).to_s }.join(':')}:#{project('akasha:core').package(:jar).to_s}"
     }
     test.options[:java_args] = %w(-ea)
     test.compile.with :gir,
@@ -97,7 +97,7 @@ define 'akasha' do
                       # Next dependency ensures the jar is built so can be used in tests but is not directly referenced
                       project('akasha:core').package(:jar)
     test.compile.enhance do |d|
-      GWT_DEPS.collect { |a| artifact(a).invoke }
+      JSINTEROP_DEPS.collect { |a| artifact(a).invoke }
       Buildr::GWT.dependencies('2.9.0').collect { |a| artifact(a).invoke }
     end
 
@@ -173,7 +173,7 @@ define 'akasha' do
 
     compile.using :javac
 
-    deps = GWT_DEPS
+    deps = JSINTEROP_DEPS
     compile.with deps
 
     gwt_enhance(project)
@@ -205,7 +205,7 @@ define 'akasha' do
 
     compile.using :javac
 
-    deps = artifacts(GWT_DEPS)
+    deps = artifacts(JSINTEROP_DEPS)
     compile.with deps
 
     gwt_enhance(project, :extra_deps => [src_dir, core_src_dir])
@@ -229,7 +229,7 @@ define 'akasha' do
 
       compile.using :javac
 
-      deps = artifacts(GWT_DEPS)
+      deps = artifacts(JSINTEROP_DEPS)
       deps << [project('akasha:core')]
       compile.with deps
 
@@ -258,7 +258,7 @@ define 'akasha' do
 
   ipr.add_testng_configuration('jsinterop-generator',
                                :module => 'jsinterop-generator',
-                               :jvm_args => "-ea -Dwebtack.output_fixture_data=true -Dwebtack.jsinterop-generator.fixture_dir=src/test/fixtures -Dwebtack.jsinterop-generator.gwtc=true -Dwebtack.jsinterop-generator.fixture.libs=#{GWT_DEPS.collect { |a| artifact(a).to_s }.join(':')}:#{project('akasha:core').project._(:target, :main, :idea, :classes)} -Dwebtack.jsinterop-generator.gwt_dev.libs=#{Buildr::GWT.dependencies('2.9.0').collect { |d| artifact(d).to_s }.join(':')}:#{project('akasha:core').project._(:target, :main, :idea, :classes)}")
+                               :jvm_args => "-ea -Dwebtack.output_fixture_data=true -Dwebtack.jsinterop-generator.fixture_dir=src/test/fixtures -Dwebtack.jsinterop-generator.gwtc=true -Dwebtack.jsinterop-generator.fixture.libs=#{JSINTEROP_DEPS.collect { |a| artifact(a).to_s }.join(':')}:#{project('akasha:core').project._(:target, :main, :idea, :classes)} -Dwebtack.jsinterop-generator.gwt_dev.libs=#{Buildr::GWT.dependencies('2.9.0').collect { |d| artifact(d).to_s }.join(':')}:#{project('akasha:core').project._(:target, :main, :idea, :classes)}")
 
   ipr.add_testng_configuration('react4j-generator',
                                :module => 'react4j-generator',
