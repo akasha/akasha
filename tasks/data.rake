@@ -1,11 +1,11 @@
 def run_webtack(args)
-  pkg = Buildr.project('akasha:cli').package(:jar, :classifier => 'all')
+  pkg = Buildr.project('akasha:webtack:cli').package(:jar, :classifier => 'all')
   pkg.invoke
 
-  jsinterop_pkg = project('akasha:jsinterop-generator').package(:jar, :classifier => 'all')
+  jsinterop_pkg = project('akasha:webtack:jsinterop-generator').package(:jar, :classifier => 'all')
   jsinterop_pkg.invoke
 
-  react4j_pkg = project('akasha:react4j-generator').package(:jar, :classifier => 'all')
+  react4j_pkg = project('akasha:webtack:react4j-generator').package(:jar, :classifier => 'all')
   react4j_pkg.invoke
 
   actual_args = []

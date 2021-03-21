@@ -37,134 +37,138 @@ define 'akasha' do
   pom.add_github_project('realityforge/webtack')
   pom.add_developer('realityforge', 'Peter Donald')
 
-  define 'webidl-parser' do
-    compile.with :javax_annotation,
-                 Buildr::Antlr4.runtime_dependencies
+  define 'webtack' do
 
-    antlr_lexer_generated_dir =
-      compile_antlr(_('src/main/antlr/WebIDLLexer.g4'),
-                    :listener => false,
-                    :package => 'org.realityforge.webtack.webidl.parser')
-    compile.from antlr_lexer_generated_dir
+    define 'webidl-parser' do
+      compile.with :javax_annotation,
+                   Buildr::Antlr4.runtime_dependencies
 
-    antlr_generated_dir =
-      compile_antlr(_('src/main/antlr/WebIDLParser.g4'),
-                    :listener => false,
-                    :package => 'org.realityforge.webtack.webidl.parser')
-    compile.from antlr_generated_dir
+      antlr_lexer_generated_dir =
+        compile_antlr(_('src/main/antlr/WebIDLLexer.g4'),
+                      :listener => false,
+                      :package => 'org.realityforge.webtack.webidl.parser')
+      compile.from antlr_lexer_generated_dir
 
-    package(:jar)
-    package(:sources)
-    package(:javadoc)
+      antlr_generated_dir =
+        compile_antlr(_('src/main/antlr/WebIDLParser.g4'),
+                      :listener => false,
+                      :package => 'org.realityforge.webtack.webidl.parser')
+      compile.from antlr_generated_dir
 
-    test.using :testng
+      package(:jar)
+      package(:sources)
+      package(:javadoc)
 
-    project.iml.main_generated_source_directories << antlr_lexer_generated_dir
-    project.iml.main_generated_source_directories << antlr_generated_dir
-  end
+      test.using :testng
 
-  define 'webidl-model' do
-    compile.with project('webidl-parser').package(:jar),
-                 project('webidl-parser').compile.dependencies,
-                 JSONB_DEPS,
-                 :jsoup,
-                 :javapoet
-
-    test.using :testng
-    test.options[:properties] = { 'webtack.fixture_dir' => _('src/test/java') }
-    test.options[:java_args] = %w(-ea)
-    test.compile.with :gir
-
-    package(:jar)
-    package(:sources)
-    package(:javadoc)
-  end
-
-  define 'jsinterop-generator' do
-    compile.with project('webidl-model').package(:jar),
-                 project('webidl-model').compile.dependencies
-
-    test.using :testng
-    test.options[:properties] = {
-      'webtack.jsinterop-generator.gwtc' => ENV['GWT'] == 'no' ? 'false' : 'true',
-      'webtack.jsinterop-generator.fixture_dir' => _('src/test/fixtures'),
-      'webtack.jsinterop-generator.fixture.libs' => "#{JSINTEROP_DEPS.collect { |a| artifact(a).to_s }.join(':')}:#{artifact(:gwt_user)}:#{project('akasha:core').package(:jar)}",
-      'webtack.jsinterop-generator.gwt_dev.libs' => "#{Buildr::GWT.dependencies('2.9.0').collect { |d| artifact(d).to_s }.join(':')}"
-    }
-    test.options[:java_args] = %w(-ea)
-    test.compile.with :gir,
-                      Buildr::Util.tools_jar,
-                      # Next dependency ensures the jar is built so can be used in tests but is not directly referenced
-                      project('akasha:core').package(:jar)
-    test.compile.enhance do |d|
-      JSINTEROP_DEPS.collect { |a| artifact(a).invoke }
-      Buildr::GWT.dependencies('2.9.0').collect { |a| artifact(a).invoke }
+      project.iml.main_generated_source_directories << antlr_lexer_generated_dir
+      project.iml.main_generated_source_directories << antlr_generated_dir
     end
 
-    package(:jar, :classifier => 'all').tap do |jar|
-      [:javapoet].collect { |dep| Buildr.artifact(dep) }.each do |d|
-        jar.merge(d)
+    define 'webidl-model' do
+      compile.with project('webidl-parser').package(:jar),
+                   project('webidl-parser').compile.dependencies,
+                   JSONB_DEPS,
+                   :jsoup,
+                   :javapoet
+
+      test.using :testng
+      test.options[:properties] = { 'webtack.fixture_dir' => _('src/test/java') }
+      test.options[:java_args] = %w(-ea)
+      test.compile.with :gir
+
+      package(:jar)
+      package(:sources)
+      package(:javadoc)
+    end
+
+    define 'jsinterop-generator' do
+      compile.with project('webidl-model').package(:jar),
+                   project('webidl-model').compile.dependencies
+
+      test.using :testng
+      test.options[:properties] = {
+        'webtack.jsinterop-generator.gwtc' => ENV['GWT'] == 'no' ? 'false' : 'true',
+        'webtack.jsinterop-generator.fixture_dir' => _('src/test/fixtures'),
+        'webtack.jsinterop-generator.fixture.libs' => "#{JSINTEROP_DEPS.collect { |a| artifact(a).to_s }.join(':')}:#{artifact(:gwt_user)}:#{project('akasha:core').package(:jar)}",
+        'webtack.jsinterop-generator.gwt_dev.libs' => "#{Buildr::GWT.dependencies('2.9.0').collect { |d| artifact(d).to_s }.join(':')}"
+      }
+      test.options[:java_args] = %w(-ea)
+      test.compile.with :gir,
+                        Buildr::Util.tools_jar,
+                        # Next dependency ensures the jar is built so can be used in tests but is not directly referenced
+                        project('akasha:core').package(:jar)
+      test.compile.enhance do |d|
+        JSINTEROP_DEPS.collect { |a| artifact(a).invoke }
+        Buildr::GWT.dependencies('2.9.0').collect { |a| artifact(a).invoke }
       end
-    end
-    package(:sources)
-    package(:javadoc)
-  end
 
-  define 'react4j-generator' do
-    compile.with project('webidl-model').package(:jar),
-                 project('webidl-model').compile.dependencies
-
-    test.using :testng
-    test.options[:properties] = {
-      'webtack.react4j-generator.gwtc' => ENV['GWT'] == 'no' ? 'false' : 'true',
-      'webtack.react4j-generator.fixture_dir' => _('src/test/fixtures'),
-      'webtack.react4j-generator.fixture.libs' => "#{REACT4J_DEPS.collect { |a| artifact(a).to_s }.join(':')}:#{artifact(:gwt_user)}:#{project('akasha:core').package(:jar)}",
-      'webtack.react4j-generator.gwt_dev.libs' => "#{Buildr::GWT.dependencies('2.9.0').collect { |d| artifact(d).to_s }.join(':')}"
-    }
-    test.options[:java_args] = %w(-ea)
-    test.compile.with :gir,
-                      Buildr::Util.tools_jar,
-                      # Next dependency ensures the jar is built so can be used in tests but is not directly referenced
-                      project('akasha:core').package(:jar)
-    test.compile.enhance do |d|
-      REACT4J_DEPS.collect { |a| artifact(a).invoke }
-      Buildr::GWT.dependencies('2.9.0').collect { |a| artifact(a).invoke }
-    end
-
-    package(:jar, :classifier => 'all').tap do |jar|
-      [:javapoet].collect { |dep| Buildr.artifact(dep) }.each do |d|
-        jar.merge(d)
+      package(:jar, :classifier => 'all').tap do |jar|
+        [:javapoet].collect { |dep| Buildr.artifact(dep) }.each do |d|
+          jar.merge(d)
+        end
       end
+      package(:sources)
+      package(:javadoc)
     end
-    package(:sources)
-    package(:javadoc)
-  end
 
-  define 'cli' do
-    generate_config_resource(project)
+    define 'react4j-generator' do
+      compile.with project('webidl-model').package(:jar),
+                   project('webidl-model').compile.dependencies
 
-    compile.with :javax_annotation,
-                 project('webidl-model').package(:jar),
-                 project('webidl-model').compile.dependencies,
-                 project('jsinterop-generator').package(:jar),
-                 project('jsinterop-generator').compile.dependencies,
-                 project('react4j-generator').package(:jar),
-                 project('react4j-generator').compile.dependencies,
-                 PACKAGED_DEPS
-
-    package(:jar)
-    package(:jar, :classifier => 'all').tap do |jar|
-      jar.with :manifest => { 'Main-Class' => 'org.realityforge.webtack.Main' }
-      PACKAGED_DEPS.collect { |dep| Buildr.artifact(dep) }.each do |d|
-        jar.merge(d)
+      test.using :testng
+      test.options[:properties] = {
+        'webtack.react4j-generator.gwtc' => ENV['GWT'] == 'no' ? 'false' : 'true',
+        'webtack.react4j-generator.fixture_dir' => _('src/test/fixtures'),
+        'webtack.react4j-generator.fixture.libs' => "#{REACT4J_DEPS.collect { |a| artifact(a).to_s }.join(':')}:#{artifact(:gwt_user)}:#{project('akasha:core').package(:jar)}",
+        'webtack.react4j-generator.gwt_dev.libs' => "#{Buildr::GWT.dependencies('2.9.0').collect { |d| artifact(d).to_s }.join(':')}"
+      }
+      test.options[:java_args] = %w(-ea)
+      test.compile.with :gir,
+                        Buildr::Util.tools_jar,
+                        # Next dependency ensures the jar is built so can be used in tests but is not directly referenced
+                        project('akasha:core').package(:jar)
+      test.compile.enhance do |d|
+        REACT4J_DEPS.collect { |a| artifact(a).invoke }
+        Buildr::GWT.dependencies('2.9.0').collect { |a| artifact(a).invoke }
       end
-      jar.merge(project('webidl-parser').package(:jar))
-      jar.merge(project('webidl-model').package(:jar))
-    end
-    package(:sources)
-    package(:javadoc)
 
-    test.using :testng
+      package(:jar, :classifier => 'all').tap do |jar|
+        [:javapoet].collect { |dep| Buildr.artifact(dep) }.each do |d|
+          jar.merge(d)
+        end
+      end
+      package(:sources)
+      package(:javadoc)
+    end
+
+    define 'cli' do
+      generate_config_resource(project)
+
+      compile.with :javax_annotation,
+                   project('webidl-model').package(:jar),
+                   project('webidl-model').compile.dependencies,
+                   project('jsinterop-generator').package(:jar),
+                   project('jsinterop-generator').compile.dependencies,
+                   project('react4j-generator').package(:jar),
+                   project('react4j-generator').compile.dependencies,
+                   PACKAGED_DEPS
+
+      package(:jar)
+      package(:jar, :classifier => 'all').tap do |jar|
+        jar.with :manifest => { 'Main-Class' => 'org.realityforge.webtack.Main' }
+        PACKAGED_DEPS.collect { |dep| Buildr.artifact(dep) }.each do |d|
+          jar.merge(d)
+        end
+        jar.merge(project('webidl-parser').package(:jar))
+        jar.merge(project('webidl-model').package(:jar))
+      end
+      package(:sources)
+      package(:javadoc)
+
+      test.using :testng
+    end
+    project.no_iml
   end
 
   desc "Akasha Core"
@@ -250,7 +254,7 @@ define 'akasha' do
 
   iml.excluded_directories << project._('tmp')
 
-  ipr.add_default_testng_configuration(:jvm_args => '-ea -Dwebtack.output_fixture_data=false -Dwebtack.fixture_dir=webidl-model/src/test/resources')
+  ipr.add_default_testng_configuration(:jvm_args => '-ea -Dwebtack.output_fixture_data=false -Dwebtack.fixture_dir=webtack/webidl-model/src/test/resources')
 
   ipr.add_testng_configuration('webidl-parser', :module => 'webidl-parser', :jvm_args => '-ea')
 
@@ -266,13 +270,13 @@ define 'akasha' do
                                :module => 'react4j-generator',
                                :jvm_args => "-ea -Dwebtack.output_fixture_data=true -Dwebtack.react4j-generator.fixture_dir=src/test/fixtures -Dwebtack.react4j-generator.gwtc=false -Dwebtack.react4j-generator.fixture.libs=#{REACT4J_DEPS.collect { |a| artifact(a).to_s }.join(':')}:#{artifact(:gwt_user)}:#{project('akasha:core').package(:jar)} -Dwebtack.react4j-generator.gwt_dev.libs=#{Buildr::GWT.dependencies('2.9.0').collect { |d| artifact(d).to_s }.join(':')}")
 
-  ipr.add_java_configuration(project('cli'), 'org.realityforge.webtack.Main', :name => 'Run - bluetooth', :dir => 'file://$PROJECT_DIR$', :args => '-d data run bluetooth')
+  ipr.add_java_configuration(project('webtack:cli'), 'org.realityforge.webtack.Main', :name => 'Run - bluetooth', :dir => 'file://$PROJECT_DIR$', :args => '-d data run bluetooth')
 
-  ipr.add_java_configuration(project('cli'), 'org.realityforge.webtack.Main', :name => 'Run - main', :dir => 'file://$PROJECT_DIR$', :args => '-d data run main')
+  ipr.add_java_configuration(project('webtack:cli'), 'org.realityforge.webtack.Main', :name => 'Run - main', :dir => 'file://$PROJECT_DIR$', :args => '-d data run main')
 
-  ipr.add_java_configuration(project('cli'), 'org.realityforge.webtack.Main', :name => 'Run - react4j', :dir => 'file://$PROJECT_DIR$', :args => '-d data run react4j')
+  ipr.add_java_configuration(project('webtack:cli'), 'org.realityforge.webtack.Main', :name => 'Run - react4j', :dir => 'file://$PROJECT_DIR$', :args => '-d data run react4j')
 
-  ipr.add_java_configuration(project('cli'), 'org.realityforge.webtack.Main', :name => 'Run - speech', :dir => 'file://$PROJECT_DIR$', :args => '-d data run speech')
+  ipr.add_java_configuration(project('webtack:cli'), 'org.realityforge.webtack.Main', :name => 'Run - speech', :dir => 'file://$PROJECT_DIR$', :args => '-d data run speech')
 
   ipr.add_component_from_artifact(:idea_codestyle)
   ipr.add_code_insight_settings
@@ -281,7 +285,7 @@ define 'akasha' do
 end
 
 desc 'Generate source artifacts'
-task('generate:all').enhance([file(File.expand_path("#{File.dirname(__FILE__)}/webidl-parser/generated/antlr/main/java"))])
+task('generate:all').enhance([file(File.expand_path("#{File.dirname(__FILE__)}/webtack/webidl-parser/generated/antlr/main/java"))])
 
 Buildr.projects.each do |project|
   unless %w(akasha:complete).include?(project.name)
