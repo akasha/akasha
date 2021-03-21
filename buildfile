@@ -284,7 +284,7 @@ desc 'Generate source artifacts'
 task('generate:all').enhance([file(File.expand_path("#{File.dirname(__FILE__)}/webidl-parser/generated/antlr/main/java"))])
 
 Buildr.projects.each do |project|
-  unless %w(akasha:main).include?(project.name)
+  unless %w(akasha:complete).include?(project.name)
     project.task('upload').actions.clear
   end
 end
