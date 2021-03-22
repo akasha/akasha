@@ -79,9 +79,9 @@ can be added as a maven dependency:
 
 ```xml
 <dependency>
-  <groupId>org.realityforge.webtack</groupId>
-  <artifactId>webtack-elemental3-complete</artifactId>
-  <version>0.03</version>
+  <groupId>org.realityforge.akasha</groupId>
+  <artifactId>akasha-java</artifactId>
+  <version>0.01</version>
 </dependency>
 ```
 
