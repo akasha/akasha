@@ -1,0 +1,13 @@
+
+{
+    "kind": "Type",
+    "name": "IdleDeadline",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/IdleDeadline",
+    "description": "The IdleDeadline interface is used as the data type of the input parameter to idle callbacks established by calling Window.requestIdleCallback(). It offers a method, timeRemaining(), which lets you determine how much longer the user agent estimates it will remain idle and a property, didTimeout, which lets you determine if your callback is executing because its timeout duration expired.",
+    "refs": [
+        {
+            "name": "Cooperative Scheduling of Background Tasks",
+            "href": "https://www.w3.org/TR/requestidlecallback/"
+        }
+    ]
+}
