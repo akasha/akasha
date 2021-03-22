@@ -185,6 +185,26 @@
       }
     },
     {
+      "name": "RemoveMember",
+      "description": "We remove the trailing parameters to make it more java-esque",
+      "sourceSelector": "name=whatwg_html",
+      "config": {
+        "expectedRemoveCount": 2,
+        "elementNamePattern": "^WindowOrWorkerGlobalScope$",
+        "memberNamePattern": "^(setInterval|setTimeout)$"
+      }
+    },
+    {
+      "name": "RemoveElement",
+      "description": "Remove the type so it can be replaced with a more java-friendly form",
+      "sourceSelector": "name=whatwg_html",
+      "config": {
+        "expectedRemoveCount": 1,
+        "namePattern": "^TimerHandler$",
+        "type": ["callback"]
+      }
+    },
+    {
       "name": "AddExtendedAttribute",
       "description": "Package up the elements defined by ECMA into a separate package to model behaviour of elemental2-core",
       "sourceSelector": "name=atomics name=errors name=symbol name=json name=math name=typedarray name=basic_types",

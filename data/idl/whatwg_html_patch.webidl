@@ -762,3 +762,10 @@ const enum HTMLMediaElementNetworkState {
   HTMLMediaElement.NETWORK_LOADING,
   HTMLMediaElement.NETWORK_NO_SOURCE
 };
+
+callback TimerHandler = undefined ();
+
+partial interface mixin WindowOrWorkerGlobalScope {
+  long setInterval( TimerHandler handler, optional long timeout = 0 );
+  long setTimeout( TimerHandler handler, optional long timeout = 0 );
+};
