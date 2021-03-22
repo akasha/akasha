@@ -190,8 +190,8 @@ define 'akasha' do
     package(:javadoc)
   end
 
-  desc "Akasha complete"
-  define 'complete', :base_dir => "#{WORKSPACE_DIR}/akasha/complete" do
+  desc "Akasha Java Browser API"
+  define 'java', :base_dir => "#{WORKSPACE_DIR}/akasha/java" do
     src_dir = file("#{project._(:target, :generated)}/webtack/main/java" => ["data:run_complete_pipeline"])
     compile.sources << src_dir
     iml.main_generated_source_directories << src_dir
@@ -288,7 +288,7 @@ desc 'Generate source artifacts'
 task('generate:all').enhance([file(File.expand_path("#{File.dirname(__FILE__)}/webtack/webidl-parser/generated/antlr/main/java"))])
 
 Buildr.projects.each do |project|
-  unless %w(akasha:complete).include?(project.name)
+  unless %w(akasha:java).include?(project.name)
     project.task('install').actions.clear
     project.task('upload').actions.clear
   end
