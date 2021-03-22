@@ -146,6 +146,11 @@ public abstract class AbstractTest
       {
         WebIDLWriter.writeSchema( writer, schema );
       }
+      if ( 0L == Files.size( schemaPath ) )
+      {
+        // Avoid empty files as it does not work with zapwhite
+        Files.write( schemaPath, "\n".getBytes( StandardCharsets.UTF_8 ) );
+      }
     }
 
     final Path workingDirectory = getWorkingDir();
