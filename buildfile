@@ -246,6 +246,12 @@ define 'akasha' do
 
   ipr.add_java_configuration(project('webtack:cli'), 'org.realityforge.webtack.Main', :name => 'Run - react4j', :dir => 'file://$PROJECT_DIR$', :args => '-d data run react4j')
 
+  ipr.add_java_configuration(project('webtack:cli'), 'org.realityforge.webtack.Main', :name => 'Add', :dir => 'file://$PROJECT_DIR$', :args => '-d data add')
+
+  ipr.add_java_configuration(project('webtack:cli'), 'org.realityforge.webtack.Main', :name => 'Fetch', :dir => 'file://$PROJECT_DIR$', :args => '-d data fetch')
+
+  ipr.add_java_configuration(project('webtack:cli'), 'org.realityforge.webtack.Main', :name => 'FetchDocs', :dir => 'file://$PROJECT_DIR$', :args => '-d data fetch-docs')
+
   ipr.add_component_from_artifact(:idea_codestyle)
   ipr.add_code_insight_settings
   ipr.add_nullable_manager
