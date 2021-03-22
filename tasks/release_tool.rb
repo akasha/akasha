@@ -159,7 +159,7 @@ HEADER
     end
 
     def patch_changelog_post_release
-      t.stage('PatchChangelogPostRelease', 'Patch the changelog post release to prepare for next development iteration') do
+      stage('PatchChangelogPostRelease', 'Patch the changelog post release to prepare for next development iteration') do
         changelog = IO.read('CHANGELOG.md')
         changelog = changelog.gsub("# Change Log\n", <<HEADER)
 # Change Log
