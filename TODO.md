@@ -11,6 +11,8 @@ complete as there is too much un-said.
 
 * Add missing methods to typed array types
 
+* checkin source to a branch somewhere so it is easy to track changes over time
+
 # Docs Integration
 
 * Process docs and any words that match an original/non-synthetic word then convert into {@link MyType}
