@@ -41,7 +41,7 @@ task 'data:force_fetch' do
   end
 end
 
-%w(speech bluetooth complete react4j).each do |pipeline|
+%w(complete react4j).each do |pipeline|
   desc "Run the #{pipeline} pipeline"
   task "data:run_#{pipeline}_pipeline" do
     in_dir(WORKSPACE_DIR) do

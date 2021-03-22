@@ -1,7 +1,56 @@
 {
-  "sourceSelector": "!name=minimal_event !name=secure_contexts !name=bluetooth_common",
-  "pre": ["common"],
   "stages": [
+    {
+      "name": "ChangeAttributeType",
+      "sourceSelector": "name=common",
+      "config": {
+        "expectedRemoveCount": 1,
+        "elementNamePattern": "^DOMException$",
+        "attributeNamePattern": "^code$",
+        "type": "DOMException"
+      }
+    },
+    {
+      "name": "RemoveMember",
+      "description": "Members removed as now inherited from parent interface",
+      "sourceSelector": "name=common",
+      "config": {
+        "expectedRemoveCount": 2,
+        "elementNamePattern": "^DOMException$",
+        "memberNamePattern": "^(message|name)$",
+        "types": ["interface_type"]
+      }
+    },
+    {
+      "name": "ChangeExtends",
+      "description": "Actually model how it logically works",
+      "sourceSelector": "name=common",
+      "config": {
+        "expectedChangeCount": 1,
+        "elementNamePattern": "^DOMException$",
+        "parentType": "Error"
+      }
+    },
+    {
+      "name": "AddExtendedAttribute",
+      "description": "Convert BufferSource into marker type",
+      "sourceSelector": "name=common",
+      "config": {
+        "namePattern": "^BufferSource$",
+        "extendedAttribute": "MarkerType",
+        "types": ["typedef"]
+      }
+    },
+    {
+      "name": "RemoveElement",
+      "description": "Remove ArrayBufferView as redefined with more general structure in common_patch",
+      "sourceSelector": "name=common",
+      "config": {
+        "expectedRemoveCount": 1,
+        "namePattern": "^ArrayBufferView$",
+        "type": ["typedef"]
+      }
+    },
     {
       "name": "MergeDocs",
       "description": "Add documentation from doc repository. This needs to be done before Flatten and renames as some documentation applies to Mixins or to elements before they are renamed",

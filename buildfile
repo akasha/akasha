@@ -224,34 +224,6 @@ define 'akasha' do
     package(:javadoc)
   end
 
-  %w(speech bluetooth).each do |name|
-    desc "Akasha #{name}"
-    define name, :base_dir => "#{WORKSPACE_DIR}/akasha/#{name}" do
-      src_dir = file("#{WORKSPACE_DIR}/data/output/#{name}/main/java" => ["data:run_#{name}_pipeline"])
-      compile.sources << src_dir
-      project.layout[:target, :generated] = "#{WORKSPACE_DIR}/target/akasha-#{name}/generated"
-
-      doc.options.merge!('Xdoclint:all,-reference,-missing' => true)
-
-      compile.using :javac
-
-      deps = artifacts(JSINTEROP_DEPS)
-      deps << [project('akasha:core')]
-      compile.with deps
-
-      gwt_enhance(project, :extra_deps => [src_dir])
-
-      pom.include_transitive_dependencies << deps
-      pom.dependency_filter = Proc.new { |dep| dep[:scope].to_s != 'test' && deps.include?(dep[:artifact]) }
-
-      package(:jar)
-      package(:sources)
-      package(:javadoc)
-
-      project.no_iml
-    end
-  end
-
   iml.excluded_directories << project._('tmp')
 
   ipr.add_default_testng_configuration(:jvm_args => '-ea -Dwebtack.output_fixture_data=false -Dwebtack.fixture_dir=webtack/webidl-model/src/test/resources')
@@ -270,13 +242,9 @@ define 'akasha' do
                                :module => 'react4j-generator',
                                :jvm_args => "-ea -Dwebtack.output_fixture_data=true -Dwebtack.react4j-generator.fixture_dir=src/test/fixtures -Dwebtack.react4j-generator.gwtc=false -Dwebtack.react4j-generator.fixture.libs=#{REACT4J_DEPS.collect { |a| artifact(a).to_s }.join(':')}:#{artifact(:gwt_user)}:#{project('akasha:core').package(:jar)} -Dwebtack.react4j-generator.gwt_dev.libs=#{Buildr::GWT.dependencies('2.9.0').collect { |d| artifact(d).to_s }.join(':')}")
 
-  ipr.add_java_configuration(project('webtack:cli'), 'org.realityforge.webtack.Main', :name => 'Run - bluetooth', :dir => 'file://$PROJECT_DIR$', :args => '-d data run bluetooth')
-
   ipr.add_java_configuration(project('webtack:cli'), 'org.realityforge.webtack.Main', :name => 'Run - main', :dir => 'file://$PROJECT_DIR$', :args => '-d data run main')
 
   ipr.add_java_configuration(project('webtack:cli'), 'org.realityforge.webtack.Main', :name => 'Run - react4j', :dir => 'file://$PROJECT_DIR$', :args => '-d data run react4j')
-
-  ipr.add_java_configuration(project('webtack:cli'), 'org.realityforge.webtack.Main', :name => 'Run - speech', :dir => 'file://$PROJECT_DIR$', :args => '-d data run speech')
 
   ipr.add_component_from_artifact(:idea_codestyle)
   ipr.add_code_insight_settings

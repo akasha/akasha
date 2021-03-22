@@ -24,10 +24,6 @@
         "url": "https://www.w3.org/TR/beacon/"
     },
     {
-        "lastModifiedTime": 0,
-        "name": "bluetooth_common"
-    },
-    {
         "lastModifiedTime": 1612326763000,
         "name": "clipboard_apis",
         "url": "https://www.w3.org/TR/clipboard-apis/"
@@ -212,10 +208,6 @@
         "lastModifiedTime": 1613482429000,
         "name": "mediacapture_record",
         "url": "https://w3c.github.io/mediacapture-record/MediaRecorder.html"
-    },
-    {
-        "lastModifiedTime": 0,
-        "name": "minimal_event"
     },
     {
         "lastModifiedTime": 1615219174000,
