@@ -13,6 +13,8 @@ complete as there is too much un-said.
 
 * checkin source to a branch somewhere so it is easy to track changes over time
 
+* Define `JsObject`
+
 # Docs Integration
 
 * Process docs and any words that match an original/non-synthetic word then convert into {@link MyType}
