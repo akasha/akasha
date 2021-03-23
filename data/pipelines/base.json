@@ -7,7 +7,7 @@
         "expectedRemoveCount": 1,
         "elementNamePattern": "^DOMException$",
         "attributeNamePattern": "^code$",
-        "type": "DOMException"
+        "type": "DOMExceptionCode"
       }
     },
     {
