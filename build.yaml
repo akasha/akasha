@@ -28,5 +28,5 @@ artifacts:
   gwt_user: com.google.gwt:gwt-user:jar:2.9.0
   gwt_dev: com.google.gwt:gwt-dev:jar:2.9.0
 
-  react4j_core: org.realityforge.react4j:react4j-core:jar:0.178
-  react4j_dom: org.realityforge.react4j:react4j-dom:jar:0.178
+  react4j_core: org.realityforge.react4j:react4j-core:jar:0.181
+  react4j_dom: org.realityforge.react4j:react4j-dom:jar:0.181
