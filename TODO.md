@@ -15,6 +15,8 @@ complete as there is too much un-said.
 
 * Define `JsObject`
 
+* Add minimal documentation to JsArray
+
 # Docs Integration
 
 * Process docs and any words that match an original/non-synthetic word then convert into {@link MyType}
