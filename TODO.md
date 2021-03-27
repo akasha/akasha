@@ -51,7 +51,7 @@ complete as there is too much un-said.
 
 # Java Generation
 
-* Any type that defines a `[@@iterator]()` method should implement `JsIterator<X>`.
+* Any type that defines a `[@@iterator]()` method should implement `JsIterable<X>`.
 
 * Consider supporting multiple exposure sets and thus multiple `GlobalX` interfaces in output library. Then
   figure out a way to support multiple `Global` objects. We may also need to support an interface to represent
