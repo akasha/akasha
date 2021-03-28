@@ -8,9 +8,9 @@ complete as there is too much un-said.
 
 * Add missing methods to typed array types
 
-* checkin source to a branch somewhere so it is easy to track changes over time
-
 * Define `JsObject`
+
+* Include link to source repository in the release notes
 
 # Docs Integration
 

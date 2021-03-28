@@ -13,7 +13,7 @@ Buildr::ReleaseTool.define_release_task do |t|
   t.patch_maven_version_in_readme
   t.tag_project
   t.stage_release(:release_to => { :url => 'https://stocksoftware.jfrog.io/stocksoftware/staging', :username => ENV['STAGING_USERNAME'], :password => ENV['STAGING_PASSWORD'] })
-  t.maven_central_publish
+  t.maven_central_publish(:additional_tasks => 'source:publish_and_tag')
   t.patch_changelog_post_release
   t.push_changes
   t.github_release('akasha/akasha')
