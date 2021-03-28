@@ -1,6 +1,0 @@
-<module>
-  <inherits name='jsinterop.base.Base'/>
-  <inherits name='akasha.lang.Lang'/>
-
-  <source path=''/>
-</module>

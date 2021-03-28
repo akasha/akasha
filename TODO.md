@@ -15,8 +15,6 @@ complete as there is too much un-said.
 
 * Define `JsObject`
 
-* Merge `akasha-core` into `akasha-java` as no longer any value in keeping separate.
-
 # Docs Integration
 
 * Process docs and any words that match an original/non-synthetic word then convert into {@link MyType}
