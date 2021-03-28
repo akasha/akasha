@@ -6,9 +6,6 @@ complete as there is too much un-said.
 
 # MVP Release
 
-* Why does `JsPropertyMap` not have a keys method? A result of no `JsArray`? Replace `JsObject.keys()` through
-  apps with `PropertyMap.forEach`
-
 * Add missing methods to typed array types
 
 * checkin source to a branch somewhere so it is easy to track changes over time
