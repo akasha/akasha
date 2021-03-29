@@ -1,0 +1,14 @@
+
+{
+    "kind": "Method",
+    "name": "Object.seal",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/seal",
+    "description": "The Object.seal() method seals an object, preventing new properties from being added to it and marking all existing properties as non-configurable. Values of present properties can still be changed as long as they are writable.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-object.seal",
+            "description": "Object.seal - ECMAScript (ECMA-262)"
+        }
+    ]
+}

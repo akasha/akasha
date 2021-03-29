@@ -1,0 +1,14 @@
+
+{
+    "kind": "Method",
+    "name": "Object.getOwnPropertySymbols",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols",
+    "description": "The Object.getOwnPropertySymbols() method returns an array of all symbol properties found directly upon a given object.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-object.getownpropertysymbols",
+            "description": "Object.getOwnPropertySymbols - ECMAScript (ECMA-262)"
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+
+{
+    "kind": "Type",
+    "name": "Object",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "description": "The Object class represents one of JavaScript's data types. It is used to store various keyed collections and more complex entities. Objects can be created using the Object() constructor or the object initializer / literal syntax.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-object-objects",
+            "description": "Object - ECMAScript (ECMA-262)"
+        }
+    ]
+}

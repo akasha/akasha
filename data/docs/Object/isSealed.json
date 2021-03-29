@@ -1,0 +1,14 @@
+
+{
+    "kind": "Method",
+    "name": "Object.isSealed",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/isSealed",
+    "description": "The Object.isSealed() method determines if an object is sealed.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-object.issealed",
+            "description": "Object.isSealed - ECMAScript (ECMA-262)"
+        }
+    ]
+}

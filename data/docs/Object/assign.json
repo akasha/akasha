@@ -1,0 +1,14 @@
+
+{
+    "kind": "Method",
+    "name": "Object.assign",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign",
+    "description": "The Object.assign() method copies all enumerable own properties from one or more source objects to a target object. It returns the target object.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-object.assign",
+            "description": "Object.assign - ECMAScript (ECMA-262)"
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+
+{
+    "kind": "Method",
+    "name": "Object.toString",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString",
+    "description": "The toString() method returns a string representing the object.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-object.prototype.tostring",
+            "description": "Object.prototype.toString - ECMAScript (ECMA-262)"
+        }
+    ]
+}

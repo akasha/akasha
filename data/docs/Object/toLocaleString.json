@@ -1,0 +1,14 @@
+
+{
+    "kind": "Method",
+    "name": "Object.toLocaleString",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toLocaleString",
+    "description": "The toLocaleString() method returns a string representing the object. This method is meant to be overridden by derived objects for locale-specific purposes.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-object.prototype.tolocalestring",
+            "description": "Object.prototype.toLocaleString - ECMAScript (ECMA-262)"
+        }
+    ]
+}

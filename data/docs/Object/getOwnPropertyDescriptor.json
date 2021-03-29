@@ -1,0 +1,14 @@
+
+{
+    "kind": "Method",
+    "name": "Object.getOwnPropertyDescriptor",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor",
+    "description": "The Object.getOwnPropertyDescriptor() method returns an object describing the configuration of a specific property on a given object (that is, one directly present on an object and not in the object's prototype chain). The object returned is mutable but mutating it has no effect on the original property's configuration.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-object.getownpropertydescriptor",
+            "description": "Object.getOwnPropertyDescriptor - ECMAScript (ECMA-262)"
+        }
+    ]
+}

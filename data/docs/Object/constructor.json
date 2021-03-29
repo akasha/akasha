@@ -1,0 +1,14 @@
+
+{
+    "kind": "Property",
+    "name": "Object.constructor",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor",
+    "description": "The constructor property returns a reference to the Object constructor function that created the instance object. Note that the value of this property is a reference to the function itself, not a string containing the function's name.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-object.prototype.constructor",
+            "description": "Object.prototype.constructor - ECMAScript (ECMA-262)"
+        }
+    ]
+}

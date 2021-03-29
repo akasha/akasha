@@ -1,0 +1,14 @@
+
+{
+    "kind": "Method",
+    "name": "Object.is",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is",
+    "description": "The Object.is() method determines whether two values are the same value.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-object.is",
+            "description": "Object.is - ECMAScript (ECMA-262)"
+        }
+    ]
+}

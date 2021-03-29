@@ -1,0 +1,14 @@
+
+{
+    "kind": "Method",
+    "name": "Object.defineProperties",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperties",
+    "description": "The Object.defineProperties() method defines new or modifies existing properties directly on an object, returning the object.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-object.defineproperties",
+            "description": "Object.defineProperties - ECMAScript (ECMA-262)"
+        }
+    ]
+}

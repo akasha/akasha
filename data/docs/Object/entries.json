@@ -1,0 +1,14 @@
+
+{
+    "kind": "Method",
+    "name": "Object.entries",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries",
+    "description": "The Object.entries() method returns an array of a given object's own enumerable string-keyed property [key, value] pairs, in the same order as that provided by a for...in loop. (The only important difference is that a for...in loop enumerates properties in the prototype chain as well).",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-object.entries",
+            "description": "Object.entries - ECMAScript (ECMA-262)"
+        }
+    ]
+}

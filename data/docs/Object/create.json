@@ -1,0 +1,14 @@
+
+{
+    "kind": "Method",
+    "name": "Object.create",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create",
+    "description": "The Object.create() method creates a new object, using an existing object as the prototype of the newly created object.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-object.create",
+            "description": "Object.create - ECMAScript (ECMA-262)"
+        }
+    ]
+}

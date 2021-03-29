@@ -1,0 +1,14 @@
+
+{
+    "kind": "Method",
+    "name": "Object.__defineSetter__",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__",
+    "description": "The __defineSetter__ method binds an object's property to a function to be called when an attempt is made to set that property.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-object.prototype.__defineSetter__",
+            "description": "Object.prototype.__defineSetter__() - ECMAScript (ECMA-262)"
+        }
+    ]
+}
