@@ -53,3 +53,46 @@ interface Number {
 
   unrestricted double valueOf();
 };
+
+callback PropertyAccessorFunction = any ();
+
+callback PropertyMutatorFunction = void ( any value );
+
+dictionary ObjectPropertyDescriptor {
+  boolean configurable = false;
+  boolean enumerable = false;
+  PropertyAccessorFunction get = null;
+  PropertyMutatorFunction set = null;
+  any value = null;
+  boolean writable = false;
+};
+
+// This is hand-written
+interface ObjectPropertyEntry {
+};
+
+[JavaName=JsObject]
+interface Object {
+  static object assign( object target, object... sources );
+  static object create( object? proto, optional record<DOMString, ObjectPropertyDescriptor>? props = null );
+  static undefined defineProperties( object obj, record<DOMString, ObjectPropertyDescriptor> props );
+  static undefined defineProperty( object obj, (DOMString or Symbol) prop, ObjectPropertyDescriptor descriptor );
+  static sequence<ObjectPropertyEntry> entries( object obj );
+  static undefined freeze( object obj );
+  static object fromEntries( [JavaSequenceType=Iterable] sequence<ObjectPropertyEntry> iterable );
+  static ObjectPropertyDescriptor? getOwnPropertyDescriptor( object obj, (DOMString or Symbol) prop );
+  static sequence<ObjectPropertyDescriptor> getOwnPropertyDescriptors( object obj );
+  static sequence<DOMString> getOwnPropertyNames( object obj );
+  static sequence<Symbol> getOwnPropertySymbols( object obj );
+
+  static object? getPrototypeOf( object obj );
+  static boolean is( object value1, object value2 );
+  static boolean isExtensible( object obj );
+  static boolean isFrozen( object obj );
+  static boolean isSealed( object obj );
+  static sequence<DOMString> keys( object obj );
+  static undefined preventExtensions( object obj );
+  static undefined seal( object obj );
+  static undefined setPrototypeOf( object obj, object prototype );
+  static sequence<any> values( object obj );
+};
