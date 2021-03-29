@@ -10,6 +10,10 @@ complete as there is too much un-said.
 
 * Include link to source repository in the release notes
 
+* Add api diff to change log.
+
+* Record changes in changelog
+
 # Docs Integration
 
 * Process docs and any words that match an original/non-synthetic word then convert into {@link MyType}
