@@ -1,6 +1,6 @@
 # Change Log
 
-### Unreleased
+### [v0.05](https://github.com/akasha/akasha/tree/v0.05) (2021-03-30) · [Full Changelog](https://github.com/akasha/akasha/compare/v0.04...v0.05)
 
 ### [v0.04](https://github.com/akasha/akasha/tree/v0.04) (2021-03-29) · [Full Changelog](https://github.com/akasha/akasha/compare/v0.03...v0.04)
 
