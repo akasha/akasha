@@ -7,6 +7,6 @@ EventListenerOptions=com.example.EventListenerOptions
 EventTarget=com.example.EventTarget
 FocusEvent=com.example.FocusEvent
 FocusEventListener=com.example.FocusEventListener
-Object=java.lang.Object
 ScrollToOptions=com.example.ScrollToOptions
 Window=com.example.Window
+object=java.lang.Object

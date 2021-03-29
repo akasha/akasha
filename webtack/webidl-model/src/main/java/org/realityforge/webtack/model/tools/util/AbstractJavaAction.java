@@ -407,7 +407,7 @@ public abstract class AbstractJavaAction
 
   protected void registerDefaultTypeMapping()
   {
-    tryRegisterIdlToJavaTypeMapping( Kind.Object.name(), "java.lang.Object" );
+    tryRegisterIdlToJavaTypeMapping( "object", "java.lang.Object" );
   }
 
   @Nonnull
@@ -566,7 +566,7 @@ public abstract class AbstractJavaAction
     }
     else if ( Kind.Object == kind )
     {
-      return lookupClassName( kind.name() );
+      return lookupClassName( "object" );
     }
     else
     {

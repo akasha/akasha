@@ -1,5 +1,5 @@
 ImageBitmap=com.example.ImageBitmap
 MessagePort=com.example.MessagePort
-Object=java.lang.Object
 PostMessageOptions=com.example.PostMessageOptions
 Sequence=com.example.JsArray
+object=java.lang.Object

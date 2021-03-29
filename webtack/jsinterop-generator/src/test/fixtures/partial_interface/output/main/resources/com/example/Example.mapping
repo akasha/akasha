@@ -1,11 +1,11 @@
 DOMTokenList=com.example.DOMTokenList
 Headers=com.example.Headers
 Iterator=com.example.JsIterator
-Object=java.lang.Object
 RTCStatsReport=com.example.RTCStatsReport
 Sequence=com.example.JsArray
 SomeMapLikeDefiningOverrides=com.example.SomeMapLikeDefiningOverrides
 SomeOtherType=com.example.SomeOtherType
 SpeechSynthesis=com.example.SpeechSynthesis
 Window=com.example.Window
+object=java.lang.Object
 rtcThingie=com.example.RtcThingie
