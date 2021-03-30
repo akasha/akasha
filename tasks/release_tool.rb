@@ -70,7 +70,7 @@ module Buildr
 
     def extract_version_from_changelog(options = {})
       stage('ExtractVersion', 'Extract the last version from CHANGELOG.md and derive next version unless specified', :always_run => true) do
-        derive_versions_from_changelog(options)
+        Buildr::ReleaseTool.derive_versions_from_changelog(options)
         # Also initialize release date if required
         ENV['RELEASE_DATE'] ||= Time.now.strftime('%Y-%m-%d')
       end
