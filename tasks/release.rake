@@ -1,7 +1,7 @@
 require File.expand_path(File.dirname(__FILE__) + '/release_tool.rb')
 
 Buildr::ReleaseTool.define_release_task do |t|
-  t.extract_version
+  t.extract_version_from_changelog
   t.zapwhite
   t.ensure_git_clean
   # The code has TODOs ... so ignore this stage
