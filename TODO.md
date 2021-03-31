@@ -12,6 +12,8 @@ complete as there is too much un-said.
 
 * Record changes in changelog
 
+* Change the way dictionaries are implemented to be j2cl compatible
+
 # Docs Integration
 
 * Process docs and any words that match an original/non-synthetic word then convert into {@link MyType}
