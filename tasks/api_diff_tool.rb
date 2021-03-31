@@ -1,7 +1,7 @@
 module Buildr
   class ApiDiffTool
     class << self
-      def generate_differences_report(artifact_coordinate, old_version, new_version, new_file, output_file)
+      def generate_differences_report(artifact_coordinate, old_version, new_version, new_file, output_file, options = {})
         revapi = Buildr.artifact('org.realityforge.revapi.diff:revapi-diff:jar:all:0.08')
         revapi.invoke
 
@@ -16,8 +16,20 @@ module Buildr
         args << revapi.to_s
         args << '--old-api'
         args << "#{artifact_coordinate}:#{old_version}::#{old_artifact.to_s}"
+        if options[:support_libs]
+          options[:support_libs].each do |lib|
+            args << '--old-api-support'
+            args << lib.to_s
+          end
+        end
         args << '--new-api'
         args << "#{artifact_coordinate}:#{new_version}::#{new_file}"
+        if options[:support_libs]
+          options[:support_libs].each do |lib|
+            args << '--new-api-support'
+            args << lib.to_s
+          end
+        end
         args << '--output-file'
         args << output_file.to_s
 
@@ -28,18 +40,18 @@ module Buildr
         end
       end
 
-      def update_differences_report(artifact_coordinate, old_version, new_version, new_file, output_directory)
+      def update_differences_report(artifact_coordinate, old_version, new_version, new_file, output_directory, options = {})
         output_file = "#{output_directory}/#{old_version}-#{new_version}.json"
-        generate_differences_report(artifact_coordinate, old_version, new_version, new_file, output_file)
+        generate_differences_report(artifact_coordinate, old_version, new_version, new_file, output_file, options)
       end
 
-      def test_differences_report(artifact_coordinate, old_version, new_version, new_file, output_directory)
+      def test_differences_report(artifact_coordinate, old_version, new_version, new_file, output_directory, options = {})
         report_file = "#{output_directory}/#{old_version}-#{new_version}.json"
         tmp = nil
         begin
           tmp = Tempfile.open("#{old_version}-#{new_version}.json")
           tmp.close
-          generate_differences_report(artifact_coordinate, old_version, new_version, new_file, tmp.path)
+          generate_differences_report(artifact_coordinate, old_version, new_version, new_file, tmp.path, options)
 
           report_content = File.exist?(report_file) ? IO.read(report_file, :encoding => 'UTF-8') : ''
           test_content = File.exist?(tmp.path) ? IO.read(tmp.path, :encoding => 'UTF-8') : ''

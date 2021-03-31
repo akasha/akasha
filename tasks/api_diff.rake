@@ -9,7 +9,7 @@ end
 task 'do_update_api_diff' do
   a = Buildr.project('akasha:java').package(:jar)
   a.invoke
-  Buildr::ApiDiffTool.update_differences_report("org.realityforge.akasha:akasha-java:jar", ENV['PREVIOUS_PRODUCT_VERSION'], ENV['PRODUCT_VERSION'], a.to_s, "#{WORKSPACE_DIR}/api-test")
+  Buildr::ApiDiffTool.update_differences_report("org.realityforge.akasha:akasha-java:jar", ENV['PREVIOUS_PRODUCT_VERSION'], ENV['PRODUCT_VERSION'], a.to_s, "#{WORKSPACE_DIR}/api-test", :support_libs => JSINTEROP_DEPS.collect{|a| Buildr.artifact(a).to_s})
 end
 
 desc 'Test the api differences for the next version'
@@ -21,5 +21,5 @@ end
 task 'do_test_api_diff' do
   a = Buildr.project('akasha:java').package(:jar)
   a.invoke
-  Buildr::ApiDiffTool.test_differences_report("org.realityforge.akasha:akasha-java:jar", ENV['PREVIOUS_PRODUCT_VERSION'], ENV['PRODUCT_VERSION'], a.to_s, "#{WORKSPACE_DIR}/api-test")
+  Buildr::ApiDiffTool.test_differences_report("org.realityforge.akasha:akasha-java:jar", ENV['PREVIOUS_PRODUCT_VERSION'], ENV['PRODUCT_VERSION'], a.to_s, "#{WORKSPACE_DIR}/api-test", :support_libs => JSINTEROP_DEPS.collect{|a| Buildr.artifact(a).to_s})
 end
