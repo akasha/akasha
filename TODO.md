@@ -10,8 +10,6 @@ complete as there is too much un-said.
 
 * Include link to source repository in the release notes
 
-* Add api diff to change log.
-
 * Record changes in changelog
 
 # Docs Integration
