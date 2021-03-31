@@ -1,0 +1,177 @@
+[
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'javax.annotation.Generated'.",
+    "element": "class akasha.HTMLOListElement",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@javax.annotation.Generated({\"org.realityforge.webtack\"})",
+      "annotationType": "javax.annotation.Generated",
+      "classQualifiedName": "akasha.HTMLOListElement",
+      "classSimpleName": "HTMLOListElement",
+      "elementKind": "class",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.annotation.removed",
+    "description": "Element no longer annotated with 'javax.annotation.Generated'.",
+    "element": "interface akasha.audio.AudioBufferSourceOptions",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@javax.annotation.Generated({\"org.realityforge.webtack\"})",
+      "annotationType": "javax.annotation.Generated",
+      "classQualifiedName": "akasha.audio.AudioBufferSourceOptions",
+      "classSimpleName": "AudioBufferSourceOptions",
+      "elementKind": "interface",
+      "package": "akasha.audio"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'akasha.DOMExceptionCode'.",
+    "newElement": "method int akasha.DOMException::code() @ akasha.media.OverconstrainedError",
+    "oldElement": "method akasha.DOMException akasha.DOMException::code() @ akasha.media.OverconstrainedError",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.DOMExceptionCode",
+      "annotationType": "akasha.DOMExceptionCode",
+      "classQualifiedName": "akasha.media.OverconstrainedError",
+      "classSimpleName": "OverconstrainedError",
+      "elementKind": "method",
+      "methodName": "code",
+      "package": "akasha.media"
+    }
+  },
+  {
+    "code": "java.annotation.removed",
+    "description": "Element no longer annotated with 'javax.annotation.Nonnull'.",
+    "newElement": "method int akasha.DOMException::code() @ akasha.media.OverconstrainedError",
+    "oldElement": "method akasha.DOMException akasha.DOMException::code() @ akasha.media.OverconstrainedError",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@javax.annotation.Nonnull",
+      "annotationType": "javax.annotation.Nonnull",
+      "classQualifiedName": "akasha.media.OverconstrainedError",
+      "classSimpleName": "OverconstrainedError",
+      "elementKind": "method",
+      "methodName": "code",
+      "package": "akasha.media"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'akasha.DOMExceptionCode'.",
+    "newElement": "method int akasha.DOMException::code() @ akasha.rtc.RTCError",
+    "oldElement": "method akasha.DOMException akasha.DOMException::code() @ akasha.rtc.RTCError",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.DOMExceptionCode",
+      "annotationType": "akasha.DOMExceptionCode",
+      "classQualifiedName": "akasha.rtc.RTCError",
+      "classSimpleName": "RTCError",
+      "elementKind": "method",
+      "methodName": "code",
+      "package": "akasha.rtc"
+    }
+  },
+  {
+    "code": "java.annotation.removed",
+    "description": "Element no longer annotated with 'javax.annotation.Nonnull'.",
+    "newElement": "method int akasha.DOMException::code() @ akasha.rtc.RTCError",
+    "oldElement": "method akasha.DOMException akasha.DOMException::code() @ akasha.rtc.RTCError",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@javax.annotation.Nonnull",
+      "annotationType": "javax.annotation.Nonnull",
+      "classQualifiedName": "akasha.rtc.RTCError",
+      "classSimpleName": "RTCError",
+      "elementKind": "method",
+      "methodName": "code",
+      "package": "akasha.rtc"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'akasha.DOMExceptionCode'.",
+    "newElement": "method int akasha.DOMException::code()",
+    "oldElement": "method akasha.DOMException akasha.DOMException::code()",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.DOMExceptionCode",
+      "annotationType": "akasha.DOMExceptionCode",
+      "classQualifiedName": "akasha.DOMException",
+      "classSimpleName": "DOMException",
+      "elementKind": "method",
+      "methodName": "code",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.annotation.removed",
+    "description": "Element no longer annotated with 'javax.annotation.Nonnull'.",
+    "newElement": "method int akasha.DOMException::code()",
+    "oldElement": "method akasha.DOMException akasha.DOMException::code()",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@javax.annotation.Nonnull",
+      "annotationType": "javax.annotation.Nonnull",
+      "classQualifiedName": "akasha.DOMException",
+      "classSimpleName": "DOMException",
+      "elementKind": "method",
+      "methodName": "code",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.returnTypeChanged",
+    "description": "The return type changed from 'akasha.DOMException' to  'int'.",
+    "newElement": "method int akasha.DOMException::code()",
+    "oldElement": "method akasha.DOMException akasha.DOMException::code()",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.DOMException",
+      "classSimpleName": "DOMException",
+      "elementKind": "method",
+      "methodName": "code",
+      "newType": "int",
+      "oldType": "akasha.DOMException",
+      "package": "akasha"
+    }
+  }
+]

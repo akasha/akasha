@@ -1,0 +1,656 @@
+[
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.IdleDeadline",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.IdleDeadline",
+      "classSimpleName": "IdleDeadline",
+      "elementKind": "class",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.IdleRequestCallback",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.IdleRequestCallback",
+      "classSimpleName": "IdleRequestCallback",
+      "elementKind": "interface",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.IdleRequestOptions",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.IdleRequestOptions",
+      "classSimpleName": "IdleRequestOptions",
+      "elementKind": "interface",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'java.lang.FunctionalInterface'.",
+    "element": "interface akasha.TimerHandler",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "EQUIVALENT"
+    },
+    "attachments": {
+      "annotation": "@java.lang.FunctionalInterface",
+      "annotationType": "java.lang.FunctionalInterface",
+      "classQualifiedName": "akasha.TimerHandler",
+      "classSimpleName": "TimerHandler",
+      "elementKind": "interface",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsFunction'.",
+    "element": "interface akasha.TimerHandler",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsFunction",
+      "annotationType": "jsinterop.annotations.JsFunction",
+      "classQualifiedName": "akasha.TimerHandler",
+      "classSimpleName": "TimerHandler",
+      "elementKind": "interface",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.annotation.removed",
+    "description": "Element no longer annotated with 'jsinterop.annotations.JsType'.",
+    "element": "interface akasha.TimerHandler",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsType(isNative = true, namespace = \"<global>\", name = \"?\")",
+      "annotationType": "jsinterop.annotations.JsType",
+      "classQualifiedName": "akasha.TimerHandler",
+      "classSimpleName": "TimerHandler",
+      "elementKind": "interface",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'javax.annotation.Generated'.",
+    "element": "interface akasha.audio.AudioBufferSourceOptions",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@javax.annotation.Generated({\"org.realityforge.webtack\"})",
+      "annotationType": "javax.annotation.Generated",
+      "classQualifiedName": "akasha.audio.AudioBufferSourceOptions",
+      "classSimpleName": "AudioBufferSourceOptions",
+      "elementKind": "interface",
+      "package": "akasha.audio"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method int akasha.Global::requestIdleCallback(akasha.IdleRequestCallback)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.Global",
+      "classSimpleName": "Global",
+      "elementKind": "method",
+      "methodName": "requestIdleCallback",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method int akasha.Global::requestIdleCallback(akasha.IdleRequestCallback, akasha.IdleRequestOptions)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.Global",
+      "classSimpleName": "Global",
+      "elementKind": "method",
+      "methodName": "requestIdleCallback",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.numberOfParametersChanged",
+    "description": "The number of parameters of the method have changed.",
+    "newElement": "method int akasha.Global::setInterval(akasha.TimerHandler)",
+    "oldElement": "method int akasha.Global::setInterval(akasha.TimerHandler, int)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.Global",
+      "classSimpleName": "Global",
+      "elementKind": "method",
+      "methodName": "setInterval",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.numberOfParametersChanged",
+    "description": "The number of parameters of the method have changed.",
+    "newElement": "method int akasha.Global::setInterval(akasha.TimerHandler, int)",
+    "oldElement": "method int akasha.Global::setInterval(akasha.TimerHandler, int, java.lang.Object[])",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.Global",
+      "classSimpleName": "Global",
+      "elementKind": "method",
+      "methodName": "setInterval",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.numberOfParametersChanged",
+    "description": "The number of parameters of the method have changed.",
+    "newElement": "method int akasha.Global::setTimeout(akasha.TimerHandler)",
+    "oldElement": "method int akasha.Global::setTimeout(akasha.TimerHandler, int)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.Global",
+      "classSimpleName": "Global",
+      "elementKind": "method",
+      "methodName": "setTimeout",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.numberOfParametersChanged",
+    "description": "The number of parameters of the method have changed.",
+    "newElement": "method int akasha.Global::setTimeout(akasha.TimerHandler, int)",
+    "oldElement": "method int akasha.Global::setTimeout(akasha.TimerHandler, int, java.lang.Object[])",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.Global",
+      "classSimpleName": "Global",
+      "elementKind": "method",
+      "methodName": "setTimeout",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method int akasha.Window::requestIdleCallback(akasha.IdleRequestCallback)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.Window",
+      "classSimpleName": "Window",
+      "elementKind": "method",
+      "methodName": "requestIdleCallback",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method int akasha.Window::requestIdleCallback(akasha.IdleRequestCallback, akasha.IdleRequestOptions)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.Window",
+      "classSimpleName": "Window",
+      "elementKind": "method",
+      "methodName": "requestIdleCallback",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.numberOfParametersChanged",
+    "description": "The number of parameters of the method have changed.",
+    "newElement": "method int akasha.Window::setInterval(akasha.TimerHandler)",
+    "oldElement": "method int akasha.Window::setInterval(akasha.TimerHandler, int)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.Window",
+      "classSimpleName": "Window",
+      "elementKind": "method",
+      "methodName": "setInterval",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.numberOfParametersChanged",
+    "description": "The number of parameters of the method have changed.",
+    "newElement": "method int akasha.Window::setInterval(akasha.TimerHandler, int)",
+    "oldElement": "method int akasha.Window::setInterval(akasha.TimerHandler, int, java.lang.Object[])",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.Window",
+      "classSimpleName": "Window",
+      "elementKind": "method",
+      "methodName": "setInterval",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.numberOfParametersChanged",
+    "description": "The number of parameters of the method have changed.",
+    "newElement": "method int akasha.Window::setTimeout(akasha.TimerHandler)",
+    "oldElement": "method int akasha.Window::setTimeout(akasha.TimerHandler, int)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.Window",
+      "classSimpleName": "Window",
+      "elementKind": "method",
+      "methodName": "setTimeout",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.numberOfParametersChanged",
+    "description": "The number of parameters of the method have changed.",
+    "newElement": "method int akasha.Window::setTimeout(akasha.TimerHandler, int)",
+    "oldElement": "method int akasha.Window::setTimeout(akasha.TimerHandler, int, java.lang.Object[])",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.Window",
+      "classSimpleName": "Window",
+      "elementKind": "method",
+      "methodName": "setTimeout",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method void akasha.Global::cancelIdleCallback(int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.Global",
+      "classSimpleName": "Global",
+      "elementKind": "method",
+      "methodName": "cancelIdleCallback",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.addedToInterface",
+    "description": "Method was added to an interface.",
+    "newElement": "method void akasha.TimerHandler::onInvoke()",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "NON_BREAKING",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.TimerHandler",
+      "classSimpleName": "TimerHandler",
+      "elementKind": "method",
+      "methodName": "onInvoke",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method void akasha.Window::cancelIdleCallback(int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.Window",
+      "classSimpleName": "Window",
+      "elementKind": "method",
+      "methodName": "cancelIdleCallback",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.TimerHandler akasha.TimerHandler::of(akasha.Function)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.TimerHandler",
+      "classSimpleName": "TimerHandler",
+      "elementKind": "method",
+      "methodName": "of",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.TimerHandler akasha.TimerHandler::of(java.lang.String)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.TimerHandler",
+      "classSimpleName": "TimerHandler",
+      "elementKind": "method",
+      "methodName": "of",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method int akasha.Global::setInterval(akasha.Function, int)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.Global",
+      "classSimpleName": "Global",
+      "elementKind": "method",
+      "methodName": "setInterval",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method int akasha.Global::setInterval(akasha.Function, int, java.lang.Object[])",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.Global",
+      "classSimpleName": "Global",
+      "elementKind": "method",
+      "methodName": "setInterval",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method int akasha.Global::setInterval(java.lang.String, int)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.Global",
+      "classSimpleName": "Global",
+      "elementKind": "method",
+      "methodName": "setInterval",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method int akasha.Global::setInterval(java.lang.String, int, java.lang.Object[])",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.Global",
+      "classSimpleName": "Global",
+      "elementKind": "method",
+      "methodName": "setInterval",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method int akasha.Global::setTimeout(akasha.Function, int)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.Global",
+      "classSimpleName": "Global",
+      "elementKind": "method",
+      "methodName": "setTimeout",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method int akasha.Global::setTimeout(akasha.Function, int, java.lang.Object[])",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.Global",
+      "classSimpleName": "Global",
+      "elementKind": "method",
+      "methodName": "setTimeout",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method int akasha.Global::setTimeout(java.lang.String, int)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.Global",
+      "classSimpleName": "Global",
+      "elementKind": "method",
+      "methodName": "setTimeout",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method int akasha.Global::setTimeout(java.lang.String, int, java.lang.Object[])",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.Global",
+      "classSimpleName": "Global",
+      "elementKind": "method",
+      "methodName": "setTimeout",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method int akasha.Window::setInterval(akasha.Function, int)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.Window",
+      "classSimpleName": "Window",
+      "elementKind": "method",
+      "methodName": "setInterval",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method int akasha.Window::setInterval(akasha.Function, int, java.lang.Object[])",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.Window",
+      "classSimpleName": "Window",
+      "elementKind": "method",
+      "methodName": "setInterval",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method int akasha.Window::setInterval(java.lang.String, int)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.Window",
+      "classSimpleName": "Window",
+      "elementKind": "method",
+      "methodName": "setInterval",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method int akasha.Window::setInterval(java.lang.String, int, java.lang.Object[])",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.Window",
+      "classSimpleName": "Window",
+      "elementKind": "method",
+      "methodName": "setInterval",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method int akasha.Window::setTimeout(akasha.Function, int)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.Window",
+      "classSimpleName": "Window",
+      "elementKind": "method",
+      "methodName": "setTimeout",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method int akasha.Window::setTimeout(akasha.Function, int, java.lang.Object[])",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.Window",
+      "classSimpleName": "Window",
+      "elementKind": "method",
+      "methodName": "setTimeout",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method int akasha.Window::setTimeout(java.lang.String, int)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.Window",
+      "classSimpleName": "Window",
+      "elementKind": "method",
+      "methodName": "setTimeout",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method int akasha.Window::setTimeout(java.lang.String, int, java.lang.Object[])",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.Window",
+      "classSimpleName": "Window",
+      "elementKind": "method",
+      "methodName": "setTimeout",
+      "package": "akasha"
+    }
+  }
+]

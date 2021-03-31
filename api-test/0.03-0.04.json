@@ -1,0 +1,4093 @@
+[
+  {
+    "code": "java.annotation.removed",
+    "description": "Element no longer annotated with 'javax.annotation.Generated'.",
+    "element": "class akasha.HTMLOListElement",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@javax.annotation.Generated({\"org.realityforge.webtack\"})",
+      "annotationType": "javax.annotation.Generated",
+      "classQualifiedName": "akasha.HTMLOListElement",
+      "classSimpleName": "HTMLOListElement",
+      "elementKind": "class",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.core.JsObject",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.JsObject",
+      "classSimpleName": "JsObject",
+      "elementKind": "class",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.core.ObjectPropertyEntry",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.ObjectPropertyEntry",
+      "classSimpleName": "ObjectPropertyEntry",
+      "elementKind": "class",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.field.typeChanged",
+    "description": "The type of the field changed from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "element": "field akasha.HTMLInputElement.valueAsDate",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.HTMLInputElement",
+      "classSimpleName": "HTMLInputElement",
+      "elementKind": "field",
+      "fieldName": "valueAsDate",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.core.ObjectPropertyDescriptor",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.ObjectPropertyDescriptor",
+      "classSimpleName": "ObjectPropertyDescriptor",
+      "elementKind": "interface",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.core.PropertyAccessorFunction",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.PropertyAccessorFunction",
+      "classSimpleName": "PropertyAccessorFunction",
+      "elementKind": "interface",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.core.PropertyMutatorFunction",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.PropertyMutatorFunction",
+      "classSimpleName": "PropertyMutatorFunction",
+      "elementKind": "interface",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.returnTypeChangedCovariantly",
+    "description": "The return type changed covariantly from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "method akasha.core.JsObject akasha.DOMMatrixReadOnly::toJSON()",
+    "oldElement": "method java.lang.Object akasha.DOMMatrixReadOnly::toJSON()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.DOMMatrixReadOnly",
+      "classSimpleName": "DOMMatrixReadOnly",
+      "elementKind": "method",
+      "methodName": "toJSON",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.returnTypeChangedCovariantly",
+    "description": "The return type changed covariantly from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "method akasha.core.JsObject akasha.DOMPointReadOnly::toJSON()",
+    "oldElement": "method java.lang.Object akasha.DOMPointReadOnly::toJSON()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.DOMPointReadOnly",
+      "classSimpleName": "DOMPointReadOnly",
+      "elementKind": "method",
+      "methodName": "toJSON",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.returnTypeChangedCovariantly",
+    "description": "The return type changed covariantly from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "method akasha.core.JsObject akasha.DOMQuad::toJSON()",
+    "oldElement": "method java.lang.Object akasha.DOMQuad::toJSON()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.DOMQuad",
+      "classSimpleName": "DOMQuad",
+      "elementKind": "method",
+      "methodName": "toJSON",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.returnTypeChangedCovariantly",
+    "description": "The return type changed covariantly from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "method akasha.core.JsObject akasha.DOMRectReadOnly::toJSON()",
+    "oldElement": "method java.lang.Object akasha.DOMRectReadOnly::toJSON()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.DOMRectReadOnly",
+      "classSimpleName": "DOMRectReadOnly",
+      "elementKind": "method",
+      "methodName": "toJSON",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.returnTypeChangedCovariantly",
+    "description": "The return type changed covariantly from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "method akasha.core.JsObject akasha.Document::get(java.lang.String)",
+    "oldElement": "method java.lang.Object akasha.Document::get(java.lang.String)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.Document",
+      "classSimpleName": "Document",
+      "elementKind": "method",
+      "methodName": "get",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.returnTypeChangedCovariantly",
+    "description": "The return type changed covariantly from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "method akasha.core.JsObject akasha.HTMLMediaElement::getStartDate()",
+    "oldElement": "method java.lang.Object akasha.HTMLMediaElement::getStartDate()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.HTMLMediaElement",
+      "classSimpleName": "HTMLMediaElement",
+      "elementKind": "method",
+      "methodName": "getStartDate",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.returnTypeChangedCovariantly",
+    "description": "The return type changed covariantly from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "method akasha.core.JsObject akasha.MimeTypeArray::item(int)",
+    "oldElement": "method java.lang.Object akasha.MimeTypeArray::item(int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.MimeTypeArray",
+      "classSimpleName": "MimeTypeArray",
+      "elementKind": "method",
+      "methodName": "item",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.returnTypeChangedCovariantly",
+    "description": "The return type changed covariantly from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "method akasha.core.JsObject akasha.MimeTypeArray::namedItem(java.lang.String)",
+    "oldElement": "method java.lang.Object akasha.MimeTypeArray::namedItem(java.lang.String)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.MimeTypeArray",
+      "classSimpleName": "MimeTypeArray",
+      "elementKind": "method",
+      "methodName": "namedItem",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.returnTypeChangedCovariantly",
+    "description": "The return type changed covariantly from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "method akasha.core.JsObject akasha.PluginArray::item(int)",
+    "oldElement": "method java.lang.Object akasha.PluginArray::item(int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.PluginArray",
+      "classSimpleName": "PluginArray",
+      "elementKind": "method",
+      "methodName": "item",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.returnTypeChangedCovariantly",
+    "description": "The return type changed covariantly from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "method akasha.core.JsObject akasha.PluginArray::namedItem(java.lang.String)",
+    "oldElement": "method java.lang.Object akasha.PluginArray::namedItem(java.lang.String)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.PluginArray",
+      "classSimpleName": "PluginArray",
+      "elementKind": "method",
+      "methodName": "namedItem",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.returnTypeChangedCovariantly",
+    "description": "The return type changed covariantly from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "method akasha.core.JsObject akasha.Report::toJSON()",
+    "oldElement": "method java.lang.Object akasha.Report::toJSON()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.Report",
+      "classSimpleName": "Report",
+      "elementKind": "method",
+      "methodName": "toJSON",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.returnTypeChangedCovariantly",
+    "description": "The return type changed covariantly from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "method akasha.core.JsObject akasha.ReportBody::toJSON()",
+    "oldElement": "method java.lang.Object akasha.ReportBody::toJSON()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.ReportBody",
+      "classSimpleName": "ReportBody",
+      "elementKind": "method",
+      "methodName": "toJSON",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.returnTypeChangedCovariantly",
+    "description": "The return type changed covariantly from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "method akasha.core.JsObject akasha.Window::get(java.lang.String)",
+    "oldElement": "method java.lang.Object akasha.Window::get(java.lang.String)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.Window",
+      "classSimpleName": "Window",
+      "elementKind": "method",
+      "methodName": "get",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.returnTypeChangedCovariantly",
+    "description": "The return type changed covariantly from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "method akasha.core.JsObject akasha.audio.AudioWorkletNodeOptions::processorOptions()",
+    "oldElement": "method java.lang.Object akasha.audio.AudioWorkletNodeOptions::processorOptions()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.audio.AudioWorkletNodeOptions",
+      "classSimpleName": "AudioWorkletNodeOptions",
+      "elementKind": "method",
+      "methodName": "processorOptions",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha.audio"
+    }
+  },
+  {
+    "code": "java.method.returnTypeChangedCovariantly",
+    "description": "The return type changed covariantly from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "method akasha.core.JsObject akasha.bluetooth.BluetoothLEScanFilterInit::manufacturerData()",
+    "oldElement": "method java.lang.Object akasha.bluetooth.BluetoothLEScanFilterInit::manufacturerData()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.bluetooth.BluetoothLEScanFilterInit",
+      "classSimpleName": "BluetoothLEScanFilterInit",
+      "elementKind": "method",
+      "methodName": "manufacturerData",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha.bluetooth"
+    }
+  },
+  {
+    "code": "java.method.returnTypeChangedCovariantly",
+    "description": "The return type changed covariantly from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "method akasha.core.JsObject akasha.bluetooth.BluetoothLEScanFilterInit::serviceData()",
+    "oldElement": "method java.lang.Object akasha.bluetooth.BluetoothLEScanFilterInit::serviceData()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.bluetooth.BluetoothLEScanFilterInit",
+      "classSimpleName": "BluetoothLEScanFilterInit",
+      "elementKind": "method",
+      "methodName": "serviceData",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha.bluetooth"
+    }
+  },
+  {
+    "code": "java.method.returnTypeChangedCovariantly",
+    "description": "The return type changed covariantly from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "method akasha.core.JsObject akasha.crypto.CryptoKey::algorithm()",
+    "oldElement": "method java.lang.Object akasha.crypto.CryptoKey::algorithm()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.CryptoKey",
+      "classSimpleName": "CryptoKey",
+      "elementKind": "method",
+      "methodName": "algorithm",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha.crypto"
+    }
+  },
+  {
+    "code": "java.method.returnTypeChangedCovariantly",
+    "description": "The return type changed covariantly from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "method akasha.core.JsObject akasha.crypto.CryptoKey::usages()",
+    "oldElement": "method java.lang.Object akasha.crypto.CryptoKey::usages()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.CryptoKey",
+      "classSimpleName": "CryptoKey",
+      "elementKind": "method",
+      "methodName": "usages",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha.crypto"
+    }
+  },
+  {
+    "code": "java.method.returnTypeChangedCovariantly",
+    "description": "The return type changed covariantly from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "method akasha.core.JsObject akasha.gl.WebGLRenderingContext::getExtension(java.lang.String)",
+    "oldElement": "method java.lang.Object akasha.gl.WebGLRenderingContext::getExtension(java.lang.String)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gl.WebGLRenderingContext",
+      "classSimpleName": "WebGLRenderingContext",
+      "elementKind": "method",
+      "methodName": "getExtension",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.method.returnTypeChangedCovariantly",
+    "description": "The return type changed covariantly from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "method akasha.core.JsObject akasha.media.MediaDeviceInfo::toJSON()",
+    "oldElement": "method java.lang.Object akasha.media.MediaDeviceInfo::toJSON()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.media.MediaDeviceInfo",
+      "classSimpleName": "MediaDeviceInfo",
+      "elementKind": "method",
+      "methodName": "toJSON",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha.media"
+    }
+  },
+  {
+    "code": "java.method.returnTypeChangedCovariantly",
+    "description": "The return type changed covariantly from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "method akasha.core.JsObject akasha.perf.Performance::toJSON()",
+    "oldElement": "method java.lang.Object akasha.perf.Performance::toJSON()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.perf.Performance",
+      "classSimpleName": "Performance",
+      "elementKind": "method",
+      "methodName": "toJSON",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha.perf"
+    }
+  },
+  {
+    "code": "java.method.returnTypeChangedCovariantly",
+    "description": "The return type changed covariantly from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "method akasha.core.JsObject akasha.perf.PerformanceEntry::toJSON()",
+    "oldElement": "method java.lang.Object akasha.perf.PerformanceEntry::toJSON()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.perf.PerformanceEntry",
+      "classSimpleName": "PerformanceEntry",
+      "elementKind": "method",
+      "methodName": "toJSON",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha.perf"
+    }
+  },
+  {
+    "code": "java.method.returnTypeChangedCovariantly",
+    "description": "The return type changed covariantly from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "method akasha.core.JsObject akasha.perf.PerformanceNavigation::toJSON()",
+    "oldElement": "method java.lang.Object akasha.perf.PerformanceNavigation::toJSON()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.perf.PerformanceNavigation",
+      "classSimpleName": "PerformanceNavigation",
+      "elementKind": "method",
+      "methodName": "toJSON",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha.perf"
+    }
+  },
+  {
+    "code": "java.method.returnTypeChangedCovariantly",
+    "description": "The return type changed covariantly from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "method akasha.core.JsObject akasha.perf.PerformanceNavigationTiming::toJSON()",
+    "oldElement": "method java.lang.Object akasha.perf.PerformanceNavigationTiming::toJSON()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.perf.PerformanceNavigationTiming",
+      "classSimpleName": "PerformanceNavigationTiming",
+      "elementKind": "method",
+      "methodName": "toJSON",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha.perf"
+    }
+  },
+  {
+    "code": "java.method.returnTypeChangedCovariantly",
+    "description": "The return type changed covariantly from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "method akasha.core.JsObject akasha.perf.PerformanceResourceTiming::toJSON()",
+    "oldElement": "method java.lang.Object akasha.perf.PerformanceResourceTiming::toJSON()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.perf.PerformanceResourceTiming",
+      "classSimpleName": "PerformanceResourceTiming",
+      "elementKind": "method",
+      "methodName": "toJSON",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha.perf"
+    }
+  },
+  {
+    "code": "java.method.returnTypeChangedCovariantly",
+    "description": "The return type changed covariantly from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "method akasha.core.JsObject akasha.perf.PerformanceTiming::toJSON()",
+    "oldElement": "method java.lang.Object akasha.perf.PerformanceTiming::toJSON()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.perf.PerformanceTiming",
+      "classSimpleName": "PerformanceTiming",
+      "elementKind": "method",
+      "methodName": "toJSON",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha.perf"
+    }
+  },
+  {
+    "code": "java.method.returnTypeChangedCovariantly",
+    "description": "The return type changed covariantly from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "method akasha.core.JsObject akasha.rtc.RTCSessionDescription::toJSON()",
+    "oldElement": "method java.lang.Object akasha.rtc.RTCSessionDescription::toJSON()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.rtc.RTCSessionDescription",
+      "classSimpleName": "RTCSessionDescription",
+      "elementKind": "method",
+      "methodName": "toJSON",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha.rtc"
+    }
+  },
+  {
+    "code": "java.method.returnTypeChangedCovariantly",
+    "description": "The return type changed covariantly from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "method akasha.core.JsObject akasha.rtc.RTCStatsReport.Entry::value()",
+    "oldElement": "method java.lang.Object akasha.rtc.RTCStatsReport.Entry::value()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.rtc.RTCStatsReport.Entry",
+      "classSimpleName": "Entry",
+      "elementKind": "method",
+      "methodName": "value",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha.rtc"
+    }
+  },
+  {
+    "code": "java.method.returnTypeChangedCovariantly",
+    "description": "The return type changed covariantly from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "method akasha.core.JsObject akasha.rtc.RTCStatsReport::get(java.lang.String)",
+    "oldElement": "method java.lang.Object akasha.rtc.RTCStatsReport::get(java.lang.String)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.rtc.RTCStatsReport",
+      "classSimpleName": "RTCStatsReport",
+      "elementKind": "method",
+      "methodName": "get",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha.rtc"
+    }
+  },
+  {
+    "code": "java.method.returnTypeChangedCovariantly",
+    "description": "The return type changed covariantly from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "method akasha.core.JsObject akasha.wasm.Instance::exports()",
+    "oldElement": "method java.lang.Object akasha.wasm.Instance::exports()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.wasm.Instance",
+      "classSimpleName": "Instance",
+      "elementKind": "method",
+      "methodName": "exports",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha.wasm"
+    }
+  },
+  {
+    "code": "java.method.returnTypeTypeParametersChanged",
+    "description": "The return type changed from 'akasha.lang.JsArray<java.lang.Object>' to 'akasha.lang.JsArray<akasha.core.JsObject>'.",
+    "newElement": "method akasha.lang.JsArray<akasha.core.JsObject> akasha.KeyframeEffect::getKeyframes()",
+    "oldElement": "method akasha.lang.JsArray<java.lang.Object> akasha.KeyframeEffect::getKeyframes()",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.KeyframeEffect",
+      "classSimpleName": "KeyframeEffect",
+      "elementKind": "method",
+      "methodName": "getKeyframes",
+      "newType": "akasha.lang.JsArray<akasha.core.JsObject>",
+      "oldType": "akasha.lang.JsArray<java.lang.Object>",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.returnTypeTypeParametersChanged",
+    "description": "The return type changed from 'akasha.lang.JsIterator<java.lang.Object>' to 'akasha.lang.JsIterator<akasha.core.JsObject>'.",
+    "newElement": "method akasha.lang.JsIterator<akasha.core.JsObject> akasha.rtc.RTCStatsReport::values()",
+    "oldElement": "method akasha.lang.JsIterator<java.lang.Object> akasha.rtc.RTCStatsReport::values()",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.rtc.RTCStatsReport",
+      "classSimpleName": "RTCStatsReport",
+      "elementKind": "method",
+      "methodName": "values",
+      "newType": "akasha.lang.JsIterator<akasha.core.JsObject>",
+      "oldType": "akasha.lang.JsIterator<java.lang.Object>",
+      "package": "akasha.rtc"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.lang.JsArray<T> akasha.lang.JsArray<T>::splice()",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.lang.JsArray",
+      "classSimpleName": "JsArray",
+      "elementKind": "method",
+      "methodName": "splice",
+      "package": "akasha.lang"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method java.lang.String akasha.lang.JsArray<T>::toSource()",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.lang.JsArray",
+      "classSimpleName": "JsArray",
+      "elementKind": "method",
+      "methodName": "toSource",
+      "package": "akasha.lang"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "parameter akasha.Animation akasha.CSSPseudoElement::animate(===akasha.core.JsObject===)",
+    "oldElement": "parameter akasha.Animation akasha.CSSPseudoElement::animate(===java.lang.Object===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.CSSPseudoElement",
+      "classSimpleName": "CSSPseudoElement",
+      "elementKind": "parameter",
+      "methodName": "animate",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "parameter akasha.Animation akasha.CSSPseudoElement::animate(===akasha.core.JsObject===, akasha.KeyframeAnimationOptions)",
+    "oldElement": "parameter akasha.Animation akasha.CSSPseudoElement::animate(===java.lang.Object===, akasha.KeyframeAnimationOptions)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.CSSPseudoElement",
+      "classSimpleName": "CSSPseudoElement",
+      "elementKind": "parameter",
+      "methodName": "animate",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "parameter akasha.Animation akasha.CSSPseudoElement::animate(===akasha.core.JsObject===, double)",
+    "oldElement": "parameter akasha.Animation akasha.CSSPseudoElement::animate(===java.lang.Object===, double)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.CSSPseudoElement",
+      "classSimpleName": "CSSPseudoElement",
+      "elementKind": "parameter",
+      "methodName": "animate",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "parameter akasha.Animation akasha.Element::animate(===akasha.core.JsObject===)",
+    "oldElement": "parameter akasha.Animation akasha.Element::animate(===java.lang.Object===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.Element",
+      "classSimpleName": "Element",
+      "elementKind": "parameter",
+      "methodName": "animate",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "parameter akasha.Animation akasha.Element::animate(===akasha.core.JsObject===, akasha.KeyframeAnimationOptions)",
+    "oldElement": "parameter akasha.Animation akasha.Element::animate(===java.lang.Object===, akasha.KeyframeAnimationOptions)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.Element",
+      "classSimpleName": "Element",
+      "elementKind": "parameter",
+      "methodName": "animate",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "parameter akasha.Animation akasha.Element::animate(===akasha.core.JsObject===, double)",
+    "oldElement": "parameter akasha.Animation akasha.Element::animate(===java.lang.Object===, double)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.Element",
+      "classSimpleName": "Element",
+      "elementKind": "parameter",
+      "methodName": "animate",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "parameter akasha.audio.AudioWorkletNodeOptions akasha.audio.AudioWorkletNodeOptions::processorOptions(===akasha.core.JsObject===)",
+    "oldElement": "parameter akasha.audio.AudioWorkletNodeOptions akasha.audio.AudioWorkletNodeOptions::processorOptions(===java.lang.Object===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.audio.AudioWorkletNodeOptions",
+      "classSimpleName": "AudioWorkletNodeOptions",
+      "elementKind": "parameter",
+      "methodName": "processorOptions",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha.audio",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "parameter akasha.bluetooth.BluetoothLEScanFilterInit akasha.bluetooth.BluetoothLEScanFilterInit::manufacturerData(===akasha.core.JsObject===)",
+    "oldElement": "parameter akasha.bluetooth.BluetoothLEScanFilterInit akasha.bluetooth.BluetoothLEScanFilterInit::manufacturerData(===java.lang.Object===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.bluetooth.BluetoothLEScanFilterInit",
+      "classSimpleName": "BluetoothLEScanFilterInit",
+      "elementKind": "parameter",
+      "methodName": "manufacturerData",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha.bluetooth",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "parameter akasha.bluetooth.BluetoothLEScanFilterInit akasha.bluetooth.BluetoothLEScanFilterInit::serviceData(===akasha.core.JsObject===)",
+    "oldElement": "parameter akasha.bluetooth.BluetoothLEScanFilterInit akasha.bluetooth.BluetoothLEScanFilterInit::serviceData(===java.lang.Object===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.bluetooth.BluetoothLEScanFilterInit",
+      "classSimpleName": "BluetoothLEScanFilterInit",
+      "elementKind": "parameter",
+      "methodName": "serviceData",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha.bluetooth",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.String' to 'akasha.core.JsObject'.",
+    "newElement": "parameter akasha.crypto.AlgorithmIdentifier akasha.crypto.AlgorithmIdentifier::of(===akasha.core.JsObject===)",
+    "oldElement": "parameter akasha.crypto.AlgorithmIdentifier akasha.crypto.AlgorithmIdentifier::of(===java.lang.String===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.AlgorithmIdentifier",
+      "classSimpleName": "AlgorithmIdentifier",
+      "elementKind": "parameter",
+      "methodName": "of",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.String",
+      "package": "akasha.crypto",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'java.lang.String'.",
+    "newElement": "parameter akasha.crypto.AlgorithmIdentifier akasha.crypto.AlgorithmIdentifier::of(===java.lang.String===)",
+    "oldElement": "parameter akasha.crypto.AlgorithmIdentifier akasha.crypto.AlgorithmIdentifier::of(===java.lang.Object===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.AlgorithmIdentifier",
+      "classSimpleName": "AlgorithmIdentifier",
+      "elementKind": "parameter",
+      "methodName": "of",
+      "newType": "java.lang.String",
+      "oldType": "java.lang.Object",
+      "package": "akasha.crypto",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.String' to 'akasha.core.JsObject'.",
+    "newElement": "parameter akasha.crypto.EcdsaParams akasha.crypto.EcdsaParams::create(java.lang.String, ===akasha.core.JsObject===)",
+    "oldElement": "parameter akasha.crypto.EcdsaParams akasha.crypto.EcdsaParams::create(java.lang.String, ===java.lang.String===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.EcdsaParams",
+      "classSimpleName": "EcdsaParams",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.String",
+      "package": "akasha.crypto",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'java.lang.String'.",
+    "newElement": "parameter akasha.crypto.EcdsaParams akasha.crypto.EcdsaParams::create(java.lang.String, ===java.lang.String===)",
+    "oldElement": "parameter akasha.crypto.EcdsaParams akasha.crypto.EcdsaParams::create(java.lang.String, ===java.lang.Object===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.EcdsaParams",
+      "classSimpleName": "EcdsaParams",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "newType": "java.lang.String",
+      "oldType": "java.lang.Object",
+      "package": "akasha.crypto",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.String' to 'akasha.core.JsObject'.",
+    "newElement": "parameter akasha.crypto.EcdsaParams akasha.crypto.EcdsaParams::hash(===akasha.core.JsObject===)",
+    "oldElement": "parameter akasha.crypto.EcdsaParams akasha.crypto.EcdsaParams::hash(===java.lang.String===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.EcdsaParams",
+      "classSimpleName": "EcdsaParams",
+      "elementKind": "parameter",
+      "methodName": "hash",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.String",
+      "package": "akasha.crypto",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'java.lang.String'.",
+    "newElement": "parameter akasha.crypto.EcdsaParams akasha.crypto.EcdsaParams::hash(===java.lang.String===)",
+    "oldElement": "parameter akasha.crypto.EcdsaParams akasha.crypto.EcdsaParams::hash(===java.lang.Object===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.EcdsaParams",
+      "classSimpleName": "EcdsaParams",
+      "elementKind": "parameter",
+      "methodName": "hash",
+      "newType": "java.lang.String",
+      "oldType": "java.lang.Object",
+      "package": "akasha.crypto",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.String' to 'akasha.core.JsObject'.",
+    "newElement": "parameter akasha.crypto.HkdfParams akasha.crypto.HkdfParams::create(java.lang.String, ===akasha.core.JsObject===, akasha.core.BufferSource, akasha.core.BufferSource)",
+    "oldElement": "parameter akasha.crypto.HkdfParams akasha.crypto.HkdfParams::create(java.lang.String, ===java.lang.String===, akasha.core.BufferSource, akasha.core.BufferSource)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.HkdfParams",
+      "classSimpleName": "HkdfParams",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.String",
+      "package": "akasha.crypto",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'java.lang.String'.",
+    "newElement": "parameter akasha.crypto.HkdfParams akasha.crypto.HkdfParams::create(java.lang.String, ===java.lang.String===, akasha.core.BufferSource, akasha.core.BufferSource)",
+    "oldElement": "parameter akasha.crypto.HkdfParams akasha.crypto.HkdfParams::create(java.lang.String, ===java.lang.Object===, akasha.core.BufferSource, akasha.core.BufferSource)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.HkdfParams",
+      "classSimpleName": "HkdfParams",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "newType": "java.lang.String",
+      "oldType": "java.lang.Object",
+      "package": "akasha.crypto",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.String' to 'akasha.core.JsObject'.",
+    "newElement": "parameter akasha.crypto.HkdfParams akasha.crypto.HkdfParams::hash(===akasha.core.JsObject===)",
+    "oldElement": "parameter akasha.crypto.HkdfParams akasha.crypto.HkdfParams::hash(===java.lang.String===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.HkdfParams",
+      "classSimpleName": "HkdfParams",
+      "elementKind": "parameter",
+      "methodName": "hash",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.String",
+      "package": "akasha.crypto",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'java.lang.String'.",
+    "newElement": "parameter akasha.crypto.HkdfParams akasha.crypto.HkdfParams::hash(===java.lang.String===)",
+    "oldElement": "parameter akasha.crypto.HkdfParams akasha.crypto.HkdfParams::hash(===java.lang.Object===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.HkdfParams",
+      "classSimpleName": "HkdfParams",
+      "elementKind": "parameter",
+      "methodName": "hash",
+      "newType": "java.lang.String",
+      "oldType": "java.lang.Object",
+      "package": "akasha.crypto",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.String' to 'akasha.core.JsObject'.",
+    "newElement": "parameter akasha.crypto.HmacImportParams akasha.crypto.HmacImportParams::create(java.lang.String, ===akasha.core.JsObject===)",
+    "oldElement": "parameter akasha.crypto.HmacImportParams akasha.crypto.HmacImportParams::create(java.lang.String, ===java.lang.String===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.HmacImportParams",
+      "classSimpleName": "HmacImportParams",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.String",
+      "package": "akasha.crypto",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'java.lang.String'.",
+    "newElement": "parameter akasha.crypto.HmacImportParams akasha.crypto.HmacImportParams::create(java.lang.String, ===java.lang.String===)",
+    "oldElement": "parameter akasha.crypto.HmacImportParams akasha.crypto.HmacImportParams::create(java.lang.String, ===java.lang.Object===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.HmacImportParams",
+      "classSimpleName": "HmacImportParams",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "newType": "java.lang.String",
+      "oldType": "java.lang.Object",
+      "package": "akasha.crypto",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.String' to 'akasha.core.JsObject'.",
+    "newElement": "parameter akasha.crypto.HmacImportParams akasha.crypto.HmacImportParams::hash(===akasha.core.JsObject===)",
+    "oldElement": "parameter akasha.crypto.HmacImportParams akasha.crypto.HmacImportParams::hash(===java.lang.String===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.HmacImportParams",
+      "classSimpleName": "HmacImportParams",
+      "elementKind": "parameter",
+      "methodName": "hash",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.String",
+      "package": "akasha.crypto",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'java.lang.String'.",
+    "newElement": "parameter akasha.crypto.HmacImportParams akasha.crypto.HmacImportParams::hash(===java.lang.String===)",
+    "oldElement": "parameter akasha.crypto.HmacImportParams akasha.crypto.HmacImportParams::hash(===java.lang.Object===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.HmacImportParams",
+      "classSimpleName": "HmacImportParams",
+      "elementKind": "parameter",
+      "methodName": "hash",
+      "newType": "java.lang.String",
+      "oldType": "java.lang.Object",
+      "package": "akasha.crypto",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.String' to 'akasha.core.JsObject'.",
+    "newElement": "parameter akasha.crypto.HmacKeyGenParams akasha.crypto.HmacKeyGenParams::create(java.lang.String, ===akasha.core.JsObject===)",
+    "oldElement": "parameter akasha.crypto.HmacKeyGenParams akasha.crypto.HmacKeyGenParams::create(java.lang.String, ===java.lang.String===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.HmacKeyGenParams",
+      "classSimpleName": "HmacKeyGenParams",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.String",
+      "package": "akasha.crypto",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'java.lang.String'.",
+    "newElement": "parameter akasha.crypto.HmacKeyGenParams akasha.crypto.HmacKeyGenParams::create(java.lang.String, ===java.lang.String===)",
+    "oldElement": "parameter akasha.crypto.HmacKeyGenParams akasha.crypto.HmacKeyGenParams::create(java.lang.String, ===java.lang.Object===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.HmacKeyGenParams",
+      "classSimpleName": "HmacKeyGenParams",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "newType": "java.lang.String",
+      "oldType": "java.lang.Object",
+      "package": "akasha.crypto",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.String' to 'akasha.core.JsObject'.",
+    "newElement": "parameter akasha.crypto.HmacKeyGenParams akasha.crypto.HmacKeyGenParams::hash(===akasha.core.JsObject===)",
+    "oldElement": "parameter akasha.crypto.HmacKeyGenParams akasha.crypto.HmacKeyGenParams::hash(===java.lang.String===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.HmacKeyGenParams",
+      "classSimpleName": "HmacKeyGenParams",
+      "elementKind": "parameter",
+      "methodName": "hash",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.String",
+      "package": "akasha.crypto",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'java.lang.String'.",
+    "newElement": "parameter akasha.crypto.HmacKeyGenParams akasha.crypto.HmacKeyGenParams::hash(===java.lang.String===)",
+    "oldElement": "parameter akasha.crypto.HmacKeyGenParams akasha.crypto.HmacKeyGenParams::hash(===java.lang.Object===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.HmacKeyGenParams",
+      "classSimpleName": "HmacKeyGenParams",
+      "elementKind": "parameter",
+      "methodName": "hash",
+      "newType": "java.lang.String",
+      "oldType": "java.lang.Object",
+      "package": "akasha.crypto",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.String' to 'akasha.core.JsObject'.",
+    "newElement": "parameter akasha.crypto.Pbkdf2Params akasha.crypto.Pbkdf2Params::create(java.lang.String, ===akasha.core.JsObject===, int, akasha.core.BufferSource)",
+    "oldElement": "parameter akasha.crypto.Pbkdf2Params akasha.crypto.Pbkdf2Params::create(java.lang.String, ===java.lang.String===, int, akasha.core.BufferSource)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.Pbkdf2Params",
+      "classSimpleName": "Pbkdf2Params",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.String",
+      "package": "akasha.crypto",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'java.lang.String'.",
+    "newElement": "parameter akasha.crypto.Pbkdf2Params akasha.crypto.Pbkdf2Params::create(java.lang.String, ===java.lang.String===, int, akasha.core.BufferSource)",
+    "oldElement": "parameter akasha.crypto.Pbkdf2Params akasha.crypto.Pbkdf2Params::create(java.lang.String, ===java.lang.Object===, int, akasha.core.BufferSource)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.Pbkdf2Params",
+      "classSimpleName": "Pbkdf2Params",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "newType": "java.lang.String",
+      "oldType": "java.lang.Object",
+      "package": "akasha.crypto",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.String' to 'akasha.core.JsObject'.",
+    "newElement": "parameter akasha.crypto.Pbkdf2Params akasha.crypto.Pbkdf2Params::hash(===akasha.core.JsObject===)",
+    "oldElement": "parameter akasha.crypto.Pbkdf2Params akasha.crypto.Pbkdf2Params::hash(===java.lang.String===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.Pbkdf2Params",
+      "classSimpleName": "Pbkdf2Params",
+      "elementKind": "parameter",
+      "methodName": "hash",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.String",
+      "package": "akasha.crypto",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'java.lang.String'.",
+    "newElement": "parameter akasha.crypto.Pbkdf2Params akasha.crypto.Pbkdf2Params::hash(===java.lang.String===)",
+    "oldElement": "parameter akasha.crypto.Pbkdf2Params akasha.crypto.Pbkdf2Params::hash(===java.lang.Object===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.Pbkdf2Params",
+      "classSimpleName": "Pbkdf2Params",
+      "elementKind": "parameter",
+      "methodName": "hash",
+      "newType": "java.lang.String",
+      "oldType": "java.lang.Object",
+      "package": "akasha.crypto",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.String' to 'akasha.core.JsObject'.",
+    "newElement": "parameter akasha.crypto.RsaHashedImportParams akasha.crypto.RsaHashedImportParams::create(java.lang.String, ===akasha.core.JsObject===)",
+    "oldElement": "parameter akasha.crypto.RsaHashedImportParams akasha.crypto.RsaHashedImportParams::create(java.lang.String, ===java.lang.String===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.RsaHashedImportParams",
+      "classSimpleName": "RsaHashedImportParams",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.String",
+      "package": "akasha.crypto",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'java.lang.String'.",
+    "newElement": "parameter akasha.crypto.RsaHashedImportParams akasha.crypto.RsaHashedImportParams::create(java.lang.String, ===java.lang.String===)",
+    "oldElement": "parameter akasha.crypto.RsaHashedImportParams akasha.crypto.RsaHashedImportParams::create(java.lang.String, ===java.lang.Object===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.RsaHashedImportParams",
+      "classSimpleName": "RsaHashedImportParams",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "newType": "java.lang.String",
+      "oldType": "java.lang.Object",
+      "package": "akasha.crypto",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.String' to 'akasha.core.JsObject'.",
+    "newElement": "parameter akasha.crypto.RsaHashedImportParams akasha.crypto.RsaHashedImportParams::hash(===akasha.core.JsObject===)",
+    "oldElement": "parameter akasha.crypto.RsaHashedImportParams akasha.crypto.RsaHashedImportParams::hash(===java.lang.String===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.RsaHashedImportParams",
+      "classSimpleName": "RsaHashedImportParams",
+      "elementKind": "parameter",
+      "methodName": "hash",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.String",
+      "package": "akasha.crypto",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'java.lang.String'.",
+    "newElement": "parameter akasha.crypto.RsaHashedImportParams akasha.crypto.RsaHashedImportParams::hash(===java.lang.String===)",
+    "oldElement": "parameter akasha.crypto.RsaHashedImportParams akasha.crypto.RsaHashedImportParams::hash(===java.lang.Object===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.RsaHashedImportParams",
+      "classSimpleName": "RsaHashedImportParams",
+      "elementKind": "parameter",
+      "methodName": "hash",
+      "newType": "java.lang.String",
+      "oldType": "java.lang.Object",
+      "package": "akasha.crypto",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.String' to 'akasha.core.JsObject'.",
+    "newElement": "parameter akasha.crypto.RsaHashedKeyGenParams akasha.crypto.RsaHashedKeyGenParams::create(java.lang.String, int, akasha.core.Uint8Array, ===akasha.core.JsObject===)",
+    "oldElement": "parameter akasha.crypto.RsaHashedKeyGenParams akasha.crypto.RsaHashedKeyGenParams::create(java.lang.String, int, akasha.core.Uint8Array, ===java.lang.String===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.RsaHashedKeyGenParams",
+      "classSimpleName": "RsaHashedKeyGenParams",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.String",
+      "package": "akasha.crypto",
+      "parameterIndex": "3"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'java.lang.String'.",
+    "newElement": "parameter akasha.crypto.RsaHashedKeyGenParams akasha.crypto.RsaHashedKeyGenParams::create(java.lang.String, int, akasha.core.Uint8Array, ===java.lang.String===)",
+    "oldElement": "parameter akasha.crypto.RsaHashedKeyGenParams akasha.crypto.RsaHashedKeyGenParams::create(java.lang.String, int, akasha.core.Uint8Array, ===java.lang.Object===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.RsaHashedKeyGenParams",
+      "classSimpleName": "RsaHashedKeyGenParams",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "newType": "java.lang.String",
+      "oldType": "java.lang.Object",
+      "package": "akasha.crypto",
+      "parameterIndex": "3"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.String' to 'akasha.core.JsObject'.",
+    "newElement": "parameter akasha.crypto.RsaHashedKeyGenParams akasha.crypto.RsaHashedKeyGenParams::hash(===akasha.core.JsObject===)",
+    "oldElement": "parameter akasha.crypto.RsaHashedKeyGenParams akasha.crypto.RsaHashedKeyGenParams::hash(===java.lang.String===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.RsaHashedKeyGenParams",
+      "classSimpleName": "RsaHashedKeyGenParams",
+      "elementKind": "parameter",
+      "methodName": "hash",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.String",
+      "package": "akasha.crypto",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'java.lang.String'.",
+    "newElement": "parameter akasha.crypto.RsaHashedKeyGenParams akasha.crypto.RsaHashedKeyGenParams::hash(===java.lang.String===)",
+    "oldElement": "parameter akasha.crypto.RsaHashedKeyGenParams akasha.crypto.RsaHashedKeyGenParams::hash(===java.lang.Object===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.RsaHashedKeyGenParams",
+      "classSimpleName": "RsaHashedKeyGenParams",
+      "elementKind": "parameter",
+      "methodName": "hash",
+      "newType": "java.lang.String",
+      "oldType": "java.lang.Object",
+      "package": "akasha.crypto",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "parameter akasha.promise.Promise<akasha.PermissionStatus> akasha.Permissions::query(===akasha.core.JsObject===)",
+    "oldElement": "parameter akasha.promise.Promise<akasha.PermissionStatus> akasha.Permissions::query(===java.lang.Object===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.Permissions",
+      "classSimpleName": "Permissions",
+      "elementKind": "parameter",
+      "methodName": "query",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.String' to 'akasha.core.JsObject'.",
+    "newElement": "parameter akasha.promise.Promise<akasha.core.ArrayBuffer> akasha.crypto.SubtleCrypto::deriveBits(===akasha.core.JsObject===, akasha.crypto.CryptoKey, int)",
+    "oldElement": "parameter akasha.promise.Promise<akasha.core.ArrayBuffer> akasha.crypto.SubtleCrypto::deriveBits(===java.lang.String===, akasha.crypto.CryptoKey, int)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "parameter",
+      "methodName": "deriveBits",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.String",
+      "package": "akasha.crypto",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'java.lang.String'.",
+    "newElement": "parameter akasha.promise.Promise<akasha.core.ArrayBuffer> akasha.crypto.SubtleCrypto::deriveBits(===java.lang.String===, akasha.crypto.CryptoKey, int)",
+    "oldElement": "parameter akasha.promise.Promise<akasha.core.ArrayBuffer> akasha.crypto.SubtleCrypto::deriveBits(===java.lang.Object===, akasha.crypto.CryptoKey, int)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "parameter",
+      "methodName": "deriveBits",
+      "newType": "java.lang.String",
+      "oldType": "java.lang.Object",
+      "package": "akasha.crypto",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'akasha.crypto.JsonWebKey' to 'akasha.core.BufferSource'.",
+    "newElement": "parameter akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::importKey(java.lang.String, ===akasha.core.BufferSource===, akasha.core.JsObject, boolean, akasha.lang.JsArray<java.lang.String>)",
+    "oldElement": "parameter akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::importKey(java.lang.String, ===akasha.crypto.JsonWebKey===, java.lang.String, boolean, akasha.lang.JsArray<java.lang.String>)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "parameter",
+      "methodName": "importKey",
+      "newType": "akasha.core.BufferSource",
+      "oldType": "akasha.crypto.JsonWebKey",
+      "package": "akasha.crypto",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'akasha.crypto.JsonWebKey' to 'akasha.core.BufferSource'.",
+    "newElement": "parameter akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::importKey(java.lang.String, ===akasha.core.BufferSource===, akasha.core.JsObject, boolean, java.lang.String[])",
+    "oldElement": "parameter akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::importKey(java.lang.String, ===akasha.crypto.JsonWebKey===, java.lang.String, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "parameter",
+      "methodName": "importKey",
+      "newType": "akasha.core.BufferSource",
+      "oldType": "akasha.crypto.JsonWebKey",
+      "package": "akasha.crypto",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'akasha.core.BufferSource' to 'akasha.crypto.JsonWebKey'.",
+    "newElement": "parameter akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::importKey(java.lang.String, ===akasha.crypto.JsonWebKey===, java.lang.String, boolean, akasha.lang.JsArray<java.lang.String>)",
+    "oldElement": "parameter akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::importKey(java.lang.String, ===akasha.core.BufferSource===, java.lang.String, boolean, akasha.lang.JsArray<java.lang.String>)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "parameter",
+      "methodName": "importKey",
+      "newType": "akasha.crypto.JsonWebKey",
+      "oldType": "akasha.core.BufferSource",
+      "package": "akasha.crypto",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'akasha.core.BufferSource' to 'akasha.crypto.JsonWebKey'.",
+    "newElement": "parameter akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::importKey(java.lang.String, ===akasha.crypto.JsonWebKey===, java.lang.String, boolean, java.lang.String[])",
+    "oldElement": "parameter akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::importKey(java.lang.String, ===akasha.core.BufferSource===, java.lang.String, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "parameter",
+      "methodName": "importKey",
+      "newType": "akasha.crypto.JsonWebKey",
+      "oldType": "akasha.core.BufferSource",
+      "package": "akasha.crypto",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.String' to 'akasha.core.JsObject'.",
+    "newElement": "parameter akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::importKey(java.lang.String, akasha.core.BufferSource, ===akasha.core.JsObject===, boolean, akasha.lang.JsArray<java.lang.String>)",
+    "oldElement": "parameter akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::importKey(java.lang.String, akasha.crypto.JsonWebKey, ===java.lang.String===, boolean, akasha.lang.JsArray<java.lang.String>)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "parameter",
+      "methodName": "importKey",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.String",
+      "package": "akasha.crypto",
+      "parameterIndex": "2"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.String' to 'akasha.core.JsObject'.",
+    "newElement": "parameter akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::importKey(java.lang.String, akasha.core.BufferSource, ===akasha.core.JsObject===, boolean, java.lang.String[])",
+    "oldElement": "parameter akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::importKey(java.lang.String, akasha.crypto.JsonWebKey, ===java.lang.String===, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "parameter",
+      "methodName": "importKey",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.String",
+      "package": "akasha.crypto",
+      "parameterIndex": "2"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'java.lang.String'.",
+    "newElement": "parameter akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::importKey(java.lang.String, akasha.core.BufferSource, ===java.lang.String===, boolean, akasha.lang.JsArray<java.lang.String>)",
+    "oldElement": "parameter akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::importKey(java.lang.String, akasha.core.BufferSource, ===java.lang.Object===, boolean, akasha.lang.JsArray<java.lang.String>)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "parameter",
+      "methodName": "importKey",
+      "newType": "java.lang.String",
+      "oldType": "java.lang.Object",
+      "package": "akasha.crypto",
+      "parameterIndex": "2"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'java.lang.String'.",
+    "newElement": "parameter akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::importKey(java.lang.String, akasha.core.BufferSource, ===java.lang.String===, boolean, java.lang.String[])",
+    "oldElement": "parameter akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::importKey(java.lang.String, akasha.core.BufferSource, ===java.lang.Object===, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "parameter",
+      "methodName": "importKey",
+      "newType": "java.lang.String",
+      "oldType": "java.lang.Object",
+      "package": "akasha.crypto",
+      "parameterIndex": "2"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "parameter akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::importKey(java.lang.String, akasha.crypto.JsonWebKey, ===akasha.core.JsObject===, boolean, akasha.lang.JsArray<java.lang.String>)",
+    "oldElement": "parameter akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::importKey(java.lang.String, akasha.crypto.JsonWebKey, ===java.lang.Object===, boolean, akasha.lang.JsArray<java.lang.String>)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "parameter",
+      "methodName": "importKey",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha.crypto",
+      "parameterIndex": "2"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "parameter akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::importKey(java.lang.String, akasha.crypto.JsonWebKey, ===akasha.core.JsObject===, boolean, java.lang.String[])",
+    "oldElement": "parameter akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::importKey(java.lang.String, akasha.crypto.JsonWebKey, ===java.lang.Object===, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "parameter",
+      "methodName": "importKey",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha.crypto",
+      "parameterIndex": "2"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.String' to 'akasha.core.JsObject'.",
+    "newElement": "parameter akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::unwrapKey(java.lang.String, akasha.core.BufferSource, akasha.crypto.CryptoKey, ===akasha.core.JsObject===, akasha.core.JsObject, boolean, akasha.lang.JsArray<java.lang.String>)",
+    "oldElement": "parameter akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::unwrapKey(java.lang.String, akasha.core.BufferSource, akasha.crypto.CryptoKey, ===java.lang.String===, java.lang.String, boolean, akasha.lang.JsArray<java.lang.String>)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "parameter",
+      "methodName": "unwrapKey",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.String",
+      "package": "akasha.crypto",
+      "parameterIndex": "3"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.String' to 'akasha.core.JsObject'.",
+    "newElement": "parameter akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::unwrapKey(java.lang.String, akasha.core.BufferSource, akasha.crypto.CryptoKey, ===akasha.core.JsObject===, akasha.core.JsObject, boolean, java.lang.String[])",
+    "oldElement": "parameter akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::unwrapKey(java.lang.String, akasha.core.BufferSource, akasha.crypto.CryptoKey, ===java.lang.String===, java.lang.String, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "parameter",
+      "methodName": "unwrapKey",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.String",
+      "package": "akasha.crypto",
+      "parameterIndex": "3"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.String' to 'akasha.core.JsObject'.",
+    "newElement": "parameter akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::unwrapKey(java.lang.String, akasha.core.BufferSource, akasha.crypto.CryptoKey, ===akasha.core.JsObject===, akasha.crypto.AlgorithmIdentifier, boolean, akasha.lang.JsArray<java.lang.String>)",
+    "oldElement": "parameter akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::unwrapKey(java.lang.String, akasha.core.BufferSource, akasha.crypto.CryptoKey, ===java.lang.String===, java.lang.Object, boolean, akasha.lang.JsArray<java.lang.String>)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "parameter",
+      "methodName": "unwrapKey",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.String",
+      "package": "akasha.crypto",
+      "parameterIndex": "3"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.String' to 'akasha.core.JsObject'.",
+    "newElement": "parameter akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::unwrapKey(java.lang.String, akasha.core.BufferSource, akasha.crypto.CryptoKey, ===akasha.core.JsObject===, akasha.crypto.AlgorithmIdentifier, boolean, java.lang.String[])",
+    "oldElement": "parameter akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::unwrapKey(java.lang.String, akasha.core.BufferSource, akasha.crypto.CryptoKey, ===java.lang.String===, java.lang.Object, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "parameter",
+      "methodName": "unwrapKey",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.String",
+      "package": "akasha.crypto",
+      "parameterIndex": "3"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.String' to 'akasha.core.JsObject'.",
+    "newElement": "parameter akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::unwrapKey(java.lang.String, akasha.core.BufferSource, akasha.crypto.CryptoKey, ===akasha.core.JsObject===, java.lang.String, boolean, akasha.lang.JsArray<java.lang.String>)",
+    "oldElement": "parameter akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::unwrapKey(java.lang.String, akasha.core.BufferSource, akasha.crypto.CryptoKey, ===java.lang.String===, akasha.crypto.AlgorithmIdentifier, boolean, akasha.lang.JsArray<java.lang.String>)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "parameter",
+      "methodName": "unwrapKey",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.String",
+      "package": "akasha.crypto",
+      "parameterIndex": "3"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.String' to 'akasha.core.JsObject'.",
+    "newElement": "parameter akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::unwrapKey(java.lang.String, akasha.core.BufferSource, akasha.crypto.CryptoKey, ===akasha.core.JsObject===, java.lang.String, boolean, java.lang.String[])",
+    "oldElement": "parameter akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::unwrapKey(java.lang.String, akasha.core.BufferSource, akasha.crypto.CryptoKey, ===java.lang.String===, akasha.crypto.AlgorithmIdentifier, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "parameter",
+      "methodName": "unwrapKey",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.String",
+      "package": "akasha.crypto",
+      "parameterIndex": "3"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'akasha.crypto.AlgorithmIdentifier'.",
+    "newElement": "parameter akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::unwrapKey(java.lang.String, akasha.core.BufferSource, akasha.crypto.CryptoKey, ===akasha.crypto.AlgorithmIdentifier===, akasha.core.JsObject, boolean, akasha.lang.JsArray<java.lang.String>)",
+    "oldElement": "parameter akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::unwrapKey(java.lang.String, akasha.core.BufferSource, akasha.crypto.CryptoKey, ===java.lang.Object===, akasha.crypto.AlgorithmIdentifier, boolean, akasha.lang.JsArray<java.lang.String>)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "parameter",
+      "methodName": "unwrapKey",
+      "newType": "akasha.crypto.AlgorithmIdentifier",
+      "oldType": "java.lang.Object",
+      "package": "akasha.crypto",
+      "parameterIndex": "3"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'akasha.crypto.AlgorithmIdentifier'.",
+    "newElement": "parameter akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::unwrapKey(java.lang.String, akasha.core.BufferSource, akasha.crypto.CryptoKey, ===akasha.crypto.AlgorithmIdentifier===, akasha.core.JsObject, boolean, java.lang.String[])",
+    "oldElement": "parameter akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::unwrapKey(java.lang.String, akasha.core.BufferSource, akasha.crypto.CryptoKey, ===java.lang.Object===, akasha.crypto.AlgorithmIdentifier, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "parameter",
+      "methodName": "unwrapKey",
+      "newType": "akasha.crypto.AlgorithmIdentifier",
+      "oldType": "java.lang.Object",
+      "package": "akasha.crypto",
+      "parameterIndex": "3"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'java.lang.String'.",
+    "newElement": "parameter akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::unwrapKey(java.lang.String, akasha.core.BufferSource, akasha.crypto.CryptoKey, ===java.lang.String===, akasha.core.JsObject, boolean, akasha.lang.JsArray<java.lang.String>)",
+    "oldElement": "parameter akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::unwrapKey(java.lang.String, akasha.core.BufferSource, akasha.crypto.CryptoKey, ===java.lang.Object===, java.lang.String, boolean, akasha.lang.JsArray<java.lang.String>)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "parameter",
+      "methodName": "unwrapKey",
+      "newType": "java.lang.String",
+      "oldType": "java.lang.Object",
+      "package": "akasha.crypto",
+      "parameterIndex": "3"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'java.lang.String'.",
+    "newElement": "parameter akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::unwrapKey(java.lang.String, akasha.core.BufferSource, akasha.crypto.CryptoKey, ===java.lang.String===, akasha.core.JsObject, boolean, java.lang.String[])",
+    "oldElement": "parameter akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::unwrapKey(java.lang.String, akasha.core.BufferSource, akasha.crypto.CryptoKey, ===java.lang.Object===, java.lang.String, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "parameter",
+      "methodName": "unwrapKey",
+      "newType": "java.lang.String",
+      "oldType": "java.lang.Object",
+      "package": "akasha.crypto",
+      "parameterIndex": "3"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'akasha.crypto.AlgorithmIdentifier' to 'java.lang.String'.",
+    "newElement": "parameter akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::unwrapKey(java.lang.String, akasha.core.BufferSource, akasha.crypto.CryptoKey, ===java.lang.String===, akasha.crypto.AlgorithmIdentifier, boolean, akasha.lang.JsArray<java.lang.String>)",
+    "oldElement": "parameter akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::unwrapKey(java.lang.String, akasha.core.BufferSource, akasha.crypto.CryptoKey, ===akasha.crypto.AlgorithmIdentifier===, java.lang.Object, boolean, akasha.lang.JsArray<java.lang.String>)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "parameter",
+      "methodName": "unwrapKey",
+      "newType": "java.lang.String",
+      "oldType": "akasha.crypto.AlgorithmIdentifier",
+      "package": "akasha.crypto",
+      "parameterIndex": "3"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'akasha.crypto.AlgorithmIdentifier' to 'java.lang.String'.",
+    "newElement": "parameter akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::unwrapKey(java.lang.String, akasha.core.BufferSource, akasha.crypto.CryptoKey, ===java.lang.String===, akasha.crypto.AlgorithmIdentifier, boolean, java.lang.String[])",
+    "oldElement": "parameter akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::unwrapKey(java.lang.String, akasha.core.BufferSource, akasha.crypto.CryptoKey, ===akasha.crypto.AlgorithmIdentifier===, java.lang.Object, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "parameter",
+      "methodName": "unwrapKey",
+      "newType": "java.lang.String",
+      "oldType": "akasha.crypto.AlgorithmIdentifier",
+      "package": "akasha.crypto",
+      "parameterIndex": "3"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'java.lang.String'.",
+    "newElement": "parameter akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::unwrapKey(java.lang.String, akasha.core.BufferSource, akasha.crypto.CryptoKey, ===java.lang.String===, java.lang.String, boolean, akasha.lang.JsArray<java.lang.String>)",
+    "oldElement": "parameter akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::unwrapKey(java.lang.String, akasha.core.BufferSource, akasha.crypto.CryptoKey, ===java.lang.Object===, java.lang.Object, boolean, akasha.lang.JsArray<java.lang.String>)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "parameter",
+      "methodName": "unwrapKey",
+      "newType": "java.lang.String",
+      "oldType": "java.lang.Object",
+      "package": "akasha.crypto",
+      "parameterIndex": "3"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'java.lang.String'.",
+    "newElement": "parameter akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::unwrapKey(java.lang.String, akasha.core.BufferSource, akasha.crypto.CryptoKey, ===java.lang.String===, java.lang.String, boolean, java.lang.String[])",
+    "oldElement": "parameter akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::unwrapKey(java.lang.String, akasha.core.BufferSource, akasha.crypto.CryptoKey, ===java.lang.Object===, java.lang.Object, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "parameter",
+      "methodName": "unwrapKey",
+      "newType": "java.lang.String",
+      "oldType": "java.lang.Object",
+      "package": "akasha.crypto",
+      "parameterIndex": "3"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.String' to 'akasha.core.JsObject'.",
+    "newElement": "parameter akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::unwrapKey(java.lang.String, akasha.core.BufferSource, akasha.crypto.CryptoKey, akasha.core.JsObject, ===akasha.core.JsObject===, boolean, akasha.lang.JsArray<java.lang.String>)",
+    "oldElement": "parameter akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::unwrapKey(java.lang.String, akasha.core.BufferSource, akasha.crypto.CryptoKey, java.lang.String, ===java.lang.String===, boolean, akasha.lang.JsArray<java.lang.String>)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "parameter",
+      "methodName": "unwrapKey",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.String",
+      "package": "akasha.crypto",
+      "parameterIndex": "4"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.String' to 'akasha.core.JsObject'.",
+    "newElement": "parameter akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::unwrapKey(java.lang.String, akasha.core.BufferSource, akasha.crypto.CryptoKey, akasha.core.JsObject, ===akasha.core.JsObject===, boolean, java.lang.String[])",
+    "oldElement": "parameter akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::unwrapKey(java.lang.String, akasha.core.BufferSource, akasha.crypto.CryptoKey, java.lang.String, ===java.lang.String===, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "parameter",
+      "methodName": "unwrapKey",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.String",
+      "package": "akasha.crypto",
+      "parameterIndex": "4"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'akasha.crypto.AlgorithmIdentifier'.",
+    "newElement": "parameter akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::unwrapKey(java.lang.String, akasha.core.BufferSource, akasha.crypto.CryptoKey, akasha.core.JsObject, ===akasha.crypto.AlgorithmIdentifier===, boolean, akasha.lang.JsArray<java.lang.String>)",
+    "oldElement": "parameter akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::unwrapKey(java.lang.String, akasha.core.BufferSource, akasha.crypto.CryptoKey, java.lang.String, ===java.lang.Object===, boolean, akasha.lang.JsArray<java.lang.String>)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "parameter",
+      "methodName": "unwrapKey",
+      "newType": "akasha.crypto.AlgorithmIdentifier",
+      "oldType": "java.lang.Object",
+      "package": "akasha.crypto",
+      "parameterIndex": "4"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'akasha.crypto.AlgorithmIdentifier'.",
+    "newElement": "parameter akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::unwrapKey(java.lang.String, akasha.core.BufferSource, akasha.crypto.CryptoKey, akasha.core.JsObject, ===akasha.crypto.AlgorithmIdentifier===, boolean, java.lang.String[])",
+    "oldElement": "parameter akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::unwrapKey(java.lang.String, akasha.core.BufferSource, akasha.crypto.CryptoKey, java.lang.String, ===java.lang.Object===, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "parameter",
+      "methodName": "unwrapKey",
+      "newType": "akasha.crypto.AlgorithmIdentifier",
+      "oldType": "java.lang.Object",
+      "package": "akasha.crypto",
+      "parameterIndex": "4"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'akasha.crypto.AlgorithmIdentifier' to 'java.lang.String'.",
+    "newElement": "parameter akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::unwrapKey(java.lang.String, akasha.core.BufferSource, akasha.crypto.CryptoKey, akasha.core.JsObject, ===java.lang.String===, boolean, akasha.lang.JsArray<java.lang.String>)",
+    "oldElement": "parameter akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::unwrapKey(java.lang.String, akasha.core.BufferSource, akasha.crypto.CryptoKey, java.lang.String, ===akasha.crypto.AlgorithmIdentifier===, boolean, akasha.lang.JsArray<java.lang.String>)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "parameter",
+      "methodName": "unwrapKey",
+      "newType": "java.lang.String",
+      "oldType": "akasha.crypto.AlgorithmIdentifier",
+      "package": "akasha.crypto",
+      "parameterIndex": "4"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'akasha.crypto.AlgorithmIdentifier' to 'java.lang.String'.",
+    "newElement": "parameter akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::unwrapKey(java.lang.String, akasha.core.BufferSource, akasha.crypto.CryptoKey, akasha.core.JsObject, ===java.lang.String===, boolean, java.lang.String[])",
+    "oldElement": "parameter akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::unwrapKey(java.lang.String, akasha.core.BufferSource, akasha.crypto.CryptoKey, java.lang.String, ===akasha.crypto.AlgorithmIdentifier===, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "parameter",
+      "methodName": "unwrapKey",
+      "newType": "java.lang.String",
+      "oldType": "akasha.crypto.AlgorithmIdentifier",
+      "package": "akasha.crypto",
+      "parameterIndex": "4"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'akasha.crypto.AlgorithmIdentifier' to 'akasha.core.JsObject'.",
+    "newElement": "parameter akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::unwrapKey(java.lang.String, akasha.core.BufferSource, akasha.crypto.CryptoKey, akasha.crypto.AlgorithmIdentifier, ===akasha.core.JsObject===, boolean, akasha.lang.JsArray<java.lang.String>)",
+    "oldElement": "parameter akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::unwrapKey(java.lang.String, akasha.core.BufferSource, akasha.crypto.CryptoKey, java.lang.Object, ===akasha.crypto.AlgorithmIdentifier===, boolean, akasha.lang.JsArray<java.lang.String>)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "parameter",
+      "methodName": "unwrapKey",
+      "newType": "akasha.core.JsObject",
+      "oldType": "akasha.crypto.AlgorithmIdentifier",
+      "package": "akasha.crypto",
+      "parameterIndex": "4"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'akasha.crypto.AlgorithmIdentifier' to 'akasha.core.JsObject'.",
+    "newElement": "parameter akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::unwrapKey(java.lang.String, akasha.core.BufferSource, akasha.crypto.CryptoKey, akasha.crypto.AlgorithmIdentifier, ===akasha.core.JsObject===, boolean, java.lang.String[])",
+    "oldElement": "parameter akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::unwrapKey(java.lang.String, akasha.core.BufferSource, akasha.crypto.CryptoKey, java.lang.Object, ===akasha.crypto.AlgorithmIdentifier===, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "parameter",
+      "methodName": "unwrapKey",
+      "newType": "akasha.core.JsObject",
+      "oldType": "akasha.crypto.AlgorithmIdentifier",
+      "package": "akasha.crypto",
+      "parameterIndex": "4"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.String' to 'akasha.core.JsObject'.",
+    "newElement": "parameter akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::unwrapKey(java.lang.String, akasha.core.BufferSource, akasha.crypto.CryptoKey, java.lang.String, ===akasha.core.JsObject===, boolean, akasha.lang.JsArray<java.lang.String>)",
+    "oldElement": "parameter akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::unwrapKey(java.lang.String, akasha.core.BufferSource, akasha.crypto.CryptoKey, java.lang.Object, ===java.lang.String===, boolean, akasha.lang.JsArray<java.lang.String>)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "parameter",
+      "methodName": "unwrapKey",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.String",
+      "package": "akasha.crypto",
+      "parameterIndex": "4"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.String' to 'akasha.core.JsObject'.",
+    "newElement": "parameter akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::unwrapKey(java.lang.String, akasha.core.BufferSource, akasha.crypto.CryptoKey, java.lang.String, ===akasha.core.JsObject===, boolean, java.lang.String[])",
+    "oldElement": "parameter akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::unwrapKey(java.lang.String, akasha.core.BufferSource, akasha.crypto.CryptoKey, java.lang.Object, ===java.lang.String===, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "parameter",
+      "methodName": "unwrapKey",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.String",
+      "package": "akasha.crypto",
+      "parameterIndex": "4"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'akasha.crypto.AlgorithmIdentifier'.",
+    "newElement": "parameter akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::unwrapKey(java.lang.String, akasha.core.BufferSource, akasha.crypto.CryptoKey, java.lang.String, ===akasha.crypto.AlgorithmIdentifier===, boolean, akasha.lang.JsArray<java.lang.String>)",
+    "oldElement": "parameter akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::unwrapKey(java.lang.String, akasha.core.BufferSource, akasha.crypto.CryptoKey, akasha.crypto.AlgorithmIdentifier, ===java.lang.Object===, boolean, akasha.lang.JsArray<java.lang.String>)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "parameter",
+      "methodName": "unwrapKey",
+      "newType": "akasha.crypto.AlgorithmIdentifier",
+      "oldType": "java.lang.Object",
+      "package": "akasha.crypto",
+      "parameterIndex": "4"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'akasha.crypto.AlgorithmIdentifier'.",
+    "newElement": "parameter akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::unwrapKey(java.lang.String, akasha.core.BufferSource, akasha.crypto.CryptoKey, java.lang.String, ===akasha.crypto.AlgorithmIdentifier===, boolean, java.lang.String[])",
+    "oldElement": "parameter akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::unwrapKey(java.lang.String, akasha.core.BufferSource, akasha.crypto.CryptoKey, akasha.crypto.AlgorithmIdentifier, ===java.lang.Object===, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "parameter",
+      "methodName": "unwrapKey",
+      "newType": "akasha.crypto.AlgorithmIdentifier",
+      "oldType": "java.lang.Object",
+      "package": "akasha.crypto",
+      "parameterIndex": "4"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'java.lang.String'.",
+    "newElement": "parameter akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::unwrapKey(java.lang.String, akasha.core.BufferSource, akasha.crypto.CryptoKey, java.lang.String, ===java.lang.String===, boolean, akasha.lang.JsArray<java.lang.String>)",
+    "oldElement": "parameter akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::unwrapKey(java.lang.String, akasha.core.BufferSource, akasha.crypto.CryptoKey, java.lang.Object, ===java.lang.Object===, boolean, akasha.lang.JsArray<java.lang.String>)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "parameter",
+      "methodName": "unwrapKey",
+      "newType": "java.lang.String",
+      "oldType": "java.lang.Object",
+      "package": "akasha.crypto",
+      "parameterIndex": "4"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'java.lang.String'.",
+    "newElement": "parameter akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::unwrapKey(java.lang.String, akasha.core.BufferSource, akasha.crypto.CryptoKey, java.lang.String, ===java.lang.String===, boolean, java.lang.String[])",
+    "oldElement": "parameter akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::unwrapKey(java.lang.String, akasha.core.BufferSource, akasha.crypto.CryptoKey, java.lang.Object, ===java.lang.Object===, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "parameter",
+      "methodName": "unwrapKey",
+      "newType": "java.lang.String",
+      "oldType": "java.lang.Object",
+      "package": "akasha.crypto",
+      "parameterIndex": "4"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.String' to 'akasha.core.JsObject'.",
+    "newElement": "parameter akasha.promise.Promise<akasha.rtc.RTCCertificate> akasha.rtc.RTCPeerConnection::generateCertificate(===akasha.core.JsObject===)",
+    "oldElement": "parameter akasha.promise.Promise<akasha.rtc.RTCCertificate> akasha.rtc.RTCPeerConnection::generateCertificate(===java.lang.String===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.rtc.RTCPeerConnection",
+      "classSimpleName": "RTCPeerConnection",
+      "elementKind": "parameter",
+      "methodName": "generateCertificate",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.String",
+      "package": "akasha.rtc",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'java.lang.String'.",
+    "newElement": "parameter akasha.promise.Promise<akasha.rtc.RTCCertificate> akasha.rtc.RTCPeerConnection::generateCertificate(===java.lang.String===)",
+    "oldElement": "parameter akasha.promise.Promise<akasha.rtc.RTCCertificate> akasha.rtc.RTCPeerConnection::generateCertificate(===java.lang.Object===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.rtc.RTCPeerConnection",
+      "classSimpleName": "RTCPeerConnection",
+      "elementKind": "parameter",
+      "methodName": "generateCertificate",
+      "newType": "java.lang.String",
+      "oldType": "java.lang.Object",
+      "package": "akasha.rtc",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "parameter akasha.promise.Promise<akasha.wasm.Instance> akasha.wasm.WebAssembly::instantiate(akasha.wasm.Module, ===akasha.core.JsObject===)",
+    "oldElement": "parameter akasha.promise.Promise<akasha.wasm.Instance> akasha.wasm.WebAssembly::instantiate(akasha.wasm.Module, ===java.lang.Object===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.wasm.WebAssembly",
+      "classSimpleName": "WebAssembly",
+      "elementKind": "parameter",
+      "methodName": "instantiate",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha.wasm",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "parameter akasha.promise.Promise<akasha.wasm.Instance> akasha.wasm.WebAssemblyNamespace::instantiate(akasha.wasm.Module, ===akasha.core.JsObject===)",
+    "oldElement": "parameter akasha.promise.Promise<akasha.wasm.Instance> akasha.wasm.WebAssemblyNamespace::instantiate(akasha.wasm.Module, ===java.lang.Object===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.wasm.WebAssemblyNamespace",
+      "classSimpleName": "WebAssemblyNamespace",
+      "elementKind": "parameter",
+      "methodName": "instantiate",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha.wasm",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "parameter akasha.promise.Promise<akasha.wasm.WebAssemblyInstantiatedSource> akasha.wasm.WebAssembly::instantiate(akasha.core.BufferSource, ===akasha.core.JsObject===)",
+    "oldElement": "parameter akasha.promise.Promise<akasha.wasm.WebAssemblyInstantiatedSource> akasha.wasm.WebAssembly::instantiate(akasha.core.BufferSource, ===java.lang.Object===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.wasm.WebAssembly",
+      "classSimpleName": "WebAssembly",
+      "elementKind": "parameter",
+      "methodName": "instantiate",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha.wasm",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "parameter akasha.promise.Promise<akasha.wasm.WebAssemblyInstantiatedSource> akasha.wasm.WebAssembly::instantiateStreaming(akasha.promise.Promise<akasha.Response>, ===akasha.core.JsObject===)",
+    "oldElement": "parameter akasha.promise.Promise<akasha.wasm.WebAssemblyInstantiatedSource> akasha.wasm.WebAssembly::instantiateStreaming(akasha.promise.Promise<akasha.Response>, ===java.lang.Object===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.wasm.WebAssembly",
+      "classSimpleName": "WebAssembly",
+      "elementKind": "parameter",
+      "methodName": "instantiateStreaming",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha.wasm",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "parameter akasha.promise.Promise<akasha.wasm.WebAssemblyInstantiatedSource> akasha.wasm.WebAssemblyNamespace::instantiate(akasha.core.BufferSource, ===akasha.core.JsObject===)",
+    "oldElement": "parameter akasha.promise.Promise<akasha.wasm.WebAssemblyInstantiatedSource> akasha.wasm.WebAssemblyNamespace::instantiate(akasha.core.BufferSource, ===java.lang.Object===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.wasm.WebAssemblyNamespace",
+      "classSimpleName": "WebAssemblyNamespace",
+      "elementKind": "parameter",
+      "methodName": "instantiate",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha.wasm",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "parameter akasha.promise.Promise<akasha.wasm.WebAssemblyInstantiatedSource> akasha.wasm.WebAssemblyNamespace::instantiateStreaming(akasha.promise.Promise<akasha.Response>, ===akasha.core.JsObject===)",
+    "oldElement": "parameter akasha.promise.Promise<akasha.wasm.WebAssemblyInstantiatedSource> akasha.wasm.WebAssemblyNamespace::instantiateStreaming(akasha.promise.Promise<akasha.Response>, ===java.lang.Object===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.wasm.WebAssemblyNamespace",
+      "classSimpleName": "WebAssemblyNamespace",
+      "elementKind": "parameter",
+      "methodName": "instantiateStreaming",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha.wasm",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.String' to 'akasha.core.JsObject'.",
+    "newElement": "parameter akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::decrypt(===akasha.core.JsObject===, akasha.crypto.CryptoKey, akasha.core.BufferSource)",
+    "oldElement": "parameter akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::decrypt(===java.lang.String===, akasha.crypto.CryptoKey, akasha.core.BufferSource)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "parameter",
+      "methodName": "decrypt",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.String",
+      "package": "akasha.crypto",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'java.lang.String'.",
+    "newElement": "parameter akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::decrypt(===java.lang.String===, akasha.crypto.CryptoKey, akasha.core.BufferSource)",
+    "oldElement": "parameter akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::decrypt(===java.lang.Object===, akasha.crypto.CryptoKey, akasha.core.BufferSource)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "parameter",
+      "methodName": "decrypt",
+      "newType": "java.lang.String",
+      "oldType": "java.lang.Object",
+      "package": "akasha.crypto",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.String' to 'akasha.core.JsObject'.",
+    "newElement": "parameter akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::deriveKey(===akasha.core.JsObject===, akasha.crypto.CryptoKey, akasha.core.JsObject, boolean, akasha.lang.JsArray<java.lang.String>)",
+    "oldElement": "parameter akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::deriveKey(===java.lang.String===, akasha.crypto.CryptoKey, java.lang.String, boolean, akasha.lang.JsArray<java.lang.String>)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "parameter",
+      "methodName": "deriveKey",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.String",
+      "package": "akasha.crypto",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.String' to 'akasha.core.JsObject'.",
+    "newElement": "parameter akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::deriveKey(===akasha.core.JsObject===, akasha.crypto.CryptoKey, akasha.core.JsObject, boolean, java.lang.String[])",
+    "oldElement": "parameter akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::deriveKey(===java.lang.String===, akasha.crypto.CryptoKey, java.lang.String, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "parameter",
+      "methodName": "deriveKey",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.String",
+      "package": "akasha.crypto",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.String' to 'akasha.core.JsObject'.",
+    "newElement": "parameter akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::deriveKey(===akasha.core.JsObject===, akasha.crypto.CryptoKey, akasha.crypto.AlgorithmIdentifier, boolean, akasha.lang.JsArray<java.lang.String>)",
+    "oldElement": "parameter akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::deriveKey(===java.lang.String===, akasha.crypto.CryptoKey, akasha.crypto.AlgorithmIdentifier, boolean, akasha.lang.JsArray<java.lang.String>)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "parameter",
+      "methodName": "deriveKey",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.String",
+      "package": "akasha.crypto",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.String' to 'akasha.core.JsObject'.",
+    "newElement": "parameter akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::deriveKey(===akasha.core.JsObject===, akasha.crypto.CryptoKey, akasha.crypto.AlgorithmIdentifier, boolean, java.lang.String[])",
+    "oldElement": "parameter akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::deriveKey(===java.lang.String===, akasha.crypto.CryptoKey, akasha.crypto.AlgorithmIdentifier, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "parameter",
+      "methodName": "deriveKey",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.String",
+      "package": "akasha.crypto",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "parameter akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::deriveKey(===akasha.core.JsObject===, akasha.crypto.CryptoKey, java.lang.String, boolean, akasha.lang.JsArray<java.lang.String>)",
+    "oldElement": "parameter akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::deriveKey(===java.lang.Object===, akasha.crypto.CryptoKey, java.lang.String, boolean, akasha.lang.JsArray<java.lang.String>)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "parameter",
+      "methodName": "deriveKey",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha.crypto",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "parameter akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::deriveKey(===akasha.core.JsObject===, akasha.crypto.CryptoKey, java.lang.String, boolean, java.lang.String[])",
+    "oldElement": "parameter akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::deriveKey(===java.lang.Object===, akasha.crypto.CryptoKey, java.lang.String, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "parameter",
+      "methodName": "deriveKey",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha.crypto",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.String' to 'akasha.crypto.AlgorithmIdentifier'.",
+    "newElement": "parameter akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::deriveKey(===akasha.crypto.AlgorithmIdentifier===, akasha.crypto.CryptoKey, akasha.core.JsObject, boolean, akasha.lang.JsArray<java.lang.String>)",
+    "oldElement": "parameter akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::deriveKey(===java.lang.String===, akasha.crypto.CryptoKey, java.lang.Object, boolean, akasha.lang.JsArray<java.lang.String>)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "parameter",
+      "methodName": "deriveKey",
+      "newType": "akasha.crypto.AlgorithmIdentifier",
+      "oldType": "java.lang.String",
+      "package": "akasha.crypto",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.String' to 'akasha.crypto.AlgorithmIdentifier'.",
+    "newElement": "parameter akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::deriveKey(===akasha.crypto.AlgorithmIdentifier===, akasha.crypto.CryptoKey, akasha.core.JsObject, boolean, java.lang.String[])",
+    "oldElement": "parameter akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::deriveKey(===java.lang.String===, akasha.crypto.CryptoKey, java.lang.Object, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "parameter",
+      "methodName": "deriveKey",
+      "newType": "akasha.crypto.AlgorithmIdentifier",
+      "oldType": "java.lang.String",
+      "package": "akasha.crypto",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'java.lang.String'.",
+    "newElement": "parameter akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::deriveKey(===java.lang.String===, akasha.crypto.CryptoKey, akasha.core.JsObject, boolean, akasha.lang.JsArray<java.lang.String>)",
+    "oldElement": "parameter akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::deriveKey(===java.lang.Object===, akasha.crypto.CryptoKey, java.lang.Object, boolean, akasha.lang.JsArray<java.lang.String>)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "parameter",
+      "methodName": "deriveKey",
+      "newType": "java.lang.String",
+      "oldType": "java.lang.Object",
+      "package": "akasha.crypto",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'java.lang.String'.",
+    "newElement": "parameter akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::deriveKey(===java.lang.String===, akasha.crypto.CryptoKey, akasha.core.JsObject, boolean, java.lang.String[])",
+    "oldElement": "parameter akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::deriveKey(===java.lang.Object===, akasha.crypto.CryptoKey, java.lang.Object, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "parameter",
+      "methodName": "deriveKey",
+      "newType": "java.lang.String",
+      "oldType": "java.lang.Object",
+      "package": "akasha.crypto",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'java.lang.String'.",
+    "newElement": "parameter akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::deriveKey(===java.lang.String===, akasha.crypto.CryptoKey, akasha.crypto.AlgorithmIdentifier, boolean, akasha.lang.JsArray<java.lang.String>)",
+    "oldElement": "parameter akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::deriveKey(===java.lang.Object===, akasha.crypto.CryptoKey, akasha.crypto.AlgorithmIdentifier, boolean, akasha.lang.JsArray<java.lang.String>)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "parameter",
+      "methodName": "deriveKey",
+      "newType": "java.lang.String",
+      "oldType": "java.lang.Object",
+      "package": "akasha.crypto",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'java.lang.String'.",
+    "newElement": "parameter akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::deriveKey(===java.lang.String===, akasha.crypto.CryptoKey, akasha.crypto.AlgorithmIdentifier, boolean, java.lang.String[])",
+    "oldElement": "parameter akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::deriveKey(===java.lang.Object===, akasha.crypto.CryptoKey, akasha.crypto.AlgorithmIdentifier, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "parameter",
+      "methodName": "deriveKey",
+      "newType": "java.lang.String",
+      "oldType": "java.lang.Object",
+      "package": "akasha.crypto",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'akasha.crypto.AlgorithmIdentifier' to 'java.lang.String'.",
+    "newElement": "parameter akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::deriveKey(===java.lang.String===, akasha.crypto.CryptoKey, java.lang.String, boolean, akasha.lang.JsArray<java.lang.String>)",
+    "oldElement": "parameter akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::deriveKey(===akasha.crypto.AlgorithmIdentifier===, akasha.crypto.CryptoKey, java.lang.String, boolean, akasha.lang.JsArray<java.lang.String>)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "parameter",
+      "methodName": "deriveKey",
+      "newType": "java.lang.String",
+      "oldType": "akasha.crypto.AlgorithmIdentifier",
+      "package": "akasha.crypto",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'akasha.crypto.AlgorithmIdentifier' to 'java.lang.String'.",
+    "newElement": "parameter akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::deriveKey(===java.lang.String===, akasha.crypto.CryptoKey, java.lang.String, boolean, java.lang.String[])",
+    "oldElement": "parameter akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::deriveKey(===akasha.crypto.AlgorithmIdentifier===, akasha.crypto.CryptoKey, java.lang.String, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "parameter",
+      "methodName": "deriveKey",
+      "newType": "java.lang.String",
+      "oldType": "akasha.crypto.AlgorithmIdentifier",
+      "package": "akasha.crypto",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.String' to 'akasha.core.JsObject'.",
+    "newElement": "parameter akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::deriveKey(akasha.core.JsObject, akasha.crypto.CryptoKey, ===akasha.core.JsObject===, boolean, akasha.lang.JsArray<java.lang.String>)",
+    "oldElement": "parameter akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::deriveKey(java.lang.String, akasha.crypto.CryptoKey, ===java.lang.String===, boolean, akasha.lang.JsArray<java.lang.String>)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "parameter",
+      "methodName": "deriveKey",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.String",
+      "package": "akasha.crypto",
+      "parameterIndex": "2"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.String' to 'akasha.core.JsObject'.",
+    "newElement": "parameter akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::deriveKey(akasha.core.JsObject, akasha.crypto.CryptoKey, ===akasha.core.JsObject===, boolean, java.lang.String[])",
+    "oldElement": "parameter akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::deriveKey(java.lang.String, akasha.crypto.CryptoKey, ===java.lang.String===, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "parameter",
+      "methodName": "deriveKey",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.String",
+      "package": "akasha.crypto",
+      "parameterIndex": "2"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "parameter akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::deriveKey(akasha.crypto.AlgorithmIdentifier, akasha.crypto.CryptoKey, ===akasha.core.JsObject===, boolean, akasha.lang.JsArray<java.lang.String>)",
+    "oldElement": "parameter akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::deriveKey(java.lang.String, akasha.crypto.CryptoKey, ===java.lang.Object===, boolean, akasha.lang.JsArray<java.lang.String>)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "parameter",
+      "methodName": "deriveKey",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha.crypto",
+      "parameterIndex": "2"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "parameter akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::deriveKey(akasha.crypto.AlgorithmIdentifier, akasha.crypto.CryptoKey, ===akasha.core.JsObject===, boolean, java.lang.String[])",
+    "oldElement": "parameter akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::deriveKey(java.lang.String, akasha.crypto.CryptoKey, ===java.lang.Object===, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "parameter",
+      "methodName": "deriveKey",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha.crypto",
+      "parameterIndex": "2"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'java.lang.String'.",
+    "newElement": "parameter akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::deriveKey(akasha.crypto.AlgorithmIdentifier, akasha.crypto.CryptoKey, ===java.lang.String===, boolean, akasha.lang.JsArray<java.lang.String>)",
+    "oldElement": "parameter akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::deriveKey(akasha.crypto.AlgorithmIdentifier, akasha.crypto.CryptoKey, ===java.lang.Object===, boolean, akasha.lang.JsArray<java.lang.String>)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "parameter",
+      "methodName": "deriveKey",
+      "newType": "java.lang.String",
+      "oldType": "java.lang.Object",
+      "package": "akasha.crypto",
+      "parameterIndex": "2"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'java.lang.String'.",
+    "newElement": "parameter akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::deriveKey(akasha.crypto.AlgorithmIdentifier, akasha.crypto.CryptoKey, ===java.lang.String===, boolean, java.lang.String[])",
+    "oldElement": "parameter akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::deriveKey(akasha.crypto.AlgorithmIdentifier, akasha.crypto.CryptoKey, ===java.lang.Object===, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "parameter",
+      "methodName": "deriveKey",
+      "newType": "java.lang.String",
+      "oldType": "java.lang.Object",
+      "package": "akasha.crypto",
+      "parameterIndex": "2"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "parameter akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::deriveKey(java.lang.String, akasha.crypto.CryptoKey, ===akasha.core.JsObject===, boolean, akasha.lang.JsArray<java.lang.String>)",
+    "oldElement": "parameter akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::deriveKey(java.lang.Object, akasha.crypto.CryptoKey, ===java.lang.Object===, boolean, akasha.lang.JsArray<java.lang.String>)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "parameter",
+      "methodName": "deriveKey",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha.crypto",
+      "parameterIndex": "2"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "parameter akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::deriveKey(java.lang.String, akasha.crypto.CryptoKey, ===akasha.core.JsObject===, boolean, java.lang.String[])",
+    "oldElement": "parameter akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::deriveKey(java.lang.Object, akasha.crypto.CryptoKey, ===java.lang.Object===, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "parameter",
+      "methodName": "deriveKey",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha.crypto",
+      "parameterIndex": "2"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.String' to 'akasha.core.JsObject'.",
+    "newElement": "parameter akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::digest(===akasha.core.JsObject===, akasha.core.BufferSource)",
+    "oldElement": "parameter akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::digest(===java.lang.String===, akasha.core.BufferSource)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "parameter",
+      "methodName": "digest",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.String",
+      "package": "akasha.crypto",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'java.lang.String'.",
+    "newElement": "parameter akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::digest(===java.lang.String===, akasha.core.BufferSource)",
+    "oldElement": "parameter akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::digest(===java.lang.Object===, akasha.core.BufferSource)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "parameter",
+      "methodName": "digest",
+      "newType": "java.lang.String",
+      "oldType": "java.lang.Object",
+      "package": "akasha.crypto",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.String' to 'akasha.core.JsObject'.",
+    "newElement": "parameter akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::encrypt(===akasha.core.JsObject===, akasha.crypto.CryptoKey, akasha.core.BufferSource)",
+    "oldElement": "parameter akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::encrypt(===java.lang.String===, akasha.crypto.CryptoKey, akasha.core.BufferSource)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "parameter",
+      "methodName": "encrypt",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.String",
+      "package": "akasha.crypto",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'java.lang.String'.",
+    "newElement": "parameter akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::encrypt(===java.lang.String===, akasha.crypto.CryptoKey, akasha.core.BufferSource)",
+    "oldElement": "parameter akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::encrypt(===java.lang.Object===, akasha.crypto.CryptoKey, akasha.core.BufferSource)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "parameter",
+      "methodName": "encrypt",
+      "newType": "java.lang.String",
+      "oldType": "java.lang.Object",
+      "package": "akasha.crypto",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.String' to 'akasha.core.JsObject'.",
+    "newElement": "parameter akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::generateKey(===akasha.core.JsObject===, boolean, akasha.lang.JsArray<java.lang.String>)",
+    "oldElement": "parameter akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::generateKey(===java.lang.String===, boolean, akasha.lang.JsArray<java.lang.String>)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "parameter",
+      "methodName": "generateKey",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.String",
+      "package": "akasha.crypto",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.String' to 'akasha.core.JsObject'.",
+    "newElement": "parameter akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::generateKey(===akasha.core.JsObject===, boolean, java.lang.String[])",
+    "oldElement": "parameter akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::generateKey(===java.lang.String===, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "parameter",
+      "methodName": "generateKey",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.String",
+      "package": "akasha.crypto",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'java.lang.String'.",
+    "newElement": "parameter akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::generateKey(===java.lang.String===, boolean, akasha.lang.JsArray<java.lang.String>)",
+    "oldElement": "parameter akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::generateKey(===java.lang.Object===, boolean, akasha.lang.JsArray<java.lang.String>)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "parameter",
+      "methodName": "generateKey",
+      "newType": "java.lang.String",
+      "oldType": "java.lang.Object",
+      "package": "akasha.crypto",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'java.lang.String'.",
+    "newElement": "parameter akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::generateKey(===java.lang.String===, boolean, java.lang.String[])",
+    "oldElement": "parameter akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::generateKey(===java.lang.Object===, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "parameter",
+      "methodName": "generateKey",
+      "newType": "java.lang.String",
+      "oldType": "java.lang.Object",
+      "package": "akasha.crypto",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.String' to 'akasha.core.JsObject'.",
+    "newElement": "parameter akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::sign(===akasha.core.JsObject===, akasha.crypto.CryptoKey, akasha.core.BufferSource)",
+    "oldElement": "parameter akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::sign(===java.lang.String===, akasha.crypto.CryptoKey, akasha.core.BufferSource)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "parameter",
+      "methodName": "sign",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.String",
+      "package": "akasha.crypto",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'java.lang.String'.",
+    "newElement": "parameter akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::sign(===java.lang.String===, akasha.crypto.CryptoKey, akasha.core.BufferSource)",
+    "oldElement": "parameter akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::sign(===java.lang.Object===, akasha.crypto.CryptoKey, akasha.core.BufferSource)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "parameter",
+      "methodName": "sign",
+      "newType": "java.lang.String",
+      "oldType": "java.lang.Object",
+      "package": "akasha.crypto",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.String' to 'akasha.core.JsObject'.",
+    "newElement": "parameter akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::verify(===akasha.core.JsObject===, akasha.crypto.CryptoKey, akasha.core.BufferSource, akasha.core.BufferSource)",
+    "oldElement": "parameter akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::verify(===java.lang.String===, akasha.crypto.CryptoKey, akasha.core.BufferSource, akasha.core.BufferSource)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "parameter",
+      "methodName": "verify",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.String",
+      "package": "akasha.crypto",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'java.lang.String'.",
+    "newElement": "parameter akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::verify(===java.lang.String===, akasha.crypto.CryptoKey, akasha.core.BufferSource, akasha.core.BufferSource)",
+    "oldElement": "parameter akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::verify(===java.lang.Object===, akasha.crypto.CryptoKey, akasha.core.BufferSource, akasha.core.BufferSource)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "parameter",
+      "methodName": "verify",
+      "newType": "java.lang.String",
+      "oldType": "java.lang.Object",
+      "package": "akasha.crypto",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.String' to 'akasha.core.JsObject'.",
+    "newElement": "parameter akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::wrapKey(java.lang.String, akasha.crypto.CryptoKey, akasha.crypto.CryptoKey, ===akasha.core.JsObject===)",
+    "oldElement": "parameter akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::wrapKey(java.lang.String, akasha.crypto.CryptoKey, akasha.crypto.CryptoKey, ===java.lang.String===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "parameter",
+      "methodName": "wrapKey",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.String",
+      "package": "akasha.crypto",
+      "parameterIndex": "3"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'java.lang.String'.",
+    "newElement": "parameter akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::wrapKey(java.lang.String, akasha.crypto.CryptoKey, akasha.crypto.CryptoKey, ===java.lang.String===)",
+    "oldElement": "parameter akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::wrapKey(java.lang.String, akasha.crypto.CryptoKey, akasha.crypto.CryptoKey, ===java.lang.Object===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "parameter",
+      "methodName": "wrapKey",
+      "newType": "java.lang.String",
+      "oldType": "java.lang.Object",
+      "package": "akasha.crypto",
+      "parameterIndex": "3"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "parameter boolean akasha.audio.AudioWorkletProcessCallback::onInvoke(akasha.lang.JsArray<akasha.lang.JsArray<akasha.core.Float32Array>>, akasha.lang.JsArray<akasha.lang.JsArray<akasha.core.Float32Array>>, ===akasha.core.JsObject===)",
+    "oldElement": "parameter boolean akasha.audio.AudioWorkletProcessCallback::onInvoke(akasha.lang.JsArray<akasha.lang.JsArray<akasha.core.Float32Array>>, akasha.lang.JsArray<akasha.lang.JsArray<akasha.core.Float32Array>>, ===java.lang.Object===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.audio.AudioWorkletProcessCallback",
+      "classSimpleName": "AudioWorkletProcessCallback",
+      "elementKind": "parameter",
+      "methodName": "onInvoke",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha.audio",
+      "parameterIndex": "2"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "parameter int akasha.core.JsString::localeCompare(java.lang.String, akasha.lang.JsArray<java.lang.String>, ===akasha.core.JsObject===)",
+    "oldElement": "parameter int akasha.core.JsString::localeCompare(java.lang.String, akasha.lang.JsArray<java.lang.String>, ===java.lang.Object===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.JsString",
+      "classSimpleName": "JsString",
+      "elementKind": "parameter",
+      "methodName": "localeCompare",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha.core",
+      "parameterIndex": "2"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "parameter int akasha.core.JsString::localeCompare(java.lang.String, java.lang.String, ===akasha.core.JsObject===)",
+    "oldElement": "parameter int akasha.core.JsString::localeCompare(java.lang.String, java.lang.String, ===java.lang.Object===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.JsString",
+      "classSimpleName": "JsString",
+      "elementKind": "parameter",
+      "methodName": "localeCompare",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha.core",
+      "parameterIndex": "2"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "parameter int akasha.core.JsString::localeCompare(java.lang.String, java.lang.String[], ===akasha.core.JsObject===)",
+    "oldElement": "parameter int akasha.core.JsString::localeCompare(java.lang.String, java.lang.String[], ===java.lang.Object===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.JsString",
+      "classSimpleName": "JsString",
+      "elementKind": "parameter",
+      "methodName": "localeCompare",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha.core",
+      "parameterIndex": "2"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "parameter void akasha.Console::dir(java.lang.Object, ===akasha.core.JsObject===)",
+    "oldElement": "parameter void akasha.Console::dir(java.lang.Object, ===java.lang.Object===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.Console",
+      "classSimpleName": "Console",
+      "elementKind": "parameter",
+      "methodName": "dir",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "parameter void akasha.ConsoleNamespace::dir(java.lang.Object, ===akasha.core.JsObject===)",
+    "oldElement": "parameter void akasha.ConsoleNamespace::dir(java.lang.Object, ===java.lang.Object===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.ConsoleNamespace",
+      "classSimpleName": "ConsoleNamespace",
+      "elementKind": "parameter",
+      "methodName": "dir",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "parameter void akasha.KeyframeEffect::<init>(akasha.CSSPseudoElement, ===akasha.core.JsObject===)",
+    "oldElement": "parameter void akasha.KeyframeEffect::<init>(akasha.CSSPseudoElement, ===java.lang.Object===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.KeyframeEffect",
+      "classSimpleName": "KeyframeEffect",
+      "elementKind": "parameter",
+      "methodName": "<init>",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "parameter void akasha.KeyframeEffect::<init>(akasha.CSSPseudoElement, ===akasha.core.JsObject===, akasha.KeyframeEffectOptions)",
+    "oldElement": "parameter void akasha.KeyframeEffect::<init>(akasha.CSSPseudoElement, ===java.lang.Object===, akasha.KeyframeEffectOptions)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.KeyframeEffect",
+      "classSimpleName": "KeyframeEffect",
+      "elementKind": "parameter",
+      "methodName": "<init>",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "parameter void akasha.KeyframeEffect::<init>(akasha.CSSPseudoElement, ===akasha.core.JsObject===, double)",
+    "oldElement": "parameter void akasha.KeyframeEffect::<init>(akasha.CSSPseudoElement, ===java.lang.Object===, double)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.KeyframeEffect",
+      "classSimpleName": "KeyframeEffect",
+      "elementKind": "parameter",
+      "methodName": "<init>",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "parameter void akasha.KeyframeEffect::<init>(akasha.Element, ===akasha.core.JsObject===)",
+    "oldElement": "parameter void akasha.KeyframeEffect::<init>(akasha.Element, ===java.lang.Object===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.KeyframeEffect",
+      "classSimpleName": "KeyframeEffect",
+      "elementKind": "parameter",
+      "methodName": "<init>",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "parameter void akasha.KeyframeEffect::<init>(akasha.Element, ===akasha.core.JsObject===, akasha.KeyframeEffectOptions)",
+    "oldElement": "parameter void akasha.KeyframeEffect::<init>(akasha.Element, ===java.lang.Object===, akasha.KeyframeEffectOptions)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.KeyframeEffect",
+      "classSimpleName": "KeyframeEffect",
+      "elementKind": "parameter",
+      "methodName": "<init>",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "parameter void akasha.KeyframeEffect::<init>(akasha.Element, ===akasha.core.JsObject===, double)",
+    "oldElement": "parameter void akasha.KeyframeEffect::<init>(akasha.Element, ===java.lang.Object===, double)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.KeyframeEffect",
+      "classSimpleName": "KeyframeEffect",
+      "elementKind": "parameter",
+      "methodName": "<init>",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "parameter void akasha.KeyframeEffect::setKeyframes(===akasha.core.JsObject===)",
+    "oldElement": "parameter void akasha.KeyframeEffect::setKeyframes(===java.lang.Object===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.KeyframeEffect",
+      "classSimpleName": "KeyframeEffect",
+      "elementKind": "parameter",
+      "methodName": "setKeyframes",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "parameter void akasha.ReadableStream::<init>(===akasha.core.JsObject===)",
+    "oldElement": "parameter void akasha.ReadableStream::<init>(===java.lang.Object===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.ReadableStream",
+      "classSimpleName": "ReadableStream",
+      "elementKind": "parameter",
+      "methodName": "<init>",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "parameter void akasha.ReadableStream::<init>(===akasha.core.JsObject===, akasha.QueuingStrategy)",
+    "oldElement": "parameter void akasha.ReadableStream::<init>(===java.lang.Object===, akasha.QueuingStrategy)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.ReadableStream",
+      "classSimpleName": "ReadableStream",
+      "elementKind": "parameter",
+      "methodName": "<init>",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "parameter void akasha.TransformStream::<init>(===akasha.core.JsObject===)",
+    "oldElement": "parameter void akasha.TransformStream::<init>(===java.lang.Object===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.TransformStream",
+      "classSimpleName": "TransformStream",
+      "elementKind": "parameter",
+      "methodName": "<init>",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "parameter void akasha.TransformStream::<init>(===akasha.core.JsObject===, akasha.QueuingStrategy)",
+    "oldElement": "parameter void akasha.TransformStream::<init>(===java.lang.Object===, akasha.QueuingStrategy)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.TransformStream",
+      "classSimpleName": "TransformStream",
+      "elementKind": "parameter",
+      "methodName": "<init>",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "parameter void akasha.TransformStream::<init>(===akasha.core.JsObject===, akasha.QueuingStrategy, akasha.QueuingStrategy)",
+    "oldElement": "parameter void akasha.TransformStream::<init>(===java.lang.Object===, akasha.QueuingStrategy, akasha.QueuingStrategy)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.TransformStream",
+      "classSimpleName": "TransformStream",
+      "elementKind": "parameter",
+      "methodName": "<init>",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "parameter void akasha.WritableStream::<init>(===akasha.core.JsObject===)",
+    "oldElement": "parameter void akasha.WritableStream::<init>(===java.lang.Object===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.WritableStream",
+      "classSimpleName": "WritableStream",
+      "elementKind": "parameter",
+      "methodName": "<init>",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "parameter void akasha.WritableStream::<init>(===akasha.core.JsObject===, akasha.QueuingStrategy)",
+    "oldElement": "parameter void akasha.WritableStream::<init>(===java.lang.Object===, akasha.QueuingStrategy)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.WritableStream",
+      "classSimpleName": "WritableStream",
+      "elementKind": "parameter",
+      "methodName": "<init>",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "parameter void akasha.audio.AudioWorkletNodeOptions::setProcessorOptions(===akasha.core.JsObject===)",
+    "oldElement": "parameter void akasha.audio.AudioWorkletNodeOptions::setProcessorOptions(===java.lang.Object===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.audio.AudioWorkletNodeOptions",
+      "classSimpleName": "AudioWorkletNodeOptions",
+      "elementKind": "parameter",
+      "methodName": "setProcessorOptions",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha.audio",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "parameter void akasha.bluetooth.BluetoothLEScanFilterInit::setManufacturerData(===akasha.core.JsObject===)",
+    "oldElement": "parameter void akasha.bluetooth.BluetoothLEScanFilterInit::setManufacturerData(===java.lang.Object===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.bluetooth.BluetoothLEScanFilterInit",
+      "classSimpleName": "BluetoothLEScanFilterInit",
+      "elementKind": "parameter",
+      "methodName": "setManufacturerData",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha.bluetooth",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "parameter void akasha.bluetooth.BluetoothLEScanFilterInit::setServiceData(===akasha.core.JsObject===)",
+    "oldElement": "parameter void akasha.bluetooth.BluetoothLEScanFilterInit::setServiceData(===java.lang.Object===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.bluetooth.BluetoothLEScanFilterInit",
+      "classSimpleName": "BluetoothLEScanFilterInit",
+      "elementKind": "parameter",
+      "methodName": "setServiceData",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha.bluetooth",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.String' to 'akasha.core.JsObject'.",
+    "newElement": "parameter void akasha.crypto.EcdsaParams::setHash(===akasha.core.JsObject===)",
+    "oldElement": "parameter void akasha.crypto.EcdsaParams::setHash(===java.lang.String===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.EcdsaParams",
+      "classSimpleName": "EcdsaParams",
+      "elementKind": "parameter",
+      "methodName": "setHash",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.String",
+      "package": "akasha.crypto",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'java.lang.String'.",
+    "newElement": "parameter void akasha.crypto.EcdsaParams::setHash(===java.lang.String===)",
+    "oldElement": "parameter void akasha.crypto.EcdsaParams::setHash(===java.lang.Object===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.EcdsaParams",
+      "classSimpleName": "EcdsaParams",
+      "elementKind": "parameter",
+      "methodName": "setHash",
+      "newType": "java.lang.String",
+      "oldType": "java.lang.Object",
+      "package": "akasha.crypto",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.String' to 'akasha.core.JsObject'.",
+    "newElement": "parameter void akasha.crypto.HkdfParams::setHash(===akasha.core.JsObject===)",
+    "oldElement": "parameter void akasha.crypto.HkdfParams::setHash(===java.lang.String===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.HkdfParams",
+      "classSimpleName": "HkdfParams",
+      "elementKind": "parameter",
+      "methodName": "setHash",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.String",
+      "package": "akasha.crypto",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'java.lang.String'.",
+    "newElement": "parameter void akasha.crypto.HkdfParams::setHash(===java.lang.String===)",
+    "oldElement": "parameter void akasha.crypto.HkdfParams::setHash(===java.lang.Object===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.HkdfParams",
+      "classSimpleName": "HkdfParams",
+      "elementKind": "parameter",
+      "methodName": "setHash",
+      "newType": "java.lang.String",
+      "oldType": "java.lang.Object",
+      "package": "akasha.crypto",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.String' to 'akasha.core.JsObject'.",
+    "newElement": "parameter void akasha.crypto.HmacImportParams::setHash(===akasha.core.JsObject===)",
+    "oldElement": "parameter void akasha.crypto.HmacImportParams::setHash(===java.lang.String===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.HmacImportParams",
+      "classSimpleName": "HmacImportParams",
+      "elementKind": "parameter",
+      "methodName": "setHash",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.String",
+      "package": "akasha.crypto",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'java.lang.String'.",
+    "newElement": "parameter void akasha.crypto.HmacImportParams::setHash(===java.lang.String===)",
+    "oldElement": "parameter void akasha.crypto.HmacImportParams::setHash(===java.lang.Object===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.HmacImportParams",
+      "classSimpleName": "HmacImportParams",
+      "elementKind": "parameter",
+      "methodName": "setHash",
+      "newType": "java.lang.String",
+      "oldType": "java.lang.Object",
+      "package": "akasha.crypto",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.String' to 'akasha.core.JsObject'.",
+    "newElement": "parameter void akasha.crypto.HmacKeyGenParams::setHash(===akasha.core.JsObject===)",
+    "oldElement": "parameter void akasha.crypto.HmacKeyGenParams::setHash(===java.lang.String===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.HmacKeyGenParams",
+      "classSimpleName": "HmacKeyGenParams",
+      "elementKind": "parameter",
+      "methodName": "setHash",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.String",
+      "package": "akasha.crypto",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'java.lang.String'.",
+    "newElement": "parameter void akasha.crypto.HmacKeyGenParams::setHash(===java.lang.String===)",
+    "oldElement": "parameter void akasha.crypto.HmacKeyGenParams::setHash(===java.lang.Object===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.HmacKeyGenParams",
+      "classSimpleName": "HmacKeyGenParams",
+      "elementKind": "parameter",
+      "methodName": "setHash",
+      "newType": "java.lang.String",
+      "oldType": "java.lang.Object",
+      "package": "akasha.crypto",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.String' to 'akasha.core.JsObject'.",
+    "newElement": "parameter void akasha.crypto.Pbkdf2Params::setHash(===akasha.core.JsObject===)",
+    "oldElement": "parameter void akasha.crypto.Pbkdf2Params::setHash(===java.lang.String===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.Pbkdf2Params",
+      "classSimpleName": "Pbkdf2Params",
+      "elementKind": "parameter",
+      "methodName": "setHash",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.String",
+      "package": "akasha.crypto",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'java.lang.String'.",
+    "newElement": "parameter void akasha.crypto.Pbkdf2Params::setHash(===java.lang.String===)",
+    "oldElement": "parameter void akasha.crypto.Pbkdf2Params::setHash(===java.lang.Object===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.Pbkdf2Params",
+      "classSimpleName": "Pbkdf2Params",
+      "elementKind": "parameter",
+      "methodName": "setHash",
+      "newType": "java.lang.String",
+      "oldType": "java.lang.Object",
+      "package": "akasha.crypto",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.String' to 'akasha.core.JsObject'.",
+    "newElement": "parameter void akasha.crypto.RsaHashedImportParams::setHash(===akasha.core.JsObject===)",
+    "oldElement": "parameter void akasha.crypto.RsaHashedImportParams::setHash(===java.lang.String===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.RsaHashedImportParams",
+      "classSimpleName": "RsaHashedImportParams",
+      "elementKind": "parameter",
+      "methodName": "setHash",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.String",
+      "package": "akasha.crypto",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'java.lang.String'.",
+    "newElement": "parameter void akasha.crypto.RsaHashedImportParams::setHash(===java.lang.String===)",
+    "oldElement": "parameter void akasha.crypto.RsaHashedImportParams::setHash(===java.lang.Object===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.RsaHashedImportParams",
+      "classSimpleName": "RsaHashedImportParams",
+      "elementKind": "parameter",
+      "methodName": "setHash",
+      "newType": "java.lang.String",
+      "oldType": "java.lang.Object",
+      "package": "akasha.crypto",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.String' to 'akasha.core.JsObject'.",
+    "newElement": "parameter void akasha.crypto.RsaHashedKeyGenParams::setHash(===akasha.core.JsObject===)",
+    "oldElement": "parameter void akasha.crypto.RsaHashedKeyGenParams::setHash(===java.lang.String===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.RsaHashedKeyGenParams",
+      "classSimpleName": "RsaHashedKeyGenParams",
+      "elementKind": "parameter",
+      "methodName": "setHash",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.String",
+      "package": "akasha.crypto",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'java.lang.String'.",
+    "newElement": "parameter void akasha.crypto.RsaHashedKeyGenParams::setHash(===java.lang.String===)",
+    "oldElement": "parameter void akasha.crypto.RsaHashedKeyGenParams::setHash(===java.lang.Object===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.RsaHashedKeyGenParams",
+      "classSimpleName": "RsaHashedKeyGenParams",
+      "elementKind": "parameter",
+      "methodName": "setHash",
+      "newType": "java.lang.String",
+      "oldType": "java.lang.Object",
+      "package": "akasha.crypto",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "parameter void akasha.rtc.RTCStatsReport.ForEachCallback2::item(===akasha.core.JsObject===, java.lang.String)",
+    "oldElement": "parameter void akasha.rtc.RTCStatsReport.ForEachCallback2::item(===java.lang.Object===, java.lang.String)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.rtc.RTCStatsReport.ForEachCallback2",
+      "classSimpleName": "ForEachCallback2",
+      "elementKind": "parameter",
+      "methodName": "item",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha.rtc",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "parameter void akasha.rtc.RTCStatsReport.ForEachCallback3::item(===akasha.core.JsObject===, java.lang.String, akasha.rtc.RTCStatsReport)",
+    "oldElement": "parameter void akasha.rtc.RTCStatsReport.ForEachCallback3::item(===java.lang.Object===, java.lang.String, akasha.rtc.RTCStatsReport)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.rtc.RTCStatsReport.ForEachCallback3",
+      "classSimpleName": "ForEachCallback3",
+      "elementKind": "parameter",
+      "methodName": "item",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha.rtc",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "parameter void akasha.rtc.RTCStatsReport.ForEachCallback::item(===akasha.core.JsObject===)",
+    "oldElement": "parameter void akasha.rtc.RTCStatsReport.ForEachCallback::item(===java.lang.Object===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.rtc.RTCStatsReport.ForEachCallback",
+      "classSimpleName": "ForEachCallback",
+      "elementKind": "parameter",
+      "methodName": "item",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha.rtc",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "parameter void akasha.wasm.Instance::<init>(akasha.wasm.Module, ===akasha.core.JsObject===)",
+    "oldElement": "parameter void akasha.wasm.Instance::<init>(akasha.wasm.Module, ===java.lang.Object===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.wasm.Instance",
+      "classSimpleName": "Instance",
+      "elementKind": "parameter",
+      "methodName": "<init>",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha.wasm",
+      "parameterIndex": "1"
+    }
+  }
+]
