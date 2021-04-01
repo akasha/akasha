@@ -115,6 +115,8 @@ module Buildr
 
         header = "### [v#{ENV['PRODUCT_VERSION']}](https://github.com/#{repository_name}/tree/v#{ENV['PRODUCT_VERSION']}) (#{ENV['RELEASE_DATE']}) · [Full Changelog](https://github.com/spritz/spritz/compare/#{from}...v#{ENV['PRODUCT_VERSION']})"
 
+        sub_header_text = ''
+
         api_diff_directory = options[:api_diff_directory]
         api_diff_filename = api_diff_directory ? "#{api_diff_directory}/#{ENV['PREVIOUS_PRODUCT_VERSION']}-#{ENV['PRODUCT_VERSION']}.json" : nil
         if api_diff_filename && File.exist?(api_diff_filename)
@@ -143,9 +145,13 @@ module Buildr
               description += "#{change_descriptions[0]}, #{change_descriptions[1]} and #{change_descriptions[2]}"
             end
 
-            header += "\n\n#{description}."
+            sub_header_text = description
           end
         end
+
+        header_suffix = options[:header_suffix]
+        header += header_suffix if header_suffix
+        header += "\n\n#{sub_header_text}" unless sub_header_text.empty?
         header += "\n"
 
         header += <<CONTENT
