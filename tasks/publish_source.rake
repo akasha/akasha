@@ -2,10 +2,6 @@ require File.expand_path(File.dirname(__FILE__) + '/util')
 
 REMOTE_REPOSITORY = "#{WORKSPACE_DIR}/target/remote_repository"
 
-def changes_between_refs?(from_branch, to_branch)
-  `git log #{from_branch}..#{to_branch} 2>&1`.split.select {|l| l.size != 0}.size > 0
-end
-
 desc 'Commit the source to a local copy of an external repository'
 task 'source:commit' do
   artifact = Buildr.project('akasha:java').package(:sources)
