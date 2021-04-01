@@ -116,7 +116,6 @@ module Buildr
         header = "### [v#{ENV['PRODUCT_VERSION']}](https://github.com/#{repository_name}/tree/v#{ENV['PRODUCT_VERSION']}) (#{ENV['RELEASE_DATE']}) · [Full Changelog](https://github.com/spritz/spritz/compare/#{from}...v#{ENV['PRODUCT_VERSION']})"
 
         api_diff_directory = options[:api_diff_directory]
-
         api_diff_filename = api_diff_directory ? "#{api_diff_directory}/#{ENV['PREVIOUS_PRODUCT_VERSION']}-#{ENV['PRODUCT_VERSION']}.json" : nil
         if api_diff_filename && File.exist?(api_diff_filename)
 
