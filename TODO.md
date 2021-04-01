@@ -10,8 +10,6 @@ complete as there is too much un-said.
 
 * Include link to source repository in the release notes
 
-* Record changes in changelog
-
 * Change the way dictionaries are implemented to be j2cl compatible
 
 # Docs Integration
