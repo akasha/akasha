@@ -1,2 +1,5 @@
+Base=com.example.Base
 Sequence=com.example.JsArray
+Sub1=com.example.Sub1
+Sub2=com.example.Sub2
 XRSessionInit=com.example.XRSessionInit

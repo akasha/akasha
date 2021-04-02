@@ -54,7 +54,6 @@ public interface AddEventListenerOptions extends EventListenerOptions {
 
   @JsOverlay
   @Nonnull
-  @Override
   default AddEventListenerOptions capture(final boolean capture) {
     setCapture( capture );
     return this;

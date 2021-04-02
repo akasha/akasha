@@ -18,8 +18,8 @@ import jsinterop.base.JsPropertyMap;
 public interface PermissionDescriptor {
   @JsOverlay
   @Nonnull
-  static PermissionDescriptor create(@Nonnull final String name) {
-    return Js.<PermissionDescriptor>uncheckedCast( JsPropertyMap.of() ).name( name );
+  static Builder create(@Nonnull final String name) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).name( name );
   }
 
   @JsProperty(
@@ -31,10 +31,18 @@ public interface PermissionDescriptor {
   @JsProperty
   void setName(@Nonnull String name);
 
-  @JsOverlay
-  @Nonnull
-  default PermissionDescriptor name(@Nonnull final String name) {
-    setName( name );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends PermissionDescriptor {
+    @JsOverlay
+    @Nonnull
+    default Builder name(@Nonnull final String name) {
+      setName( name );
+      return this;
+    }
   }
 }

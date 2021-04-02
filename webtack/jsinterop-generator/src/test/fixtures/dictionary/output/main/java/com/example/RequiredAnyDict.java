@@ -21,8 +21,8 @@ import jsinterop.base.JsPropertyMap;
 public interface RequiredAnyDict {
   @JsOverlay
   @Nonnull
-  static RequiredAnyDict create(@DoNotAutobox @Nullable final Object someValue) {
-    return Js.<RequiredAnyDict>uncheckedCast( JsPropertyMap.of() ).someValue( someValue );
+  static Builder create(@DoNotAutobox @Nullable final Object someValue) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).someValue( someValue );
   }
 
   @JsProperty(
@@ -34,10 +34,18 @@ public interface RequiredAnyDict {
   @JsProperty
   void setSomeValue(@DoNotAutobox @Nullable Object someValue);
 
-  @JsOverlay
-  @Nonnull
-  default RequiredAnyDict someValue(@DoNotAutobox @Nullable final Object someValue) {
-    setSomeValue( someValue );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends RequiredAnyDict {
+    @JsOverlay
+    @Nonnull
+    default Builder someValue(@DoNotAutobox @Nullable final Object someValue) {
+      setSomeValue( someValue );
+      return this;
+    }
   }
 }
