@@ -205,6 +205,16 @@
       }
     },
     {
+      "name": "RemoveElement",
+      "description": "Remove the types that are scheduled for removal from the browser",
+      "sourceSelector": "name=whatwg_html",
+      "config": {
+        "expectedRemoveCount": 2,
+        "namePattern": "^(MimeType|Plugin)$",
+        "type": ["interface_type"]
+      }
+    },
+    {
       "name": "AddExtendedAttribute",
       "description": "Package up the elements defined by ECMA into a separate package to model behaviour of elemental2-core",
       "sourceSelector": "name=atomics name=errors name=symbol name=json name=math name=typedarray name=basic_types",
