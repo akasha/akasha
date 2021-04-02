@@ -2,14 +2,11 @@ package com.example;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import jsinterop.annotations.JsOverlay;
 
 @Generated("org.realityforge.webtack")
 public final class JsMath {
-  @JsOverlay
   public static final double E = JsMathNamespace.E;
 
-  @JsOverlay
   public static final double LN10 = JsMathNamespace.LN10;
 
   private JsMath() {

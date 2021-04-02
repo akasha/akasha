@@ -518,8 +518,7 @@ final class JsinteropAction
                   constant.getName(),
                   Modifier.PUBLIC,
                   Modifier.STATIC,
-                  Modifier.FINAL )
-        .addAnnotation( JsinteropTypes.JS_OVERLAY );
+                  Modifier.FINAL );
 
     maybeAddCustomAnnotations( constant, field );
     maybeAddJavadoc( constant, field );
