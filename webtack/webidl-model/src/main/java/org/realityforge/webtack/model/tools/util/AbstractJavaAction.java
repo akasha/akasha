@@ -260,9 +260,11 @@ public abstract class AbstractJavaAction
   @Nonnull
   protected String safeJsPropertyMethodName( @Nonnull final String name, final boolean isBooleanValue )
   {
-    if ( "is".equals( name ) || ( !isBooleanValue && name.matches( "^is[A-Z].*" ) ) )
+    if ( "is".equals( name ) || ( !isBooleanValue && name.matches( "^is[A-Za-z].*" ) ) )
     {
       // This method is a work around for a bug in GWTs validation of properties
+      // where methods named /is[A-Z].*/ must return booleans. J2CL has a similar
+      // problem but the "is" prefix can have a lowercase name trailing it
       // https://github.com/gwtproject/gwt/issues/9703
       return "_" + name;
     }

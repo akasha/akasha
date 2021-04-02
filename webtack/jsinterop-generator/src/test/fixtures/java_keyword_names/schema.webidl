@@ -38,6 +38,11 @@ dictionary MyDictionary2 {
   object wait;
 };
 
+dictionary RTCCertificateStats {
+  DOMString isNot;
+  DOMString issuerCertificateId;
+};
+
 interface MyType1 {
   readonly attribute object clone;
   readonly attribute object default;

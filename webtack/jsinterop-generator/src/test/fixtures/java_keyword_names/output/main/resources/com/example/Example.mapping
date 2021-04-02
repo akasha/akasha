@@ -5,4 +5,5 @@ MyType1=com.example.MyType1
 MyType2=com.example.MyType2
 MyType3=com.example.MyType3
 MyType4=com.example.MyType4
+RTCCertificateStats=com.example.RTCCertificateStats
 object=java.lang.Object
