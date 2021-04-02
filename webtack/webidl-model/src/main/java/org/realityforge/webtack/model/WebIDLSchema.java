@@ -607,6 +607,7 @@ public final class WebIDLSchema
       _linked = true;
       getInterfaces().forEach( e -> e.link( this ) );
       getTypedefs().forEach( e -> e.link( this ) );
+      getDictionaries().forEach( e -> e.link( this ) );
     }
   }
 }

@@ -1,5 +1,6 @@
 package org.realityforge.webtack.model;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Objects;
@@ -14,6 +15,11 @@ public final class DictionaryDefinition
   private final String _inherits;
   @Nonnull
   private final List<DictionaryMember> _members;
+  private boolean _linked;
+  @Nullable
+  private DictionaryDefinition _superDictionary;
+  @Nonnull
+  private final List<DictionaryDefinition> _directSubDictionary = new ArrayList<>();
 
   public DictionaryDefinition( @Nonnull final String name,
                                @Nullable final String inherits,
@@ -37,6 +43,31 @@ public final class DictionaryDefinition
   public List<DictionaryMember> getMembers()
   {
     return _members;
+  }
+
+  @Nullable
+  public DictionaryDefinition getSuperDictionary()
+  {
+    assert _linked;
+    assert null == _inherits || null != _superDictionary;
+    return _superDictionary;
+  }
+
+  @Nonnull
+  public List<DictionaryDefinition> getDirectSubDictionary()
+  {
+    assert _linked;
+    return _directSubDictionary;
+  }
+
+  void link( @Nonnull final WebIDLSchema schema )
+  {
+    if ( null != _inherits )
+    {
+      _superDictionary = schema.getDictionaryByName( _inherits );
+      _superDictionary._directSubDictionary.add( this );
+    }
+    _linked = true;
   }
 
   @Override
