@@ -866,7 +866,7 @@ final class JsinteropAction
     sb.append( "  <inherits name='jsinterop.base.Base'/>\n" );
     for ( final String gwtInherit : _gwtInherits )
     {
-      sb.append( "  <inherits name='").append( gwtInherit ).append( "'/>\n" );
+      sb.append( "  <inherits name='" ).append( gwtInherit ).append( "'/>\n" );
     }
     sb.append( "\n" );
     sb.append( "  <source path=''/>\n" );
