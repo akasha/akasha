@@ -104,7 +104,6 @@ public interface StorageEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default StorageEventInit bubbles(final boolean bubbles) {
     setBubbles( bubbles );
     return this;
@@ -112,7 +111,6 @@ public interface StorageEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default StorageEventInit cancelable(final boolean cancelable) {
     setCancelable( cancelable );
     return this;
@@ -120,7 +118,6 @@ public interface StorageEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  @Override
   default StorageEventInit composed(final boolean composed) {
     setComposed( composed );
     return this;

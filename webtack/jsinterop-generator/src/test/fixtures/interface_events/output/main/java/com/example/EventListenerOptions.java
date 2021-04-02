@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface EventListenerOptions {
   @JsOverlay
   @Nonnull
-  static EventListenerOptions create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -30,10 +30,18 @@ public interface EventListenerOptions {
   @JsProperty
   void setCapture(boolean capture);
 
-  @JsOverlay
-  @Nonnull
-  default EventListenerOptions capture(final boolean capture) {
-    setCapture( capture );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends EventListenerOptions {
+    @JsOverlay
+    @Nonnull
+    default Builder capture(final boolean capture) {
+      setCapture( capture );
+      return this;
+    }
   }
 }

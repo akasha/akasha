@@ -1090,6 +1090,62 @@ final class JsinteropAction
   private void generateDictionary( @Nonnull final DictionaryDefinition definition )
     throws IOException
   {
+    if ( definition.getDirectSubDictionary().isEmpty() )
+    {
+      generateAllInOneDictionary( definition );
+    }
+    else
+    {
+      generateAbstractDictionary( definition );
+    }
+  }
+
+  private void generateConcreteDictionary( @Nonnull final DictionaryDefinition definition,
+                                           @Nonnull final TypeSpec.Builder container )
+  {
+    final TypeSpec.Builder type =
+      TypeSpec
+        .interfaceBuilder( "Builder" )
+        .addModifiers( Modifier.PUBLIC, Modifier.STATIC );
+    writeGeneratedAnnotation( type );
+    type.addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_TYPE )
+                          .addMember( "isNative", "true" )
+                          .addMember( "namespace", "$T.GLOBAL", JsinteropTypes.JS_PACKAGE )
+                          .addMember( "name", "$S", "Object" )
+                          .build() );
+    maybeAddCustomAnnotations( definition, type );
+    maybeAddJavadoc( definition, type );
+
+    type.addSuperinterface( lookupClassName( definition.getName() ) );
+
+    final WebIDLSchema schema = getSchema();
+    for ( final DictionaryMember member : definition.getMembers() )
+    {
+      for ( final TypedValue typedValue : explodeType( member.getType() ) )
+      {
+        generateDictionaryMemberSetterReturningThis( definition, member, typedValue, true, type );
+      }
+    }
+    String superName = definition.getInherits();
+    while ( null != superName )
+    {
+      final DictionaryDefinition parent = schema.getDictionaryByName( superName );
+      for ( final DictionaryMember member : parent.getMembers() )
+      {
+        for ( final TypedValue memberType : explodeType( member.getType() ) )
+        {
+          generateDictionaryMemberSetterReturningThis( definition, member, memberType, true, type );
+        }
+      }
+      superName = parent.getInherits();
+    }
+
+    container.addType( type.build() );
+  }
+
+  private void generateAbstractDictionary( @Nonnull final DictionaryDefinition definition )
+    throws IOException
+  {
     final TypeSpec.Builder type =
       TypeSpec
         .interfaceBuilder( lookupClassName( definition.getName() ).simpleName() )
@@ -1114,7 +1170,58 @@ final class JsinteropAction
       explodeTypeList( requiredMembers.stream().map( DictionaryMember::getType ).collect( Collectors.toList() ) );
     for ( final List<TypedValue> argTypes : explodedTypeList )
     {
-      generateDictionaryCreateMethod( definition, requiredMembers, argTypes, type );
+      generateDictionaryCreateMethod( definition, requiredMembers, argTypes, true, type );
+    }
+
+    final WebIDLSchema schema = getSchema();
+    for ( final DictionaryMember member : definition.getMembers() )
+    {
+      final Type actualType = schema.resolveType( member.getType() );
+      final TypeName javaType = toTypeName( actualType );
+
+      generateDictionaryMemberGetter( member, actualType, javaType, type );
+      generateDictionaryMemberSetter( member, actualType, javaType, type );
+      for ( final TypedValue typedValue : explodeType( member.getType() ) )
+      {
+        if ( Kind.Any != actualType.getKind() && !javaType.equals( typedValue.getJavaType() ) )
+        {
+          generateDictionaryMemberOverlaySetter( member, typedValue, type );
+        }
+      }
+    }
+    generateConcreteDictionary( definition, type );
+
+    writeTopLevelType( definition.getName(), type );
+  }
+
+  private void generateAllInOneDictionary( @Nonnull final DictionaryDefinition definition )
+    throws IOException
+  {
+    final TypeSpec.Builder type =
+      TypeSpec
+        .interfaceBuilder( lookupClassName( definition.getName() ).simpleName() )
+        .addModifiers( Modifier.PUBLIC );
+    writeGeneratedAnnotation( type );
+    type.addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_TYPE )
+                          .addMember( "isNative", "true" )
+                          .addMember( "namespace", "$T.GLOBAL", JsinteropTypes.JS_PACKAGE )
+                          .addMember( "name", "$S", "Object" )
+                          .build() );
+    maybeAddCustomAnnotations( definition, type );
+    maybeAddJavadoc( definition, type );
+
+    final String inherits = definition.getInherits();
+    if ( null != inherits )
+    {
+      type.addSuperinterface( lookupClassName( inherits ) );
+    }
+
+    final List<DictionaryMember> requiredMembers = getRequiredDictionaryMembers( definition );
+    final List<List<TypedValue>> explodedTypeList =
+      explodeTypeList( requiredMembers.stream().map( DictionaryMember::getType ).collect( Collectors.toList() ) );
+    for ( final List<TypedValue> argTypes : explodedTypeList )
+    {
+      generateDictionaryCreateMethod( definition, requiredMembers, argTypes, false, type );
     }
 
     final WebIDLSchema schema = getSchema();
@@ -1142,7 +1249,7 @@ final class JsinteropAction
       {
         for ( final TypedValue memberType : explodeType( member.getType() ) )
         {
-          generateDictionaryMemberSetterReturningThis( definition, member, memberType, true, type );
+          generateDictionaryMemberSetterReturningThis( definition, member, memberType, false, type );
         }
       }
       superName = parent.getInherits();
@@ -1151,18 +1258,20 @@ final class JsinteropAction
     writeTopLevelType( definition.getName(), type );
   }
 
-  private void generateDictionaryCreateMethod( @Nonnull final DictionaryDefinition definition,
+  private void generateDictionaryCreateMethod( @Nonnull final DictionaryDefinition dictionary,
                                                @Nonnull final List<DictionaryMember> requiredMembers,
                                                @Nonnull final List<TypedValue> types,
+                                               final boolean onBuilder,
                                                @Nonnull final TypeSpec.Builder type )
   {
-    final TypeName self = lookupClassName( definition.getName() );
+    final ClassName self = lookupClassName( dictionary.getName() );
+    final ClassName target = onBuilder ? self.nestedClass( "Builder" ) : self;
     final MethodSpec.Builder method = MethodSpec
       .methodBuilder( "create" )
       .addAnnotation( JsinteropTypes.JS_OVERLAY )
       .addAnnotation( BasicTypes.NONNULL )
       .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
-      .returns( self );
+      .returns( target );
     if ( requiredMembers.isEmpty() )
     {
       method.addStatement( "return $T.uncheckedCast( $T.of() )", JsinteropTypes.JS, JsinteropTypes.JS_PROPERTY_MAP );
@@ -1173,7 +1282,7 @@ final class JsinteropAction
       final StringBuilder sb = new StringBuilder();
       sb.append( "return $T.<$T>uncheckedCast( $T.of() )" );
       params.add( JsinteropTypes.JS );
-      params.add( self );
+      params.add( target );
       params.add( JsinteropTypes.JS_PROPERTY_MAP );
 
       int index = 0;
@@ -1362,21 +1471,20 @@ final class JsinteropAction
   private void generateDictionaryMemberSetterReturningThis( @Nonnull final DictionaryDefinition dictionary,
                                                             @Nonnull final DictionaryMember member,
                                                             @Nonnull final TypedValue typedValue,
-                                                            final boolean addOverride,
+                                                            final boolean onBuilder,
                                                             @Nonnull final TypeSpec.Builder type )
   {
+
+    final ClassName self = lookupClassName( dictionary.getName() );
+    final ClassName target = onBuilder ? self.nestedClass( "Builder" ) : self;
     final MethodSpec.Builder method =
       MethodSpec
         .methodBuilder( javaMethodName( member ) )
         .addModifiers( Modifier.PUBLIC, Modifier.DEFAULT )
         .addAnnotation( JsinteropTypes.JS_OVERLAY )
         .addAnnotation( BasicTypes.NONNULL )
-        .returns( lookupClassName( dictionary.getName() ) );
+        .returns( target );
     maybeAddJavadoc( member, method );
-    if ( addOverride )
-    {
-      method.addAnnotation( Override.class );
-    }
     final TypeName javaType = typedValue.getJavaType();
     final String paramName = javaName( member );
     final ParameterSpec.Builder parameter = ParameterSpec.builder( javaType, paramName, Modifier.FINAL );

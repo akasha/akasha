@@ -43,7 +43,6 @@ public interface OptionalAnyDict extends RequiredAnyDict {
 
   @JsOverlay
   @Nonnull
-  @Override
   default OptionalAnyDict someValue(@DoNotAutobox @Nullable final Object someValue) {
     setSomeValue( someValue );
     return this;

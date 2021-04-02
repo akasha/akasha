@@ -6,6 +6,7 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import jsinterop.base.Any;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
 
@@ -15,7 +16,7 @@ import jsinterop.base.JsPropertyMap;
     namespace = JsPackage.GLOBAL,
     name = "Object"
 )
-public interface EventListenerOptions {
+public interface Base {
   @JsOverlay
   @Nonnull
   static Builder create() {
@@ -23,12 +24,17 @@ public interface EventListenerOptions {
   }
 
   @JsProperty(
-      name = "capture"
+      name = "optionalFeatures"
   )
-  boolean capture();
+  JsArray<Any> optionalFeatures();
 
   @JsProperty
-  void setCapture(boolean capture);
+  void setOptionalFeatures(@Nonnull JsArray<Any> optionalFeatures);
+
+  @JsOverlay
+  default void setOptionalFeatures(@Nonnull final Any... optionalFeatures) {
+    setOptionalFeatures( Js.<JsArray<Any>>uncheckedCast( optionalFeatures ) );
+  }
 
   @Generated("org.realityforge.webtack")
   @JsType(
@@ -36,11 +42,18 @@ public interface EventListenerOptions {
       namespace = JsPackage.GLOBAL,
       name = "Object"
   )
-  interface Builder extends EventListenerOptions {
+  interface Builder extends Base {
     @JsOverlay
     @Nonnull
-    default Builder capture(final boolean capture) {
-      setCapture( capture );
+    default Builder optionalFeatures(@Nonnull final JsArray<Any> optionalFeatures) {
+      setOptionalFeatures( optionalFeatures );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder optionalFeatures(@Nonnull final Any... optionalFeatures) {
+      setOptionalFeatures( optionalFeatures );
       return this;
     }
   }

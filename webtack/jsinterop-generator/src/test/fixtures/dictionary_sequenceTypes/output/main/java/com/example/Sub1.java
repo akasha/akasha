@@ -6,6 +6,7 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import jsinterop.base.Any;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
 
@@ -15,7 +16,7 @@ import jsinterop.base.JsPropertyMap;
     namespace = JsPackage.GLOBAL,
     name = "Object"
 )
-public interface EventInit {
+public interface Sub1 extends Base {
   @JsOverlay
   @Nonnull
   static Builder create() {
@@ -23,28 +24,17 @@ public interface EventInit {
   }
 
   @JsProperty(
-      name = "bubbles"
+      name = "others"
   )
-  boolean bubbles();
+  JsArray<Base> others();
 
   @JsProperty
-  void setBubbles(boolean bubbles);
+  void setOthers(@Nonnull JsArray<Base> others);
 
-  @JsProperty(
-      name = "cancelable"
-  )
-  boolean cancelable();
-
-  @JsProperty
-  void setCancelable(boolean cancelable);
-
-  @JsProperty(
-      name = "composed"
-  )
-  boolean composed();
-
-  @JsProperty
-  void setComposed(boolean composed);
+  @JsOverlay
+  default void setOthers(@Nonnull final Base... others) {
+    setOthers( Js.<JsArray<Base>>uncheckedCast( others ) );
+  }
 
   @Generated("org.realityforge.webtack")
   @JsType(
@@ -52,25 +42,32 @@ public interface EventInit {
       namespace = JsPackage.GLOBAL,
       name = "Object"
   )
-  interface Builder extends EventInit {
+  interface Builder extends Sub1 {
     @JsOverlay
     @Nonnull
-    default Builder bubbles(final boolean bubbles) {
-      setBubbles( bubbles );
+    default Builder others(@Nonnull final JsArray<Base> others) {
+      setOthers( others );
       return this;
     }
 
     @JsOverlay
     @Nonnull
-    default Builder cancelable(final boolean cancelable) {
-      setCancelable( cancelable );
+    default Builder others(@Nonnull final Base... others) {
+      setOthers( others );
       return this;
     }
 
     @JsOverlay
     @Nonnull
-    default Builder composed(final boolean composed) {
-      setComposed( composed );
+    default Builder optionalFeatures(@Nonnull final JsArray<Any> optionalFeatures) {
+      setOptionalFeatures( optionalFeatures );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder optionalFeatures(@Nonnull final Any... optionalFeatures) {
+      setOptionalFeatures( optionalFeatures );
       return this;
     }
   }
