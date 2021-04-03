@@ -10,6 +10,7 @@
 * Remove the `clear()` operation from `Document` as it does nothing and only exists for backward compatibility.
 * Remove the `applets` collection attribute from the `Document` type as it is always empty and only exists for backwards compatibility.
 * Remove the `external` attribute from the `Window` type and the associated type of the of attribute as the field only exists for backwards compatibility and the operations on the associated type do nothing.
+* Change the implementation of `JsUtil` so that it uses `Js.uncheckedCast(...)` to lie to the type system. The previous implementation used JSNI which was difficult to make compatible with J2CL without introducing an incompatibility with GWT.
 
 ### [v0.05](https://github.com/akasha/akasha/tree/v0.05) (2021-03-30) · [Full Changelog](https://github.com/akasha/akasha/compare/v0.04...v0.05) · [API Differences](https://akasha.github.io/akasha-java/api-diff/?key=akasha-java&old=0.04&new=0.05) · [Source Diff](https://github.com/akasha/akasha-java/compare/v0.04...v0.05)
 
