@@ -167,7 +167,7 @@ define 'akasha' do
     project.no_iml
   end
 
-  desc "Akasha Java Browser API"
+  desc 'Akasha Java Browser API for GWT'
   define 'java', :base_dir => "#{WORKSPACE_DIR}/akasha/java" do
     src_dir = file("#{project._(:target, :generated)}/webtack/main/java" => ["data:run_complete_pipeline"])
     compile.sources << src_dir
