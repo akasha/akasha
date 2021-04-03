@@ -215,6 +215,38 @@
       }
     },
     {
+      "name": "RemoveElement",
+      "description": "Remove the type that only contains methods that must do nothing according to the spec",
+      "sourceSelector": "name=whatwg_html",
+      "config": {
+        "expectedRemoveCount": 1,
+        "namePattern": "^External$",
+        "type": ["interface_type"]
+      }
+    },
+    {
+      "name": "RemoveMember",
+      "description": "the spec defines as do nothing elements that exist for backwards compatibility",
+      "sourceSelector": "name=whatwg_html",
+      "config": {
+        "expectedRemoveCount": 3,
+        "elementNamePattern": "^Window$",
+        "memberNamePattern": "^(external|captureEvents|releaseEvents)$",
+        "types": ["interface_type"]
+      }
+    },
+    {
+      "name": "RemoveMember",
+      "description": "the spec defines these as must do nothing elements that exist for backwards compatibility",
+      "sourceSelector": "name=whatwg_html",
+      "config": {
+        "expectedRemoveCount": 4,
+        "elementNamePattern": "^Document$",
+        "memberNamePattern": "^(clear|captureEvents|releaseEvents|applets)$",
+        "types": ["interface_type"]
+      }
+    },
+    {
       "name": "AddExtendedAttribute",
       "description": "Package up the elements defined by ECMA into a separate package to model behaviour of elemental2-core",
       "sourceSelector": "name=atomics name=errors name=symbol name=json name=math name=typedarray name=basic_types",

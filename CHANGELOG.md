@@ -6,6 +6,10 @@
 * Change the way dictionaries with subtypes are represented so that any dictionary that has subtypes moves the chainable builder methods to a separate subtype nested within the dictionary type. This avoids the scenario where a `@JsOverlay` annotated method in the subtype would override a `@JsOverlay` annotated method in the super type. This was incorrect behaviour and J2CL does not allow the construct.
 * Remove the `MimeType` and `Plugin` interface types from the whatwg_html spec as the attributes have been updated to return undefined, the methods are noops and two of the major browsers have removed the underlying types. Removal was required for J2CL compatibility as they produced unsupported structures.
 * Prefix the java method name of property accessors with an `_` if they start with the `is` string to avoid a bug in the J2CL validation of `@JsProperty` which expects a boolean if the accessor starts with the string `is`.
+* Remove the `captureEvents()` and `releaseEvents()` methods from `Document` and `Window` types as they do nothing and only exist for backward compatibility.
+* Remove the `clear()` operation from `Document` as it does nothing and only exists for backward compatibility.
+* Remove the `applets` collection attribute from the `Document` type as it is always empty and only exists for backwards compatibility.
+* Remove the `external` attribute from the `Window` type and the associated type of the of attribute as the field only exists for backwards compatibility and the operations on the associated type do nothing.
 
 ### [v0.05](https://github.com/akasha/akasha/tree/v0.05) (2021-03-30) · [Full Changelog](https://github.com/akasha/akasha/compare/v0.04...v0.05) · [API Differences](https://akasha.github.io/akasha-java/api-diff/?key=akasha-java&old=0.04&new=0.05) · [Source Diff](https://github.com/akasha/akasha-java/compare/v0.04...v0.05)
 
