@@ -56,8 +56,6 @@ define 'akasha' do
       compile.from antlr_generated_dir
 
       package(:jar)
-      package(:sources)
-      package(:javadoc)
 
       test.using :testng
 
@@ -78,8 +76,6 @@ define 'akasha' do
       test.compile.with :gir
 
       package(:jar)
-      package(:sources)
-      package(:javadoc)
     end
 
     define 'jsinterop-generator' do
@@ -106,8 +102,6 @@ define 'akasha' do
           jar.merge(d)
         end
       end
-      package(:sources)
-      package(:javadoc)
     end
 
     define 'react4j-generator' do
@@ -134,8 +128,6 @@ define 'akasha' do
           jar.merge(d)
         end
       end
-      package(:sources)
-      package(:javadoc)
     end
 
     define 'cli' do
@@ -159,8 +151,6 @@ define 'akasha' do
         jar.merge(project('webidl-parser').package(:jar))
         jar.merge(project('webidl-model').package(:jar))
       end
-      package(:sources)
-      package(:javadoc)
 
       test.using :testng
     end
