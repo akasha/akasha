@@ -249,7 +249,7 @@ public final class Main
     if ( !environment.hasRepositoryConfigFile() )
     {
       final Path configFile =
-        environment.currentDirectory().resolve( RepositoryConfig.FILENAME ).toAbsolutePath().normalize();
+        environment.webidlDirectory().resolve( RepositoryConfig.FILENAME ).toAbsolutePath().normalize();
       if ( environment.getCommand().requireConfigFile() && !configFile.toFile().exists() )
       {
         logger.log( Level.SEVERE,

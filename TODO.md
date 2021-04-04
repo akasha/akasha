@@ -8,8 +8,6 @@ complete as there is too much un-said.
 
 * Add missing methods to typed array types
 
-* Move `sources.json` into idl directory.
-
 * Emit closure externs for WebIDL types.
 
 # Docs Integration
