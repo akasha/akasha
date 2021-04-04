@@ -57,12 +57,12 @@ public final class JsinteropActionFactory
         final Path catalog = Paths.get( typeCatalog );
         if ( !Files.exists( catalog ) )
         {
-          throw new IllegalArgumentException( "React4j action configuration specified a file that does not exist " +
+          throw new IllegalArgumentException( "Jsinterop action configuration specified a file that does not exist " +
                                               "in the predefinedTypeMapping parameter: " + catalog );
         }
         else if ( !Files.isRegularFile( catalog ) )
         {
-          throw new IllegalArgumentException( "React4j action configuration specified a file that is not a regular " +
+          throw new IllegalArgumentException( "Jsinterop action configuration specified a file that is not a regular " +
                                               "file in the predefinedTypeMapping parameter: " + catalog );
         }
         predefinedTypeMappingPaths.add( catalog );
@@ -77,12 +77,12 @@ public final class JsinteropActionFactory
         final Path catalog = Paths.get( typeCatalog );
         if ( !Files.exists( catalog ) )
         {
-          throw new IllegalArgumentException( "React4j action configuration specified a file that does not exist " +
+          throw new IllegalArgumentException( "Jsinterop action configuration specified a file that does not exist " +
                                               "in the externalTypeMapping parameter: " + catalog );
         }
         else if ( !Files.isRegularFile( catalog ) )
         {
-          throw new IllegalArgumentException( "React4j action configuration specified a file that is not a regular " +
+          throw new IllegalArgumentException( "Jsinterop action configuration specified a file that is not a regular " +
                                               "file in the externalTypeMapping parameter: " + catalog );
         }
         externalTypeMappingPaths.add( catalog );
