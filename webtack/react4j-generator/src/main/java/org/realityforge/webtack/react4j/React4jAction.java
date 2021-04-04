@@ -15,7 +15,6 @@ import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
-import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
 import javax.annotation.Nonnull;
@@ -95,13 +94,6 @@ final class React4jAction
       "core" :
       NamingUtil.uppercaseFirstCharacter( packageName.replaceAll( ".*\\.([^.]+)$", "$1" ) );
     writeResourceFile( getMainJavaDirectory(), name + ".gwt.xml", gwtModuleContent.getBytes( StandardCharsets.UTF_8 ) );
-  }
-
-  @Nonnull
-  @Override
-  protected Map<String, Path> getGeneratedFiles()
-  {
-    return super.getGeneratedFiles();
   }
 
   @Nonnull

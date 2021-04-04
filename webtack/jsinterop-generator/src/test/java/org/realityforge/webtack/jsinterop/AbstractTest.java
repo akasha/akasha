@@ -16,7 +16,6 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
-import java.util.Map;
 import java.util.stream.Collectors;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -171,10 +170,8 @@ public abstract class AbstractTest
     final List<Path> javaFiles = collectFilesWithExtension( ".java", mainJavaDirectory );
     final List<Path> classpathEntries = collectLibs();
 
-    final Map<String, Path> generatedSourceFiles = action.getGeneratedFiles();
-    for ( final Map.Entry<String, Path> e : generatedSourceFiles.entrySet() )
+    for ( final Path file : action.getGeneratedFiles() )
     {
-      final Path file = e.getValue();
       // If it is not in the input path then it must be in output path
       final Path javaPath =
         outputDirectory.resolve( "main" ).resolve( "java" ).relativize( file );

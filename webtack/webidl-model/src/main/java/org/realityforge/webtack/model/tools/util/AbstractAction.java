@@ -1,7 +1,12 @@
 package org.realityforge.webtack.model.tools.util;
 
+import java.io.IOException;
+import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.StandardOpenOption;
+import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import org.realityforge.webtack.model.DocumentationElement;
@@ -23,6 +28,8 @@ public abstract class AbstractAction
    */
   @Nullable
   private WebIDLSchema _schema;
+  @Nonnull
+  private final Set<Path> _generatedFiles = new HashSet<>();
 
   protected AbstractAction( @Nonnull final PipelineContext context, @Nonnull final Path outputDirectory )
   {
@@ -43,8 +50,21 @@ public abstract class AbstractAction
     return _schema;
   }
 
+  @Nonnull
+  public Set<Path> getGeneratedFiles()
+  {
+    return _generatedFiles;
+  }
+
+  protected final void recordGeneratedFile( @Nonnull final Path file )
+  {
+    assert !_generatedFiles.contains( file );
+    _generatedFiles.add( file );
+  }
+
   protected void processInit( @Nonnull final WebIDLSchema schema )
   {
+    _generatedFiles.clear();
     _schema = Objects.requireNonNull( schema );
     schema.link();
   }
@@ -61,5 +81,13 @@ public abstract class AbstractAction
   {
     final DocEntry docEntry = context().docRepository().findDocEntry( type, member );
     return null != docEntry ? DocEntryUtil.createDocumentationElement( docEntry ) : null;
+  }
+
+  protected final void writeFile( @Nonnull final Path path, @Nonnull final byte[] content )
+    throws IOException
+  {
+    recordGeneratedFile( path );
+    Files.createDirectories( path.getParent() );
+    Files.write( path, content, StandardOpenOption.CREATE_NEW );
   }
 }

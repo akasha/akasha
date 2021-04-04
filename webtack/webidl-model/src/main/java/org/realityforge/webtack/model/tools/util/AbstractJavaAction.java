@@ -13,11 +13,8 @@ import com.squareup.javapoet.TypeSpec;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
-import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.StandardOpenOption;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -59,9 +56,6 @@ public abstract class AbstractJavaAction
   // Maps idlName -> Qualified Java Name that specified explicitly but types are still generate by action
   @Nonnull
   private final Map<String, String> _externalIdlToJavaTypeMapping = new HashMap<>();
-  // Maps Classname -> Path of source file
-  @Nonnull
-  private final Map<String, Path> _generatedFiles = new HashMap<>();
   // Maps idlName -> Qualified Java Name of output
   @Nonnull
   private final Map<String, String> _idlToJavaTypeMapping = new HashMap<>();
@@ -167,7 +161,6 @@ public abstract class AbstractJavaAction
   {
     _idlToJavaTypeMapping.clear();
     _idlToClassNameMapping.clear();
-    _generatedFiles.clear();
     _unions.clear();
     _idlToJavaTypeMapping.putAll( _predefinedIdlToJavaTypeMapping );
     _idlToJavaTypeMapping.putAll( _externalIdlToJavaTypeMapping );
@@ -287,13 +280,7 @@ public abstract class AbstractJavaAction
                                     @Nonnull final byte[] content )
     throws IOException
   {
-    final Path path = getPackageDirectory( baseDirectory, _packageName ).resolve( name );
-    final String qualifiedName = _packageName + "." + name;
-    assert !_generatedFiles.containsKey( qualifiedName );
-    _generatedFiles.put( qualifiedName, path );
-
-    Files.createDirectories( path.getParent() );
-    Files.write( path, content, StandardOpenOption.CREATE_NEW );
+    writeFile( getPackageDirectory( baseDirectory, _packageName ).resolve( name ), content );
   }
 
   @Nonnull
@@ -324,9 +311,7 @@ public abstract class AbstractJavaAction
       // Lookup java type so that it will be part of cache AND it will be emitted in mapping file
       lookupClassName( idlName );
     }
-    assert !_generatedFiles.containsKey( qualifiedName );
-    _generatedFiles.put( qualifiedName,
-                         outputDirectory.resolve( qualifiedName.replaceAll( "\\.", File.separator ) + ".java" ) );
+    recordGeneratedFile( outputDirectory.resolve( qualifiedName.replaceAll( "\\.", File.separator ) + ".java" ) );
     JavaFile
       .builder( ClassName.bestGuess( qualifiedName ).packageName(), typeSpec )
       .skipJavaLangImports( true )
@@ -358,11 +343,6 @@ public abstract class AbstractJavaAction
     return _packageName;
   }
 
-  @Nonnull
-  protected Map<String, Path> getGeneratedFiles()
-  {
-    return Collections.unmodifiableMap( _generatedFiles );
-  }
 
   @Nonnull
   protected ClassName lookupClassName( @Nonnull final String idlName )

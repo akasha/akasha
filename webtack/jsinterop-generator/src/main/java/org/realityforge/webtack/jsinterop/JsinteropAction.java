@@ -3325,13 +3325,6 @@ final class JsinteropAction
       .anyMatch( a -> a.getName().equals( "Exposed" ) );
   }
 
-  @Nonnull
-  @Override
-  protected Map<String, Path> getGeneratedFiles()
-  {
-    return super.getGeneratedFiles();
-  }
-
   private void registerIdlTypeToJavaTypeMapping()
   {
     final WebIDLSchema schema = getSchema();
