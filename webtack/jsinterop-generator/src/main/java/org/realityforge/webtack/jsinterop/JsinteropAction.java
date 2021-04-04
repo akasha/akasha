@@ -244,7 +244,7 @@ final class JsinteropAction
     final WebIDLSchema schema = getSchema();
 
     final ConstEnumerationValue firstValue = definition.getValues().get( 0 );
-    final ConstMember constant = getConstant( firstValue );
+    final ConstMember constant = getSchema().getConstant( firstValue );
     final boolean isInteger = schema.resolveType( constant.getType() ).getKind().isInteger();
 
     final AnnotationSpec.Builder annotation = AnnotationSpec.builder( BasicTypes.MAGIC_CONSTANT );
@@ -342,8 +342,8 @@ final class JsinteropAction
                            @Nonnull final ConstEnumerationValue o1,
                            @Nonnull final ConstEnumerationValue o2 )
   {
-    final ConstMember c1 = getConstant( o1 );
-    final ConstMember c2 = getConstant( o2 );
+    final ConstMember c1 = getSchema().getConstant( o1 );
+    final ConstMember c2 = getSchema().getConstant( o2 );
     final String v1 = c1.getValue().getValue();
     final String v2 = c2.getValue().getValue();
     assert null != v1;
@@ -361,12 +361,6 @@ final class JsinteropAction
   {
     final boolean isHex = value.startsWith( "0x" );
     return Integer.parseInt( isHex ? value.substring( 2 ) : value, isHex ? 16 : 10 );
-  }
-
-  @Nonnull
-  private ConstMember getConstant( @Nonnull final ConstEnumerationValue value )
-  {
-    return getSchema().getInterfaceByName( value.getInterfaceName() ).getConstantByName( value.getConstName() );
   }
 
   private void writeTypeCatalog()

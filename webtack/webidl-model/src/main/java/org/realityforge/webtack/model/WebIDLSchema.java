@@ -237,6 +237,12 @@ public final class WebIDLSchema
   }
 
   @Nonnull
+  public ConstMember getConstant( @Nonnull final ConstEnumerationValue value )
+  {
+    return getInterfaceByName( value.getInterfaceName() ).getConstantByName( value.getConstName() );
+  }
+
+  @Nonnull
   public Collection<IncludesStatement> getIncludes()
   {
     return _includes;
