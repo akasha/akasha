@@ -97,10 +97,7 @@ define 'akasha' do
         Buildr::GWT.dependencies('2.9.0').collect { |a| artifact(a).invoke }
       end
 
-      package(:jar, :classifier => 'all').tap do |jar|
-        [:javapoet].collect { |dep| Buildr.artifact(dep) }.each do |d|
-          jar.merge(d)
-        end
+      package(:jar)
       end
     end
 
@@ -123,11 +120,7 @@ define 'akasha' do
         Buildr::GWT.dependencies('2.9.0').collect { |a| artifact(a).invoke }
       end
 
-      package(:jar, :classifier => 'all').tap do |jar|
-        [:javapoet].collect { |dep| Buildr.artifact(dep) }.each do |d|
-          jar.merge(d)
-        end
-      end
+      package(:jar)
     end
 
     define 'cli' do
