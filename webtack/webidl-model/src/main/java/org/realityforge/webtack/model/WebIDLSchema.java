@@ -10,7 +10,6 @@ import java.util.Set;
 import java.util.stream.Collectors;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
-import org.realityforge.webtack.model.tools.util.ExtendedAttributes;
 
 public final class WebIDLSchema
   extends Node
