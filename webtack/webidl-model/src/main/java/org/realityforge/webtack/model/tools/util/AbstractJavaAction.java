@@ -70,10 +70,6 @@ public abstract class AbstractJavaAction
   private final Map<String, ClassName> _idlToClassNameMapping = new HashMap<>();
   @Nonnull
   private final Map<String, UnionType> _unions = new HashMap<>();
-  /**
-   * Value cached during processing
-   */
-  private WebIDLSchema _schema;
 
   protected AbstractJavaAction( @Nonnull final PipelineContext context,
                                 @Nonnull final Path outputDirectory,
@@ -175,8 +171,7 @@ public abstract class AbstractJavaAction
     _unions.clear();
     _idlToJavaTypeMapping.putAll( _predefinedIdlToJavaTypeMapping );
     _idlToJavaTypeMapping.putAll( _externalIdlToJavaTypeMapping );
-    _schema = Objects.requireNonNull( schema );
-    schema.link();
+    super.processInit( schema );
   }
 
   @Nonnull
@@ -471,31 +466,32 @@ public abstract class AbstractJavaAction
     {
       final TypeReference typeReference = (TypeReference) type;
       final String name = typeReference.getName();
-      if ( null != _schema.findInterfaceByName( name ) ||
-           null != _schema.findDictionaryByName( name ) ||
-           null != _schema.findCallbackInterfaceByName( name ) ||
-           null != _schema.findCallbackByName( name ) )
+      final WebIDLSchema schema = getSchema();
+      if ( null != schema.findInterfaceByName( name ) ||
+           null != schema.findDictionaryByName( name ) ||
+           null != schema.findCallbackInterfaceByName( name ) ||
+           null != schema.findCallbackByName( name ) )
       {
         return lookupClassName( name );
       }
-      else if ( null != _schema.findEnumerationByName( name ) )
+      else if ( null != schema.findEnumerationByName( name ) )
       {
         return BasicTypes.STRING;
       }
       else
       {
-        final ConstEnumerationDefinition definition = _schema.findConstEnumerationByName( name );
+        final ConstEnumerationDefinition definition = schema.findConstEnumerationByName( name );
         if ( null != definition )
         {
           final ConstEnumerationValue value = definition.getValues().get( 0 );
-          return toTypeName( _schema
+          return toTypeName( schema
                                .getInterfaceByName( value.getInterfaceName() )
                                .getConstantByName( value.getConstName() )
                                .getType() );
         }
         else
         {
-          final TypedefDefinition typedef = _schema.getTypedefByName( name );
+          final TypedefDefinition typedef = schema.getTypedefByName( name );
           if ( Kind.Union == typedef.getType().getKind() )
           {
             // TODO: There is a single named union in the HTML API which is MediaProvider. We
@@ -598,7 +594,7 @@ public abstract class AbstractJavaAction
   @Nonnull
   protected final TypeName getUnexpandedType( @Nonnull final Type type )
   {
-    return toTypeName( toJsinteropCompatibleType( _schema.resolveType( type ) ) ).box();
+    return toTypeName( toJsinteropCompatibleType( getSchema().resolveType( type ) ) ).box();
   }
 
   @Nonnull
@@ -638,14 +634,15 @@ public abstract class AbstractJavaAction
   {
     if ( _enableMagicConstants && Kind.TypeReference == type.getKind() )
     {
+      final WebIDLSchema schema = getSchema();
       final EnumerationDefinition enumeration =
-        _schema.findEnumerationByName( ( (TypeReference) type ).getName() );
+        schema.findEnumerationByName( ( (TypeReference) type ).getName() );
       if ( null != enumeration )
       {
         parameter.addAnnotation( emitMagicConstantAnnotation( enumeration ) );
       }
       final ConstEnumerationDefinition constEnumeration =
-        _schema.findConstEnumerationByName( ( (TypeReference) type ).getName() );
+        schema.findConstEnumerationByName( ( (TypeReference) type ).getName() );
       if ( null != constEnumeration )
       {
         parameter.addAnnotation( emitMagicConstantAnnotation( constEnumeration ) );
@@ -658,14 +655,15 @@ public abstract class AbstractJavaAction
   {
     if ( _enableMagicConstants && Kind.TypeReference == type.getKind() )
     {
+      final WebIDLSchema schema = getSchema();
       final EnumerationDefinition enumeration =
-        _schema.findEnumerationByName( ( (TypeReference) type ).getName() );
+        schema.findEnumerationByName( ( (TypeReference) type ).getName() );
       if ( null != enumeration )
       {
         method.addAnnotation( emitMagicConstantAnnotation( enumeration ) );
       }
       final ConstEnumerationDefinition constEnumeration =
-        _schema.findConstEnumerationByName( ( (TypeReference) type ).getName() );
+        schema.findConstEnumerationByName( ( (TypeReference) type ).getName() );
       if ( null != constEnumeration )
       {
         method.addAnnotation( emitMagicConstantAnnotation( constEnumeration ) );
@@ -678,14 +676,15 @@ public abstract class AbstractJavaAction
   {
     if ( _enableMagicConstants && Kind.TypeReference == type.getKind() )
     {
+      final WebIDLSchema schema = getSchema();
       final EnumerationDefinition enumeration =
-        _schema.findEnumerationByName( ( (TypeReference) type ).getName() );
+        schema.findEnumerationByName( ( (TypeReference) type ).getName() );
       if ( null != enumeration )
       {
         field.addAnnotation( emitMagicConstantAnnotation( enumeration ) );
       }
       final ConstEnumerationDefinition constEnumeration =
-        _schema.findConstEnumerationByName( ( (TypeReference) type ).getName() );
+        schema.findConstEnumerationByName( ( (TypeReference) type ).getName() );
       if ( null != constEnumeration )
       {
         field.addAnnotation( emitMagicConstantAnnotation( constEnumeration ) );
