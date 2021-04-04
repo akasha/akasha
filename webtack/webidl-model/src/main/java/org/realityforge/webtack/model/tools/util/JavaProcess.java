@@ -34,14 +34,22 @@ public final class JavaProcess
                           @Nonnull final List<String> classpath )
     throws IOException, InterruptedException
   {
+    final List<String> command = new ArrayList<>( jvmArgs );
+    command.add( "-cp" );
+    command.add( String.join( File.pathSeparator, classpath ) );
+    command.add( className );
+    command.addAll( args );
+    return java( command );
+  }
+
+  @SuppressWarnings( "SameParameterValue" )
+  public static int java( @Nonnull final List<String> args )
+    throws IOException, InterruptedException
+  {
     final String javaHome = System.getProperty( "java.home" );
     final String javaBin = javaHome + File.separator + "bin" + File.separator + "java";
     final List<String> command = new ArrayList<>();
     command.add( javaBin );
-    command.addAll( jvmArgs );
-    command.add( "-cp" );
-    command.add( String.join( File.pathSeparator, classpath ) );
-    command.add( className );
     command.addAll( args );
     final ProcessBuilder builder = new ProcessBuilder( command );
     final Process process = builder.inheritIO().start();
