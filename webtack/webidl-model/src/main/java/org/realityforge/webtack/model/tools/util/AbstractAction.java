@@ -1,5 +1,7 @@
 package org.realityforge.webtack.model.tools.util;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -81,6 +83,15 @@ public abstract class AbstractAction
   {
     final DocEntry docEntry = context().docRepository().findDocEntry( type, member );
     return null != docEntry ? DocEntryUtil.createDocumentationElement( docEntry ) : null;
+  }
+
+  @Nonnull
+  protected final BufferedWriter openWriter( @Nonnull final Path path )
+    throws IOException
+  {
+    recordGeneratedFile( path );
+    Files.createDirectories( path.getParent() );
+    return new BufferedWriter( new FileWriter( path.toFile() ) );
   }
 
   protected final void writeFile( @Nonnull final Path path, @Nonnull final byte[] content )
