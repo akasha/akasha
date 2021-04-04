@@ -174,8 +174,7 @@ public abstract class AbstractTest
     for ( final Path file : action.getGeneratedFiles() )
     {
       // If it is not in the input path then it must be in output path
-      final Path javaPath =
-        outputDirectory.resolve( "main" ).resolve( "java" ).relativize( file );
+      final Path javaPath = outputDirectory.resolve( "main" ).resolve( "java" ).relativize( file );
       if ( !Files.exists( inputJavaDirectory.resolve( javaPath ) ) )
       {
         final Path relativePath = workingDirectory.relativize( file );
