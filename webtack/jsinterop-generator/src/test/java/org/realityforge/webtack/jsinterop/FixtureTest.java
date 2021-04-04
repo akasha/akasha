@@ -49,9 +49,11 @@ public final class FixtureTest
     {
       gwtInherits.add( "com.other.Other" );
     }
+    final String packageName = "com.example";
     generateCode( directory,
                   directory.getParent().resolve( commonDir ),
                   loadWebIDLSchema( directory.resolve( "schema.webidl" ) ),
+                  packageName,
                   globalInterface,
                   validatorRuleConfig,
                   gwtInherits );

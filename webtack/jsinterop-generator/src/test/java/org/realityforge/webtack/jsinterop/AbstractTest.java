@@ -16,9 +16,11 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import org.realityforge.webtack.closure.ClosureActionFactory;
 import org.realityforge.webtack.model.WebIDLModelParser;
 import org.realityforge.webtack.model.WebIDLSchema;
 import org.realityforge.webtack.model.WebIDLWriter;
@@ -28,7 +30,9 @@ import org.realityforge.webtack.model.tools.pipeline.config.PipelineConfig;
 import org.realityforge.webtack.model.tools.pipeline.config.StageConfig;
 import org.realityforge.webtack.model.tools.qa.BailErrorListener;
 import org.realityforge.webtack.model.tools.qa.TestProgressListener;
+import org.realityforge.webtack.model.tools.spi.Action;
 import org.realityforge.webtack.model.tools.spi.PipelineContext;
+import org.realityforge.webtack.model.tools.util.AbstractAction;
 import org.realityforge.webtack.model.tools.util.JavaProcess;
 import org.realityforge.webtack.model.tools.validator.ValidationError;
 import org.realityforge.webtack.model.tools.validator.ValidatorRuleConfig;
@@ -120,6 +124,7 @@ public abstract class AbstractTest
   protected final void generateCode( @Nonnull final Path directory,
                                      @Nonnull final Path commonDirectory,
                                      @Nonnull final WebIDLSchema schema,
+                                     @Nonnull final String packageName,
                                      @Nullable final String globalInterface,
                                      @Nonnull final ValidatorRuleConfig validator,
                                      @Nonnull final List<String> gwtInherits )
@@ -147,17 +152,93 @@ public abstract class AbstractTest
     final Path workingDirectory = getWorkingDir();
     final Path inputDirectory = directory.resolve( "input" );
     final Path inputJavaDirectory = inputDirectory.resolve( "main" ).resolve( "java" );
+    final Path inputJsDirectory = inputDirectory.resolve( "main" ).resolve( "js" );
     final Path commonInput = commonDirectory.resolve( "input" );
     final Path commonInputJavaDirectory = commonInput.resolve( "main" ).resolve( "java" );
+    final Path commonInputJsDirectory = commonInput.resolve( "main" ).resolve( "js" );
     final Path outputDirectory = workingDirectory.resolve( "output" );
     final List<Path> inputTypeCatalogs =
       collectFilesWithExtension( ".mapping", inputDirectory.resolve( "main" ).resolve( "resources" ) );
     final List<Path> externalTypeMappingPaths =
       collectFilesWithExtension( ".mapping", commonInput.resolve( "main" ).resolve( "resources" ) );
+    final Set<Path> generatedJsinteropFiles =
+      performJsinteropAction( directory,
+                              schema,
+                              packageName,
+                              globalInterface,
+                              gwtInherits,
+                              outputDirectory,
+                              inputTypeCatalogs,
+                              externalTypeMappingPaths );
+
+    for ( final Path file : generatedJsinteropFiles )
+    {
+      // If it is not in the input path then it must be in output path
+      final Path javaPath = outputDirectory.resolve( "main" ).resolve( "java" ).relativize( file );
+      if ( !Files.exists( inputJavaDirectory.resolve( javaPath ) ) )
+      {
+        final Path relativePath = workingDirectory.relativize( file );
+        assertFileMatchesFixture( file, directory.resolve( relativePath ) );
+      }
+    }
+
+    final Set<Path> generatedClosureFiles =
+      performClosureAction( directory, schema, packageName, globalInterface, outputDirectory );
+    for ( final Path file : generatedClosureFiles )
+    {
+      // If it is not in the input path then it must be in output path
+      final Path javaPath = outputDirectory.resolve( "main" ).resolve( "js" ).relativize( file );
+      if ( !Files.exists( inputJsDirectory.resolve( javaPath ) ) )
+      {
+        final Path relativePath = workingDirectory.relativize( file );
+        assertFileMatchesFixture( file, directory.resolve( relativePath ) );
+      }
+    }
+
+    final List<Path> javaSourceDirectories = new ArrayList<>();
+    final Path mainJavaDirectory = outputDirectory.resolve( "main" ).resolve( "java" );
+    javaSourceDirectories.add( mainJavaDirectory );
+    final List<Path> javaFiles = new ArrayList<>( collectFilesWithExtension( ".java", mainJavaDirectory ) );
+    if ( Files.exists( inputJavaDirectory ) )
+    {
+      javaFiles.addAll( collectFilesWithExtension( ".java", inputJavaDirectory ) );
+      javaSourceDirectories.add( inputJavaDirectory );
+    }
+    if ( Files.exists( commonInputJavaDirectory ) )
+    {
+      javaFiles.addAll( collectFilesWithExtension( ".java", commonInputJavaDirectory ) );
+      javaSourceDirectories.add( commonInputJavaDirectory );
+    }
+
+    final Path mainJsDirectory = outputDirectory.resolve( "main" ).resolve( "js" );
+    final List<Path> jsFiles = new ArrayList<>( collectFilesWithExtension( ".js", mainJsDirectory ) );
+    if ( Files.exists( inputJsDirectory ) )
+    {
+      jsFiles.addAll( collectFilesWithExtension( ".js", inputJsDirectory ) );
+    }
+    if ( Files.exists( commonInputJsDirectory ) )
+    {
+      jsFiles.addAll( collectFilesWithExtension( ".js", commonInputJsDirectory ) );
+    }
+
+    ensureGeneratedCodeCompiles( javaSourceDirectories, javaFiles, jsFiles );
+  }
+
+  @Nonnull
+  private Set<Path> performJsinteropAction( @Nonnull final Path directory,
+                                            @Nonnull final WebIDLSchema schema,
+                                            @Nonnull final String packageName,
+                                            @Nullable final String globalInterface,
+                                            @Nonnull final List<String> gwtInherits,
+                                            @Nonnull final Path outputDirectory,
+                                            @Nonnull final List<Path> inputTypeCatalogs,
+                                            @Nonnull final List<Path> externalTypeMappingPaths )
+    throws Exception
+  {
     final JsinteropAction action =
       new JsinteropAction( newPipelineContext( directory ),
                            outputDirectory,
-                           "com.example",
+                           packageName,
                            globalInterface,
                            inputTypeCatalogs,
                            externalTypeMappingPaths,
@@ -166,64 +247,86 @@ public abstract class AbstractTest
                            true,
                            true );
     action.process( schema );
-    final Path mainJavaDirectory = outputDirectory.resolve( "main" ).resolve( "java" );
-    final List<Path> javaFiles = collectFilesWithExtension( ".java", mainJavaDirectory );
-    final List<Path> classpathEntries = collectLibs();
+    return action.getGeneratedFiles();
+  }
 
-    for ( final Path file : action.getGeneratedFiles() )
-    {
-      // If it is not in the input path then it must be in output path
-      final Path javaPath =
-        outputDirectory.resolve( "main" ).resolve( "java" ).relativize( file );
-      if ( !Files.exists( inputJavaDirectory.resolve( javaPath ) ) )
-      {
-        final Path relativePath = workingDirectory.relativize( file );
-        assertFileMatchesFixture( file, directory.resolve( relativePath ) );
-      }
-    }
-    final List<Path> sourceDirectories = new ArrayList<>();
-    sourceDirectories.add( mainJavaDirectory );
-    final List<Path> sourceFiles = new ArrayList<>( javaFiles );
-    if ( Files.exists( inputJavaDirectory ) )
-    {
-      sourceFiles.addAll( collectFilesWithExtension( ".java", inputJavaDirectory ) );
-      sourceDirectories.add( inputJavaDirectory );
-    }
-    if ( Files.exists( commonInputJavaDirectory ) )
-    {
-      sourceFiles.addAll( collectFilesWithExtension( ".java", commonInputJavaDirectory ) );
-      sourceDirectories.add( commonInputJavaDirectory );
-    }
-
-    ensureGeneratedCodeCompiles( sourceDirectories, sourceFiles, classpathEntries );
+  @Nonnull
+  private Set<Path> performClosureAction( @Nonnull final Path directory,
+                                          @Nonnull final WebIDLSchema schema,
+                                          @Nonnull final String packageName,
+                                          @Nullable final String globalInterface,
+                                          @Nonnull final Path outputDirectory )
+    throws Exception
+  {
+    final ClosureActionFactory actionFactory = new ClosureActionFactory();
+    actionFactory.outputDirectory = outputDirectory.toString();
+    actionFactory.key = packageName.replace( ".", "/" ) + "/externs.js";
+    actionFactory.globalInterface = globalInterface;
+    final Action action = actionFactory.create( newPipelineContext( directory ) );
+    action.process( schema );
+    return ( (AbstractAction) action ).getGeneratedFiles();
   }
 
   /**
    * Compile the supplied java files and make sure that they compile together.
    *
-   * @param sourceDirectories the directories from which the java files are compiled.
-   * @param javaFiles         the java files.
+   * @param javaSourceDirectories the directories from which the java files are compiled.
+   * @param javaFiles             the java files.
+   * @param jsFiles               the javascript files.
    * @throws Exception if there is an error
    */
-  private void ensureGeneratedCodeCompiles( @Nonnull final List<Path> sourceDirectories,
+  private void ensureGeneratedCodeCompiles( @Nonnull final List<Path> javaSourceDirectories,
                                             @Nonnull final List<Path> javaFiles,
-                                            @Nonnull final List<Path> classpathEntries )
+                                            @Nonnull final List<Path> jsFiles )
     throws Exception
   {
     if ( !javaFiles.isEmpty() )
     {
+      final List<Path> classpathEntries = collectLibs();
       final Path output =
         JavaProcess.javac( javaFiles, classpathEntries, getWorkingDir().resolve( "target" ).resolve( "classes" ) );
       final List<Path> classpathElements = new ArrayList<>( classpathEntries );
       classpathElements.addAll( gwtDevLibs() );
 
-      JavaProcess.javadoc( sourceDirectories,
+      JavaProcess.javadoc( javaSourceDirectories,
                            javaFiles,
                            classpathElements,
                            getWorkingDir().resolve( "target" ).resolve( "javadoc" ) );
       if ( "true".equals( SystemProperty.get( "webtack.jsinterop-generator.gwtc" ) ) )
       {
         gwtc( classpathEntries, output );
+      }
+    }
+    if ( !jsFiles.isEmpty() )
+    {
+      if ( "true".equals( SystemProperty.get( "webtack.jsinterop-generator.closure_compile" ) ) )
+      {
+        final Path outputDirectory = getWorkingDir().resolve( "target" ).resolve( "js" );
+        Files.createDirectories( outputDirectory );
+        final Path outputJs = outputDirectory.resolve( "output.js" );
+        final Path inputJs = outputDirectory.resolve( "input.js" );
+        FileUtil.write( inputJs, "" );
+        final List<String> args = new ArrayList<>();
+        args.add( "-jar" );
+        args.add( closureJar().toString() );
+        args.add( "--compilation_level" );
+        args.add( "ADVANCED" );
+        args.add( "--env" );
+        args.add( "CUSTOM" );
+        args.add( "--js_output_file" );
+        args.add( outputJs.toString() );
+        args.add( "--jscomp_error" );
+        args.add( "*" );
+        args.add( "--warning_level" );
+        args.add( "VERBOSE" );
+        args.add( inputJs.toString() );
+        for ( final Path file : jsFiles )
+        {
+          args.add( file.toString() );
+        }
+
+        final int exitCode = JavaProcess.java( args );
+        assertEquals( exitCode, 0 );
       }
     }
   }
@@ -286,6 +389,12 @@ public abstract class AbstractTest
              .stream( libraries.split( File.pathSeparator ) )
              .map( Paths::get )
              .collect( Collectors.toList() );
+  }
+
+  @Nonnull
+  private Path closureJar()
+  {
+    return Paths.get( SystemProperty.get( "webtack.jsinterop-generator.closure.jar" ) );
   }
 
   @Nonnull

@@ -21,6 +21,14 @@
         "packageName": "akasha",
         "globalInterface": "Window"
       }
+    },
+    {
+      "name": "Closure",
+      "config": {
+        "outputDirectory": "akasha/java/generated/webtack",
+        "key": "akasha/akasha",
+        "globalInterface": "Window"
+      }
     }
   ]
 }

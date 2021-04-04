@@ -30,3 +30,5 @@ artifacts:
 
   react4j_core: org.realityforge.react4j:react4j-core:jar:0.181
   react4j_dom: org.realityforge.react4j:react4j-dom:jar:0.181
+
+  closure_compiler: com.google.javascript:closure-compiler:jar:v20210302

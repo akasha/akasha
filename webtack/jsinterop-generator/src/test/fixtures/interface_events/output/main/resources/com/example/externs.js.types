@@ -1,0 +1,11 @@
+AddEventListenerOptions
+Event
+EventHandler
+EventListener
+EventListenerOptions
+EventTarget
+SpeechSynthesisErrorEvent
+SpeechSynthesisEvent
+SpeechSynthesisEventHandler
+SpeechSynthesisEventListener
+SpeechSynthesisUtterance

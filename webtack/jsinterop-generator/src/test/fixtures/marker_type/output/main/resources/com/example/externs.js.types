@@ -1,0 +1,10 @@
+HTMLCanvasElement
+HTMLImageElement
+HTMLVideoElement
+ImageBitmap
+ImageData
+MyBufferSource
+OffscreenCanvas
+TexBufferSource
+TexImageSource
+WebGLRenderingContext

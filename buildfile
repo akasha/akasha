@@ -85,9 +85,11 @@ define 'akasha' do
       test.using :testng
       test.options[:properties] = {
         'webtack.jsinterop-generator.gwtc' => ENV['GWT'] == 'no' ? 'false' : 'true',
+        'webtack.jsinterop-generator.closure_compile' => ENV['CLOSURE'] == 'no' ? 'false' : 'true',
         'webtack.jsinterop-generator.fixture_dir' => _('src/test/fixtures'),
         'webtack.jsinterop-generator.fixture.libs' => "#{JSINTEROP_DEPS.collect { |a| artifact(a).to_s }.join(':')}:#{artifact(:gwt_user)}",
-        'webtack.jsinterop-generator.gwt_dev.libs' => "#{Buildr::GWT.dependencies('2.9.0').collect { |d| artifact(d).to_s }.join(':')}"
+        'webtack.jsinterop-generator.gwt_dev.libs' => "#{Buildr::GWT.dependencies('2.9.0').collect { |d| artifact(d).to_s }.join(':')}",
+        'webtack.jsinterop-generator.closure.jar' => artifact(:closure_compiler).to_s
       }
       test.options[:java_args] = %w(-ea)
       test.compile.with :gir,
@@ -152,6 +154,7 @@ define 'akasha' do
   desc 'Akasha Java Browser API for GWT'
   define 'java', :base_dir => "#{WORKSPACE_DIR}/akasha/java" do
     src_dir = file("#{project._(:target, :generated)}/webtack/main/java" => ['data:run_complete_pipeline'])
+    js_src_dir = file("#{project._(:target, :generated)}/webtack/main/js" => ['data:run_complete_pipeline'])
     compile.sources << src_dir
     iml.main_generated_source_directories << src_dir
 
@@ -167,7 +170,11 @@ define 'akasha' do
     pom.include_transitive_dependencies << deps
     pom.dependency_filter = Proc.new { |dep| dep[:scope].to_s != 'test' && deps.include?(dep[:artifact]) }
 
-    package(:jar)
+    package(:jar).tap do |j|
+      j.enhance([js_src_dir]) do |j2|
+        j2.include("#{js_src_dir}/*")
+      end
+    end
     package(:sources)
     package(:javadoc)
   end
@@ -184,7 +191,7 @@ define 'akasha' do
 
   ipr.add_testng_configuration('jsinterop-generator',
                                :module => 'jsinterop-generator',
-                               :jvm_args => "-ea -Dwebtack.output_fixture_data=true -Dwebtack.jsinterop-generator.fixture_dir=src/test/fixtures -Dwebtack.jsinterop-generator.gwtc=false -Dwebtack.jsinterop-generator.fixture.libs=#{JSINTEROP_DEPS.collect { |a| artifact(a).to_s }.join(':')}:#{artifact(:gwt_user)} -Dwebtack.jsinterop-generator.gwt_dev.libs=#{Buildr::GWT.dependencies('2.9.0').collect { |d| artifact(d).to_s }.join(':')}")
+                               :jvm_args => "-ea -Dwebtack.output_fixture_data=true -Dwebtack.jsinterop-generator.fixture_dir=src/test/fixtures -Dwebtack.jsinterop-generator.gwtc=false -Dwebtack.jsinterop-generator.closure.jar=#{artifact(:closure_compiler)} -Dwebtack.jsinterop-generator.closure_compile=true -Dwebtack.jsinterop-generator.fixture.libs=#{JSINTEROP_DEPS.collect { |a| artifact(a).to_s }.join(':')}:#{artifact(:gwt_user)} -Dwebtack.jsinterop-generator.gwt_dev.libs=#{Buildr::GWT.dependencies('2.9.0').collect { |d| artifact(d).to_s }.join(':')}")
 
   ipr.add_testng_configuration('react4j-generator',
                                :module => 'react4j-generator',
