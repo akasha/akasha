@@ -29,7 +29,6 @@ import javax.lang.model.SourceVersion;
 import org.realityforge.webtack.model.Attributed;
 import org.realityforge.webtack.model.ConstEnumerationDefinition;
 import org.realityforge.webtack.model.ConstEnumerationValue;
-import org.realityforge.webtack.model.DocumentationElement;
 import org.realityforge.webtack.model.EnumerationDefinition;
 import org.realityforge.webtack.model.EnumerationValue;
 import org.realityforge.webtack.model.FrozenArrayType;
@@ -43,21 +42,14 @@ import org.realityforge.webtack.model.TypeReference;
 import org.realityforge.webtack.model.TypedefDefinition;
 import org.realityforge.webtack.model.UnionType;
 import org.realityforge.webtack.model.WebIDLSchema;
-import org.realityforge.webtack.model.tools.mdn_scanner.DocEntry;
-import org.realityforge.webtack.model.tools.mdn_scanner.config2.DocEntryUtil;
-import org.realityforge.webtack.model.tools.spi.Action;
 import org.realityforge.webtack.model.tools.spi.PipelineContext;
 
 public abstract class AbstractJavaAction
-  implements Action
+  extends AbstractAction
 {
-  @Nonnull
-  private final PipelineContext _context;
   @Nonnull
   private static final List<String> OBJECT_METHODS =
     Arrays.asList( "hashCode", "equals", "clone", "toString", "finalize", "getClass", "wait", "notifyAll", "notify" );
-  @Nonnull
-  private final Path _outputDirectory;
   @Nonnull
   private final String _packageName;
   private final boolean _enableMagicConstants;
@@ -90,8 +82,7 @@ public abstract class AbstractJavaAction
                                 @Nonnull final List<Path> predefinedTypeMappingPaths,
                                 @Nonnull final List<Path> externalTypeMappingPaths )
   {
-    _context = Objects.requireNonNull( context );
-    _outputDirectory = Objects.requireNonNull( outputDirectory );
+    super(context, outputDirectory );
     _packageName = Objects.requireNonNull( packageName );
     _enableMagicConstants = enableMagicConstants;
     final Properties predefinedTypes = new Properties();
@@ -128,19 +119,6 @@ public abstract class AbstractJavaAction
       final String pkgName = externalMapping.getProperty( name );
       _externalIdlToJavaTypeMapping.put( name, ( pkgName.startsWith( "." ) ? getPackageName() : "" ) + pkgName );
     }
-  }
-
-  @Nonnull
-  protected final PipelineContext context()
-  {
-    return _context;
-  }
-
-  @Nonnull
-  protected final WebIDLSchema getSchema()
-  {
-    assert null != _schema;
-    return _schema;
   }
 
   @Nonnull
@@ -288,12 +266,6 @@ public abstract class AbstractJavaAction
   private String mangleName( @Nonnull final String name )
   {
     return Character.isUnicodeIdentifierStart( name.charAt( 0 ) ) ? name + "_" : "_" + name;
-  }
-
-  @Nonnull
-  protected Path getOutputDirectory()
-  {
-    return _outputDirectory;
   }
 
   @Nonnull
@@ -723,14 +695,6 @@ public abstract class AbstractJavaAction
         field.addAnnotation( emitMagicConstantAnnotation( constEnumeration ) );
       }
     }
-  }
-
-  @Nullable
-  protected final DocumentationElement getDocumentationElement( @Nonnull final String type,
-                                                                @Nullable final String member )
-  {
-    final DocEntry docEntry = context().docRepository().findDocEntry( type, member );
-    return null != docEntry ? DocEntryUtil.createDocumentationElement( docEntry ) : null;
   }
 
   @Nonnull
