@@ -99,7 +99,11 @@ define 'akasha' do
         Buildr::GWT.dependencies('2.9.0').collect { |a| artifact(a).invoke }
       end
 
-      package(:jar)
+      package(:jar, :classifier => 'all').tap do |jar|
+        [:javapoet].collect { |dep| Buildr.artifact(dep) }.each do |d|
+          jar.merge(d)
+        end
+      end
     end
 
     define 'react4j-generator' do
@@ -121,7 +125,11 @@ define 'akasha' do
         Buildr::GWT.dependencies('2.9.0').collect { |a| artifact(a).invoke }
       end
 
-      package(:jar)
+      package(:jar, :classifier => 'all').tap do |jar|
+        [:javapoet].collect { |dep| Buildr.artifact(dep) }.each do |d|
+          jar.merge(d)
+        end
+      end
     end
 
     define 'cli' do
