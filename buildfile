@@ -98,7 +98,6 @@ define 'akasha' do
       end
 
       package(:jar)
-      end
     end
 
     define 'react4j-generator' do
