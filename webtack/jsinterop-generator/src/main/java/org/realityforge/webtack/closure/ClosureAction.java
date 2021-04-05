@@ -255,4 +255,90 @@ final class ClosureAction
       writer.write( " */\n" );
     }
   }
+
+  private void writeType( @Nonnull final Writer writer, @Nonnull final Type type )
+    throws IOException
+  {
+    final Kind kind = type.getKind();
+    if ( Kind.Any != kind && Kind.Void != kind )
+    {
+      writer.write( type.isNullable() ? "?" : "!" );
+    }
+    if ( kind.isNumeric() || Kind.Byte == kind || Kind.Octet == kind )
+    {
+      writer.write( "number" );
+    }
+    else if ( kind.isString() )
+    {
+      writer.write( "string" );
+    }
+    else if ( Kind.Boolean == kind )
+    {
+      writer.write( "boolean" );
+    }
+    else if ( Kind.Void == kind )
+    {
+      writer.write( "undefined" );
+    }
+    else if ( Kind.Any == kind )
+    {
+      writer.write( "*" );
+    }
+    else if ( Kind.Sequence == kind )
+    {
+      writer.write( "Array<" );
+      writeType( writer, ( (SequenceType) type ).getItemType() );
+      writer.write( ">" );
+    }
+    else if ( Kind.FrozenArray == kind )
+    {
+      writer.write( "Array<" );
+      writeType( writer, ( (FrozenArrayType) type ).getItemType() );
+      writer.write( ">" );
+    }
+    else if ( Kind.Promise == kind )
+    {
+      writer.write( "Promise<" );
+      writeType( writer, ( (PromiseType) type ).getResolveType() );
+      writer.write( ">" );
+    }
+    else if ( Kind.Object == kind )
+    {
+      writer.write( "Object" );
+    }
+    else if ( Kind.Union == kind )
+    {
+      writer.write( "(" );
+      final List<Type> memberTypes = ( (UnionType) type ).getMemberTypes();
+      boolean first = true;
+      for ( final Type memberType : memberTypes )
+      {
+        if ( !first )
+        {
+          writer.write( "|" );
+        }
+        else
+        {
+          first = false;
+        }
+        writeType( writer, memberType );
+      }
+      writer.write( ")" );
+    }
+    else if ( Kind.Record == kind )
+    {
+      final RecordType recordType = (RecordType) type;
+      writer.write( "Object<" );
+      writeType( writer, recordType.getKeyType() );
+      writer.write( "," );
+      writeType( writer, recordType.getValueType() );
+      writer.write( ">" );
+    }
+    else
+    {
+      assert Kind.TypeReference == kind;
+      final TypeReference typeReference = (TypeReference) type;
+      writer.write( typeReference.getName() );
+    }
+  }
 }
