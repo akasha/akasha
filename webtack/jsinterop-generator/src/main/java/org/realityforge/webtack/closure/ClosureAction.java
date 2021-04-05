@@ -238,4 +238,21 @@ final class ClosureAction
     throws IOException
   {
   }
+
+  private void writeJsDoc( @Nonnull final Writer writer, @Nonnull final String... lines )
+    throws IOException
+  {
+    final List<String> docLines = Stream.of( lines ).filter( Objects::nonNull ).collect( Collectors.toList() );
+    if ( !docLines.isEmpty() )
+    {
+      writer.write( "/**\n" );
+      for ( final String line : docLines )
+      {
+        writer.write( " * " );
+        writer.write( line );
+        writer.write( "\n" );
+      }
+      writer.write( " */\n" );
+    }
+  }
 }
