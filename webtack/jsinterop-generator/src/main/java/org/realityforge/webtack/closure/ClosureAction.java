@@ -256,6 +256,31 @@ final class ClosureAction
     }
   }
 
+  private void writeConstMembers( @Nonnull final Writer writer,
+                                  @Nonnull final NamedDefinition definition,
+                                  @Nonnull final List<ConstMember> constants )
+    throws IOException
+  {
+    for ( final ConstMember constant : constants )
+    {
+      writeConstMember( writer, definition, constant );
+    }
+  }
+
+  private void writeConstMember( @Nonnull final Writer writer,
+                                 @Nonnull final NamedDefinition definition,
+                                 @Nonnull final ConstMember constant )
+    throws IOException
+  {
+    writer.write( "/** @const {" );
+    writeType( writer, constant.getType() );
+    writer.write( "} */ " );
+    writer.write( definition.getName() );
+    writer.write( "." );
+    writer.write( constant.getName() );
+    writer.write( ";\n" );
+  }
+
   private void writeOperation( @Nonnull final Writer writer,
                                @Nonnull final String typeName,
                                @Nonnull final String name,
