@@ -281,6 +281,24 @@ final class ClosureAction
     writer.write( ";\n" );
   }
 
+  private void writeUniquelyNamedOperation( @Nonnull final Writer writer,
+                                            @Nonnull final NamedDefinition definition,
+                                            @Nonnull final OperationMember operation )
+    throws IOException
+  {
+    final String name = operation.getName();
+    final OperationMember.Kind kind = operation.getKind();
+    if ( null != name && OperationMember.Kind.CONSTRUCTOR != kind )
+    {
+      writeOperation( writer,
+                      definition.getName(),
+                      name,
+                      operation.getArguments(),
+                      operation.getReturnType(),
+                      OperationMember.Kind.STATIC != kind );
+    }
+  }
+
   private void writeOperation( @Nonnull final Writer writer,
                                @Nonnull final String typeName,
                                @Nonnull final String name,
