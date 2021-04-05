@@ -42,6 +42,15 @@ complete as there is too much un-said.
 
 * Figure out an example for indexdb.
 
+# Closure Generation
+
+* Make sure that the js types use `@implements` for all the interfaces that we expect which are
+  probably characterized via maplike, setlike etc.
+
+* Scan the main closure externs and figure out a heuristic for `@nosideeffects`
+
+* Consider how we can use `@enum` for const enumerations and friends.
+
 # Java Generation
 
 * Any type that defines a `[@@iterator]()` method should implement `JsIterable<X>`.
@@ -93,6 +102,7 @@ Generate host element factories: Events would need to be specially handled to ma
 
 * It would be nice to extend WebIDL and support throws either as an expression or maybe an extended attribute.
   The Gecko WebIDL files actually have a `[Throws]` extended attribute that we could look into to drive this?
+  We could also add the equivalent closure annotation `@throws`
 
 ### Validations
 
