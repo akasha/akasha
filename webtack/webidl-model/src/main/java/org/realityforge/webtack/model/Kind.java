@@ -171,6 +171,11 @@ public enum Kind
     return Flags.PRIMITIVE == ( Flags.PRIMITIVE & _flags );
   }
 
+  public boolean isNumeric()
+  {
+    return isInteger() || isDecimal();
+  }
+
   public boolean isInteger()
   {
     return Flags.INTEGER == ( Flags.INTEGER & _flags );
