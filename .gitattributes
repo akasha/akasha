@@ -1,6 +1,7 @@
 # DO NOT EDIT: File is auto-generated
 * -text
 *.java text
+*.js text
 *.json text
 *.md text
 *.rake text
