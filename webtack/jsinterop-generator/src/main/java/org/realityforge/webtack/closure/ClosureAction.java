@@ -317,6 +317,41 @@ final class ClosureAction
                   " = function" + toArgumentsList( arguments ) + " {};\n" );
   }
 
+  private void writeConstructor( @Nonnull final Writer writer,
+                                 @Nonnull final String typeName,
+                                 @Nullable final String superType,
+                                 @Nonnull final List<Argument> arguments )
+    throws IOException
+  {
+    writer.write( "/**\n" );
+    writer.write( " * @constructor\n" );
+    if ( null != superType )
+    {
+      writer.write( " * @extends {" );
+      writer.write( superType );
+      writer.write( "}\n" );
+    }
+    //TODO: Implement types like iterable
+    for ( final Argument argument : arguments )
+    {
+      writer.write( " * @param {" );
+      if ( argument.isVariadic() )
+      {
+        writer.write( "..." );
+      }
+      writeType( writer, argument.getType() );
+      if ( argument.isOptional() )
+      {
+        writer.write( "=" );
+      }
+      writer.write( "} " );
+      writer.write( argument.getName() );
+      writer.write( "\n" );
+    }
+    writer.write( " */\n" );
+    writer.write( "function " + typeName + toArgumentsList( arguments ) + " {};\n" );
+  }
+
   @Nonnull
   private String toArgumentsList( @Nonnull final List<Argument> arguments )
   {
