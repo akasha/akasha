@@ -215,12 +215,19 @@ final class ClosureAction
   private void generateCallback( @Nonnull final Writer writer, @Nonnull final CallbackDefinition definition )
     throws IOException
   {
+    writer.write( "/**\n * @typedef {" );
+    writeFunctionType( writer, definition.getArguments(), definition.getReturnType() );
+    writer.write( "\n */\n" );
+    writer.write( "var " + definition.getName() + ";\n" );
   }
 
   private void generateCallbackInterface( @Nonnull final Writer writer,
                                           @Nonnull final CallbackInterfaceDefinition definition )
     throws IOException
   {
+    writeConstructor( writer, definition.getName(), null, Collections.emptyList() );
+    writeConstMembers( writer, definition, definition.getConstants() );
+    writeUniquelyNamedOperation( writer, definition, definition.getOperation() );
   }
 
   private void generateEnumeration( @Nonnull final Writer writer, @Nonnull final EnumerationDefinition definition )
