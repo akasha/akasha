@@ -358,6 +358,36 @@ final class ClosureAction
     return "(" + arguments.stream().map( NamedElement::getName ).collect( Collectors.joining( "," ) ) + ")";
   }
 
+  private void writeFunctionType( @Nonnull final Writer writer,
+                                  @Nonnull final List<Argument> arguments,
+                                  @Nonnull final Type returnType )
+    throws IOException
+  {
+    writer.write( "function(" );
+    boolean first = true;
+    for ( final Argument argument : arguments )
+    {
+      if ( !first )
+      {
+        writer.write( "," );
+      }
+      first = false;
+      if ( argument.isVariadic() )
+      {
+        writer.write( "..." );
+      }
+      writeType( writer, argument.getType() );
+      if ( argument.isOptional() )
+      {
+        writer.write( "=" );
+      }
+    }
+
+    writer.write( "): " );
+    writeType( writer, returnType );
+    writer.write( "}" );
+  }
+
   private void writeType( @Nonnull final Writer writer, @Nonnull final Type type )
     throws IOException
   {
