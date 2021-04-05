@@ -256,6 +256,48 @@ final class ClosureAction
     }
   }
 
+  private void writeOperation( @Nonnull final Writer writer,
+                               @Nonnull final String typeName,
+                               @Nonnull final String name,
+                               @Nonnull final List<Argument> arguments,
+                               @Nonnull final Type returnType,
+                               final boolean onPrototype )
+    throws IOException
+  {
+    writer.write( "/**\n" );
+    for ( final Argument argument : arguments )
+    {
+      writer.write( " * @param {" );
+      if ( argument.isVariadic() )
+      {
+        writer.write( "..." );
+      }
+      writeType( writer, argument.getType() );
+      if ( argument.isOptional() )
+      {
+        writer.write( "=" );
+      }
+      writer.write( "} " );
+      writer.write( argument.getName() );
+      writer.write( "\n" );
+    }
+    writer.write( " * @return {" );
+    writeType( writer, returnType );
+    writer.write( "}\n" );
+    writer.write( " */\n" );
+    writer.write( typeName +
+                  "." +
+                  ( onPrototype ? "prototype." : "" ) +
+                  name +
+                  " = function" + toArgumentsList( arguments ) + " {};\n" );
+  }
+
+  @Nonnull
+  private String toArgumentsList( @Nonnull final List<Argument> arguments )
+  {
+    return "(" + arguments.stream().map( NamedElement::getName ).collect( Collectors.joining( "," ) ) + ")";
+  }
+
   private void writeType( @Nonnull final Writer writer, @Nonnull final Type type )
     throws IOException
   {
