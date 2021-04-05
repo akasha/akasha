@@ -99,7 +99,7 @@ final class ClosureAction
 
     try ( final Writer writer = openWriter( getMainJsDirectory().resolve( _key + ".externs.js" ) ) )
     {
-      writer.write( "/**\n * @externs\n */\n" );
+      writeJsDoc( writer, "@fileoverview", "@externs" );
       for ( final TypedefDefinition definition : schema.getTypedefs() )
       {
         final Type type = definition.getType();
