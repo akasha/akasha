@@ -260,14 +260,25 @@ final class ClosureAction
   private void writeNamespace( @Nonnull final Writer writer, @Nonnull final NamespaceDefinition definition )
     throws IOException
   {
-    final String type = definition.getName();
-    writeJsDoc( writer, "@const" );
-    writer.write( "var " );
-    writer.write( type );
-    writer.write( " = {};\n" );
+    final String name = definition.getName();
 
-    writeConstMembers( writer, type, definition.getConstants(), true, false );
-    writeOperations( writer, type, definition.getOperations() );
+    // There is no actual interface for the underlying type that matches this name as the underlying
+    // type is the same name as namespace. But introducing this synthetic type is the closest we can get
+    // to getting closure to handle this scenario correctly
+    final String interfaceType = name + "Interface";
+    writeConstructor( writer,
+                      interfaceType,
+                      null,
+                      Collections.emptyList(),
+                      true,
+                      Collections.singletonList( "@private" ) );
+    writeConstMembers( writer, interfaceType, definition.getConstants(), true, false );
+    writeOperations( writer, interfaceType, definition.getOperations() );
+
+    writeJsDoc( writer, "@const", "@type {" + interfaceType + "}" );
+    writer.write( "var " );
+    writer.write( name );
+    writer.write( ";\n" );
   }
 
   private void writeInterface( @Nonnull final Writer writer, @Nonnull final InterfaceDefinition definition )

@@ -11,15 +11,21 @@ var ScrollToOptions;
  */
 var WebAssemblyInstantiatedSource;
 /**
- * @const
+ * @constructor
+ * @private
  */
-var WebAssembly = {};
+function WebAssemblyInterface() {}
 /**
  * @param {(!BufferSource|!Module)} arg0
  * @param {!Object=} arg1
  * @return {(!Promise<!WebAssemblyInstantiatedSource>|!Promise<!Instance>)}
  */
-WebAssembly.prototype.instantiate = function(arg0,arg1) {}
+WebAssemblyInterface.prototype.instantiate = function(arg0,arg1) {}
+/**
+ * @const
+ * @type {WebAssemblyInterface}
+ */
+var WebAssembly;
 /**
  * @constructor
  * @private

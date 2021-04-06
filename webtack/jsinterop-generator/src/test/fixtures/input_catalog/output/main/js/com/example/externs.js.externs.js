@@ -43,24 +43,36 @@ var IDBIndexParameters;
  */
 var IDBIndexParameters2;
 /**
- * @const
+ * @constructor
+ * @private
  */
-var CSS = {};
+function CSSInterface() {}
 /**
  * @param {!string} ident
  * @return {!string}
  */
-CSS.prototype.escape = function(ident) {}
+CSSInterface.prototype.escape = function(ident) {}
 /**
  * @const
+ * @type {CSSInterface}
  */
-var WebAssembly = {};
+var CSS;
+/**
+ * @constructor
+ * @private
+ */
+function WebAssemblyInterface() {}
 /**
  * @param {!string} txMode
  * @param {!string} mode
  * @return {!boolean}
  */
-WebAssembly.prototype.validate = function(txMode,mode) {}
+WebAssemblyInterface.prototype.validate = function(txMode,mode) {}
+/**
+ * @const
+ * @type {WebAssemblyInterface}
+ */
+var WebAssembly;
 /**
  * @constructor
  * @private

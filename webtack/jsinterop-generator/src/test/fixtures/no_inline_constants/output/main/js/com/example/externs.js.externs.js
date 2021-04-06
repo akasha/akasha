@@ -3,15 +3,21 @@
  * @externs
  */
 /**
- * @const
+ * @constructor
+ * @private
  */
-var Math = {};
-/** @const {!number} */ Math.E;
-/** @const {!number} */ Math.PI;
-/** @const {!number} */ Math.SQRT1_2;
-/** @const {!number} */ Math.SQRT2;
+function MathInterface() {}
+/** @const {!number} */ MathInterface.E;
+/** @const {!number} */ MathInterface.PI;
+/** @const {!number} */ MathInterface.SQRT1_2;
+/** @const {!number} */ MathInterface.SQRT2;
 /**
  * @param {!number} x
  * @return {!number}
  */
-Math.prototype.abs = function(x) {}
+MathInterface.prototype.abs = function(x) {}
+/**
+ * @const
+ * @type {MathInterface}
+ */
+var Math;

@@ -7,53 +7,77 @@
  */
 var BufferSource;
 /**
- * @const
+ * @constructor
+ * @private
  */
-var console = {};
+function consoleInterface() {}
 /**
  * @param {...*} data
  * @return {undefined}
  */
-console.prototype.warn = function(data) {}
+consoleInterface.prototype.warn = function(data) {}
 /**
  * @param {!boolean=} condition
  * @param {...*} data
  * @return {undefined}
  */
-console.prototype.assert = function(condition,data) {}
+consoleInterface.prototype.assert = function(condition,data) {}
 /**
  * @return {undefined}
  */
-console.prototype.clear = function() {}
+consoleInterface.prototype.clear = function() {}
 /**
  * @const
+ * @type {consoleInterface}
  */
-var CSS = {};
+var console;
+/**
+ * @constructor
+ * @private
+ */
+function CSSInterface() {}
 /**
  * @param {!string} ident
  * @return {!string}
  */
-CSS.prototype.escape = function(ident) {}
+CSSInterface.prototype.escape = function(ident) {}
 /**
  * @const
+ * @type {CSSInterface}
  */
-var WebAssembly = {};
+var CSS;
+/**
+ * @constructor
+ * @private
+ */
+function WebAssemblyInterface() {}
 /**
  * @param {!BufferSource} bytes
  * @return {!boolean}
  */
-WebAssembly.prototype.validate = function(bytes) {}
+WebAssemblyInterface.prototype.validate = function(bytes) {}
 /**
  * @const
+ * @type {WebAssemblyInterface}
  */
-var Math = {};
-/** @const {!number} */ Math.E;
-/** @const {!number} */ Math.LN10;
+var WebAssembly;
+/**
+ * @constructor
+ * @private
+ */
+function MathInterface() {}
+/** @const {!number} */ MathInterface.E;
+/** @const {!number} */ MathInterface.LN10;
 /**
  * @param {!number} x
  * @return {!number}
  */
-Math.prototype.abs = function(x) {}
+MathInterface.prototype.abs = function(x) {}
+/**
+ * @const
+ * @type {MathInterface}
+ */
+var Math;
 /**
  * @constructor
  * @private
