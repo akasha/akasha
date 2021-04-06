@@ -3,9 +3,9 @@
  * @externs
  */
 /**
- * @constructor
+ * @interface
  */
-function XPathNSResolver() {};
+function () {};
 /**
  * @param {?string} prefix
  * @return {?string}

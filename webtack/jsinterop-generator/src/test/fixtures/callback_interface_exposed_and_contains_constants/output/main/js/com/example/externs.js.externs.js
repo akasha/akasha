@@ -3,9 +3,9 @@
  * @externs
  */
 /**
- * @constructor
+ * @interface
  */
-function NodeFilter() {};
+function () {};
 /** @const {!number} */ NodeFilter.FILTER_ACCEPT;
 /** @const {!number} */ NodeFilter.FILTER_REJECT;
 /** @const {!number} */ NodeFilter.FILTER_SKIP;
@@ -27,3 +27,7 @@ function NodeFilter() {};
  * @return {!number}
  */
 NodeFilter.prototype.acceptNode = function(node) {};
+/**
+ * @constructor
+ */
+function Node() {};

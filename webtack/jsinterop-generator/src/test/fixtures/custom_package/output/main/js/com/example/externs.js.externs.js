@@ -7,11 +7,16 @@
  */
 var MyEventHandler;
 /**
- * @constructor
+ * @interface
  */
-function EventListener() {};
+function () {};
 /**
  * @param {!Event} event
  * @return {undefined}
  */
 EventListener.prototype.handleEvent = function(event) {};
+/**
+ * @constructor
+ * @private
+ */
+function Event() {};
