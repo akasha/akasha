@@ -43,6 +43,25 @@ var IDBIndexParameters;
  */
 var IDBIndexParameters2;
 /**
+ * @const
+ */
+var CSS = {};
+/**
+ * @param {!string} ident
+ * @return {!string}
+ */
+CSS.prototype.escape = function(ident) {}
+/**
+ * @const
+ */
+var WebAssembly = {};
+/**
+ * @param {!txMode} txMode
+ * @param {!ActiveMode} mode
+ * @return {!boolean}
+ */
+WebAssembly.prototype.validate = function(txMode,mode) {}
+/**
  * @constructor
  * @private
  */

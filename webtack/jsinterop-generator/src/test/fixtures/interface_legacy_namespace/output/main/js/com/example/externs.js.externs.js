@@ -11,6 +11,15 @@ var BufferSource;
  */
 var GlobalDescriptor;
 /**
+ * @const
+ */
+var WebAssembly = {};
+/**
+ * @param {!BufferSource} bytes
+ * @return {!Promise<!Module>}
+ */
+WebAssembly.prototype.compile = function(bytes) {}
+/**
  * @constructor
  * @private
  */

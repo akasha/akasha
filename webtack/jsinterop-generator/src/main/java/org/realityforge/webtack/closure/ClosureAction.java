@@ -155,18 +155,18 @@ final class ClosureAction
           writeConstEnumeration( writer, definition );
         }
       }
-      for ( final InterfaceDefinition definition : schema.getInterfaces() )
-      {
-        if ( tryRecordGeneratedType( definition.getName() ) )
-        {
-          writeInterface( writer, definition );
-        }
-      }
       for ( final NamespaceDefinition definition : schema.getNamespaces() )
       {
         if ( tryRecordGeneratedType( definition.getName() ) )
         {
           writeNamespace( writer, definition );
+        }
+      }
+      for ( final InterfaceDefinition definition : schema.getInterfaces() )
+      {
+        if ( tryRecordGeneratedType( definition.getName() ) )
+        {
+          writeInterface( writer, definition );
         }
       }
 
@@ -282,12 +282,24 @@ final class ClosureAction
   {
   }
 
+  private void writeNamespace( @Nonnull final Writer writer, @Nonnull final NamespaceDefinition definition )
+    throws IOException
+  {
+    writeJsDoc( writer, "@const" );
+    writer.write( "var " );
+    writer.write( definition.getName() );
+    writer.write( " = {};\n" );
+
+    writeConstMembers( writer, definition, definition.getConstants() );
+    writeOperations( writer, definition, definition.getOperations() );
+  }
+
   private void writeInterface( @Nonnull final Writer writer, @Nonnull final InterfaceDefinition definition )
     throws IOException
   {
+    final List<OperationMember> operations = definition.getOperations();
     final List<OperationMember> constructors =
-      definition
-        .getOperations()
+      operations
         .stream()
         .filter( o -> OperationMember.Kind.CONSTRUCTOR == o.getKind() )
         .collect( Collectors.toList() );
@@ -317,9 +329,16 @@ final class ClosureAction
     }
     writeConstMembers( writer, definition, definition.getConstants() );
 
+    writeOperations( writer, definition, operations );
+  }
+
+  private void writeOperations( @Nonnull final Writer writer,
+                                @Nonnull final NamedDefinition definition,
+                                @Nonnull final List<OperationMember> operations )
+    throws IOException
+  {
     final Map<String, List<OperationMember>> operationMap =
-      definition
-        .getOperations()
+      operations
         .stream()
         .filter( o -> null != o.getName() )
         .filter( o -> OperationMember.Kind.CONSTRUCTOR != o.getKind() )
@@ -348,11 +367,6 @@ final class ClosureAction
                         isNonStaticOperation );
       }
     }
-  }
-
-  private void writeNamespace( @Nonnull final Writer writer, @Nonnull final NamespaceDefinition definition )
-    throws IOException
-  {
   }
 
   private void writeGlobalInterface( @Nonnull final Writer writer, @Nonnull final InterfaceDefinition definition )

@@ -53,7 +53,6 @@ complete as there is too much un-said.
 
 * Consider how we can use `@enum` for const enumerations and friends.
 
-* namespace support
 * LegacyNoInterfaceObject support
 * LegacyNamespace=WebAssembly support
 

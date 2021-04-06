@@ -41,6 +41,15 @@ var AddEventListenerOptions;
  */
 var EventInit;
 /**
+ * @const
+ */
+var CSS = {};
+/**
+ * @param {!string} ident
+ * @return {!string}
+ */
+CSS.prototype.escape = function(ident) {}
+/**
  * @constructor
  * @extends {EventTarget}
  * @private

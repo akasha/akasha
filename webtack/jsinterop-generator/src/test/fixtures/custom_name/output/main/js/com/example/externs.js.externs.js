@@ -24,6 +24,15 @@ EventListener.prototype.handleEvent = function(event) {}
  */
 var EventInit;
 /**
+ * @const
+ */
+var CSS = {};
+/**
+ * @param {!string} ident
+ * @return {!string}
+ */
+CSS.prototype.escape = function(ident) {}
+/**
  * @constructor
  * @private
  */
