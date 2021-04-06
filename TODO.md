@@ -55,6 +55,8 @@ complete as there is too much un-said.
 
 * LegacyNoInterfaceObject support
 * LegacyNamespace=WebAssembly support
+* Exposed filtering
+* attributes
 
 # Java Generation
 
