@@ -23,7 +23,7 @@ WebAssembly.prototype.compile = function(bytes) {}
  * @constructor
  * @private
  */
-function CompileError() {}
+WebAssembly.CompileError = function() {}
 /**
  * @constructor
  * @private
@@ -33,14 +33,14 @@ function ArrayBuffer() {}
  * @constructor
  * @private
  */
-function Module() {}
+WebAssembly.Module = function() {}
 /**
  * @constructor
  * @param {!GlobalDescriptor} descriptor
  * @param {*=} v
  */
-function Global(descriptor,v) {}
+WebAssembly.Global = function(descriptor,v) {}
 /**
  * @return {*}
  */
-Global.prototype.valueOf = function() {}
+WebAssembly.Global.prototype.valueOf = function() {}

@@ -27,7 +27,6 @@ import org.realityforge.webtack.model.EnumerationDefinition;
 import org.realityforge.webtack.model.FrozenArrayType;
 import org.realityforge.webtack.model.InterfaceDefinition;
 import org.realityforge.webtack.model.Kind;
-import org.realityforge.webtack.model.NamedDefinition;
 import org.realityforge.webtack.model.NamedElement;
 import org.realityforge.webtack.model.NamespaceDefinition;
 import org.realityforge.webtack.model.OperationMember;
@@ -214,11 +213,12 @@ final class ClosureAction
                                        @Nonnull final CallbackInterfaceDefinition definition )
     throws IOException
   {
+    final String type = definition.getName();
     writer.write( "/**\n * @interface\n */\nfunction " );
-    writer.write( definition.getName() );
+    writer.write( type );
     writer.write( "() {}\n" );
-    writeConstMembers( writer, definition, definition.getConstants() );
-    writeUniquelyNamedOperation( writer, definition, definition.getOperation() );
+    writeConstMembers( writer, type, definition.getConstants() );
+    writeUniquelyNamedOperation( writer, type, definition.getOperation() );
   }
 
   private void writeDictionary( @Nonnull final Writer writer, @Nonnull final DictionaryDefinition definition )
@@ -285,13 +285,14 @@ final class ClosureAction
   private void writeNamespace( @Nonnull final Writer writer, @Nonnull final NamespaceDefinition definition )
     throws IOException
   {
+    final String type = definition.getName();
     writeJsDoc( writer, "@const" );
     writer.write( "var " );
-    writer.write( definition.getName() );
+    writer.write( type );
     writer.write( " = {};\n" );
 
-    writeConstMembers( writer, definition, definition.getConstants() );
-    writeOperations( writer, definition, definition.getOperations() );
+    writeConstMembers( writer, type, definition.getConstants() );
+    writeOperations( writer, type, definition.getOperations() );
   }
 
   private void writeInterface( @Nonnull final Writer writer, @Nonnull final InterfaceDefinition definition )
@@ -303,10 +304,12 @@ final class ClosureAction
         .stream()
         .filter( o -> OperationMember.Kind.CONSTRUCTOR == o.getKind() )
         .collect( Collectors.toList() );
+    final String namespace = definition.getNamespace();
+    final String type = ( null == namespace ? "" : namespace + "." ) + definition.getName();
     if ( constructors.isEmpty() )
     {
       writeConstructor( writer,
-                        definition.getName(),
+                        type,
                         definition.getInherits(),
                         Collections.emptyList(),
                         Collections.singletonList( "@private" ) );
@@ -314,7 +317,7 @@ final class ClosureAction
     else if ( 1 == constructors.size() )
     {
       writeConstructor( writer,
-                        definition.getName(),
+                        type,
                         definition.getInherits(),
                         constructors.get( 0 ).getArguments(),
                         Collections.emptyList() );
@@ -322,18 +325,18 @@ final class ClosureAction
     else
     {
       writeConstructor( writer,
-                        definition.getName(),
+                        type,
                         definition.getInherits(),
                         deriveArguments( constructors ),
                         Collections.emptyList() );
     }
-    writeConstMembers( writer, definition, definition.getConstants() );
+    writeConstMembers( writer, type, definition.getConstants() );
 
-    writeOperations( writer, definition, operations );
+    writeOperations( writer, type, operations );
   }
 
   private void writeOperations( @Nonnull final Writer writer,
-                                @Nonnull final NamedDefinition definition,
+                                @Nonnull final String type,
                                 @Nonnull final List<OperationMember> operations )
     throws IOException
   {
@@ -351,7 +354,7 @@ final class ClosureAction
       if ( 1 == operationsToMerge.size() )
       {
         writeOperation( writer,
-                        definition.getName(),
+                        type,
                         entry.getKey(),
                         templateOperation.getArguments(),
                         templateOperation.getReturnType(),
@@ -360,7 +363,7 @@ final class ClosureAction
       else
       {
         writeOperation( writer,
-                        definition.getName(),
+                        type,
                         entry.getKey(),
                         deriveArguments( operationsToMerge ),
                         deriveReturnType( operationsToMerge ),
@@ -494,32 +497,32 @@ final class ClosureAction
   }
 
   private void writeConstMembers( @Nonnull final Writer writer,
-                                  @Nonnull final NamedDefinition definition,
+                                  @Nonnull final String type,
                                   @Nonnull final List<ConstMember> constants )
     throws IOException
   {
     for ( final ConstMember constant : constants )
     {
-      writeConstMember( writer, definition, constant );
+      writeConstMember( writer, type, constant );
     }
   }
 
   private void writeConstMember( @Nonnull final Writer writer,
-                                 @Nonnull final NamedDefinition definition,
+                                 @Nonnull final String type,
                                  @Nonnull final ConstMember constant )
     throws IOException
   {
     writer.write( "/** @const {" );
     writeType( writer, constant.getType() );
     writer.write( "} */ " );
-    writer.write( definition.getName() );
+    writer.write( type );
     writer.write( "." );
     writer.write( constant.getName() );
     writer.write( ";\n" );
   }
 
   private void writeUniquelyNamedOperation( @Nonnull final Writer writer,
-                                            @Nonnull final NamedDefinition definition,
+                                            @Nonnull final String type,
                                             @Nonnull final OperationMember operation )
     throws IOException
   {
@@ -528,7 +531,7 @@ final class ClosureAction
     if ( null != name && OperationMember.Kind.CONSTRUCTOR != kind )
     {
       writeOperation( writer,
-                      definition.getName(),
+                      type,
                       name,
                       operation.getArguments(),
                       operation.getReturnType(),
@@ -581,7 +584,14 @@ final class ClosureAction
     //TODO: Implement types like iterable
     writeArgumentsJsDoc( writer, arguments );
     writer.write( " */\n" );
-    writer.write( "function " + typeName + toArgumentsList( arguments ) + " {}\n" );
+    if ( typeName.contains( "." ) )
+    {
+      writer.write( typeName + " = function" + toArgumentsList( arguments ) + " {}\n" );
+    }
+    else
+    {
+      writer.write( "function " + typeName + toArgumentsList( arguments ) + " {}\n" );
+    }
   }
 
   private void writeArgumentsJsDoc( @Nonnull final Writer writer,
