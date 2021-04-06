@@ -25,7 +25,7 @@ public final class JsinteropActionFactory
   public List<String> externalTypeMapping;
   public List<String> gwtInherits;
   public boolean generateGwtModule = true;
-  public boolean generateTypeCatalog = true;
+  public boolean generateTypeMapping = true;
   public boolean enableMagicConstants = true;
 
   @Nonnull
@@ -96,7 +96,7 @@ public final class JsinteropActionFactory
                                 externalTypeMappingPaths,
                                 generateGwtModule,
                                 null == gwtInherits ? Collections.emptyList() : gwtInherits,
-                                generateTypeCatalog,
+                                generateTypeMapping,
                                 enableMagicConstants );
   }
 }

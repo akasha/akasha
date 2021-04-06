@@ -83,7 +83,7 @@ final class JsinteropAction
   @Nonnull
   private final List<String> _gwtInherits;
   private final boolean _generateGwtModule;
-  private final boolean _generateTypeCatalog;
+  private final boolean _generateTypeMapping;
 
   JsinteropAction( @Nonnull final PipelineContext context,
                    @Nonnull final Path outputDirectory,
@@ -93,7 +93,7 @@ final class JsinteropAction
                    @Nonnull final List<Path> externalTypeMappingPaths,
                    final boolean generateGwtModule,
                    @Nonnull final List<String> gwtInherits,
-                   final boolean generateTypeCatalog,
+                   final boolean generateTypeMapping,
                    final boolean enableMagicConstants )
   {
     super( context,
@@ -105,7 +105,7 @@ final class JsinteropAction
     _globalInterface = globalInterface;
     _generateGwtModule = generateGwtModule;
     _gwtInherits = Objects.requireNonNull( gwtInherits );
-    _generateTypeCatalog = generateTypeCatalog;
+    _generateTypeMapping = generateTypeMapping;
   }
 
   @Override
@@ -222,9 +222,9 @@ final class JsinteropAction
       }
     }
 
-    if ( _generateTypeCatalog )
+    if ( _generateTypeMapping )
     {
-      writeTypeCatalog();
+      writeTypeMappingFile();
     }
   }
 
@@ -363,7 +363,7 @@ final class JsinteropAction
     return Integer.parseInt( isHex ? value.substring( 2 ) : value, isHex ? 16 : 10 );
   }
 
-  private void writeTypeCatalog()
+  private void writeTypeMappingFile()
     throws IOException
   {
     final String typeMappingContent =
