@@ -145,10 +145,9 @@ public abstract class AbstractJavaAction
     return _idlToJavaTypeMapping.computeIfAbsent( idlType, t -> _packageName + "." + idlType );
   }
 
-  @SuppressWarnings( "BooleanMethodIsAlwaysInverted" )
-  protected boolean isIdlTypePredefined( @Nonnull final String idlName )
+  protected boolean isIdlTypeNotPredefined( @Nonnull final String idlName )
   {
-    return _predefinedIdlToJavaTypeMapping.containsKey( idlName );
+    return !_predefinedIdlToJavaTypeMapping.containsKey( idlName );
   }
 
   @Nonnull

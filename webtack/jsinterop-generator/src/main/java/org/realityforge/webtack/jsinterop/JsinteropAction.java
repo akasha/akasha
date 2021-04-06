@@ -123,7 +123,7 @@ final class JsinteropAction
     for ( final TypedefDefinition definition : schema.getTypedefs() )
     {
       final Type type = definition.getType();
-      if ( Kind.Union == type.getKind() && !isIdlTypePredefined( definition.getName() ) )
+      if ( Kind.Union == type.getKind() && isIdlTypeNotPredefined( definition.getName() ) )
       {
         final UnionType unionType = (UnionType) type;
         if ( isMarkerType( definition ) )
@@ -141,49 +141,49 @@ final class JsinteropAction
     }
     for ( final CallbackDefinition definition : schema.getCallbacks() )
     {
-      if ( !isIdlTypePredefined( definition.getName() ) )
+      if ( isIdlTypeNotPredefined( definition.getName() ) )
       {
         generateCallback( definition );
       }
     }
     for ( final CallbackInterfaceDefinition definition : schema.getCallbackInterfaces() )
     {
-      if ( !isIdlTypePredefined( definition.getName() ) )
+      if ( isIdlTypeNotPredefined( definition.getName() ) )
       {
         generateCallbackInterface( definition );
       }
     }
     for ( final DictionaryDefinition definition : schema.getDictionaries() )
     {
-      if ( !isIdlTypePredefined( definition.getName() ) )
+      if ( isIdlTypeNotPredefined( definition.getName() ) )
       {
         generateDictionary( definition );
       }
     }
     for ( final EnumerationDefinition definition : schema.getEnumerations() )
     {
-      if ( !isIdlTypePredefined( definition.getName() ) )
+      if ( isIdlTypeNotPredefined( definition.getName() ) )
       {
         generateEnumeration( definition );
       }
     }
     for ( final ConstEnumerationDefinition definition : schema.getConstEnumerations() )
     {
-      if ( !isIdlTypePredefined( definition.getName() ) )
+      if ( isIdlTypeNotPredefined( definition.getName() ) )
       {
         generateConstEnumeration( definition );
       }
     }
     for ( final InterfaceDefinition definition : schema.getInterfaces() )
     {
-      if ( !isIdlTypePredefined( definition.getName() ) )
+      if ( isIdlTypeNotPredefined( definition.getName() ) )
       {
         generateInterface( definition );
       }
     }
     for ( final PartialInterfaceDefinition definition : schema.getPartialInterfaces() )
     {
-      if ( !isIdlTypePredefined( definition.getName() ) )
+      if ( isIdlTypeNotPredefined( definition.getName() ) )
       {
         generatePartialInterface( definition );
       }
@@ -191,7 +191,7 @@ final class JsinteropAction
     final List<NamespaceDefinition> namespacesGenerated = new ArrayList<>();
     for ( final NamespaceDefinition definition : schema.getNamespaces() )
     {
-      if ( !isIdlTypePredefined( definition.getName() ) )
+      if ( isIdlTypeNotPredefined( definition.getName() ) )
       {
         generateNamespace( definition );
         namespacesGenerated.add( definition );
@@ -201,7 +201,7 @@ final class JsinteropAction
     for ( final Map.Entry<String, UnionType> entry : getUnions().entrySet() )
     {
       final String name = entry.getKey();
-      if ( !isIdlTypePredefined( name ) )
+      if ( isIdlTypeNotPredefined( name ) )
       {
         generateUnion( name, NamingUtil.uppercaseFirstCharacter( name ), entry.getValue(), Collections.emptyList() );
       }
@@ -370,7 +370,7 @@ final class JsinteropAction
       getIdlToClassNameMapping()
         .entrySet()
         .stream()
-        .filter( e -> !isIdlTypePredefined( e.getKey() ) )
+        .filter( e -> isIdlTypeNotPredefined( e.getKey() ) )
         .map( e -> e.getKey() + "=" + e.getValue() )
         .sorted()
         .collect( Collectors.joining( "\n" ) ) + "\n";
