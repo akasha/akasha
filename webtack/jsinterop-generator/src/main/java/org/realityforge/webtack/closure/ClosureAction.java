@@ -518,14 +518,8 @@ final class ClosureAction
   private void writeType( @Nonnull final Writer writer, @Nonnull final Type type )
     throws IOException
   {
-    writeType( writer, type, true );
-  }
-
-  private void writeType( @Nonnull final Writer writer, @Nonnull final Type type, final boolean emitNullability )
-    throws IOException
-  {
     final Kind kind = type.getKind();
-    if ( emitNullability && Kind.Any != kind && Kind.Void != kind )
+    if ( Kind.Union != kind && Kind.Any != kind && Kind.Void != kind )
     {
       writer.write( type.isNullable() ? "?" : "!" );
     }
@@ -586,7 +580,7 @@ final class ClosureAction
         {
           first = false;
         }
-        writeType( writer, memberType, false );
+        writeType( writer, memberType );
       }
       writer.write( ")" );
     }
