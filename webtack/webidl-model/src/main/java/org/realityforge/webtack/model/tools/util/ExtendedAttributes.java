@@ -27,6 +27,14 @@ public final class ExtendedAttributes
    */
   public static final String LEGACY_NO_INTERFACE_OBJECT = "LegacyNoInterfaceObject";
   /**
+   * The LegacyNoInterfaceObject extended attribute indicates that the interface object for this interface
+   * will not be created as a property of the global object, but rather as a property of the namespace
+   * identified by the argument to the extended attribute.
+   *
+   * @see <a href="https://heycam.github.io/webidl/#LegacyNamespace">LegacyNamespace - WebIDL Specification</a>
+   */
+  public static final String LEGACY_NAMESPACE = "LegacyNamespace";
+  /**
    * The LegacyFactoryFunction extended attribute indicates that the ECMAScript global object will
    * have a property with the specified name whose value is a function that can create objects that
    * implement the interface.

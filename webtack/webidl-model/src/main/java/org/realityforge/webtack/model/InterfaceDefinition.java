@@ -7,6 +7,7 @@ import java.util.Objects;
 import java.util.Set;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import org.realityforge.webtack.model.tools.util.ExtendedAttributes;
 
 public final class InterfaceDefinition
   extends NamedDefinition
@@ -156,7 +157,8 @@ public final class InterfaceDefinition
   {
     return getExtendedAttributes()
       .stream()
-      .filter( a -> ExtendedAttribute.Kind.IDENT == a.getKind() && "LegacyNamespace".equals( a.getName() ) )
+      .filter( a -> ExtendedAttribute.Kind.IDENT == a.getKind() &&
+                    ExtendedAttributes.LEGACY_NAMESPACE.equals( a.getName() ) )
       .map( ExtendedAttribute::getIdent )
       .findAny()
       .orElse( null );
