@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -250,6 +251,60 @@ final class ClosureAction
   private void generateInterface( @Nonnull final Writer writer, @Nonnull final InterfaceDefinition definition )
     throws IOException
   {
+    final List<OperationMember> constructors =
+      definition
+        .getOperations()
+        .stream()
+        .filter( o -> OperationMember.Kind.CONSTRUCTOR == o.getKind() )
+        .collect( Collectors.toList() );
+    if ( constructors.isEmpty() )
+    {
+      writeConstructor( writer,
+                        definition.getName(),
+                        definition.getInherits(),
+                        Collections.emptyList(),
+                        Collections.singletonList( "@private" ) );
+    }
+    else
+    {
+      final List<Argument> arguments = new ArrayList<>();
+      //TODO: merge all the constructor parameters
+      writeConstructor( writer, definition.getName(), definition.getInherits(), arguments, Collections.emptyList() );
+    }
+    writeConstMembers( writer, definition, definition.getConstants() );
+
+    final Map<String, List<OperationMember>> operationMap =
+      definition
+        .getOperations()
+        .stream()
+        .filter( o -> null != o.getName() )
+        .filter( o -> OperationMember.Kind.CONSTRUCTOR != o.getKind() )
+        .collect( Collectors.groupingBy( OperationMember::getName ) );
+    for ( final Map.Entry<String, List<OperationMember>> entry : operationMap.entrySet() )
+    {
+      final List<OperationMember> operationsToMerge = entry.getValue();
+      final OperationMember templateOperation = operationsToMerge.get( 0 );
+      final boolean isNonStaticOperation = OperationMember.Kind.STATIC != templateOperation.getKind();
+      if ( 1 == operationsToMerge.size() )
+      {
+        writeOperation( writer,
+                        definition.getName(),
+                        entry.getKey(),
+                        templateOperation.getArguments(),
+                        templateOperation.getReturnType(),
+                        isNonStaticOperation );
+      }
+      else
+      {
+        //TODO: Merge all operations and return types
+        writeOperation( writer,
+                        definition.getName(),
+                        entry.getKey(),
+                        templateOperation.getArguments(),
+                        templateOperation.getReturnType(),
+                        isNonStaticOperation );
+      }
+    }
   }
 
   private void generatePartialInterface( @Nonnull final Writer writer,
