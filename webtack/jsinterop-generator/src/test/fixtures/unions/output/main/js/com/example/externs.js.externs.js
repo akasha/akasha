@@ -13,7 +13,7 @@ var OnErrorEventHandler;
 /**
  * @interface
  */
-function () {}
+function EventListener2() {}
 /**
  * @param {(!string|!number)} event
  * @return {undefined}
@@ -22,7 +22,7 @@ EventListener2.prototype.handleUuid = function(event) {}
 /**
  * @interface
  */
-function () {}
+function EventListener3() {}
 /**
  * @param {!BluetoothServiceUUID} event
  * @return {undefined}

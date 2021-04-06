@@ -9,7 +9,7 @@ var MyEventHandler;
 /**
  * @interface
  */
-function () {}
+function OtherEventListener() {}
 /**
  * @param {!Event} event
  * @return {undefined}
@@ -18,7 +18,7 @@ OtherEventListener.prototype.handleEvent = function(event) {}
 /**
  * @interface
  */
-function () {}
+function EventListener() {}
 /**
  * @param {!Event} event
  * @return {undefined}

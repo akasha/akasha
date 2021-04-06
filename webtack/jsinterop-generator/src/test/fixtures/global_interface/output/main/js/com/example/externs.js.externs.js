@@ -5,7 +5,7 @@
 /**
  * @interface
  */
-function () {}
+function FocusEventListener() {}
 /**
  * @param {!FocusEvent} event
  * @return {undefined}
@@ -14,7 +14,7 @@ FocusEventListener.prototype.handleEvent = function(event) {}
 /**
  * @interface
  */
-function () {}
+function EventListener() {}
 /**
  * @param {!Event} event
  * @return {undefined}

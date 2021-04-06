@@ -9,7 +9,7 @@ var MyEventHandler;
 /**
  * @interface
  */
-function () {}
+function EventListener() {}
 /**
  * @param {!Event} event
  * @return {undefined}

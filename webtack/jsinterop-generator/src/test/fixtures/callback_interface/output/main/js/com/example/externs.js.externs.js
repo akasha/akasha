@@ -5,7 +5,7 @@
 /**
  * @interface
  */
-function () {}
+function txCallback() {}
 /**
  * @param {!Event} event
  * @return {undefined}
@@ -14,7 +14,7 @@ txCallback.prototype.handleEvent = function(event) {}
 /**
  * @interface
  */
-function () {}
+function EventListener() {}
 /**
  * @param {!Event} event
  * @return {undefined}

@@ -5,7 +5,7 @@
 /**
  * @interface
  */
-function () {}
+function XPathNSResolver() {}
 /**
  * @param {?string} prefix
  * @return {?string}

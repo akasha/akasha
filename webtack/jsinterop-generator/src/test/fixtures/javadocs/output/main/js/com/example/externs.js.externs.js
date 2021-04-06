@@ -9,7 +9,7 @@ var OnActionHandler;
 /**
  * @interface
  */
-function () {}
+function NodeFilter() {}
 /** @const {!number} */ NodeFilter.FILTER_ACCEPT;
 /**
  * @param {!Node} node

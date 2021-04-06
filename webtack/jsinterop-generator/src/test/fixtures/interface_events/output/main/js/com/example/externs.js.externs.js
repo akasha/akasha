@@ -13,7 +13,7 @@ var SpeechSynthesisEventHandler;
 /**
  * @interface
  */
-function () {}
+function SpeechSynthesisEventListener() {}
 /**
  * @param {!SpeechSynthesisEvent} event
  * @return {undefined}
@@ -22,7 +22,7 @@ SpeechSynthesisEventListener.prototype.handleEvent = function(event) {}
 /**
  * @interface
  */
-function () {}
+function EventListener() {}
 /**
  * @param {!Event} event
  * @return {undefined}

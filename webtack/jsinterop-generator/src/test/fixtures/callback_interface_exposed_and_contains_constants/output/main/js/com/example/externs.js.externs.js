@@ -5,7 +5,7 @@
 /**
  * @interface
  */
-function () {}
+function NodeFilter() {}
 /** @const {!number} */ NodeFilter.FILTER_ACCEPT;
 /** @const {!number} */ NodeFilter.FILTER_REJECT;
 /** @const {!number} */ NodeFilter.FILTER_SKIP;

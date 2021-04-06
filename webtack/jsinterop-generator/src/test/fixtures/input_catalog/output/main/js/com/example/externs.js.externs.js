@@ -13,7 +13,7 @@ var EventHandler2;
 /**
  * @interface
  */
-function () {}
+function CompletionCallback() {}
 /**
  * @return {undefined}
  */
@@ -21,7 +21,7 @@ CompletionCallback.prototype.onDone = function() {}
 /**
  * @interface
  */
-function () {}
+function EventListener() {}
 /**
  * @return {undefined}
  */
