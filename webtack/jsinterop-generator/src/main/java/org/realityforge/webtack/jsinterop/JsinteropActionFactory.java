@@ -18,14 +18,50 @@ import org.realityforge.webtack.model.tools.spi.PipelineContext;
 public final class JsinteropActionFactory
   implements ActionFactory
 {
+  /**
+   * The base directory in which to generate code.
+   */
   public String outputDirectory;
+  /**
+   * The base package under which to generate code.
+   */
   public String packageName;
+  /**
+   * The global interface expected for generated library.
+   * If this is specified, then only types that are exposed
+   * on that global interface are present in generated output.
+   */
   public String globalInterface;
+  /**
+   * A list of files that list types that are predefined.
+   * Each file contains lines of the form: "[idl_type_name]=[qualified java class name]"
+   */
   public List<String> predefinedTypeMapping;
+  /**
+   * A list of files that override the name of the generated java class for an idl type.
+   * Each file contains lines of the form: "[idl_type_name]=[qualified java class name]"
+   */
   public List<String> externalTypeMapping;
+  /**
+   * A list of inherits to add to the generated to the generated gwt module.
+   */
   public List<String> gwtInherits;
+  /**
+   * A flag controlling whether the gwt module descriptor is generated.
+   */
   public boolean generateGwtModule = true;
+  /**
+   * A flag controlling whether the type mapping file is generated.
+   * The type mapping file consists of a line for every generated class and
+   * each line is of the form "[idl_type_name]=[qualified java class name]".
+   * This is designed to be passed in to the "externalTypeMapping" of other
+   * "Jsinterop" actions.
+   */
   public boolean generateTypeMapping = true;
+  /**
+   * Should the generated code emit @MagicConstant annotations to improve usability
+   * in IntelliJ IDEA and related IDEs.
+   */
   public boolean enableMagicConstants = true;
 
   @Nonnull
