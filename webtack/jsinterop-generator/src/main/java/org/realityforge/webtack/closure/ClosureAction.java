@@ -257,6 +257,14 @@ final class ClosureAction
                         Collections.emptyList(),
                         Collections.singletonList( "@private" ) );
     }
+    else if ( 1 == constructors.size() )
+    {
+      writeConstructor( writer,
+                        definition.getName(),
+                        definition.getInherits(),
+                        constructors.get( 0 ).getArguments(),
+                        Collections.emptyList() );
+    }
     else
     {
       final List<Argument> arguments = new ArrayList<>();

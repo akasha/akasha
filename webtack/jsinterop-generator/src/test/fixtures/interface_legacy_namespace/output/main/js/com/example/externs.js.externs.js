@@ -19,8 +19,10 @@ function ArrayBuffer() {}
 function Module() {}
 /**
  * @constructor
+ * @param {!GlobalDescriptor} descriptor
+ * @param {*=} v
  */
-function Global() {};
+function Global(descriptor,v) {}
 /**
  * @return {*}
  */

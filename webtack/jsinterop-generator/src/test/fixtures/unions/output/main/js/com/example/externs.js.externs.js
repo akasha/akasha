@@ -76,9 +76,9 @@ BluetoothRemoteGATTServer.prototype.getPrimaryServices = function(service) {}
 BluetoothRemoteGATTServer.prototype.getPrimaryService = function(service) {}
 /**
  * @constructor
- * @param {!(!string|!number)} arg0
+ * @param {!(!string|!number)} serviceUuid
  */
-function SomeInterface(arg0) {}
+function SomeInterface(serviceUuid) {}
 /**
  * @return {!(!string|!number)}
  */
@@ -94,9 +94,9 @@ SomeInterface.prototype.getUuid = function() {}
 SomeInterface.myStaticMethodWithUnionArg = function(serviceUuid) {}
 /**
  * @constructor
- * @param {!BufferSource} arg0
+ * @param {!BufferSource} data
  */
-function SomeDataContainer(arg0) {}
+function SomeDataContainer(data) {}
 /**
  * @return {!BluetoothDescriptorUUID}
  */
@@ -164,9 +164,9 @@ function Event() {}
 function ArrayBuffer() {}
 /**
  * @constructor
- * @param {!BluetoothServiceUUID=} arg0
+ * @param {!BluetoothServiceUUID=} service
  */
-function SomeServiceContainer(arg0) {}
+function SomeServiceContainer(service) {}
 /**
  * @return {?BluetoothDescriptorUUID}
  */

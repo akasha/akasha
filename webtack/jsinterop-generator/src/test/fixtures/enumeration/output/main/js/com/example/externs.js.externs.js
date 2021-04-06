@@ -8,8 +8,9 @@
 var SomeCallbackHandler;
 /**
  * @constructor
+ * @param {!OverSampleType} sample
  */
-function WaveShaperNode() {};
+function WaveShaperNode(sample) {}
 /**
  * @return {!OverSampleType}
  */

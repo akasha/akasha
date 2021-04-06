@@ -117,19 +117,19 @@ Storage.prototype.key = function(index) {}
 /**
  * @constructor
  * @extends {Event}
- * @param {!string} arg0
+ * @param {!string} type
  */
-function SpeechRecognitionErrorEvent(arg0) {}
+function SpeechRecognitionErrorEvent(type) {}
 /**
  * @return {!string}
  */
 SpeechRecognitionErrorEvent.prototype.messageDescription = function() {}
 /**
  * @constructor
- * @param {!string} arg0
- * @param {!EventInit=} arg1
+ * @param {!string} type
+ * @param {!EventInit=} eventInitDict
  */
-function Event(arg0,arg1) {}
+function Event(type,eventInitDict) {}
 /** @const {!number} */ Event.AT_TARGET;
 /** @const {!number} */ Event.BUBBLING_PHASE;
 /** @const {!number} */ Event.CAPTURING_PHASE;

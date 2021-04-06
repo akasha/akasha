@@ -23,8 +23,10 @@ NodeFilter.prototype.acceptNode = function(node) {}
 function Node() {}
 /**
  * @constructor
+ * @param {!string} type
+ * @param {!EventInit=} eventInitDict
  */
-function Event() {};
+function Event(type,eventInitDict) {}
 /** @const {!number} */ Event.AT_TARGET;
 /**
  * @return {!Array<!EventTarget>}

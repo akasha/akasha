@@ -26,8 +26,9 @@ function KHR_parallel_shader_compile() {}
 /** @const {!string} */ KHR_parallel_shader_compile.NAME;
 /**
  * @constructor
+ * @param {!ReadyStateType} value
  */
-function XMLHttpRequest() {};
+function XMLHttpRequest(value) {}
 /** @const {!number} */ XMLHttpRequest.DONE;
 /** @const {!number} */ XMLHttpRequest.HEADERS_RECEIVED;
 /** @const {!number} */ XMLHttpRequest.LOADING;
