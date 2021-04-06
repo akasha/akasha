@@ -56,6 +56,7 @@ complete as there is too much un-said.
 * LegacyNoInterfaceObject support
 * Exposed filtering
 * attributes
+* filter out elements that are marked as `JavaOnly`
 
 # Java Generation
 
