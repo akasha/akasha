@@ -357,7 +357,8 @@ final class ClosureAction
   private void writeConstructor( @Nonnull final Writer writer,
                                  @Nonnull final String typeName,
                                  @Nullable final String superType,
-                                 @Nonnull final List<Argument> arguments )
+                                 @Nonnull final List<Argument> arguments,
+                                 @Nonnull final List<String> additionalLines )
     throws IOException
   {
     writer.write( "/**\n" );
@@ -367,6 +368,12 @@ final class ClosureAction
       writer.write( " * @extends {" );
       writer.write( superType );
       writer.write( "}\n" );
+    }
+    for ( final String additionalLine : additionalLines )
+    {
+      writer.write( " * " );
+      writer.write( additionalLine );
+      writer.write( "\n" );
     }
     //TODO: Implement types like iterable
     for ( final Argument argument : arguments )
