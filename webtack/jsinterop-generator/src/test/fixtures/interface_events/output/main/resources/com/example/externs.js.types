@@ -4,6 +4,7 @@ EventHandler
 EventListener
 EventListenerOptions
 EventTarget
+NullableEventHandler
 SpeechSynthesisErrorEvent
 SpeechSynthesisEvent
 SpeechSynthesisEventHandler

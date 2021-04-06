@@ -114,11 +114,9 @@ final class ClosureAction
       writeJsDoc( writer, "@fileoverview", "@externs" );
       for ( final TypedefDefinition definition : schema.getTypedefs() )
       {
-        final Type type = definition.getType();
-        if ( Kind.Union == type.getKind() && tryRecordGeneratedType( definition.getName() ) )
+        if ( tryRecordGeneratedType( definition.getName() ) )
         {
-          final UnionType unionType = (UnionType) type;
-          generateUnion( writer, definition.getName(), unionType );
+          generateTypedef( writer, definition.getName(), definition.getType() );
         }
       }
       for ( final CallbackDefinition definition : schema.getCallbacks() )
@@ -230,9 +228,9 @@ final class ClosureAction
   {
   }
 
-  private void generateUnion( @Nonnull final Writer writer,
-                              @Nonnull final String idlName,
-                              @Nonnull final UnionType unionType )
+  private void generateTypedef( @Nonnull final Writer writer,
+                                @Nonnull final String idlName,
+                                @Nonnull final Type unionType )
     throws IOException
   {
     writer.write( "/**\n * @typedef {" );

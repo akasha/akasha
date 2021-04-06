@@ -3,6 +3,10 @@
  * @externs
  */
 /**
+ * @typedef {!Promise<!ClipboardItemDataType>}
+ */
+var ClipboardItemData;
+/**
  * @typedef {(!string|!Blob)}
  */
 var ClipboardItemDataType;

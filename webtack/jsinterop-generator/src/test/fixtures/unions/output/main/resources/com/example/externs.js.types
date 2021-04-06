@@ -21,6 +21,7 @@ Float64Array
 Int16Array
 Int32Array
 Int8Array
+MyNamedBufferSource
 OnBufferSourceHandler
 OnErrorEventHandler
 SomeDataContainer

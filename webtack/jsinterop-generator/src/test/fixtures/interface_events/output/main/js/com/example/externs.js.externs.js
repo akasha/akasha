@@ -3,6 +3,10 @@
  * @externs
  */
 /**
+ * @typedef {?EventHandler}
+ */
+var NullableEventHandler;
+/**
  * @typedef {function(!Event): undefined}
  */
 var EventHandler;

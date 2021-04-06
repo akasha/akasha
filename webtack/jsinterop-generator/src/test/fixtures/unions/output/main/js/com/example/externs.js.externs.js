@@ -19,6 +19,10 @@ var BluetoothServiceUUID;
  */
 var BufferSource;
 /**
+ * @typedef {!BufferSource}
+ */
+var MyNamedBufferSource;
+/**
  * @typedef {(!string|!number)}
  */
 var txCode;

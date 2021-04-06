@@ -3,6 +3,10 @@
  * @externs
  */
 /**
+ * @typedef {!Object<!string,!string>}
+ */
+var AuthenticationExtensionsAuthenticatorInputs;
+/**
  * @constructor
  * @param {!Object<!string,!ClipboardItemData>} items
  * @param {!ClipboardItemOptions=} options

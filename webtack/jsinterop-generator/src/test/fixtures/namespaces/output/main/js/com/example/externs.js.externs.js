@@ -3,6 +3,10 @@
  * @externs
  */
 /**
+ * @typedef {!ArrayBuffer}
+ */
+var BufferSource;
+/**
  * @constructor
  * @private
  */

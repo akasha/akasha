@@ -1,4 +1,5 @@
 ArrayBuffer
+BufferSource
 CompileError
 Global
 GlobalDescriptor

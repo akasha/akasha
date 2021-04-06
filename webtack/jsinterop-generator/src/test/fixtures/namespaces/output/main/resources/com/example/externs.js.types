@@ -1,4 +1,5 @@
 ArrayBuffer
+BufferSource
 CSS
 Math
 WebAssembly
