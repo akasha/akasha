@@ -116,62 +116,69 @@ final class ClosureAction
       {
         if ( tryRecordGeneratedType( definition.getName() ) )
         {
-          generateTypedef( writer, definition.getName(), definition.getType() );
+          writeTypedef( writer, definition.getName(), definition.getType() );
         }
       }
       for ( final CallbackDefinition definition : schema.getCallbacks() )
       {
         if ( tryRecordGeneratedType( definition.getName() ) )
         {
-          generateCallback( writer, definition );
+          writeCallback( writer, definition );
         }
       }
       for ( final CallbackInterfaceDefinition definition : schema.getCallbackInterfaces() )
       {
         if ( tryRecordGeneratedType( definition.getName() ) )
         {
-          generateCallbackInterface( writer, definition );
+          writeCallbackInterface( writer, definition );
         }
       }
       for ( final DictionaryDefinition definition : schema.getDictionaries() )
       {
         if ( tryRecordGeneratedType( definition.getName() ) )
         {
-          generateDictionary( writer, definition );
+          writeDictionary( writer, definition );
         }
       }
       for ( final EnumerationDefinition definition : schema.getEnumerations() )
       {
         if ( tryRecordGeneratedType( definition.getName() ) )
         {
-          generateEnumeration( writer, definition );
+          writeEnumeration( writer, definition );
         }
       }
       for ( final ConstEnumerationDefinition definition : schema.getConstEnumerations() )
       {
         if ( tryRecordGeneratedType( definition.getName() ) )
         {
-          generateConstEnumeration( definition );
+          writeConstEnumeration( writer, definition );
         }
       }
       for ( final InterfaceDefinition definition : schema.getInterfaces() )
       {
         if ( tryRecordGeneratedType( definition.getName() ) )
         {
-          generateInterface( writer, definition );
+          writeInterface( writer, definition );
         }
       }
       for ( final NamespaceDefinition definition : schema.getNamespaces() )
       {
         if ( tryRecordGeneratedType( definition.getName() ) )
         {
-          generateNamespace( definition );
+          writeNamespace( writer, definition );
         }
       }
 
       if ( null != _globalInterface )
       {
-        // Should we define externs for globalThis.X, window.X and X ?
+        final InterfaceDefinition definition = schema.findInterfaceByName( _globalInterface );
+        if ( null == definition )
+        {
+          throw new IllegalStateException( "Declared globalInterface '" +
+                                           _globalInterface +
+                                           "' does not exist in schema" );
+        }
+        writeGlobalInterface( writer, definition );
       }
     }
 
@@ -181,56 +188,9 @@ final class ClosureAction
     }
   }
 
-  private void generateNamespace( @Nonnull final NamespaceDefinition definition )
-  {
-
-  }
-
-  private void generateConstEnumeration( @Nonnull final ConstEnumerationDefinition definition )
-    throws IOException
-  {
-  }
-
-  private void writeTypeCatalog()
-    throws IOException
-  {
-    final String content =
-      _generatedTypes
-        .stream()
-        .sorted()
-        .collect( Collectors.joining( "\n" ) ) + "\n";
-    writeFile( getMainResourcesDirectory().resolve( _key + ".types" ),
-               content.getBytes( StandardCharsets.UTF_8 ) );
-  }
-
-  private void generateCallback( @Nonnull final Writer writer, @Nonnull final CallbackDefinition definition )
-    throws IOException
-  {
-    writer.write( "/**\n * @typedef {" );
-    writeFunctionType( writer, definition.getArguments(), definition.getReturnType() );
-    writer.write( "\n */\n" );
-    writer.write( "var " + definition.getName() + ";\n" );
-  }
-
-  private void generateCallbackInterface( @Nonnull final Writer writer,
-                                          @Nonnull final CallbackInterfaceDefinition definition )
-    throws IOException
-  {
-    writer.write( "/**\n * @interface\n */\nfunction " );
-    writer.write( definition.getName() );
-    writer.write( "() {}\n" );
-    writeConstMembers( writer, definition, definition.getConstants() );
-    writeUniquelyNamedOperation( writer, definition, definition.getOperation() );
-  }
-
-  private void generateEnumeration( @Nonnull final Writer writer, @Nonnull final EnumerationDefinition definition )
-    throws IOException
-  {
-  }
-
-  private void generateTypedef( @Nonnull final Writer writer,
-                                @Nonnull final String idlName,
-                                @Nonnull final Type unionType )
+  private void writeTypedef( @Nonnull final Writer writer,
+                             @Nonnull final String idlName,
+                             @Nonnull final Type unionType )
     throws IOException
   {
     writer.write( "/**\n * @typedef {" );
@@ -240,12 +200,43 @@ final class ClosureAction
     writer.write( ";\n" );
   }
 
-  private void generateDictionary( @Nonnull final Writer writer, @Nonnull final DictionaryDefinition definition )
+  private void writeCallback( @Nonnull final Writer writer, @Nonnull final CallbackDefinition definition )
+    throws IOException
+  {
+    writer.write( "/**\n * @typedef {" );
+    writeFunctionType( writer, definition.getArguments(), definition.getReturnType() );
+    writer.write( "\n */\n" );
+    writer.write( "var " + definition.getName() + ";\n" );
+  }
+
+  private void writeCallbackInterface( @Nonnull final Writer writer,
+                                       @Nonnull final CallbackInterfaceDefinition definition )
+    throws IOException
+  {
+    writer.write( "/**\n * @interface\n */\nfunction " );
+    writer.write( definition.getName() );
+    writer.write( "() {}\n" );
+    writeConstMembers( writer, definition, definition.getConstants() );
+    writeUniquelyNamedOperation( writer, definition, definition.getOperation() );
+  }
+
+  private void writeDictionary( @Nonnull final Writer writer, @Nonnull final DictionaryDefinition definition )
     throws IOException
   {
   }
 
-  private void generateInterface( @Nonnull final Writer writer, @Nonnull final InterfaceDefinition definition )
+  private void writeEnumeration( @Nonnull final Writer writer, @Nonnull final EnumerationDefinition definition )
+    throws IOException
+  {
+  }
+
+  private void writeConstEnumeration( @Nonnull final Writer writer,
+                                      @Nonnull final ConstEnumerationDefinition definition )
+    throws IOException
+  {
+  }
+
+  private void writeInterface( @Nonnull final Writer writer, @Nonnull final InterfaceDefinition definition )
     throws IOException
   {
     final List<OperationMember> constructors =
@@ -311,6 +302,29 @@ final class ClosureAction
                         isNonStaticOperation );
       }
     }
+  }
+
+  private void writeNamespace( @Nonnull final Writer writer, @Nonnull final NamespaceDefinition definition )
+    throws IOException
+  {
+  }
+
+  private void writeGlobalInterface( @Nonnull final Writer writer, @Nonnull final InterfaceDefinition definition )
+    throws IOException
+  {
+    // Should we define externs for globalThis.X, window.X and X ?
+  }
+
+  private void writeTypeCatalog()
+    throws IOException
+  {
+    final String content =
+      _generatedTypes
+        .stream()
+        .sorted()
+        .collect( Collectors.joining( "\n" ) ) + "\n";
+    writeFile( getMainResourcesDirectory().resolve( _key + ".types" ),
+               content.getBytes( StandardCharsets.UTF_8 ) );
   }
 
   @Nonnull
