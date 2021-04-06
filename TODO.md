@@ -10,6 +10,8 @@ complete as there is too much un-said.
 
 * Emit closure externs for WebIDL types.
 
+* Make abstract/concrete dictionaries generate the same way.
+
 # Docs Integration
 
 * Process docs and any words that match an original/non-synthetic word then convert into {@link MyType}
@@ -50,6 +52,10 @@ complete as there is too much un-said.
 * Scan the main closure externs and figure out a heuristic for `@nosideeffects`
 
 * Consider how we can use `@enum` for const enumerations and friends.
+
+* namespace support
+* LegacyNoInterfaceObject support
+* LegacyNamespace=WebAssembly support
 
 # Java Generation
 
