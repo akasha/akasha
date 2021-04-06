@@ -54,7 +54,6 @@ complete as there is too much un-said.
 * Consider how we can use `@enum` for const enumerations and friends.
 
 * LegacyNoInterfaceObject support
-* LegacyNamespace=WebAssembly support
 * Exposed filtering
 * attributes
 
