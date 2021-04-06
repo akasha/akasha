@@ -322,7 +322,7 @@ final class ClosureAction
   {
     for ( final Type type : types )
     {
-      if ( !type.equiv( candidate ) )
+      if ( type.equiv( candidate ) )
       {
         return;
       }
