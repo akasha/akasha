@@ -3,7 +3,7 @@
  * @externs
  */
 /**
- * @constructor
+ * @record
  * @private
  */
 function SpeechSynthesisVoice() {}

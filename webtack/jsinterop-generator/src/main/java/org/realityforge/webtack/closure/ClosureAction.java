@@ -41,6 +41,7 @@ import org.realityforge.webtack.model.WebIDLSchema;
 import org.realityforge.webtack.model.tools.io.FilesUtil;
 import org.realityforge.webtack.model.tools.spi.PipelineContext;
 import org.realityforge.webtack.model.tools.util.AbstractAction;
+import org.realityforge.webtack.model.tools.util.ExtendedAttributes;
 
 final class ClosureAction
   extends AbstractAction
@@ -304,15 +305,31 @@ final class ClosureAction
         .stream()
         .filter( o -> OperationMember.Kind.CONSTRUCTOR == o.getKind() )
         .collect( Collectors.toList() );
+    final boolean hasNoJsType =
+      definition.isNoArgsExtendedAttributePresent( ExtendedAttributes.LEGACY_NO_INTERFACE_OBJECT );
+
     final String namespace = definition.getNamespace();
     final String type = ( null == namespace ? "" : namespace + "." ) + definition.getName();
     if ( constructors.isEmpty() )
     {
-      writeConstructor( writer,
-                        type,
-                        definition.getInherits(),
-                        Collections.emptyList(),
-                        Collections.singletonList( "@private" ) );
+      if ( hasNoJsType )
+      {
+        writeConstructor( writer,
+                          type,
+                          definition.getInherits(),
+                          Collections.emptyList(),
+                          false,
+                          Collections.singletonList( "@private" ) );
+      }
+      else
+      {
+        writeConstructor( writer,
+                          type,
+                          definition.getInherits(),
+                          Collections.emptyList(),
+                          true,
+                          Collections.singletonList( "@private" ) );
+      }
     }
     else if ( 1 == constructors.size() )
     {
@@ -320,6 +337,7 @@ final class ClosureAction
                         type,
                         definition.getInherits(),
                         constructors.get( 0 ).getArguments(),
+                        true,
                         Collections.emptyList() );
     }
     else
@@ -328,6 +346,7 @@ final class ClosureAction
                         type,
                         definition.getInherits(),
                         deriveArguments( constructors ),
+                        true,
                         Collections.emptyList() );
     }
     writeConstMembers( writer, type, definition.getConstants() );
@@ -564,11 +583,19 @@ final class ClosureAction
                                  @Nonnull final String typeName,
                                  @Nullable final String superType,
                                  @Nonnull final List<Argument> arguments,
+                                 final boolean hasJsType,
                                  @Nonnull final List<String> additionalLines )
     throws IOException
   {
     writer.write( "/**\n" );
-    writer.write( " * @constructor\n" );
+    if ( hasJsType )
+    {
+      writer.write( " * @constructor\n" );
+    }
+    else
+    {
+      writer.write( " * @record\n" );
+    }
     if ( null != superType )
     {
       writer.write( " * @extends {" );
