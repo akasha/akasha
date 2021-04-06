@@ -269,7 +269,6 @@ final class ClosureAction
     writer.write( "}}\n */\nvar " );
     writer.write( definition.getName() );
     writer.write( ";\n" );
-
   }
 
   private void writeEnumeration( @Nonnull final Writer writer, @Nonnull final EnumerationDefinition definition )
