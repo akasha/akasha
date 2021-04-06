@@ -182,8 +182,18 @@ public abstract class AbstractTest
       }
     }
 
+    final List<Path> predefinedTypeCatalogPaths =
+      collectFilesWithExtension( ".types", inputDirectory.resolve( "main" ).resolve( "resources" ) );
+    final List<Path> commonTypeCatalogPaths =
+      collectFilesWithExtension( ".types", commonInput.resolve( "main" ).resolve( "resources" ) );
+    predefinedTypeCatalogPaths.addAll( commonTypeCatalogPaths );
     final Set<Path> generatedClosureFiles =
-      performClosureAction( directory, schema, packageName, globalInterface, outputDirectory );
+      performClosureAction( directory,
+                            schema,
+                            packageName,
+                            globalInterface,
+                            outputDirectory,
+                            predefinedTypeCatalogPaths );
     for ( final Path file : generatedClosureFiles )
     {
       // If it is not in the input path then it must be in output path
@@ -255,13 +265,16 @@ public abstract class AbstractTest
                                           @Nonnull final WebIDLSchema schema,
                                           @Nonnull final String packageName,
                                           @Nullable final String globalInterface,
-                                          @Nonnull final Path outputDirectory )
+                                          @Nonnull final Path outputDirectory,
+                                          @Nonnull final List<Path> predefinedTypeCatalogPaths )
     throws Exception
   {
     final ClosureActionFactory actionFactory = new ClosureActionFactory();
     actionFactory.outputDirectory = outputDirectory.toString();
     actionFactory.key = packageName.replace( ".", "/" ) + "/externs.js";
     actionFactory.globalInterface = globalInterface;
+    actionFactory.predefinedTypeCatalogs =
+      predefinedTypeCatalogPaths.stream().map( Path::toString ).collect( Collectors.toList() );
     final Action action = actionFactory.create( newPipelineContext( directory ) );
     action.process( schema );
     return ( (AbstractAction) action ).getGeneratedFiles();
