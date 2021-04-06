@@ -386,6 +386,7 @@ final class ClosureAction
       _generatedTypes
         .stream()
         .sorted()
+        .filter( t -> !_predefinedTypes.contains( t ) )
         .collect( Collectors.joining( "\n" ) ) + "\n";
     writeFile( getMainResourcesDirectory().resolve( _key + ".types" ),
                content.getBytes( StandardCharsets.UTF_8 ) );
