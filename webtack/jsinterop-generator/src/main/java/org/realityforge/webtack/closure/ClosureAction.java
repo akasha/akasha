@@ -30,7 +30,6 @@ import org.realityforge.webtack.model.NamedDefinition;
 import org.realityforge.webtack.model.NamedElement;
 import org.realityforge.webtack.model.NamespaceDefinition;
 import org.realityforge.webtack.model.OperationMember;
-import org.realityforge.webtack.model.PartialInterfaceDefinition;
 import org.realityforge.webtack.model.PromiseType;
 import org.realityforge.webtack.model.RecordType;
 import org.realityforge.webtack.model.SequenceType;
@@ -162,13 +161,6 @@ final class ClosureAction
         if ( tryRecordGeneratedType( definition.getName() ) )
         {
           generateInterface( writer, definition );
-        }
-      }
-      for ( final PartialInterfaceDefinition definition : schema.getPartialInterfaces() )
-      {
-        if ( tryRecordGeneratedType( definition.getName() ) )
-        {
-          generatePartialInterface( writer, definition );
         }
       }
       for ( final NamespaceDefinition definition : schema.getNamespaces() )
@@ -307,9 +299,6 @@ final class ClosureAction
     }
   }
 
-  private void generatePartialInterface( @Nonnull final Writer writer,
-                                         @Nonnull final PartialInterfaceDefinition definition )
-    throws IOException
   {
   }
 

@@ -11,6 +11,4 @@ IDBObjectStore
 IndexedKeyframeOffsetType
 SomeDataType
 WebAssembly
-Window
-Worker
 txMode
