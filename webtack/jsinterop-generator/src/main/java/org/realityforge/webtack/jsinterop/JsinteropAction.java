@@ -1112,7 +1112,6 @@ final class JsinteropAction
 
     type.addSuperinterface( lookupClassName( definition.getName() ) );
 
-    final WebIDLSchema schema = getSchema();
     for ( final DictionaryMember member : definition.getMembers() )
     {
       for ( final TypedValue typedValue : explodeType( member.getType() ) )
