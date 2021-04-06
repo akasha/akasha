@@ -9,6 +9,10 @@ complete as there is too much un-said.
 * Add missing methods to typed array types
 
 * Emit closure externs for WebIDL types.
+  * Exposed filtering
+  * attributes
+  * filter out elements that are marked as `JavaOnly`
+  
 
 * Make abstract/concrete dictionaries generate the same way.
 
@@ -50,10 +54,6 @@ complete as there is too much un-said.
   probably characterized via maplike, setlike etc.
 
 * Scan the main closure externs and figure out a heuristic for `@nosideeffects`
-
-* Exposed filtering
-* attributes
-* filter out elements that are marked as `JavaOnly`
 
 # Java Generation
 
