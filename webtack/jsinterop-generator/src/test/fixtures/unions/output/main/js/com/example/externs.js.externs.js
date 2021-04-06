@@ -3,6 +3,30 @@
  * @externs
  */
 /**
+ * @typedef {(!Int8Array|!Int16Array|!Int32Array|!Uint8Array|!Uint16Array|!Uint32Array|!Uint8ClampedArray|!Float32Array|!Float64Array|!DataView)}
+ */
+var ArrayBufferView;
+/**
+ * @typedef {(!string|!number)}
+ */
+var BluetoothDescriptorUUID;
+/**
+ * @typedef {(!string|!number)}
+ */
+var BluetoothServiceUUID;
+/**
+ * @typedef {(!ArrayBufferView|!ArrayBuffer)}
+ */
+var BufferSource;
+/**
+ * @typedef {(!string|!number)}
+ */
+var txCode;
+/**
+ * @typedef {(!string|!number)}
+ */
+var BluetoothCharacteristicUUID;
+/**
  * @typedef {function(!BufferSource=): undefined}
  */
 var OnBufferSourceHandler;

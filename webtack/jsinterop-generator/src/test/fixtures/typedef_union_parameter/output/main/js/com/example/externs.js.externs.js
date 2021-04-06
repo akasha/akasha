@@ -3,6 +3,10 @@
  * @externs
  */
 /**
+ * @typedef {(!string|!number)}
+ */
+var StringifySpaceUnionType;
+/**
  * @constructor
  * @private
  */

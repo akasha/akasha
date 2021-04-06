@@ -3,6 +3,14 @@
  * @externs
  */
 /**
+ * @typedef {(!TexImageSource|!MyBufferSource)}
+ */
+var TexBufferSource;
+/**
+ * @typedef {(!ImageBitmap|!ImageData|!HTMLImageElement|!HTMLCanvasElement|!HTMLVideoElement|!OffscreenCanvas)}
+ */
+var TexImageSource;
+/**
  * @constructor
  * @private
  */

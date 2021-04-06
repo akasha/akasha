@@ -235,6 +235,11 @@ final class ClosureAction
                               @Nonnull final UnionType unionType )
     throws IOException
   {
+    writer.write( "/**\n * @typedef {" );
+    writeType( writer, unionType );
+    writer.write( "}\n */\nvar " );
+    writer.write( idlName );
+    writer.write( ";\n" );
   }
 
   private void generateDictionary( @Nonnull final Writer writer, @Nonnull final DictionaryDefinition definition )

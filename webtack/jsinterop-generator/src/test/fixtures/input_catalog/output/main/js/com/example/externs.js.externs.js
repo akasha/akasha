@@ -3,6 +3,14 @@
  * @externs
  */
 /**
+ * @typedef {(?number|!Array<?number>)}
+ */
+var IndexedKeyframeOffsetType;
+/**
+ * @typedef {(!string|!number)}
+ */
+var SomeDataType;
+/**
  * @typedef {function(): undefined}
  */
 var EventHandler1;

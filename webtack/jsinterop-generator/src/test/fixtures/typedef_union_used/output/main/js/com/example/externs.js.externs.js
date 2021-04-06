@@ -3,6 +3,10 @@
  * @externs
  */
 /**
+ * @typedef {(!string|!Blob)}
+ */
+var ClipboardItemDataType;
+/**
  * @typedef {function(): !ClipboardItemData}
  */
 var ClipboardItemDelayedCallback;

@@ -3,6 +3,10 @@
  * @externs
  */
 /**
+ * @typedef {(!string|!number)}
+ */
+var MyTypedefedUnion;
+/**
  * @typedef {function(!Event): undefined}
  */
 var MyEventHandler;
