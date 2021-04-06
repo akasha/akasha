@@ -4,4 +4,3 @@ EventInit
 EventListener
 MyEventHandler
 MyTypedefedUnion
-PermissionState

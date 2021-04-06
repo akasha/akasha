@@ -3,28 +3,28 @@
  * @externs
  */
 /**
- * @typedef {function(!txMode): !SpeechRecognitionErrorCode}
+ * @typedef {function(!string): !string}
  */
 var SomeCallbackHandler;
 /**
- * @typedef {{oversample:(!OverSampleType|undefined)}}
+ * @typedef {{oversample:(!string|undefined)}}
  */
 var WaveShaperOptions;
 /**
- * @typedef {{error:!SpeechRecognitionErrorCode}}
+ * @typedef {{error:!string}}
  */
 var SpeechRecognitionErrorEventInit;
 /**
  * @constructor
- * @param {!OverSampleType} sample
+ * @param {!string} sample
  */
 function WaveShaperNode(sample) {}
 /**
- * @return {!OverSampleType}
+ * @return {!string}
  */
 WaveShaperNode.prototype.getSample = function() {}
 /**
- * @param {!OverSampleType} sample
+ * @param {!string} sample
  * @return {undefined}
  */
 WaveShaperNode.prototype.setSample = function(sample) {}

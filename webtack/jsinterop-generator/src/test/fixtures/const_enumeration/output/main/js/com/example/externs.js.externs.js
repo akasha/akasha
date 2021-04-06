@@ -33,7 +33,7 @@ function KHR_parallel_shader_compile() {}
 /** @const {!string} */ KHR_parallel_shader_compile.prototype.NAME;
 /**
  * @constructor
- * @param {!ReadyStateType} value
+ * @param {!!number} value
  */
 function XMLHttpRequest(value) {}
 /** @const {!number} */ XMLHttpRequest.DONE;
@@ -47,11 +47,11 @@ function XMLHttpRequest(value) {}
 /** @const {!number} */ XMLHttpRequest.UNSENT;
 /** @const {!number} */ XMLHttpRequest.prototype.UNSENT;
 /**
- * @return {!ReadyStateType}
+ * @return {!!number}
  */
 XMLHttpRequest.prototype.getSample = function() {}
 /**
- * @param {!ReadyStateType} sample
+ * @param {!!number} sample
  * @return {undefined}
  */
 XMLHttpRequest.prototype.setSample = function(sample) {}

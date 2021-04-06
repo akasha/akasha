@@ -56,8 +56,8 @@ CSS.prototype.escape = function(ident) {}
  */
 var WebAssembly = {};
 /**
- * @param {!txMode} txMode
- * @param {!ActiveMode} mode
+ * @param {!string} txMode
+ * @param {!string} mode
  * @return {!boolean}
  */
 WebAssembly.prototype.validate = function(txMode,mode) {}

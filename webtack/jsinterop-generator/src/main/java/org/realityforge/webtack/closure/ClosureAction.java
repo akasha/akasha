@@ -23,7 +23,6 @@ import org.realityforge.webtack.model.ConstEnumerationDefinition;
 import org.realityforge.webtack.model.ConstMember;
 import org.realityforge.webtack.model.DictionaryDefinition;
 import org.realityforge.webtack.model.DictionaryMember;
-import org.realityforge.webtack.model.EnumerationDefinition;
 import org.realityforge.webtack.model.FrozenArrayType;
 import org.realityforge.webtack.model.InterfaceDefinition;
 import org.realityforge.webtack.model.Kind;
@@ -139,20 +138,6 @@ final class ClosureAction
         if ( tryRecordGeneratedType( definition.getName() ) )
         {
           writeDictionary( writer, definition );
-        }
-      }
-      for ( final EnumerationDefinition definition : schema.getEnumerations() )
-      {
-        if ( tryRecordGeneratedType( definition.getName() ) )
-        {
-          writeEnumeration( writer, definition );
-        }
-      }
-      for ( final ConstEnumerationDefinition definition : schema.getConstEnumerations() )
-      {
-        if ( tryRecordGeneratedType( definition.getName() ) )
-        {
-          writeConstEnumeration( writer, definition );
         }
       }
       for ( final NamespaceDefinition definition : schema.getNamespaces() )
@@ -272,17 +257,6 @@ final class ClosureAction
     writer.write( ";\n" );
   }
 
-  private void writeEnumeration( @Nonnull final Writer writer, @Nonnull final EnumerationDefinition definition )
-    throws IOException
-  {
-  }
-
-  private void writeConstEnumeration( @Nonnull final Writer writer,
-                                      @Nonnull final ConstEnumerationDefinition definition )
-    throws IOException
-  {
-  }
-
   private void writeNamespace( @Nonnull final Writer writer, @Nonnull final NamespaceDefinition definition )
     throws IOException
   {
@@ -310,26 +284,23 @@ final class ClosureAction
 
     final String namespace = definition.getNamespace();
     final String type = ( null == namespace ? "" : namespace + "." ) + definition.getName();
-    if ( constructors.isEmpty() )
+    if ( hasNoJsType )
     {
-      if ( hasNoJsType )
-      {
-        writeConstructor( writer,
-                          type,
-                          definition.getInherits(),
-                          Collections.emptyList(),
-                          false,
-                          Collections.singletonList( "@private" ) );
-      }
-      else
-      {
-        writeConstructor( writer,
-                          type,
-                          definition.getInherits(),
-                          Collections.emptyList(),
-                          true,
-                          Collections.singletonList( "@private" ) );
-      }
+      writeConstructor( writer,
+                        type,
+                        definition.getInherits(),
+                        Collections.emptyList(),
+                        false,
+                        Collections.singletonList( "@private" ) );
+    }
+    else if ( constructors.isEmpty() )
+    {
+      writeConstructor( writer,
+                        type,
+                        definition.getInherits(),
+                        Collections.emptyList(),
+                        true,
+                        Collections.singletonList( "@private" ) );
     }
     else if ( 1 == constructors.size() )
     {
@@ -775,7 +746,24 @@ final class ClosureAction
     {
       assert Kind.TypeReference == kind;
       final TypeReference typeReference = (TypeReference) type;
-      writer.write( typeReference.getName() );
+      final String name = typeReference.getName();
+      final WebIDLSchema schema = getSchema();
+      if ( null != schema.findEnumerationByName( name ) )
+      {
+        writer.write( "string" );
+      }
+      else
+      {
+        final ConstEnumerationDefinition constEnumeration = schema.findConstEnumerationByName( name );
+        if ( null != constEnumeration )
+        {
+          writeType( writer, schema.getConstant( constEnumeration.getValues().get( 0 ) ).getType() );
+        }
+        else
+        {
+          writer.write( name );
+        }
+      }
     }
   }
 }
