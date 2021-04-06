@@ -21,6 +21,18 @@ function EventListener() {}
  */
 EventListener.prototype.handleEvent = function(event) {}
 /**
+ * @typedef {{capture:(!boolean|undefined)}}
+ */
+var EventListenerOptions;
+/**
+ * @typedef {{left:(!number|undefined),top:(!number|undefined)}}
+ */
+var ScrollToOptions;
+/**
+ * @typedef {{once:(!boolean|undefined),passive:(!boolean|undefined),capture:(!boolean|undefined)}}
+ */
+var AddEventListenerOptions;
+/**
  * @constructor
  * @extends {EventTarget}
  * @private

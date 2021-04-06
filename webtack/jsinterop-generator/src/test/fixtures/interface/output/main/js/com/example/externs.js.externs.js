@@ -3,6 +3,10 @@
  * @externs
  */
 /**
+ * @typedef {{bubbles:(!boolean|undefined),cancelable:(!boolean|undefined),composed:(!boolean|undefined)}}
+ */
+var EventInit;
+/**
  * @constructor
  * @private
  */

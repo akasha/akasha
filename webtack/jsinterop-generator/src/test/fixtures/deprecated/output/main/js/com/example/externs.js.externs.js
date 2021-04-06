@@ -29,6 +29,18 @@ function EventListener() {}
  */
 EventListener.prototype.handleEvent = function(event) {}
 /**
+ * @typedef {{capture:(!boolean|undefined)}}
+ */
+var EventListenerOptions;
+/**
+ * @typedef {{once:(!boolean|undefined),passive:(!boolean|undefined),capture:(!boolean|undefined)}}
+ */
+var AddEventListenerOptions;
+/**
+ * @typedef {{bubbles:(!boolean|undefined)}}
+ */
+var EventInit;
+/**
  * @constructor
  * @extends {EventTarget}
  * @private

@@ -3,6 +3,14 @@
  * @externs
  */
 /**
+ * @typedef {{left:(!number|undefined),top:(!number|undefined)}}
+ */
+var ScrollToOptions;
+/**
+ * @typedef {{instance:!Instance,module:!Module}}
+ */
+var WebAssemblyInstantiatedSource;
+/**
  * @constructor
  * @private
  */

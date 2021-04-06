@@ -35,6 +35,14 @@ function EventListener() {}
  */
 EventListener.prototype.onEvent = function() {}
 /**
+ * @typedef {{multiEntry:(!boolean|undefined),unique:(!boolean|undefined)}}
+ */
+var IDBIndexParameters;
+/**
+ * @typedef {{multiEntry:(!boolean|undefined),unique:(!boolean|undefined)}}
+ */
+var IDBIndexParameters2;
+/**
  * @constructor
  * @private
  */

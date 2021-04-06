@@ -1120,10 +1120,9 @@ final class JsinteropAction
         generateDictionaryMemberSetterReturningThis( definition, member, typedValue, true, type );
       }
     }
-    String superName = definition.getInherits();
-    while ( null != superName )
+    DictionaryDefinition parent = definition.getSuperDictionary();
+    while ( null != parent )
     {
-      final DictionaryDefinition parent = schema.getDictionaryByName( superName );
       for ( final DictionaryMember member : parent.getMembers() )
       {
         for ( final TypedValue memberType : explodeType( member.getType() ) )
@@ -1131,7 +1130,7 @@ final class JsinteropAction
           generateDictionaryMemberSetterReturningThis( definition, member, memberType, true, type );
         }
       }
-      superName = parent.getInherits();
+      parent = parent.getSuperDictionary();
     }
 
     container.addType( type.build() );

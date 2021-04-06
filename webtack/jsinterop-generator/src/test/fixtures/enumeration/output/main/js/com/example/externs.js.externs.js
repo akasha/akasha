@@ -7,6 +7,14 @@
  */
 var SomeCallbackHandler;
 /**
+ * @typedef {{oversample:(!OverSampleType|undefined)}}
+ */
+var WaveShaperOptions;
+/**
+ * @typedef {{error:!SpeechRecognitionErrorCode}}
+ */
+var SpeechRecognitionErrorEventInit;
+/**
  * @constructor
  * @param {!OverSampleType} sample
  */

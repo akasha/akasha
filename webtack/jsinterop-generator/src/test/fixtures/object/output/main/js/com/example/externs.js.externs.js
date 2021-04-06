@@ -3,6 +3,10 @@
  * @externs
  */
 /**
+ * @typedef {{nullableObjectValue:(?Object|undefined),objectValue:(!Object|undefined),requiredObjectValue:!Object}}
+ */
+var MyDictionary;
+/**
  * @constructor
  * @private
  */

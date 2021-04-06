@@ -3,6 +3,10 @@
  * @externs
  */
 /**
+ * @typedef {{multiEntry:(!boolean|undefined),unique:(!boolean|undefined)}}
+ */
+var IDBIndexParameters;
+/**
  * @constructor
  * @private
  */

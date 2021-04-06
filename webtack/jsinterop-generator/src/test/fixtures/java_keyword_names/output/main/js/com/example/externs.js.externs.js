@@ -3,6 +3,18 @@
  * @externs
  */
 /**
+ * @typedef {{clone:(!Object|undefined),default:(!Object|undefined),equals:(!Object|undefined),finalize:(!Object|undefined),getClass:(!Object|undefined),hashCode:(!Object|undefined),is:(!Object|undefined),notify:(!Object|undefined),notifyAll:(!Object|undefined),private:(!Object|undefined),protected:(!Object|undefined),public:(!Object|undefined),toString:(!Object|undefined),wait:(!Object|undefined)}}
+ */
+var MyDictionary2;
+/**
+ * @typedef {{isNot:(!string|undefined),issuerCertificateId:(!string|undefined)}}
+ */
+var RTCCertificateStats;
+/**
+ * @typedef {{clone:!Object,default:!Object,equals:!Object,finalize:!Object,getClass:!Object,hashCode:!Object,is:!Object,notify:!Object,notifyAll:!Object,private:!Object,protected:!Object,public:!Object,toString:!Object,wait:!Object}}
+ */
+var MyDictionary1;
+/**
  * @constructor
  * @private
  */

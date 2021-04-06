@@ -3,6 +3,10 @@
  * @externs
  */
 /**
+ * @typedef {{transfer:(!Array<!Object>|undefined)}}
+ */
+var PostMessageOptions;
+/**
  * @constructor
  * @private
  */

@@ -7,6 +7,10 @@
  */
 var BufferSource;
 /**
+ * @typedef {{mutable:(!boolean|undefined),value:*}}
+ */
+var GlobalDescriptor;
+/**
  * @constructor
  * @private
  */

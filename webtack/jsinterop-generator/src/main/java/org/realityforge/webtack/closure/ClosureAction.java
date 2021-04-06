@@ -22,6 +22,7 @@ import org.realityforge.webtack.model.CallbackInterfaceDefinition;
 import org.realityforge.webtack.model.ConstEnumerationDefinition;
 import org.realityforge.webtack.model.ConstMember;
 import org.realityforge.webtack.model.DictionaryDefinition;
+import org.realityforge.webtack.model.DictionaryMember;
 import org.realityforge.webtack.model.EnumerationDefinition;
 import org.realityforge.webtack.model.FrozenArrayType;
 import org.realityforge.webtack.model.InterfaceDefinition;
@@ -223,6 +224,52 @@ final class ClosureAction
   private void writeDictionary( @Nonnull final Writer writer, @Nonnull final DictionaryDefinition definition )
     throws IOException
   {
+    writer.write( "/**\n * @typedef {{" );
+
+    boolean first = true;
+    DictionaryDefinition dict = definition;
+    while ( null != dict )
+    {
+      for ( final DictionaryMember member : dict.getMembers() )
+      {
+        if ( !first )
+        {
+          writer.write( "," );
+        }
+        else
+        {
+          first = false;
+        }
+        writer.write( member.getName() );
+        writer.write( ":" );
+        final Type type = member.getType();
+        if ( member.isOptional() )
+        {
+          final Type undefinedType = new Type( Kind.Void, Collections.emptyList(), false, Collections.emptyList() );
+          final List<Type> types = new ArrayList<>();
+          if ( Kind.Union == type.getKind() )
+          {
+            types.addAll( ( (UnionType) type ).getMemberTypes() );
+          }
+          else
+          {
+            types.add( type );
+          }
+          maybeAddTypeToList( types, undefinedType );
+          writeType( writer, new UnionType( types, Collections.emptyList(), false, Collections.emptyList() ) );
+        }
+        else
+        {
+          writeType( writer, type );
+        }
+      }
+      dict = dict.getSuperDictionary();
+    }
+
+    writer.write( "}}\n */\nvar " );
+    writer.write( definition.getName() );
+    writer.write( ";\n" );
+
   }
 
   private void writeEnumeration( @Nonnull final Writer writer, @Nonnull final EnumerationDefinition definition )

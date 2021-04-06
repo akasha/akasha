@@ -3,6 +3,34 @@
  * @externs
  */
 /**
+ * @typedef {{anotherValue:(*|undefined),someValue:*}}
+ */
+var OptionalAnyDict;
+/**
+ * @typedef {{promise:!Promise<*>,reason:(*|undefined),bubbles:(!boolean|undefined),cancelable:(!boolean|undefined),composed:(!boolean|undefined)}}
+ */
+var PromiseRejectionEventInit;
+/**
+ * @typedef {{contentType:!string}}
+ */
+var txAuthGenericArg;
+/**
+ * @typedef {{bubbles:(!boolean|undefined),cancelable:(!boolean|undefined),composed:(!boolean|undefined)}}
+ */
+var EventInit;
+/**
+ * @typedef {{elapsedTime:(!number|undefined),propertyName:(!string|undefined),pseudoElement:(!string|undefined),bubbles:(!boolean|undefined),cancelable:(!boolean|undefined),composed:(!boolean|undefined)}}
+ */
+var TransitionEventInit;
+/**
+ * @typedef {{someValue:*}}
+ */
+var RequiredAnyDict;
+/**
+ * @typedef {{key:(?string|undefined),newValue:(?string|undefined),oldValue:(?string|undefined),storageArea:(?Storage|undefined),url:(!string|undefined),bubbles:(!boolean|undefined),cancelable:(!boolean|undefined),composed:(!boolean|undefined)}}
+ */
+var StorageEventInit;
+/**
  * @constructor
  * @private
  */

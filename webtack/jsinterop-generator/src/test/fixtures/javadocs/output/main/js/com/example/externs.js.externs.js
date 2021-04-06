@@ -17,6 +17,10 @@ function NodeFilter() {}
  */
 NodeFilter.prototype.acceptNode = function(node) {}
 /**
+ * @typedef {{bubbles:(!boolean|undefined),cancelable:!boolean}}
+ */
+var EventInit;
+/**
  * @constructor
  * @private
  */

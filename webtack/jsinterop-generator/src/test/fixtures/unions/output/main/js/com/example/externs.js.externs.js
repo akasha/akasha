@@ -57,6 +57,22 @@ function EventListener3() {}
  */
 EventListener3.prototype.handleServiceUuid = function(event) {}
 /**
+ * @typedef {{capture:(!boolean|undefined)}}
+ */
+var EventListenerOptions;
+/**
+ * @typedef {{dataPrefix:!MyNamedBufferSource,mask:(!MyNamedBufferSource|undefined)}}
+ */
+var BluetoothDataFilterInit2;
+/**
+ * @typedef {{allowedServices:(!string|!Array<!string>),otherServices:(!string|!Array<!string>|undefined),requiredUuids:!Array<(!string|!number)>,uuids:(!Array<(!string|!number)>|undefined)}}
+ */
+var AllowedBluetoothDevice;
+/**
+ * @typedef {{dataPrefix:!BufferSource,mask:(!BufferSource|undefined)}}
+ */
+var BluetoothDataFilterInit;
+/**
  * @constructor
  * @extends {EventTarget}
  * @private

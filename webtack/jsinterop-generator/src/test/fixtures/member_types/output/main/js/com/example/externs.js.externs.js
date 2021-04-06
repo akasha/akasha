@@ -3,6 +3,246 @@
  * @externs
  */
 /**
+ * @typedef {{requiredLongLongValue:!number}}
+ */
+var Dictionary_requiredLongLongValue;
+/**
+ * @typedef {{requiredDoubleSequenceValue:!Array<!number>}}
+ */
+var Dictionary_requiredDoubleSequenceValue;
+/**
+ * @typedef {{requiredUnsignedLongValue:!number}}
+ */
+var Dictionary_requiredUnsignedLongValue;
+/**
+ * @typedef {{requiredNullableBooleanValue:?boolean}}
+ */
+var Dictionary_requiredNullableBooleanValue;
+/**
+ * @typedef {{requiredNullableSomeTypeValue:?SomeType}}
+ */
+var Dictionary_requiredNullableSomeTypeValue;
+/**
+ * @typedef {{requiredNullableFloatValue:?number}}
+ */
+var Dictionary_requiredNullableFloatValue;
+/**
+ * @typedef {{requiredNullableUnsignedLongValue:?number}}
+ */
+var Dictionary_requiredNullableUnsignedLongValue;
+/**
+ * @typedef {{requiredNullableDoubleSequenceValue:?Array<!number>}}
+ */
+var Dictionary_requiredNullableDoubleSequenceValue;
+/**
+ * @typedef {{requiredLongValue:!number}}
+ */
+var Dictionary_requiredLongValue;
+/**
+ * @typedef {{requiredUnrestrictedDoubleValue:!number}}
+ */
+var Dictionary_requiredUnrestrictedDoubleValue;
+/**
+ * @typedef {{requiredNullableLongValue:?number}}
+ */
+var Dictionary_requiredNullableLongValue;
+/**
+ * @typedef {{requiredObjectValue:!Object}}
+ */
+var Dictionary_requiredObjectValue;
+/**
+ * @typedef {{requiredNullableUSVStringValue:?string}}
+ */
+var Dictionary_requiredNullableUSVStringValue;
+/**
+ * @typedef {{requiredSomeTypeValue:!SomeType}}
+ */
+var Dictionary_requiredSomeTypeValue;
+/**
+ * @typedef {{requiredNullableUnsignedLongLongValue:?number}}
+ */
+var Dictionary_requiredNullableUnsignedLongLongValue;
+/**
+ * @typedef {{requiredNullableBooleanFrozenArrayValue:?Array<!boolean>}}
+ */
+var Dictionary_requiredNullableBooleanFrozenArrayValue;
+/**
+ * @typedef {{requiredNullableDOMStringValue:?string}}
+ */
+var Dictionary_requiredNullableDOMStringValue;
+/**
+ * @typedef {{requiredShortFrozenArrayValue:!Array<!number>}}
+ */
+var Dictionary_requiredShortFrozenArrayValue;
+/**
+ * @typedef {{requiredBooleanSequenceValue:!Array<!boolean>}}
+ */
+var Dictionary_requiredBooleanSequenceValue;
+/**
+ * @typedef {{requiredNullableDoubleFrozenArrayValue:?Array<!number>}}
+ */
+var Dictionary_requiredNullableDoubleFrozenArrayValue;
+/**
+ * @typedef {{requiredDoubleFrozenArrayValue:!Array<!number>}}
+ */
+var Dictionary_requiredDoubleFrozenArrayValue;
+/**
+ * @typedef {{requiredFloatFrozenArrayValue:!Array<!number>}}
+ */
+var Dictionary_requiredFloatFrozenArrayValue;
+/**
+ * @typedef {{requiredNullableByteValue:?number}}
+ */
+var Dictionary_requiredNullableByteValue;
+/**
+ * @typedef {{requiredByteStringValue:!string}}
+ */
+var Dictionary_requiredByteStringValue;
+/**
+ * @typedef {{requiredNullableUnrestrictedFloatValue:?number}}
+ */
+var Dictionary_requiredNullableUnrestrictedFloatValue;
+/**
+ * @typedef {{requiredUnrestrictedFloatValue:!number}}
+ */
+var Dictionary_requiredUnrestrictedFloatValue;
+/**
+ * @typedef {{requiredSomeTypeSequenceValue:!Array<!SomeType>}}
+ */
+var Dictionary_requiredSomeTypeSequenceValue;
+/**
+ * @typedef {{requiredBooleanFrozenArrayValue:!Array<!boolean>}}
+ */
+var Dictionary_requiredBooleanFrozenArrayValue;
+/**
+ * @typedef {{requiredFloatValue:!number}}
+ */
+var Dictionary_requiredFloatValue;
+/**
+ * @typedef {{requiredNullableShortSequenceValue:?Array<!number>}}
+ */
+var Dictionary_requiredNullableShortSequenceValue;
+/**
+ * @typedef {{requiredShortSequenceValue:!Array<!number>}}
+ */
+var Dictionary_requiredShortSequenceValue;
+/**
+ * @typedef {{requiredNullableShortFrozenArrayValue:?Array<!number>}}
+ */
+var Dictionary_requiredNullableShortFrozenArrayValue;
+/**
+ * @typedef {{requiredNullableSomeTypeFrozenArrayValue:?Array<!SomeType>}}
+ */
+var Dictionary_requiredNullableSomeTypeFrozenArrayValue;
+/**
+ * @typedef {{requiredNullableUnrestrictedDoubleValue:?number}}
+ */
+var Dictionary_requiredNullableUnrestrictedDoubleValue;
+/**
+ * @typedef {{requiredNullableOctetValue:?number}}
+ */
+var Dictionary_requiredNullableOctetValue;
+/**
+ * @typedef {{requiredDOMStringValue:!string}}
+ */
+var Dictionary_requiredDOMStringValue;
+/**
+ * @typedef {{requiredSomeTypeFrozenArrayValue:!Array<!SomeType>}}
+ */
+var Dictionary_requiredSomeTypeFrozenArrayValue;
+/**
+ * @typedef {{requiredNullableBooleanSequenceValue:?Array<!boolean>}}
+ */
+var Dictionary_requiredNullableBooleanSequenceValue;
+/**
+ * @typedef {{requiredOctetValue:!number}}
+ */
+var Dictionary_requiredOctetValue;
+/**
+ * @typedef {{requiredNullableObjectValue:?Object}}
+ */
+var Dictionary_requiredNullableObjectValue;
+/**
+ * @typedef {{requiredNullableByteStringValue:?string}}
+ */
+var Dictionary_requiredNullableByteStringValue;
+/**
+ * @typedef {{requiredBooleanValue:!boolean}}
+ */
+var Dictionary_requiredBooleanValue;
+/**
+ * @typedef {{requiredUSVStringValue:!string}}
+ */
+var Dictionary_requiredUSVStringValue;
+/**
+ * @typedef {{requiredNullableSomeTypeSequenceValue:?Array<!SomeType>}}
+ */
+var Dictionary_requiredNullableSomeTypeSequenceValue;
+/**
+ * @typedef {{requiredShortValue:!number}}
+ */
+var Dictionary_requiredShortValue;
+/**
+ * @typedef {{requiredAnyIterableValue:!Array<*>,requiredAnyIteratorIterableValue:!Array<*>,requiredAnyIteratorValue:!Array<*>,requiredAnySequenceValue:!Array<*>}}
+ */
+var Dictionary_requiredAnySequenceValue;
+/**
+ * @typedef {{requiredDoubleSequenceSequenceValue:!Array<!Array<!number>>}}
+ */
+var Dictionary_requiredDoubleSequenceSequenceValue;
+/**
+ * @typedef {{requiredNullableDoubleValue:?number}}
+ */
+var Dictionary_requiredNullableDoubleValue;
+/**
+ * @typedef {{requiredNullableUnsignedShortValue:?number}}
+ */
+var Dictionary_requiredNullableUnsignedShortValue;
+/**
+ * @typedef {{requiredAnyValue:*}}
+ */
+var Dictionary_requiredAnyValue;
+/**
+ * @typedef {{requiredNullableLongLongValue:?number}}
+ */
+var Dictionary_requiredNullableLongLongValue;
+/**
+ * @typedef {{requiredUnsignedShortValue:!number}}
+ */
+var Dictionary_requiredUnsignedShortValue;
+/**
+ * @typedef {{requiredByteValue:!number}}
+ */
+var Dictionary_requiredByteValue;
+/**
+ * @typedef {{requiredFloatSequenceValue:!Array<!number>}}
+ */
+var Dictionary_requiredFloatSequenceValue;
+/**
+ * @typedef {{requiredNullableShortValue:?number}}
+ */
+var Dictionary_requiredNullableShortValue;
+/**
+ * @typedef {{requiredNullableFloatFrozenArrayValue:?Array<!number>}}
+ */
+var Dictionary_requiredNullableFloatFrozenArrayValue;
+/**
+ * @typedef {{requiredNullableFloatSequenceValue:?Array<!number>}}
+ */
+var Dictionary_requiredNullableFloatSequenceValue;
+/**
+ * @typedef {{requiredUnsignedLongLongValue:!number}}
+ */
+var Dictionary_requiredUnsignedLongLongValue;
+/**
+ * @typedef {{anyValue:(*|undefined),booleanFrozenArrayValue:(!Array<!boolean>|undefined),booleanSequenceValue:(!Array<!boolean>|undefined),booleanValue:(!boolean|undefined),byteStringRecordValue:(!Object<!string,!string>|undefined),byteStringValue:(!string|undefined),byteValue:(!number|undefined),domStringRecordValue:(!Object<!string,!string>|undefined),domStringValue:(!string|undefined),doubleFrozenArrayValue:(!Array<!number>|undefined),doubleRecordValue:(!Object<!string,!number>|undefined),doubleSequenceValue:(!Array<!number>|undefined),doubleValue:(!number|undefined),floatFrozenArrayValue:(!Array<!number>|undefined),floatSequenceValue:(!Array<!number>|undefined),floatValue:(!number|undefined),longLongValue:(!number|undefined),longValue:(!number|undefined),mixedStringRecordValue:(!Object<!string,!string>|undefined),nullableBooleanFrozenArrayValue:(?Array<!boolean>|undefined),nullableBooleanSequenceValue:(?Array<!boolean>|undefined),nullableBooleanValue:(?boolean|undefined),nullableByteStringValue:(?string|undefined),nullableByteValue:(?number|undefined),nullableDOMStringValue:(?string|undefined),nullableDoubleFrozenArrayValue:(?Array<!number>|undefined),nullableDoubleSequenceValue:(?Array<!number>|undefined),nullableDoubleValue:(?number|undefined),nullableFloatFrozenArrayValue:(?Array<!number>|undefined),nullableFloatSequenceValue:(?Array<!number>|undefined),nullableFloatValue:(?number|undefined),nullableLongLongValue:(?number|undefined),nullableLongValue:(?number|undefined),nullableObjectValue:(?Object|undefined),nullableOctetValue:(?number|undefined),nullableShortFrozenArrayValue:(?Array<!number>|undefined),nullableShortPromiseValue:(!Promise<?number>|undefined),nullableShortSequenceValue:(?Array<!number>|undefined),nullableShortValue:(?number|undefined),nullableSomeTypeFrozenArrayValue:(?Array<!SomeType>|undefined),nullableSomeTypePromiseValue:(!Promise<?SomeType>|undefined),nullableSomeTypeSequenceValue:(?Array<!SomeType>|undefined),nullableSomeTypeValue:(?SomeType|undefined),nullableUSVStringValue:(?string|undefined),nullableUnrestrictedDoubleValue:(?number|undefined),nullableUnrestrictedFloatValue:(?number|undefined),nullableUnsignedLongLongValue:(?number|undefined),nullableUnsignedLongValue:(?number|undefined),nullableUnsignedShortValue:(?number|undefined),objectValue:(!Object|undefined),octetValue:(!number|undefined),requiredAnyIterableValue:(!Array<*>|undefined),requiredAnyIteratorIterableValue:(!Array<*>|undefined),requiredAnyIteratorValue:(!Array<*>|undefined),requiredAnySequenceValue:(!Array<*>|undefined),sequencePromiseValue:(!Promise<!Array<!number>>|undefined),shortFrozenArrayValue:(!Array<!number>|undefined),shortPromiseValue:(!Promise<!number>|undefined),shortSequenceValue:(!Array<!number>|undefined),shortValue:(!number|undefined),someTypeFrozenArrayValue:(!Array<!SomeType>|undefined),someTypePromiseValue:(!Promise<!SomeType>|undefined),someTypeSequenceValue:(!Array<!SomeType>|undefined),someTypeValue:(!SomeType|undefined),typeReferenceRecordValue:(!Object<!string,!SomeType>|undefined),unrestrictedDoubleValue:(!number|undefined),unrestrictedFloatValue:(!number|undefined),unsignedLongLongValue:(!number|undefined),unsignedLongValue:(!number|undefined),unsignedShortValue:(!number|undefined),usvStringRecordValue:(!Object<!string,!string>|undefined),usvStringValue:(!string|undefined),voidPromiseValue:(!Promise<undefined>|undefined)}}
+ */
+var MyDictionary;
+/**
+ * @typedef {{requiredDoubleValue:!number}}
+ */
+var Dictionary_requiredDoubleValue;
+/**
  * @constructor
  * @private
  */

@@ -20,6 +20,10 @@ function EventListener() {}
  */
 EventListener.prototype.handleEvent = function(event) {}
 /**
+ * @typedef {{bubbles:(!boolean|undefined)}}
+ */
+var EventInit;
+/**
  * @constructor
  * @private
  */
