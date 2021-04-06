@@ -56,7 +56,7 @@ function EventTarget() {}
 /**
  * @param {!string} type
  * @param {?EventListener} callback
- * @param {!(!EventListenerOptions|!boolean)=} options
+ * @param {!(EventListenerOptions|boolean)=} options
  * @return {undefined}
  */
 EventTarget.prototype.removeEventListener = function(type,callback,options) {}
@@ -68,7 +68,7 @@ EventTarget.prototype.dispatchEvent = function(event) {}
 /**
  * @param {!string} type
  * @param {?EventListener} callback
- * @param {!(!AddEventListenerOptions|!boolean)=} options
+ * @param {!(AddEventListenerOptions|boolean)=} options
  * @return {undefined}
  */
 EventTarget.prototype.addEventListener = function(type,callback,options) {}

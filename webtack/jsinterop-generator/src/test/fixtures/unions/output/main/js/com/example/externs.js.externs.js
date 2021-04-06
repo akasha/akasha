@@ -7,7 +7,7 @@
  */
 var OnBufferSourceHandler;
 /**
- * @typedef {function(!(!Event|!string),!string=,!number=,!number=,*=): *}
+ * @typedef {function(!(Event|string),!string=,!number=,!number=,*=): *}
  */
 var OnErrorEventHandler;
 /**
@@ -15,7 +15,7 @@ var OnErrorEventHandler;
  */
 function () {}
 /**
- * @param {!(!string|!number)} event
+ * @param {!(string|number)} event
  * @return {undefined}
  */
 EventListener2.prototype.handleUuid = function(event) {}
@@ -76,19 +76,19 @@ BluetoothRemoteGATTServer.prototype.getPrimaryServices = function(service) {}
 BluetoothRemoteGATTServer.prototype.getPrimaryService = function(service) {}
 /**
  * @constructor
- * @param {!(!string|!number)} serviceUuid
+ * @param {!(string|number)} serviceUuid
  */
 function SomeInterface(serviceUuid) {}
 /**
- * @return {!(!string|!number)}
+ * @return {!(string|number)}
  */
 SomeInterface.myStaticMethodWithUnionReturn = function() {}
 /**
- * @return {!(!string|!number)}
+ * @return {!(string|number)}
  */
 SomeInterface.prototype.getUuid = function() {}
 /**
- * @param {!(!string|!number)} serviceUuid
+ * @param {!(string|number)} serviceUuid
  * @return {undefined}
  */
 SomeInterface.myStaticMethodWithUnionArg = function(serviceUuid) {}
@@ -188,7 +188,7 @@ function Uint8Array() {}
 function EventTarget() {}
 /**
  * @param {!string} type
- * @param {!(!EventListenerOptions|!boolean)=} options
+ * @param {!(EventListenerOptions|boolean)=} options
  * @return {undefined}
  */
 EventTarget.prototype.removeEventListener = function(type,options) {}

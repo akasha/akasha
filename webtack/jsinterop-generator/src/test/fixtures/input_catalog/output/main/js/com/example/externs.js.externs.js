@@ -32,7 +32,7 @@ EventListener.prototype.onEvent = function() {}
  */
 function IDBObjectStore() {}
 /**
- * @return {!(!string|!number)}
+ * @return {!(string|number)}
  */
 IDBObjectStore.prototype.returnSomeUnionThatIsPredefined = function() {}
 /**
@@ -48,12 +48,12 @@ IDBObjectStore.prototype.createIndex2 = function(name,options) {}
  */
 IDBObjectStore.prototype.registerListeners = function(eventListener,completionCallback) {}
 /**
- * @return {!(!string|!number)}
+ * @return {!(string|number)}
  */
 IDBObjectStore.prototype.returnSomeUnionThatIsNotPredefined = function() {}
 /**
  * @param {!string} name
- * @param {!(!string|!Array<!string>)} keyPath
+ * @param {!(string|Array<!string>)} keyPath
  * @param {!IDBIndexParameters=} options
  * @return {!IDBIndex}
  */

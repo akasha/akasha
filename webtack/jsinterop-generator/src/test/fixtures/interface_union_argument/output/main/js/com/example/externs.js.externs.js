@@ -9,7 +9,7 @@
 function IDBObjectStore() {}
 /**
  * @param {!string} name
- * @param {!(!string|!Array<!string>)} keyPath
+ * @param {!(string|Array<!string>)} keyPath
  * @param {!IDBIndexParameters=} options
  * @return {!IDBIndex}
  */
