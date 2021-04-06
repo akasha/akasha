@@ -668,7 +668,7 @@ final class ClosureAction
     throws IOException
   {
     final Kind kind = type.getKind();
-    if ( Kind.Union != kind && Kind.Any != kind && Kind.Void != kind )
+    if ( Kind.TypeReference != kind && Kind.Union != kind && Kind.Any != kind && Kind.Void != kind )
     {
       writer.write( type.isNullable() ? "?" : "!" );
     }
@@ -750,6 +750,7 @@ final class ClosureAction
       final WebIDLSchema schema = getSchema();
       if ( null != schema.findEnumerationByName( name ) )
       {
+        writer.write( type.isNullable() ? "?" : "!" );
         writer.write( "string" );
       }
       else
@@ -761,6 +762,7 @@ final class ClosureAction
         }
         else
         {
+          writer.write( type.isNullable() ? "?" : "!" );
           writer.write( name );
         }
       }
