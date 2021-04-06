@@ -3,10 +3,6 @@
  * @externs
  */
 /**
- * @typedef {function(...*): *}
- */
-var Function;
-/**
  * @constructor
  * @private
  */

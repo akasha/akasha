@@ -3,10 +3,6 @@
  * @externs
  */
 /**
- * @typedef {(!Int8Array|!Int16Array|!Int32Array|!Uint8Array|!Uint16Array|!Uint32Array|!Uint8ClampedArray|!Float32Array|!Float64Array|!DataView)}
- */
-var ArrayBufferView;
-/**
  * @typedef {(!string|!number)}
  */
 var BluetoothDescriptorUUID;
@@ -14,10 +10,6 @@ var BluetoothDescriptorUUID;
  * @typedef {(!string|!number)}
  */
 var BluetoothServiceUUID;
-/**
- * @typedef {(!ArrayBufferView|!ArrayBuffer)}
- */
-var BufferSource;
 /**
  * @typedef {!BufferSource}
  */
@@ -92,21 +84,6 @@ BluetoothRemoteGATTService.prototype.getIncludedServices = function(service) {}
  * @constructor
  * @private
  */
-function Int8Array() {}
-/**
- * @constructor
- * @private
- */
-function Int16Array() {}
-/**
- * @constructor
- * @private
- */
-function Uint16Array() {}
-/**
- * @constructor
- * @private
- */
 function BluetoothRemoteGATTServer() {}
 /**
  * @param {!BluetoothServiceUUID=} service
@@ -152,11 +129,6 @@ SomeDataContainer.myStaticMethodWithUnionReturn = function() {}
 SomeDataContainer.myStaticMethodWithUnionArg = function(name) {}
 /**
  * @constructor
- * @private
- */
-function Float32Array() {}
-/**
- * @constructor
  * @extends {EventTarget}
  * @private
  */
@@ -180,32 +152,7 @@ BluetoothRemoteGATTCharacteristic.prototype.writeValue = function(value) {}
  * @constructor
  * @private
  */
-function Float64Array() {}
-/**
- * @constructor
- * @private
- */
-function DataView() {}
-/**
- * @constructor
- * @private
- */
-function Int32Array() {}
-/**
- * @constructor
- * @private
- */
-function Uint32Array() {}
-/**
- * @constructor
- * @private
- */
 function Event() {}
-/**
- * @constructor
- * @private
- */
-function ArrayBuffer() {}
 /**
  * @constructor
  * @param {!BluetoothServiceUUID=} service
@@ -224,11 +171,6 @@ SomeServiceContainer.myStaticMethodWithUnionArg = function(name) {}
  * @constructor
  * @private
  */
-function Uint8Array() {}
-/**
- * @constructor
- * @private
- */
 function EventTarget() {}
 /**
  * @param {!string} type
@@ -236,8 +178,3 @@ function EventTarget() {}
  * @return {undefined}
  */
 EventTarget.prototype.removeEventListener = function(type,options) {}
-/**
- * @constructor
- * @private
- */
-function Uint8ClampedArray() {}

@@ -1,6 +1,5 @@
 GLbitfield
 GLenum
 GLint
-Int32Array
 Int32List
 WebGLRenderingContext

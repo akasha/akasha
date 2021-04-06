@@ -11,10 +11,10 @@ import jsinterop.annotations.JsType;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "JSON"
+    name = "MyJSON"
 )
-public class JSON {
-  protected JSON() {
+public class MyJSON {
+  protected MyJSON() {
   }
 
   @Nonnull

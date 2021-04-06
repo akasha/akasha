@@ -1,14 +1,3 @@
-ArrayBufferView
 Blob
 ClipboardItemDataType
-DataView
-Float32Array
-Float64Array
 IndexedKeyframeOffsetType
-Int16Array
-Int32Array
-Int8Array
-Uint16Array
-Uint32Array
-Uint8Array
-Uint8ClampedArray

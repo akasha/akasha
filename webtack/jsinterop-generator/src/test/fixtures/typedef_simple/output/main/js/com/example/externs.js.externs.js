@@ -22,11 +22,6 @@ var Int32List;
  * @constructor
  * @private
  */
-function Int32Array() {}
-/**
- * @constructor
- * @private
- */
 function WebGLRenderingContext() {}
 /** @const {!GLenum} */ WebGLRenderingContext.ACTIVE_ATTRIBUTES;
 /** @const {!GLenum} */ WebGLRenderingContext.prototype.ACTIVE_ATTRIBUTES;

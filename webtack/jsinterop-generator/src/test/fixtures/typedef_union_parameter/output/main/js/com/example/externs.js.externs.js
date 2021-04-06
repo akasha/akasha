@@ -10,10 +10,10 @@ var StringifySpaceUnionType;
  * @constructor
  * @private
  */
-function JSON() {}
+function MyJSON() {}
 /**
  * @param {*} value
  * @param {?StringifySpaceUnionType=} space
  * @return {!string}
  */
-JSON.prototype.stringify = function(value,space) {}
+MyJSON.prototype.stringify = function(value,space) {}

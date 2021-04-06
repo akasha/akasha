@@ -51,11 +51,6 @@ function Instance() {}
  * @constructor
  * @private
  */
-function BufferSource() {}
-/**
- * @constructor
- * @private
- */
 function MediaStreamTrack() {}
 /**
  * @constructor

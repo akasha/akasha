@@ -23,8 +23,3 @@ MyType1.staticOjectMethod = function(v1,v2) {}
  * @return {!Object}
  */
 MyType1.prototype.objectMethod = function(v1,v2) {}
-/**
- * @constructor
- * @private
- */
-function Object() {}

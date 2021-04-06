@@ -3,10 +3,6 @@
  * @externs
  */
 /**
- * @typedef {!ArrayBuffer}
- */
-var BufferSource;
-/**
  * @typedef {{mutable:(!boolean|undefined),value:*}}
  */
 var GlobalDescriptor;
@@ -30,11 +26,6 @@ var WebAssembly;
  * @private
  */
 WebAssembly.CompileError = function() {}
-/**
- * @constructor
- * @private
- */
-function ArrayBuffer() {}
 /**
  * @constructor
  * @private

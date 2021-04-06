@@ -3,10 +3,6 @@
  * @externs
  */
 /**
- * @typedef {!ArrayBuffer}
- */
-var BufferSource;
-/**
  * @constructor
  * @private
  */
@@ -65,26 +61,4 @@ var WebAssembly;
  * @constructor
  * @private
  */
-function MathInterface() {}
-/** @const {!number} */ MathInterface.E;
-/** @const {!number} */ MathInterface.LN10;
-/**
- * @param {!number} x
- * @return {!number}
- */
-MathInterface.prototype.abs = function(x) {}
-/**
- * @const
- * @type {MathInterface}
- */
-var Math;
-/**
- * @constructor
- * @private
- */
 function Window() {}
-/**
- * @constructor
- * @private
- */
-function ArrayBuffer() {}
