@@ -51,7 +51,6 @@ complete as there is too much un-said.
 
 * Scan the main closure externs and figure out a heuristic for `@nosideeffects`
 
-* LegacyNoInterfaceObject support
 * Exposed filtering
 * attributes
 * filter out elements that are marked as `JavaOnly`
