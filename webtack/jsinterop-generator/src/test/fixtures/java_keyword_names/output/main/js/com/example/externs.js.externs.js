@@ -35,10 +35,10 @@ MyType4.prototype.getClass = function(getClass) {}
  */
 MyType4.prototype.wait = function(wait) {}
 /**
- * @param {!Object} private
+ * @param {!Object} private_
  * @return {undefined}
  */
-MyType4.prototype.private = function(private) {}
+MyType4.prototype.private = function(private_) {}
 /**
  * @param {!Object} notifyAll
  * @return {undefined}
@@ -55,20 +55,20 @@ MyType4.prototype.is = function(is) {}
  */
 MyType4.prototype.notify = function(notify) {}
 /**
- * @param {!Object} default
+ * @param {!Object} default_
  * @return {undefined}
  */
-MyType4.prototype.default = function(default) {}
+MyType4.prototype.default = function(default_) {}
 /**
- * @param {!Object} public
+ * @param {!Object} public_
  * @return {undefined}
  */
-MyType4.prototype.public = function(public) {}
+MyType4.prototype.public = function(public_) {}
 /**
- * @param {!Object} protected
+ * @param {!Object} protected_
  * @return {undefined}
  */
-MyType4.prototype.protected = function(protected) {}
+MyType4.prototype.protected = function(protected_) {}
 /**
  * @param {!Object} hashCode
  * @return {undefined}
@@ -115,10 +115,10 @@ MyType3.getClass = function(getClass) {}
  */
 MyType3.wait = function(wait) {}
 /**
- * @param {!Object} private
+ * @param {!Object} private_
  * @return {undefined}
  */
-MyType3.private = function(private) {}
+MyType3.private = function(private_) {}
 /**
  * @param {!Object} notifyAll
  * @return {undefined}
@@ -135,20 +135,20 @@ MyType3.is = function(is) {}
  */
 MyType3.notify = function(notify) {}
 /**
- * @param {!Object} default
+ * @param {!Object} default_
  * @return {undefined}
  */
-MyType3.default = function(default) {}
+MyType3.default = function(default_) {}
 /**
- * @param {!Object} public
+ * @param {!Object} public_
  * @return {undefined}
  */
-MyType3.public = function(public) {}
+MyType3.public = function(public_) {}
 /**
- * @param {!Object} protected
+ * @param {!Object} protected_
  * @return {undefined}
  */
-MyType3.protected = function(protected) {}
+MyType3.protected = function(protected_) {}
 /**
  * @param {!Object} hashCode
  * @return {undefined}

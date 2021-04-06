@@ -6,6 +6,7 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
@@ -45,6 +46,29 @@ import org.realityforge.webtack.model.tools.util.ExtendedAttributes;
 final class ClosureAction
   extends AbstractAction
 {
+  /**
+   * ES5 key words. See Section 7.6.1.1
+   */
+  @Nonnull
+  private static final List<String> JS_KEY_WORDS =
+    Arrays.asList( "break", "case", "catch", "continue", "debugger", "default", "delete",
+                   "do", "else", "finally", "for", "function", "if", "in", "instanceof",
+                   "new", "return", "switch", "this", "throw", "try", "typeof", "var", "void",
+                   "while", "with" );
+  /**
+   * ES5 strict mode reserved words. See Section 7.6.1.2
+   */
+  @Nonnull
+  private static final List<String> JS_RESERVED_WORDS =
+    Arrays.asList( "class", "const", "enum", "export", "extends", "import", "super",
+                   "implements", "interface", "let", "package", "private", "protected",
+                   "public", "static", "yield" );
+  /**
+   * JS Literals. See Section 7.8 Literals.
+   */
+  @Nonnull
+  private static final List<String> JS_LITERALS = Arrays.asList( "true", "false", "null" );
+
   @Nonnull
   private final String _key;
   @Nullable
@@ -635,7 +659,7 @@ final class ClosureAction
         writer.write( "=" );
       }
       writer.write( "} " );
-      writer.write( argument.getName() );
+      writer.write( safeJsArgName( argument.getName() ) );
       writer.write( "\n" );
     }
   }
@@ -643,7 +667,13 @@ final class ClosureAction
   @Nonnull
   private String toArgumentsList( @Nonnull final List<Argument> arguments )
   {
-    return "(" + arguments.stream().map( NamedElement::getName ).collect( Collectors.joining( "," ) ) + ")";
+    return "(" +
+           arguments
+             .stream()
+             .map( NamedElement::getName )
+             .map( this::safeJsArgName )
+             .collect( Collectors.joining( "," ) ) +
+           ")";
   }
 
   private void writeFunctionType( @Nonnull final Writer writer,
@@ -780,4 +810,22 @@ final class ClosureAction
       }
     }
   }
+
+  @Nonnull
+  private String safeJsArgName( @Nonnull final String name )
+  {
+    return isArgNameJsSafe( name ) ? name : mangleName( name );
+  }
+
+  private boolean isArgNameJsSafe( @Nonnull final String name )
+  {
+    return !JS_RESERVED_WORDS.contains( name ) && !JS_KEY_WORDS.contains( name ) && !JS_LITERALS.contains( name );
+  }
+
+  @Nonnull
+  private String mangleName( @Nonnull final String name )
+  {
+    return Character.isUnicodeIdentifierStart( name.charAt( 0 ) ) ? name + "_" : "_" + name;
+  }
+
 }
