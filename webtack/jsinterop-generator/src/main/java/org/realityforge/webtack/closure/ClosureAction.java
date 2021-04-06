@@ -353,7 +353,7 @@ final class ClosureAction
     {
       results.add( new Argument( "arg" + i,
                                  types.get( i ),
-                                 i >= minArgCount || (optionals.size() > i && optionals.get( i )),
+                                 i >= minArgCount || ( optionals.size() > i && optionals.get( i ) ),
                                  i == argCount - 1 && variadic,
                                  null,
                                  null,
