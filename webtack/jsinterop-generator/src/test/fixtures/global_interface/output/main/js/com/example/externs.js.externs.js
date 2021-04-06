@@ -32,9 +32,9 @@ function Window() {}
  */
 Window.prototype.get = function(name) {}
 /**
- * @param {!number=} arg0
- * @param {!number} arg1
- * @return {!(undefined|undefined)}
+ * @param {(!number|!ScrollToOptions)=} arg0
+ * @param {!number=} arg1
+ * @return {undefined}
  */
 Window.prototype.scroll = function(arg0,arg1) {}
 /**

@@ -1,0 +1,14 @@
+BufferSource=com.example.BufferSource
+Instance=com.example.Instance
+MediaStream=com.example.MediaStream
+MediaStreamTrack=com.example.MediaStreamTrack
+Module=com.example.Module
+Other=com.example.Other
+Point=com.example.Point
+Promise=com.example.JsPromise
+ScrollToOptions=com.example.ScrollToOptions
+Sequence=com.example.JsArray
+WebAssembly=com.example.WebAssemblyNamespace
+WebAssemblyInstantiatedSource=com.example.WebAssemblyInstantiatedSource
+Window=com.example.Window
+object=java.lang.Object

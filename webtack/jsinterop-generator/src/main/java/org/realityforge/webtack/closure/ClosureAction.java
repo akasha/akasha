@@ -267,9 +267,11 @@ final class ClosureAction
     }
     else
     {
-      final List<Argument> arguments = new ArrayList<>();
-      //TODO: merge all the constructor parameters
-      writeConstructor( writer, definition.getName(), definition.getInherits(), arguments, Collections.emptyList() );
+      writeConstructor( writer,
+                        definition.getName(),
+                        definition.getInherits(),
+                        deriveArguments( constructors ),
+                        Collections.emptyList() );
     }
     writeConstMembers( writer, definition, definition.getConstants() );
 
@@ -299,7 +301,7 @@ final class ClosureAction
         writeOperation( writer,
                         definition.getName(),
                         entry.getKey(),
-                        templateOperation.getArguments(),
+                        deriveArguments( operationsToMerge ),
                         deriveReturnType( operationsToMerge ),
                         isNonStaticOperation );
       }
@@ -312,9 +314,11 @@ final class ClosureAction
     final List<List<Type>> arguments = new ArrayList<>();
     final List<Boolean> optionals = new ArrayList<>();
     boolean variadic = false;
+    int minArgCount = Integer.MAX_VALUE;
     for ( final OperationMember operation : operations )
     {
       int i = 0;
+      minArgCount = Math.min( minArgCount, operation.getArguments().size() );
       for ( final Argument argument : operation.getArguments() )
       {
         if ( argument.isVariadic() )
@@ -349,7 +353,7 @@ final class ClosureAction
     {
       results.add( new Argument( "arg" + i,
                                  types.get( i ),
-                                 optionals.size() > i && optionals.get( i ),
+                                 i >= minArgCount || (optionals.size() > i && optionals.get( i )),
                                  i == argCount - 1 && variadic,
                                  null,
                                  null,
