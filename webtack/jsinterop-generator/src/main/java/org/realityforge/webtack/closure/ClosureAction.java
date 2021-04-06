@@ -306,6 +306,58 @@ final class ClosureAction
     }
   }
 
+  @Nonnull
+  private List<Argument> deriveArguments( @Nonnull final List<OperationMember> operations )
+  {
+    final List<List<Type>> arguments = new ArrayList<>();
+    final List<Boolean> optionals = new ArrayList<>();
+    boolean variadic = false;
+    for ( final OperationMember operation : operations )
+    {
+      int i = 0;
+      for ( final Argument argument : operation.getArguments() )
+      {
+        if ( argument.isVariadic() )
+        {
+          // The assumption is that only the last argument may be variadic and variadic APIs should be consistent
+          // across operations with the same name...
+          variadic = true;
+        }
+        if ( argument.isOptional() )
+        {
+          // Make sure optional array covers index and then set to true
+          for ( int j = optionals.size(); j <= i; j++ )
+          {
+            optionals.add( Boolean.FALSE );
+          }
+          optionals.set( i, Boolean.TRUE );
+        }
+        final Type type = argument.getType();
+        for ( int j = arguments.size(); j <= i; j++ )
+        {
+          arguments.add( new ArrayList<>() );
+        }
+        maybeAddTypeToList( arguments.get( i ), type );
+        i++;
+      }
+    }
+
+    final List<Type> types = arguments.stream().map( this::toType ).collect( Collectors.toList() );
+    final List<Argument> results = new ArrayList<>();
+    final int argCount = types.size();
+    for ( int i = 0; i < argCount; i++ )
+    {
+      results.add( new Argument( "arg" + i,
+                                 types.get( i ),
+                                 optionals.size() > i && optionals.get( i ),
+                                 i == argCount - 1 && variadic,
+                                 null,
+                                 null,
+                                 Collections.emptyList(),
+                                 Collections.emptyList() ) );
+    }
+    return results;
+  }
 
   @Nonnull
   private Type deriveReturnType( @Nonnull final List<OperationMember> operations )
