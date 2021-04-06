@@ -157,7 +157,7 @@ public abstract class AbstractTest
     final Path commonInputJavaDirectory = commonInput.resolve( "main" ).resolve( "java" );
     final Path commonInputJsDirectory = commonInput.resolve( "main" ).resolve( "js" );
     final Path outputDirectory = workingDirectory.resolve( "output" );
-    final List<Path> inputTypeCatalogs =
+    final List<Path> predefinedTypeMappingPaths =
       collectFilesWithExtension( ".mapping", inputDirectory.resolve( "main" ).resolve( "resources" ) );
     final List<Path> externalTypeMappingPaths =
       collectFilesWithExtension( ".mapping", commonInput.resolve( "main" ).resolve( "resources" ) );
@@ -168,7 +168,7 @@ public abstract class AbstractTest
                               globalInterface,
                               gwtInherits,
                               outputDirectory,
-                              inputTypeCatalogs,
+                              predefinedTypeMappingPaths,
                               externalTypeMappingPaths );
 
     for ( final Path file : generatedJsinteropFiles )
@@ -231,7 +231,7 @@ public abstract class AbstractTest
                                             @Nullable final String globalInterface,
                                             @Nonnull final List<String> gwtInherits,
                                             @Nonnull final Path outputDirectory,
-                                            @Nonnull final List<Path> inputTypeCatalogs,
+                                            @Nonnull final List<Path> predefinedTypeMappingPaths,
                                             @Nonnull final List<Path> externalTypeMappingPaths )
     throws Exception
   {
@@ -240,7 +240,7 @@ public abstract class AbstractTest
                            outputDirectory,
                            packageName,
                            globalInterface,
-                           inputTypeCatalogs,
+                           predefinedTypeMappingPaths,
                            externalTypeMappingPaths,
                            true,
                            gwtInherits,
