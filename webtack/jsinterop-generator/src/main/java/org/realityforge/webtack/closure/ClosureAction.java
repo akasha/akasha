@@ -288,18 +288,49 @@ final class ClosureAction
       }
       else
       {
-        //TODO: Merge all operations and return types
         writeOperation( writer,
                         definition.getName(),
                         entry.getKey(),
                         templateOperation.getArguments(),
-                        templateOperation.getReturnType(),
+                        deriveReturnType( operationsToMerge ),
                         isNonStaticOperation );
       }
     }
   }
 
+
+  @Nonnull
+  private Type deriveReturnType( @Nonnull final List<OperationMember> operations )
   {
+    final List<Type> types = new ArrayList<>();
+    for ( final OperationMember operation : operations )
+    {
+      maybeAddTypeToList( types, operation.getReturnType() );
+    }
+    return toType( types );
+  }
+
+  private void maybeAddTypeToList( @Nonnull final List<Type> types, @Nonnull final Type candidate )
+  {
+    for ( final Type type : types )
+    {
+      if ( !type.equiv( candidate ) )
+      {
+        return;
+      }
+    }
+    types.add( candidate );
+  }
+
+  @Nonnull
+  private Type toType( @Nonnull final List<Type> types )
+  {
+    return 1 == types.size() ?
+           types.get( 0 ) :
+           new UnionType( types,
+                          Collections.emptyList(),
+                          types.stream().anyMatch( Type::isNullable ),
+                          Collections.emptyList() );
   }
 
   private void writeJsDoc( @Nonnull final Writer writer, @Nonnull final String... lines )
