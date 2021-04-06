@@ -29,6 +29,7 @@ function Int32Array() {}
  */
 function WebGLRenderingContext() {}
 /** @const {!GLenum} */ WebGLRenderingContext.ACTIVE_ATTRIBUTES;
+/** @const {!GLenum} */ WebGLRenderingContext.prototype.ACTIVE_ATTRIBUTES;
 /**
  * @param {!GLbitfield} mask
  * @return {undefined}

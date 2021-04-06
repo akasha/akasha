@@ -218,7 +218,7 @@ final class ClosureAction
     writer.write( "/**\n * @interface\n */\nfunction " );
     writer.write( type );
     writer.write( "() {}\n" );
-    writeConstMembers( writer, type, definition.getConstants() );
+    writeConstMembers( writer, type, definition.getConstants(), true, false );
     writeUniquelyNamedOperation( writer, type, definition.getOperation() );
   }
 
@@ -292,7 +292,7 @@ final class ClosureAction
     writer.write( type );
     writer.write( " = {};\n" );
 
-    writeConstMembers( writer, type, definition.getConstants() );
+    writeConstMembers( writer, type, definition.getConstants(), true, false );
     writeOperations( writer, type, definition.getOperations() );
   }
 
@@ -349,7 +349,7 @@ final class ClosureAction
                         true,
                         Collections.emptyList() );
     }
-    writeConstMembers( writer, type, definition.getConstants() );
+    writeConstMembers( writer, type, definition.getConstants(), !hasNoJsType, true );
 
     writeOperations( writer, type, operations );
   }
@@ -517,18 +517,28 @@ final class ClosureAction
 
   private void writeConstMembers( @Nonnull final Writer writer,
                                   @Nonnull final String type,
-                                  @Nonnull final List<ConstMember> constants )
+                                  @Nonnull final List<ConstMember> constants,
+                                  final boolean addConstantsToType,
+                                  final boolean addConstantsToPrototype )
     throws IOException
   {
     for ( final ConstMember constant : constants )
     {
-      writeConstMember( writer, type, constant );
+      if ( addConstantsToType )
+      {
+        writeConstMember( writer, type, constant, false );
+      }
+      if ( addConstantsToPrototype )
+      {
+        writeConstMember( writer, type, constant, true );
+      }
     }
   }
 
   private void writeConstMember( @Nonnull final Writer writer,
                                  @Nonnull final String type,
-                                 @Nonnull final ConstMember constant )
+                                 @Nonnull final ConstMember constant,
+                                 final boolean onPrototype )
     throws IOException
   {
     writer.write( "/** @const {" );
@@ -536,6 +546,10 @@ final class ClosureAction
     writer.write( "} */ " );
     writer.write( type );
     writer.write( "." );
+    if ( onPrototype )
+    {
+      writer.write( "prototype." );
+    }
     writer.write( constant.getName() );
     writer.write( ";\n" );
   }

@@ -32,6 +32,7 @@ function Node() {}
  */
 function Event(type,eventInitDict) {}
 /** @const {!number} */ Event.AT_TARGET;
+/** @const {!number} */ Event.prototype.AT_TARGET;
 /**
  * @return {!Array<!EventTarget>}
  */

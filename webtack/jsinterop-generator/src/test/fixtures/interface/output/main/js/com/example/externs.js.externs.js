@@ -135,9 +135,13 @@ SpeechRecognitionErrorEvent.prototype.messageDescription = function() {}
  */
 function Event(type,eventInitDict) {}
 /** @const {!number} */ Event.AT_TARGET;
+/** @const {!number} */ Event.prototype.AT_TARGET;
 /** @const {!number} */ Event.BUBBLING_PHASE;
+/** @const {!number} */ Event.prototype.BUBBLING_PHASE;
 /** @const {!number} */ Event.CAPTURING_PHASE;
+/** @const {!number} */ Event.prototype.CAPTURING_PHASE;
 /** @const {!number} */ Event.NONE;
+/** @const {!number} */ Event.prototype.NONE;
 /**
  * @return {undefined}
  */
