@@ -73,7 +73,7 @@ final class ClosureAction
         Files.readAllLines( predefinedTypeCatalog )
           .stream()
           .map( String::trim )
-          .filter( String::isEmpty )
+          .filter( t -> !t.isEmpty() )
           .forEach( _predefinedTypes::add );
       }
       catch ( final IOException ioe )
