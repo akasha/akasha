@@ -6,9 +6,9 @@
  * @constructor
  * @private
  */
-function Window() {};
+function Window() {}
 /**
  * @constructor
  * @private
  */
-function ArrayBuffer() {};
+function ArrayBuffer() {}

@@ -5,7 +5,7 @@
 /**
  * @interface
  */
-function () {};
+function () {}
 /** @const {!number} */ NodeFilter.FILTER_ACCEPT;
 /** @const {!number} */ NodeFilter.FILTER_REJECT;
 /** @const {!number} */ NodeFilter.FILTER_SKIP;
@@ -26,8 +26,8 @@ function () {};
  * @param {!Node} node
  * @return {!number}
  */
-NodeFilter.prototype.acceptNode = function(node) {};
+NodeFilter.prototype.acceptNode = function(node) {}
 /**
  * @constructor
  */
-function Node() {};
+function Node() {}

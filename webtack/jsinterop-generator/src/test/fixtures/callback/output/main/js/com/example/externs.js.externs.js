@@ -10,4 +10,4 @@ var txEventHandler;
  * @constructor
  * @private
  */
-function Event() {};
+function Event() {}

@@ -5,22 +5,22 @@
 /**
  * @interface
  */
-function () {};
+function () {}
 /**
  * @param {!Event} event
  * @return {undefined}
  */
-txCallback.prototype.handleEvent = function(event) {};
+txCallback.prototype.handleEvent = function(event) {}
 /**
  * @interface
  */
-function () {};
+function () {}
 /**
  * @param {!Event} event
  * @return {undefined}
  */
-EventListener.prototype.handleEvent = function(event) {};
+EventListener.prototype.handleEvent = function(event) {}
 /**
  * @constructor
  */
-function Event() {};
+function Event() {}

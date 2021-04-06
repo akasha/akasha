@@ -226,7 +226,7 @@ final class ClosureAction
                                           @Nonnull final CallbackInterfaceDefinition definition )
     throws IOException
   {
-    writer.write( "/**\n * @interface\n */\nfunction () {};\n" );
+    writer.write( "/**\n * @interface\n */\nfunction () {}\n" );
     writeConstMembers( writer, definition, definition.getConstants() );
     writeUniquelyNamedOperation( writer, definition, definition.getOperation() );
   }
@@ -406,7 +406,7 @@ final class ClosureAction
                   "." +
                   ( onPrototype ? "prototype." : "" ) +
                   name +
-                  " = function" + toArgumentsList( arguments ) + " {};\n" );
+                  " = function" + toArgumentsList( arguments ) + " {}\n" );
   }
 
   private void writeConstructor( @Nonnull final Writer writer,
@@ -448,7 +448,7 @@ final class ClosureAction
       writer.write( "\n" );
     }
     writer.write( " */\n" );
-    writer.write( "function " + typeName + toArgumentsList( arguments ) + " {};\n" );
+    writer.write( "function " + typeName + toArgumentsList( arguments ) + " {}\n" );
   }
 
   @Nonnull

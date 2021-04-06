@@ -10,9 +10,9 @@ var ClipboardItemDelayedCallback;
  * @constructor
  * @private
  */
-function Blob() {};
+function Blob() {}
 /**
  * @constructor
  * @private
  */
-function SomeStore() {};
+function SomeStore() {}

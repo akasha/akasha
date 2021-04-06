@@ -6,10 +6,10 @@
  * @constructor
  * @private
  */
-function JSON() {};
+function JSON() {}
 /**
  * @param {*} value
  * @param {?StringifySpaceUnionType=} space
  * @return {!string}
  */
-JSON.prototype.stringify = function(value,space) {};
+JSON.prototype.stringify = function(value,space) {}

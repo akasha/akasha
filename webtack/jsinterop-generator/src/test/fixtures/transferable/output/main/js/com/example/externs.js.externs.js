@@ -6,27 +6,27 @@
  * @constructor
  * @private
  */
-function MessagePort() {};
+function MessagePort() {}
 /**
  * @param {*} message
  * @param {!Array<!Object>} transfer
  * @return {undefined}
  */
-MessagePort.prototype.postMessage = function(message,transfer) {};
+MessagePort.prototype.postMessage = function(message,transfer) {}
 /**
  * @return {undefined}
  */
-MessagePort.prototype.start = function() {};
+MessagePort.prototype.start = function() {}
 /**
  * @return {undefined}
  */
-MessagePort.prototype.close = function() {};
+MessagePort.prototype.close = function() {}
 /**
  * @constructor
  * @private
  */
-function ImageBitmap() {};
+function ImageBitmap() {}
 /**
  * @return {undefined}
  */
-ImageBitmap.prototype.close = function() {};
+ImageBitmap.prototype.close = function() {}

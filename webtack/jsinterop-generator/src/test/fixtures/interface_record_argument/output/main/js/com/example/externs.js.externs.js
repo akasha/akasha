@@ -14,4 +14,4 @@ function Headers() {};
  * @constructor
  * @private
  */
-function ClipboardItemData() {};
+function ClipboardItemData() {}

@@ -6,44 +6,44 @@
  * @constructor
  * @private
  */
-function HTMLImageElement() {};
+function HTMLImageElement() {}
 /**
  * @constructor
  * @private
  */
-function HTMLVideoElement() {};
+function HTMLVideoElement() {}
 /**
  * @constructor
  * @private
  */
-function ImageData() {};
+function ImageData() {}
 /**
  * @constructor
  * @private
  */
-function MyBufferSource() {};
+function MyBufferSource() {}
 /**
  * @constructor
  * @private
  */
-function WebGLRenderingContext() {};
+function WebGLRenderingContext() {}
 /**
  * @param {!TexImageSource} source
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.texImage2D = function(source) {};
+WebGLRenderingContext.prototype.texImage2D = function(source) {}
 /**
  * @constructor
  * @private
  */
-function ImageBitmap() {};
+function ImageBitmap() {}
 /**
  * @constructor
  * @private
  */
-function HTMLCanvasElement() {};
+function HTMLCanvasElement() {}
 /**
  * @constructor
  * @private
  */
-function OffscreenCanvas() {};
+function OffscreenCanvas() {}

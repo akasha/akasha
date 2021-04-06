@@ -6,16 +6,16 @@
  * @constructor
  * @private
  */
-function IDBObjectStore() {};
+function IDBObjectStore() {}
 /**
  * @param {!string} name
  * @param {!(!string|!Array<!string>)} keyPath
  * @param {!IDBIndexParameters=} options
  * @return {!IDBIndex}
  */
-IDBObjectStore.prototype.createIndex = function(name,keyPath,options) {};
+IDBObjectStore.prototype.createIndex = function(name,keyPath,options) {}
 /**
  * @constructor
  * @private
  */
-function IDBIndex() {};
+function IDBIndex() {}

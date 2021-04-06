@@ -6,127 +6,130 @@
  * @constructor
  * @private
  */
-function MyThingCollection() {};
+function MyThingCollection() {}
 /**
  * @constructor
  * @private
  */
-function DOMTokenList() {};
+function DOMTokenList() {}
 /**
  * @constructor
  * @private
  */
-function SomeOtherType() {};
+function SomeOtherType() {}
 /**
  * @constructor
  * @private
  */
-function Headers() {};
+function Headers() {}
 /**
  * @param {!string} name
  * @param {!string} value
  * @return {undefined}
  */
-Headers.prototype.set = function(name,value) {};
+Headers.prototype.set = function(name,value) {}
 /**
  * @param {!string} name
  * @return {?string}
  */
-Headers.prototype.get = function(name) {};
+Headers.prototype.get = function(name) {}
 /**
  * @param {!string} name
  * @return {!boolean}
  */
-Headers.prototype.has = function(name) {};
+Headers.prototype.has = function(name) {}
 /**
  * @param {!string} name
  * @return {undefined}
  */
-Headers.prototype.delete = function(name) {};
+Headers.prototype.delete = function(name) {}
 /**
  * @param {!string} name
  * @param {!string} value
  * @return {undefined}
  */
-Headers.prototype.append = function(name,value) {};
+Headers.prototype.append = function(name,value) {}
 /**
  * @constructor
  * @private
  */
-function MyThing() {};
+function MyThing() {}
 /**
  * @constructor
  * @private
  */
-function DOMStringMap() {};
+function DOMStringMap() {}
 /**
  * @constructor
  * @private
  */
-function SomeMapLikeDefiningOverrides() {};
+function SomeMapLikeDefiningOverrides() {}
 /**
  * @param {!string} key
  * @param {!number} value
  * @return {undefined}
  */
-SomeMapLikeDefiningOverrides.prototype.set = function(key,value) {};
+SomeMapLikeDefiningOverrides.prototype.set = function(key,value) {}
 /**
  * @return {undefined}
  */
-SomeMapLikeDefiningOverrides.prototype.clear = function() {};
+SomeMapLikeDefiningOverrides.prototype.clear = function() {}
 /**
  * @param {!string} key
  * @return {!boolean}
  */
-SomeMapLikeDefiningOverrides.prototype.delete = function(key) {};
+SomeMapLikeDefiningOverrides.prototype.delete = function(key) {}
 /**
  * @constructor
  * @private
  */
-function txStorage() {};
+function txStorage() {}
 /**
  * @constructor
  * @private
  */
-function Storage() {};
+function Storage() {}
 /**
  * @param {!string} key
  * @return {undefined}
  */
-Storage.prototype.removeItem = function(key) {};
+Storage.prototype.removeItem = function(key) {}
 /**
  * @return {undefined}
  */
-Storage.prototype.clear = function() {};
+Storage.prototype.clear = function() {}
 /**
  * @param {!string} key
  * @return {?string}
  */
-Storage.prototype.getItem = function(key) {};
+Storage.prototype.getItem = function(key) {}
 /**
  * @param {!string} key
  * @param {!string} value
  * @return {undefined}
  */
-Storage.prototype.setItem = function(key,value) {};
+Storage.prototype.setItem = function(key,value) {}
 /**
  * @param {!number} index
  * @return {?string}
  */
-Storage.prototype.key = function(index) {};
+Storage.prototype.key = function(index) {}
 /**
  * @constructor
  * @extends {Event}
+ * @param {!string} arg0
  */
-function SpeechRecognitionErrorEvent() {};
+function SpeechRecognitionErrorEvent(arg0) {}
 /**
  * @return {!string}
  */
-SpeechRecognitionErrorEvent.prototype.messageDescription = function() {};
+SpeechRecognitionErrorEvent.prototype.messageDescription = function() {}
 /**
  * @constructor
+ * @param {!string} arg0
+ * @param {!EventInit=} arg1
  */
-function Event() {};
+function Event(arg0,arg1) {}
 /** @const {!number} */ Event.AT_TARGET;
 /** @const {!number} */ Event.BUBBLING_PHASE;
 /** @const {!number} */ Event.CAPTURING_PHASE;
@@ -134,50 +137,50 @@ function Event() {};
 /**
  * @return {undefined}
  */
-Event.prototype.stopImmediatePropagation = function() {};
+Event.prototype.stopImmediatePropagation = function() {}
 /**
  * @return {!Array<!EventTarget>}
  */
-Event.prototype.composedPath = function() {};
+Event.prototype.composedPath = function() {}
 /**
  * @param {*} value
  * @return {undefined}
  */
-Event.prototype.anyParameter = function(value) {};
+Event.prototype.anyParameter = function(value) {}
 /**
  * @return {*}
  */
-Event.prototype.anyReturning = function() {};
+Event.prototype.anyReturning = function() {}
 /**
  * @return {undefined}
  */
-Event.prototype.stopPropagation = function() {};
+Event.prototype.stopPropagation = function() {}
 /**
  * @param {!string} type
  * @param {!boolean=} bubbles
  * @param {!boolean=} cancelable
  * @return {undefined}
  */
-Event.prototype.initEvent = function(type,bubbles,cancelable) {};
+Event.prototype.initEvent = function(type,bubbles,cancelable) {}
 /**
  * @return {!Promise<*>}
  */
-Event.prototype.anyInReturnedPromise = function() {};
+Event.prototype.anyInReturnedPromise = function() {}
 /**
  * @return {undefined}
  */
-Event.prototype.preventDefault = function() {};
+Event.prototype.preventDefault = function() {}
 /**
  * @constructor
  * @private
  */
-function RTCStatsReport() {};
+function RTCStatsReport() {}
 /**
  * @constructor
  */
-function EventTarget() {};
+function EventTarget() {}
 /**
  * @param {!Event} event
  * @return {!boolean}
  */
-EventTarget.prototype.dispatchEvent = function(event) {};
+EventTarget.prototype.dispatchEvent = function(event) {}

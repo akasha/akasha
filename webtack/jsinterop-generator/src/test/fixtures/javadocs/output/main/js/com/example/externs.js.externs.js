@@ -9,18 +9,18 @@ var OnActionHandler;
 /**
  * @interface
  */
-function () {};
+function () {}
 /** @const {!number} */ NodeFilter.FILTER_ACCEPT;
 /**
  * @param {!Node} node
  * @return {!number}
  */
-NodeFilter.prototype.acceptNode = function(node) {};
+NodeFilter.prototype.acceptNode = function(node) {}
 /**
  * @constructor
  * @private
  */
-function Node() {};
+function Node() {}
 /**
  * @constructor
  */
@@ -29,14 +29,14 @@ function Event() {};
 /**
  * @return {!Array<!EventTarget>}
  */
-Event.prototype.composedPath = function() {};
+Event.prototype.composedPath = function() {}
 /**
  * @param {!string} type
  * @return {!Event}
  */
-Event.filterGlobalEvent = function(type) {};
+Event.filterGlobalEvent = function(type) {}
 /**
  * @constructor
  * @private
  */
-function EventTarget() {};
+function EventTarget() {}

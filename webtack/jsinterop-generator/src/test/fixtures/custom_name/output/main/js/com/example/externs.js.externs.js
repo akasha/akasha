@@ -9,14 +9,14 @@ var MyEventHandler;
 /**
  * @interface
  */
-function () {};
+function () {}
 /**
  * @param {!Event} event
  * @return {undefined}
  */
-EventListener.prototype.handleEvent = function(event) {};
+EventListener.prototype.handleEvent = function(event) {}
 /**
  * @constructor
  * @private
  */
-function Event() {};
+function Event() {}

@@ -6,17 +6,17 @@
  * @constructor
  * @private
  */
-function CompileError() {};
+function CompileError() {}
 /**
  * @constructor
  * @private
  */
-function ArrayBuffer() {};
+function ArrayBuffer() {}
 /**
  * @constructor
  * @private
  */
-function Module() {};
+function Module() {}
 /**
  * @constructor
  */
@@ -24,4 +24,4 @@ function Global() {};
 /**
  * @return {*}
  */
-Global.prototype.valueOf = function() {};
+Global.prototype.valueOf = function() {}

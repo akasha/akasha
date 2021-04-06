@@ -6,8 +6,8 @@
  * @constructor
  * @private
  */
-function SpeechSynthesis() {};
+function SpeechSynthesis() {}
 /**
  * @return {undefined}
  */
-SpeechSynthesis.prototype.customToString = function() {};
+SpeechSynthesis.prototype.customToString = function() {}

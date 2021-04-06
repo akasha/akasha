@@ -6,54 +6,54 @@
  * @constructor
  * @private
  */
-function Int8Array() {};
+function Int8Array() {}
 /**
  * @constructor
  * @private
  */
-function DataView() {};
+function DataView() {}
 /**
  * @constructor
  * @private
  */
-function Int32Array() {};
+function Int32Array() {}
 /**
  * @constructor
  * @private
  */
-function Blob() {};
+function Blob() {}
 /**
  * @constructor
  * @private
  */
-function Int16Array() {};
+function Int16Array() {}
 /**
  * @constructor
  * @private
  */
-function Uint16Array() {};
+function Uint16Array() {}
 /**
  * @constructor
  * @private
  */
-function Float32Array() {};
+function Float32Array() {}
 /**
  * @constructor
  * @private
  */
-function Uint32Array() {};
+function Uint32Array() {}
 /**
  * @constructor
  * @private
  */
-function Uint8Array() {};
+function Uint8Array() {}
 /**
  * @constructor
  * @private
  */
-function Float64Array() {};
+function Float64Array() {}
 /**
  * @constructor
  * @private
  */
-function Uint8ClampedArray() {};
+function Uint8ClampedArray() {}

@@ -6,7 +6,7 @@
  * @constructor
  * @private
  */
-function XMLHttpRequest2() {};
+function XMLHttpRequest2() {}
 /** @const {!number} */ XMLHttpRequest2.DONE;
 /** @const {!number} */ XMLHttpRequest2.HEADERS_RECEIVED;
 /** @const {!number} */ XMLHttpRequest2.LOADING;
@@ -16,13 +16,13 @@ function XMLHttpRequest2() {};
  * @constructor
  * @private
  */
-function EXT_color_buffer_float() {};
+function EXT_color_buffer_float() {}
 /** @const {!string} */ EXT_color_buffer_float.NAME;
 /**
  * @constructor
  * @private
  */
-function KHR_parallel_shader_compile() {};
+function KHR_parallel_shader_compile() {}
 /** @const {!string} */ KHR_parallel_shader_compile.NAME;
 /**
  * @constructor
@@ -36,15 +36,15 @@ function XMLHttpRequest() {};
 /**
  * @return {!ReadyStateType}
  */
-XMLHttpRequest.prototype.getSample = function() {};
+XMLHttpRequest.prototype.getSample = function() {}
 /**
  * @param {!ReadyStateType} sample
  * @return {undefined}
  */
-XMLHttpRequest.prototype.setSample = function(sample) {};
+XMLHttpRequest.prototype.setSample = function(sample) {}
 /**
  * @constructor
  * @private
  */
-function EXT_float_blend() {};
+function EXT_float_blend() {}
 /** @const {!string} */ EXT_float_blend.NAME;

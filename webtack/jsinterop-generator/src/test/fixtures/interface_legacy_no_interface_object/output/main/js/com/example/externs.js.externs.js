@@ -6,4 +6,4 @@
  * @constructor
  * @private
  */
-function SpeechSynthesisVoice() {};
+function SpeechSynthesisVoice() {}

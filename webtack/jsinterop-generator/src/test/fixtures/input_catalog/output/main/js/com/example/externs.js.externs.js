@@ -13,53 +13,53 @@ var EventHandler2;
 /**
  * @interface
  */
-function () {};
+function () {}
 /**
  * @return {undefined}
  */
-CompletionCallback.prototype.onDone = function() {};
+CompletionCallback.prototype.onDone = function() {}
 /**
  * @interface
  */
-function () {};
+function () {}
 /**
  * @return {undefined}
  */
-EventListener.prototype.onEvent = function() {};
+EventListener.prototype.onEvent = function() {}
 /**
  * @constructor
  * @private
  */
-function IDBObjectStore() {};
+function IDBObjectStore() {}
 /**
  * @return {!(!string|!number)}
  */
-IDBObjectStore.prototype.returnSomeUnionThatIsPredefined = function() {};
+IDBObjectStore.prototype.returnSomeUnionThatIsPredefined = function() {}
 /**
  * @param {!string} name
  * @param {!IDBIndexParameters2=} options
  * @return {!IDBIndex}
  */
-IDBObjectStore.prototype.createIndex2 = function(name,options) {};
+IDBObjectStore.prototype.createIndex2 = function(name,options) {}
 /**
  * @param {!EventListener} eventListener
  * @param {!CompletionCallback} completionCallback
  * @return {undefined}
  */
-IDBObjectStore.prototype.registerListeners = function(eventListener,completionCallback) {};
+IDBObjectStore.prototype.registerListeners = function(eventListener,completionCallback) {}
 /**
  * @return {!(!string|!number)}
  */
-IDBObjectStore.prototype.returnSomeUnionThatIsNotPredefined = function() {};
+IDBObjectStore.prototype.returnSomeUnionThatIsNotPredefined = function() {}
 /**
  * @param {!string} name
  * @param {!(!string|!Array<!string>)} keyPath
  * @param {!IDBIndexParameters=} options
  * @return {!IDBIndex}
  */
-IDBObjectStore.prototype.createIndex = function(name,keyPath,options) {};
+IDBObjectStore.prototype.createIndex = function(name,keyPath,options) {}
 /**
  * @constructor
  * @private
  */
-function IDBIndex() {};
+function IDBIndex() {}

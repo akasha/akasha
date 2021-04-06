@@ -5,9 +5,9 @@
 /**
  * @interface
  */
-function () {};
+function () {}
 /**
  * @param {?string} prefix
  * @return {?string}
  */
-XPathNSResolver.prototype.lookupNamespaceURI = function(prefix) {};
+XPathNSResolver.prototype.lookupNamespaceURI = function(prefix) {}

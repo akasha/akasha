@@ -13,184 +13,187 @@ var OnErrorEventHandler;
 /**
  * @interface
  */
-function () {};
+function () {}
 /**
  * @param {!(!string|!number)} event
  * @return {undefined}
  */
-EventListener2.prototype.handleUuid = function(event) {};
+EventListener2.prototype.handleUuid = function(event) {}
 /**
  * @interface
  */
-function () {};
+function () {}
 /**
  * @param {!BluetoothServiceUUID} event
  * @return {undefined}
  */
-EventListener3.prototype.handleServiceUuid = function(event) {};
+EventListener3.prototype.handleServiceUuid = function(event) {}
 /**
  * @constructor
  * @extends {EventTarget}
  * @private
  */
-function BluetoothRemoteGATTService() {};
+function BluetoothRemoteGATTService() {}
 /**
  * @param {!BluetoothServiceUUID} service
  * @return {!Promise<!BluetoothRemoteGATTService>}
  */
-BluetoothRemoteGATTService.prototype.getIncludedService = function(service) {};
+BluetoothRemoteGATTService.prototype.getIncludedService = function(service) {}
 /**
  * @param {!BluetoothServiceUUID=} service
  * @return {!Promise<!Array<!BluetoothRemoteGATTService>>}
  */
-BluetoothRemoteGATTService.prototype.getIncludedServices = function(service) {};
+BluetoothRemoteGATTService.prototype.getIncludedServices = function(service) {}
 /**
  * @constructor
  * @private
  */
-function Int8Array() {};
+function Int8Array() {}
 /**
  * @constructor
  * @private
  */
-function Int16Array() {};
+function Int16Array() {}
 /**
  * @constructor
  * @private
  */
-function Uint16Array() {};
+function Uint16Array() {}
 /**
  * @constructor
  * @private
  */
-function BluetoothRemoteGATTServer() {};
+function BluetoothRemoteGATTServer() {}
 /**
  * @param {!BluetoothServiceUUID=} service
  * @return {!Promise<!Array<!BluetoothRemoteGATTService>>}
  */
-BluetoothRemoteGATTServer.prototype.getPrimaryServices = function(service) {};
+BluetoothRemoteGATTServer.prototype.getPrimaryServices = function(service) {}
 /**
  * @param {!BluetoothServiceUUID} service
  * @return {!Promise<!BluetoothRemoteGATTService>}
  */
-BluetoothRemoteGATTServer.prototype.getPrimaryService = function(service) {};
+BluetoothRemoteGATTServer.prototype.getPrimaryService = function(service) {}
 /**
  * @constructor
+ * @param {!(!string|!number)} arg0
  */
-function SomeInterface() {};
+function SomeInterface(arg0) {}
 /**
  * @return {!(!string|!number)}
  */
-SomeInterface.myStaticMethodWithUnionReturn = function() {};
+SomeInterface.myStaticMethodWithUnionReturn = function() {}
 /**
  * @return {!(!string|!number)}
  */
-SomeInterface.prototype.getUuid = function() {};
+SomeInterface.prototype.getUuid = function() {}
 /**
  * @param {!(!string|!number)} serviceUuid
  * @return {undefined}
  */
-SomeInterface.myStaticMethodWithUnionArg = function(serviceUuid) {};
+SomeInterface.myStaticMethodWithUnionArg = function(serviceUuid) {}
 /**
  * @constructor
+ * @param {!BufferSource} arg0
  */
-function SomeDataContainer() {};
+function SomeDataContainer(arg0) {}
 /**
  * @return {!BluetoothDescriptorUUID}
  */
-SomeDataContainer.myStaticMethodWithUnionReturn = function() {};
+SomeDataContainer.myStaticMethodWithUnionReturn = function() {}
 /**
  * @param {!BluetoothDescriptorUUID} name
  * @return {undefined}
  */
-SomeDataContainer.myStaticMethodWithUnionArg = function(name) {};
+SomeDataContainer.myStaticMethodWithUnionArg = function(name) {}
 /**
  * @constructor
  * @private
  */
-function Float32Array() {};
+function Float32Array() {}
 /**
  * @constructor
  * @extends {EventTarget}
  * @private
  */
-function BluetoothRemoteGATTCharacteristic() {};
+function BluetoothRemoteGATTCharacteristic() {}
 /**
  * @param {!BufferSource} value
  * @return {!Promise<undefined>}
  */
-BluetoothRemoteGATTCharacteristic.prototype.writeValueWithoutResponse = function(value) {};
+BluetoothRemoteGATTCharacteristic.prototype.writeValueWithoutResponse = function(value) {}
 /**
  * @param {!BufferSource} value
  * @return {!Promise<undefined>}
  */
-BluetoothRemoteGATTCharacteristic.prototype.writeValueWithResponse = function(value) {};
+BluetoothRemoteGATTCharacteristic.prototype.writeValueWithResponse = function(value) {}
 /**
  * @param {!BufferSource} value
  * @return {!Promise<undefined>}
  */
-BluetoothRemoteGATTCharacteristic.prototype.writeValue = function(value) {};
+BluetoothRemoteGATTCharacteristic.prototype.writeValue = function(value) {}
 /**
  * @constructor
  * @private
  */
-function Float64Array() {};
+function Float64Array() {}
 /**
  * @constructor
  * @private
  */
-function DataView() {};
+function DataView() {}
 /**
  * @constructor
  * @private
  */
-function Int32Array() {};
+function Int32Array() {}
 /**
  * @constructor
  * @private
  */
-function Uint32Array() {};
+function Uint32Array() {}
 /**
  * @constructor
  * @private
  */
-function Event() {};
+function Event() {}
 /**
  * @constructor
  * @private
  */
-function ArrayBuffer() {};
+function ArrayBuffer() {}
 /**
  * @constructor
+ * @param {!BluetoothServiceUUID=} arg0
  */
-function SomeServiceContainer() {};
+function SomeServiceContainer(arg0) {}
 /**
  * @return {?BluetoothDescriptorUUID}
  */
-SomeServiceContainer.myStaticMethodWithUnionReturn = function() {};
+SomeServiceContainer.myStaticMethodWithUnionReturn = function() {}
 /**
  * @param {!BluetoothDescriptorUUID=} name
  * @return {undefined}
  */
-SomeServiceContainer.myStaticMethodWithUnionArg = function(name) {};
+SomeServiceContainer.myStaticMethodWithUnionArg = function(name) {}
 /**
  * @constructor
  * @private
  */
-function Uint8Array() {};
+function Uint8Array() {}
 /**
  * @constructor
  * @private
  */
-function EventTarget() {};
+function EventTarget() {}
 /**
  * @param {!string} type
  * @param {!(!EventListenerOptions|!boolean)=} options
  * @return {undefined}
  */
-EventTarget.prototype.removeEventListener = function(type,options) {};
+EventTarget.prototype.removeEventListener = function(type,options) {}
 /**
  * @constructor
  * @private
  */
-function Uint8ClampedArray() {};
+function Uint8ClampedArray() {}
