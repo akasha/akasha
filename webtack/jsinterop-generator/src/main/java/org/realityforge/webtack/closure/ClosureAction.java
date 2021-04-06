@@ -225,7 +225,7 @@ final class ClosureAction
                                           @Nonnull final CallbackInterfaceDefinition definition )
     throws IOException
   {
-    writeConstructor( writer, definition.getName(), null, Collections.emptyList() );
+    writer.write( "/**\n * @interface\n */\nfunction () {};\n" );
     writeConstMembers( writer, definition, definition.getConstants() );
     writeUniquelyNamedOperation( writer, definition, definition.getOperation() );
   }
