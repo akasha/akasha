@@ -821,7 +821,21 @@ final class ClosureAction
         else
         {
           writer.write( type.isNullable() ? "?" : "!" );
-          writer.write( name );
+          final InterfaceDefinition interfaceDefinition = schema.findInterfaceByName( name );
+          if ( null != interfaceDefinition )
+          {
+            final String namespace = interfaceDefinition.getNamespace();
+            if ( null != namespace )
+            {
+              writer.write( namespace );
+              writer.write( "." );
+            }
+            writer.write( name );
+          }
+          else
+          {
+            writer.write( name );
+          }
         }
       }
     }

@@ -13,7 +13,7 @@ var GlobalDescriptor;
 function WebAssemblyInterface() {}
 /**
  * @param {!BufferSource} bytes
- * @return {!Promise<!Module>}
+ * @return {!Promise<!WebAssembly.Module>}
  */
 WebAssemblyInterface.prototype.compile = function(bytes) {}
 /**
