@@ -34,3 +34,4 @@ function Headers(headers) {}
  * @private
  */
 function ClipboardItemData() {}
+/** @type {!string} */ ClipboardItemData.prototype.data;

@@ -56,6 +56,7 @@ MyString.prototype.toString = function() {}
  * @private
  */
 function WebAssemblyGlobal() {}
+/** @type {*} */ WebAssemblyGlobal.prototype.value;
 /**
  * @return {*}
  * @override

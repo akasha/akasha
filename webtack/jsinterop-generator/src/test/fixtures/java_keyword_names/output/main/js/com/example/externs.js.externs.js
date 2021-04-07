@@ -19,6 +19,20 @@ var MyDictionary1;
  * @private
  */
 function MyType1() {}
+/** @type {!Object} */ MyType1.prototype.clone;
+/** @type {!Object} */ MyType1.prototype.default;
+/** @type {!Object} */ MyType1.prototype.equals;
+/** @type {!Object} */ MyType1.prototype.finalize;
+/** @type {!Object} */ MyType1.prototype.getClass;
+/** @type {!Object} */ MyType1.prototype.hashCode;
+/** @type {!Object} */ MyType1.prototype.is;
+/** @type {!Object} */ MyType1.prototype.notify;
+/** @type {!Object} */ MyType1.prototype.notifyAll;
+/** @type {!Object} */ MyType1.prototype.private;
+/** @type {!Object} */ MyType1.prototype.protected;
+/** @type {!Object} */ MyType1.prototype.public;
+/** @type {!Object} */ MyType1.prototype.toString;
+/** @type {!Object} */ MyType1.prototype.wait;
 /**
  * @constructor
  * @private
@@ -104,6 +118,19 @@ MyType4.prototype.finalize = function(finalize) {}
  * @private
  */
 function MyType2() {}
+/** @type {!Object} */ MyType2.prototype.clone;
+/** @type {!Object} */ MyType2.prototype.default;
+/** @type {!Object} */ MyType2.prototype.equals;
+/** @type {!Object} */ MyType2.prototype.finalize;
+/** @type {!Object} */ MyType2.prototype.getClass;
+/** @type {!Object} */ MyType2.prototype.hashCode;
+/** @type {!Object} */ MyType2.prototype.is;
+/** @type {!Object} */ MyType2.prototype.notify;
+/** @type {!Object} */ MyType2.prototype.notifyAll;
+/** @type {!Object} */ MyType2.prototype.private;
+/** @type {!Object} */ MyType2.prototype.protected;
+/** @type {!Object} */ MyType2.prototype.public;
+/** @type {!Object} */ MyType2.prototype.wait;
 /**
  * @constructor
  * @private

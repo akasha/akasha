@@ -37,6 +37,7 @@ WebAssembly.Module = function() {}
  * @param {*=} v
  */
 WebAssembly.Global = function(descriptor,v) {}
+/** @type {*} */ WebAssembly.Global.prototype.value;
 /**
  * @return {*}
  * @override

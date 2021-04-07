@@ -11,6 +11,7 @@ var IDBIndexParameters;
  * @private
  */
 function IDBObjectStore() {}
+/** @type {!boolean} */ IDBObjectStore.prototype.autoIncrement;
 /**
  * @param {!string} name
  * @param {(!string|!Array<!string>)} keyPath

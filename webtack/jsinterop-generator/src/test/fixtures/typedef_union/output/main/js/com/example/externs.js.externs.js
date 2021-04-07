@@ -15,3 +15,4 @@ var ClipboardItemDataType;
  * @private
  */
 function Blob() {}
+/** @type {!string} */ Blob.prototype.type;

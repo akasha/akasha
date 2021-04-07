@@ -19,6 +19,8 @@ var SpeechRecognitionErrorEventInit;
  * @param {!string} sample
  */
 function WaveShaperNode(sample) {}
+/** @type {!string} */ WaveShaperNode.prototype.oversample;
+/** @type {!string} */ WaveShaperNode.prototype.static_oversample;
 /**
  * @return {!string}
  */
@@ -33,3 +35,4 @@ WaveShaperNode.prototype.setSample = function(sample) {}
  * @private
  */
 function PermissionStatus() {}
+/** @type {!string} */ PermissionStatus.prototype.state;

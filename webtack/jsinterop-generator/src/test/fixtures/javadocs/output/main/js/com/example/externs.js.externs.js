@@ -33,6 +33,8 @@ function Node() {}
 function Event(type,eventInitDict) {}
 /** @const {!number} */ Event.AT_TARGET;
 /** @const {!number} */ Event.prototype.AT_TARGET;
+/** @type {!boolean} */ Event.prototype.bubbles;
+/** @type {!boolean} */ Event.prototype.cancelBubble;
 /**
  * @return {!Array<!EventTarget>}
  */

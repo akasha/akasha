@@ -11,6 +11,10 @@ var MyDictionary;
  * @private
  */
 function MyType1() {}
+/** @type {!Object} */ MyType1.staticReadonlyObjectValue;
+/** @type {!Object} */ MyType1.staticObjectValue;
+/** @type {!Object} */ MyType1.prototype.readonlyObjectValue;
+/** @type {!Object} */ MyType1.prototype.objectValue;
 /**
  * @param {!Object} v1
  * @param {!Object=} v2

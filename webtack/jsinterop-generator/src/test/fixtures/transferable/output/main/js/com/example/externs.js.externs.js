@@ -30,6 +30,8 @@ MessagePort.prototype.close = function() {}
  * @private
  */
 function ImageBitmap() {}
+/** @type {!number} */ ImageBitmap.prototype.height;
+/** @type {!number} */ ImageBitmap.prototype.width;
 /**
  * @return {undefined}
  */

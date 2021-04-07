@@ -17,6 +17,7 @@ function XMLHttpRequest2() {}
 /** @const {!number} */ XMLHttpRequest2.prototype.OPENED;
 /** @const {!number} */ XMLHttpRequest2.UNSENT;
 /** @const {!number} */ XMLHttpRequest2.prototype.UNSENT;
+/** @type {!number} */ XMLHttpRequest2.prototype.readyState;
 /**
  * @constructor
  * @private
@@ -46,6 +47,8 @@ function XMLHttpRequest(value) {}
 /** @const {!number} */ XMLHttpRequest.prototype.OPENED;
 /** @const {!number} */ XMLHttpRequest.UNSENT;
 /** @const {!number} */ XMLHttpRequest.prototype.UNSENT;
+/** @type {!number} */ XMLHttpRequest.prototype.readyState;
+/** @type {!number} */ XMLHttpRequest.prototype.otherReadyState;
 /**
  * @return {!number}
  */

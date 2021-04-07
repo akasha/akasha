@@ -78,6 +78,8 @@ var WebAssembly;
  * @private
  */
 function IDBObjectStore() {}
+/** @type {!EventHandler1} */ IDBObjectStore.prototype.handler1;
+/** @type {!EventHandler2} */ IDBObjectStore.prototype.handler2;
 /**
  * @return {(!string|!number)}
  */

@@ -18,6 +18,7 @@ import java.util.stream.Stream;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import org.realityforge.webtack.model.Argument;
+import org.realityforge.webtack.model.AttributeMember;
 import org.realityforge.webtack.model.CallbackDefinition;
 import org.realityforge.webtack.model.CallbackInterfaceDefinition;
 import org.realityforge.webtack.model.ConstEnumerationDefinition;
@@ -310,6 +311,7 @@ final class ClosureAction
                       true,
                       Collections.singletonList( "@private" ) );
     writeConstMembers( writer, interfaceType, definition.getConstants(), true, false );
+    writeAttributeMembers( writer, interfaceType, definition.getAttributes() );
     writeOperations( writer, interfaceType, definition.getOperations() );
 
     writeJsDoc( writer, "@const", "@type {" + interfaceType + "}" );
@@ -369,7 +371,7 @@ final class ClosureAction
                         Collections.emptyList() );
     }
     writeConstMembers( writer, type, definition.getConstants(), !hasNoJsType, true );
-
+    writeAttributeMembers( writer, type, definition.getAttributes() );
     writeOperations( writer, type, operations );
   }
 
@@ -533,6 +535,36 @@ final class ClosureAction
       }
       writer.write( " */\n" );
     }
+  }
+
+  private void writeAttributeMembers( @Nonnull final Writer writer,
+                                      @Nonnull final String type,
+                                      @Nonnull final List<AttributeMember> attributes )
+    throws IOException
+  {
+    for ( final AttributeMember attribute : attributes )
+    {
+      writeAttributeMember( writer, type, attribute );
+    }
+  }
+
+  private void writeAttributeMember( @Nonnull final Writer writer,
+                                     @Nonnull final String type,
+                                     @Nonnull final AttributeMember attribute )
+    throws IOException
+  {
+    writer.write( "/** @type {" );
+    writeType( writer, attribute.getType() );
+    writer.write( "} */ " );
+    writer.write( type );
+    writer.write( "." );
+    // TODO: Should INHERIT imply @Override
+    if ( !attribute.getModifiers().contains( AttributeMember.Modifier.STATIC ) )
+    {
+      writer.write( "prototype." );
+    }
+    writer.write( attribute.getName() );
+    writer.write( ";\n" );
   }
 
   private void writeConstMembers( @Nonnull final Writer writer,

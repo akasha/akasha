@@ -19,8 +19,10 @@ var ClipboardItemDelayedCallback;
  * @private
  */
 function Blob() {}
+/** @type {!string} */ Blob.prototype.type;
 /**
  * @constructor
  * @private
  */
 function SomeStore() {}
+/** @type {(!number|!string)} */ SomeStore.prototype.transactionMode;

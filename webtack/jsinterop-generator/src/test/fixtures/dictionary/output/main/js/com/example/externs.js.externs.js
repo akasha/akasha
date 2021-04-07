@@ -35,6 +35,7 @@ var StorageEventInit;
  * @private
  */
 function Storage() {}
+/** @type {!number} */ Storage.prototype.length;
 /**
  * @param {!string} key
  * @return {undefined}

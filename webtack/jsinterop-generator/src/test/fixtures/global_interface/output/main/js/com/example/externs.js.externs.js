@@ -38,6 +38,9 @@ var AddEventListenerOptions;
  * @private
  */
 function Window() {}
+/** @type {!boolean} */ Window.prototype.closed;
+/** @type {!boolean} */ Window.prototype.isSecureContext;
+/** @type {!string} */ Window.prototype.name;
 /**
  * @param {!string} name
  * @return {!Object}
@@ -65,6 +68,8 @@ function FocusEvent() {}
  * @private
  */
 function EventTarget() {}
+/** @type {!boolean} */ EventTarget.prototype.open;
+/** @type {!string} */ EventTarget.prototype.id;
 /**
  * @param {!string} type
  * @param {?EventListener} callback

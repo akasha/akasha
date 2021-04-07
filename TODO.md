@@ -9,7 +9,6 @@ complete as there is too much un-said.
 * Add missing methods to typed array types
 
 * Emit closure externs for WebIDL types.
-  * attributes
   * filter out elements that are marked as `JavaOnly` - probably by writing a processor that strips them
 
 * Make abstract/concrete dictionaries generate the same way.

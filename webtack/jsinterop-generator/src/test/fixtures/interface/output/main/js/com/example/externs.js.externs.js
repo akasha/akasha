@@ -88,11 +88,13 @@ SomeMapLikeDefiningOverrides.prototype.delete = function(key) {}
  * @private
  */
 function txStorage() {}
+/** @type {!number} */ txStorage.prototype.length;
 /**
  * @constructor
  * @private
  */
 function Storage() {}
+/** @type {!number} */ Storage.prototype.length;
 /**
  * @param {!string} key
  * @return {undefined}
@@ -124,6 +126,7 @@ Storage.prototype.key = function(index) {}
  * @param {!string} type
  */
 function SpeechRecognitionErrorEvent(type) {}
+/** @type {!string} */ SpeechRecognitionErrorEvent.prototype.message;
 /**
  * @return {!string}
  */
@@ -142,6 +145,20 @@ function Event(type,eventInitDict) {}
 /** @const {!number} */ Event.prototype.CAPTURING_PHASE;
 /** @const {!number} */ Event.NONE;
 /** @const {!number} */ Event.prototype.NONE;
+/** @type {!boolean} */ Event.prototype.bubbles;
+/** @type {!boolean} */ Event.prototype.cancelable;
+/** @type {!boolean} */ Event.prototype.composed;
+/** @type {?EventTarget} */ Event.prototype.currentTarget;
+/** @type {!boolean} */ Event.prototype.defaultPrevented;
+/** @type {!number} */ Event.prototype.eventPhase;
+/** @type {!boolean} */ Event.prototype.isTrusted;
+/** @type {*} */ Event.prototype.readonlyAny;
+/** @type {?EventTarget} */ Event.prototype.srcElement;
+/** @type {?EventTarget} */ Event.prototype.target;
+/** @type {!string} */ Event.prototype.type;
+/** @type {!boolean} */ Event.prototype.cancelBubble;
+/** @type {*} */ Event.prototype.mutableAny;
+/** @type {!boolean} */ Event.prototype.returnValue;
 /**
  * @return {undefined}
  */

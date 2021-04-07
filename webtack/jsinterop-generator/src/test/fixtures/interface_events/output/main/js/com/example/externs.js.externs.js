@@ -63,6 +63,10 @@ function Event() {}
  * @private
  */
 function SpeechSynthesisUtterance() {}
+/** @type {!NullableEventHandler} */ SpeechSynthesisUtterance.prototype.onend;
+/** @type {?SpeechSynthesisEventHandler} */ SpeechSynthesisUtterance.prototype.onpause;
+/** @type {!NullableEventHandler} */ SpeechSynthesisUtterance.prototype.onresume;
+/** @type {?SpeechSynthesisEventHandler} */ SpeechSynthesisUtterance.prototype.onstart;
 /**
  * @constructor
  */
