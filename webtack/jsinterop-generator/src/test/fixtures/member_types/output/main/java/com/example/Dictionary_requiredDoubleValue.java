@@ -18,8 +18,8 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredDoubleValue {
   @JsOverlay
   @Nonnull
-  static Dictionary_requiredDoubleValue create(final double requiredDoubleValue) {
-    return Js.<Dictionary_requiredDoubleValue>uncheckedCast( JsPropertyMap.of() ).requiredDoubleValue( requiredDoubleValue );
+  static Builder create(final double requiredDoubleValue) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredDoubleValue( requiredDoubleValue );
   }
 
   @JsProperty(
@@ -30,10 +30,18 @@ public interface Dictionary_requiredDoubleValue {
   @JsProperty
   void setRequiredDoubleValue(double requiredDoubleValue);
 
-  @JsOverlay
-  @Nonnull
-  default Dictionary_requiredDoubleValue requiredDoubleValue(final double requiredDoubleValue) {
-    setRequiredDoubleValue( requiredDoubleValue );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends Dictionary_requiredDoubleValue {
+    @JsOverlay
+    @Nonnull
+    default Builder requiredDoubleValue(final double requiredDoubleValue) {
+      setRequiredDoubleValue( requiredDoubleValue );
+      return this;
+    }
   }
 }

@@ -18,16 +18,14 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredShortSequenceValue {
   @JsOverlay
   @Nonnull
-  static Dictionary_requiredShortSequenceValue create(
-      @Nonnull final JsArray<Double> requiredShortSequenceValue) {
-    return Js.<Dictionary_requiredShortSequenceValue>uncheckedCast( JsPropertyMap.of() ).requiredShortSequenceValue( requiredShortSequenceValue );
+  static Builder create(@Nonnull final JsArray<Double> requiredShortSequenceValue) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredShortSequenceValue( requiredShortSequenceValue );
   }
 
   @JsOverlay
   @Nonnull
-  static Dictionary_requiredShortSequenceValue create(
-      @Nonnull final double[] requiredShortSequenceValue) {
-    return Js.<Dictionary_requiredShortSequenceValue>uncheckedCast( JsPropertyMap.of() ).requiredShortSequenceValue( requiredShortSequenceValue );
+  static Builder create(@Nonnull final double[] requiredShortSequenceValue) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredShortSequenceValue( requiredShortSequenceValue );
   }
 
   @JsProperty(
@@ -40,23 +38,31 @@ public interface Dictionary_requiredShortSequenceValue {
   void setRequiredShortSequenceValue(@Nonnull JsArray<Double> requiredShortSequenceValue);
 
   @JsOverlay
-  @Nonnull
-  default Dictionary_requiredShortSequenceValue requiredShortSequenceValue(
-      @Nonnull final JsArray<Double> requiredShortSequenceValue) {
-    setRequiredShortSequenceValue( requiredShortSequenceValue );
-    return this;
-  }
-
-  @JsOverlay
   default void setRequiredShortSequenceValue(@Nonnull final double... requiredShortSequenceValue) {
     setRequiredShortSequenceValue( Js.<JsArray<Double>>uncheckedCast( requiredShortSequenceValue ) );
   }
 
-  @JsOverlay
-  @Nonnull
-  default Dictionary_requiredShortSequenceValue requiredShortSequenceValue(
-      @Nonnull final double... requiredShortSequenceValue) {
-    setRequiredShortSequenceValue( requiredShortSequenceValue );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends Dictionary_requiredShortSequenceValue {
+    @JsOverlay
+    @Nonnull
+    default Builder requiredShortSequenceValue(
+        @Nonnull final JsArray<Double> requiredShortSequenceValue) {
+      setRequiredShortSequenceValue( requiredShortSequenceValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder requiredShortSequenceValue(
+        @Nonnull final double... requiredShortSequenceValue) {
+      setRequiredShortSequenceValue( requiredShortSequenceValue );
+      return this;
+    }
   }
 }

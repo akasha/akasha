@@ -18,8 +18,8 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredUnsignedLongValue {
   @JsOverlay
   @Nonnull
-  static Dictionary_requiredUnsignedLongValue create(final int requiredUnsignedLongValue) {
-    return Js.<Dictionary_requiredUnsignedLongValue>uncheckedCast( JsPropertyMap.of() ).requiredUnsignedLongValue( requiredUnsignedLongValue );
+  static Builder create(final int requiredUnsignedLongValue) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredUnsignedLongValue( requiredUnsignedLongValue );
   }
 
   @JsProperty(
@@ -30,11 +30,18 @@ public interface Dictionary_requiredUnsignedLongValue {
   @JsProperty
   void setRequiredUnsignedLongValue(int requiredUnsignedLongValue);
 
-  @JsOverlay
-  @Nonnull
-  default Dictionary_requiredUnsignedLongValue requiredUnsignedLongValue(
-      final int requiredUnsignedLongValue) {
-    setRequiredUnsignedLongValue( requiredUnsignedLongValue );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends Dictionary_requiredUnsignedLongValue {
+    @JsOverlay
+    @Nonnull
+    default Builder requiredUnsignedLongValue(final int requiredUnsignedLongValue) {
+      setRequiredUnsignedLongValue( requiredUnsignedLongValue );
+      return this;
+    }
   }
 }

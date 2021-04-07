@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface PostMessageOptions {
   @JsOverlay
   @Nonnull
-  static PostMessageOptions create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -31,21 +31,29 @@ public interface PostMessageOptions {
   void setTransfer(@Nonnull JsArray<Object> transfer);
 
   @JsOverlay
-  @Nonnull
-  default PostMessageOptions transfer(@Nonnull final JsArray<Object> transfer) {
-    setTransfer( transfer );
-    return this;
-  }
-
-  @JsOverlay
   default void setTransfer(@Nonnull final Object... transfer) {
     setTransfer( Js.<JsArray<Object>>uncheckedCast( transfer ) );
   }
 
-  @JsOverlay
-  @Nonnull
-  default PostMessageOptions transfer(@Nonnull final Object... transfer) {
-    setTransfer( transfer );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends PostMessageOptions {
+    @JsOverlay
+    @Nonnull
+    default Builder transfer(@Nonnull final JsArray<Object> transfer) {
+      setTransfer( transfer );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder transfer(@Nonnull final Object... transfer) {
+      setTransfer( transfer );
+      return this;
+    }
   }
 }

@@ -20,16 +20,14 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredNullableShortSequenceValue {
   @JsOverlay
   @Nonnull
-  static Dictionary_requiredNullableShortSequenceValue create(
-      @Nullable final JsArray<Double> requiredNullableShortSequenceValue) {
-    return Js.<Dictionary_requiredNullableShortSequenceValue>uncheckedCast( JsPropertyMap.of() ).requiredNullableShortSequenceValue( requiredNullableShortSequenceValue );
+  static Builder create(@Nullable final JsArray<Double> requiredNullableShortSequenceValue) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredNullableShortSequenceValue( requiredNullableShortSequenceValue );
   }
 
   @JsOverlay
   @Nonnull
-  static Dictionary_requiredNullableShortSequenceValue create(
-      @Nullable final double[] requiredNullableShortSequenceValue) {
-    return Js.<Dictionary_requiredNullableShortSequenceValue>uncheckedCast( JsPropertyMap.of() ).requiredNullableShortSequenceValue( requiredNullableShortSequenceValue );
+  static Builder create(@Nullable final double[] requiredNullableShortSequenceValue) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredNullableShortSequenceValue( requiredNullableShortSequenceValue );
   }
 
   @JsProperty(
@@ -43,24 +41,32 @@ public interface Dictionary_requiredNullableShortSequenceValue {
       @Nullable JsArray<Double> requiredNullableShortSequenceValue);
 
   @JsOverlay
-  @Nonnull
-  default Dictionary_requiredNullableShortSequenceValue requiredNullableShortSequenceValue(
-      @Nullable final JsArray<Double> requiredNullableShortSequenceValue) {
-    setRequiredNullableShortSequenceValue( requiredNullableShortSequenceValue );
-    return this;
-  }
-
-  @JsOverlay
   default void setRequiredNullableShortSequenceValue(
       @Nullable final double... requiredNullableShortSequenceValue) {
     setRequiredNullableShortSequenceValue( Js.<JsArray<Double>>uncheckedCast( requiredNullableShortSequenceValue ) );
   }
 
-  @JsOverlay
-  @Nonnull
-  default Dictionary_requiredNullableShortSequenceValue requiredNullableShortSequenceValue(
-      @Nullable final double... requiredNullableShortSequenceValue) {
-    setRequiredNullableShortSequenceValue( requiredNullableShortSequenceValue );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends Dictionary_requiredNullableShortSequenceValue {
+    @JsOverlay
+    @Nonnull
+    default Builder requiredNullableShortSequenceValue(
+        @Nullable final JsArray<Double> requiredNullableShortSequenceValue) {
+      setRequiredNullableShortSequenceValue( requiredNullableShortSequenceValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder requiredNullableShortSequenceValue(
+        @Nullable final double... requiredNullableShortSequenceValue) {
+      setRequiredNullableShortSequenceValue( requiredNullableShortSequenceValue );
+      return this;
+    }
   }
 }

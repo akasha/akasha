@@ -18,9 +18,8 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredUnrestrictedDoubleValue {
   @JsOverlay
   @Nonnull
-  static Dictionary_requiredUnrestrictedDoubleValue create(
-      final double requiredUnrestrictedDoubleValue) {
-    return Js.<Dictionary_requiredUnrestrictedDoubleValue>uncheckedCast( JsPropertyMap.of() ).requiredUnrestrictedDoubleValue( requiredUnrestrictedDoubleValue );
+  static Builder create(final double requiredUnrestrictedDoubleValue) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredUnrestrictedDoubleValue( requiredUnrestrictedDoubleValue );
   }
 
   @JsProperty(
@@ -31,11 +30,18 @@ public interface Dictionary_requiredUnrestrictedDoubleValue {
   @JsProperty
   void setRequiredUnrestrictedDoubleValue(double requiredUnrestrictedDoubleValue);
 
-  @JsOverlay
-  @Nonnull
-  default Dictionary_requiredUnrestrictedDoubleValue requiredUnrestrictedDoubleValue(
-      final double requiredUnrestrictedDoubleValue) {
-    setRequiredUnrestrictedDoubleValue( requiredUnrestrictedDoubleValue );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends Dictionary_requiredUnrestrictedDoubleValue {
+    @JsOverlay
+    @Nonnull
+    default Builder requiredUnrestrictedDoubleValue(final double requiredUnrestrictedDoubleValue) {
+      setRequiredUnrestrictedDoubleValue( requiredUnrestrictedDoubleValue );
+      return this;
+    }
   }
 }

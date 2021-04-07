@@ -19,9 +19,8 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredNullableUSVStringValue {
   @JsOverlay
   @Nonnull
-  static Dictionary_requiredNullableUSVStringValue create(
-      @Nullable final String requiredNullableUSVStringValue) {
-    return Js.<Dictionary_requiredNullableUSVStringValue>uncheckedCast( JsPropertyMap.of() ).requiredNullableUSVStringValue( requiredNullableUSVStringValue );
+  static Builder create(@Nullable final String requiredNullableUSVStringValue) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredNullableUSVStringValue( requiredNullableUSVStringValue );
   }
 
   @JsProperty(
@@ -33,11 +32,19 @@ public interface Dictionary_requiredNullableUSVStringValue {
   @JsProperty
   void setRequiredNullableUSVStringValue(@Nullable String requiredNullableUSVStringValue);
 
-  @JsOverlay
-  @Nonnull
-  default Dictionary_requiredNullableUSVStringValue requiredNullableUSVStringValue(
-      @Nullable final String requiredNullableUSVStringValue) {
-    setRequiredNullableUSVStringValue( requiredNullableUSVStringValue );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends Dictionary_requiredNullableUSVStringValue {
+    @JsOverlay
+    @Nonnull
+    default Builder requiredNullableUSVStringValue(
+        @Nullable final String requiredNullableUSVStringValue) {
+      setRequiredNullableUSVStringValue( requiredNullableUSVStringValue );
+      return this;
+    }
   }
 }

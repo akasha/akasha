@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface MyDictionary2 {
   @JsOverlay
   @Nonnull
-  static MyDictionary2 create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -30,13 +30,6 @@ public interface MyDictionary2 {
   @JsProperty
   void setClone(@Nonnull Object clone);
 
-  @JsOverlay
-  @Nonnull
-  default MyDictionary2 clone_(@Nonnull final Object clone) {
-    setClone( clone );
-    return this;
-  }
-
   @JsProperty(
       name = "default"
   )
@@ -44,13 +37,6 @@ public interface MyDictionary2 {
 
   @JsProperty
   void setDefault(@Nonnull Object default_);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary2 default_(@Nonnull final Object default_) {
-    setDefault( default_ );
-    return this;
-  }
 
   @JsProperty(
       name = "equals"
@@ -60,13 +46,6 @@ public interface MyDictionary2 {
   @JsProperty
   void setEquals(@Nonnull Object equals);
 
-  @JsOverlay
-  @Nonnull
-  default MyDictionary2 equals_(@Nonnull final Object equals) {
-    setEquals( equals );
-    return this;
-  }
-
   @JsProperty(
       name = "finalize"
   )
@@ -74,13 +53,6 @@ public interface MyDictionary2 {
 
   @JsProperty
   void setFinalize(@Nonnull Object finalize);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary2 finalize_(@Nonnull final Object finalize) {
-    setFinalize( finalize );
-    return this;
-  }
 
   @JsProperty(
       name = "getClass"
@@ -90,13 +62,6 @@ public interface MyDictionary2 {
   @JsProperty
   void setGetClass(@Nonnull Object getClass);
 
-  @JsOverlay
-  @Nonnull
-  default MyDictionary2 getClass_(@Nonnull final Object getClass) {
-    setGetClass( getClass );
-    return this;
-  }
-
   @JsProperty(
       name = "hashCode"
   )
@@ -104,13 +69,6 @@ public interface MyDictionary2 {
 
   @JsProperty
   void setHashCode(@Nonnull Object hashCode);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary2 hashCode_(@Nonnull final Object hashCode) {
-    setHashCode( hashCode );
-    return this;
-  }
 
   @JsProperty(
       name = "is"
@@ -120,13 +78,6 @@ public interface MyDictionary2 {
   @JsProperty
   void setIs(@Nonnull Object is);
 
-  @JsOverlay
-  @Nonnull
-  default MyDictionary2 is(@Nonnull final Object is) {
-    setIs( is );
-    return this;
-  }
-
   @JsProperty(
       name = "notify"
   )
@@ -134,13 +85,6 @@ public interface MyDictionary2 {
 
   @JsProperty
   void setNotify(@Nonnull Object notify);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary2 notify_(@Nonnull final Object notify) {
-    setNotify( notify );
-    return this;
-  }
 
   @JsProperty(
       name = "notifyAll"
@@ -150,13 +94,6 @@ public interface MyDictionary2 {
   @JsProperty
   void setNotifyAll(@Nonnull Object notifyAll);
 
-  @JsOverlay
-  @Nonnull
-  default MyDictionary2 notifyAll_(@Nonnull final Object notifyAll) {
-    setNotifyAll( notifyAll );
-    return this;
-  }
-
   @JsProperty(
       name = "private"
   )
@@ -164,13 +101,6 @@ public interface MyDictionary2 {
 
   @JsProperty
   void setPrivate(@Nonnull Object private_);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary2 private_(@Nonnull final Object private_) {
-    setPrivate( private_ );
-    return this;
-  }
 
   @JsProperty(
       name = "protected"
@@ -180,13 +110,6 @@ public interface MyDictionary2 {
   @JsProperty
   void setProtected(@Nonnull Object protected_);
 
-  @JsOverlay
-  @Nonnull
-  default MyDictionary2 protected_(@Nonnull final Object protected_) {
-    setProtected( protected_ );
-    return this;
-  }
-
   @JsProperty(
       name = "public"
   )
@@ -194,13 +117,6 @@ public interface MyDictionary2 {
 
   @JsProperty
   void setPublic(@Nonnull Object public_);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary2 public_(@Nonnull final Object public_) {
-    setPublic( public_ );
-    return this;
-  }
 
   @JsProperty(
       name = "toString"
@@ -210,13 +126,6 @@ public interface MyDictionary2 {
   @JsProperty
   void setToString(@Nonnull Object toString);
 
-  @JsOverlay
-  @Nonnull
-  default MyDictionary2 toString_(@Nonnull final Object toString) {
-    setToString( toString );
-    return this;
-  }
-
   @JsProperty(
       name = "wait"
   )
@@ -225,10 +134,109 @@ public interface MyDictionary2 {
   @JsProperty
   void setWait(@Nonnull Object wait);
 
-  @JsOverlay
-  @Nonnull
-  default MyDictionary2 wait_(@Nonnull final Object wait) {
-    setWait( wait );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends MyDictionary2 {
+    @JsOverlay
+    @Nonnull
+    default Builder clone_(@Nonnull final Object clone) {
+      setClone( clone );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder default_(@Nonnull final Object default_) {
+      setDefault( default_ );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder equals_(@Nonnull final Object equals) {
+      setEquals( equals );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder finalize_(@Nonnull final Object finalize) {
+      setFinalize( finalize );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder getClass_(@Nonnull final Object getClass) {
+      setGetClass( getClass );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder hashCode_(@Nonnull final Object hashCode) {
+      setHashCode( hashCode );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder is(@Nonnull final Object is) {
+      setIs( is );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder notify_(@Nonnull final Object notify) {
+      setNotify( notify );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder notifyAll_(@Nonnull final Object notifyAll) {
+      setNotifyAll( notifyAll );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder private_(@Nonnull final Object private_) {
+      setPrivate( private_ );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder protected_(@Nonnull final Object protected_) {
+      setProtected( protected_ );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder public_(@Nonnull final Object public_) {
+      setPublic( public_ );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder toString_(@Nonnull final Object toString) {
+      setToString( toString );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder wait_(@Nonnull final Object wait) {
+      setWait( wait );
+      return this;
+    }
   }
 }

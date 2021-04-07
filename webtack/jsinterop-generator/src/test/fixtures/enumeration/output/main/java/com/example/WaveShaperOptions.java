@@ -21,7 +21,7 @@ import jsinterop.base.JsPropertyMap;
 public interface WaveShaperOptions {
   @JsOverlay
   @Nonnull
-  static WaveShaperOptions create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -34,10 +34,21 @@ public interface WaveShaperOptions {
   @JsProperty
   void setOversample(@OverSampleType @Nonnull String oversample);
 
-  @JsOverlay
-  @Nonnull
-  default WaveShaperOptions oversample(@OverSampleType @Nonnull final String oversample) {
-    setOversample( oversample );
-    return this;
+  /**
+   * Optional attribute is an enum
+   */
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends WaveShaperOptions {
+    @JsOverlay
+    @Nonnull
+    default Builder oversample(@OverSampleType @Nonnull final String oversample) {
+      setOversample( oversample );
+      return this;
+    }
   }
 }

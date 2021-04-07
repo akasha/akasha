@@ -19,9 +19,8 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredDoubleFrozenArrayValue {
   @JsOverlay
   @Nonnull
-  static Dictionary_requiredDoubleFrozenArrayValue create(
-      @Nonnull final JsArray<Double> requiredDoubleFrozenArrayValue) {
-    return Js.<Dictionary_requiredDoubleFrozenArrayValue>uncheckedCast( JsPropertyMap.of() ).requiredDoubleFrozenArrayValue( requiredDoubleFrozenArrayValue );
+  static Builder create(@Nonnull final JsArray<Double> requiredDoubleFrozenArrayValue) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredDoubleFrozenArrayValue( requiredDoubleFrozenArrayValue );
   }
 
   @JsProperty(
@@ -33,11 +32,19 @@ public interface Dictionary_requiredDoubleFrozenArrayValue {
   @JsProperty
   void setRequiredDoubleFrozenArrayValue(@Nonnull JsArray<Double> requiredDoubleFrozenArrayValue);
 
-  @JsOverlay
-  @Nonnull
-  default Dictionary_requiredDoubleFrozenArrayValue requiredDoubleFrozenArrayValue(
-      @Nonnull final JsArray<Double> requiredDoubleFrozenArrayValue) {
-    setRequiredDoubleFrozenArrayValue( requiredDoubleFrozenArrayValue );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends Dictionary_requiredDoubleFrozenArrayValue {
+    @JsOverlay
+    @Nonnull
+    default Builder requiredDoubleFrozenArrayValue(
+        @Nonnull final JsArray<Double> requiredDoubleFrozenArrayValue) {
+      setRequiredDoubleFrozenArrayValue( requiredDoubleFrozenArrayValue );
+      return this;
+    }
   }
 }

@@ -18,8 +18,8 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredBooleanValue {
   @JsOverlay
   @Nonnull
-  static Dictionary_requiredBooleanValue create(final boolean requiredBooleanValue) {
-    return Js.<Dictionary_requiredBooleanValue>uncheckedCast( JsPropertyMap.of() ).requiredBooleanValue( requiredBooleanValue );
+  static Builder create(final boolean requiredBooleanValue) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredBooleanValue( requiredBooleanValue );
   }
 
   @JsProperty(
@@ -30,10 +30,18 @@ public interface Dictionary_requiredBooleanValue {
   @JsProperty
   void setRequiredBooleanValue(boolean requiredBooleanValue);
 
-  @JsOverlay
-  @Nonnull
-  default Dictionary_requiredBooleanValue requiredBooleanValue(final boolean requiredBooleanValue) {
-    setRequiredBooleanValue( requiredBooleanValue );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends Dictionary_requiredBooleanValue {
+    @JsOverlay
+    @Nonnull
+    default Builder requiredBooleanValue(final boolean requiredBooleanValue) {
+      setRequiredBooleanValue( requiredBooleanValue );
+      return this;
+    }
   }
 }

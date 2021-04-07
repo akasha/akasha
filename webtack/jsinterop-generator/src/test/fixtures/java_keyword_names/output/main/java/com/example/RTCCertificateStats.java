@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface RTCCertificateStats {
   @JsOverlay
   @Nonnull
-  static RTCCertificateStats create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -30,13 +30,6 @@ public interface RTCCertificateStats {
   @JsProperty
   void setIsNot(@Nonnull String isNot);
 
-  @JsOverlay
-  @Nonnull
-  default RTCCertificateStats isNot(@Nonnull final String isNot) {
-    setIsNot( isNot );
-    return this;
-  }
-
   @JsProperty(
       name = "issuerCertificateId"
   )
@@ -45,10 +38,25 @@ public interface RTCCertificateStats {
   @JsProperty
   void setIssuerCertificateId(@Nonnull String issuerCertificateId);
 
-  @JsOverlay
-  @Nonnull
-  default RTCCertificateStats issuerCertificateId(@Nonnull final String issuerCertificateId) {
-    setIssuerCertificateId( issuerCertificateId );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends RTCCertificateStats {
+    @JsOverlay
+    @Nonnull
+    default Builder isNot(@Nonnull final String isNot) {
+      setIsNot( isNot );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder issuerCertificateId(@Nonnull final String issuerCertificateId) {
+      setIssuerCertificateId( issuerCertificateId );
+      return this;
+    }
   }
 }

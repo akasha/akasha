@@ -19,9 +19,8 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredNullableUnsignedShortValue {
   @JsOverlay
   @Nonnull
-  static Dictionary_requiredNullableUnsignedShortValue create(
-      @Nullable final Double requiredNullableUnsignedShortValue) {
-    return Js.<Dictionary_requiredNullableUnsignedShortValue>uncheckedCast( JsPropertyMap.of() ).requiredNullableUnsignedShortValue( requiredNullableUnsignedShortValue );
+  static Builder create(@Nullable final Double requiredNullableUnsignedShortValue) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredNullableUnsignedShortValue( requiredNullableUnsignedShortValue );
   }
 
   @JsProperty(
@@ -33,11 +32,19 @@ public interface Dictionary_requiredNullableUnsignedShortValue {
   @JsProperty
   void setRequiredNullableUnsignedShortValue(@Nullable Double requiredNullableUnsignedShortValue);
 
-  @JsOverlay
-  @Nonnull
-  default Dictionary_requiredNullableUnsignedShortValue requiredNullableUnsignedShortValue(
-      @Nullable final Double requiredNullableUnsignedShortValue) {
-    setRequiredNullableUnsignedShortValue( requiredNullableUnsignedShortValue );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends Dictionary_requiredNullableUnsignedShortValue {
+    @JsOverlay
+    @Nonnull
+    default Builder requiredNullableUnsignedShortValue(
+        @Nullable final Double requiredNullableUnsignedShortValue) {
+      setRequiredNullableUnsignedShortValue( requiredNullableUnsignedShortValue );
+      return this;
+    }
   }
 }

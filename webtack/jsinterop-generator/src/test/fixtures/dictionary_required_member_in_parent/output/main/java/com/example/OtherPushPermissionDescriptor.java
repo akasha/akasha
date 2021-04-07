@@ -18,8 +18,8 @@ import jsinterop.base.JsPropertyMap;
 public interface OtherPushPermissionDescriptor extends PushPermissionDescriptor {
   @JsOverlay
   @Nonnull
-  static OtherPushPermissionDescriptor create(@Nonnull final String name, final boolean safe) {
-    return Js.<OtherPushPermissionDescriptor>uncheckedCast( JsPropertyMap.of() ).name( name ).safe( safe );
+  static Builder create(@Nonnull final String name, final boolean safe) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).name( name ).safe( safe );
   }
 
   @JsProperty(
@@ -30,24 +30,32 @@ public interface OtherPushPermissionDescriptor extends PushPermissionDescriptor 
   @JsProperty
   void setSafe(boolean safe);
 
-  @JsOverlay
-  @Nonnull
-  default OtherPushPermissionDescriptor safe(final boolean safe) {
-    setSafe( safe );
-    return this;
-  }
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends OtherPushPermissionDescriptor {
+    @JsOverlay
+    @Nonnull
+    default Builder safe(final boolean safe) {
+      setSafe( safe );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default OtherPushPermissionDescriptor userVisibleOnly(final boolean userVisibleOnly) {
-    setUserVisibleOnly( userVisibleOnly );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder userVisibleOnly(final boolean userVisibleOnly) {
+      setUserVisibleOnly( userVisibleOnly );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default OtherPushPermissionDescriptor name(@Nonnull final String name) {
-    setName( name );
-    return this;
+    @JsOverlay
+    @Nonnull
+    default Builder name(@Nonnull final String name) {
+      setName( name );
+      return this;
+    }
   }
 }

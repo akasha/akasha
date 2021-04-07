@@ -21,8 +21,8 @@ import jsinterop.base.JsPropertyMap;
 public interface OptionalAnyDict extends RequiredAnyDict {
   @JsOverlay
   @Nonnull
-  static OptionalAnyDict create(@DoNotAutobox @Nullable final Object someValue) {
-    return Js.<OptionalAnyDict>uncheckedCast( JsPropertyMap.of() ).someValue( someValue );
+  static Builder create(@DoNotAutobox @Nullable final Object someValue) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).someValue( someValue );
   }
 
   @JsProperty(
@@ -34,17 +34,25 @@ public interface OptionalAnyDict extends RequiredAnyDict {
   @JsProperty
   void setAnotherValue(@DoNotAutobox @Nullable Object anotherValue);
 
-  @JsOverlay
-  @Nonnull
-  default OptionalAnyDict anotherValue(@DoNotAutobox @Nullable final Object anotherValue) {
-    setAnotherValue( anotherValue );
-    return this;
-  }
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends OptionalAnyDict {
+    @JsOverlay
+    @Nonnull
+    default Builder anotherValue(@DoNotAutobox @Nullable final Object anotherValue) {
+      setAnotherValue( anotherValue );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default OptionalAnyDict someValue(@DoNotAutobox @Nullable final Object someValue) {
-    setSomeValue( someValue );
-    return this;
+    @JsOverlay
+    @Nonnull
+    default Builder someValue(@DoNotAutobox @Nullable final Object someValue) {
+      setSomeValue( someValue );
+      return this;
+    }
   }
 }

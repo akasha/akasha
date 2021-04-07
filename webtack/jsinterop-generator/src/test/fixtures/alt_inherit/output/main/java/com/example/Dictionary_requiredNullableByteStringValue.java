@@ -19,9 +19,8 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredNullableByteStringValue {
   @JsOverlay
   @Nonnull
-  static Dictionary_requiredNullableByteStringValue create(
-      @Nullable final String requiredNullableByteStringValue) {
-    return Js.<Dictionary_requiredNullableByteStringValue>uncheckedCast( JsPropertyMap.of() ).requiredNullableByteStringValue( requiredNullableByteStringValue );
+  static Builder create(@Nullable final String requiredNullableByteStringValue) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredNullableByteStringValue( requiredNullableByteStringValue );
   }
 
   @JsProperty(
@@ -33,11 +32,19 @@ public interface Dictionary_requiredNullableByteStringValue {
   @JsProperty
   void setRequiredNullableByteStringValue(@Nullable String requiredNullableByteStringValue);
 
-  @JsOverlay
-  @Nonnull
-  default Dictionary_requiredNullableByteStringValue requiredNullableByteStringValue(
-      @Nullable final String requiredNullableByteStringValue) {
-    setRequiredNullableByteStringValue( requiredNullableByteStringValue );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends Dictionary_requiredNullableByteStringValue {
+    @JsOverlay
+    @Nonnull
+    default Builder requiredNullableByteStringValue(
+        @Nullable final String requiredNullableByteStringValue) {
+      setRequiredNullableByteStringValue( requiredNullableByteStringValue );
+      return this;
+    }
   }
 }

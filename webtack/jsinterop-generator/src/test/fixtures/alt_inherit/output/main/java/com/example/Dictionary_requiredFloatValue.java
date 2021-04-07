@@ -18,8 +18,8 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredFloatValue {
   @JsOverlay
   @Nonnull
-  static Dictionary_requiredFloatValue create(final float requiredFloatValue) {
-    return Js.<Dictionary_requiredFloatValue>uncheckedCast( JsPropertyMap.of() ).requiredFloatValue( requiredFloatValue );
+  static Builder create(final float requiredFloatValue) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredFloatValue( requiredFloatValue );
   }
 
   @JsProperty(
@@ -30,10 +30,18 @@ public interface Dictionary_requiredFloatValue {
   @JsProperty
   void setRequiredFloatValue(float requiredFloatValue);
 
-  @JsOverlay
-  @Nonnull
-  default Dictionary_requiredFloatValue requiredFloatValue(final float requiredFloatValue) {
-    setRequiredFloatValue( requiredFloatValue );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends Dictionary_requiredFloatValue {
+    @JsOverlay
+    @Nonnull
+    default Builder requiredFloatValue(final float requiredFloatValue) {
+      setRequiredFloatValue( requiredFloatValue );
+      return this;
+    }
   }
 }

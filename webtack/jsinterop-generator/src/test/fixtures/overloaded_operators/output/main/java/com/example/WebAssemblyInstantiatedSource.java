@@ -18,9 +18,8 @@ import jsinterop.base.JsPropertyMap;
 public interface WebAssemblyInstantiatedSource {
   @JsOverlay
   @Nonnull
-  static WebAssemblyInstantiatedSource create(@Nonnull final Instance instance,
-      @Nonnull final Module module) {
-    return Js.<WebAssemblyInstantiatedSource>uncheckedCast( JsPropertyMap.of() ).instance( instance ).module( module );
+  static Builder create(@Nonnull final Instance instance, @Nonnull final Module module) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).instance( instance ).module( module );
   }
 
   @JsProperty(
@@ -32,13 +31,6 @@ public interface WebAssemblyInstantiatedSource {
   @JsProperty
   void setInstance(@Nonnull Instance instance);
 
-  @JsOverlay
-  @Nonnull
-  default WebAssemblyInstantiatedSource instance(@Nonnull final Instance instance) {
-    setInstance( instance );
-    return this;
-  }
-
   @JsProperty(
       name = "module"
   )
@@ -48,10 +40,25 @@ public interface WebAssemblyInstantiatedSource {
   @JsProperty
   void setModule(@Nonnull Module module);
 
-  @JsOverlay
-  @Nonnull
-  default WebAssemblyInstantiatedSource module(@Nonnull final Module module) {
-    setModule( module );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends WebAssemblyInstantiatedSource {
+    @JsOverlay
+    @Nonnull
+    default Builder instance(@Nonnull final Instance instance) {
+      setInstance( instance );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder module(@Nonnull final Module module) {
+      setModule( module );
+      return this;
+    }
   }
 }

@@ -19,9 +19,8 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredNullableLongValue {
   @JsOverlay
   @Nonnull
-  static Dictionary_requiredNullableLongValue create(
-      @Nullable final Double requiredNullableLongValue) {
-    return Js.<Dictionary_requiredNullableLongValue>uncheckedCast( JsPropertyMap.of() ).requiredNullableLongValue( requiredNullableLongValue );
+  static Builder create(@Nullable final Double requiredNullableLongValue) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredNullableLongValue( requiredNullableLongValue );
   }
 
   @JsProperty(
@@ -33,11 +32,18 @@ public interface Dictionary_requiredNullableLongValue {
   @JsProperty
   void setRequiredNullableLongValue(@Nullable Double requiredNullableLongValue);
 
-  @JsOverlay
-  @Nonnull
-  default Dictionary_requiredNullableLongValue requiredNullableLongValue(
-      @Nullable final Double requiredNullableLongValue) {
-    setRequiredNullableLongValue( requiredNullableLongValue );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends Dictionary_requiredNullableLongValue {
+    @JsOverlay
+    @Nonnull
+    default Builder requiredNullableLongValue(@Nullable final Double requiredNullableLongValue) {
+      setRequiredNullableLongValue( requiredNullableLongValue );
+      return this;
+    }
   }
 }

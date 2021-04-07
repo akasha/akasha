@@ -1081,21 +1081,8 @@ final class JsinteropAction
     }
   }
 
-  private void generateDictionary( @Nonnull final DictionaryDefinition definition )
-    throws IOException
-  {
-    if ( definition.getDirectSubDictionary().isEmpty() )
-    {
-      generateAllInOneDictionary( definition );
-    }
-    else
-    {
-      generateAbstractDictionary( definition );
-    }
-  }
-
-  private void generateConcreteDictionary( @Nonnull final DictionaryDefinition definition,
-                                           @Nonnull final TypeSpec.Builder container )
+  private void generateDictionaryBuilder( @Nonnull final DictionaryDefinition definition,
+                                          @Nonnull final TypeSpec.Builder container )
   {
     final TypeSpec.Builder type =
       TypeSpec
@@ -1116,7 +1103,7 @@ final class JsinteropAction
     {
       for ( final TypedValue typedValue : explodeType( member.getType() ) )
       {
-        generateDictionaryMemberSetterReturningThis( definition, member, typedValue, true, type );
+        generateDictionaryMemberSetterReturningThis( definition, member, typedValue, type );
       }
     }
     DictionaryDefinition parent = definition.getSuperDictionary();
@@ -1126,7 +1113,7 @@ final class JsinteropAction
       {
         for ( final TypedValue memberType : explodeType( member.getType() ) )
         {
-          generateDictionaryMemberSetterReturningThis( definition, member, memberType, true, type );
+          generateDictionaryMemberSetterReturningThis( definition, member, memberType, type );
         }
       }
       parent = parent.getSuperDictionary();
@@ -1135,7 +1122,7 @@ final class JsinteropAction
     container.addType( type.build() );
   }
 
-  private void generateAbstractDictionary( @Nonnull final DictionaryDefinition definition )
+  private void generateDictionary( @Nonnull final DictionaryDefinition definition )
     throws IOException
   {
     final TypeSpec.Builder type =
@@ -1162,7 +1149,7 @@ final class JsinteropAction
       explodeTypeList( requiredMembers.stream().map( DictionaryMember::getType ).collect( Collectors.toList() ) );
     for ( final List<TypedValue> argTypes : explodedTypeList )
     {
-      generateDictionaryCreateMethod( definition, requiredMembers, argTypes, true, type );
+      generateDictionaryCreateMethod( definition, requiredMembers, argTypes, type );
     }
 
     final WebIDLSchema schema = getSchema();
@@ -1181,71 +1168,7 @@ final class JsinteropAction
         }
       }
     }
-    generateConcreteDictionary( definition, type );
-
-    writeTopLevelType( definition.getName(), type );
-  }
-
-  private void generateAllInOneDictionary( @Nonnull final DictionaryDefinition definition )
-    throws IOException
-  {
-    final TypeSpec.Builder type =
-      TypeSpec
-        .interfaceBuilder( lookupClassName( definition.getName() ).simpleName() )
-        .addModifiers( Modifier.PUBLIC );
-    writeGeneratedAnnotation( type );
-    type.addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_TYPE )
-                          .addMember( "isNative", "true" )
-                          .addMember( "namespace", "$T.GLOBAL", JsinteropTypes.JS_PACKAGE )
-                          .addMember( "name", "$S", "Object" )
-                          .build() );
-    maybeAddCustomAnnotations( definition, type );
-    maybeAddJavadoc( definition, type );
-
-    final String inherits = definition.getInherits();
-    if ( null != inherits )
-    {
-      type.addSuperinterface( lookupClassName( inherits ) );
-    }
-
-    final List<DictionaryMember> requiredMembers = getRequiredDictionaryMembers( definition );
-    final List<List<TypedValue>> explodedTypeList =
-      explodeTypeList( requiredMembers.stream().map( DictionaryMember::getType ).collect( Collectors.toList() ) );
-    for ( final List<TypedValue> argTypes : explodedTypeList )
-    {
-      generateDictionaryCreateMethod( definition, requiredMembers, argTypes, false, type );
-    }
-
-    final WebIDLSchema schema = getSchema();
-    for ( final DictionaryMember member : definition.getMembers() )
-    {
-      final Type actualType = schema.resolveType( member.getType() );
-      final TypeName javaType = toTypeName( actualType );
-
-      generateDictionaryMemberGetter( member, actualType, javaType, type );
-      generateDictionaryMemberSetter( member, actualType, javaType, type );
-      for ( final TypedValue typedValue : explodeType( member.getType() ) )
-      {
-        if ( Kind.Any != actualType.getKind() && !javaType.equals( typedValue.getJavaType() ) )
-        {
-          generateDictionaryMemberOverlaySetter( member, typedValue, type );
-        }
-        generateDictionaryMemberSetterReturningThis( definition, member, typedValue, false, type );
-      }
-    }
-    String superName = definition.getInherits();
-    while ( null != superName )
-    {
-      final DictionaryDefinition parent = schema.getDictionaryByName( superName );
-      for ( final DictionaryMember member : parent.getMembers() )
-      {
-        for ( final TypedValue memberType : explodeType( member.getType() ) )
-        {
-          generateDictionaryMemberSetterReturningThis( definition, member, memberType, false, type );
-        }
-      }
-      superName = parent.getInherits();
-    }
+    generateDictionaryBuilder( definition, type );
 
     writeTopLevelType( definition.getName(), type );
   }
@@ -1253,11 +1176,10 @@ final class JsinteropAction
   private void generateDictionaryCreateMethod( @Nonnull final DictionaryDefinition dictionary,
                                                @Nonnull final List<DictionaryMember> requiredMembers,
                                                @Nonnull final List<TypedValue> types,
-                                               final boolean onBuilder,
                                                @Nonnull final TypeSpec.Builder type )
   {
     final ClassName self = lookupClassName( dictionary.getName() );
-    final ClassName target = onBuilder ? self.nestedClass( "Builder" ) : self;
+    final ClassName target = self.nestedClass( "Builder" );
     final MethodSpec.Builder method = MethodSpec
       .methodBuilder( "create" )
       .addAnnotation( JsinteropTypes.JS_OVERLAY )
@@ -1463,12 +1385,10 @@ final class JsinteropAction
   private void generateDictionaryMemberSetterReturningThis( @Nonnull final DictionaryDefinition dictionary,
                                                             @Nonnull final DictionaryMember member,
                                                             @Nonnull final TypedValue typedValue,
-                                                            final boolean onBuilder,
                                                             @Nonnull final TypeSpec.Builder type )
   {
-
     final ClassName self = lookupClassName( dictionary.getName() );
-    final ClassName target = onBuilder ? self.nestedClass( "Builder" ) : self;
+    final ClassName target = self.nestedClass( "Builder" );
     final MethodSpec.Builder method =
       MethodSpec
         .methodBuilder( javaMethodName( member ) )

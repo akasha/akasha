@@ -19,7 +19,7 @@ import jsinterop.base.JsPropertyMap;
 public interface Sub2 extends Sub1 {
   @JsOverlay
   @Nonnull
-  static Sub2 create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -32,49 +32,57 @@ public interface Sub2 extends Sub1 {
   void setSessions(@Nonnull JsArray<XRSessionInit> sessions);
 
   @JsOverlay
-  @Nonnull
-  default Sub2 sessions(@Nonnull final JsArray<XRSessionInit> sessions) {
-    setSessions( sessions );
-    return this;
-  }
-
-  @JsOverlay
   default void setSessions(@Nonnull final XRSessionInit... sessions) {
     setSessions( Js.<JsArray<XRSessionInit>>uncheckedCast( sessions ) );
   }
 
-  @JsOverlay
-  @Nonnull
-  default Sub2 sessions(@Nonnull final XRSessionInit... sessions) {
-    setSessions( sessions );
-    return this;
-  }
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends Sub2 {
+    @JsOverlay
+    @Nonnull
+    default Builder sessions(@Nonnull final JsArray<XRSessionInit> sessions) {
+      setSessions( sessions );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default Sub2 others(@Nonnull final JsArray<Base> others) {
-    setOthers( others );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder sessions(@Nonnull final XRSessionInit... sessions) {
+      setSessions( sessions );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default Sub2 others(@Nonnull final Base... others) {
-    setOthers( others );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder others(@Nonnull final JsArray<Base> others) {
+      setOthers( others );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default Sub2 optionalFeatures(@Nonnull final JsArray<Any> optionalFeatures) {
-    setOptionalFeatures( optionalFeatures );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder others(@Nonnull final Base... others) {
+      setOthers( others );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default Sub2 optionalFeatures(@Nonnull final Any... optionalFeatures) {
-    setOptionalFeatures( optionalFeatures );
-    return this;
+    @JsOverlay
+    @Nonnull
+    default Builder optionalFeatures(@Nonnull final JsArray<Any> optionalFeatures) {
+      setOptionalFeatures( optionalFeatures );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder optionalFeatures(@Nonnull final Any... optionalFeatures) {
+      setOptionalFeatures( optionalFeatures );
+      return this;
+    }
   }
 }

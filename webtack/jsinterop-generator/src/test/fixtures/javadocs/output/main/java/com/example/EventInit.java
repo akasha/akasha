@@ -21,8 +21,8 @@ import jsinterop.base.JsPropertyMap;
 public interface EventInit {
   @JsOverlay
   @Nonnull
-  static EventInit create(final boolean cancelable) {
-    return Js.<EventInit>uncheckedCast( JsPropertyMap.of() ).cancelable( cancelable );
+  static Builder create(final boolean cancelable) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).cancelable( cancelable );
   }
 
   /**
@@ -40,16 +40,6 @@ public interface EventInit {
   void setBubbles(boolean bubbles);
 
   /**
-   * Documentation for member EventInit.bubbles.
-   */
-  @JsOverlay
-  @Nonnull
-  default EventInit bubbles(final boolean bubbles) {
-    setBubbles( bubbles );
-    return this;
-  }
-
-  /**
    * Documentation for required member EventInit.cancelable.
    */
   @JsProperty(
@@ -64,12 +54,33 @@ public interface EventInit {
   void setCancelable(boolean cancelable);
 
   /**
-   * Documentation for required member EventInit.cancelable.
+   * Documentation for EventInit.
    */
-  @JsOverlay
-  @Nonnull
-  default EventInit cancelable(final boolean cancelable) {
-    setCancelable( cancelable );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends EventInit {
+    /**
+     * Documentation for member EventInit.bubbles.
+     */
+    @JsOverlay
+    @Nonnull
+    default Builder bubbles(final boolean bubbles) {
+      setBubbles( bubbles );
+      return this;
+    }
+
+    /**
+     * Documentation for required member EventInit.cancelable.
+     */
+    @JsOverlay
+    @Nonnull
+    default Builder cancelable(final boolean cancelable) {
+      setCancelable( cancelable );
+      return this;
+    }
   }
 }

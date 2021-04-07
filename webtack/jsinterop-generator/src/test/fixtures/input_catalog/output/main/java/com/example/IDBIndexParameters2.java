@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface IDBIndexParameters2 {
   @JsOverlay
   @Nonnull
-  static IDBIndexParameters2 create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -30,13 +30,6 @@ public interface IDBIndexParameters2 {
   @JsProperty
   void setMultiEntry(boolean multiEntry);
 
-  @JsOverlay
-  @Nonnull
-  default IDBIndexParameters2 multiEntry(final boolean multiEntry) {
-    setMultiEntry( multiEntry );
-    return this;
-  }
-
   @JsProperty(
       name = "unique"
   )
@@ -45,10 +38,25 @@ public interface IDBIndexParameters2 {
   @JsProperty
   void setUnique(boolean unique);
 
-  @JsOverlay
-  @Nonnull
-  default IDBIndexParameters2 unique(final boolean unique) {
-    setUnique( unique );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends IDBIndexParameters2 {
+    @JsOverlay
+    @Nonnull
+    default Builder multiEntry(final boolean multiEntry) {
+      setMultiEntry( multiEntry );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder unique(final boolean unique) {
+      setUnique( unique );
+      return this;
+    }
   }
 }

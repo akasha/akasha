@@ -18,8 +18,8 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredByteStringValue {
   @JsOverlay
   @Nonnull
-  static Dictionary_requiredByteStringValue create(@Nonnull final String requiredByteStringValue) {
-    return Js.<Dictionary_requiredByteStringValue>uncheckedCast( JsPropertyMap.of() ).requiredByteStringValue( requiredByteStringValue );
+  static Builder create(@Nonnull final String requiredByteStringValue) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredByteStringValue( requiredByteStringValue );
   }
 
   @JsProperty(
@@ -31,11 +31,18 @@ public interface Dictionary_requiredByteStringValue {
   @JsProperty
   void setRequiredByteStringValue(@Nonnull String requiredByteStringValue);
 
-  @JsOverlay
-  @Nonnull
-  default Dictionary_requiredByteStringValue requiredByteStringValue(
-      @Nonnull final String requiredByteStringValue) {
-    setRequiredByteStringValue( requiredByteStringValue );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends Dictionary_requiredByteStringValue {
+    @JsOverlay
+    @Nonnull
+    default Builder requiredByteStringValue(@Nonnull final String requiredByteStringValue) {
+      setRequiredByteStringValue( requiredByteStringValue );
+      return this;
+    }
   }
 }

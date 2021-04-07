@@ -20,16 +20,14 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredNullableFloatSequenceValue {
   @JsOverlay
   @Nonnull
-  static Dictionary_requiredNullableFloatSequenceValue create(
-      @Nullable final JsArray<Double> requiredNullableFloatSequenceValue) {
-    return Js.<Dictionary_requiredNullableFloatSequenceValue>uncheckedCast( JsPropertyMap.of() ).requiredNullableFloatSequenceValue( requiredNullableFloatSequenceValue );
+  static Builder create(@Nullable final JsArray<Double> requiredNullableFloatSequenceValue) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredNullableFloatSequenceValue( requiredNullableFloatSequenceValue );
   }
 
   @JsOverlay
   @Nonnull
-  static Dictionary_requiredNullableFloatSequenceValue create(
-      @Nullable final double[] requiredNullableFloatSequenceValue) {
-    return Js.<Dictionary_requiredNullableFloatSequenceValue>uncheckedCast( JsPropertyMap.of() ).requiredNullableFloatSequenceValue( requiredNullableFloatSequenceValue );
+  static Builder create(@Nullable final double[] requiredNullableFloatSequenceValue) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredNullableFloatSequenceValue( requiredNullableFloatSequenceValue );
   }
 
   @JsProperty(
@@ -43,24 +41,32 @@ public interface Dictionary_requiredNullableFloatSequenceValue {
       @Nullable JsArray<Double> requiredNullableFloatSequenceValue);
 
   @JsOverlay
-  @Nonnull
-  default Dictionary_requiredNullableFloatSequenceValue requiredNullableFloatSequenceValue(
-      @Nullable final JsArray<Double> requiredNullableFloatSequenceValue) {
-    setRequiredNullableFloatSequenceValue( requiredNullableFloatSequenceValue );
-    return this;
-  }
-
-  @JsOverlay
   default void setRequiredNullableFloatSequenceValue(
       @Nullable final double... requiredNullableFloatSequenceValue) {
     setRequiredNullableFloatSequenceValue( Js.<JsArray<Double>>uncheckedCast( requiredNullableFloatSequenceValue ) );
   }
 
-  @JsOverlay
-  @Nonnull
-  default Dictionary_requiredNullableFloatSequenceValue requiredNullableFloatSequenceValue(
-      @Nullable final double... requiredNullableFloatSequenceValue) {
-    setRequiredNullableFloatSequenceValue( requiredNullableFloatSequenceValue );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends Dictionary_requiredNullableFloatSequenceValue {
+    @JsOverlay
+    @Nonnull
+    default Builder requiredNullableFloatSequenceValue(
+        @Nullable final JsArray<Double> requiredNullableFloatSequenceValue) {
+      setRequiredNullableFloatSequenceValue( requiredNullableFloatSequenceValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder requiredNullableFloatSequenceValue(
+        @Nullable final double... requiredNullableFloatSequenceValue) {
+      setRequiredNullableFloatSequenceValue( requiredNullableFloatSequenceValue );
+      return this;
+    }
   }
 }

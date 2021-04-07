@@ -18,8 +18,8 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredObjectValue {
   @JsOverlay
   @Nonnull
-  static Dictionary_requiredObjectValue create(@Nonnull final Object requiredObjectValue) {
-    return Js.<Dictionary_requiredObjectValue>uncheckedCast( JsPropertyMap.of() ).requiredObjectValue( requiredObjectValue );
+  static Builder create(@Nonnull final Object requiredObjectValue) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredObjectValue( requiredObjectValue );
   }
 
   @JsProperty(
@@ -31,11 +31,18 @@ public interface Dictionary_requiredObjectValue {
   @JsProperty
   void setRequiredObjectValue(@Nonnull Object requiredObjectValue);
 
-  @JsOverlay
-  @Nonnull
-  default Dictionary_requiredObjectValue requiredObjectValue(
-      @Nonnull final Object requiredObjectValue) {
-    setRequiredObjectValue( requiredObjectValue );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends Dictionary_requiredObjectValue {
+    @JsOverlay
+    @Nonnull
+    default Builder requiredObjectValue(@Nonnull final Object requiredObjectValue) {
+      setRequiredObjectValue( requiredObjectValue );
+      return this;
+    }
   }
 }

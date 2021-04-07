@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface OtherDict {
   @JsOverlay
   @Nonnull
-  static OtherDict create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -30,10 +30,18 @@ public interface OtherDict {
   @JsProperty
   void setValue(@Nonnull JsPropertyMap<String> value);
 
-  @JsOverlay
-  @Nonnull
-  default OtherDict value(@Nonnull final JsPropertyMap<String> value) {
-    setValue( value );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends OtherDict {
+    @JsOverlay
+    @Nonnull
+    default Builder value(@Nonnull final JsPropertyMap<String> value) {
+      setValue( value );
+      return this;
+    }
   }
 }

@@ -20,7 +20,7 @@ import jsinterop.base.JsPropertyMap;
 public interface EventInit {
   @JsOverlay
   @Nonnull
-  static EventInit create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -33,10 +33,19 @@ public interface EventInit {
   @JsProperty
   void setBubbles(@MyAnnotation boolean bubbles);
 
-  @JsOverlay
-  @Nonnull
-  default EventInit bubbles(@MyAnnotation final boolean bubbles) {
-    setBubbles( bubbles );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  @MyAnnotation
+  interface Builder extends EventInit {
+    @JsOverlay
+    @Nonnull
+    default Builder bubbles(@MyAnnotation final boolean bubbles) {
+      setBubbles( bubbles );
+      return this;
+    }
   }
 }

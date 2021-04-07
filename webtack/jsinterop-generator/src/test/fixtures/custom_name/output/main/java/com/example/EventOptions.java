@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface EventOptions {
   @JsOverlay
   @Nonnull
-  static EventOptions create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -30,13 +30,6 @@ public interface EventOptions {
   @JsProperty
   void setBubbles(boolean bubbles);
 
-  @JsOverlay
-  @Nonnull
-  default EventOptions bubbles(final boolean bubbles) {
-    setBubbles( bubbles );
-    return this;
-  }
-
   @JsProperty(
       name = "cancelable"
   )
@@ -44,13 +37,6 @@ public interface EventOptions {
 
   @JsProperty
   void setCancelable(boolean cancelable);
-
-  @JsOverlay
-  @Nonnull
-  default EventOptions cancelable(final boolean cancelable) {
-    setCancelable( cancelable );
-    return this;
-  }
 
   @JsProperty(
       name = "composed"
@@ -60,10 +46,32 @@ public interface EventOptions {
   @JsProperty
   void setComposed(boolean composed);
 
-  @JsOverlay
-  @Nonnull
-  default EventOptions composed(final boolean composed) {
-    setComposed( composed );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends EventOptions {
+    @JsOverlay
+    @Nonnull
+    default Builder bubbles(final boolean bubbles) {
+      setBubbles( bubbles );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder cancelable(final boolean cancelable) {
+      setCancelable( cancelable );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder composed(final boolean composed) {
+      setComposed( composed );
+      return this;
+    }
   }
 }

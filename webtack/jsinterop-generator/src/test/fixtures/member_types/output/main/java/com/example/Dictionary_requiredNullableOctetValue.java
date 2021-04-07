@@ -19,9 +19,8 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredNullableOctetValue {
   @JsOverlay
   @Nonnull
-  static Dictionary_requiredNullableOctetValue create(
-      @Nullable final Double requiredNullableOctetValue) {
-    return Js.<Dictionary_requiredNullableOctetValue>uncheckedCast( JsPropertyMap.of() ).requiredNullableOctetValue( requiredNullableOctetValue );
+  static Builder create(@Nullable final Double requiredNullableOctetValue) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredNullableOctetValue( requiredNullableOctetValue );
   }
 
   @JsProperty(
@@ -33,11 +32,18 @@ public interface Dictionary_requiredNullableOctetValue {
   @JsProperty
   void setRequiredNullableOctetValue(@Nullable Double requiredNullableOctetValue);
 
-  @JsOverlay
-  @Nonnull
-  default Dictionary_requiredNullableOctetValue requiredNullableOctetValue(
-      @Nullable final Double requiredNullableOctetValue) {
-    setRequiredNullableOctetValue( requiredNullableOctetValue );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends Dictionary_requiredNullableOctetValue {
+    @JsOverlay
+    @Nonnull
+    default Builder requiredNullableOctetValue(@Nullable final Double requiredNullableOctetValue) {
+      setRequiredNullableOctetValue( requiredNullableOctetValue );
+      return this;
+    }
   }
 }

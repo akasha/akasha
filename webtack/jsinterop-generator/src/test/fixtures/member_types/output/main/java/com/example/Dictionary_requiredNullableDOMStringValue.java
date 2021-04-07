@@ -19,9 +19,8 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredNullableDOMStringValue {
   @JsOverlay
   @Nonnull
-  static Dictionary_requiredNullableDOMStringValue create(
-      @Nullable final String requiredNullableDOMStringValue) {
-    return Js.<Dictionary_requiredNullableDOMStringValue>uncheckedCast( JsPropertyMap.of() ).requiredNullableDOMStringValue( requiredNullableDOMStringValue );
+  static Builder create(@Nullable final String requiredNullableDOMStringValue) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredNullableDOMStringValue( requiredNullableDOMStringValue );
   }
 
   @JsProperty(
@@ -33,11 +32,19 @@ public interface Dictionary_requiredNullableDOMStringValue {
   @JsProperty
   void setRequiredNullableDOMStringValue(@Nullable String requiredNullableDOMStringValue);
 
-  @JsOverlay
-  @Nonnull
-  default Dictionary_requiredNullableDOMStringValue requiredNullableDOMStringValue(
-      @Nullable final String requiredNullableDOMStringValue) {
-    setRequiredNullableDOMStringValue( requiredNullableDOMStringValue );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends Dictionary_requiredNullableDOMStringValue {
+    @JsOverlay
+    @Nonnull
+    default Builder requiredNullableDOMStringValue(
+        @Nullable final String requiredNullableDOMStringValue) {
+      setRequiredNullableDOMStringValue( requiredNullableDOMStringValue );
+      return this;
+    }
   }
 }

@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface AddEventListenerOptions extends EventListenerOptions {
   @JsOverlay
   @Nonnull
-  static AddEventListenerOptions create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -30,13 +30,6 @@ public interface AddEventListenerOptions extends EventListenerOptions {
   @JsProperty
   void setOnce(boolean once);
 
-  @JsOverlay
-  @Nonnull
-  default AddEventListenerOptions once(final boolean once) {
-    setOnce( once );
-    return this;
-  }
-
   @JsProperty(
       name = "passive"
   )
@@ -45,17 +38,32 @@ public interface AddEventListenerOptions extends EventListenerOptions {
   @JsProperty
   void setPassive(boolean passive);
 
-  @JsOverlay
-  @Nonnull
-  default AddEventListenerOptions passive(final boolean passive) {
-    setPassive( passive );
-    return this;
-  }
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends AddEventListenerOptions {
+    @JsOverlay
+    @Nonnull
+    default Builder once(final boolean once) {
+      setOnce( once );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default AddEventListenerOptions capture(final boolean capture) {
-    setCapture( capture );
-    return this;
+    @JsOverlay
+    @Nonnull
+    default Builder passive(final boolean passive) {
+      setPassive( passive );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder capture(final boolean capture) {
+      setCapture( capture );
+      return this;
+    }
   }
 }

@@ -19,7 +19,7 @@ import jsinterop.base.JsPropertyMap;
 public interface StorageEventInit extends EventInit {
   @JsOverlay
   @Nonnull
-  static StorageEventInit create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -32,13 +32,6 @@ public interface StorageEventInit extends EventInit {
   @JsProperty
   void setKey(@Nullable String key);
 
-  @JsOverlay
-  @Nonnull
-  default StorageEventInit key(@Nullable final String key) {
-    setKey( key );
-    return this;
-  }
-
   @JsProperty(
       name = "newValue"
   )
@@ -47,13 +40,6 @@ public interface StorageEventInit extends EventInit {
 
   @JsProperty
   void setNewValue(@Nullable String newValue);
-
-  @JsOverlay
-  @Nonnull
-  default StorageEventInit newValue(@Nullable final String newValue) {
-    setNewValue( newValue );
-    return this;
-  }
 
   @JsProperty(
       name = "oldValue"
@@ -64,13 +50,6 @@ public interface StorageEventInit extends EventInit {
   @JsProperty
   void setOldValue(@Nullable String oldValue);
 
-  @JsOverlay
-  @Nonnull
-  default StorageEventInit oldValue(@Nullable final String oldValue) {
-    setOldValue( oldValue );
-    return this;
-  }
-
   @JsProperty(
       name = "storageArea"
   )
@@ -80,13 +59,6 @@ public interface StorageEventInit extends EventInit {
   @JsProperty
   void setStorageArea(@Nullable Storage storageArea);
 
-  @JsOverlay
-  @Nonnull
-  default StorageEventInit storageArea(@Nullable final Storage storageArea) {
-    setStorageArea( storageArea );
-    return this;
-  }
-
   @JsProperty(
       name = "url"
   )
@@ -95,31 +67,67 @@ public interface StorageEventInit extends EventInit {
   @JsProperty
   void setUrl(@Nonnull String url);
 
-  @JsOverlay
-  @Nonnull
-  default StorageEventInit url(@Nonnull final String url) {
-    setUrl( url );
-    return this;
-  }
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends StorageEventInit {
+    @JsOverlay
+    @Nonnull
+    default Builder key(@Nullable final String key) {
+      setKey( key );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default StorageEventInit bubbles(final boolean bubbles) {
-    setBubbles( bubbles );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder newValue(@Nullable final String newValue) {
+      setNewValue( newValue );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default StorageEventInit cancelable(final boolean cancelable) {
-    setCancelable( cancelable );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder oldValue(@Nullable final String oldValue) {
+      setOldValue( oldValue );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default StorageEventInit composed(final boolean composed) {
-    setComposed( composed );
-    return this;
+    @JsOverlay
+    @Nonnull
+    default Builder storageArea(@Nullable final Storage storageArea) {
+      setStorageArea( storageArea );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder url(@Nonnull final String url) {
+      setUrl( url );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder bubbles(final boolean bubbles) {
+      setBubbles( bubbles );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder cancelable(final boolean cancelable) {
+      setCancelable( cancelable );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder composed(final boolean composed) {
+      setComposed( composed );
+      return this;
+    }
   }
 }

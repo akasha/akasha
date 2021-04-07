@@ -18,8 +18,8 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredUSVStringValue {
   @JsOverlay
   @Nonnull
-  static Dictionary_requiredUSVStringValue create(@Nonnull final String requiredUSVStringValue) {
-    return Js.<Dictionary_requiredUSVStringValue>uncheckedCast( JsPropertyMap.of() ).requiredUSVStringValue( requiredUSVStringValue );
+  static Builder create(@Nonnull final String requiredUSVStringValue) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredUSVStringValue( requiredUSVStringValue );
   }
 
   @JsProperty(
@@ -31,11 +31,18 @@ public interface Dictionary_requiredUSVStringValue {
   @JsProperty
   void setRequiredUSVStringValue(@Nonnull String requiredUSVStringValue);
 
-  @JsOverlay
-  @Nonnull
-  default Dictionary_requiredUSVStringValue requiredUSVStringValue(
-      @Nonnull final String requiredUSVStringValue) {
-    setRequiredUSVStringValue( requiredUSVStringValue );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends Dictionary_requiredUSVStringValue {
+    @JsOverlay
+    @Nonnull
+    default Builder requiredUSVStringValue(@Nonnull final String requiredUSVStringValue) {
+      setRequiredUSVStringValue( requiredUSVStringValue );
+      return this;
+    }
   }
 }

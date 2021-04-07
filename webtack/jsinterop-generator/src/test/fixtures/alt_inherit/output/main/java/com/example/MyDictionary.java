@@ -26,7 +26,7 @@ import jsinterop.base.JsPropertyMap;
 public interface MyDictionary {
   @JsOverlay
   @Nonnull
-  static MyDictionary create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -39,13 +39,6 @@ public interface MyDictionary {
   @JsProperty
   void setAnyValue(@DoNotAutobox @Nullable Object anyValue);
 
-  @JsOverlay
-  @Nonnull
-  default MyDictionary anyValue(@DoNotAutobox @Nullable final Object anyValue) {
-    setAnyValue( anyValue );
-    return this;
-  }
-
   @JsProperty(
       name = "booleanFrozenArrayValue"
   )
@@ -53,14 +46,6 @@ public interface MyDictionary {
 
   @JsProperty
   void setBooleanFrozenArrayValue(@Nonnull JsArray<Boolean> booleanFrozenArrayValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary booleanFrozenArrayValue(
-      @Nonnull final JsArray<Boolean> booleanFrozenArrayValue) {
-    setBooleanFrozenArrayValue( booleanFrozenArrayValue );
-    return this;
-  }
 
   @JsProperty(
       name = "booleanSequenceValue"
@@ -71,22 +56,8 @@ public interface MyDictionary {
   void setBooleanSequenceValue(@Nonnull JsArray<Boolean> booleanSequenceValue);
 
   @JsOverlay
-  @Nonnull
-  default MyDictionary booleanSequenceValue(@Nonnull final JsArray<Boolean> booleanSequenceValue) {
-    setBooleanSequenceValue( booleanSequenceValue );
-    return this;
-  }
-
-  @JsOverlay
   default void setBooleanSequenceValue(@Nonnull final Boolean... booleanSequenceValue) {
     setBooleanSequenceValue( Js.<JsArray<Boolean>>uncheckedCast( booleanSequenceValue ) );
-  }
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary booleanSequenceValue(@Nonnull final Boolean... booleanSequenceValue) {
-    setBooleanSequenceValue( booleanSequenceValue );
-    return this;
   }
 
   @JsProperty(
@@ -97,13 +68,6 @@ public interface MyDictionary {
   @JsProperty
   void setBooleanValue(boolean booleanValue);
 
-  @JsOverlay
-  @Nonnull
-  default MyDictionary booleanValue(final boolean booleanValue) {
-    setBooleanValue( booleanValue );
-    return this;
-  }
-
   @JsProperty(
       name = "byteStringRecordValue"
   )
@@ -111,14 +75,6 @@ public interface MyDictionary {
 
   @JsProperty
   void setByteStringRecordValue(@Nonnull JsPropertyMap<String> byteStringRecordValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary byteStringRecordValue(
-      @Nonnull final JsPropertyMap<String> byteStringRecordValue) {
-    setByteStringRecordValue( byteStringRecordValue );
-    return this;
-  }
 
   @JsProperty(
       name = "byteStringValue"
@@ -128,13 +84,6 @@ public interface MyDictionary {
   @JsProperty
   void setByteStringValue(@Nonnull String byteStringValue);
 
-  @JsOverlay
-  @Nonnull
-  default MyDictionary byteStringValue(@Nonnull final String byteStringValue) {
-    setByteStringValue( byteStringValue );
-    return this;
-  }
-
   @JsProperty(
       name = "byteValue"
   )
@@ -142,13 +91,6 @@ public interface MyDictionary {
 
   @JsProperty
   void setByteValue(byte byteValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary byteValue(final byte byteValue) {
-    setByteValue( byteValue );
-    return this;
-  }
 
   @JsProperty(
       name = "domStringRecordValue"
@@ -158,14 +100,6 @@ public interface MyDictionary {
   @JsProperty
   void setDomStringRecordValue(@Nonnull JsPropertyMap<String> domStringRecordValue);
 
-  @JsOverlay
-  @Nonnull
-  default MyDictionary domStringRecordValue(
-      @Nonnull final JsPropertyMap<String> domStringRecordValue) {
-    setDomStringRecordValue( domStringRecordValue );
-    return this;
-  }
-
   @JsProperty(
       name = "domStringValue"
   )
@@ -173,13 +107,6 @@ public interface MyDictionary {
 
   @JsProperty
   void setDomStringValue(@Nonnull String domStringValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary domStringValue(@Nonnull final String domStringValue) {
-    setDomStringValue( domStringValue );
-    return this;
-  }
 
   @JsProperty(
       name = "doubleFrozenArrayValue"
@@ -189,14 +116,6 @@ public interface MyDictionary {
   @JsProperty
   void setDoubleFrozenArrayValue(@Nonnull JsArray<Double> doubleFrozenArrayValue);
 
-  @JsOverlay
-  @Nonnull
-  default MyDictionary doubleFrozenArrayValue(
-      @Nonnull final JsArray<Double> doubleFrozenArrayValue) {
-    setDoubleFrozenArrayValue( doubleFrozenArrayValue );
-    return this;
-  }
-
   @JsProperty(
       name = "doubleRecordValue"
   )
@@ -204,13 +123,6 @@ public interface MyDictionary {
 
   @JsProperty
   void setDoubleRecordValue(@Nonnull JsPropertyMap<Double> doubleRecordValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary doubleRecordValue(@Nonnull final JsPropertyMap<Double> doubleRecordValue) {
-    setDoubleRecordValue( doubleRecordValue );
-    return this;
-  }
 
   @JsProperty(
       name = "doubleSequenceValue"
@@ -221,22 +133,8 @@ public interface MyDictionary {
   void setDoubleSequenceValue(@Nonnull JsArray<Double> doubleSequenceValue);
 
   @JsOverlay
-  @Nonnull
-  default MyDictionary doubleSequenceValue(@Nonnull final JsArray<Double> doubleSequenceValue) {
-    setDoubleSequenceValue( doubleSequenceValue );
-    return this;
-  }
-
-  @JsOverlay
   default void setDoubleSequenceValue(@Nonnull final double... doubleSequenceValue) {
     setDoubleSequenceValue( Js.<JsArray<Double>>uncheckedCast( doubleSequenceValue ) );
-  }
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary doubleSequenceValue(@Nonnull final double... doubleSequenceValue) {
-    setDoubleSequenceValue( doubleSequenceValue );
-    return this;
   }
 
   @JsProperty(
@@ -247,13 +145,6 @@ public interface MyDictionary {
   @JsProperty
   void setDoubleValue(double doubleValue);
 
-  @JsOverlay
-  @Nonnull
-  default MyDictionary doubleValue(final double doubleValue) {
-    setDoubleValue( doubleValue );
-    return this;
-  }
-
   @JsProperty(
       name = "floatFrozenArrayValue"
   )
@@ -261,13 +152,6 @@ public interface MyDictionary {
 
   @JsProperty
   void setFloatFrozenArrayValue(@Nonnull JsArray<Double> floatFrozenArrayValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary floatFrozenArrayValue(@Nonnull final JsArray<Double> floatFrozenArrayValue) {
-    setFloatFrozenArrayValue( floatFrozenArrayValue );
-    return this;
-  }
 
   @JsProperty(
       name = "floatSequenceValue"
@@ -278,22 +162,8 @@ public interface MyDictionary {
   void setFloatSequenceValue(@Nonnull JsArray<Double> floatSequenceValue);
 
   @JsOverlay
-  @Nonnull
-  default MyDictionary floatSequenceValue(@Nonnull final JsArray<Double> floatSequenceValue) {
-    setFloatSequenceValue( floatSequenceValue );
-    return this;
-  }
-
-  @JsOverlay
   default void setFloatSequenceValue(@Nonnull final double... floatSequenceValue) {
     setFloatSequenceValue( Js.<JsArray<Double>>uncheckedCast( floatSequenceValue ) );
-  }
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary floatSequenceValue(@Nonnull final double... floatSequenceValue) {
-    setFloatSequenceValue( floatSequenceValue );
-    return this;
   }
 
   @JsProperty(
@@ -304,13 +174,6 @@ public interface MyDictionary {
   @JsProperty
   void setFloatValue(float floatValue);
 
-  @JsOverlay
-  @Nonnull
-  default MyDictionary floatValue(final float floatValue) {
-    setFloatValue( floatValue );
-    return this;
-  }
-
   @JsProperty(
       name = "longLongValue"
   )
@@ -318,13 +181,6 @@ public interface MyDictionary {
 
   @JsProperty
   void setLongLongValue(int longLongValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary longLongValue(final int longLongValue) {
-    setLongLongValue( longLongValue );
-    return this;
-  }
 
   @JsProperty(
       name = "longValue"
@@ -334,13 +190,6 @@ public interface MyDictionary {
   @JsProperty
   void setLongValue(int longValue);
 
-  @JsOverlay
-  @Nonnull
-  default MyDictionary longValue(final int longValue) {
-    setLongValue( longValue );
-    return this;
-  }
-
   @JsProperty(
       name = "mixedStringRecordValue"
   )
@@ -348,14 +197,6 @@ public interface MyDictionary {
 
   @JsProperty
   void setMixedStringRecordValue(@Nonnull JsPropertyMap<String> mixedStringRecordValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary mixedStringRecordValue(
-      @Nonnull final JsPropertyMap<String> mixedStringRecordValue) {
-    setMixedStringRecordValue( mixedStringRecordValue );
-    return this;
-  }
 
   @JsProperty(
       name = "nullableBooleanFrozenArrayValue"
@@ -367,14 +208,6 @@ public interface MyDictionary {
   void setNullableBooleanFrozenArrayValue(
       @Nullable JsArray<Boolean> nullableBooleanFrozenArrayValue);
 
-  @JsOverlay
-  @Nonnull
-  default MyDictionary nullableBooleanFrozenArrayValue(
-      @Nullable final JsArray<Boolean> nullableBooleanFrozenArrayValue) {
-    setNullableBooleanFrozenArrayValue( nullableBooleanFrozenArrayValue );
-    return this;
-  }
-
   @JsProperty(
       name = "nullableBooleanSequenceValue"
   )
@@ -385,25 +218,9 @@ public interface MyDictionary {
   void setNullableBooleanSequenceValue(@Nullable JsArray<Boolean> nullableBooleanSequenceValue);
 
   @JsOverlay
-  @Nonnull
-  default MyDictionary nullableBooleanSequenceValue(
-      @Nullable final JsArray<Boolean> nullableBooleanSequenceValue) {
-    setNullableBooleanSequenceValue( nullableBooleanSequenceValue );
-    return this;
-  }
-
-  @JsOverlay
   default void setNullableBooleanSequenceValue(
       @Nullable final Boolean... nullableBooleanSequenceValue) {
     setNullableBooleanSequenceValue( Js.<JsArray<Boolean>>uncheckedCast( nullableBooleanSequenceValue ) );
-  }
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary nullableBooleanSequenceValue(
-      @Nullable final Boolean... nullableBooleanSequenceValue) {
-    setNullableBooleanSequenceValue( nullableBooleanSequenceValue );
-    return this;
   }
 
   @JsProperty(
@@ -415,13 +232,6 @@ public interface MyDictionary {
   @JsProperty
   void setNullableBooleanValue(@Nullable Boolean nullableBooleanValue);
 
-  @JsOverlay
-  @Nonnull
-  default MyDictionary nullableBooleanValue(@Nullable final Boolean nullableBooleanValue) {
-    setNullableBooleanValue( nullableBooleanValue );
-    return this;
-  }
-
   @JsProperty(
       name = "nullableByteStringValue"
   )
@@ -430,13 +240,6 @@ public interface MyDictionary {
 
   @JsProperty
   void setNullableByteStringValue(@Nullable String nullableByteStringValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary nullableByteStringValue(@Nullable final String nullableByteStringValue) {
-    setNullableByteStringValue( nullableByteStringValue );
-    return this;
-  }
 
   @JsProperty(
       name = "nullableByteValue"
@@ -447,13 +250,6 @@ public interface MyDictionary {
   @JsProperty
   void setNullableByteValue(@Nullable Double nullableByteValue);
 
-  @JsOverlay
-  @Nonnull
-  default MyDictionary nullableByteValue(@Nullable final Double nullableByteValue) {
-    setNullableByteValue( nullableByteValue );
-    return this;
-  }
-
   @JsProperty(
       name = "nullableDOMStringValue"
   )
@@ -463,13 +259,6 @@ public interface MyDictionary {
   @JsProperty
   void setNullableDOMStringValue(@Nullable String nullableDOMStringValue);
 
-  @JsOverlay
-  @Nonnull
-  default MyDictionary nullableDOMStringValue(@Nullable final String nullableDOMStringValue) {
-    setNullableDOMStringValue( nullableDOMStringValue );
-    return this;
-  }
-
   @JsProperty(
       name = "nullableDoubleFrozenArrayValue"
   )
@@ -478,14 +267,6 @@ public interface MyDictionary {
 
   @JsProperty
   void setNullableDoubleFrozenArrayValue(@Nullable JsArray<Double> nullableDoubleFrozenArrayValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary nullableDoubleFrozenArrayValue(
-      @Nullable final JsArray<Double> nullableDoubleFrozenArrayValue) {
-    setNullableDoubleFrozenArrayValue( nullableDoubleFrozenArrayValue );
-    return this;
-  }
 
   @JsProperty(
       name = "nullableDoubleSequenceValue"
@@ -497,25 +278,9 @@ public interface MyDictionary {
   void setNullableDoubleSequenceValue(@Nullable JsArray<Double> nullableDoubleSequenceValue);
 
   @JsOverlay
-  @Nonnull
-  default MyDictionary nullableDoubleSequenceValue(
-      @Nullable final JsArray<Double> nullableDoubleSequenceValue) {
-    setNullableDoubleSequenceValue( nullableDoubleSequenceValue );
-    return this;
-  }
-
-  @JsOverlay
   default void setNullableDoubleSequenceValue(
       @Nullable final double... nullableDoubleSequenceValue) {
     setNullableDoubleSequenceValue( Js.<JsArray<Double>>uncheckedCast( nullableDoubleSequenceValue ) );
-  }
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary nullableDoubleSequenceValue(
-      @Nullable final double... nullableDoubleSequenceValue) {
-    setNullableDoubleSequenceValue( nullableDoubleSequenceValue );
-    return this;
   }
 
   @JsProperty(
@@ -527,13 +292,6 @@ public interface MyDictionary {
   @JsProperty
   void setNullableDoubleValue(@Nullable Double nullableDoubleValue);
 
-  @JsOverlay
-  @Nonnull
-  default MyDictionary nullableDoubleValue(@Nullable final Double nullableDoubleValue) {
-    setNullableDoubleValue( nullableDoubleValue );
-    return this;
-  }
-
   @JsProperty(
       name = "nullableFloatFrozenArrayValue"
   )
@@ -542,14 +300,6 @@ public interface MyDictionary {
 
   @JsProperty
   void setNullableFloatFrozenArrayValue(@Nullable JsArray<Double> nullableFloatFrozenArrayValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary nullableFloatFrozenArrayValue(
-      @Nullable final JsArray<Double> nullableFloatFrozenArrayValue) {
-    setNullableFloatFrozenArrayValue( nullableFloatFrozenArrayValue );
-    return this;
-  }
 
   @JsProperty(
       name = "nullableFloatSequenceValue"
@@ -561,24 +311,8 @@ public interface MyDictionary {
   void setNullableFloatSequenceValue(@Nullable JsArray<Double> nullableFloatSequenceValue);
 
   @JsOverlay
-  @Nonnull
-  default MyDictionary nullableFloatSequenceValue(
-      @Nullable final JsArray<Double> nullableFloatSequenceValue) {
-    setNullableFloatSequenceValue( nullableFloatSequenceValue );
-    return this;
-  }
-
-  @JsOverlay
   default void setNullableFloatSequenceValue(@Nullable final double... nullableFloatSequenceValue) {
     setNullableFloatSequenceValue( Js.<JsArray<Double>>uncheckedCast( nullableFloatSequenceValue ) );
-  }
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary nullableFloatSequenceValue(
-      @Nullable final double... nullableFloatSequenceValue) {
-    setNullableFloatSequenceValue( nullableFloatSequenceValue );
-    return this;
   }
 
   @JsProperty(
@@ -590,13 +324,6 @@ public interface MyDictionary {
   @JsProperty
   void setNullableFloatValue(@Nullable Double nullableFloatValue);
 
-  @JsOverlay
-  @Nonnull
-  default MyDictionary nullableFloatValue(@Nullable final Double nullableFloatValue) {
-    setNullableFloatValue( nullableFloatValue );
-    return this;
-  }
-
   @JsProperty(
       name = "nullableLongLongValue"
   )
@@ -605,13 +332,6 @@ public interface MyDictionary {
 
   @JsProperty
   void setNullableLongLongValue(@Nullable Double nullableLongLongValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary nullableLongLongValue(@Nullable final Double nullableLongLongValue) {
-    setNullableLongLongValue( nullableLongLongValue );
-    return this;
-  }
 
   @JsProperty(
       name = "nullableLongValue"
@@ -622,13 +342,6 @@ public interface MyDictionary {
   @JsProperty
   void setNullableLongValue(@Nullable Double nullableLongValue);
 
-  @JsOverlay
-  @Nonnull
-  default MyDictionary nullableLongValue(@Nullable final Double nullableLongValue) {
-    setNullableLongValue( nullableLongValue );
-    return this;
-  }
-
   @JsProperty(
       name = "nullableObjectValue"
   )
@@ -637,13 +350,6 @@ public interface MyDictionary {
 
   @JsProperty
   void setNullableObjectValue(@Nullable Object nullableObjectValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary nullableObjectValue(@Nullable final Object nullableObjectValue) {
-    setNullableObjectValue( nullableObjectValue );
-    return this;
-  }
 
   @JsProperty(
       name = "nullableOctetValue"
@@ -654,13 +360,6 @@ public interface MyDictionary {
   @JsProperty
   void setNullableOctetValue(@Nullable Double nullableOctetValue);
 
-  @JsOverlay
-  @Nonnull
-  default MyDictionary nullableOctetValue(@Nullable final Double nullableOctetValue) {
-    setNullableOctetValue( nullableOctetValue );
-    return this;
-  }
-
   @JsProperty(
       name = "nullableShortFrozenArrayValue"
   )
@@ -670,14 +369,6 @@ public interface MyDictionary {
   @JsProperty
   void setNullableShortFrozenArrayValue(@Nullable JsArray<Double> nullableShortFrozenArrayValue);
 
-  @JsOverlay
-  @Nonnull
-  default MyDictionary nullableShortFrozenArrayValue(
-      @Nullable final JsArray<Double> nullableShortFrozenArrayValue) {
-    setNullableShortFrozenArrayValue( nullableShortFrozenArrayValue );
-    return this;
-  }
-
   @JsProperty(
       name = "nullableShortPromiseValue"
   )
@@ -685,14 +376,6 @@ public interface MyDictionary {
 
   @JsProperty
   void setNullableShortPromiseValue(@Nonnull JsPromise<Double> nullableShortPromiseValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary nullableShortPromiseValue(
-      @Nonnull final JsPromise<Double> nullableShortPromiseValue) {
-    setNullableShortPromiseValue( nullableShortPromiseValue );
-    return this;
-  }
 
   @JsProperty(
       name = "nullableShortSequenceValue"
@@ -704,24 +387,8 @@ public interface MyDictionary {
   void setNullableShortSequenceValue(@Nullable JsArray<Double> nullableShortSequenceValue);
 
   @JsOverlay
-  @Nonnull
-  default MyDictionary nullableShortSequenceValue(
-      @Nullable final JsArray<Double> nullableShortSequenceValue) {
-    setNullableShortSequenceValue( nullableShortSequenceValue );
-    return this;
-  }
-
-  @JsOverlay
   default void setNullableShortSequenceValue(@Nullable final double... nullableShortSequenceValue) {
     setNullableShortSequenceValue( Js.<JsArray<Double>>uncheckedCast( nullableShortSequenceValue ) );
-  }
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary nullableShortSequenceValue(
-      @Nullable final double... nullableShortSequenceValue) {
-    setNullableShortSequenceValue( nullableShortSequenceValue );
-    return this;
   }
 
   @JsProperty(
@@ -733,13 +400,6 @@ public interface MyDictionary {
   @JsProperty
   void setNullableShortValue(@Nullable Double nullableShortValue);
 
-  @JsOverlay
-  @Nonnull
-  default MyDictionary nullableShortValue(@Nullable final Double nullableShortValue) {
-    setNullableShortValue( nullableShortValue );
-    return this;
-  }
-
   @JsProperty(
       name = "nullableSomeTypeFrozenArrayValue"
   )
@@ -750,14 +410,6 @@ public interface MyDictionary {
   void setNullableSomeTypeFrozenArrayValue(
       @Nullable JsArray<SomeType> nullableSomeTypeFrozenArrayValue);
 
-  @JsOverlay
-  @Nonnull
-  default MyDictionary nullableSomeTypeFrozenArrayValue(
-      @Nullable final JsArray<SomeType> nullableSomeTypeFrozenArrayValue) {
-    setNullableSomeTypeFrozenArrayValue( nullableSomeTypeFrozenArrayValue );
-    return this;
-  }
-
   @JsProperty(
       name = "nullableSomeTypePromiseValue"
   )
@@ -765,14 +417,6 @@ public interface MyDictionary {
 
   @JsProperty
   void setNullableSomeTypePromiseValue(@Nonnull JsPromise<SomeType> nullableSomeTypePromiseValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary nullableSomeTypePromiseValue(
-      @Nonnull final JsPromise<SomeType> nullableSomeTypePromiseValue) {
-    setNullableSomeTypePromiseValue( nullableSomeTypePromiseValue );
-    return this;
-  }
 
   @JsProperty(
       name = "nullableSomeTypeSequenceValue"
@@ -784,25 +428,9 @@ public interface MyDictionary {
   void setNullableSomeTypeSequenceValue(@Nullable JsArray<SomeType> nullableSomeTypeSequenceValue);
 
   @JsOverlay
-  @Nonnull
-  default MyDictionary nullableSomeTypeSequenceValue(
-      @Nullable final JsArray<SomeType> nullableSomeTypeSequenceValue) {
-    setNullableSomeTypeSequenceValue( nullableSomeTypeSequenceValue );
-    return this;
-  }
-
-  @JsOverlay
   default void setNullableSomeTypeSequenceValue(
       @Nullable final SomeType... nullableSomeTypeSequenceValue) {
     setNullableSomeTypeSequenceValue( Js.<JsArray<SomeType>>uncheckedCast( nullableSomeTypeSequenceValue ) );
-  }
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary nullableSomeTypeSequenceValue(
-      @Nullable final SomeType... nullableSomeTypeSequenceValue) {
-    setNullableSomeTypeSequenceValue( nullableSomeTypeSequenceValue );
-    return this;
   }
 
   @JsProperty(
@@ -814,13 +442,6 @@ public interface MyDictionary {
   @JsProperty
   void setNullableSomeTypeValue(@Nullable SomeType nullableSomeTypeValue);
 
-  @JsOverlay
-  @Nonnull
-  default MyDictionary nullableSomeTypeValue(@Nullable final SomeType nullableSomeTypeValue) {
-    setNullableSomeTypeValue( nullableSomeTypeValue );
-    return this;
-  }
-
   @JsProperty(
       name = "nullableUSVStringValue"
   )
@@ -829,13 +450,6 @@ public interface MyDictionary {
 
   @JsProperty
   void setNullableUSVStringValue(@Nullable String nullableUSVStringValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary nullableUSVStringValue(@Nullable final String nullableUSVStringValue) {
-    setNullableUSVStringValue( nullableUSVStringValue );
-    return this;
-  }
 
   @JsProperty(
       name = "nullableUnrestrictedDoubleValue"
@@ -846,14 +460,6 @@ public interface MyDictionary {
   @JsProperty
   void setNullableUnrestrictedDoubleValue(@Nullable Double nullableUnrestrictedDoubleValue);
 
-  @JsOverlay
-  @Nonnull
-  default MyDictionary nullableUnrestrictedDoubleValue(
-      @Nullable final Double nullableUnrestrictedDoubleValue) {
-    setNullableUnrestrictedDoubleValue( nullableUnrestrictedDoubleValue );
-    return this;
-  }
-
   @JsProperty(
       name = "nullableUnrestrictedFloatValue"
   )
@@ -862,14 +468,6 @@ public interface MyDictionary {
 
   @JsProperty
   void setNullableUnrestrictedFloatValue(@Nullable Double nullableUnrestrictedFloatValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary nullableUnrestrictedFloatValue(
-      @Nullable final Double nullableUnrestrictedFloatValue) {
-    setNullableUnrestrictedFloatValue( nullableUnrestrictedFloatValue );
-    return this;
-  }
 
   @JsProperty(
       name = "nullableUnsignedLongLongValue"
@@ -880,14 +478,6 @@ public interface MyDictionary {
   @JsProperty
   void setNullableUnsignedLongLongValue(@Nullable Double nullableUnsignedLongLongValue);
 
-  @JsOverlay
-  @Nonnull
-  default MyDictionary nullableUnsignedLongLongValue(
-      @Nullable final Double nullableUnsignedLongLongValue) {
-    setNullableUnsignedLongLongValue( nullableUnsignedLongLongValue );
-    return this;
-  }
-
   @JsProperty(
       name = "nullableUnsignedLongValue"
   )
@@ -896,13 +486,6 @@ public interface MyDictionary {
 
   @JsProperty
   void setNullableUnsignedLongValue(@Nullable Double nullableUnsignedLongValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary nullableUnsignedLongValue(@Nullable final Double nullableUnsignedLongValue) {
-    setNullableUnsignedLongValue( nullableUnsignedLongValue );
-    return this;
-  }
 
   @JsProperty(
       name = "nullableUnsignedShortValue"
@@ -913,14 +496,6 @@ public interface MyDictionary {
   @JsProperty
   void setNullableUnsignedShortValue(@Nullable Double nullableUnsignedShortValue);
 
-  @JsOverlay
-  @Nonnull
-  default MyDictionary nullableUnsignedShortValue(
-      @Nullable final Double nullableUnsignedShortValue) {
-    setNullableUnsignedShortValue( nullableUnsignedShortValue );
-    return this;
-  }
-
   @JsProperty(
       name = "objectValue"
   )
@@ -928,13 +503,6 @@ public interface MyDictionary {
 
   @JsProperty
   void setObjectValue(@Nonnull Object objectValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary objectValue(@Nonnull final Object objectValue) {
-    setObjectValue( objectValue );
-    return this;
-  }
 
   @JsProperty(
       name = "octetValue"
@@ -944,13 +512,6 @@ public interface MyDictionary {
   @JsProperty
   void setOctetValue(short octetValue);
 
-  @JsOverlay
-  @Nonnull
-  default MyDictionary octetValue(final short octetValue) {
-    setOctetValue( octetValue );
-    return this;
-  }
-
   @JsProperty(
       name = "requiredAnyIterableValue"
   )
@@ -958,14 +519,6 @@ public interface MyDictionary {
 
   @JsProperty
   void setRequiredAnyIterableValue(@Nonnull JsIterable<Any> requiredAnyIterableValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredAnyIterableValue(
-      @Nonnull final JsIterable<Any> requiredAnyIterableValue) {
-    setRequiredAnyIterableValue( requiredAnyIterableValue );
-    return this;
-  }
 
   @JsProperty(
       name = "requiredAnyIteratorIterableValue"
@@ -976,14 +529,6 @@ public interface MyDictionary {
   void setRequiredAnyIteratorIterableValue(
       @Nonnull JsIteratorIterable<Any> requiredAnyIteratorIterableValue);
 
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredAnyIteratorIterableValue(
-      @Nonnull final JsIteratorIterable<Any> requiredAnyIteratorIterableValue) {
-    setRequiredAnyIteratorIterableValue( requiredAnyIteratorIterableValue );
-    return this;
-  }
-
   @JsProperty(
       name = "requiredAnyIteratorValue"
   )
@@ -991,14 +536,6 @@ public interface MyDictionary {
 
   @JsProperty
   void setRequiredAnyIteratorValue(@Nonnull JsIterator<Any> requiredAnyIteratorValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredAnyIteratorValue(
-      @Nonnull final JsIterator<Any> requiredAnyIteratorValue) {
-    setRequiredAnyIteratorValue( requiredAnyIteratorValue );
-    return this;
-  }
 
   @JsProperty(
       name = "requiredAnySequenceValue"
@@ -1009,23 +546,8 @@ public interface MyDictionary {
   void setRequiredAnySequenceValue(@Nonnull JsArray<Any> requiredAnySequenceValue);
 
   @JsOverlay
-  @Nonnull
-  default MyDictionary requiredAnySequenceValue(
-      @Nonnull final JsArray<Any> requiredAnySequenceValue) {
-    setRequiredAnySequenceValue( requiredAnySequenceValue );
-    return this;
-  }
-
-  @JsOverlay
   default void setRequiredAnySequenceValue(@Nonnull final Any... requiredAnySequenceValue) {
     setRequiredAnySequenceValue( Js.<JsArray<Any>>uncheckedCast( requiredAnySequenceValue ) );
-  }
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredAnySequenceValue(@Nonnull final Any... requiredAnySequenceValue) {
-    setRequiredAnySequenceValue( requiredAnySequenceValue );
-    return this;
   }
 
   @JsProperty(
@@ -1036,14 +558,6 @@ public interface MyDictionary {
   @JsProperty
   void setSequencePromiseValue(@Nonnull JsPromise<JsArray<Double>> sequencePromiseValue);
 
-  @JsOverlay
-  @Nonnull
-  default MyDictionary sequencePromiseValue(
-      @Nonnull final JsPromise<JsArray<Double>> sequencePromiseValue) {
-    setSequencePromiseValue( sequencePromiseValue );
-    return this;
-  }
-
   @JsProperty(
       name = "shortFrozenArrayValue"
   )
@@ -1052,13 +566,6 @@ public interface MyDictionary {
   @JsProperty
   void setShortFrozenArrayValue(@Nonnull JsArray<Double> shortFrozenArrayValue);
 
-  @JsOverlay
-  @Nonnull
-  default MyDictionary shortFrozenArrayValue(@Nonnull final JsArray<Double> shortFrozenArrayValue) {
-    setShortFrozenArrayValue( shortFrozenArrayValue );
-    return this;
-  }
-
   @JsProperty(
       name = "shortPromiseValue"
   )
@@ -1066,13 +573,6 @@ public interface MyDictionary {
 
   @JsProperty
   void setShortPromiseValue(@Nonnull JsPromise<Double> shortPromiseValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary shortPromiseValue(@Nonnull final JsPromise<Double> shortPromiseValue) {
-    setShortPromiseValue( shortPromiseValue );
-    return this;
-  }
 
   @JsProperty(
       name = "shortSequenceValue"
@@ -1083,22 +583,8 @@ public interface MyDictionary {
   void setShortSequenceValue(@Nonnull JsArray<Double> shortSequenceValue);
 
   @JsOverlay
-  @Nonnull
-  default MyDictionary shortSequenceValue(@Nonnull final JsArray<Double> shortSequenceValue) {
-    setShortSequenceValue( shortSequenceValue );
-    return this;
-  }
-
-  @JsOverlay
   default void setShortSequenceValue(@Nonnull final double... shortSequenceValue) {
     setShortSequenceValue( Js.<JsArray<Double>>uncheckedCast( shortSequenceValue ) );
-  }
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary shortSequenceValue(@Nonnull final double... shortSequenceValue) {
-    setShortSequenceValue( shortSequenceValue );
-    return this;
   }
 
   @JsProperty(
@@ -1109,13 +595,6 @@ public interface MyDictionary {
   @JsProperty
   void setShortValue(short shortValue);
 
-  @JsOverlay
-  @Nonnull
-  default MyDictionary shortValue(final short shortValue) {
-    setShortValue( shortValue );
-    return this;
-  }
-
   @JsProperty(
       name = "someTypeFrozenArrayValue"
   )
@@ -1124,14 +603,6 @@ public interface MyDictionary {
   @JsProperty
   void setSomeTypeFrozenArrayValue(@Nonnull JsArray<SomeType> someTypeFrozenArrayValue);
 
-  @JsOverlay
-  @Nonnull
-  default MyDictionary someTypeFrozenArrayValue(
-      @Nonnull final JsArray<SomeType> someTypeFrozenArrayValue) {
-    setSomeTypeFrozenArrayValue( someTypeFrozenArrayValue );
-    return this;
-  }
-
   @JsProperty(
       name = "someTypePromiseValue"
   )
@@ -1139,14 +610,6 @@ public interface MyDictionary {
 
   @JsProperty
   void setSomeTypePromiseValue(@Nonnull JsPromise<SomeType> someTypePromiseValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary someTypePromiseValue(
-      @Nonnull final JsPromise<SomeType> someTypePromiseValue) {
-    setSomeTypePromiseValue( someTypePromiseValue );
-    return this;
-  }
 
   @JsProperty(
       name = "someTypeSequenceValue"
@@ -1157,23 +620,8 @@ public interface MyDictionary {
   void setSomeTypeSequenceValue(@Nonnull JsArray<SomeType> someTypeSequenceValue);
 
   @JsOverlay
-  @Nonnull
-  default MyDictionary someTypeSequenceValue(
-      @Nonnull final JsArray<SomeType> someTypeSequenceValue) {
-    setSomeTypeSequenceValue( someTypeSequenceValue );
-    return this;
-  }
-
-  @JsOverlay
   default void setSomeTypeSequenceValue(@Nonnull final SomeType... someTypeSequenceValue) {
     setSomeTypeSequenceValue( Js.<JsArray<SomeType>>uncheckedCast( someTypeSequenceValue ) );
-  }
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary someTypeSequenceValue(@Nonnull final SomeType... someTypeSequenceValue) {
-    setSomeTypeSequenceValue( someTypeSequenceValue );
-    return this;
   }
 
   @JsProperty(
@@ -1184,13 +632,6 @@ public interface MyDictionary {
   @JsProperty
   void setSomeTypeValue(@Nonnull SomeType someTypeValue);
 
-  @JsOverlay
-  @Nonnull
-  default MyDictionary someTypeValue(@Nonnull final SomeType someTypeValue) {
-    setSomeTypeValue( someTypeValue );
-    return this;
-  }
-
   @JsProperty(
       name = "typeReferenceRecordValue"
   )
@@ -1198,14 +639,6 @@ public interface MyDictionary {
 
   @JsProperty
   void setTypeReferenceRecordValue(@Nonnull JsPropertyMap<SomeType> typeReferenceRecordValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary typeReferenceRecordValue(
-      @Nonnull final JsPropertyMap<SomeType> typeReferenceRecordValue) {
-    setTypeReferenceRecordValue( typeReferenceRecordValue );
-    return this;
-  }
 
   @JsProperty(
       name = "unrestrictedDoubleValue"
@@ -1215,13 +648,6 @@ public interface MyDictionary {
   @JsProperty
   void setUnrestrictedDoubleValue(double unrestrictedDoubleValue);
 
-  @JsOverlay
-  @Nonnull
-  default MyDictionary unrestrictedDoubleValue(final double unrestrictedDoubleValue) {
-    setUnrestrictedDoubleValue( unrestrictedDoubleValue );
-    return this;
-  }
-
   @JsProperty(
       name = "unrestrictedFloatValue"
   )
@@ -1229,13 +655,6 @@ public interface MyDictionary {
 
   @JsProperty
   void setUnrestrictedFloatValue(float unrestrictedFloatValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary unrestrictedFloatValue(final float unrestrictedFloatValue) {
-    setUnrestrictedFloatValue( unrestrictedFloatValue );
-    return this;
-  }
 
   @JsProperty(
       name = "unsignedLongLongValue"
@@ -1245,13 +664,6 @@ public interface MyDictionary {
   @JsProperty
   void setUnsignedLongLongValue(int unsignedLongLongValue);
 
-  @JsOverlay
-  @Nonnull
-  default MyDictionary unsignedLongLongValue(final int unsignedLongLongValue) {
-    setUnsignedLongLongValue( unsignedLongLongValue );
-    return this;
-  }
-
   @JsProperty(
       name = "unsignedLongValue"
   )
@@ -1259,13 +671,6 @@ public interface MyDictionary {
 
   @JsProperty
   void setUnsignedLongValue(int unsignedLongValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary unsignedLongValue(final int unsignedLongValue) {
-    setUnsignedLongValue( unsignedLongValue );
-    return this;
-  }
 
   @JsProperty(
       name = "unsignedShortValue"
@@ -1275,13 +680,6 @@ public interface MyDictionary {
   @JsProperty
   void setUnsignedShortValue(int unsignedShortValue);
 
-  @JsOverlay
-  @Nonnull
-  default MyDictionary unsignedShortValue(final int unsignedShortValue) {
-    setUnsignedShortValue( unsignedShortValue );
-    return this;
-  }
-
   @JsProperty(
       name = "usvStringRecordValue"
   )
@@ -1289,14 +687,6 @@ public interface MyDictionary {
 
   @JsProperty
   void setUsvStringRecordValue(@Nonnull JsPropertyMap<String> usvStringRecordValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary usvStringRecordValue(
-      @Nonnull final JsPropertyMap<String> usvStringRecordValue) {
-    setUsvStringRecordValue( usvStringRecordValue );
-    return this;
-  }
 
   @JsProperty(
       name = "usvStringValue"
@@ -1306,13 +696,6 @@ public interface MyDictionary {
   @JsProperty
   void setUsvStringValue(@Nonnull String usvStringValue);
 
-  @JsOverlay
-  @Nonnull
-  default MyDictionary usvStringValue(@Nonnull final String usvStringValue) {
-    setUsvStringValue( usvStringValue );
-    return this;
-  }
-
   @JsProperty(
       name = "voidPromiseValue"
   )
@@ -1321,10 +704,630 @@ public interface MyDictionary {
   @JsProperty
   void setVoidPromiseValue(@Nonnull JsPromise<Void> voidPromiseValue);
 
-  @JsOverlay
-  @Nonnull
-  default MyDictionary voidPromiseValue(@Nonnull final JsPromise<Void> voidPromiseValue) {
-    setVoidPromiseValue( voidPromiseValue );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends MyDictionary {
+    @JsOverlay
+    @Nonnull
+    default Builder anyValue(@DoNotAutobox @Nullable final Object anyValue) {
+      setAnyValue( anyValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder booleanFrozenArrayValue(
+        @Nonnull final JsArray<Boolean> booleanFrozenArrayValue) {
+      setBooleanFrozenArrayValue( booleanFrozenArrayValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder booleanSequenceValue(@Nonnull final JsArray<Boolean> booleanSequenceValue) {
+      setBooleanSequenceValue( booleanSequenceValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder booleanSequenceValue(@Nonnull final Boolean... booleanSequenceValue) {
+      setBooleanSequenceValue( booleanSequenceValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder booleanValue(final boolean booleanValue) {
+      setBooleanValue( booleanValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder byteStringRecordValue(
+        @Nonnull final JsPropertyMap<String> byteStringRecordValue) {
+      setByteStringRecordValue( byteStringRecordValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder byteStringValue(@Nonnull final String byteStringValue) {
+      setByteStringValue( byteStringValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder byteValue(final byte byteValue) {
+      setByteValue( byteValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder domStringRecordValue(
+        @Nonnull final JsPropertyMap<String> domStringRecordValue) {
+      setDomStringRecordValue( domStringRecordValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder domStringValue(@Nonnull final String domStringValue) {
+      setDomStringValue( domStringValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder doubleFrozenArrayValue(@Nonnull final JsArray<Double> doubleFrozenArrayValue) {
+      setDoubleFrozenArrayValue( doubleFrozenArrayValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder doubleRecordValue(@Nonnull final JsPropertyMap<Double> doubleRecordValue) {
+      setDoubleRecordValue( doubleRecordValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder doubleSequenceValue(@Nonnull final JsArray<Double> doubleSequenceValue) {
+      setDoubleSequenceValue( doubleSequenceValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder doubleSequenceValue(@Nonnull final double... doubleSequenceValue) {
+      setDoubleSequenceValue( doubleSequenceValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder doubleValue(final double doubleValue) {
+      setDoubleValue( doubleValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder floatFrozenArrayValue(@Nonnull final JsArray<Double> floatFrozenArrayValue) {
+      setFloatFrozenArrayValue( floatFrozenArrayValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder floatSequenceValue(@Nonnull final JsArray<Double> floatSequenceValue) {
+      setFloatSequenceValue( floatSequenceValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder floatSequenceValue(@Nonnull final double... floatSequenceValue) {
+      setFloatSequenceValue( floatSequenceValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder floatValue(final float floatValue) {
+      setFloatValue( floatValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder longLongValue(final int longLongValue) {
+      setLongLongValue( longLongValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder longValue(final int longValue) {
+      setLongValue( longValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder mixedStringRecordValue(
+        @Nonnull final JsPropertyMap<String> mixedStringRecordValue) {
+      setMixedStringRecordValue( mixedStringRecordValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder nullableBooleanFrozenArrayValue(
+        @Nullable final JsArray<Boolean> nullableBooleanFrozenArrayValue) {
+      setNullableBooleanFrozenArrayValue( nullableBooleanFrozenArrayValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder nullableBooleanSequenceValue(
+        @Nullable final JsArray<Boolean> nullableBooleanSequenceValue) {
+      setNullableBooleanSequenceValue( nullableBooleanSequenceValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder nullableBooleanSequenceValue(
+        @Nullable final Boolean... nullableBooleanSequenceValue) {
+      setNullableBooleanSequenceValue( nullableBooleanSequenceValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder nullableBooleanValue(@Nullable final Boolean nullableBooleanValue) {
+      setNullableBooleanValue( nullableBooleanValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder nullableByteStringValue(@Nullable final String nullableByteStringValue) {
+      setNullableByteStringValue( nullableByteStringValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder nullableByteValue(@Nullable final Double nullableByteValue) {
+      setNullableByteValue( nullableByteValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder nullableDOMStringValue(@Nullable final String nullableDOMStringValue) {
+      setNullableDOMStringValue( nullableDOMStringValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder nullableDoubleFrozenArrayValue(
+        @Nullable final JsArray<Double> nullableDoubleFrozenArrayValue) {
+      setNullableDoubleFrozenArrayValue( nullableDoubleFrozenArrayValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder nullableDoubleSequenceValue(
+        @Nullable final JsArray<Double> nullableDoubleSequenceValue) {
+      setNullableDoubleSequenceValue( nullableDoubleSequenceValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder nullableDoubleSequenceValue(
+        @Nullable final double... nullableDoubleSequenceValue) {
+      setNullableDoubleSequenceValue( nullableDoubleSequenceValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder nullableDoubleValue(@Nullable final Double nullableDoubleValue) {
+      setNullableDoubleValue( nullableDoubleValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder nullableFloatFrozenArrayValue(
+        @Nullable final JsArray<Double> nullableFloatFrozenArrayValue) {
+      setNullableFloatFrozenArrayValue( nullableFloatFrozenArrayValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder nullableFloatSequenceValue(
+        @Nullable final JsArray<Double> nullableFloatSequenceValue) {
+      setNullableFloatSequenceValue( nullableFloatSequenceValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder nullableFloatSequenceValue(
+        @Nullable final double... nullableFloatSequenceValue) {
+      setNullableFloatSequenceValue( nullableFloatSequenceValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder nullableFloatValue(@Nullable final Double nullableFloatValue) {
+      setNullableFloatValue( nullableFloatValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder nullableLongLongValue(@Nullable final Double nullableLongLongValue) {
+      setNullableLongLongValue( nullableLongLongValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder nullableLongValue(@Nullable final Double nullableLongValue) {
+      setNullableLongValue( nullableLongValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder nullableObjectValue(@Nullable final Object nullableObjectValue) {
+      setNullableObjectValue( nullableObjectValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder nullableOctetValue(@Nullable final Double nullableOctetValue) {
+      setNullableOctetValue( nullableOctetValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder nullableShortFrozenArrayValue(
+        @Nullable final JsArray<Double> nullableShortFrozenArrayValue) {
+      setNullableShortFrozenArrayValue( nullableShortFrozenArrayValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder nullableShortPromiseValue(
+        @Nonnull final JsPromise<Double> nullableShortPromiseValue) {
+      setNullableShortPromiseValue( nullableShortPromiseValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder nullableShortSequenceValue(
+        @Nullable final JsArray<Double> nullableShortSequenceValue) {
+      setNullableShortSequenceValue( nullableShortSequenceValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder nullableShortSequenceValue(
+        @Nullable final double... nullableShortSequenceValue) {
+      setNullableShortSequenceValue( nullableShortSequenceValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder nullableShortValue(@Nullable final Double nullableShortValue) {
+      setNullableShortValue( nullableShortValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder nullableSomeTypeFrozenArrayValue(
+        @Nullable final JsArray<SomeType> nullableSomeTypeFrozenArrayValue) {
+      setNullableSomeTypeFrozenArrayValue( nullableSomeTypeFrozenArrayValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder nullableSomeTypePromiseValue(
+        @Nonnull final JsPromise<SomeType> nullableSomeTypePromiseValue) {
+      setNullableSomeTypePromiseValue( nullableSomeTypePromiseValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder nullableSomeTypeSequenceValue(
+        @Nullable final JsArray<SomeType> nullableSomeTypeSequenceValue) {
+      setNullableSomeTypeSequenceValue( nullableSomeTypeSequenceValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder nullableSomeTypeSequenceValue(
+        @Nullable final SomeType... nullableSomeTypeSequenceValue) {
+      setNullableSomeTypeSequenceValue( nullableSomeTypeSequenceValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder nullableSomeTypeValue(@Nullable final SomeType nullableSomeTypeValue) {
+      setNullableSomeTypeValue( nullableSomeTypeValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder nullableUSVStringValue(@Nullable final String nullableUSVStringValue) {
+      setNullableUSVStringValue( nullableUSVStringValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder nullableUnrestrictedDoubleValue(
+        @Nullable final Double nullableUnrestrictedDoubleValue) {
+      setNullableUnrestrictedDoubleValue( nullableUnrestrictedDoubleValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder nullableUnrestrictedFloatValue(
+        @Nullable final Double nullableUnrestrictedFloatValue) {
+      setNullableUnrestrictedFloatValue( nullableUnrestrictedFloatValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder nullableUnsignedLongLongValue(
+        @Nullable final Double nullableUnsignedLongLongValue) {
+      setNullableUnsignedLongLongValue( nullableUnsignedLongLongValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder nullableUnsignedLongValue(@Nullable final Double nullableUnsignedLongValue) {
+      setNullableUnsignedLongValue( nullableUnsignedLongValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder nullableUnsignedShortValue(@Nullable final Double nullableUnsignedShortValue) {
+      setNullableUnsignedShortValue( nullableUnsignedShortValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder objectValue(@Nonnull final Object objectValue) {
+      setObjectValue( objectValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder octetValue(final short octetValue) {
+      setOctetValue( octetValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder requiredAnyIterableValue(
+        @Nonnull final JsIterable<Any> requiredAnyIterableValue) {
+      setRequiredAnyIterableValue( requiredAnyIterableValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder requiredAnyIteratorIterableValue(
+        @Nonnull final JsIteratorIterable<Any> requiredAnyIteratorIterableValue) {
+      setRequiredAnyIteratorIterableValue( requiredAnyIteratorIterableValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder requiredAnyIteratorValue(
+        @Nonnull final JsIterator<Any> requiredAnyIteratorValue) {
+      setRequiredAnyIteratorValue( requiredAnyIteratorValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder requiredAnySequenceValue(@Nonnull final JsArray<Any> requiredAnySequenceValue) {
+      setRequiredAnySequenceValue( requiredAnySequenceValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder requiredAnySequenceValue(@Nonnull final Any... requiredAnySequenceValue) {
+      setRequiredAnySequenceValue( requiredAnySequenceValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder sequencePromiseValue(
+        @Nonnull final JsPromise<JsArray<Double>> sequencePromiseValue) {
+      setSequencePromiseValue( sequencePromiseValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder shortFrozenArrayValue(@Nonnull final JsArray<Double> shortFrozenArrayValue) {
+      setShortFrozenArrayValue( shortFrozenArrayValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder shortPromiseValue(@Nonnull final JsPromise<Double> shortPromiseValue) {
+      setShortPromiseValue( shortPromiseValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder shortSequenceValue(@Nonnull final JsArray<Double> shortSequenceValue) {
+      setShortSequenceValue( shortSequenceValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder shortSequenceValue(@Nonnull final double... shortSequenceValue) {
+      setShortSequenceValue( shortSequenceValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder shortValue(final short shortValue) {
+      setShortValue( shortValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder someTypeFrozenArrayValue(
+        @Nonnull final JsArray<SomeType> someTypeFrozenArrayValue) {
+      setSomeTypeFrozenArrayValue( someTypeFrozenArrayValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder someTypePromiseValue(@Nonnull final JsPromise<SomeType> someTypePromiseValue) {
+      setSomeTypePromiseValue( someTypePromiseValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder someTypeSequenceValue(@Nonnull final JsArray<SomeType> someTypeSequenceValue) {
+      setSomeTypeSequenceValue( someTypeSequenceValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder someTypeSequenceValue(@Nonnull final SomeType... someTypeSequenceValue) {
+      setSomeTypeSequenceValue( someTypeSequenceValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder someTypeValue(@Nonnull final SomeType someTypeValue) {
+      setSomeTypeValue( someTypeValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder typeReferenceRecordValue(
+        @Nonnull final JsPropertyMap<SomeType> typeReferenceRecordValue) {
+      setTypeReferenceRecordValue( typeReferenceRecordValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder unrestrictedDoubleValue(final double unrestrictedDoubleValue) {
+      setUnrestrictedDoubleValue( unrestrictedDoubleValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder unrestrictedFloatValue(final float unrestrictedFloatValue) {
+      setUnrestrictedFloatValue( unrestrictedFloatValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder unsignedLongLongValue(final int unsignedLongLongValue) {
+      setUnsignedLongLongValue( unsignedLongLongValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder unsignedLongValue(final int unsignedLongValue) {
+      setUnsignedLongValue( unsignedLongValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder unsignedShortValue(final int unsignedShortValue) {
+      setUnsignedShortValue( unsignedShortValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder usvStringRecordValue(
+        @Nonnull final JsPropertyMap<String> usvStringRecordValue) {
+      setUsvStringRecordValue( usvStringRecordValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder usvStringValue(@Nonnull final String usvStringValue) {
+      setUsvStringValue( usvStringValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder voidPromiseValue(@Nonnull final JsPromise<Void> voidPromiseValue) {
+      setVoidPromiseValue( voidPromiseValue );
+      return this;
+    }
   }
 }

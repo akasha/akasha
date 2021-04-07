@@ -19,9 +19,8 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredNullableFloatValue {
   @JsOverlay
   @Nonnull
-  static Dictionary_requiredNullableFloatValue create(
-      @Nullable final Double requiredNullableFloatValue) {
-    return Js.<Dictionary_requiredNullableFloatValue>uncheckedCast( JsPropertyMap.of() ).requiredNullableFloatValue( requiredNullableFloatValue );
+  static Builder create(@Nullable final Double requiredNullableFloatValue) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredNullableFloatValue( requiredNullableFloatValue );
   }
 
   @JsProperty(
@@ -33,11 +32,18 @@ public interface Dictionary_requiredNullableFloatValue {
   @JsProperty
   void setRequiredNullableFloatValue(@Nullable Double requiredNullableFloatValue);
 
-  @JsOverlay
-  @Nonnull
-  default Dictionary_requiredNullableFloatValue requiredNullableFloatValue(
-      @Nullable final Double requiredNullableFloatValue) {
-    setRequiredNullableFloatValue( requiredNullableFloatValue );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends Dictionary_requiredNullableFloatValue {
+    @JsOverlay
+    @Nonnull
+    default Builder requiredNullableFloatValue(@Nullable final Double requiredNullableFloatValue) {
+      setRequiredNullableFloatValue( requiredNullableFloatValue );
+      return this;
+    }
   }
 }

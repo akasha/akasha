@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface ClipboardItemOptions {
   @JsOverlay
   @Nonnull
-  static ClipboardItemOptions create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -30,10 +30,18 @@ public interface ClipboardItemOptions {
   @JsProperty
   void setPresentationStyle(@Nonnull String presentationStyle);
 
-  @JsOverlay
-  @Nonnull
-  default ClipboardItemOptions presentationStyle(@Nonnull final String presentationStyle) {
-    setPresentationStyle( presentationStyle );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends ClipboardItemOptions {
+    @JsOverlay
+    @Nonnull
+    default Builder presentationStyle(@Nonnull final String presentationStyle) {
+      setPresentationStyle( presentationStyle );
+      return this;
+    }
   }
 }

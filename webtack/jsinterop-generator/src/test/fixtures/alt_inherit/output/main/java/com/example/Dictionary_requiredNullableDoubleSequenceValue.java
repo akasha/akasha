@@ -20,16 +20,14 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredNullableDoubleSequenceValue {
   @JsOverlay
   @Nonnull
-  static Dictionary_requiredNullableDoubleSequenceValue create(
-      @Nullable final JsArray<Double> requiredNullableDoubleSequenceValue) {
-    return Js.<Dictionary_requiredNullableDoubleSequenceValue>uncheckedCast( JsPropertyMap.of() ).requiredNullableDoubleSequenceValue( requiredNullableDoubleSequenceValue );
+  static Builder create(@Nullable final JsArray<Double> requiredNullableDoubleSequenceValue) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredNullableDoubleSequenceValue( requiredNullableDoubleSequenceValue );
   }
 
   @JsOverlay
   @Nonnull
-  static Dictionary_requiredNullableDoubleSequenceValue create(
-      @Nullable final double[] requiredNullableDoubleSequenceValue) {
-    return Js.<Dictionary_requiredNullableDoubleSequenceValue>uncheckedCast( JsPropertyMap.of() ).requiredNullableDoubleSequenceValue( requiredNullableDoubleSequenceValue );
+  static Builder create(@Nullable final double[] requiredNullableDoubleSequenceValue) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredNullableDoubleSequenceValue( requiredNullableDoubleSequenceValue );
   }
 
   @JsProperty(
@@ -43,24 +41,32 @@ public interface Dictionary_requiredNullableDoubleSequenceValue {
       @Nullable JsArray<Double> requiredNullableDoubleSequenceValue);
 
   @JsOverlay
-  @Nonnull
-  default Dictionary_requiredNullableDoubleSequenceValue requiredNullableDoubleSequenceValue(
-      @Nullable final JsArray<Double> requiredNullableDoubleSequenceValue) {
-    setRequiredNullableDoubleSequenceValue( requiredNullableDoubleSequenceValue );
-    return this;
-  }
-
-  @JsOverlay
   default void setRequiredNullableDoubleSequenceValue(
       @Nullable final double... requiredNullableDoubleSequenceValue) {
     setRequiredNullableDoubleSequenceValue( Js.<JsArray<Double>>uncheckedCast( requiredNullableDoubleSequenceValue ) );
   }
 
-  @JsOverlay
-  @Nonnull
-  default Dictionary_requiredNullableDoubleSequenceValue requiredNullableDoubleSequenceValue(
-      @Nullable final double... requiredNullableDoubleSequenceValue) {
-    setRequiredNullableDoubleSequenceValue( requiredNullableDoubleSequenceValue );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends Dictionary_requiredNullableDoubleSequenceValue {
+    @JsOverlay
+    @Nonnull
+    default Builder requiredNullableDoubleSequenceValue(
+        @Nullable final JsArray<Double> requiredNullableDoubleSequenceValue) {
+      setRequiredNullableDoubleSequenceValue( requiredNullableDoubleSequenceValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder requiredNullableDoubleSequenceValue(
+        @Nullable final double... requiredNullableDoubleSequenceValue) {
+      setRequiredNullableDoubleSequenceValue( requiredNullableDoubleSequenceValue );
+      return this;
+    }
   }
 }

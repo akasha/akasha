@@ -23,22 +23,20 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredAnySequenceValue {
   @JsOverlay
   @Nonnull
-  static Dictionary_requiredAnySequenceValue create(
-      @Nonnull final JsIterable<Any> requiredAnyIterableValue,
+  static Builder create(@Nonnull final JsIterable<Any> requiredAnyIterableValue,
       @Nonnull final JsIteratorIterable<Any> requiredAnyIteratorIterableValue,
       @Nonnull final JsIterator<Any> requiredAnyIteratorValue,
       @Nonnull final JsArray<Any> requiredAnySequenceValue) {
-    return Js.<Dictionary_requiredAnySequenceValue>uncheckedCast( JsPropertyMap.of() ).requiredAnyIterableValue( requiredAnyIterableValue ).requiredAnyIteratorIterableValue( requiredAnyIteratorIterableValue ).requiredAnyIteratorValue( requiredAnyIteratorValue ).requiredAnySequenceValue( requiredAnySequenceValue );
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredAnyIterableValue( requiredAnyIterableValue ).requiredAnyIteratorIterableValue( requiredAnyIteratorIterableValue ).requiredAnyIteratorValue( requiredAnyIteratorValue ).requiredAnySequenceValue( requiredAnySequenceValue );
   }
 
   @JsOverlay
   @Nonnull
-  static Dictionary_requiredAnySequenceValue create(
-      @Nonnull final JsIterable<Any> requiredAnyIterableValue,
+  static Builder create(@Nonnull final JsIterable<Any> requiredAnyIterableValue,
       @Nonnull final JsIteratorIterable<Any> requiredAnyIteratorIterableValue,
       @Nonnull final JsIterator<Any> requiredAnyIteratorValue,
       @Nonnull final Any[] requiredAnySequenceValue) {
-    return Js.<Dictionary_requiredAnySequenceValue>uncheckedCast( JsPropertyMap.of() ).requiredAnyIterableValue( requiredAnyIterableValue ).requiredAnyIteratorIterableValue( requiredAnyIteratorIterableValue ).requiredAnyIteratorValue( requiredAnyIteratorValue ).requiredAnySequenceValue( requiredAnySequenceValue );
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredAnyIterableValue( requiredAnyIterableValue ).requiredAnyIteratorIterableValue( requiredAnyIteratorIterableValue ).requiredAnyIteratorValue( requiredAnyIteratorValue ).requiredAnySequenceValue( requiredAnySequenceValue );
   }
 
   @JsProperty(
@@ -50,14 +48,6 @@ public interface Dictionary_requiredAnySequenceValue {
   @JsProperty
   void setRequiredAnyIterableValue(@Nonnull JsIterable<Any> requiredAnyIterableValue);
 
-  @JsOverlay
-  @Nonnull
-  default Dictionary_requiredAnySequenceValue requiredAnyIterableValue(
-      @Nonnull final JsIterable<Any> requiredAnyIterableValue) {
-    setRequiredAnyIterableValue( requiredAnyIterableValue );
-    return this;
-  }
-
   @JsProperty(
       name = "requiredAnyIteratorIterableValue"
   )
@@ -68,14 +58,6 @@ public interface Dictionary_requiredAnySequenceValue {
   void setRequiredAnyIteratorIterableValue(
       @Nonnull JsIteratorIterable<Any> requiredAnyIteratorIterableValue);
 
-  @JsOverlay
-  @Nonnull
-  default Dictionary_requiredAnySequenceValue requiredAnyIteratorIterableValue(
-      @Nonnull final JsIteratorIterable<Any> requiredAnyIteratorIterableValue) {
-    setRequiredAnyIteratorIterableValue( requiredAnyIteratorIterableValue );
-    return this;
-  }
-
   @JsProperty(
       name = "requiredAnyIteratorValue"
   )
@@ -84,14 +66,6 @@ public interface Dictionary_requiredAnySequenceValue {
 
   @JsProperty
   void setRequiredAnyIteratorValue(@Nonnull JsIterator<Any> requiredAnyIteratorValue);
-
-  @JsOverlay
-  @Nonnull
-  default Dictionary_requiredAnySequenceValue requiredAnyIteratorValue(
-      @Nonnull final JsIterator<Any> requiredAnyIteratorValue) {
-    setRequiredAnyIteratorValue( requiredAnyIteratorValue );
-    return this;
-  }
 
   @JsProperty(
       name = "requiredAnySequenceValue"
@@ -103,23 +77,53 @@ public interface Dictionary_requiredAnySequenceValue {
   void setRequiredAnySequenceValue(@Nonnull JsArray<Any> requiredAnySequenceValue);
 
   @JsOverlay
-  @Nonnull
-  default Dictionary_requiredAnySequenceValue requiredAnySequenceValue(
-      @Nonnull final JsArray<Any> requiredAnySequenceValue) {
-    setRequiredAnySequenceValue( requiredAnySequenceValue );
-    return this;
-  }
-
-  @JsOverlay
   default void setRequiredAnySequenceValue(@Nonnull final Any... requiredAnySequenceValue) {
     setRequiredAnySequenceValue( Js.<JsArray<Any>>uncheckedCast( requiredAnySequenceValue ) );
   }
 
-  @JsOverlay
-  @Nonnull
-  default Dictionary_requiredAnySequenceValue requiredAnySequenceValue(
-      @Nonnull final Any... requiredAnySequenceValue) {
-    setRequiredAnySequenceValue( requiredAnySequenceValue );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends Dictionary_requiredAnySequenceValue {
+    @JsOverlay
+    @Nonnull
+    default Builder requiredAnyIterableValue(
+        @Nonnull final JsIterable<Any> requiredAnyIterableValue) {
+      setRequiredAnyIterableValue( requiredAnyIterableValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder requiredAnyIteratorIterableValue(
+        @Nonnull final JsIteratorIterable<Any> requiredAnyIteratorIterableValue) {
+      setRequiredAnyIteratorIterableValue( requiredAnyIteratorIterableValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder requiredAnyIteratorValue(
+        @Nonnull final JsIterator<Any> requiredAnyIteratorValue) {
+      setRequiredAnyIteratorValue( requiredAnyIteratorValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder requiredAnySequenceValue(@Nonnull final JsArray<Any> requiredAnySequenceValue) {
+      setRequiredAnySequenceValue( requiredAnySequenceValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder requiredAnySequenceValue(@Nonnull final Any... requiredAnySequenceValue) {
+      setRequiredAnySequenceValue( requiredAnySequenceValue );
+      return this;
+    }
   }
 }

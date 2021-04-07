@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface ElementCreationOptions {
   @JsOverlay
   @Nonnull
-  static ElementCreationOptions create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -30,10 +30,18 @@ public interface ElementCreationOptions {
   @JsProperty
   void setIs(@Nonnull String is);
 
-  @JsOverlay
-  @Nonnull
-  default ElementCreationOptions is(@Nonnull final String is) {
-    setIs( is );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends ElementCreationOptions {
+    @JsOverlay
+    @Nonnull
+    default Builder is(@Nonnull final String is) {
+      setIs( is );
+      return this;
+    }
   }
 }

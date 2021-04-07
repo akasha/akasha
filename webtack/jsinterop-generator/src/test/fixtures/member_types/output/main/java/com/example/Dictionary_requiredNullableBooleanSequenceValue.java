@@ -19,16 +19,14 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredNullableBooleanSequenceValue {
   @JsOverlay
   @Nonnull
-  static Dictionary_requiredNullableBooleanSequenceValue create(
-      @Nullable final JsArray<Boolean> requiredNullableBooleanSequenceValue) {
-    return Js.<Dictionary_requiredNullableBooleanSequenceValue>uncheckedCast( JsPropertyMap.of() ).requiredNullableBooleanSequenceValue( requiredNullableBooleanSequenceValue );
+  static Builder create(@Nullable final JsArray<Boolean> requiredNullableBooleanSequenceValue) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredNullableBooleanSequenceValue( requiredNullableBooleanSequenceValue );
   }
 
   @JsOverlay
   @Nonnull
-  static Dictionary_requiredNullableBooleanSequenceValue create(
-      @Nullable final Boolean[] requiredNullableBooleanSequenceValue) {
-    return Js.<Dictionary_requiredNullableBooleanSequenceValue>uncheckedCast( JsPropertyMap.of() ).requiredNullableBooleanSequenceValue( requiredNullableBooleanSequenceValue );
+  static Builder create(@Nullable final Boolean[] requiredNullableBooleanSequenceValue) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredNullableBooleanSequenceValue( requiredNullableBooleanSequenceValue );
   }
 
   @JsProperty(
@@ -42,24 +40,32 @@ public interface Dictionary_requiredNullableBooleanSequenceValue {
       @Nullable JsArray<Boolean> requiredNullableBooleanSequenceValue);
 
   @JsOverlay
-  @Nonnull
-  default Dictionary_requiredNullableBooleanSequenceValue requiredNullableBooleanSequenceValue(
-      @Nullable final JsArray<Boolean> requiredNullableBooleanSequenceValue) {
-    setRequiredNullableBooleanSequenceValue( requiredNullableBooleanSequenceValue );
-    return this;
-  }
-
-  @JsOverlay
   default void setRequiredNullableBooleanSequenceValue(
       @Nullable final Boolean... requiredNullableBooleanSequenceValue) {
     setRequiredNullableBooleanSequenceValue( Js.<JsArray<Boolean>>uncheckedCast( requiredNullableBooleanSequenceValue ) );
   }
 
-  @JsOverlay
-  @Nonnull
-  default Dictionary_requiredNullableBooleanSequenceValue requiredNullableBooleanSequenceValue(
-      @Nullable final Boolean... requiredNullableBooleanSequenceValue) {
-    setRequiredNullableBooleanSequenceValue( requiredNullableBooleanSequenceValue );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends Dictionary_requiredNullableBooleanSequenceValue {
+    @JsOverlay
+    @Nonnull
+    default Builder requiredNullableBooleanSequenceValue(
+        @Nullable final JsArray<Boolean> requiredNullableBooleanSequenceValue) {
+      setRequiredNullableBooleanSequenceValue( requiredNullableBooleanSequenceValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder requiredNullableBooleanSequenceValue(
+        @Nullable final Boolean... requiredNullableBooleanSequenceValue) {
+      setRequiredNullableBooleanSequenceValue( requiredNullableBooleanSequenceValue );
+      return this;
+    }
   }
 }

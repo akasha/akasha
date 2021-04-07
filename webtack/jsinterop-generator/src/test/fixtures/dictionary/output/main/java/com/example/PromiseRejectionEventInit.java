@@ -21,8 +21,8 @@ import jsinterop.base.JsPropertyMap;
 public interface PromiseRejectionEventInit extends EventInit {
   @JsOverlay
   @Nonnull
-  static PromiseRejectionEventInit create(@Nonnull final JsPromise<Any> promise) {
-    return Js.<PromiseRejectionEventInit>uncheckedCast( JsPropertyMap.of() ).promise( promise );
+  static Builder create(@Nonnull final JsPromise<Any> promise) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).promise( promise );
   }
 
   @JsProperty(
@@ -34,13 +34,6 @@ public interface PromiseRejectionEventInit extends EventInit {
   @JsProperty
   void setPromise(@Nonnull JsPromise<Any> promise);
 
-  @JsOverlay
-  @Nonnull
-  default PromiseRejectionEventInit promise(@Nonnull final JsPromise<Any> promise) {
-    setPromise( promise );
-    return this;
-  }
-
   @JsProperty(
       name = "reason"
   )
@@ -50,31 +43,46 @@ public interface PromiseRejectionEventInit extends EventInit {
   @JsProperty
   void setReason(@DoNotAutobox @Nullable Object reason);
 
-  @JsOverlay
-  @Nonnull
-  default PromiseRejectionEventInit reason(@DoNotAutobox @Nullable final Object reason) {
-    setReason( reason );
-    return this;
-  }
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends PromiseRejectionEventInit {
+    @JsOverlay
+    @Nonnull
+    default Builder promise(@Nonnull final JsPromise<Any> promise) {
+      setPromise( promise );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default PromiseRejectionEventInit bubbles(final boolean bubbles) {
-    setBubbles( bubbles );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder reason(@DoNotAutobox @Nullable final Object reason) {
+      setReason( reason );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default PromiseRejectionEventInit cancelable(final boolean cancelable) {
-    setCancelable( cancelable );
-    return this;
-  }
+    @JsOverlay
+    @Nonnull
+    default Builder bubbles(final boolean bubbles) {
+      setBubbles( bubbles );
+      return this;
+    }
 
-  @JsOverlay
-  @Nonnull
-  default PromiseRejectionEventInit composed(final boolean composed) {
-    setComposed( composed );
-    return this;
+    @JsOverlay
+    @Nonnull
+    default Builder cancelable(final boolean cancelable) {
+      setCancelable( cancelable );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder composed(final boolean composed) {
+      setComposed( composed );
+      return this;
+    }
   }
 }

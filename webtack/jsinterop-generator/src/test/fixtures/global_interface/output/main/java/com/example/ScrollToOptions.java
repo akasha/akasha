@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface ScrollToOptions {
   @JsOverlay
   @Nonnull
-  static ScrollToOptions create() {
+  static Builder create() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -30,13 +30,6 @@ public interface ScrollToOptions {
   @JsProperty
   void setLeft(double left);
 
-  @JsOverlay
-  @Nonnull
-  default ScrollToOptions left(final double left) {
-    setLeft( left );
-    return this;
-  }
-
   @JsProperty(
       name = "top"
   )
@@ -45,10 +38,25 @@ public interface ScrollToOptions {
   @JsProperty
   void setTop(double top);
 
-  @JsOverlay
-  @Nonnull
-  default ScrollToOptions top(final double top) {
-    setTop( top );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends ScrollToOptions {
+    @JsOverlay
+    @Nonnull
+    default Builder left(final double left) {
+      setLeft( left );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder top(final double top) {
+      setTop( top );
+      return this;
+    }
   }
 }

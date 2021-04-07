@@ -18,16 +18,14 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredFloatSequenceValue {
   @JsOverlay
   @Nonnull
-  static Dictionary_requiredFloatSequenceValue create(
-      @Nonnull final JsArray<Double> requiredFloatSequenceValue) {
-    return Js.<Dictionary_requiredFloatSequenceValue>uncheckedCast( JsPropertyMap.of() ).requiredFloatSequenceValue( requiredFloatSequenceValue );
+  static Builder create(@Nonnull final JsArray<Double> requiredFloatSequenceValue) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredFloatSequenceValue( requiredFloatSequenceValue );
   }
 
   @JsOverlay
   @Nonnull
-  static Dictionary_requiredFloatSequenceValue create(
-      @Nonnull final double[] requiredFloatSequenceValue) {
-    return Js.<Dictionary_requiredFloatSequenceValue>uncheckedCast( JsPropertyMap.of() ).requiredFloatSequenceValue( requiredFloatSequenceValue );
+  static Builder create(@Nonnull final double[] requiredFloatSequenceValue) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredFloatSequenceValue( requiredFloatSequenceValue );
   }
 
   @JsProperty(
@@ -40,23 +38,31 @@ public interface Dictionary_requiredFloatSequenceValue {
   void setRequiredFloatSequenceValue(@Nonnull JsArray<Double> requiredFloatSequenceValue);
 
   @JsOverlay
-  @Nonnull
-  default Dictionary_requiredFloatSequenceValue requiredFloatSequenceValue(
-      @Nonnull final JsArray<Double> requiredFloatSequenceValue) {
-    setRequiredFloatSequenceValue( requiredFloatSequenceValue );
-    return this;
-  }
-
-  @JsOverlay
   default void setRequiredFloatSequenceValue(@Nonnull final double... requiredFloatSequenceValue) {
     setRequiredFloatSequenceValue( Js.<JsArray<Double>>uncheckedCast( requiredFloatSequenceValue ) );
   }
 
-  @JsOverlay
-  @Nonnull
-  default Dictionary_requiredFloatSequenceValue requiredFloatSequenceValue(
-      @Nonnull final double... requiredFloatSequenceValue) {
-    setRequiredFloatSequenceValue( requiredFloatSequenceValue );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends Dictionary_requiredFloatSequenceValue {
+    @JsOverlay
+    @Nonnull
+    default Builder requiredFloatSequenceValue(
+        @Nonnull final JsArray<Double> requiredFloatSequenceValue) {
+      setRequiredFloatSequenceValue( requiredFloatSequenceValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder requiredFloatSequenceValue(
+        @Nonnull final double... requiredFloatSequenceValue) {
+      setRequiredFloatSequenceValue( requiredFloatSequenceValue );
+      return this;
+    }
   }
 }

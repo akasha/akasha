@@ -18,8 +18,8 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredOctetValue {
   @JsOverlay
   @Nonnull
-  static Dictionary_requiredOctetValue create(final short requiredOctetValue) {
-    return Js.<Dictionary_requiredOctetValue>uncheckedCast( JsPropertyMap.of() ).requiredOctetValue( requiredOctetValue );
+  static Builder create(final short requiredOctetValue) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredOctetValue( requiredOctetValue );
   }
 
   @JsProperty(
@@ -30,10 +30,18 @@ public interface Dictionary_requiredOctetValue {
   @JsProperty
   void setRequiredOctetValue(short requiredOctetValue);
 
-  @JsOverlay
-  @Nonnull
-  default Dictionary_requiredOctetValue requiredOctetValue(final short requiredOctetValue) {
-    setRequiredOctetValue( requiredOctetValue );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends Dictionary_requiredOctetValue {
+    @JsOverlay
+    @Nonnull
+    default Builder requiredOctetValue(final short requiredOctetValue) {
+      setRequiredOctetValue( requiredOctetValue );
+      return this;
+    }
   }
 }

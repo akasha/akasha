@@ -19,8 +19,8 @@ import jsinterop.base.JsPropertyMap;
 public interface MyDictionary {
   @JsOverlay
   @Nonnull
-  static MyDictionary create(@Nonnull final Object requiredObjectValue) {
-    return Js.<MyDictionary>uncheckedCast( JsPropertyMap.of() ).requiredObjectValue( requiredObjectValue );
+  static Builder create(@Nonnull final Object requiredObjectValue) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredObjectValue( requiredObjectValue );
   }
 
   @JsProperty(
@@ -32,13 +32,6 @@ public interface MyDictionary {
   @JsProperty
   void setNullableObjectValue(@Nullable Object nullableObjectValue);
 
-  @JsOverlay
-  @Nonnull
-  default MyDictionary nullableObjectValue(@Nullable final Object nullableObjectValue) {
-    setNullableObjectValue( nullableObjectValue );
-    return this;
-  }
-
   @JsProperty(
       name = "objectValue"
   )
@@ -46,13 +39,6 @@ public interface MyDictionary {
 
   @JsProperty
   void setObjectValue(@Nonnull Object objectValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary objectValue(@Nonnull final Object objectValue) {
-    setObjectValue( objectValue );
-    return this;
-  }
 
   @JsProperty(
       name = "requiredObjectValue"
@@ -63,10 +49,32 @@ public interface MyDictionary {
   @JsProperty
   void setRequiredObjectValue(@Nonnull Object requiredObjectValue);
 
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredObjectValue(@Nonnull final Object requiredObjectValue) {
-    setRequiredObjectValue( requiredObjectValue );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends MyDictionary {
+    @JsOverlay
+    @Nonnull
+    default Builder nullableObjectValue(@Nullable final Object nullableObjectValue) {
+      setNullableObjectValue( nullableObjectValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder objectValue(@Nonnull final Object objectValue) {
+      setObjectValue( objectValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder requiredObjectValue(@Nonnull final Object requiredObjectValue) {
+      setRequiredObjectValue( requiredObjectValue );
+      return this;
+    }
   }
 }

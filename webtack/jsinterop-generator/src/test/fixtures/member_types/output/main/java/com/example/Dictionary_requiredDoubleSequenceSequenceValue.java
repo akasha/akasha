@@ -18,16 +18,15 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredDoubleSequenceSequenceValue {
   @JsOverlay
   @Nonnull
-  static Dictionary_requiredDoubleSequenceSequenceValue create(
+  static Builder create(
       @Nonnull final JsArray<JsArray<Double>> requiredDoubleSequenceSequenceValue) {
-    return Js.<Dictionary_requiredDoubleSequenceSequenceValue>uncheckedCast( JsPropertyMap.of() ).requiredDoubleSequenceSequenceValue( requiredDoubleSequenceSequenceValue );
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredDoubleSequenceSequenceValue( requiredDoubleSequenceSequenceValue );
   }
 
   @JsOverlay
   @Nonnull
-  static Dictionary_requiredDoubleSequenceSequenceValue create(
-      @Nonnull final JsArray<Double>[] requiredDoubleSequenceSequenceValue) {
-    return Js.<Dictionary_requiredDoubleSequenceSequenceValue>uncheckedCast( JsPropertyMap.of() ).requiredDoubleSequenceSequenceValue( requiredDoubleSequenceSequenceValue );
+  static Builder create(@Nonnull final JsArray<Double>[] requiredDoubleSequenceSequenceValue) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredDoubleSequenceSequenceValue( requiredDoubleSequenceSequenceValue );
   }
 
   @JsProperty(
@@ -41,26 +40,34 @@ public interface Dictionary_requiredDoubleSequenceSequenceValue {
       @Nonnull JsArray<JsArray<Double>> requiredDoubleSequenceSequenceValue);
 
   @JsOverlay
-  @Nonnull
-  default Dictionary_requiredDoubleSequenceSequenceValue requiredDoubleSequenceSequenceValue(
-      @Nonnull final JsArray<JsArray<Double>> requiredDoubleSequenceSequenceValue) {
-    setRequiredDoubleSequenceSequenceValue( requiredDoubleSequenceSequenceValue );
-    return this;
-  }
-
-  @JsOverlay
   @SuppressWarnings("unchecked")
   default void setRequiredDoubleSequenceSequenceValue(
       @Nonnull final JsArray<Double>... requiredDoubleSequenceSequenceValue) {
     setRequiredDoubleSequenceSequenceValue( Js.<JsArray<JsArray<Double>>>uncheckedCast( requiredDoubleSequenceSequenceValue ) );
   }
 
-  @JsOverlay
-  @Nonnull
-  @SuppressWarnings("unchecked")
-  default Dictionary_requiredDoubleSequenceSequenceValue requiredDoubleSequenceSequenceValue(
-      @Nonnull final JsArray<Double>... requiredDoubleSequenceSequenceValue) {
-    setRequiredDoubleSequenceSequenceValue( requiredDoubleSequenceSequenceValue );
-    return this;
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends Dictionary_requiredDoubleSequenceSequenceValue {
+    @JsOverlay
+    @Nonnull
+    default Builder requiredDoubleSequenceSequenceValue(
+        @Nonnull final JsArray<JsArray<Double>> requiredDoubleSequenceSequenceValue) {
+      setRequiredDoubleSequenceSequenceValue( requiredDoubleSequenceSequenceValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    @SuppressWarnings("unchecked")
+    default Builder requiredDoubleSequenceSequenceValue(
+        @Nonnull final JsArray<Double>... requiredDoubleSequenceSequenceValue) {
+      setRequiredDoubleSequenceSequenceValue( requiredDoubleSequenceSequenceValue );
+      return this;
+    }
   }
 }
