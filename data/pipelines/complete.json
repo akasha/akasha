@@ -27,6 +27,9 @@
       "config": {
         "outputDirectory": "akasha/java/generated/webtack",
         "key": "akasha/akasha",
+        "predefinedTypeCatalogs": [
+          "data/pipelines/predefined_js_types.types"
+        ],
         "globalInterface": "Window"
       }
     }
