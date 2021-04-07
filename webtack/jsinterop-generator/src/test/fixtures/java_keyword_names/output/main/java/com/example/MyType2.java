@@ -62,9 +62,6 @@ public class MyType2 {
   public Object public_;
 
   @Nonnull
-  public Object toString;
-
-  @Nonnull
   public Object wait;
 
   protected MyType2() {

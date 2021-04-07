@@ -1,0 +1,9 @@
+Boolean=com.example.JsBoolean
+Date=com.example.JsDate
+MyBoolean=com.example.MyBoolean
+MyDate=com.example.MyDate
+MyNumber=com.example.MyNumber
+MyString=com.example.MyString
+Number=com.example.JsNumber
+String=com.example.JsString
+WebAssemblyGlobal=com.example.WebAssemblyGlobal

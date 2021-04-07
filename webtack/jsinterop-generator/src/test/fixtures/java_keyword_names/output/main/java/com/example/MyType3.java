@@ -74,11 +74,6 @@ public class MyType3 {
   public static native void public_(@Nonnull Object public_);
 
   @JsMethod(
-      name = "toString"
-  )
-  public static native void toString_(@Nonnull Object toString);
-
-  @JsMethod(
       name = "wait"
   )
   public static native void wait_(@Nonnull Object wait);

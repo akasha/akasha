@@ -73,7 +73,6 @@ interface MyType2 {
   attribute object private;
   attribute object protected;
   attribute object public;
-  attribute object toString;
   attribute object wait;
 };
 
@@ -90,7 +89,6 @@ interface MyType3 {
   static undefined private( object private );
   static undefined protected( object protected );
   static undefined public( object public );
-  static undefined toString( object toString );
   static undefined wait( object wait );
 };
 
@@ -104,9 +102,10 @@ interface MyType4 {
   undefined is( object is );
   undefined notify( object notify );
   undefined notifyAll( object notifyAll );
+  undefined other( object toString );
   undefined private( object private );
   undefined protected( object protected );
   undefined public( object public );
-  undefined toString( object toString );
+  DOMString toString();
   undefined wait( object wait );
 };

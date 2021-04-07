@@ -58,6 +58,8 @@ public class MyType4 {
   )
   public native void notifyAll_(@Nonnull Object notifyAll);
 
+  public native void other(@Nonnull Object toString);
+
   @JsMethod(
       name = "private"
   )
@@ -76,7 +78,8 @@ public class MyType4 {
   @JsMethod(
       name = "toString"
   )
-  public native void toString_(@Nonnull Object toString);
+  @Nonnull
+  public native String toString_();
 
   @JsMethod(
       name = "wait"

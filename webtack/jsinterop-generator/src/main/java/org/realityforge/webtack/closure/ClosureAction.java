@@ -68,7 +68,19 @@ final class ClosureAction
    */
   @Nonnull
   private static final List<String> JS_LITERALS = Arrays.asList( "true", "false", "null" );
-
+  /**
+   * Instance methods that are implicitly available on every object and thus mandate an `@override` annotation
+   * if they are redefined by other interface/namespace types.
+   */
+  @Nonnull
+  private static final List<String> OBJECT_PROTOTYPE_METHODS =
+    Arrays.asList( "hasOwnProperty",
+                   "isPrototypeOf",
+                   "propertyIsEnumerable",
+                   "toLocaleString",
+                   "toSource",
+                   "toString",
+                   "valueOf" );
   @Nonnull
   private final String _key;
   @Nullable
@@ -592,6 +604,10 @@ final class ClosureAction
     writer.write( " * @return {" );
     writeType( writer, returnType );
     writer.write( "}\n" );
+    if ( onPrototype && OBJECT_PROTOTYPE_METHODS.contains( name ) )
+    {
+      writer.write( " * @override\n" );
+    }
     writer.write( " */\n" );
     writer.write( typeName +
                   "." +

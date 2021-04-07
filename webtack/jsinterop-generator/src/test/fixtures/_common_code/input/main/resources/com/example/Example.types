@@ -1,7 +1,9 @@
 ArrayBuffer
 ArrayBufferView
+Boolean
 BufferSource
 DataView
+Date
 Float32Array
 Float64Array
 Function
@@ -10,7 +12,9 @@ Int32Array
 Int8Array
 JSON
 Math
+Number
 Object
+String
 Symbol
 Uint16Array
 Uint32Array

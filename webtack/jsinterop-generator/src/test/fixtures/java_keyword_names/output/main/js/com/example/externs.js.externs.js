@@ -40,6 +40,11 @@ MyType4.prototype.wait = function(wait) {}
  */
 MyType4.prototype.private = function(private_) {}
 /**
+ * @param {!Object} toString
+ * @return {undefined}
+ */
+MyType4.prototype.other = function(toString) {}
+/**
  * @param {!Object} notifyAll
  * @return {undefined}
  */
@@ -85,10 +90,10 @@ MyType4.prototype.equals = function(equals) {}
  */
 MyType4.prototype.clone = function(clone) {}
 /**
- * @param {!Object} toString
- * @return {undefined}
+ * @return {!string}
+ * @override
  */
-MyType4.prototype.toString = function(toString) {}
+MyType4.prototype.toString = function() {}
 /**
  * @param {!Object} finalize
  * @return {undefined}
@@ -120,21 +125,6 @@ MyType3.wait = function(wait) {}
  */
 MyType3.private = function(private_) {}
 /**
- * @param {!Object} notifyAll
- * @return {undefined}
- */
-MyType3.notifyAll = function(notifyAll) {}
-/**
- * @param {!Object} is
- * @return {undefined}
- */
-MyType3.is = function(is) {}
-/**
- * @param {!Object} notify
- * @return {undefined}
- */
-MyType3.notify = function(notify) {}
-/**
  * @param {!Object} default_
  * @return {undefined}
  */
@@ -155,6 +145,11 @@ MyType3.protected = function(protected_) {}
  */
 MyType3.hashCode = function(hashCode) {}
 /**
+ * @param {!Object} notifyAll
+ * @return {undefined}
+ */
+MyType3.notifyAll = function(notifyAll) {}
+/**
  * @param {!Object} equals
  * @return {undefined}
  */
@@ -165,12 +160,17 @@ MyType3.equals = function(equals) {}
  */
 MyType3.clone = function(clone) {}
 /**
- * @param {!Object} toString
+ * @param {!Object} is
  * @return {undefined}
  */
-MyType3.toString = function(toString) {}
+MyType3.is = function(is) {}
 /**
  * @param {!Object} finalize
  * @return {undefined}
  */
 MyType3.finalize = function(finalize) {}
+/**
+ * @param {!Object} notify
+ * @return {undefined}
+ */
+MyType3.notify = function(notify) {}
