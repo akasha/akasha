@@ -3,6 +3,7 @@ package org.realityforge.webtack.model;
 import java.util.List;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import org.realityforge.webtack.model.tools.util.ExtendedAttributes;
 
 public abstract class Element
   extends AttributedNode
@@ -25,6 +26,14 @@ public abstract class Element
   public DocumentationElement getDocumentation()
   {
     return _documentation;
+  }
+
+  public boolean isExposedOnAnyGlobal()
+  {
+    return getExtendedAttributes()
+      .stream()
+      .filter( a -> a.getKind() == ExtendedAttribute.Kind.IDENT || a.getKind() == ExtendedAttribute.Kind.IDENT_LIST )
+      .anyMatch( a -> a.getName().equals( ExtendedAttributes.EXPOSED ) );
   }
 
   @SuppressWarnings( "BooleanMethodIsAlwaysInverted" )

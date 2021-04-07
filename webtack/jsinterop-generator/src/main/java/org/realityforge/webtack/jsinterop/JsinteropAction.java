@@ -1610,7 +1610,7 @@ final class JsinteropAction
   private void generateCallbackInterface( @Nonnull final CallbackInterfaceDefinition definition )
     throws IOException
   {
-    final boolean exposedOnGlobal = isExposedOnGlobal( definition );
+    final boolean exposedOnGlobal = definition.isExposedOnAnyGlobal();
     final String name = definition.getName();
     final TypeSpec.Builder type =
       TypeSpec
@@ -3313,14 +3313,6 @@ final class JsinteropAction
     }
 
     return docs.toString();
-  }
-
-  private boolean isExposedOnGlobal( @Nonnull final Element element )
-  {
-    return element.getExtendedAttributes()
-      .stream()
-      .filter( a -> a.getKind() == ExtendedAttribute.Kind.IDENT || a.getKind() == ExtendedAttribute.Kind.IDENT_LIST )
-      .anyMatch( a -> a.getName().equals( "Exposed" ) );
   }
 
   private void registerIdlTypeToJavaTypeMapping()

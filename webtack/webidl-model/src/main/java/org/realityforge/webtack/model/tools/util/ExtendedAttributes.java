@@ -13,6 +13,20 @@ public final class ExtendedAttributes
   @Nonnull
   public static final String TRANSFERABLE = "Transferable";
   /**
+   * When the [Exposed] extended attribute appears on an interface, partial interface, interface mixin, partial
+   * interface mixin, callback interface, namespace, partial namespace, or an individual interface member,
+   * interface mixin member, or namespace member, it indicates that the construct is exposed on that particular
+   * set of global interfaces.
+   *
+   * <p>The [Exposed] extended attribute must either take an identifier or take an identifier list. Each of the
+   * identifiers mentioned must be a global name and be unique. This list of identifiers is known as the
+   * construct’s own exposure set.</p>
+   *
+   * @see <a href="https://heycam.github.io/webidl/#Exposed">Exposed - WebIDL Specification</a>
+   */
+  @Nonnull
+  public static final String EXPOSED = "Exposed";
+  /**
    * A attribute applied to no arg constructors that implies special handling by the environment.
    *
    * @see <a href="https://html.spec.whatwg.org/#htmlconstructor">[HTMLConstructor] - HTML Specification</a>
