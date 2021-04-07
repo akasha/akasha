@@ -15,6 +15,7 @@ Math
 Number
 Object
 String
+symbol
 Symbol
 Uint16Array
 Uint32Array
