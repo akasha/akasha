@@ -106,7 +106,8 @@ final class ClosureAction
     {
       try
       {
-        Files.readAllLines( predefinedTypeCatalog )
+        Files
+          .readAllLines( predefinedTypeCatalog )
           .stream()
           .map( String::trim )
           .filter( t -> !t.isEmpty() )
