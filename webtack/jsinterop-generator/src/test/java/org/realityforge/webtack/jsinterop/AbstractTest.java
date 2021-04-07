@@ -245,19 +245,18 @@ public abstract class AbstractTest
                                             @Nonnull final List<Path> externalTypeMappingPaths )
     throws Exception
   {
-    final JsinteropAction action =
-      new JsinteropAction( newPipelineContext( directory ),
-                           outputDirectory,
-                           packageName,
-                           globalInterface,
-                           predefinedTypeMappingPaths,
-                           externalTypeMappingPaths,
-                           true,
-                           gwtInherits,
-                           true,
-                           true );
+    final JsinteropActionFactory factory = new JsinteropActionFactory();
+    factory.packageName = packageName;
+    factory.globalInterface = globalInterface;
+    factory.gwtInherits = gwtInherits;
+    factory.outputDirectory = outputDirectory.toString();
+    factory.predefinedTypeMapping =
+      predefinedTypeMappingPaths.stream().map( Path::toString ).collect( Collectors.toList() );
+    factory.externalTypeMapping =
+      externalTypeMappingPaths.stream().map( Path::toString ).collect( Collectors.toList() );
+    final Action action = factory.create( newPipelineContext( directory ) );
     action.process( schema );
-    return action.getGeneratedFiles();
+    return ( (AbstractAction) action ).getGeneratedFiles();
   }
 
   @Nonnull
