@@ -269,13 +269,13 @@ public abstract class AbstractTest
                                           @Nonnull final List<Path> predefinedTypeCatalogPaths )
     throws Exception
   {
-    final ClosureActionFactory actionFactory = new ClosureActionFactory();
-    actionFactory.outputDirectory = outputDirectory.toString();
-    actionFactory.key = packageName.replace( ".", "/" ) + "/externs.js";
-    actionFactory.globalInterface = globalInterface;
-    actionFactory.predefinedTypeCatalogs =
+    final ClosureActionFactory factory = new ClosureActionFactory();
+    factory.outputDirectory = outputDirectory.toString();
+    factory.key = packageName.replace( ".", "/" ) + "/externs.js";
+    factory.globalInterface = globalInterface;
+    factory.predefinedTypeCatalogs =
       predefinedTypeCatalogPaths.stream().map( Path::toString ).collect( Collectors.toList() );
-    final Action action = actionFactory.create( newPipelineContext( directory ) );
+    final Action action = factory.create( newPipelineContext( directory ) );
     action.process( schema );
     return ( (AbstractAction) action ).getGeneratedFiles();
   }
