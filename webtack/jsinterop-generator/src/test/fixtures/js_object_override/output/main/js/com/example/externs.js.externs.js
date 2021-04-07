@@ -66,6 +66,16 @@ WebAssemblyGlobal.prototype.valueOf = function() {}
  * @constructor
  * @private
  */
+function ReportBody() {}
+/**
+ * @return {!Object}
+ * @override
+ */
+ReportBody.prototype.toJSON = function() {}
+/**
+ * @constructor
+ * @private
+ */
 function MyNumber() {}
 /**
  * @return {!number}

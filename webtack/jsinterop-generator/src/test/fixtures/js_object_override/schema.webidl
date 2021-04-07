@@ -38,6 +38,11 @@ interface Number {
   stringifier DOMString toString( optional long radix );
 };
 
+interface ReportBody {
+  [Default]
+  object toJSON();
+};
+
 [JavaName=JsString]
 interface String {
   DOMString valueOf();

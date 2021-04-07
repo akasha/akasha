@@ -5,5 +5,7 @@ MyDate=com.example.MyDate
 MyNumber=com.example.MyNumber
 MyString=com.example.MyString
 Number=com.example.JsNumber
+ReportBody=com.example.ReportBody
 String=com.example.JsString
 WebAssemblyGlobal=com.example.WebAssemblyGlobal
+object=java.lang.Object

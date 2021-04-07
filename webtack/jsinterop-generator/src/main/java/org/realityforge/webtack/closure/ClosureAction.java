@@ -79,6 +79,7 @@ final class ClosureAction
                    "isPrototypeOf",
                    "propertyIsEnumerable",
                    "toLocaleString",
+                   "toJSON",
                    "toSource",
                    "toString",
                    "valueOf" );

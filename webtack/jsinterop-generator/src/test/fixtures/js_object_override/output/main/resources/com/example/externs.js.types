@@ -2,5 +2,6 @@ MyBoolean
 MyDate
 MyNumber
 MyString
+ReportBody
 Timestamp
 WebAssemblyGlobal
