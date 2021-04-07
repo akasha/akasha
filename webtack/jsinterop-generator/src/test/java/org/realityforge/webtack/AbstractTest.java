@@ -1,4 +1,4 @@
-package org.realityforge.webtack.jsinterop;
+package org.realityforge.webtack;
 
 import gir.io.FileUtil;
 import gir.sys.SystemProperty;
@@ -21,6 +21,7 @@ import java.util.stream.Collectors;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import org.realityforge.webtack.closure.ClosureActionFactory;
+import org.realityforge.webtack.jsinterop.JsinteropActionFactory;
 import org.realityforge.webtack.model.WebIDLModelParser;
 import org.realityforge.webtack.model.WebIDLSchema;
 import org.realityforge.webtack.model.WebIDLWriter;

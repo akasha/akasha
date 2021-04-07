@@ -1,4 +1,4 @@
-package org.realityforge.webtack.jsinterop;
+package org.realityforge.webtack;
 
 import java.io.IOException;
 import java.nio.file.Files;
