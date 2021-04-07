@@ -183,7 +183,11 @@ define 'akasha' do
         j2.include("#{js_src_dir}/*")
       end
     end
-    package(:sources)
+    package(:sources).tap do |j|
+      j.enhance([js_src_dir]) do |j2|
+        j2.include("#{js_src_dir}/*")
+      end
+    end
     package(:javadoc)
   end
 
