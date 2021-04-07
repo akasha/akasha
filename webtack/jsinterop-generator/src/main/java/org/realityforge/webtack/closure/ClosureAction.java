@@ -843,5 +843,4 @@ final class ClosureAction
   {
     return Character.isUnicodeIdentifierStart( name.charAt( 0 ) ) ? name + "_" : "_" + name;
   }
-
 }
