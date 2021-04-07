@@ -26,7 +26,7 @@
       "name": "Closure",
       "config": {
         "outputDirectory": "akasha/java/generated/webtack",
-        "key": "akasha/akasha",
+        "key": "akasha/Akasha",
         "predefinedTypeCatalogs": [
           "data/pipelines/predefined_js_types.types"
         ],
