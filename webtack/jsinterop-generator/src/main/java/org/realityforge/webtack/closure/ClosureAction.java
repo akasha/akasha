@@ -342,7 +342,7 @@ final class ClosureAction
                         definition.getInherits(),
                         Collections.emptyList(),
                         false,
-                        Collections.singletonList( "@private" ) );
+                        Collections.emptyList() );
     }
     else if ( constructors.isEmpty() )
     {
@@ -659,13 +659,10 @@ final class ClosureAction
     throws IOException
   {
     writer.write( "/**\n" );
-    if ( hasJsType )
+    writer.write( " * @constructor\n" );
+    if ( !hasJsType )
     {
-      writer.write( " * @constructor\n" );
-    }
-    else
-    {
-      writer.write( " * @record\n" );
+      writer.write( " * @private\n" );
     }
     if ( null != superType )
     {
