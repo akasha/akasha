@@ -389,19 +389,23 @@ final class ClosureAction
     }
     writeConstants( writer, type, definition.getConstants(), !hasNoJsType, true );
     writeAttributes( writer, type, definition.getAttributes() );
-    writeOperations( writer, type, operations, operationName -> {
-      InterfaceDefinition interfaceDefinition = definition.getSuperInterface();
-      while ( null != interfaceDefinition )
+    writeOperations( writer, type, operations, name -> shouldOperationBeAnOverride( definition, name ) );
+  }
+
+  private boolean shouldOperationBeAnOverride( @Nonnull final InterfaceDefinition definition,
+                                               @Nonnull final String operationName )
+  {
+    InterfaceDefinition interfaceDefinition = definition.getSuperInterface();
+    while ( null != interfaceDefinition )
+    {
+      final OperationMember operation = interfaceDefinition.findOperationByName( operationName );
+      if ( null != operation && OperationMember.Kind.STATIC != operation.getKind() )
       {
-        final OperationMember operation = interfaceDefinition.findOperationByName( operationName );
-        if ( null != operation && OperationMember.Kind.STATIC != operation.getKind() )
-        {
-          return true;
-        }
-        interfaceDefinition = interfaceDefinition.getSuperInterface();
+        return true;
       }
-      return false;
-    } );
+      interfaceDefinition = interfaceDefinition.getSuperInterface();
+    }
+    return false;
   }
 
   private void writeOperations( @Nonnull final Writer writer,
