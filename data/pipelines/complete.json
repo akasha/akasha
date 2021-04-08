@@ -4,7 +4,7 @@
     {
       "name": "Emit",
       "config": {
-        "filePattern": "data/output/complete/complete.webidl"
+        "filePattern": "akasha/java/generated/webtack/main/resources/akasha/Akasha.webidl"
       }
     },
     {
