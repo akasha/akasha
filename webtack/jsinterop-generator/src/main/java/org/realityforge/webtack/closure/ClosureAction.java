@@ -243,7 +243,10 @@ final class ClosureAction
     writer.write( type );
     writer.write( "() {}\n" );
     writeConstMembers( writer, type, definition.getConstants(), true, false );
-    writeUniquelyNamedOperation( writer, type, definition.getOperation() );
+    final OperationMember operation = definition.getOperation();
+    final String name = operation.getName();
+    assert null != name;
+    writeOperation( writer, type, name, operation.getArguments(), operation.getReturnType(), true, false );
   }
 
   private void writeDictionary( @Nonnull final Writer writer, @Nonnull final DictionaryDefinition definition )
@@ -605,24 +608,6 @@ final class ClosureAction
     }
     writer.write( constant.getName() );
     writer.write( ";\n" );
-  }
-
-  private void writeUniquelyNamedOperation( @Nonnull final Writer writer,
-                                            @Nonnull final String type,
-                                            @Nonnull final OperationMember operation )
-    throws IOException
-  {
-    final String name = operation.getName();
-    final OperationMember.Kind kind = operation.getKind();
-    if ( null != name && OperationMember.Kind.CONSTRUCTOR != kind )
-    {
-      writeOperation( writer,
-                      type,
-                      name,
-                      operation.getArguments(),
-                      operation.getReturnType(),
-                      OperationMember.Kind.STATIC != kind );
-    }
   }
 
   private void writeOperation( @Nonnull final Writer writer,
