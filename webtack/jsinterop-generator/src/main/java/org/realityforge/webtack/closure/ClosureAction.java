@@ -13,6 +13,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Set;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import javax.annotation.Nonnull;
@@ -316,7 +317,7 @@ final class ClosureAction
                       Collections.singletonList( "@private" ) );
     writeConstMembers( writer, interfaceType, definition.getConstants(), true, false );
     writeAttributeMembers( writer, interfaceType, definition.getAttributes() );
-    writeOperations( writer, interfaceType, definition.getOperations() );
+    writeOperations( writer, interfaceType, definition.getOperations(), s -> false );
 
     writeJsDoc( writer, "@const", "@type {" + interfaceType + "}" );
     writer.write( "var " );
@@ -376,12 +377,25 @@ final class ClosureAction
     }
     writeConstMembers( writer, type, definition.getConstants(), !hasNoJsType, true );
     writeAttributeMembers( writer, type, definition.getAttributes() );
-    writeOperations( writer, type, operations );
+    writeOperations( writer, type, operations, operationName -> {
+      InterfaceDefinition interfaceDefinition = definition.getSuperInterface();
+      while ( null != interfaceDefinition )
+      {
+        final OperationMember operation = interfaceDefinition.findOperationByName( operationName );
+        if ( null != operation && OperationMember.Kind.STATIC != operation.getKind() )
+        {
+          return true;
+        }
+        interfaceDefinition = interfaceDefinition.getSuperInterface();
+      }
+      return false;
+    } );
   }
 
   private void writeOperations( @Nonnull final Writer writer,
                                 @Nonnull final String type,
-                                @Nonnull final List<OperationMember> operations )
+                                @Nonnull final List<OperationMember> operations,
+                                @Nonnull final Predicate<String> isOperationOverride )
     throws IOException
   {
     final Map<String, List<OperationMember>> operationMap =
@@ -392,26 +406,30 @@ final class ClosureAction
         .collect( Collectors.groupingBy( OperationMember::getName ) );
     for ( final Map.Entry<String, List<OperationMember>> entry : operationMap.entrySet() )
     {
+      final String operationName = entry.getKey();
       final List<OperationMember> operationsToMerge = entry.getValue();
       final OperationMember templateOperation = operationsToMerge.get( 0 );
       final boolean isNonStaticOperation = OperationMember.Kind.STATIC != templateOperation.getKind();
+      final boolean isOverride = isNonStaticOperation && isOperationOverride.test( operationName );
       if ( 1 == operationsToMerge.size() )
       {
         writeOperation( writer,
                         type,
-                        entry.getKey(),
+                        operationName,
                         templateOperation.getArguments(),
                         templateOperation.getReturnType(),
-                        isNonStaticOperation );
+                        isNonStaticOperation,
+                        isOverride );
       }
       else
       {
         writeOperation( writer,
                         type,
-                        entry.getKey(),
+                        operationName,
                         deriveArguments( operationsToMerge ),
                         deriveReturnType( operationsToMerge ),
-                        isNonStaticOperation );
+                        isNonStaticOperation,
+                        isOverride );
       }
     }
   }
@@ -615,7 +633,8 @@ final class ClosureAction
                                @Nonnull final String name,
                                @Nonnull final List<Argument> arguments,
                                @Nonnull final Type returnType,
-                               final boolean onPrototype )
+                               final boolean onPrototype,
+                               final boolean override )
     throws IOException
   {
     writer.write( "/**\n" );
@@ -623,7 +642,7 @@ final class ClosureAction
     writer.write( " * @return {" );
     writeType( writer, returnType );
     writer.write( "}\n" );
-    if ( onPrototype && OBJECT_PROTOTYPE_METHODS.contains( name ) )
+    if ( override || ( onPrototype && OBJECT_PROTOTYPE_METHODS.contains( name ) ) )
     {
       writer.write( " * @override\n" );
     }

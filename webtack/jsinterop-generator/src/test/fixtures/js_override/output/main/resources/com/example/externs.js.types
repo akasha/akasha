@@ -1,0 +1,4 @@
+AudioBufferSourceNode
+AudioScheduledSourceNode
+DOMMatrix
+DOMMatrixReadOnly
