@@ -243,7 +243,7 @@ final class ClosureAction
     writer.write( "/**\n * @interface\n */\nfunction " );
     writer.write( type );
     writer.write( "() {}\n" );
-    writeConstMembers( writer, type, definition.getConstants(), true, false );
+    writeConstants( writer, type, definition.getConstants(), true, false );
     final OperationMember operation = definition.getOperation();
     final String name = operation.getName();
     assert null != name;
@@ -327,7 +327,7 @@ final class ClosureAction
                       Collections.emptyList(),
                       true,
                       Collections.singletonList( "@private" ) );
-    writeConstMembers( writer, interfaceType, definition.getConstants(), true, false );
+    writeConstants( writer, interfaceType, definition.getConstants(), true, false );
     writeAttributeMembers( writer, interfaceType, definition.getAttributes() );
     writeOperations( writer, interfaceType, definition.getOperations(), s -> false );
 
@@ -387,7 +387,7 @@ final class ClosureAction
                         true,
                         Collections.emptyList() );
     }
-    writeConstMembers( writer, type, definition.getConstants(), !hasNoJsType, true );
+    writeConstants( writer, type, definition.getConstants(), !hasNoJsType, true );
     writeAttributeMembers( writer, type, definition.getAttributes() );
     writeOperations( writer, type, operations, operationName -> {
       InterfaceDefinition interfaceDefinition = definition.getSuperInterface();
@@ -601,30 +601,30 @@ final class ClosureAction
     writer.write( ";\n" );
   }
 
-  private void writeConstMembers( @Nonnull final Writer writer,
-                                  @Nonnull final String type,
-                                  @Nonnull final List<ConstMember> constants,
-                                  final boolean addConstantsToType,
-                                  final boolean addConstantsToPrototype )
+  private void writeConstants( @Nonnull final Writer writer,
+                               @Nullable final String type,
+                               @Nonnull final List<ConstMember> constants,
+                               final boolean addConstantsToType,
+                               final boolean addConstantsToPrototype )
     throws IOException
   {
     for ( final ConstMember constant : constants )
     {
       if ( addConstantsToType )
       {
-        writeConstMember( writer, type, constant, false );
+        writeConstant( writer, type, constant, false );
       }
       if ( addConstantsToPrototype )
       {
-        writeConstMember( writer, type, constant, true );
+        writeConstant( writer, type, constant, true );
       }
     }
   }
 
-  private void writeConstMember( @Nonnull final Writer writer,
                                  @Nonnull final String type,
-                                 @Nonnull final ConstMember constant,
-                                 final boolean onPrototype )
+  private void writeConstant( @Nonnull final Writer writer,
+                              @Nonnull final ConstMember constant,
+                              final boolean onPrototype )
     throws IOException
   {
     writer.write( "/** @const {" );
