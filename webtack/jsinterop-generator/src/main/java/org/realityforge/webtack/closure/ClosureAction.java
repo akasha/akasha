@@ -328,7 +328,7 @@ final class ClosureAction
                       true,
                       Collections.singletonList( "@private" ) );
     writeConstants( writer, interfaceType, definition.getConstants(), true, false );
-    writeAttributeMembers( writer, interfaceType, definition.getAttributes() );
+    writeAttributes( writer, interfaceType, definition.getAttributes() );
     writeOperations( writer, interfaceType, definition.getOperations(), s -> false );
 
     writeJsDoc( writer, "@const", "@type {" + interfaceType + "}" );
@@ -388,7 +388,7 @@ final class ClosureAction
                         Collections.emptyList() );
     }
     writeConstants( writer, type, definition.getConstants(), !hasNoJsType, true );
-    writeAttributeMembers( writer, type, definition.getAttributes() );
+    writeAttributes( writer, type, definition.getAttributes() );
     writeOperations( writer, type, operations, operationName -> {
       InterfaceDefinition interfaceDefinition = definition.getSuperInterface();
       while ( null != interfaceDefinition )
@@ -571,20 +571,20 @@ final class ClosureAction
     }
   }
 
-  private void writeAttributeMembers( @Nonnull final Writer writer,
+  private void writeAttributes( @Nonnull final Writer writer,
                                       @Nonnull final String type,
-                                      @Nonnull final List<AttributeMember> attributes )
+                                @Nonnull final List<AttributeMember> attributes )
     throws IOException
   {
     for ( final AttributeMember attribute : attributes )
     {
-      writeAttributeMember( writer, type, attribute );
+      writeAttribute( writer, type, attribute );
     }
   }
 
-  private void writeAttributeMember( @Nonnull final Writer writer,
+  private void writeAttribute( @Nonnull final Writer writer,
                                      @Nonnull final String type,
-                                     @Nonnull final AttributeMember attribute )
+                               @Nonnull final AttributeMember attribute )
     throws IOException
   {
     writer.write( "/** @type {" );
