@@ -31,15 +31,39 @@ task 'data:force_fetch' do
   end
 end
 
-%w(complete react4j).each do |pipeline|
-  desc "Run the #{pipeline} pipeline"
-  task "data:run_#{pipeline}_pipeline" do
-    in_dir(WORKSPACE_DIR) do
-      run_webtack(%W(--verbose -d data run #{pipeline}))
-    end
+desc 'Run the react4j pipeline'
+task 'data:run_react4j_pipeline' do
+  in_dir(WORKSPACE_DIR) do
+    run_webtack(%w(--verbose -d data run react4j))
   end
-  task 'data:run_pipelines' => %W(data:run_#{pipeline}_pipeline)
+end
+
+desc 'Run the complete pipeline'
+task 'data:run_complete_pipeline' do
+  in_dir(WORKSPACE_DIR) do
+    run_webtack(%w(--verbose -d data run complete))
+  end
+
+  a = artifact(:closure_compiler)
+  a.invoke
+
+  output = "#{WORKSPACE_DIR}/target/akasha-java/tmp/output.js"
+  FileUtils.mkdir_p File.dirname(output)
+
+  args = []
+  args << Java::Commands.path_to_bin('java')
+  args << '-jar'
+  args << a.to_s
+  args << '--compilation_level' << 'ADVANCED'
+  args << '--env' << 'CUSTOM'
+  args << '--warning_level' << 'VERBOSE'
+  args << '--inject_libraries' << 'false'
+  args << '--js_output_file' << output
+  args << '--jscomp_error' << "'*'"
+  args << "#{WORKSPACE_DIR}/akasha/java/generated/webtack/main/js/akasha/Akasha.externs.js"
+
+  sh args.join(' ')
 end
 
 desc 'Run all of the pipelines'
-task 'data:run_pipelines'
+task 'data:run_pipelines' => %w(data:run_complete_pipeline data:run_react4j_pipeline)
