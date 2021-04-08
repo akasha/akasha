@@ -11,6 +11,7 @@
 * Remove the `applets` collection attribute from the `Document` type as it is always empty and only exists for backwards compatibility.
 * Remove the `external` attribute from the `Window` type and the associated type of the of attribute as the field only exists for backwards compatibility and the operations on the associated type do nothing.
 * Change the implementation of `JsUtil` so that it uses `Js.uncheckedCast(...)` to lie to the type system. The previous implementation used JSNI which was difficult to make compatible with J2CL without introducing an incompatibility with GWT.
+* Add action that generates closure externs based on the WebIDL schema. Closure externs can not exactly represent the type system as present in the browser so when compromises had to be made, guidance was taken from the hand-written externs. These externs have been sufficient to get some akasha based applications converted to J2CL/Closure but they will evolve to a more complete state. The `@nosideeffects` type annotation has not been added to any extern but the type annotation is expected to be present in the future. The closure externs are also missing affordances catering to hand-written javascript and this is expected to be added as needed.
 
 ### [v0.05](https://github.com/akasha/akasha/tree/v0.05) (2021-03-30) · [Full Changelog](https://github.com/akasha/akasha/compare/v0.04...v0.05) · [API Differences](https://akasha.github.io/akasha-java/api-diff/?key=akasha-java&old=0.04&new=0.05) · [Source Diff](https://github.com/akasha/akasha-java/compare/v0.04...v0.05)
 
