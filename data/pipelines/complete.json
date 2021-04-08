@@ -2,12 +2,6 @@
   "pre": ["base"],
   "stages": [
     {
-      "name": "Emit",
-      "config": {
-        "filePattern": "akasha/java/generated/webtack/main/resources/akasha/Akasha.webidl"
-      }
-    },
-    {
       "name": "Jsinterop",
       "config": {
         "externalTypeMapping": [
@@ -20,6 +14,12 @@
         "outputDirectory": "akasha/java/generated/webtack",
         "packageName": "akasha",
         "globalInterface": "Window"
+      }
+    },
+    {
+      "name": "Emit",
+      "config": {
+        "filePattern": "akasha/java/generated/webtack/main/resources/akasha/Akasha.webidl"
       }
     },
     {
