@@ -122,6 +122,18 @@ public final class InterfaceDefinition
     return _operations;
   }
 
+  @Nullable
+  public OperationMember findOperationByName( @Nonnull final String name )
+  {
+    return getOperations().stream().filter( c -> name.equals( c.getName() ) ).findFirst().orElse( null );
+  }
+
+  @Nonnull
+  public OperationMember getOperationByName( @Nonnull final String name )
+  {
+    return Objects.requireNonNull( findOperationByName( name ), "Missing expected Operation with name " + name );
+  }
+
   @Nonnull
   public List<EventMember> getEvents()
   {
