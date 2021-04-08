@@ -1,6 +1,9 @@
 EventInit
 OptionalAnyDict
 PromiseRejectionEventInit
+RTCAnswerOptions
+RTCOfferAnswerOptions
+RTCOfferOptions
 RequiredAnyDict
 Storage
 StorageEventInit

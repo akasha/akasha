@@ -13,6 +13,16 @@ dictionary PromiseRejectionEventInit : EventInit {
   any reason;
 };
 
+dictionary RTCAnswerOptions : RTCOfferAnswerOptions {
+};
+
+dictionary RTCOfferAnswerOptions {
+};
+
+dictionary RTCOfferOptions : RTCOfferAnswerOptions {
+  boolean iceRestart = false;
+};
+
 dictionary RequiredAnyDict {
   required any someValue;
 };

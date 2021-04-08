@@ -253,13 +253,26 @@ final class ClosureAction
   private void writeDictionary( @Nonnull final Writer writer, @Nonnull final DictionaryDefinition definition )
     throws IOException
   {
-    writer.write( "/**\n * @typedef {{" );
-
-    boolean first = true;
+    final List<DictionaryMember> members = new ArrayList<>();
     DictionaryDefinition dict = definition;
     while ( null != dict )
     {
-      for ( final DictionaryMember member : dict.getMembers() )
+      members.addAll( dict.getMembers() );
+      dict = dict.getSuperDictionary();
+    }
+
+    if ( members.isEmpty() )
+    {
+      writer.write( "/**\n * @record\n */\nvar " );
+      writer.write( definition.getName() );
+      writer.write( ";\n" );
+    }
+    else
+    {
+      writer.write( "/**\n * @typedef {{" );
+
+      boolean first = true;
+      for ( final DictionaryMember member : members )
       {
         if ( !first )
         {
@@ -292,12 +305,11 @@ final class ClosureAction
           writeType( writer, type );
         }
       }
-      dict = dict.getSuperDictionary();
-    }
 
-    writer.write( "}}\n */\nvar " );
-    writer.write( definition.getName() );
-    writer.write( ";\n" );
+      writer.write( "}}\n */\nvar " );
+      writer.write( definition.getName() );
+      writer.write( ";\n" );
+    }
   }
 
   private void writeNamespace( @Nonnull final Writer writer, @Nonnull final NamespaceDefinition definition )

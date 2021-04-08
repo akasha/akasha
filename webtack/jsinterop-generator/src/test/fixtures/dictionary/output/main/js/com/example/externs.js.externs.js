@@ -7,6 +7,14 @@
  */
 var OptionalAnyDict;
 /**
+ * @record
+ */
+var RTCOfferAnswerOptions;
+/**
+ * @typedef {{iceRestart:(!boolean|undefined)}}
+ */
+var RTCOfferOptions;
+/**
  * @typedef {{promise:!Promise<*>,reason:(*|undefined),bubbles:(!boolean|undefined),cancelable:(!boolean|undefined),composed:(!boolean|undefined)}}
  */
 var PromiseRejectionEventInit;
@@ -30,6 +38,10 @@ var RequiredAnyDict;
  * @typedef {{key:(?string|undefined),newValue:(?string|undefined),oldValue:(?string|undefined),storageArea:(?Storage|undefined),url:(!string|undefined),bubbles:(!boolean|undefined),cancelable:(!boolean|undefined),composed:(!boolean|undefined)}}
  */
 var StorageEventInit;
+/**
+ * @record
+ */
+var RTCAnswerOptions;
 /**
  * @constructor
  * @private
