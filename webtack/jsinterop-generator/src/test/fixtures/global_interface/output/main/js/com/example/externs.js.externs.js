@@ -89,3 +89,17 @@ EventTarget.prototype.dispatchEvent = function(event) {}
  * @return {undefined}
  */
 EventTarget.prototype.addEventListener = function(type,callback,options) {}
+/** @type {!boolean} */ var closed;
+/** @type {!boolean} */ var isSecureContext;
+/** @type {!string} */ var name;
+/**
+ * @param {!string} name
+ * @return {!Object}
+ */
+function get(name) {}
+/**
+ * @param {(!number|!ScrollToOptions)=} arg0
+ * @param {!number=} arg1
+ * @return {undefined}
+ */
+function scroll(arg0,arg1) {}

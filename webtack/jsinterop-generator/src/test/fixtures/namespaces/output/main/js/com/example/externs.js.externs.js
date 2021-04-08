@@ -63,3 +63,4 @@ var WebAssembly;
  */
 function Window() {}
 /** @type {!boolean} */ Window.prototype.closed;
+/** @type {!boolean} */ var closed;

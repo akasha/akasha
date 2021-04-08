@@ -409,7 +409,7 @@ final class ClosureAction
   }
 
   private void writeOperations( @Nonnull final Writer writer,
-                                @Nonnull final String type,
+                                @Nullable final String type,
                                 @Nonnull final List<OperationMember> operations,
                                 @Nonnull final Predicate<String> isOperationOverride )
     throws IOException
@@ -454,6 +454,9 @@ final class ClosureAction
     throws IOException
   {
     // Should we define externs for globalThis.X, window.X and X ?
+    writeConstants( writer, null, definition.getConstants(), true, false );
+    writeAttributes( writer, null, definition.getAttributes() );
+    writeOperations( writer, null, definition.getOperations(), name -> false );
   }
 
   private void writeTypeCatalog()
@@ -576,7 +579,7 @@ final class ClosureAction
   }
 
   private void writeAttributes( @Nonnull final Writer writer,
-                                      @Nonnull final String type,
+                                @Nullable final String type,
                                 @Nonnull final List<AttributeMember> attributes )
     throws IOException
   {
@@ -587,22 +590,30 @@ final class ClosureAction
   }
 
   private void writeAttribute( @Nonnull final Writer writer,
-                                     @Nonnull final String type,
+                               @Nullable final String type,
                                @Nonnull final AttributeMember attribute )
     throws IOException
   {
     writer.write( "/** @type {" );
     writeType( writer, attribute.getType() );
     writer.write( "} */ " );
-    writer.write( type );
-    writer.write( "." );
-    // TODO: Should INHERIT imply @Override
-    if ( !attribute.getModifiers().contains( AttributeMember.Modifier.STATIC ) )
+    if ( null != type )
     {
-      writer.write( "prototype." );
+      writer.write( type );
+      writer.write( "." );
+      if ( !attribute.getModifiers().contains( AttributeMember.Modifier.STATIC ) )
+      {
+        writer.write( "prototype." );
+      }
+      writer.write( attribute.getName() );
+      writer.write( ";\n" );
     }
-    writer.write( attribute.getName() );
-    writer.write( ";\n" );
+    else
+    {
+      writer.write( "var " );
+      writer.write( attribute.getName() );
+      writer.write( ";\n" );
+    }
   }
 
   private void writeConstants( @Nonnull final Writer writer,
@@ -625,8 +636,8 @@ final class ClosureAction
     }
   }
 
-                                 @Nonnull final String type,
   private void writeConstant( @Nonnull final Writer writer,
+                              @Nullable final String type,
                               @Nonnull final ConstMember constant,
                               final boolean onPrototype )
     throws IOException
@@ -634,18 +645,27 @@ final class ClosureAction
     writer.write( "/** @const {" );
     writeType( writer, constant.getType() );
     writer.write( "} */ " );
-    writer.write( type );
-    writer.write( "." );
-    if ( onPrototype )
+    if ( null != type )
     {
-      writer.write( "prototype." );
+      writer.write( type );
+      writer.write( "." );
+      if ( onPrototype )
+      {
+        writer.write( "prototype." );
+      }
+      writer.write( constant.getName() );
+      writer.write( ";\n" );
     }
-    writer.write( constant.getName() );
-    writer.write( ";\n" );
+    else
+    {
+      writer.write( "var " );
+      writer.write( constant.getName() );
+      writer.write( ";\n" );
+    }
   }
 
   private void writeOperation( @Nonnull final Writer writer,
-                               @Nonnull final String typeName,
+                               @Nullable final String type,
                                @Nonnull final String name,
                                @Nonnull final List<Argument> arguments,
                                @Nonnull final Type returnType,
@@ -663,11 +683,20 @@ final class ClosureAction
       writer.write( " * @override\n" );
     }
     writer.write( " */\n" );
-    writer.write( typeName +
-                  "." +
-                  ( onPrototype ? "prototype." : "" ) +
-                  name +
-                  " = function" + toArgumentsList( arguments ) + " {}\n" );
+    if ( null != type )
+    {
+      writer.write( type );
+      writer.write( "." );
+      if ( onPrototype )
+      {
+        writer.write( "prototype." );
+      }
+      writer.write( name + " = function" + toArgumentsList( arguments ) + " {}\n" );
+    }
+    else
+    {
+      writer.write( "function " + name + toArgumentsList( arguments ) + " {}\n" );
+    }
   }
 
   private void writeConstructor( @Nonnull final Writer writer,
