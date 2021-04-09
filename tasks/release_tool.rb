@@ -46,7 +46,7 @@ module Buildr
       def derive_next_version(current_version, options = {})
         return options[:next_version_action].call(current_version) if options[:next_version_action]
         version_parts = current_version.split('.')
-        next_version = "#{version_parts[0]}.#{sprintf('%02d', version_parts[1].to_i + 1)}#{version_parts.length > 2 ? ".#{version_parts[2]}" : ''}"
+        "#{version_parts[0]}.#{sprintf('%02d', version_parts[1].to_i + 1)}#{version_parts.length > 2 ? ".#{version_parts[2]}" : ''}"
       end
 
       private
