@@ -42,7 +42,11 @@ module Buildr
         sh args.join(' ')
         if File.exist?(output_file)
           data = JSON.parse(IO.read(output_file, :encoding => 'UTF-8'))
-          FileUtils.rm_f output_file if data.empty?
+          if data.empty?
+            FileUtils.rm_f output_file
+          else
+            sh "git add #{output_file}"
+          end
         end
       end
 
