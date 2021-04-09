@@ -1,6 +1,10 @@
 # Change Log
 
-### Unreleased
+### [v0.06](https://github.com/akasha/akasha/tree/v0.06) (2021-04-10) · [Full Changelog](https://github.com/spritz/spritz/compare/v0.05...v0.06) · [API Differences](https://akasha.github.io/akasha-java/api-diff/?key=akasha-java&old=0.05&new=0.06) · [Source Diff](https://github.com/akasha/akasha-java/compare/v0.05...v0.06)
+
+The release includes 713 non breaking API changes and 2254 breaking API changes
+
+Changes in this release:
 
 * Remove the `@JsOverlay` annotation from constant "aliases" added to the static namespace class. This was incorrect behaviour and J2CL does not allow the construct.
 * Change the way dictionaries with subtypes are represented so that any dictionary that has subtypes moves the chainable builder methods to a separate subtype nested within the dictionary type. This avoids the scenario where a `@JsOverlay` annotated method in the subtype would override a `@JsOverlay` annotated method in the super type. This was incorrect behaviour and J2CL does not allow the construct.
