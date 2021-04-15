@@ -147,8 +147,7 @@ public final class DocRepositoryRuntime
       }
       catch ( final Exception e )
       {
-        //TODO: Log error message here
-        return null;
+        throw new IllegalStateException( "Failed to load doc entry from " + path, e );
       }
     }
     else
