@@ -257,15 +257,6 @@ public final class DocRepositoryRuntime
     }
   }
 
-  @Nonnull
-  public DocIndex getIndexForType( @Nonnull final String name )
-    throws IndexException
-  {
-    final DocIndex docIndex = findIndexForType( name );
-    assert null != docIndex;
-    return docIndex;
-  }
-
   @Nullable
   public DocIndex findIndexForType( @Nonnull final String name )
     throws IndexException
