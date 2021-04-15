@@ -242,7 +242,7 @@ final class React4jAction
 
     if ( isBaseType( definition ) )
     {
-      // TODO: Add the custom logic for combining multiple classnames here?
+      // Maybe add the custom logic for combining multiple classnames here?
 
       // id is a real "dom" attribute inherited from "Element" WebIDL interface
       type.addMethod( MethodSpec
@@ -398,7 +398,7 @@ final class React4jAction
   {
     for ( final AttributeMember attribute : selectAttributes( definition ) )
     {
-      // TODO: The attribute definitions should map event handlers to react equivalents
+      // The attribute definitions should map event handlers to react equivalents?
       final String attributeName = javaMethodName( attribute );
       if ( Kind.Boolean == attribute.getType().getKind() )
       {
@@ -545,7 +545,7 @@ final class React4jAction
            permittedContent.contains( "transparent content" ) ||
            permittedContent.contains( "flow content" ) )
       {
-        // TODO: Asses downstream apps but it seems like we could probably remove all of these except STRING
+        // Asses downstream apps but it seems like we could probably remove all of these except STRING
         type.addMethod( emitElementFactoryWithSimpleContentAndInputs( element, inputsParameter, BasicTypes.STRING ) );
         type.addMethod( emitElementFactoryWithSimpleContent( element, BasicTypes.STRING ) );
         type.addMethod( emitElementFactoryWithSimpleContentAndInputs( element, inputsParameter, TypeName.BYTE ) );
