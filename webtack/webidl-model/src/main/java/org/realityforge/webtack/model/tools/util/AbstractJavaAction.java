@@ -374,8 +374,8 @@ public abstract class AbstractJavaAction
            Kind.LongLong == kind ||
            Kind.UnsignedLongLong == kind ) )
     {
-      // TODO: This is uncomfortable mapping. Not sure what the solutions is...
-      //  We should emit a warning a deal with it later
+      // This is uncomfortable mapping. Not sure what the solutions is...
+      // Maybe we should emit a warning so we can track down the scenarios
       return TypeName.DOUBLE.box();
     }
     else if ( Kind.Any == kind )
@@ -473,10 +473,11 @@ public abstract class AbstractJavaAction
           final TypedefDefinition typedef = schema.getTypedefByName( name );
           if ( Kind.Union == typedef.getType().getKind() )
           {
-            // TODO: There is a single named union in the HTML API which is MediaProvider. We
-            //  could live with including this unnecessary abstraction or copy the logic for
-            //  expanding types from jsinterop generator and expand this to it's subtypes ala
-            //  MediaStream, MediaSource or Blob. At the moment the extra complexity is unjustified
+            // There is a single named union in the HTML API which is MediaProvider which we
+            // convert to a MarkerType so this does not actually appear. If it does appear we
+            // could live with including this unnecessary abstraction or copy the logic for
+            // expanding types from jsinterop generator and expand this to it's subtypes ala
+            // MediaStream, MediaSource or Blob. At the moment the extra complexity is unjustified
             return lookupClassName( name );
           }
           else
