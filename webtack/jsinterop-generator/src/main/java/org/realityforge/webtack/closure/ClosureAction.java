@@ -317,24 +317,32 @@ final class ClosureAction
   {
     final String name = definition.getName();
 
-    // There is no actual interface for the underlying type that matches this name as the underlying
-    // type is the same name as namespace. But introducing this synthetic type is the closest we can get
-    // to getting closure to handle this scenario correctly
-    final String interfaceType = name + "Interface";
-    writeConstructor( writer,
-                      interfaceType,
-                      null,
-                      Collections.emptyList(),
-                      true,
-                      Collections.singletonList( "@private" ) );
-    writeConstants( writer, interfaceType, definition.getConstants(), true, false );
-    writeAttributes( writer, interfaceType, definition.getAttributes() );
-    writeOperations( writer, interfaceType, definition.getOperations(), s -> false );
-
-    writeJsDoc( writer, "@const", "@type {" + interfaceType + "}" );
+    writeJsDoc( writer, "@const" );
     writer.write( "var " );
     writer.write( name );
     writer.write( ";\n" );
+
+    for ( final ConstMember constant : definition.getConstants() )
+    {
+      writer.write( "/** @const {" );
+      writeType( writer, constant.getType() );
+      writer.write( "} */ " );
+      writer.write( name );
+      writer.write( "." );
+      writer.write( constant.getName() );
+      writer.write( ";\n" );
+    }
+    for ( final AttributeMember attribute : definition.getAttributes() )
+    {
+      writer.write( "/** @type {" );
+      writeType( writer, attribute.getType() );
+      writer.write( "} */ " );
+      writer.write( name );
+      writer.write( "." );
+      writer.write( attribute.getName() );
+      writer.write( ";\n" );
+    }
+    writeOperations( writer, name, definition.getOperations(), true, s -> false );
   }
 
   private void writeInterface( @Nonnull final Writer writer, @Nonnull final InterfaceDefinition definition )
@@ -389,7 +397,7 @@ final class ClosureAction
     }
     writeConstants( writer, type, definition.getConstants(), !hasNoJsType, true );
     writeAttributes( writer, type, definition.getAttributes() );
-    writeOperations( writer, type, operations, name -> shouldOperationBeAnOverride( definition, name ) );
+    writeOperations( writer, type, operations, false, name -> shouldOperationBeAnOverride( definition, name ) );
   }
 
   private boolean shouldOperationBeAnOverride( @Nonnull final InterfaceDefinition definition,
@@ -411,6 +419,7 @@ final class ClosureAction
   private void writeOperations( @Nonnull final Writer writer,
                                 @Nullable final String type,
                                 @Nonnull final List<OperationMember> operations,
+                                final boolean onNamespace,
                                 @Nonnull final Predicate<String> isOperationOverride )
     throws IOException
   {
@@ -425,7 +434,7 @@ final class ClosureAction
       final String operationName = entry.getKey();
       final List<OperationMember> operationsToMerge = entry.getValue();
       final OperationMember templateOperation = operationsToMerge.get( 0 );
-      final boolean isNonStaticOperation = OperationMember.Kind.STATIC != templateOperation.getKind();
+      final boolean isNonStaticOperation = !onNamespace && OperationMember.Kind.STATIC != templateOperation.getKind();
       final boolean isOverride = isNonStaticOperation && isOperationOverride.test( operationName );
       if ( 1 == operationsToMerge.size() )
       {
@@ -453,10 +462,9 @@ final class ClosureAction
   private void writeGlobalInterface( @Nonnull final Writer writer, @Nonnull final InterfaceDefinition definition )
     throws IOException
   {
-    // Should we define externs for globalThis.X, window.X and X ?
     writeConstants( writer, null, definition.getConstants(), true, false );
     writeAttributes( writer, null, definition.getAttributes() );
-    writeOperations( writer, null, definition.getOperations(), name -> false );
+    writeOperations( writer, null, definition.getOperations(), false, name -> false );
   }
 
   private void writeTypeCatalog()

@@ -41,20 +41,14 @@ var AddEventListenerOptions;
  */
 var EventInit;
 /**
- * @constructor
- * @private
+ * @const
  */
-function CSSInterface() {}
+var CSS;
 /**
  * @param {!string} ident
  * @return {!string}
  */
-CSSInterface.prototype.escape = function(ident) {}
-/**
- * @const
- * @type {CSSInterface}
- */
-var CSS;
+CSS.escape = function(ident) {}
 /**
  * @constructor
  * @extends {EventTarget}

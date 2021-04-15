@@ -2,6 +2,7 @@
 
 ### Unreleased
 
+* Change the way namespaces are represented in closure externs. Namespace were previously represented as a `@const` variable with a type that defined the interface which was never correct from a conceptual point of view but is consistent with how some namespaces are represented in existing closure externs. The new representation defines properties and functions on a `@const` variable and omits the type. This avoids a type cast error due to code structure of generated Java code.
 * Explicitly specify the `javaemul.internal.annotations` dependency to make it easy to replace dependency as part of J2CL project. 
 
 ### [v0.06](https://github.com/akasha/akasha/tree/v0.06) (2021-04-10) · [Full Changelog](https://github.com/spritz/spritz/compare/v0.05...v0.06) · [API Differences](https://akasha.github.io/akasha-java/api-diff/?key=akasha-java&old=0.05&new=0.06) · [Source Diff](https://github.com/akasha/akasha-java/compare/v0.05...v0.06)

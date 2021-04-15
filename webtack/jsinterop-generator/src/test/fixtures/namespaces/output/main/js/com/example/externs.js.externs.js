@@ -3,60 +3,42 @@
  * @externs
  */
 /**
- * @constructor
- * @private
+ * @const
  */
-function consoleInterface() {}
+var console;
 /**
  * @param {...*} data
  * @return {undefined}
  */
-consoleInterface.prototype.warn = function(data) {}
+console.warn = function(data) {}
 /**
  * @param {!boolean=} condition
  * @param {...*} data
  * @return {undefined}
  */
-consoleInterface.prototype.assert = function(condition,data) {}
+console.assert = function(condition,data) {}
 /**
  * @return {undefined}
  */
-consoleInterface.prototype.clear = function() {}
+console.clear = function() {}
 /**
  * @const
- * @type {consoleInterface}
  */
-var console;
-/**
- * @constructor
- * @private
- */
-function CSSInterface() {}
+var CSS;
 /**
  * @param {!string} ident
  * @return {!string}
  */
-CSSInterface.prototype.escape = function(ident) {}
+CSS.escape = function(ident) {}
 /**
  * @const
- * @type {CSSInterface}
  */
-var CSS;
-/**
- * @constructor
- * @private
- */
-function WebAssemblyInterface() {}
+var WebAssembly;
 /**
  * @param {!BufferSource} bytes
  * @return {!boolean}
  */
-WebAssemblyInterface.prototype.validate = function(bytes) {}
-/**
- * @const
- * @type {WebAssemblyInterface}
- */
-var WebAssembly;
+WebAssembly.validate = function(bytes) {}
 /**
  * @constructor
  * @private
