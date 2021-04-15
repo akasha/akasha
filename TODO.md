@@ -50,6 +50,8 @@ complete as there is too much un-said.
 
 * Scan the main closure externs and figure out a heuristic for `@nosideeffects`
 
+* Add affordances for js developers like iterable
+
 # Java Generation
 
 * Any type that defines a `[@@iterator]()` method should implement `JsIterable<X>`.

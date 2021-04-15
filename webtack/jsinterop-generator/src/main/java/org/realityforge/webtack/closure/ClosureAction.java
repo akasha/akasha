@@ -733,7 +733,6 @@ final class ClosureAction
       writer.write( additionalLine );
       writer.write( "\n" );
     }
-    //TODO: Implement types like iterable
     writeArgumentsJsDoc( writer, arguments );
     writer.write( " */\n" );
     if ( typeName.contains( "." ) )
