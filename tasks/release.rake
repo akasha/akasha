@@ -4,8 +4,7 @@ Buildr::ReleaseTool.define_release_task do |t|
   t.extract_version_from_changelog
   t.zapwhite
   t.ensure_git_clean
-  # The code has TODOs ... so ignore this stage
-  #t.verify_no_todo
+  t.verify_no_todo
   t.cleanup_staging
   t.build(:additional_tasks => 'do_test_api_diff')
   t.patch_changelog('akasha/akasha',
