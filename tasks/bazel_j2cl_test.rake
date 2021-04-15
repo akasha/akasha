@@ -2,16 +2,16 @@ module Buildr
   class BazelJ2cl
     class << self
 
-      def define_bazel_j2cl_test(root_project, projects_to_upload, options = {})
+      def define_bazel_j2cl_test(root_project, projects, requires, options = {})
         desc 'Verify that the specified packages can be compiled with J2CL'
         root_project.task('bazel_j2cl_test') do
-          perform_bazel_test(root_project, projects_to_upload, options)
+          perform_bazel_test(root_project, projects, requires, options)
         end
       end
 
       private
 
-      def perform_bazel_test(root_project, projects, options)
+      def perform_bazel_test(root_project, projects, requires, options)
         packages = projects.collect { |p| p.packages }.flatten.select{|p| p.classifier.nil? }.sort.uniq
 
         depgen_cache_dir = root_project._(:target, :depgen_artifact_cache)
@@ -23,12 +23,18 @@ module Buildr
         FileUtils.mkdir_p bazel_workspace_dir
         write_bazelrc(bazel_workspace_dir)
         write_workspace(bazel_workspace_dir)
-        File.write("#{bazel_workspace_dir}/src.js", "goog.module('bazel.BuildTest');\n")
+        write_js_src(bazel_workspace_dir, requires)
         write_build(bazel_workspace_dir, packages)
         write_dependency_yml(bazel_workspace_dir, cache_dir, packages, options)
         write_dependency_bzl(bazel_workspace_dir, depgen_cache_dir)
 
         sh "cd #{bazel_workspace_dir} && bazel build :all"
+      end
+
+      def write_js_src(bazel_workspace_dir, requires)
+        File.write("#{bazel_workspace_dir}/src.js",
+                   "goog.module('bazel.BuildTest');\n" +
+                     requires.collect { |r| "goog.require('#{r}');\n" }.join)
       end
 
       def write_bazelrc(dir)
