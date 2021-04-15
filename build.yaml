@@ -32,3 +32,5 @@ artifacts:
   react4j_dom: org.realityforge.react4j:react4j-dom:jar:0.181
 
   closure_compiler: com.google.javascript:closure-compiler:jar:v20210302
+
+  javaemul_internal_annotations: org.realityforge.javaemul.internal.annotations:javaemul.internal.annotations:jar:0.01

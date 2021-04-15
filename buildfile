@@ -14,6 +14,7 @@ JSINTEROP_DEPS = [
   :javax_annotation,
   :jetbrains_annotations,
   :jsinterop_annotations,
+  :javaemul_internal_annotations,
   :jsinterop_base
 ]
 
