@@ -192,6 +192,13 @@ define 'akasha' do
     package(:javadoc)
   end
 
+  if ENV['J2CL'].nil? || ENV['J2CL'] == project.name
+    t = Buildr::BazelJ2cl.define_bazel_j2cl_test(Buildr.project('akasha'),
+                                                 [Buildr.project('akasha:java')],
+                                                 :javax_annotation => true)
+    package.enhance([t])
+  end
+
   iml.excluded_directories << project._('tmp')
 
   ipr.add_default_testng_configuration(:jvm_args => '-ea -Dwebtack.output_fixture_data=false -Dwebtack.fixture_dir=webtack/webidl-model/src/test/resources')

@@ -4,6 +4,21 @@ jdk:
   - oraclejdk8
 rvm:
   - 2.7.2
+before_install:
+  - |
+    if [ "${TRAVIS_OS_NAME}" = "osx" ]; then
+      OS=darwin
+    else
+      sysctl kernel.unprivileged_userns_clone=1
+      OS=linux
+    fi
+    BAZEL_VERSION=$(cat ".bazelversion")
+    BAZELISK_VERSION=v1.0
+    if [ ! -d "${HOME}/bin" ]; then
+      mkdir "${HOME}/bin"
+    fi
+    wget -O "${HOME}/bin/bazel" "https://github.com/bazelbuild/bazelisk/releases/download/${BAZELISK_VERSION}/bazelisk-${OS}-amd64"
+    chmod +x "${HOME}/bin/bazel"
 install:
   - rvm install ruby-2.7.2
   - rvm use 2.7.2
