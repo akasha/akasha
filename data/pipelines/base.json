@@ -42,6 +42,16 @@
       }
     },
     {
+      "name": "AddExtendedAttribute",
+      "description": "Convert MediaProvider into marker type",
+      "sourceSelector": "name=whatwg_html",
+      "config": {
+        "namePattern": "^MediaProvider$",
+        "extendedAttribute": "MarkerType",
+        "types": ["typedef"]
+      }
+    },
+    {
       "name": "RemoveElement",
       "description": "Remove ArrayBufferView as redefined with more general structure in common_patch",
       "sourceSelector": "name=common",
