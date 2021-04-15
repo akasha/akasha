@@ -4,7 +4,7 @@
 
 * Change the way namespaces are represented in closure externs. Namespace were previously represented as a `@const` variable with a type that defined the interface which was never correct from a conceptual point of view but is consistent with how some namespaces are represented in existing closure externs. The new representation defines properties and functions on a `@const` variable and omits the type. This avoids a type cast error due to code structure of generated Java code.
 * Add some manual patches to closure externs that are required due to the types required in the base closure library.
-* Explicitly specify the `javaemul.internal.annotations` dependency to make it easy to replace dependency as part of J2CL project. 
+* Explicitly specify the `javaemul.internal.annotations` dependency rather than inheriting it as an implicit dependency from GWT. Making this dependency explicit makes it easier to replace this dependency when using J2CL to compile the project. 
 * Convert the `MediaProvider` java type to being a marker interface to reduce the complexity when interacting with that type.
 
 ### [v0.06](https://github.com/akasha/akasha/tree/v0.06) (2021-04-10) · [Full Changelog](https://github.com/spritz/spritz/compare/v0.05...v0.06) · [API Differences](https://akasha.github.io/akasha-java/api-diff/?key=akasha-java&old=0.05&new=0.06) · [Source Diff](https://github.com/akasha/akasha-java/compare/v0.05...v0.06)
