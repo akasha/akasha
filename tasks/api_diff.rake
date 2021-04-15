@@ -1,4 +1,4 @@
-require File.expand_path(File.dirname(__FILE__) + '/api_diff_tool')
+require 'buildr/api_diff_tool.rb'
 
 desc 'Update the api_differences for the next version'
 task 'update_api_diff' do
