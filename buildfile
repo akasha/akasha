@@ -197,7 +197,7 @@ define 'akasha' do
                                                  [Buildr.project('akasha:java')],
                                                  %w[akasha.Global],
                                                  :javax_annotation => true)
-    package.enhance([t])
+    test.enhance([t])
   end
 
   iml.excluded_directories << project._('tmp')
