@@ -10,6 +10,7 @@
 *.xml text
 *.yaml text
 *.yml text
+.bazelversion text
 .gitattributes text
 .gitignore text
 .ruby-version text
