@@ -1,6 +1,10 @@
 # Change Log
 
-### Unreleased
+### [v0.07](https://github.com/akasha/akasha/tree/v0.07) (2021-04-17) · [Full Changelog](https://github.com/spritz/spritz/compare/v0.06...v0.07) · [API Differences](https://akasha.github.io/akasha-java/api-diff/?key=akasha-java&old=0.06&new=0.07) · [Source Diff](https://github.com/akasha/akasha-java/compare/v0.06...v0.07)
+
+The release includes 3 non breaking API changes and 3 breaking API changes
+
+Changes in this release:
 
 * Change the way namespaces are represented in closure externs. Namespace were previously represented as a `@const` variable with a type that defined the interface which was never correct from a conceptual point of view but is consistent with how some namespaces are represented in existing closure externs. The new representation defines properties and functions on a `@const` variable and omits the type. This avoids a type cast error due to code structure of generated Java code.
 * Add some manual patches to closure externs that are required due to the types required in the base closure library.
