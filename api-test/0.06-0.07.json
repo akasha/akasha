@@ -1,0 +1,116 @@
+[
+  {
+    "code": "java.class.nowImplementsInterface",
+    "description": "Class now implements interface 'akasha.MediaProvider'.",
+    "element": "class akasha.Blob",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.Blob",
+      "classSimpleName": "Blob",
+      "elementKind": "class",
+      "interface": "akasha.MediaProvider",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'javax.annotation.Generated'.",
+    "element": "class akasha.gl.WebGL2RenderingContext",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@javax.annotation.Generated({\"org.realityforge.webtack\"})",
+      "annotationType": "javax.annotation.Generated",
+      "classQualifiedName": "akasha.gl.WebGL2RenderingContext",
+      "classSimpleName": "WebGL2RenderingContext",
+      "elementKind": "class",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.class.nowImplementsInterface",
+    "description": "Class now implements interface 'akasha.MediaProvider'.",
+    "element": "class akasha.media.MediaSource",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.media.MediaSource",
+      "classSimpleName": "MediaSource",
+      "elementKind": "class",
+      "interface": "akasha.MediaProvider",
+      "package": "akasha.media"
+    }
+  },
+  {
+    "code": "java.class.nowImplementsInterface",
+    "description": "Class now implements interface 'akasha.MediaProvider'.",
+    "element": "class akasha.media.MediaStream",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.media.MediaStream",
+      "classSimpleName": "MediaStream",
+      "elementKind": "class",
+      "interface": "akasha.MediaProvider",
+      "package": "akasha.media"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.MediaProvider akasha.MediaProvider::of(akasha.Blob)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.MediaProvider",
+      "classSimpleName": "MediaProvider",
+      "elementKind": "method",
+      "methodName": "of",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.MediaProvider akasha.MediaProvider::of(akasha.media.MediaSource)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.MediaProvider",
+      "classSimpleName": "MediaProvider",
+      "elementKind": "method",
+      "methodName": "of",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.MediaProvider akasha.MediaProvider::of(akasha.media.MediaStream)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.MediaProvider",
+      "classSimpleName": "MediaProvider",
+      "elementKind": "method",
+      "methodName": "of",
+      "package": "akasha"
+    }
+  }
+]
