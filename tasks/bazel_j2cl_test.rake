@@ -101,6 +101,8 @@ generate_targets()
 TEXT
         packages.collect { |d| d.to_spec_hash }.each do |d|
           name = d[:id].gsub('-','_')
+
+          # TODO: defs = ["--env=CUSTOM"] should be added but this is not currently support through j2cl_application
           content += <<TEXT
 
 closure_js_library( name = "#{name}-closure", srcs = ["src.js"], deps = [":#{name}-j2cl"], )
