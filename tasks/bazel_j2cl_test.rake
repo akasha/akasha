@@ -164,7 +164,7 @@ TEXT
       end
 
       def write_dependency_bzl(bazel_workspace_dir, depgen_cache_dir)
-        depgen = Buildr.artifact('org.realityforge.bazel.depgen:bazel-depgen:jar:all:0.10')
+        depgen = Buildr.artifact('org.realityforge.bazel.depgen:bazel-depgen:jar:all:0.12')
         depgen.invoke
 
         args = []
