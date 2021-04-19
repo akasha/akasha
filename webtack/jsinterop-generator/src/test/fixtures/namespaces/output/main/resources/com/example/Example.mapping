@@ -1,12 +1,8 @@
 $Global=com.example.Global
 $GlobalWindow=com.example.GlobalWindow
-$StaticCSS=com.example.CSS
-$StaticMath=com.example.JsMath
-$StaticWebAssembly=com.example.WebAssembly
-$Staticconsole=com.example.Console
 ArrayBuffer=com.example.ArrayBuffer
-CSS=com.example.CSSNamespace
-Math=com.example.JsMathNamespace
-WebAssembly=com.example.WebAssemblyNamespace
+CSS=com.example.CSS
+Math=com.example.JsMath
+WebAssembly=com.example.WebAssembly
 Window=com.example.Window
-console=com.example.ConsoleNamespace
+console=com.example.Console

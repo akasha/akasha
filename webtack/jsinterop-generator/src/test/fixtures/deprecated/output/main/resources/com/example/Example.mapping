@@ -1,8 +1,7 @@
 $Global=com.example.Global
 $GlobalWindow=com.example.GlobalWindow
-$StaticCSS=com.example.CSS
 AddEventListenerOptions=com.example.AddEventListenerOptions
-CSS=com.example.CSSNamespace
+CSS=com.example.CSS
 Event=com.example.Event
 EventInit=com.example.EventInit
 EventListener=com.example.EventListener

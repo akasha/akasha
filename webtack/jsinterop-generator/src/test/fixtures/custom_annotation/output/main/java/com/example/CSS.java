@@ -1,24 +1,22 @@
 package com.example;
 
-import akasha.MyAnnotation;
 import akasha.MyAnnotation2;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@Generated("org.realityforge.webtack")
-@MyAnnotation
 @JsType(
     isNative = true,
-    namespace = JsPackage.GLOBAL,
-    name = "CSS"
+    name = "CSS",
+    namespace = JsPackage.GLOBAL
 )
-public final class CSSNamespace {
-  private CSSNamespace() {
+@Generated("org.realityforge.webtack")
+public final class CSS {
+  private CSS() {
   }
 
   @MyAnnotation2
   @Nonnull
-  public native String escape(@Nonnull String ident);
+  public static native String escape(@Nonnull String ident);
 }

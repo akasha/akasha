@@ -6,16 +6,16 @@ import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
-    namespace = JsPackage.GLOBAL,
-    name = "WebAssembly"
+    name = "WebAssembly",
+    namespace = JsPackage.GLOBAL
 )
-public final class WebAssemblyNamespace {
-  private WebAssemblyNamespace() {
+@Generated("org.realityforge.webtack")
+public final class WebAssembly {
+  private WebAssembly() {
   }
 
-  public native boolean validate(@TxMode @Nonnull String txMode,
+  public static native boolean validate(@TxMode @Nonnull String txMode,
       @MyActiveMode @Nonnull String mode);
 }

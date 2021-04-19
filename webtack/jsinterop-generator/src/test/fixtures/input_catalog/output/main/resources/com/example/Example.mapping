@@ -4,6 +4,6 @@ IDBIndexParameters2=com.example.IDBIndexParameters2
 IDBObjectStore=com.example.IDBObjectStore
 IndexedKeyframeOffsetType=com.example.IndexedKeyframeOffsetType
 StringOrFloatUnion=com.example.StringOrFloatUnion
-WebAssembly=com.example.WebAssemblyNamespace
+WebAssembly=com.example.WebAssembly
 Worker=com.example.Worker
 txMode=com.example.TxMode

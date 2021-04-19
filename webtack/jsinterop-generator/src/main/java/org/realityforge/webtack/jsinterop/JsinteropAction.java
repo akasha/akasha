@@ -188,13 +188,11 @@ final class JsinteropAction
         generatePartialInterface( definition );
       }
     }
-    final List<NamespaceDefinition> namespacesGenerated = new ArrayList<>();
     for ( final NamespaceDefinition definition : schema.getNamespaces() )
     {
       if ( isIdlTypeNotPredefined( definition.getName() ) )
       {
         generateNamespace( definition );
-        namespacesGenerated.add( definition );
       }
     }
 
@@ -216,10 +214,6 @@ final class JsinteropAction
     {
       generateGlobalThisInterface( _globalInterface );
       generateGlobalThisAccessor( _globalInterface );
-      for ( final NamespaceDefinition definition : namespacesGenerated )
-      {
-        generateStaticNamespace( definition );
-      }
     }
 
     if ( _generateTypeMapping )
@@ -417,7 +411,7 @@ final class JsinteropAction
     InterfaceDefinition definition = schema.getInterfaceByName( globalInterface );
     while ( null != definition )
     {
-      generateStaticAttributes( definition.getAttributes(), type, true );
+      generateStaticAttributes( definition.getAttributes(), type );
       generateGlobalOperationsMethods( type, definition.getOperations() );
       generateGlobalEventsMethods( type, schema, definition.getEvents() );
       final String inherits = definition.getInherits();
@@ -426,27 +420,9 @@ final class JsinteropAction
 
     for ( final MixinDefinition mixin : getGlobalMixins( schema ) )
     {
-      generateStaticAttributes( mixin.getAttributes(), type, true );
+      generateStaticAttributes( mixin.getAttributes(), type );
       generateGlobalOperationsMethods( type, mixin.getOperations() );
       generateGlobalEventsMethods( type, schema, mixin.getEvents() );
-    }
-
-    for ( final NamespaceDefinition namespace : schema.getNamespaces() )
-    {
-      final String methodName = NamingUtil.camelCase( safeJsPropertyMethodName( namespace.getName(), false ) );
-      final MethodSpec.Builder namespaceMethod =
-        MethodSpec
-          .methodBuilder( methodName )
-          .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
-          .returns( lookupClassName( namespace.getName() ) )
-          .addAnnotation( BasicTypes.NONNULL )
-          .addStatement( "return globalThis().$N()", methodName );
-      final DocumentationElement documentation = namespace.getDocumentation();
-      if ( null != documentation && documentation.hasDeprecatedTag() )
-      {
-        namespaceMethod.addAnnotation( Deprecated.class );
-      }
-      type.addMethod( namespaceMethod.build() );
     }
 
     writeTopLevelType( "$Global", type );
@@ -465,7 +441,7 @@ final class JsinteropAction
                OperationMember.Kind.DELETER == operationKind ) &&
              null != operation.getName() ) )
       {
-        generateDelegateOperation( operation, type, true );
+        generateDelegateOperation( operation, type );
       }
     }
   }
@@ -490,63 +466,112 @@ final class JsinteropAction
     }
   }
 
-  private void generateStaticConstants( @Nonnull final List<ConstMember> constants,
-                                        @Nonnull final String namespaceName,
-                                        @Nonnull final TypeSpec.Builder type )
-  {
-    constants
-      .stream()
-      .sorted( Comparator.comparing( NamedElement::getName ) )
-      .forEach( constant -> generateStaticConstant( constant, namespaceName, type ) );
-  }
-
-  private void generateStaticConstant( @Nonnull final ConstMember constant,
-                                       @Nonnull final String namespaceName,
-                                       @Nonnull final TypeSpec.Builder type )
-  {
-    final Type constantType = constant.getType();
-    final Type actualType = getSchema().resolveType( constantType );
-    final FieldSpec.Builder field =
-      FieldSpec
-        .builder( toTypeName( actualType ),
-                  constant.getName(),
-                  Modifier.PUBLIC,
-                  Modifier.STATIC,
-                  Modifier.FINAL );
-
-    maybeAddCustomAnnotations( constant, field );
-    maybeAddJavadoc( constant, field );
-    field.initializer( "$T.$N", lookupClassName( namespaceName ), constant.getName() );
-    type.addField( field.build() );
-  }
-
-  private void generateStaticAttributes( @Nonnull final List<AttributeMember> attributes,
-                                         @Nonnull final TypeSpec.Builder type,
-                                         final boolean global )
+  private void generateNamespaceAttributes( @Nonnull final List<AttributeMember> attributes,
+                                            @Nonnull final TypeSpec.Builder type )
   {
     attributes
       .stream()
       .sorted( Comparator.comparing( NamedElement::getName ) )
-      .forEach( attribute -> generateStaticAttribute( attribute, type, global ) );
+      .forEach( attribute -> generateNamespaceAttribute( attribute, type ) );
   }
 
-  private void generateStaticAttribute( @Nonnull final AttributeMember attribute,
-                                        @Nonnull final TypeSpec.Builder type,
-                                        final boolean global )
+  private void generateNamespaceAttribute( @Nonnull final AttributeMember attribute,
+                                           @Nonnull final TypeSpec.Builder type )
   {
     if ( attribute.getModifiers().contains( AttributeMember.Modifier.READ_ONLY ) )
     {
-      generateStaticReadOnlyAttribute( attribute, type, global );
+      generateReadOnlyNamespaceAttribute( attribute, type );
     }
     else
     {
-      generateStaticReadWriteAttribute( attribute, type, global );
+      generateReadWriteNamespaceAttribute( attribute, type );
+    }
+  }
+
+  private void generateReadOnlyNamespaceAttribute( @Nonnull final AttributeMember attribute,
+                                                   @Nonnull final TypeSpec.Builder type )
+  {
+    assert attribute.getModifiers().contains( AttributeMember.Modifier.READ_ONLY );
+    final Type attributeType = attribute.getType();
+    final WebIDLSchema schema = getSchema();
+    final Type actualType = schema.resolveType( attributeType );
+    final String name = attribute.getName();
+    final TypeName actualJavaType = toTypeName( actualType );
+    final MethodSpec.Builder method =
+      MethodSpec
+        .methodBuilder( safeJsPropertyMethodName( name, TypeName.BOOLEAN.equals( actualJavaType ) ) )
+        .addModifiers( Modifier.PUBLIC, Modifier.STATIC, Modifier.NATIVE )
+        .returns( actualJavaType )
+        .addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_PROPERTY ).addMember( "name", "$S", name ).build() );
+    maybeAddCustomAnnotations( attribute, method );
+    maybeAddJavadoc( attribute, method );
+    if ( schema.isNullable( attributeType ) )
+    {
+      method.addAnnotation( BasicTypes.NULLABLE );
+    }
+    else if ( !actualJavaType.isPrimitive() )
+    {
+      method.addAnnotation( BasicTypes.NONNULL );
+    }
+    addMagicConstantAnnotationIfNeeded( actualType, method );
+    type.addMethod( method.build() );
+  }
+
+  private void generateReadWriteNamespaceAttribute( @Nonnull final AttributeMember attribute,
+                                                    @Nonnull final TypeSpec.Builder type )
+  {
+    assert !attribute.getModifiers().contains( AttributeMember.Modifier.READ_ONLY );
+    final Type attributeType = attribute.getType();
+    final WebIDLSchema schema = getSchema();
+    final Type actualType = schema.resolveType( attributeType );
+    final String name = attribute.getName();
+    final String fieldName = javaName( attribute );
+    final FieldSpec.Builder field =
+      FieldSpec.builder( toTypeName( actualType ), fieldName, Modifier.PUBLIC, Modifier.STATIC );
+    maybeAddCustomAnnotations( attribute, field );
+    maybeAddJavadoc( attribute, field );
+    if ( !fieldName.equals( name ) )
+    {
+      field.addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_PROPERTY )
+                             .addMember( "name", "$S", name )
+                             .build() );
+    }
+    if ( schema.isNullable( attributeType ) )
+    {
+      field.addAnnotation( BasicTypes.NULLABLE );
+    }
+    else if ( !actualType.getKind().isPrimitive() )
+    {
+      field.addAnnotation( BasicTypes.NONNULL );
+    }
+    addMagicConstantAnnotationIfNeeded( actualType, field );
+    type.addField( field.build() );
+  }
+
+  private void generateStaticAttributes( @Nonnull final List<AttributeMember> attributes,
+                                         @Nonnull final TypeSpec.Builder type )
+  {
+    attributes
+      .stream()
+      .sorted( Comparator.comparing( NamedElement::getName ) )
+      .forEach( attribute -> generateStaticAttribute( attribute, type ) );
+  }
+
+  private void generateStaticAttribute( @Nonnull final AttributeMember attribute,
+                                        @Nonnull final TypeSpec.Builder type )
+  {
+    if ( attribute.getModifiers().contains( AttributeMember.Modifier.READ_ONLY ) )
+    {
+      generateStaticReadOnlyAttribute( attribute, type );
+    }
+    else
+    {
+      generateStaticReadWriteAttribute( attribute, type );
     }
   }
 
   private void generateStaticReadOnlyAttribute( @Nonnull final AttributeMember attribute,
-                                                @Nonnull final TypeSpec.Builder type,
-                                                final boolean global )
+                                                @Nonnull final TypeSpec.Builder type )
   {
     assert attribute.getModifiers().contains( AttributeMember.Modifier.READ_ONLY );
     final Type attributeType = attribute.getType();
@@ -571,13 +596,12 @@ final class JsinteropAction
       method.addAnnotation( BasicTypes.NONNULL );
     }
     addMagicConstantAnnotationIfNeeded( actualType, method );
-    method.addStatement( "return $N().$N()", global ? "globalThis" : "namespace", methodName );
+    method.addStatement( "return $N().$N()", "globalThis", methodName );
     type.addMethod( method.build() );
   }
 
   private void generateStaticReadWriteAttribute( @Nonnull final AttributeMember attribute,
-                                                 @Nonnull final TypeSpec.Builder type,
-                                                 final boolean global )
+                                                 @Nonnull final TypeSpec.Builder type )
   {
     assert !attribute.getModifiers().contains( AttributeMember.Modifier.READ_ONLY );
     final Type attributeType = attribute.getType();
@@ -602,13 +626,12 @@ final class JsinteropAction
       method.addAnnotation( BasicTypes.NONNULL );
     }
     addMagicConstantAnnotationIfNeeded( actualType, method );
-    method.addStatement( "return $N().$N", global ? "globalThis" : "namespace", methodName );
+    method.addStatement( "return $N().$N", "globalThis", methodName );
     type.addMethod( method.build() );
   }
 
   private void generateDelegateOperation( @Nonnull final OperationMember operation,
-                                          @Nonnull final TypeSpec.Builder type,
-                                          final boolean global )
+                                          @Nonnull final TypeSpec.Builder type )
   {
     final List<Argument> arguments = operation.getArguments();
     final int argCount = arguments.size();
@@ -620,7 +643,7 @@ final class JsinteropAction
         explodeTypeList( argumentList.stream().map( Argument::getType ).collect( Collectors.toList() ) );
       for ( final List<TypedValue> typeList : explodedTypeList )
       {
-        generateDelegateOperation( operation, argumentList, typeList, type, global );
+        generateDelegateOperation( operation, argumentList, typeList, type );
       }
     }
   }
@@ -628,8 +651,7 @@ final class JsinteropAction
   private void generateDelegateOperation( @Nonnull final OperationMember operation,
                                           @Nonnull final List<Argument> arguments,
                                           @Nonnull final List<TypedValue> typeList,
-                                          @Nonnull final TypeSpec.Builder type,
-                                          final boolean global )
+                                          @Nonnull final TypeSpec.Builder type )
   {
     final OperationMember.Kind operationKind = operation.getKind();
     assert OperationMember.Kind.STATIC != operationKind && OperationMember.Kind.CONSTRUCTOR != operationKind;
@@ -656,7 +678,7 @@ final class JsinteropAction
       sb.append( "return " );
     }
     sb.append( "$N().$N(" );
-    args.add( global ? "globalThis" : "namespace" );
+    args.add( "globalThis" );
     args.add( methodName );
 
     boolean firstArg = true;
@@ -806,27 +828,6 @@ final class JsinteropAction
       generateSuperCall( parentConstructor, method );
     }
     type.addMethod( method.build() );
-
-    for ( final NamespaceDefinition namespace : schema.getNamespaces() )
-    {
-      final String name = namespace.getName();
-      final MethodSpec.Builder namespaceMethod =
-        MethodSpec
-          .methodBuilder( NamingUtil.camelCase( safeJsPropertyMethodName( name, false ) ) )
-          .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
-          .returns( lookupClassName( namespace.getName() ) )
-          .addAnnotation( AnnotationSpec
-                            .builder( JsinteropTypes.JS_PROPERTY )
-                            .addMember( "name", "$S", name )
-                            .build() )
-          .addAnnotation( BasicTypes.NONNULL );
-      final DocumentationElement documentation = namespace.getDocumentation();
-      if ( null != documentation && documentation.hasDeprecatedTag() )
-      {
-        namespaceMethod.addAnnotation( Deprecated.class );
-      }
-      type.addMethod( namespaceMethod.build() );
-    }
 
     for ( final MixinDefinition mixin : getGlobalMixins( schema ) )
     {
@@ -1790,44 +1791,22 @@ final class JsinteropAction
   private void generateNamespace( @Nonnull final NamespaceDefinition definition )
     throws IOException
   {
-    final String name = definition.getName();
-    final TypeSpec.Builder type =
-      TypeSpec
-        .classBuilder( lookupClassName( definition.getName() ).simpleName() )
-        .addModifiers( Modifier.PUBLIC, Modifier.FINAL );
-    writeGeneratedAnnotation( type );
-    maybeAddCustomAnnotations( definition, type );
-    maybeAddJavadoc( definition, type );
-
-    generateConstants( definition.getName(), definition.getConstants(), type );
-    generateAttributes( definition.getAttributes(), type );
-    generateOperations( definition.getOperations(), type );
-
-    type.addAnnotation( AnnotationSpec
-                          .builder( JsinteropTypes.JS_TYPE )
-                          .addMember( "isNative", "true" )
-                          .addMember( "namespace", "$T.GLOBAL", JsinteropTypes.JS_PACKAGE )
-                          .addMember( "name", "$S", name )
-                          .build() );
-
-    type.addMethod( MethodSpec.constructorBuilder().addModifiers( Modifier.PRIVATE ).build() );
-
-    writeTopLevelType( name, type );
-  }
-
-  private void generateStaticNamespace( @Nonnull final NamespaceDefinition definition )
-    throws IOException
-  {
-    final String idlName = "$Static" + definition.getName();
+    final String idlName = definition.getName();
     final TypeSpec.Builder type =
       TypeSpec
         .classBuilder( lookupClassName( idlName ).simpleName() )
-        .addModifiers( Modifier.PUBLIC, Modifier.FINAL );
+        .addModifiers( Modifier.PUBLIC, Modifier.FINAL )
+        .addAnnotation( AnnotationSpec
+                          .builder( JsinteropTypes.JS_TYPE )
+                          .addMember( "isNative", "true" )
+                          .addMember( "name", "$S", definition.getName() )
+                          .addMember( "namespace", "$T.GLOBAL", JsinteropTypes.JS_PACKAGE )
+                          .build() );
     writeGeneratedAnnotation( type );
     maybeAddJavadoc( definition, type );
 
-    generateStaticConstants( definition.getConstants(), definition.getName(), type );
-    generateStaticAttributes( definition.getAttributes(), type, false );
+    generateConstants( definition.getName(), definition.getConstants(), type );
+    generateNamespaceAttributes( definition.getAttributes(), type );
 
     for ( final OperationMember operation : definition.getOperations() )
     {
@@ -1840,29 +1819,10 @@ final class JsinteropAction
                OperationMember.Kind.DELETER == operationKind ) &&
              null != operation.getName() ) )
       {
-        generateDelegateOperation( operation, type, false );
+        generateNamespaceOperation( operation, type );
       }
     }
     type.addMethod( MethodSpec.constructorBuilder().addModifiers( Modifier.PRIVATE ).build() );
-
-    final MethodSpec.Builder namespaceMethod =
-      MethodSpec
-        .methodBuilder( "namespace" )
-        .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
-        .addAnnotation( BasicTypes.NONNULL )
-        .returns( lookupClassName( definition.getName() ) )
-        .addStatement( "return $T.$N()",
-                       lookupClassName( "$Global" ),
-                       NamingUtil.camelCase( safeJsPropertyMethodName( definition.getName(), false ) ) )
-        .addJavadoc( "Return the '" + definition.getName() + "' namespace object.\n" +
-                     "\n" +
-                     "@return the '" + definition.getName() + "' namespace object\n" );
-    final DocumentationElement documentation = definition.getDocumentation();
-    if ( null != documentation && documentation.hasDeprecatedTag() )
-    {
-      namespaceMethod.addAnnotation( Deprecated.class );
-    }
-    type.addMethod( namespaceMethod.build() );
 
     writeTopLevelType( idlName, type );
   }
@@ -2692,6 +2652,55 @@ final class JsinteropAction
     type.addMethod( method.build() );
   }
 
+  private void generateNamespaceOperation( @Nonnull final OperationMember operation,
+                                           @Nonnull final TypeSpec.Builder type )
+  {
+    final List<Argument> arguments = operation.getArguments();
+    final int argCount = arguments.size();
+    final long optionalCount = arguments.stream().filter( Argument::isOptional ).count();
+    for ( int i = 0; i <= optionalCount; i++ )
+    {
+      final List<Argument> argumentList = operation.getArguments().subList( 0, argCount - i );
+      final List<List<TypedValue>> explodedTypeList =
+        explodeTypeList( argumentList.stream().map( Argument::getType ).collect( Collectors.toList() ) );
+      for ( final List<TypedValue> typeList : explodedTypeList )
+      {
+        generateNamespaceOperation( operation, argumentList, typeList, type );
+      }
+    }
+  }
+
+  private void generateNamespaceOperation( @Nonnull final OperationMember operation,
+                                           @Nonnull final List<Argument> arguments,
+                                           @Nonnull final List<TypedValue> typeList,
+                                           @Nonnull final TypeSpec.Builder type )
+  {
+    final String name = operation.getName();
+    assert null != name;
+    final String methodName = javaMethodName( name, operation );
+    final MethodSpec.Builder method =
+      MethodSpec
+        .methodBuilder( methodName )
+        .addModifiers( Modifier.PUBLIC, Modifier.STATIC, Modifier.NATIVE );
+    maybeAddCustomAnnotations( operation, method );
+    maybeAddJavadoc( operation, method );
+    if ( !methodName.equals( name ) )
+    {
+      method.addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_METHOD )
+                              .addMember( "name", "$S", name )
+                              .build() );
+    }
+    final Type returnType = operation.getReturnType();
+    emitReturnType( returnType, method );
+    int index = 0;
+    for ( final Argument argument : arguments )
+    {
+      final TypedValue typedValue = typeList.get( index++ );
+      generateArgument( argument, typedValue, false, method );
+    }
+    type.addMethod( method.build() );
+  }
+
   private void generateAnonymousIndexedGetter( @Nonnull final OperationMember operation,
                                                @Nonnull final TypeSpec.Builder type )
   {
@@ -3248,10 +3257,7 @@ final class JsinteropAction
     schema.getConstEnumerations().forEach( this::registerDefinition );
     schema.getInterfaces().forEach( this::registerDefinition );
     schema.getPartialInterfaces().forEach( this::registerDefinition );
-    schema.getNamespaces().forEach( definition -> {
-      tryRegisterIdlToJavaTypeMapping( definition.getName(), deriveJavaType( definition, "", "Namespace" ) );
-      tryRegisterIdlToJavaTypeMapping( "$Static" + definition.getName(), deriveJavaType( definition, "", "" ) );
-    } );
+    schema.getNamespaces().forEach( this::registerDefinition );;
     if ( null != _globalInterface )
     {
       final InterfaceDefinition global = schema.getInterfaceByName( _globalInterface );

@@ -133,10 +133,4 @@ public final class Global {
   public static String decodeURI(@Nonnull String encodedURI) {
     return globalThis().decodeURI(encodedURI);
   }
-
-  @Nonnull
-  @Deprecated
-  public static CSSNamespace css() {
-    return globalThis().css();
-  }
 }

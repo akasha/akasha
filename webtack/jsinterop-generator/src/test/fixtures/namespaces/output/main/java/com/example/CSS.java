@@ -2,24 +2,19 @@ package com.example;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsPackage;
+import jsinterop.annotations.JsType;
 
+@JsType(
+    isNative = true,
+    name = "CSS",
+    namespace = JsPackage.GLOBAL
+)
 @Generated("org.realityforge.webtack")
 public final class CSS {
   private CSS() {
   }
 
   @Nonnull
-  public static String escape(@Nonnull String ident) {
-    return namespace().escape(ident);
-  }
-
-  /**
-   * Return the 'CSS' namespace object.
-   *
-   * @return the 'CSS' namespace object
-   */
-  @Nonnull
-  public static CSSNamespace namespace() {
-    return Global.css();
-  }
+  public static native String escape(@Nonnull String ident);
 }

@@ -3,7 +3,6 @@ package com.example;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
@@ -20,13 +19,6 @@ import jsinterop.annotations.JsType;
 public final class GlobalWindow extends Window {
   private GlobalWindow() {
   }
-
-  @JsProperty(
-      name = "CSS"
-  )
-  @Nonnull
-  @Deprecated
-  public native CSSNamespace css();
 
   /**
    * @deprecated

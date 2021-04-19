@@ -30,24 +30,4 @@ public final class Global {
   public static boolean closed() {
     return globalThis().closed();
   }
-
-  @Nonnull
-  public static ConsoleNamespace console() {
-    return globalThis().console();
-  }
-
-  @Nonnull
-  public static CSSNamespace css() {
-    return globalThis().css();
-  }
-
-  @Nonnull
-  public static WebAssemblyNamespace webAssembly() {
-    return globalThis().webAssembly();
-  }
-
-  @Nonnull
-  public static JsMathNamespace math() {
-    return globalThis().math();
-  }
 }

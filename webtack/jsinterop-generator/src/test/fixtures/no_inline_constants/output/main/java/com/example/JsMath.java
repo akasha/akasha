@@ -5,13 +5,13 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
-    namespace = JsPackage.GLOBAL,
-    name = "Math"
+    name = "Math",
+    namespace = JsPackage.GLOBAL
 )
-public final class JsMathNamespace {
+@Generated("org.realityforge.webtack")
+public final class JsMath {
   /**
    * Constant is inlined...
    */
@@ -30,10 +30,10 @@ public final class JsMathNamespace {
   @JsOverlay
   public static final double SQRT2 = Constants.SQRT2;
 
-  private JsMathNamespace() {
+  private JsMath() {
   }
 
-  public native double abs(double x);
+  public static native double abs(double x);
 
   @JsType(
       isNative = true,

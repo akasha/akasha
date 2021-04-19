@@ -5,16 +5,16 @@ import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
-    namespace = JsPackage.GLOBAL,
-    name = "CSS"
+    name = "CSS",
+    namespace = JsPackage.GLOBAL
 )
-public final class CSSNamespace {
-  private CSSNamespace() {
+@Generated("org.realityforge.webtack")
+public final class CSS {
+  private CSS() {
   }
 
   @Nonnull
-  public native String escape(@Nonnull String ident);
+  public static native String escape(@Nonnull String ident);
 }

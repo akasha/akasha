@@ -1,9 +1,7 @@
 package com.example;
 
 import javax.annotation.Generated;
-import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
@@ -20,28 +18,4 @@ import jsinterop.annotations.JsType;
 public final class GlobalWindow extends Window {
   private GlobalWindow() {
   }
-
-  @JsProperty(
-      name = "console"
-  )
-  @Nonnull
-  public native ConsoleNamespace console();
-
-  @JsProperty(
-      name = "CSS"
-  )
-  @Nonnull
-  public native CSSNamespace css();
-
-  @JsProperty(
-      name = "WebAssembly"
-  )
-  @Nonnull
-  public native WebAssemblyNamespace webAssembly();
-
-  @JsProperty(
-      name = "Math"
-  )
-  @Nonnull
-  public native JsMathNamespace math();
 }
