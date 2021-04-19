@@ -3,6 +3,7 @@
 ### Unreleased
 
 * Convert `akasha.core.JsObject` from a generated class to a locally customized version that performs an `uncheckedCast(...)` to avoid type errors when compiling with base externs provided by closure compiler.
+* Remove incorrect `@JsOverlay` annotations on non-inlined constants in the generated Java binding.
 
 ### [v0.07](https://github.com/akasha/akasha/tree/v0.07) (2021-04-17) · [Full Changelog](https://github.com/spritz/spritz/compare/v0.06...v0.07) · [API Differences](https://akasha.github.io/akasha-java/api-diff/?key=akasha-java&old=0.06&new=0.07) · [Source Diff](https://github.com/akasha/akasha-java/compare/v0.06...v0.07)
 

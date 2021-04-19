@@ -41,13 +41,10 @@ public final class JsMathNamespace {
       namespace = JsPackage.GLOBAL
   )
   private static final class Constants {
-    @JsOverlay
     private static double PI;
 
-    @JsOverlay
     private static double SQRT1_2;
 
-    @JsOverlay
     private static double SQRT2;
   }
 }

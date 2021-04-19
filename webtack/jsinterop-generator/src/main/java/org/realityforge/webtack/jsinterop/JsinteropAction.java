@@ -2549,7 +2549,6 @@ final class JsinteropAction
                                            constant.getName(),
                                            Modifier.PRIVATE,
                                            Modifier.STATIC )
-                                 .addAnnotation( JsinteropTypes.JS_OVERLAY )
                                  .build() );
       }
       type.addType( constantType.build() );
