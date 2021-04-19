@@ -47,7 +47,7 @@ task 'data:run_complete_pipeline' do
   a = artifact(:closure_compiler)
   a.invoke
 
-  output = "#{WORKSPACE_DIR}/target/akasha-java/tmp/output.js"
+  output = "#{WORKSPACE_DIR}/target/akasha_java/tmp/output.js"
   FileUtils.mkdir_p File.dirname(output)
 
   args = []
