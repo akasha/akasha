@@ -3258,7 +3258,7 @@ final class JsinteropAction
     schema.getConstEnumerations().forEach( this::registerDefinition );
     schema.getInterfaces().forEach( this::registerDefinition );
     schema.getPartialInterfaces().forEach( this::registerDefinition );
-    schema.getNamespaces().forEach( this::registerDefinition );;
+    schema.getNamespaces().forEach( this::registerDefinition );
     if ( null != _globalInterface )
     {
       final InterfaceDefinition global = schema.getInterfaceByName( _globalInterface );
