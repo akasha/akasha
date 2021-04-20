@@ -795,9 +795,10 @@ final class JsinteropAction
     {
       throw new IllegalStateException( "Declared globalInterface '" + globalInterface + "' does not exist in schema" );
     }
+    final String name = lookupClassName( "$Global" + definition.getName() ).simpleName();
     final TypeSpec.Builder type =
       TypeSpec
-        .classBuilder( lookupClassName( "$Global" + definition.getName() ).simpleName() )
+        .classBuilder( name )
         .addModifiers( Modifier.PUBLIC, Modifier.FINAL )
         .superclass( lookupClassName( definition.getName() ) );
     writeGeneratedAnnotation( type );
