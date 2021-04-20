@@ -107,7 +107,7 @@ TEXT
 
 closure_js_library( name = "#{name}-closure", srcs = ["src.js"], deps = [":#{name}-j2cl"], )
 
-j2cl_application( name = "#{name}-app", entry_points = ["bazel.BuildTest"], deps = [":#{name}-closure"], )
+j2cl_application( name = "#{name}-app", entry_points = ["bazel.BuildTest"], extra_production_args = ["--env=CUSTOM"], deps = [":#{name}-closure"], )
 TEXT
         end
         File.write("#{dir}/BUILD.bazel", content)
