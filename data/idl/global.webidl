@@ -101,7 +101,9 @@ interface mixin GlobalObject
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt">parseInt - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-parseint-string-radix">parseInt() - ECMA</a>
    */
-  long long parseInt( DOMString string, optional long long radix );
+  long long parseInt( DOMString string, long long radix );
+  // Note: parseInt should have an optional radix parameter but the closure externs require it
+  // which makes generation of it as optional problematic and thus we give in and follow suite
 
   /**
    * The unescape() function computes a new string in which hexadecimal escape sequences are replaced with the character that it represents. The escape sequences might be introduced by a function like escape. Usually, decodeURI or decodeURIComponent are preferred over unescape.
