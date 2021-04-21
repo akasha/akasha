@@ -3,6 +3,7 @@ package com.example;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
+import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @Generated("org.realityforge.webtack")
@@ -11,16 +12,15 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "goog.global"
 )
-public final class Global {
-  private Global() {
+public final class WindowGlobal {
+  @Nonnull
+  public static String name;
+
+  private WindowGlobal() {
   }
 
-  @Nonnull
-  public static native String decodeURI(@Nonnull String encodedURI);
-
-  @Nonnull
-  public static native String decodeURIComponent(@Nonnull String encodedURI);
-
-  @Nonnull
-  public static native String encodeURI(@Nonnull String uri);
+  @JsProperty(
+      name = "isSecureContext"
+  )
+  public static native boolean isSecureContext();
 }

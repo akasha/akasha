@@ -1,5 +1,4 @@
-$Global=com.example.Global
-$GlobalWindow=com.example.GlobalWindow
+$GlobalWindow=com.example.WindowGlobal
 ArrayBuffer=com.example.ArrayBuffer
 CSS=com.example.CSS
 Math=com.example.JsMath

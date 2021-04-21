@@ -1,5 +1,4 @@
-$Global=com.example.Global
-$GlobalWindow=com.example.GlobalWindow
+$GlobalWindow=com.example.WindowGlobal
 AddEventListenerOptions=com.example.AddEventListenerOptions
 Event=com.example.Event
 EventListener=com.example.EventListener
