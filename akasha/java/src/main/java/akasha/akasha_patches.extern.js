@@ -31,4 +31,3 @@ var TrustedScript;
  * =:
  */
 Promise.any = function(iterable) {};
-
