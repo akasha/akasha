@@ -193,10 +193,10 @@ define 'akasha' do
   end
 
   if ENV['J2CL'].nil? || ENV['J2CL'] == project.name
-    t = Buildr::BazelJ2cl.define_bazel_j2cl_test(Buildr.project('akasha'),
-                                                 [Buildr.project('akasha:java')],
-                                                 %w[akasha.Global.$Overlay akasha.WindowGlobal.$Overlay],
-                                                 :javax_annotation => true)
+    Buildr::BazelJ2cl.define_bazel_j2cl_test(Buildr.project('akasha'),
+                                             [Buildr.project('akasha:java')],
+                                             %w[akasha.Global.$Overlay akasha.WindowGlobal.$Overlay],
+                                             :javax_annotation => true)
   end
 
   iml.excluded_directories << project._('tmp')
