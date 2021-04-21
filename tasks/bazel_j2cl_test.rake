@@ -5,7 +5,7 @@ module Buildr
       def define_bazel_j2cl_test(root_project, projects, requires, options = {})
         desc 'Verify that the specified packages can be compiled with J2CL'
         root_project.task('bazel_j2cl_test') do
-          perform_bazel_test(root_project, projects, requires, options)
+          perform_bazel_test(root_project, projects, requires, options) if ENV['J2CL'].nil? || ENV['J2CL'] == root_project.name
         end
       end
 

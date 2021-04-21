@@ -192,12 +192,10 @@ define 'akasha' do
     package(:javadoc)
   end
 
-  if ENV['J2CL'].nil? || ENV['J2CL'] == project.name
-    Buildr::BazelJ2cl.define_bazel_j2cl_test(Buildr.project('akasha'),
-                                             [Buildr.project('akasha:java')],
-                                             %w[akasha.Global.$Overlay akasha.WindowGlobal.$Overlay],
-                                             :javax_annotation => true)
-  end
+  Buildr::BazelJ2cl.define_bazel_j2cl_test(Buildr.project('akasha'),
+                                           [Buildr.project('akasha:java')],
+                                           %w[akasha.Global.$Overlay akasha.WindowGlobal.$Overlay],
+                                           :javax_annotation => true)
 
   iml.excluded_directories << project._('tmp')
 
