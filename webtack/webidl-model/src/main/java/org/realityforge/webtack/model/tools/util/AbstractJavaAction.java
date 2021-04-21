@@ -72,7 +72,7 @@ public abstract class AbstractJavaAction
                                 @Nonnull final List<Path> predefinedTypeMappingPaths,
                                 @Nonnull final List<Path> externalTypeMappingPaths )
   {
-    super(context, outputDirectory );
+    super( context, outputDirectory );
     _packageName = Objects.requireNonNull( packageName );
     _enableMagicConstants = enableMagicConstants;
     final Properties predefinedTypes = new Properties();
@@ -341,7 +341,6 @@ public abstract class AbstractJavaAction
   {
     return _packageName;
   }
-
 
   @Nonnull
   protected ClassName lookupClassName( @Nonnull final String idlName )
