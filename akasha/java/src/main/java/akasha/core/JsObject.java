@@ -67,7 +67,7 @@ public class JsObject
   public static Object create( @Nullable final Object proto,
                                @Nullable final JsPropertyMap<ObjectPropertyDescriptor> props )
   {
-    return create( Js.uncheckedCast( props ), props );
+    return create( Js.uncheckedCast( proto ), props );
   }
 
   /**

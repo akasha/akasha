@@ -2,6 +2,8 @@
 
 ### Unreleased
 
+* Fixed bug introduced into `JsObject.create(...)` method in `v0.08` where incorrect parameters were passed to the native method.
+
 ### [v0.08](https://github.com/akasha/akasha/tree/v0.08) (2021-04-21) · [Full Changelog](https://github.com/spritz/spritz/compare/v0.07...v0.08) · [API Differences](https://akasha.github.io/akasha-java/api-diff/?key=akasha-java&old=0.07&new=0.08) · [Source Diff](https://github.com/akasha/akasha-java/compare/v0.07...v0.08)
 
 The release includes 1 non breaking API change and 518 breaking API changes
