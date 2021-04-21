@@ -81,7 +81,7 @@ can be added as a maven dependency:
 <dependency>
   <groupId>org.realityforge.akasha</groupId>
   <artifactId>akasha-java</artifactId>
-  <version>0.07</version>
+  <version>0.08</version>
 </dependency>
 ```
 
