@@ -1,6 +1,10 @@
 # Change Log
 
-### Unreleased
+### [v0.08](https://github.com/akasha/akasha/tree/v0.08) (2021-04-21) · [Full Changelog](https://github.com/spritz/spritz/compare/v0.07...v0.08) · [API Differences](https://akasha.github.io/akasha-java/api-diff/?key=akasha-java&old=0.07&new=0.08) · [Source Diff](https://github.com/akasha/akasha-java/compare/v0.07...v0.08)
+
+The release includes 1 non breaking API change and 518 breaking API changes
+
+Changes in this release:
 
 * Convert `akasha.core.JsObject` from a generated class to a locally customized version that performs an `uncheckedCast(...)` to avoid type errors when compiling with base externs provided by closure compiler.
 * Remove incorrect `@JsOverlay` annotations on non-inlined constants in the generated Java binding.
