@@ -197,7 +197,6 @@ define 'akasha' do
                                                  [Buildr.project('akasha:java')],
                                                  %w[akasha.Global.$Overlay akasha.WindowGlobal.$Overlay],
                                                  :javax_annotation => true)
-    test.enhance([t])
   end
 
   iml.excluded_directories << project._('tmp')
