@@ -20,6 +20,11 @@ import jsinterop.base.JsPropertyMap;
 @JsType( isNative = true, namespace = JsPackage.GLOBAL, name = "Object" )
 public class JsObject
 {
+  // It should be noted that the primary reason for this class to exist is that closure compiler
+  // treats the interface type `Object` differently from non-reference types. There should be an
+  // implicit `@extends {Object}` for every non-reference object in the closure type system ... but
+  // there is not so we do some unchecked casts to work around this.
+
   protected JsObject()
   {
   }
