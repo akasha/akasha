@@ -114,8 +114,7 @@ final class JsinteropAction
   {
     processInit( schema );
 
-    FilesUtil.deleteDirectory( getMainJavaDirectory() );
-    FilesUtil.deleteDirectory( getMainResourcesDirectory() );
+    FilesUtil.deleteDirectory( getOutputDirectory() );
 
     registerIdlTypeToJavaTypeMapping();
     registerDefaultTypeMapping();
