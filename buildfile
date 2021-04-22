@@ -194,7 +194,8 @@ define 'akasha' do
 
   Buildr::BazelJ2cl.define_bazel_j2cl_test(Buildr.project('akasha'),
                                            [Buildr.project('akasha:java')],
-                                           %w[akasha.Global.$Overlay akasha.WindowGlobal.$Overlay],
+                                           'akasha.AkashaCompileTest',
+                                           Buildr.project('akasha')._(:target, :generated, 'webtack/test/js/akasha/Akasha.CompileTest.js'),
                                            :javax_annotation => true)
 
   iml.excluded_directories << project._('tmp')

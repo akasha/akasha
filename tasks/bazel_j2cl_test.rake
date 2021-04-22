@@ -2,16 +2,16 @@ module Buildr
   class BazelJ2cl
     class << self
 
-      def define_bazel_j2cl_test(root_project, projects, requires, options = {})
+      def define_bazel_j2cl_test(root_project, projects, test_module, test_module_file, options = {})
         desc 'Verify that the specified packages can be compiled with J2CL'
         root_project.task('bazel_j2cl_test') do
-          perform_bazel_test(root_project, projects, requires, options) if ENV['J2CL'].nil? || ENV['J2CL'] == root_project.name
+          perform_bazel_test(root_project, projects, test_module, test_module_file, options) if ENV['J2CL'].nil? || ENV['J2CL'] == root_project.name
         end
       end
 
       private
 
-      def perform_bazel_test(root_project, projects, requires, options)
+      def perform_bazel_test(root_project, projects, test_module, test_module_file, options)
         packages = projects.collect { |p| p.packages }.flatten.select{|p| p.classifier.nil? }.sort.uniq
 
         depgen_cache_dir = root_project._(:target, :depgen_artifact_cache)
@@ -23,18 +23,12 @@ module Buildr
         FileUtils.mkdir_p bazel_workspace_dir
         write_bazelrc(bazel_workspace_dir)
         write_workspace(bazel_workspace_dir)
-        write_js_src(bazel_workspace_dir, requires)
-        write_build(bazel_workspace_dir, packages)
+        FileUtils.cp test_module, "#{bazel_workspace_dir}/src.js"
+        write_build(bazel_workspace_dir, test_module, packages)
         write_dependency_yml(bazel_workspace_dir, cache_dir, packages, options)
         write_dependency_bzl(bazel_workspace_dir, depgen_cache_dir)
 
         sh "cd #{bazel_workspace_dir} && bazel build :all"
-      end
-
-      def write_js_src(bazel_workspace_dir, requires)
-        File.write("#{bazel_workspace_dir}/src.js",
-                   "goog.module('bazel.BuildTest');\n" +
-                     requires.collect { |r| "goog.require('#{r}');\n" }.join)
       end
 
       def write_bazelrc(dir)
@@ -81,7 +75,7 @@ http_archive(
 TEXT
       end
 
-      def write_build(dir, packages)
+      def write_build(dir, test_module, packages)
         content = <<TEXT
 package(default_visibility = ["//visibility:public"])
 
@@ -106,7 +100,7 @@ TEXT
 
 closure_js_library( name = "#{name}-closure", srcs = ["src.js"], deps = [":#{name}-j2cl"], )
 
-j2cl_application( name = "#{name}-app", entry_points = ["bazel.BuildTest"], extra_production_args = ["--env=CUSTOM"], deps = [":#{name}-closure"], )
+j2cl_application( name = "#{name}-app", entry_points = ["#{test_module}"], extra_production_args = ["--env=CUSTOM"], deps = [":#{name}-closure"], )
 TEXT
         end
         File.write("#{dir}/BUILD.bazel", content)
