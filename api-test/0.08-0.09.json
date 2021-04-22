@@ -1,0 +1,821 @@
+[
+  {
+    "code": "java.annotation.attributeValueChanged",
+    "description": "Attribute 'name' of annotation 'jsinterop.annotations.JsType' changed value from '\"Symbol\"' to '\"symbol\"'.",
+    "newElement": "interface akasha.core.Symbol",
+    "oldElement": "class akasha.core.Symbol",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsType(isNative = true, namespace = \"<global>\", name = \"symbol\")",
+      "annotationType": "jsinterop.annotations.JsType",
+      "attribute": "name",
+      "classQualifiedName": "akasha.core.Symbol",
+      "classSimpleName": "Symbol",
+      "elementKind": "class",
+      "newValue": "\"symbol\"",
+      "oldValue": "\"Symbol\"",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.class.kindChanged",
+    "description": "Class kind changed from 'class' to 'interface'.",
+    "newElement": "interface akasha.core.Symbol",
+    "oldElement": "class akasha.core.Symbol",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Symbol",
+      "classSimpleName": "Symbol",
+      "elementKind": "class",
+      "newKind": "interface",
+      "oldKind": "class",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.class.nowAbstract",
+    "description": "Class is now abstract.",
+    "newElement": "interface akasha.core.Symbol",
+    "oldElement": "class akasha.core.Symbol",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Symbol",
+      "classSimpleName": "Symbol",
+      "elementKind": "class",
+      "newModifiers": "public abstract",
+      "oldModifiers": "public",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method akasha.core.Symbol akasha.core.Symbol::_isConcatSpreadable()",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.core.Symbol",
+      "classSimpleName": "Symbol",
+      "elementKind": "method",
+      "methodName": "_isConcatSpreadable",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.annotation.removed",
+    "description": "Element no longer annotated with 'jsinterop.annotations.JsProperty'.",
+    "element": "method akasha.core.Symbol akasha.core.Symbol::_isConcatSpreadable()",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsProperty(name = \"isConcatSpreadable\")",
+      "annotationType": "jsinterop.annotations.JsProperty",
+      "classQualifiedName": "akasha.core.Symbol",
+      "classSimpleName": "Symbol",
+      "elementKind": "method",
+      "methodName": "_isConcatSpreadable",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method akasha.core.Symbol akasha.core.Symbol::asyncIterator()",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.core.Symbol",
+      "classSimpleName": "Symbol",
+      "elementKind": "method",
+      "methodName": "asyncIterator",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.annotation.removed",
+    "description": "Element no longer annotated with 'jsinterop.annotations.JsProperty'.",
+    "element": "method akasha.core.Symbol akasha.core.Symbol::asyncIterator()",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsProperty(name = \"asyncIterator\")",
+      "annotationType": "jsinterop.annotations.JsProperty",
+      "classQualifiedName": "akasha.core.Symbol",
+      "classSimpleName": "Symbol",
+      "elementKind": "method",
+      "methodName": "asyncIterator",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method akasha.core.Symbol akasha.core.Symbol::for_(java.lang.String)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.core.Symbol",
+      "classSimpleName": "Symbol",
+      "elementKind": "method",
+      "methodName": "for_",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.annotation.removed",
+    "description": "Element no longer annotated with 'jsinterop.annotations.JsMethod'.",
+    "element": "method akasha.core.Symbol akasha.core.Symbol::for_(java.lang.String)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsMethod(name = \"for\")",
+      "annotationType": "jsinterop.annotations.JsMethod",
+      "classQualifiedName": "akasha.core.Symbol",
+      "classSimpleName": "Symbol",
+      "elementKind": "method",
+      "methodName": "for_",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method akasha.core.Symbol akasha.core.Symbol::hasInstance()",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.core.Symbol",
+      "classSimpleName": "Symbol",
+      "elementKind": "method",
+      "methodName": "hasInstance",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.annotation.removed",
+    "description": "Element no longer annotated with 'jsinterop.annotations.JsProperty'.",
+    "element": "method akasha.core.Symbol akasha.core.Symbol::hasInstance()",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsProperty(name = \"hasInstance\")",
+      "annotationType": "jsinterop.annotations.JsProperty",
+      "classQualifiedName": "akasha.core.Symbol",
+      "classSimpleName": "Symbol",
+      "elementKind": "method",
+      "methodName": "hasInstance",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method akasha.core.Symbol akasha.core.Symbol::iterator()",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.core.Symbol",
+      "classSimpleName": "Symbol",
+      "elementKind": "method",
+      "methodName": "iterator",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.annotation.removed",
+    "description": "Element no longer annotated with 'jsinterop.annotations.JsProperty'.",
+    "element": "method akasha.core.Symbol akasha.core.Symbol::iterator()",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsProperty(name = \"iterator\")",
+      "annotationType": "jsinterop.annotations.JsProperty",
+      "classQualifiedName": "akasha.core.Symbol",
+      "classSimpleName": "Symbol",
+      "elementKind": "method",
+      "methodName": "iterator",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method akasha.core.Symbol akasha.core.Symbol::match()",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.core.Symbol",
+      "classSimpleName": "Symbol",
+      "elementKind": "method",
+      "methodName": "match",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.annotation.removed",
+    "description": "Element no longer annotated with 'jsinterop.annotations.JsProperty'.",
+    "element": "method akasha.core.Symbol akasha.core.Symbol::match()",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsProperty(name = \"match\")",
+      "annotationType": "jsinterop.annotations.JsProperty",
+      "classQualifiedName": "akasha.core.Symbol",
+      "classSimpleName": "Symbol",
+      "elementKind": "method",
+      "methodName": "match",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method akasha.core.Symbol akasha.core.Symbol::matchAll()",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.core.Symbol",
+      "classSimpleName": "Symbol",
+      "elementKind": "method",
+      "methodName": "matchAll",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.annotation.removed",
+    "description": "Element no longer annotated with 'jsinterop.annotations.JsProperty'.",
+    "element": "method akasha.core.Symbol akasha.core.Symbol::matchAll()",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsProperty(name = \"matchAll\")",
+      "annotationType": "jsinterop.annotations.JsProperty",
+      "classQualifiedName": "akasha.core.Symbol",
+      "classSimpleName": "Symbol",
+      "elementKind": "method",
+      "methodName": "matchAll",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method akasha.core.Symbol akasha.core.Symbol::replace()",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.core.Symbol",
+      "classSimpleName": "Symbol",
+      "elementKind": "method",
+      "methodName": "replace",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.annotation.removed",
+    "description": "Element no longer annotated with 'jsinterop.annotations.JsProperty'.",
+    "element": "method akasha.core.Symbol akasha.core.Symbol::replace()",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsProperty(name = \"replace\")",
+      "annotationType": "jsinterop.annotations.JsProperty",
+      "classQualifiedName": "akasha.core.Symbol",
+      "classSimpleName": "Symbol",
+      "elementKind": "method",
+      "methodName": "replace",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method akasha.core.Symbol akasha.core.Symbol::search()",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.core.Symbol",
+      "classSimpleName": "Symbol",
+      "elementKind": "method",
+      "methodName": "search",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.annotation.removed",
+    "description": "Element no longer annotated with 'jsinterop.annotations.JsProperty'.",
+    "element": "method akasha.core.Symbol akasha.core.Symbol::search()",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsProperty(name = \"search\")",
+      "annotationType": "jsinterop.annotations.JsProperty",
+      "classQualifiedName": "akasha.core.Symbol",
+      "classSimpleName": "Symbol",
+      "elementKind": "method",
+      "methodName": "search",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method akasha.core.Symbol akasha.core.Symbol::species()",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.core.Symbol",
+      "classSimpleName": "Symbol",
+      "elementKind": "method",
+      "methodName": "species",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.annotation.removed",
+    "description": "Element no longer annotated with 'jsinterop.annotations.JsProperty'.",
+    "element": "method akasha.core.Symbol akasha.core.Symbol::species()",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsProperty(name = \"species\")",
+      "annotationType": "jsinterop.annotations.JsProperty",
+      "classQualifiedName": "akasha.core.Symbol",
+      "classSimpleName": "Symbol",
+      "elementKind": "method",
+      "methodName": "species",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method akasha.core.Symbol akasha.core.Symbol::split()",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.core.Symbol",
+      "classSimpleName": "Symbol",
+      "elementKind": "method",
+      "methodName": "split",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.annotation.removed",
+    "description": "Element no longer annotated with 'jsinterop.annotations.JsProperty'.",
+    "element": "method akasha.core.Symbol akasha.core.Symbol::split()",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsProperty(name = \"split\")",
+      "annotationType": "jsinterop.annotations.JsProperty",
+      "classQualifiedName": "akasha.core.Symbol",
+      "classSimpleName": "Symbol",
+      "elementKind": "method",
+      "methodName": "split",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method akasha.core.Symbol akasha.core.Symbol::toPrimitive()",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.core.Symbol",
+      "classSimpleName": "Symbol",
+      "elementKind": "method",
+      "methodName": "toPrimitive",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.annotation.removed",
+    "description": "Element no longer annotated with 'jsinterop.annotations.JsProperty'.",
+    "element": "method akasha.core.Symbol akasha.core.Symbol::toPrimitive()",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsProperty(name = \"toPrimitive\")",
+      "annotationType": "jsinterop.annotations.JsProperty",
+      "classQualifiedName": "akasha.core.Symbol",
+      "classSimpleName": "Symbol",
+      "elementKind": "method",
+      "methodName": "toPrimitive",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method akasha.core.Symbol akasha.core.Symbol::toStringTag()",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.core.Symbol",
+      "classSimpleName": "Symbol",
+      "elementKind": "method",
+      "methodName": "toStringTag",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.annotation.removed",
+    "description": "Element no longer annotated with 'jsinterop.annotations.JsProperty'.",
+    "element": "method akasha.core.Symbol akasha.core.Symbol::toStringTag()",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsProperty(name = \"toStringTag\")",
+      "annotationType": "jsinterop.annotations.JsProperty",
+      "classQualifiedName": "akasha.core.Symbol",
+      "classSimpleName": "Symbol",
+      "elementKind": "method",
+      "methodName": "toStringTag",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method akasha.core.Symbol akasha.core.Symbol::unscopables()",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.core.Symbol",
+      "classSimpleName": "Symbol",
+      "elementKind": "method",
+      "methodName": "unscopables",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.annotation.removed",
+    "description": "Element no longer annotated with 'jsinterop.annotations.JsProperty'.",
+    "element": "method akasha.core.Symbol akasha.core.Symbol::unscopables()",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsProperty(name = \"unscopables\")",
+      "annotationType": "jsinterop.annotations.JsProperty",
+      "classQualifiedName": "akasha.core.Symbol",
+      "classSimpleName": "Symbol",
+      "elementKind": "method",
+      "methodName": "unscopables",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method java.lang.String akasha.core.Symbol::keyFor(akasha.core.Symbol)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.core.Symbol",
+      "classSimpleName": "Symbol",
+      "elementKind": "method",
+      "methodName": "keyFor",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.nowAbstract",
+    "description": "Method now abstract",
+    "element": "method java.lang.String akasha.core.Symbol::toString_()",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Symbol",
+      "classSimpleName": "Symbol",
+      "elementKind": "method",
+      "methodName": "toString_",
+      "newModifiers": "public abstract",
+      "oldModifiers": "public native",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method boolean java.lang.Object::equals(java.lang.Object) @ akasha.core.Symbol",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Symbol",
+      "classSimpleName": "Symbol",
+      "elementKind": "method",
+      "methodName": "equals",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method int java.lang.Object::hashCode() @ akasha.core.Symbol",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Symbol",
+      "classSimpleName": "Symbol",
+      "elementKind": "method",
+      "methodName": "hashCode",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method java.lang.Class<?> java.lang.Object::getClass() @ akasha.core.Symbol",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Symbol",
+      "classSimpleName": "Symbol",
+      "elementKind": "method",
+      "methodName": "getClass",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method java.lang.Object java.lang.Object::clone() throws java.lang.CloneNotSupportedException @ akasha.core.Symbol",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Symbol",
+      "classSimpleName": "Symbol",
+      "elementKind": "method",
+      "methodName": "clone",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method java.lang.String java.lang.Object::toString() @ akasha.core.Symbol",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Symbol",
+      "classSimpleName": "Symbol",
+      "elementKind": "method",
+      "methodName": "toString",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method void akasha.core.Symbol::<init>()",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Symbol",
+      "classSimpleName": "Symbol",
+      "elementKind": "constructor",
+      "methodName": "<init>",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method void java.lang.Object::finalize() throws java.lang.Throwable @ akasha.core.Symbol",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Symbol",
+      "classSimpleName": "Symbol",
+      "elementKind": "method",
+      "methodName": "finalize",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method void java.lang.Object::notify() @ akasha.core.Symbol",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Symbol",
+      "classSimpleName": "Symbol",
+      "elementKind": "method",
+      "methodName": "notify",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method void java.lang.Object::notifyAll() @ akasha.core.Symbol",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Symbol",
+      "classSimpleName": "Symbol",
+      "elementKind": "method",
+      "methodName": "notifyAll",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method void java.lang.Object::wait() throws java.lang.InterruptedException @ akasha.core.Symbol",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Symbol",
+      "classSimpleName": "Symbol",
+      "elementKind": "method",
+      "methodName": "wait",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method void java.lang.Object::wait(long) throws java.lang.InterruptedException @ akasha.core.Symbol",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Symbol",
+      "classSimpleName": "Symbol",
+      "elementKind": "method",
+      "methodName": "wait",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method void java.lang.Object::wait(long, int) throws java.lang.InterruptedException @ akasha.core.Symbol",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Symbol",
+      "classSimpleName": "Symbol",
+      "elementKind": "method",
+      "methodName": "wait",
+      "package": "akasha.core"
+    }
+  }
+]
