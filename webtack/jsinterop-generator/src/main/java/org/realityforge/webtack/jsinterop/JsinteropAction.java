@@ -13,6 +13,7 @@ import com.squareup.javapoet.WildcardTypeName;
 import java.io.IOException;
 import java.lang.annotation.Documented;
 import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -89,6 +90,8 @@ final class JsinteropAction
   private final boolean _generateTypeMapping;
   @Nonnull
   private final Set<String> _modulesToRequireInCompileTest = new HashSet<>();
+  @Nonnull
+  private final Set<String> _extraModulesToRequireInCompileTest = new HashSet<>();
 
   JsinteropAction( @Nonnull final PipelineContext context,
                    @Nonnull final Path outputDirectory,
@@ -96,6 +99,7 @@ final class JsinteropAction
                    @Nullable final String globalInterface,
                    @Nonnull final List<Path> predefinedTypeMappingPaths,
                    @Nonnull final List<Path> externalTypeMappingPaths,
+                   @Nonnull final List<Path> extraClosureModulesToRequireInCompileTestPaths,
                    final boolean generateGwtModule,
                    final boolean generateJ2clCompileTest,
                    @Nonnull final List<String> gwtInherits,
@@ -113,6 +117,21 @@ final class JsinteropAction
     _generateJ2clCompileTest = generateJ2clCompileTest;
     _gwtInherits = Objects.requireNonNull( gwtInherits );
     _generateTypeMapping = generateTypeMapping;
+    for ( final Path path : extraClosureModulesToRequireInCompileTestPaths )
+    {
+      try
+      {
+        Files
+          .readAllLines( path )
+          .stream()
+          .filter( line -> !line.trim().isEmpty() )
+          .forEach( _extraModulesToRequireInCompileTest::add );
+      }
+      catch ( final IOException ioe )
+      {
+        throw new IllegalStateException( "Failed to read closure test module list in file " + path, ioe );
+      }
+    }
   }
 
   @Override
@@ -129,6 +148,7 @@ final class JsinteropAction
     processInit( schema );
 
     FilesUtil.deleteDirectory( getOutputDirectory() );
+    _modulesToRequireInCompileTest.addAll( _extraModulesToRequireInCompileTest );
 
     registerIdlTypeToJavaTypeMapping();
     registerDefaultTypeMapping();

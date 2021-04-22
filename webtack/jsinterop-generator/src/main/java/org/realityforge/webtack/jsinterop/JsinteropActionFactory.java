@@ -70,6 +70,11 @@ public final class JsinteropActionFactory
    * in IntelliJ IDEA and related IDEs.
    */
   public boolean enableMagicConstants = true;
+  /**
+   * A list of files that override the name of closure modules to include in compile test.
+   * Each file contains one closure module per lilne
+   */
+  public List<String> extraClosureModulesToRequireInCompileTest;
 
   @Nonnull
   @Override
@@ -131,12 +136,34 @@ public final class JsinteropActionFactory
         externalTypeMappingPaths.add( catalog );
       }
     }
+    final List<Path> extraClosureModulesToRequireInCompileTestPaths = new ArrayList<>();
+    if ( null != extraClosureModulesToRequireInCompileTest )
+    {
+      for ( final String typeCatalog : extraClosureModulesToRequireInCompileTest )
+      {
+        final Path file = Paths.get( typeCatalog );
+        if ( !Files.exists( file ) )
+        {
+          throw new IllegalArgumentException( "Jsinterop action configuration specified a file that does not exist " +
+                                              "in the extraClosureModulesToRequireInCompileTest parameter: " + file );
+        }
+        else if ( !Files.isRegularFile( file ) )
+        {
+          throw new IllegalArgumentException( "Jsinterop action configuration specified a file that is not a regular " +
+                                              "file in the extraClosureModulesToRequireInCompileTest parameter: " +
+                                              file );
+        }
+        extraClosureModulesToRequireInCompileTestPaths.add( file );
+      }
+    }
+
     return new JsinteropAction( context,
                                 Paths.get( outputDirectory ),
                                 packageName,
                                 globalInterface,
                                 predefinedTypeMappingPaths,
                                 externalTypeMappingPaths,
+                                extraClosureModulesToRequireInCompileTestPaths,
                                 generateGwtModule,
                                 generateJ2clCompileTest,
                                 null == gwtInherits ? Collections.emptyList() : gwtInherits,
