@@ -8,8 +8,7 @@ complete as there is too much un-said.
 
 * Add missing methods to typed array types
 
-* Emit closure externs for WebIDL types.
-  * filter out elements that are marked as `JavaOnly` - probably by writing a processor that strips them
+* filter out elements that are marked as `JavaOnly` from closure externs - probably by writing a processor that strips them
 
 * Add a mechanism for creating
 
