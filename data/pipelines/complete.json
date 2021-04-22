@@ -4,6 +4,9 @@
     {
       "name": "Jsinterop",
       "config": {
+        "extraClosureModulesToRequireInCompileTest": [
+          "data/pipelines/complete_closure_modules.txt"
+        ],
         "externalTypeMapping": [
           "data/pipelines/types.mapping"
         ],

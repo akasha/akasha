@@ -1,0 +1,7 @@
+akasha.core.JsMap.$Overlay
+akasha.core.JsObject.$Overlay
+akasha.core.JsWeakMap.$Overlay
+akasha.core.JsWeakSet.$Overlay
+akasha.core.SymbolType.$Overlay
+akasha.lang.JsArray.$Overlay
+akasha.promise.Promise.$Overlay
