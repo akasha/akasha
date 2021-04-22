@@ -234,7 +234,7 @@ public class JsObject
   @Nonnull
   public static JsArray<String> getOwnPropertyNames( @Nonnull final Object obj )
   {
-    return Js.uncheckedCast( obj );
+    return getOwnPropertyNames( Js.uncheckedCast( obj ) );
   }
 
   @Nonnull
