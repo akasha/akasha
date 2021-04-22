@@ -18,6 +18,13 @@ var TrustedScript;
 /**
  * This does not yet have a typing declared in closure compiler.
  *
+ * @const {symbol}
+ */
+Symbol.split;
+
+/**
+ * This does not yet have a typing declared in closure compiler.
+ *
  * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
  * @param {!Iterable<VALUE>} iterable
  * @return {!Promise<RESULT>}
