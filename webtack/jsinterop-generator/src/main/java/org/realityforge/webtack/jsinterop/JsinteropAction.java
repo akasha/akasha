@@ -416,9 +416,10 @@ final class JsinteropAction
     if ( !globalMixins.isEmpty() )
     {
       final String idlName = "$Global";
+      final ClassName className = lookupClassName( idlName );
       final TypeSpec.Builder type =
         TypeSpec
-          .classBuilder( lookupClassName( idlName ).simpleName() )
+          .classBuilder( className.simpleName() )
           .addModifiers( Modifier.PUBLIC, Modifier.FINAL );
       writeGeneratedAnnotation( type );
       type.addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_TYPE )
@@ -436,6 +437,7 @@ final class JsinteropAction
         generateStaticEventsMethods( type, schema, mixin.getEvents() );
       }
 
+      _modulesToRequireInCompileTest.add( className.canonicalName() + ".$Overlay" );
       writeTopLevelType( idlName, type );
     }
   }
@@ -444,9 +446,10 @@ final class JsinteropAction
     throws IOException
   {
     final String idlName = "$Global" + globalInterface;
+    final ClassName className = lookupClassName( idlName );
     final TypeSpec.Builder type =
       TypeSpec
-        .classBuilder( lookupClassName( idlName ).simpleName() )
+        .classBuilder( className.simpleName() )
         .addModifiers( Modifier.PUBLIC, Modifier.FINAL );
     writeGeneratedAnnotation( type );
     type.addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_TYPE )
@@ -467,6 +470,7 @@ final class JsinteropAction
       definition = definition.getSuperInterface();
     }
 
+    _modulesToRequireInCompileTest.add( className.canonicalName() + ".$Overlay" );
     writeTopLevelType( idlName, type );
   }
 

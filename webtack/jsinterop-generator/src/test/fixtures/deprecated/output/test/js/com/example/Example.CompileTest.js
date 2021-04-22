@@ -6,6 +6,8 @@ goog.require('com.example.EventInit.$Overlay');
 goog.require('com.example.EventListener.$Overlay');
 goog.require('com.example.EventListenerOptions.$Overlay');
 goog.require('com.example.EventTarget.$Overlay');
+goog.require('com.example.Global.$Overlay');
 goog.require('com.example.OtherEventListener.$Overlay');
 goog.require('com.example.OtherType.$Overlay');
 goog.require('com.example.Window.$Overlay');
+goog.require('com.example.WindowGlobal.$Overlay');

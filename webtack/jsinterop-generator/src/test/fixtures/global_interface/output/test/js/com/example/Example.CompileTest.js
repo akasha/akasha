@@ -8,3 +8,4 @@ goog.require('com.example.FocusEvent.$Overlay');
 goog.require('com.example.FocusEventListener.$Overlay');
 goog.require('com.example.ScrollToOptions.$Overlay');
 goog.require('com.example.Window.$Overlay');
+goog.require('com.example.WindowGlobal.$Overlay');

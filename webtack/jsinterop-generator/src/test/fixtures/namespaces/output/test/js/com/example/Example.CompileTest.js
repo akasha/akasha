@@ -5,3 +5,4 @@ goog.require('com.example.Console.$Overlay');
 goog.require('com.example.JsMath.$Overlay');
 goog.require('com.example.WebAssembly.$Overlay');
 goog.require('com.example.Window.$Overlay');
+goog.require('com.example.WindowGlobal.$Overlay');
