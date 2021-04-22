@@ -1,0 +1,15 @@
+goog.module('com.example.ExampleCompileTest');
+goog.require('com.example.DOMStringMap.$Overlay');
+goog.require('com.example.DOMTokenList.$Overlay');
+goog.require('com.example.Event.$Overlay');
+goog.require('com.example.EventInit.$Overlay');
+goog.require('com.example.EventTarget.$Overlay');
+goog.require('com.example.Headers.$Overlay');
+goog.require('com.example.MyThing.$Overlay');
+goog.require('com.example.MyThingCollection.$Overlay');
+goog.require('com.example.RTCStatsReport.$Overlay');
+goog.require('com.example.SomeMapLikeDefiningOverrides.$Overlay');
+goog.require('com.example.SomeOtherType.$Overlay');
+goog.require('com.example.SpeechRecognitionErrorEvent.$Overlay');
+goog.require('com.example.Storage.$Overlay');
+goog.require('com.example.TxStorage.$Overlay');

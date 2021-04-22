@@ -1,0 +1,11 @@
+goog.module('com.example.ExampleCompileTest');
+goog.require('com.example.JsBoolean.$Overlay');
+goog.require('com.example.JsDate.$Overlay');
+goog.require('com.example.JsNumber.$Overlay');
+goog.require('com.example.JsString.$Overlay');
+goog.require('com.example.MyBoolean.$Overlay');
+goog.require('com.example.MyDate.$Overlay');
+goog.require('com.example.MyNumber.$Overlay');
+goog.require('com.example.MyString.$Overlay');
+goog.require('com.example.ReportBody.$Overlay');
+goog.require('com.example.WebAssemblyGlobal.$Overlay');

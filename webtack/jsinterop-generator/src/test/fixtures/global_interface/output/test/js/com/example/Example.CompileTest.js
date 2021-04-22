@@ -1,0 +1,10 @@
+goog.module('com.example.ExampleCompileTest');
+goog.require('com.example.AddEventListenerOptions.$Overlay');
+goog.require('com.example.Event.$Overlay');
+goog.require('com.example.EventListener.$Overlay');
+goog.require('com.example.EventListenerOptions.$Overlay');
+goog.require('com.example.EventTarget.$Overlay');
+goog.require('com.example.FocusEvent.$Overlay');
+goog.require('com.example.FocusEventListener.$Overlay');
+goog.require('com.example.ScrollToOptions.$Overlay');
+goog.require('com.example.Window.$Overlay');

@@ -1,0 +1,9 @@
+goog.module('com.example.ExampleCompileTest');
+goog.require('com.example.HTMLCanvasElement.$Overlay');
+goog.require('com.example.HTMLImageElement.$Overlay');
+goog.require('com.example.HTMLVideoElement.$Overlay');
+goog.require('com.example.ImageBitmap.$Overlay');
+goog.require('com.example.ImageData.$Overlay');
+goog.require('com.example.MyBufferSource.$Overlay');
+goog.require('com.example.OffscreenCanvas.$Overlay');
+goog.require('com.example.WebGLRenderingContext.$Overlay');
