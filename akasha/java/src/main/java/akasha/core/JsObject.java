@@ -206,7 +206,7 @@ public class JsObject
   }
 
   @Nonnull
-  private static native JsArray<ObjectPropertyDescriptor> getOwnPropertyDescriptors( @Nonnull JsObject obj );
+  private static native JsPropertyMap<ObjectPropertyDescriptor> getOwnPropertyDescriptors( @Nonnull JsObject obj );
 
   /**
    * The Object.getOwnPropertyDescriptors() method returns all own property descriptors of a given object.
@@ -216,7 +216,7 @@ public class JsObject
    */
   @JsOverlay
   @Nonnull
-  public static JsArray<ObjectPropertyDescriptor> getOwnPropertyDescriptors( @Nonnull final Object obj )
+  public static JsPropertyMap<ObjectPropertyDescriptor> getOwnPropertyDescriptors( @Nonnull final Object obj )
   {
     return getOwnPropertyDescriptors( Js.uncheckedCast( obj ) );
   }
