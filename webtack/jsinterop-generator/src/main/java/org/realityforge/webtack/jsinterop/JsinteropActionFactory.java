@@ -51,6 +51,13 @@ public final class JsinteropActionFactory
    */
   public boolean generateGwtModule = true;
   /**
+   * A flag controlling whether a closure module is generated that
+   * requires modules that j2cl will generate. This is used to help
+   * perform J2cl+closure compiler pass over generated code to ensure
+   * that the correct artifacts are generated.
+   */
+  public boolean generateJ2clCompileTest = true;
+  /**
    * A flag controlling whether the type mapping file is generated.
    * The type mapping file consists of a line for every generated class and
    * each line is of the form "[idl_type_name]=[qualified java class name]".
@@ -131,6 +138,7 @@ public final class JsinteropActionFactory
                                 predefinedTypeMappingPaths,
                                 externalTypeMappingPaths,
                                 generateGwtModule,
+                                generateJ2clCompileTest,
                                 null == gwtInherits ? Collections.emptyList() : gwtInherits,
                                 generateTypeMapping,
                                 enableMagicConstants );

@@ -18,9 +18,11 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
@@ -83,7 +85,10 @@ final class JsinteropAction
   @Nonnull
   private final List<String> _gwtInherits;
   private final boolean _generateGwtModule;
+  private final boolean _generateJ2clCompileTest;
   private final boolean _generateTypeMapping;
+  @Nonnull
+  private final Set<String> _modulesToRequireInCompileTest = new HashSet<>();
 
   JsinteropAction( @Nonnull final PipelineContext context,
                    @Nonnull final Path outputDirectory,
@@ -92,6 +97,7 @@ final class JsinteropAction
                    @Nonnull final List<Path> predefinedTypeMappingPaths,
                    @Nonnull final List<Path> externalTypeMappingPaths,
                    final boolean generateGwtModule,
+                   final boolean generateJ2clCompileTest,
                    @Nonnull final List<String> gwtInherits,
                    final boolean generateTypeMapping,
                    final boolean enableMagicConstants )
@@ -104,8 +110,16 @@ final class JsinteropAction
            externalTypeMappingPaths );
     _globalInterface = globalInterface;
     _generateGwtModule = generateGwtModule;
+    _generateJ2clCompileTest = generateJ2clCompileTest;
     _gwtInherits = Objects.requireNonNull( gwtInherits );
     _generateTypeMapping = generateTypeMapping;
+  }
+
+  @Override
+  protected void processInit( @Nonnull final WebIDLSchema schema )
+  {
+    _modulesToRequireInCompileTest.clear();
+    super.processInit( schema );
   }
 
   @Override
@@ -215,6 +229,10 @@ final class JsinteropAction
     }
     generateGlobalType();
 
+    if ( _generateJ2clCompileTest )
+    {
+      writeJ2clCompileTest();
+    }
     if ( _generateTypeMapping )
     {
       writeTypeMappingFile();
@@ -371,6 +389,23 @@ final class JsinteropAction
     writeResourceFile( getMainResourcesDirectory(),
                        name + ".mapping",
                        typeMappingContent.getBytes( StandardCharsets.UTF_8 ) );
+  }
+
+  private void writeJ2clCompileTest()
+    throws IOException
+  {
+    final String name = NamingUtil.uppercaseFirstCharacter( getLeafPackageName() );
+    final String content =
+      "goog.module('" + getPackageName() + "." + name + "CompileTest');\n" +
+      _modulesToRequireInCompileTest
+        .stream()
+        .map( v -> "goog.require('" + v + "');" )
+        .sorted()
+        .collect( Collectors.joining( "\n" ) ) + "\n";
+
+    writeResourceFile( getOutputDirectory().resolve( "test" ).resolve( "js" ),
+                       name + ".CompileTest.js",
+                       content.getBytes( StandardCharsets.UTF_8 ) );
   }
 
   private void generateGlobalType()
@@ -3060,7 +3095,17 @@ final class JsinteropAction
 
   private void registerDefinition( @Nonnull final NamedDefinition definition )
   {
-    tryRegisterIdlToJavaTypeMapping( definition.getName(), deriveJavaType( definition, "", "" ) );
+    final String name = definition.getName();
+    tryRegisterIdlToJavaTypeMapping( name, deriveJavaType( definition, "", "" ) );
+
+    if ( isIdlTypeNotPredefined( name ) &&
+         ( definition instanceof CallbackInterfaceDefinition ||
+           definition instanceof DictionaryDefinition ||
+           definition instanceof InterfaceDefinition ||
+           definition instanceof NamespaceDefinition ) )
+    {
+      _modulesToRequireInCompileTest.add( lookupJavaType( name ) + ".$Overlay" );
+    }
   }
 
   @SuppressWarnings( "SameParameterValue" )
