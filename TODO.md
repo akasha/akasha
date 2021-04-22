@@ -68,10 +68,8 @@ on an interface
 
 * Any type that defines a `[@@iterator]()` method should implement `JsIterable<X>`.
 
-* Consider supporting multiple exposure sets and thus multiple `GlobalX` interfaces in output library. Then
-  figure out a way to support multiple `Global` objects. We may also need to support an interface to represent
-  `[GlobalObject]` mixins and make sure all our global objects implement that and maybe that it is also exposed
-  as a static accessor somewhere.
+* Consider supporting multiple exposure sets and thus multiple `XGlobal` types in output library. It would
+  also be nice to have designated `XGlobal` for elements that are shared between Window/Worker context
 
 * Add the ability to designate root types in the graph that either identify nodes to keep or nodes to remove
   and anything that is removed has all references to it removed. This is a way of partitioning the graph into
