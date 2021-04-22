@@ -1,0 +1,21 @@
+[
+  {
+    "code": "java.method.returnTypeChanged",
+    "description": "The return type changed from 'akasha.lang.JsArray<akasha.core.ObjectPropertyDescriptor>' to  'jsinterop.base.JsPropertyMap<akasha.core.ObjectPropertyDescriptor>'.",
+    "newElement": "method jsinterop.base.JsPropertyMap<akasha.core.ObjectPropertyDescriptor> akasha.core.JsObject::getOwnPropertyDescriptors(java.lang.Object)",
+    "oldElement": "method akasha.lang.JsArray<akasha.core.ObjectPropertyDescriptor> akasha.core.JsObject::getOwnPropertyDescriptors(java.lang.Object)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.JsObject",
+      "classSimpleName": "JsObject",
+      "elementKind": "method",
+      "methodName": "getOwnPropertyDescriptors",
+      "newType": "jsinterop.base.JsPropertyMap<akasha.core.ObjectPropertyDescriptor>",
+      "oldType": "akasha.lang.JsArray<akasha.core.ObjectPropertyDescriptor>",
+      "package": "akasha.core"
+    }
+  }
+]
