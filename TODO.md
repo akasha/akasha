@@ -50,7 +50,10 @@ complete as there is too much un-said.
 
 * Scan the main closure externs and figure out a heuristic for `@nosideeffects`
 
-* Add affordances for js developers like iterable
+* Add affordances for js developers like iterable. i.e.
+
+  > /** @return {!Iterator<!Array<string>>} */
+  > Headers.prototype[Symbol.iterator] = function() {};
 
 # Java Generation
 
