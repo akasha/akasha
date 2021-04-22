@@ -23,7 +23,7 @@ module Buildr
         FileUtils.mkdir_p bazel_workspace_dir
         write_bazelrc(bazel_workspace_dir)
         write_workspace(bazel_workspace_dir)
-        FileUtils.cp test_module, "#{bazel_workspace_dir}/src.js"
+        FileUtils.cp test_module_file, "#{bazel_workspace_dir}/src.js"
         write_build(bazel_workspace_dir, test_module, packages)
         write_dependency_yml(bazel_workspace_dir, cache_dir, packages, options)
         write_dependency_bzl(bazel_workspace_dir, depgen_cache_dir)
