@@ -6,6 +6,7 @@
 *.md text
 *.rake text
 *.rb text
+*.txt text
 *.webidl text
 *.xml text
 *.yaml text
