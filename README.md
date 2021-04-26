@@ -139,6 +139,8 @@ supporting other `ExposureSet` types such as `WorkerGlobal`, `DedicatedWorkerGlo
 this has not been provided. So accessing values on the `globalThis` object requires some direct knowledge of what
 is available in each different environment.
 
+See [Issue #11](https://github.com/akasha/akasha/issues/11) to track progress made towards addressing this limitation.
+
 #### Nullable non-double primitives are mapped poorly in Jsinterop
 
 Some of the type mappings from WebIDL to java are not mapped in a java-friendly manner. The most obvious example

@@ -46,9 +46,6 @@ complete as there is too much un-said.
 
 * Any type that defines a `[@@iterator]()` method should implement `JsIterable<X>`.
 
-* Consider supporting multiple exposure sets and thus multiple `XGlobal` types in output library. It would
-  also be nice to have designated `XGlobal` for elements that are shared between Window/Worker context
-
 * Add the ability to designate root types in the graph that either identify nodes to keep or nodes to remove
   and anything that is removed has all references to it removed. This is a way of partitioning the graph into
   more meaningful subgraphs.
