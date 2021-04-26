@@ -19,12 +19,3 @@ complete as there is too much un-said.
  - WebXR Layers Sample: https://cabanier.github.io/WebXRLayers-samples/index.html
 
 * Figure out an example for indexdb.
-
-### Validations
-
-This section lists some validations that should be implemented to at least confirm some of our assumptions:
-
-* Exploded union type lists should not contain:
-  * multiple values represented by javascript numbers (otherwise how to determine which variant is intended)
-  * multiple dictionary values (otherwise would need to inspect data to switch between them?)
-  * multiple union types represented by javascript strings (DONString, USVString, ByteString, enumeration reference)
