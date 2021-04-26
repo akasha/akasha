@@ -46,10 +46,6 @@ complete as there is too much un-said.
 
 * Any type that defines a `[@@iterator]()` method should implement `JsIterable<X>`.
 
-* Add the ability to designate root types in the graph that either identify nodes to keep or nodes to remove
-  and anything that is removed has all references to it removed. This is a way of partitioning the graph into
-  more meaningful subgraphs.
-
 * Add codegen for `AsyncIterableMember`
 
 * Use `JsPropertyMap` for records. We may need some "wrapper" types like `JsIntPropertyMap` and like `JsShortPropertyMap`
