@@ -1,45 +1,52 @@
-# WebTack: Fetch and process WebIDL to generate Source Code
+# Akasha: Evergreen Browser API
 
 [![Build Status](https://api.travis-ci.com/akasha/akasha.svg?branch=master)](http://travis-ci.com/akasha/akasha)
 
-## What is WebTack?
+## What is Akasha?
 
-WebTack is a tool designed to fetch WebIDL and supporting artifacts, process the WebIDL and generate source
-code to support writing web applications.
-
-[WebIDL](https://heycam.github.io/webidl/) is used by various specifications to communicate the interfaces that
-are expected to be implemented in web browsers. Many web browsers also use a WebIDL variant to generate code to
-implement the specification.
-
-The types of source code artifacts that WebTack generates or will generate include:
+Akasha is a typed browser API layer that is always up to date with the latest web specifications. These API layers
+are intended to simplify writing web applications in languages other than pure-Javascript. Akasha currently
+provides:
 
 * [Closure-compiler](https://github.com/google/closure-compiler) externs so that the closure-compiler
   can perform type checking and advanced type-based optimizations.
 * Jsinterop annotated java classes that can be used in [GWT](https://github.com/gwtproject/gwt) or
   [J2CL](https://github.com/google/j2cl) based projects.
-* [React4j](https://github.com/react4j/react4j) element factories.
+
+In the near future, it is expected that bindings for other languages and frameworks will be produced
+(particularly to support WASM based toolkits). Support will also be re-enabled to generate
+[React4j](https://github.com/react4j/react4j) element factories.
+
+## How does it work?
+
+Akasha is kept with evolving browser standards by fetching WebIDL and processing the WebIDL to generate
+source code and other artifacts.
+
+[WebIDL](https://heycam.github.io/webidl/) is used by various specifications to communicate the interfaces that
+are expected to be implemented in web browsers. Many web browsers also use a WebIDL variant to generate code to
+implement the specification.
 
 WebIDL published as part of the official specifications are not always perfect representations of the interfaces as
 implemented by the web browsers. Nor is there a central place that contains the complete WebIDL that a browser is
-expected to implement. WebTack defines a pipeline for processing WebIDL schemas. The pipeline defines a series of
-stages. Each stage will either transform a schema, combine multiple schemas or perform an action for the schema.
-This capability allows WebIDL or process the WebIDL schemas fetched from the specifications and combine them into
-a consistent document.
+expected to implement. The Akasha suite defines a pipeline for processing WebIDL schemas. The pipeline defines a
+series of stages. Each stage will either transform a schema, combine multiple schemas or perform an action for the
+schema. This capability allows WebIDL or process the WebIDL schemas fetched from the specifications and combine
+them into a consistent document.
 
-WebTack also includes tools to fetch data from other locations and combine the data with the WebIDL in processing
-stages. The most significant other data source is the documentation that is scraped from the
+The Akasha suite also includes tools to fetch data from other locations and combine the data with the
+WebIDL in processing stages. The most significant other data source is the documentation that is scraped from the
 [MDN](https://developer.mozilla.org/en-US/) website and used to add basic documentation to the WebIDL elements. In the
 near future it is expected that the [browser compatibility data](https://github.com/mdn/browser-compat-data/tree/master/api)
 will be also be scraped so that browser compatibility data for WebIDL elements can be used in the processing pipeline
 to influence how artifacts are built. Other data from the web specifications could be combined to improve the outputs
 generated from the suite.
 
-WebTack extends the WebIDL syntax to support additional data being added to the WebIDL. This includes syntax to
+Akasha extends the WebIDL syntax to support additional data being added to the WebIDL. This includes syntax to
 explicitly declare events emitted by interfaces (i.e. there is a new member element that looks like
 `event ProgressEvent load;`). It also supports a [Javadoc-like](https://en.wikipedia.org/wiki/Javadoc) syntax for
 documenting the WebIDL elements.
 
-The WebTack jsinterop action generates source code with a more java-esque feel than is present in
+The Akasha jsinterop action generates source code with a more java-esque feel than is present in
 [elemental2](https://github.com/google/elemental2). It also aims to offer affordances that make working with
 the browser API easier for java developers. A few differences from Elemental2 include:
 
@@ -62,54 +69,46 @@ the browser API easier for java developers. A few differences from Elemental2 in
   report errors when incorrect values are supplied.
 * Several other minor usability improvements, particularly with respect to union types.
 
-One of the greatest advantages of WebTack is the ability to quickly generate API for new specifications. First you
+One of the greatest advantages of Akasha is the ability to quickly generate API for new specifications. First you
 run a single command to register the spec url, extracting the WebIDL from the specification and extract the
 documentation from MDN. Then you run a second command to regenerate the java and library and closure externs.
 
-### The Now
+## How does this relate to WebTack?
 
-Experiments with WebTack are ongoing but so far the experiments have largely proved successful. Several web apps
-have been created to explore the feel of using the generated code. This has included experiments with the
+WebTack was the former name of this project when the scope encompassed building a tool to fetch and process
+WebIDL files. That name still lives on with that part of the suite but the name is no longer used outside this
+project.
+
+## The project evolution
+
+Akasha grew out of several experiments that helped shape the way the code was generated. Several web apps
+have been created to explore the feel of using the generated code and these may be interesting to investigate
+to get a feel of how the project evolved. This has included experiments with the
 [Web Bluetooth API](https://webbluetoothcg.github.io/web-bluetooth/) by creating a browser based
 [Heart Rate Monitor](https://github.com/react4j/react4j-heart-rate-monitor), experiments with [speech synthesis](https://github.com/react4j/react4j-webspeechdemo) using the [Web Speech API](https://wicg.github.io/speech-api/), experiments
 with [WebRTC](https://w3c.github.io/webrtc-pc/) by creating a [video chat application](https://github.com/react4j/react4j-vchat)
 and several other experiments that are not open source.
 
-The experiments to date, have copied the WebTack generated source into the source tree. To facilitate experiments
-by third parties, the generated source code for the has been packaged and published to maven central. This artifact
-can be added as a maven dependency:
+The next major milestone was for integration of Akasha into a medium sized application with ~600K lines of GWT
+code that has been in development since 2011. This integration has successfully replaced our previous browser API
+layers and we are now focusing on fine tuning and optimizing the output.
 
-```xml
-<dependency>
-  <groupId>org.realityforge.akasha</groupId>
-  <artifactId>akasha-java</artifactId>
-  <version>0.10</version>
-</dependency>
-```
+Adopting Akasha has made it trivial to integrate with new Web APIs as they come out with minimal fuss compared to
+past approaches such as the handwritten DOM adapters, elemental or elemental2 libraries and we think Akasha is nearing
+a time where it is suitable for adoption in a broader context.
 
-### The Future
+### Limitations
 
-WebTack is an alpha project that is surprisingly useful as is. It is extremely useful to start using web APIs
-that are not covered by [elemental2](https://github.com/google/elemental2) with minimal fuss. The web APIs are also
-generated with basic javadocs that makes it relatively easy to explore the API locally or follow a link to MDN for
-more details. The java API is usually equivalent or better than the equivalent in Elemental2 as it tries to follow
-conventions more comfortable to Java developers.
-
-The outputs are not without limitations. The following limitations that have been discovered while using the
-outputs of WebTack.
+The outputs are not without limitations. The following limitations that have been discovered while using
+the libraries generated by Akasha.
 
 #### Large Java Packages
 
-WebTacks jsinterop action generates a java type for every element within the input WebIDL schema. These elements
-are mostly generated within a single java package. If a reasonably complete WebIDL is fed into the action this can
-produce a single package with 1200+ java classes. This is not the simplest structure to navigate and is not expected
-to be an efficient compilation module.
-
-An approach that we have used to address this limitation is manually partitioning the schema into required subset
-needed by the application. This has been surprisingly effective at producing small java packages, at the expense of
-some manual labour. However, it is expected that this would not scale to larger applications. A better approach maybe
-to automatically partition the files into different packages based on the originating specification or some other
-grouping heuristic.
+Akasha generates a java type for every element within the input WebIDL schema. These elements are mostly
+generated within a small number of java packages. A reasonably complete WebIDL will produce a single library
+with 1200+ java classes. This is not the simplest structure to navigate and is not expected to be an efficient
+compilation module. See [Issue #9](https://github.com/akasha/akasha/issues/9) for a potential path to addressing
+this limitation.
 
 #### Browser Implementation Differences
 
@@ -118,9 +117,10 @@ implement the specification exactly. The fix is to apply processor stages to adj
 browsers implement the specification. This is somewhat error prone as it involves detecting the error and applying
 the appropriate patch. A better solution is to import the browser specific WebIDL source files, detect differences
 and merge the differences as desired. This should be relatively easy for chrome and gecko based browsers that already
-have publicly available WebIDL files.
+have publicly available WebIDL files. See [Issue #1](https://github.com/akasha/akasha/issues/1) to track any progress
+made towards addressing this limitation.
 
-#### The globalThis / ExposureSet relationship is not yet finalized
+#### Multiple ExposureSets not user friendly
 
 Javascript has the notion of a global object that is named `globalThis` in modern versions of javascript.
 The properties, operations and namespaces exposed on the global object differs in different JavaScript
@@ -131,19 +131,20 @@ the web you can use `window`, `self`, or `frames` - but in Web Workers only `sel
 these work, and you must instead use `global`. In WebIDL, the `ExposureSet` extended attribute is used to control
 whether an interface or namespace is present in a particular Javascript environment.
 
-WebTack currently assumes that the generated library is used in a specific JavaScript environment. This makes it
-difficult to reuse the library across different Javascript environments. WebTack generates a single
-`Global.globalThis()` static method to access the global object which is quite verbose. Both of these implementation
-decisions will be re-evaluated going forward.
+Akasha currently assumes that the generated library is used in a single specific JavaScript environment. Akasha
+generates two classes containing static methods and fields to access the `globalThis`. There is the `Global` class
+that contains all the `globalThis` methods that are common to any javascript environment and there is class named
+`WindowGlobal` for the `"Window"` `ExposureSet`. It is expected that in the future there will be other global objects
+supporting other `ExposureSet` types such as `WorkerGlobal`, `DedicatedWorkerGlobal` and `SharedWorker` but as yet
+this has not been provided. So accessing values on the `globalThis` object requires some direct knowledge of what
+is available in each different environment.
 
-#### Missing/Incomplete Features
+#### Nullable non-double primitives are mapped poorly in Jsinterop
 
-WebTack is missing a handful of features.
-
-* Some of the type mappings from WebIDL to java are not mapped in a java-friendly manner. The most obvious example
-  is how sequences of non-double numeric values or nullable non-double primitives are mapped to java. The numeric
-  values are mapped to `java.lang.Double` as that will map to javascript `number` when compiled. It is unclear on
-  the best strategy to address this mismatch. This is no different from other bindings such as Elemental2.
+Some of the type mappings from WebIDL to java are not mapped in a java-friendly manner. The most obvious example
+is how sequences of non-double numeric values or nullable non-double primitives are mapped to java. The numeric
+values are mapped to `java.lang.Double` as that will map to javascript `number` when compiled. It is unclear on
+the best strategy to address this mismatch. This is no different from other bindings such as Elemental2.
 
 # Contributing
 
