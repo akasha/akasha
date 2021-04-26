@@ -26,8 +26,6 @@ on an interface
 
 * Some doc entries include documentation for constants .. scan for that?.
 
-* Add special handling for `@return` javadoc.
-
 # Apps to Stretch Implementation
 
 * Complete `react4j-vchat`
