@@ -50,7 +50,9 @@ the browser API easier for java developers. A few differences from Elemental2 in
 * Fields, methods and parameters are annotated with `@Nonnull` or `@Nullable` if the type is a non-primitive, non-void type.
 * Read-only attributes in WebIDL are implemented as methods rather than mutable fields or properties with setters.
 * Dictionaries in WebIDL use a "builder" pattern to make construction of these types much easier.
-* No parameterized types exist in WebTack as WebIDL does not define such constructs.
+* No parameterized types exist in Akasha generate artifacts as WebIDL does not define such constructs. However there
+  are a handful of hand-written jsinterop annotated java classes such as `JsArray`, `JsMap`, `JsSet`, `JsWeakMap`
+  and `JsWeakSet` that make use of parameterized types to support normal java development practices.
 * Event handlers and event listeners are typed according to type of event expected to be delivered and have a void
   return type. This simplifies the use of lambdas and method references in java code.
 * `@JsOverlay` methods are added for known events emitted by an interface. For example, it is possible to use code such
