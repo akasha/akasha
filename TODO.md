@@ -30,21 +30,7 @@ complete as there is too much un-said.
 
 * Figure out an example for indexdb.
 
-# Closure Generation
-
-* Make sure that the js types use `@implements` for all the interfaces that we expect which are
-  probably characterized via maplike, setlike etc.
-
-* Add affordances for js developers like iterable. i.e.
-
-  > /** @return {!Iterator<!Array<string>>} */
-  > Headers.prototype[Symbol.iterator] = function() {};
-
 # Java Generation
-
-* Any type that defines a `[@@iterator]()` method should implement `JsIterable<X>`.
-
-* Add codegen for `AsyncIterableMember`
 
 * Use `JsPropertyMap` for records. We may need some "wrapper" types like `JsIntPropertyMap` and like `JsShortPropertyMap`
   which just unchecked cast to `JsPropertyMap<double>` and then cast on the way out?
