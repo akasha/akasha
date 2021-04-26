@@ -10,10 +10,6 @@ complete as there is too much un-said.
 
 * filter out elements that are marked as `JavaOnly` from closure externs - probably by writing a processor that strips them
 
-# Docs Integration
-
-* Process docs and any words that match an original/non-synthetic word then convert into {@link MyType}
-
 # Apps to Stretch Implementation
 
 * Complete `react4j-vchat`
