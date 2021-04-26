@@ -145,7 +145,7 @@ WebTack is missing a handful of features.
 * Some of the type mappings from WebIDL to java are not mapped in a java-friendly manner. The most obvious example
   is how sequences of non-double numeric values or nullable non-double primitives are mapped to java. The numeric
   values are mapped to `java.lang.Double` as that will map to javascript `number` when compiled. It is unclear on
-  the best strategy to address this mismatch.
+  the best strategy to address this mismatch. This is no different from other bindings such as Elemental2.
 
 # Contributing
 
