@@ -6,8 +6,6 @@ complete as there is too much un-said.
 
 # MVP Release
 
-* Add missing methods to typed array types
-
 * filter out elements that are marked as `JavaOnly` from closure externs - probably by writing a processor that strips them
 
 # Apps to Stretch Implementation
