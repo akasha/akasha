@@ -31,8 +31,8 @@ stages. The most significant other data source is the documentation that is scra
 [MDN](https://developer.mozilla.org/en-US/) website and used to add basic documentation to the WebIDL elements. In the
 near future it is expected that the [browser compatibility data](https://github.com/mdn/browser-compat-data/tree/master/api)
 will be also be scraped so that browser compatibility data for WebIDL elements can be used in the processing pipeline
-to influence how artifacts are built. Other data from the web specifications could be combined to improve the outputs.
-At the very least, links to the specifications will be added to the WebIDL elements in the future.
+to influence how artifacts are built. Other data from the web specifications could be combined to improve the outputs
+generated from the suite.
 
 WebTack extends the WebIDL syntax to support additional data being added to the WebIDL. This includes syntax to
 explicitly declare events emitted by interfaces (i.e. there is a new member element that looks like
