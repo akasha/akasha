@@ -17,6 +17,41 @@ In the near future, it is expected that bindings for other languages and framewo
 (particularly to support WASM based toolkits). Support will also be re-enabled to generate
 [React4j](https://github.com/react4j/react4j) element factories.
 
+## Getting Started
+
+Getting started using the JsInterop annotated Java classes in a [GWT](https://github.com/gwtproject/gwt) or
+[J2CL](https://github.com/google/j2cl) based project is relatively easy. First you add a dependency on the java
+library to your project. In a Maven-based project is as simple as adding the following dependency:
+
+```xml
+<dependency>
+  <groupId>org.realityforge.akasha</groupId>
+  <artifactId>akasha-java</artifactId>
+  <version>0.10</version>
+</dependency>
+```
+
+### GWT
+
+In a GWT project it is necessary to add a reference to the Akasha library the GWT module in your `.gwt.xml` file. This
+is just a single inherit:
+
+```xml
+<module>
+  ...
+  <inherits name='akasha.Akasha'/>
+  ...
+</module>
+```
+
+### J2CL/Closure Compiler
+
+The closure compiler is shipped with a set of externs that do not align 100% with the externs produced by the Akasha
+project. Thus it is necessary to pass the arguments `-env CUSTOM` when running the closure compiler. It is also
+necessary to add the closure externs shipped as part of the `akasha-java` artifact. These are included in the artifact
+under the names; `akasha/Akasha.externs.js` and `akasha/akasha_patches.extern.js`. The exact way that these build
+steps are specified will depend upon the underlying tool but a simple example using Bazel is available at https://github.com/react4j/react4j-todomvc/tree/raw_bazel_j2cl
+
 ## How does it work?
 
 Akasha is kept with evolving browser standards by fetching WebIDL and processing the WebIDL to generate
