@@ -91,12 +91,6 @@ Generate host element factories: Events would need to be specially handled to ma
 
 * `translate` is `yes` or `no` in html where it is boolean at IDL level
 
-# Other
-
-* It would be nice to extend WebIDL and support throws either as an expression or maybe an extended attribute.
-  The Gecko WebIDL files actually have a `[Throws]` extended attribute that we could look into to drive this?
-  We could also add the equivalent closure annotation `@throws`
-
 ### Validations
 
 This section lists some validations that should be implemented to at least confirm some of our assumptions:
