@@ -120,26 +120,6 @@ and merge the differences as desired. This should be relatively easy for chrome 
 have publicly available WebIDL files. See [Issue #1](https://github.com/akasha/akasha/issues/1) to track any progress
 made towards addressing this limitation.
 
-#### Multiple ExposureSets not user friendly
-
-Javascript has the notion of a global object that is named `globalThis` in modern versions of javascript.
-The properties, operations and namespaces exposed on the global object differs in different JavaScript
-environments.
-
-Historically, accessing the global object has required different syntax in different JavaScript environments. On
-the web you can use `window`, `self`, or `frames` - but in Web Workers only `self` will work. In Node.js none of
-these work, and you must instead use `global`. In WebIDL, the `ExposureSet` extended attribute is used to control
-whether an interface or namespace is present in a particular Javascript environment.
-
-Akasha currently assumes that the generated library is used in a single specific JavaScript environment. Akasha
-generates two classes containing static methods and fields to access the `globalThis`. There is the `Global` class
-that contains all the `globalThis` methods that are common to any javascript environment and there is class named
-`WindowGlobal` for the `"Window"` `ExposureSet`. It is expected that in the future there will be other global objects
-supporting other `ExposureSet` types such as `WorkerGlobal`, `DedicatedWorkerGlobal` and `SharedWorker` but as yet
-this has not been provided. So accessing values on the `globalThis` object requires some direct knowledge of what
-is available in each different environment.
-
-See [Issue #11](https://github.com/akasha/akasha/issues/11) to track progress made towards addressing this limitation.
 # Contributing
 
 The project was released as open source so others could benefit from the project. We are thankful for any
