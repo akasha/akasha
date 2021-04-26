@@ -140,8 +140,6 @@ decisions will be re-evaluated going forward.
 
 WebTack is missing a handful of features.
 
-* The `IterableMember` element in WebIDL does not yet result in any java code as no application has required that
-  feature yet.
 * Some of the type mappings from WebIDL to java are not mapped in a java-friendly manner. The most obvious example
   is how sequences of non-double numeric values or nullable non-double primitives are mapped to java. The numeric
   values are mapped to `java.lang.Double` as that will map to javascript `number` when compiled. It is unclear on
