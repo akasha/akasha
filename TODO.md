@@ -26,9 +26,6 @@ on an interface
 
 * Some doc entries include documentation for constants .. scan for that?.
 
-* Extract param docs for methods and constructors.
-  - See example at https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/polygonOffset
-
 * Add special handling for `@return` javadoc.
 
 # Apps to Stretch Implementation
