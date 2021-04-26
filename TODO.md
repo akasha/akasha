@@ -35,8 +35,6 @@ complete as there is too much un-said.
 * Make sure that the js types use `@implements` for all the interfaces that we expect which are
   probably characterized via maplike, setlike etc.
 
-* Scan the main closure externs and figure out a heuristic for `@nosideeffects`
-
 * Add affordances for js developers like iterable. i.e.
 
   > /** @return {!Iterator<!Array<string>>} */
