@@ -146,8 +146,6 @@ WebTack is missing a handful of features.
   is how sequences of non-double numeric values or nullable non-double primitives are mapped to java. The numeric
   values are mapped to `java.lang.Double` as that will map to javascript `number` when compiled. It is unclear on
   the best strategy to address this mismatch.
-* WebTack references several classes from  the `elemental2-core` library. This dependency will be removed but this
-  requires additional work that has not been done.
 
 # Contributing
 
