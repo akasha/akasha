@@ -140,14 +140,6 @@ this has not been provided. So accessing values on the `globalThis` object requi
 is available in each different environment.
 
 See [Issue #11](https://github.com/akasha/akasha/issues/11) to track progress made towards addressing this limitation.
-
-#### Nullable non-double primitives are mapped poorly in Jsinterop
-
-Some of the type mappings from WebIDL to java are not mapped in a java-friendly manner. The most obvious example
-is how sequences of non-double numeric values or nullable non-double primitives are mapped to java. The numeric
-values are mapped to `java.lang.Double` as that will map to javascript `number` when compiled. It is unclear on
-the best strategy to address this mismatch. This is no different from other bindings such as Elemental2.
-
 # Contributing
 
 The project was released as open source so others could benefit from the project. We are thankful for any
