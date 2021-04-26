@@ -93,10 +93,6 @@ Generate host element factories: Events would need to be specially handled to ma
 
 # Other
 
-* Parser is extremely slow because of it's recursive nature. Is there a way to "fix" this by reworking the
-  grammar some how. For example, the `main` pipeline that loads all the schemas, applys transforms and emits
-  a complete idl with all annotations takes 18sec but loading that complete idl takes 51sec)
-
 * It would be nice to extend WebIDL and support throws either as an expression or maybe an extended attribute.
   The Gecko WebIDL files actually have a `[Throws]` extended attribute that we could look into to drive this?
   We could also add the equivalent closure annotation `@throws`
