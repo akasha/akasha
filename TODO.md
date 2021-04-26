@@ -31,11 +31,6 @@ on an interface
 
 * Add special handling for `@return` javadoc.
 
-* Scan [MDN browser compat ability data](https://github.com/mdn/browser-compat-data/tree/master/api) to
-  build up compatibility table for elements, possibly adding
-  [browser](https://github.com/mdn/browser-compat-data/tree/master/browsers) compatibility to the mix.
-  Alternatively extract [caniuse](https://github.com/Fyrd/caniuse) data.
-
 # Apps to Stretch Implementation
 
 * Complete `react4j-vchat`
