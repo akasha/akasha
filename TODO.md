@@ -4,10 +4,6 @@ This document is essentially a list of shorthand notes describing work yet to be
 Unfortunately it is not complete enough for other people to pick work off the list and
 complete as there is too much un-said.
 
-# MVP Release
-
-* filter out elements that are marked as `JavaOnly` from closure externs - probably by writing a processor that strips them
-
 # Apps to Stretch Implementation
 
 * Complete `react4j-vchat`
