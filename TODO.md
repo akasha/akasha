@@ -63,14 +63,6 @@ complete as there is too much un-said.
   value X then arg2 must be of type Y. To create the overlay method we may need to define an extended attribute on
   operation that defines scenario.
 
-# React4j Host Element Factories
-
-Generate host element factories: Events would need to be specially handled to map to reacts event system but we could control whether we generate a capture handler using the `[NoBubble]` attribute on events.
-
-* boolean input values should have a method that accepts a boolean aswell as one that passes default value of true. i.e. `HtmlProps.required(boolean) { return ...; }` and `HtmlProps.required() { return required(true); }`
-
-* `translate` is `yes` or `no` in html where it is boolean at IDL level
-
 ### Validations
 
 This section lists some validations that should be implemented to at least confirm some of our assumptions:
