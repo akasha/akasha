@@ -93,10 +93,6 @@ Generate host element factories: Events would need to be specially handled to ma
 
 # Other
 
-* Consider a reorganization of pipelines so that each independent pipeline can define a local idl to
-  include so each transform could be relatively isolated with the processing stages combined with custom
-  idl in one place
-
 * Parser is extremely slow because of it's recursive nature. Is there a way to "fix" this by reworking the
   grammar some how. For example, the `main` pipeline that loads all the schemas, applys transforms and emits
   a complete idl with all annotations takes 18sec but loading that complete idl takes 51sec)
