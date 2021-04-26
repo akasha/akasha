@@ -24,8 +24,6 @@ on an interface
 
 * Process docs and any words that match an original/non-synthetic word then convert into {@link MyType}
 
-* Some doc entries include documentation for constants .. scan for that?.
-
 # Apps to Stretch Implementation
 
 * Complete `react4j-vchat`
