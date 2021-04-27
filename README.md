@@ -52,6 +52,29 @@ necessary to add the closure externs shipped as part of the `akasha-java` artifa
 under the names; `akasha/Akasha.externs.js` and `akasha/akasha_patches.extern.js`. The exact way that these build
 steps are specified will depend upon the underlying tool but a simple example using Bazel is available at https://github.com/react4j/react4j-todomvc/tree/raw_bazel_j2cl
 
+### Java Integration
+
+The easiest way to access browser APIs is to access the static fields or call static methods on the classes
+that represent the `globalThis` object within the javascript environment. The "namespaces" within the browser
+are also exposed as java classes containing static methods and static fields.
+
+For example the javascript:
+
+```javascript
+window.addEventListener( "online", e => console.log( "The network is connected" ) )
+```
+
+Would be translated into Akasha java as:
+
+```java
+WindowGlobal.addOnlineListener( e -> Console.log( "The network is connected" ) );
+```
+
+In this scenario, the `WindowGlobal` java class represents `globalThis` value in a browser window context and the
+`Console` class represents the `console` namespace. Some browser types can also be created using the `new` keyword
+and where this is possible in javascript it is possible in Akasha java. i.e. `new WebSocket("wss://..." )` is valid
+in both javascript and Akasha java.
+
 ## How does it work?
 
 Akasha is kept with evolving browser standards by fetching WebIDL and processing the WebIDL to generate
