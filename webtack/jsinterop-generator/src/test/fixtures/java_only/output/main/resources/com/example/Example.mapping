@@ -1,0 +1,11 @@
+EXT_disjoint_timer_query=com.example.EXT_disjoint_timer_query
+EventListener1=com.example.EventListener1
+EventListener2=com.example.EventListener2
+Math1=com.example.Math1
+Math2=com.example.Math2
+MyType2=com.example.MyType2
+OnBlahEventHandler=com.example.OnBlahEventHandler
+OnBleeEventHandler=com.example.OnBleeEventHandler
+OverSampleType=com.example.OverSampleType
+PermissionDescriptor=com.example.PermissionDescriptor
+PushPermissionDescriptor=com.example.PushPermissionDescriptor

@@ -20,6 +20,7 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import org.realityforge.webtack.model.Argument;
 import org.realityforge.webtack.model.AttributeMember;
+import org.realityforge.webtack.model.AttributedNode;
 import org.realityforge.webtack.model.CallbackDefinition;
 import org.realityforge.webtack.model.CallbackInterfaceDefinition;
 import org.realityforge.webtack.model.ConstEnumerationDefinition;
@@ -154,42 +155,42 @@ final class ClosureAction
       writeJsDoc( writer, "@fileoverview", "@externs" );
       for ( final TypedefDefinition definition : schema.getTypedefs() )
       {
-        if ( tryRecordGeneratedType( definition.getName() ) )
+        if ( isNotExcluded( definition ) && tryRecordGeneratedType( definition.getName() ) )
         {
           writeTypedef( writer, definition.getName(), definition.getType() );
         }
       }
       for ( final CallbackDefinition definition : schema.getCallbacks() )
       {
-        if ( tryRecordGeneratedType( definition.getName() ) )
+        if ( isNotExcluded( definition ) && tryRecordGeneratedType( definition.getName() ) )
         {
           writeCallback( writer, definition );
         }
       }
       for ( final CallbackInterfaceDefinition definition : schema.getCallbackInterfaces() )
       {
-        if ( tryRecordGeneratedType( definition.getName() ) )
+        if ( isNotExcluded( definition ) && tryRecordGeneratedType( definition.getName() ) )
         {
           writeCallbackInterface( writer, definition );
         }
       }
       for ( final DictionaryDefinition definition : schema.getDictionaries() )
       {
-        if ( tryRecordGeneratedType( definition.getName() ) )
+        if ( isNotExcluded( definition ) && tryRecordGeneratedType( definition.getName() ) )
         {
           writeDictionary( writer, definition );
         }
       }
       for ( final NamespaceDefinition definition : schema.getNamespaces() )
       {
-        if ( tryRecordGeneratedType( definition.getName() ) )
+        if ( isNotExcluded( definition ) && tryRecordGeneratedType( definition.getName() ) )
         {
           writeNamespace( writer, definition );
         }
       }
       for ( final InterfaceDefinition definition : schema.getInterfaces() )
       {
-        if ( tryRecordGeneratedType( definition.getName() ) )
+        if ( isNotExcluded( definition ) && tryRecordGeneratedType( definition.getName() ) )
         {
           writeInterface( writer, definition );
         }
@@ -212,6 +213,11 @@ final class ClosureAction
     {
       writeTypeCatalog();
     }
+  }
+
+  private boolean isNotExcluded( @Nonnull final AttributedNode node )
+  {
+    return !node.isNoArgsExtendedAttributePresent( ExtendedAttributes.JAVA_ONLY );
   }
 
   private void writeTypedef( @Nonnull final Writer writer,
@@ -257,7 +263,7 @@ final class ClosureAction
     DictionaryDefinition dict = definition;
     while ( null != dict )
     {
-      members.addAll( dict.getMembers() );
+      dict.getMembers().stream().filter( this::isNotExcluded ).forEach( members::add );
       dict = dict.getSuperDictionary();
     }
 
@@ -324,23 +330,29 @@ final class ClosureAction
 
     for ( final ConstMember constant : definition.getConstants() )
     {
-      writer.write( "/** @const {" );
-      writeType( writer, constant.getType() );
-      writer.write( "} */ " );
-      writer.write( name );
-      writer.write( "." );
-      writer.write( constant.getName() );
-      writer.write( ";\n" );
+      if ( isNotExcluded( constant ) )
+      {
+        writer.write( "/** @const {" );
+        writeType( writer, constant.getType() );
+        writer.write( "} */ " );
+        writer.write( name );
+        writer.write( "." );
+        writer.write( constant.getName() );
+        writer.write( ";\n" );
+      }
     }
     for ( final AttributeMember attribute : definition.getAttributes() )
     {
-      writer.write( "/** @type {" );
-      writeType( writer, attribute.getType() );
-      writer.write( "} */ " );
-      writer.write( name );
-      writer.write( "." );
-      writer.write( attribute.getName() );
-      writer.write( ";\n" );
+      if ( isNotExcluded( attribute ) )
+      {
+        writer.write( "/** @type {" );
+        writeType( writer, attribute.getType() );
+        writer.write( "} */ " );
+        writer.write( name );
+        writer.write( "." );
+        writer.write( attribute.getName() );
+        writer.write( ";\n" );
+      }
     }
     writeOperations( writer, name, definition.getOperations(), true, s -> false );
   }
@@ -434,27 +446,30 @@ final class ClosureAction
       final String operationName = entry.getKey();
       final List<OperationMember> operationsToMerge = entry.getValue();
       final OperationMember templateOperation = operationsToMerge.get( 0 );
-      final boolean isNonStaticOperation = !onNamespace && OperationMember.Kind.STATIC != templateOperation.getKind();
-      final boolean isOverride = isNonStaticOperation && isOperationOverride.test( operationName );
-      if ( 1 == operationsToMerge.size() )
+      if ( isNotExcluded( templateOperation ) )
       {
-        writeOperation( writer,
-                        type,
-                        operationName,
-                        templateOperation.getArguments(),
-                        templateOperation.getReturnType(),
-                        isNonStaticOperation,
-                        isOverride );
-      }
-      else
-      {
-        writeOperation( writer,
-                        type,
-                        operationName,
-                        deriveArguments( operationsToMerge ),
-                        deriveReturnType( operationsToMerge ),
-                        isNonStaticOperation,
-                        isOverride );
+        final boolean isNonStaticOperation = !onNamespace && OperationMember.Kind.STATIC != templateOperation.getKind();
+        final boolean isOverride = isNonStaticOperation && isOperationOverride.test( operationName );
+        if ( 1 == operationsToMerge.size() )
+        {
+          writeOperation( writer,
+                          type,
+                          operationName,
+                          templateOperation.getArguments(),
+                          templateOperation.getReturnType(),
+                          isNonStaticOperation,
+                          isOverride );
+        }
+        else
+        {
+          writeOperation( writer,
+                          type,
+                          operationName,
+                          deriveArguments( operationsToMerge ),
+                          deriveReturnType( operationsToMerge ),
+                          isNonStaticOperation,
+                          isOverride );
+        }
       }
     }
   }
@@ -593,7 +608,10 @@ final class ClosureAction
   {
     for ( final AttributeMember attribute : attributes )
     {
-      writeAttribute( writer, type, attribute );
+      if ( isNotExcluded( attribute ) )
+      {
+        writeAttribute( writer, type, attribute );
+      }
     }
   }
 
@@ -633,13 +651,16 @@ final class ClosureAction
   {
     for ( final ConstMember constant : constants )
     {
-      if ( addConstantsToType )
+      if ( isNotExcluded( constant ) )
       {
-        writeConstant( writer, type, constant, false );
-      }
-      if ( addConstantsToPrototype )
-      {
-        writeConstant( writer, type, constant, true );
+        if ( addConstantsToType )
+        {
+          writeConstant( writer, type, constant, false );
+        }
+        if ( addConstantsToPrototype )
+        {
+          writeConstant( writer, type, constant, true );
+        }
       }
     }
   }
