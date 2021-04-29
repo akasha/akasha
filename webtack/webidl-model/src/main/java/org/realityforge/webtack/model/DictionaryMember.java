@@ -23,7 +23,6 @@ public final class DictionaryMember
                            @Nonnull final List<SourceInterval> sourceLocations )
   {
     super( name, documentation, extendedAttributes, sourceLocations );
-    assert optional || extendedAttributes.isEmpty();
     assert optional || null == defaultValue;
     _type = Objects.requireNonNull( type );
     _optional = optional;
