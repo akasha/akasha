@@ -1,0 +1,11 @@
+FakeMath.acos
+FakeMath.abs
+OffscreenCanvas.OffscreenCanvas
+OffscreenCanvas.isValid
+Performance.now
+WEBGL_debug_shaders.getTranslatedShaderSource
+
+# Blank space before this comment line is ignored as is comment
+escape
+isFinite
+isNaN

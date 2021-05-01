@@ -57,6 +57,12 @@ public final class ExtendedAttributes
    */
   public static final String LEGACY_FACTORY_FUNCTION = "LegacyFactoryFunction";
   /**
+   * Indicates that the operation has no side effects and if the compiler determines that the return
+   * value is not needed then the compiler can omit the call. It results in <code>@nosideeffects</code>
+   * annotation in closure externs and <code>@HasNoSideEffects</code> annotation in java code.
+   */
+  public static final String NO_SIDE_EFFECTS = "NoSideEffects";
+  /**
    * A custom extended property that specifies the sub-package in which to generate element relative to the root element.
    */
   public static final String JAVA_SUB_PACKAGE = "JavaSubPackage";
