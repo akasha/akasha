@@ -1037,6 +1037,13 @@
       "name": "Merge"
     },
     {
+      "name": "AddNoSideEffectsExtendedAttribute",
+      "description": "Source NoSideEffects attributes from central location",
+      "config": {
+        "file": "data/pipelines/no_side_effects.txt"
+      }
+    },
+    {
       "name": "SynthesizeTransferable",
       "config": {
         "expectedTransferableCount": 7
