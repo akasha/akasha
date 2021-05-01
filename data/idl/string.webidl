@@ -19,6 +19,8 @@ interface String {
   long long localeCompare( DOMString compareString, optional ( DOMString or sequence<DOMString> ) locales, optional object options );
   sequence<DOMString> match( RegExp regexp );
   sequence<DOMString> match( DOMString regexp );
+  [JavaSequenceType=Iterator] sequence<RegExpResult> matchAll( RegExp regexp );
+  [JavaSequenceType=Iterator] sequence<RegExpResult> matchAll( DOMString regexp );
   DOMString normalize( optional DOMString form = "" );
   DOMString padEnd( long long targetLength, optional DOMString padString = "" );
   DOMString padStart( long long targetLength, optional DOMString padString = "" );
