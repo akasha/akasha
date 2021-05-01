@@ -607,7 +607,7 @@ public final class WebIDLModelParser
                                         @Nonnull final List<ExtendedAttribute> extendedAttributes,
                                         @Nonnull final SourcePosition startPosition )
   {
-    final Type returnType = parse( ctx.type(), extendedAttributes );
+    final Type returnType = parse( ctx.type(), Collections.emptyList() );
     final WebIDLParser.OperationNameContext operationNameContext =
       ctx.operationRest().optionalOperationName().operationName();
     final String name;
