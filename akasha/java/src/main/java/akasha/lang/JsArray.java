@@ -1,6 +1,7 @@
 package akasha.lang;
 
 import javaemul.internal.ArrayStamper;
+import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import jsinterop.annotations.JsFunction;
@@ -124,6 +125,7 @@ public class JsArray<T>
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/of">Array.of - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-array.of">Array.of - ECMA</a>
    */
+  @HasNoSideEffects
   @SafeVarargs
   @Nonnull
   public static native <T> JsArray<T> of( @Nonnull T... var_args );
@@ -142,6 +144,7 @@ public class JsArray<T>
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Array">Array() - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-array-constructor">Array Constructor - ECMA</a>
    */
+  //@HasNoSideEffects not supported on constructors
   @SafeVarargs
   public JsArray( @Nonnull final T... items )
   {
@@ -166,6 +169,7 @@ public class JsArray<T>
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat">Array.prototype.concat() - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-array.prototype.concat">Array.prototype.concat() - ECMA</a>
    */
+  @HasNoSideEffects
   @SafeVarargs
   @Nonnull
   public final native JsArray<T> concat( @Nonnull T... items );
@@ -199,6 +203,7 @@ public class JsArray<T>
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/entries">Array.prototype.entries() - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-array.prototype.entries">Array.prototype.entries() - ECMA</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native JsIteratorIterable<JsArray<Entry<T>>> entries();
 
@@ -368,6 +373,7 @@ public class JsArray<T>
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat">Array.prototype.flat() - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-array.prototype.flat">Array.prototype.flat() - ECMA</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native <S> JsArray<S> flat();
 
@@ -379,6 +385,7 @@ public class JsArray<T>
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat">Array.prototype.flat() - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-array.prototype.flat">Array.prototype.flat() - ECMA</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native <S> JsArray<S> flat( double depth );
 
@@ -450,6 +457,7 @@ public class JsArray<T>
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes">Array.prototype.includes() - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-array.prototype.includes">Array.prototype.includes() - ECMA</a>
    */
+  @HasNoSideEffects
   public native boolean includes( @Nullable T searchElement, int fromIndex );
 
   /**
@@ -459,6 +467,7 @@ public class JsArray<T>
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes">Array.prototype.includes() - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-array.prototype.includes">Array.prototype.includes() - ECMA</a>
    */
+  @HasNoSideEffects
   public native boolean includes( @Nullable T searchElement );
 
   /**
@@ -470,6 +479,7 @@ public class JsArray<T>
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf">Array.prototype.indexOf() - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-array.prototype.indexof">Array.prototype.indexOf() - ECMA</a>
    */
+  @HasNoSideEffects
   public native int indexOf( @Nonnull T searchElement, int fromIndex );
 
   /**
@@ -480,6 +490,7 @@ public class JsArray<T>
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf">Array.prototype.indexOf() - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-array.prototype.indexof">Array.prototype.indexOf() - ECMA</a>
    */
+  @HasNoSideEffects
   public native int indexOf( @Nonnull T searchElement );
 
   /**
@@ -490,6 +501,7 @@ public class JsArray<T>
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join">Array.prototype.join() - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-array.prototype.join">Array.prototype.join() - ECMA</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native String join( @Nonnull String separator );
 
@@ -500,6 +512,7 @@ public class JsArray<T>
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join">Array.prototype.join() - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-array.prototype.join">Array.prototype.join() - ECMA</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native String join();
 
@@ -510,6 +523,7 @@ public class JsArray<T>
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/keys">Array.prototype.join() - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-array.prototype.keys">Array.prototype.keys() - ECMA</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native JsIteratorIterable<Double> keys();
 
@@ -522,6 +536,7 @@ public class JsArray<T>
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf">Array.prototype.lastIndexOf() - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-array.prototype.lastindexof">Array.prototype.lastIndexOf() - ECMA</a>
    */
+  @HasNoSideEffects
   public native int lastIndexOf( @Nullable T searchElement, int fromIndex );
 
   /**
@@ -532,6 +547,7 @@ public class JsArray<T>
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf">Array.prototype.lastIndexOf() - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-array.prototype.lastindexof">Array.prototype.lastIndexOf() - ECMA</a>
    */
+  @HasNoSideEffects
   public native int lastIndexOf( @Nullable T searchElement );
 
   /**
@@ -735,6 +751,7 @@ public class JsArray<T>
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice">Array.prototype.slice() - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-array.prototype.slice">Array.prototype.slice() - ECMA</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native JsArray<T> slice( int begin, int end );
 
@@ -746,6 +763,7 @@ public class JsArray<T>
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice">Array.prototype.slice() - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-array.prototype.slice">Array.prototype.slice() - ECMA</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native JsArray<T> slice( int begin );
 
@@ -756,6 +774,7 @@ public class JsArray<T>
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice">Array.prototype.slice() - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-array.prototype.slice">Array.prototype.slice() - ECMA</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native JsArray<T> slice();
 
@@ -842,6 +861,7 @@ public class JsArray<T>
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toString">Array.prototype.toString() - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-array.prototype.tostring">Array.prototype.toString() - ECMA</a>
    */
+  @HasNoSideEffects
   @JsMethod( name = "toString" )
   @Nonnull
   public native String toString_();
@@ -864,6 +884,7 @@ public class JsArray<T>
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/values">Array.prototype.values() - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-array.prototype.values">Array.prototype.values() - ECMA</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native JsIteratorIterable<T> values();
 

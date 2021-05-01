@@ -3,6 +3,7 @@ package akasha.core;
 import akasha.lang.JsArray;
 import akasha.lang.JsIterable;
 import akasha.lang.JsIteratorIterable;
+import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import jsinterop.annotations.JsFunction;
@@ -27,6 +28,7 @@ public class JsMap<K, V>
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/Map">Map() - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-map-constructor">Map Constructor - ECMA</a>
    */
+  //@HasNoSideEffects not supported on constructors
   public JsMap()
   {
   }
@@ -38,6 +40,7 @@ public class JsMap<K, V>
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/Map">Map() - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-map-constructor">Map Constructor - ECMA</a>
    */
+  //@HasNoSideEffects not supported on constructors
   @SafeVarargs
   public JsMap( @Nonnull final Entry<K, V>... pairs )
   {
@@ -50,6 +53,7 @@ public class JsMap<K, V>
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/Map">Map() - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-map-constructor">Map Constructor - ECMA</a>
    */
+  //@HasNoSideEffects not supported on constructors
   public JsMap( @Nonnull final JsIterable<Entry<K, V>> pairs )
   {
   }
@@ -89,6 +93,7 @@ public class JsMap<K, V>
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/entries">Map.prototype.entries - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-get-map.prototype.entries">Map.prototype.entries - ECMA</a>
    */
+  @HasNoSideEffects
   public native JsIteratorIterable<Entry<K, V>> entries();
 
   /**
@@ -126,6 +131,7 @@ public class JsMap<K, V>
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/get">Map.prototype.get - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-get-map.prototype.get">Map.prototype.get - ECMA</a>
    */
+  @HasNoSideEffects
   public native V get( K key );
 
   /**
@@ -135,6 +141,7 @@ public class JsMap<K, V>
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/has">Map.prototype.has - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-get-map.prototype.has">Map.prototype.has - ECMA</a>
    */
+  @HasNoSideEffects
   public native boolean has( @Nullable K key );
 
   /**
@@ -144,6 +151,7 @@ public class JsMap<K, V>
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/keys">Map.prototype.keys - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-get-map.prototype.keys">Map.prototype.keys - ECMA</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native JsIteratorIterable<K> keys();
 
@@ -166,6 +174,7 @@ public class JsMap<K, V>
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/values">Map.prototype.values - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-get-map.prototype.values">Map.prototype.values - ECMA</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native JsIteratorIterable<V> values();
 

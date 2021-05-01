@@ -2,6 +2,7 @@ package akasha.core;
 
 import akasha.lang.JsArray;
 import akasha.lang.JsIterable;
+import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import jsinterop.annotations.JsOverlay;
@@ -23,6 +24,7 @@ public class JsWeakMap<K, V>
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/WeakMap">WeakMap() - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-weakmap-constructor">WeakMap Constructor - ECMA</a>
    */
+  //@HasNoSideEffects not supported on constructors
   public JsWeakMap()
   {
   }
@@ -34,6 +36,7 @@ public class JsWeakMap<K, V>
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/WeakMap">WeakMap() - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-weakmap-constructor">WeakMap Constructor - ECMA</a>
    */
+  //@HasNoSideEffects not supported on constructors
   @SafeVarargs
   public JsWeakMap( @Nonnull final Entry<K, V>... pairs )
   {
@@ -46,6 +49,7 @@ public class JsWeakMap<K, V>
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/WeakMap">WeakMap() - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-weakmap-constructor">WeakMap Constructor - ECMA</a>
    */
+  //@HasNoSideEffects not supported on constructors
   public JsWeakMap( @Nonnull final JsIterable<Entry<K, V>> pairs )
   {
   }
@@ -68,6 +72,7 @@ public class JsWeakMap<K, V>
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/get">WeakMap.prototype.get() - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-weakmap.prototype.get">WeakMap.prototype.get() - ECMA</a>
    */
+  @HasNoSideEffects
   @Nullable
   public native V get( @Nonnull K key );
 
@@ -79,6 +84,7 @@ public class JsWeakMap<K, V>
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/has">WeakMap.prototype.has() - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-weakmap.prototype.has">WeakMap.prototype.has() - ECMA</a>
    */
+  @HasNoSideEffects
   public native boolean has( @Nonnull K key );
 
   /**

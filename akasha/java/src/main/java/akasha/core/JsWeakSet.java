@@ -1,6 +1,7 @@
 package akasha.core;
 
 import akasha.lang.JsIterable;
+import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
@@ -20,6 +21,7 @@ public class JsWeakSet<T>
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet/WeakSet">WeakSet() - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-weakset-constructor">WeakSet Constructor - ECMA</a>
    */
+  //@HasNoSideEffects not supported on constructors
   public JsWeakSet()
   {
   }
@@ -31,6 +33,7 @@ public class JsWeakSet<T>
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet/WeakSet">WeakSet() - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-weakset-constructor">WeakSet Constructor - ECMA</a>
    */
+  //@HasNoSideEffects not supported on constructors
   public JsWeakSet( @Nonnull final JsIterable<T> values )
   {
   }
@@ -42,6 +45,7 @@ public class JsWeakSet<T>
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet/WeakSet">WeakSet() - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-weakset-constructor">WeakSet Constructor - ECMA</a>
    */
+  //@HasNoSideEffects not supported on constructors
   public JsWeakSet( @Nonnull final T[] values )
   {
   }
@@ -75,5 +79,6 @@ public class JsWeakSet<T>
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet/has">WeakSet.prototype.has() - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-weakset.prototype.has">WeakSet.prototype.has() - ECMA</a>
    */
+  @HasNoSideEffects
   public native boolean has( @Nonnull T value );
 }

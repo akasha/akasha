@@ -3,6 +3,7 @@ package akasha.core;
 import akasha.lang.JsArray;
 import akasha.lang.JsIterable;
 import akasha.lang.JsIteratorIterable;
+import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import jsinterop.annotations.JsFunction;
@@ -26,6 +27,7 @@ public class JsSet<T>
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/Set">Set Constructor - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-set-constructor">Set Constructor - ECMA</a>
    */
+  //@HasNoSideEffects not supported on constructors
   public JsSet()
   {
   }
@@ -37,6 +39,7 @@ public class JsSet<T>
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/Set">Set Constructor - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-set-constructor">Set Constructor - ECMA</a>
    */
+  //@HasNoSideEffects not supported on constructors
   public JsSet( @Nonnull JsIterable<T> values )
   {
   }
@@ -48,6 +51,7 @@ public class JsSet<T>
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/Set">Set Constructor - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-set-constructor">Set Constructor - ECMA</a>
    */
+  //@HasNoSideEffects not supported on constructors
   public JsSet( @Nonnull T[] values )
   {
   }
@@ -125,6 +129,7 @@ public class JsSet<T>
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/has">Set.prototype.has - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-get-set.prototype.has">Set.prototype.has - ECMA</a>
    */
+  @HasNoSideEffects
   public native boolean has( @Nullable T value );
 
   /**
@@ -134,6 +139,7 @@ public class JsSet<T>
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/entries">Set.prototype.entries - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-get-set.prototype.entries">Set.prototype.entries - ECMA</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native JsIteratorIterable<JsArray<T>> entries();
 
@@ -144,6 +150,7 @@ public class JsSet<T>
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/keys">Set.prototype.keys - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-get-set.prototype.keys">Set.prototype.keys - ECMA</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native JsIteratorIterable<T> keys();
 
@@ -154,6 +161,7 @@ public class JsSet<T>
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/values">Set.prototype.values - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-get-set.prototype.values">Set.prototype.values - ECMA</a>
    */
+  @HasNoSideEffects
   @Nonnull
   public native JsIteratorIterable<T> values();
 
