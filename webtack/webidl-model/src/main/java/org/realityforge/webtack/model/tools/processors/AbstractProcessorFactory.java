@@ -1,6 +1,10 @@
 package org.realityforge.webtack.model.tools.processors;
 
 import java.io.StringReader;
+import java.nio.file.Files;
+import java.nio.file.InvalidPathException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.regex.Pattern;
@@ -26,6 +30,39 @@ public abstract class AbstractProcessorFactory
     else
     {
       return value;
+    }
+  }
+
+  @SuppressWarnings( "SameParameterValue" )
+  @Nonnull
+  protected final Path requirePath( @Nonnull final String key,
+                                    @Nonnull final String value,
+                                    @Nullable final Boolean exist )
+  {
+    try
+    {
+      final Path path = Paths.get( requireNonNull( key, value ) );
+      if ( null != exist )
+      {
+        if ( exist && !Files.exists( path ) )
+        {
+          throw new IllegalArgumentException( getProcessorName() + " failed to parse the " + key + " configuration " +
+                                              "value as it expected to reference a file that existed but no such " +
+                                              "file exists at " + path );
+        }
+        else if ( !exist && Files.exists( path ) )
+        {
+          throw new IllegalArgumentException( getProcessorName() + " failed to parse the " + key + " configuration " +
+                                              "value as it expected to reference a file that does not exist but a " +
+                                              "file exists at " + path );
+        }
+      }
+      return path;
+    }
+    catch ( final InvalidPathException e )
+    {
+      throw new IllegalArgumentException( getProcessorName() + " failed to parse the " + key + " configuration value",
+                                          e );
     }
   }
 
