@@ -95,4 +95,18 @@ interface Object {
   static undefined seal( object obj );
   static undefined setPrototypeOf( object obj, object prototype );
   static sequence<any> values( object obj );
+
+  constructor( optional any value );
+
+  boolean hasOwnProperty( Symbol prop );
+  boolean hasOwnProperty( DOMString prop );
+
+  boolean propertyIsEnumerable( DOMString prop );
+  boolean isPrototypeOf( object obj );
+
+  // Note: The toLocale* method has not been defined as we have seen no usage of it in the wild and
+  // it is somewhat complex to define
+  // DOMString toLocaleString(...);
+
+  stringifier DOMString toString();
 };

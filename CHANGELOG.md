@@ -4,6 +4,7 @@
 
 * Upgrade the `org.realityforge.react4j` artifacts to version `0.182`.
 * Omit generation of closure externs for WebIDL elements that have the extended attribute `[JavaOnly]`. This is supported across all different element types but is only currently used on constants named `"NAME"` on WebGl/WebGl2 extensions that have been added to the java interfaces to improve the typing of the method `WebGL2RenderingContext.getExtension(...)`. These constant fields are no longer being incorrectly defined in closure externs. Fixes #18.
+* Add the `constructor`, `hasOwnProperty`, `propertyIsEnumerable`, `isPrototypeOf` and `toString` operations to the IDL defining the `Object` interface types. This increases the ability for akasha to be used in a context with a more javascript-ish architecture but is not expected to impact the more java centric usages of Akasha.
 
 ### [v0.10](https://github.com/akasha/akasha/tree/v0.10) (2021-04-22) · [Full Changelog](https://github.com/spritz/spritz/compare/v0.09...v0.10) · [API Differences](https://akasha.github.io/akasha-java/api-diff/?key=akasha-java&old=0.09&new=0.10) · [Source Diff](https://github.com/akasha/akasha-java/compare/v0.09...v0.10)
 
