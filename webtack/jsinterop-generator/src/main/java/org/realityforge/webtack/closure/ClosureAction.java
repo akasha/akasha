@@ -371,7 +371,7 @@ final class ClosureAction
 
     final String namespace = definition.getNamespace();
     final String type = ( null == namespace ? "" : namespace + "." ) + definition.getName();
-    if ( hasNoJsType )
+    if ( hasNoJsType || constructors.isEmpty() )
     {
       writeConstructor( writer,
                         type,
@@ -379,15 +379,6 @@ final class ClosureAction
                         Collections.emptyList(),
                         false,
                         Collections.emptyList() );
-    }
-    else if ( constructors.isEmpty() )
-    {
-      writeConstructor( writer,
-                        type,
-                        definition.getInherits(),
-                        Collections.emptyList(),
-                        true,
-                        Collections.singletonList( "@private" ) );
     }
     else if ( 1 == constructors.size() )
     {
