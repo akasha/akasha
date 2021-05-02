@@ -1324,7 +1324,7 @@ final class JsinteropAction
         .methodBuilder( "onInvoke" )
         .addModifiers( Modifier.PUBLIC, Modifier.ABSTRACT );
     maybeAddCustomAnnotations( definition, method );
-    emitReturnType( definition.getReturnType(), method );
+    emitReturnType( definition, definition.getReturnType(), method );
     for ( final Argument argument : definition.getArguments() )
     {
       generateArgument( argument, asTypedValue( argument.getType() ), false, method );
@@ -2512,7 +2512,7 @@ final class JsinteropAction
       method.addAnnotation( JsinteropTypes.HAS_NO_SIDE_EFFECTS );
     }
     final Type returnType = operation.getReturnType();
-    emitReturnType( returnType, method );
+    emitReturnType( operation, returnType, method );
     int index = 0;
     for ( final Argument argument : arguments )
     {
@@ -2566,7 +2566,7 @@ final class JsinteropAction
       method.addAnnotation( JsinteropTypes.HAS_NO_SIDE_EFFECTS );
     }
     final Type returnType = operation.getReturnType();
-    emitReturnType( returnType, method );
+    emitReturnType( operation, returnType, method );
     int index = 0;
     for ( final Argument argument : arguments )
     {
@@ -2592,7 +2592,7 @@ final class JsinteropAction
     maybeAddJavadoc( operation, method );
     method.addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_OVERLAY ).build() );
     final Type itemType = operation.getReturnType();
-    emitReturnType( itemType, method );
+    emitReturnType( operation, itemType, method );
     final Argument argument = arguments.get( 0 );
     generateArgument( argument, asTypedValue( argument.getType() ), true, method );
     method.addStatement( "return $T.<$T>cast( this ).getAt( $N )",
@@ -2648,7 +2648,7 @@ final class JsinteropAction
     maybeAddJavadoc( operation, method );
     method.addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_OVERLAY ).build() );
     final Type itemType = operation.getReturnType();
-    emitReturnType( itemType, method );
+    emitReturnType( operation, itemType, method );
     final Argument argument = arguments.get( 0 );
     generateArgument( argument, asTypedValue( argument.getType() ), true, method );
     final TypeName javaItemType = toTypeName( itemType );
@@ -2754,7 +2754,7 @@ final class JsinteropAction
                               .build() );
     }
     final Type returnType = operation.getReturnType();
-    emitReturnType( returnType, method );
+    emitReturnType( operation, returnType, method );
     int index = 0;
     for ( final Argument argument : arguments )
     {
@@ -2763,7 +2763,9 @@ final class JsinteropAction
     type.addMethod( method.build() );
   }
 
-  private void emitReturnType( @Nonnull final Type returnType, @Nonnull final MethodSpec.Builder method )
+  private void emitReturnType( @Nonnull final AttributedNode operation,
+                               @Nonnull final Type returnType,
+                               @Nonnull final MethodSpec.Builder method )
   {
     if ( Kind.Void != returnType.getKind() )
     {
@@ -2777,7 +2779,17 @@ final class JsinteropAction
       {
         method.addAnnotation( BasicTypes.NONNULL );
       }
-      method.returns( toTypeName( returnType ) );
+      final TypeName type;
+      if ( Kind.Sequence == actualType.getKind() )
+      {
+        type = toJavaSequenceType( (SequenceType) actualType,
+                                   operation.getIdentValue( ExtendedAttributes.JAVA_SEQUENCE_TYPE ) );
+      }
+      else
+      {
+        type = toTypeName( returnType );
+      }
+      method.returns( type );
     }
   }
 
