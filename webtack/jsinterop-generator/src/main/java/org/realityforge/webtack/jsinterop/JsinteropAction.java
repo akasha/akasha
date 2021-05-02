@@ -1594,6 +1594,7 @@ final class JsinteropAction
     final MethodSpec.Builder method =
       MethodSpec
         .methodBuilder( methodName )
+        .addAnnotation( JsinteropTypes.HAS_NO_SIDE_EFFECTS )
         .addAnnotation( BasicTypes.NONNULL )
         .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
         .returns( ParameterizedTypeName.get( lookupClassName( "Iterator" ), ClassName.bestGuess( "Entry" ) ) );
@@ -1609,6 +1610,7 @@ final class JsinteropAction
     final MethodSpec.Builder method =
       MethodSpec
         .methodBuilder( methodName )
+        .addAnnotation( JsinteropTypes.HAS_NO_SIDE_EFFECTS )
         .addAnnotation( BasicTypes.NONNULL )
         .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
         .returns( ParameterizedTypeName.get( lookupClassName( "Iterator" ), keyType.box() ) );
@@ -1623,6 +1625,7 @@ final class JsinteropAction
     final String methodName = "values";
     final MethodSpec.Builder method =
       MethodSpec.methodBuilder( methodName )
+        .addAnnotation( JsinteropTypes.HAS_NO_SIDE_EFFECTS )
         .addAnnotation( BasicTypes.NONNULL )
         .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
         .returns( ParameterizedTypeName.get( lookupClassName( "Iterator" ), toTypeName( iterable.getValueType() ) ) );
@@ -1901,6 +1904,7 @@ final class JsinteropAction
       MethodSpec
         .methodBuilder( "has" )
         .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
+        .addAnnotation( JsinteropTypes.HAS_NO_SIDE_EFFECTS )
         .addParameter( keyParam )
         .returns( TypeName.BOOLEAN );
     maybeAddJavadoc( getDocumentationElement( definitionName, "has" ), has );
@@ -1909,6 +1913,7 @@ final class JsinteropAction
     final MethodSpec.Builder get = MethodSpec
       .methodBuilder( "get" )
       .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
+      .addAnnotation( JsinteropTypes.HAS_NO_SIDE_EFFECTS )
       .addAnnotation( BasicTypes.NULLABLE )
       .addParameter( keyParam )
       .returns( boxedValueType );
@@ -1919,6 +1924,7 @@ final class JsinteropAction
       MethodSpec
         .methodBuilder( "keys" )
         .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
+        .addAnnotation( JsinteropTypes.HAS_NO_SIDE_EFFECTS )
         .addAnnotation( BasicTypes.NONNULL )
         .returns( ParameterizedTypeName.get( lookupClassName( "Iterator" ), boxedKeyType ) );
     maybeAddJavadoc( getDocumentationElement( definitionName, "keys" ), keys );
@@ -1928,6 +1934,7 @@ final class JsinteropAction
       MethodSpec
         .methodBuilder( "values" )
         .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
+        .addAnnotation( JsinteropTypes.HAS_NO_SIDE_EFFECTS )
         .addAnnotation( BasicTypes.NONNULL )
         .returns( ParameterizedTypeName.get( lookupClassName( "Iterator" ), boxedValueType ) );
     maybeAddJavadoc( getDocumentationElement( definitionName, "values" ), values );
@@ -1939,6 +1946,7 @@ final class JsinteropAction
       MethodSpec
         .methodBuilder( "entries" )
         .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
+        .addAnnotation( JsinteropTypes.HAS_NO_SIDE_EFFECTS )
         .addAnnotation( BasicTypes.NONNULL )
         .returns( ParameterizedTypeName.get( lookupClassName( "Iterator" ),
                                              ClassName.bestGuess( "Entry" ) ) );
@@ -2498,6 +2506,11 @@ final class JsinteropAction
                               .addMember( "name", "$S", name )
                               .build() );
     }
+    if ( operation.isNoArgsExtendedAttributePresent( ExtendedAttributes.NO_SIDE_EFFECTS ) ||
+         OperationMember.Kind.GETTER == operation.getKind() )
+    {
+      method.addAnnotation( JsinteropTypes.HAS_NO_SIDE_EFFECTS );
+    }
     final Type returnType = operation.getReturnType();
     emitReturnType( returnType, method );
     int index = 0;
@@ -2546,6 +2559,11 @@ final class JsinteropAction
       method.addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_METHOD )
                               .addMember( "name", "$S", name )
                               .build() );
+    }
+    if ( operation.isNoArgsExtendedAttributePresent( ExtendedAttributes.NO_SIDE_EFFECTS ) ||
+         OperationMember.Kind.GETTER == operation.getKind() )
+    {
+      method.addAnnotation( JsinteropTypes.HAS_NO_SIDE_EFFECTS );
     }
     final Type returnType = operation.getReturnType();
     emitReturnType( returnType, method );

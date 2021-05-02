@@ -1,0 +1,10 @@
+$Global=com.example.Global
+CSSFontPaletteValuesRule=com.example.CSSFontPaletteValuesRule
+FakeMath=com.example.FakeMath
+FakeRegExpGroups=com.example.FakeRegExpGroups
+FakeRegExpResult=com.example.FakeRegExpResult
+Iterator=com.example.JsIterator
+OffscreenCanvas=com.example.OffscreenCanvas
+Performance=com.example.Performance
+Sequence=com.example.JsArray
+WEBGL_debug_shaders=com.example.WEBGL_debug_shaders

@@ -253,7 +253,7 @@ final class ClosureAction
     final OperationMember operation = definition.getOperation();
     final String name = operation.getName();
     assert null != name;
-    writeOperation( writer, type, name, operation.getArguments(), operation.getReturnType(), true, false );
+    writeOperation( writer, type, name, operation.getArguments(), operation.getReturnType(), true, false, false );
   }
 
   private void writeDictionary( @Nonnull final Writer writer, @Nonnull final DictionaryDefinition definition )
@@ -378,25 +378,31 @@ final class ClosureAction
                         definition.getInherits(),
                         Collections.emptyList(),
                         false,
-                        Collections.emptyList() );
+                        Collections.singletonList( "@nosideeffects" ) );
     }
     else if ( 1 == constructors.size() )
     {
+      final OperationMember constructor = constructors.get( 0 );
+      final boolean noSideEffects =
+        constructor.isNoArgsExtendedAttributePresent( ExtendedAttributes.NO_SIDE_EFFECTS );
       writeConstructor( writer,
                         type,
                         definition.getInherits(),
-                        constructors.get( 0 ).getArguments(),
+                        constructor.getArguments(),
                         true,
-                        Collections.emptyList() );
+                        noSideEffects ? Collections.singletonList( "@nosideeffects" ) : Collections.emptyList() );
     }
     else
     {
+      final OperationMember constructor = constructors.get( 0 );
+      final boolean noSideEffects =
+        constructor.isNoArgsExtendedAttributePresent( ExtendedAttributes.NO_SIDE_EFFECTS );
       writeConstructor( writer,
                         type,
                         definition.getInherits(),
                         deriveArguments( constructors ),
                         true,
-                        Collections.emptyList() );
+                        noSideEffects ? Collections.singletonList( "@nosideeffects" ) : Collections.emptyList() );
     }
     writeConstants( writer, type, definition.getConstants(), !hasNoJsType, true );
     writeAttributes( writer, type, definition.getAttributes() );
@@ -441,6 +447,8 @@ final class ClosureAction
       {
         final boolean isNonStaticOperation = !onNamespace && OperationMember.Kind.STATIC != templateOperation.getKind();
         final boolean isOverride = isNonStaticOperation && isOperationOverride.test( operationName );
+        final boolean noSideEffects =
+          templateOperation.isNoArgsExtendedAttributePresent( ExtendedAttributes.NO_SIDE_EFFECTS );
         if ( 1 == operationsToMerge.size() )
         {
           writeOperation( writer,
@@ -449,7 +457,8 @@ final class ClosureAction
                           templateOperation.getArguments(),
                           templateOperation.getReturnType(),
                           isNonStaticOperation,
-                          isOverride );
+                          isOverride,
+                          noSideEffects );
         }
         else
         {
@@ -459,7 +468,8 @@ final class ClosureAction
                           deriveArguments( operationsToMerge ),
                           deriveReturnType( operationsToMerge ),
                           isNonStaticOperation,
-                          isOverride );
+                          isOverride,
+                          noSideEffects );
         }
       }
     }
@@ -690,7 +700,8 @@ final class ClosureAction
                                @Nonnull final List<Argument> arguments,
                                @Nonnull final Type returnType,
                                final boolean onPrototype,
-                               final boolean override )
+                               final boolean override,
+                               final boolean noSideEffects )
     throws IOException
   {
     writer.write( "/**\n" );
@@ -701,6 +712,10 @@ final class ClosureAction
     if ( override || ( onPrototype && OBJECT_PROTOTYPE_METHODS.contains( name ) ) )
     {
       writer.write( " * @override\n" );
+    }
+    if ( noSideEffects )
+    {
+      writer.write( " * @nosideeffects\n" );
     }
     writer.write( " */\n" );
     if ( null != type )
