@@ -1,8 +1,13 @@
 namespace FakeMath {
   const double SQRT2 = 1.4142135623730951;
-  unrestricted double abs( unrestricted double x );
   [NoSideEffects]
   unrestricted double acos( unrestricted double x );
+  unrestricted double otherOp();
+};
+
+partial namespace FakeMath {
+  [NoSideEffects]
+  unrestricted double abs( unrestricted double x );
 };
 
 [GlobalObject, NoFlatten]
