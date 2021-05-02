@@ -674,8 +674,13 @@ public abstract class AbstractJavaAction
   @Nonnull
   protected final TypeName toJavaSequenceType( @Nonnull final SequenceType sequenceType )
   {
-    final String containerTypeName = sequenceType.getIdentValue( ExtendedAttributes.JAVA_SEQUENCE_TYPE );
+    return toJavaSequenceType( sequenceType, sequenceType.getIdentValue( ExtendedAttributes.JAVA_SEQUENCE_TYPE ) );
+  }
 
+  @Nonnull
+  protected final ParameterizedTypeName toJavaSequenceType( @Nonnull final SequenceType sequenceType,
+                                                            @Nullable final String containerTypeName )
+  {
     final ClassName containerType =
       lookupClassName( null == containerTypeName ? Kind.Sequence.name() : containerTypeName );
     return ParameterizedTypeName.get( containerType, toTypeName( sequenceType.getItemType(), true ) );
