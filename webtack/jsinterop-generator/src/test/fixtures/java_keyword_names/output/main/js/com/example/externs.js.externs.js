@@ -17,6 +17,7 @@ var MyDictionary1;
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function MyType1() {}
 /** @type {!Object} */ MyType1.prototype.clone;
@@ -36,6 +37,7 @@ function MyType1() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function MyType4() {}
 /**
@@ -116,6 +118,7 @@ MyType4.prototype.finalize = function(finalize) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function MyType2() {}
 /** @type {!Object} */ MyType2.prototype.clone;
@@ -134,6 +137,7 @@ function MyType2() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function MyType3() {}
 /**

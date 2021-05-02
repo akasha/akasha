@@ -32,6 +32,7 @@ Math1.abs2 = function(x) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function EXT_disjoint_timer_query() {}
 /** @const {!number} */ EXT_disjoint_timer_query.QUERY_COUNTER_BITS_EXT;

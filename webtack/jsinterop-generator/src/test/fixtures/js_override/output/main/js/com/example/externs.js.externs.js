@@ -5,6 +5,7 @@
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function AudioScheduledSourceNode() {}
 /**
@@ -19,8 +20,9 @@ AudioScheduledSourceNode.prototype.stop = function(when) {}
 AudioScheduledSourceNode.prototype.start = function(when) {}
 /**
  * @constructor
- * @extends {AudioScheduledSourceNode}
  * @private
+ * @extends {AudioScheduledSourceNode}
+ * @nosideeffects
  */
 function AudioBufferSourceNode() {}
 /**
@@ -34,6 +36,7 @@ AudioBufferSourceNode.prototype.start = function(when,offset,duration) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function DOMMatrixReadOnly() {}
 /**
@@ -43,8 +46,9 @@ function DOMMatrixReadOnly() {}
 DOMMatrixReadOnly.fromMatrix = function(other) {}
 /**
  * @constructor
- * @extends {DOMMatrixReadOnly}
  * @private
+ * @extends {DOMMatrixReadOnly}
+ * @nosideeffects
  */
 function DOMMatrix() {}
 /**

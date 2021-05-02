@@ -33,6 +33,7 @@ WaveShaperNode.prototype.setSample = function(sample) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function PermissionStatus() {}
 /** @type {!string} */ PermissionStatus.prototype.state;

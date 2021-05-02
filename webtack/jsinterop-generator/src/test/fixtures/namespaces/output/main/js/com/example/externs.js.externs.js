@@ -42,6 +42,7 @@ WebAssembly.validate = function(bytes) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function Window() {}
 /** @type {!boolean} */ Window.prototype.closed;

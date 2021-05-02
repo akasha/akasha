@@ -1,5 +1,6 @@
 package com.example;
 
+import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -32,12 +33,15 @@ public class Headers {
 
   public native void set(@Nonnull String name, @Nonnull String value);
 
+  @HasNoSideEffects
   @Nonnull
   public native JsIterator<String> keys();
 
+  @HasNoSideEffects
   @Nonnull
   public native JsIterator<String> values();
 
+  @HasNoSideEffects
   @Nonnull
   public native JsIterator<Entry> entries();
 

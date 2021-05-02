@@ -5,6 +5,7 @@
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function SpeechSynthesis() {}
 /** @type {!boolean} */ SpeechSynthesis.prototype.paused;

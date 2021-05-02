@@ -1,5 +1,6 @@
 package com.example;
 
+import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsOverlay;
@@ -46,6 +47,7 @@ public class Window extends EventTarget {
 
   public native void scroll();
 
+  @HasNoSideEffects
   @Nonnull
   public native Object get(@Nonnull String name);
 

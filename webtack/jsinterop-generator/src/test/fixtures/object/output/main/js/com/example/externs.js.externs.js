@@ -9,6 +9,7 @@ var MyDictionary;
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function MyType1() {}
 /** @type {!Object} */ MyType1.staticReadonlyObjectValue;

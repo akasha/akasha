@@ -5,6 +5,7 @@
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function XMLHttpRequest2() {}
 /** @const {!number} */ XMLHttpRequest2.DONE;
@@ -21,6 +22,7 @@ function XMLHttpRequest2() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function EXT_color_buffer_float() {}
 /** @const {!string} */ EXT_color_buffer_float.NAME;
@@ -28,6 +30,7 @@ function EXT_color_buffer_float() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function KHR_parallel_shader_compile() {}
 /** @const {!string} */ KHR_parallel_shader_compile.NAME;
@@ -61,6 +64,7 @@ XMLHttpRequest.prototype.setSample = function(sample) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function EXT_float_blend() {}
 /** @const {!string} */ EXT_float_blend.NAME;

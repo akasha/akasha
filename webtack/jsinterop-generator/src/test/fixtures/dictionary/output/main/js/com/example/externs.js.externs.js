@@ -45,6 +45,7 @@ var RTCAnswerOptions;
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function Storage() {}
 /** @type {!number} */ Storage.prototype.length;

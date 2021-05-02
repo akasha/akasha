@@ -9,6 +9,7 @@ var PostMessageOptions;
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function MessagePort() {}
 /**
@@ -28,6 +29,7 @@ MessagePort.prototype.close = function() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function ImageBitmap() {}
 /** @type {!number} */ ImageBitmap.prototype.height;

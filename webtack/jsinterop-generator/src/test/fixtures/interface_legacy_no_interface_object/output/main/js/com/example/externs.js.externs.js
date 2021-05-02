@@ -5,6 +5,7 @@
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function SpeechSynthesisVoice() {}
 /** @type {!boolean} */ SpeechSynthesisVoice.prototype.default;

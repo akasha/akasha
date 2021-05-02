@@ -64,6 +64,7 @@ WebAssembly.validate = function(txMode,mode) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function IDBObjectStore() {}
 /** @type {!EventHandler1} */ IDBObjectStore.prototype.handler1;
@@ -98,5 +99,6 @@ IDBObjectStore.prototype.createIndex = function(name,keyPath,options) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function IDBIndex() {}

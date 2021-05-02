@@ -23,6 +23,7 @@ WebAssembly.instantiate = function(arg0,arg1) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function Window() {}
 /**
@@ -39,26 +40,31 @@ function MediaStream(arg0) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function Instance() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function MediaStreamTrack() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function Point() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function Module() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function Other() {}
 /**

@@ -5,6 +5,7 @@
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function Window() {}
 /** @type {!boolean} */ Window.prototype.isSecureContext;

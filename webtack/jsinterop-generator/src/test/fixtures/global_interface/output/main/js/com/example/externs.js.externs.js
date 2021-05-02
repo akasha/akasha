@@ -34,8 +34,9 @@ var ScrollToOptions;
 var AddEventListenerOptions;
 /**
  * @constructor
- * @extends {EventTarget}
  * @private
+ * @extends {EventTarget}
+ * @nosideeffects
  */
 function Window() {}
 /** @type {!boolean} */ Window.prototype.closed;
@@ -55,17 +56,20 @@ Window.prototype.scroll = function(arg0,arg1) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function Event() {}
 /**
  * @constructor
- * @extends {Event}
  * @private
+ * @extends {Event}
+ * @nosideeffects
  */
 function FocusEvent() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function EventTarget() {}
 /** @type {!boolean} */ EventTarget.prototype.open;

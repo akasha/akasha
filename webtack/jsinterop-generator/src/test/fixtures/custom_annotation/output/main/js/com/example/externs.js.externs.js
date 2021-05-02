@@ -35,6 +35,7 @@ CSS.escape = function(ident) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function WebGL2RenderingContext() {}
 /**
@@ -45,10 +46,12 @@ WebGL2RenderingContext.prototype.getShaderSource = function(shader) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function WebGLShader() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function Event() {}

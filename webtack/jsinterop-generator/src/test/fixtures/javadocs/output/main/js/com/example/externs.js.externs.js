@@ -23,6 +23,7 @@ var EventInit;
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function Node() {}
 /**
@@ -47,5 +48,6 @@ Event.filterGlobalEvent = function(type) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function EventTarget() {}

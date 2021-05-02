@@ -1,5 +1,6 @@
 package com.example;
 
+import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -27,6 +28,7 @@ public class Storage {
   @Nullable
   public native String key(int index);
 
+  @HasNoSideEffects
   @Nullable
   public native String getItem(@Nonnull String key);
 

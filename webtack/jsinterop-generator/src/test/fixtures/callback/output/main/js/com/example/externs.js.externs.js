@@ -9,5 +9,6 @@ var txEventHandler;
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function Event() {}

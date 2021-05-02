@@ -1,5 +1,6 @@
 package com.example;
 
+import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -50,6 +51,7 @@ public final class WindowGlobal {
 
   public static native void scroll();
 
+  @HasNoSideEffects
   @Nonnull
   public static native Object get(@Nonnull String name);
 

@@ -245,6 +245,7 @@ var Dictionary_requiredDoubleValue;
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function MyType6() {}
 /** @type {*} */ MyType6.anyValue;
@@ -323,11 +324,13 @@ function MyType6() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function SomeType() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function MyType1() {}
 /** @type {*} */ MyType1.prototype.readonlyAnyValue;
@@ -399,6 +402,7 @@ function MyType1() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function MyType4() {}
 /**
@@ -842,6 +846,7 @@ MyType4.someTypeSequenceMethod = function(v1,v2) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function MyType5() {}
 /** @type {*} */ MyType5.readonlyAnyValue;
@@ -913,6 +918,7 @@ function MyType5() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function MyType2() {}
 /** @type {*} */ MyType2.prototype.anyValue;
@@ -991,6 +997,7 @@ function MyType2() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function MyType3() {}
 /**

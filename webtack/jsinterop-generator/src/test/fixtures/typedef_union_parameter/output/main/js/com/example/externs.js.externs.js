@@ -9,6 +9,7 @@ var StringifySpaceUnionType;
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function MyJSON() {}
 /**

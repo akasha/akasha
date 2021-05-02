@@ -9,21 +9,25 @@ var EventInit;
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function MyThingCollection() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function DOMTokenList() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function SomeOtherType() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function Headers() {}
 /**
@@ -56,16 +60,19 @@ Headers.prototype.append = function(name,value) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function MyThing() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function DOMStringMap() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function SomeMapLikeDefiningOverrides() {}
 /**
@@ -86,12 +93,14 @@ SomeMapLikeDefiningOverrides.prototype.delete = function(key) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function txStorage() {}
 /** @type {!number} */ txStorage.prototype.length;
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function Storage() {}
 /** @type {!number} */ Storage.prototype.length;
@@ -198,6 +207,7 @@ Event.prototype.preventDefault = function() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function RTCStatsReport() {}
 /**

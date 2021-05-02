@@ -1,5 +1,6 @@
 package com.example;
 
+import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -34,17 +35,22 @@ public class SomeMapLikeDefiningOverrides {
   )
   public native int size();
 
+  @HasNoSideEffects
   public native boolean has(@Nonnull String key);
 
+  @HasNoSideEffects
   @Nullable
   public native Double get(@Nonnull String key);
 
+  @HasNoSideEffects
   @Nonnull
   public native JsIterator<String> keys();
 
+  @HasNoSideEffects
   @Nonnull
   public native JsIterator<Double> values();
 
+  @HasNoSideEffects
   @Nonnull
   public native JsIterator<Entry> entries();
 

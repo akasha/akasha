@@ -18,11 +18,13 @@ WebAssembly.compile = function(bytes) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 WebAssembly.CompileError = function() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 WebAssembly.Module = function() {}
 /**

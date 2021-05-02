@@ -66,8 +66,9 @@ var AllowedBluetoothDevice;
 var BluetoothDataFilterInit;
 /**
  * @constructor
- * @extends {EventTarget}
  * @private
+ * @extends {EventTarget}
+ * @nosideeffects
  */
 function BluetoothRemoteGATTService() {}
 /**
@@ -83,6 +84,7 @@ BluetoothRemoteGATTService.prototype.getIncludedServices = function(service) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function BluetoothRemoteGATTServer() {}
 /**
@@ -129,8 +131,9 @@ SomeDataContainer.myStaticMethodWithUnionReturn = function() {}
 SomeDataContainer.myStaticMethodWithUnionArg = function(name) {}
 /**
  * @constructor
- * @extends {EventTarget}
  * @private
+ * @extends {EventTarget}
+ * @nosideeffects
  */
 function BluetoothRemoteGATTCharacteristic() {}
 /**
@@ -151,6 +154,7 @@ BluetoothRemoteGATTCharacteristic.prototype.writeValue = function(value) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function Event() {}
 /**
@@ -170,6 +174,7 @@ SomeServiceContainer.myStaticMethodWithUnionArg = function(name) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function EventTarget() {}
 /**

@@ -42,25 +42,29 @@ var EventListenerOptions;
 var AddEventListenerOptions;
 /**
  * @constructor
- * @extends {Event}
  * @private
+ * @extends {Event}
+ * @nosideeffects
  */
 function SpeechSynthesisEvent() {}
 /**
  * @constructor
- * @extends {SpeechSynthesisEvent}
  * @private
+ * @extends {SpeechSynthesisEvent}
+ * @nosideeffects
  */
 function SpeechSynthesisErrorEvent() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function Event() {}
 /**
  * @constructor
- * @extends {EventTarget}
  * @private
+ * @extends {EventTarget}
+ * @nosideeffects
  */
 function SpeechSynthesisUtterance() {}
 /** @type {!NullableEventHandler} */ SpeechSynthesisUtterance.prototype.onend;

@@ -32,6 +32,7 @@ function Headers(headers) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function ClipboardItemData() {}
 /** @type {!string} */ ClipboardItemData.prototype.data;

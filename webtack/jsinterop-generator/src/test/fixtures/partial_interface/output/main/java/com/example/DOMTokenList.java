@@ -1,5 +1,6 @@
 package com.example;
 
+import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsFunction;
@@ -27,12 +28,15 @@ public final class DOMTokenList {
     return Js.cast( object );
   }
 
+  @HasNoSideEffects
   @Nonnull
   public native JsIterator<Double> keys();
 
+  @HasNoSideEffects
   @Nonnull
   public native JsIterator<String> values();
 
+  @HasNoSideEffects
   @Nonnull
   public native JsIterator<Entry> entries();
 

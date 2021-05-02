@@ -21,6 +21,7 @@ var Int32List;
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function WebGLRenderingContext() {}
 /** @const {!GLenum} */ WebGLRenderingContext.ACTIVE_ATTRIBUTES;
