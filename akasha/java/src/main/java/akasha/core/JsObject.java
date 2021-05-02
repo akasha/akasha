@@ -4,6 +4,7 @@ import akasha.lang.JsArray;
 import akasha.lang.JsIterable;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
@@ -392,4 +393,13 @@ public class JsObject
 
   @Nonnull
   private static native JsArray<Any> values( @Nonnull JsObject obj );
+
+  /**
+   * The valueOf() method returns the wrapped primitive value of a Number object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf">Object.valueOf - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-number.prototype.valueof">Object.prototype.valueOf - ECMAScript (ECMA-262)</a>
+   */
+  @JsMethod( name = "valueOf" )
+  public native Any valueOf_();
 }

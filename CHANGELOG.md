@@ -4,7 +4,7 @@
 
 * Upgrade the `org.realityforge.react4j` artifacts to version `0.182`.
 * Omit generation of closure externs for WebIDL elements that have the extended attribute `[JavaOnly]`. This is supported across all different element types but is only currently used on constants named `"NAME"` on WebGl/WebGl2 extensions that have been added to the java interfaces to improve the typing of the method `WebGL2RenderingContext.getExtension(...)`. These constant fields are no longer being incorrectly defined in closure externs. Fixes #18.
-* Add the `constructor`, `hasOwnProperty`, `propertyIsEnumerable`, `isPrototypeOf` and `toString` operations to the IDL defining the `Object` interface types. This increases the ability for akasha to be used in a context with a more javascript-ish architecture but is not expected to impact the more java centric usages of Akasha.
+* Add the `constructor`, `hasOwnProperty`, `propertyIsEnumerable`, `isPrototypeOf`, `valueOf` and `toString` operations to the IDL defining the `Object` interface types. This increases the ability for akasha to be used in a context with a more javascript-ish architecture but is not expected to impact the more java centric usages of Akasha.
 * Define `String.matchAll` operation in WebIDL.
 * Add the annotation `@HasNoSideEffects` to numerous methods in the `JsArray`, `JsMap`, `JsSet`, `JsWeakMap` and `JsWeakSet` classes so that calls to these methods will be optimized out by the GWT compiler if the return values are unused. No action is required in the closure extern generator action as these types are all part of the intrinsic externs defined by closure compiler and have already been defined as `@nosideefects`.
 

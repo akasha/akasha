@@ -108,5 +108,8 @@ interface Object {
   // it is somewhat complex to define
   // DOMString toLocaleString(...);
 
+  [JavaName=valueOf_]
+  any valueOf();
+
   stringifier DOMString toString();
 };
