@@ -66,6 +66,11 @@ public final class JsinteropActionFactory
    */
   public boolean generateTypeMapping = true;
   /**
+   * A flag controlling whether the Global type should be generated. It will only be present if
+   * mixins with the extended attribute [GlobalObject]
+   */
+  public boolean generateGenerateGlobal = true;
+  /**
    * Should the generated code emit @MagicConstant annotations to improve usability
    * in IntelliJ IDEA and related IDEs.
    */
@@ -168,6 +173,7 @@ public final class JsinteropActionFactory
                                 generateJ2clCompileTest,
                                 null == gwtInherits ? Collections.emptyList() : gwtInherits,
                                 generateTypeMapping,
+                                generateGenerateGlobal,
                                 enableMagicConstants );
   }
 }
