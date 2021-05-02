@@ -15,8 +15,8 @@ interface ReadableStream {
   Promise<undefined> pipeTo(WritableStream destination, optional StreamPipeOptions options = {});
   sequence<ReadableStream> tee();
 
-  // Removed an optional parameter here as it is not valid WebIDL atm
-  async iterable<any>;
+  // Removed an optional parameter here as it is not valid WebIDL atm and comment out as unsupported
+  // async iterable<any>;
 };
 
 typedef (ReadableStreamDefaultReader or ReadableStreamBYOBReader) ReadableStreamReader;

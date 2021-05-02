@@ -1466,6 +1466,10 @@ final class JsinteropAction
         generatePairIterableElements( name, iterable, type );
       }
     }
+    if ( null != definition.getAsyncIterable() )
+    {
+      throw new UnsupportedOperationException( "async iterable not yet supported in code generator" );
+    }
     if ( null != definition.getSetLikeMember() )
     {
       throw new UnsupportedOperationException( "setlike not yet supported in code generator" );
