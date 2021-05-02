@@ -35,5 +35,6 @@ CSS.escape = function(ident) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function Event() {}

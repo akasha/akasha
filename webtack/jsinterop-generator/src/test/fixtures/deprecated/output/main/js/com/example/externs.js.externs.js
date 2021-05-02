@@ -51,8 +51,9 @@ var CSS;
 CSS.escape = function(ident) {}
 /**
  * @constructor
- * @extends {EventTarget}
  * @private
+ * @extends {EventTarget}
+ * @nosideeffects
  */
 function Window() {}
 /** @type {!boolean} */ Window.prototype.isSecureContext;
@@ -60,16 +61,19 @@ function Window() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function Event() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function OtherType() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function EventTarget() {}
 /**

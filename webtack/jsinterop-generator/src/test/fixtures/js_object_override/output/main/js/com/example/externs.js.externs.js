@@ -9,6 +9,7 @@ var Timestamp;
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function MyDate() {}
 /**
@@ -24,6 +25,7 @@ MyDate.prototype.toString = function() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function MyBoolean() {}
 /**
@@ -39,6 +41,7 @@ MyBoolean.prototype.toString = function() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function MyString() {}
 /**
@@ -54,6 +57,7 @@ MyString.prototype.toString = function() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function WebAssemblyGlobal() {}
 /** @type {*} */ WebAssemblyGlobal.prototype.value;
@@ -65,6 +69,7 @@ WebAssemblyGlobal.prototype.valueOf = function() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function ReportBody() {}
 /**
@@ -75,6 +80,7 @@ ReportBody.prototype.toJSON = function() {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function MyNumber() {}
 /**

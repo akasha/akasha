@@ -9,6 +9,7 @@ var IDBIndexParameters;
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function IDBObjectStore() {}
 /** @type {!boolean} */ IDBObjectStore.prototype.autoIncrement;
@@ -22,5 +23,6 @@ IDBObjectStore.prototype.createIndex = function(name,keyPath,options) {}
 /**
  * @constructor
  * @private
+ * @nosideeffects
  */
 function IDBIndex() {}
