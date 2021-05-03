@@ -848,8 +848,8 @@ final class JsinteropAction
       final boolean nullable = getSchema().isNullable( type );
       final TypedValue.Nullability nullability =
         nullable ? TypedValue.Nullability.NULLABLE : TypedValue.Nullability.NONNULL;
-      values.add( new TypedValue( declaredType, type, toJavaSequenceType( (SequenceType) type ), nullability, false ) );
-      if ( null == type.getIdentValue( ExtendedAttributes.JAVA_SEQUENCE_TYPE ) )
+      values.add( new TypedValue( declaredType, type, toSequenceType( (SequenceType) type ), nullability, false ) );
+      if ( null == type.getIdentValue( ExtendedAttributes.SEQUENCE_TYPE ) )
       {
         final TypeName arrayJavaType = asArrayType( getUnexpandedType( ( (SequenceType) type ).getItemType() ) );
         values.add( new TypedValue( declaredType, type, arrayJavaType, nullability, false ) );
@@ -1203,7 +1203,7 @@ final class JsinteropAction
       method.addStatement( "$N( $T.<$T>uncheckedCast( $N ) )",
                            mutatorName,
                            JsinteropTypes.JS,
-                           toJavaSequenceType( (SequenceType) resolvedType ),
+                           toSequenceType( (SequenceType) resolvedType ),
                            paramName );
     }
     else if ( Kind.Any == declaredType.getKind() && typedValue.doNotAutobox() )
@@ -2786,8 +2786,8 @@ final class JsinteropAction
       final TypeName type;
       if ( Kind.Sequence == actualType.getKind() )
       {
-        type = toJavaSequenceType( (SequenceType) actualType,
-                                   operation.getIdentValue( ExtendedAttributes.JAVA_SEQUENCE_TYPE ) );
+        type = toSequenceType( (SequenceType) actualType,
+                               operation.getIdentValue( ExtendedAttributes.SEQUENCE_TYPE ) );
       }
       else
       {

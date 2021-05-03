@@ -79,7 +79,7 @@ interface Object {
   static undefined defineProperty( object obj, (DOMString or Symbol) prop, ObjectPropertyDescriptor descriptor );
   static sequence<ObjectPropertyEntry> entries( object obj );
   static undefined freeze( object obj );
-  static object fromEntries( [JavaSequenceType=Iterable] sequence<ObjectPropertyEntry> iterable );
+  static object fromEntries( [SequenceType=Iterable] sequence<ObjectPropertyEntry> iterable );
   static ObjectPropertyDescriptor? getOwnPropertyDescriptor( object obj, (DOMString or Symbol) prop );
   static sequence<ObjectPropertyDescriptor> getOwnPropertyDescriptors( object obj );
   static sequence<DOMString> getOwnPropertyNames( object obj );

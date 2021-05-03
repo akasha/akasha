@@ -493,7 +493,7 @@ public abstract class AbstractJavaAction
     }
     else if ( Kind.Sequence == kind )
     {
-      return toJavaSequenceType( (SequenceType) type );
+      return toSequenceType( (SequenceType) type );
     }
     else if ( Kind.Record == kind )
     {
@@ -672,14 +672,14 @@ public abstract class AbstractJavaAction
   }
 
   @Nonnull
-  protected final TypeName toJavaSequenceType( @Nonnull final SequenceType sequenceType )
+  protected final TypeName toSequenceType( @Nonnull final SequenceType sequenceType )
   {
-    return toJavaSequenceType( sequenceType, sequenceType.getIdentValue( ExtendedAttributes.JAVA_SEQUENCE_TYPE ) );
+    return toSequenceType( sequenceType, sequenceType.getIdentValue( ExtendedAttributes.SEQUENCE_TYPE ) );
   }
 
   @Nonnull
-  protected final ParameterizedTypeName toJavaSequenceType( @Nonnull final SequenceType sequenceType,
-                                                            @Nullable final String containerTypeName )
+  protected final ParameterizedTypeName toSequenceType( @Nonnull final SequenceType sequenceType,
+                                                        @Nullable final String containerTypeName )
   {
     final ClassName containerType =
       lookupClassName( null == containerTypeName ? Kind.Sequence.name() : containerTypeName );

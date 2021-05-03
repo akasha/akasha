@@ -91,7 +91,7 @@ interface URIError : Error {
 [Exposed=(Window,Worker), JavaSubPackage=core, Serializable]
 interface AggregateError : Error {
 
-  readonly attribute [JavaSequenceType=Iterable] sequence<any> errors;
+  readonly attribute [SequenceType=Iterable] sequence<any> errors;
 
   /**
    * The AggregateError() constructor creates an error for several errors that need to be wrapped in a single error.
@@ -101,5 +101,5 @@ interface AggregateError : Error {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError/URIError">URIError() - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-native-error-types-used-in-this-standard-urierror">URIError() - ECMA</a>
    */
-  constructor( [JavaSequenceType=Iterable] sequence<any> errors, optional DOMString message = "" );
+  constructor( [SequenceType=Iterable] sequence<any> errors, optional DOMString message = "" );
 };

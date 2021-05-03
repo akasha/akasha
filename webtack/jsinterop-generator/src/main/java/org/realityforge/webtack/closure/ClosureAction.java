@@ -466,7 +466,7 @@ final class ClosureAction
                     false,
                     true );
     final ExtendedAttribute iteratorIterableExtendedAttribute =
-      ExtendedAttribute.createExtendedAttributeIdent( ExtendedAttributes.JAVA_SEQUENCE_TYPE,
+      ExtendedAttribute.createExtendedAttributeIdent( ExtendedAttributes.SEQUENCE_TYPE,
                                                       "IteratorIterable",
                                                       Collections.emptyList() );
     writeOperation( writer,
@@ -1065,7 +1065,7 @@ final class ClosureAction
     }
     else if ( Kind.Sequence == kind )
     {
-      final String sequenceType = type.getIdentValue( ExtendedAttributes.JAVA_SEQUENCE_TYPE );
+      final String sequenceType = type.getIdentValue( ExtendedAttributes.SEQUENCE_TYPE );
       writer.write( null == sequenceType ? "Array" : sequenceType );
       writer.write( "<" );
       writeType( writer, ( (SequenceType) type ).getItemType() );

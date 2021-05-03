@@ -94,10 +94,11 @@ public final class ExtendedAttributes
   @Nonnull
   public static final String MARKER_TYPE = "MarkerType";
   /**
-   * A custom extended property that specifies the java type of the sequence class.
+   * A custom extended property that specifies the type of the sequence class.
+   * Must be one of Iterable, Iterator or IteratorIterable
    */
   @Nonnull
-  public static final String JAVA_SEQUENCE_TYPE = "JavaSequenceType";
+  public static final String SEQUENCE_TYPE = "SequenceType";
   /**
    * A custom extended property that indicates that the element only exists in the java binding
    * and should be omitted when emitting to other languages. This is usually used on java-only
