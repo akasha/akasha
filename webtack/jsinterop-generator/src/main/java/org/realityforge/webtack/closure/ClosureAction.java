@@ -866,7 +866,9 @@ final class ClosureAction
     }
     else if ( Kind.Sequence == kind )
     {
-      writer.write( "Array<" );
+      final String sequenceType = type.getIdentValue( ExtendedAttributes.JAVA_SEQUENCE_TYPE );
+      writer.write( null == sequenceType ? "Array" : sequenceType );
+      writer.write( "<" );
       writeType( writer, ( (SequenceType) type ).getItemType() );
       writer.write( ">" );
     }

@@ -183,7 +183,7 @@ var Dictionary_requiredNullableSomeTypeSequenceValue;
  */
 var Dictionary_requiredShortValue;
 /**
- * @typedef {{requiredAnyIterableValue:!Array<*>,requiredAnyIteratorIterableValue:!Array<*>,requiredAnyIteratorValue:!Array<*>,requiredAnySequenceValue:!Array<*>}}
+ * @typedef {{requiredAnyIterableValue:!Iterable<*>,requiredAnyIteratorIterableValue:!IteratorIterable<*>,requiredAnyIteratorValue:!Iterator<*>,requiredAnySequenceValue:!Array<*>}}
  */
 var Dictionary_requiredAnySequenceValue;
 /**
@@ -235,7 +235,7 @@ var Dictionary_requiredNullableFloatSequenceValue;
  */
 var Dictionary_requiredUnsignedLongLongValue;
 /**
- * @typedef {{anyValue:(*|undefined),booleanFrozenArrayValue:(!Array<!boolean>|undefined),booleanSequenceValue:(!Array<!boolean>|undefined),booleanValue:(!boolean|undefined),byteStringRecordValue:(!Object<!string,!string>|undefined),byteStringValue:(!string|undefined),byteValue:(!number|undefined),domStringRecordValue:(!Object<!string,!string>|undefined),domStringValue:(!string|undefined),doubleFrozenArrayValue:(!Array<!number>|undefined),doubleRecordValue:(!Object<!string,!number>|undefined),doubleSequenceValue:(!Array<!number>|undefined),doubleValue:(!number|undefined),floatFrozenArrayValue:(!Array<!number>|undefined),floatSequenceValue:(!Array<!number>|undefined),floatValue:(!number|undefined),longLongValue:(!number|undefined),longValue:(!number|undefined),mixedStringRecordValue:(!Object<!string,!string>|undefined),nullableBooleanFrozenArrayValue:(?Array<!boolean>|undefined),nullableBooleanSequenceValue:(?Array<!boolean>|undefined),nullableBooleanValue:(?boolean|undefined),nullableByteStringValue:(?string|undefined),nullableByteValue:(?number|undefined),nullableDOMStringValue:(?string|undefined),nullableDoubleFrozenArrayValue:(?Array<!number>|undefined),nullableDoubleSequenceValue:(?Array<!number>|undefined),nullableDoubleValue:(?number|undefined),nullableFloatFrozenArrayValue:(?Array<!number>|undefined),nullableFloatSequenceValue:(?Array<!number>|undefined),nullableFloatValue:(?number|undefined),nullableLongLongValue:(?number|undefined),nullableLongValue:(?number|undefined),nullableObjectValue:(?Object|undefined),nullableOctetValue:(?number|undefined),nullableShortFrozenArrayValue:(?Array<!number>|undefined),nullableShortPromiseValue:(!Promise<?number>|undefined),nullableShortSequenceValue:(?Array<!number>|undefined),nullableShortValue:(?number|undefined),nullableSomeTypeFrozenArrayValue:(?Array<!SomeType>|undefined),nullableSomeTypePromiseValue:(!Promise<?SomeType>|undefined),nullableSomeTypeSequenceValue:(?Array<!SomeType>|undefined),nullableSomeTypeValue:(?SomeType|undefined),nullableUSVStringValue:(?string|undefined),nullableUnrestrictedDoubleValue:(?number|undefined),nullableUnrestrictedFloatValue:(?number|undefined),nullableUnsignedLongLongValue:(?number|undefined),nullableUnsignedLongValue:(?number|undefined),nullableUnsignedShortValue:(?number|undefined),objectValue:(!Object|undefined),octetValue:(!number|undefined),requiredAnyIterableValue:(!Array<*>|undefined),requiredAnyIteratorIterableValue:(!Array<*>|undefined),requiredAnyIteratorValue:(!Array<*>|undefined),requiredAnySequenceValue:(!Array<*>|undefined),sequencePromiseValue:(!Promise<!Array<!number>>|undefined),shortFrozenArrayValue:(!Array<!number>|undefined),shortPromiseValue:(!Promise<!number>|undefined),shortSequenceValue:(!Array<!number>|undefined),shortValue:(!number|undefined),someTypeFrozenArrayValue:(!Array<!SomeType>|undefined),someTypePromiseValue:(!Promise<!SomeType>|undefined),someTypeSequenceValue:(!Array<!SomeType>|undefined),someTypeValue:(!SomeType|undefined),typeReferenceRecordValue:(!Object<!string,!SomeType>|undefined),unrestrictedDoubleValue:(!number|undefined),unrestrictedFloatValue:(!number|undefined),unsignedLongLongValue:(!number|undefined),unsignedLongValue:(!number|undefined),unsignedShortValue:(!number|undefined),usvStringRecordValue:(!Object<!string,!string>|undefined),usvStringValue:(!string|undefined),voidPromiseValue:(!Promise<undefined>|undefined)}}
+ * @typedef {{anyValue:(*|undefined),booleanFrozenArrayValue:(!Array<!boolean>|undefined),booleanSequenceValue:(!Array<!boolean>|undefined),booleanValue:(!boolean|undefined),byteStringRecordValue:(!Object<!string,!string>|undefined),byteStringValue:(!string|undefined),byteValue:(!number|undefined),domStringRecordValue:(!Object<!string,!string>|undefined),domStringValue:(!string|undefined),doubleFrozenArrayValue:(!Array<!number>|undefined),doubleRecordValue:(!Object<!string,!number>|undefined),doubleSequenceValue:(!Array<!number>|undefined),doubleValue:(!number|undefined),floatFrozenArrayValue:(!Array<!number>|undefined),floatSequenceValue:(!Array<!number>|undefined),floatValue:(!number|undefined),longLongValue:(!number|undefined),longValue:(!number|undefined),mixedStringRecordValue:(!Object<!string,!string>|undefined),nullableBooleanFrozenArrayValue:(?Array<!boolean>|undefined),nullableBooleanSequenceValue:(?Array<!boolean>|undefined),nullableBooleanValue:(?boolean|undefined),nullableByteStringValue:(?string|undefined),nullableByteValue:(?number|undefined),nullableDOMStringValue:(?string|undefined),nullableDoubleFrozenArrayValue:(?Array<!number>|undefined),nullableDoubleSequenceValue:(?Array<!number>|undefined),nullableDoubleValue:(?number|undefined),nullableFloatFrozenArrayValue:(?Array<!number>|undefined),nullableFloatSequenceValue:(?Array<!number>|undefined),nullableFloatValue:(?number|undefined),nullableLongLongValue:(?number|undefined),nullableLongValue:(?number|undefined),nullableObjectValue:(?Object|undefined),nullableOctetValue:(?number|undefined),nullableShortFrozenArrayValue:(?Array<!number>|undefined),nullableShortPromiseValue:(!Promise<?number>|undefined),nullableShortSequenceValue:(?Array<!number>|undefined),nullableShortValue:(?number|undefined),nullableSomeTypeFrozenArrayValue:(?Array<!SomeType>|undefined),nullableSomeTypePromiseValue:(!Promise<?SomeType>|undefined),nullableSomeTypeSequenceValue:(?Array<!SomeType>|undefined),nullableSomeTypeValue:(?SomeType|undefined),nullableUSVStringValue:(?string|undefined),nullableUnrestrictedDoubleValue:(?number|undefined),nullableUnrestrictedFloatValue:(?number|undefined),nullableUnsignedLongLongValue:(?number|undefined),nullableUnsignedLongValue:(?number|undefined),nullableUnsignedShortValue:(?number|undefined),objectValue:(!Object|undefined),octetValue:(!number|undefined),requiredAnyIterableValue:(!Iterable<*>|undefined),requiredAnyIteratorIterableValue:(!IteratorIterable<*>|undefined),requiredAnyIteratorValue:(!Iterator<*>|undefined),requiredAnySequenceValue:(!Array<*>|undefined),sequencePromiseValue:(!Promise<!Array<!number>>|undefined),shortFrozenArrayValue:(!Array<!number>|undefined),shortPromiseValue:(!Promise<!number>|undefined),shortSequenceValue:(!Array<!number>|undefined),shortValue:(!number|undefined),someTypeFrozenArrayValue:(!Array<!SomeType>|undefined),someTypePromiseValue:(!Promise<!SomeType>|undefined),someTypeSequenceValue:(!Array<!SomeType>|undefined),someTypeValue:(!SomeType|undefined),typeReferenceRecordValue:(!Object<!string,!SomeType>|undefined),unrestrictedDoubleValue:(!number|undefined),unrestrictedFloatValue:(!number|undefined),unsignedLongLongValue:(!number|undefined),unsignedLongValue:(!number|undefined),unsignedShortValue:(!number|undefined),usvStringRecordValue:(!Object<!string,!string>|undefined),usvStringValue:(!string|undefined),voidPromiseValue:(!Promise<undefined>|undefined)}}
  */
 var MyDictionary;
 /**
@@ -300,9 +300,9 @@ function MyType6() {}
 /** @type {?number} */ MyType6.nullableUnsignedShortValue;
 /** @type {!Object} */ MyType6.objectValue;
 /** @type {!number} */ MyType6.octetValue;
-/** @type {!Array<*>} */ MyType6.requiredAnyIterableValue;
-/** @type {!Array<*>} */ MyType6.requiredAnyIteratorIterableValue;
-/** @type {!Array<*>} */ MyType6.requiredAnyIteratorValue;
+/** @type {!Iterable<*>} */ MyType6.requiredAnyIterableValue;
+/** @type {!IteratorIterable<*>} */ MyType6.requiredAnyIteratorIterableValue;
+/** @type {!Iterator<*>} */ MyType6.requiredAnyIteratorValue;
 /** @type {!Array<*>} */ MyType6.requiredAnySequenceValue;
 /** @type {!Array<!number>} */ MyType6.shortFrozenArrayValue;
 /** @type {!Promise<!number>} */ MyType6.shortPromiseValue;
@@ -395,9 +395,9 @@ function MyType1() {}
 /** @type {!number} */ MyType1.prototype.readonlyUnsignedLongValue;
 /** @type {!number} */ MyType1.prototype.readonlyUnsignedShortValue;
 /** @type {!Promise<undefined>} */ MyType1.prototype.readonlyVoidPromiseValue;
-/** @type {!Array<*>} */ MyType1.prototype.requiredAnyIterableValue;
-/** @type {!Array<*>} */ MyType1.prototype.requiredAnyIteratorIterableValue;
-/** @type {!Array<*>} */ MyType1.prototype.requiredAnyIteratorValue;
+/** @type {!Iterable<*>} */ MyType1.prototype.requiredAnyIterableValue;
+/** @type {!IteratorIterable<*>} */ MyType1.prototype.requiredAnyIteratorIterableValue;
+/** @type {!Iterator<*>} */ MyType1.prototype.requiredAnyIteratorValue;
 /** @type {!Array<*>} */ MyType1.prototype.requiredAnySequenceValue;
 /**
  * @constructor
@@ -466,8 +466,8 @@ MyType4.usvStringRecordMethod = function(v1,v2) {}
  */
 MyType4.unsignedShortMethod = function(v1,v2) {}
 /**
- * @param {!Array<*>} v1
- * @param {!Array<*>=} v2
+ * @param {!Iterator<*>} v1
+ * @param {!Iterator<*>=} v2
  * @return {!Array<*>}
  */
 MyType4.anyIteratorMethod = function(v1,v2) {}
@@ -556,8 +556,8 @@ MyType4.nullableDoubleMethod = function(v1,v2) {}
  */
 MyType4.nullableUnsignedShortMethod = function(v1,v2) {}
 /**
- * @param {!Array<*>} v1
- * @param {!Array<*>=} v2
+ * @param {!Iterable<*>} v1
+ * @param {!Iterable<*>=} v2
  * @return {!Array<*>}
  */
 MyType4.anyIterableMethod = function(v1,v2) {}
@@ -670,8 +670,8 @@ MyType4.nullableByteMethod = function(v1,v2) {}
  */
 MyType4.usvStringMethod = function(v1,v2) {}
 /**
- * @param {!Array<*>} v1
- * @param {!Array<*>=} v2
+ * @param {!IteratorIterable<*>} v1
+ * @param {!IteratorIterable<*>=} v2
  * @return {!Array<*>}
  */
 MyType4.anyIteratorIterableMethod = function(v1,v2) {}
@@ -911,9 +911,9 @@ function MyType5() {}
 /** @type {!number} */ MyType5.readonlyUnsignedLongValue;
 /** @type {!number} */ MyType5.readonlyUnsignedShortValue;
 /** @type {!Promise<undefined>} */ MyType5.readonlyVoidPromiseValue;
-/** @type {!Array<*>} */ MyType5.requiredAnyIterableValue;
-/** @type {!Array<*>} */ MyType5.requiredAnyIteratorIterableValue;
-/** @type {!Array<*>} */ MyType5.requiredAnyIteratorValue;
+/** @type {!Iterable<*>} */ MyType5.requiredAnyIterableValue;
+/** @type {!IteratorIterable<*>} */ MyType5.requiredAnyIteratorIterableValue;
+/** @type {!Iterator<*>} */ MyType5.requiredAnyIteratorValue;
 /** @type {!Array<*>} */ MyType5.requiredAnySequenceValue;
 /**
  * @constructor
@@ -973,9 +973,9 @@ function MyType2() {}
 /** @type {?number} */ MyType2.prototype.nullableUnsignedShortValue;
 /** @type {!Object} */ MyType2.prototype.objectValue;
 /** @type {!number} */ MyType2.prototype.octetValue;
-/** @type {!Array<*>} */ MyType2.prototype.requiredAnyIterableValue;
-/** @type {!Array<*>} */ MyType2.prototype.requiredAnyIteratorIterableValue;
-/** @type {!Array<*>} */ MyType2.prototype.requiredAnyIteratorValue;
+/** @type {!Iterable<*>} */ MyType2.prototype.requiredAnyIterableValue;
+/** @type {!IteratorIterable<*>} */ MyType2.prototype.requiredAnyIteratorIterableValue;
+/** @type {!Iterator<*>} */ MyType2.prototype.requiredAnyIteratorValue;
 /** @type {!Array<*>} */ MyType2.prototype.requiredAnySequenceValue;
 /** @type {!Array<!number>} */ MyType2.prototype.shortFrozenArrayValue;
 /** @type {!Promise<!number>} */ MyType2.prototype.shortPromiseValue;
@@ -1061,8 +1061,8 @@ MyType3.prototype.usvStringRecordMethod = function(v1,v2) {}
  */
 MyType3.prototype.unsignedShortMethod = function(v1,v2) {}
 /**
- * @param {!Array<*>} v1
- * @param {!Array<*>=} v2
+ * @param {!Iterator<*>} v1
+ * @param {!Iterator<*>=} v2
  * @return {!Array<*>}
  */
 MyType3.prototype.anyIteratorMethod = function(v1,v2) {}
@@ -1151,8 +1151,8 @@ MyType3.prototype.nullableDoubleMethod = function(v1,v2) {}
  */
 MyType3.prototype.nullableUnsignedShortMethod = function(v1,v2) {}
 /**
- * @param {!Array<*>} v1
- * @param {!Array<*>=} v2
+ * @param {!Iterable<*>} v1
+ * @param {!Iterable<*>=} v2
  * @return {!Array<*>}
  */
 MyType3.prototype.anyIterableMethod = function(v1,v2) {}
@@ -1265,8 +1265,8 @@ MyType3.prototype.nullableByteMethod = function(v1,v2) {}
  */
 MyType3.prototype.usvStringMethod = function(v1,v2) {}
 /**
- * @param {!Array<*>} v1
- * @param {!Array<*>=} v2
+ * @param {!IteratorIterable<*>} v1
+ * @param {!IteratorIterable<*>=} v2
  * @return {!Array<*>}
  */
 MyType3.prototype.anyIteratorIterableMethod = function(v1,v2) {}
