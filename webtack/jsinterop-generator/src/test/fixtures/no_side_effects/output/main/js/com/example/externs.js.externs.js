@@ -38,12 +38,105 @@ WEBGL_debug_shaders.prototype.getTranslatedShaderSource = function(shaderId) {}
 function CSSFontPaletteValuesRule() {}
 /** @type {!string} */ CSSFontPaletteValuesRule.prototype.basePalette;
 /** @type {!string} */ CSSFontPaletteValuesRule.prototype.fontFamily;
+/** @const {number} */ CSSFontPaletteValuesRule.prototype.size;
+/**
+ * @param {!number} key
+ * @return {!boolean}
+ * @nosideeffects
+ */
+CSSFontPaletteValuesRule.prototype.has = function(key) {}
+/**
+ * @param {!number} key
+ * @return {?string}
+ * @nosideeffects
+ */
+CSSFontPaletteValuesRule.prototype.get = function(key) {}
+/**
+ * @return {!IteratorIterable<!number>}
+ * @nosideeffects
+ */
+CSSFontPaletteValuesRule.prototype.keys = function() {}
+/**
+ * @return {!IteratorIterable<!string>}
+ * @nosideeffects
+ */
+CSSFontPaletteValuesRule.prototype.values = function() {}
+/**
+ * @return {!Iterator<!Array<!number|!string>>}
+ * @nosideeffects
+ */
+CSSFontPaletteValuesRule.prototype.entries = function() {};
+/**
+ * @return {!Iterator<!Array<!number|!string>>}
+ * @nosideeffects
+ */
+CSSFontPaletteValuesRule.prototype[Symbol.iterator] = function() {};
+/**
+ * @param {function(!string, !number, MAP)} callback
+ * @this {MAP}
+ * @template MAP
+ */
+CSSFontPaletteValuesRule.prototype.forEach = function(callback) {};
+/**
+ * @param {!number} key
+ * @param {!string} value
+ * @return {undefined}
+ */
+CSSFontPaletteValuesRule.prototype.set = function(key,value) {}
+/**
+ * @param {!number} key
+ * @return {!boolean}
+ */
+CSSFontPaletteValuesRule.prototype.delete = function(key) {}
+/**
+ * @return {undefined}
+ */
+CSSFontPaletteValuesRule.prototype.clear = function() {}
 /**
  * @constructor
  * @private
  * @nosideeffects
  */
 function FakeRegExpGroups() {}
+/** @const {number} */ FakeRegExpGroups.prototype.size;
+/**
+ * @param {!string} key
+ * @return {!boolean}
+ * @nosideeffects
+ */
+FakeRegExpGroups.prototype.has = function(key) {}
+/**
+ * @param {!string} key
+ * @return {?string}
+ * @nosideeffects
+ */
+FakeRegExpGroups.prototype.get = function(key) {}
+/**
+ * @return {!IteratorIterable<!string>}
+ * @nosideeffects
+ */
+FakeRegExpGroups.prototype.keys = function() {}
+/**
+ * @return {!IteratorIterable<!string>}
+ * @nosideeffects
+ */
+FakeRegExpGroups.prototype.values = function() {}
+/**
+ * @return {!Iterator<!Array<!string|!string>>}
+ * @nosideeffects
+ */
+FakeRegExpGroups.prototype.entries = function() {};
+/**
+ * @return {!Iterator<!Array<!string|!string>>}
+ * @nosideeffects
+ */
+FakeRegExpGroups.prototype[Symbol.iterator] = function() {};
+/**
+ * @param {function(!string, !string, MAP)} callback
+ * @this {MAP}
+ * @template MAP
+ */
+FakeRegExpGroups.prototype.forEach = function(callback) {};
 /**
  * @constructor
  * @private

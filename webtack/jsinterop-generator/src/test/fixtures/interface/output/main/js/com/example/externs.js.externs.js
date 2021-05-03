@@ -24,6 +24,60 @@ function DOMTokenList() {}
  * @nosideeffects
  */
 function SomeOtherType() {}
+/** @const {number} */ SomeOtherType.prototype.size;
+/**
+ * @param {!number} key
+ * @return {!boolean}
+ * @nosideeffects
+ */
+SomeOtherType.prototype.has = function(key) {}
+/**
+ * @param {!number} key
+ * @return {?number}
+ * @nosideeffects
+ */
+SomeOtherType.prototype.get = function(key) {}
+/**
+ * @return {!IteratorIterable<!number>}
+ * @nosideeffects
+ */
+SomeOtherType.prototype.keys = function() {}
+/**
+ * @return {!IteratorIterable<!number>}
+ * @nosideeffects
+ */
+SomeOtherType.prototype.values = function() {}
+/**
+ * @return {!Iterator<!Array<!number|!number>>}
+ * @nosideeffects
+ */
+SomeOtherType.prototype.entries = function() {};
+/**
+ * @return {!Iterator<!Array<!number|!number>>}
+ * @nosideeffects
+ */
+SomeOtherType.prototype[Symbol.iterator] = function() {};
+/**
+ * @param {function(!number, !number, MAP)} callback
+ * @this {MAP}
+ * @template MAP
+ */
+SomeOtherType.prototype.forEach = function(callback) {};
+/**
+ * @param {!number} key
+ * @param {!number} value
+ * @return {undefined}
+ */
+SomeOtherType.prototype.set = function(key,value) {}
+/**
+ * @param {!number} key
+ * @return {!boolean}
+ */
+SomeOtherType.prototype.delete = function(key) {}
+/**
+ * @return {undefined}
+ */
+SomeOtherType.prototype.clear = function() {}
 /**
  * @constructor
  * @private
@@ -90,6 +144,45 @@ SomeMapLikeDefiningOverrides.prototype.clear = function() {}
  * @return {!boolean}
  */
 SomeMapLikeDefiningOverrides.prototype.delete = function(key) {}
+/** @const {number} */ SomeMapLikeDefiningOverrides.prototype.size;
+/**
+ * @param {!string} key
+ * @return {!boolean}
+ * @nosideeffects
+ */
+SomeMapLikeDefiningOverrides.prototype.has = function(key) {}
+/**
+ * @param {!string} key
+ * @return {?number}
+ * @nosideeffects
+ */
+SomeMapLikeDefiningOverrides.prototype.get = function(key) {}
+/**
+ * @return {!IteratorIterable<!string>}
+ * @nosideeffects
+ */
+SomeMapLikeDefiningOverrides.prototype.keys = function() {}
+/**
+ * @return {!IteratorIterable<!number>}
+ * @nosideeffects
+ */
+SomeMapLikeDefiningOverrides.prototype.values = function() {}
+/**
+ * @return {!Iterator<!Array<!string|!number>>}
+ * @nosideeffects
+ */
+SomeMapLikeDefiningOverrides.prototype.entries = function() {};
+/**
+ * @return {!Iterator<!Array<!string|!number>>}
+ * @nosideeffects
+ */
+SomeMapLikeDefiningOverrides.prototype[Symbol.iterator] = function() {};
+/**
+ * @param {function(!number, !string, MAP)} callback
+ * @this {MAP}
+ * @template MAP
+ */
+SomeMapLikeDefiningOverrides.prototype.forEach = function(callback) {};
 /**
  * @constructor
  * @private
@@ -210,6 +303,45 @@ Event.prototype.preventDefault = function() {}
  * @nosideeffects
  */
 function RTCStatsReport() {}
+/** @const {number} */ RTCStatsReport.prototype.size;
+/**
+ * @param {!string} key
+ * @return {!boolean}
+ * @nosideeffects
+ */
+RTCStatsReport.prototype.has = function(key) {}
+/**
+ * @param {!string} key
+ * @return {?Object}
+ * @nosideeffects
+ */
+RTCStatsReport.prototype.get = function(key) {}
+/**
+ * @return {!IteratorIterable<!string>}
+ * @nosideeffects
+ */
+RTCStatsReport.prototype.keys = function() {}
+/**
+ * @return {!IteratorIterable<!Object>}
+ * @nosideeffects
+ */
+RTCStatsReport.prototype.values = function() {}
+/**
+ * @return {!Iterator<!Array<!string|!Object>>}
+ * @nosideeffects
+ */
+RTCStatsReport.prototype.entries = function() {};
+/**
+ * @return {!Iterator<!Array<!string|!Object>>}
+ * @nosideeffects
+ */
+RTCStatsReport.prototype[Symbol.iterator] = function() {};
+/**
+ * @param {function(!Object, !string, MAP)} callback
+ * @this {MAP}
+ * @template MAP
+ */
+RTCStatsReport.prototype.forEach = function(callback) {};
 /**
  * @constructor
  */

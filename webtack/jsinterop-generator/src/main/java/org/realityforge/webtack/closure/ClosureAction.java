@@ -27,9 +27,11 @@ import org.realityforge.webtack.model.ConstEnumerationDefinition;
 import org.realityforge.webtack.model.ConstMember;
 import org.realityforge.webtack.model.DictionaryDefinition;
 import org.realityforge.webtack.model.DictionaryMember;
+import org.realityforge.webtack.model.ExtendedAttribute;
 import org.realityforge.webtack.model.FrozenArrayType;
 import org.realityforge.webtack.model.InterfaceDefinition;
 import org.realityforge.webtack.model.Kind;
+import org.realityforge.webtack.model.MapLikeMember;
 import org.realityforge.webtack.model.NamedElement;
 import org.realityforge.webtack.model.NamespaceDefinition;
 import org.realityforge.webtack.model.OperationMember;
@@ -407,6 +409,175 @@ final class ClosureAction
     writeConstants( writer, type, definition.getConstants(), !hasNoJsType, true );
     writeAttributes( writer, type, definition.getAttributes() );
     writeOperations( writer, type, operations, false, name -> shouldOperationBeAnOverride( definition, name ) );
+    final MapLikeMember mapLike = definition.getMapLikeMember();
+    if ( null != mapLike )
+    {
+      generateMapLikeOperations( writer, type, definition.getOperations(), mapLike );
+    }
+  }
+
+  private void generateMapLikeOperations( @Nonnull final Writer writer,
+                                          @Nonnull final String type,
+                                          @Nonnull final List<OperationMember> operations,
+                                          @Nonnull final MapLikeMember mapLike )
+    throws IOException
+  {
+    writer.write( "/** @const {number} */ " );
+    writer.write( type );
+    writer.write( ".prototype.size;\n" );
+
+    final Type keyType = mapLike.getKeyType();
+    final Argument keyArgument =
+      new Argument( "key",
+                    keyType,
+                    false,
+                    false,
+                    null,
+                    null,
+                    Collections.emptyList(),
+                    Collections.emptyList() );
+    final Type valueType = mapLike.getValueType();
+    final Argument valueArgument =
+      new Argument( "value",
+                    valueType,
+                    false,
+                    false,
+                    null,
+                    null,
+                    Collections.emptyList(),
+                    Collections.emptyList() );
+
+    // has operation
+    writeOperation( writer,
+                    type,
+                    "has",
+                    Collections.singletonList( keyArgument ),
+                    new Type( Kind.Boolean, Collections.emptyList(), false, Collections.emptyList() ),
+                    true,
+                    false,
+                    true );
+    writeOperation( writer,
+                    type,
+                    "get",
+                    Collections.singletonList( keyArgument ),
+                    valueType,
+                    true,
+                    true,
+                    false,
+                    true );
+    final ExtendedAttribute iteratorIterableExtendedAttribute =
+      ExtendedAttribute.createExtendedAttributeIdent( ExtendedAttributes.JAVA_SEQUENCE_TYPE,
+                                                      "IteratorIterable",
+                                                      Collections.emptyList() );
+    writeOperation( writer,
+                    type,
+                    "keys",
+                    Collections.emptyList(),
+                    new SequenceType( keyType,
+                                      Collections.singletonList( iteratorIterableExtendedAttribute ),
+                                      false,
+                                      Collections.emptyList() ),
+                    true,
+                    false,
+                    true );
+
+    writeOperation( writer,
+                    type,
+                    "values",
+                    Collections.emptyList(),
+                    new SequenceType( valueType,
+                                      Collections.singletonList( iteratorIterableExtendedAttribute ),
+                                      false,
+                                      Collections.emptyList() ),
+                    true,
+                    false,
+                    true );
+
+    writer.write( "/**\n" );
+    writer.write( " * @return {!Iterator<!Array<" );
+    writeType( writer, keyType );
+    writer.write( "|" );
+    writeType( writer, valueType );
+    writer.write( ">>}\n" );
+    writer.write( " * @nosideeffects\n" );
+    writer.write( " */\n" );
+    writer.write( type + ".prototype.entries = function() {};\n" );
+
+    writer.write( "/**\n" );
+    writer.write( " * @return {!Iterator<!Array<" );
+    writeType( writer, keyType );
+    writer.write( "|" );
+    writeType( writer, valueType );
+    writer.write( ">>}\n" );
+    writer.write( " * @nosideeffects\n" );
+    writer.write( " */\n" );
+    writer.write( type + ".prototype[Symbol.iterator] = function() {};\n" );
+
+    writer.write( "/**\n" );
+    writer.write( " * @param {function(" );
+    writeType( writer, valueType );
+    writer.write( ", " );
+    writeType( writer, keyType );
+    writer.write( ", MAP)} callback\n" );
+    writer.write( " * @this {MAP}\n" );
+    writer.write( " * @template MAP\n" );
+    writer.write( " */\n" );
+    writer.write( type + ".prototype.forEach = function(callback) {};\n" );
+
+    if ( !mapLike.isReadOnly() )
+    {
+      final boolean setPresent =
+        operations
+          .stream()
+          .anyMatch( o -> "set".equals( o.getName() ) &&
+                          2 == o.getArguments().size() &&
+                          Kind.Void == o.getReturnType().getKind() );
+      if ( !setPresent )
+      {
+        writeOperation( writer,
+                        type,
+                        "set",
+                        Arrays.asList( keyArgument, valueArgument ),
+                        new Type( Kind.Void, Collections.emptyList(), false, Collections.emptyList() ),
+                        true,
+                        false,
+                        false );
+      }
+      final boolean deletePresent =
+        operations
+          .stream()
+          .anyMatch( o -> "delete".equals( o.getName() ) &&
+                          1 == o.getArguments().size() &&
+                          Kind.Boolean == o.getReturnType().getKind() );
+      if ( !deletePresent )
+      {
+        writeOperation( writer,
+                        type,
+                        "delete",
+                        Collections.singletonList( keyArgument ),
+                        new Type( Kind.Boolean, Collections.emptyList(), false, Collections.emptyList() ),
+                        true,
+                        false,
+                        false );
+      }
+      final boolean clearPresent =
+        operations
+          .stream()
+          .anyMatch( o -> "clear".equals( o.getName() ) &&
+                          o.getArguments().isEmpty() &&
+                          Kind.Void == o.getReturnType().getKind() );
+      if ( !clearPresent )
+      {
+        writeOperation( writer,
+                        type,
+                        "clear",
+                        Collections.emptyList(),
+                        new Type( Kind.Void, Collections.emptyList(), false, Collections.emptyList() ),
+                        true,
+                        false,
+                        false );
+      }
+    }
   }
 
   private boolean shouldOperationBeAnOverride( @Nonnull final InterfaceDefinition definition,
