@@ -704,10 +704,32 @@ final class ClosureAction
                                final boolean noSideEffects )
     throws IOException
   {
+    writeOperation( writer,
+                    type,
+                    name,
+                    arguments,
+                    returnType,
+                    returnType.isNullable(),
+                    onPrototype,
+                    override,
+                    noSideEffects );
+  }
+
+  private void writeOperation( @Nonnull final Writer writer,
+                               @Nullable final String type,
+                               @Nonnull final String name,
+                               @Nonnull final List<Argument> arguments,
+                               @Nonnull final Type returnType,
+                               final boolean returnNullable,
+                               final boolean onPrototype,
+                               final boolean override,
+                               final boolean noSideEffects )
+    throws IOException
+  {
     writer.write( "/**\n" );
     writeArgumentsJsDoc( writer, arguments );
     writer.write( " * @return {" );
-    writeType( writer, returnType );
+    writeType( writer, returnType, returnNullable );
     writer.write( "}\n" );
     if ( override || ( onPrototype && OBJECT_PROTOTYPE_METHODS.contains( name ) ) )
     {
@@ -839,10 +861,16 @@ final class ClosureAction
   private void writeType( @Nonnull final Writer writer, @Nonnull final Type type )
     throws IOException
   {
+    writeType( writer, type, type.isNullable() );
+  }
+
+  private void writeType( @Nonnull final Writer writer, @Nonnull final Type type, final boolean nullable )
+    throws IOException
+  {
     final Kind kind = type.getKind();
     if ( Kind.TypeReference != kind && Kind.Union != kind && Kind.Any != kind && Kind.Void != kind )
     {
-      writer.write( type.isNullable() ? "?" : "!" );
+      writer.write( nullable ? "?" : "!" );
     }
     if ( kind.isNumeric() || Kind.Byte == kind || Kind.Octet == kind )
     {
