@@ -52,12 +52,12 @@ CSSFontPaletteValuesRule.prototype.has = function(key) {}
  */
 CSSFontPaletteValuesRule.prototype.get = function(key) {}
 /**
- * @return {!IteratorIterable<!number>}
+ * @return {!Iterator<!number>}
  * @nosideeffects
  */
 CSSFontPaletteValuesRule.prototype.keys = function() {}
 /**
- * @return {!IteratorIterable<!string>}
+ * @return {!Iterator<!string>}
  * @nosideeffects
  */
 CSSFontPaletteValuesRule.prototype.values = function() {}
@@ -112,12 +112,12 @@ FakeRegExpGroups.prototype.has = function(key) {}
  */
 FakeRegExpGroups.prototype.get = function(key) {}
 /**
- * @return {!IteratorIterable<!string>}
+ * @return {!Iterator<!string>}
  * @nosideeffects
  */
 FakeRegExpGroups.prototype.keys = function() {}
 /**
- * @return {!IteratorIterable<!string>}
+ * @return {!Iterator<!string>}
  * @nosideeffects
  */
 FakeRegExpGroups.prototype.values = function() {}

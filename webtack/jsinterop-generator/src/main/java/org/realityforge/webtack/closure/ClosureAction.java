@@ -465,16 +465,16 @@ final class ClosureAction
                     true,
                     false,
                     true );
-    final ExtendedAttribute iteratorIterableExtendedAttribute =
+    final ExtendedAttribute iteratorExtendedAttribute =
       ExtendedAttribute.createExtendedAttributeIdent( ExtendedAttributes.SEQUENCE_TYPE,
-                                                      "IteratorIterable",
+                                                      "Iterator",
                                                       Collections.emptyList() );
     writeOperation( writer,
                     type,
                     "keys",
                     Collections.emptyList(),
                     new SequenceType( keyType,
-                                      Collections.singletonList( iteratorIterableExtendedAttribute ),
+                                      Collections.singletonList( iteratorExtendedAttribute ),
                                       false,
                                       Collections.emptyList() ),
                     true,
@@ -486,7 +486,7 @@ final class ClosureAction
                     "values",
                     Collections.emptyList(),
                     new SequenceType( valueType,
-                                      Collections.singletonList( iteratorIterableExtendedAttribute ),
+                                      Collections.singletonList( iteratorExtendedAttribute ),
                                       false,
                                       Collections.emptyList() ),
                     true,

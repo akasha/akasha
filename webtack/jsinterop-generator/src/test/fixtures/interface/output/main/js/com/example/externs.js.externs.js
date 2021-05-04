@@ -38,12 +38,12 @@ SomeOtherType.prototype.has = function(key) {}
  */
 SomeOtherType.prototype.get = function(key) {}
 /**
- * @return {!IteratorIterable<!number>}
+ * @return {!Iterator<!number>}
  * @nosideeffects
  */
 SomeOtherType.prototype.keys = function() {}
 /**
- * @return {!IteratorIterable<!number>}
+ * @return {!Iterator<!number>}
  * @nosideeffects
  */
 SomeOtherType.prototype.values = function() {}
@@ -158,12 +158,12 @@ SomeMapLikeDefiningOverrides.prototype.has = function(key) {}
  */
 SomeMapLikeDefiningOverrides.prototype.get = function(key) {}
 /**
- * @return {!IteratorIterable<!string>}
+ * @return {!Iterator<!string>}
  * @nosideeffects
  */
 SomeMapLikeDefiningOverrides.prototype.keys = function() {}
 /**
- * @return {!IteratorIterable<!number>}
+ * @return {!Iterator<!number>}
  * @nosideeffects
  */
 SomeMapLikeDefiningOverrides.prototype.values = function() {}
@@ -317,12 +317,12 @@ RTCStatsReport.prototype.has = function(key) {}
  */
 RTCStatsReport.prototype.get = function(key) {}
 /**
- * @return {!IteratorIterable<!string>}
+ * @return {!Iterator<!string>}
  * @nosideeffects
  */
 RTCStatsReport.prototype.keys = function() {}
 /**
- * @return {!IteratorIterable<!Object>}
+ * @return {!Iterator<!Object>}
  * @nosideeffects
  */
 RTCStatsReport.prototype.values = function() {}
