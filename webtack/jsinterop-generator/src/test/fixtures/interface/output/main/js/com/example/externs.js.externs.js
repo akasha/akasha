@@ -19,6 +19,32 @@ function MyThingCollection() {}
  */
 function DOMTokenList() {}
 /**
+ * @return {!Iterator<!number>}
+ * @nosideeffects
+ */
+DOMTokenList.prototype.keys = function() {}
+/**
+ * @return {!Iterator<!string>}
+ * @nosideeffects
+ */
+DOMTokenList.prototype.values = function() {}
+/**
+ * @return {!Iterator<!Array<!number|!string>>}
+ * @nosideeffects
+ */
+DOMTokenList.prototype.entries = function() {};
+/**
+ * @return {!Iterator<!Array<!number|!string>>}
+ * @nosideeffects
+ */
+DOMTokenList.prototype[Symbol.iterator] = function() {};
+/**
+ * @param {function(!string, !number, MAP)} callback
+ * @this {MAP}
+ * @template MAP
+ */
+DOMTokenList.prototype.forEach = function(callback) {};
+/**
  * @constructor
  * @private
  * @nosideeffects
@@ -111,6 +137,32 @@ Headers.prototype.delete = function(name) {}
  * @return {undefined}
  */
 Headers.prototype.append = function(name,value) {}
+/**
+ * @return {!Iterator<!string>}
+ * @nosideeffects
+ */
+Headers.prototype.keys = function() {}
+/**
+ * @return {!Iterator<!string>}
+ * @nosideeffects
+ */
+Headers.prototype.values = function() {}
+/**
+ * @return {!Iterator<!Array<!string|!string>>}
+ * @nosideeffects
+ */
+Headers.prototype.entries = function() {};
+/**
+ * @return {!Iterator<!Array<!string|!string>>}
+ * @nosideeffects
+ */
+Headers.prototype[Symbol.iterator] = function() {};
+/**
+ * @param {function(!string, !string, MAP)} callback
+ * @this {MAP}
+ * @template MAP
+ */
+Headers.prototype.forEach = function(callback) {};
 /**
  * @constructor
  * @private

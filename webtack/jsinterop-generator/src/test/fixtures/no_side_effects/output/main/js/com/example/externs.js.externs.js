@@ -176,3 +176,29 @@ function FakeRegExpResult() {}
  * @return {?string}
  */
 FakeRegExpResult.prototype.get = function(index) {}
+/**
+ * @return {!Iterator<!number>}
+ * @nosideeffects
+ */
+FakeRegExpResult.prototype.keys = function() {}
+/**
+ * @return {!Iterator<!string>}
+ * @nosideeffects
+ */
+FakeRegExpResult.prototype.values = function() {}
+/**
+ * @return {!Iterator<!Array<!number|!string>>}
+ * @nosideeffects
+ */
+FakeRegExpResult.prototype.entries = function() {};
+/**
+ * @return {!Iterator<!Array<!number|!string>>}
+ * @nosideeffects
+ */
+FakeRegExpResult.prototype[Symbol.iterator] = function() {};
+/**
+ * @param {function(!string, !number, MAP)} callback
+ * @this {MAP}
+ * @template MAP
+ */
+FakeRegExpResult.prototype.forEach = function(callback) {};

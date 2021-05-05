@@ -30,6 +30,7 @@ import org.realityforge.webtack.model.DictionaryMember;
 import org.realityforge.webtack.model.ExtendedAttribute;
 import org.realityforge.webtack.model.FrozenArrayType;
 import org.realityforge.webtack.model.InterfaceDefinition;
+import org.realityforge.webtack.model.IterableMember;
 import org.realityforge.webtack.model.Kind;
 import org.realityforge.webtack.model.MapLikeMember;
 import org.realityforge.webtack.model.NamedElement;
@@ -414,6 +415,11 @@ final class ClosureAction
     {
       generateMapLikeOperations( writer, type, definition.getOperations(), mapLike );
     }
+    final IterableMember iterable = definition.getIterable();
+    if ( null != iterable )
+    {
+      generateIterableOperations( writer, type, iterable );
+    }
   }
 
   private void generateMapLikeOperations( @Nonnull final Writer writer,
@@ -578,6 +584,136 @@ final class ClosureAction
                         false );
       }
     }
+  }
+
+  private void generateIterableOperations( @Nonnull final Writer writer,
+                                           @Nonnull final String type,
+                                           @Nonnull final IterableMember iterable )
+    throws IOException
+  {
+    generateIterableKeysMethod( writer, type, iterable );
+    generateIterableValuesMethod( writer, type, iterable );
+    generateIterableEntriesMethod( writer, type, iterable );
+    generateIterableForEachMethod( writer, type, iterable );
+  }
+
+  private void generateIterableForEachMethod( @Nonnull final Writer writer,
+                                              @Nonnull final String type,
+                                              @Nonnull final IterableMember iterable )
+    throws IOException
+  {
+    final Type keyType = iterable.getKeyType();
+    final Type valueType = iterable.getValueType();
+
+    writer.write( "/**\n" );
+    writer.write( " * @param {function(" );
+    writeType( writer, valueType );
+    writer.write( ", " );
+    if ( null == keyType )
+    {
+      writer.write( "!number" );
+    }
+    else
+    {
+      writeType( writer, keyType );
+    }
+    writer.write( ", MAP)} callback\n" );
+    writer.write( " * @this {MAP}\n" );
+    writer.write( " * @template MAP\n" );
+    writer.write( " */\n" );
+    writer.write( type + ".prototype.forEach = function(callback) {};\n" );
+  }
+
+  private void generateIterableEntriesMethod( @Nonnull final Writer writer,
+                                              @Nonnull final String type,
+                                              @Nonnull final IterableMember iterable )
+    throws IOException
+  {
+    final Type keyType = iterable.getKeyType();
+    final Type valueType = iterable.getValueType();
+
+    writer.write( "/**\n" );
+    writer.write( " * @return {!Iterator<!Array<" );
+    if ( null == keyType )
+    {
+      writer.write( "!number" );
+    }
+    else
+    {
+      writeType( writer, keyType );
+    }
+    writer.write( "|" );
+    writeType( writer, valueType );
+    writer.write( ">>}\n" );
+    writer.write( " * @nosideeffects\n" );
+    writer.write( " */\n" );
+    writer.write( type + ".prototype.entries = function() {};\n" );
+
+    writer.write( "/**\n" );
+    writer.write( " * @return {!Iterator<!Array<" );
+    if ( null == keyType )
+    {
+      writer.write( "!number" );
+    }
+    else
+    {
+      writeType( writer, keyType );
+    }
+    writer.write( "|" );
+    writeType( writer, valueType );
+    writer.write( ">>}\n" );
+    writer.write( " * @nosideeffects\n" );
+    writer.write( " */\n" );
+    writer.write( type + ".prototype[Symbol.iterator] = function() {};\n" );
+  }
+
+  private void generateIterableKeysMethod( @Nonnull final Writer writer,
+                                           @Nonnull final String type,
+                                           @Nonnull final IterableMember iterable )
+    throws IOException
+  {
+    final ExtendedAttribute iteratorExtendedAttribute =
+      ExtendedAttribute.createExtendedAttributeIdent( ExtendedAttributes.SEQUENCE_TYPE,
+                                                      "Iterator",
+                                                      Collections.emptyList() );
+    final Type declaredKeyType = iterable.getKeyType();
+    final Type keyType =
+      null == declaredKeyType ?
+      new Type( Kind.Double, Collections.emptyList(), false, Collections.emptyList() ) :
+      declaredKeyType;
+    writeOperation( writer,
+                    type,
+                    "keys",
+                    Collections.emptyList(),
+                    new SequenceType( keyType,
+                                      Collections.singletonList( iteratorExtendedAttribute ),
+                                      false,
+                                      Collections.emptyList() ),
+                    true,
+                    false,
+                    true );
+  }
+
+  private void generateIterableValuesMethod( @Nonnull final Writer writer,
+                                             @Nonnull final String type,
+                                             @Nonnull final IterableMember iterable )
+    throws IOException
+  {
+    final ExtendedAttribute iteratorExtendedAttribute =
+      ExtendedAttribute.createExtendedAttributeIdent( ExtendedAttributes.SEQUENCE_TYPE,
+                                                      "Iterator",
+                                                      Collections.emptyList() );
+    writeOperation( writer,
+                    type,
+                    "values",
+                    Collections.emptyList(),
+                    new SequenceType( iterable.getValueType(),
+                                      Collections.singletonList( iteratorExtendedAttribute ),
+                                      false,
+                                      Collections.emptyList() ),
+                    true,
+                    false,
+                    true );
   }
 
   private boolean shouldOperationBeAnOverride( @Nonnull final InterfaceDefinition definition,
