@@ -16,7 +16,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "FakeRegExpResult"
 )
-public class FakeRegExpResult {
+public class FakeRegExpResult implements JsIterable<FakeRegExpResult.Entry> {
   protected FakeRegExpResult() {
   }
 

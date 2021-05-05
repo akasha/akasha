@@ -15,6 +15,7 @@ function MyThingCollection() {}
 /**
  * @constructor
  * @private
+ * @implements {Iterable<!Array<!number|!string>>}
  * @nosideeffects
  */
 function DOMTokenList() {}
@@ -47,6 +48,7 @@ DOMTokenList.prototype.forEach = function(callback) {};
 /**
  * @constructor
  * @private
+ * @implements {Iterable<!Array<!number|!number>>}
  * @nosideeffects
  */
 function SomeOtherType() {}
@@ -107,6 +109,7 @@ SomeOtherType.prototype.clear = function() {}
 /**
  * @constructor
  * @private
+ * @implements {Iterable<!Array<!string|!string>>}
  * @nosideeffects
  */
 function Headers() {}
@@ -178,6 +181,7 @@ function DOMStringMap() {}
 /**
  * @constructor
  * @private
+ * @implements {Iterable<!Array<!string|!number>>}
  * @nosideeffects
  */
 function SomeMapLikeDefiningOverrides() {}
@@ -352,6 +356,7 @@ Event.prototype.preventDefault = function() {}
 /**
  * @constructor
  * @private
+ * @implements {Iterable<!Array<!string|!Object>>}
  * @nosideeffects
  */
 function RTCStatsReport() {}

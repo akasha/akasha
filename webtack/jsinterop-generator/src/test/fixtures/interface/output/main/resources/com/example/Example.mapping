@@ -4,6 +4,7 @@ Event=com.example.Event
 EventInit=com.example.EventInit
 EventTarget=com.example.EventTarget
 Headers=com.example.Headers
+Iterable=com.example.JsIterable
 Iterator=com.example.JsIterator
 MyThing=com.example.MyThing
 MyThingCollection=com.example.MyThingCollection

@@ -20,7 +20,7 @@ import jsinterop.base.Js;
     namespace = JsPackage.GLOBAL,
     name = "RTCStatsReport"
 )
-public final class RTCStatsReport {
+public final class RTCStatsReport implements JsIterable<RTCStatsReport.Entry> {
   private RTCStatsReport() {
   }
 

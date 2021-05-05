@@ -20,7 +20,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "SomeOtherType"
 )
-public class SomeOtherType {
+public class SomeOtherType implements JsIterable<SomeOtherType.Entry> {
   protected SomeOtherType() {
   }
 

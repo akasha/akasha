@@ -16,7 +16,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "CSSFontPaletteValuesRule"
 )
-public class CSSFontPaletteValuesRule {
+public class CSSFontPaletteValuesRule implements JsIterable<CSSFontPaletteValuesRule.Entry> {
   @Nonnull
   public String basePalette;
 

@@ -1,6 +1,7 @@
 package org.realityforge.webtack.closure;
 
 import java.io.IOException;
+import java.io.StringWriter;
 import java.io.Writer;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
@@ -372,54 +373,93 @@ final class ClosureAction
     final boolean hasNoJsType =
       definition.isNoArgsExtendedAttributePresent( ExtendedAttributes.LEGACY_NO_INTERFACE_OBJECT );
 
+    final MapLikeMember mapLike = definition.getMapLikeMember();
+    final IterableMember iterable = definition.getIterable();
+
+    final List<String> lines = new ArrayList<>();
+    if ( null != iterable )
+    {
+      final Type keyType = iterable.getKeyType();
+      if ( null == keyType )
+      {
+        lines.add( "@implements {Iterable<!Array<!number|" + toClosureType( iterable.getValueType() ) + ">>}" );
+      }
+      else
+      {
+        lines.add( "@implements {Iterable<!Array<" + toClosureType( keyType ) + "|" +
+                   toClosureType( iterable.getValueType() ) + ">>}" );
+      }
+    }
+    if ( null != mapLike )
+    {
+      lines.add( "@implements {Iterable<!Array<" + toClosureType( mapLike.getKeyType() ) + "|" +
+                 toClosureType( mapLike.getValueType() ) + ">>}" );
+    }
+
     final String namespace = definition.getNamespace();
     final String type = ( null == namespace ? "" : namespace + "." ) + definition.getName();
     if ( hasNoJsType || constructors.isEmpty() )
     {
+      lines.add( "@nosideeffects" );
       writeConstructor( writer,
                         type,
                         definition.getInherits(),
                         Collections.emptyList(),
                         false,
-                        Collections.singletonList( "@nosideeffects" ) );
+                        lines );
     }
     else if ( 1 == constructors.size() )
     {
       final OperationMember constructor = constructors.get( 0 );
       final boolean noSideEffects =
         constructor.isNoArgsExtendedAttributePresent( ExtendedAttributes.NO_SIDE_EFFECTS );
+      if ( noSideEffects )
+      {
+        lines.add( "@nosideeffects" );
+      }
       writeConstructor( writer,
                         type,
                         definition.getInherits(),
                         constructor.getArguments(),
                         true,
-                        noSideEffects ? Collections.singletonList( "@nosideeffects" ) : Collections.emptyList() );
+                        lines );
     }
     else
     {
       final OperationMember constructor = constructors.get( 0 );
       final boolean noSideEffects =
         constructor.isNoArgsExtendedAttributePresent( ExtendedAttributes.NO_SIDE_EFFECTS );
+      if ( noSideEffects )
+      {
+        lines.add( "@nosideeffects" );
+      }
       writeConstructor( writer,
                         type,
                         definition.getInherits(),
                         deriveArguments( constructors ),
                         true,
-                        noSideEffects ? Collections.singletonList( "@nosideeffects" ) : Collections.emptyList() );
+                        lines );
     }
     writeConstants( writer, type, definition.getConstants(), !hasNoJsType, true );
     writeAttributes( writer, type, definition.getAttributes() );
     writeOperations( writer, type, operations, false, name -> shouldOperationBeAnOverride( definition, name ) );
-    final MapLikeMember mapLike = definition.getMapLikeMember();
     if ( null != mapLike )
     {
       generateMapLikeOperations( writer, type, definition.getOperations(), mapLike );
     }
-    final IterableMember iterable = definition.getIterable();
     if ( null != iterable )
     {
       generateIterableOperations( writer, type, iterable );
     }
+  }
+
+  @Nonnull
+  private String toClosureType( @Nonnull final Type keyType )
+    throws IOException
+  {
+    final StringWriter sw = new StringWriter();
+    writeType( sw, keyType );
+    return sw.toString();
   }
 
   private void generateMapLikeOperations( @Nonnull final Writer writer,

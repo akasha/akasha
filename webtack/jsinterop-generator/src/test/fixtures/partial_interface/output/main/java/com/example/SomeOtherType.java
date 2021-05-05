@@ -21,7 +21,7 @@ import jsinterop.base.Js;
     namespace = JsPackage.GLOBAL,
     name = "SomeOtherType"
 )
-public final class SomeOtherType {
+public final class SomeOtherType implements JsIterable<SomeOtherType.Entry> {
   private SomeOtherType() {
   }
 

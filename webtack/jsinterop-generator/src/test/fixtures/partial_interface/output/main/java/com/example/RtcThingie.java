@@ -20,7 +20,7 @@ import jsinterop.base.Js;
     namespace = JsPackage.GLOBAL,
     name = "rtcThingie"
 )
-public final class RtcThingie {
+public final class RtcThingie implements JsIterable<RtcThingie.Entry> {
   private RtcThingie() {
   }
 

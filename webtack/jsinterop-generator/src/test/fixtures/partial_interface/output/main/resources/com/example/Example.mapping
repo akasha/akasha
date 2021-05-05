@@ -1,5 +1,6 @@
 DOMTokenList=com.example.DOMTokenList
 Headers=com.example.Headers
+Iterable=com.example.JsIterable
 Iterator=com.example.JsIterator
 RTCStatsReport=com.example.RTCStatsReport
 Sequence=com.example.JsArray

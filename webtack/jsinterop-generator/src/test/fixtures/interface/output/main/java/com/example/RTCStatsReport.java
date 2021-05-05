@@ -19,7 +19,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "RTCStatsReport"
 )
-public class RTCStatsReport {
+public class RTCStatsReport implements JsIterable<RTCStatsReport.Entry> {
   protected RTCStatsReport() {
   }
 

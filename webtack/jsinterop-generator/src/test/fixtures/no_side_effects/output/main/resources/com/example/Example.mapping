@@ -3,6 +3,7 @@ CSSFontPaletteValuesRule=com.example.CSSFontPaletteValuesRule
 FakeMath=com.example.FakeMath
 FakeRegExpGroups=com.example.FakeRegExpGroups
 FakeRegExpResult=com.example.FakeRegExpResult
+Iterable=com.example.JsIterable
 Iterator=com.example.JsIterator
 OffscreenCanvas=com.example.OffscreenCanvas
 Performance=com.example.Performance

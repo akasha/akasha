@@ -19,7 +19,7 @@ import jsinterop.base.Js;
     namespace = JsPackage.GLOBAL,
     name = "Headers"
 )
-public final class Headers {
+public final class Headers implements JsIterable<Headers.Entry> {
   private Headers() {
   }
 

@@ -21,7 +21,7 @@ import jsinterop.base.Js;
     namespace = JsPackage.GLOBAL,
     name = "SomeMapLikeDefiningOverrides"
 )
-public final class SomeMapLikeDefiningOverrides {
+public final class SomeMapLikeDefiningOverrides implements JsIterable<SomeMapLikeDefiningOverrides.Entry> {
   private SomeMapLikeDefiningOverrides() {
   }
 

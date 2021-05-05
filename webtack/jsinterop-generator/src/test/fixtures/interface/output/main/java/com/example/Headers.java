@@ -18,7 +18,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "Headers"
 )
-public class Headers {
+public class Headers implements JsIterable<Headers.Entry> {
   protected Headers() {
   }
 

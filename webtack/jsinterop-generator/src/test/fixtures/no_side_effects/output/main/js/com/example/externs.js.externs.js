@@ -33,6 +33,7 @@ WEBGL_debug_shaders.prototype.getTranslatedShaderSource = function(shaderId) {}
 /**
  * @constructor
  * @private
+ * @implements {Iterable<!Array<!number|!string>>}
  * @nosideeffects
  */
 function CSSFontPaletteValuesRule() {}
@@ -95,6 +96,7 @@ CSSFontPaletteValuesRule.prototype.clear = function() {}
 /**
  * @constructor
  * @private
+ * @implements {Iterable<!Array<!string|!string>>}
  * @nosideeffects
  */
 function FakeRegExpGroups() {}
@@ -165,6 +167,7 @@ OffscreenCanvas.prototype.isValid = function() {}
 /**
  * @constructor
  * @private
+ * @implements {Iterable<!Array<!number|!string>>}
  * @nosideeffects
  */
 function FakeRegExpResult() {}

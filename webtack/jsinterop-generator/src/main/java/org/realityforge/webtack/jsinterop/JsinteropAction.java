@@ -1418,9 +1418,10 @@ final class JsinteropAction
     throws IOException
   {
     final String name = definition.getName();
+    final String javaName = lookupClassName( definition.getName() ).simpleName();
     final TypeSpec.Builder type =
       TypeSpec
-        .classBuilder( lookupClassName( definition.getName() ).simpleName() )
+        .classBuilder( javaName )
         .addModifiers( Modifier.PUBLIC, Modifier.FINAL );
     writeGeneratedAnnotation( type );
     maybeAddCustomAnnotations( definition, type );
@@ -1465,6 +1466,11 @@ final class JsinteropAction
       {
         generatePairIterableElements( name, iterable, type );
       }
+    }
+    if ( null != iterable || null != mapLike )
+    {
+      type.addSuperinterface( ParameterizedTypeName.get( lookupClassName( "Iterable" ),
+                                                         ClassName.bestGuess( javaName + ".Entry" ) ) );
     }
     if ( null != definition.getAsyncIterable() )
     {
@@ -1695,9 +1701,10 @@ final class JsinteropAction
     throws IOException
   {
     final String name = definition.getName();
+    final String javaName = lookupClassName( definition.getName() ).simpleName();
     final TypeSpec.Builder type =
       TypeSpec
-        .classBuilder( lookupClassName( definition.getName() ).simpleName() )
+        .classBuilder( javaName )
         .addModifiers( Modifier.PUBLIC );
     writeGeneratedAnnotation( type );
     maybeAddCustomAnnotations( definition, type );
@@ -1760,6 +1767,11 @@ final class JsinteropAction
       {
         generatePairIterableElements( name, iterable, type );
       }
+    }
+    if ( null != iterable || null != mapLike )
+    {
+      type.addSuperinterface( ParameterizedTypeName.get( lookupClassName( "Iterable" ),
+                                                         ClassName.bestGuess( javaName + ".Entry" ) ) );
     }
     if ( null != definition.getSetLikeMember() )
     {

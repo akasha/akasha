@@ -20,7 +20,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "SomeMapLikeDefiningOverrides"
 )
-public class SomeMapLikeDefiningOverrides {
+public class SomeMapLikeDefiningOverrides implements JsIterable<SomeMapLikeDefiningOverrides.Entry> {
   protected SomeMapLikeDefiningOverrides() {
   }
 

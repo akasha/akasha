@@ -18,7 +18,7 @@ import jsinterop.base.Js;
     namespace = JsPackage.GLOBAL,
     name = "DOMTokenList"
 )
-public final class DOMTokenList {
+public final class DOMTokenList implements JsIterable<DOMTokenList.Entry> {
   private DOMTokenList() {
   }
 
