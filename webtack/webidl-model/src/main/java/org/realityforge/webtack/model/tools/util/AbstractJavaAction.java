@@ -262,6 +262,12 @@ public abstract class AbstractJavaAction
   }
 
   @Nonnull
+  protected Path getTestJavaDirectory()
+  {
+    return getOutputDirectory().resolve( "test" ).resolve( "java" );
+  }
+
+  @Nonnull
   protected Path getMainResourcesDirectory()
   {
     return getOutputDirectory().resolve( "main" ).resolve( "resources" );
