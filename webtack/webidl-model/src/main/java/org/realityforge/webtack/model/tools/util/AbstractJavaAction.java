@@ -303,7 +303,6 @@ public abstract class AbstractJavaAction
   protected void writeTopLevelType( @Nullable final String idlName, @Nonnull final TypeSpec.Builder type )
     throws IOException
   {
-    final Path outputDirectory = getMainJavaDirectory();
     final TypeSpec typeSpec = type.build();
     final String qualifiedName =
       null != idlName ? _idlToJavaTypeMapping.get( idlName ) : _packageName + "." + typeSpec.name;
@@ -316,6 +315,12 @@ public abstract class AbstractJavaAction
       // Lookup java type so that it will be part of cache AND it will be emitted in mapping file
       lookupClassName( idlName );
     }
+    emitJavaType( getMainJavaDirectory(), typeSpec, qualifiedName );
+  }
+
+  protected void emitJavaType( @Nonnull final Path outputDirectory, @Nonnull final TypeSpec typeSpec, @Nonnull final String qualifiedName )
+    throws IOException
+  {
     recordGeneratedFile( outputDirectory.resolve( qualifiedName.replaceAll( "\\.", File.separator ) + ".java" ) );
     JavaFile
       .builder( ClassName.bestGuess( qualifiedName ).packageName(), typeSpec )
