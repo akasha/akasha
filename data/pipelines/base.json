@@ -1698,6 +1698,9 @@
     },
     {
       "name": "JavaizeEventHandlers"
+    },
+    {
+      "name": "ExtendObject"
     }
   ]
 }
