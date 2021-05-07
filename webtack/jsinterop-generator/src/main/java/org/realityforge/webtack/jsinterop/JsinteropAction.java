@@ -1424,7 +1424,8 @@ final class JsinteropAction
     throws IOException
   {
     final String name = definition.getName();
-    final String javaName = lookupClassName( definition.getName() ).simpleName();
+    final ClassName className = lookupClassName( definition.getName() );
+    final String javaName = className.simpleName();
     final TypeSpec.Builder type =
       TypeSpec
         .classBuilder( javaName )
