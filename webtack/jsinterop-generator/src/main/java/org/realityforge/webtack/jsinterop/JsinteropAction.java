@@ -2340,10 +2340,11 @@ final class JsinteropAction
     final Type attributeType = attribute.getType();
     final WebIDLSchema schema = getSchema();
     final Type actualType = schema.resolveType( attributeType );
+    final TypeName actualJavaType = toTypeName( actualType );
     final String name = attribute.getName();
     final String fieldName = javaName( attribute );
     final FieldSpec.Builder field =
-      FieldSpec.builder( toTypeName( actualType ), fieldName, Modifier.PUBLIC );
+      FieldSpec.builder( actualJavaType, fieldName, Modifier.PUBLIC );
     maybeAddCustomAnnotations( attribute, field );
     maybeAddJavadoc( attribute, field );
     if ( !fieldName.equals( name ) )
