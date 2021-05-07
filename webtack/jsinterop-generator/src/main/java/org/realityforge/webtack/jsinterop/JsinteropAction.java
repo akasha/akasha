@@ -2308,9 +2308,10 @@ final class JsinteropAction
     final Type actualType = schema.resolveType( attributeType );
     final String name = attribute.getName();
     final TypeName actualJavaType = toTypeName( actualType );
+    final String javaName = safeJsPropertyMethodName( name, TypeName.BOOLEAN.equals( actualJavaType ) );
     final MethodSpec.Builder method =
       MethodSpec
-        .methodBuilder( safeJsPropertyMethodName( name, TypeName.BOOLEAN.equals( actualJavaType ) ) )
+        .methodBuilder( javaName )
         .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
         .returns( actualJavaType )
         .addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_PROPERTY ).addMember( "name", "$S", name ).build() );
