@@ -38,3 +38,17 @@ Symbol.split;
  * =:
  */
 Promise.any = function(iterable) {};
+
+/**
+ * This does not yet have a typing declared in closure compiler.
+ *
+ * @type {boolean}
+ */
+RegExp.prototype.unicode;
+
+/**
+ * This does not yet have a typing declared in closure compiler.
+ *
+ * @type {boolean}
+ */
+RegExp.prototype.dotAll;
