@@ -1327,7 +1327,7 @@ final class JsinteropAction
     emitReturnType( definition, definition.getReturnType(), method );
     for ( final Argument argument : definition.getArguments() )
     {
-      generateArgument( argument, asTypedValue( argument.getType() ), false, method );
+      generateArgument( argument, asTypedValue( argument.getType(), argument.isOptional() ), false, true, method );
     }
     type.addMethod( method.build() );
 
@@ -1361,6 +1361,12 @@ final class JsinteropAction
   @Nonnull
   private TypedValue asTypedValue( @Nonnull final Type type )
   {
+    return asTypedValue( type, false );
+  }
+
+  @Nonnull
+  private TypedValue asTypedValue( @Nonnull final Type type, final boolean supportJsOptional )
+  {
     // This method is only called for arguments to callback interfaces a callbacks
     final WebIDLSchema schema = getSchema();
     final Type resolveType = schema.resolveType( type );
@@ -1370,7 +1376,7 @@ final class JsinteropAction
     }
     else
     {
-      final TypeName javaType = toTypeName( resolveType );
+      final TypeName javaType = toTypeName( resolveType, supportJsOptional );
       final TypedValue.Nullability nullability =
         javaType.isPrimitive() ? TypedValue.Nullability.NA :
         schema.isNullable( type ) ? TypedValue.Nullability.NULLABLE :
@@ -2533,7 +2539,7 @@ final class JsinteropAction
     for ( final Argument argument : arguments )
     {
       final TypedValue typedValue = typeList.get( index++ );
-      generateArgument( argument, typedValue, false, method );
+      generateArgument( argument, typedValue, false, false, method );
     }
     type.addMethod( method.build() );
   }
@@ -2587,7 +2593,7 @@ final class JsinteropAction
     for ( final Argument argument : arguments )
     {
       final TypedValue typedValue = typeList.get( index++ );
-      generateArgument( argument, typedValue, false, method );
+      generateArgument( argument, typedValue, false, false, method );
     }
     type.addMethod( method.build() );
   }
@@ -2610,7 +2616,7 @@ final class JsinteropAction
     final Type itemType = operation.getReturnType();
     emitReturnType( operation, itemType, method );
     final Argument argument = arguments.get( 0 );
-    generateArgument( argument, asTypedValue( argument.getType() ), true, method );
+    generateArgument( argument, asTypedValue( argument.getType() ), true, false, method );
     method.addStatement( "return $T.<$T>cast( this ).getAt( $N )",
                          JsinteropTypes.JS,
                          ParameterizedTypeName.get( JsinteropTypes.JS_ARRAY_LIKE, toTypeName( itemType ) ),
@@ -2634,10 +2640,10 @@ final class JsinteropAction
     maybeAddJavadoc( operation, method );
     method.addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_OVERLAY ).build() );
     final Argument indexArgument = arguments.get( 0 );
-    generateArgument( indexArgument, asTypedValue( indexArgument.getType() ), true, method );
+    generateArgument( indexArgument, asTypedValue( indexArgument.getType() ), true, false, method );
 
     final Argument valueArgument = arguments.get( 1 );
-    generateArgument( valueArgument, asTypedValue( valueArgument.getType() ), true, method );
+    generateArgument( valueArgument, asTypedValue( valueArgument.getType() ), true, false, method );
 
     method.addStatement( "$T.<$T>cast( this ).setAt( $N, $N )",
                          JsinteropTypes.JS,
@@ -2666,7 +2672,7 @@ final class JsinteropAction
     final Type itemType = operation.getReturnType();
     emitReturnType( operation, itemType, method );
     final Argument argument = arguments.get( 0 );
-    generateArgument( argument, asTypedValue( argument.getType() ), true, method );
+    generateArgument( argument, asTypedValue( argument.getType() ), true, false, method );
     final TypeName javaItemType = toTypeName( itemType );
     method.addStatement( "return $T.<$T>cast( this ).get( $N )",
                          JsinteropTypes.JS,
@@ -2691,10 +2697,10 @@ final class JsinteropAction
     maybeAddJavadoc( operation, method );
     method.addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_OVERLAY ).build() );
     final Argument indexArgument = arguments.get( 0 );
-    generateArgument( indexArgument, asTypedValue( indexArgument.getType() ), true, method );
+    generateArgument( indexArgument, asTypedValue( indexArgument.getType() ), true, false, method );
 
     final Argument valueArgument = arguments.get( 1 );
-    generateArgument( valueArgument, asTypedValue( valueArgument.getType() ), true, method );
+    generateArgument( valueArgument, asTypedValue( valueArgument.getType() ), true, false, method );
 
     method.addStatement( "$T.<$T>cast( this ).set( $N, $N )",
                          JsinteropTypes.JS,
@@ -2721,7 +2727,7 @@ final class JsinteropAction
     maybeAddJavadoc( operation, method );
     method.addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_OVERLAY ).build() );
     final Argument argument = arguments.get( 0 );
-    generateArgument( argument, asTypedValue( argument.getType() ), true, method );
+    generateArgument( argument, asTypedValue( argument.getType() ), true, false, method );
     method.addStatement( "$T.<$T>cast( this ).delete( $N )",
                          JsinteropTypes.JS,
                          ParameterizedTypeName.get( JsinteropTypes.JS_PROPERTY_MAP,
@@ -2774,7 +2780,7 @@ final class JsinteropAction
     int index = 0;
     for ( final Argument argument : arguments )
     {
-      generateArgument( argument, typeList.get( index++ ), false, method );
+      generateArgument( argument, typeList.get( index++ ), false, false, method );
     }
     type.addMethod( method.build() );
   }
@@ -2840,7 +2846,7 @@ final class JsinteropAction
     int index = 0;
     for ( final Argument argument : argumentList )
     {
-      generateArgument( argument, typeList.get( index++ ), true, method );
+      generateArgument( argument, typeList.get( index++ ), true, false, method );
     }
     if ( null != parentConstructor )
     {
@@ -2897,6 +2903,7 @@ final class JsinteropAction
   private void generateArgument( @Nonnull final Argument argument,
                                  @Nonnull final TypedValue typedValue,
                                  final boolean isFinal,
+                                 final boolean applyJsOptional,
                                  @Nonnull final MethodSpec.Builder method )
   {
     final Type actualType = getSchema().resolveType( argument.getType() );
@@ -2911,6 +2918,10 @@ final class JsinteropAction
     addMagicConstantAnnotationIfNeeded( actualType, parameter );
     addDoNotAutoboxAnnotation( typedValue, parameter );
     addNullabilityAnnotation( typedValue, parameter );
+    if ( applyJsOptional && argument.isOptional() )
+    {
+      parameter.addAnnotation( JsinteropTypes.JS_OPTIONAL );
+    }
     // Only the last argument can be variadic
     if ( argument.isVariadic() )
     {

@@ -16,6 +16,8 @@ public final class JsinteropTypes
   @Nonnull
   public static final ClassName JS_FUNCTION = ClassName.get( "jsinterop.annotations", "JsFunction" );
   @Nonnull
+  public static final ClassName JS_OPTIONAL = ClassName.get( "jsinterop.annotations", "JsOptional" );
+  @Nonnull
   public static final ClassName ANY = ClassName.get( "jsinterop.base", "Any" );
   @Nonnull
   public static final ClassName JS = ClassName.get( "jsinterop.base", "Js" );

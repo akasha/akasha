@@ -13,6 +13,7 @@
 * Rename the extended attribute `[JavaSequenceType]` to `[SequenceType]` as it is used in the context of closure externs and is not java-specific. Fixes #25.
 * Modify the closure and java binding of interface types so that they implement the `Iterator<T>` / `JsIterator<T>` interfaces respectively. Fixes #15.
 * Change all interface types so that they extend `Object`. This aligns how the types are implemented in WebIDL javascript binding and makes these types easier to use in a web context. Fixes #24.
+* In the java binding, annotate optional operation arguments in callbacks with the `@jsinterop.annotations.JsOptional` annotation. This ensures that the types align when compiled with J2CL and closure compiler that the types align.
 
 ### [v0.10](https://github.com/akasha/akasha/tree/v0.10) (2021-04-22) · [Full Changelog](https://github.com/spritz/spritz/compare/v0.09...v0.10) · [API Differences](https://akasha.github.io/akasha-java/api-diff/?key=akasha-java&old=0.09&new=0.10) · [Source Diff](https://github.com/akasha/akasha-java/compare/v0.09...v0.10)
 
