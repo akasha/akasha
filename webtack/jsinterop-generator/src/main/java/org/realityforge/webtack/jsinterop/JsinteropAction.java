@@ -2019,7 +2019,8 @@ final class JsinteropAction
       MethodSpec
         .methodBuilder( "forEach" )
         .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
-        .addParameter( ParameterSpec.builder( ClassName.bestGuess( "ForEachCallback" ), "callback" )
+        .addParameter( ParameterSpec
+                         .builder( ClassName.bestGuess( "ForEachCallback" ), "callback" )
                          .addAnnotation( BasicTypes.NONNULL )
                          .build() );
     maybeAddJavadoc( forEachDocumentation, forEach1 );
