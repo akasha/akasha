@@ -1,9 +1,15 @@
 goog.module('com.example.ExampleCompileTest');
 goog.require('com.example.EXT_disjoint_timer_query.$Overlay');
+goog.require('com.example.EXT_disjoint_timer_queryTest');
 goog.require('com.example.EventListener1.$Overlay');
+goog.require('com.example.EventListener1Test');
 goog.require('com.example.EventListener2.$Overlay');
+goog.require('com.example.EventListener2Test');
 goog.require('com.example.Math1.$Overlay');
+goog.require('com.example.Math1Test');
 goog.require('com.example.Math2.$Overlay');
+goog.require('com.example.Math2Test');
 goog.require('com.example.MyType2.$Overlay');
+goog.require('com.example.MyType2Test');
 goog.require('com.example.PermissionDescriptor.$Overlay');
 goog.require('com.example.PushPermissionDescriptor.$Overlay');

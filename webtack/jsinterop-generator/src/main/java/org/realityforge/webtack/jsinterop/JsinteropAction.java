@@ -456,16 +456,29 @@ final class JsinteropAction
                             .build() );
       type.addMethod( MethodSpec.constructorBuilder().addModifiers( Modifier.PRIVATE ).build() );
 
+      final String testJavaName = javaName + "Test";
+      final TypeSpec.Builder testType =
+        TypeSpec
+          .classBuilder( testJavaName )
+          .addModifiers( Modifier.PUBLIC, Modifier.FINAL );
+      writeGeneratedAnnotation( testType );
+
       for ( final MixinDefinition mixin : globalMixins )
       {
         generateConstants( mixin.getName(), mixin.getConstants(), type );
-        generateStaticAttributes( mixin.getAttributes(), type );
-        generateStaticOperations( type, mixin.getOperations() );
+        generateStaticAttributes( mixin.getAttributes(), className, type, testType );
+        generateStaticOperations( mixin.getOperations(), className, type, testType );
         generateStaticEventsMethods( type, schema, mixin.getEvents() );
       }
 
       _modulesToRequireInCompileTest.add( className.canonicalName() + ".$Overlay" );
       writeTopLevelType( idlName, type );
+
+      emitJavaType( getTestJavaDirectory(),
+                    testType.build(),
+                    ClassName.get( className.packageName(), testJavaName ).toString() );
+
+      _modulesToRequireInCompileTest.add( className.canonicalName() + "Test" );
     }
   }
 
@@ -486,20 +499,33 @@ final class JsinteropAction
                           .addMember( "name", "$S", "goog.global" )
                           .build() );
 
+    final String testJavaName = javaName + "Test";
+    final TypeSpec.Builder testType =
+      TypeSpec
+        .classBuilder( testJavaName )
+        .addModifiers( Modifier.PUBLIC, Modifier.FINAL );
+    writeGeneratedAnnotation( testType );
+
     type.addMethod( MethodSpec.constructorBuilder().addModifiers( Modifier.PRIVATE ).build() );
 
     final WebIDLSchema schema = getSchema();
     InterfaceDefinition definition = schema.getInterfaceByName( globalInterface );
     while ( null != definition )
     {
-      generateStaticAttributes( definition.getAttributes(), type );
-      generateStaticOperations( type, definition.getOperations() );
+      generateStaticAttributes( definition.getAttributes(), className, type, testType );
+      generateStaticOperations( definition.getOperations(), className, type, testType );
       generateStaticEventsMethods( type, schema, definition.getEvents() );
       definition = definition.getSuperInterface();
     }
 
     _modulesToRequireInCompileTest.add( className.canonicalName() + ".$Overlay" );
     writeTopLevelType( idlName, type );
+
+    emitJavaType( getTestJavaDirectory(),
+                  testType.build(),
+                  ClassName.get( className.packageName(), testJavaName ).toString() );
+
+    _modulesToRequireInCompileTest.add( className.canonicalName() + "Test" );
   }
 
   private void generateStaticEventsMethods( @Nonnull final TypeSpec.Builder type,
@@ -523,29 +549,35 @@ final class JsinteropAction
   }
 
   private void generateStaticAttributes( @Nonnull final List<AttributeMember> attributes,
-                                         @Nonnull final TypeSpec.Builder type )
+                                         @Nonnull final ClassName className,
+                                         @Nonnull final TypeSpec.Builder type,
+                                         @Nonnull final TypeSpec.Builder testType )
   {
     attributes
       .stream()
       .sorted( Comparator.comparing( NamedElement::getName ) )
-      .forEach( attribute -> generateStaticAttribute( attribute, type ) );
+      .forEach( attribute -> generateStaticAttribute( attribute, className, type, testType ) );
   }
 
   private void generateStaticAttribute( @Nonnull final AttributeMember attribute,
-                                        @Nonnull final TypeSpec.Builder type )
+                                        @Nonnull final ClassName className,
+                                        @Nonnull final TypeSpec.Builder type,
+                                        @Nonnull final TypeSpec.Builder testType )
   {
     if ( attribute.getModifiers().contains( AttributeMember.Modifier.READ_ONLY ) )
     {
-      generateStaticReadOnlyAttribute( attribute, type );
+      generateStaticReadOnlyAttribute( attribute, className, type, testType );
     }
     else
     {
-      generateStaticReadWriteAttribute( attribute, type );
+      generateStaticReadWriteAttribute( attribute, className, type, testType );
     }
   }
 
   private void generateStaticReadOnlyAttribute( @Nonnull final AttributeMember attribute,
-                                                @Nonnull final TypeSpec.Builder type )
+                                                @Nonnull final ClassName className,
+                                                @Nonnull final TypeSpec.Builder type,
+                                                @Nonnull final TypeSpec.Builder testType )
   {
     assert attribute.getModifiers().contains( AttributeMember.Modifier.READ_ONLY );
     final Type attributeType = attribute.getType();
@@ -575,10 +607,19 @@ final class JsinteropAction
     }
     addMagicConstantAnnotationIfNeeded( actualType, method );
     type.addMethod( method.build() );
+
+    testType.addMethod( MethodSpec
+                          .methodBuilder( javaName )
+                          .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+                          .returns( actualJavaType )
+                          .addStatement( "return $T.$N()", className, javaName )
+                          .build() );
   }
 
   private void generateStaticReadWriteAttribute( @Nonnull final AttributeMember attribute,
-                                                 @Nonnull final TypeSpec.Builder type )
+                                                 @Nonnull final ClassName className,
+                                                 @Nonnull final TypeSpec.Builder type,
+                                                 @Nonnull final TypeSpec.Builder testType )
   {
     assert !attribute.getModifiers().contains( AttributeMember.Modifier.READ_ONLY );
     final Type attributeType = attribute.getType();
@@ -607,6 +648,20 @@ final class JsinteropAction
     }
     addMagicConstantAnnotationIfNeeded( actualType, field );
     type.addField( field.build() );
+
+    testType.addMethod( MethodSpec
+                          .methodBuilder( fieldName )
+                          .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+                          .returns( actualJavaType )
+                          .addStatement( "return $T.$N", className, fieldName )
+                          .build() );
+    testType.addMethod( MethodSpec
+                          .methodBuilder( fieldName )
+                          .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+                          .addStatement( "$T.$N = value", className, fieldName )
+                          .addParameter( ParameterSpec.builder( actualJavaType, "value", Modifier.FINAL ).build() )
+                          .build() );
+
   }
 
   private void generateStaticAddEventListener( @Nonnull final EventMember event,
@@ -1410,14 +1465,27 @@ final class JsinteropAction
     maybeAddCustomAnnotations( definition, type );
     maybeAddJavadoc( definition, type );
 
+    final String testJavaName = javaName + "Test";
+    final TypeSpec.Builder testType =
+      TypeSpec
+        .classBuilder( testJavaName )
+        .addModifiers( Modifier.PUBLIC, Modifier.FINAL );
+    writeGeneratedAnnotation( testType );
+
     generateConstants( definition.getName(), definition.getConstants(), type );
 
     final OperationMember operation = definition.getOperation();
     final List<Argument> arguments = operation.getArguments();
     final List<TypedValue> typedValues = asTypedValuesList( arguments );
-    generateDefaultOperation( operation, true, arguments, typedValues, type );
+    generateDefaultOperation( operation, true, arguments, typedValues, className, type, testType );
 
     writeTopLevelType( name, type );
+
+    emitJavaType( getTestJavaDirectory(),
+                  testType.build(),
+                  ClassName.get( className.packageName(), testJavaName ).toString() );
+
+    _modulesToRequireInCompileTest.add( className.canonicalName() + "Test" );
   }
 
   @Nonnull
@@ -1440,6 +1508,13 @@ final class JsinteropAction
     maybeAddCustomAnnotations( definition, type );
     maybeAddJavadoc( definition, type );
 
+    final String testJavaName = javaName + "Test";
+    final TypeSpec.Builder testType =
+      TypeSpec
+        .classBuilder( testJavaName )
+        .addModifiers( Modifier.PUBLIC, Modifier.FINAL );
+    writeGeneratedAnnotation( testType );
+
     generateConstants( definition.getName(), definition.getConstants(), type );
 
     type.addMethod( MethodSpec
@@ -1460,24 +1535,24 @@ final class JsinteropAction
                       .addModifiers( Modifier.PRIVATE )
                       .build() );
 
-    generateAttributes( definition.getAttributes(), type );
-    generateOperations( definition.getOperations(), type );
+    generateAttributes( definition.getAttributes(), className, type, testType );
+    generateOperations( definition.getOperations(), className, type, testType );
 
     final MapLikeMember mapLike = definition.getMapLikeMember();
     if ( null != mapLike )
     {
-      generateMapLikeOperations( name, definition.getOperations(), mapLike, type );
+      generateMapLikeOperations( name, definition.getOperations(), mapLike, className, type, testType );
     }
     final IterableMember iterable = definition.getIterable();
     if ( null != iterable )
     {
       if ( null == iterable.getKeyType() )
       {
-        generateValueIterableElements( name, iterable, type );
+        generateValueIterableElements( name, iterable, className, type, testType );
       }
       else
       {
-        generatePairIterableElements( name, iterable, type );
+        generatePairIterableElements( name, iterable, className, type, testType );
       }
     }
     if ( null != iterable || null != mapLike )
@@ -1502,37 +1577,48 @@ final class JsinteropAction
                           .build() );
 
     writeTopLevelType( name, type );
+    emitJavaType( getTestJavaDirectory(),
+                  testType.build(),
+                  ClassName.get( className.packageName(), testJavaName ).toString() );
+
+    _modulesToRequireInCompileTest.add( className.canonicalName() + "Test" );
   }
 
   private void generatePairIterableElements( @Nonnull final String idlName,
                                              @Nonnull final IterableMember iterable,
-                                             @Nonnull final TypeSpec.Builder type )
+                                             @Nonnull final ClassName className,
+                                             @Nonnull final TypeSpec.Builder type,
+                                             @Nonnull final TypeSpec.Builder testType )
   {
     final Type keyType = iterable.getKeyType();
     assert null != keyType;
     generateEntry( "key", toTypeName( keyType ), toTypeName( iterable.getValueType() ), type );
-    generateIterableKeysMethod( idlName, toTypeName( keyType ), type );
-    generateIterableValuesMethod( idlName, iterable, type );
-    generateIterableEntriesMethod( idlName, type );
-    generateIterableForEachMethod( idlName, iterable, toTypeName( keyType ), "key", type );
+    generateIterableKeysMethod( idlName, toTypeName( keyType ), className, type, testType );
+    generateIterableValuesMethod( idlName, iterable, className, type, testType );
+    generateIterableEntriesMethod( idlName, className, type, testType );
+    generateIterableForEachMethod( idlName, iterable, toTypeName( keyType ), "key", className, type, testType );
   }
 
   private void generateValueIterableElements( @Nonnull final String idlName,
                                               @Nonnull final IterableMember iterable,
-                                              @Nonnull final TypeSpec.Builder type )
+                                              @Nonnull final ClassName className,
+                                              @Nonnull final TypeSpec.Builder type,
+                                              @Nonnull final TypeSpec.Builder testType )
   {
     generateEntry( "index", TypeName.INT, toTypeName( iterable.getValueType() ), type );
-    generateIterableKeysMethod( idlName, TypeName.DOUBLE, type );
-    generateIterableValuesMethod( idlName, iterable, type );
-    generateIterableEntriesMethod( idlName, type );
-    generateIterableForEachMethod( idlName, iterable, TypeName.INT, "index", type );
+    generateIterableKeysMethod( idlName, TypeName.DOUBLE, className, type, testType );
+    generateIterableValuesMethod( idlName, iterable, className, type, testType );
+    generateIterableEntriesMethod( idlName, className, type, testType );
+    generateIterableForEachMethod( idlName, iterable, TypeName.INT, "index", className, type, testType );
   }
 
   private void generateIterableForEachMethod( @Nonnull final String idlName,
                                               @Nonnull final IterableMember iterable,
                                               @Nonnull final TypeName keyType,
                                               @Nonnull final String keyName,
-                                              @Nonnull final TypeSpec.Builder type )
+                                              @Nonnull final ClassName className,
+                                              @Nonnull final TypeSpec.Builder type,
+                                              @Nonnull final TypeSpec.Builder testType )
   {
     final ParameterSpec indexParam = ParameterSpec.builder( keyType, keyName ).build();
 
@@ -1591,6 +1677,16 @@ final class JsinteropAction
     maybeAddJavadoc( documentation, forEach1 );
     type.addMethod( forEach1.build() );
 
+    testType.addMethod( MethodSpec
+                          .methodBuilder( "forEach" )
+                          .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+                          .addParameter( ParameterSpec.builder( className, "$instance" ).build() )
+                          .addParameter( ParameterSpec
+                                           .builder( className.nestedClass( "ForEachCallback" ), "callback" )
+                                           .build() )
+                          .addStatement( "$N.$N( callback )", "$instance", "forEach" )
+                          .build() );
+
     final MethodSpec.Builder forEach2 =
       MethodSpec
         .methodBuilder( "forEach" )
@@ -1600,6 +1696,17 @@ final class JsinteropAction
                          .build() );
     maybeAddJavadoc( documentation, forEach2 );
     type.addMethod( forEach2.build() );
+
+    testType.addMethod( MethodSpec
+                          .methodBuilder( "forEach" )
+                          .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+                          .addParameter( ParameterSpec.builder( className, "$instance" ).build() )
+                          .addParameter( ParameterSpec
+                                           .builder( className.nestedClass( "ForEachCallback2" ), "callback" )
+                                           .build() )
+                          .addStatement( "$N.$N( callback )", "$instance", "forEach" )
+                          .build() );
+
     final MethodSpec.Builder forEach3 =
       MethodSpec
         .methodBuilder( "forEach" )
@@ -1609,9 +1716,22 @@ final class JsinteropAction
                          .build() );
     maybeAddJavadoc( documentation, forEach3 );
     type.addMethod( forEach3.build() );
+
+    testType.addMethod( MethodSpec
+                          .methodBuilder( "forEach" )
+                          .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+                          .addParameter( ParameterSpec.builder( className, "$instance" ).build() )
+                          .addParameter( ParameterSpec
+                                           .builder( className.nestedClass( "ForEachCallback3" ), "callback" )
+                                           .build() )
+                          .addStatement( "$N.$N( callback )", "$instance", "forEach" )
+                          .build() );
   }
 
-  private void generateIterableEntriesMethod( @Nonnull final String idlName, @Nonnull final TypeSpec.Builder type )
+  private void generateIterableEntriesMethod( @Nonnull final String idlName,
+                                              @Nonnull final ClassName className,
+                                              @Nonnull final TypeSpec.Builder type,
+                                              @Nonnull final TypeSpec.Builder testType )
   {
     final String methodName = "entries";
     final MethodSpec.Builder method =
@@ -1623,11 +1743,21 @@ final class JsinteropAction
         .returns( iteratorType( ClassName.bestGuess( "Entry" ) ) );
     maybeAddJavadoc( getDocumentationElement( idlName, methodName ), method );
     type.addMethod( method.build() );
+
+    testType.addMethod( MethodSpec
+                          .methodBuilder( methodName )
+                          .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+                          .addParameter( ParameterSpec.builder( className, "$instance" ).build() )
+                          .returns( iteratorType( className.nestedClass( "Entry" ) ) )
+                          .addStatement( "return $N.$N()", "$instance", methodName )
+                          .build() );
   }
 
   private void generateIterableKeysMethod( @Nonnull final String idlName,
                                            @Nonnull final TypeName keyType,
-                                           @Nonnull final TypeSpec.Builder type )
+                                           @Nonnull final ClassName className,
+                                           @Nonnull final TypeSpec.Builder type,
+                                           @Nonnull final TypeSpec.Builder testType )
   {
     final String methodName = "keys";
     final MethodSpec.Builder method =
@@ -1639,11 +1769,21 @@ final class JsinteropAction
         .returns( iteratorType( keyType.box() ) );
     maybeAddJavadoc( getDocumentationElement( idlName, methodName ), method );
     type.addMethod( method.build() );
+
+    testType.addMethod( MethodSpec
+                          .methodBuilder( methodName )
+                          .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+                          .addParameter( ParameterSpec.builder( className, "$instance" ).build() )
+                          .returns( iteratorType( keyType.box() ) )
+                          .addStatement( "return $N.$N()", "$instance", methodName )
+                          .build() );
   }
 
   private void generateIterableValuesMethod( @Nonnull final String idlName,
                                              @Nonnull final IterableMember iterable,
-                                             @Nonnull final TypeSpec.Builder type )
+                                             @Nonnull final ClassName className,
+                                             @Nonnull final TypeSpec.Builder type,
+                                             @Nonnull final TypeSpec.Builder testType )
   {
     final String methodName = "values";
     final MethodSpec.Builder method =
@@ -1654,15 +1794,25 @@ final class JsinteropAction
         .returns( iteratorType( toTypeName( iterable.getValueType() ) ) );
     maybeAddJavadoc( getDocumentationElement( idlName, methodName ), method );
     type.addMethod( method.build() );
+
+    testType.addMethod( MethodSpec
+                          .methodBuilder( methodName )
+                          .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+                          .addParameter( ParameterSpec.builder( className, "$instance" ).build() )
+                          .returns( iteratorType( toTypeName( iterable.getValueType() ) ) )
+                          .addStatement( "return $N.$N()", "$instance", methodName )
+                          .build() );
   }
 
   private void generateOperations( @Nonnull final List<OperationMember> operations,
-                                   @Nonnull final TypeSpec.Builder type )
+                                   @Nonnull final ClassName className,
+                                   @Nonnull final TypeSpec.Builder type,
+                                   @Nonnull final TypeSpec.Builder testType )
   {
     operations
       .stream()
       .sorted()
-      .forEach( operation -> generateOperation( operation, type ) );
+      .forEach( operation -> generateOperation( operation, className, type, testType ) );
   }
 
   private void generateNamespace( @Nonnull final NamespaceDefinition definition )
@@ -1684,17 +1834,31 @@ final class JsinteropAction
     writeGeneratedAnnotation( type );
     maybeAddJavadoc( definition, type );
 
+    final String testJavaName = javaName + "Test";
+    final TypeSpec.Builder testType =
+      TypeSpec
+        .classBuilder( testJavaName )
+        .addModifiers( Modifier.PUBLIC, Modifier.FINAL );
+    writeGeneratedAnnotation( testType );
+
     generateConstants( definition.getName(), definition.getConstants(), type );
-    generateStaticAttributes( definition.getAttributes(), type );
-    generateStaticOperations( type, definition.getOperations() );
+    generateStaticAttributes( definition.getAttributes(), className, type, testType );
+    generateStaticOperations( definition.getOperations(), className, type, testType );
 
     type.addMethod( MethodSpec.constructorBuilder().addModifiers( Modifier.PRIVATE ).build() );
 
     writeTopLevelType( idlName, type );
+    emitJavaType( getTestJavaDirectory(),
+                  testType.build(),
+                  ClassName.get( className.packageName(), testJavaName ).toString() );
+
+    _modulesToRequireInCompileTest.add( className.canonicalName() + "Test" );
   }
 
-  private void generateStaticOperations( @Nonnull final TypeSpec.Builder type,
-                                         @Nonnull final List<OperationMember> operations )
+  private void generateStaticOperations( @Nonnull final List<OperationMember> operations,
+                                         @Nonnull final ClassName className,
+                                         @Nonnull final TypeSpec.Builder type,
+                                         @Nonnull final TypeSpec.Builder testType )
   {
     for ( final OperationMember operation : operations )
     {
@@ -1707,7 +1871,7 @@ final class JsinteropAction
                OperationMember.Kind.DELETER == operationKind ) &&
              null != operation.getName() ) )
       {
-        generateNamespaceOperation( operation, type );
+        generateNamespaceOperation( operation, className, type, testType );
       }
     }
   }
@@ -1725,6 +1889,13 @@ final class JsinteropAction
     writeGeneratedAnnotation( type );
     maybeAddCustomAnnotations( definition, type );
     maybeAddJavadoc( definition, type );
+
+    final String testJavaName = javaName + "Test";
+    final TypeSpec.Builder testType =
+      TypeSpec
+        .classBuilder( testJavaName )
+        .addModifiers( Modifier.PUBLIC, Modifier.FINAL );
+    writeGeneratedAnnotation( testType );
 
     for ( final TypedefDefinition markerType : definition.getMarkerTypes() )
     {
@@ -1754,12 +1925,12 @@ final class JsinteropAction
     }
 
     generateConstants( definition.getName(), definition.getConstants(), type );
-    generateAttributes( definition.getAttributes(), type );
+    generateAttributes( definition.getAttributes(), className, type, testType );
 
     boolean constructorPresent = false;
     for ( final OperationMember operation : definition.getOperations() )
     {
-      final boolean processed = generateOperation( operation, type );
+      final boolean processed = generateOperation( operation, className, type, testType );
       if ( !processed && OperationMember.Kind.CONSTRUCTOR == operation.getKind() )
       {
         generateConstructorOperation( operation, parentConstructor, type );
@@ -1770,18 +1941,18 @@ final class JsinteropAction
     final MapLikeMember mapLike = definition.getMapLikeMember();
     if ( null != mapLike )
     {
-      generateMapLikeOperations( name, definition.getOperations(), mapLike, type );
+      generateMapLikeOperations( name, definition.getOperations(), mapLike, className, type, testType );
     }
     final IterableMember iterable = definition.getIterable();
     if ( null != iterable )
     {
       if ( null == iterable.getKeyType() )
       {
-        generateValueIterableElements( name, iterable, type );
+        generateValueIterableElements( name, iterable, className, type, testType );
       }
       else
       {
-        generatePairIterableElements( name, iterable, type );
+        generatePairIterableElements( name, iterable, className, type, testType );
       }
     }
     if ( null != iterable || null != mapLike )
@@ -1831,15 +2002,23 @@ final class JsinteropAction
     }
 
     writeTopLevelType( name, type );
+    emitJavaType( getTestJavaDirectory(),
+                  testType.build(),
+                  ClassName.get( className.packageName(), testJavaName ).toString() );
+
+    _modulesToRequireInCompileTest.add( className.canonicalName() + "Test" );
   }
 
-  private boolean generateOperation( @Nonnull final OperationMember operation, @Nonnull final TypeSpec.Builder type )
+  private boolean generateOperation( @Nonnull final OperationMember operation,
+                                     @Nonnull final ClassName className,
+                                     @Nonnull final TypeSpec.Builder type,
+                                     @Nonnull final TypeSpec.Builder testType )
   {
     final OperationMember.Kind operationKind = operation.getKind();
     final String operationName = operation.getName();
     if ( OperationMember.Kind.DEFAULT == operationKind )
     {
-      generateDefaultOperation( operation, type );
+      generateDefaultOperation( operation, className, type, testType );
     }
     else if ( ( OperationMember.Kind.STRINGIFIER == operationKind ||
                 OperationMember.Kind.GETTER == operationKind ||
@@ -1847,7 +2026,7 @@ final class JsinteropAction
                 OperationMember.Kind.DELETER == operationKind ) &&
               null != operationName )
     {
-      generateDefaultOperation( operation, type );
+      generateDefaultOperation( operation, className, type, testType );
     }
     else if ( OperationMember.Kind.GETTER == operationKind &&
               Kind.UnsignedLong == operation.getArguments().get( 0 ).getType().getKind() )
@@ -1876,7 +2055,7 @@ final class JsinteropAction
     }
     else if ( OperationMember.Kind.STATIC == operationKind )
     {
-      generateStaticOperation( operation, type );
+      generateStaticOperation( operation, className, type, testType );
     }
     else
     {
@@ -1886,30 +2065,37 @@ final class JsinteropAction
   }
 
   private void generateAttributes( @Nonnull final List<AttributeMember> attributes,
-                                   @Nonnull final TypeSpec.Builder type )
+                                   @Nonnull final ClassName className,
+                                   @Nonnull final TypeSpec.Builder type,
+                                   @Nonnull final TypeSpec.Builder testType )
   {
     attributes
       .stream()
       .sorted( Comparator.comparing( NamedElement::getName ) )
-      .forEach( attribute -> generateAttribute( attribute, type ) );
+      .forEach( attribute -> generateAttribute( attribute, className, type, testType ) );
   }
 
-  private void generateAttribute( @Nonnull final AttributeMember attribute, @Nonnull final TypeSpec.Builder type )
+  private void generateAttribute( @Nonnull final AttributeMember attribute,
+                                  @Nonnull final ClassName className,
+                                  @Nonnull final TypeSpec.Builder type,
+                                  @Nonnull final TypeSpec.Builder testType )
   {
     if ( attribute.getModifiers().contains( AttributeMember.Modifier.READ_ONLY ) )
     {
-      generateReadOnlyAttribute( attribute, type );
+      generateReadOnlyAttribute( attribute, className, type, testType );
     }
     else
     {
-      generateReadWriteAttribute( attribute, type );
+      generateReadWriteAttribute( attribute, className, type, testType );
     }
   }
 
   private void generateMapLikeOperations( @Nonnull final String definitionName,
                                           @Nonnull final List<OperationMember> operations,
                                           @Nonnull final MapLikeMember mapLike,
-                                          @Nonnull final TypeSpec.Builder type )
+                                          @Nonnull final ClassName className,
+                                          @Nonnull final TypeSpec.Builder type,
+                                          @Nonnull final TypeSpec.Builder testType )
   {
     type.addMethod( MethodSpec
                       .methodBuilder( "size" )
@@ -1919,6 +2105,13 @@ final class JsinteropAction
                                         .build() )
                       .returns( TypeName.INT )
                       .build() );
+    testType.addMethod( MethodSpec
+                          .methodBuilder( "size" )
+                          .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+                          .returns( TypeName.INT )
+                          .addParameter( ParameterSpec.builder( className, "$instance" ).build() )
+                          .addStatement( "return $N.$N()", "$instance", "size" )
+                          .build() );
     final TypeName keyType = toTypeName( mapLike.getKeyType() );
     final TypeName boxedKeyType = toTypeName( mapLike.getKeyType(), true );
     final TypeName valueType = toTypeName( mapLike.getValueType() );
@@ -1942,6 +2135,15 @@ final class JsinteropAction
     maybeAddJavadoc( getDocumentationElement( definitionName, "has" ), has );
     type.addMethod( has.build() );
 
+    testType.addMethod( MethodSpec
+                          .methodBuilder( "has" )
+                          .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+                          .addParameter( ParameterSpec.builder( keyType, "key" ).build() )
+                          .returns( TypeName.BOOLEAN )
+                          .addParameter( ParameterSpec.builder( className, "$instance" ).build() )
+                          .addStatement( "return $N.$N( key )", "$instance", "has" )
+                          .build() );
+
     final MethodSpec.Builder get = MethodSpec
       .methodBuilder( "get" )
       .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
@@ -1951,6 +2153,15 @@ final class JsinteropAction
       .returns( boxedValueType );
     maybeAddJavadoc( getDocumentationElement( definitionName, "get" ), get );
     type.addMethod( get.build() );
+
+    testType.addMethod( MethodSpec
+                          .methodBuilder( "get" )
+                          .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+                          .addParameter( ParameterSpec.builder( className, "$instance" ).build() )
+                          .addParameter( ParameterSpec.builder( keyType, "key" ).build() )
+                          .returns( boxedValueType )
+                          .addStatement( "return $N.$N( key )", "$instance", "get" )
+                          .build() );
 
     final MethodSpec.Builder keys =
       MethodSpec
@@ -1962,6 +2173,14 @@ final class JsinteropAction
     maybeAddJavadoc( getDocumentationElement( definitionName, "keys" ), keys );
     type.addMethod( keys.build() );
 
+    testType.addMethod( MethodSpec
+                          .methodBuilder( "keys" )
+                          .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+                          .addParameter( ParameterSpec.builder( className, "$instance" ).build() )
+                          .returns( iteratorType( boxedKeyType ) )
+                          .addStatement( "return $N.$N()", "$instance", "keys" )
+                          .build() );
+
     final MethodSpec.Builder values =
       MethodSpec
         .methodBuilder( "values" )
@@ -1971,6 +2190,14 @@ final class JsinteropAction
         .returns( iteratorType( boxedValueType ) );
     maybeAddJavadoc( getDocumentationElement( definitionName, "values" ), values );
     type.addMethod( values.build() );
+
+    testType.addMethod( MethodSpec
+                          .methodBuilder( "values" )
+                          .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+                          .addParameter( ParameterSpec.builder( className, "$instance" ).build() )
+                          .returns( iteratorType( boxedValueType ) )
+                          .addStatement( "return $N.$N()", "$instance", "values" )
+                          .build() );
 
     generateEntry( "key", keyType, valueType, type );
 
@@ -1983,6 +2210,14 @@ final class JsinteropAction
         .returns( iteratorType( ClassName.bestGuess( "Entry" ) ) );
     maybeAddJavadoc( getDocumentationElement( definitionName, "entries" ), entries );
     type.addMethod( entries.build() );
+
+    testType.addMethod( MethodSpec
+                          .methodBuilder( "entries" )
+                          .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+                          .addParameter( ParameterSpec.builder( className, "$instance" ).build() )
+                          .returns( iteratorType( className.nestedClass( "Entry" ) ) )
+                          .addStatement( "return $N.$N()", "$instance", "entries" )
+                          .build() );
 
     type.addType( TypeSpec
                     .interfaceBuilder( "ForEachCallback" )
@@ -2034,6 +2269,17 @@ final class JsinteropAction
                          .build() );
     maybeAddJavadoc( forEachDocumentation, forEach1 );
     type.addMethod( forEach1.build() );
+
+    testType.addMethod( MethodSpec
+                          .methodBuilder( "forEach" )
+                          .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+                          .addParameter( ParameterSpec.builder( className, "$instance" ).build() )
+                          .addParameter( ParameterSpec
+                                           .builder( className.nestedClass( "ForEachCallback" ), "callback" )
+                                           .build() )
+                          .addStatement( "$N.$N( callback )", "$instance", "forEach" )
+                          .build() );
+
     final MethodSpec.Builder forEach2 =
       MethodSpec
         .methodBuilder( "forEach" )
@@ -2044,6 +2290,16 @@ final class JsinteropAction
     maybeAddJavadoc( forEachDocumentation, forEach2 );
     type.addMethod( forEach2.build() );
 
+    testType.addMethod( MethodSpec
+                          .methodBuilder( "forEach" )
+                          .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+                          .addParameter( ParameterSpec.builder( className, "$instance" ).build() )
+                          .addParameter( ParameterSpec
+                                           .builder( className.nestedClass( "ForEachCallback2" ), "callback" )
+                                           .build() )
+                          .addStatement( "$N.$N( callback )", "$instance", "forEach" )
+                          .build() );
+
     final MethodSpec.Builder forEach3 = MethodSpec
       .methodBuilder( "forEach" )
       .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
@@ -2052,6 +2308,17 @@ final class JsinteropAction
                        .build() );
     maybeAddJavadoc( forEachDocumentation, forEach3 );
     type.addMethod( forEach3.build() );
+
+    testType.addMethod( MethodSpec
+                          .methodBuilder( "forEach" )
+                          .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+                          .addParameter( ParameterSpec.builder( className, "$instance" ).build() )
+                          .addParameter( ParameterSpec
+                                           .builder( className.nestedClass( "ForEachCallback3" ), "callback" )
+                                           .build() )
+                          .addStatement( "$N.$N( callback )", "$instance", "forEach" )
+                          .build() );
+
     if ( !mapLike.isReadOnly() )
     {
       final boolean setPresent =
@@ -2069,6 +2336,15 @@ final class JsinteropAction
           .addParameter( valueParam );
         maybeAddJavadoc( getDocumentationElement( definitionName, "set" ), set );
         type.addMethod( set.build() );
+
+        testType.addMethod( MethodSpec
+                              .methodBuilder( "set" )
+                              .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+                              .addParameter( ParameterSpec.builder( className, "$instance" ).build() )
+                              .addParameter( ParameterSpec.builder( keyType, "key" ).build() )
+                              .addParameter( ParameterSpec.builder( valueType, "value" ).build() )
+                              .addStatement( "$N.$N( key, value )", "$instance", "set" )
+                              .build() );
       }
 
       final boolean deletePresent =
@@ -2087,6 +2363,15 @@ final class JsinteropAction
             .returns( TypeName.BOOLEAN );
         maybeAddJavadoc( getDocumentationElement( definitionName, "delete" ), delete );
         type.addMethod( delete.build() );
+
+        testType.addMethod( MethodSpec
+                              .methodBuilder( "delete" )
+                              .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+                              .addParameter( ParameterSpec.builder( className, "$instance" ).build() )
+                              .addParameter( ParameterSpec.builder( keyType, "key" ).build() )
+                              .returns( TypeName.BOOLEAN )
+                              .addStatement( "return $N.$N( key )", "$instance", "delete" )
+                              .build() );
       }
 
       final boolean clearPresent =
@@ -2103,6 +2388,13 @@ final class JsinteropAction
             .addModifiers( Modifier.PUBLIC, Modifier.NATIVE );
         maybeAddJavadoc( getDocumentationElement( definitionName, "clear" ), clear );
         type.addMethod( clear.build() );
+
+        testType.addMethod( MethodSpec
+                              .methodBuilder( "clear" )
+                              .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+                              .addParameter( ParameterSpec.builder( className, "$instance" ).build() )
+                              .addStatement( "$N.$N()", "$instance", "clear" )
+                              .build() );
       }
     }
   }
@@ -2309,7 +2601,9 @@ final class JsinteropAction
   }
 
   private void generateReadOnlyAttribute( @Nonnull final AttributeMember attribute,
-                                          @Nonnull final TypeSpec.Builder type )
+                                          @Nonnull final ClassName className,
+                                          @Nonnull final TypeSpec.Builder type,
+                                          @Nonnull final TypeSpec.Builder testType )
   {
     assert attribute.getModifiers().contains( AttributeMember.Modifier.READ_ONLY );
     final Type attributeType = attribute.getType();
@@ -2326,9 +2620,22 @@ final class JsinteropAction
         .addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_PROPERTY ).addMember( "name", "$S", name ).build() );
     maybeAddCustomAnnotations( attribute, method );
     maybeAddJavadoc( attribute, method );
+
+    final MethodSpec.Builder testMethod =
+      MethodSpec
+        .methodBuilder( javaName )
+        .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+        .returns( actualJavaType );
+
     if ( attribute.getModifiers().contains( AttributeMember.Modifier.STATIC ) )
     {
       method.addModifiers( Modifier.STATIC );
+      testMethod.addStatement( "return $T.$N()", className, javaName );
+    }
+    else
+    {
+      testMethod.addParameter( ParameterSpec.builder( className, "type", Modifier.FINAL ).build() );
+      testMethod.addStatement( "return type.$N()", javaName );
     }
     if ( schema.isNullable( attributeType ) )
     {
@@ -2340,10 +2647,14 @@ final class JsinteropAction
     }
     addMagicConstantAnnotationIfNeeded( actualType, method );
     type.addMethod( method.build() );
+
+    testType.addMethod( testMethod.build() );
   }
 
   private void generateReadWriteAttribute( @Nonnull final AttributeMember attribute,
-                                           @Nonnull final TypeSpec.Builder type )
+                                           @Nonnull final ClassName className,
+                                           @Nonnull final TypeSpec.Builder type,
+                                           @Nonnull final TypeSpec.Builder testType )
   {
     assert !attribute.getModifiers().contains( AttributeMember.Modifier.READ_ONLY );
     final Type attributeType = attribute.getType();
@@ -2356,6 +2667,17 @@ final class JsinteropAction
       FieldSpec.builder( actualJavaType, fieldName, Modifier.PUBLIC );
     maybeAddCustomAnnotations( attribute, field );
     maybeAddJavadoc( attribute, field );
+
+    final MethodSpec.Builder testReadMethod =
+      MethodSpec
+        .methodBuilder( fieldName )
+        .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+        .returns( actualJavaType );
+    final MethodSpec.Builder testWriteMethod =
+      MethodSpec
+        .methodBuilder( fieldName )
+        .addModifiers( Modifier.PUBLIC, Modifier.STATIC );
+
     if ( !fieldName.equals( name ) )
     {
       field.addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_PROPERTY )
@@ -2365,7 +2687,18 @@ final class JsinteropAction
     if ( attribute.getModifiers().contains( AttributeMember.Modifier.STATIC ) )
     {
       field.addModifiers( Modifier.STATIC );
+      testReadMethod.addStatement( "return $T.$N", className, fieldName );
+      testWriteMethod.addStatement( "$T.$N = value", className, fieldName );
     }
+    else
+    {
+      testReadMethod.addParameter( ParameterSpec.builder( className, "type", Modifier.FINAL ).build() );
+      testReadMethod.addStatement( "return type.$N", fieldName );
+      testWriteMethod.addParameter( ParameterSpec.builder( className, "type", Modifier.FINAL ).build() );
+      testWriteMethod.addStatement( "type.$N = value", fieldName );
+    }
+    testWriteMethod.addParameter( ParameterSpec.builder( actualJavaType, "value", Modifier.FINAL ).build() );
+
     if ( schema.isNullable( attributeType ) )
     {
       field.addAnnotation( BasicTypes.NULLABLE );
@@ -2376,6 +2709,9 @@ final class JsinteropAction
     }
     addMagicConstantAnnotationIfNeeded( actualType, field );
     type.addField( field.build() );
+
+    testType.addMethod( testReadMethod.build() );
+    testType.addMethod( testWriteMethod.build() );
   }
 
   private void generateConstants( @Nonnull final String definitionName,
@@ -2500,7 +2836,9 @@ final class JsinteropAction
   }
 
   private void generateDefaultOperation( @Nonnull final OperationMember operation,
-                                         @Nonnull final TypeSpec.Builder type )
+                                         @Nonnull final ClassName className,
+                                         @Nonnull final TypeSpec.Builder type,
+                                         @Nonnull final TypeSpec.Builder testType )
   {
     final List<Argument> arguments = operation.getArguments();
     final int argCount = arguments.size();
@@ -2512,7 +2850,7 @@ final class JsinteropAction
         explodeTypeList( argumentList.stream().map( Argument::getType ).collect( Collectors.toList() ) );
       for ( final List<TypedValue> typeList : explodedTypeList )
       {
-        generateDefaultOperation( operation, false, argumentList, typeList, type );
+        generateDefaultOperation( operation, false, argumentList, typeList, className, type, testType );
       }
     }
   }
@@ -2521,7 +2859,9 @@ final class JsinteropAction
                                          final boolean javaInterface,
                                          @Nonnull final List<Argument> arguments,
                                          @Nonnull final List<TypedValue> typeList,
-                                         @Nonnull final TypeSpec.Builder type )
+                                         @Nonnull final ClassName className,
+                                         @Nonnull final TypeSpec.Builder type,
+                                         @Nonnull final TypeSpec.Builder testType )
   {
     final OperationMember.Kind operationKind = operation.getKind();
     assert OperationMember.Kind.STATIC != operationKind && OperationMember.Kind.CONSTRUCTOR != operationKind;
@@ -2547,17 +2887,81 @@ final class JsinteropAction
     }
     final Type returnType = operation.getReturnType();
     emitReturnType( operation, returnType, method );
+
+    final MethodSpec.Builder testMethod =
+      MethodSpec
+        .methodBuilder( methodName ).addModifiers( Modifier.PUBLIC, Modifier.STATIC );
+    final DocumentationElement documentation = operation.getDocumentation();
+    if ( null != documentation && documentation.hasDeprecatedTag() )
+    {
+      testMethod.addAnnotation( Deprecated.class );
+    }
+    emitTestReturnType( operation, returnType, testMethod );
+    testMethod.addParameter( ParameterSpec.builder( className, "$instance", Modifier.FINAL ).build() );
+
+    final StringBuilder testCallStatement = new StringBuilder();
+    final List<Object> testCallArgs = new ArrayList<>();
+    if ( Kind.Void != returnType.getKind() )
+    {
+      testCallStatement.append( "return " );
+    }
+    testCallStatement.append( "$N.$N(" );
+    testCallArgs.add( "$instance" );
+    testCallArgs.add( methodName );
+
     int index = 0;
     for ( final Argument argument : arguments )
     {
+      if ( 0 == index )
+      {
+        testCallStatement.append( " " );
+      }
+      else
+      {
+        testCallStatement.append( ", " );
+      }
+      testCallStatement.append( "$N" );
+      testCallArgs.add( javaName( argument ) );
       final TypedValue typedValue = typeList.get( index++ );
-      generateArgument( argument, typedValue, false, false, method );
+      generateArgument( argument, typedValue, false, false, method, testMethod );
     }
     type.addMethod( method.build() );
+
+    if ( !arguments.isEmpty() )
+    {
+      testCallStatement.append( " " );
+    }
+    testCallStatement.append( ")" );
+
+    testMethod.addStatement( testCallStatement.toString(), testCallArgs.toArray() );
+    testType.addMethod( testMethod.build() );
+  }
+
+  private void emitTestReturnType( @Nonnull final OperationMember operation,
+                                   @Nonnull final Type returnType,
+                                   @Nonnull final MethodSpec.Builder testMethod )
+  {
+    if ( Kind.Void != returnType.getKind() )
+    {
+      final Type actualType = getSchema().resolveType( returnType );
+      final TypeName javaReturnType;
+      if ( Kind.Sequence == actualType.getKind() )
+      {
+        javaReturnType = toSequenceType( (SequenceType) actualType,
+                                         operation.getIdentValue( ExtendedAttributes.SEQUENCE_TYPE ) );
+      }
+      else
+      {
+        javaReturnType = toTypeName( returnType );
+      }
+      testMethod.returns( javaReturnType );
+    }
   }
 
   private void generateNamespaceOperation( @Nonnull final OperationMember operation,
-                                           @Nonnull final TypeSpec.Builder type )
+                                           @Nonnull final ClassName className,
+                                           @Nonnull final TypeSpec.Builder type,
+                                           @Nonnull final TypeSpec.Builder testType )
   {
     final List<Argument> arguments = operation.getArguments();
     final int argCount = arguments.size();
@@ -2569,7 +2973,7 @@ final class JsinteropAction
         explodeTypeList( argumentList.stream().map( Argument::getType ).collect( Collectors.toList() ) );
       for ( final List<TypedValue> typeList : explodedTypeList )
       {
-        generateNamespaceOperation( operation, argumentList, typeList, type );
+        generateNamespaceOperation( operation, argumentList, typeList, className, type, testType );
       }
     }
   }
@@ -2577,7 +2981,9 @@ final class JsinteropAction
   private void generateNamespaceOperation( @Nonnull final OperationMember operation,
                                            @Nonnull final List<Argument> arguments,
                                            @Nonnull final List<TypedValue> typeList,
-                                           @Nonnull final TypeSpec.Builder type )
+                                           @Nonnull final ClassName className,
+                                           @Nonnull final TypeSpec.Builder type,
+                                           @Nonnull final TypeSpec.Builder testType )
   {
     final String name = operation.getName();
     assert null != name;
@@ -2601,13 +3007,54 @@ final class JsinteropAction
     }
     final Type returnType = operation.getReturnType();
     emitReturnType( operation, returnType, method );
+
+    final MethodSpec.Builder testMethod =
+      MethodSpec
+        .methodBuilder( methodName ).addModifiers( Modifier.PUBLIC, Modifier.STATIC );
+    final DocumentationElement documentation = operation.getDocumentation();
+    if ( null != documentation && documentation.hasDeprecatedTag() )
+    {
+      testMethod.addAnnotation( Deprecated.class );
+    }
+
+    emitTestReturnType( operation, returnType, testMethod );
+
+    final StringBuilder testCallStatement = new StringBuilder();
+    final List<Object> testCallArgs = new ArrayList<>();
+    if ( Kind.Void != returnType.getKind() )
+    {
+      testCallStatement.append( "return " );
+    }
+    testCallStatement.append( "$T.$N(" );
+    testCallArgs.add( className );
+    testCallArgs.add( methodName );
+
     int index = 0;
     for ( final Argument argument : arguments )
     {
+      if ( 0 == index )
+      {
+        testCallStatement.append( " " );
+      }
+      else
+      {
+        testCallStatement.append( ", " );
+      }
+      testCallStatement.append( "$N" );
+      testCallArgs.add( javaName( argument ) );
       final TypedValue typedValue = typeList.get( index++ );
-      generateArgument( argument, typedValue, false, false, method );
+      generateArgument( argument, typedValue, false, false, method, testMethod );
     }
     type.addMethod( method.build() );
+
+    if ( !arguments.isEmpty() )
+    {
+      testCallStatement.append( " " );
+    }
+    testCallStatement.append( ")" );
+
+    testMethod.addStatement( testCallStatement.toString(), testCallArgs.toArray() );
+    testType.addMethod( testMethod.build() );
   }
 
   private void generateAnonymousIndexedGetter( @Nonnull final OperationMember operation,
@@ -2749,7 +3196,9 @@ final class JsinteropAction
   }
 
   private void generateStaticOperation( @Nonnull final OperationMember operation,
-                                        @Nonnull final TypeSpec.Builder type )
+                                        @Nonnull final ClassName className,
+                                        @Nonnull final TypeSpec.Builder type,
+                                        @Nonnull final TypeSpec.Builder testType )
   {
     final List<Argument> arguments = operation.getArguments();
     final int argCount = arguments.size();
@@ -2761,7 +3210,7 @@ final class JsinteropAction
         explodeTypeList( argumentList.stream().map( Argument::getType ).collect( Collectors.toList() ) );
       for ( final List<TypedValue> typeList : explodedTypeList )
       {
-        generateStaticOperation( operation, argumentList, typeList, type );
+        generateStaticOperation( operation, argumentList, typeList, className, type, testType );
       }
     }
   }
@@ -2769,7 +3218,9 @@ final class JsinteropAction
   private void generateStaticOperation( @Nonnull final OperationMember operation,
                                         @Nonnull final List<Argument> arguments,
                                         @Nonnull final List<TypedValue> typeList,
-                                        @Nonnull final TypeSpec.Builder type )
+                                        @Nonnull final ClassName className,
+                                        @Nonnull final TypeSpec.Builder type,
+                                        @Nonnull final TypeSpec.Builder testType )
   {
     assert OperationMember.Kind.STATIC == operation.getKind();
     final String name = operation.getName();
@@ -2789,12 +3240,53 @@ final class JsinteropAction
     }
     final Type returnType = operation.getReturnType();
     emitReturnType( operation, returnType, method );
+
+    final MethodSpec.Builder testMethod =
+      MethodSpec
+        .methodBuilder( methodName ).addModifiers( Modifier.PUBLIC, Modifier.STATIC );
+    final DocumentationElement documentation = operation.getDocumentation();
+    if ( null != documentation && documentation.hasDeprecatedTag() )
+    {
+      testMethod.addAnnotation( Deprecated.class );
+    }
+
+    emitTestReturnType( operation, returnType, testMethod );
+
+    final StringBuilder testCallStatement = new StringBuilder();
+    final List<Object> testCallArgs = new ArrayList<>();
+    if ( Kind.Void != returnType.getKind() )
+    {
+      testCallStatement.append( "return " );
+    }
+    testCallStatement.append( "$T.$N(" );
+    testCallArgs.add( className );
+    testCallArgs.add( methodName );
+
     int index = 0;
     for ( final Argument argument : arguments )
     {
-      generateArgument( argument, typeList.get( index++ ), false, false, method );
+      if ( 0 == index )
+      {
+        testCallStatement.append( " " );
+      }
+      else
+      {
+        testCallStatement.append( ", " );
+      }
+      testCallStatement.append( "$N" );
+      testCallArgs.add( javaName( argument ) );
+      generateArgument( argument, typeList.get( index++ ), false, false, method, testMethod );
     }
     type.addMethod( method.build() );
+
+    if ( !arguments.isEmpty() )
+    {
+      testCallStatement.append( " " );
+    }
+    testCallStatement.append( ")" );
+
+    testMethod.addStatement( testCallStatement.toString(), testCallArgs.toArray() );
+    testType.addMethod( testMethod.build() );
   }
 
   private void emitReturnType( @Nonnull final AttributedNode operation,
@@ -2918,10 +3410,23 @@ final class JsinteropAction
                                  final boolean applyJsOptional,
                                  @Nonnull final MethodSpec.Builder method )
   {
+    generateArgument( argument, typedValue, isFinal, applyJsOptional, method, null );
+  }
+
+  private void generateArgument( @Nonnull final Argument argument,
+                                 @Nonnull final TypedValue typedValue,
+                                 final boolean isFinal,
+                                 final boolean applyJsOptional,
+                                 @Nonnull final MethodSpec.Builder method,
+                                 @Nullable final MethodSpec.Builder testMethod )
+  {
     final Type actualType = getSchema().resolveType( argument.getType() );
     final TypeName type = typedValue.getJavaType();
-    final ParameterSpec.Builder parameter =
-      ParameterSpec.builder( argument.isVariadic() ? asArrayType( type ) : type, javaName( argument ) );
+    final String argumentName = javaName( argument );
+    final TypeName argumentType = argument.isVariadic() ? asArrayType( type ) : type;
+    final ParameterSpec.Builder parameter = ParameterSpec.builder( argumentType, argumentName );
+    final ParameterSpec.Builder testParameter =
+      null != testMethod ? ParameterSpec.builder( argumentType, argumentName ).addModifiers( Modifier.FINAL ) : null;
     if ( isFinal )
     {
       parameter.addModifiers( Modifier.FINAL );
@@ -2940,6 +3445,11 @@ final class JsinteropAction
       method.varargs();
     }
     method.addParameter( parameter.build() );
+    if ( null != testParameter )
+    {
+      addDoNotAutoboxAnnotation( typedValue, testParameter );
+      testMethod.addParameter( testParameter.build() );
+    }
   }
 
   private void generateEnumeration( @Nonnull final EnumerationDefinition definition )

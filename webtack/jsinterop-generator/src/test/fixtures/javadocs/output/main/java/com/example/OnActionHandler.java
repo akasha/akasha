@@ -3,6 +3,7 @@ package com.example;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsFunction;
+import jsinterop.annotations.JsOptional;
 
 /**
  * Documentation for OnActionHandler.
@@ -14,5 +15,5 @@ import jsinterop.annotations.JsFunction;
 @JsFunction
 @FunctionalInterface
 public interface OnActionHandler {
-  void onInvoke(@Nonnull String type);
+  void onInvoke(@Nonnull @JsOptional String type);
 }

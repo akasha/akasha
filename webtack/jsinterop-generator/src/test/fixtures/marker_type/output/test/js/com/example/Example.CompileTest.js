@@ -1,9 +1,17 @@
 goog.module('com.example.ExampleCompileTest');
 goog.require('com.example.HTMLCanvasElement.$Overlay');
+goog.require('com.example.HTMLCanvasElementTest');
 goog.require('com.example.HTMLImageElement.$Overlay');
+goog.require('com.example.HTMLImageElementTest');
 goog.require('com.example.HTMLVideoElement.$Overlay');
+goog.require('com.example.HTMLVideoElementTest');
 goog.require('com.example.ImageBitmap.$Overlay');
+goog.require('com.example.ImageBitmapTest');
 goog.require('com.example.ImageData.$Overlay');
+goog.require('com.example.ImageDataTest');
 goog.require('com.example.MyBufferSource.$Overlay');
+goog.require('com.example.MyBufferSourceTest');
 goog.require('com.example.OffscreenCanvas.$Overlay');
+goog.require('com.example.OffscreenCanvasTest');
 goog.require('com.example.WebGLRenderingContext.$Overlay');
+goog.require('com.example.WebGLRenderingContextTest');

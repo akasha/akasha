@@ -1,7 +1,12 @@
 goog.module('com.example.ExampleCompileTest');
 goog.require('com.example.ArrayBuffer.$Overlay');
+goog.require('com.example.ArrayBufferTest');
 goog.require('com.example.GlobalDescriptor.$Overlay');
 goog.require('com.example.WebAssembly.$Overlay');
+goog.require('com.example.WebAssemblyTest');
 goog.require('com.example.web_assembly.CompileError.$Overlay');
+goog.require('com.example.web_assembly.CompileErrorTest');
 goog.require('com.example.web_assembly.Global.$Overlay');
+goog.require('com.example.web_assembly.GlobalTest');
 goog.require('com.example.web_assembly.Module.$Overlay');
+goog.require('com.example.web_assembly.ModuleTest');

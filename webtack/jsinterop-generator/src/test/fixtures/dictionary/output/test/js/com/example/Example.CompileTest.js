@@ -8,5 +8,6 @@ goog.require('com.example.RTCOfferOptions.$Overlay');
 goog.require('com.example.RequiredAnyDict.$Overlay');
 goog.require('com.example.Storage.$Overlay');
 goog.require('com.example.StorageEventInit.$Overlay');
+goog.require('com.example.StorageTest');
 goog.require('com.example.TransitionEventInit.$Overlay');
 goog.require('com.example.TxAuthGenericArg.$Overlay');
