@@ -700,8 +700,8 @@ public abstract class AbstractJavaAction
   }
 
   @Nonnull
-  protected final ArrayTypeName asArrayType( @Nonnull final TypeName typeName )
+  protected final ArrayTypeName asArrayType( @Nonnull final TypeName componentType )
   {
-    return ArrayTypeName.of( BasicTypes.BOXED_DOUBLE.equals( typeName ) ? TypeName.DOUBLE : typeName );
+    return ArrayTypeName.of( BasicTypes.BOXED_DOUBLE.equals( componentType ) ? TypeName.DOUBLE : componentType );
   }
 }
