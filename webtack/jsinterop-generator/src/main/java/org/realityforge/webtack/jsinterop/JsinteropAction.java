@@ -1614,7 +1614,7 @@ final class JsinteropAction
         .addAnnotation( JsinteropTypes.HAS_NO_SIDE_EFFECTS )
         .addAnnotation( BasicTypes.NONNULL )
         .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
-        .returns( ParameterizedTypeName.get( lookupClassName( "Iterator" ), ClassName.bestGuess( "Entry" ) ) );
+        .returns( iteratorType( ClassName.bestGuess( "Entry" ) ) );
     maybeAddJavadoc( getDocumentationElement( idlName, methodName ), method );
     type.addMethod( method.build() );
   }
@@ -1630,7 +1630,7 @@ final class JsinteropAction
         .addAnnotation( JsinteropTypes.HAS_NO_SIDE_EFFECTS )
         .addAnnotation( BasicTypes.NONNULL )
         .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
-        .returns( ParameterizedTypeName.get( lookupClassName( "Iterator" ), keyType.box() ) );
+        .returns( iteratorType( keyType.box() ) );
     maybeAddJavadoc( getDocumentationElement( idlName, methodName ), method );
     type.addMethod( method.build() );
   }
@@ -1645,7 +1645,7 @@ final class JsinteropAction
         .addAnnotation( JsinteropTypes.HAS_NO_SIDE_EFFECTS )
         .addAnnotation( BasicTypes.NONNULL )
         .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
-        .returns( ParameterizedTypeName.get( lookupClassName( "Iterator" ), toTypeName( iterable.getValueType() ) ) );
+        .returns( iteratorType( toTypeName( iterable.getValueType() ) ) );
     maybeAddJavadoc( getDocumentationElement( idlName, methodName ), method );
     type.addMethod( method.build() );
   }
@@ -1949,7 +1949,7 @@ final class JsinteropAction
         .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
         .addAnnotation( JsinteropTypes.HAS_NO_SIDE_EFFECTS )
         .addAnnotation( BasicTypes.NONNULL )
-        .returns( ParameterizedTypeName.get( lookupClassName( "Iterator" ), boxedKeyType ) );
+        .returns( iteratorType( boxedKeyType ) );
     maybeAddJavadoc( getDocumentationElement( definitionName, "keys" ), keys );
     type.addMethod( keys.build() );
 
@@ -1959,7 +1959,7 @@ final class JsinteropAction
         .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
         .addAnnotation( JsinteropTypes.HAS_NO_SIDE_EFFECTS )
         .addAnnotation( BasicTypes.NONNULL )
-        .returns( ParameterizedTypeName.get( lookupClassName( "Iterator" ), boxedValueType ) );
+        .returns( iteratorType( boxedValueType ) );
     maybeAddJavadoc( getDocumentationElement( definitionName, "values" ), values );
     type.addMethod( values.build() );
 
@@ -1971,8 +1971,7 @@ final class JsinteropAction
         .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
         .addAnnotation( JsinteropTypes.HAS_NO_SIDE_EFFECTS )
         .addAnnotation( BasicTypes.NONNULL )
-        .returns( ParameterizedTypeName.get( lookupClassName( "Iterator" ),
-                                             ClassName.bestGuess( "Entry" ) ) );
+        .returns( iteratorType( ClassName.bestGuess( "Entry" ) ) );
     maybeAddJavadoc( getDocumentationElement( definitionName, "entries" ), entries );
     type.addMethod( entries.build() );
 

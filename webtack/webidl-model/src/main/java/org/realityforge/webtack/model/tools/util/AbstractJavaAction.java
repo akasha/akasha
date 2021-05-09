@@ -704,4 +704,10 @@ public abstract class AbstractJavaAction
   {
     return ArrayTypeName.of( BasicTypes.BOXED_DOUBLE.equals( componentType ) ? TypeName.DOUBLE : componentType );
   }
+
+  @Nonnull
+  protected final ParameterizedTypeName iteratorType( @Nonnull final TypeName componentType )
+  {
+    return ParameterizedTypeName.get( lookupClassName( "Iterator" ), componentType );
+  }
 }
