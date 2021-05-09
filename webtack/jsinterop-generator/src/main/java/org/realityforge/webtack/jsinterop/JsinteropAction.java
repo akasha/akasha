@@ -443,9 +443,10 @@ final class JsinteropAction
     {
       final String idlName = "$Global";
       final ClassName className = lookupClassName( idlName );
+      final String javaName = className.simpleName();
       final TypeSpec.Builder type =
         TypeSpec
-          .classBuilder( className.simpleName() )
+          .classBuilder( javaName )
           .addModifiers( Modifier.PUBLIC, Modifier.FINAL );
       writeGeneratedAnnotation( type );
       type.addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_TYPE )
@@ -473,9 +474,10 @@ final class JsinteropAction
   {
     final String idlName = "$Global" + globalInterface;
     final ClassName className = lookupClassName( idlName );
+    final String javaName = className.simpleName();
     final TypeSpec.Builder type =
       TypeSpec
-        .classBuilder( className.simpleName() )
+        .classBuilder( javaName )
         .addModifiers( Modifier.PUBLIC, Modifier.FINAL );
     writeGeneratedAnnotation( type );
     type.addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_TYPE )
@@ -551,9 +553,10 @@ final class JsinteropAction
     final Type actualType = schema.resolveType( attributeType );
     final String name = attribute.getName();
     final TypeName actualJavaType = toTypeName( actualType );
+    final String javaName = safeJsPropertyMethodName( name, TypeName.BOOLEAN.equals( actualJavaType ) );
     final MethodSpec.Builder method =
       MethodSpec
-        .methodBuilder( safeJsPropertyMethodName( name, TypeName.BOOLEAN.equals( actualJavaType ) ) )
+        .methodBuilder( javaName )
         .addModifiers( Modifier.PUBLIC, Modifier.STATIC, Modifier.NATIVE )
         .returns( actualJavaType )
         .addAnnotation( AnnotationSpec
@@ -583,8 +586,9 @@ final class JsinteropAction
     final Type actualType = schema.resolveType( attributeType );
     final String name = attribute.getName();
     final String fieldName = javaName( attribute );
+    final TypeName actualJavaType = toTypeName( actualType );
     final FieldSpec.Builder field =
-      FieldSpec.builder( toTypeName( actualType ), fieldName, Modifier.PUBLIC, Modifier.STATIC );
+      FieldSpec.builder( actualJavaType, fieldName, Modifier.PUBLIC, Modifier.STATIC );
     maybeAddCustomAnnotations( attribute, field );
     maybeAddJavadoc( attribute, field );
     if ( !fieldName.equals( name ) )
@@ -1390,9 +1394,11 @@ final class JsinteropAction
   {
     final boolean exposedOnGlobal = definition.isExposedOnAnyGlobal();
     final String name = definition.getName();
+    final ClassName className = lookupClassName( definition.getName() );
+    final String javaName = className.simpleName();
     final TypeSpec.Builder type =
       TypeSpec
-        .interfaceBuilder( lookupClassName( definition.getName() ).simpleName() )
+        .interfaceBuilder( javaName )
         .addModifiers( Modifier.PUBLIC );
     writeGeneratedAnnotation( type );
     type.addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_TYPE )
@@ -1663,9 +1669,11 @@ final class JsinteropAction
     throws IOException
   {
     final String idlName = definition.getName();
+    final ClassName className = lookupClassName( idlName );
+    final String javaName = className.simpleName();
     final TypeSpec.Builder type =
       TypeSpec
-        .classBuilder( lookupClassName( idlName ).simpleName() )
+        .classBuilder( javaName )
         .addModifiers( Modifier.PUBLIC, Modifier.FINAL )
         .addAnnotation( AnnotationSpec
                           .builder( JsinteropTypes.JS_TYPE )
@@ -1708,7 +1716,8 @@ final class JsinteropAction
     throws IOException
   {
     final String name = definition.getName();
-    final String javaName = lookupClassName( definition.getName() ).simpleName();
+    final ClassName className = lookupClassName( definition.getName() );
+    final String javaName = className.simpleName();
     final TypeSpec.Builder type =
       TypeSpec
         .classBuilder( javaName )
