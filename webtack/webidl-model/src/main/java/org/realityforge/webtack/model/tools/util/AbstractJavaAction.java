@@ -318,7 +318,9 @@ public abstract class AbstractJavaAction
     emitJavaType( getMainJavaDirectory(), typeSpec, qualifiedName );
   }
 
-  protected void emitJavaType( @Nonnull final Path outputDirectory, @Nonnull final TypeSpec typeSpec, @Nonnull final String qualifiedName )
+  protected void emitJavaType( @Nonnull final Path outputDirectory,
+                               @Nonnull final TypeSpec typeSpec,
+                               @Nonnull final String qualifiedName )
     throws IOException
   {
     recordGeneratedFile( outputDirectory.resolve( qualifiedName.replaceAll( "\\.", File.separator ) + ".java" ) );
