@@ -52,3 +52,10 @@ RegExp.prototype.unicode;
  * @type {boolean}
  */
 RegExp.prototype.dotAll;
+
+/**
+ * Typedef for type used in jsinterop but associated with JSON type which has no externs generated as it is part of the core types.
+ *
+ * @typedef {(string|number)}
+ */
+var StringOrLongLongUnion;
