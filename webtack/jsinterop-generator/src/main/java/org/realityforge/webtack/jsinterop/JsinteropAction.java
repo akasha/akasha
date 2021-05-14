@@ -1000,7 +1000,8 @@ final class JsinteropAction
         .interfaceBuilder( "Builder" )
         .addModifiers( Modifier.PUBLIC, Modifier.STATIC );
     writeGeneratedAnnotation( type );
-    type.addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_TYPE )
+    type.addAnnotation( AnnotationSpec
+                          .builder( JsinteropTypes.JS_TYPE )
                           .addMember( "isNative", "true" )
                           .addMember( "namespace", "$T.GLOBAL", JsinteropTypes.JS_PACKAGE )
                           .addMember( "name", "$S", "Object" )
