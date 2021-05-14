@@ -62,8 +62,6 @@ public abstract class AbstractJavaAction
   // Maps idlName -> JavaPoet TypeName
   @Nonnull
   private final Map<String, ClassName> _idlToClassNameMapping = new HashMap<>();
-  @Nonnull
-  private final Map<String, UnionType> _unions = new HashMap<>();
 
   protected AbstractJavaAction( @Nonnull final PipelineContext context,
                                 @Nonnull final Path outputDirectory,
@@ -111,12 +109,6 @@ public abstract class AbstractJavaAction
     }
   }
 
-  @Nonnull
-  protected final Map<String, UnionType> getUnions()
-  {
-    return _unions;
-  }
-
   /**
    * Register a mapping from the specified idl type to the specified java type if no type mapping for the idl type exists.
    *
@@ -160,7 +152,6 @@ public abstract class AbstractJavaAction
   {
     _idlToJavaTypeMapping.clear();
     _idlToClassNameMapping.clear();
-    _unions.clear();
     _idlToJavaTypeMapping.putAll( _predefinedIdlToJavaTypeMapping );
     _idlToJavaTypeMapping.putAll( _externalIdlToJavaTypeMapping );
     super.processInit( schema );
@@ -520,66 +511,15 @@ public abstract class AbstractJavaAction
     }
     else if ( Kind.Union == kind )
     {
-      return lookupClassName( generateUnionType( (UnionType) type ) );
+      return lookupClassName( synthesizeUnionType( (UnionType) type ) );
     }
     else if ( Kind.Object == kind )
     {
-      return lookupClassName( "object" );
+      return lookupClassName( "Object" );
     }
     else
     {
       throw new UnsupportedOperationException( kind + " type not currently supported by generator: " + type );
-    }
-  }
-
-  @Nonnull
-  private String generateUnionType( @Nonnull final UnionType type )
-  {
-    final StringBuilder sb = new StringBuilder();
-    for ( final Type memberType : type.getMemberTypes() )
-    {
-      if ( 0 != sb.length() )
-      {
-        sb.append( "Or" );
-      }
-      appendTypeToUnionName( sb, memberType );
-    }
-    sb.append( "Union" );
-    final String name = sb.toString();
-    if ( !_unions.containsKey( name ) )
-    {
-      _unions.put( name, type );
-    }
-    return name;
-  }
-
-  private void appendTypeToUnionName( @Nonnull final StringBuilder sb, @Nonnull final Type type )
-  {
-    final Kind kind = type.getKind();
-    if ( kind.isString() )
-    {
-      sb.append( "String" );
-    }
-    else if ( kind.isPrimitive() || Kind.FrozenArray == kind || Kind.Object == kind )
-    {
-      sb.append( kind.name() );
-    }
-    else if ( Kind.TypeReference == kind )
-    {
-      sb.append( NamingUtil.uppercaseFirstCharacter( ( (TypeReference) type ).getName() ) );
-    }
-    else if ( Kind.Sequence == kind )
-    {
-      appendTypeToUnionName( sb, ( (SequenceType) type ).getItemType() );
-      sb.append( "Array" );
-    }
-    else if ( Kind.Void == kind )
-    {
-      sb.append( "Undefined" );
-    }
-    else
-    {
-      throw new UnsupportedOperationException( "Contains kind " + kind + " in union which has not been implemented" );
     }
   }
 
