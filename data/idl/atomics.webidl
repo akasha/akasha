@@ -75,7 +75,7 @@ namespace Atomics {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/isLockFree">MDN - Atomics.isLockFree</a>
    * @see <a href="https://tc39.es/ecma262/#sec-atomics.isLockFree">Atomics.isLockFree() - ECMA</a>
    */
-  long long isLockFree( long size );
+  boolean isLockFree( long size );
 
   /**
    * Returns the value at the specified index of the array.
