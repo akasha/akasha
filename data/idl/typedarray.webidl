@@ -595,6 +595,11 @@ interface DataView {
   constructor(ArrayBuffer buffer, optional unsigned long byteOffset = 0, optional unsigned long byteLength = 0);
   constructor(SharedArrayBuffer buffer, optional unsigned long byteOffset = 0, optional unsigned long byteLength = 0);
 
+  readonly attribute ArrayBuffer buffer;
+  readonly attribute unsigned long byteOffset;
+  readonly attribute unsigned long byteLength;
+  stringifier DOMString toString();
+
   // Gets the value of the given type at the specified byte offset
   // from the start of the view. There is no alignment constraint;
   // multi-byte values may be fetched from any offset.
@@ -636,8 +641,6 @@ interface DataView {
   undefined setFloat32(unsigned long byteOffset, unrestricted float value, optional boolean littleEndian);
   undefined setFloat64(unsigned long byteOffset, unrestricted double value, optional boolean littleEndian);
 };
-
-DataView includes ArrayBufferViewImpl;
 
 [MarkerType]
 typedef ( Int8Array or Int16Array or Int32Array or Uint8Array or Uint16Array or Uint32Array or Uint8ClampedArray ) IntegerTypedArray;
