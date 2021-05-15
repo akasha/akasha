@@ -152,7 +152,7 @@ interface Int8Array {
   Int8Array copyWithin(unsigned long target, unsigned long start, optional unsigned long end);
 
   getter byte (unsigned long index);
-  setter void set(unsigned long index, byte value);
+  setter void (unsigned long index, byte value);
   void set(Int8Array array, optional unsigned long offset);
   void set(sequence<byte> array, optional unsigned long offset);
   Int8Array subarray(long start, long end);
@@ -205,7 +205,7 @@ interface Uint8Array {
   Uint8Array copyWithin(unsigned long target, unsigned long start, optional unsigned long end);
 
   getter octet (unsigned long index);
-  setter void set(unsigned long index, octet value);
+  setter void (unsigned long index, octet value);
   void set(Uint8Array array, optional unsigned long offset);
   void set(sequence<octet> array, optional unsigned long offset);
   Uint8Array subarray(long start, long end);
@@ -259,7 +259,7 @@ interface Uint8ClampedArray {
   Uint8ClampedArray copyWithin(unsigned long target, unsigned long start, optional unsigned long end);
 
   getter octet (unsigned long index);
-  setter void set(unsigned long index, [Clamp] octet value);
+  setter void (unsigned long index, [Clamp] octet value);
   void set(Uint8ClampedArray array, optional unsigned long offset);
   void set(sequence<octet> array, optional unsigned long offset);
   Uint8ClampedArray subarray(long start, long end);
@@ -313,7 +313,7 @@ interface Int16Array {
   Int16Array copyWithin(unsigned long target, unsigned long start, optional unsigned long end);
 
   getter short (unsigned long index);
-  setter void set(unsigned long index, short value);
+  setter void (unsigned long index, short value);
   void set(Int16Array array, optional unsigned long offset);
   void set(sequence<short> array, optional unsigned long offset);
   Int16Array subarray(long start, long end);
@@ -367,7 +367,7 @@ interface Uint16Array {
   Uint16Array copyWithin(unsigned long target, unsigned long start, optional unsigned long end);
 
   getter unsigned short (unsigned long index);
-  setter void set(unsigned long index, unsigned short value);
+  setter void (unsigned long index, unsigned short value);
   void set(Uint16Array array, optional unsigned long offset);
   void set(sequence<unsigned short> array, optional unsigned long offset);
   Uint16Array subarray(long start, long end);
@@ -421,7 +421,7 @@ interface Int32Array {
   Int32Array copyWithin(unsigned long target, unsigned long start, optional unsigned long end);
 
   getter long (unsigned long index);
-  setter void set(unsigned long index, long value);
+  setter void (unsigned long index, long value);
   void set(Int32Array array, optional unsigned long offset);
   void set(sequence<long> array, optional unsigned long offset);
   Int32Array subarray(long start, long end);
@@ -475,7 +475,7 @@ interface Uint32Array {
   Uint32Array copyWithin(unsigned long target, unsigned long start, optional unsigned long end);
 
   getter unsigned long (unsigned long index);
-  setter void set(unsigned long index, unsigned long value);
+  setter void (unsigned long index, unsigned long value);
   void set(Uint32Array array, optional unsigned long offset);
   void set(sequence<unsigned long> array, optional unsigned long offset);
   Uint32Array subarray(long start, long end);
@@ -529,7 +529,7 @@ interface Float32Array {
   Float32Array copyWithin(unsigned long target, unsigned long start, optional unsigned long end);
 
   getter unrestricted float (unsigned long index);
-  setter void set(unsigned long index, unrestricted float value);
+  setter void (unsigned long index, unrestricted float value);
   void set(Float32Array array, optional unsigned long offset);
   void set(sequence<unrestricted float> array, optional unsigned long offset);
   Float32Array subarray(long start, long end);
@@ -584,7 +584,7 @@ interface Float64Array {
   Float64Array copyWithin(unsigned long target, unsigned long start, optional unsigned long end);
 
   getter unrestricted double (unsigned long index);
-  setter void set(unsigned long index, unrestricted double value);
+  setter void (unsigned long index, unrestricted double value);
   void set(Float64Array array, optional unsigned long offset);
   void set(sequence<unrestricted double> array, optional unsigned long offset);
   Float64Array subarray(long start, long end);
