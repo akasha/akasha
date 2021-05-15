@@ -163,9 +163,12 @@ define 'akasha' do
   desc 'Akasha Java Browser API for GWT'
   define 'java', :base_dir => "#{WORKSPACE_DIR}/akasha/java" do
     src_dir = file("#{project._(:target, :generated)}/webtack/main/java" => ['data:run_j2cl_complete_pipeline'])
+    test_src_dir = file("#{project._(:target, :generated)}/webtack/test/java" => ['data:run_j2cl_complete_pipeline'])
     js_src_dir = file("#{project._(:target, :generated)}/webtack/main/js" => ['data:run_j2cl_complete_pipeline'])
     compile.sources << src_dir.to_s
+    test.compile.sources << test_src_dir.to_s
     iml.main_generated_source_directories << src_dir.to_s
+    iml.test_generated_source_directories << test_src_dir.to_s
 
     doc.options.merge!('Xdoclint:all,-reference,-missing' => true)
 
