@@ -5,6 +5,204 @@ dictionary EventInit {
 };
 
 /**
+ * This type contains anonymous indexed property operations.
+ */
+interface AnonymousIndexedAccessorsBoolean {
+  getter boolean ( unsigned long index );
+  setter undefined ( unsigned long index, boolean value );
+  deleter undefined ( unsigned long index );
+};
+
+/**
+ * This type contains anonymous indexed property operations.
+ */
+interface AnonymousIndexedAccessorsByte {
+  getter byte ( unsigned long index );
+  setter undefined ( unsigned long index, byte value );
+  deleter undefined ( unsigned long index );
+};
+
+/**
+ * This type contains anonymous indexed property operations.
+ */
+interface AnonymousIndexedAccessorsFloat {
+  getter float ( unsigned long index );
+  setter undefined ( unsigned long index, float value );
+  deleter undefined ( float name );
+};
+
+/**
+ * This type contains anonymous indexed property operations.
+ */
+interface AnonymousIndexedAccessorsLong {
+  getter long ( unsigned long index );
+  setter undefined ( unsigned long index, long value );
+  deleter undefined ( unsigned long index );
+};
+
+/**
+ * This type contains anonymous indexed property operations.
+ */
+interface AnonymousIndexedAccessorsLongLong {
+  getter long long ( unsigned long index );
+  setter undefined ( unsigned long index, long long value );
+  deleter undefined ( unsigned long index );
+};
+
+/**
+ * This type contains anonymous indexed property operations.
+ */
+interface AnonymousIndexedAccessorsOctet {
+  getter octet ( unsigned long index );
+  setter undefined ( unsigned long index, octet value );
+  deleter undefined ( unsigned long index );
+};
+
+/**
+ * This type contains anonymous indexed property operations.
+ */
+interface AnonymousIndexedAccessorsShort {
+  getter short ( unsigned long index );
+  setter undefined ( unsigned long index, short value );
+  deleter undefined ( unsigned long index );
+};
+
+/**
+ * This type contains anonymous indexed property operations.
+ */
+interface AnonymousIndexedAccessorsUnrestrictedFloat {
+  getter unrestricted float ( unsigned long index );
+  setter undefined ( unsigned long index, unrestricted float value );
+  deleter undefined ( unsigned long index );
+};
+
+/**
+ * This type contains anonymous indexed property operations.
+ */
+interface AnonymousIndexedAccessorsUnsignedLong {
+  getter unsigned long ( unsigned long index );
+  setter undefined ( unsigned long index, unsigned long value );
+  deleter undefined ( unsigned long index );
+};
+
+/**
+ * This type contains anonymous indexed property operations.
+ */
+interface AnonymousIndexedAccessorsUnsignedLongLong {
+  getter unsigned long long ( unsigned long index );
+  setter undefined ( unsigned long index, unsigned long long value );
+  deleter undefined ( unsigned long index );
+};
+
+/**
+ * This type contains anonymous indexed property operations.
+ */
+interface AnonymousIndexedAccessorsUnsignedShort {
+  getter unsigned short ( unsigned long index );
+  setter undefined ( unsigned long index, unsigned short value );
+  deleter undefined ( unsigned long index );
+};
+
+/**
+ * This type contains anonymous named property operations.
+ */
+interface AnonymousNamedAccessorsBoolean {
+  getter boolean ( DOMString name );
+  setter undefined ( DOMString name, boolean value );
+  deleter undefined ( DOMString name );
+};
+
+/**
+ * This type contains anonymous named property operations.
+ */
+interface AnonymousNamedAccessorsByte {
+  getter byte ( DOMString name );
+  setter undefined ( DOMString name, byte value );
+  deleter undefined ( DOMString name );
+};
+
+/**
+ * This type contains anonymous named property operations.
+ */
+interface AnonymousNamedAccessorsFloat {
+  getter float ( DOMString name );
+  setter undefined ( DOMString name, float value );
+  deleter undefined ( float name );
+};
+
+/**
+ * This type contains anonymous named property operations.
+ */
+interface AnonymousNamedAccessorsLong {
+  getter long ( DOMString name );
+  setter undefined ( DOMString name, long value );
+  deleter undefined ( DOMString name );
+};
+
+/**
+ * This type contains anonymous named property operations.
+ */
+interface AnonymousNamedAccessorsLongLong {
+  getter long long ( DOMString name );
+  setter undefined ( DOMString name, long long value );
+  deleter undefined ( DOMString name );
+};
+
+/**
+ * This type contains anonymous named property operations.
+ */
+interface AnonymousNamedAccessorsOctet {
+  getter octet ( DOMString name );
+  setter undefined ( DOMString name, octet value );
+  deleter undefined ( DOMString name );
+};
+
+/**
+ * This type contains anonymous named property operations.
+ */
+interface AnonymousNamedAccessorsShort {
+  getter short ( DOMString name );
+  setter undefined ( DOMString name, short value );
+  deleter undefined ( DOMString name );
+};
+
+/**
+ * This type contains anonymous named property operations.
+ */
+interface AnonymousNamedAccessorsUnrestrictedFloat {
+  getter unrestricted float ( DOMString name );
+  setter undefined ( DOMString name, unrestricted float value );
+  deleter undefined ( DOMString name );
+};
+
+/**
+ * This type contains anonymous named property operations.
+ */
+interface AnonymousNamedAccessorsUnsignedLong {
+  getter unsigned long ( DOMString name );
+  setter undefined ( DOMString name, unsigned long value );
+  deleter undefined ( DOMString name );
+};
+
+/**
+ * This type contains anonymous named property operations.
+ */
+interface AnonymousNamedAccessorsUnsignedLongLong {
+  getter unsigned long long ( DOMString name );
+  setter undefined ( DOMString name, unsigned long long value );
+  deleter undefined ( DOMString name );
+};
+
+/**
+ * This type contains anonymous named property operations.
+ */
+interface AnonymousNamedAccessorsUnsignedShort {
+  getter unsigned short ( DOMString name );
+  setter undefined ( DOMString name, unsigned short value );
+  deleter undefined ( DOMString name );
+};
+
+/**
  * This type contains anonymous named property operations.
  */
 interface DOMStringMap {

@@ -3082,9 +3082,25 @@ final class JsinteropAction
     emitReturnType( operation, itemType, method );
     final Argument argument = arguments.get( 0 );
     generateArgument( argument, asTypedValue( argument.getType() ), true, false, method );
-    method.addStatement( "return $T.<$T>cast( this ).getAt( $N )",
+    final Kind itemTypeKind = itemType.getKind();
+    final boolean mustConvert =
+      itemTypeKind.isPrimitive() && Kind.Double != itemTypeKind && Kind.UnrestrictedDouble != itemTypeKind;
+    final TypeName itemTypeName = mustConvert ? JsinteropTypes.ANY : toTypeName( itemType, true );
+    final String suffix =
+      !mustConvert ? "" :
+      Kind.Float == itemTypeKind || Kind.UnrestrictedFloat == itemTypeKind ? ".asFloat()" :
+      Kind.Octet == itemTypeKind || Kind.Short == itemTypeKind ? ".asShort()" :
+      Kind.UnsignedShort == itemTypeKind ||
+      Kind.Long == itemTypeKind ||
+      Kind.UnsignedLong == itemTypeKind ||
+      Kind.LongLong == itemTypeKind ||
+      Kind.UnsignedLongLong == itemTypeKind ? ".asInt()" :
+      Kind.Boolean == itemTypeKind ? ".asBoolean()" :
+      Kind.Byte == itemTypeKind ? ".asByte()" :
+      "";
+    method.addStatement( "return $T.<$T>cast( this ).getAt( $N )" + suffix,
                          JsinteropTypes.JS,
-                         ParameterizedTypeName.get( JsinteropTypes.JS_ARRAY_LIKE, toTypeName( itemType ) ),
+                         ParameterizedTypeName.get( JsinteropTypes.JS_ARRAY_LIKE, itemTypeName ),
                          argument.getName() );
     type.addMethod( method.build() );
   }
@@ -3113,7 +3129,7 @@ final class JsinteropAction
     method.addStatement( "$T.<$T>cast( this ).setAt( $N, $N )",
                          JsinteropTypes.JS,
                          ParameterizedTypeName.get( JsinteropTypes.JS_ARRAY_LIKE,
-                                                    toTypeName( valueArgument.getType() ) ),
+                                                    toTypeName( valueArgument.getType() ).box() ),
                          indexArgument.getName(),
                          valueArgument.getName() );
     type.addMethod( method.build() );
@@ -3138,10 +3154,25 @@ final class JsinteropAction
     emitReturnType( operation, itemType, method );
     final Argument argument = arguments.get( 0 );
     generateArgument( argument, asTypedValue( argument.getType() ), true, false, method );
-    final TypeName javaItemType = toTypeName( itemType );
-    method.addStatement( "return $T.<$T>cast( this ).get( $N )",
+    final Kind itemTypeKind = itemType.getKind();
+    final boolean mustConvert =
+      itemTypeKind.isPrimitive() && Kind.Double != itemTypeKind && Kind.UnrestrictedDouble != itemTypeKind;
+    final TypeName itemTypeName = mustConvert ? JsinteropTypes.ANY : toTypeName( itemType, true );
+    final String suffix =
+      !mustConvert ? "" :
+      Kind.Float == itemTypeKind || Kind.UnrestrictedFloat == itemTypeKind ? ".asFloat()" :
+      Kind.Octet == itemTypeKind || Kind.Short == itemTypeKind ? ".asShort()" :
+      Kind.UnsignedShort == itemTypeKind ||
+      Kind.Long == itemTypeKind ||
+      Kind.UnsignedLong == itemTypeKind ||
+      Kind.LongLong == itemTypeKind ||
+      Kind.UnsignedLongLong == itemTypeKind ? ".asInt()" :
+      Kind.Boolean == itemTypeKind ? ".asBoolean()" :
+      Kind.Byte == itemTypeKind ? ".asByte()" :
+      "";
+    method.addStatement( "return $T.<$T>cast( this ).get( $N )" + suffix,
                          JsinteropTypes.JS,
-                         ParameterizedTypeName.get( JsinteropTypes.JS_PROPERTY_MAP, javaItemType ),
+                         ParameterizedTypeName.get( JsinteropTypes.JS_PROPERTY_MAP, itemTypeName ),
                          argument.getName() );
     type.addMethod( method.build() );
   }
@@ -3170,7 +3201,7 @@ final class JsinteropAction
     method.addStatement( "$T.<$T>cast( this ).set( $N, $N )",
                          JsinteropTypes.JS,
                          ParameterizedTypeName.get( JsinteropTypes.JS_PROPERTY_MAP,
-                                                    toTypeName( valueArgument.getType() ) ),
+                                                    toTypeName( valueArgument.getType() ).box() ),
                          indexArgument.getName(),
                          valueArgument.getName() );
     type.addMethod( method.build() );

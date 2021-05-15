@@ -11,6 +11,12 @@ var EventInit;
  * @private
  * @nosideeffects
  */
+function AnonymousNamedAccessorsOctet() {}
+/**
+ * @constructor
+ * @private
+ * @nosideeffects
+ */
 function MyThingCollection() {}
 /**
  * @constructor
@@ -45,67 +51,6 @@ DOMTokenList.prototype[Symbol.iterator] = function() {};
  * @template MAP
  */
 DOMTokenList.prototype.forEach = function(callback) {};
-/**
- * @constructor
- * @private
- * @implements {Iterable<!Array<!number|!number>>}
- * @nosideeffects
- */
-function SomeOtherType() {}
-/** @const {number} */ SomeOtherType.prototype.size;
-/**
- * @param {!number} key
- * @return {!boolean}
- * @nosideeffects
- */
-SomeOtherType.prototype.has = function(key) {}
-/**
- * @param {!number} key
- * @return {?number}
- * @nosideeffects
- */
-SomeOtherType.prototype.get = function(key) {}
-/**
- * @return {!Iterator<!number>}
- * @nosideeffects
- */
-SomeOtherType.prototype.keys = function() {}
-/**
- * @return {!Iterator<!number>}
- * @nosideeffects
- */
-SomeOtherType.prototype.values = function() {}
-/**
- * @return {!Iterator<!Array<!number|!number>>}
- * @nosideeffects
- */
-SomeOtherType.prototype.entries = function() {};
-/**
- * @return {!Iterator<!Array<!number|!number>>}
- * @nosideeffects
- */
-SomeOtherType.prototype[Symbol.iterator] = function() {};
-/**
- * @param {function(!number, !number, MAP)} callback
- * @this {MAP}
- * @template MAP
- */
-SomeOtherType.prototype.forEach = function(callback) {};
-/**
- * @param {!number} key
- * @param {!number} value
- * @return {undefined}
- */
-SomeOtherType.prototype.set = function(key,value) {}
-/**
- * @param {!number} key
- * @return {!boolean}
- */
-SomeOtherType.prototype.delete = function(key) {}
-/**
- * @return {undefined}
- */
-SomeOtherType.prototype.clear = function() {}
 /**
  * @constructor
  * @private
@@ -171,6 +116,12 @@ Headers.prototype.forEach = function(callback) {};
  * @private
  * @nosideeffects
  */
+function AnonymousNamedAccessorsFloat() {}
+/**
+ * @constructor
+ * @private
+ * @nosideeffects
+ */
 function MyThing() {}
 /**
  * @constructor
@@ -178,6 +129,183 @@ function MyThing() {}
  * @nosideeffects
  */
 function DOMStringMap() {}
+/**
+ * @constructor
+ * @private
+ * @nosideeffects
+ */
+function AnonymousIndexedAccessorsUnsignedShort() {}
+/**
+ * @constructor
+ * @private
+ * @nosideeffects
+ */
+function AnonymousIndexedAccessorsByte() {}
+/**
+ * @constructor
+ * @private
+ * @nosideeffects
+ */
+function AnonymousNamedAccessorsLongLong() {}
+/**
+ * @constructor
+ * @private
+ * @nosideeffects
+ */
+function AnonymousNamedAccessorsUnsignedLong() {}
+/**
+ * @constructor
+ * @private
+ * @nosideeffects
+ */
+function AnonymousIndexedAccessorsLongLong() {}
+/**
+ * @constructor
+ * @private
+ * @nosideeffects
+ */
+function AnonymousNamedAccessorsLong() {}
+/**
+ * @constructor
+ * @extends {Event}
+ * @param {!string} type
+ */
+function SpeechRecognitionErrorEvent(type) {}
+/** @type {!string} */ SpeechRecognitionErrorEvent.prototype.message;
+/**
+ * @return {!string}
+ */
+SpeechRecognitionErrorEvent.prototype.messageDescription = function() {}
+/**
+ * @constructor
+ * @private
+ * @nosideeffects
+ */
+function AnonymousIndexedAccessorsUnsignedLong() {}
+/**
+ * @constructor
+ * @private
+ * @nosideeffects
+ */
+function AnonymousNamedAccessorsUnrestrictedFloat() {}
+/**
+ * @constructor
+ * @private
+ * @nosideeffects
+ */
+function AnonymousIndexedAccessorsUnsignedLongLong() {}
+/**
+ * @constructor
+ */
+function EventTarget() {}
+/**
+ * @param {!Event} event
+ * @return {!boolean}
+ */
+EventTarget.prototype.dispatchEvent = function(event) {}
+/**
+ * @constructor
+ * @private
+ * @nosideeffects
+ */
+function AnonymousIndexedAccessorsShort() {}
+/**
+ * @constructor
+ * @private
+ * @nosideeffects
+ */
+function AnonymousNamedAccessorsBoolean() {}
+/**
+ * @constructor
+ * @private
+ * @nosideeffects
+ */
+function AnonymousIndexedAccessorsFloat() {}
+/**
+ * @constructor
+ * @private
+ * @nosideeffects
+ */
+function AnonymousNamedAccessorsUnsignedShort() {}
+/**
+ * @constructor
+ * @private
+ * @implements {Iterable<!Array<!number|!number>>}
+ * @nosideeffects
+ */
+function SomeOtherType() {}
+/** @const {number} */ SomeOtherType.prototype.size;
+/**
+ * @param {!number} key
+ * @return {!boolean}
+ * @nosideeffects
+ */
+SomeOtherType.prototype.has = function(key) {}
+/**
+ * @param {!number} key
+ * @return {?number}
+ * @nosideeffects
+ */
+SomeOtherType.prototype.get = function(key) {}
+/**
+ * @return {!Iterator<!number>}
+ * @nosideeffects
+ */
+SomeOtherType.prototype.keys = function() {}
+/**
+ * @return {!Iterator<!number>}
+ * @nosideeffects
+ */
+SomeOtherType.prototype.values = function() {}
+/**
+ * @return {!Iterator<!Array<!number|!number>>}
+ * @nosideeffects
+ */
+SomeOtherType.prototype.entries = function() {};
+/**
+ * @return {!Iterator<!Array<!number|!number>>}
+ * @nosideeffects
+ */
+SomeOtherType.prototype[Symbol.iterator] = function() {};
+/**
+ * @param {function(!number, !number, MAP)} callback
+ * @this {MAP}
+ * @template MAP
+ */
+SomeOtherType.prototype.forEach = function(callback) {};
+/**
+ * @param {!number} key
+ * @param {!number} value
+ * @return {undefined}
+ */
+SomeOtherType.prototype.set = function(key,value) {}
+/**
+ * @param {!number} key
+ * @return {!boolean}
+ */
+SomeOtherType.prototype.delete = function(key) {}
+/**
+ * @return {undefined}
+ */
+SomeOtherType.prototype.clear = function() {}
+/**
+ * @constructor
+ * @private
+ * @nosideeffects
+ */
+function AnonymousIndexedAccessorsLong() {}
+/**
+ * @constructor
+ * @private
+ * @nosideeffects
+ */
+function AnonymousNamedAccessorsUnsignedLongLong() {}
+/**
+ * @constructor
+ * @private
+ * @nosideeffects
+ */
+function AnonymousNamedAccessorsByte() {}
 /**
  * @constructor
  * @private
@@ -280,15 +408,28 @@ Storage.prototype.setItem = function(key,value) {}
 Storage.prototype.key = function(index) {}
 /**
  * @constructor
- * @extends {Event}
- * @param {!string} type
+ * @private
+ * @nosideeffects
  */
-function SpeechRecognitionErrorEvent(type) {}
-/** @type {!string} */ SpeechRecognitionErrorEvent.prototype.message;
+function AnonymousIndexedAccessorsUnrestrictedFloat() {}
 /**
- * @return {!string}
+ * @constructor
+ * @private
+ * @nosideeffects
  */
-SpeechRecognitionErrorEvent.prototype.messageDescription = function() {}
+function AnonymousIndexedAccessorsBoolean() {}
+/**
+ * @constructor
+ * @private
+ * @nosideeffects
+ */
+function AnonymousNamedAccessorsShort() {}
+/**
+ * @constructor
+ * @private
+ * @nosideeffects
+ */
+function AnonymousIndexedAccessorsOctet() {}
 /**
  * @constructor
  * @param {!string} type
@@ -399,12 +540,3 @@ RTCStatsReport.prototype[Symbol.iterator] = function() {};
  * @template MAP
  */
 RTCStatsReport.prototype.forEach = function(callback) {};
-/**
- * @constructor
- */
-function EventTarget() {}
-/**
- * @param {!Event} event
- * @return {!boolean}
- */
-EventTarget.prototype.dispatchEvent = function(event) {}
