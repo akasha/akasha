@@ -4,6 +4,8 @@ import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class XMLHttpRequestTest {
+  static XMLHttpRequest $typeReference$;
+
   public static int otherReadyState(final XMLHttpRequest type) {
     return type.otherReadyState;
   }

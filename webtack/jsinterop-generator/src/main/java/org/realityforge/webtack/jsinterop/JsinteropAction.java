@@ -1899,6 +1899,8 @@ final class JsinteropAction
         .addModifiers( Modifier.PUBLIC, Modifier.FINAL );
     writeGeneratedAnnotation( testType );
 
+    testType.addField( FieldSpec.builder( className, "$typeReference$", Modifier.STATIC ).build() );
+
     for ( final TypedefDefinition markerType : definition.getMarkerTypes() )
     {
       type.addSuperinterface( lookupClassName( markerType.getName() ) );

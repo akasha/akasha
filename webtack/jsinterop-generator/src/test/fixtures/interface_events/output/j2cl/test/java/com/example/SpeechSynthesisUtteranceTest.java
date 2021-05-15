@@ -4,6 +4,8 @@ import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class SpeechSynthesisUtteranceTest {
+  static SpeechSynthesisUtterance $typeReference$;
+
   public static EventHandler onend(final SpeechSynthesisUtterance type) {
     return type.onend;
   }

@@ -4,6 +4,8 @@ import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class MyType1Test {
+  static MyType1 $typeReference$;
+
   public static JsObject objectValue(final MyType1 type) {
     return type.objectValue;
   }

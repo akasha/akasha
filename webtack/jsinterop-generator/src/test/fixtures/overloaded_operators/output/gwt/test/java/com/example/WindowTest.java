@@ -4,6 +4,8 @@ import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class WindowTest {
+  static Window $typeReference$;
+
   public static void scroll(final Window $instance, final double x, final double y) {
     $instance.scroll( x, y );
   }

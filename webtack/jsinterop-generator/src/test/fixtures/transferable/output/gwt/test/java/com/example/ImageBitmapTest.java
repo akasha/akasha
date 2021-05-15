@@ -4,6 +4,8 @@ import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class ImageBitmapTest {
+  static ImageBitmap $typeReference$;
+
   public static int height(final ImageBitmap type) {
     return type.height();
   }

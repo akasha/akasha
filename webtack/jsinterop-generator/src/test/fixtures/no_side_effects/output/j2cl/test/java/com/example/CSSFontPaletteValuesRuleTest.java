@@ -4,6 +4,8 @@ import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class CSSFontPaletteValuesRuleTest {
+  static CSSFontPaletteValuesRule $typeReference$;
+
   public static String basePalette(final CSSFontPaletteValuesRule type) {
     return type.basePalette;
   }

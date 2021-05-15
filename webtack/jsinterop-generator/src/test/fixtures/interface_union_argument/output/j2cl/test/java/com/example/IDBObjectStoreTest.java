@@ -4,6 +4,8 @@ import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class IDBObjectStoreTest {
+  static IDBObjectStore $typeReference$;
+
   public static boolean autoIncrement(final IDBObjectStore type) {
     return type.autoIncrement();
   }

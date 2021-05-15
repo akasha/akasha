@@ -4,6 +4,8 @@ import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class FakeRegExpGroupsTest {
+  static FakeRegExpGroups $typeReference$;
+
   public static int size(FakeRegExpGroups $instance) {
     return $instance.size();
   }

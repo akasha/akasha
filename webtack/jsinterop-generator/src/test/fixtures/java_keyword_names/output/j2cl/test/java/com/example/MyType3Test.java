@@ -4,6 +4,8 @@ import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class MyType3Test {
+  static MyType3 $typeReference$;
+
   public static void clone_(final Object clone) {
     MyType3.clone_( clone );
   }

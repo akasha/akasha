@@ -5,6 +5,8 @@ import jsinterop.base.Any;
 
 @Generated("org.realityforge.webtack")
 public final class MyType5Test {
+  static MyType5 $typeReference$;
+
   public static Any readonlyAnyValue() {
     return MyType5.readonlyAnyValue();
   }

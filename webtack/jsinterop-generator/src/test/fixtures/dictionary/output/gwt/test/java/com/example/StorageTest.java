@@ -4,6 +4,8 @@ import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class StorageTest {
+  static Storage $typeReference$;
+
   public static int length(final Storage type) {
     return type.length();
   }

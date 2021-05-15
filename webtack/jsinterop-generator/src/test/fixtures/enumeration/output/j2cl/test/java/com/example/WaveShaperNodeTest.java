@@ -4,6 +4,8 @@ import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class WaveShaperNodeTest {
+  static WaveShaperNode $typeReference$;
+
   public static String oversample(final WaveShaperNode type) {
     return type.oversample;
   }

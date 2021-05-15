@@ -9,6 +9,8 @@ import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class IDBObjectStoreTest {
+  static IDBObjectStore $typeReference$;
+
   public static MyEventHandler1 handler1(final IDBObjectStore type) {
     return type.handler1;
   }

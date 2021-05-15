@@ -4,6 +4,8 @@ import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class SomeMapLikeDefiningOverridesTest {
+  static SomeMapLikeDefiningOverrides $typeReference$;
+
   public static void clear(final SomeMapLikeDefiningOverrides $instance) {
     $instance.clear();
   }

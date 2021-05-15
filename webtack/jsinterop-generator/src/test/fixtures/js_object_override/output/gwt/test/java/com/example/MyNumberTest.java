@@ -4,6 +4,8 @@ import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class MyNumberTest {
+  static MyNumber $typeReference$;
+
   public static double valueOf(final MyNumber $instance) {
     return $instance.valueOf();
   }

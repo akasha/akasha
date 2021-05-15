@@ -4,6 +4,8 @@ import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class SymbolTest {
+  static Symbol $typeReference$;
+
   public static Symbol asyncIterator() {
     return Symbol.asyncIterator();
   }

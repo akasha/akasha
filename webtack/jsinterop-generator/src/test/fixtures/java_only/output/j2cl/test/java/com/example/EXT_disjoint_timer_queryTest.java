@@ -5,6 +5,8 @@ import jsinterop.base.Any;
 
 @Generated("org.realityforge.webtack")
 public final class EXT_disjoint_timer_queryTest {
+  static EXT_disjoint_timer_query $typeReference$;
+
   public static Any valueA(final EXT_disjoint_timer_query type) {
     return type.valueA();
   }

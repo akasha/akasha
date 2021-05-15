@@ -4,6 +4,8 @@ import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class SpeechRecognitionErrorEventTest {
+  static SpeechRecognitionErrorEvent $typeReference$;
+
   public static String message(final SpeechRecognitionErrorEvent type) {
     return type.message();
   }

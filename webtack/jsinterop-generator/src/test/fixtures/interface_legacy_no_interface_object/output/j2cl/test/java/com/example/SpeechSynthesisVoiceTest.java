@@ -4,6 +4,8 @@ import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class SpeechSynthesisVoiceTest {
+  static SpeechSynthesisVoice $typeReference$;
+
   public static boolean default_(final SpeechSynthesisVoice type) {
     return type.default_();
   }

@@ -4,6 +4,8 @@ import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class WindowTest {
+  static Window $typeReference$;
+
   public static boolean isSecureContext(final Window type) {
     return type.isSecureContext();
   }

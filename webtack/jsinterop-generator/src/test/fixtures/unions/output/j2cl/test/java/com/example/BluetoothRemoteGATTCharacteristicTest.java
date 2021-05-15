@@ -4,6 +4,8 @@ import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class BluetoothRemoteGATTCharacteristicTest {
+  static BluetoothRemoteGATTCharacteristic $typeReference$;
+
   public static JsPromise<Void> writeValue(final BluetoothRemoteGATTCharacteristic $instance,
       final BufferSource value) {
     return $instance.writeValue( value );

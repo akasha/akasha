@@ -4,6 +4,8 @@ import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class SomeDataContainerTest {
+  static SomeDataContainer $typeReference$;
+
   public static void myStaticMethodWithUnionArg(final BluetoothDescriptorUUID name) {
     SomeDataContainer.myStaticMethodWithUnionArg( name );
   }

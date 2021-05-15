@@ -5,6 +5,8 @@ import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class MyJSONTest {
+  static MyJSON $typeReference$;
+
   public static String stringify(final MyJSON $instance, @DoNotAutobox final Object value,
       final StringifySpaceUnionType space) {
     return $instance.stringify( value, space );

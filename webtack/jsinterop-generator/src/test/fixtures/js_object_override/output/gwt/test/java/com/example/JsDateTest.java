@@ -4,6 +4,8 @@ import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class JsDateTest {
+  static JsDate $typeReference$;
+
   public static double valueOf(final JsDate $instance) {
     return $instance.valueOf();
   }

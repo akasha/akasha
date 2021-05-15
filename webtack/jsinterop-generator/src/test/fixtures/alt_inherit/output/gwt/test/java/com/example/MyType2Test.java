@@ -11,6 +11,8 @@ import jsinterop.base.JsPropertyMap;
 
 @Generated("org.realityforge.webtack")
 public final class MyType2Test {
+  static MyType2 $typeReference$;
+
   public static Any anyValue(final MyType2 type) {
     return type.anyValue;
   }

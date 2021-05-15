@@ -7,6 +7,8 @@ import jsinterop.base.JsPropertyMap;
 
 @Generated("org.realityforge.webtack")
 public final class MyType3Test {
+  static MyType3 $typeReference$;
+
   public static JsIterable<Any> anyIterableMethod(final MyType3 $instance, final JsIterable<Any> v1,
       final JsIterable<Any> v2) {
     return $instance.anyIterableMethod( v1, v2 );

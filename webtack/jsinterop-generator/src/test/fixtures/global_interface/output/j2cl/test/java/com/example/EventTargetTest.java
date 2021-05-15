@@ -4,6 +4,8 @@ import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class EventTargetTest {
+  static EventTarget $typeReference$;
+
   public static String id(final EventTarget type) {
     return type.id;
   }

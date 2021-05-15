@@ -4,6 +4,8 @@ import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class FakeRegExpResultTest {
+  static FakeRegExpResult $typeReference$;
+
   public static int index(final FakeRegExpResult type) {
     return type.index();
   }

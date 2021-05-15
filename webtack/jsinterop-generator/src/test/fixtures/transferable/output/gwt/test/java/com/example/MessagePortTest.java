@@ -5,6 +5,8 @@ import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class MessagePortTest {
+  static MessagePort $typeReference$;
+
   public static void close(final MessagePort $instance) {
     $instance.close();
   }

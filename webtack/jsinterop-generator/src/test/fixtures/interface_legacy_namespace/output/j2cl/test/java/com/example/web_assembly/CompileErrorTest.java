@@ -4,4 +4,5 @@ import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class CompileErrorTest {
+  static CompileError $typeReference$;
 }

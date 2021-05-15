@@ -4,6 +4,8 @@ import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class BluetoothRemoteGATTServerTest {
+  static BluetoothRemoteGATTServer $typeReference$;
+
   public static JsPromise<BluetoothRemoteGATTService> getPrimaryService(
       final BluetoothRemoteGATTServer $instance, final BluetoothServiceUUID service) {
     return $instance.getPrimaryService( service );

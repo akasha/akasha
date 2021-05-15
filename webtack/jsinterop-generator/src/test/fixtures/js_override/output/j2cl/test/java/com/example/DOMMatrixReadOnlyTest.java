@@ -4,6 +4,8 @@ import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class DOMMatrixReadOnlyTest {
+  static DOMMatrixReadOnly $typeReference$;
+
   public static DOMMatrixReadOnly fromMatrix(final Object other) {
     return DOMMatrixReadOnly.fromMatrix( other );
   }

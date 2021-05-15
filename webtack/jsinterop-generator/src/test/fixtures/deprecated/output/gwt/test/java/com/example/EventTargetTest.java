@@ -4,6 +4,8 @@ import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class EventTargetTest {
+  static EventTarget $typeReference$;
+
   public static void addEventListener(final EventTarget $instance, final String type,
       final EventListener callback, final AddEventListenerOptions options) {
     $instance.addEventListener( type, callback, options );

@@ -4,6 +4,8 @@ import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class MyBooleanTest {
+  static MyBoolean $typeReference$;
+
   public static boolean valueOf(final MyBoolean $instance) {
     return $instance.valueOf();
   }

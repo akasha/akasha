@@ -4,6 +4,8 @@ import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class AudioScheduledSourceNodeTest {
+  static AudioScheduledSourceNode $typeReference$;
+
   public static void start(final AudioScheduledSourceNode $instance, final double when) {
     $instance.start( when );
   }

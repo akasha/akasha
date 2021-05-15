@@ -5,6 +5,8 @@ import jsinterop.base.Any;
 
 @Generated("org.realityforge.webtack")
 public final class WebAssemblyGlobalTest {
+  static WebAssemblyGlobal $typeReference$;
+
   public static Any value(final WebAssemblyGlobal type) {
     return type.value;
   }
