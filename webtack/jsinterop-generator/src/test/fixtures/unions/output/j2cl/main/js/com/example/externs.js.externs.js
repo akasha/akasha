@@ -27,7 +27,7 @@ var BluetoothCharacteristicUUID;
  */
 var OnBufferSourceHandler;
 /**
- * @typedef {function((!Event|!string),!string=,!number=,!number=,*=): *}
+ * @typedef {function(EventOrStringUnion,!string=,!number=,!number=,*=): *}
  */
 var OnErrorEventHandler;
 /**
@@ -57,7 +57,7 @@ var EventListenerOptions;
  */
 var BluetoothDataFilterInit2;
 /**
- * @typedef {{allowedServices:(!string|!Array<!string>),otherServices:(!string|!Array<!string>|undefined),requiredUuids:!Array<(!string|!number)>,uuids:(!Array<(!string|!number)>|undefined)}}
+ * @typedef {{allowedServices:StringOrStringArrayUnion,otherServices:(!StringOrStringArrayUnion|undefined),requiredUuids:!Array<StringOrLongLongUnion>,uuids:(!Array<StringOrOctetUnion>|undefined)}}
  */
 var AllowedBluetoothDevice;
 /**
@@ -103,11 +103,11 @@ BluetoothRemoteGATTServer.prototype.getPrimaryService = function(service) {}
  */
 function SomeInterface(serviceUuid) {}
 /**
- * @return {(!string|!number)}
+ * @return {StringOrUnsignedLongUnion}
  */
 SomeInterface.myStaticMethodWithUnionReturn = function() {}
 /**
- * @return {(!string|!number)}
+ * @return {StringOrUnsignedLongUnion}
  */
 SomeInterface.prototype.getUuid = function() {}
 /**
@@ -183,3 +183,23 @@ function EventTarget() {}
  * @return {undefined}
  */
 EventTarget.prototype.removeEventListener = function(type,options) {}
+/**
+ * @typedef {(!Event|!string)}
+ */
+var EventOrStringUnion;
+/**
+ * @typedef {(!string|!number)}
+ */
+var StringOrUnsignedLongUnion;
+/**
+ * @typedef {(!string|!number)}
+ */
+var StringOrOctetUnion;
+/**
+ * @typedef {(!string|!Array<!string>)}
+ */
+var StringOrStringArrayUnion;
+/**
+ * @typedef {(!string|!number)}
+ */
+var StringOrLongLongUnion;

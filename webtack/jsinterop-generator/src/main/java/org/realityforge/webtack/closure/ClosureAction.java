@@ -49,6 +49,7 @@ import org.realityforge.webtack.model.tools.io.FilesUtil;
 import org.realityforge.webtack.model.tools.spi.PipelineContext;
 import org.realityforge.webtack.model.tools.util.AbstractAction;
 import org.realityforge.webtack.model.tools.util.ExtendedAttributes;
+import org.realityforge.webtack.model.tools.util.NamingUtil;
 
 final class ClosureAction
   extends AbstractAction
@@ -199,6 +200,14 @@ final class ClosureAction
           writeInterface( writer, definition );
         }
       }
+      for ( final Map.Entry<String, UnionType> entry : getUnions().entrySet() )
+      {
+        final String name = entry.getKey();
+        if ( tryRecordGeneratedType( name ) )
+        {
+          writeUnion( writer, NamingUtil.uppercaseFirstCharacter( name ), entry.getValue() );
+        }
+      }
 
       if ( null != _globalInterface )
       {
@@ -301,7 +310,19 @@ final class ClosureAction
           final List<Type> types = new ArrayList<>();
           if ( Kind.Union == type.getKind() )
           {
-            types.addAll( ( (UnionType) type ).getMemberTypes() );
+            final UnionType unionType = (UnionType) type;
+            if ( !unionType.isNoArgsExtendedAttributePresent( "X" ) )
+            {
+              final String typeName = synthesizeUnionType( unionType );
+              types.add( new TypeReference( typeName,
+                                            unionType.getExtendedAttributes(),
+                                            unionType.isNullable(),
+                                            unionType.getSourceLocations() ) );
+            }
+            else
+            {
+              types.addAll( unionType.getMemberTypes() );
+            }
           }
           else
           {
@@ -312,7 +333,7 @@ final class ClosureAction
         }
         else
         {
-          writeType( writer, type );
+          writeType( writer, type, type.isNullable(), true );
         }
       }
 
@@ -350,7 +371,7 @@ final class ClosureAction
       if ( isNotExcluded( attribute ) )
       {
         writer.write( "/** @type {" );
-        writeType( writer, attribute.getType() );
+        writeType( writer, attribute.getType(), attribute.getType().isNullable(), true );
         writer.write( "} */ " );
         writer.write( name );
         writer.write( "." );
@@ -359,6 +380,31 @@ final class ClosureAction
       }
     }
     writeOperations( writer, name, definition.getOperations(), true, s -> false );
+  }
+
+  private void writeUnion( @Nonnull final Writer writer,
+                           @Nonnull final String name,
+                           @Nonnull final UnionType unionType )
+    throws IOException
+  {
+    writer.write( "/**\n * @typedef {(" );
+    final List<Type> memberTypes = unionType.getMemberTypes();
+    boolean first = true;
+    for ( final Type memberType : memberTypes )
+    {
+      if ( !first )
+      {
+        writer.write( "|" );
+      }
+      else
+      {
+        first = false;
+      }
+      writeType( writer, memberType, memberType.isNullable(), true );
+    }
+    writer.write( ")}\n */\nvar " );
+    writer.write( name );
+    writer.write( ";\n" );
   }
 
   private void writeInterface( @Nonnull final Writer writer, @Nonnull final InterfaceDefinition definition )
@@ -927,7 +973,8 @@ final class ClosureAction
     return 1 == types.size() ?
            types.get( 0 ) :
            new UnionType( types,
-                          Collections.emptyList(),
+                          Collections.singletonList( ExtendedAttribute.createExtendedAttributeNoArgs( "X",
+                                                                                                      Collections.emptyList() ) ),
                           types.stream().anyMatch( Type::isNullable ),
                           Collections.emptyList() );
   }
@@ -969,7 +1016,7 @@ final class ClosureAction
     throws IOException
   {
     writer.write( "/** @type {" );
-    writeType( writer, attribute.getType() );
+    writeType( writer, attribute.getType(), attribute.getType().isNullable(), true );
     writer.write( "} */ " );
     if ( null != type )
     {
@@ -1076,7 +1123,7 @@ final class ClosureAction
     writer.write( "/**\n" );
     writeArgumentsJsDoc( writer, arguments );
     writer.write( " * @return {" );
-    writeType( writer, returnType, returnNullable );
+    writeType( writer, returnType, returnNullable, true );
     writer.write( "}\n" );
     if ( override || ( onPrototype && OBJECT_PROTOTYPE_METHODS.contains( name ) ) )
     {
@@ -1141,8 +1188,7 @@ final class ClosureAction
     }
   }
 
-  private void writeArgumentsJsDoc( @Nonnull final Writer writer,
-                                    @Nonnull final List<Argument> arguments )
+  private void writeArgumentsJsDoc( @Nonnull final Writer writer, @Nonnull final List<Argument> arguments )
     throws IOException
   {
     for ( final Argument argument : arguments )
@@ -1193,7 +1239,7 @@ final class ClosureAction
       {
         writer.write( "..." );
       }
-      writeType( writer, argument.getType() );
+      writeType( writer, argument.getType(), argument.getType().isNullable(), true );
       if ( argument.isOptional() )
       {
         writer.write( "=" );
@@ -1201,17 +1247,20 @@ final class ClosureAction
     }
 
     writer.write( "): " );
-    writeType( writer, returnType );
+    writeType( writer, returnType, returnType.isNullable(), true );
     writer.write( "}" );
   }
 
   private void writeType( @Nonnull final Writer writer, @Nonnull final Type type )
     throws IOException
   {
-    writeType( writer, type, type.isNullable() );
+    writeType( writer, type, type.isNullable(), false );
   }
 
-  private void writeType( @Nonnull final Writer writer, @Nonnull final Type type, final boolean nullable )
+  private void writeType( @Nonnull final Writer writer,
+                          @Nonnull final Type type,
+                          final boolean nullable,
+                          final boolean synthesizeUnionTypes )
     throws IOException
   {
     final Kind kind = type.getKind();
@@ -1244,19 +1293,22 @@ final class ClosureAction
       final String sequenceType = type.getIdentValue( ExtendedAttributes.SEQUENCE_TYPE );
       writer.write( null == sequenceType ? "Array" : sequenceType );
       writer.write( "<" );
-      writeType( writer, ( (SequenceType) type ).getItemType() );
+      final Type itemType = ( (SequenceType) type ).getItemType();
+      writeType( writer, itemType, itemType.isNullable(), true );
       writer.write( ">" );
     }
     else if ( Kind.FrozenArray == kind )
     {
       writer.write( "Array<" );
-      writeType( writer, ( (FrozenArrayType) type ).getItemType() );
+      final Type itemType = ( (FrozenArrayType) type ).getItemType();
+      writeType( writer, itemType, itemType.isNullable(), true );
       writer.write( ">" );
     }
     else if ( Kind.Promise == kind )
     {
       writer.write( "Promise<" );
-      writeType( writer, ( (PromiseType) type ).getResolveType() );
+      final Type resolveType = ( (PromiseType) type ).getResolveType();
+      writeType( writer, resolveType, resolveType.isNullable(), true );
       writer.write( ">" );
     }
     else if ( Kind.Object == kind )
@@ -1265,30 +1317,37 @@ final class ClosureAction
     }
     else if ( Kind.Union == kind )
     {
-      writer.write( "(" );
-      final List<Type> memberTypes = ( (UnionType) type ).getMemberTypes();
-      boolean first = true;
-      for ( final Type memberType : memberTypes )
+      final UnionType unionType = (UnionType) type;
+      if ( synthesizeUnionTypes && !unionType.isNoArgsExtendedAttributePresent( "X" ) )
       {
-        if ( !first )
-        {
-          writer.write( "|" );
-        }
-        else
-        {
-          first = false;
-        }
-        writeType( writer, memberType );
+        writer.write( synthesizeUnionType( unionType ) );
       }
-      writer.write( ")" );
+      else
+      {
+        writer.write( "(" );
+        boolean first = true;
+        for ( final Type memberType : unionType.getMemberTypes() )
+        {
+          if ( !first )
+          {
+            writer.write( "|" );
+          }
+          else
+          {
+            first = false;
+          }
+          writeType( writer, memberType, memberType.isNullable(), true );
+        }
+        writer.write( ")" );
+      }
     }
     else if ( Kind.Record == kind )
     {
       final RecordType recordType = (RecordType) type;
       writer.write( "Object<" );
-      writeType( writer, recordType.getKeyType() );
+      writeType( writer, recordType.getKeyType(), recordType.getKeyType().isNullable(), true );
       writer.write( "," );
-      writeType( writer, recordType.getValueType() );
+      writeType( writer, recordType.getValueType(), recordType.getValueType().isNullable(), true );
       writer.write( ">" );
     }
     else
@@ -1307,7 +1366,8 @@ final class ClosureAction
         final ConstEnumerationDefinition constEnumeration = schema.findConstEnumerationByName( name );
         if ( null != constEnumeration )
         {
-          writeType( writer, schema.getConstant( constEnumeration.getValues().get( 0 ) ).getType() );
+          final Type constantType = schema.getConstant( constEnumeration.getValues().get( 0 ) ).getType();
+          writeType( writer, constantType, constantType.isNullable(), true );
         }
         else
         {

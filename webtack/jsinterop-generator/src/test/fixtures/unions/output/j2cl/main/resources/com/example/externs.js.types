@@ -11,6 +11,7 @@ Event
 EventListener2
 EventListener3
 EventListenerOptions
+EventOrStringUnion
 EventTarget
 MyNamedBufferSource
 OnBufferSourceHandler
@@ -18,4 +19,8 @@ OnErrorEventHandler
 SomeDataContainer
 SomeInterface
 SomeServiceContainer
+StringOrLongLongUnion
+StringOrOctetUnion
+StringOrStringArrayUnion
+StringOrUnsignedLongUnion
 txCode

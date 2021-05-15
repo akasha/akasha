@@ -27,4 +27,8 @@ function Blob() {}
  * @nosideeffects
  */
 function SomeStore() {}
-/** @type {(!number|!string)} */ SomeStore.prototype.transactionMode;
+/** @type {LongOrTxModeUnion} */ SomeStore.prototype.transactionMode;
+/**
+ * @typedef {(!number|!string)}
+ */
+var LongOrTxModeUnion;

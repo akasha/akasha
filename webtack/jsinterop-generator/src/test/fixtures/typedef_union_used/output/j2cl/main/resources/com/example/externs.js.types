@@ -2,4 +2,5 @@ Blob
 ClipboardItemData
 ClipboardItemDataType
 ClipboardItemDelayedCallback
+LongOrTxModeUnion
 SomeStore

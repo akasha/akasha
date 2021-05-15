@@ -9,4 +9,6 @@ IDBIndexParameters2
 IDBObjectStore
 IndexedKeyframeOffsetType
 SomeDataType
+StringOrFloatUnion
+StringOrLongLongUnion
 WebAssembly

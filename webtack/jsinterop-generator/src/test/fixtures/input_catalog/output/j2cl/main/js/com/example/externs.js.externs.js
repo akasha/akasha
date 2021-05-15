@@ -70,7 +70,7 @@ function IDBObjectStore() {}
 /** @type {!EventHandler1} */ IDBObjectStore.prototype.handler1;
 /** @type {!EventHandler2} */ IDBObjectStore.prototype.handler2;
 /**
- * @return {(!string|!number)}
+ * @return {StringOrLongLongUnion}
  */
 IDBObjectStore.prototype.returnSomeUnionThatIsPredefined = function() {}
 /**
@@ -86,7 +86,7 @@ IDBObjectStore.prototype.createIndex2 = function(name,options) {}
  */
 IDBObjectStore.prototype.registerListeners = function(eventListener,completionCallback) {}
 /**
- * @return {(!string|!number)}
+ * @return {StringOrFloatUnion}
  */
 IDBObjectStore.prototype.returnSomeUnionThatIsNotPredefined = function() {}
 /**
@@ -102,3 +102,11 @@ IDBObjectStore.prototype.createIndex = function(name,keyPath,options) {}
  * @nosideeffects
  */
 function IDBIndex() {}
+/**
+ * @typedef {(!string|!number)}
+ */
+var StringOrFloatUnion;
+/**
+ * @typedef {(!string|!number)}
+ */
+var StringOrLongLongUnion;
