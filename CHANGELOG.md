@@ -19,6 +19,7 @@
 * Fix the definition of `DataView` to remove the `length` property that does not exist.
 * Correct the return type of the `Atomics.isLockFree()` operation to be a `boolean`.
 * Remove the `ArrayBufferView.length` property from the hand-crafted interface as it is not common to `DataView` type that implements the interface.
+* Remove the named element getters and setters declared on the typed array types as they do exist in underlying javascript types and invoking them resulted in errors.
 
 ### [v0.10](https://github.com/akasha/akasha/tree/v0.10) (2021-04-22) · [Full Changelog](https://github.com/spritz/spritz/compare/v0.09...v0.10) · [API Differences](https://akasha.github.io/akasha-java/api-diff/?key=akasha-java&old=0.09&new=0.10) · [Source Diff](https://github.com/akasha/akasha-java/compare/v0.09...v0.10)
 
