@@ -14,7 +14,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "Sub1"
 )
 public interface Sub1 extends Base {
   @JsOverlay
@@ -40,7 +40,7 @@ public interface Sub1 extends Base {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "Sub1"
   )
   interface Builder extends Sub1 {
     @JsOverlay

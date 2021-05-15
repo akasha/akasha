@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "AllowedBluetoothDevice"
 )
 public interface AllowedBluetoothDevice {
   @JsOverlay
@@ -136,7 +136,7 @@ public interface AllowedBluetoothDevice {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "AllowedBluetoothDevice"
   )
   interface Builder extends AllowedBluetoothDevice {
     @JsOverlay

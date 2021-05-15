@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "MyDictionary1"
 )
 public interface MyDictionary1 {
   @JsOverlay
@@ -157,7 +157,7 @@ public interface MyDictionary1 {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "MyDictionary1"
   )
   interface Builder extends MyDictionary1 {
     @JsOverlay

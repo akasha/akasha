@@ -11,7 +11,7 @@ import jsinterop.base.Js;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "?"
+    name = "BluetoothDescriptorUUID"
 )
 public interface BluetoothDescriptorUUID {
   @JsOverlay

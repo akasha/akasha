@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "Dictionary_requiredUnsignedLongLongValue"
 )
 public interface Dictionary_requiredUnsignedLongLongValue {
   @JsOverlay
@@ -34,7 +34,7 @@ public interface Dictionary_requiredUnsignedLongLongValue {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "Dictionary_requiredUnsignedLongLongValue"
   )
   interface Builder extends Dictionary_requiredUnsignedLongLongValue {
     @JsOverlay

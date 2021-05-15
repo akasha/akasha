@@ -14,7 +14,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "StorageEventInit"
 )
 public interface StorageEventInit extends EventInit {
   @JsOverlay
@@ -71,7 +71,7 @@ public interface StorageEventInit extends EventInit {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "StorageEventInit"
   )
   interface Builder extends StorageEventInit {
     @JsOverlay

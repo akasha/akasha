@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "Dictionary_requiredDoubleFrozenArrayValue"
 )
 public interface Dictionary_requiredDoubleFrozenArrayValue {
   @JsOverlay
@@ -35,7 +35,7 @@ public interface Dictionary_requiredDoubleFrozenArrayValue {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "Dictionary_requiredDoubleFrozenArrayValue"
   )
   interface Builder extends Dictionary_requiredDoubleFrozenArrayValue {
     @JsOverlay

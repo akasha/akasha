@@ -14,7 +14,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "Dictionary_requiredNullableSomeTypeValue"
 )
 public interface Dictionary_requiredNullableSomeTypeValue {
   @JsOverlay
@@ -36,7 +36,7 @@ public interface Dictionary_requiredNullableSomeTypeValue {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "Dictionary_requiredNullableSomeTypeValue"
   )
   interface Builder extends Dictionary_requiredNullableSomeTypeValue {
     @JsOverlay

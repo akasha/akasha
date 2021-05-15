@@ -16,7 +16,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "EventInit"
 )
 @Deprecated
 public interface EventInit {
@@ -49,7 +49,7 @@ public interface EventInit {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "EventInit"
   )
   @Deprecated
   interface Builder extends EventInit {

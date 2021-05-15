@@ -14,7 +14,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "Dictionary_requiredBooleanSequenceValue"
 )
 public interface Dictionary_requiredBooleanSequenceValue {
   @JsOverlay
@@ -48,7 +48,7 @@ public interface Dictionary_requiredBooleanSequenceValue {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "Dictionary_requiredBooleanSequenceValue"
   )
   interface Builder extends Dictionary_requiredBooleanSequenceValue {
     @JsOverlay

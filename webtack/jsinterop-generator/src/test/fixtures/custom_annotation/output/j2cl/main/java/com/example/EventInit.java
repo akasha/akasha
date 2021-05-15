@@ -14,7 +14,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "EventInit"
 )
 @MyAnnotation
 public interface EventInit {
@@ -37,7 +37,7 @@ public interface EventInit {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "EventInit"
   )
   @MyAnnotation
   interface Builder extends EventInit {

@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "ClipboardItemOptions"
 )
 public interface ClipboardItemOptions {
   @JsOverlay
@@ -34,7 +34,7 @@ public interface ClipboardItemOptions {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "ClipboardItemOptions"
   )
   interface Builder extends ClipboardItemOptions {
     @JsOverlay

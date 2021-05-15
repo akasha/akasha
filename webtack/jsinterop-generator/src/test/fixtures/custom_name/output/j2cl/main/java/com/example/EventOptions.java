@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "EventInit"
 )
 public interface EventOptions {
   @JsOverlay
@@ -50,7 +50,7 @@ public interface EventOptions {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "EventInit"
   )
   interface Builder extends EventOptions {
     @JsOverlay

@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "Dictionary_requiredBooleanFrozenArrayValue"
 )
 public interface Dictionary_requiredBooleanFrozenArrayValue {
   @JsOverlay
@@ -36,7 +36,7 @@ public interface Dictionary_requiredBooleanFrozenArrayValue {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "Dictionary_requiredBooleanFrozenArrayValue"
   )
   interface Builder extends Dictionary_requiredBooleanFrozenArrayValue {
     @JsOverlay

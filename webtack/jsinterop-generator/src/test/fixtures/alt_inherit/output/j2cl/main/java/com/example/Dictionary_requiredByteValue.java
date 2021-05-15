@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "Dictionary_requiredByteValue"
 )
 public interface Dictionary_requiredByteValue {
   @JsOverlay
@@ -34,7 +34,7 @@ public interface Dictionary_requiredByteValue {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "Dictionary_requiredByteValue"
   )
   interface Builder extends Dictionary_requiredByteValue {
     @JsOverlay

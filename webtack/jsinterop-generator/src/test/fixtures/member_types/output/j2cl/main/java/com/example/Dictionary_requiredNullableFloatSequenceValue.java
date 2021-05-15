@@ -14,7 +14,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "Dictionary_requiredNullableFloatSequenceValue"
 )
 public interface Dictionary_requiredNullableFloatSequenceValue {
   @JsOverlay
@@ -49,7 +49,7 @@ public interface Dictionary_requiredNullableFloatSequenceValue {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "Dictionary_requiredNullableFloatSequenceValue"
   )
   interface Builder extends Dictionary_requiredNullableFloatSequenceValue {
     @JsOverlay

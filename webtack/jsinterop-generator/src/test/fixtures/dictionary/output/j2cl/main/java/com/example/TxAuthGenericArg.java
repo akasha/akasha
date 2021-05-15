@@ -16,7 +16,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "txAuthGenericArg"
 )
 public interface TxAuthGenericArg {
   @JsOverlay
@@ -41,7 +41,7 @@ public interface TxAuthGenericArg {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "txAuthGenericArg"
   )
   interface Builder extends TxAuthGenericArg {
     @JsOverlay

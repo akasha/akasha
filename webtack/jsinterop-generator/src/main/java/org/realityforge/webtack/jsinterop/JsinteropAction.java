@@ -796,7 +796,7 @@ final class JsinteropAction
                           .builder( JsinteropTypes.JS_TYPE )
                           .addMember( "isNative", "true" )
                           .addMember( "namespace", "$T.GLOBAL", JsinteropTypes.JS_PACKAGE )
-                          .addMember( "name", "$S", "?" )
+                          .addMember( "name", "$S", OutputType.gwt == _outputType ? "?" : idlName )
                           .build() );
 
     additionalAnnotations.forEach( type::addAnnotation );
@@ -1005,7 +1005,7 @@ final class JsinteropAction
                           .builder( JsinteropTypes.JS_TYPE )
                           .addMember( "isNative", "true" )
                           .addMember( "namespace", "$T.GLOBAL", JsinteropTypes.JS_PACKAGE )
-                          .addMember( "name", "$S", "Object" )
+                          .addMember( "name", "$S", OutputType.gwt == _outputType ? "Object" : definition.getName() )
                           .build() );
     maybeAddCustomAnnotations( definition, type );
     maybeAddJavadoc( definition, type );
@@ -1046,7 +1046,7 @@ final class JsinteropAction
     type.addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_TYPE )
                           .addMember( "isNative", "true" )
                           .addMember( "namespace", "$T.GLOBAL", JsinteropTypes.JS_PACKAGE )
-                          .addMember( "name", "$S", "Object" )
+                          .addMember( "name", "$S", OutputType.gwt == _outputType ? "Object" : definition.getName() )
                           .build() );
     maybeAddCustomAnnotations( definition, type );
     maybeAddJavadoc( definition, type );
@@ -1571,6 +1571,7 @@ final class JsinteropAction
       throw new UnsupportedOperationException( "setlike not yet supported in code generator" );
     }
     final boolean noPublicSymbol =
+      OutputType.gwt == _outputType &&
       definition.isNoArgsExtendedAttributePresent( ExtendedAttributes.LEGACY_NO_INTERFACE_OBJECT );
     type.addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_TYPE )
                           .addMember( "isNative", "true" )
@@ -2593,7 +2594,8 @@ final class JsinteropAction
   @Nonnull
   private String deriveJavascriptName( @Nonnull final InterfaceDefinition definition )
   {
-    if ( definition.isNoArgsExtendedAttributePresent( ExtendedAttributes.LEGACY_NO_INTERFACE_OBJECT ) )
+    if ( OutputType.gwt == _outputType &&
+         definition.isNoArgsExtendedAttributePresent( ExtendedAttributes.LEGACY_NO_INTERFACE_OBJECT ) )
     {
       return "Object";
     }

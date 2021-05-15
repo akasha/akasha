@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "ElementCreationOptions"
 )
 public interface ElementCreationOptions {
   @JsOverlay
@@ -34,7 +34,7 @@ public interface ElementCreationOptions {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "ElementCreationOptions"
   )
   interface Builder extends ElementCreationOptions {
     @JsOverlay

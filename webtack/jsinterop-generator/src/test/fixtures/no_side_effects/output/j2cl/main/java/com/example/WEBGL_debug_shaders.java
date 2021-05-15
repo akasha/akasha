@@ -10,7 +10,7 @@ import jsinterop.annotations.JsType;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "WEBGL_debug_shaders"
 )
 public class WEBGL_debug_shaders {
   protected WEBGL_debug_shaders() {

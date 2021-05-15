@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "TransitionEventInit"
 )
 public interface TransitionEventInit extends EventInit {
   @JsOverlay
@@ -50,7 +50,7 @@ public interface TransitionEventInit extends EventInit {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "TransitionEventInit"
   )
   interface Builder extends TransitionEventInit {
     @JsOverlay

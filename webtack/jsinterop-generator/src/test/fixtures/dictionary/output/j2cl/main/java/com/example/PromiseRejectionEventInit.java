@@ -16,7 +16,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "PromiseRejectionEventInit"
 )
 public interface PromiseRejectionEventInit extends EventInit {
   @JsOverlay
@@ -47,7 +47,7 @@ public interface PromiseRejectionEventInit extends EventInit {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "PromiseRejectionEventInit"
   )
   interface Builder extends PromiseRejectionEventInit {
     @JsOverlay

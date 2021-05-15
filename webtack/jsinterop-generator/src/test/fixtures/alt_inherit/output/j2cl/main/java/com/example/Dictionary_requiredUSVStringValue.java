@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "Dictionary_requiredUSVStringValue"
 )
 public interface Dictionary_requiredUSVStringValue {
   @JsOverlay
@@ -35,7 +35,7 @@ public interface Dictionary_requiredUSVStringValue {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "Dictionary_requiredUSVStringValue"
   )
   interface Builder extends Dictionary_requiredUSVStringValue {
     @JsOverlay

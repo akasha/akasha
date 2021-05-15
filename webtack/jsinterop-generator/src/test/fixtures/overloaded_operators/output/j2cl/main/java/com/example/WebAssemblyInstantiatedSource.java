@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "WebAssemblyInstantiatedSource"
 )
 public interface WebAssemblyInstantiatedSource {
   @JsOverlay
@@ -44,7 +44,7 @@ public interface WebAssemblyInstantiatedSource {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "WebAssemblyInstantiatedSource"
   )
   interface Builder extends WebAssemblyInstantiatedSource {
     @JsOverlay

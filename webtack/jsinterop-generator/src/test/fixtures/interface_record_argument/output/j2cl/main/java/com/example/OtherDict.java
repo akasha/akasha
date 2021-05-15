@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "OtherDict"
 )
 public interface OtherDict {
   @JsOverlay
@@ -34,7 +34,7 @@ public interface OtherDict {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "OtherDict"
   )
   interface Builder extends OtherDict {
     @JsOverlay

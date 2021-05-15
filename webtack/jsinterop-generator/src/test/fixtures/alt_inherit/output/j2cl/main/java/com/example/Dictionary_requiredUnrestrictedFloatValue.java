@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "Dictionary_requiredUnrestrictedFloatValue"
 )
 public interface Dictionary_requiredUnrestrictedFloatValue {
   @JsOverlay
@@ -34,7 +34,7 @@ public interface Dictionary_requiredUnrestrictedFloatValue {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "Dictionary_requiredUnrestrictedFloatValue"
   )
   interface Builder extends Dictionary_requiredUnrestrictedFloatValue {
     @JsOverlay

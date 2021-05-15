@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "Dictionary_requiredUnrestrictedDoubleValue"
 )
 public interface Dictionary_requiredUnrestrictedDoubleValue {
   @JsOverlay
@@ -34,7 +34,7 @@ public interface Dictionary_requiredUnrestrictedDoubleValue {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "Dictionary_requiredUnrestrictedDoubleValue"
   )
   interface Builder extends Dictionary_requiredUnrestrictedDoubleValue {
     @JsOverlay

@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "AudioWorkletNodeOptions"
 )
 public interface AudioWorkletNodeOptions {
   @JsOverlay
@@ -122,7 +122,7 @@ public interface AudioWorkletNodeOptions {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "AudioWorkletNodeOptions"
   )
   interface Builder extends AudioWorkletNodeOptions {
     @JsOverlay

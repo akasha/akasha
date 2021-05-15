@@ -16,7 +16,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "OptionalAnyDict"
 )
 public interface OptionalAnyDict extends RequiredAnyDict {
   @JsOverlay
@@ -38,7 +38,7 @@ public interface OptionalAnyDict extends RequiredAnyDict {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "OptionalAnyDict"
   )
   interface Builder extends OptionalAnyDict {
     @JsOverlay

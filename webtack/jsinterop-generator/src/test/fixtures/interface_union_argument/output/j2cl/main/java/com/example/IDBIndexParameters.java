@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "IDBIndexParameters"
 )
 public interface IDBIndexParameters {
   @JsOverlay
@@ -42,7 +42,7 @@ public interface IDBIndexParameters {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "IDBIndexParameters"
   )
   interface Builder extends IDBIndexParameters {
     @JsOverlay

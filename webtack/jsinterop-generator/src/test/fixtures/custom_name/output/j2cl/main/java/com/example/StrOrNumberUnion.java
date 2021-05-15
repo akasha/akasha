@@ -11,7 +11,7 @@ import jsinterop.base.Js;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "?"
+    name = "MyTypedefedUnion"
 )
 public interface StrOrNumberUnion {
   @JsOverlay

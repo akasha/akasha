@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "RTCCertificateStats"
 )
 public interface RTCCertificateStats {
   @JsOverlay
@@ -42,7 +42,7 @@ public interface RTCCertificateStats {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "RTCCertificateStats"
   )
   interface Builder extends RTCCertificateStats {
     @JsOverlay

@@ -16,7 +16,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "WaveShaperOptions"
 )
 public interface WaveShaperOptions {
   @JsOverlay
@@ -41,7 +41,7 @@ public interface WaveShaperOptions {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "WaveShaperOptions"
   )
   interface Builder extends WaveShaperOptions {
     @JsOverlay

@@ -14,7 +14,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "Dictionary_requiredFloatFrozenArrayValue"
 )
 public interface Dictionary_requiredFloatFrozenArrayValue {
   @JsOverlay
@@ -36,7 +36,7 @@ public interface Dictionary_requiredFloatFrozenArrayValue {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "Dictionary_requiredFloatFrozenArrayValue"
   )
   interface Builder extends Dictionary_requiredFloatFrozenArrayValue {
     @JsOverlay

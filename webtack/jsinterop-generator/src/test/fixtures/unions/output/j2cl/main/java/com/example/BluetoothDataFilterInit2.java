@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "BluetoothDataFilterInit2"
 )
 public interface BluetoothDataFilterInit2 {
   @JsOverlay
@@ -235,7 +235,7 @@ public interface BluetoothDataFilterInit2 {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "BluetoothDataFilterInit2"
   )
   interface Builder extends BluetoothDataFilterInit2 {
     @JsOverlay

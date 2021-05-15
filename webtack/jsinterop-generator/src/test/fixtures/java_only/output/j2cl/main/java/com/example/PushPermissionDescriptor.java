@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "PushPermissionDescriptor"
 )
 public interface PushPermissionDescriptor extends PermissionDescriptor {
   @JsOverlay
@@ -34,7 +34,7 @@ public interface PushPermissionDescriptor extends PermissionDescriptor {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "PushPermissionDescriptor"
   )
   interface Builder extends PushPermissionDescriptor {
     @JsOverlay

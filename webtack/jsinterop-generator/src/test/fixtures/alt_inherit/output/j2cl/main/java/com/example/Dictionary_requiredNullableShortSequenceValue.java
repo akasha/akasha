@@ -15,7 +15,7 @@ import jsinterop.base.JsPropertyMap;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "Dictionary_requiredNullableShortSequenceValue"
 )
 public interface Dictionary_requiredNullableShortSequenceValue {
   @JsOverlay
@@ -50,7 +50,7 @@ public interface Dictionary_requiredNullableShortSequenceValue {
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
-      name = "Object"
+      name = "Dictionary_requiredNullableShortSequenceValue"
   )
   interface Builder extends Dictionary_requiredNullableShortSequenceValue {
     @JsOverlay
