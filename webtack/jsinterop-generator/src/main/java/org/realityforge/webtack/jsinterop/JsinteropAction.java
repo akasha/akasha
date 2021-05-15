@@ -88,7 +88,7 @@ final class JsinteropAction
   private final boolean _generateGwtModule;
   private final boolean _generateJ2clCompileTest;
   private final boolean _generateTypeMapping;
-  private final boolean _generateGenerateGlobal;
+  private final boolean _generateGlobal;
   @Nonnull
   private final Set<String> _modulesToRequireInCompileTest = new HashSet<>();
   @Nonnull
@@ -105,7 +105,7 @@ final class JsinteropAction
                    final boolean generateJ2clCompileTest,
                    @Nonnull final List<String> gwtInherits,
                    final boolean generateTypeMapping,
-                   final boolean generateGenerateGlobal,
+                   final boolean generateGlobal,
                    final boolean enableMagicConstants )
   {
     super( context,
@@ -119,7 +119,7 @@ final class JsinteropAction
     _generateJ2clCompileTest = generateJ2clCompileTest;
     _gwtInherits = Objects.requireNonNull( gwtInherits );
     _generateTypeMapping = generateTypeMapping;
-    _generateGenerateGlobal = generateGenerateGlobal;
+    _generateGlobal = generateGlobal;
     for ( final Path path : extraClosureModulesToRequireInCompileTestPaths )
     {
       try
@@ -250,7 +250,7 @@ final class JsinteropAction
     {
       generateGlobalType( _globalInterface );
     }
-    if ( _generateGenerateGlobal )
+    if ( _generateGlobal )
     {
       generateGlobalType();
     }
