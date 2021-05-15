@@ -18,6 +18,7 @@
 * Generate classes to test compatibility of jsinterop annotated java classes and closure externs. This involves generating a java class for relevant WebIDL elements that interacts with operations and attributes on the element. These "compile test" classes are the compiled by J2CL and passed to the closure compiler to ensure no warnings or errors are generated. Fixes #31.
 * Fix the definition of `DataView` to remove the `length` property that does not exist.
 * Correct the return type of the `Atomics.isLockFree()` operation to be a `boolean`.
+* Remove the `ArrayBufferView.length` property from the hand-crafted interface as it is not common to `DataView` type that implements the interface.
 
 ### [v0.10](https://github.com/akasha/akasha/tree/v0.10) (2021-04-22) · [Full Changelog](https://github.com/spritz/spritz/compare/v0.09...v0.10) · [API Differences](https://akasha.github.io/akasha-java/api-diff/?key=akasha-java&old=0.09&new=0.10) · [Source Diff](https://github.com/akasha/akasha-java/compare/v0.09...v0.10)
 

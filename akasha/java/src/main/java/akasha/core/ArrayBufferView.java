@@ -33,10 +33,4 @@ public interface ArrayBufferView
    */
   @JsProperty( name = "byteOffset" )
   int byteOffset();
-
-  /**
-   * The length accessor property represents the length (in elements) of a ArrayBufferView.
-   */
-  @JsProperty( name = "length" )
-  int length();
 }
