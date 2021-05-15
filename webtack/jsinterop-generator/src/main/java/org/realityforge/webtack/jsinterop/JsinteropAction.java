@@ -3701,7 +3701,7 @@ final class JsinteropAction
       final InterfaceDefinition global = schema.getInterfaceByName( _globalInterface );
       tryRegisterIdlToJavaTypeMapping( "$Global" + global.getName(), deriveJavaType( global, "", "Global" ) );
     }
-    if ( _generateGenerateGlobal )
+    if ( _generateGlobal )
     {
       tryRegisterIdlToJavaTypeMapping( "$Global", getPackageName() + ".Global" );
     }
