@@ -146,6 +146,12 @@ public final class JsinteropActionFactory
     final List<Path> extraClosureModulesToRequireInCompileTestPaths = new ArrayList<>();
     if ( null != extraClosureModulesToRequireInCompileTest )
     {
+      if ( OutputType.j2cl != outputType && !extraClosureModulesToRequireInCompileTest.isEmpty() )
+      {
+        throw new IllegalArgumentException( "Jsinterop action configuration did not specify 'j2cl' outputType " +
+                                            "but specified values in the extraClosureModulesToRequireInCompileTest " +
+                                            "configuration: " + extraClosureModulesToRequireInCompileTest );
+      }
       for ( final String typeCatalog : extraClosureModulesToRequireInCompileTest )
       {
         final Path file = Paths.get( typeCatalog );
@@ -164,6 +170,11 @@ public final class JsinteropActionFactory
       }
     }
 
+    if ( OutputType.gwt != outputType && ( null != gwtInherits && !gwtInherits.isEmpty() ) )
+    {
+      throw new IllegalArgumentException( "Jsinterop action configuration did not specify 'gwt' outputType " +
+                                          "but specified values in the gwtInherits configuration: " + gwtInherits );
+    }
     return new JsinteropAction( context,
                                 outputType,
                                 Paths.get( outputDirectory ),
