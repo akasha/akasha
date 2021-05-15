@@ -1,0 +1,15 @@
+ArrayBufferView=com.example.ArrayBufferView
+Blob=com.example.Blob
+ClipboardItemDataType=com.example.ClipboardItemDataType
+DataView=com.example.DataView
+Float32Array=com.example.Float32Array
+Float64Array=com.example.Float64Array
+IndexedKeyframeOffsetType=com.example.IndexedKeyframeOffsetType
+Int16Array=com.example.Int16Array
+Int32Array=com.example.Int32Array
+Int8Array=com.example.Int8Array
+Sequence=com.example.JsArray
+Uint16Array=com.example.Uint16Array
+Uint32Array=com.example.Uint32Array
+Uint8Array=com.example.Uint8Array
+Uint8ClampedArray=com.example.Uint8ClampedArray

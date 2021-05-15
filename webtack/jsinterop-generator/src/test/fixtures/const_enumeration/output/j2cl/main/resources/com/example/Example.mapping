@@ -1,0 +1,8 @@
+EXT_color_buffer_float=com.example.EXT_color_buffer_float
+EXT_float_blend=com.example.EXT_float_blend
+KHR_parallel_shader_compile=com.example.KHR_parallel_shader_compile
+ReadyStateType2=com.example.req.ReadyStateType2b
+ReadyStateType=com.example.ReadyStateType
+WebGLExtensionName=com.example.WebGLExtensionName
+XMLHttpRequest2=com.example.req.XMLHR2
+XMLHttpRequest=com.example.XMLHttpRequest

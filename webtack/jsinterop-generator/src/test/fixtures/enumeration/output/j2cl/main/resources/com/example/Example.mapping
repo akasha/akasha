@@ -1,0 +1,10 @@
+OverSampleType=com.example.OverSampleType
+PermissionState=com.example.PermissionState
+PermissionStatus=com.example.PermissionStatus
+SomeCallbackHandler=com.example.SomeCallbackHandler
+SpeechRecognitionErrorCode=com.example.SpeechRecognitionErrorCode
+SpeechRecognitionErrorEventInit=com.example.SpeechRecognitionErrorEventInit
+WaveShaperNode=com.example.WaveShaperNode
+WaveShaperOptions=com.example.WaveShaperOptions
+XMLHttpRequestResponseType=com.example.XMLHttpRequestResponseType
+txMode=com.example.TxMode

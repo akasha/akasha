@@ -1,0 +1,7 @@
+ArrayBuffer=com.example.ArrayBuffer
+CompileError=com.example.web_assembly.CompileError
+Global=com.example.web_assembly.Global
+GlobalDescriptor=com.example.GlobalDescriptor
+Module=com.example.web_assembly.Module
+Promise=com.example.JsPromise
+WebAssembly=com.example.WebAssembly

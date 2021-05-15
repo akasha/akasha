@@ -1,0 +1,9 @@
+CSS=com.example.CSS
+Event=com.example.Event
+EventInit=com.example.EventInit
+EventListener=com.example.EventListener
+MyEventHandler=com.example.MyEventHandler
+MyTypedefedUnion=com.example.MyTypedefedUnion
+PermissionState=com.example.PermissionState
+WebGL2RenderingContext=com.example.WebGL2RenderingContext
+WebGLShader=com.example.WebGLShader

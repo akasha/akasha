@@ -1,0 +1,12 @@
+DOMTokenList=com.example.DOMTokenList
+Headers=com.example.Headers
+Iterable=com.example.JsIterable
+Iterator=com.example.JsIterator
+Object=com.example.Object
+RTCStatsReport=com.example.RTCStatsReport
+Sequence=com.example.JsArray
+SomeMapLikeDefiningOverrides=com.example.SomeMapLikeDefiningOverrides
+SomeOtherType=com.example.SomeOtherType
+SpeechSynthesis=com.example.SpeechSynthesis
+Window=com.example.Window
+rtcThingie=com.example.RtcThingie

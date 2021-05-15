@@ -1,0 +1,5 @@
+AudioBufferSourceNode=com.example.AudioBufferSourceNode
+AudioScheduledSourceNode=com.example.AudioScheduledSourceNode
+DOMMatrix=com.example.DOMMatrix
+DOMMatrixReadOnly=com.example.DOMMatrixReadOnly
+Object=com.example.Object

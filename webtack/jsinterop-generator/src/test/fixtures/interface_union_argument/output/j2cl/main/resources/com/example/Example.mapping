@@ -1,0 +1,4 @@
+IDBIndex=com.example.IDBIndex
+IDBIndexParameters=com.example.IDBIndexParameters
+IDBObjectStore=com.example.IDBObjectStore
+Sequence=com.example.JsArray

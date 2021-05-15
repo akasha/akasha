@@ -1,0 +1,7 @@
+CSS=com.example.mynamespaces.CSS
+Event=com.example.myinterfaces.Event
+EventInit=com.example.mydictionaries.EventInit
+EventListener=com.example.mycallbackinterfaces.EventListener
+MyEventHandler=com.example.mycallbacks.MyEventHandler
+MyTypedefedUnion=com.example.mytypedefs.MyTypedefedUnion
+PermissionState=com.example.myenumerations.PermissionState

@@ -1,0 +1,71 @@
+package com.example;
+
+import javax.annotation.Generated;
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+import jsinterop.annotations.JsOverlay;
+import jsinterop.annotations.JsPackage;
+import jsinterop.annotations.JsProperty;
+import jsinterop.annotations.JsType;
+import jsinterop.base.Js;
+import jsinterop.base.JsPropertyMap;
+
+@Generated("org.realityforge.webtack")
+@JsType(
+    isNative = true,
+    namespace = JsPackage.GLOBAL,
+    name = "Object"
+)
+public interface Dictionary_requiredNullableBooleanSequenceValue {
+  @JsOverlay
+  @Nonnull
+  static Builder create(@Nullable final JsArray<Boolean> requiredNullableBooleanSequenceValue) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredNullableBooleanSequenceValue( requiredNullableBooleanSequenceValue );
+  }
+
+  @JsOverlay
+  @Nonnull
+  static Builder create(@Nullable final Boolean[] requiredNullableBooleanSequenceValue) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredNullableBooleanSequenceValue( requiredNullableBooleanSequenceValue );
+  }
+
+  @JsProperty(
+      name = "requiredNullableBooleanSequenceValue"
+  )
+  @Nullable
+  JsArray<Boolean> requiredNullableBooleanSequenceValue();
+
+  @JsProperty
+  void setRequiredNullableBooleanSequenceValue(
+      @Nullable JsArray<Boolean> requiredNullableBooleanSequenceValue);
+
+  @JsOverlay
+  default void setRequiredNullableBooleanSequenceValue(
+      @Nullable final Boolean... requiredNullableBooleanSequenceValue) {
+    setRequiredNullableBooleanSequenceValue( Js.<JsArray<Boolean>>uncheckedCast( requiredNullableBooleanSequenceValue ) );
+  }
+
+  @Generated("org.realityforge.webtack")
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends Dictionary_requiredNullableBooleanSequenceValue {
+    @JsOverlay
+    @Nonnull
+    default Builder requiredNullableBooleanSequenceValue(
+        @Nullable final JsArray<Boolean> requiredNullableBooleanSequenceValue) {
+      setRequiredNullableBooleanSequenceValue( requiredNullableBooleanSequenceValue );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder requiredNullableBooleanSequenceValue(
+        @Nullable final Boolean... requiredNullableBooleanSequenceValue) {
+      setRequiredNullableBooleanSequenceValue( requiredNullableBooleanSequenceValue );
+      return this;
+    }
+  }
+}

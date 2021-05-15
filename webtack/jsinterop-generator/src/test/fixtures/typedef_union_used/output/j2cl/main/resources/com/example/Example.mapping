@@ -1,0 +1,7 @@
+Blob=com.example.Blob
+ClipboardItemDataType=com.example.ClipboardItemDataType
+ClipboardItemDelayedCallback=com.example.ClipboardItemDelayedCallback
+LongOrTxModeUnion=com.example.LongOrTxModeUnion
+Promise=com.example.JsPromise
+SomeStore=com.example.SomeStore
+txMode=com.example.TxMode

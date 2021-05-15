@@ -1,0 +1,7 @@
+$GlobalWindow=com.example.WindowGlobal
+ArrayBuffer=com.example.ArrayBuffer
+CSS=com.example.CSS
+Math=com.example.JsMath
+WebAssembly=com.example.WebAssembly
+Window=com.example.Window
+console=com.example.Console

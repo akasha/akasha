@@ -1,0 +1,5 @@
+ImageBitmap=com.example.ImageBitmap
+MessagePort=com.example.MessagePort
+Object=com.example.Object
+PostMessageOptions=com.example.PostMessageOptions
+Sequence=com.example.JsArray
