@@ -19,6 +19,11 @@ public final class JsinteropActionFactory
   implements ActionFactory
 {
   /**
+   * The expected consumer of the generate classes. There are slightly different strategies depending on whether
+   * the code is being generated for GWT or J2CL consumers.
+   */
+  public OutputType outputType = OutputType.gwt;
+  /**
    * The base directory in which to generate code.
    */
   public String outputDirectory;
@@ -46,10 +51,6 @@ public final class JsinteropActionFactory
    * A list of inherits to add to the generated to the generated gwt module.
    */
   public List<String> gwtInherits;
-  /**
-   * A flag controlling whether the gwt module descriptor is generated.
-   */
-  public boolean generateGwtModule = true;
   /**
    * A flag controlling whether a closure module is generated that
    * requires modules that j2cl will generate. This is used to help
@@ -163,13 +164,13 @@ public final class JsinteropActionFactory
     }
 
     return new JsinteropAction( context,
+                                outputType,
                                 Paths.get( outputDirectory ),
                                 packageName,
                                 globalInterface,
                                 predefinedTypeMappingPaths,
                                 externalTypeMappingPaths,
                                 extraClosureModulesToRequireInCompileTestPaths,
-                                generateGwtModule,
                                 generateJ2clCompileTest,
                                 null == gwtInherits ? Collections.emptyList() : gwtInherits,
                                 generateTypeMapping,

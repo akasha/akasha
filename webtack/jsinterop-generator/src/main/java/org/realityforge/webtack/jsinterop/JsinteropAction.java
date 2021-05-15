@@ -81,11 +81,12 @@ final class JsinteropAction
    */
   @Nonnull
   private final Pattern _linkMatcher = Pattern.compile( "\\{@link ([^ }]*)" );
+  @Nonnull
+  private final OutputType _outputType;
   @Nullable
   private final String _globalInterface;
   @Nonnull
   private final List<String> _gwtInherits;
-  private final boolean _generateGwtModule;
   private final boolean _generateJ2clCompileTest;
   private final boolean _generateTypeMapping;
   private final boolean _generateGlobal;
@@ -95,13 +96,13 @@ final class JsinteropAction
   private final Set<String> _extraModulesToRequireInCompileTest = new HashSet<>();
 
   JsinteropAction( @Nonnull final PipelineContext context,
+                   @Nonnull final OutputType outputType,
                    @Nonnull final Path outputDirectory,
                    @Nonnull final String packageName,
                    @Nullable final String globalInterface,
                    @Nonnull final List<Path> predefinedTypeMappingPaths,
                    @Nonnull final List<Path> externalTypeMappingPaths,
                    @Nonnull final List<Path> extraClosureModulesToRequireInCompileTestPaths,
-                   final boolean generateGwtModule,
                    final boolean generateJ2clCompileTest,
                    @Nonnull final List<String> gwtInherits,
                    final boolean generateTypeMapping,
@@ -114,8 +115,8 @@ final class JsinteropAction
            enableMagicConstants,
            predefinedTypeMappingPaths,
            externalTypeMappingPaths );
+    _outputType = Objects.requireNonNull( outputType );
     _globalInterface = globalInterface;
-    _generateGwtModule = generateGwtModule;
     _generateJ2clCompileTest = generateJ2clCompileTest;
     _gwtInherits = Objects.requireNonNull( gwtInherits );
     _generateTypeMapping = generateTypeMapping;
@@ -241,7 +242,7 @@ final class JsinteropAction
       }
     }
 
-    if ( _generateGwtModule )
+    if ( OutputType.gwt == _outputType )
     {
       writeGwtModule();
     }
