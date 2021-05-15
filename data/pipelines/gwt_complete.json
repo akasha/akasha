@@ -4,9 +4,6 @@
     {
       "name": "Jsinterop",
       "config": {
-        "extraClosureModulesToRequireInCompileTest": [
-          "data/pipelines/complete_closure_modules.txt"
-        ],
         "externalTypeMapping": [
           "data/pipelines/types.mapping"
         ],
@@ -23,17 +20,6 @@
       "name": "Emit",
       "config": {
         "filePattern": "akasha/java/generated/webtack/main/resources/akasha/Akasha.webidl"
-      }
-    },
-    {
-      "name": "Closure",
-      "config": {
-        "outputDirectory": "akasha/java/generated/webtack",
-        "key": "akasha/Akasha",
-        "predefinedTypeCatalogs": [
-          "data/pipelines/predefined_js_types.types"
-        ],
-        "globalInterface": "Window"
       }
     }
   ]

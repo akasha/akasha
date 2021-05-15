@@ -1,0 +1,41 @@
+{
+  "pre": ["base"],
+  "stages": [
+    {
+      "name": "Jsinterop",
+      "config": {
+        "outputType": "j2cl",
+        "extraClosureModulesToRequireInCompileTest": [
+          "data/pipelines/complete_closure_modules.txt"
+        ],
+        "externalTypeMapping": [
+          "data/pipelines/types.mapping"
+        ],
+        "predefinedTypeMapping": [
+          "data/pipelines/common_predefined.mapping",
+          "data/pipelines/complete_predefined.mapping"
+        ],
+        "outputDirectory": "akasha/java/generated/webtack",
+        "packageName": "akasha",
+        "globalInterface": "Window"
+      }
+    },
+    {
+      "name": "Emit",
+      "config": {
+        "filePattern": "akasha/java/generated/webtack/main/resources/akasha/Akasha.webidl"
+      }
+    },
+    {
+      "name": "Closure",
+      "config": {
+        "outputDirectory": "akasha/java/generated/webtack",
+        "key": "akasha/Akasha",
+        "predefinedTypeCatalogs": [
+          "data/pipelines/predefined_js_types.types"
+        ],
+        "globalInterface": "Window"
+      }
+    }
+  ]
+}
