@@ -17,6 +17,7 @@ var TrustedScript;
 
 /**
  * This does not yet have a typing declared in closure compiler.
+ * NOTE: This has been submitted upstream and should be removed once it is accepted.
  *
  * @const {symbol}
  */
@@ -24,6 +25,7 @@ Symbol.split;
 
 /**
  * This does not yet have a typing declared in closure compiler.
+ * NOTE: This has been submitted upstream and should be removed once it is accepted.
  *
  * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
  * @param {!Iterable<VALUE>} iterable
@@ -41,6 +43,7 @@ Promise.any = function(iterable) {};
 
 /**
  * This does not yet have a typing declared in closure compiler.
+ * NOTE: This has been submitted upstream and should be removed once it is accepted.
  *
  * @type {boolean}
  */
@@ -48,6 +51,7 @@ RegExp.prototype.unicode;
 
 /**
  * This does not yet have a typing declared in closure compiler.
+ * NOTE: This has been submitted upstream and should be removed once it is accepted.
  *
  * @type {boolean}
  */
