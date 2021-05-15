@@ -87,7 +87,7 @@ final class JsinteropAction
   private final String _globalInterface;
   @Nonnull
   private final List<String> _gwtInherits;
-  private final boolean _generateJ2clCompileTest;
+  private final boolean _generateCompileTest;
   private final boolean _generateTypeMapping;
   private final boolean _generateGlobal;
   @Nonnull
@@ -103,7 +103,7 @@ final class JsinteropAction
                    @Nonnull final List<Path> predefinedTypeMappingPaths,
                    @Nonnull final List<Path> externalTypeMappingPaths,
                    @Nonnull final List<Path> extraClosureModulesToRequireInCompileTestPaths,
-                   final boolean generateJ2clCompileTest,
+                   final boolean generateCompileTest,
                    @Nonnull final List<String> gwtInherits,
                    final boolean generateTypeMapping,
                    final boolean generateGlobal,
@@ -117,7 +117,7 @@ final class JsinteropAction
            externalTypeMappingPaths );
     _outputType = Objects.requireNonNull( outputType );
     _globalInterface = globalInterface;
-    _generateJ2clCompileTest = generateJ2clCompileTest;
+    _generateCompileTest = generateCompileTest;
     _gwtInherits = Objects.requireNonNull( gwtInherits );
     _generateTypeMapping = generateTypeMapping;
     _generateGlobal = generateGlobal;
@@ -256,7 +256,7 @@ final class JsinteropAction
       generateGlobalType();
     }
 
-    if ( _generateJ2clCompileTest )
+    if ( _generateCompileTest && OutputType.j2cl == _outputType )
     {
       writeJ2clCompileTest();
     }
@@ -475,11 +475,14 @@ final class JsinteropAction
       _modulesToRequireInCompileTest.add( className.canonicalName() + ".$Overlay" );
       writeTopLevelType( idlName, type );
 
-      emitJavaType( getTestJavaDirectory(),
-                    testType.build(),
-                    ClassName.get( className.packageName(), testJavaName ).toString() );
+      if ( _generateCompileTest )
+      {
+        emitJavaType( getTestJavaDirectory(),
+                      testType.build(),
+                      ClassName.get( className.packageName(), testJavaName ).toString() );
 
-      _modulesToRequireInCompileTest.add( className.canonicalName() + "Test" );
+        _modulesToRequireInCompileTest.add( className.canonicalName() + "Test" );
+      }
     }
   }
 
@@ -522,11 +525,14 @@ final class JsinteropAction
     _modulesToRequireInCompileTest.add( className.canonicalName() + ".$Overlay" );
     writeTopLevelType( idlName, type );
 
-    emitJavaType( getTestJavaDirectory(),
-                  testType.build(),
-                  ClassName.get( className.packageName(), testJavaName ).toString() );
+    if ( _generateCompileTest )
+    {
+      emitJavaType( getTestJavaDirectory(),
+                    testType.build(),
+                    ClassName.get( className.packageName(), testJavaName ).toString() );
 
-    _modulesToRequireInCompileTest.add( className.canonicalName() + "Test" );
+      _modulesToRequireInCompileTest.add( className.canonicalName() + "Test" );
+    }
   }
 
   private void generateStaticEventsMethods( @Nonnull final TypeSpec.Builder type,
@@ -1483,11 +1489,14 @@ final class JsinteropAction
 
     writeTopLevelType( name, type );
 
-    emitJavaType( getTestJavaDirectory(),
-                  testType.build(),
-                  ClassName.get( className.packageName(), testJavaName ).toString() );
+    if ( _generateCompileTest )
+    {
+      emitJavaType( getTestJavaDirectory(),
+                    testType.build(),
+                    ClassName.get( className.packageName(), testJavaName ).toString() );
 
-    _modulesToRequireInCompileTest.add( className.canonicalName() + "Test" );
+      _modulesToRequireInCompileTest.add( className.canonicalName() + "Test" );
+    }
   }
 
   @Nonnull
@@ -1580,11 +1589,14 @@ final class JsinteropAction
                           .build() );
 
     writeTopLevelType( name, type );
-    emitJavaType( getTestJavaDirectory(),
-                  testType.build(),
-                  ClassName.get( className.packageName(), testJavaName ).toString() );
+    if ( _generateCompileTest )
+    {
+      emitJavaType( getTestJavaDirectory(),
+                    testType.build(),
+                    ClassName.get( className.packageName(), testJavaName ).toString() );
 
-    _modulesToRequireInCompileTest.add( className.canonicalName() + "Test" );
+      _modulesToRequireInCompileTest.add( className.canonicalName() + "Test" );
+    }
   }
 
   private void generatePairIterableElements( @Nonnull final String idlName,
@@ -1851,11 +1863,14 @@ final class JsinteropAction
     type.addMethod( MethodSpec.constructorBuilder().addModifiers( Modifier.PRIVATE ).build() );
 
     writeTopLevelType( idlName, type );
-    emitJavaType( getTestJavaDirectory(),
-                  testType.build(),
-                  ClassName.get( className.packageName(), testJavaName ).toString() );
+    if ( _generateCompileTest )
+    {
+      emitJavaType( getTestJavaDirectory(),
+                    testType.build(),
+                    ClassName.get( className.packageName(), testJavaName ).toString() );
 
-    _modulesToRequireInCompileTest.add( className.canonicalName() + "Test" );
+      _modulesToRequireInCompileTest.add( className.canonicalName() + "Test" );
+    }
   }
 
   private void generateStaticOperations( @Nonnull final List<OperationMember> operations,
@@ -2007,11 +2022,14 @@ final class JsinteropAction
     }
 
     writeTopLevelType( name, type );
-    emitJavaType( getTestJavaDirectory(),
-                  testType.build(),
-                  ClassName.get( className.packageName(), testJavaName ).toString() );
+    if ( _generateCompileTest )
+    {
+      emitJavaType( getTestJavaDirectory(),
+                    testType.build(),
+                    ClassName.get( className.packageName(), testJavaName ).toString() );
 
-    _modulesToRequireInCompileTest.add( className.canonicalName() + "Test" );
+      _modulesToRequireInCompileTest.add( className.canonicalName() + "Test" );
+    }
   }
 
   private boolean generateOperation( @Nonnull final OperationMember operation,

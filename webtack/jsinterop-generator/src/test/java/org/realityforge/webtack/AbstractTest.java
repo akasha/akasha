@@ -129,6 +129,7 @@ public abstract class AbstractTest
                                      @Nonnull final WebIDLSchema schema,
                                      @Nonnull final String packageName,
                                      @Nullable final String globalInterface,
+                                     final boolean compileTest,
                                      @Nonnull final ValidatorRuleConfig validator,
                                      @Nonnull final List<String> gwtInherits )
     throws Exception
@@ -175,6 +176,7 @@ public abstract class AbstractTest
                                 packageName,
                                 globalInterface,
                                 gwtInherits,
+                                compileTest,
                                 gwtOutputDirectory,
                                 predefinedTypeMappingPaths,
                                 externalTypeMappingPaths );
@@ -195,6 +197,7 @@ public abstract class AbstractTest
                                 packageName,
                                 globalInterface,
                                 null,
+                                compileTest,
                                 j2clOutputDirectory,
                                 predefinedTypeMappingPaths,
                                 externalTypeMappingPaths );
@@ -323,6 +326,7 @@ public abstract class AbstractTest
                                             @Nonnull final String packageName,
                                             @Nullable final String globalInterface,
                                             @Nullable final List<String> gwtInherits,
+                                            final boolean compileTest,
                                             @Nonnull final Path outputDirectory,
                                             @Nonnull final List<Path> predefinedTypeMappingPaths,
                                             @Nonnull final List<Path> externalTypeMappingPaths )
@@ -331,6 +335,7 @@ public abstract class AbstractTest
     final JsinteropActionFactory factory = new JsinteropActionFactory();
     factory.outputType = outputType;
     factory.packageName = packageName;
+    factory.generateCompileTest = compileTest;
     factory.globalInterface = globalInterface;
     factory.gwtInherits = OutputType.gwt == outputType ? gwtInherits : null;
     factory.outputDirectory = outputDirectory.toString();

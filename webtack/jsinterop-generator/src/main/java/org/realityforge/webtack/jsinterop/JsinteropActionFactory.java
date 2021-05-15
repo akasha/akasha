@@ -52,12 +52,13 @@ public final class JsinteropActionFactory
    */
   public List<String> gwtInherits;
   /**
-   * A flag controlling whether a closure module is generated that
-   * requires modules that j2cl will generate. This is used to help
-   * perform J2cl+closure compiler pass over generated code to ensure
-   * that the correct artifacts are generated.
+   * A flag controlling whether java classes are generated that reference
+   * and invoke the generated classes. If the outputType is j2cl then a
+   * closure module is generated that requires modules for these java classes.
+   * This is used to help perform GWT or J2cl+closure compiler pass over generated
+   * code to ensure that the artifacts will compile and type check correctly.
    */
-  public boolean generateJ2clCompileTest = true;
+  public boolean generateCompileTest = true;
   /**
    * A flag controlling whether the type mapping file is generated.
    * The type mapping file consists of a line for every generated class and
@@ -171,7 +172,7 @@ public final class JsinteropActionFactory
                                 predefinedTypeMappingPaths,
                                 externalTypeMappingPaths,
                                 extraClosureModulesToRequireInCompileTestPaths,
-                                generateJ2clCompileTest,
+                                generateCompileTest,
                                 null == gwtInherits ? Collections.emptyList() : gwtInherits,
                                 generateTypeMapping,
                                 generateGlobal,
