@@ -1,3 +1,11 @@
+// Patched Date.UTC to align with optionality in current release of closure compiler.
+// A PR has been submitted upstream at https://github.com/google/closure-compiler/pull/3819
+// and as soon as this has been accepted and release we should remove this patch and the corresponding
+// pipeline stage to remove original
+partial interface Date {
+  static Timestamp UTC(long year, long month, optional long date = 0, optional long hours = 0, optional long minute = 0, optional long second = 0, optional long ms = 0 );
+};
+
 // Patched SharedArrayBuffer.slice to align with optionality in current release of closure compiler.
 // A PR has been submitted upstream at https://github.com/google/closure-compiler/pull/3814
 // and as soon as this has been accepted and release we should remove this patch and the corresponding

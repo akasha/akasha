@@ -24,6 +24,16 @@
     {
       "name": "RemoveMember",
       "description": "Remove member so we can apply patch to align with incorrect closure compiler representation",
+      "sourceSelector": "name=date",
+      "config": {
+        "expectedRemoveCount": 1,
+        "elementNamePattern": "^Date$",
+        "memberNamePattern": "^UTC$"
+      }
+    },
+    {
+      "name": "RemoveMember",
+      "description": "Remove member so we can apply patch to align with incorrect closure compiler representation",
       "sourceSelector": "name=typedarray",
       "config": {
         "expectedRemoveCount": 1,
