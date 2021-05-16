@@ -29,6 +29,10 @@
         "url": "https://www.w3.org/TR/clipboard-apis/"
     },
     {
+        "lastModifiedTime": 0,
+        "name": "closure_compiler_patch"
+    },
+    {
         "lastModifiedTime": 1615535691000,
         "name": "common",
         "selector": "[data-level~=4.] ~ pre.idl",

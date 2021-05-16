@@ -22,6 +22,16 @@
       }
     },
     {
+      "name": "RemoveMember",
+      "description": "Remove member so we can apply patch to align with incorrect closure compiler representation",
+      "sourceSelector": "name=typedarray",
+      "config": {
+        "expectedRemoveCount": 1,
+        "elementNamePattern": "^SharedArrayBuffer$",
+        "memberNamePattern": "^slice$"
+      }
+    },
+    {
       "name": "ChangeExtends",
       "description": "Actually model how it logically works",
       "sourceSelector": "name=common",
