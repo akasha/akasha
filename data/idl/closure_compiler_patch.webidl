@@ -1,3 +1,25 @@
+// Patched Atomics.wait to align with types in current release of closure compiler.
+// A PR has been submitted upstream at https://github.com/google/closure-compiler/pull/3820
+// and as soon as this has been accepted and release we should remove this patch and the corresponding
+// pipeline stage to remove original
+partial namespace Atomics {
+ /**
+   * Verifies that the specified index of the array still contains a value and sleeps awaiting or times out.
+   * Returns either "ok", "not-equal", or "timed-out".
+   * If waiting is not allowed in the calling agent then it throws an Error exception. Most browsers will not
+   * allow wait() on the browser's main thread.
+   *
+   * @param typedArray the typed array.
+   * @param index      the position in the typed array.
+   * @param value      the expected value to test.
+   * @param timeout    the time to wait in milliseconds
+   * @return the result state.
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/wait">Atomics.wait() - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-atomics.wait">Atomics.wait() - ECMA</a>
+   */
+  String wait( IntegerTypedArray typedArray, long index, long long value, optional long long timeout = Infinity );
+};
+
 // Patched Date.UTC to align with optionality in current release of closure compiler.
 // A PR has been submitted upstream at https://github.com/google/closure-compiler/pull/3819
 // and as soon as this has been accepted and release we should remove this patch and the corresponding
