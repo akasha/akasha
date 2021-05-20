@@ -9,7 +9,7 @@ import javax.annotation.Nullable;
 
 public final class PartialMixinDefinition
   extends NamedDefinition
-  implements OperationMemberContainer
+  implements OperationMemberContainer, ConstantMemberContainer
 {
   @Nonnull
   private final List<ConstMember> _constants;
@@ -37,6 +37,7 @@ public final class PartialMixinDefinition
   }
 
   @Nonnull
+  @Override
   public List<ConstMember> getConstants()
   {
     return _constants;

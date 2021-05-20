@@ -9,6 +9,7 @@ import javax.annotation.Nullable;
 
 public final class CallbackInterfaceDefinition
   extends NamedDefinition
+  implements ConstantMemberContainer
 {
   @Nonnull
   private final OperationMember _operation;

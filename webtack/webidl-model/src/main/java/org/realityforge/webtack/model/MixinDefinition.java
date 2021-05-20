@@ -9,7 +9,8 @@ import javax.annotation.Nullable;
 
 public final class MixinDefinition
   extends NamedDefinition
-  implements OperationMemberContainer
+  implements OperationMemberContainer, ConstantMemberContainer
+
 {
   @Nonnull
   private final List<ConstMember> _constants;
@@ -37,6 +38,7 @@ public final class MixinDefinition
   }
 
   @Nonnull
+  @Override
   public List<ConstMember> getConstants()
   {
     return _constants;

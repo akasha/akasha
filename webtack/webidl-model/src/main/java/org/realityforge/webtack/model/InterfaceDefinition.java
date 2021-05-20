@@ -11,7 +11,7 @@ import org.realityforge.webtack.model.tools.util.ExtendedAttributes;
 
 public final class InterfaceDefinition
   extends NamedDefinition
-  implements OperationMemberContainer
+  implements OperationMemberContainer, ConstantMemberContainer
 {
   @Nullable
   private final String _inherits;
@@ -94,21 +94,10 @@ public final class InterfaceDefinition
   }
 
   @Nonnull
+  @Override
   public List<ConstMember> getConstants()
   {
     return _constants;
-  }
-
-  @Nullable
-  public ConstMember findConstantByName( @Nonnull final String name )
-  {
-    return getConstants().stream().filter( c -> c.getName().equals( name ) ).findFirst().orElse( null );
-  }
-
-  @Nonnull
-  public ConstMember getConstantByName( @Nonnull final String name )
-  {
-    return Objects.requireNonNull( findConstantByName( name ), "Missing expected constant with name " + name );
   }
 
   @Nonnull
