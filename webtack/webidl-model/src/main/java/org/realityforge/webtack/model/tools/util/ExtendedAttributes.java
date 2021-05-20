@@ -116,6 +116,15 @@ public final class ExtendedAttributes
    */
   @Nonnull
   public static final String GLOBAL_OBJECT = "GlobalObject";
+  /**
+   * In javascript there is a single function with name whereas in WebIDL there can be multiple operations
+   * with the same name that take different arguments and potentially return different types. When binding
+   * to jsinterop with closure externs, special care must be taken when multiple operations exist with the
+   * same name that return different types based on arguments. In this scenario we create a UnionType for
+   * all the return alternatives and add this extended type onto the union.
+   */
+  @Nonnull
+  public static final String SYNTHESIZED_RETURN = "SynthesizedReturn";
 
   private ExtendedAttributes()
   {

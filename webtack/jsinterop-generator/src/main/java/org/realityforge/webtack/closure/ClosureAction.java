@@ -311,7 +311,7 @@ final class ClosureAction
           if ( Kind.Union == type.getKind() )
           {
             final UnionType unionType = (UnionType) type;
-            if ( !unionType.isNoArgsExtendedAttributePresent( "X" ) )
+            if ( !unionType.isNoArgsExtendedAttributePresent( ExtendedAttributes.SYNTHESIZED_RETURN ) )
             {
               final String typeName = synthesizeUnionType( unionType );
               types.add( new TypeReference( typeName,
@@ -973,7 +973,7 @@ final class ClosureAction
     return 1 == types.size() ?
            types.get( 0 ) :
            new UnionType( types,
-                          Collections.singletonList( ExtendedAttribute.createExtendedAttributeNoArgs( "X",
+                          Collections.singletonList( ExtendedAttribute.createExtendedAttributeNoArgs( ExtendedAttributes.SYNTHESIZED_RETURN,
                                                                                                       Collections.emptyList() ) ),
                           types.stream().anyMatch( Type::isNullable ),
                           Collections.emptyList() );
@@ -1318,7 +1318,7 @@ final class ClosureAction
     else if ( Kind.Union == kind )
     {
       final UnionType unionType = (UnionType) type;
-      if ( synthesizeUnionTypes && !unionType.isNoArgsExtendedAttributePresent( "X" ) )
+      if ( synthesizeUnionTypes && !unionType.isNoArgsExtendedAttributePresent( ExtendedAttributes.SYNTHESIZED_RETURN ) )
       {
         writer.write( synthesizeUnionType( unionType ) );
       }
