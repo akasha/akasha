@@ -35,6 +35,7 @@ public final class PartialInterfaceValidatorTest
                         "Interface named 'InterfaceB' does not exist but a partial for the interface does exist" );
   }
 
+  @Override
   @Nonnull
   Validator createValidator()
   {

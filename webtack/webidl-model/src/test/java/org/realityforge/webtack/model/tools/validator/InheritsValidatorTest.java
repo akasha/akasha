@@ -47,6 +47,7 @@ public final class InheritsValidatorTest
                         "Interface named 'DanglingInterface' inherits from interface named 'MissingInterface' but no such interface exists" );
   }
 
+  @Override
   @Nonnull
   Validator createValidator()
   {

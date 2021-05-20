@@ -52,6 +52,7 @@ public final class IncludeValidatorTest
                         "Include of mixin named 'MixinInterfaceA' into interface named 'InterfaceA' defined but no such mixin exists" );
   }
 
+  @Override
   @Nonnull
   Validator createValidator()
   {

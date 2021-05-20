@@ -41,6 +41,7 @@ public final class ConstEnumerationValidatorTest
                         "Constant named 'UNSENT' referenced by const enumeration named 'XMLHttpRequestReadyStateType' has a type of long long which does not match the type of other constants in the const enumeration which are of type unsigned short" );
   }
 
+  @Override
   @Nonnull
   Validator createValidator()
   {

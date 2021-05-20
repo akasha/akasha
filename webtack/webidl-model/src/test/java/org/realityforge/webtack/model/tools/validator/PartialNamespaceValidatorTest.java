@@ -35,6 +35,7 @@ public final class PartialNamespaceValidatorTest
                         "Namespace named 'NamespaceB' does not exist but a partial for the namespace does exist" );
   }
 
+  @Override
   @Nonnull
   Validator createValidator()
   {

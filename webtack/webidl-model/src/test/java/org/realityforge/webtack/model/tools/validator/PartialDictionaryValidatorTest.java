@@ -35,6 +35,7 @@ public final class PartialDictionaryValidatorTest
                         "Dictionary named 'DictionaryB' does not exist but a partial for the dictionary does exist" );
   }
 
+  @Override
   @Nonnull
   Validator createValidator()
   {

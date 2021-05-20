@@ -35,6 +35,7 @@ public final class PartialMixinValidatorTest
                         "Mixin named 'MixinB' does not exist but a partial for the mixin does exist" );
   }
 
+  @Override
   @Nonnull
   Validator createValidator()
   {

@@ -148,6 +148,7 @@ public abstract class AbstractJavaAction
     return _idlToClassNameMapping;
   }
 
+  @Override
   protected void processInit( @Nonnull final WebIDLSchema schema )
   {
     _idlToJavaTypeMapping.clear();

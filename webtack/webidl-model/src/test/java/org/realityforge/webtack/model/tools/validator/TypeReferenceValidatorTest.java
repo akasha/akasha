@@ -186,6 +186,7 @@ public final class TypeReferenceValidatorTest
     assertSingleError( filename, message );
   }
 
+  @Override
   @Nonnull
   Validator createValidator()
   {

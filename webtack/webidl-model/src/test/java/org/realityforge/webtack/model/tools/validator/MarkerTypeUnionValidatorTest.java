@@ -63,6 +63,7 @@ public class MarkerTypeUnionValidatorTest
                         "Typedef named 'TexImageSource' has the MarkerType extended attribute but contains a member type 'BasicEnumeration' that is not a reference to an interface or a typedef with the MarkerType extended attribute." );
   }
 
+  @Override
   @Nonnull
   Validator createValidator()
   {
