@@ -9,6 +9,7 @@ import javax.annotation.Nullable;
 
 public final class PartialNamespaceDefinition
   extends NamedDefinition
+  implements OperationMemberContainer
 {
   @Nonnull
   private final List<ConstMember> _constants;
@@ -50,6 +51,7 @@ public final class PartialNamespaceDefinition
   }
 
   @Nonnull
+  @Override
   public List<OperationMember> getOperations()
   {
     return _operations;

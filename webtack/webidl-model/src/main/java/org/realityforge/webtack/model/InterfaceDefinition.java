@@ -11,6 +11,7 @@ import org.realityforge.webtack.model.tools.util.ExtendedAttributes;
 
 public final class InterfaceDefinition
   extends NamedDefinition
+  implements OperationMemberContainer
 {
   @Nullable
   private final String _inherits;
@@ -117,21 +118,10 @@ public final class InterfaceDefinition
   }
 
   @Nonnull
+  @Override
   public List<OperationMember> getOperations()
   {
     return _operations;
-  }
-
-  @Nullable
-  public OperationMember findOperationByName( @Nonnull final String name )
-  {
-    return getOperations().stream().filter( c -> name.equals( c.getName() ) ).findFirst().orElse( null );
-  }
-
-  @Nonnull
-  public OperationMember getOperationByName( @Nonnull final String name )
-  {
-    return Objects.requireNonNull( findOperationByName( name ), "Missing expected Operation with name " + name );
   }
 
   @Nonnull
