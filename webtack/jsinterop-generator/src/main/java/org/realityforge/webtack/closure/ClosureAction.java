@@ -952,7 +952,7 @@ final class ClosureAction
     {
       maybeAddTypeToList( types, operation.getReturnType() );
     }
-    return toType( types );
+    return toReturnType( types );
   }
 
   private void maybeAddTypeToList( @Nonnull final List<Type> types, @Nonnull final Type candidate )
@@ -968,13 +968,24 @@ final class ClosureAction
   }
 
   @Nonnull
-  private Type toType( @Nonnull final List<Type> types )
+  private Type toReturnType( @Nonnull final List<Type> types )
   {
     return 1 == types.size() ?
            types.get( 0 ) :
            new UnionType( types,
                           Collections.singletonList( ExtendedAttribute.createExtendedAttributeNoArgs( ExtendedAttributes.SYNTHESIZED_RETURN,
                                                                                                       Collections.emptyList() ) ),
+                          types.stream().anyMatch( Type::isNullable ),
+                          Collections.emptyList() );
+  }
+
+  @Nonnull
+  private Type toType( @Nonnull final List<Type> types )
+  {
+    return 1 == types.size() ?
+           types.get( 0 ) :
+           new UnionType( types,
+                          Collections.emptyList(),
                           types.stream().anyMatch( Type::isNullable ),
                           Collections.emptyList() );
   }
