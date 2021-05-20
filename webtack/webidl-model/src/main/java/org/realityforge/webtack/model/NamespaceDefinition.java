@@ -31,6 +31,7 @@ public final class NamespaceDefinition
     _operations = Objects.requireNonNull( operations );
     _attributes = Objects.requireNonNull( attributes );
   }
+
   @Nonnull
   public List<ConstMember> getConstants()
   {
