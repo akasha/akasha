@@ -288,6 +288,14 @@ public abstract class AbstractTest
     final Path mainJavaDirectory = outputDirectory.resolve( "main" ).resolve( "java" );
     sourceDirectories.add( mainJavaDirectory );
     final List<Path> javaFiles = new ArrayList<>( collectFilesWithExtension( ".java", mainJavaDirectory ) );
+
+    final Path testJavaDirectory = outputDirectory.resolve( "test" ).resolve( "java" );
+    if ( Files.exists( testJavaDirectory ) )
+    {
+      javaFiles.addAll( collectFilesWithExtension( ".java", testJavaDirectory ) );
+      sourceDirectories.add( testJavaDirectory );
+    }
+
     if ( Files.exists( inputJavaDirectory ) )
     {
       javaFiles.addAll( collectFilesWithExtension( ".java", inputJavaDirectory ) );
