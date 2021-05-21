@@ -945,41 +945,6 @@ final class ClosureAction
   }
 
   @Nonnull
-  private Type deriveReturnType( @Nonnull final List<OperationMember> operations )
-  {
-    final List<Type> types = new ArrayList<>();
-    for ( final OperationMember operation : operations )
-    {
-      maybeAddTypeToList( types, operation.getReturnType() );
-    }
-    return toReturnType( types );
-  }
-
-  private void maybeAddTypeToList( @Nonnull final List<Type> types, @Nonnull final Type candidate )
-  {
-    for ( final Type type : types )
-    {
-      if ( type.equiv( candidate ) )
-      {
-        return;
-      }
-    }
-    types.add( candidate );
-  }
-
-  @Nonnull
-  private Type toReturnType( @Nonnull final List<Type> types )
-  {
-    return 1 == types.size() ?
-           types.get( 0 ) :
-           new UnionType( types,
-                          Collections.singletonList( ExtendedAttribute.createExtendedAttributeNoArgs( ExtendedAttributes.SYNTHESIZED_RETURN,
-                                                                                                      Collections.emptyList() ) ),
-                          types.stream().anyMatch( Type::isNullable ),
-                          Collections.emptyList() );
-  }
-
-  @Nonnull
   private Type toType( @Nonnull final List<Type> types )
   {
     return 1 == types.size() ?

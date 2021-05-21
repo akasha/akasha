@@ -6,15 +6,20 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.StandardOpenOption;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Set;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import org.realityforge.webtack.model.DocumentationElement;
+import org.realityforge.webtack.model.ExtendedAttribute;
 import org.realityforge.webtack.model.Kind;
+import org.realityforge.webtack.model.OperationMember;
 import org.realityforge.webtack.model.SequenceType;
 import org.realityforge.webtack.model.Type;
 import org.realityforge.webtack.model.TypeReference;
@@ -167,5 +172,40 @@ public abstract class AbstractAction
     {
       throw new UnsupportedOperationException( "Contains kind " + kind + " in union which has not been implemented" );
     }
+  }
+
+  @Nonnull
+  protected final Type deriveReturnType( @Nonnull final List<OperationMember> operations )
+  {
+    final List<Type> types = new ArrayList<>();
+    for ( final OperationMember operation : operations )
+    {
+      maybeAddTypeToList( types, operation.getReturnType() );
+    }
+    return toReturnType( types );
+  }
+
+  protected final void maybeAddTypeToList( @Nonnull final List<Type> types, @Nonnull final Type candidate )
+  {
+    for ( final Type type : types )
+    {
+      if ( type.equiv( candidate ) )
+      {
+        return;
+      }
+    }
+    types.add( candidate );
+  }
+
+  @Nonnull
+  private Type toReturnType( @Nonnull final List<Type> types )
+  {
+    return 1 == types.size() ?
+           types.get( 0 ) :
+           new UnionType( types,
+                          Collections.singletonList( ExtendedAttribute.createExtendedAttributeNoArgs( ExtendedAttributes.SYNTHESIZED_RETURN,
+                                                                                                      Collections.emptyList() ) ),
+                          types.stream().anyMatch( Type::isNullable ),
+                          Collections.emptyList() );
   }
 }
