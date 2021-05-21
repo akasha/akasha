@@ -23,6 +23,7 @@
 * Mark the `begin` parameter of `SharedArrayBuffer.slice` operation as required to align with the current closure compiler externs. A PR has been submitted upstream as google/closure-compiler#3814 to correct the closure compiler externs and this local patch will be removed once the PR is accepted and released.
 * Mark the `month` parameter of `Date.UTC` operation as required to align with the current closure compiler externs. A PR has been submitted upstream as google/closure-compiler#3819 to correct the closure compiler externs and this local patch will be removed once the PR is accepted and released.
 * Change the return value of the `Atomics.wait` operation to the interface string type rather than the string primitive. This is to align with the current closure compiler externs. A PR has been submitted upstream as google/closure-compiler#3820 to correct the closure compiler externs and this local patch will be removed once the PR is accepted and released.
+* Use a custom implementation of `RegExpResult` to ensure that it aligns with the closure compiler externs.
 
 ### [v0.10](https://github.com/akasha/akasha/tree/v0.10) (2021-04-22) · [Full Changelog](https://github.com/spritz/spritz/compare/v0.09...v0.10) · [API Differences](https://akasha.github.io/akasha-java/api-diff/?key=akasha-java&old=0.09&new=0.10) · [Source Diff](https://github.com/akasha/akasha-java/compare/v0.09...v0.10)
 

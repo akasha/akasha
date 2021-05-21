@@ -2,16 +2,16 @@ module Buildr
   class BazelJ2cl
     class << self
 
-      def define_bazel_j2cl_test(root_project, projects, test_module, test_module_file, test_java_dir, options = {})
+      def define_bazel_j2cl_test(root_project, projects, test_module, test_module_file, test_java_dirs, options = {})
         desc 'Verify that the specified packages can be compiled with J2CL'
         root_project.task('bazel_j2cl_test') do
-          perform_bazel_test(root_project, projects, test_module, test_module_file, test_java_dir, options) if ENV['J2CL'].nil? || ENV['J2CL'] == root_project.name
+          perform_bazel_test(root_project, projects, test_module, test_module_file, test_java_dirs, options) if ENV['J2CL'].nil? || ENV['J2CL'] == root_project.name
         end
       end
 
       private
 
-      def perform_bazel_test(root_project, projects, test_module, test_module_file, test_java_dir, options)
+      def perform_bazel_test(root_project, projects, test_module, test_module_file, test_java_dirs, options)
         packages = projects.collect { |p| p.packages }.flatten.select { |p| p.classifier.nil? }.sort.uniq
 
         depgen_cache_dir = root_project._(:target, :depgen_artifact_cache)
@@ -25,7 +25,9 @@ module Buildr
         write_bazelrc(bazel_workspace_dir)
         write_workspace(bazel_workspace_dir)
         FileUtils.cp test_module_file, "#{bazel_workspace_dir}/src.js"
-        FileUtils.cp_r test_java_dir, "#{bazel_workspace_dir}/mysrc/"
+        test_java_dirs.each do |test_java_dir|
+          FileUtils.cp_r test_java_dir, "#{bazel_workspace_dir}/mysrc/"
+        end
 
         write_build(bazel_workspace_dir, test_module, packages)
         write_dependency_yml(bazel_workspace_dir, cache_dir, packages, options)

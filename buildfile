@@ -199,7 +199,7 @@ define 'akasha' do
                                            [Buildr.project('akasha:java')],
                                            'akasha.AkashaCompileTest',
                                            Buildr.project('akasha:java')._(:target, :generated, 'webtack/test/js/akasha/Akasha.CompileTest.js'),
-                                           Buildr.project('akasha:java')._(:target, :generated, 'webtack/test/java'),
+                                           [Buildr.project('akasha:java')._(:target, :generated, 'webtack/test/java'), Buildr.project('akasha:java')._(:source, :test, :java)],
                                            :javax_annotation => true)
 
   iml.excluded_directories << project._('tmp')
