@@ -15,13 +15,13 @@ var RTCPeerConnectionErrorCallback;
  * @private
  * @nosideeffects
  */
-function RTCOfferOptions() {}
+function DOMException() {}
 /**
  * @constructor
  * @private
  * @nosideeffects
  */
-function DOMException() {}
+function RTCOfferOptions() {}
 /**
  * @constructor
  * @private
