@@ -2986,7 +2986,7 @@ final class JsinteropAction
     {
       testMethod.addAnnotation( Deprecated.class );
     }
-    emitTestReturnType( operation, returnType, testMethod );
+    emitTestReturnType( operation, operation.getReturnType(), testMethod );
     testMethod.addParameter( ParameterSpec.builder( className, "$instance", Modifier.FINAL ).build() );
 
     final StringBuilder overlayCallStatement = new StringBuilder();
@@ -2994,13 +2994,9 @@ final class JsinteropAction
 
     final StringBuilder testCallStatement = new StringBuilder();
     final List<Object> testCallArgs = new ArrayList<>();
-    final Kind returnTypeKind = returnType.getKind();
     if ( Kind.Void != operation.getReturnType().getKind() )
     {
       overlayCallStatement.append( "return " );
-    }
-    if ( Kind.Void != returnTypeKind )
-    {
       testCallStatement.append( "return " );
     }
     overlayCallStatement.append( "$N(" );
