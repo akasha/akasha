@@ -200,12 +200,24 @@ public abstract class AbstractAction
   @Nonnull
   private Type toReturnType( @Nonnull final List<Type> types )
   {
-    return 1 == types.size() ?
-           types.get( 0 ) :
-           new UnionType( types,
-                          Collections.singletonList( ExtendedAttribute.createExtendedAttributeNoArgs( ExtendedAttributes.SYNTHESIZED_RETURN,
-                                                                                                      Collections.emptyList() ) ),
-                          types.stream().anyMatch( Type::isNullable ),
-                          Collections.emptyList() );
+    if ( 1 == types.size() )
+    {
+      return types.get( 0 );
+    }
+    else
+    {
+      final UnionType unionType =
+        new UnionType( types,
+                       Collections.singletonList( ExtendedAttribute.createExtendedAttributeNoArgs(
+                         ExtendedAttributes.SYNTHESIZED_RETURN,
+                         Collections.emptyList() ) ),
+                       types.stream().anyMatch( Type::isNullable ),
+                       Collections.emptyList() );
+      if ( unionType.getMemberTypes().stream().noneMatch( t -> Kind.Promise == t.getKind() ) )
+      {
+        synthesizeUnionType( unionType );
+      }
+      return unionType;
+    }
   }
 }

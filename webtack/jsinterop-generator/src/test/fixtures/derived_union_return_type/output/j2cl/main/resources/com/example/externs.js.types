@@ -1,7 +1,9 @@
 AudioNode
+AudioNodeOrUndefinedUnion
 AudioParam
 DOMException
 Document
+DocumentOrWindowProxyUnion
 RTCOfferOptions
 RTCPeerConnection
 RTCPeerConnectionErrorCallback

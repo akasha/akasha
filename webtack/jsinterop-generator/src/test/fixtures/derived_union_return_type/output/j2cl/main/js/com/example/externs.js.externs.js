@@ -79,3 +79,11 @@ function AudioNode() {}
  * @return {(!AudioNode|undefined)}
  */
 AudioNode.prototype.connect = function(arg0,arg1,arg2) {}
+/**
+ * @typedef {(!Document|?WindowProxy)}
+ */
+var DocumentOrWindowProxyUnion;
+/**
+ * @typedef {(!AudioNode|undefined)}
+ */
+var AudioNodeOrUndefinedUnion;
