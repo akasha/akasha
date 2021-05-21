@@ -1,2 +1,4 @@
+AudioNode=com.example.AudioNode
+AudioParam=com.example.AudioParam
 Document=com.example.Document
 WindowProxy=com.example.WindowProxy

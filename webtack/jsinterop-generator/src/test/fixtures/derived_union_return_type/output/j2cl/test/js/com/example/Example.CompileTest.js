@@ -1,4 +1,8 @@
 goog.module('com.example.ExampleCompileTest');
+goog.require('com.example.AudioNode.$Overlay');
+goog.require('com.example.AudioNodeTest');
+goog.require('com.example.AudioParam.$Overlay');
+goog.require('com.example.AudioParamTest');
 goog.require('com.example.Document.$Overlay');
 goog.require('com.example.DocumentTest');
 goog.require('com.example.WindowProxy.$Overlay');

@@ -2986,9 +2986,12 @@ final class JsinteropAction
     final StringBuilder testCallStatement = new StringBuilder();
     final List<Object> testCallArgs = new ArrayList<>();
     final Kind returnTypeKind = returnType.getKind();
-    if ( Kind.Void != returnTypeKind )
+    if ( Kind.Void != operation.getReturnType().getKind() )
     {
       overlayCallStatement.append( "return " );
+    }
+    if ( Kind.Void != returnTypeKind )
+    {
       testCallStatement.append( "return " );
     }
     overlayCallStatement.append( "$N(" );
