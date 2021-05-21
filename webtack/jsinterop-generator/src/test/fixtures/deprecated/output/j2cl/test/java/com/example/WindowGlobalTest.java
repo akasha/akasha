@@ -4,14 +4,17 @@ import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class WindowGlobalTest {
+  @Deprecated
   public static boolean isSecureContext() {
     return WindowGlobal.isSecureContext();
   }
 
+  @Deprecated
   public static String name() {
     return WindowGlobal.name;
   }
 
+  @Deprecated
   public static void name(final String value) {
     WindowGlobal.name = value;
   }

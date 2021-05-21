@@ -616,12 +616,18 @@ final class JsinteropAction
     addMagicConstantAnnotationIfNeeded( actualType, method );
     type.addMethod( method.build() );
 
-    testType.addMethod( MethodSpec
-                          .methodBuilder( javaName )
-                          .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
-                          .returns( actualJavaType )
-                          .addStatement( "return $T.$N()", className, javaName )
-                          .build() );
+    final MethodSpec.Builder testMethod =
+      MethodSpec
+        .methodBuilder( javaName )
+        .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+        .returns( actualJavaType )
+        .addStatement( "return $T.$N()", className, javaName );
+    final DocumentationElement documentation = attribute.getDocumentation();
+    if ( null != documentation && documentation.hasDeprecatedTag() )
+    {
+      testMethod.addAnnotation( Deprecated.class );
+    }
+    testType.addMethod( testMethod.build() );
   }
 
   private void generateStaticReadWriteAttribute( @Nonnull final AttributeMember attribute,
@@ -657,19 +663,27 @@ final class JsinteropAction
     addMagicConstantAnnotationIfNeeded( actualType, field );
     type.addField( field.build() );
 
-    testType.addMethod( MethodSpec
-                          .methodBuilder( fieldName )
-                          .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
-                          .returns( actualJavaType )
-                          .addStatement( "return $T.$N", className, fieldName )
-                          .build() );
-    testType.addMethod( MethodSpec
-                          .methodBuilder( fieldName )
-                          .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
-                          .addStatement( "$T.$N = value", className, fieldName )
-                          .addParameter( ParameterSpec.builder( actualJavaType, "value", Modifier.FINAL ).build() )
-                          .build() );
+    final MethodSpec.Builder testReadMethod =
+      MethodSpec
+        .methodBuilder( fieldName )
+        .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+        .returns( actualJavaType )
+        .addStatement( "return $T.$N", className, fieldName );
+    final MethodSpec.Builder testWriteMethod =
+      MethodSpec
+        .methodBuilder( fieldName )
+        .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+        .addStatement( "$T.$N = value", className, fieldName )
+        .addParameter( ParameterSpec.builder( actualJavaType, "value", Modifier.FINAL ).build() );
 
+    final DocumentationElement documentation = attribute.getDocumentation();
+    if ( null != documentation && documentation.hasDeprecatedTag() )
+    {
+      testReadMethod.addAnnotation( Deprecated.class );
+      testWriteMethod.addAnnotation( Deprecated.class );
+    }
+    testType.addMethod( testReadMethod.build() );
+    testType.addMethod( testWriteMethod.build() );
   }
 
   private void generateStaticAddEventListener( @Nonnull final EventMember event,
@@ -1964,7 +1978,15 @@ final class JsinteropAction
         .addModifiers( Modifier.PUBLIC, Modifier.FINAL );
     writeGeneratedAnnotation( testType );
 
-    testType.addField( FieldSpec.builder( className, "$typeReference$", Modifier.STATIC ).build() );
+    final FieldSpec.Builder typeReferenceField =
+      FieldSpec.builder( className, "$typeReference$", Modifier.STATIC );
+    final DocumentationElement documentation = definition.getDocumentation();
+    if ( null != documentation && documentation.hasDeprecatedTag() )
+    {
+      typeReferenceField.addAnnotation( Deprecated.class );
+    }
+
+    testType.addField( typeReferenceField.build() );
 
     for ( final TypedefDefinition markerType : definition.getMarkerTypes() )
     {
@@ -2702,6 +2724,12 @@ final class JsinteropAction
         .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
         .returns( actualJavaType );
 
+    final DocumentationElement documentation = attribute.getDocumentation();
+    if ( null != documentation && documentation.hasDeprecatedTag() )
+    {
+      testMethod.addAnnotation( Deprecated.class );
+    }
+
     if ( attribute.getModifiers().contains( AttributeMember.Modifier.STATIC ) )
     {
       method.addModifiers( Modifier.STATIC );
@@ -2752,6 +2780,12 @@ final class JsinteropAction
       MethodSpec
         .methodBuilder( fieldName )
         .addModifiers( Modifier.PUBLIC, Modifier.STATIC );
+    final DocumentationElement documentation = attribute.getDocumentation();
+    if ( null != documentation && documentation.hasDeprecatedTag() )
+    {
+      testReadMethod.addAnnotation( Deprecated.class );
+      testWriteMethod.addAnnotation( Deprecated.class );
+    }
 
     if ( !fieldName.equals( name ) )
     {
