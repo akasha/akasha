@@ -2,17 +2,17 @@ module Buildr
   class BazelJ2cl
     class << self
 
-      def define_bazel_j2cl_test(root_project, projects, test_module, test_module_file, options = {})
+      def define_bazel_j2cl_test(root_project, projects, test_module, test_module_file, test_java_dir, options = {})
         desc 'Verify that the specified packages can be compiled with J2CL'
         root_project.task('bazel_j2cl_test') do
-          perform_bazel_test(root_project, projects, test_module, test_module_file, options) if ENV['J2CL'].nil? || ENV['J2CL'] == root_project.name
+          perform_bazel_test(root_project, projects, test_module, test_module_file, test_java_dir, options) if ENV['J2CL'].nil? || ENV['J2CL'] == root_project.name
         end
       end
 
       private
 
-      def perform_bazel_test(root_project, projects, test_module, test_module_file, options)
-        packages = projects.collect { |p| p.packages }.flatten.select{|p| p.classifier.nil? }.sort.uniq
+      def perform_bazel_test(root_project, projects, test_module, test_module_file, test_java_dir, options)
+        packages = projects.collect { |p| p.packages }.flatten.select { |p| p.classifier.nil? }.sort.uniq
 
         depgen_cache_dir = root_project._(:target, :depgen_artifact_cache)
         cache_dir = root_project._(:target, :artifact_cache)
@@ -20,10 +20,13 @@ module Buildr
 
         install_artifacts_into_local_cache(cache_dir, projects)
 
+        FileUtils.rm_rf bazel_workspace_dir
         FileUtils.mkdir_p bazel_workspace_dir
         write_bazelrc(bazel_workspace_dir)
         write_workspace(bazel_workspace_dir)
         FileUtils.cp test_module_file, "#{bazel_workspace_dir}/src.js"
+        FileUtils.cp_r test_java_dir, "#{bazel_workspace_dir}/mysrc/"
+
         write_build(bazel_workspace_dir, test_module, packages)
         write_dependency_yml(bazel_workspace_dir, cache_dir, packages, options)
         write_dependency_bzl(bazel_workspace_dir, depgen_cache_dir)
@@ -92,17 +95,20 @@ j2cl_import( name = "javaemul_internal_annotations-j2cl", jar = "@org_gwtproject
 load("//:dependencies.bzl", "generate_targets")
 
 generate_targets()
+
+load("@com_google_j2cl//build_defs:rules.bzl", "j2cl_library")
+
+j2cl_library(
+    name = "mysrc",
+    srcs = glob([ "mysrc/**/*.java"]),
+    visibility = ["//visibility:private"],
+    deps = [":javaemul_internal_annotations-j2cl", ":jsinterop_base-j2cl", ":akasha_java-j2cl"],
+)
+closure_js_library( name = "akasha_java-closure", srcs = ["src.js"], deps = [":akasha_java-j2cl", ":mysrc"], )
+
+j2cl_application( name = "akasha_java-app", entry_points = ["#{test_module}"], extra_production_args = ["--env=CUSTOM"], deps = [":akasha_java-closure"], )
+
 TEXT
-        packages.collect { |d| d.to_spec_hash }.each do |d|
-          name = d[:id].gsub('-','_')
-
-          content += <<TEXT
-
-closure_js_library( name = "#{name}-closure", srcs = ["src.js"], deps = [":#{name}-j2cl"], )
-
-j2cl_application( name = "#{name}-app", entry_points = ["#{test_module}"], extra_production_args = ["--env=CUSTOM"], deps = [":#{name}-closure"], )
-TEXT
-        end
         File.write("#{dir}/BUILD.bazel", content)
       end
 
