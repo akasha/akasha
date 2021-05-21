@@ -809,6 +809,35 @@ final class JsinteropAction
 
     generateUnionOfMethods( idlName, unionType, type );
 
+    // We only ever generate these methods for synthesized return types. It is unclear whether
+    // we should be generating them in other scenarios and whether there would be any value in
+    // that. It is the behaviour of Elemental2 but I have never seen usage of this feature...
+    if ( unionType.isNoArgsExtendedAttributePresent( ExtendedAttributes.SYNTHESIZED_RETURN ) )
+    {
+      for ( final Type memberType : unionType.getMemberTypes() )
+      {
+        final Kind memberTypeKind = memberType.getKind();
+        if ( Kind.TypeReference == memberTypeKind )
+        {
+          final TypeName javaType = toTypeName( memberType );
+          //type.addMethod( MethodSpec
+          //                  .methodBuilder( "is" + ( (TypeReference) memberType ).getName() )
+          //                  .addAnnotation( JsinteropTypes.JS_OVERLAY )
+          //                  .addModifiers( Modifier.PUBLIC, Modifier.DEFAULT )
+          //                  .returns( TypeName.BOOLEAN )
+          //                  .addStatement( "return ( ($T) this ) instanceof $T", TypeName.OBJECT, javaType )
+          //                  .build() );
+          type.addMethod( MethodSpec
+                            .methodBuilder( "as" + ( (TypeReference) memberType ).getName() )
+                            .addAnnotation( JsinteropTypes.JS_OVERLAY )
+                            .addModifiers( Modifier.PUBLIC, Modifier.DEFAULT )
+                            .returns( javaType )
+                            .addStatement( "return $T.cast( this )", JsinteropTypes.JS )
+                            .build() );
+        }
+      }
+    }
+
     writeTopLevelType( idlName, type );
   }
 
@@ -1485,7 +1514,14 @@ final class JsinteropAction
     final OperationMember operation = definition.getOperation();
     final List<Argument> arguments = operation.getArguments();
     final List<TypedValue> typedValues = asTypedValuesList( arguments );
-    generateDefaultOperation( operation, true, arguments, typedValues, className, type, testType );
+    generateDefaultOperation( operation,
+                              true,
+                              operation.getReturnType(),
+                              arguments,
+                              typedValues,
+                              className,
+                              type,
+                              testType );
 
     writeTopLevelType( name, type );
 
@@ -1547,7 +1583,18 @@ final class JsinteropAction
                       .build() );
 
     generateAttributes( definition.getAttributes(), className, type, testType );
-    generateOperations( definition.getOperations(), className, type, testType );
+    definition.getOperations()
+      .stream()
+      .sorted()
+      .forEach( operation -> {
+        final String operationName = operation.getName();
+
+        final Type returnType =
+          OutputType.j2cl == _outputType && null != operationName ?
+          deriveReturnType( definition.findAllOperationsByName( operationName ) ) :
+          operation.getReturnType();
+        generateOperation( operation, returnType, className, type, testType );
+      } );
 
     final MapLikeMember mapLike = definition.getMapLikeMember();
     if ( null != mapLike )
@@ -1819,17 +1866,6 @@ final class JsinteropAction
                           .build() );
   }
 
-  private void generateOperations( @Nonnull final List<OperationMember> operations,
-                                   @Nonnull final ClassName className,
-                                   @Nonnull final TypeSpec.Builder type,
-                                   @Nonnull final TypeSpec.Builder testType )
-  {
-    operations
-      .stream()
-      .sorted()
-      .forEach( operation -> generateOperation( operation, className, type, testType ) );
-  }
-
   private void generateNamespace( @Nonnull final NamespaceDefinition definition )
     throws IOException
   {
@@ -1950,7 +1986,12 @@ final class JsinteropAction
     boolean constructorPresent = false;
     for ( final OperationMember operation : definition.getOperations() )
     {
-      final boolean processed = generateOperation( operation, className, type, testType );
+      final String operationName = operation.getName();
+      final Type returnType =
+        OutputType.j2cl == _outputType && null != operationName ?
+        deriveReturnType( definition.findAllOperationsByName( operationName ) ) :
+        operation.getReturnType();
+      final boolean processed = generateOperation( operation, returnType, className, type, testType );
       if ( !processed && OperationMember.Kind.CONSTRUCTOR == operation.getKind() )
       {
         generateConstructorOperation( operation, parentConstructor, type );
@@ -2033,6 +2074,7 @@ final class JsinteropAction
   }
 
   private boolean generateOperation( @Nonnull final OperationMember operation,
+                                     @Nonnull final Type returnType,
                                      @Nonnull final ClassName className,
                                      @Nonnull final TypeSpec.Builder type,
                                      @Nonnull final TypeSpec.Builder testType )
@@ -2041,7 +2083,7 @@ final class JsinteropAction
     final String operationName = operation.getName();
     if ( OperationMember.Kind.DEFAULT == operationKind )
     {
-      generateDefaultOperation( operation, className, type, testType );
+      generateDefaultOperation( operation, returnType, className, type, testType );
     }
     else if ( ( OperationMember.Kind.STRINGIFIER == operationKind ||
                 OperationMember.Kind.GETTER == operationKind ||
@@ -2049,7 +2091,7 @@ final class JsinteropAction
                 OperationMember.Kind.DELETER == operationKind ) &&
               null != operationName )
     {
-      generateDefaultOperation( operation, className, type, testType );
+      generateDefaultOperation( operation, returnType, className, type, testType );
     }
     else if ( OperationMember.Kind.GETTER == operationKind &&
               Kind.UnsignedLong == operation.getArguments().get( 0 ).getType().getKind() )
@@ -2860,6 +2902,7 @@ final class JsinteropAction
   }
 
   private void generateDefaultOperation( @Nonnull final OperationMember operation,
+                                         @Nonnull final Type returnType,
                                          @Nonnull final ClassName className,
                                          @Nonnull final TypeSpec.Builder type,
                                          @Nonnull final TypeSpec.Builder testType )
@@ -2874,19 +2917,26 @@ final class JsinteropAction
         explodeTypeList( argumentList.stream().map( Argument::getType ).collect( Collectors.toList() ) );
       for ( final List<TypedValue> typeList : explodedTypeList )
       {
-        generateDefaultOperation( operation, false, argumentList, typeList, className, type, testType );
+        generateDefaultOperation( operation, false, returnType, argumentList, typeList, className, type, testType );
       }
     }
   }
 
   private void generateDefaultOperation( @Nonnull final OperationMember operation,
                                          final boolean javaInterface,
+                                         @Nonnull final Type returnType,
                                          @Nonnull final List<Argument> arguments,
                                          @Nonnull final List<TypedValue> typeList,
                                          @Nonnull final ClassName className,
                                          @Nonnull final TypeSpec.Builder type,
                                          @Nonnull final TypeSpec.Builder testType )
   {
+    final boolean requireOverlay = OutputType.j2cl == _outputType && !operation.getReturnType().equals( returnType );
+
+    // Codegen does not currently support requiring overlays on java interfaces.
+    // We could add that later if ever needed
+    assert !requireOverlay || !javaInterface;
+
     final OperationMember.Kind operationKind = operation.getKind();
     assert OperationMember.Kind.STATIC != operationKind && OperationMember.Kind.CONSTRUCTOR != operationKind;
     final String name = operation.getName();
@@ -2894,11 +2944,18 @@ final class JsinteropAction
     final String methodName = javaMethodName( name, operation );
     final MethodSpec.Builder method =
       MethodSpec
-        .methodBuilder( methodName )
+        .methodBuilder( ( requireOverlay ? "_" : "" ) + methodName )
         .addModifiers( Modifier.PUBLIC, javaInterface ? Modifier.ABSTRACT : Modifier.NATIVE );
-    maybeAddCustomAnnotations( operation, method );
-    maybeAddJavadoc( operation, method );
-    if ( !methodName.equals( name ) )
+    final MethodSpec.Builder overlayMethod =
+      MethodSpec
+        .methodBuilder( methodName )
+        .addAnnotation( JsinteropTypes.JS_OVERLAY )
+        .addModifiers( Modifier.PUBLIC, Modifier.FINAL );
+
+    maybeAddCustomAnnotations( operation, requireOverlay ? overlayMethod : method );
+    maybeAddJavadoc( operation, requireOverlay ? overlayMethod : method );
+
+    if ( requireOverlay || !methodName.equals( name ) )
     {
       method.addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_METHOD )
                               .addMember( "name", "$S", name )
@@ -2909,7 +2966,7 @@ final class JsinteropAction
     {
       method.addAnnotation( JsinteropTypes.HAS_NO_SIDE_EFFECTS );
     }
-    final Type returnType = operation.getReturnType();
+    emitReturnType( operation, operation.getReturnType(), overlayMethod );
     emitReturnType( operation, returnType, method );
 
     final MethodSpec.Builder testMethod =
@@ -2923,12 +2980,20 @@ final class JsinteropAction
     emitTestReturnType( operation, returnType, testMethod );
     testMethod.addParameter( ParameterSpec.builder( className, "$instance", Modifier.FINAL ).build() );
 
+    final StringBuilder overlayCallStatement = new StringBuilder();
+    final List<Object> overlayCallArgs = new ArrayList<>();
+
     final StringBuilder testCallStatement = new StringBuilder();
     final List<Object> testCallArgs = new ArrayList<>();
-    if ( Kind.Void != returnType.getKind() )
+    final Kind returnTypeKind = returnType.getKind();
+    if ( Kind.Void != returnTypeKind )
     {
+      overlayCallStatement.append( "return " );
       testCallStatement.append( "return " );
     }
+    overlayCallStatement.append( "$N(" );
+    overlayCallArgs.add( "_" + methodName );
+
     testCallStatement.append( "$N.$N(" );
     testCallArgs.add( "$instance" );
     testCallArgs.add( methodName );
@@ -2938,24 +3003,54 @@ final class JsinteropAction
     {
       if ( 0 == index )
       {
+        overlayCallStatement.append( " " );
         testCallStatement.append( " " );
       }
       else
       {
+        overlayCallStatement.append( ", " );
         testCallStatement.append( ", " );
       }
+      overlayCallStatement.append( "$N" );
+      overlayCallArgs.add( javaName( argument ) );
+
       testCallStatement.append( "$N" );
       testCallArgs.add( javaName( argument ) );
       final TypedValue typedValue = typeList.get( index++ );
+      generateArgument( argument, typedValue, false, false, overlayMethod, null );
       generateArgument( argument, typedValue, false, false, method, testMethod );
     }
     type.addMethod( method.build() );
 
     if ( !arguments.isEmpty() )
     {
+      overlayCallStatement.append( " " );
       testCallStatement.append( " " );
     }
+    overlayCallStatement.append( ")" );
     testCallStatement.append( ")" );
+
+    if ( requireOverlay )
+    {
+      final Type actualReturnType = operation.getReturnType();
+      final Kind kind = actualReturnType.getKind();
+      if ( Kind.TypeReference == kind )
+      {
+        overlayCallStatement.append( ".as" ).append( ( (TypeReference) actualReturnType ).getName() ).append( "()" );
+      }
+      else if ( Kind.Void != kind )
+      {
+        // This scenario does not exist atm so no need to expend effort to support scenario
+        throw new IllegalStateException( "Synthesized union type consisting of more than just " +
+                                         "type references is not supported" );
+      }
+    }
+
+    overlayMethod.addStatement( overlayCallStatement.toString(), overlayCallArgs.toArray() );
+    if ( requireOverlay )
+    {
+      type.addMethod( overlayMethod.build() );
+    }
 
     testMethod.addStatement( testCallStatement.toString(), testCallArgs.toArray() );
     testType.addMethod( testMethod.build() );
