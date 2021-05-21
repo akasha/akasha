@@ -1,4 +1,11 @@
 AudioNode=com.example.AudioNode
 AudioParam=com.example.AudioParam
+DOMException=com.example.DOMException
 Document=com.example.Document
+Promise=com.example.JsPromise
+RTCOfferOptions=com.example.RTCOfferOptions
+RTCPeerConnection=com.example.RTCPeerConnection
+RTCPeerConnectionErrorCallback=com.example.RTCPeerConnectionErrorCallback
+RTCSessionDescriptionCallback=com.example.RTCSessionDescriptionCallback
+RTCSessionDescriptionInit=com.example.RTCSessionDescriptionInit
 WindowProxy=com.example.WindowProxy

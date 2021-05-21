@@ -3,6 +3,45 @@
  * @externs
  */
 /**
+ * @typedef {function(!RTCSessionDescriptionInit): undefined}
+ */
+var RTCSessionDescriptionCallback;
+/**
+ * @typedef {function(!DOMException): undefined}
+ */
+var RTCPeerConnectionErrorCallback;
+/**
+ * @constructor
+ * @private
+ * @nosideeffects
+ */
+function RTCOfferOptions() {}
+/**
+ * @constructor
+ * @private
+ * @nosideeffects
+ */
+function DOMException() {}
+/**
+ * @constructor
+ * @private
+ * @nosideeffects
+ */
+function RTCSessionDescriptionInit() {}
+/**
+ * @constructor
+ * @private
+ * @nosideeffects
+ */
+function RTCPeerConnection() {}
+/**
+ * @param {(!RTCOfferOptions|!RTCSessionDescriptionCallback)=} arg0
+ * @param {!RTCPeerConnectionErrorCallback=} arg1
+ * @param {!RTCOfferOptions=} arg2
+ * @return {(!Promise<!RTCSessionDescriptionInit>|!Promise<undefined>)}
+ */
+RTCPeerConnection.prototype.createOffer = function(arg0,arg1,arg2) {}
+/**
  * @constructor
  * @private
  * @nosideeffects

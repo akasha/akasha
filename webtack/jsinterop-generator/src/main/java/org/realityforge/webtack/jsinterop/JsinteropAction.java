@@ -58,6 +58,7 @@ import org.realityforge.webtack.model.NamedDefinition;
 import org.realityforge.webtack.model.NamedElement;
 import org.realityforge.webtack.model.NamespaceDefinition;
 import org.realityforge.webtack.model.OperationMember;
+import org.realityforge.webtack.model.OperationMemberContainer;
 import org.realityforge.webtack.model.PartialInterfaceDefinition;
 import org.realityforge.webtack.model.SequenceType;
 import org.realityforge.webtack.model.Type;
@@ -1586,15 +1587,11 @@ final class JsinteropAction
     definition.getOperations()
       .stream()
       .sorted()
-      .forEach( operation -> {
-        final String operationName = operation.getName();
-
-        final Type returnType =
-          OutputType.j2cl == _outputType && null != operationName ?
-          deriveReturnType( definition.findAllOperationsByName( operationName ) ) :
-          operation.getReturnType();
-        generateOperation( operation, returnType, className, type, testType );
-      } );
+      .forEach( operation -> generateOperation( operation,
+                                                deriveOperationReturnType( definition, operation ),
+                                                className,
+                                                type,
+                                                testType ) );
 
     final MapLikeMember mapLike = definition.getMapLikeMember();
     if ( null != mapLike )
@@ -1644,6 +1641,22 @@ final class JsinteropAction
 
       _modulesToRequireInCompileTest.add( className.canonicalName() + "Test" );
     }
+  }
+
+  @Nonnull
+  private Type deriveOperationReturnType( @Nonnull final OperationMemberContainer definition,
+                                          @Nonnull final OperationMember operation )
+  {
+    final String operationName = operation.getName();
+
+    // We only care about merging return types in closure binding due to the way the type system works
+    return OutputType.j2cl == _outputType &&
+           // We are matching on operations by name so must have a name
+           null != operationName &&
+           // Promises seems to be handled fine in the underlying Closure type system
+           Kind.Promise != operation.getReturnType().getKind() ?
+           deriveReturnType( definition.findAllOperationsByName( operationName ) ) :
+           operation.getReturnType();
   }
 
   private void generatePairIterableElements( @Nonnull final String idlName,
@@ -1986,12 +1999,8 @@ final class JsinteropAction
     boolean constructorPresent = false;
     for ( final OperationMember operation : definition.getOperations() )
     {
-      final String operationName = operation.getName();
-      final Type returnType =
-        OutputType.j2cl == _outputType && null != operationName ?
-        deriveReturnType( definition.findAllOperationsByName( operationName ) ) :
-        operation.getReturnType();
-      final boolean processed = generateOperation( operation, returnType, className, type, testType );
+      final boolean processed =
+        generateOperation( operation, deriveOperationReturnType( definition, operation ), className, type, testType );
       if ( !processed && OperationMember.Kind.CONSTRUCTOR == operation.getKind() )
       {
         generateConstructorOperation( operation, parentConstructor, type );

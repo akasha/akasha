@@ -1,4 +1,10 @@
 AudioNode
 AudioParam
+DOMException
 Document
+RTCOfferOptions
+RTCPeerConnection
+RTCPeerConnectionErrorCallback
+RTCSessionDescriptionCallback
+RTCSessionDescriptionInit
 WindowProxy

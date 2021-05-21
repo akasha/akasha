@@ -1,3 +1,7 @@
+callback RTCPeerConnectionErrorCallback = undefined ( DOMException error );
+
+callback RTCSessionDescriptionCallback = undefined ( RTCSessionDescriptionInit description );
+
 interface AudioNode {
   /**
    * If the destination is a node, connect() returns a reference to the destination AudioNode object, allowing you to chain multiple connect() calls. In some browsers, older implementations of this interface return undefined.
@@ -20,6 +24,9 @@ interface AudioNode {
 interface AudioParam {
 };
 
+interface DOMException {
+};
+
 interface Document {
   /**
    * The Document.open() method opens a document for writing.
@@ -38,6 +45,17 @@ interface Document {
    * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-72161170">document.open() - Document Object Model (DOM) Level 2 HTML Specification</a>
    */
   WindowProxy? open( USVString url, DOMString name, DOMString features );
+};
+
+interface RTCOfferOptions {
+};
+
+interface RTCPeerConnection {
+  Promise<RTCSessionDescriptionInit> createOffer( optional RTCOfferOptions options = {} );
+  Promise<undefined> createOffer( RTCSessionDescriptionCallback successCallback, RTCPeerConnectionErrorCallback failureCallback, optional RTCOfferOptions options = {} );
+};
+
+interface RTCSessionDescriptionInit {
 };
 
 interface WindowProxy {
