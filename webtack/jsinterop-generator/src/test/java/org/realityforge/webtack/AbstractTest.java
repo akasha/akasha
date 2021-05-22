@@ -248,7 +248,7 @@ public abstract class AbstractTest
     if ( !j2clJavaFiles.isEmpty() )
     {
       javaCompileTest( j2clSourceDirectories, j2clJavaFiles, getWorkingDir().resolve( "target" ).resolve( "j2cl" ) );
-      //TODO: Perform a j2cl compile here to simplify testing going forward
+      // Perform a j2cl compile here to simplify testing going forward
       if ( !j2clJsFiles.isEmpty() )
       {
         if ( "true".equals( SystemProperty.get( "webtack.jsinterop-generator.closure_compile" ) ) )
