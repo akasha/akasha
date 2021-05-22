@@ -62,25 +62,22 @@ task 'data:run_react4j_pipeline' do
   end
 end
 
-desc 'Run the complete pipeline'
+desc 'Run the complete pipeline for GWT'
 task 'data:run_gwt_complete_pipeline' do
   in_dir(WORKSPACE_DIR) do
-    run_webtack(%w(--verbose -d data run j2cl_complete))
+    run_webtack(%w(--verbose -d data run gwt_complete))
   end
-
-  run_closure_compile("#{WORKSPACE_DIR}/akasha/java/generated/webtack/main/js/akasha/Akasha.externs.js",
-                      "#{WORKSPACE_DIR}/target/akasha_java/tmp/output.js")
 end
 
-desc 'Run the complete pipeline'
+desc 'Run the complete pipeline for J2CL'
 task 'data:run_j2cl_complete_pipeline' do
   in_dir(WORKSPACE_DIR) do
     run_webtack(%w(--verbose -d data run j2cl_complete))
   end
 
   run_closure_compile("#{WORKSPACE_DIR}/akasha/java/generated/webtack/main/js/akasha/Akasha.externs.js",
-                      "#{WORKSPACE_DIR}/target/akasha_java/tmp/output.js")
+                      "#{WORKSPACE_DIR}/target/akasha_j2cl/tmp/output.js")
 end
 
 desc 'Run all of the pipelines'
-task 'data:run_pipelines' => %w(data:run_complete_pipeline data:run_react4j_pipeline)
+task 'data:run_pipelines' => %w(data:run_j2cl_complete_pipeline data:run_gwt_complete_pipeline data:run_react4j_pipeline)

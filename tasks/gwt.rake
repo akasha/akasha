@@ -9,11 +9,7 @@ def gwt_enhance(project, options = {})
   modules_complete = !!options[:modules_complete]
   package_jars = options[:package_jars].nil? ? true : !!options[:package_jars]
 
-  extra_deps = (project.iml.main_generated_resource_directories.flatten + (options[:extra_deps] || [])).compact.collect do |a|
-    a.is_a?(String) ? file(a) : a
-  end + project.iml.main_generated_source_directories.flatten.compact.collect do |a|
-    a.is_a?(String) ? file(a) : a
-  end
+  extra_deps = (options[:extra_deps] || []).flatten.compact.collect {|a| a.is_a?(String) ? file(a) : a }
 
   if !!project.compile.options[:processor] || (project.compile.options[:processor].nil? && !(project.compile.options[:processor_path] || []).empty?)
     extra_deps += [project.file(project._(:target, :generated, 'processors/main/java'))]
@@ -24,8 +20,7 @@ def gwt_enhance(project, options = {})
   dependencies = project.compile.dependencies + extra_deps
 
   gwt_modules = options[:gwt_modules] || []
-  source_paths = project.compile.sources + project.iml.main_generated_resource_directories.flatten.compact + project.iml.main_generated_source_directories.flatten.compact
-  source_paths.each do |base_dir|
+  project.compile.sources.each do |base_dir|
     Dir["#{base_dir}/**/*.gwt.xml"].each do |filename|
       gwt_modules << filename.gsub("#{base_dir}/", '').gsub('.gwt.xml', '').gsub('/', '.')
     end
@@ -85,12 +80,4 @@ CONTENT
     j.include("#{project._(:source, :main, :java)}/*")
   end if package_jars
 
-  config = {}
-  gwt_modules.each do |gwt_module|
-    config[gwt_module] = false
-  end
-  project.iml.add_gwt_facet(config, :settings => {
-    :compilerMaxHeapSize => '1024',
-    :compilerParameters => '-draftCompile -localWorkers 2 -strict'
-  }, :gwt_dev_artifact => :gwt_dev)
 end

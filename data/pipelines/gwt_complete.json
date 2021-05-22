@@ -11,7 +11,7 @@
           "data/pipelines/common_predefined.mapping",
           "data/pipelines/complete_predefined.mapping"
         ],
-        "outputDirectory": "akasha/java/generated/webtack",
+        "outputDirectory": "akasha/gwt/generated/webtack",
         "packageName": "akasha",
         "globalInterface": "Window"
       }
@@ -19,7 +19,7 @@
     {
       "name": "Emit",
       "config": {
-        "filePattern": "akasha/java/generated/webtack/main/resources/akasha/Akasha.webidl"
+        "filePattern": "akasha/gwt/generated/webtack/main/resources/akasha/Akasha.webidl"
       }
     }
   ]

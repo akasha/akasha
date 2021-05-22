@@ -10,8 +10,8 @@ provides:
 
 * [Closure-compiler](https://github.com/google/closure-compiler) externs so that the closure-compiler
   can perform type checking and advanced type-based optimizations.
-* Jsinterop annotated java classes that can be used in [GWT](https://github.com/gwtproject/gwt) or
-  [J2CL](https://github.com/google/j2cl) based projects.
+* Jsinterop annotated java classes that can be used in [GWT](https://github.com/gwtproject/gwt) projects.
+* Jsinterop annotated java classes that can be used in [J2CL](https://github.com/google/j2cl) projects.
 
 In the near future, it is expected that bindings for other languages and frameworks will be produced
 (particularly to support WASM based toolkits). Support will also be re-enabled to generate
@@ -19,19 +19,21 @@ In the near future, it is expected that bindings for other languages and framewo
 
 ## Getting Started
 
-Getting started using the JsInterop annotated Java classes in a [GWT](https://github.com/gwtproject/gwt) or
-[J2CL](https://github.com/google/j2cl) based project is relatively easy. First you add a dependency on the java
-library to your project. In a Maven-based project is as simple as adding the following dependency:
+Getting started using the JsInterop annotated classes is relatively easy. The following sections give a basic
+overview of how to get started in a GWT or J2CL project.
+
+### GWT
+
+First you add a dependency on the gwt library to your project. In a Maven-based project is as simple as adding
+the following dependency:
 
 ```xml
 <dependency>
   <groupId>org.realityforge.akasha</groupId>
-  <artifactId>akasha-java</artifactId>
+  <artifactId>akasha-gwt</artifactId>
   <version>0.10</version>
 </dependency>
 ```
-
-### GWT
 
 In a GWT project it is necessary to add a reference to the Akasha library the GWT module in your `.gwt.xml` file. This
 is just a single inherit:
@@ -45,6 +47,17 @@ is just a single inherit:
 ```
 
 ### J2CL/Closure Compiler
+
+First you add a dependency on the j2cl library to your project. In a Maven-based project is as simple as adding
+the following dependency:
+
+```xml
+<dependency>
+  <groupId>org.realityforge.akasha</groupId>
+  <artifactId>akasha-j2cl</artifactId>
+  <version>0.10</version>
+</dependency>
+```
 
 The closure compiler is shipped with a set of externs that do not align 100% with the externs produced by the Akasha
 project. Thus it is necessary to pass the arguments `-env CUSTOM` when running the closure compiler. It is also

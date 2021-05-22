@@ -161,7 +161,45 @@ define 'akasha' do
   end
 
   desc 'Akasha Java Browser API for GWT'
-  define 'java', :base_dir => "#{WORKSPACE_DIR}/akasha/java" do
+  define 'gwt', :base_dir => "#{WORKSPACE_DIR}/akasha/gwt" do
+    java_main_src_dir = "#{WORKSPACE_DIR}/akasha/java/src/main/java"
+    java_test_src_dir = "#{WORKSPACE_DIR}/akasha/java/src/main/java"
+    java_src_dir = "#{WORKSPACE_DIR}/akasha/java/src/main/java"
+    src_dir = file("#{project._(:target, :generated)}/webtack/main/java" => ['data:run_gwt_complete_pipeline'])
+    test_src_dir = file("#{project._(:target, :generated)}/webtack/test/java" => ['data:run_gwt_complete_pipeline'])
+    js_src_dir = file("#{project._(:target, :generated)}/webtack/main/js" => ['data:run_gwt_complete_pipeline'])
+    compile.sources << src_dir.to_s << java_main_src_dir
+    test.compile.sources << test_src_dir.to_s << java_test_src_dir
+
+    project.no_iml
+
+    doc.options.merge!('Xdoclint:all,-reference,-missing' => true)
+
+    compile.using :javac
+
+    deps = artifacts(JSINTEROP_DEPS)
+    compile.with deps
+
+    gwt_enhance(project, :extra_deps => [src_dir])
+
+    pom.include_transitive_dependencies << deps
+    pom.dependency_filter = Proc.new { |dep| dep[:scope].to_s != 'test' && deps.include?(dep[:artifact]) }
+
+    package(:jar).tap do |j|
+      j.enhance([file(java_main_src_dir)]) do |j2|
+        j2.include("#{java_main_src_dir}/*")
+      end
+    end
+    package(:sources).tap do |j|
+      j.enhance([file(java_main_src_dir)]) do |j2|
+        j2.include("#{java_main_src_dir}/*")
+      end
+    end
+    package(:javadoc)
+  end
+
+  desc 'Akasha Java Browser API for J2CL'
+  define 'j2cl', :base_dir => "#{WORKSPACE_DIR}/akasha/java" do
     src_dir = file("#{project._(:target, :generated)}/webtack/main/java" => ['data:run_j2cl_complete_pipeline'])
     test_src_dir = file("#{project._(:target, :generated)}/webtack/test/java" => ['data:run_j2cl_complete_pipeline'])
     js_src_dir = file("#{project._(:target, :generated)}/webtack/main/js" => ['data:run_j2cl_complete_pipeline'])
@@ -175,9 +213,9 @@ define 'akasha' do
     compile.using :javac
 
     deps = artifacts(JSINTEROP_DEPS)
-    compile.with deps
-
-    gwt_enhance(project, :extra_deps => [src_dir])
+    compile.with deps,
+                 # gwt_dev required for javaemul.internal.ArrayStamper which is provided by jre dep in j2cl
+                 :gwt_user
 
     pom.include_transitive_dependencies << deps
     pom.dependency_filter = Proc.new { |dep| dep[:scope].to_s != 'test' && deps.include?(dep[:artifact]) }
@@ -196,10 +234,10 @@ define 'akasha' do
   end
 
   Buildr::BazelJ2cl.define_bazel_j2cl_test(Buildr.project('akasha'),
-                                           [Buildr.project('akasha:java')],
+                                           [Buildr.project('akasha:j2cl')],
                                            'akasha.AkashaCompileTest',
-                                           Buildr.project('akasha:java')._(:target, :generated, 'webtack/test/js/akasha/Akasha.CompileTest.js'),
-                                           [Buildr.project('akasha:java')._(:target, :generated, 'webtack/test/java'), Buildr.project('akasha:java')._(:source, :test, :java)],
+                                           Buildr.project('akasha:j2cl')._(:target, :generated, 'webtack/test/js/akasha/Akasha.CompileTest.js'),
+                                           [Buildr.project('akasha:j2cl')._(:target, :generated, 'webtack/test/java'), Buildr.project('akasha:j2cl')._(:source, :test, :java)],
                                            :javax_annotation => true)
 
   iml.excluded_directories << project._('tmp')
@@ -240,7 +278,7 @@ desc 'Generate source artifacts'
 task('generate:all').enhance([file(File.expand_path("#{File.dirname(__FILE__)}/webtack/webidl-parser/generated/antlr/main/java"))])
 
 Buildr.projects.each do |project|
-  unless %w(akasha:java).include?(project.name)
+  unless %w(akasha:gwt akasha:j2cl).include?(project.name)
     project.task('install').actions.clear
     project.task('upload').actions.clear
   end
