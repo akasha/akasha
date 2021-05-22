@@ -458,7 +458,7 @@ final class JsinteropAction
                             .build() );
       type.addMethod( MethodSpec.constructorBuilder().addModifiers( Modifier.PRIVATE ).build() );
 
-      final String testJavaName = javaName + "Test";
+      final String testJavaName = javaName + "TestCompile";
       final TypeSpec.Builder testType =
         TypeSpec
           .classBuilder( testJavaName )
@@ -482,7 +482,7 @@ final class JsinteropAction
                       testType.build(),
                       ClassName.get( className.packageName(), testJavaName ).toString() );
 
-        _modulesToRequireInCompileTest.add( className.canonicalName() + "Test" );
+        _modulesToRequireInCompileTest.add( className.canonicalName() + "TestCompile" );
       }
     }
   }
@@ -504,7 +504,7 @@ final class JsinteropAction
                           .addMember( "name", "$S", "goog.global" )
                           .build() );
 
-    final String testJavaName = javaName + "Test";
+    final String testJavaName = javaName + "TestCompile";
     final TypeSpec.Builder testType =
       TypeSpec
         .classBuilder( testJavaName )
@@ -532,7 +532,7 @@ final class JsinteropAction
                     testType.build(),
                     ClassName.get( className.packageName(), testJavaName ).toString() );
 
-      _modulesToRequireInCompileTest.add( className.canonicalName() + "Test" );
+      _modulesToRequireInCompileTest.add( className.canonicalName() + "TestCompile" );
     }
   }
 
@@ -1517,7 +1517,7 @@ final class JsinteropAction
     maybeAddCustomAnnotations( definition, type );
     maybeAddJavadoc( definition, type );
 
-    final String testJavaName = javaName + "Test";
+    final String testJavaName = javaName + "TestCompile";
     final TypeSpec.Builder testType =
       TypeSpec
         .classBuilder( testJavaName )
@@ -1546,7 +1546,7 @@ final class JsinteropAction
                     testType.build(),
                     ClassName.get( className.packageName(), testJavaName ).toString() );
 
-      _modulesToRequireInCompileTest.add( className.canonicalName() + "Test" );
+      _modulesToRequireInCompileTest.add( className.canonicalName() + "TestCompile" );
     }
   }
 
@@ -1570,7 +1570,7 @@ final class JsinteropAction
     maybeAddCustomAnnotations( definition, type );
     maybeAddJavadoc( definition, type );
 
-    final String testJavaName = javaName + "Test";
+    final String testJavaName = javaName + "TestCompile";
     final TypeSpec.Builder testType =
       TypeSpec
         .classBuilder( testJavaName )
@@ -1653,7 +1653,7 @@ final class JsinteropAction
                     testType.build(),
                     ClassName.get( className.packageName(), testJavaName ).toString() );
 
-      _modulesToRequireInCompileTest.add( className.canonicalName() + "Test" );
+      _modulesToRequireInCompileTest.add( className.canonicalName() + "TestCompile" );
     }
   }
 
@@ -1912,7 +1912,7 @@ final class JsinteropAction
     writeGeneratedAnnotation( type );
     maybeAddJavadoc( definition, type );
 
-    final String testJavaName = javaName + "Test";
+    final String testJavaName = javaName + "TestCompile";
     final TypeSpec.Builder testType =
       TypeSpec
         .classBuilder( testJavaName )
@@ -1932,7 +1932,7 @@ final class JsinteropAction
                     testType.build(),
                     ClassName.get( className.packageName(), testJavaName ).toString() );
 
-      _modulesToRequireInCompileTest.add( className.canonicalName() + "Test" );
+      _modulesToRequireInCompileTest.add( className.canonicalName() + "TestCompile" );
     }
   }
 
@@ -1971,7 +1971,7 @@ final class JsinteropAction
     maybeAddCustomAnnotations( definition, type );
     maybeAddJavadoc( definition, type );
 
-    final String testJavaName = javaName + "Test";
+    final String testJavaName = javaName + "TestCompile";
     final TypeSpec.Builder testType =
       TypeSpec
         .classBuilder( testJavaName )
@@ -2100,7 +2100,7 @@ final class JsinteropAction
                     testType.build(),
                     ClassName.get( className.packageName(), testJavaName ).toString() );
 
-      _modulesToRequireInCompileTest.add( className.canonicalName() + "Test" );
+      _modulesToRequireInCompileTest.add( className.canonicalName() + "TestCompile" );
     }
   }
 

@@ -1,5 +1,5 @@
 goog.module('com.example.ExampleCompileTest');
 goog.require('com.example.Blob.$Overlay');
-goog.require('com.example.BlobTest');
+goog.require('com.example.BlobTestCompile');
 goog.require('com.example.SomeStore.$Overlay');
-goog.require('com.example.SomeStoreTest');
+goog.require('com.example.SomeStoreTestCompile');

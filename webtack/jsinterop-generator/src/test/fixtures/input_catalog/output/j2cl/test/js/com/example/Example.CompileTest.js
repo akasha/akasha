@@ -1,9 +1,9 @@
 goog.module('com.example.ExampleCompileTest');
 goog.require('com.example.CompletionCallback.$Overlay');
-goog.require('com.example.CompletionCallbackTest');
+goog.require('com.example.CompletionCallbackTestCompile');
 goog.require('com.example.IDBIndexParameters2.$Overlay');
 goog.require('com.example.IDBObjectStore.$Overlay');
-goog.require('com.example.IDBObjectStoreTest');
+goog.require('com.example.IDBObjectStoreTestCompile');
 goog.require('com.example.WebAssembly.$Overlay');
-goog.require('com.example.WebAssemblyTest');
-goog.require('com.example.WorkerTest');
+goog.require('com.example.WebAssemblyTestCompile');
+goog.require('com.example.WorkerTestCompile');

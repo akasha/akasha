@@ -1,9 +1,9 @@
 goog.module('com.example.ExampleCompileTest');
 goog.require('com.example.AudioBufferSourceNode.$Overlay');
-goog.require('com.example.AudioBufferSourceNodeTest');
+goog.require('com.example.AudioBufferSourceNodeTestCompile');
 goog.require('com.example.AudioScheduledSourceNode.$Overlay');
-goog.require('com.example.AudioScheduledSourceNodeTest');
+goog.require('com.example.AudioScheduledSourceNodeTestCompile');
 goog.require('com.example.DOMMatrix.$Overlay');
 goog.require('com.example.DOMMatrixReadOnly.$Overlay');
-goog.require('com.example.DOMMatrixReadOnlyTest');
-goog.require('com.example.DOMMatrixTest');
+goog.require('com.example.DOMMatrixReadOnlyTestCompile');
+goog.require('com.example.DOMMatrixTestCompile');
