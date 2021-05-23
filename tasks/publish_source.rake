@@ -4,7 +4,7 @@ REMOTE_REPOSITORY = "#{WORKSPACE_DIR}/target/remote_repository"
 
 desc 'Commit the source to a local copy of an external repository'
 task 'source:commit' do
-  artifact = Buildr.project('akasha:java').package(:sources)
+  artifact = Buildr.project('akasha:j2cl').package(:sources)
   artifact.invoke
 
   origin_url = 'https://github.com/akasha/akasha-java.git'
