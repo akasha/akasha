@@ -1,6 +1,10 @@
 # Change Log
 
-### Unreleased
+### [v0.11](https://github.com/akasha/akasha/tree/v0.11) (2021-05-23) · [Full Changelog](https://github.com/spritz/spritz/compare/v0.10...v0.11) · [API Differences](https://akasha.github.io/akasha-java/api-diff/?key=akasha-java&old=0.10&new=0.11) · [Source Diff](https://github.com/akasha/akasha-java/compare/v0.10...v0.11)
+
+The release includes 78 non breaking API changes, 846 potentially breaking API changes and 29 breaking API changes.
+
+Changes in this release:
 
 * Upgrade the `org.realityforge.react4j` artifacts to version `0.182`.
 * Omit generation of closure externs for WebIDL elements that have the extended attribute `[JavaOnly]`. This is supported across all different element types but is only currently used on constants named `"NAME"` on WebGl/WebGl2 extensions that have been added to the java interfaces to improve the typing of the method `WebGL2RenderingContext.getExtension(...)`. These constant fields are no longer being incorrectly defined in closure externs. Fixes #18.
