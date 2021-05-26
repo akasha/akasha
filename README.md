@@ -101,14 +101,14 @@ WebIDL published as part of the official specifications are not always perfect r
 implemented by the web browsers. Nor is there a central place that contains the complete WebIDL that a browser is
 expected to implement. The Akasha suite defines a pipeline for processing WebIDL schemas. The pipeline defines a
 series of stages. Each stage will either transform a schema, combine multiple schemas or perform an action for the
-schema. This capability allows WebIDL or process the WebIDL schemas fetched from the specifications and combine
+schema. This capability allows the tool to process the WebIDL schemas fetched from the specifications and combine
 them into a consistent document.
 
 The Akasha suite also includes tools to fetch data from other locations and combine the data with the
 WebIDL in processing stages. The most significant other data source is the documentation that is scraped from the
 [MDN](https://developer.mozilla.org/en-US/) website and used to add basic documentation to the WebIDL elements. In the
 near future it is expected that the [browser compatibility data](https://github.com/mdn/browser-compat-data/tree/master/api)
-will be also be scraped so that browser compatibility data for WebIDL elements can be used in the processing pipeline
+will also be scraped so that browser compatibility data for WebIDL elements can be used in the processing pipeline
 to influence how artifacts are built. Other data from the web specifications could be combined to improve the outputs
 generated from the suite.
 
@@ -128,10 +128,10 @@ the browser API easier for java developers. A few differences from Elemental2 in
 * Fields, methods and parameters are annotated with `@Nonnull` or `@Nullable` if the type is a non-primitive, non-void type.
 * Read-only attributes in WebIDL are implemented as methods rather than mutable fields or properties with setters.
 * Dictionaries in WebIDL use a "builder" pattern to make construction of these types much easier.
-* No parameterized types exist in Akasha generate artifacts as WebIDL does not define such constructs. However there
+* No parameterized types exist in the Akasha generated artifacts as WebIDL does not define such constructs. However there
   are a handful of hand-written jsinterop annotated java classes such as `JsArray`, `JsMap`, `JsSet`, `JsWeakMap`
   and `JsWeakSet` that make use of parameterized types to support normal java development practices.
-* Event handlers and event listeners are typed according to type of event expected to be delivered and have a void
+* Event handlers and event listeners are typed according to the type of event expected to be delivered and have a void
   return type. This simplifies the use of lambdas and method references in java code.
 * `@JsOverlay` methods are added for known events emitted by an interface. For example, it is possible to use code such
   as `e.addBlurListener(this::processBlurEvent)` rather than the more verbose `e.addEventListener("blur", e -> processBlurEvent((FocusEvent) e)`
