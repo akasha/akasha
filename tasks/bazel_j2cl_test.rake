@@ -104,9 +104,9 @@ j2cl_library(
     name = "mysrc",
     srcs = glob([ "mysrc/**/*.java"]),
     visibility = ["//visibility:private"],
-    deps = [":javaemul_internal_annotations-j2cl", ":jsinterop_base-j2cl", ":akasha_java-j2cl"],
+    deps = [":javaemul_internal_annotations-j2cl", ":jsinterop_base-j2cl", ":akasha_j2cl-j2cl"],
 )
-closure_js_library( name = "akasha_java-closure", srcs = ["src.js"], deps = [":akasha_java-j2cl", ":mysrc"], )
+closure_js_library( name = "akasha_java-closure", srcs = ["src.js"], deps = [":akasha_j2cl-j2cl", ":mysrc"], )
 
 j2cl_application( name = "akasha_java-app", entry_points = ["#{test_module}"], extra_production_args = ["--env=CUSTOM"], deps = [":akasha_java-closure"], )
 
