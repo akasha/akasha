@@ -2,6 +2,7 @@
 
 ### Unreleased
 
+* Update the `Geolocation API` spec to the `W3C Working Draft 10 June 2021` version. This improved typing and aligned with how browsers are implementing the underlying javascript objects.
 * Update the `Gamepad` spec to the `W3C Working Draft 08 April 2021` version. This added event events for when gamepads are connected and disconnected. This version  also supports XR mappings.
 * Update the `Web Bluetooth` spec to the `Draft Community Group Report, 17 May 2021` version. This improved the typing of several attributes and exposed `manufacturerData` via the API.
 * Update to the latest version of the `webgl` specifications. This primarily resulted in supporting `VideoFrame` as a `TexImageSource`.
