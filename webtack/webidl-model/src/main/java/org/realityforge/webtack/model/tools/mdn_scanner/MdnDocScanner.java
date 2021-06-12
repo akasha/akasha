@@ -282,7 +282,7 @@ public final class MdnDocScanner
                                                      .trim() ) );
 
       entry.setRefs( null );
-      final Element standardsElement = document.selectFirst( "#specifications + div > table.standard-table" );
+      final Element standardsElement = document.selectFirst( "#specifications + div > table.standard-table , #specifications + table.standard-table" );
       if ( null != standardsElement )
       {
         final List<ExternalRef> refs = new ArrayList<>();
