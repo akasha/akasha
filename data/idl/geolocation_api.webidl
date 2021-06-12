@@ -10,8 +10,15 @@ dictionary PositionOptions {
   unsigned long timeout = 0xFFFFFFFF;
 };
 
-[NoInterfaceObject]
-interface Coordinates {
+[Exposed=Window]
+interface Geolocation {
+  undefined clearWatch( long watchId );
+  undefined getCurrentPosition( PositionCallback successCallback, optional PositionErrorCallback? errorCallback = null, optional PositionOptions options = {} );
+  long watchPosition( PositionCallback successCallback, optional PositionErrorCallback? errorCallback = null, optional PositionOptions options = {} );
+};
+
+[Exposed=Window, SecureContext]
+interface GeolocationCoordinates {
   readonly attribute double accuracy;
   readonly attribute double? altitude;
   readonly attribute double? altitudeAccuracy;
@@ -21,21 +28,14 @@ interface Coordinates {
   readonly attribute double? speed;
 };
 
-[NoInterfaceObject]
-interface Geolocation {
-  void clearWatch( long watchId );
-  void getCurrentPosition( PositionCallback successCallback, optional PositionErrorCallback errorCallback, optional PositionOptions options );
-  long watchPosition( PositionCallback successCallback, optional PositionErrorCallback errorCallback, optional PositionOptions options );
-};
-
-[NoInterfaceObject]
-interface Position {
-  readonly attribute Coordinates coords;
+[Exposed=Window, SecureContext]
+interface GeolocationPosition {
+  readonly attribute GeolocationCoordinates coords;
   readonly attribute DOMTimeStamp timestamp;
 };
 
-[NoInterfaceObject]
-interface PositionError {
+[Exposed=Window]
+interface GeolocationPositionError {
   const unsigned short PERMISSION_DENIED = 1;
   const unsigned short POSITION_UNAVAILABLE = 2;
   const unsigned short TIMEOUT = 3;
@@ -44,5 +44,6 @@ interface PositionError {
 };
 
 partial interface Navigator {
+  [SameObject]
   readonly attribute Geolocation geolocation;
 };

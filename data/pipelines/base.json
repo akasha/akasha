@@ -466,15 +466,6 @@
     },
     {
       "name": "AddExtendedAttribute",
-      "description": "Add LegacyNoInterfaceObject as spec still uses the historic 'NoInterfaceObject' extended attribute",
-      "sourceSelector": "name=geolocation_api",
-      "config": {
-        "namePattern": "^(Coordinates|Geolocation|Position|PositionError)$",
-        "extendedAttribute": "LegacyNoInterfaceObject"
-      }
-    },
-    {
-      "name": "AddExtendedAttribute",
       "description": "Add MarkerType to make conversion between types easier",
       "sourceSelector": "name=whatwg_html",
       "config": {
@@ -483,21 +474,11 @@
       }
     },
     {
-      "name": "RemoveExtendedAttribute",
-      "description": "Remove NoInterfaceObject as spec still uses the historic 'NoInterfaceObject' extended attribute",
-      "sourceSelector": "name=geolocation_api",
-      "config": {
-        "expectedRemoveCount": 4,
-        "namePattern": "^(Coordinates|Geolocation|Position|PositionError)$",
-        "extendedAttribute": "NoInterfaceObject"
-      }
-    },
-    {
       "name": "ChangeAttributeType",
       "sourceSelector": "name=geolocation_api",
       "config": {
         "expectedRemoveCount": 1,
-        "elementNamePattern": "^PositionError$",
+        "elementNamePattern": "^GeolocationPositionError$",
         "attributeNamePattern": "^code$",
         "type": "PositionErrorCode"
       }
