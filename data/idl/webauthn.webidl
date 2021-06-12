@@ -1,23 +1,35 @@
 enum AttestationConveyancePreference {
-  "none",
+  "direct",
+  "enterprise",
   "indirect",
-  "direct"
+  "none"
 };
 
 enum AuthenticatorAttachment {
-  "platform",
-  "cross-platform"
+  "cross-platform",
+  "platform"
 };
 
 enum AuthenticatorTransport {
-  "usb",
-  "nfc",
   "ble",
-  "internal"
+  "internal",
+  "nfc",
+  "usb"
+};
+
+enum LargeBlobSupport {
+  "preferred",
+  "required"
 };
 
 enum PublicKeyCredentialType {
   "public-key"
+};
+
+enum ResidentKeyRequirement {
+  "discouraged",
+  "preferred",
+  "required"
 };
 
 enum TokenBindingStatus {
@@ -26,18 +38,10 @@ enum TokenBindingStatus {
 };
 
 enum UserVerificationRequirement {
-  "required",
+  "discouraged",
   "preferred",
-  "discouraged"
+  "required"
 };
-
-typedef BufferSource AAGUID;
-
-typedef record<DOMString, DOMString> AuthenticationExtensionsAuthenticatorInputs;
-
-typedef sequence<USVString> AuthenticationExtensionsSupported;
-
-typedef sequence<AAGUID> AuthenticatorSelectionList;
 
 typedef long COSEAlgorithmIdentifier;
 
@@ -51,21 +55,39 @@ dictionary AuthenticationExtensionsClientInputs {
 dictionary AuthenticationExtensionsClientOutputs {
 };
 
+dictionary AuthenticationExtensionsLargeBlobInputs {
+  boolean read;
+  DOMString support;
+  BufferSource write;
+};
+
+dictionary AuthenticationExtensionsLargeBlobOutputs {
+  ArrayBuffer blob;
+  boolean supported;
+  boolean written;
+};
+
 dictionary AuthenticatorSelectionCriteria {
-  AuthenticatorAttachment authenticatorAttachment;
+  DOMString authenticatorAttachment;
   boolean requireResidentKey = false;
-  UserVerificationRequirement userVerification = "preferred";
+  DOMString residentKey;
+  DOMString userVerification = "preferred";
 };
 
 dictionary CollectedClientData {
   required DOMString challenge;
+  boolean crossOrigin;
   required DOMString origin;
   TokenBinding tokenBinding;
   required DOMString type;
 };
 
+dictionary CredentialPropertiesOutput {
+  boolean rk;
+};
+
 dictionary PublicKeyCredentialCreationOptions {
-  AttestationConveyancePreference attestation = "none";
+  DOMString attestation = "none";
   AuthenticatorSelectionCriteria authenticatorSelection;
   required BufferSource challenge;
   sequence<PublicKeyCredentialDescriptor> excludeCredentials = [];
@@ -78,18 +100,17 @@ dictionary PublicKeyCredentialCreationOptions {
 
 dictionary PublicKeyCredentialDescriptor {
   required BufferSource id;
-  sequence<AuthenticatorTransport> transports;
-  required PublicKeyCredentialType type;
+  sequence<DOMString> transports;
+  required DOMString type;
 };
 
 dictionary PublicKeyCredentialEntity {
-  USVString icon;
   required DOMString name;
 };
 
 dictionary PublicKeyCredentialParameters {
   required COSEAlgorithmIdentifier alg;
-  required PublicKeyCredentialType type;
+  required DOMString type;
 };
 
 dictionary PublicKeyCredentialRequestOptions {
@@ -98,7 +119,7 @@ dictionary PublicKeyCredentialRequestOptions {
   AuthenticationExtensionsClientInputs extensions;
   USVString rpId;
   unsigned long timeout;
-  UserVerificationRequirement userVerification = "preferred";
+  DOMString userVerification = "preferred";
 };
 
 dictionary PublicKeyCredentialRpEntity : PublicKeyCredentialEntity {
@@ -112,17 +133,7 @@ dictionary PublicKeyCredentialUserEntity : PublicKeyCredentialEntity {
 
 dictionary TokenBinding {
   DOMString id;
-  required TokenBindingStatus status;
-};
-
-dictionary authenticatorBiometricPerfBounds {
-  float FAR;
-  float FRR;
-};
-
-dictionary txAuthGenericArg {
-  required ArrayBuffer content;
-  required USVString contentType;
+  required DOMString status;
 };
 
 partial dictionary AuthenticationExtensionsClientInputs {
@@ -130,31 +141,19 @@ partial dictionary AuthenticationExtensionsClientInputs {
 };
 
 partial dictionary AuthenticationExtensionsClientInputs {
-  USVString txAuthSimple;
-};
-
-partial dictionary AuthenticationExtensionsClientInputs {
-  txAuthGenericArg txAuthGeneric;
-};
-
-partial dictionary AuthenticationExtensionsClientInputs {
-  AuthenticatorSelectionList authnSel;
-};
-
-partial dictionary AuthenticationExtensionsClientInputs {
-  boolean exts;
-};
-
-partial dictionary AuthenticationExtensionsClientInputs {
-  boolean uvi;
-};
-
-partial dictionary AuthenticationExtensionsClientInputs {
-  boolean loc;
+  USVString appidExclude;
 };
 
 partial dictionary AuthenticationExtensionsClientInputs {
   boolean uvm;
+};
+
+partial dictionary AuthenticationExtensionsClientInputs {
+  boolean credProps;
+};
+
+partial dictionary AuthenticationExtensionsClientInputs {
+  AuthenticationExtensionsLargeBlobInputs largeBlob;
 };
 
 partial dictionary AuthenticationExtensionsClientOutputs {
@@ -162,31 +161,19 @@ partial dictionary AuthenticationExtensionsClientOutputs {
 };
 
 partial dictionary AuthenticationExtensionsClientOutputs {
-  USVString txAuthSimple;
-};
-
-partial dictionary AuthenticationExtensionsClientOutputs {
-  ArrayBuffer txAuthGeneric;
-};
-
-partial dictionary AuthenticationExtensionsClientOutputs {
-  boolean authnSel;
-};
-
-partial dictionary AuthenticationExtensionsClientOutputs {
-  AuthenticationExtensionsSupported exts;
-};
-
-partial dictionary AuthenticationExtensionsClientOutputs {
-  ArrayBuffer uvi;
-};
-
-partial dictionary AuthenticationExtensionsClientOutputs {
-  Coordinates loc;
+  boolean appidExclude;
 };
 
 partial dictionary AuthenticationExtensionsClientOutputs {
   UvmEntries uvm;
+};
+
+partial dictionary AuthenticationExtensionsClientOutputs {
+  CredentialPropertiesOutput credProps;
+};
+
+partial dictionary AuthenticationExtensionsClientOutputs {
+  AuthenticationExtensionsLargeBlobOutputs largeBlob;
 };
 
 partial dictionary CredentialCreationOptions {
@@ -211,6 +198,10 @@ interface AuthenticatorAssertionResponse : AuthenticatorResponse {
 interface AuthenticatorAttestationResponse : AuthenticatorResponse {
   [SameObject]
   readonly attribute ArrayBuffer attestationObject;
+  ArrayBuffer getAuthenticatorData();
+  ArrayBuffer? getPublicKey();
+  COSEAlgorithmIdentifier getPublicKeyAlgorithm();
+  sequence<DOMString> getTransports();
 };
 
 [SecureContext, Exposed=Window]

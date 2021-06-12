@@ -387,9 +387,9 @@
         "url": "https://w3c.github.io/webappsec-csp/"
     },
     {
-        "lastModifiedTime": 1551474872000,
-        "name": "webauthn_1",
-        "url": "https://www.w3.org/TR/webauthn-1/"
+        "lastModifiedTime": 1617741897000,
+        "name": "webauthn",
+        "url": "https://www.w3.org/TR/webauthn/"
     },
     {
         "lastModifiedTime": 1605175331000,
