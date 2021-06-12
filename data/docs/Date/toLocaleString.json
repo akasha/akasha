@@ -6,14 +6,14 @@
     "description": "The toLocaleString() method returns a string with a language sensitive representation of this date.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-date.prototype.tolocalestring",
-            "description": "Date.prototype.toLocaleString - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-date.prototype.tolocalestring",
+            "description": "(ECMAScript) # sec-date.prototype.tolocalestring"
         },
         {
-            "name": "ECMAScript Internationalization API (ECMA-402)",
+            "name": "ECMAScript Internationalization API Specification",
             "href": "https://tc39.es/ecma402/#sup-date.prototype.tolocalestring",
-            "description": "Date.prototype.toLocaleString - ECMAScript Internationalization API (ECMA-402)"
+            "description": "(ECMAScript Internationalization API) # sup-date.prototype.tolocalestring"
         }
     ]
 }

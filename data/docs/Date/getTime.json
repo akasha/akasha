@@ -6,9 +6,9 @@
     "description": "The getTime() method returns the number of milliseconds* since the Unix Epoch.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-date.prototype.gettime",
-            "description": "Date.prototype.getTime - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-date.prototype.gettime",
+            "description": "(ECMAScript) # sec-date.prototype.gettime"
         }
     ]
 }

@@ -6,9 +6,9 @@
     "description": "The Number.isFinite() method determines whether the passed value is a finite number &mdash; that is, it checks that the type of a given value is Number, and the number is neither positive Infinity, negative Infinity, nor NaN.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-number.isfinite",
-            "description": "Number.isInteger - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-number.isfinite",
+            "description": "(ECMAScript) # sec-number.isfinite"
         }
     ]
 }

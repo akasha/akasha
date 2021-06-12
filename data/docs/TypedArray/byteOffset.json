@@ -6,9 +6,9 @@
     "description": "The byteOffset accessor property represents the offset (in bytes) of a typed array from the start of its ArrayBuffer.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-get-%25typedarray%25.prototype.byteoffset",
-            "description": "TypedArray.prototype.byteOffset - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-get-%25typedarray%25.prototype.byteoffset",
+            "description": "(ECMAScript) # sec-get-%typedarray%.prototype.byteoffset"
         }
     ]
 }

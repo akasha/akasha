@@ -6,9 +6,9 @@
     "description": "The toString() method returns a string representing the specified Symbol object.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-symbol.prototype.tostring",
-            "description": "Symbol.prototype.toString - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-symbol.prototype.tostring",
+            "description": "(ECMAScript) # sec-symbol.prototype.tostring"
         }
     ]
 }

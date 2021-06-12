@@ -6,9 +6,9 @@
     "description": "The blink() method creates a &lt;blink&gt; HTML element that causes a string to blink.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-string.prototype.blink",
-            "description": "String.prototype.blink - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/additional-ecmascript-features-for-web-browsers.html#sec-string.prototype.blink",
+            "description": "(ECMAScript) # sec-string.prototype.blink"
         }
     ]
 }

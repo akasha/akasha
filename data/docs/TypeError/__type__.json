@@ -6,9 +6,9 @@
     "description": "The TypeError object represents an error when an operation could not be performed, typically (but not exclusively) when a value is not of the expected type.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-native-error-types-used-in-this-standard-typeerror",
-            "description": "TypeError - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-native-error-types-used-in-this-standard-typeerror",
+            "description": "(ECMAScript) # sec-native-error-types-used-in-this-standard-typeerror"
         }
     ]
 }

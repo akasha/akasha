@@ -3,12 +3,12 @@
     "kind": "Property",
     "name": "TypedArray.byteLength",
     "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/byteLength",
-    "description": "The byteLength accessor property represents the length (in bytes) of a typed array.",
+    "description": "The byteLength accessor property represents the length (in bytes) of the typed array.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-get-%25typedarray%25.prototype.bytelength",
-            "description": "TypedArray.prototype.byteLength - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-get-%25typedarray%25.prototype.bytelength",
+            "description": "(ECMAScript) # sec-get-%typedarray%.prototype.bytelength"
         }
     ]
 }

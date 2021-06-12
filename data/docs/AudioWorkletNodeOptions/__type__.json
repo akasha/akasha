@@ -3,12 +3,5 @@
     "kind": "Type",
     "name": "AudioWorkletNodeOptions",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioWorkletNodeOptions",
-    "description": "The AudioWorkletNodeOptions dictionary of the Web Audio API is used to specify configuration options when constructing a new AudioWorkletNode object for custom audio processing.",
-    "refs": [
-        {
-            "name": "Web Audio API",
-            "href": "https://webaudio.github.io/web-audio-api/#dictdef-audioworkletnodeoptions",
-            "description": "AudioWorkletNodeOptions - Web Audio API"
-        }
-    ]
+    "description": "The AudioWorkletNodeOptions dictionary of the Web Audio API is used to specify configuration options when constructing a new AudioWorkletNode object for custom audio processing."
 }

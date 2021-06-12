@@ -6,9 +6,9 @@
     "description": "The Number constructor contains constants and methods for working with numbers. Values of other types can be converted to numbers using the Number() function.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-number-objects",
-            "description": "Number - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-number-objects",
+            "description": "(ECMAScript) # sec-number-objects"
         }
     ]
 }

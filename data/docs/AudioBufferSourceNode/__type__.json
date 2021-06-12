@@ -8,7 +8,7 @@
         {
             "name": "Web Audio API",
             "href": "https://webaudio.github.io/web-audio-api/#AudioBufferSourceNode",
-            "description": "AudioBufferSourceNode - Web Audio API"
+            "description": "# AudioBufferSourceNode"
         }
     ]
 }

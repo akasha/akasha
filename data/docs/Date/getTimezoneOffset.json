@@ -3,12 +3,12 @@
     "kind": "Method",
     "name": "Date.getTimezoneOffset",
     "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getTimezoneOffset",
-    "description": "The getTimezoneOffset() method returns the time zone difference, in minutes, from current locale (host system settings) to UTC.",
+    "description": "The getTimezoneOffset() method returns the difference, in minutes, between a date as evaluated in the UTC time zone, and the same date as evaluated in the local time zone.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-date.prototype.gettimezoneoffset",
-            "description": "Date.prototype.getTimezoneOffset - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-date.prototype.gettimezoneoffset",
+            "description": "(ECMAScript) # sec-date.prototype.gettimezoneoffset"
         }
     ]
 }

@@ -7,8 +7,8 @@
     "refs": [
         {
             "name": "Web Audio API",
-            "href": "https://webaudio.github.io/web-audio-api/#audioworkletprocessor",
-            "description": "AudioWorkletProcessor - Web Audio API"
+            "href": "https://webaudio.github.io/web-audio-api/#AudioWorkletProcessor",
+            "description": "# AudioWorkletProcessor"
         }
     ]
 }

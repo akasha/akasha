@@ -8,7 +8,7 @@
         {
             "name": "WebAssembly JavaScript Interface",
             "href": "https://webassembly.github.io/spec/js-api/#memories",
-            "description": "Memory - WebAssembly JavaScript Interface"
+            "description": "# memories"
         }
     ]
 }

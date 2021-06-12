@@ -6,9 +6,9 @@
     "description": "The TypedArray.BYTES_PER_ELEMENT property represents the size in bytes of each element in an typed array.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-typedarray.bytes_per_element",
-            "description": "TypedArray.BYTES_PER_ELEMENT - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-typedarray.bytes_per_element",
+            "description": "(ECMAScript) # sec-typedarray.bytes_per_element"
         }
     ]
 }

@@ -6,9 +6,9 @@
     "description": "The buffer accessor property represents the ArrayBuffer or SharedArrayBuffer referenced by the DataView at construction time.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-get-dataview.prototype.buffer",
-            "description": "DataView.prototype.buffer - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/structured-data.html#sec-get-dataview.prototype.buffer",
+            "description": "(ECMAScript) # sec-get-dataview.prototype.buffer"
         }
     ]
 }

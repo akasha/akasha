@@ -1,63 +1,71 @@
 
 {
     "name": "RegExp",
-    "lastModifiedAt": 1615890941302,
+    "lastModifiedAt": 1623484794765,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1612573596000
+            "lastModifiedAt": 1623291350000
         },
         {
             "name": "compile",
-            "lastModifiedAt": 1612573596000
+            "lastModifiedAt": 1623463357000
         },
         {
             "name": "dotAll",
-            "lastModifiedAt": 1612573596000
+            "lastModifiedAt": 1623463357000
         },
         {
             "name": "exec",
-            "lastModifiedAt": 1612573596000
+            "lastModifiedAt": 1623463357000
         },
         {
             "name": "flags",
-            "lastModifiedAt": 1612573596000
+            "lastModifiedAt": 1623463357000
         },
         {
             "name": "global",
-            "lastModifiedAt": 1612573596000
+            "lastModifiedAt": 1623463357000
+        },
+        {
+            "name": "hasIndices",
+            "lastModifiedAt": 1623463357000
         },
         {
             "name": "ignoreCase",
-            "lastModifiedAt": 1612573596000
+            "lastModifiedAt": 1623463357000
         },
         {
             "name": "multiline",
-            "lastModifiedAt": 1612573596000
+            "lastModifiedAt": 1623463357000
         },
         {
             "name": "prototype",
-            "lastModifiedAt": 1612573596000
+            "lastModifiedAt": 1623291350000
         },
         {
             "name": "source",
-            "lastModifiedAt": 1612573596000
+            "lastModifiedAt": 1623463357000
         },
         {
             "name": "sticky",
-            "lastModifiedAt": 1612573596000
+            "lastModifiedAt": 1623463357000
         },
         {
             "name": "test",
-            "lastModifiedAt": 1612573596000
+            "lastModifiedAt": 1623291350000
+        },
+        {
+            "name": "toSource",
+            "lastModifiedAt": 1623463357000
         },
         {
             "name": "toString",
-            "lastModifiedAt": 1612573596000
+            "lastModifiedAt": 1623463357000
         },
         {
             "name": "unicode",
-            "lastModifiedAt": 1612573596000
+            "lastModifiedAt": 1623463357000
         }
     ]
 }

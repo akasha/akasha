@@ -6,9 +6,9 @@
     "description": "The setHours() method sets the hours for a specified date according to local time, and returns the number of milliseconds since January 1, 1970 00:00:00 UTC until the time represented by the updated Date instance.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-date.prototype.sethours",
-            "description": "Date.prototype.setHours - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-date.prototype.sethours",
+            "description": "(ECMAScript) # sec-date.prototype.sethours"
         }
     ]
 }

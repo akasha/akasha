@@ -6,9 +6,9 @@
     "description": "The isPrototypeOf() method checks if an object exists in another object's prototype chain.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-object.prototype.isprototypeof",
-            "description": "Object.prototype.isPrototypeOf - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-object.prototype.isprototypeof",
+            "description": "(ECMAScript) # sec-object.prototype.isprototypeof"
         }
     ]
 }

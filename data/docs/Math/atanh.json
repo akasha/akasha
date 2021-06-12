@@ -6,9 +6,9 @@
     "description": "The Math.atanh() function returns the hyperbolic arctangent of a number, that is",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-math.atanh",
-            "description": "Math.atanh - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-math.atanh",
+            "description": "(ECMAScript) # sec-math.atanh"
         }
     ]
 }

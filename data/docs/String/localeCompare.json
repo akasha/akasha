@@ -6,14 +6,14 @@
     "description": "The localeCompare() method returns a number indicating whether a reference string comes before, or after, or is the same as the given string in sort order.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-string.prototype.localecompare",
-            "description": "String.prototype.localeCompare - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/text-processing.html#sec-string.prototype.localecompare",
+            "description": "(ECMAScript) # sec-string.prototype.localecompare"
         },
         {
-            "name": "ECMAScript Internationalization API (ECMA-402)",
+            "name": "ECMAScript Internationalization API Specification",
             "href": "https://tc39.es/ecma402/#sup-String.prototype.localeCompare",
-            "description": "String.prototype.localeCompare - ECMAScript Internationalization API (ECMA-402)"
+            "description": "(ECMAScript Internationalization API) # sup-String.prototype.localeCompare"
         }
     ]
 }

@@ -6,9 +6,9 @@
     "description": "The Math.tanh() function returns the hyperbolic tangent of a number, that is",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-math.tanh",
-            "description": "Math.tanh - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-math.tanh",
+            "description": "(ECMAScript) # sec-math.tanh"
         }
     ]
 }

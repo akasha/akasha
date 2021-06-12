@@ -8,7 +8,7 @@
         {
             "name": "WebAssembly JavaScript Interface",
             "href": "https://webassembly.github.io/spec/js-api/#tables",
-            "description": "Table - WebAssembly JavaScript Interface"
+            "description": "# tables"
         }
     ]
 }

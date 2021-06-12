@@ -6,9 +6,9 @@
     "description": "The WebAssembly.instantiateStreaming() function compiles and instantiates a WebAssembly module directly from a streamed underlying source. This is the most efficient, optimized way to load wasm code.",
     "refs": [
         {
-            "name": "WebAssembly features for web embedding",
-            "href": "https://webassembly.org/docs/web/#webassemblyinstantiatestreaming",
-            "description": "instantiateStreaming() - WebAssembly features for web embedding"
+            "name": "WebAssembly Web API",
+            "href": "https://webassembly.github.io/spec/web-api/#dom-webassembly-instantiatestreaming",
+            "description": "# dom-webassembly-instantiatestreaming"
         }
     ]
 }

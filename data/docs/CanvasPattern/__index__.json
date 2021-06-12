@@ -1,11 +1,11 @@
 
 {
     "name": "CanvasPattern",
-    "lastModifiedAt": 1615897058484,
+    "lastModifiedAt": 1623484613386,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604975534911
+            "lastModifiedAt": 1623463438000
         },
         {
             "name": "setTransform",

@@ -3,12 +3,12 @@
     "kind": "Method",
     "name": "Date.getDay",
     "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getDay",
-    "description": "The getDay() method returns the day of the week for the specified date according to local time, where 0 represents Sunday.",
+    "description": "The getDay() method returns the day of the week for the specified date according to local time, where 0 represents Sunday. For the day of the month, see Date.prototype.getDate().",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-date.prototype.getday",
-            "description": "Date.prototype.getDay - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-date.prototype.getday",
+            "description": "(ECMAScript) # sec-date.prototype.getday"
         }
     ]
 }

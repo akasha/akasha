@@ -6,9 +6,9 @@
     "description": "The getUTCDay() method returns the day of the week in the specified date according to universal time, where 0 represents Sunday.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-date.prototype.getutcday",
-            "description": "Date.prototype.getUTCDay - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-date.prototype.getutcday",
+            "description": "(ECMAScript) # sec-date.prototype.getutcday"
         }
     ]
 }

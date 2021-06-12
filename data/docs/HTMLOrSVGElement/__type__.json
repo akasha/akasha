@@ -3,12 +3,5 @@
     "kind": "Type",
     "name": "HTMLOrSVGElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLOrSVGElement",
-    "description": "The HTMLOrForeignElement mixin describes several features common to the HTMLElement, SVGElement and MathMLElement interfaces.",
-    "refs": [
-        {
-            "name": "HTML Living Standard",
-            "href": "https://html.spec.whatwg.org/multipage/dom.html#htmlorsvgelement",
-            "description": "HTMLOrForeignElement - HTML Living Standard"
-        }
-    ]
+    "description": "The HTMLOrForeignElement mixin describes several features common to the HTMLElement, SVGElement and MathMLElement interfaces."
 }

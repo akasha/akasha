@@ -6,9 +6,9 @@
     "description": "The Math.acos() function returns the arccosine (in radians) of a number, that is",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-math.acos",
-            "description": "Math.acos - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-math.acos",
+            "description": "(ECMAScript) # sec-math.acos"
         }
     ]
 }

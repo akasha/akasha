@@ -6,14 +6,9 @@
     "description": "The AudioTrack interface represents a single audio track from one of the HTML media elements, &lt;audio&gt; or &lt;video&gt;.",
     "refs": [
         {
-            "name": "HTML Living Standard",
+            "name": "HTML Standard",
             "href": "https://html.spec.whatwg.org/multipage/media.html#audiotrack",
-            "description": "AudioTrack - HTML Living Standard"
-        },
-        {
-            "name": "HTML5",
-            "href": "https://www.w3.org/TR/html52/embedded-content-0.html#audiotrack",
-            "description": "AudioTrack - HTML5"
+            "description": "(HTML) # audiotrack"
         }
     ]
 }

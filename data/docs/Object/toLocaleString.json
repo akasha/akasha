@@ -6,9 +6,9 @@
     "description": "The toLocaleString() method returns a string representing the object. This method is meant to be overridden by derived objects for locale-specific purposes.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-object.prototype.tolocalestring",
-            "description": "Object.prototype.toLocaleString - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-object.prototype.tolocalestring",
+            "description": "(ECMAScript) # sec-object.prototype.tolocalestring"
         }
     ]
 }

@@ -1,7 +1,7 @@
 
 {
     "name": "BiquadFilterNode",
-    "lastModifiedAt": 1615896919585,
+    "lastModifiedAt": 1623484604324,
     "entries": [
         {
             "name": "BiquadFilterNode",
@@ -13,7 +13,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1612573628000
+            "lastModifiedAt": 1623463440000
         },
         {
             "name": "detune",

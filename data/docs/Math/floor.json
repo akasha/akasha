@@ -6,9 +6,9 @@
     "description": "The Math.floor() function returns the largest integer less than or equal to a given number.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-math.floor",
-            "description": "Math.floor - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-math.floor",
+            "description": "(ECMAScript) # sec-math.floor"
         }
     ]
 }

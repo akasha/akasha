@@ -1,11 +1,11 @@
 
 {
     "name": "BluetoothCharacteristicProperties",
-    "lastModifiedAt": 1615890344611,
+    "lastModifiedAt": 1623484604654,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1612573641000
+            "lastModifiedAt": 1623463424000
         },
         {
             "name": "authenticatedSignedWrites",

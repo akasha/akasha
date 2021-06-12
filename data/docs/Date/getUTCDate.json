@@ -6,9 +6,9 @@
     "description": "The getUTCDate() method returns the day of the month(from 1 to 31) in the specified date according to universal time.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-date.prototype.getutcdate",
-            "description": "Date.prototype.getUTCDate - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-date.prototype.getutcdate",
+            "description": "(ECMAScript) # sec-date.prototype.getutcdate"
         }
     ]
 }

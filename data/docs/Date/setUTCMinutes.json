@@ -6,9 +6,9 @@
     "description": "The setUTCMinutes() method sets the minutes for a specified date according to universal time.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-date.prototype.setutcminutes",
-            "description": "Date.prototype.setUTCMinutes - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-date.prototype.setutcminutes",
+            "description": "(ECMAScript) # sec-date.prototype.setutcminutes"
         }
     ]
 }

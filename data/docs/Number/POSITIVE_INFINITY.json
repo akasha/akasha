@@ -6,9 +6,9 @@
     "description": "The Number.POSITIVE_INFINITY property represents the positive Infinity value.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-number.positive_infinity",
-            "description": "Number.POSITIVE_INFINITY - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-number.positive_infinity",
+            "description": "(ECMAScript) # sec-number.positive_infinity"
         }
     ]
 }

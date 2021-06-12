@@ -8,7 +8,7 @@
         {
             "name": "WebAssembly JavaScript Interface",
             "href": "https://webassembly.github.io/spec/js-api/#globals",
-            "description": "WebAssembly.Global() - WebAssembly JavaScript Interface"
+            "description": "# globals"
         }
     ]
 }

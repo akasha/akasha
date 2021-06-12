@@ -6,9 +6,9 @@
     "description": "The indexOf() method returns the first index at which a given element can be found in the typed array, or -1 if it is not present. This method has the same algorithm as Array.prototype.indexOf(). TypedArray is one of the typed array types here.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-%25typedarray%25.prototype.indexof",
-            "description": "TypedArray.prototype.indexOf - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.indexof",
+            "description": "(ECMAScript) # sec-%typedarray%.prototype.indexof"
         }
     ]
 }

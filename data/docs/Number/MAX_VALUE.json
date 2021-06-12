@@ -6,9 +6,9 @@
     "description": "The Number.MAX_VALUE property represents the maximum numeric value representable in JavaScript.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-number.max_value",
-            "description": "Number.MAX_VALUE - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-number.max_value",
+            "description": "(ECMAScript) # sec-number.max_value"
         }
     ]
 }

@@ -6,9 +6,9 @@
     "description": "The AuthenticatorAssertionResponse interface of the Web Authentication API is returned by CredentialsContainer.get() when a PublicKeyCredential is passed, and provides proof to a service that it has a key pair and that the authentication request is valid and approved.",
     "refs": [
         {
-            "name": "Web Authentication: An API for accessing Public Key Credentials Level 1",
+            "name": "Web Authentication: An API for accessing Public Key Credentials - Level 3",
             "href": "https://w3c.github.io/webauthn/#iface-authenticatorassertionresponse",
-            "description": "AuthenticatorAssertionResponse interface - Web Authentication: An API for accessing Public Key Credentials Level 1"
+            "description": "(Web Authentication) # iface-authenticatorassertionresponse"
         }
     ]
 }

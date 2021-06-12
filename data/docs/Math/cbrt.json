@@ -6,9 +6,9 @@
     "description": "The Math.cbrt() function returns the cube root of a number, that is",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-math.cbrt",
-            "description": "Math.cbrt - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-math.cbrt",
+            "description": "(ECMAScript) # sec-math.cbrt"
         }
     ]
 }

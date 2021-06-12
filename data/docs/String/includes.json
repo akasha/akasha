@@ -6,9 +6,9 @@
     "description": "The includes() method performs a case-sensitive search to determine whether one string may be found within another string, returning true or false as appropriate.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-string.prototype.includes",
-            "description": "String.prototype.includes - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/text-processing.html#sec-string.prototype.includes",
+            "description": "(ECMAScript) # sec-string.prototype.includes"
         }
     ]
 }

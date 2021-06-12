@@ -6,9 +6,9 @@
     "description": "The Number.parseFloat() method parses an argument and returns a floating point number. If a number cannot be parsed from the argument, it returns NaN.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-number.parsefloat",
-            "description": "Number.parseFloat - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-number.parsefloat",
+            "description": "(ECMAScript) # sec-number.parsefloat"
         }
     ]
 }

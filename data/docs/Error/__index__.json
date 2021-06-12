@@ -1,7 +1,7 @@
 
 {
     "name": "Error",
-    "lastModifiedAt": 1615890531241,
+    "lastModifiedAt": 1623484644613,
     "entries": [
         {
             "name": "Error",
@@ -9,7 +9,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1606559268510
+            "lastModifiedAt": 1623291352000
         },
         {
             "name": "columnNumber",
@@ -25,11 +25,11 @@
         },
         {
             "name": "message",
-            "lastModifiedAt": 1606560321036
+            "lastModifiedAt": 1623463360000
         },
         {
             "name": "name",
-            "lastModifiedAt": 1606560321427
+            "lastModifiedAt": 1623463360000
         },
         {
             "name": "stack",
@@ -41,7 +41,7 @@
         },
         {
             "name": "toString",
-            "lastModifiedAt": 1612573599000
+            "lastModifiedAt": 1623463360000
         }
     ]
 }

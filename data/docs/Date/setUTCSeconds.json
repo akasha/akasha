@@ -6,9 +6,9 @@
     "description": "The setUTCSeconds() method sets the seconds for a specified date according to universal time.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-date.prototype.setutcseconds",
-            "description": "Date.prototype.setUTCSeconds - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-date.prototype.setutcseconds",
+            "description": "(ECMAScript) # sec-date.prototype.setutcseconds"
         }
     ]
 }

@@ -1,7 +1,7 @@
 
 {
     "name": "ArrayBuffer",
-    "lastModifiedAt": 1615890317772,
+    "lastModifiedAt": 1623484602864,
     "entries": [
         {
             "name": "ArrayBuffer",
@@ -9,19 +9,19 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1606791054133
+            "lastModifiedAt": 1623291353000
         },
         {
             "name": "byteLength",
-            "lastModifiedAt": 1606791055625
+            "lastModifiedAt": 1623463362000
         },
         {
             "name": "isView",
-            "lastModifiedAt": 1606791056300
+            "lastModifiedAt": 1623463363000
         },
         {
             "name": "slice",
-            "lastModifiedAt": 1606791056591
+            "lastModifiedAt": 1623463363000
         }
     ]
 }

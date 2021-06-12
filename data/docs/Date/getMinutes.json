@@ -6,9 +6,9 @@
     "description": "The getMinutes() method returns the minutes in the specified date according to local time.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-date.prototype.getminutes",
-            "description": "Date.prototype.getMinutes - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-date.prototype.getminutes",
+            "description": "(ECMAScript) # sec-date.prototype.getminutes"
         }
     ]
 }

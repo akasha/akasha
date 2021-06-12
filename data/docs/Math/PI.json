@@ -6,9 +6,9 @@
     "description": "The Math.PI property represents the ratio of the circumference of a circle to its diameter, approximately 3.14159:",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-math.pi",
-            "description": "Math.PI - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-math.pi",
+            "description": "(ECMAScript) # sec-math.pi"
         }
     ]
 }

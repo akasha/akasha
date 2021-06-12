@@ -3,12 +3,12 @@
     "kind": "Method",
     "name": "Math.abs",
     "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/abs",
-    "description": "The Math.abs() function returns the absolute value of a number",
+    "description": "The Math.abs() function returns the absolute value of a number. That is, it returns x if x is positive or zero, and the negation of x if x is negative.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-math.abs",
-            "description": "Math.abs - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-math.abs",
+            "description": "(ECMAScript) # sec-math.abs"
         }
     ]
 }

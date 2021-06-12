@@ -6,9 +6,9 @@
     "description": "The Number.isSafeInteger() method determines whether the provided value is a number that is a safe integer.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-number.issafeinteger",
-            "description": "Number.isSafeInteger - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-number.issafeinteger",
+            "description": "(ECMAScript) # sec-number.issafeinteger"
         }
     ]
 }

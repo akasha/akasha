@@ -3,12 +3,12 @@
     "kind": "Method",
     "name": "String.replaceAll",
     "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll",
-    "description": "The replaceAll() method returns a new string with all matches of a pattern replaced by a replacement.",
+    "description": "The replaceAll() method returns a new string with all matches of a pattern replaced by a replacement. The pattern can be a string or a RegExp, and the replacement can be a string or a function to be called for each match.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-string.prototype.replaceall",
-            "description": "String.prototype.replaceAll - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/text-processing.html#sec-string.prototype.replaceall",
+            "description": "(ECMAScript) # sec-string.prototype.replaceall"
         }
     ]
 }

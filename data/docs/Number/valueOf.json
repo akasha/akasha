@@ -6,9 +6,9 @@
     "description": "The valueOf() method returns the wrapped primitive value of a Number object.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-number.prototype.valueof",
-            "description": "Number.prototype.valueOf - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-number.prototype.valueof",
+            "description": "(ECMAScript) # sec-number.prototype.valueof"
         }
     ]
 }

@@ -7,8 +7,8 @@
     "refs": [
         {
             "name": "Web Bluetooth",
-            "href": "https://webbluetoothcg.github.io/web-bluetooth/#bluetoothdevice",
-            "description": "BluetoothDevice - Web Bluetooth"
+            "href": "https://webbluetoothcg.github.io/web-bluetooth/#bluetoothdevice-interface",
+            "description": "# bluetoothdevice-interface"
         }
     ]
 }

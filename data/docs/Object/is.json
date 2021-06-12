@@ -6,9 +6,9 @@
     "description": "The Object.is() method determines whether two values are the same value.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-object.is",
-            "description": "Object.is - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-object.is",
+            "description": "(ECMAScript) # sec-object.is"
         }
     ]
 }

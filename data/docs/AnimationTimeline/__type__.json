@@ -6,9 +6,9 @@
     "description": "The AnimationTimeline interface of the Web Animations API represents the timeline of an animation. This interface exists to define timeline features (inherited by DocumentTimeline and future timeline types) and is not itself directly used by developers. Anywhere you see AnimationTimeline, you should use DocumentTimeline or any other timeline type instead.",
     "refs": [
         {
-            "name": "Web Animations",
-            "href": "https://drafts.csswg.org/web-animations-1/#the-animationtimeline-interface",
-            "description": "AnimationTimeline - Web Animations"
+            "name": "Web Animations Level 2",
+            "href": "https://drafts.csswg.org/web-animations/#the-animationtimeline-interface",
+            "description": "(Web Animations 2) # the-animationtimeline-interface"
         }
     ]
 }

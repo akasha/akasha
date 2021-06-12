@@ -6,9 +6,9 @@
     "description": "The toString() method returns a string representing the specified Number object.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-number.prototype.tostring",
-            "description": "Number.prototype.tostring - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-number.prototype.tostring",
+            "description": "(ECMAScript) # sec-number.prototype.tostring"
         }
     ]
 }

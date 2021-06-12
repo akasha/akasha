@@ -1,11 +1,11 @@
 
 {
     "name": "BluetoothRemoteGATTService",
-    "lastModifiedAt": 1615890348321,
+    "lastModifiedAt": 1623484605033,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604975475137
+            "lastModifiedAt": 1623463387000
         },
         {
             "name": "device",

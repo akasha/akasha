@@ -6,9 +6,9 @@
     "description": "The Symbol.hasInstance well-known symbol is used to determine if a constructor object recognizes an object as its instance. The instanceof operator's behavior can be customized by this symbol.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-symbol.hasinstance",
-            "description": "Symbol.hasInstance - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-symbol.hasinstance",
+            "description": "(ECMAScript) # sec-symbol.hasinstance"
         }
     ]
 }

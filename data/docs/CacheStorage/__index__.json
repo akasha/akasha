@@ -1,11 +1,11 @@
 
 {
     "name": "CacheStorage",
-    "lastModifiedAt": 1615896891581,
+    "lastModifiedAt": 1623484613132,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604975529458
+            "lastModifiedAt": 1623463410000
         },
         {
             "name": "delete",

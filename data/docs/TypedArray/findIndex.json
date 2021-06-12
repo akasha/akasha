@@ -6,9 +6,9 @@
     "description": "The findIndex() method returns an index in the typed array, if an element in the typed array satisfies the provided testing function. Otherwise -1 is returned.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-%25typedarray%25.prototype.findindex",
-            "description": "%TypedArray%.prototype.findIndex - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.findindex",
+            "description": "(ECMAScript) # sec-%typedarray%.prototype.findindex"
         }
     ]
 }

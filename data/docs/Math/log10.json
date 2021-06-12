@@ -6,9 +6,9 @@
     "description": "The Math.log10() function returns the base 10 logarithm of a number, that is",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-math.log10",
-            "description": "Math.log10 - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-math.log10",
+            "description": "(ECMAScript) # sec-math.log10"
         }
     ]
 }

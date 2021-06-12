@@ -6,9 +6,9 @@
     "description": "The getBigInt64() method gets a signed 64-bit integer (long long) at the specified byte offset from the start of the DataView.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-dataview.prototype.getbigint64",
-            "description": "DataView.prototype.getBigInt64() - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/structured-data.html#sec-dataview.prototype.getbigint64",
+            "description": "(ECMAScript) # sec-dataview.prototype.getbigint64"
         }
     ]
 }

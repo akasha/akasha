@@ -6,9 +6,9 @@
     "description": "The read-only description property is a string returning the optional description of Symbol objects.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-symbol.prototype.description",
-            "description": "get Symbol.prototype.description - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-symbol.prototype.description",
+            "description": "(ECMAScript) # sec-symbol.prototype.description"
         }
     ]
 }

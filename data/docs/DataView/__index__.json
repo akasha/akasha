@@ -1,7 +1,7 @@
 
 {
     "name": "DataView",
-    "lastModifiedAt": 1615890443028,
+    "lastModifiedAt": 1623484625424,
     "entries": [
         {
             "name": "DataView",
@@ -9,99 +9,99 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1606790991719
+            "lastModifiedAt": 1623291351000
         },
         {
             "name": "buffer",
-            "lastModifiedAt": 1606790992865
+            "lastModifiedAt": 1623463359000
         },
         {
             "name": "byteLength",
-            "lastModifiedAt": 1606790993171
+            "lastModifiedAt": 1623463359000
         },
         {
             "name": "byteOffset",
-            "lastModifiedAt": 1606790993474
+            "lastModifiedAt": 1623463359000
         },
         {
             "name": "getBigInt64",
-            "lastModifiedAt": 1606790993781
+            "lastModifiedAt": 1623463359000
         },
         {
             "name": "getBigUint64",
-            "lastModifiedAt": 1606790994080
+            "lastModifiedAt": 1623463359000
         },
         {
             "name": "getFloat32",
-            "lastModifiedAt": 1606790994420
+            "lastModifiedAt": 1623463359000
         },
         {
             "name": "getFloat64",
-            "lastModifiedAt": 1606790994717
+            "lastModifiedAt": 1623463359000
         },
         {
             "name": "getInt16",
-            "lastModifiedAt": 1606790995000
+            "lastModifiedAt": 1623463359000
         },
         {
             "name": "getInt32",
-            "lastModifiedAt": 1606790995356
+            "lastModifiedAt": 1623463359000
         },
         {
             "name": "getInt8",
-            "lastModifiedAt": 1606790995636
+            "lastModifiedAt": 1623463359000
         },
         {
             "name": "getUint16",
-            "lastModifiedAt": 1606790995913
+            "lastModifiedAt": 1623463359000
         },
         {
             "name": "getUint32",
-            "lastModifiedAt": 1606790996777
+            "lastModifiedAt": 1623463359000
         },
         {
             "name": "getUint8",
-            "lastModifiedAt": 1606790997098
+            "lastModifiedAt": 1623463359000
         },
         {
             "name": "setBigInt64",
-            "lastModifiedAt": 1606790997390
+            "lastModifiedAt": 1623463359000
         },
         {
             "name": "setBigUint64",
-            "lastModifiedAt": 1606790997684
+            "lastModifiedAt": 1623463359000
         },
         {
             "name": "setFloat32",
-            "lastModifiedAt": 1606790998020
+            "lastModifiedAt": 1623463359000
         },
         {
             "name": "setFloat64",
-            "lastModifiedAt": 1606790998370
+            "lastModifiedAt": 1623463359000
         },
         {
             "name": "setInt16",
-            "lastModifiedAt": 1606790998672
+            "lastModifiedAt": 1623463359000
         },
         {
             "name": "setInt32",
-            "lastModifiedAt": 1606790998978
+            "lastModifiedAt": 1623463359000
         },
         {
             "name": "setInt8",
-            "lastModifiedAt": 1606791000162
+            "lastModifiedAt": 1623463359000
         },
         {
             "name": "setUint16",
-            "lastModifiedAt": 1606791000722
+            "lastModifiedAt": 1623463359000
         },
         {
             "name": "setUint32",
-            "lastModifiedAt": 1606791000994
+            "lastModifiedAt": 1623463359000
         },
         {
             "name": "setUint8",
-            "lastModifiedAt": 1606791001306
+            "lastModifiedAt": 1623463359000
         }
     ]
 }

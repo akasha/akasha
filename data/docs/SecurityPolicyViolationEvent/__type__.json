@@ -7,7 +7,7 @@
     "refs": [
         {
             "name": "Content Security Policy Level 2",
-            "href": "https://w3c.github.io/webappsec-csp/2/#firing-securitypolicyviolationevent-events",
+            "href": "https://www.w3.org/TR/CSP2/#firing-securitypolicyviolationevent-events",
             "description": "SecurityPolicyViolationEvent - Content Security Policy Level 2"
         },
         {

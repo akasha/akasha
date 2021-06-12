@@ -6,9 +6,9 @@
     "description": "The static method Object.defineProperty() defines a new property directly on an object, or modifies an existing property on an object, and returns the object.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-object.defineproperty",
-            "description": "Object.defineProperty - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-object.defineproperty",
+            "description": "(ECMAScript) # sec-object.defineproperty"
         }
     ]
 }

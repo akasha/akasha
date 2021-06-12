@@ -6,14 +6,9 @@
     "description": "The AudioTrackList interface is used to represent a list of the audio tracks contained within a given HTML media element, with each track represented by a separate AudioTrack object in the list.",
     "refs": [
         {
-            "name": "HTML Living Standard",
-            "href": "https://html.spec.whatwg.org/multipage/media.html#audiotracklist",
-            "description": "AudioTrackList - HTML Living Standard"
-        },
-        {
-            "name": "HTML5",
-            "href": "https://www.w3.org/TR/html52/embedded-content-0.html#audiotracklist",
-            "description": "AudioTrackList - HTML5"
+            "name": "HTML Standard",
+            "href": "https://html.spec.whatwg.org/multipage/media.html#audiotracklist-and-videotracklist-objects",
+            "description": "(HTML) # audiotracklist-and-videotracklist-objects"
         }
     ]
 }

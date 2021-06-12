@@ -7,8 +7,8 @@
     "refs": [
         {
             "name": "Web Bluetooth",
-            "href": "https://webbluetoothcg.github.io/web-bluetooth/#bluetoothremotegattservice",
-            "description": "BluetoothRemoteGATTService - Web Bluetooth"
+            "href": "https://webbluetoothcg.github.io/web-bluetooth/#bluetoothgattservice-interface",
+            "description": "# bluetoothgattservice-interface"
         }
     ]
 }

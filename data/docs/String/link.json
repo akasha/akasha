@@ -6,9 +6,9 @@
     "description": "The link() method creates a string representing the code for an &lt;a&gt; HTML element to be used as a hypertext link to another URL.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-string.prototype.link",
-            "description": "String.prototype.link - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/additional-ecmascript-features-for-web-browsers.html#sec-string.prototype.link",
+            "description": "(ECMAScript) # sec-string.prototype.link"
         }
     ]
 }

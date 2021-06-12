@@ -6,9 +6,9 @@
     "description": "The lastIndexOf() method returns the last index at which a given element can be found in the typed array, or -1 if it is not present. The typed array is searched backwards, starting at fromIndex. This method has the same algorithm as Array.prototype.lastIndexOf(). TypedArray is one of the typed array types here.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-%25typedarray%25.prototype.lastindexof",
-            "description": "TypedArray.prototype.lastIndexOf - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.lastindexof",
+            "description": "(ECMAScript) # sec-%typedarray%.prototype.lastindexof"
         }
     ]
 }

@@ -6,9 +6,9 @@
     "description": "The JSON.stringify() method converts a JavaScript object or value to a JSON string, optionally replacing values if a replacer function is specified or optionally including only the specified properties if a replacer array is specified.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-json.stringify",
-            "description": "JSON.stringify - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/structured-data.html#sec-json.stringify",
+            "description": "(ECMAScript) # sec-json.stringify"
         }
     ]
 }

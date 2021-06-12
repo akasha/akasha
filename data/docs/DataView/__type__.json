@@ -6,9 +6,9 @@
     "description": "The DataView view provides a low-level interface for reading and writing multiple number types in a binary ArrayBuffer, without having to care about the platform's endianness.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-dataview-objects",
-            "description": "DataView - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/structured-data.html#sec-dataview-objects",
+            "description": "(ECMAScript) # sec-dataview-objects"
         }
     ]
 }

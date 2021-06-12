@@ -1,7 +1,7 @@
 
 {
     "name": "BroadcastChannel",
-    "lastModifiedAt": 1615897070713,
+    "lastModifiedAt": 1623484610912,
     "entries": [
         {
             "name": "BroadcastChannel",
@@ -9,7 +9,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1604975485525
+            "lastModifiedAt": 1623463408000
         },
         {
             "name": "close",

@@ -6,9 +6,9 @@
     "description": "The Math.SQRT1_2 property represents the square root of 1/2 which is approximately 0.707:",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-math.sqrt1_2",
-            "description": "Math.SQRT1_2 - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-math.sqrt1_2",
+            "description": "(ECMAScript) # sec-math.sqrt1_2"
         }
     ]
 }

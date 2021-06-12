@@ -6,9 +6,9 @@
     "description": "The JSON.parse() method parses a JSON string, constructing the JavaScript value or object described by the string. An optional reviver function can be provided to perform a transformation on the resulting object before it is returned.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-json.parse",
-            "description": "JSON.parse - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/structured-data.html#sec-json.parse",
+            "description": "(ECMAScript) # sec-json.parse"
         }
     ]
 }

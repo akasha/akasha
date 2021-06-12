@@ -6,9 +6,9 @@
     "description": "The trimEnd() method removes whitespace from the end of a string. trimRight() is an alias of this method.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-string.prototype.trimend",
-            "description": "String.prototype.trimEnd - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/text-processing.html#sec-string.prototype.trimend",
+            "description": "(ECMAScript) # sec-string.prototype.trimend"
         }
     ]
 }

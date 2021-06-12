@@ -3,12 +3,5 @@
     "kind": "Type",
     "name": "AggregateError",
     "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/AggregateError",
-    "description": "The AggregateError object represents an error when several errors need to be wrapped in a single error. It is thrown when multiple errors need to be reported by an operation, for example by Promise.any(), when all promises passed to it reject.",
-    "refs": [
-        {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-aggregate-error-objects",
-            "description": "AggregateError - ECMAScript (ECMA-262)"
-        }
-    ]
+    "description": "The AggregateError object represents an error when several errors need to be wrapped in a single error. It is thrown when multiple errors need to be reported by an operation, for example by Promise.any(), when all promises passed to it reject."
 }

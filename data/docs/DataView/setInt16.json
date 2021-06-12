@@ -6,9 +6,9 @@
     "description": "The setInt16() method stores a signed 16-bit integer (short) value at the specified byte offset from the start of the DataView.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-dataview.prototype.setint16",
-            "description": "DataView.prototype.setInt16 - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/structured-data.html#sec-dataview.prototype.setint16",
+            "description": "(ECMAScript) # sec-dataview.prototype.setint16"
         }
     ]
 }

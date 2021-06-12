@@ -1,7 +1,7 @@
 
 {
     "name": "AbortController",
-    "lastModifiedAt": 1615897002205,
+    "lastModifiedAt": 1623473228677,
     "entries": [
         {
             "name": "AbortController",
@@ -9,7 +9,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1604975268843
+            "lastModifiedAt": 1623291366000
         },
         {
             "name": "abort",

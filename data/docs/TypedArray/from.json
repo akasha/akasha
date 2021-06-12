@@ -6,9 +6,9 @@
     "description": "The TypedArray.from() method creates a new typed array from an array-like or iterable object. This method is nearly the same as Array.from().",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-%25typedarray%25.from",
-            "description": "%TypedArray%.from - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.from",
+            "description": "(ECMAScript) # sec-%typedarray%.from"
         }
     ]
 }

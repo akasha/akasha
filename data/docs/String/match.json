@@ -6,9 +6,9 @@
     "description": "The match() method retrieves the result of matching a string against a regular expression.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-string.prototype.match",
-            "description": "String.prototype.match - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/text-processing.html#sec-string.prototype.match",
+            "description": "(ECMAScript) # sec-string.prototype.match"
         }
     ]
 }

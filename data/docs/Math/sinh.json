@@ -6,9 +6,9 @@
     "description": "The Math.sinh() function returns the hyperbolic sine of a number, that can be expressed using the constant e:",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-math.sinh",
-            "description": "Math.sinh - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-math.sinh",
+            "description": "(ECMAScript) # sec-math.sinh"
         }
     ]
 }

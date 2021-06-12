@@ -6,9 +6,9 @@
     "description": "The sort() method sorts the elements of a typed array numerically in place and returns the typed array. This method has the same algorithm as Array.prototype.sort(), except that sorts the values numerically instead of as strings. TypedArray is one of the typed array types here.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-%25typedarray%25.prototype.sort",
-            "description": "TypedArray.prototype.sort - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.sort",
+            "description": "(ECMAScript) # sec-%typedarray%.prototype.sort"
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "WebAssembly JavaScript Interface",
             "href": "https://webassembly.github.io/spec/js-api/#instances",
-            "description": "Instance - WebAssembly JavaScript Interface"
+            "description": "# instances"
         }
     ]
 }

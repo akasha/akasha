@@ -6,9 +6,9 @@
     "description": "The sticky property reflects whether or not the search is sticky (searches in strings only from the index indicated by the lastIndex property of this regular expression). sticky is a read-only property of an individual regular expression object.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-get-regexp.prototype.sticky",
-            "description": "RegExp.prototype.sticky - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/text-processing.html#sec-get-regexp.prototype.sticky",
+            "description": "(ECMAScript) # sec-get-regexp.prototype.sticky"
         }
     ]
 }

@@ -6,9 +6,9 @@
     "description": "The unicode property indicates whether or not the &quot;u&quot; flag is used with a regular expression. unicode is a read-only property of an individual regular expression instance.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-get-regexp.prototype.unicode",
-            "description": "RegExp.prototype.unicode - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/text-processing.html#sec-get-regexp.prototype.unicode",
+            "description": "(ECMAScript) # sec-get-regexp.prototype.unicode"
         }
     ]
 }

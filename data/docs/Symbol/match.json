@@ -6,9 +6,9 @@
     "description": "The Symbol.match well-known symbol specifies the matching of a regular expression against a string. This function is called by the String.prototype.match() method.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-symbol.match",
-            "description": "Symbol.match - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-symbol.match",
+            "description": "(ECMAScript) # sec-symbol.match"
         }
     ]
 }

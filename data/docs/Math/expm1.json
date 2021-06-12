@@ -3,12 +3,12 @@
     "kind": "Method",
     "name": "Math.expm1",
     "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/expm1",
-    "description": "The Math.expm1() function returns ex - 1, where x is the argument, and e the base of the natural logarithms.",
+    "description": "The Math.expm1() function returns e^x - 1, where x is the argument, and e the base of the natural logarithms.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-math.expm1",
-            "description": "Math.expm1 - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-math.expm1",
+            "description": "(ECMAScript) # sec-math.expm1"
         }
     ]
 }

@@ -6,9 +6,9 @@
     "description": "The TypedArray.of() method creates a new typed array from a variable number of arguments. This method is nearly the same as Array.of().",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-%25typedarray%25.of",
-            "description": "%TypedArray%.of - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.of",
+            "description": "(ECMAScript) # sec-%typedarray%.of"
         }
     ]
 }

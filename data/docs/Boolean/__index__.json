@@ -1,7 +1,7 @@
 
 {
     "name": "Boolean",
-    "lastModifiedAt": 1617018805062,
+    "lastModifiedAt": 1623484610824,
     "entries": [
         {
             "name": "Boolean",
@@ -9,15 +9,19 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1606626654611
+            "lastModifiedAt": 1623291350000
+        },
+        {
+            "name": "toSource",
+            "lastModifiedAt": 0
         },
         {
             "name": "toString",
-            "lastModifiedAt": 1606626906692
+            "lastModifiedAt": 1623463357000
         },
         {
             "name": "valueOf",
-            "lastModifiedAt": 1606626907523
+            "lastModifiedAt": 1623463357000
         }
     ]
 }

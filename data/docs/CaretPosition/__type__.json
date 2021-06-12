@@ -6,9 +6,9 @@
     "description": "The CaretPosition interface represents the caret position, an indicator for the text insertion point. You can get a CaretPosition using the Document.caretPositionFromPoint() method.",
     "refs": [
         {
-            "name": "CSS Object Model (CSSOM) View Module",
+            "name": "CSSOM View Module",
             "href": "https://drafts.csswg.org/cssom-view/#caret-position",
-            "description": "CaretPosition - CSS Object Model (CSSOM) View Module"
+            "description": "(CSSOM View) # caret-position"
         }
     ]
 }

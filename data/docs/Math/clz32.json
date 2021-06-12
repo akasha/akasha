@@ -6,9 +6,9 @@
     "description": "The Math.clz32() function returns the number of leading zero bits in the 32-bit binary representation of a number.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-math.clz32",
-            "description": "Math.clz32 - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-math.clz32",
+            "description": "(ECMAScript) # sec-math.clz32"
         }
     ]
 }

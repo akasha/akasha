@@ -11,11 +11,6 @@
             "description": "HTMLObjectElement - HTML Living Standard"
         },
         {
-            "name": "HTML5",
-            "href": "https://www.w3.org/TR/html52/embedded-content-0.html#the-object-element",
-            "description": "HTMLObjectElement - HTML5"
-        },
-        {
             "name": "Document Object Model (DOM) Level 2 HTML Specification",
             "href": "https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-9893177",
             "description": "HTMLObjectElement - Document Object Model (DOM) Level 2 HTML Specification"

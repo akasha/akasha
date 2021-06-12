@@ -6,9 +6,9 @@
     "description": "The Math.E property represents Euler's number, the base of natural logarithms, e, which is approximately 2.718.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-math.e",
-            "description": "Math.E - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-math.e",
+            "description": "(ECMAScript) # sec-math.e"
         }
     ]
 }

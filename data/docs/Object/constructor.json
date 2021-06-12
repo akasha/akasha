@@ -6,9 +6,9 @@
     "description": "The constructor property returns a reference to the Object constructor function that created the instance object. Note that the value of this property is a reference to the function itself, not a string containing the function's name.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-object.prototype.constructor",
-            "description": "Object.prototype.constructor - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-object.prototype.constructor",
+            "description": "(ECMAScript) # sec-object.prototype.constructor"
         }
     ]
 }

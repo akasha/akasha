@@ -3,12 +3,12 @@
     "kind": "Method",
     "name": "String.padStart",
     "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/padStart",
-    "description": "The padStart() method pads the current string with another string (multiple times, if needed) until the resulting string reaches the given length.",
+    "description": "The padStart() method pads the current string with another string (multiple times, if needed) until the resulting string reaches the given length. The padding is applied from the start of the current string.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-string.prototype.padstart",
-            "description": "String.prototype.padStart - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/text-processing.html#sec-string.prototype.padstart",
+            "description": "(ECMAScript) # sec-string.prototype.padstart"
         }
     ]
 }

@@ -6,9 +6,9 @@
     "description": "The Object.getOwnPropertySymbols() method returns an array of all symbol properties found directly upon a given object.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-object.getownpropertysymbols",
-            "description": "Object.getOwnPropertySymbols - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-object.getownpropertysymbols",
+            "description": "(ECMAScript) # sec-object.getownpropertysymbols"
         }
     ]
 }

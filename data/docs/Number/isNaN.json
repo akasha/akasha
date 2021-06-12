@@ -6,9 +6,9 @@
     "description": "The Number.isNaN() method determines whether the passed value is NaN and its type is Number. It is a more robust version of the original, global isNaN().",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-number.isnan",
-            "description": "Number.isnan - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-number.isnan",
+            "description": "(ECMAScript) # sec-number.isnan"
         }
     ]
 }

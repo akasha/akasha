@@ -6,9 +6,9 @@
     "description": "The matchAll() method returns an iterator of all results matching a string against a regular expression, including capturing groups.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-string.prototype.matchall",
-            "description": "String.prototype.matchAll - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/text-processing.html#sec-string.prototype.matchall",
+            "description": "(ECMAScript) # sec-string.prototype.matchall"
         }
     ]
 }

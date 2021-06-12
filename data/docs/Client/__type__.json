@@ -6,9 +6,9 @@
     "description": "The Client interface represents an executable context such as a Worker, or a SharedWorker. Window clients are represented by the more-specific WindowClient. You can get Client/WindowClient objects from methods such as Clients.matchAll() and Clients.get().",
     "refs": [
         {
-            "name": "Service Workers",
-            "href": "https://w3c.github.io/ServiceWorker/#client",
-            "description": "Client - Service Workers"
+            "name": "Service Workers 1",
+            "href": "https://w3c.github.io/ServiceWorker/#client-interface",
+            "description": "# client-interface"
         }
     ]
 }

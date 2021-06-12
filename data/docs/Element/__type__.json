@@ -6,18 +6,8 @@
     "description": "Element is the most general base class from which all element objects (i.e. objects that represent elements) in a Document inherit. It only has methods and properties common to all kinds of elements. More specific classes inherit from Element.",
     "refs": [
         {
-            "name": "CSS Pseudo-Elements Level 4",
-            "href": "https://drafts.csswg.org/css-pseudo-4/#window-interface",
-            "description": "Element - CSS Pseudo-Elements Level 4"
-        },
-        {
             "name": "Web Animations",
             "href": "https://drafts.csswg.org/web-animations-1/"
-        },
-        {
-            "name": "UndoManager and DOMTransaction",
-            "href": "https://dvcs.w3.org/hg/undomanager/raw-file/tip/undomanager.html",
-            "description": "Element - UndoManager and DOMTransaction"
         },
         {
             "name": "Pointer Events – Level 2",

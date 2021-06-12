@@ -6,14 +6,14 @@
     "description": "The toLocaleString() method returns a string with a language-sensitive representation of this number.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-number.prototype.tolocalestring",
-            "description": "Number.prototype.toLocaleString - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-number.prototype.tolocalestring",
+            "description": "(ECMAScript) # sec-number.prototype.tolocalestring"
         },
         {
-            "name": "ECMAScript Internationalization API (ECMA-402)",
+            "name": "ECMAScript Internationalization API Specification",
             "href": "https://tc39.es/ecma402/#sup-number.prototype.tolocalestring",
-            "description": "Number.prototype.toLocaleString - ECMAScript Internationalization API (ECMA-402)"
+            "description": "(ECMAScript Internationalization API) # sup-number.prototype.tolocalestring"
         }
     ]
 }

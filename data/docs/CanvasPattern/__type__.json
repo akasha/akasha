@@ -6,9 +6,9 @@
     "description": "The CanvasPattern interface represents an opaque object describing a pattern, based on an image, a canvas, or a video, created by the CanvasRenderingContext2D.createPattern() method.",
     "refs": [
         {
-            "name": "HTML Living Standard",
-            "href": "https://html.spec.whatwg.org/multipage/the-canvas-element.html#canvaspattern",
-            "description": "CanvasPattern - HTML Living Standard"
+            "name": "HTML Standard",
+            "href": "https://html.spec.whatwg.org/multipage/canvas.html#canvaspattern",
+            "description": "(HTML) # canvaspattern"
         }
     ]
 }

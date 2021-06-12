@@ -6,14 +6,14 @@
     "description": "The toLocaleDateString() method returns a string with a language sensitive representation of the date portion of this date. The new locales and options arguments let applications specify the language whose formatting conventions should be used and allow to customize the behavior of the function. In older implementations, which ignore the locales and options arguments, the locale used and the form of the string returned are entirely implementation dependent.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-date.prototype.tolocaledatestring",
-            "description": "Date.prototype.toLocaleDateString - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-date.prototype.tolocaledatestring",
+            "description": "(ECMAScript) # sec-date.prototype.tolocaledatestring"
         },
         {
-            "name": "ECMAScript Internationalization API (ECMA-402)",
+            "name": "ECMAScript Internationalization API Specification",
             "href": "https://tc39.es/ecma402/#sup-date.prototype.tolocaledatestring",
-            "description": "Date.prototype.toLocaleDateString - ECMAScript Internationalization API (ECMA-402)"
+            "description": "(ECMAScript Internationalization API) # sup-date.prototype.tolocaledatestring"
         }
     ]
 }

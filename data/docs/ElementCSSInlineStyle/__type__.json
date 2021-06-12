@@ -3,12 +3,12 @@
     "kind": "Type",
     "name": "ElementCSSInlineStyle",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/ElementCSSInlineStyle",
-    "description": "The ElementCSSInlineStyle mixin describes CSSOM-specific features common to the HTMLElement, SVGElement and MathMLElement interfaces.",
+    "description": "The style read-only property returns the inline style of an element in the form of a CSSStyleDeclaration object that contains a list of all styles properties for that element with values assigned for the attributes that are defined in the element's inline style attribute.",
     "refs": [
         {
             "name": "CSS Object Model (CSSOM)",
-            "href": "https://drafts.csswg.org/cssom/#the-elementcssinlinestyle-mixin",
-            "description": "ElementCSSInlineStyle - CSS Object Model (CSSOM)"
+            "href": "https://drafts.csswg.org/cssom/#dom-elementcssinlinestyle-style",
+            "description": "the style attribute - CSS Object Model (CSSOM)"
         }
     ]
 }

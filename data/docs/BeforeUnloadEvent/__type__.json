@@ -6,9 +6,9 @@
     "description": "The beforeunload event is fired when the window, the document and its resources are about to be unloaded.",
     "refs": [
         {
-            "name": "HTML Living Standard",
+            "name": "HTML Standard",
             "href": "https://html.spec.whatwg.org/multipage/browsing-the-web.html#the-beforeunloadevent-interface",
-            "description": "BeforeUnloadEvent - HTML Living Standard"
+            "description": "(HTML) # the-beforeunloadevent-interface"
         }
     ]
 }

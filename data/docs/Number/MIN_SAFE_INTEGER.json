@@ -3,12 +3,12 @@
     "kind": "Property",
     "name": "Number.MIN_SAFE_INTEGER",
     "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MIN_SAFE_INTEGER",
-    "description": "The Number.MIN_SAFE_INTEGER constant represents the minimum safe integer in JavaScript (-(253 - 1)).",
+    "description": "The Number.MIN_SAFE_INTEGER constant represents the minimum safe integer in JavaScript (-(2^53 - 1)).",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-number.min_safe_integer",
-            "description": "Number.MIN_SAFE_INTEGER - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-number.min_safe_integer",
+            "description": "(ECMAScript) # sec-number.min_safe_integer"
         }
     ]
 }

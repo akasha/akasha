@@ -6,9 +6,9 @@
     "description": "The setUint32() method stores an unsigned 32-bit integer (unsigned long) value at the specified byte offset from the start of the DataView.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-dataview.prototype.setuint32",
-            "description": "DataView.prototype.setUint32 - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/structured-data.html#sec-dataview.prototype.setuint32",
+            "description": "(ECMAScript) # sec-dataview.prototype.setuint32"
         }
     ]
 }

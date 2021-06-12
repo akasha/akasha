@@ -6,9 +6,9 @@
     "description": "The Math.tan() function returns the tangent of a number.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-math.tan",
-            "description": "Math.tan - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-math.tan",
+            "description": "(ECMAScript) # sec-math.tan"
         }
     ]
 }

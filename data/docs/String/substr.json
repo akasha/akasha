@@ -6,9 +6,9 @@
     "description": "The substr() method returns a portion of the string, starting at the specified index and extending for a given number of characters afterwards.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-string.prototype.substr",
-            "description": "String.prototype.substr - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/additional-ecmascript-features-for-web-browsers.html#sec-string.prototype.substr",
+            "description": "(ECMAScript) # sec-string.prototype.substr"
         }
     ]
 }

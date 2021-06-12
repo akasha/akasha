@@ -6,9 +6,9 @@
     "description": "The URIError object represents an error when a global URI handling function was used in a wrong way.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-native-error-types-used-in-this-standard-urierror",
-            "description": "URIError - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-native-error-types-used-in-this-standard-urierror",
+            "description": "(ECMAScript) # sec-native-error-types-used-in-this-standard-urierror"
         }
     ]
 }

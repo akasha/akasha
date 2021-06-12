@@ -6,9 +6,9 @@
     "description": "The Math.hypot() function returns the square root of the sum of squares of its arguments, that is:",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-math.hypot",
-            "description": "Math.hypot - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-math.hypot",
+            "description": "(ECMAScript) # sec-math.hypot"
         }
     ]
 }

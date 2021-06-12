@@ -6,9 +6,9 @@
     "description": "The toUTCString() method converts a date to a string, using the UTC time zone.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-date.prototype.toutcstring",
-            "description": "Date.prototype.toUTCString - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-date.prototype.toutcstring",
+            "description": "(ECMAScript) # sec-date.prototype.toutcstring"
         }
     ]
 }

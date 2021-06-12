@@ -6,9 +6,9 @@
     "description": "The CacheStorage interface represents the storage for Cache objects.",
     "refs": [
         {
-            "name": "Service Workers",
-            "href": "https://w3c.github.io/ServiceWorker/#cachestorage",
-            "description": "CacheStorage - Service Workers"
+            "name": "Service Workers 1",
+            "href": "https://w3c.github.io/ServiceWorker/#cachestorage-interface",
+            "description": "# cachestorage-interface"
         }
     ]
 }

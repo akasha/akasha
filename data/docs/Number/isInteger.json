@@ -6,9 +6,9 @@
     "description": "The Number.isInteger() method determines whether the passed value is an integer.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-number.isinteger",
-            "description": "Number.isInteger - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-number.isinteger",
+            "description": "(ECMAScript) # sec-number.isinteger"
         }
     ]
 }

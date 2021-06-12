@@ -6,9 +6,9 @@
     "description": "The SharedArrayBuffer.prototype.slice() method returns a new SharedArrayBuffer whose contents are a copy of this SharedArrayBuffer's bytes from begin, inclusive, up to end, exclusive. If either begin or end is negative, it refers to an index from the end of the array, as opposed to from the beginning. This method has the same algorithm as Array.prototype.slice().",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-sharedarraybuffer.prototype.slice",
-            "description": "SharedArrayBuffer.prototype.slice - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/structured-data.html#sec-sharedarraybuffer.prototype.slice",
+            "description": "(ECMAScript) # sec-sharedarraybuffer.prototype.slice"
         }
     ]
 }

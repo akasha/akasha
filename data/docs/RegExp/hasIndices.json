@@ -1,0 +1,14 @@
+
+{
+    "kind": "Property",
+    "name": "RegExp.hasIndices",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/hasIndices",
+    "description": "The hasIndices property indicates whether or not the &quot;d&quot; flag is used with the regular expression. hasIndices is a read-only property of an individual regular expression instance.",
+    "refs": [
+        {
+            "name": "RegExp Match Indices",
+            "href": "https://tc39.es/proposal-regexp-match-indices/#sec-get-regexp.prototype.hasIndices",
+            "description": "# sec-get-regexp.prototype.hasIndices"
+        }
+    ]
+}

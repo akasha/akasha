@@ -6,9 +6,9 @@
     "description": "The Math.imul() function returns the result of the C-like 32-bit multiplication of the two parameters.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-math.imul",
-            "description": "Math.imul - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-math.imul",
+            "description": "(ECMAScript) # sec-math.imul"
         }
     ]
 }

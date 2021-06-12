@@ -6,9 +6,9 @@
     "description": "The sub() method creates a &lt;sub&gt; HTML element that causes a string to be displayed as subscript.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-string.prototype.sub",
-            "description": "String.prototype.sub - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/additional-ecmascript-features-for-web-browsers.html#sec-string.prototype.sub",
+            "description": "(ECMAScript) # sec-string.prototype.sub"
         }
     ]
 }

@@ -6,9 +6,9 @@
     "description": "The flags property returns a string consisting of the flags of the current regular expression object.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-get-regexp.prototype.flags",
-            "description": "RegExp.prototype.flags - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/text-processing.html#sec-get-regexp.prototype.flags",
+            "description": "(ECMAScript) # sec-get-regexp.prototype.flags"
         }
     ]
 }

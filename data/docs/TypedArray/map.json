@@ -6,9 +6,9 @@
     "description": "The map() method creates a new typed array with the results of calling a provided function on every element in this typed array. This method has the same algorithm as Array.prototype.map(). TypedArray is one of the typed array types here.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-%25typedarray%25.prototype.map",
-            "description": "TypedArray.prototype.map - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.map",
+            "description": "(ECMAScript) # sec-%typedarray%.prototype.map"
         }
     ]
 }

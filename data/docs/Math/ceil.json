@@ -6,9 +6,9 @@
     "description": "The Math.ceil() function always rounds a number up to the next largest integer.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-math.ceil",
-            "description": "Math.ceil - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-math.ceil",
+            "description": "(ECMAScript) # sec-math.ceil"
         }
     ]
 }

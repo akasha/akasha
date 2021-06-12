@@ -6,9 +6,9 @@
     "description": "The Object.preventExtensions() method prevents new properties from ever being added to an object (i.e. prevents future extensions to the object).",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-object.preventextensions",
-            "description": "Object.preventExtensions - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-object.preventextensions",
+            "description": "(ECMAScript) # sec-object.preventextensions"
         }
     ]
 }

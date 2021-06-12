@@ -8,7 +8,7 @@
         {
             "name": "File API",
             "href": "https://w3c.github.io/FileAPI/#blob-section",
-            "description": "The Blob interface - File API"
+            "description": "# blob-section"
         }
     ]
 }

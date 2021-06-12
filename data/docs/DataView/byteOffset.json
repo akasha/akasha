@@ -6,9 +6,9 @@
     "description": "The byteOffset accessor property represents the offset (in bytes) of this view from the start of its ArrayBuffer or SharedArrayBuffer.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-get-dataview.prototype.byteoffset",
-            "description": "DataView.prototype.byteOffset - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/structured-data.html#sec-get-dataview.prototype.byteoffset",
+            "description": "(ECMAScript) # sec-get-dataview.prototype.byteoffset"
         }
     ]
 }

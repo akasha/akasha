@@ -6,9 +6,9 @@
     "description": "The static Date.now() method returns the number of milliseconds elapsed since January 1, 1970 00:00:00 UTC.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-date.now",
-            "description": "Date.now - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-date.now",
+            "description": "(ECMAScript) # sec-date.now"
         }
     ]
 }

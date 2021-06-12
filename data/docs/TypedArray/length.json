@@ -6,9 +6,9 @@
     "description": "The length accessor property represents the length (in elements) of a typed array.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-get-%25typedarray%25.prototype.length",
-            "description": "TypedArray.prototype.length - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-get-%25typedarray%25.prototype.length",
+            "description": "(ECMAScript) # sec-get-%typedarray%.prototype.length"
         }
     ]
 }

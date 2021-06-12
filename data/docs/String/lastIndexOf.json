@@ -6,9 +6,9 @@
     "description": "The lastIndexOf() method returns the index within the calling String object of the last occurrence of the specified value, searching backwards from fromIndex. Returns -1 if the value is not found.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-string.prototype.lastindexof",
-            "description": "String.prototype.lastIndexOf - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/text-processing.html#sec-string.prototype.lastindexof",
+            "description": "(ECMAScript) # sec-string.prototype.lastindexof"
         }
     ]
 }

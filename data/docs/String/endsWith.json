@@ -6,9 +6,9 @@
     "description": "The endsWith() method determines whether a string ends with the characters of a specified string, returning true or false as appropriate.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-string.prototype.endswith",
-            "description": "String.prototype.endsWith - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/text-processing.html#sec-string.prototype.endswith",
+            "description": "(ECMAScript) # sec-string.prototype.endswith"
         }
     ]
 }

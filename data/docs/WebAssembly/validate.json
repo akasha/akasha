@@ -8,7 +8,7 @@
         {
             "name": "WebAssembly JavaScript Interface",
             "href": "https://webassembly.github.io/spec/js-api/#dom-webassembly-validate",
-            "description": "validate() - WebAssembly JavaScript Interface"
+            "description": "# dom-webassembly-validate"
         }
     ]
 }

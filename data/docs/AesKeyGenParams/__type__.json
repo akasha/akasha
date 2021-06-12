@@ -3,12 +3,5 @@
     "kind": "Type",
     "name": "AesKeyGenParams",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AesKeyGenParams",
-    "description": "A Number &mdash; the length in bits of the key to generate. This must be one of: 128, 192, or 256.",
-    "refs": [
-        {
-            "name": "Web Cryptography API",
-            "href": "https://www.w3.org/TR/WebCryptoAPI/#dfn-AesKeyGenParams",
-            "description": "SubtleCrypto.AesKeyGenParams - Web Cryptography API"
-        }
-    ]
+    "description": "A Number &mdash; the length in bits of the key to generate. This must be one of: 128, 192, or 256."
 }

@@ -6,9 +6,9 @@
     "description": "The toTimeString() method returns the time portion of a Date object in human readable form in English.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-date.prototype.totimestring",
-            "description": "Date.prototype.toTimeString - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-date.prototype.totimestring",
+            "description": "(ECMAScript) # sec-date.prototype.totimestring"
         }
     ]
 }

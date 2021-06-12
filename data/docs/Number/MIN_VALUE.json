@@ -6,9 +6,9 @@
     "description": "The Number.MIN_VALUE property represents the smallest positive numeric value representable in JavaScript.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-number.min_value",
-            "description": "Number.MIN_VALUE - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-number.min_value",
+            "description": "(ECMAScript) # sec-number.min_value"
         }
     ]
 }

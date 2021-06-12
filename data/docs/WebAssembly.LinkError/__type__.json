@@ -8,12 +8,12 @@
         {
             "name": "WebAssembly JavaScript Interface",
             "href": "https://webassembly.github.io/spec/js-api/#exceptiondef-linkerror",
-            "description": "LinkError - WebAssembly JavaScript Interface"
+            "description": "# exceptiondef-linkerror"
         },
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-native-error-types-used-in-this-standard",
-            "description": "NativeError - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-native-error-types-used-in-this-standard",
+            "description": "(ECMAScript) # sec-native-error-types-used-in-this-standard"
         }
     ]
 }

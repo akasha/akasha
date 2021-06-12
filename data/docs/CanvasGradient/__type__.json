@@ -6,9 +6,9 @@
     "description": "The CanvasGradient interface represents an opaque object describing a gradient. It is returned by the methods CanvasRenderingContext2D.createLinearGradient(), CanvasRenderingContext2D.createConicGradient() or CanvasRenderingContext2D.createRadialGradient().",
     "refs": [
         {
-            "name": "HTML Living Standard",
-            "href": "https://html.spec.whatwg.org/multipage/the-canvas-element.html#canvasgradient",
-            "description": "CanvasGradient - HTML Living Standard"
+            "name": "HTML Standard",
+            "href": "https://html.spec.whatwg.org/multipage/canvas.html#canvasgradient",
+            "description": "(HTML) # canvasgradient"
         }
     ]
 }

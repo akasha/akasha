@@ -8,7 +8,7 @@
         {
             "name": "Web Audio API",
             "href": "https://webaudio.github.io/web-audio-api/#AudioScheduledSourceNode",
-            "description": "AudioScheduledSourceNode - Web Audio API"
+            "description": "# AudioScheduledSourceNode"
         }
     ]
 }

@@ -6,9 +6,9 @@
     "description": "The test() method executes a search for a match between a regular expression and a specified string. Returns true or false.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-regexp.prototype.test",
-            "description": "RegExp.test - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/text-processing.html#sec-regexp.prototype.test",
+            "description": "(ECMAScript) # sec-regexp.prototype.test"
         }
     ]
 }

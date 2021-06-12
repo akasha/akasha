@@ -6,9 +6,9 @@
     "description": "The RangeError object indicates an error when a value is not in the set or range of allowed values.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-native-error-types-used-in-this-standard-rangeerror",
-            "description": "RangeError - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-native-error-types-used-in-this-standard-rangeerror",
+            "description": "(ECMAScript) # sec-native-error-types-used-in-this-standard-rangeerror"
         }
     ]
 }

@@ -6,9 +6,9 @@
     "description": "The getUTCMonth() returns the month of the specified date according to universal time, as a zero-based value (where zero indicates the first month of the year).",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-date.prototype.getutcmonth",
-            "description": "Date.prototype.getUTCMonth - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-date.prototype.getutcmonth",
+            "description": "(ECMAScript) # sec-date.prototype.getutcmonth"
         }
     ]
 }

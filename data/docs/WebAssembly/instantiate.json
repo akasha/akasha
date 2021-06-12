@@ -8,7 +8,7 @@
         {
             "name": "WebAssembly JavaScript Interface",
             "href": "https://webassembly.github.io/spec/js-api/#dom-webassembly-instantiate",
-            "description": "instantiate() - WebAssembly JavaScript Interface"
+            "description": "# dom-webassembly-instantiate"
         }
     ]
 }

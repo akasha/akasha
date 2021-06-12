@@ -6,9 +6,9 @@
     "description": "The concat() method concatenates the string arguments to the calling string and returns a new string.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-string.prototype.concat",
-            "description": "String.prototype.concat - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/text-processing.html#sec-string.prototype.concat",
+            "description": "(ECMAScript) # sec-string.prototype.concat"
         }
     ]
 }

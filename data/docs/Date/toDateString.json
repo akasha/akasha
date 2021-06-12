@@ -6,9 +6,9 @@
     "description": "The toDateString() method returns the date portion of a Date object in English in the following format separated by spaces:",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-date.prototype.todatestring",
-            "description": "Date.prototype.toDateString - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-date.prototype.todatestring",
+            "description": "(ECMAScript) # sec-date.prototype.todatestring"
         }
     ]
 }

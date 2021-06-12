@@ -6,9 +6,9 @@
     "description": "The ArrayBuffer object is used to represent a generic, fixed-length raw binary data buffer.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-arraybuffer-objects",
-            "description": "ArrayBuffer - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/structured-data.html#sec-arraybuffer-objects",
+            "description": "(ECMAScript) # sec-arraybuffer-objects"
         }
     ]
 }

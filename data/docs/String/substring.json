@@ -6,9 +6,9 @@
     "description": "The substring() method returns the part of the string between the start and end indexes, or to the end of the string.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-string.prototype.substring",
-            "description": "String.prototype.substring - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/text-processing.html#sec-string.prototype.substring",
+            "description": "(ECMAScript) # sec-string.prototype.substring"
         }
     ]
 }

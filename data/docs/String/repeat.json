@@ -6,9 +6,9 @@
     "description": "The repeat() method constructs and returns a new string which contains the specified number of copies of the string on which it was called, concatenated together.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-string.prototype.repeat",
-            "description": "String.prototype.repeat - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/text-processing.html#sec-string.prototype.repeat",
+            "description": "(ECMAScript) # sec-string.prototype.repeat"
         }
     ]
 }

@@ -3,5 +3,17 @@
     "kind": "Type",
     "name": "SVGAnimatedPoints",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGAnimatedPoints",
-    "description": "The SVGAnimatedPoints interface supports elements which have a points attribute which holds a list of coordinate values and which support the ability to animate that attribute."
+    "description": "The SVGPolygonElement interface provides access to the properties of &lt;polygon&gt; elements, as well as methods to manipulate them.",
+    "refs": [
+        {
+            "name": "Scalable Vector Graphics (SVG) 2",
+            "href": "https://svgwg.org/svg2-draft/shapes.html#InterfaceSVGPolygonElement",
+            "description": "SVGPolygonElement - Scalable Vector Graphics (SVG) 2"
+        },
+        {
+            "name": "Scalable Vector Graphics (SVG) 1.1 (Second Edition)",
+            "href": "https://www.w3.org/TR/SVG11/shapes.html#InterfaceSVGPolygonElement",
+            "description": "SVGPolygonElement - Scalable Vector Graphics (SVG) 1.1 (Second Edition)"
+        }
+    ]
 }

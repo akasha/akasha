@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Object.toSource",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toSource",
+    "description": "The toSource() method returns a string representing the source code of the object."
+}

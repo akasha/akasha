@@ -8,7 +8,7 @@
         {
             "name": "MediaStream Recording",
             "href": "https://w3c.github.io/mediacapture-record/#blobevent-section",
-            "description": "BlobEvent - MediaStream Recording"
+            "description": "# blobevent-section"
         }
     ]
 }

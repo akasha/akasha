@@ -6,9 +6,9 @@
     "description": "The getUint8() method gets an unsigned 8-bit integer (unsigned byte) at the specified byte offset from the start of the DataView.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-dataview.prototype.getuint8",
-            "description": "DataView.prototype.getUint8 - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/structured-data.html#sec-dataview.prototype.getuint8",
+            "description": "(ECMAScript) # sec-dataview.prototype.getuint8"
         }
     ]
 }

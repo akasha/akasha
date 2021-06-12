@@ -6,9 +6,9 @@
     "description": "The setMinutes() method sets the minutes for a specified date according to local time.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-date.prototype.setminutes",
-            "description": "Date.prototype.setMinutes - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-date.prototype.setminutes",
+            "description": "(ECMAScript) # sec-date.prototype.setminutes"
         }
     ]
 }

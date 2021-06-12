@@ -6,9 +6,9 @@
     "description": "The toLocaleString() method returns a string representing the elements of the typed array. The elements are converted to strings and are separated by a locale-specific string (such as a comma &ldquo;,&rdquo;). This method has the same algorithm as Array.prototype.toLocaleString() and, as the typed array elements are numbers, the same algorithm as Number.prototype.toLocaleString() applies for each element. TypedArray is one of the typed array types here.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-%25typedarray%25.prototype.tolocalestring",
-            "description": "TypedArray.prototype.toLocaleString - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.tolocalestring",
+            "description": "(ECMAScript) # sec-%typedarray%.prototype.tolocalestring"
         }
     ]
 }

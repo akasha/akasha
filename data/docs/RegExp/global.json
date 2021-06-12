@@ -6,9 +6,9 @@
     "description": "The global property indicates whether or not the &quot;g&quot; flag is used with the regular expression. global is a read-only property of an individual regular expression instance.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-get-regexp.prototype.global",
-            "description": "RegExp.prototype.global - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/text-processing.html#sec-get-regexp.prototype.global",
+            "description": "(ECMAScript) # sec-get-regexp.prototype.global"
         }
     ]
 }

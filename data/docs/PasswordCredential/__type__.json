@@ -3,7 +3,7 @@
     "kind": "Type",
     "name": "PasswordCredential",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PasswordCredential",
-    "description": "The interface of the Credential Management API provides information about a username/password pair. In supporting browsers an instance of this class may be passed in the credential member of the init object for global fetch.",
+    "description": "The interface of the Credential Management API provides information about a username/password pair. In supporting browsers an instance of this class may be passed in the credential member of the init object for global WindowOrWorkerGlobalScope.fetch.",
     "refs": [
         {
             "name": "Credential Management Level 1",

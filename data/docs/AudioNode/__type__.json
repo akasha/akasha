@@ -7,8 +7,8 @@
     "refs": [
         {
             "name": "Web Audio API",
-            "href": "https://webaudio.github.io/web-audio-api/#audionode",
-            "description": "AudioNode - Web Audio API"
+            "href": "https://webaudio.github.io/web-audio-api/#AudioNode",
+            "description": "# AudioNode"
         }
     ]
 }

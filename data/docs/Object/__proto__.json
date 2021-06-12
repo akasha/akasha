@@ -6,9 +6,9 @@
     "description": "The __proto__ property of Object.prototype is an accessor property (a getter function and a setter function) that exposes the internal [[Prototype]] (either an object or null) of the object through which it is accessed.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-additional-properties-of-the-object.prototype-object",
-            "description": "Object.prototype.__proto__ - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/additional-ecmascript-features-for-web-browsers.html#sec-additional-properties-of-the-object.prototype-object",
+            "description": "(ECMAScript) # sec-additional-properties-of-the-object.prototype-object"
         }
     ]
 }

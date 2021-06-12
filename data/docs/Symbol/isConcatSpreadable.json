@@ -6,9 +6,9 @@
     "description": "The Symbol.isConcatSpreadable well-known symbol is used to configure if an object should be flattened to its array elements when using the Array.prototype.concat() method.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-symbol.isconcatspreadable",
-            "description": "Symbol.isconcatspreadable - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-symbol.isconcatspreadable",
+            "description": "(ECMAScript) # sec-symbol.isconcatspreadable"
         }
     ]
 }

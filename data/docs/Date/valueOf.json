@@ -6,9 +6,9 @@
     "description": "The valueOf() method returns the primitive value of a Date object.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-date.prototype.valueof",
-            "description": "Date.prototype.valueOf - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-date.prototype.valueof",
+            "description": "(ECMAScript) # sec-date.prototype.valueof"
         }
     ]
 }

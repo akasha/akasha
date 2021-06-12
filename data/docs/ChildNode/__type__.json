@@ -3,17 +3,5 @@
     "kind": "Type",
     "name": "ChildNode",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/ChildNode",
-    "description": "The ChildNode mixin contains methods and properties that are common to all types of Node objects that can have a parent.",
-    "refs": [
-        {
-            "name": "DOM",
-            "href": "https://dom.spec.whatwg.org/#interface-childnode",
-            "description": "ChildNode - DOM"
-        },
-        {
-            "name": "Element Traversal Specification",
-            "href": "https://www.w3.org/TR/ElementTraversal/#interface-elementTraversal",
-            "description": "ElementTraversal - Element Traversal Specification"
-        }
-    ]
+    "description": "The ChildNode mixin contains methods and properties that are common to all types of Node objects that can have a parent."
 }

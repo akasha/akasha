@@ -6,9 +6,9 @@
     "description": "The well-known Symbol.iterator symbol specifies the default iterator for an object. Used by for...of.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-symbol.iterator",
-            "description": "Symbol.iterator - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-symbol.iterator",
+            "description": "(ECMAScript) # sec-symbol.iterator"
         }
     ]
 }

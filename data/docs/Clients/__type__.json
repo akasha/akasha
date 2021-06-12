@@ -6,9 +6,9 @@
     "description": "The Clients interface provides access to Client objects. Access it via self.clients within a service worker.",
     "refs": [
         {
-            "name": "Service Workers",
-            "href": "https://w3c.github.io/ServiceWorker/#clients",
-            "description": "Clients - Service Workers"
+            "name": "Service Workers 1",
+            "href": "https://w3c.github.io/ServiceWorker/#clients-interface",
+            "description": "# clients-interface"
         }
     ]
 }

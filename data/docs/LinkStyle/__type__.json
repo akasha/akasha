@@ -3,17 +3,36 @@
     "kind": "Type",
     "name": "LinkStyle",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/LinkStyle",
-    "description": "The LinkStyle interface provides access to the associated CSS style sheet of a node.",
+    "description": "The HTMLLinkElement interface represents reference information for external resources and the relationship of those resources to a document and vice-versa (corresponds to &lt;link&gt; element; not to be confused with &lt;a&gt;, which is represented by HTMLAnchorElement). This object inherits all of the properties and methods of the HTMLElement interface.",
     "refs": [
         {
-            "name": "CSS Object Model (CSSOM)",
-            "href": "https://drafts.csswg.org/cssom/#the-linkstyle-interface",
-            "description": "LinkStyle - CSS Object Model (CSSOM)"
+            "name": "Preload",
+            "href": "https://w3c.github.io/preload/"
         },
         {
-            "name": "Document Object Model (DOM) Level 2 Style Specification",
-            "href": "https://www.w3.org/TR/DOM-Level-2-Style/stylesheets.html#StyleSheets-LinkStyle",
-            "description": "LinkStyle - Document Object Model (DOM) Level 2 Style Specification"
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#htmllinkelement",
+            "description": "HTMLLinkElement - HTML Living Standard"
+        },
+        {
+            "name": "HTML 5.1",
+            "href": "https://www.w3.org/TR/html51/document-metadata.html#the-link-element",
+            "description": "HTMLLinkElement - HTML 5.1"
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/document-metadata.html#the-link-element",
+            "description": "HTMLLinkElement - HTML5"
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 HTML Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-35143001",
+            "description": "HTMLLinkElement - Document Object Model (DOM) Level 2 HTML Specification"
+        },
+        {
+            "name": "Document Object Model (DOM) Level 1 Specification",
+            "href": "https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-35143001",
+            "description": "HTMLLinkElement - Document Object Model (DOM) Level 1 Specification"
         }
     ]
 }

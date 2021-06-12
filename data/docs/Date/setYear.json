@@ -6,9 +6,9 @@
     "description": "The setYear() method sets the year for a specified date according to local time. Because setYear() does not set full years (&quot;year 2000 problem&quot;), it is no longer used and has been replaced by the setFullYear() method.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-date.prototype.setyear",
-            "description": "Date.prototype.setYear - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/additional-ecmascript-features-for-web-browsers.html#sec-date.prototype.setyear",
+            "description": "(ECMAScript) # sec-date.prototype.setyear"
         }
     ]
 }

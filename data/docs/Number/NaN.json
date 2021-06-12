@@ -6,9 +6,9 @@
     "description": "The Number.NaN property represents Not-A-Number. Equivalent of NaN.",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-number.nan",
-            "description": "Number.NaN - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-number.nan",
+            "description": "(ECMAScript) # sec-number.nan"
         }
     ]
 }

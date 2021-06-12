@@ -6,9 +6,9 @@
     "description": "The Math.LN2 property represents the natural logarithm of 2, approximately 0.693:",
     "refs": [
         {
-            "name": "ECMAScript (ECMA-262)",
-            "href": "https://tc39.es/ecma262/#sec-math.ln2",
-            "description": "Math.LN2 - ECMAScript (ECMA-262)"
+            "name": "ECMAScript Language Specification",
+            "href": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-math.ln2",
+            "description": "(ECMAScript) # sec-math.ln2"
         }
     ]
 }
