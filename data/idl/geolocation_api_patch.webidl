@@ -1,5 +1,5 @@
-const enum PositionErrorCode {
-  PositionError.PERMISSION_DENIED,
-  PositionError.POSITION_UNAVAILABLE,
-  PositionError.TIMEOUT
+const enum GeolocationPositionErrorCode {
+  GeolocationPositionError.PERMISSION_DENIED,
+  GeolocationPositionError.POSITION_UNAVAILABLE,
+  GeolocationPositionError.TIMEOUT
 };
