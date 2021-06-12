@@ -7,6 +7,7 @@ typedef ( DOMString or unsigned long ) BluetoothServiceUUID;
 typedef DOMString UUID;
 
 dictionary AllowedBluetoothDevice {
+  required sequence<unsigned short> allowedManufacturerData;
   required ( DOMString or sequence<UUID> ) allowedServices;
   required DOMString deviceId;
   required boolean mayUseGATT;
@@ -29,17 +30,22 @@ dictionary BluetoothDataFilterInit {
 };
 
 dictionary BluetoothLEScanFilterInit {
-  object manufacturerData;
+  sequence<BluetoothManufacturerDataFilterInit> manufacturerData;
   DOMString name;
   DOMString namePrefix;
-  object serviceData;
+  sequence<BluetoothServiceDataFilterInit> serviceData;
   sequence<BluetoothServiceUUID> services;
+};
+
+dictionary BluetoothManufacturerDataFilterInit : BluetoothDataFilterInit {
+  required [EnforceRange] unsigned short companyIdentifier;
 };
 
 dictionary BluetoothPermissionDescriptor : PermissionDescriptor {
   boolean acceptAllDevices = false;
   DOMString deviceId;
   sequence<BluetoothLEScanFilterInit> filters;
+  sequence<unsigned short> optionalManufacturerData = [];
   sequence<BluetoothServiceUUID> optionalServices = [];
 };
 
@@ -47,9 +53,14 @@ dictionary BluetoothPermissionStorage {
   required sequence<AllowedBluetoothDevice> allowedDevices;
 };
 
+dictionary BluetoothServiceDataFilterInit : BluetoothDataFilterInit {
+  required BluetoothServiceUUID service;
+};
+
 dictionary RequestDeviceOptions {
   boolean acceptAllDevices = false;
   sequence<BluetoothLEScanFilterInit> filters;
+  sequence<unsigned short> optionalManufacturerData = [];
   sequence<BluetoothServiceUUID> optionalServices = [];
 };
 

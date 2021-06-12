@@ -5,6 +5,12 @@ enum AnimationPlayState {
   "running"
 };
 
+enum AnimationReplaceState {
+  "active",
+  "persisted",
+  "removed"
+};
+
 enum CompositeOperation {
   "accumulate",
   "add",
@@ -26,16 +32,18 @@ enum FillMode {
   "none"
 };
 
-enum IterationCompositeOperation {
-  "accumulate",
-  "replace"
-};
-
 enum PlaybackDirection {
   "alternate",
   "alternate-reverse",
   "normal",
   "reverse"
+};
+
+enum TimelinePhase {
+  "active",
+  "after",
+  "before",
+  "inactive"
 };
 
 dictionary AnimationPlaybackEventInit : EventInit {
@@ -85,13 +93,18 @@ dictionary EffectTiming {
   unrestricted double iterations = 1.0;
 };
 
+dictionary GetAnimationsOptions {
+  boolean subtree = false;
+};
+
 dictionary KeyframeAnimationOptions : KeyframeEffectOptions {
   DOMString id = "";
+  AnimationTimeline? timeline;
 };
 
 dictionary KeyframeEffectOptions : EffectTiming {
   CompositeOperation composite = "replace";
-  IterationCompositeOperation iterationComposite = "replace";
+  CSSOMString? pseudoElement = null;
 };
 
 dictionary OptionalEffectTiming {
@@ -106,68 +119,79 @@ dictionary OptionalEffectTiming {
 };
 
 interface mixin Animatable {
-  Animation animate( object? keyframes, optional ( unrestricted double or KeyframeAnimationOptions ) options );
+  Animation animate( object? keyframes, optional ( unrestricted double or KeyframeAnimationOptions ) options = {} );
+  sequence<Animation> getAnimations( optional GetAnimationsOptions options = {} );
+};
+
+partial interface mixin DocumentOrShadowRoot {
   sequence<Animation> getAnimations();
 };
 
-[Exposed=Window, Constructor( optional AnimationEffect? effect = null, optional AnimationTimeline? timeline )]
+[Exposed=Window]
 interface Animation : EventTarget {
   readonly attribute Promise<Animation> finished;
   readonly attribute boolean pending;
   readonly attribute AnimationPlayState playState;
   readonly attribute Promise<Animation> ready;
+  readonly attribute AnimationReplaceState replaceState;
   attribute double? currentTime;
   attribute AnimationEffect? effect;
   attribute DOMString id;
   attribute EventHandler oncancel;
   attribute EventHandler onfinish;
+  attribute EventHandler onremove;
   attribute double playbackRate;
   attribute double? startTime;
   attribute AnimationTimeline? timeline;
-  void cancel();
-  void finish();
-  void pause();
-  void play();
-  void reverse();
-  void updatePlaybackRate( double playbackRate );
+  constructor( optional AnimationEffect? effect = null, optional AnimationTimeline? timeline );
+  undefined cancel();
+  undefined commitStyles();
+  undefined finish();
+  undefined pause();
+  undefined persist();
+  undefined play();
+  undefined reverse();
+  undefined updatePlaybackRate( double playbackRate );
 };
 
 [Exposed=Window]
 interface AnimationEffect {
   ComputedEffectTiming getComputedTiming();
   EffectTiming getTiming();
-  void updateTiming( optional OptionalEffectTiming timing );
+  undefined updateTiming( optional OptionalEffectTiming timing = {} );
 };
 
-[Exposed=Window, Constructor( DOMString type, optional AnimationPlaybackEventInit eventInitDict )]
+[Exposed=Window]
 interface AnimationPlaybackEvent : Event {
   readonly attribute double? currentTime;
   readonly attribute double? timelineTime;
+  constructor( DOMString type, optional AnimationPlaybackEventInit eventInitDict = {} );
 };
 
 [Exposed=Window]
 interface AnimationTimeline {
   readonly attribute double? currentTime;
+  readonly attribute TimelinePhase phase;
 };
 
-[Exposed=Window, Constructor( optional DocumentTimelineOptions options )]
+[Exposed=Window]
 interface DocumentTimeline : AnimationTimeline {
+  constructor( optional DocumentTimelineOptions options = {} );
 };
 
-[Exposed=Window, Constructor( ( Element or CSSPseudoElement )? target, object? keyframes, optional ( unrestricted double or KeyframeEffectOptions ) options ), Constructor( KeyframeEffect source )]
+[Exposed=Window]
 interface KeyframeEffect : AnimationEffect {
   attribute CompositeOperation composite;
-  attribute IterationCompositeOperation iterationComposite;
-  attribute ( Element or CSSPseudoElement )? target;
+  attribute CSSOMString? pseudoElement;
+  attribute Element? target;
+  constructor( Element? target, object? keyframes, optional ( unrestricted double or KeyframeEffectOptions ) options = {} );
+  constructor( KeyframeEffect source );
   sequence<object> getKeyframes();
-  void setKeyframes( object? keyframes );
+  undefined setKeyframes( object? keyframes );
 };
 
 partial interface Document {
   readonly attribute DocumentTimeline timeline;
-  sequence<Animation> getAnimations();
 };
-
-CSSPseudoElement includes Animatable;
 
 Element includes Animatable;

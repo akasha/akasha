@@ -1,10 +1,16 @@
 enum GamepadMappingType {
   "",
-  "standard"
+  "standard",
+  "xr-standard"
 };
 
 dictionary GamepadEventInit : EventInit {
   required Gamepad gamepad;
+};
+
+partial interface mixin WindowEventHandlers {
+  attribute EventHandler ongamepadconnected;
+  attribute EventHandler ongamepaddisconnected;
 };
 
 [Exposed=Window, SecureContext]

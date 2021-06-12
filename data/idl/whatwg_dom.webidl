@@ -3,6 +3,11 @@ enum ShadowRootMode {
   "open"
 };
 
+enum SlotAssignmentMode {
+  "manual",
+  "named"
+};
+
 callback MutationCallback = undefined ( sequence<MutationRecord> mutations, MutationObserver observer );
 
 callback interface EventListener {
@@ -75,6 +80,7 @@ dictionary MutationObserverInit {
 dictionary ShadowRootInit {
   boolean delegatesFocus = false;
   required ShadowRootMode mode;
+  SlotAssignmentMode slotAssignment = "named";
 };
 
 dictionary StaticRangeInit {
@@ -550,8 +556,10 @@ interface Range : AbstractRange {
 
 [Exposed=Window]
 interface ShadowRoot : DocumentFragment {
+  readonly attribute boolean delegatesFocus;
   readonly attribute Element host;
   readonly attribute ShadowRootMode mode;
+  readonly attribute SlotAssignmentMode slotAssignment;
   attribute EventHandler onslotchange;
 };
 
@@ -619,6 +627,21 @@ interface XPathResult {
   readonly attribute DOMString stringValue;
   Node? iterateNext();
   Node? snapshotItem( unsigned long index );
+};
+
+[Exposed=Window]
+interface XSLTProcessor {
+  constructor();
+  undefined clearParameters();
+  any getParameter( [LegacyNullToEmptyString] DOMString namespaceURI, DOMString localName );
+  undefined importStylesheet( Node style );
+  undefined removeParameter( [LegacyNullToEmptyString] DOMString namespaceURI, DOMString localName );
+  undefined reset();
+  undefined setParameter( [LegacyNullToEmptyString] DOMString namespaceURI, DOMString localName, any value );
+  [CEReactions]
+  Document transformToDocument( Node source );
+  [CEReactions]
+  DocumentFragment transformToFragment( Node source, Document output );
 };
 
 partial interface Window {

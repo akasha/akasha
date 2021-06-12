@@ -20,6 +20,34 @@ enum CanvasFillRule {
   "nonzero"
 };
 
+enum CanvasFontKerning {
+  "auto",
+  "none",
+  "normal"
+};
+
+enum CanvasFontStretch {
+  "condensed",
+  "expanded",
+  "extra-condensed",
+  "extra-expanded",
+  "normal",
+  "semi-condensed",
+  "semi-expanded",
+  "ultra-condensed",
+  "ultra-expanded"
+};
+
+enum CanvasFontVariantCaps {
+  "all-petite-caps",
+  "all-small-caps",
+  "normal",
+  "petite-caps",
+  "small-caps",
+  "titling-caps",
+  "unicase"
+};
+
 enum CanvasLineCap {
   "butt",
   "round",
@@ -47,6 +75,13 @@ enum CanvasTextBaseline {
   "ideographic",
   "middle",
   "top"
+};
+
+enum CanvasTextRendering {
+  "auto",
+  "geometricPrecision",
+  "optimizeLegibility",
+  "optimizeSpeed"
 };
 
 enum ColorSpaceConversion {
@@ -84,6 +119,11 @@ enum OffscreenRenderingContextId {
   "bitmaprenderer",
   "webgl",
   "webgl2"
+};
+
+enum PredefinedColorSpace {
+  "display-p3",
+  "srgb"
 };
 
 enum PremultiplyAlpha {
@@ -177,6 +217,7 @@ dictionary AssignedNodesOptions {
 
 dictionary CanvasRenderingContext2DSettings {
   boolean alpha = true;
+  PredefinedColorSpace colorSpace = "srgb";
   boolean desynchronized = false;
 };
 
@@ -232,6 +273,10 @@ dictionary ImageBitmapOptions {
 
 dictionary ImageBitmapRenderingContextSettings {
   boolean alpha = true;
+};
+
+dictionary ImageDataSettings {
+  PredefinedColorSpace colorSpace;
 };
 
 dictionary ImageEncodeOptions {
@@ -344,6 +389,7 @@ interface mixin CanvasDrawPath {
 interface mixin CanvasFillStrokeStyles {
   attribute ( DOMString or CanvasGradient or CanvasPattern ) fillStyle;
   attribute ( DOMString or CanvasGradient or CanvasPattern ) strokeStyle;
+  CanvasGradient createConicGradient( double startAngle, double x, double y );
   CanvasGradient createLinearGradient( double x0, double y0, double x1, double y1 );
   CanvasPattern? createPattern( CanvasImageSource image, [LegacyNullToEmptyString] DOMString repetition );
   CanvasGradient createRadialGradient( double x0, double y0, double r0, double x1, double y1, double r1 );
@@ -354,9 +400,9 @@ interface mixin CanvasFilters {
 };
 
 interface mixin CanvasImageData {
-  ImageData createImageData( [EnforceRange] long sw, [EnforceRange] long sh );
+  ImageData createImageData( [EnforceRange] long sw, [EnforceRange] long sh, optional ImageDataSettings settings = {} );
   ImageData createImageData( ImageData imagedata );
-  ImageData getImageData( [EnforceRange] long sx, [EnforceRange] long sy, [EnforceRange] long sw, [EnforceRange] long sh );
+  ImageData getImageData( [EnforceRange] long sx, [EnforceRange] long sy, [EnforceRange] long sw, [EnforceRange] long sh, optional ImageDataSettings settings = {} );
   undefined putImageData( ImageData imagedata, [EnforceRange] long dx, [EnforceRange] long dy );
   undefined putImageData( ImageData imagedata, [EnforceRange] long dx, [EnforceRange] long dy, [EnforceRange] long dirtyX, [EnforceRange] long dirtyY, [EnforceRange] long dirtyWidth, [EnforceRange] long dirtyHeight );
 };
@@ -402,6 +448,7 @@ interface mixin CanvasShadowStyles {
 };
 
 interface mixin CanvasState {
+  undefined reset();
   undefined restore();
   undefined save();
 };
@@ -415,8 +462,14 @@ interface mixin CanvasText {
 interface mixin CanvasTextDrawingStyles {
   attribute CanvasDirection direction;
   attribute DOMString font;
+  attribute CanvasFontKerning fontKerning;
+  attribute CanvasFontStretch fontStretch;
+  attribute CanvasFontVariantCaps fontVariantCaps;
   attribute CanvasTextAlign textAlign;
   attribute CanvasTextBaseline textBaseline;
+  attribute double textLetterSpacing;
+  attribute CanvasTextRendering textRendering;
+  attribute double textWordSpacing;
 };
 
 interface mixin CanvasTransform {
@@ -1066,6 +1119,8 @@ interface HTMLElement : Element {
   attribute [LegacyNullToEmptyString] DOMString innerText;
   [CEReactions]
   attribute DOMString lang;
+  [CEReactions]
+  attribute [LegacyNullToEmptyString] DOMString outerText;
   [CEReactions]
   attribute boolean spellcheck;
   [CEReactions]
@@ -1809,6 +1864,7 @@ interface HTMLSlotElement : HTMLElement {
   attribute DOMString name;
   [HTMLConstructor]
   constructor();
+  undefined assign( ( Element or Text )... nodes );
   sequence<Element> assignedElements( optional AssignedNodesOptions options = {} );
   sequence<Node> assignedNodes( optional AssignedNodesOptions options = {} );
 };
@@ -2086,11 +2142,12 @@ interface ImageBitmapRenderingContext {
 
 [Exposed=(Window,Worker), Serializable]
 interface ImageData {
+  readonly attribute PredefinedColorSpace colorSpace;
   readonly attribute Uint8ClampedArray data;
   readonly attribute unsigned long height;
   readonly attribute unsigned long width;
-  constructor( unsigned long sw, unsigned long sh );
-  constructor( Uint8ClampedArray data, unsigned long sw, optional unsigned long sh );
+  constructor( unsigned long sw, unsigned long sh, optional ImageDataSettings settings = {} );
+  constructor( Uint8ClampedArray data, unsigned long sw, optional unsigned long sh, optional ImageDataSettings settings = {} );
 };
 
 [Exposed=Window]
@@ -2319,7 +2376,7 @@ interface TextTrack : EventTarget {
 [Exposed=Window]
 interface TextTrackCue : EventTarget {
   readonly attribute TextTrack? track;
-  attribute double endTime;
+  attribute unrestricted double endTime;
   attribute DOMString id;
   attribute EventHandler onenter;
   attribute EventHandler onexit;
