@@ -1,4 +1,4 @@
-[NoInterfaceObject]
+[Exposed=(Window,Worker), LegacyNoInterfaceObject]
 interface EXT_texture_compression_rgtc {
   const GLenum COMPRESSED_RED_GREEN_RGTC2_EXT = 0x8DBD;
   const GLenum COMPRESSED_RED_RGTC1_EXT = 0x8DBB;

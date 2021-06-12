@@ -1,4 +1,4 @@
-[NoInterfaceObject]
+[Exposed=(Window,Worker), LegacyNoInterfaceObject]
 interface EXT_texture_norm16 {
   const GLenum R16_EXT = 0x822A;
   const GLenum R16_SNORM_EXT = 0x8F98;

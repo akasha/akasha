@@ -36,7 +36,7 @@ typedef unsigned short GLushort;
 
 typedef ( [AllowShared] Int32Array or sequence<GLint> ) Int32List;
 
-typedef ( ImageBitmap or ImageData or HTMLImageElement or HTMLCanvasElement or HTMLVideoElement or OffscreenCanvas ) TexImageSource;
+typedef ( ImageBitmap or ImageData or HTMLImageElement or HTMLCanvasElement or HTMLVideoElement or OffscreenCanvas or VideoFrame ) TexImageSource;
 
 dictionary WebGLContextAttributes {
   boolean alpha = true;
@@ -525,9 +525,10 @@ interface WebGLActiveInfo {
 interface WebGLBuffer : WebGLObject {
 };
 
-[Exposed=(Window,Worker), Constructor( DOMString type, optional WebGLContextEventInit eventInit = {} )]
+[Exposed=(Window,Worker)]
 interface WebGLContextEvent : Event {
   readonly attribute DOMString statusMessage;
+  constructor( DOMString type, optional WebGLContextEventInit eventInit = {} );
 };
 
 [Exposed=(Window,Worker)]
