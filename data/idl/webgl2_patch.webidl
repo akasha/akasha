@@ -275,7 +275,8 @@ const enum TextureFormat {
   WebGL2RenderingContext.RGBA_INTEGER
 };
 
-const enum PixelFormat {
+[JavaName=PixelFormat]
+const enum WebGL2PixelFormat {
   WebGL2RenderingContext.RGB,
   WebGL2RenderingContext.RGBA,
   WebGL2RenderingContext.RED,

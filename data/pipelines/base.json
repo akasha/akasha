@@ -1562,7 +1562,7 @@
         "elementNamePattern": "^WebGL2RenderingContext$",
         "operationNamePattern": "^readPixels$",
         "argumentNamePattern": "^format$",
-        "type": "PixelFormat"
+        "type": "WebGL2PixelFormat"
       }
     },
     {
