@@ -392,6 +392,11 @@
         "url": "https://www.w3.org/TR/webauthn/"
     },
     {
+        "lastModifiedTime": 1623450969000,
+        "name": "webcodecs",
+        "url": "https://www.w3.org/TR/webcodecs/"
+    },
+    {
         "lastModifiedTime": 1605175331000,
         "name": "webcrypto",
         "url": "https://w3c.github.io/webcrypto/"
