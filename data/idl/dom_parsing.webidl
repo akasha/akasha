@@ -13,7 +13,7 @@ partial interface Element {
   [CEReactions]
   attribute [LegacyNullToEmptyString] DOMString outerHTML;
   [CEReactions]
-  void insertAdjacentHTML( DOMString position, DOMString text );
+  undefined insertAdjacentHTML( DOMString position, DOMString text );
 };
 
 partial interface Range {

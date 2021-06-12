@@ -1,6 +1,6 @@
-callback PositionCallback = void ( Position position );
+callback PositionCallback = undefined ( GeolocationPosition position );
 
-callback PositionErrorCallback = void ( PositionError positionError );
+callback PositionErrorCallback = undefined ( GeolocationPositionError positionError );
 
 dictionary PositionOptions {
   boolean enableHighAccuracy = false;

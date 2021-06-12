@@ -124,7 +124,7 @@ interface BluetoothDevice : EventTarget {
   readonly attribute DOMString id;
   readonly attribute DOMString? name;
   readonly attribute boolean watchingAdvertisements;
-  Promise<void> watchAdvertisements( optional WatchAdvertisementsOptions options = {} );
+  Promise<undefined> watchAdvertisements( optional WatchAdvertisementsOptions options = {} );
 };
 
 [Exposed=Window, SecureContext]
@@ -149,9 +149,9 @@ interface BluetoothRemoteGATTCharacteristic : EventTarget {
   Promise<DataView> readValue();
   Promise<BluetoothRemoteGATTCharacteristic> startNotifications();
   Promise<BluetoothRemoteGATTCharacteristic> stopNotifications();
-  Promise<void> writeValue( BufferSource value );
-  Promise<void> writeValueWithResponse( BufferSource value );
-  Promise<void> writeValueWithoutResponse( BufferSource value );
+  Promise<undefined> writeValue( BufferSource value );
+  Promise<undefined> writeValueWithResponse( BufferSource value );
+  Promise<undefined> writeValueWithoutResponse( BufferSource value );
 };
 
 [Exposed=Window, SecureContext]
@@ -161,7 +161,7 @@ interface BluetoothRemoteGATTDescriptor {
   readonly attribute UUID uuid;
   readonly attribute DataView? value;
   Promise<DataView> readValue();
-  Promise<void> writeValue( BufferSource value );
+  Promise<undefined> writeValue( BufferSource value );
 };
 
 [Exposed=Window, SecureContext]
@@ -170,7 +170,7 @@ interface BluetoothRemoteGATTServer {
   [SameObject]
   readonly attribute BluetoothDevice device;
   Promise<BluetoothRemoteGATTServer> connect();
-  void disconnect();
+  undefined disconnect();
   Promise<BluetoothRemoteGATTService> getPrimaryService( BluetoothServiceUUID service );
   Promise<sequence<BluetoothRemoteGATTService>> getPrimaryServices( optional BluetoothServiceUUID service );
 };

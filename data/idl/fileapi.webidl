@@ -56,11 +56,11 @@ interface FileReader : EventTarget {
   attribute EventHandler onloadstart;
   attribute EventHandler onprogress;
   constructor();
-  void abort();
-  void readAsArrayBuffer( Blob blob );
-  void readAsBinaryString( Blob blob );
-  void readAsDataURL( Blob blob );
-  void readAsText( Blob blob, optional DOMString encoding );
+  undefined abort();
+  undefined readAsArrayBuffer( Blob blob );
+  undefined readAsBinaryString( Blob blob );
+  undefined readAsDataURL( Blob blob );
+  undefined readAsText( Blob blob, optional DOMString encoding );
 };
 
 [Exposed=(DedicatedWorker,SharedWorker)]
@@ -75,5 +75,5 @@ interface FileReaderSync {
 [Exposed=(Window,DedicatedWorker,SharedWorker)]
 partial interface URL {
   static DOMString createObjectURL( ( Blob or MediaSource ) obj );
-  static void revokeObjectURL( DOMString url );
+  static undefined revokeObjectURL( DOMString url );
 };
