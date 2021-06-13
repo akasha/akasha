@@ -14,7 +14,7 @@ Changes in this release:
 * Update the `Web Bluetooth` spec to the `Draft Community Group Report, 17 May 2021` version. This improved the typing of several attributes and exposed `manufacturerData` via the API.
 * Update to the latest version of the `webgl` specifications. This primarily resulted in supporting `VideoFrame` as a `TexImageSource`.
 * Upgrade to the latest version of the `Web Authentication: Level 2 Recommendation` or `webauthn` specification finalized on `8 April 2021`.
-* Update several web specifications with various fixes, clarifications and API changes to more closely align with actual implementations. These specifications included: `whatwg_html`, `whatwg_dom`, `visual_viewport`, `screen_capture` and `cssom_view`.
+* Update several web specifications with various fixes, clarifications and API changes to more closely align with actual browser implementations. These specifications included: `whatwg_html`, `whatwg_dom`, `visual_viewport`, `screen_capture` and `cssom_view`.
 
 ### [v0.11](https://github.com/akasha/akasha/tree/v0.11) (2021-05-23) · [Full Changelog](https://github.com/spritz/spritz/compare/v0.10...v0.11) · [API Differences](https://akasha.github.io/akasha-java/api-diff/?key=akasha-java&old=0.10&new=0.11) · [Source Diff](https://github.com/akasha/akasha-java/compare/v0.10...v0.11)
 
