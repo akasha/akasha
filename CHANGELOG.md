@@ -1,6 +1,10 @@
 # Change Log
 
-### Unreleased
+### [v0.12](https://github.com/akasha/akasha/tree/v0.12) (2021-06-13) · [Full Changelog](https://github.com/spritz/spritz/compare/v0.11...v0.12) · [API Differences](https://akasha.github.io/akasha-java/api-diff/?key=akasha-java&old=0.11&new=0.12) · [Source Diff](https://github.com/akasha/akasha-java/compare/v0.11...v0.12)
+
+The release includes 174 non breaking API changes, 8 potentially breaking API changes and 249 breaking API changes.
+
+Changes in this release:
 
 * Add the `WebCodecs` spec with version `W3C Working Draft, 11 June 2021` to the set of specifications which the API is generated from.
 * Update the `Geolocation API` spec to the `W3C Working Draft 10 June 2021` version. This improved typing and aligned with how browsers are implementing the underlying javascript objects.
