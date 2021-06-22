@@ -341,6 +341,15 @@
     },
     {
       "name": "AddExtendedAttribute",
+      "description": "Package up the WebGPU specific spec into a separate package",
+      "sourceSelector": "name=webgpu",
+      "config": {
+        "namePattern": "^.*$",
+        "extendedAttribute": "JavaSubPackage=gpu"
+      }
+    },
+    {
+      "name": "AddExtendedAttribute",
       "description": "Package up the indexeddb specific specs into a separate package",
       "sourceSelector": "name=indexeddb",
       "config": {
