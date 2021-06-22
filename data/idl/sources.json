@@ -610,6 +610,11 @@
         "url": "https://www.khronos.org/registry/webgl/extensions/OVR_multiview2/"
     },
     {
+        "lastModifiedTime": 1624216795000,
+        "name": "webgpu",
+        "url": "https://www.w3.org/TR/webgpu/"
+    },
+    {
         "lastModifiedTime": 1623049528000,
         "name": "webrtc",
         "url": "https://w3c.github.io/webrtc-pc/"
