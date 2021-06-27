@@ -714,6 +714,11 @@ enum RenderContextType {
    */
   "webgl2",
   /**
+   * The context type designates a {@link GPUPresentationContext}, a WenGPU rendering context.
+   * This context is only available on browsers that implement WebGPU specification.
+   */
+  "gpupresent",
+  /**
    * The context type designates a {@link ImageBitmapRenderingContext}.
    * The context provides functionality to replace the content of the canvas with a given ImageBitmap.
    */
