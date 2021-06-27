@@ -713,7 +713,6 @@ enum RenderContextType {
    * This context is only available on browsers that implement WebGL version 2 (OpenGL ES 3.0).
    */
   "webgl2",
-
   /**
    * The context type designates a {@link ImageBitmapRenderingContext}.
    * The context provides functionality to replace the content of the canvas with a given ImageBitmap.
