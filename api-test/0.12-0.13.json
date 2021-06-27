@@ -1,0 +1,2013 @@
+[
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "@interface akasha.gpu.GPUAddressMode",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUAddressMode",
+      "classSimpleName": "GPUAddressMode",
+      "elementKind": "@interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "@interface akasha.gpu.GPUBlendFactor",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUBlendFactor",
+      "classSimpleName": "GPUBlendFactor",
+      "elementKind": "@interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "@interface akasha.gpu.GPUBlendOperation",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUBlendOperation",
+      "classSimpleName": "GPUBlendOperation",
+      "elementKind": "@interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "@interface akasha.gpu.GPUBufferBindingType",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUBufferBindingType",
+      "classSimpleName": "GPUBufferBindingType",
+      "elementKind": "@interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "@interface akasha.gpu.GPUCanvasCompositingAlphaMode",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUCanvasCompositingAlphaMode",
+      "classSimpleName": "GPUCanvasCompositingAlphaMode",
+      "elementKind": "@interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "@interface akasha.gpu.GPUCompareFunction",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUCompareFunction",
+      "classSimpleName": "GPUCompareFunction",
+      "elementKind": "@interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "@interface akasha.gpu.GPUCompilationMessageType",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUCompilationMessageType",
+      "classSimpleName": "GPUCompilationMessageType",
+      "elementKind": "@interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "@interface akasha.gpu.GPUCullMode",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUCullMode",
+      "classSimpleName": "GPUCullMode",
+      "elementKind": "@interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "@interface akasha.gpu.GPUDeviceLostReason",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUDeviceLostReason",
+      "classSimpleName": "GPUDeviceLostReason",
+      "elementKind": "@interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "@interface akasha.gpu.GPUErrorFilter",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUErrorFilter",
+      "classSimpleName": "GPUErrorFilter",
+      "elementKind": "@interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "@interface akasha.gpu.GPUFeatureName",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUFeatureName",
+      "classSimpleName": "GPUFeatureName",
+      "elementKind": "@interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "@interface akasha.gpu.GPUFilterMode",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUFilterMode",
+      "classSimpleName": "GPUFilterMode",
+      "elementKind": "@interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "@interface akasha.gpu.GPUFrontFace",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUFrontFace",
+      "classSimpleName": "GPUFrontFace",
+      "elementKind": "@interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "@interface akasha.gpu.GPUIndexFormat",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUIndexFormat",
+      "classSimpleName": "GPUIndexFormat",
+      "elementKind": "@interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "@interface akasha.gpu.GPUInputStepMode",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUInputStepMode",
+      "classSimpleName": "GPUInputStepMode",
+      "elementKind": "@interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "@interface akasha.gpu.GPULoadOp",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPULoadOp",
+      "classSimpleName": "GPULoadOp",
+      "elementKind": "@interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "@interface akasha.gpu.GPUPipelineStatisticName",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUPipelineStatisticName",
+      "classSimpleName": "GPUPipelineStatisticName",
+      "elementKind": "@interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "@interface akasha.gpu.GPUPowerPreference",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUPowerPreference",
+      "classSimpleName": "GPUPowerPreference",
+      "elementKind": "@interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "@interface akasha.gpu.GPUPredefinedColorSpace",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUPredefinedColorSpace",
+      "classSimpleName": "GPUPredefinedColorSpace",
+      "elementKind": "@interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "@interface akasha.gpu.GPUPrimitiveTopology",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUPrimitiveTopology",
+      "classSimpleName": "GPUPrimitiveTopology",
+      "elementKind": "@interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "@interface akasha.gpu.GPUQueryType",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUQueryType",
+      "classSimpleName": "GPUQueryType",
+      "elementKind": "@interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "@interface akasha.gpu.GPUSamplerBindingType",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUSamplerBindingType",
+      "classSimpleName": "GPUSamplerBindingType",
+      "elementKind": "@interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "@interface akasha.gpu.GPUStencilOperation",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUStencilOperation",
+      "classSimpleName": "GPUStencilOperation",
+      "elementKind": "@interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "@interface akasha.gpu.GPUStorageTextureAccess",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUStorageTextureAccess",
+      "classSimpleName": "GPUStorageTextureAccess",
+      "elementKind": "@interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "@interface akasha.gpu.GPUStoreOp",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUStoreOp",
+      "classSimpleName": "GPUStoreOp",
+      "elementKind": "@interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "@interface akasha.gpu.GPUTextureAspect",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUTextureAspect",
+      "classSimpleName": "GPUTextureAspect",
+      "elementKind": "@interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "@interface akasha.gpu.GPUTextureDimension",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUTextureDimension",
+      "classSimpleName": "GPUTextureDimension",
+      "elementKind": "@interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "@interface akasha.gpu.GPUTextureFormat",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUTextureFormat",
+      "classSimpleName": "GPUTextureFormat",
+      "elementKind": "@interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "@interface akasha.gpu.GPUTextureSampleType",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUTextureSampleType",
+      "classSimpleName": "GPUTextureSampleType",
+      "elementKind": "@interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "@interface akasha.gpu.GPUTextureViewDimension",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUTextureViewDimension",
+      "classSimpleName": "GPUTextureViewDimension",
+      "elementKind": "@interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "@interface akasha.gpu.GPUVertexFormat",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUVertexFormat",
+      "classSimpleName": "GPUVertexFormat",
+      "elementKind": "@interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.gpu.GPU",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPU",
+      "classSimpleName": "GPU",
+      "elementKind": "class",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.gpu.GPUAdapter",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUAdapter",
+      "classSimpleName": "GPUAdapter",
+      "elementKind": "class",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.gpu.GPUBindGroup",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUBindGroup",
+      "classSimpleName": "GPUBindGroup",
+      "elementKind": "class",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.gpu.GPUBindGroupLayout",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUBindGroupLayout",
+      "classSimpleName": "GPUBindGroupLayout",
+      "elementKind": "class",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.gpu.GPUBuffer",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUBuffer",
+      "classSimpleName": "GPUBuffer",
+      "elementKind": "class",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.gpu.GPUBufferUsage",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUBufferUsage",
+      "classSimpleName": "GPUBufferUsage",
+      "elementKind": "class",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.gpu.GPUColorWrite",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUColorWrite",
+      "classSimpleName": "GPUColorWrite",
+      "elementKind": "class",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.gpu.GPUCommandBuffer",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUCommandBuffer",
+      "classSimpleName": "GPUCommandBuffer",
+      "elementKind": "class",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.gpu.GPUCommandEncoder",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUCommandEncoder",
+      "classSimpleName": "GPUCommandEncoder",
+      "elementKind": "class",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.gpu.GPUCompilationInfo",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUCompilationInfo",
+      "classSimpleName": "GPUCompilationInfo",
+      "elementKind": "class",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.gpu.GPUCompilationMessage",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUCompilationMessage",
+      "classSimpleName": "GPUCompilationMessage",
+      "elementKind": "class",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.gpu.GPUComputePassEncoder",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUComputePassEncoder",
+      "classSimpleName": "GPUComputePassEncoder",
+      "elementKind": "class",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.gpu.GPUComputePipeline",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUComputePipeline",
+      "classSimpleName": "GPUComputePipeline",
+      "elementKind": "class",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.gpu.GPUDevice",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUDevice",
+      "classSimpleName": "GPUDevice",
+      "elementKind": "class",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.gpu.GPUDeviceLostInfo",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUDeviceLostInfo",
+      "classSimpleName": "GPUDeviceLostInfo",
+      "elementKind": "class",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.gpu.GPUExternalTexture",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUExternalTexture",
+      "classSimpleName": "GPUExternalTexture",
+      "elementKind": "class",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.gpu.GPUMapMode",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUMapMode",
+      "classSimpleName": "GPUMapMode",
+      "elementKind": "class",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.gpu.GPUOutOfMemoryError",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUOutOfMemoryError",
+      "classSimpleName": "GPUOutOfMemoryError",
+      "elementKind": "class",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.gpu.GPUPipelineLayout",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUPipelineLayout",
+      "classSimpleName": "GPUPipelineLayout",
+      "elementKind": "class",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.gpu.GPUPresentationContext",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUPresentationContext",
+      "classSimpleName": "GPUPresentationContext",
+      "elementKind": "class",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.gpu.GPUQuerySet",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUQuerySet",
+      "classSimpleName": "GPUQuerySet",
+      "elementKind": "class",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.gpu.GPUQueue",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUQueue",
+      "classSimpleName": "GPUQueue",
+      "elementKind": "class",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.gpu.GPURenderBundle",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURenderBundle",
+      "classSimpleName": "GPURenderBundle",
+      "elementKind": "class",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.gpu.GPURenderBundleEncoder",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURenderBundleEncoder",
+      "classSimpleName": "GPURenderBundleEncoder",
+      "elementKind": "class",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.gpu.GPURenderPassEncoder",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURenderPassEncoder",
+      "classSimpleName": "GPURenderPassEncoder",
+      "elementKind": "class",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.gpu.GPURenderPipeline",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURenderPipeline",
+      "classSimpleName": "GPURenderPipeline",
+      "elementKind": "class",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.gpu.GPUSampler",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUSampler",
+      "classSimpleName": "GPUSampler",
+      "elementKind": "class",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.gpu.GPUShaderModule",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUShaderModule",
+      "classSimpleName": "GPUShaderModule",
+      "elementKind": "class",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.gpu.GPUShaderStage",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUShaderStage",
+      "classSimpleName": "GPUShaderStage",
+      "elementKind": "class",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.gpu.GPUSupportedFeatures",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUSupportedFeatures",
+      "classSimpleName": "GPUSupportedFeatures",
+      "elementKind": "class",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.gpu.GPUSupportedLimits",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUSupportedLimits",
+      "classSimpleName": "GPUSupportedLimits",
+      "elementKind": "class",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.gpu.GPUTexture",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUTexture",
+      "classSimpleName": "GPUTexture",
+      "elementKind": "class",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.gpu.GPUTextureUsage",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUTextureUsage",
+      "classSimpleName": "GPUTextureUsage",
+      "elementKind": "class",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.gpu.GPUTextureView",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUTextureView",
+      "classSimpleName": "GPUTextureView",
+      "elementKind": "class",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.gpu.GPUUncapturedErrorEvent",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUUncapturedErrorEvent",
+      "classSimpleName": "GPUUncapturedErrorEvent",
+      "elementKind": "class",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.gpu.GPUValidationError",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUValidationError",
+      "classSimpleName": "GPUValidationError",
+      "elementKind": "class",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.ImageBitmapOrHTMLCanvasElementOrOffscreenCanvasUnion",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.ImageBitmapOrHTMLCanvasElementOrOffscreenCanvasUnion",
+      "classSimpleName": "ImageBitmapOrHTMLCanvasElementOrOffscreenCanvasUnion",
+      "elementKind": "interface",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.gpu.GPUBindGroupDescriptor",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUBindGroupDescriptor",
+      "classSimpleName": "GPUBindGroupDescriptor",
+      "elementKind": "interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.gpu.GPUBindGroupEntry",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUBindGroupEntry",
+      "classSimpleName": "GPUBindGroupEntry",
+      "elementKind": "interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.gpu.GPUBindGroupLayoutDescriptor",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUBindGroupLayoutDescriptor",
+      "classSimpleName": "GPUBindGroupLayoutDescriptor",
+      "elementKind": "interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.gpu.GPUBindGroupLayoutEntry",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUBindGroupLayoutEntry",
+      "classSimpleName": "GPUBindGroupLayoutEntry",
+      "elementKind": "interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.gpu.GPUBindingResource",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUBindingResource",
+      "classSimpleName": "GPUBindingResource",
+      "elementKind": "interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.gpu.GPUBlendComponent",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUBlendComponent",
+      "classSimpleName": "GPUBlendComponent",
+      "elementKind": "interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.gpu.GPUBlendState",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUBlendState",
+      "classSimpleName": "GPUBlendState",
+      "elementKind": "interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.gpu.GPUBufferBinding",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUBufferBinding",
+      "classSimpleName": "GPUBufferBinding",
+      "elementKind": "interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.gpu.GPUBufferBindingLayout",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUBufferBindingLayout",
+      "classSimpleName": "GPUBufferBindingLayout",
+      "elementKind": "interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.gpu.GPUBufferDescriptor",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUBufferDescriptor",
+      "classSimpleName": "GPUBufferDescriptor",
+      "elementKind": "interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.gpu.GPUColor",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUColor",
+      "classSimpleName": "GPUColor",
+      "elementKind": "interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.gpu.GPUColorDict",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUColorDict",
+      "classSimpleName": "GPUColorDict",
+      "elementKind": "interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.gpu.GPUColorTargetState",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUColorTargetState",
+      "classSimpleName": "GPUColorTargetState",
+      "elementKind": "interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.gpu.GPUCommandBufferDescriptor",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUCommandBufferDescriptor",
+      "classSimpleName": "GPUCommandBufferDescriptor",
+      "elementKind": "interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.gpu.GPUCommandEncoderDescriptor",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUCommandEncoderDescriptor",
+      "classSimpleName": "GPUCommandEncoderDescriptor",
+      "elementKind": "interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.gpu.GPUComputePassDescriptor",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUComputePassDescriptor",
+      "classSimpleName": "GPUComputePassDescriptor",
+      "elementKind": "interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.gpu.GPUComputePipelineDescriptor",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUComputePipelineDescriptor",
+      "classSimpleName": "GPUComputePipelineDescriptor",
+      "elementKind": "interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.gpu.GPUDepthStencilState",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUDepthStencilState",
+      "classSimpleName": "GPUDepthStencilState",
+      "elementKind": "interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.gpu.GPUDeviceDescriptor",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUDeviceDescriptor",
+      "classSimpleName": "GPUDeviceDescriptor",
+      "elementKind": "interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.gpu.GPUDeviceLostReasonOrUndefinedUnion",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUDeviceLostReasonOrUndefinedUnion",
+      "classSimpleName": "GPUDeviceLostReasonOrUndefinedUnion",
+      "elementKind": "interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.gpu.GPUError",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUError",
+      "classSimpleName": "GPUError",
+      "elementKind": "interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.gpu.GPUExtent3D",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUExtent3D",
+      "classSimpleName": "GPUExtent3D",
+      "elementKind": "interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.gpu.GPUExtent3DDict",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUExtent3DDict",
+      "classSimpleName": "GPUExtent3DDict",
+      "elementKind": "interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.gpu.GPUExternalTextureBindingLayout",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUExternalTextureBindingLayout",
+      "classSimpleName": "GPUExternalTextureBindingLayout",
+      "elementKind": "interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.gpu.GPUExternalTextureDescriptor",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUExternalTextureDescriptor",
+      "classSimpleName": "GPUExternalTextureDescriptor",
+      "elementKind": "interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.gpu.GPUFragmentState",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUFragmentState",
+      "classSimpleName": "GPUFragmentState",
+      "elementKind": "interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.gpu.GPUImageCopyBuffer",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUImageCopyBuffer",
+      "classSimpleName": "GPUImageCopyBuffer",
+      "elementKind": "interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.gpu.GPUImageCopyExternalImage",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUImageCopyExternalImage",
+      "classSimpleName": "GPUImageCopyExternalImage",
+      "elementKind": "interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.gpu.GPUImageCopyTexture",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUImageCopyTexture",
+      "classSimpleName": "GPUImageCopyTexture",
+      "elementKind": "interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.gpu.GPUImageCopyTextureTagged",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUImageCopyTextureTagged",
+      "classSimpleName": "GPUImageCopyTextureTagged",
+      "elementKind": "interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.gpu.GPUImageDataLayout",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUImageDataLayout",
+      "classSimpleName": "GPUImageDataLayout",
+      "elementKind": "interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.gpu.GPULoadOpOrFloatUnion",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPULoadOpOrFloatUnion",
+      "classSimpleName": "GPULoadOpOrFloatUnion",
+      "elementKind": "interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.gpu.GPULoadOpOrGPUColorUnion",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPULoadOpOrGPUColorUnion",
+      "classSimpleName": "GPULoadOpOrGPUColorUnion",
+      "elementKind": "interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.gpu.GPULoadOpOrGPUStencilValueUnion",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPULoadOpOrGPUStencilValueUnion",
+      "classSimpleName": "GPULoadOpOrGPUStencilValueUnion",
+      "elementKind": "interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.gpu.GPUMultisampleState",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUMultisampleState",
+      "classSimpleName": "GPUMultisampleState",
+      "elementKind": "interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.gpu.GPUObjectDescriptorBase",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUObjectDescriptorBase",
+      "classSimpleName": "GPUObjectDescriptorBase",
+      "elementKind": "interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.gpu.GPUOrigin2D",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUOrigin2D",
+      "classSimpleName": "GPUOrigin2D",
+      "elementKind": "interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.gpu.GPUOrigin2DDict",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUOrigin2DDict",
+      "classSimpleName": "GPUOrigin2DDict",
+      "elementKind": "interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.gpu.GPUOrigin3D",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUOrigin3D",
+      "classSimpleName": "GPUOrigin3D",
+      "elementKind": "interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.gpu.GPUOrigin3DDict",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUOrigin3DDict",
+      "classSimpleName": "GPUOrigin3DDict",
+      "elementKind": "interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.gpu.GPUPipelineDescriptorBase",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUPipelineDescriptorBase",
+      "classSimpleName": "GPUPipelineDescriptorBase",
+      "elementKind": "interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.gpu.GPUPipelineLayoutDescriptor",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUPipelineLayoutDescriptor",
+      "classSimpleName": "GPUPipelineLayoutDescriptor",
+      "elementKind": "interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.gpu.GPUPresentationConfiguration",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUPresentationConfiguration",
+      "classSimpleName": "GPUPresentationConfiguration",
+      "elementKind": "interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.gpu.GPUPrimitiveState",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUPrimitiveState",
+      "classSimpleName": "GPUPrimitiveState",
+      "elementKind": "interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.gpu.GPUProgrammableStage",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUProgrammableStage",
+      "classSimpleName": "GPUProgrammableStage",
+      "elementKind": "interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.gpu.GPUQuerySetDescriptor",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUQuerySetDescriptor",
+      "classSimpleName": "GPUQuerySetDescriptor",
+      "elementKind": "interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.gpu.GPURenderBundleDescriptor",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURenderBundleDescriptor",
+      "classSimpleName": "GPURenderBundleDescriptor",
+      "elementKind": "interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.gpu.GPURenderBundleEncoderDescriptor",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURenderBundleEncoderDescriptor",
+      "classSimpleName": "GPURenderBundleEncoderDescriptor",
+      "elementKind": "interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.gpu.GPURenderPassColorAttachment",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURenderPassColorAttachment",
+      "classSimpleName": "GPURenderPassColorAttachment",
+      "elementKind": "interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.gpu.GPURenderPassDepthStencilAttachment",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURenderPassDepthStencilAttachment",
+      "classSimpleName": "GPURenderPassDepthStencilAttachment",
+      "elementKind": "interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.gpu.GPURenderPassDescriptor",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURenderPassDescriptor",
+      "classSimpleName": "GPURenderPassDescriptor",
+      "elementKind": "interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.gpu.GPURenderPipelineDescriptor",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURenderPipelineDescriptor",
+      "classSimpleName": "GPURenderPipelineDescriptor",
+      "elementKind": "interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.gpu.GPURequestAdapterOptions",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURequestAdapterOptions",
+      "classSimpleName": "GPURequestAdapterOptions",
+      "elementKind": "interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.gpu.GPUSamplerBindingLayout",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUSamplerBindingLayout",
+      "classSimpleName": "GPUSamplerBindingLayout",
+      "elementKind": "interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.gpu.GPUSamplerDescriptor",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUSamplerDescriptor",
+      "classSimpleName": "GPUSamplerDescriptor",
+      "elementKind": "interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.gpu.GPUShaderModuleDescriptor",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUShaderModuleDescriptor",
+      "classSimpleName": "GPUShaderModuleDescriptor",
+      "elementKind": "interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.gpu.GPUStencilFaceState",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUStencilFaceState",
+      "classSimpleName": "GPUStencilFaceState",
+      "elementKind": "interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.gpu.GPUStorageTextureBindingLayout",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUStorageTextureBindingLayout",
+      "classSimpleName": "GPUStorageTextureBindingLayout",
+      "elementKind": "interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.gpu.GPUTextureBindingLayout",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUTextureBindingLayout",
+      "classSimpleName": "GPUTextureBindingLayout",
+      "elementKind": "interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.gpu.GPUTextureDescriptor",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUTextureDescriptor",
+      "classSimpleName": "GPUTextureDescriptor",
+      "elementKind": "interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.gpu.GPUTextureViewDescriptor",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUTextureViewDescriptor",
+      "classSimpleName": "GPUTextureViewDescriptor",
+      "elementKind": "interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.gpu.GPUUncapturedErrorEventInit",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUUncapturedErrorEventInit",
+      "classSimpleName": "GPUUncapturedErrorEventInit",
+      "elementKind": "interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.gpu.GPUVertexAttribute",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUVertexAttribute",
+      "classSimpleName": "GPUVertexAttribute",
+      "elementKind": "interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.gpu.GPUVertexBufferLayout",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUVertexBufferLayout",
+      "classSimpleName": "GPUVertexBufferLayout",
+      "elementKind": "interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.gpu.GPUVertexState",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUVertexState",
+      "classSimpleName": "GPUVertexState",
+      "elementKind": "interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method akasha.gpu.GPU akasha.Navigator::gpu()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.Navigator",
+      "classSimpleName": "Navigator",
+      "elementKind": "method",
+      "methodName": "gpu",
+      "package": "akasha"
+    }
+  }
+]

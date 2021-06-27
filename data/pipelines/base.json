@@ -350,6 +350,26 @@
     },
     {
       "name": "AddExtendedAttribute",
+      "description": "Mark the WebGPU types as experimental",
+      "sourceSelector": "name=webgpu",
+      "config": {
+        "namePattern": "^.*$",
+        "extendedAttribute": "JavaAnnotation=\"org.jetbrains.annotations.ApiStatus.Experimental\""
+      }
+    },
+    {
+      "name": "AddExtendedAttributeToMember",
+      "description": "Mark the WebGPU entry point as experimental",
+      "sourceSelector": "name=webgpu",
+      "config": {
+        "expectedAddCount": 1,
+        "elementNamePattern": "^NavigatorGPU$",
+        "memberNamePattern": "^gpu$",
+        "extendedAttribute": "JavaAnnotation=\"org.jetbrains.annotations.ApiStatus.Experimental\""
+      }
+    },
+    {
+      "name": "AddExtendedAttribute",
       "description": "Package up the indexeddb specific specs into a separate package",
       "sourceSelector": "name=indexeddb",
       "config": {
