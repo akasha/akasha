@@ -1020,6 +1020,22 @@
     }
   },
   {
+    "code": "java.field.addedStaticField",
+    "description": "Static field added to class.",
+    "newElement": "field akasha.RenderContextType.gpupresent",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.RenderContextType",
+      "classSimpleName": "RenderContextType",
+      "elementKind": "field",
+      "fieldName": "gpupresent",
+      "package": "akasha"
+    }
+  },
+  {
     "code": "java.class.added",
     "description": "Class was added.",
     "newElement": "interface akasha.ImageBitmapOrHTMLCanvasElementOrOffscreenCanvasUnion",
