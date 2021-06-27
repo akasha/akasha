@@ -467,6 +467,21 @@
   {
     "code": "java.class.added",
     "description": "Class was added.",
+    "newElement": "@interface akasha.gpu.WGSL",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.WGSL",
+      "classSimpleName": "WGSL",
+      "elementKind": "@interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
     "newElement": "class akasha.gpu.GPU",
     "classification": {
       "SOURCE": "NON_BREAKING",

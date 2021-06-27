@@ -1277,6 +1277,16 @@
       }
     },
     {
+      "name": "AddExtendedAttributeToMember",
+      "sourceSelector": "name=webgpu",
+      "config": {
+        "expectedAddCount": 1,
+        "elementNamePattern": "^GPUShaderModuleDescriptor$",
+        "memberNamePattern": "^code$",
+        "extendedAttribute": "JavaAnnotation=\"akasha.gpu.WGSL\""
+      }
+    },
+    {
       "name": "ChangeArgumentType",
       "description": "Tighten up the parameter types",
       "sourceSelector": "name=webgl.*",
