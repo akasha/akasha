@@ -498,6 +498,7 @@
       "description": "Add MarkerType to make conversion between types easier",
       "sourceSelector": "name=whatwg_html",
       "config": {
+        "expectedAddCount": 1,
         "namePattern": "^RenderingContext$",
         "extendedAttribute": "MarkerType"
       }
