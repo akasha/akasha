@@ -2,7 +2,7 @@
 
 ### Unreleased
 
-* Add the `WebGPU` spec with version `W3C Working Draft, 20 June 2021` to the set of specifications which the API is generated from.
+* Add the `WebGPU` spec with version `W3C Working Draft, 20 June 2021` to the set of specifications which the API is generated from. This specification and the corresponding generated elements are marked as "Experimental" as the specification is experimental and in developer trial mode and thus not enabled by default in the major browsers.
 
 ### [v0.12](https://github.com/akasha/akasha/tree/v0.12) (2021-06-13) · [Full Changelog](https://github.com/spritz/spritz/compare/v0.11...v0.12) · [API Differences](https://akasha.github.io/akasha-java/api-diff/?key=akasha-java&old=0.11&new=0.12) · [Source Diff](https://github.com/akasha/akasha-java/compare/v0.11...v0.12)
 
