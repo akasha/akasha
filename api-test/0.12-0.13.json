@@ -572,6 +572,21 @@
   {
     "code": "java.class.added",
     "description": "Class was added.",
+    "newElement": "class akasha.gpu.GPUCanvasContext",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUCanvasContext",
+      "classSimpleName": "GPUCanvasContext",
+      "elementKind": "class",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
     "newElement": "class akasha.gpu.GPUColorWrite",
     "classification": {
       "SOURCE": "NON_BREAKING",
@@ -767,21 +782,6 @@
   {
     "code": "java.class.added",
     "description": "Class was added.",
-    "newElement": "class akasha.gpu.GPUPresentationContext",
-    "classification": {
-      "SOURCE": "NON_BREAKING",
-      "BINARY": "NON_BREAKING"
-    },
-    "attachments": {
-      "classQualifiedName": "akasha.gpu.GPUPresentationContext",
-      "classSimpleName": "GPUPresentationContext",
-      "elementKind": "class",
-      "package": "akasha.gpu"
-    }
-  },
-  {
-    "code": "java.class.added",
-    "description": "Class was added.",
     "newElement": "class akasha.gpu.GPUQuerySet",
     "classification": {
       "SOURCE": "NON_BREAKING",
@@ -940,6 +940,21 @@
     "attachments": {
       "classQualifiedName": "akasha.gpu.GPUSupportedLimits",
       "classSimpleName": "GPUSupportedLimits",
+      "elementKind": "class",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.gpu.GPUSwapChain",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUSwapChain",
+      "classSimpleName": "GPUSwapChain",
       "elementKind": "class",
       "package": "akasha.gpu"
     }
@@ -1488,21 +1503,6 @@
   {
     "code": "java.class.added",
     "description": "Class was added.",
-    "newElement": "interface akasha.gpu.GPUImageCopyTextureTagged",
-    "classification": {
-      "SOURCE": "NON_BREAKING",
-      "BINARY": "NON_BREAKING"
-    },
-    "attachments": {
-      "classQualifiedName": "akasha.gpu.GPUImageCopyTextureTagged",
-      "classSimpleName": "GPUImageCopyTextureTagged",
-      "elementKind": "interface",
-      "package": "akasha.gpu"
-    }
-  },
-  {
-    "code": "java.class.added",
-    "description": "Class was added.",
     "newElement": "interface akasha.gpu.GPUImageDataLayout",
     "classification": {
       "SOURCE": "NON_BREAKING",
@@ -1676,21 +1676,6 @@
     "attachments": {
       "classQualifiedName": "akasha.gpu.GPUPipelineLayoutDescriptor",
       "classSimpleName": "GPUPipelineLayoutDescriptor",
-      "elementKind": "interface",
-      "package": "akasha.gpu"
-    }
-  },
-  {
-    "code": "java.class.added",
-    "description": "Class was added.",
-    "newElement": "interface akasha.gpu.GPUPresentationConfiguration",
-    "classification": {
-      "SOURCE": "NON_BREAKING",
-      "BINARY": "NON_BREAKING"
-    },
-    "attachments": {
-      "classQualifiedName": "akasha.gpu.GPUPresentationConfiguration",
-      "classSimpleName": "GPUPresentationConfiguration",
       "elementKind": "interface",
       "package": "akasha.gpu"
     }
@@ -1916,6 +1901,21 @@
     "attachments": {
       "classQualifiedName": "akasha.gpu.GPUStorageTextureBindingLayout",
       "classSimpleName": "GPUStorageTextureBindingLayout",
+      "elementKind": "interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.gpu.GPUSwapChainDescriptor",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUSwapChainDescriptor",
+      "classSimpleName": "GPUSwapChainDescriptor",
       "elementKind": "interface",
       "package": "akasha.gpu"
     }

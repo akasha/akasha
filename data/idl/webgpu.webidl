@@ -158,7 +158,7 @@ enum GPUStorageTextureAccess {
 };
 
 enum GPUStoreOp {
-  "discard",
+  "clear",
   "store"
 };
 
@@ -312,8 +312,6 @@ typedef ( sequence<GPUIntegerCoordinate> or GPUOrigin2DDict ) GPUOrigin2D;
 
 typedef ( sequence<GPUIntegerCoordinate> or GPUOrigin3DDict ) GPUOrigin3D;
 
-typedef double GPUPipelineConstantValue;
-
 typedef unsigned long GPUSampleMask;
 
 typedef unsigned long GPUShaderStageFlags;
@@ -422,8 +420,8 @@ dictionary GPUDepthStencilState {
 };
 
 dictionary GPUDeviceDescriptor : GPUObjectDescriptorBase {
-  sequence<GPUFeatureName> requiredFeatures = [];
-  record<DOMString, GPUSize32> requiredLimits = {};
+  sequence<GPUFeatureName> nonGuaranteedFeatures = [];
+  record<DOMString, GPUSize32> nonGuaranteedLimits = {};
 };
 
 dictionary GPUExtent3DDict {
@@ -458,11 +456,6 @@ dictionary GPUImageCopyTexture {
   GPUIntegerCoordinate mipLevel = 0;
   GPUOrigin3D origin = {};
   required GPUTexture texture;
-};
-
-dictionary GPUImageCopyTextureTagged : GPUImageCopyTexture {
-  GPUPredefinedColorSpace colorSpace = "srgb";
-  boolean premultipliedAlpha = false;
 };
 
 dictionary GPUImageDataLayout {
@@ -500,14 +493,6 @@ dictionary GPUPipelineLayoutDescriptor : GPUObjectDescriptorBase {
   required sequence<GPUBindGroupLayout> bindGroupLayouts;
 };
 
-dictionary GPUPresentationConfiguration : GPUObjectDescriptorBase {
-  GPUCanvasCompositingAlphaMode compositingAlphaMode = "opaque";
-  required GPUDevice device;
-  required GPUTextureFormat format;
-  GPUExtent3D size;
-  GPUTextureUsageFlags usage = 0x10;
-};
-
 dictionary GPUPrimitiveState {
   boolean clampDepth = false;
   GPUCullMode cullMode = "none";
@@ -517,7 +502,6 @@ dictionary GPUPrimitiveState {
 };
 
 dictionary GPUProgrammableStage {
-  record<USVString, GPUPipelineConstantValue> constants;
   required USVString entryPoint;
   required GPUShaderModule module;
 };
@@ -607,6 +591,14 @@ dictionary GPUStorageTextureBindingLayout {
   required GPUStorageTextureAccess access;
   required GPUTextureFormat format;
   GPUTextureViewDimension viewDimension = "2d";
+};
+
+dictionary GPUSwapChainDescriptor : GPUObjectDescriptorBase {
+  GPUCanvasCompositingAlphaMode compositingAlphaMode = "opaque";
+  required GPUDevice device;
+  required GPUTextureFormat format;
+  GPUExtent3D size;
+  GPUTextureUsageFlags usage = 0x10;
 };
 
 dictionary GPUTextureBindingLayout {
@@ -732,6 +724,12 @@ interface GPUBufferUsage {
 };
 
 [Exposed=Window]
+interface GPUCanvasContext {
+  GPUSwapChain configureSwapChain( GPUSwapChainDescriptor descriptor );
+  GPUTextureFormat getSwapChainPreferredFormat( GPUAdapter adapter );
+};
+
+[Exposed=Window]
 interface GPUColorWrite {
   const GPUFlagsConstant ALL = 0xF;
   const GPUFlagsConstant ALPHA = 0x8;
@@ -843,21 +841,13 @@ interface GPUPipelineLayout {
 };
 
 [Exposed=Window]
-interface GPUPresentationContext {
-  undefined configure( GPUPresentationConfiguration configuration );
-  GPUTexture getCurrentTexture();
-  GPUTextureFormat getPreferredFormat( GPUAdapter adapter );
-  undefined unconfigure();
-};
-
-[Exposed=Window]
 interface GPUQuerySet {
   undefined destroy();
 };
 
 [Exposed=Window]
 interface GPUQueue {
-  undefined copyExternalImageToTexture( GPUImageCopyExternalImage source, GPUImageCopyTextureTagged destination, GPUExtent3D copySize );
+  undefined copyExternalImageToTexture( GPUImageCopyExternalImage source, GPUImageCopyTexture destination, GPUExtent3D copySize );
   Promise<undefined> onSubmittedWorkDone();
   undefined submit( sequence<GPUCommandBuffer> commandBuffers );
   undefined writeBuffer( GPUBuffer buffer, GPUSize64 bufferOffset, [AllowShared] BufferSource data, optional GPUSize64 dataOffset = 0, optional GPUSize64 size );
@@ -933,6 +923,11 @@ interface GPUSupportedLimits {
   readonly attribute unsigned long maxVertexAttributes;
   readonly attribute unsigned long maxVertexBufferArrayStride;
   readonly attribute unsigned long maxVertexBuffers;
+};
+
+[Exposed=Window]
+interface GPUSwapChain {
+  GPUTexture getCurrentTexture();
 };
 
 [Exposed=Window, Serializable]
@@ -1030,6 +1025,8 @@ GPURenderPipeline includes GPUPipelineBase;
 GPUSampler includes GPUObjectBase;
 
 GPUShaderModule includes GPUObjectBase;
+
+GPUSwapChain includes GPUObjectBase;
 
 GPUTexture includes GPUObjectBase;
 
