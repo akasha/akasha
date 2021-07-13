@@ -31,6 +31,8 @@ MyThingCollection
 RTCStatsReport
 SomeMapLikeDefiningOverrides
 SomeOtherType
+SomeReadOnlySetLike
+SomeWriteSetLike
 SpeechRecognitionErrorEvent
 Storage
 txStorage

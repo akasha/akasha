@@ -116,6 +116,45 @@ Headers.prototype.forEach = function(callback) {};
  * @private
  * @nosideeffects
  */
+function SomeReadOnlySetLike() {}
+/** @const {number} */ SomeReadOnlySetLike.prototype.size;
+/**
+ * @param {!string} value
+ * @return {!boolean}
+ * @nosideeffects
+ */
+SomeReadOnlySetLike.prototype.has = function(value) {}
+/**
+ * @return {!Iterator<!string>}
+ * @nosideeffects
+ */
+SomeReadOnlySetLike.prototype.keys = function() {}
+/**
+ * @return {!Iterator<!string>}
+ * @nosideeffects
+ */
+SomeReadOnlySetLike.prototype.values = function() {}
+/**
+ * @return {!Iterator<!Array<!string|!string>>}
+ * @nosideeffects
+ */
+SomeReadOnlySetLike.prototype.entries = function() {};
+/**
+ * @return {!Iterator<!Array<!string|!string>>}
+ * @nosideeffects
+ */
+SomeReadOnlySetLike.prototype[Symbol.iterator] = function() {};
+/**
+ * @param {function(!string, !string, MAP)} callback
+ * @this {MAP}
+ * @template MAP
+ */
+SomeReadOnlySetLike.prototype.forEach = function(callback) {};
+/**
+ * @constructor
+ * @private
+ * @nosideeffects
+ */
 function AnonymousNamedAccessorsFloat() {}
 /**
  * @constructor
@@ -306,6 +345,59 @@ function AnonymousNamedAccessorsUnsignedLongLong() {}
  * @nosideeffects
  */
 function AnonymousNamedAccessorsByte() {}
+/**
+ * @constructor
+ * @private
+ * @nosideeffects
+ */
+function SomeWriteSetLike() {}
+/** @const {number} */ SomeWriteSetLike.prototype.size;
+/**
+ * @param {!string} value
+ * @return {!boolean}
+ * @nosideeffects
+ */
+SomeWriteSetLike.prototype.has = function(value) {}
+/**
+ * @return {!Iterator<!string>}
+ * @nosideeffects
+ */
+SomeWriteSetLike.prototype.keys = function() {}
+/**
+ * @return {!Iterator<!string>}
+ * @nosideeffects
+ */
+SomeWriteSetLike.prototype.values = function() {}
+/**
+ * @return {!Iterator<!Array<!string|!string>>}
+ * @nosideeffects
+ */
+SomeWriteSetLike.prototype.entries = function() {};
+/**
+ * @return {!Iterator<!Array<!string|!string>>}
+ * @nosideeffects
+ */
+SomeWriteSetLike.prototype[Symbol.iterator] = function() {};
+/**
+ * @param {function(!string, !string, MAP)} callback
+ * @this {MAP}
+ * @template MAP
+ */
+SomeWriteSetLike.prototype.forEach = function(callback) {};
+/**
+ * @param {!string} value
+ * @return {undefined}
+ */
+SomeWriteSetLike.prototype.add = function(value) {}
+/**
+ * @param {!string} value
+ * @return {!boolean}
+ */
+SomeWriteSetLike.prototype.delete = function(value) {}
+/**
+ * @return {undefined}
+ */
+SomeWriteSetLike.prototype.clear = function() {}
 /**
  * @constructor
  * @private

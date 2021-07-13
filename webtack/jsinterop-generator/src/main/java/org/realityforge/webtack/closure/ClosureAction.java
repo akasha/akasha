@@ -40,6 +40,7 @@ import org.realityforge.webtack.model.OperationMember;
 import org.realityforge.webtack.model.PromiseType;
 import org.realityforge.webtack.model.RecordType;
 import org.realityforge.webtack.model.SequenceType;
+import org.realityforge.webtack.model.SetLikeMember;
 import org.realityforge.webtack.model.Type;
 import org.realityforge.webtack.model.TypeReference;
 import org.realityforge.webtack.model.TypedefDefinition;
@@ -420,6 +421,7 @@ final class ClosureAction
       definition.isNoArgsExtendedAttributePresent( ExtendedAttributes.LEGACY_NO_INTERFACE_OBJECT );
 
     final MapLikeMember mapLike = definition.getMapLikeMember();
+    final SetLikeMember setLike = definition.getSetLikeMember();
     final IterableMember iterable = definition.getIterable();
 
     final List<String> lines = new ArrayList<>();
@@ -493,6 +495,10 @@ final class ClosureAction
     {
       generateMapLikeOperations( writer, type, definition.getOperations(), mapLike );
     }
+    if ( null != setLike )
+    {
+      generateSetLikeOperations( writer, type, definition.getOperations(), setLike );
+    }
     if ( null != iterable )
     {
       generateIterableOperations( writer, type, iterable );
@@ -506,6 +512,160 @@ final class ClosureAction
     final StringWriter sw = new StringWriter();
     writeType( sw, keyType );
     return sw.toString();
+  }
+
+  private void generateSetLikeOperations( @Nonnull final Writer writer,
+                                          @Nonnull final String type,
+                                          @Nonnull final List<OperationMember> operations,
+                                          @Nonnull final SetLikeMember setLike )
+    throws IOException
+  {
+    writer.write( "/** @const {number} */ " );
+    writer.write( type );
+    writer.write( ".prototype.size;\n" );
+
+    final Type elementType = setLike.getType();
+    final Argument elementArgument =
+      new Argument( "value",
+                    elementType,
+                    false,
+                    false,
+                    null,
+                    null,
+                    Collections.emptyList(),
+                    Collections.emptyList() );
+     final Argument valueArgument2 =
+      new Argument( "value2",
+                    elementType,
+                    false,
+                    false,
+                    null,
+                    null,
+                    Collections.emptyList(),
+                    Collections.emptyList() );
+
+    // has operation
+    writeOperation( writer,
+                    type,
+                    "has",
+                    Collections.singletonList( elementArgument ),
+                    new Type( Kind.Boolean, Collections.emptyList(), false, Collections.emptyList() ),
+                    true,
+                    false,
+                    true );
+    final ExtendedAttribute iteratorExtendedAttribute =
+      ExtendedAttribute.createExtendedAttributeIdent( ExtendedAttributes.SEQUENCE_TYPE,
+                                                      "Iterator",
+                                                      Collections.emptyList() );
+    writeOperation( writer,
+                    type,
+                    "keys",
+                    Collections.emptyList(),
+                    new SequenceType( elementType,
+                                      Collections.singletonList( iteratorExtendedAttribute ),
+                                      false,
+                                      Collections.emptyList() ),
+                    true,
+                    false,
+                    true );
+
+    writeOperation( writer,
+                    type,
+                    "values",
+                    Collections.emptyList(),
+                    new SequenceType( elementType,
+                                      Collections.singletonList( iteratorExtendedAttribute ),
+                                      false,
+                                      Collections.emptyList() ),
+                    true,
+                    false,
+                    true );
+
+    writer.write( "/**\n" );
+    writer.write( " * @return {!Iterator<!Array<" );
+    writeType( writer, elementType );
+    writer.write( "|" );
+    writeType( writer, elementType );
+    writer.write( ">>}\n" );
+    writer.write( " * @nosideeffects\n" );
+    writer.write( " */\n" );
+    writer.write( type + ".prototype.entries = function() {};\n" );
+
+    writer.write( "/**\n" );
+    writer.write( " * @return {!Iterator<!Array<" );
+    writeType( writer, elementType );
+    writer.write( "|" );
+    writeType( writer, elementType );
+    writer.write( ">>}\n" );
+    writer.write( " * @nosideeffects\n" );
+    writer.write( " */\n" );
+    writer.write( type + ".prototype[Symbol.iterator] = function() {};\n" );
+
+    writer.write( "/**\n" );
+    writer.write( " * @param {function(" );
+    writeType( writer, elementType );
+    writer.write( ", " );
+    writeType( writer, elementType );
+    writer.write( ", MAP)} callback\n" );
+    writer.write( " * @this {MAP}\n" );
+    writer.write( " * @template MAP\n" );
+    writer.write( " */\n" );
+    writer.write( type + ".prototype.forEach = function(callback) {};\n" );
+
+    if ( !setLike.isReadOnly() )
+    {
+      final boolean setPresent =
+        operations
+          .stream()
+          .anyMatch( o -> "add".equals( o.getName() ) &&
+                          1 == o.getArguments().size() &&
+                          Kind.Void == o.getReturnType().getKind() );
+      if ( !setPresent )
+      {
+        writeOperation( writer,
+                        type,
+                        "add",
+                        Collections.singletonList( elementArgument ),
+                        new Type( Kind.Void, Collections.emptyList(), false, Collections.emptyList() ),
+                        true,
+                        false,
+                        false );
+      }
+      final boolean deletePresent =
+        operations
+          .stream()
+          .anyMatch( o -> "delete".equals( o.getName() ) &&
+                          1 == o.getArguments().size() &&
+                          Kind.Boolean == o.getReturnType().getKind() );
+      if ( !deletePresent )
+      {
+        writeOperation( writer,
+                        type,
+                        "delete",
+                        Collections.singletonList( elementArgument ),
+                        new Type( Kind.Boolean, Collections.emptyList(), false, Collections.emptyList() ),
+                        true,
+                        false,
+                        false );
+      }
+      final boolean clearPresent =
+        operations
+          .stream()
+          .anyMatch( o -> "clear".equals( o.getName() ) &&
+                          o.getArguments().isEmpty() &&
+                          Kind.Void == o.getReturnType().getKind() );
+      if ( !clearPresent )
+      {
+        writeOperation( writer,
+                        type,
+                        "clear",
+                        Collections.emptyList(),
+                        new Type( Kind.Void, Collections.emptyList(), false, Collections.emptyList() ),
+                        true,
+                        false,
+                        false );
+      }
+    }
   }
 
   private void generateMapLikeOperations( @Nonnull final Writer writer,

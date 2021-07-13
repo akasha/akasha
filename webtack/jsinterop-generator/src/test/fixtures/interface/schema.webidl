@@ -310,6 +310,22 @@ interface SomeOtherType {
   maplike<long, long>;
 };
 
+/**
+ * A test for a read-only setlike.
+ */
+[Exposed=Window]
+interface SomeReadOnlySetLike {
+  readonly setlike<DOMString>;
+};
+
+/**
+ * A test for a read-write setlike.
+ */
+[Exposed=Window]
+interface SomeWriteSetLike {
+  setlike<DOMString>;
+};
+
 [Exposed=Window]
 interface SpeechRecognitionErrorEvent : Event {
   readonly attribute DOMString message;

@@ -61,6 +61,7 @@ import org.realityforge.webtack.model.OperationMember;
 import org.realityforge.webtack.model.OperationMemberContainer;
 import org.realityforge.webtack.model.PartialInterfaceDefinition;
 import org.realityforge.webtack.model.SequenceType;
+import org.realityforge.webtack.model.SetLikeMember;
 import org.realityforge.webtack.model.Type;
 import org.realityforge.webtack.model.TypeReference;
 import org.realityforge.webtack.model.TypedefDefinition;
@@ -1633,9 +1634,10 @@ final class JsinteropAction
     {
       throw new UnsupportedOperationException( "async iterable not yet supported in code generator" );
     }
-    if ( null != definition.getSetLikeMember() )
+    final SetLikeMember setLike = definition.getSetLikeMember();
+    if ( null != setLike )
     {
-      throw new UnsupportedOperationException( "setlike not yet supported in code generator" );
+      generateSetLikeOperations( name, definition.getOperations(), setLike, className, type, testType );
     }
     final boolean noPublicSymbol =
       OutputType.gwt == _outputType &&
@@ -2052,9 +2054,10 @@ final class JsinteropAction
       type.addSuperinterface( ParameterizedTypeName.get( lookupClassName( "Iterable" ),
                                                          ClassName.bestGuess( javaName + ".Entry" ) ) );
     }
-    if ( null != definition.getSetLikeMember() )
+    final SetLikeMember setLike = definition.getSetLikeMember();
+    if ( null != setLike )
     {
-      throw new UnsupportedOperationException( "setlike not yet supported in code generator" );
+      generateSetLikeOperations( name, definition.getOperations(), setLike, className, type, testType );
     }
 
     for ( final EventMember event : definition.getEvents() )
@@ -2183,6 +2186,292 @@ final class JsinteropAction
     else
     {
       generateReadWriteAttribute( attribute, className, type, testType );
+    }
+  }
+
+  private void generateSetLikeOperations( @Nonnull final String definitionName,
+                                          @Nonnull final List<OperationMember> operations,
+                                          @Nonnull final SetLikeMember setLike,
+                                          @Nonnull final ClassName className,
+                                          @Nonnull final TypeSpec.Builder type,
+                                          @Nonnull final TypeSpec.Builder testType )
+  {
+    type.addMethod( MethodSpec
+                      .methodBuilder( "size" )
+                      .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
+                      .addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_PROPERTY )
+                                        .addMember( "name", "$S", "size" )
+                                        .build() )
+                      .returns( TypeName.INT )
+                      .build() );
+    testType.addMethod( MethodSpec
+                          .methodBuilder( "size" )
+                          .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+                          .returns( TypeName.INT )
+                          .addParameter( ParameterSpec.builder( className, "$instance" ).build() )
+                          .addStatement( "return $N.$N()", "$instance", "size" )
+                          .build() );
+    final TypeName elementType = toTypeName( setLike.getType() );
+    final TypeName boxedElementType = toTypeName( setLike.getType(), true );
+
+    final ParameterSpec.Builder elementParamBuilder = ParameterSpec.builder( elementType, "value" );
+    addNullabilityAnnotationIfRequired( setLike.getType(), elementParamBuilder );
+    final ParameterSpec elementParam = elementParamBuilder.build();
+
+    final ParameterSpec.Builder elementParam2Builder = ParameterSpec.builder( elementType, "value2" );
+    addNullabilityAnnotationIfRequired( setLike.getType(), elementParam2Builder );
+    final ParameterSpec elementParam2 = elementParam2Builder.build();
+
+    final MethodSpec.Builder has =
+      MethodSpec
+        .methodBuilder( "has" )
+        .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
+        .addAnnotation( JsinteropTypes.HAS_NO_SIDE_EFFECTS )
+        .addParameter( elementParam )
+        .returns( TypeName.BOOLEAN );
+    maybeAddJavadoc( getDocumentationElement( definitionName, "has" ), has );
+    type.addMethod( has.build() );
+
+    testType.addMethod( MethodSpec
+                          .methodBuilder( "has" )
+                          .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+                          .addParameter( ParameterSpec.builder( elementType, "key" ).build() )
+                          .returns( TypeName.BOOLEAN )
+                          .addParameter( ParameterSpec.builder( className, "$instance" ).build() )
+                          .addStatement( "return $N.$N( key )", "$instance", "has" )
+                          .build() );
+
+    final MethodSpec.Builder keys =
+      MethodSpec
+        .methodBuilder( "keys" )
+        .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
+        .addAnnotation( JsinteropTypes.HAS_NO_SIDE_EFFECTS )
+        .addAnnotation( BasicTypes.NONNULL )
+        .returns( iteratorType( boxedElementType ) );
+    maybeAddJavadoc( getDocumentationElement( definitionName, "keys" ), keys );
+    type.addMethod( keys.build() );
+
+    testType.addMethod( MethodSpec
+                          .methodBuilder( "keys" )
+                          .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+                          .addParameter( ParameterSpec.builder( className, "$instance" ).build() )
+                          .returns( iteratorType( boxedElementType ) )
+                          .addStatement( "return $N.$N()", "$instance", "keys" )
+                          .build() );
+
+    final MethodSpec.Builder values =
+      MethodSpec
+        .methodBuilder( "values" )
+        .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
+        .addAnnotation( JsinteropTypes.HAS_NO_SIDE_EFFECTS )
+        .addAnnotation( BasicTypes.NONNULL )
+        .returns( iteratorType( boxedElementType ) );
+    maybeAddJavadoc( getDocumentationElement( definitionName, "values" ), values );
+    type.addMethod( values.build() );
+
+    testType.addMethod( MethodSpec
+                          .methodBuilder( "values" )
+                          .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+                          .addParameter( ParameterSpec.builder( className, "$instance" ).build() )
+                          .returns( iteratorType( boxedElementType ) )
+                          .addStatement( "return $N.$N()", "$instance", "values" )
+                          .build() );
+
+    generateEntry( "key", elementType, elementType, type );
+
+    final MethodSpec.Builder entries =
+      MethodSpec
+        .methodBuilder( "entries" )
+        .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
+        .addAnnotation( JsinteropTypes.HAS_NO_SIDE_EFFECTS )
+        .addAnnotation( BasicTypes.NONNULL )
+        .returns( iteratorType( ClassName.bestGuess( "Entry" ) ) );
+    maybeAddJavadoc( getDocumentationElement( definitionName, "entries" ), entries );
+    type.addMethod( entries.build() );
+
+    testType.addMethod( MethodSpec
+                          .methodBuilder( "entries" )
+                          .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+                          .addParameter( ParameterSpec.builder( className, "$instance" ).build() )
+                          .returns( iteratorType( className.nestedClass( "Entry" ) ) )
+                          .addStatement( "return $N.$N()", "$instance", "entries" )
+                          .build() );
+
+    type.addType( TypeSpec
+                    .interfaceBuilder( "ForEachCallback" )
+                    .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+                    .addAnnotation( JsinteropTypes.JS_FUNCTION )
+                    .addAnnotation( FunctionalInterface.class )
+                    .addMethod( MethodSpec
+                                  .methodBuilder( "item" )
+                                  .addModifiers( Modifier.PUBLIC, Modifier.ABSTRACT )
+                                  .addParameter( elementParam )
+                                  .build() )
+                    .build() );
+    type.addType( TypeSpec
+                    .interfaceBuilder( "ForEachCallback2" )
+                    .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+                    .addAnnotation( JsinteropTypes.JS_FUNCTION )
+                    .addAnnotation( FunctionalInterface.class )
+                    .addMethod( MethodSpec
+                                  .methodBuilder( "item" )
+                                  .addModifiers( Modifier.PUBLIC, Modifier.ABSTRACT )
+                                  .addParameter( elementParam )
+                                  .addParameter( elementParam2 )
+                                  .build() )
+                    .build() );
+    type.addType( TypeSpec
+                    .interfaceBuilder( "ForEachCallback3" )
+                    .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+                    .addAnnotation( JsinteropTypes.JS_FUNCTION )
+                    .addAnnotation( FunctionalInterface.class )
+                    .addMethod( MethodSpec
+                                  .methodBuilder( "item" )
+                                  .addModifiers( Modifier.PUBLIC, Modifier.ABSTRACT )
+                                  .addParameter( elementParam )
+                                  .addParameter( elementParam2 )
+                                  .addParameter( ParameterSpec
+                                                   .builder( lookupClassName( definitionName ), "set" )
+                                                   .addAnnotation( BasicTypes.NONNULL )
+                                                   .build() )
+                                  .build() )
+                    .build() );
+    final DocumentationElement forEachDocumentation = getDocumentationElement( definitionName, "forEach" );
+    final MethodSpec.Builder forEach1 =
+      MethodSpec
+        .methodBuilder( "forEach" )
+        .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
+        .addParameter( ParameterSpec
+                         .builder( ClassName.bestGuess( "ForEachCallback" ), "callback" )
+                         .addAnnotation( BasicTypes.NONNULL )
+                         .build() );
+    maybeAddJavadoc( forEachDocumentation, forEach1 );
+    type.addMethod( forEach1.build() );
+
+    testType.addMethod( MethodSpec
+                          .methodBuilder( "forEach" )
+                          .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+                          .addParameter( ParameterSpec.builder( className, "$instance" ).build() )
+                          .addParameter( ParameterSpec
+                                           .builder( className.nestedClass( "ForEachCallback" ), "callback" )
+                                           .build() )
+                          .addStatement( "$N.$N( callback )", "$instance", "forEach" )
+                          .build() );
+
+    final MethodSpec.Builder forEach2 =
+      MethodSpec
+        .methodBuilder( "forEach" )
+        .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
+        .addParameter( ParameterSpec.builder( ClassName.bestGuess( "ForEachCallback2" ), "callback" )
+                         .addAnnotation( BasicTypes.NONNULL )
+                         .build() );
+    maybeAddJavadoc( forEachDocumentation, forEach2 );
+    type.addMethod( forEach2.build() );
+
+    testType.addMethod( MethodSpec
+                          .methodBuilder( "forEach" )
+                          .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+                          .addParameter( ParameterSpec.builder( className, "$instance" ).build() )
+                          .addParameter( ParameterSpec
+                                           .builder( className.nestedClass( "ForEachCallback2" ), "callback" )
+                                           .build() )
+                          .addStatement( "$N.$N( callback )", "$instance", "forEach" )
+                          .build() );
+
+    final MethodSpec.Builder forEach3 = MethodSpec
+      .methodBuilder( "forEach" )
+      .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
+      .addParameter( ParameterSpec.builder( ClassName.bestGuess( "ForEachCallback3" ), "callback" )
+                       .addAnnotation( BasicTypes.NONNULL )
+                       .build() );
+    maybeAddJavadoc( forEachDocumentation, forEach3 );
+    type.addMethod( forEach3.build() );
+
+    testType.addMethod( MethodSpec
+                          .methodBuilder( "forEach" )
+                          .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+                          .addParameter( ParameterSpec.builder( className, "$instance" ).build() )
+                          .addParameter( ParameterSpec
+                                           .builder( className.nestedClass( "ForEachCallback3" ), "callback" )
+                                           .build() )
+                          .addStatement( "$N.$N( callback )", "$instance", "forEach" )
+                          .build() );
+
+    if ( !setLike.isReadOnly() )
+    {
+      final boolean addPresent =
+        operations
+          .stream()
+          .anyMatch( o -> "add".equals( o.getName() ) &&
+                          1 == o.getArguments().size() &&
+                          Kind.Void == o.getReturnType().getKind() );
+      if ( !addPresent )
+      {
+        final MethodSpec.Builder set = MethodSpec
+          .methodBuilder( "add" )
+          .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
+          .addParameter( elementParam );
+        maybeAddJavadoc( getDocumentationElement( definitionName, "add" ), set );
+        type.addMethod( set.build() );
+
+        testType.addMethod( MethodSpec
+                              .methodBuilder( "add" )
+                              .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+                              .addParameter( ParameterSpec.builder( className, "$instance" ).build() )
+                              .addParameter( ParameterSpec.builder( elementType, "value" ).build() )
+                              .addStatement( "$N.$N( value )", "$instance", "add" )
+                              .build() );
+      }
+
+      final boolean deletePresent =
+        operations
+          .stream()
+          .anyMatch( o -> "delete".equals( o.getName() ) &&
+                          1 == o.getArguments().size() &&
+                          Kind.Boolean == o.getReturnType().getKind() );
+      if ( !deletePresent )
+      {
+        final MethodSpec.Builder delete =
+          MethodSpec
+            .methodBuilder( "delete" )
+            .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
+            .addParameter( elementParam )
+            .returns( TypeName.BOOLEAN );
+        maybeAddJavadoc( getDocumentationElement( definitionName, "delete" ), delete );
+        type.addMethod( delete.build() );
+
+        testType.addMethod( MethodSpec
+                              .methodBuilder( "delete" )
+                              .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+                              .addParameter( ParameterSpec.builder( className, "$instance" ).build() )
+                              .addParameter( ParameterSpec.builder( elementType, "value" ).build() )
+                              .returns( TypeName.BOOLEAN )
+                              .addStatement( "return $N.$N( value )", "$instance", "delete" )
+                              .build() );
+      }
+
+      final boolean clearPresent =
+        operations
+          .stream()
+          .anyMatch( o -> "clear".equals( o.getName() ) &&
+                          o.getArguments().isEmpty() &&
+                          Kind.Void == o.getReturnType().getKind() );
+      if ( !clearPresent )
+      {
+        final MethodSpec.Builder clear =
+          MethodSpec
+            .methodBuilder( "clear" )
+            .addModifiers( Modifier.PUBLIC, Modifier.NATIVE );
+        maybeAddJavadoc( getDocumentationElement( definitionName, "clear" ), clear );
+        type.addMethod( clear.build() );
+
+        testType.addMethod( MethodSpec
+                              .methodBuilder( "clear" )
+                              .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+                              .addParameter( ParameterSpec.builder( className, "$instance" ).build() )
+                              .addStatement( "$N.$N()", "$instance", "clear" )
+                              .build() );
+      }
     }
   }
 
@@ -2560,11 +2849,12 @@ final class JsinteropAction
         .returns( keyType );
     completeEntryAccessorMethod( keyMethod, keyType, 0 );
 
-    final MethodSpec.Builder valueMethod = MethodSpec
-      .methodBuilder( "value" )
-      .addModifiers( Modifier.PUBLIC )
-      .addAnnotation( JsinteropTypes.JS_OVERLAY )
-      .returns( valueType );
+    final MethodSpec.Builder valueMethod =
+      MethodSpec
+        .methodBuilder( "value" )
+        .addModifiers( Modifier.PUBLIC )
+        .addAnnotation( JsinteropTypes.JS_OVERLAY )
+        .returns( valueType );
     completeEntryAccessorMethod( valueMethod, valueType, 1 );
 
     type.addType( TypeSpec

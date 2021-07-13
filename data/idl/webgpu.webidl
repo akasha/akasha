@@ -912,8 +912,7 @@ interface GPUShaderStage {
 
 [Exposed=(Window,DedicatedWorker)]
 interface GPUSupportedFeatures {
-  // TODO: Remove this local customization when I update WebTack
-  // readonly setlike<DOMString>;
+  readonly setlike<DOMString>;
 };
 
 [Exposed=(Window,DedicatedWorker)]
