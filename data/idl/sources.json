@@ -610,9 +610,9 @@
         "url": "https://www.khronos.org/registry/webgl/extensions/OVR_multiview2/"
     },
     {
-        "lastModifiedTime": 1623096387000,
+        "lastModifiedTime": 1626128979000,
         "name": "webgpu",
-        "url": "https://www.w3.org/TR/2021/WD-webgpu-20210607/"
+        "url": "https://www.w3.org/TR/webgpu/"
     },
     {
         "lastModifiedTime": 1623049528000,

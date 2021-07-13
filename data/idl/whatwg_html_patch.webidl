@@ -726,7 +726,7 @@ enum RenderContextType {
 };
 
 [MarkerType]
-typedef ( CanvasRenderingContext2D or ImageBitmapRenderingContext or WebGLRenderingContext or WebGL2RenderingContext or GPUCanvasContext ) RenderingContext;
+typedef ( CanvasRenderingContext2D or ImageBitmapRenderingContext or WebGLRenderingContext or WebGL2RenderingContext or GPUPresentationContext ) RenderingContext;
 
 const enum EventSourceReadyState {
   EventSource.CONNECTING,

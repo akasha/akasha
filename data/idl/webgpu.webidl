@@ -158,7 +158,7 @@ enum GPUStorageTextureAccess {
 };
 
 enum GPUStoreOp {
-  "clear",
+  "discard",
   "store"
 };
 
@@ -312,6 +312,8 @@ typedef ( sequence<GPUIntegerCoordinate> or GPUOrigin2DDict ) GPUOrigin2D;
 
 typedef ( sequence<GPUIntegerCoordinate> or GPUOrigin3DDict ) GPUOrigin3D;
 
+typedef double GPUPipelineConstantValue;
+
 typedef unsigned long GPUSampleMask;
 
 typedef unsigned long GPUShaderStageFlags;
@@ -420,8 +422,8 @@ dictionary GPUDepthStencilState {
 };
 
 dictionary GPUDeviceDescriptor : GPUObjectDescriptorBase {
-  sequence<GPUFeatureName> nonGuaranteedFeatures = [];
-  record<DOMString, GPUSize32> nonGuaranteedLimits = {};
+  sequence<GPUFeatureName> requiredFeatures = [];
+  record<DOMString, GPUSize32> requiredLimits = {};
 };
 
 dictionary GPUExtent3DDict {
@@ -456,6 +458,11 @@ dictionary GPUImageCopyTexture {
   GPUIntegerCoordinate mipLevel = 0;
   GPUOrigin3D origin = {};
   required GPUTexture texture;
+};
+
+dictionary GPUImageCopyTextureTagged : GPUImageCopyTexture {
+  GPUPredefinedColorSpace colorSpace = "srgb";
+  boolean premultipliedAlpha = false;
 };
 
 dictionary GPUImageDataLayout {
@@ -493,6 +500,15 @@ dictionary GPUPipelineLayoutDescriptor : GPUObjectDescriptorBase {
   required sequence<GPUBindGroupLayout> bindGroupLayouts;
 };
 
+dictionary GPUPresentationConfiguration {
+  GPUPredefinedColorSpace colorSpace = "srgb";
+  GPUCanvasCompositingAlphaMode compositingAlphaMode = "opaque";
+  required GPUDevice device;
+  required GPUTextureFormat format;
+  GPUExtent3D size;
+  GPUTextureUsageFlags usage = 0x10;
+};
+
 dictionary GPUPrimitiveState {
   boolean clampDepth = false;
   GPUCullMode cullMode = "none";
@@ -502,6 +518,7 @@ dictionary GPUPrimitiveState {
 };
 
 dictionary GPUProgrammableStage {
+  record<USVString, GPUPipelineConstantValue> constants;
   required USVString entryPoint;
   required GPUShaderModule module;
 };
@@ -593,14 +610,6 @@ dictionary GPUStorageTextureBindingLayout {
   GPUTextureViewDimension viewDimension = "2d";
 };
 
-dictionary GPUSwapChainDescriptor : GPUObjectDescriptorBase {
-  GPUCanvasCompositingAlphaMode compositingAlphaMode = "opaque";
-  required GPUDevice device;
-  required GPUTextureFormat format;
-  GPUExtent3D size;
-  GPUTextureUsageFlags usage = 0x10;
-};
-
 dictionary GPUTextureBindingLayout {
   boolean multisampled = false;
   GPUTextureSampleType sampleType = "float";
@@ -667,9 +676,9 @@ interface mixin GPURenderEncoderBase {
   undefined drawIndexed( GPUSize32 indexCount, optional GPUSize32 instanceCount = 1, optional GPUSize32 firstIndex = 0, optional GPUSignedOffset32 baseVertex = 0, optional GPUSize32 firstInstance = 0 );
   undefined drawIndexedIndirect( GPUBuffer indirectBuffer, GPUSize64 indirectOffset );
   undefined drawIndirect( GPUBuffer indirectBuffer, GPUSize64 indirectOffset );
-  undefined setIndexBuffer( GPUBuffer buffer, GPUIndexFormat indexFormat, optional GPUSize64 offset = 0, optional GPUSize64 size = 0 );
+  undefined setIndexBuffer( GPUBuffer buffer, GPUIndexFormat indexFormat, optional GPUSize64 offset = 0, optional GPUSize64 size );
   undefined setPipeline( GPURenderPipeline pipeline );
-  undefined setVertexBuffer( GPUIndex32 slot, GPUBuffer buffer, optional GPUSize64 offset = 0, optional GPUSize64 size = 0 );
+  undefined setVertexBuffer( GPUIndex32 slot, GPUBuffer buffer, optional GPUSize64 offset = 0, optional GPUSize64 size );
 };
 
 interface mixin NavigatorGPU {
@@ -682,7 +691,7 @@ interface GPU {
   Promise<GPUAdapter?> requestAdapter( optional GPURequestAdapterOptions options = {} );
 };
 
-[Exposed=Window]
+[Exposed=(Window,DedicatedWorker)]
 interface GPUAdapter {
   [SameObject]
   readonly attribute GPUSupportedFeatures features;
@@ -693,15 +702,15 @@ interface GPUAdapter {
   Promise<GPUDevice> requestDevice( optional GPUDeviceDescriptor descriptor = {} );
 };
 
-[Exposed=Window]
+[Exposed=(Window,DedicatedWorker)]
 interface GPUBindGroup {
 };
 
-[Exposed=Window, Serializable]
+[Exposed=(Window,DedicatedWorker)]
 interface GPUBindGroupLayout {
 };
 
-[Exposed=Window, Serializable]
+[Exposed=(Window,DedicatedWorker)]
 interface GPUBuffer {
   undefined destroy();
   ArrayBuffer getMappedRange( optional GPUSize64 offset = 0, optional GPUSize64 size );
@@ -709,7 +718,7 @@ interface GPUBuffer {
   undefined unmap();
 };
 
-[Exposed=Window]
+[Exposed=(Window,DedicatedWorker)]
 interface GPUBufferUsage {
   const GPUFlagsConstant COPY_DST = 0x0008;
   const GPUFlagsConstant COPY_SRC = 0x0004;
@@ -723,13 +732,7 @@ interface GPUBufferUsage {
   const GPUFlagsConstant VERTEX = 0x0020;
 };
 
-[Exposed=Window]
-interface GPUCanvasContext {
-  GPUSwapChain configureSwapChain( GPUSwapChainDescriptor descriptor );
-  GPUTextureFormat getSwapChainPreferredFormat( GPUAdapter adapter );
-};
-
-[Exposed=Window]
+[Exposed=(Window,DedicatedWorker)]
 interface GPUColorWrite {
   const GPUFlagsConstant ALL = 0xF;
   const GPUFlagsConstant ALPHA = 0x8;
@@ -738,12 +741,12 @@ interface GPUColorWrite {
   const GPUFlagsConstant RED = 0x1;
 };
 
-[Exposed=Window]
+[Exposed=(Window,DedicatedWorker)]
 interface GPUCommandBuffer {
   readonly attribute Promise<double> executionTime;
 };
 
-[Exposed=Window]
+[Exposed=(Window,DedicatedWorker)]
 interface GPUCommandEncoder {
   GPUComputePassEncoder beginComputePass( optional GPUComputePassDescriptor descriptor = {} );
   GPURenderPassEncoder beginRenderPass( GPURenderPassDescriptor descriptor );
@@ -759,12 +762,12 @@ interface GPUCommandEncoder {
   undefined writeTimestamp( GPUQuerySet querySet, GPUSize32 queryIndex );
 };
 
-[Exposed=Window, Serializable]
+[Exposed=(Window,DedicatedWorker), Serializable]
 interface GPUCompilationInfo {
   readonly attribute FrozenArray<GPUCompilationMessage> messages;
 };
 
-[Exposed=Window, Serializable]
+[Exposed=(Window,DedicatedWorker), Serializable]
 interface GPUCompilationMessage {
   readonly attribute unsigned long long length;
   readonly attribute unsigned long long lineNum;
@@ -774,7 +777,7 @@ interface GPUCompilationMessage {
   readonly attribute GPUCompilationMessageType type;
 };
 
-[Exposed=Window]
+[Exposed=(Window,DedicatedWorker)]
 interface GPUComputePassEncoder {
   undefined beginPipelineStatisticsQuery( GPUQuerySet querySet, GPUSize32 queryIndex );
   undefined dispatch( GPUSize32 x, optional GPUSize32 y = 1, optional GPUSize32 z = 1 );
@@ -785,11 +788,11 @@ interface GPUComputePassEncoder {
   undefined writeTimestamp( GPUQuerySet querySet, GPUSize32 queryIndex );
 };
 
-[Exposed=Window, Serializable]
+[Exposed=(Window,DedicatedWorker)]
 interface GPUComputePipeline {
 };
 
-[Exposed=(Window,DedicatedWorker), Serializable]
+[Exposed=(Window,DedicatedWorker)]
 interface GPUDevice : EventTarget {
   [SameObject]
   readonly attribute GPUSupportedFeatures features;
@@ -815,55 +818,64 @@ interface GPUDevice : EventTarget {
   GPUExternalTexture importExternalTexture( GPUExternalTextureDescriptor descriptor );
 };
 
-[Exposed=Window]
+[Exposed=(Window,DedicatedWorker)]
 interface GPUDeviceLostInfo {
   readonly attribute DOMString message;
   readonly attribute ( GPUDeviceLostReason or undefined ) reason;
 };
 
-[Exposed=Window]
+[Exposed=(Window,DedicatedWorker)]
 interface GPUExternalTexture {
 };
 
-[Exposed=Window]
+[Exposed=(Window,DedicatedWorker)]
 interface GPUMapMode {
   const GPUFlagsConstant READ = 0x0001;
   const GPUFlagsConstant WRITE = 0x0002;
 };
 
-[Exposed=Window]
+[Exposed=(Window,DedicatedWorker)]
 interface GPUOutOfMemoryError {
   constructor();
 };
 
-[Exposed=Window, Serializable]
+[Exposed=(Window,DedicatedWorker)]
 interface GPUPipelineLayout {
 };
 
-[Exposed=Window]
+[Exposed=(Window,DedicatedWorker)]
+interface GPUPresentationContext {
+  readonly attribute ( HTMLCanvasElement or OffscreenCanvas ) canvas;
+  undefined configure( GPUPresentationConfiguration configuration );
+  GPUTexture getCurrentTexture();
+  GPUTextureFormat getPreferredFormat( GPUAdapter adapter );
+  undefined unconfigure();
+};
+
+[Exposed=(Window,DedicatedWorker)]
 interface GPUQuerySet {
   undefined destroy();
 };
 
-[Exposed=Window]
+[Exposed=(Window,DedicatedWorker)]
 interface GPUQueue {
-  undefined copyExternalImageToTexture( GPUImageCopyExternalImage source, GPUImageCopyTexture destination, GPUExtent3D copySize );
+  undefined copyExternalImageToTexture( GPUImageCopyExternalImage source, GPUImageCopyTextureTagged destination, GPUExtent3D copySize );
   Promise<undefined> onSubmittedWorkDone();
   undefined submit( sequence<GPUCommandBuffer> commandBuffers );
   undefined writeBuffer( GPUBuffer buffer, GPUSize64 bufferOffset, [AllowShared] BufferSource data, optional GPUSize64 dataOffset = 0, optional GPUSize64 size );
   undefined writeTexture( GPUImageCopyTexture destination, [AllowShared] BufferSource data, GPUImageDataLayout dataLayout, GPUExtent3D size );
 };
 
-[Exposed=Window]
+[Exposed=(Window,DedicatedWorker)]
 interface GPURenderBundle {
 };
 
-[Exposed=Window]
+[Exposed=(Window,DedicatedWorker)]
 interface GPURenderBundleEncoder {
   GPURenderBundle finish( optional GPURenderBundleDescriptor descriptor = {} );
 };
 
-[Exposed=Window]
+[Exposed=(Window,DedicatedWorker)]
 interface GPURenderPassEncoder {
   undefined beginOcclusionQuery( GPUSize32 queryIndex );
   undefined beginPipelineStatisticsQuery( GPUQuerySet querySet, GPUSize32 queryIndex );
@@ -878,37 +890,41 @@ interface GPURenderPassEncoder {
   undefined writeTimestamp( GPUQuerySet querySet, GPUSize32 queryIndex );
 };
 
-[Exposed=Window, Serializable]
+[Exposed=(Window,DedicatedWorker)]
 interface GPURenderPipeline {
 };
 
-[Exposed=Window]
+[Exposed=(Window,DedicatedWorker)]
 interface GPUSampler {
 };
 
-[Exposed=Window, Serializable]
+[Exposed=(Window,DedicatedWorker)]
 interface GPUShaderModule {
   Promise<GPUCompilationInfo> compilationInfo();
 };
 
-[Exposed=Window]
+[Exposed=(Window,DedicatedWorker)]
 interface GPUShaderStage {
   const GPUFlagsConstant COMPUTE = 0x4;
   const GPUFlagsConstant FRAGMENT = 0x2;
   const GPUFlagsConstant VERTEX = 0x1;
 };
 
-[Exposed=Window]
+[Exposed=(Window,DedicatedWorker)]
 interface GPUSupportedFeatures {
   // TODO: Remove this local customization when I update WebTack
   // readonly setlike<DOMString>;
 };
 
-[Exposed=Window]
+[Exposed=(Window,DedicatedWorker)]
 interface GPUSupportedLimits {
   readonly attribute unsigned long maxBindGroups;
+  readonly attribute unsigned long maxComputePerDimensionDispatchSize;
+  readonly attribute unsigned long maxComputeWorkgroupInvocations;
+  readonly attribute unsigned long maxComputeWorkgroupStorageSize;
   readonly attribute unsigned long maxDynamicStorageBuffersPerPipelineLayout;
   readonly attribute unsigned long maxDynamicUniformBuffersPerPipelineLayout;
+  readonly attribute unsigned long maxInterStageShaderComponents;
   readonly attribute unsigned long maxSampledTexturesPerShaderStage;
   readonly attribute unsigned long maxSamplersPerShaderStage;
   readonly attribute unsigned long maxStorageBufferBindingSize;
@@ -923,20 +939,17 @@ interface GPUSupportedLimits {
   readonly attribute unsigned long maxVertexAttributes;
   readonly attribute unsigned long maxVertexBufferArrayStride;
   readonly attribute unsigned long maxVertexBuffers;
+  readonly attribute unsigned long minStorageBufferOffsetAlignment;
+  readonly attribute unsigned long minUniformBufferOffsetAlignment;
 };
 
-[Exposed=Window]
-interface GPUSwapChain {
-  GPUTexture getCurrentTexture();
-};
-
-[Exposed=Window, Serializable]
+[Exposed=(Window,DedicatedWorker)]
 interface GPUTexture {
   GPUTextureView createView( optional GPUTextureViewDescriptor descriptor = {} );
   undefined destroy();
 };
 
-[Exposed=Window]
+[Exposed=(Window,DedicatedWorker)]
 interface GPUTextureUsage {
   const GPUFlagsConstant COPY_DST = 0x02;
   const GPUFlagsConstant COPY_SRC = 0x01;
@@ -945,7 +958,7 @@ interface GPUTextureUsage {
   const GPUFlagsConstant STORAGE = 0x08;
 };
 
-[Exposed=Window]
+[Exposed=(Window,DedicatedWorker)]
 interface GPUTextureView {
 };
 
@@ -956,7 +969,7 @@ interface GPUUncapturedErrorEvent : Event {
   constructor( DOMString type, GPUUncapturedErrorEventInit gpuUncapturedErrorEventInitDict );
 };
 
-[Exposed=Window]
+[Exposed=(Window,DedicatedWorker)]
 interface GPUValidationError {
   readonly attribute DOMString message;
   constructor( DOMString message );
@@ -1025,8 +1038,6 @@ GPURenderPipeline includes GPUPipelineBase;
 GPUSampler includes GPUObjectBase;
 
 GPUShaderModule includes GPUObjectBase;
-
-GPUSwapChain includes GPUObjectBase;
 
 GPUTexture includes GPUObjectBase;
 
