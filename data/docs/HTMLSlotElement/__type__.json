@@ -6,9 +6,9 @@
     "description": "The HTMLSlotElement interface of the Shadow DOM API enables access to the name and assigned nodes of an HTML &lt;slot&gt; element.",
     "refs": [
         {
-            "name": "HTML Living Standard",
+            "name": "HTML Standard",
             "href": "https://html.spec.whatwg.org/multipage/scripting.html#htmlslotelement",
-            "description": "HTMLSlotElement - HTML Living Standard"
+            "description": "(HTML) # htmlslotelement"
         }
     ]
 }

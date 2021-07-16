@@ -6,14 +6,9 @@
     "description": "The TrackEvent interface, which is part of the HTML DOM specification, is used for events which represent changes to a set of available tracks on an HTML media element; these events are addtrack and removetrack.",
     "refs": [
         {
-            "name": "HTML Living Standard",
+            "name": "HTML Standard",
             "href": "https://html.spec.whatwg.org/multipage/media.html#the-trackevent-interface",
-            "description": "TrackEvent - HTML Living Standard"
-        },
-        {
-            "name": "HTML5",
-            "href": "https://www.w3.org/TR/html52/embedded-content-0.html#trackevent",
-            "description": "TrackEvent - HTML5"
+            "description": "(HTML) # the-trackevent-interface"
         }
     ]
 }

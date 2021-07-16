@@ -6,9 +6,9 @@
     "description": "The PerformanceResourceTiming interface enables retrieval and analysis of detailed network timing data regarding the loading of an application's resources. An application can use the timing metrics to determine, for example, the length of time it takes to fetch a specific resource, such as an XMLHttpRequest, &lt;SVG&gt;, image, or script.",
     "refs": [
         {
-            "name": "Resource Timing Level 1",
-            "href": "https://www.w3.org/TR/resource-timing-1/#performanceresourcetiming",
-            "description": "PerformanceResourceTiming - Resource Timing Level 1"
+            "name": "Resource Timing Level 2",
+            "href": "https://w3c.github.io/resource-timing/#resources-included-in-the-performanceresourcetiming-interface",
+            "description": "(Resource Timing 2) # resources-included-in-the-performanceresourcetiming-interface"
         }
     ]
 }

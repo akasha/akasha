@@ -6,8 +6,9 @@
     "description": "The OES_fbo_render_mipmap extension is part of the WebGL API and makes it possible to attach any level of a texture to a framebuffer object.",
     "refs": [
         {
-            "name": "OES_fbo_render_mipmap",
-            "href": "https://www.khronos.org/registry/webgl/extensions/OES_fbo_render_mipmap/"
+            "name": "WebGL OES_fbo_render_mipmap Extension Specification",
+            "href": "https://www.khronos.org/registry/webgl/extensions/OES_fbo_render_mipmap/",
+            "description": "(WebGL OES_fbo_render_mipmap Extension)"
         }
     ]
 }

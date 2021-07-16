@@ -6,24 +6,9 @@
     "description": "The HTMLTextAreaElement interface provides special properties and methods for manipulating the layout and presentation of &lt;textarea&gt; elements.",
     "refs": [
         {
-            "name": "HTML Living Standard",
-            "href": "https://html.spec.whatwg.org/multipage/#htmltextareaelement",
-            "description": "HTMLTextAreaElement - HTML Living Standard"
-        },
-        {
-            "name": "HTML5",
-            "href": "https://www.w3.org/TR/html52/forms.html#the-textarea-element",
-            "description": "HTMLTextAreaElement - HTML5"
-        },
-        {
-            "name": "Document Object Model (DOM) Level 2 HTML Specification",
-            "href": "https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-ID-24874179",
-            "description": "HTMLTextAreaElement - Document Object Model (DOM) Level 2 HTML Specification"
-        },
-        {
-            "name": "Document Object Model (DOM) Level 1 Specification",
-            "href": "https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-24874179",
-            "description": "HTMLTextAreaElement - Document Object Model (DOM) Level 1 Specification"
+            "name": "HTML Standard",
+            "href": "https://html.spec.whatwg.org/multipage/form-elements.html#htmltextareaelement",
+            "description": "(HTML) # htmltextareaelement"
         }
     ]
 }

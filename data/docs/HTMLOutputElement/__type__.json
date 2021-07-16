@@ -6,19 +6,9 @@
     "description": "The HTMLOutputElement interface provides properties and methods (beyond those inherited from HTMLElement) for manipulating the layout and presentation of &lt;output&gt; elements.",
     "refs": [
         {
-            "name": "HTML Living Standard",
-            "href": "https://html.spec.whatwg.org/multipage/#htmloutputelement",
-            "description": "HTMLOutputElement - HTML Living Standard"
-        },
-        {
-            "name": "HTML 5.1",
-            "href": "https://www.w3.org/TR/html51/forms.html#the-output-element",
-            "description": "HTMLOutputElement - HTML 5.1"
-        },
-        {
-            "name": "HTML5",
-            "href": "https://www.w3.org/TR/html52/forms.html#the-output-element",
-            "description": "HTMLOutputElement - HTML5"
+            "name": "HTML Standard",
+            "href": "https://html.spec.whatwg.org/multipage/form-elements.html#htmloutputelement",
+            "description": "(HTML) # htmloutputelement"
         }
     ]
 }

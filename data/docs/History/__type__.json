@@ -6,14 +6,9 @@
     "description": "The History interface allows manipulation of the browser session history, that is the pages visited in the tab or frame that the current page is loaded in.",
     "refs": [
         {
-            "name": "HTML Living Standard",
-            "href": "https://html.spec.whatwg.org/multipage/browsers.html#the-history-interface",
-            "description": "History - HTML Living Standard"
-        },
-        {
-            "name": "HTML5",
-            "href": "https://www.w3.org/TR/html52/browsers.html#the-history-interface",
-            "description": "History - HTML5"
+            "name": "HTML Standard",
+            "href": "https://html.spec.whatwg.org/multipage/history.html#the-history-interface",
+            "description": "(HTML) # the-history-interface"
         }
     ]
 }

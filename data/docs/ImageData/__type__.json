@@ -6,9 +6,9 @@
     "description": "The ImageData interface represents the underlying pixel data of an area of a &lt;canvas&gt; element.",
     "refs": [
         {
-            "name": "HTML Living Standard",
+            "name": "HTML Standard",
             "href": "https://html.spec.whatwg.org/multipage/canvas.html#imagedata",
-            "description": "ImageData - HTML Living Standard"
+            "description": "(HTML) # imagedata"
         }
     ]
 }

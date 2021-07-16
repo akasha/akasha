@@ -6,9 +6,9 @@
     "description": "The RTCIceTransport interface provides access to information about the ICE transport layer over which the data is being sent and received.",
     "refs": [
         {
-            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "name": "WebRTC 1.0: Real-Time Communication Between Browsers",
             "href": "https://w3c.github.io/webrtc-pc/#dom-rtcicetransport",
-            "description": "RTCIceTransport - WebRTC 1.0: Real-time Communication Between Browsers"
+            "description": "(WebRTC 1.0) # dom-rtcicetransport"
         }
     ]
 }

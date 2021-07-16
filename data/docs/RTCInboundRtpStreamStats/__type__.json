@@ -3,12 +3,5 @@
     "kind": "Type",
     "name": "RTCInboundRtpStreamStats",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCInboundRtpStreamStats",
-    "description": "The WebRTC API's RTCInboundRtpStreamStats dictionary, based upon RTCReceivedRtpStreamStats and RTCStats, contains statistics related to the receiving end of an RTP stream on the local end of the RTCPeerConnection.",
-    "refs": [
-        {
-            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
-            "href": "https://w3c.github.io/webrtc-pc/#inboundrtpstats-dict*",
-            "description": "RTCInboundRtpStreamStats - WebRTC 1.0: Real-time Communication Between Browsers"
-        }
-    ]
+    "description": "The WebRTC API's RTCInboundRtpStreamStats dictionary, based upon RTCReceivedRtpStreamStats and RTCStats, contains statistics related to the receiving end of an RTP stream on the local end of the RTCPeerConnection."
 }

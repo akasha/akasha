@@ -6,9 +6,9 @@
     "description": "The EXT_texture_norm16 extension is part of the WebGL API and provides a set of new 16-bit signed normalized and unsigned normalized formats (fixed-point texture, renderbuffer and texture buffer).",
     "refs": [
         {
-            "name": "EXT_texture_norm16",
+            "name": "WebGL EXT_texture_norm16 Extension Specification",
             "href": "https://www.khronos.org/registry/webgl/extensions/EXT_texture_norm16/",
-            "description": "EXT_texture_norm16 - EXT_texture_norm16"
+            "description": "(WebGL EXT_texture_norm16 Extension)"
         }
     ]
 }

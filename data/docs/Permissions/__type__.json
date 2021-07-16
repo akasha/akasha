@@ -8,7 +8,7 @@
         {
             "name": "Permissions",
             "href": "https://w3c.github.io/permissions/#permissions-interface",
-            "description": "Permissions - Permissions"
+            "description": "# permissions-interface"
         }
     ]
 }

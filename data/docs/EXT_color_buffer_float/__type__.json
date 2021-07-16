@@ -6,9 +6,9 @@
     "description": "The EXT_color_buffer_float extension is part of WebGL and adds the ability to render a variety of floating point formats.",
     "refs": [
         {
-            "name": "EXT_color_buffer_float",
+            "name": "WebGL EXT_color_buffer_float Extension Specification",
             "href": "https://www.khronos.org/registry/webgl/extensions/EXT_color_buffer_float/",
-            "description": "EXT_color_buffer_float - EXT_color_buffer_float"
+            "description": "(WebGL EXT_color_buffer_float Extension)"
         }
     ]
 }

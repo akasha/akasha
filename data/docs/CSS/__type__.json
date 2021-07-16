@@ -6,19 +6,9 @@
     "description": "The CSS interface holds useful CSS-related methods. No objects with this interface are implemented: it contains only static methods and is therefore a utilitarian interface.",
     "refs": [
         {
-            "name": "CSS Painting API Level 1",
-            "href": "https://drafts.css-houdini.org/css-paint-api-1/#dom-css-paintworklet",
-            "description": "paintWorklet - CSS Painting API Level 1"
-        },
-        {
-            "name": "CSS Object Model (CSSOM)",
-            "href": "https://drafts.csswg.org/cssom/#the-css.escape()-method",
-            "description": "CSS - CSS Object Model (CSSOM)"
-        },
-        {
             "name": "CSS Conditional Rules Module Level 3",
-            "href": "https://drafts.csswg.org/css-conditional-3/#the-css-interface",
-            "description": "CSS - CSS Conditional Rules Module Level 3"
+            "href": "https://drafts.csswg.org/css-conditional/#the-css-interface",
+            "description": "(CSS Conditional 3) # the-css-interface"
         }
     ]
 }

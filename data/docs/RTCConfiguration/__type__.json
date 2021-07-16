@@ -6,9 +6,9 @@
     "description": "The RTCConfiguration dictionary is used to provide configuration options for an RTCPeerConnection. It may be passed into the constructor when instantiating a connection, or used with the RTCPeerConnection.getConfiguration() and RTCPeerConnection.setConfiguration() methods, which allow inspecting and changing the configuration while a connection is established.",
     "refs": [
         {
-            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "name": "WebRTC 1.0: Real-Time Communication Between Browsers",
             "href": "https://w3c.github.io/webrtc-pc/#dom-rtcconfiguration",
-            "description": "RTCConfiguration - WebRTC 1.0: Real-time Communication Between Browsers"
+            "description": "(WebRTC 1.0) # dom-rtcconfiguration"
         }
     ]
 }

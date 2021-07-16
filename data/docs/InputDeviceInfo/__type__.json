@@ -1,0 +1,14 @@
+
+{
+    "kind": "Type",
+    "name": "InputDeviceInfo",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/InputDeviceInfo",
+    "description": "The InputDeviceInfo interface of the Media Streams API gives access to the capabilities of the input device that it represents.",
+    "refs": [
+        {
+            "name": "Media Capture and Streams",
+            "href": "https://w3c.github.io/mediacapture-main/#dom-inputdeviceinfo",
+            "description": "# dom-inputdeviceinfo"
+        }
+    ]
+}

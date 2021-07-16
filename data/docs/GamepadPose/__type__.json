@@ -8,7 +8,7 @@
         {
             "name": "Gamepad Extensions",
             "href": "https://w3c.github.io/gamepad/extensions.html#gamepadpose-interface",
-            "description": "GamepadPose - Gamepad Extensions"
+            "description": "# gamepadpose-interface"
         }
     ]
 }

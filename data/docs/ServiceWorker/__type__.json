@@ -6,9 +6,9 @@
     "description": "The ServiceWorker interface of the Service Worker API provides a reference to a service worker. Multiple browsing contexts (e.g. pages, workers, etc.) can be associated with the same service worker, each through a unique ServiceWorker object.",
     "refs": [
         {
-            "name": "Service Workers",
-            "href": "https://w3c.github.io/ServiceWorker/#serviceworker",
-            "description": "ServiceWorker - Service Workers"
+            "name": "Service Workers 1",
+            "href": "https://w3c.github.io/ServiceWorker/#serviceworker-interface",
+            "description": "# serviceworker-interface"
         }
     ]
 }

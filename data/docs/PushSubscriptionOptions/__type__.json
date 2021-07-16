@@ -1,0 +1,14 @@
+
+{
+    "kind": "Type",
+    "name": "PushSubscriptionOptions",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/PushSubscriptionOptions",
+    "description": "The PushSubscriptionOptions interface of the Push API represents the options associated with a push subscription.",
+    "refs": [
+        {
+            "name": "Push API",
+            "href": "https://w3c.github.io/push-api/#dom-pushsubscriptionoptions",
+            "description": "# dom-pushsubscriptionoptions"
+        }
+    ]
+}

@@ -6,9 +6,9 @@
     "description": "The Event interface represents an event which takes place in the DOM.",
     "refs": [
         {
-            "name": "DOM",
+            "name": "DOM Standard",
             "href": "https://dom.spec.whatwg.org/#interface-event",
-            "description": "Event - DOM"
+            "description": "(DOM) # interface-event"
         }
     ]
 }

@@ -6,22 +6,14 @@
     "description": "The ServiceWorkerRegistration interface of the Service Worker API represents the service worker registration. You register a service worker to control one or more pages that share the same origin.",
     "refs": [
         {
-            "name": "Service Workers",
-            "href": "https://w3c.github.io/ServiceWorker/#serviceworkerregistration",
-            "description": "ServiceWorkerRegistration - Service Workers"
+            "name": "Service Workers 1",
+            "href": "https://w3c.github.io/ServiceWorker/#serviceworkerregistration-interface",
+            "description": "# serviceworkerregistration-interface"
         },
         {
             "name": "Push API",
-            "href": "https://w3c.github.io/push-api/#dom-serviceworkerregistration-pushmanager",
-            "description": "PushManager - Push API"
-        },
-        {
-            "name": "Notifications API",
-            "href": "https://notifications.spec.whatwg.org/"
-        },
-        {
-            "name": "Web Background Synchronization",
-            "href": "https://wicg.github.io/background-sync/spec/"
+            "href": "https://w3c.github.io/push-api/#extensions-to-the-serviceworkerregistration-interface",
+            "description": "# extensions-to-the-serviceworkerregistration-interface"
         }
     ]
 }

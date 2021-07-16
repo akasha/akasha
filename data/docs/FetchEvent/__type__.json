@@ -6,9 +6,9 @@
     "description": "This is the event type for fetch events dispatched on the service worker global scope. It contains information about the fetch, including the request and how the receiver will treat the response. It provides the event.respondWith() method, which allows us to provide a response to this fetch.",
     "refs": [
         {
-            "name": "Service Workers",
-            "href": "https://w3c.github.io/ServiceWorker/#dom-fetchevent-fetchevent",
-            "description": "FetchEvent() - Service Workers"
+            "name": "Service Workers 1",
+            "href": "https://w3c.github.io/ServiceWorker/#fetchevent-interface",
+            "description": "# fetchevent-interface"
         }
     ]
 }

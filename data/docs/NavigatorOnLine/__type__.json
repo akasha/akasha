@@ -3,12 +3,12 @@
     "kind": "Type",
     "name": "NavigatorOnLine",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/NavigatorOnLine",
-    "description": "The NavigatorOnLine interface contains methods and properties related to the connectivity status of the browser.",
+    "description": "The Navigator interface represents the state and the identity of the user agent. It allows scripts to query it and to register themselves to carry on some activities.",
     "refs": [
         {
-            "name": "HTML Living Standard",
-            "href": "https://html.spec.whatwg.org/multipage/#browser-state",
-            "description": "NavigatorOnLine - HTML Living Standard"
+            "name": "HTML Standard",
+            "href": "https://html.spec.whatwg.org/multipage/system-state.html#the-navigator-object",
+            "description": "(HTML) # the-navigator-object"
         }
     ]
 }

@@ -6,29 +6,9 @@
     "description": "The HTMLElement interface represents any HTML element. Some elements directly implement this interface, while others implement it via an interface that inherits it.",
     "refs": [
         {
-            "name": "CSS Object Model (CSSOM) View Module",
-            "href": "https://drafts.csswg.org/cssom-view/#extensions-to-the-htmlelement-interface",
-            "description": "HTMLElement - CSS Object Model (CSSOM) View Module"
-        },
-        {
-            "name": "HTML Living Standard",
-            "href": "https://html.spec.whatwg.org/multipage/elements.html#htmlelement",
-            "description": "HTMLElement - HTML Living Standard"
-        },
-        {
-            "name": "HTML5",
-            "href": "https://www.w3.org/TR/html52/dom.html#htmlelement",
-            "description": "HTMLElement - HTML5"
-        },
-        {
-            "name": "Document Object Model (DOM) Level 2 HTML Specification",
-            "href": "https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-011100101",
-            "description": "HTMLElement - Document Object Model (DOM) Level 2 HTML Specification"
-        },
-        {
-            "name": "Document Object Model (DOM) Level 1 Specification",
-            "href": "https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-011100101",
-            "description": "HTMLElement - Document Object Model (DOM) Level 1 Specification"
+            "name": "HTML Standard",
+            "href": "https://html.spec.whatwg.org/multipage/dom.html#htmlelement",
+            "description": "(HTML) # htmlelement"
         }
     ]
 }

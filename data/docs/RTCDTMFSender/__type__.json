@@ -6,9 +6,9 @@
     "description": "The RTCDTMFSender interface provides a mechanism for transmitting DTMF codes on a WebRTC RTCPeerConnection. You gain access to the connection's RTCDTMFSender through the RTCRtpSender.dtmf property on the audio track you wish to send DTMF with.",
     "refs": [
         {
-            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "name": "WebRTC 1.0: Real-Time Communication Between Browsers",
             "href": "https://w3c.github.io/webrtc-pc/#rtcdtmfsender",
-            "description": "RTCDTMFSender - WebRTC 1.0: Real-time Communication Between Browsers"
+            "description": "(WebRTC 1.0) # rtcdtmfsender"
         }
     ]
 }

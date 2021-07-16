@@ -6,9 +6,9 @@
     "description": "The ScrollToOptions dictionary of the CSSOM View spec contains properties specifying where an element should be scrolled to, and whether the scrolling should be smooth.",
     "refs": [
         {
-            "name": "CSS Object Model (CSSOM) View Module",
+            "name": "CSSOM View Module",
             "href": "https://drafts.csswg.org/cssom-view/#dictdef-scrolltooptions",
-            "description": "ScrollToOptions - CSS Object Model (CSSOM) View Module"
+            "description": "(CSSOM View) # dictdef-scrolltooptions"
         }
     ]
 }

@@ -6,19 +6,9 @@
     "description": "The DataTransferItem object represents one drag data item. During a drag operation, each drag event has a dataTransfer property which contains a list of drag data items. Each item in the list is a DataTransferItem object.",
     "refs": [
         {
-            "name": "HTML Living Standard",
-            "href": "https://html.spec.whatwg.org/multipage/interaction.html#datatransferitem",
-            "description": "DataTransferItem - HTML Living Standard"
-        },
-        {
-            "name": "HTML 5.1",
-            "href": "https://www.w3.org/TR/html51/editing.html#datatransferitem",
-            "description": "DataTransferItem - HTML 5.1"
-        },
-        {
-            "name": "File and Directory Entries API",
-            "href": "https://wicg.github.io/entries-api/#dom-datatransferitem-webkitgetasentry",
-            "description": "DataTransferItem.webkitGetAsEntry() - File and Directory Entries API"
+            "name": "HTML Standard",
+            "href": "https://html.spec.whatwg.org/multipage/dnd.html#the-datatransferitem-interface",
+            "description": "(HTML) # the-datatransferitem-interface"
         }
     ]
 }

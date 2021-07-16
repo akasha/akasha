@@ -6,9 +6,9 @@
     "description": "The MessageEvent interface represents a message received by a target object.",
     "refs": [
         {
-            "name": "HTML Living Standard",
-            "href": "https://html.spec.whatwg.org/multipage/#messageevent",
-            "description": "MessageEvent - HTML Living Standard"
+            "name": "HTML Standard",
+            "href": "https://html.spec.whatwg.org/multipage/comms.html#the-messageevent-interface",
+            "description": "(HTML) # the-messageevent-interface"
         }
     ]
 }

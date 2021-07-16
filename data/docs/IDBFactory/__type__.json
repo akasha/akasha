@@ -6,9 +6,9 @@
     "description": "The IDBFactory interface of the IndexedDB API lets applications asynchronously access the indexed databases. The object that implements the interface is window.indexedDB. You open &mdash; that is, create and access &mdash; and delete a database with this object, and not directly with IDBFactory.",
     "refs": [
         {
-            "name": "Indexed Database API 2.0",
-            "href": "https://www.w3.org/TR/IndexedDB/#factory-interface",
-            "description": "IDBFactory - Indexed Database API 2.0"
+            "name": "Indexed Database API 3.0",
+            "href": "https://w3c.github.io/IndexedDB/#factory-interface",
+            "description": "(Indexed DB 3.0) # factory-interface"
         }
     ]
 }

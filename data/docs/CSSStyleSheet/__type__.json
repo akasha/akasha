@@ -7,13 +7,8 @@
     "refs": [
         {
             "name": "CSS Object Model (CSSOM)",
-            "href": "https://drafts.csswg.org/cssom/#cssstylesheet",
-            "description": "CSSStyleSheet - CSS Object Model (CSSOM)"
-        },
-        {
-            "name": "Document Object Model (DOM) Level 2 Style Specification",
-            "href": "https://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSStyleSheet",
-            "description": "CSSStyleSheet - Document Object Model (DOM) Level 2 Style Specification"
+            "href": "https://drafts.csswg.org/cssom/#the-cssstylesheet-interface",
+            "description": "(CSSOM) # the-cssstylesheet-interface"
         }
     ]
 }

@@ -6,29 +6,9 @@
     "description": "The GlobalEventHandlers mixin describes the event handlers common to several interfaces like HTMLElement, Document, or Window.",
     "refs": [
         {
-            "name": "Selection API",
-            "href": "https://w3c.github.io/selection-api/",
-            "description": "Extension to GlobalEventHandlers - Selection API"
-        },
-        {
-            "name": "Pointer Lock",
-            "href": "https://w3c.github.io/pointerlock/#extensions-to-the-document-interface",
-            "description": "Extension of Document - Pointer Lock"
-        },
-        {
-            "name": "HTML Living Standard",
-            "href": "https://html.spec.whatwg.org/multipage/#globaleventhandlers",
-            "description": "GlobalEventHandlers - HTML Living Standard"
-        },
-        {
-            "name": "HTML 5.1",
-            "href": "https://www.w3.org/TR/html51/#globaleventhandlers",
-            "description": "GlobalEventHandlers - HTML 5.1"
-        },
-        {
-            "name": "HTML5",
-            "href": "https://www.w3.org/TR/html52/#globaleventhandlers",
-            "description": "GlobalEventHandlers - HTML5"
+            "name": "HTML Standard",
+            "href": "https://html.spec.whatwg.org/multipage/webappapis.html#globaleventhandlers",
+            "description": "(HTML) # globaleventhandlers"
         }
     ]
 }

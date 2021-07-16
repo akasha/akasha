@@ -6,8 +6,9 @@
     "description": "The EXT_texture_compression_bptc extension is part of the WebGL API and exposes 4 BPTC compressed texture formats. These compression formats are called BC7 and BC6H in Microsoft's DirectX API.",
     "refs": [
         {
-            "name": "EXT_texture_compression_bptc",
-            "href": "https://www.khronos.org/registry/webgl/extensions/EXT_texture_compression_bptc/"
+            "name": "WebGL EXT_texture_compression_bptc Extension Specification",
+            "href": "https://www.khronos.org/registry/webgl/extensions/EXT_texture_compression_bptc/",
+            "description": "(WebGL EXT_texture_compression_bptc Extension)"
         }
     ]
 }

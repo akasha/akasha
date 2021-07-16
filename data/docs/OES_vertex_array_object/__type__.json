@@ -6,9 +6,9 @@
     "description": "The OES_vertex_array_object extension is part of the WebGL API and provides vertex array objects (VAOs) which encapsulate vertex array states. These objects keep pointers to vertex data and provide names for different sets of vertex data.",
     "refs": [
         {
-            "name": "OES_vertex_array_object",
+            "name": "WebGL OES_vertex_array_object Khronos Ratified Extension Specification",
             "href": "https://www.khronos.org/registry/webgl/extensions/OES_vertex_array_object/",
-            "description": "OES_vertex_array_object - OES_vertex_array_object"
+            "description": "(WebGL OES_vertex_array_object Khronos Ratified Extension)"
         }
     ]
 }

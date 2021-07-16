@@ -6,39 +6,24 @@
     "description": "The Performance interface provides access to performance-related information for the current page. It's part of the High Resolution Time API, but is enhanced by the Performance Timeline API, the Navigation Timing API, the User Timing API, and the Resource Timing API.",
     "refs": [
         {
-            "name": "High Resolution Time Level 2",
-            "href": "https://www.w3.org/TR/hr-time-2/#sec-performance",
-            "description": "Performance - High Resolution Time Level 2"
-        },
-        {
             "name": "High Resolution Time",
-            "href": "https://www.w3.org/TR/hr-time-1/#performance",
-            "description": "Performance - High Resolution Time"
+            "href": "https://w3c.github.io/hr-time/#sec-performance",
+            "description": "# sec-performance"
         },
         {
             "name": "Performance Timeline Level 2",
             "href": "https://w3c.github.io/performance-timeline/#extensions-to-the-performance-interface",
-            "description": "Performance extensions - Performance Timeline Level 2"
+            "description": "(Performance Timeline 2) # extensions-to-the-performance-interface"
         },
         {
-            "name": "Performance Timeline",
-            "href": "https://www.w3.org/TR/performance-timeline/#extensions-to-the-performance-interface",
-            "description": "Performance extensions - Performance Timeline"
-        },
-        {
-            "name": "Resource Timing Level 1",
-            "href": "https://www.w3.org/TR/resource-timing-1/#extensions-performance-interface",
-            "description": "Performance extensions - Resource Timing Level 1"
+            "name": "Resource Timing Level 2",
+            "href": "https://w3c.github.io/resource-timing/#sec-extensions-performance-interface",
+            "description": "(Resource Timing 2) # sec-extensions-performance-interface"
         },
         {
             "name": "User Timing Level 2",
             "href": "https://w3c.github.io/user-timing/#extensions-performance-interface",
-            "description": "Performance extensions - User Timing Level 2"
-        },
-        {
-            "name": "User Timing",
-            "href": "https://www.w3.org/TR/user-timing/#extensions-performance-interface",
-            "description": "Performance extensions - User Timing"
+            "description": "(User Timing 2) # extensions-performance-interface"
         }
     ]
 }

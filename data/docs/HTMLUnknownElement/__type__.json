@@ -6,14 +6,9 @@
     "description": "The HTMLUnknownElement interface represents an invalid HTML element and derives from the HTMLElement interface, but without implementing any additional properties or methods.",
     "refs": [
         {
-            "name": "HTML Living Standard",
-            "href": "https://html.spec.whatwg.org/multipage/elements.html#htmlunknownelement",
-            "description": "HTMLUnknownElement - HTML Living Standard"
-        },
-        {
-            "name": "HTML5",
-            "href": "https://www.w3.org/TR/html52/dom.html#htmlunknownelement",
-            "description": "HTMLUnknownElement - HTML5"
+            "name": "HTML Standard",
+            "href": "https://html.spec.whatwg.org/multipage/dom.html#htmlunknownelement",
+            "description": "(HTML) # htmlunknownelement"
         }
     ]
 }

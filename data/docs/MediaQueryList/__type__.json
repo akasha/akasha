@@ -6,9 +6,9 @@
     "description": "A MediaQueryList object stores information on a media query applied to a document, with support for both immediate and event-driven matching against the state of the document.",
     "refs": [
         {
-            "name": "CSS Object Model (CSSOM) View Module",
+            "name": "CSSOM View Module",
             "href": "https://drafts.csswg.org/cssom-view/#the-mediaquerylist-interface",
-            "description": "MediaQueryList - CSS Object Model (CSSOM) View Module"
+            "description": "(CSSOM View) # the-mediaquerylist-interface"
         }
     ]
 }

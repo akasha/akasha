@@ -7,8 +7,8 @@
     "refs": [
         {
             "name": "CSS Object Model (CSSOM)",
-            "href": "https://drafts.csswg.org/cssom/#cssgroupingrule",
-            "description": "CSSGroupingRule - CSS Object Model (CSSOM)"
+            "href": "https://drafts.csswg.org/cssom/#the-cssgroupingrule-interface",
+            "description": "(CSSOM) # the-cssgroupingrule-interface"
         }
     ]
 }

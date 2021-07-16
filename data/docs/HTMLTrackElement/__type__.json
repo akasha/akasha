@@ -6,14 +6,9 @@
     "description": "The HTMLTrackElement interface represents an HTML &lt;track&gt; element within the DOM. This element can be used as a child of either &lt;audio&gt; or &lt;video&gt; to specify a text track containing information such as closed captions or subtitles.",
     "refs": [
         {
-            "name": "HTML Living Standard",
-            "href": "https://html.spec.whatwg.org/multipage/#htmltrackelement",
-            "description": "HTMLTrackElement - HTML Living Standard"
-        },
-        {
-            "name": "HTML5",
-            "href": "https://www.w3.org/TR/html52/embedded-content-0.html#the-track-element",
-            "description": "HTMLTrackElement - HTML5"
+            "name": "HTML Standard",
+            "href": "https://html.spec.whatwg.org/multipage/media.html#htmltrackelement",
+            "description": "(HTML) # htmltrackelement"
         }
     ]
 }

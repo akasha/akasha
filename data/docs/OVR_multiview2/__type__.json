@@ -6,8 +6,9 @@
     "description": "The OVR_multiview2 extension is part of the WebGL API and adds support for rendering into multiple views simultaneously. This especially useful for virtual reality (VR) and WebXR.",
     "refs": [
         {
-            "name": "OVR_multiview2",
-            "href": "https://www.khronos.org/registry/webgl/extensions/OVR_multiview2/"
+            "name": "WebGL OVR_multiview2 Extension Specification",
+            "href": "https://www.khronos.org/registry/webgl/extensions/OVR_multiview2/",
+            "description": "(WebGL OVR_multiview2 Extension)"
         }
     ]
 }

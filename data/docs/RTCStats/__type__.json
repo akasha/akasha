@@ -3,12 +3,5 @@
     "kind": "Type",
     "name": "RTCStats",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCStats",
-    "description": "The RTCStats dictionary is the basic statistics object used by WebRTC's statistics monitoring model, providing the properties required of all statistics data objects.",
-    "refs": [
-        {
-            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
-            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcstats",
-            "description": "RTCStats - WebRTC 1.0: Real-time Communication Between Browsers"
-        }
-    ]
+    "description": "The RTCStats dictionary is the basic statistics object used by WebRTC's statistics monitoring model, providing the properties required of all statistics data objects."
 }

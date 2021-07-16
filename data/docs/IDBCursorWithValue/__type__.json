@@ -6,14 +6,9 @@
     "description": "The IDBCursorWithValue interface of the IndexedDB API represents a cursor for traversing or iterating over multiple records in a database. It is the same as the IDBCursor, except that it includes the value property.",
     "refs": [
         {
-            "name": "Indexed Database API 2.0",
-            "href": "https://www.w3.org/TR/IndexedDB/#idbcursorwithvalue",
-            "description": "IDBCursorWithValue - Indexed Database API 2.0"
-        },
-        {
-            "name": "Indexed Database API 2.0",
-            "href": "https://www.w3.org/TR/IndexedDB/#idbcursorwithvalue",
-            "description": "IDBCursorWithValue - Indexed Database API 2.0"
+            "name": "Indexed Database API 3.0",
+            "href": "https://w3c.github.io/IndexedDB/#ref-for-idbcursorwithvalue%E2%91%A1",
+            "description": "(Indexed DB 3.0) # ref-for-idbcursorwithvalue②"
         }
     ]
 }

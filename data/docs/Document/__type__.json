@@ -6,59 +6,34 @@
     "description": "The Document interface represents any web page loaded in the browser and serves as an entry point into the web page's content, which is the DOM tree.",
     "refs": [
         {
-            "name": "DOM",
+            "name": "DOM Standard",
             "href": "https://dom.spec.whatwg.org/#interface-document",
-            "description": "Document - DOM"
+            "description": "(DOM) # interface-document"
         },
         {
-            "name": "HTML Living Standard",
+            "name": "HTML Standard",
             "href": "https://html.spec.whatwg.org/multipage/dom.html#the-document-object",
-            "description": "Document - HTML Living Standard"
+            "description": "(HTML) # the-document-object"
         },
         {
-            "name": "CSS Object Model (CSSOM) View Module",
+            "name": "CSSOM View Module",
             "href": "https://drafts.csswg.org/cssom-view/#extensions-to-the-document-interface",
-            "description": "Document - CSS Object Model (CSSOM) View Module"
+            "description": "(CSSOM View) # extensions-to-the-document-interface"
         },
         {
-            "name": "Pointer Lock",
+            "name": "Pointer Lock 2.0",
             "href": "https://w3c.github.io/pointerlock/#extensions-to-the-document-interface",
-            "description": "Document - Pointer Lock"
+            "description": "# extensions-to-the-document-interface"
         },
         {
-            "name": "Page Visibility (Second Edition)",
-            "href": "https://www.w3.org/TR/page-visibility/#extensions-to-the-document-interface",
-            "description": "Document - Page Visibility (Second Edition)"
+            "name": "Page Visibility Level 2",
+            "href": "https://w3c.github.io/page-visibility/#extensions-to-the-document-interface",
+            "description": "(Page Visibility 2) # extensions-to-the-document-interface"
         },
         {
             "name": "Selection API",
             "href": "https://w3c.github.io/selection-api/#extensions-to-document-interface",
-            "description": "Document - Selection API"
-        },
-        {
-            "name": "DOM4",
-            "href": "https://www.w3.org/TR/dom/#interface-document",
-            "description": "Document - DOM4"
-        },
-        {
-            "name": "Document Object Model (DOM) Level 3 Core Specification",
-            "href": "https://www.w3.org/TR/DOM-Level-3-Core/#i-Document",
-            "description": "Document - Document Object Model (DOM) Level 3 Core Specification"
-        },
-        {
-            "name": "Document Object Model (DOM) Level 3 XPath Specification",
-            "href": "https://www.w3.org/TR/DOM-Level-3-XPath/xpath.html#XPathEvaluator",
-            "description": "XPathEvaluator - Document Object Model (DOM) Level 3 XPath Specification"
-        },
-        {
-            "name": "Document Object Model (DOM) Level 2 Core Specification",
-            "href": "https://www.w3.org/TR/DOM-Level-2-Core/#i-Document",
-            "description": "Document - Document Object Model (DOM) Level 2 Core Specification"
-        },
-        {
-            "name": "Document Object Model (DOM) Level 1 Specification",
-            "href": "https://www.w3.org/TR/REC-DOM-Level-1/#i-Document",
-            "description": "Document - Document Object Model (DOM) Level 1 Specification"
+            "description": "# extensions-to-document-interface"
         }
     ]
 }

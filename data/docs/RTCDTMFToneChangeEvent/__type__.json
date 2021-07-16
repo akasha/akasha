@@ -6,9 +6,9 @@
     "description": "The RTCDTMFToneChangeEvent interface represents events sent to indicate that DTMF tones have started or finished playing. This interface is used by the tonechange event.",
     "refs": [
         {
-            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
-            "href": "https://w3c.github.io/webrtc-pc/#event-RTCDTMFSender-tonechange",
-            "description": "RTCDTMFToneChangeEvent - WebRTC 1.0: Real-time Communication Between Browsers"
+            "name": "WebRTC 1.0: Real-Time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcdtmftonechangeevent",
+            "description": "(WebRTC 1.0) # dom-rtcdtmftonechangeevent"
         }
     ]
 }

@@ -6,24 +6,9 @@
     "description": "NodeList objects are collections of nodes, usually returned by properties such as Node.childNodes and methods such as document.querySelectorAll().",
     "refs": [
         {
-            "name": "DOM",
+            "name": "DOM Standard",
             "href": "https://dom.spec.whatwg.org/#interface-nodelist",
-            "description": "NodeList - DOM"
-        },
-        {
-            "name": "Document Object Model (DOM) Level 3 Core Specification",
-            "href": "https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-536297177",
-            "description": "NodeList - Document Object Model (DOM) Level 3 Core Specification"
-        },
-        {
-            "name": "Document Object Model (DOM) Level 2 Core Specification",
-            "href": "https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-536297177",
-            "description": "NodeList - Document Object Model (DOM) Level 2 Core Specification"
-        },
-        {
-            "name": "Document Object Model (DOM) Level 1 Specification",
-            "href": "https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#ID-536297177",
-            "description": "NodeList - Document Object Model (DOM) Level 1 Specification"
+            "description": "(DOM) # interface-nodelist"
         }
     ]
 }

@@ -3,17 +3,12 @@
     "kind": "Type",
     "name": "NavigatorLanguage",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/NavigatorLanguage",
-    "description": "NavigatorLanguage contains methods and properties related to the language of the navigator.",
+    "description": "The Navigator interface represents the state and the identity of the user agent. It allows scripts to query it and to register themselves to carry on some activities.",
     "refs": [
         {
-            "name": "HTML Living Standard",
-            "href": "https://html.spec.whatwg.org/multipage/#navigatorlanguage",
-            "description": "NavigatorLanguage - HTML Living Standard"
-        },
-        {
-            "name": "HTML5",
-            "href": "https://www.w3.org/TR/html52/#navigatorlanguage",
-            "description": "NavigatorLanguage - HTML5"
+            "name": "HTML Standard",
+            "href": "https://html.spec.whatwg.org/multipage/system-state.html#the-navigator-object",
+            "description": "(HTML) # the-navigator-object"
         }
     ]
 }

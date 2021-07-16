@@ -6,24 +6,9 @@
     "description": "The HTMLIFrameElement interface provides special properties and methods (beyond those of the HTMLElement interface it also has available to it by inheritance) for manipulating the layout and presentation of inline frame elements.",
     "refs": [
         {
-            "name": "HTML Living Standard",
-            "href": "https://html.spec.whatwg.org/multipage/#htmliframeelement",
-            "description": "HTMLIFrameElement - HTML Living Standard"
-        },
-        {
-            "name": "HTML5",
-            "href": "https://www.w3.org/TR/html52/embedded-content-0.html#the-iframe-element",
-            "description": "HTMLIFrameElement - HTML5"
-        },
-        {
-            "name": "Document Object Model (DOM) Level 2 HTML Specification",
-            "href": "https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-50708718",
-            "description": "HTMLIFrameElement - Document Object Model (DOM) Level 2 HTML Specification"
-        },
-        {
-            "name": "Document Object Model (DOM) Level 1 Specification",
-            "href": "https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-50708718",
-            "description": "HTMLIFrameElement - Document Object Model (DOM) Level 1 Specification"
+            "name": "HTML Standard",
+            "href": "https://html.spec.whatwg.org/multipage/iframe-embed-object.html#htmliframeelement",
+            "description": "(HTML) # htmliframeelement"
         }
     ]
 }

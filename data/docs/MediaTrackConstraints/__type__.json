@@ -7,11 +7,8 @@
     "refs": [
         {
             "name": "Media Capture and Streams",
-            "href": "https://w3c.github.io/mediacapture-main/#dom-mediatrackconstraints"
-        },
-        {
-            "name": "MediaStream Image Capture",
-            "href": "https://w3c.github.io/mediacapture-image/#mediatrackconstraintset-section"
+            "href": "https://w3c.github.io/mediacapture-main/#dom-mediatrackconstraints",
+            "description": "# dom-mediatrackconstraints"
         }
     ]
 }

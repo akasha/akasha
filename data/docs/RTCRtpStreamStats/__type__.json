@@ -8,7 +8,7 @@
         {
             "name": "Identifiers for WebRTC's Statistics API",
             "href": "https://w3c.github.io/webrtc-stats/#streamstats-dict*",
-            "description": "RTCRtpStreamStats - Identifiers for WebRTC's Statistics API"
+            "description": "(WebRTC Statistics) # streamstats-dict*"
         }
     ]
 }

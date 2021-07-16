@@ -6,9 +6,9 @@
     "description": "The TransitionEvent interface represents events providing information related to transitions.",
     "refs": [
         {
-            "name": "CSS Transitions",
+            "name": "CSS Transitions Level 2",
             "href": "https://drafts.csswg.org/css-transitions/#interface-transitionevent",
-            "description": "TransitionEvent - CSS Transitions"
+            "description": "(CSS Transitions 2) # interface-transitionevent"
         }
     ]
 }

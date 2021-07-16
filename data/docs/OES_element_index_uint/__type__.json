@@ -6,9 +6,9 @@
     "description": "The OES_element_index_uint extension is part of the WebGL API and adds support for gl.UNSIGNED_INT types to WebGLRenderingContext.drawElements().",
     "refs": [
         {
-            "name": "OES_element_index_uint",
+            "name": "WebGL OES_element_index_uint Khronos Ratified Extension Specification",
             "href": "https://www.khronos.org/registry/webgl/extensions/OES_element_index_uint/",
-            "description": "OES_element_index_uint - OES_element_index_uint"
+            "description": "(WebGL OES_element_index_uint Khronos Ratified Extension)"
         }
     ]
 }

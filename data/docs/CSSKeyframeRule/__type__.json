@@ -6,9 +6,9 @@
     "description": "The CSSKeyframeRule interface describes an object representing a set of styles for a given keyframe. It corresponds to the contents of a single keyframe of a @keyframes at-rule.",
     "refs": [
         {
-            "name": "CSS Animations Level 1",
-            "href": "https://drafts.csswg.org/css-animations-1/#interface-csskeyframerule",
-            "description": "CSSKeyframeRule - CSS Animations Level 1"
+            "name": "CSS Animations Level 2",
+            "href": "https://drafts.csswg.org/css-animations/#interface-csskeyframerule",
+            "description": "(CSS Animations 2) # interface-csskeyframerule"
         }
     ]
 }

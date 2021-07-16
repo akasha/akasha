@@ -6,9 +6,9 @@
     "description": "This interface inherits the methods of its parent, HTMLCollection.",
     "refs": [
         {
-            "name": "HTML Living Standard",
-            "href": "https://html.spec.whatwg.org/multipage/#the-htmloptionscollection-interface",
-            "description": "HTMLOptionsCollection - HTML Living Standard"
+            "name": "HTML Standard",
+            "href": "https://html.spec.whatwg.org/multipage/common-dom-interfaces.html#the-htmloptionscollection-interface",
+            "description": "(HTML) # the-htmloptionscollection-interface"
         }
     ]
 }

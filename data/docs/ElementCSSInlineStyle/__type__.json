@@ -8,7 +8,7 @@
         {
             "name": "CSS Object Model (CSSOM)",
             "href": "https://drafts.csswg.org/cssom/#dom-elementcssinlinestyle-style",
-            "description": "the style attribute - CSS Object Model (CSSOM)"
+            "description": "(CSSOM) # dom-elementcssinlinestyle-style"
         }
     ]
 }

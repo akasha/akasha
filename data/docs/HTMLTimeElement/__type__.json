@@ -6,19 +6,9 @@
     "description": "The HTMLTimeElement interface provides special properties (beyond the regular HTMLElement interface it also has available to it by inheritance) for manipulating &lt;time&gt; elements.",
     "refs": [
         {
-            "name": "HTML Living Standard",
-            "href": "https://html.spec.whatwg.org/multipage/#htmltimeelement",
-            "description": "HTMLTimeElement - HTML Living Standard"
-        },
-        {
-            "name": "HTML 5.1",
-            "href": "https://www.w3.org/TR/html51/text-level-semantics.html#the-time-element",
-            "description": "HTMLTimeElement - HTML 5.1"
-        },
-        {
-            "name": "HTML5",
-            "href": "https://www.w3.org/TR/html52/text-level-semantics.html#the-time-element",
-            "description": "HTMLTimeElement - HTML5"
+            "name": "HTML Standard",
+            "href": "https://html.spec.whatwg.org/multipage/text-level-semantics.html#htmltimeelement",
+            "description": "(HTML) # htmltimeelement"
         }
     ]
 }

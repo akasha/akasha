@@ -7,8 +7,8 @@
     "refs": [
         {
             "name": "Media Capture and Streams",
-            "href": "https://w3c.github.io/mediacapture-main/#dom-mediadeviceinfo",
-            "description": "MediaDevicesInfo - Media Capture and Streams"
+            "href": "https://w3c.github.io/mediacapture-main/#device-info",
+            "description": "# device-info"
         }
     ]
 }

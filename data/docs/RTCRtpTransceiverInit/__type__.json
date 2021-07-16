@@ -6,9 +6,9 @@
     "description": "The RTCRtpTransceiverInit dictionary is used when calling the WebRTC function RTCPeerConnection.addTransceiver() to provide configuration options for the new transceiver.",
     "refs": [
         {
-            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "name": "WebRTC 1.0: Real-Time Communication Between Browsers",
             "href": "https://w3c.github.io/webrtc-pc/#dom-rtcrtptransceiverinit",
-            "description": "RTCRtpTransceiverInit - WebRTC 1.0: Real-time Communication Between Browsers"
+            "description": "(WebRTC 1.0) # dom-rtcrtptransceiverinit"
         }
     ]
 }

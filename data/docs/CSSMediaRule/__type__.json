@@ -7,18 +7,8 @@
     "refs": [
         {
             "name": "CSS Conditional Rules Module Level 3",
-            "href": "https://drafts.csswg.org/css-conditional-3/#the-cssmediarule-interface",
-            "description": "CSSMediaRule - CSS Conditional Rules Module Level 3"
-        },
-        {
-            "name": "CSS Object Model (CSSOM)",
-            "href": "https://drafts.csswg.org/cssom/#the-cssmediarule-interface",
-            "description": "CSSMediaRule - CSS Object Model (CSSOM)"
-        },
-        {
-            "name": "Document Object Model (DOM) Level 2 Style Specification",
-            "href": "https://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSMediaRule",
-            "description": "CSSMediaRule - Document Object Model (DOM) Level 2 Style Specification"
+            "href": "https://drafts.csswg.org/css-conditional/#the-cssmediarule-interface",
+            "description": "(CSS Conditional 3) # the-cssmediarule-interface"
         }
     ]
 }

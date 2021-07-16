@@ -6,9 +6,9 @@
     "description": "The WEBGL_multi_draw extension is part of the WebGL API and allows to render more than one primitive with a single function call. This can improve a WebGL application's performance as it reduces binding costs in the renderer and speeds up GPU thread time with uniform data.",
     "refs": [
         {
-            "name": "WEBGL_multi_draw",
+            "name": "WebGL WEBGL_multi_draw Extension Specification",
             "href": "https://www.khronos.org/registry/webgl/extensions/WEBGL_multi_draw/",
-            "description": "WEBGL_multi_draw - WEBGL_multi_draw"
+            "description": "(WebGL WEBGL_multi_draw Extension)"
         }
     ]
 }

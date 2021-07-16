@@ -6,14 +6,9 @@
     "description": "The DOM StaticRange interface extends AbstractRange to provide a method to specify a range of content in the DOM whose contents don't update to reflect changes which occur within the DOM tree.",
     "refs": [
         {
-            "name": "DOM",
+            "name": "DOM Standard",
             "href": "https://dom.spec.whatwg.org/#interface-staticrange",
-            "description": "StaticRange - DOM"
-        },
-        {
-            "name": "Static Range",
-            "href": "https://w3c.github.io/staticrange/#interface-staticrange",
-            "description": "StaticRange - Static Range"
+            "description": "(DOM) # interface-staticrange"
         }
     ]
 }

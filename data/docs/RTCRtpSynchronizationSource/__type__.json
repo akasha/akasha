@@ -6,9 +6,9 @@
     "description": "The RTCRtpSynchronizationSource dictionary of the WebRTC API is used by getSynchronizationSources() to describe a particular synchronization source (SSRC).",
     "refs": [
         {
-            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "name": "WebRTC 1.0: Real-Time Communication Between Browsers",
             "href": "https://w3c.github.io/webrtc-pc/#dom-rtcrtpsynchronizationsource",
-            "description": "RTCRtpSynchronizationSource - WebRTC 1.0: Real-time Communication Between Browsers"
+            "description": "(WebRTC 1.0) # dom-rtcrtpsynchronizationsource"
         }
     ]
 }

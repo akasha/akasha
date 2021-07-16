@@ -6,73 +6,34 @@
     "description": "Element is the most general base class from which all element objects (i.e. objects that represent elements) in a Document inherit. It only has methods and properties common to all kinds of elements. More specific classes inherit from Element.",
     "refs": [
         {
-            "name": "Web Animations",
-            "href": "https://drafts.csswg.org/web-animations-1/"
-        },
-        {
-            "name": "Pointer Events – Level 2",
-            "href": "https://www.w3.org/TR/pointerevents2/#extensions-to-the-element-interface",
-            "description": "Element - Pointer Events &ndash; Level 2"
+            "name": "DOM Standard",
+            "href": "https://dom.spec.whatwg.org/#interface-element",
+            "description": "(DOM) # interface-element"
         },
         {
             "name": "Pointer Events",
-            "href": "https://www.w3.org/TR/pointerevents1/#extensions-to-the-element-interface",
-            "description": "Element - Pointer Events"
+            "href": "https://w3c.github.io/pointerevents/#extensions-to-the-element-interface",
+            "description": "# extensions-to-the-element-interface"
         },
         {
-            "name": "Selectors API Level 1",
-            "href": "https://www.w3.org/TR/selectors-api/#interface-definitions",
-            "description": "Element - Selectors API Level 1"
-        },
-        {
-            "name": "Pointer Lock",
+            "name": "Pointer Lock 2.0",
             "href": "https://w3c.github.io/pointerlock/#extensions-to-the-element-interface",
-            "description": "Element - Pointer Lock"
+            "description": "# extensions-to-the-element-interface"
         },
         {
-            "name": "Fullscreen API",
+            "name": "Fullscreen API Standard",
             "href": "https://fullscreen.spec.whatwg.org/#api",
-            "description": "Element - Fullscreen API"
+            "description": "(Fullscreen API) # api"
         },
         {
             "name": "DOM Parsing and Serialization",
             "href": "https://w3c.github.io/DOM-Parsing/#extensions-to-the-element-interface",
-            "description": "Element - DOM Parsing and Serialization"
+            "description": "# extensions-to-the-element-interface"
         },
         {
-            "name": "CSS Object Model (CSSOM) View Module",
+            "name": "CSSOM View Module",
             "href": "https://drafts.csswg.org/cssom-view/#extension-to-the-element-interface",
-            "description": "Element - CSS Object Model (CSSOM) View Module"
-        },
-        {
-            "name": "Element Traversal Specification",
-            "href": "https://www.w3.org/TR/ElementTraversal/#ecmascript-bindings",
-            "description": "Element - Element Traversal Specification"
-        },
-        {
-            "name": "DOM",
-            "href": "https://dom.spec.whatwg.org/#interface-element",
-            "description": "Element - DOM"
-        },
-        {
-            "name": "DOM4",
-            "href": "https://www.w3.org/TR/dom/#interface-element",
-            "description": "Element - DOM4"
-        },
-        {
-            "name": "Document Object Model (DOM) Level 3 Core Specification",
-            "href": "https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-745549614",
-            "description": "Element - Document Object Model (DOM) Level 3 Core Specification"
-        },
-        {
-            "name": "Document Object Model (DOM) Level 2 Core Specification",
-            "href": "https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-745549614",
-            "description": "Element - Document Object Model (DOM) Level 2 Core Specification"
-        },
-        {
-            "name": "Document Object Model (DOM) Level 1 Specification",
-            "href": "https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#ID-745549614",
-            "description": "Element - Document Object Model (DOM) Level 1 Specification"
+            "description": "(CSSOM View) # extension-to-the-element-interface"
         }
     ]
 }

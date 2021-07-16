@@ -6,14 +6,9 @@
     "description": "The HTMLBRElement interface represents a HTML line break element (&lt;br&gt;). It inherits from HTMLElement.",
     "refs": [
         {
-            "name": "HTML Living Standard",
-            "href": "https://html.spec.whatwg.org/multipage/#htmlbrelement",
-            "description": "HTMLBRElement - HTML Living Standard"
-        },
-        {
-            "name": "HTML5",
-            "href": "https://www.w3.org/TR/html52/textlevel-semantics.html#the-br-element",
-            "description": "HTMLBRElement - HTML5"
+            "name": "HTML Standard",
+            "href": "https://html.spec.whatwg.org/multipage/text-level-semantics.html#htmlbrelement",
+            "description": "(HTML) # htmlbrelement"
         }
     ]
 }

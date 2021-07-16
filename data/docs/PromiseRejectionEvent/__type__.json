@@ -6,9 +6,9 @@
     "description": "The PromiseRejectionEvent interface represents events which are sent to the global script context when JavaScript Promises are rejected.",
     "refs": [
         {
-            "name": "HTML Living Standard",
-            "href": "https://html.spec.whatwg.org/multipage/webappapis.html#promiserejectionevent",
-            "description": "PromiseRejectionEvent - HTML Living Standard"
+            "name": "HTML Standard",
+            "href": "https://html.spec.whatwg.org/multipage/webappapis.html#the-promiserejectionevent-interface",
+            "description": "(HTML) # the-promiserejectionevent-interface"
         }
     ]
 }

@@ -6,9 +6,9 @@
     "description": "The MessagePort interface of the Channel Messaging API represents one of the two ports of a MessageChannel, allowing messages to be sent from one port and listening out for them arriving at the other.",
     "refs": [
         {
-            "name": "HTML Living Standard",
+            "name": "HTML Standard",
             "href": "https://html.spec.whatwg.org/multipage/web-messaging.html#message-ports",
-            "description": "Message ports - HTML Living Standard"
+            "description": "(HTML) # message-ports"
         }
     ]
 }

@@ -6,19 +6,9 @@
     "description": "The HTMLMenuElement interface provides special properties (beyond those defined on the regular HTMLElement interface it also has available to it by inheritance) for manipulating &lt;menu&gt; elements.",
     "refs": [
         {
-            "name": "HTML Living Standard",
+            "name": "HTML Standard",
             "href": "https://html.spec.whatwg.org/multipage/grouping-content.html#htmlmenuelement",
-            "description": "HTMLMenuElement - HTML Living Standard"
-        },
-        {
-            "name": "HTML 5.2",
-            "href": "https://www.w3.org/TR/html52/grouping-content.html#htmlmenuelement",
-            "description": "HTMLMenuElement - HTML 5.2"
-        },
-        {
-            "name": "HTML 5.1",
-            "href": "https://www.w3.org/TR/html51/interactive-elements.html#htmlmenuelement-htmlmenuelement",
-            "description": "HTMLMenuElement - HTML 5.1"
+            "description": "(HTML) # htmlmenuelement"
         }
     ]
 }

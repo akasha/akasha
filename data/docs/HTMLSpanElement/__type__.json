@@ -6,24 +6,9 @@
     "description": "The HTMLSpanElement interface represents a &lt;span&gt; element and derives from the HTMLElement interface, but without implementing any additional properties or methods.",
     "refs": [
         {
-            "name": "HTML Living Standard",
+            "name": "HTML Standard",
             "href": "https://html.spec.whatwg.org/multipage/text-level-semantics.html#htmlspanelement",
-            "description": "HTMLSpanElement - HTML Living Standard"
-        },
-        {
-            "name": "HTML 5.2",
-            "href": "https://www.w3.org/TR/html52/textlevel-semantics.html#htmlspanelement",
-            "description": "HTMLSpanElement - HTML 5.2"
-        },
-        {
-            "name": "HTML 5.1",
-            "href": "https://www.w3.org/TR/html51/textlevel-semantics.html#htmlspanelement",
-            "description": "HTMLSpanElement - HTML 5.1"
-        },
-        {
-            "name": "HTML5",
-            "href": "https://www.w3.org/TR/html52/text-level-semantics.html#htmlspanelement",
-            "description": "HTMLSpanElement - HTML5"
+            "description": "(HTML) # htmlspanelement"
         }
     ]
 }

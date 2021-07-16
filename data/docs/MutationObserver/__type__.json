@@ -6,9 +6,9 @@
     "description": "The MutationObserver interface provides the ability to watch for changes being made to the DOM tree. It is designed as a replacement for the older Mutation Events feature, which was part of the DOM3 Events specification.",
     "refs": [
         {
-            "name": "DOM",
+            "name": "DOM Standard",
             "href": "https://dom.spec.whatwg.org/#interface-mutationobserver",
-            "description": "MutationObserver - DOM"
+            "description": "(DOM) # interface-mutationobserver"
         }
     ]
 }

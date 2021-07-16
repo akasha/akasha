@@ -6,9 +6,9 @@
     "description": "The PositionOptions dictionary describes an object containing option properties to pass as a parameter of Geolocation.getCurrentPosition() and Geolocation.watchPosition().",
     "refs": [
         {
-            "name": "Geolocation API",
+            "name": "Geolocation API Specification 2nd Edition",
             "href": "https://w3c.github.io/geolocation-api/#position_options_interface",
-            "description": "PositionOptions - Geolocation API"
+            "description": "# position_options_interface"
         }
     ]
 }

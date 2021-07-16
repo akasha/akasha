@@ -6,9 +6,9 @@
     "description": "The PluginArray interface is used to store a list of Plugin objects describing the available plugins; it's returned by the navigator.plugins property. The PluginArray is not a JavaScript array, but has the length property and supports accessing individual items using bracket notation (plugins[2]), as well as via item(index) and namedItem(&quot;name&quot;) methods.",
     "refs": [
         {
-            "name": "HTML Living Standard",
-            "href": "https://html.spec.whatwg.org/multipage/#pluginarray",
-            "description": "PluginArray - HTML Living Standard"
+            "name": "HTML Standard",
+            "href": "https://html.spec.whatwg.org/multipage/obsolete.html#pluginarray",
+            "description": "(HTML) # pluginarray"
         }
     ]
 }

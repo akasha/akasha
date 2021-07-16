@@ -6,9 +6,9 @@
     "description": "The TextTrackCueList array-like object represents a dynamically updating list of TextTrackCue objects.",
     "refs": [
         {
-            "name": "HTML Living Standard",
-            "href": "https://html.spec.whatwg.org/multipage/#texttrackcuelist",
-            "description": "TextTrackCueList - HTML Living Standard"
+            "name": "HTML Standard",
+            "href": "https://html.spec.whatwg.org/multipage/media.html#texttrackcuelist",
+            "description": "(HTML) # texttrackcuelist"
         }
     ]
 }

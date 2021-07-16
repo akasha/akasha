@@ -6,46 +6,9 @@
     "description": "The PerformanceEntry object encapsulates a single performance metric that is part of the performance timeline. A performance entry can be directly created by making a performance mark or measure (for example by calling the mark() method) at an explicit point in an application. Performance entries are also created in indirect ways such as loading a resource (such as an image).",
     "refs": [
         {
-            "name": "Resource Timing Level 3",
-            "href": "https://w3c.github.io/resource-timing/"
-        },
-        {
-            "name": "Resource Timing Level 2",
-            "href": "https://www.w3.org/TR/resource-timing-2/"
-        },
-        {
-            "name": "Resource Timing Level 1",
-            "href": "https://www.w3.org/TR/resource-timing-1/"
-        },
-        {
-            "name": "Navigation Timing Level 2",
-            "href": "https://w3c.github.io/navigation-timing/"
-        },
-        {
-            "name": "Navigation Timing",
-            "href": "https://www.w3.org/TR/navigation-timing/"
-        },
-        {
-            "name": "User Timing Level 2",
-            "href": "https://w3c.github.io/user-timing/"
-        },
-        {
-            "name": "User Timing",
-            "href": "https://www.w3.org/TR/user-timing/"
-        },
-        {
-            "name": "Frame Timing",
-            "href": "https://wicg.github.io/frame-timing/"
-        },
-        {
             "name": "Performance Timeline Level 2",
             "href": "https://w3c.github.io/performance-timeline/#dom-performanceentry",
-            "description": "PerformanceEntry - Performance Timeline Level 2"
-        },
-        {
-            "name": "Performance Timeline",
-            "href": "https://www.w3.org/TR/performance-timeline/#dom-performanceentry",
-            "description": "PerformanceEntry - Performance Timeline"
+            "description": "(Performance Timeline 2) # dom-performanceentry"
         }
     ]
 }

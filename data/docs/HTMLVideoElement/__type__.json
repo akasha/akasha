@@ -6,9 +6,9 @@
     "description": "The HTMLVideoElement interface provides special properties and methods for manipulating video objects. It also inherits properties and methods of HTMLMediaElement and HTMLElement.",
     "refs": [
         {
-            "name": "HTML Living Standard",
-            "href": "https://html.spec.whatwg.org/multipage/#htmlvideoelement",
-            "description": "HTMLVideoElement - HTML Living Standard"
+            "name": "HTML Standard",
+            "href": "https://html.spec.whatwg.org/multipage/media.html#htmlvideoelement",
+            "description": "(HTML) # htmlvideoelement"
         }
     ]
 }

@@ -6,9 +6,9 @@
     "description": "The WindowOrWorkerGlobalScope mixin describes several features common to the Window and WorkerGlobalScope interfaces.",
     "refs": [
         {
-            "name": "HTML Living Standard",
+            "name": "HTML Standard",
             "href": "https://html.spec.whatwg.org/multipage/webappapis.html#windoworworkerglobalscope-mixin",
-            "description": "WindowOrWorkerGlobalScope mixin - HTML Living Standard"
+            "description": "(HTML) # windoworworkerglobalscope-mixin"
         }
     ]
 }

@@ -6,9 +6,9 @@
     "description": "The KHR_parallel_shader_compile extension is part of the WebGL API and enables a non-blocking poll operation, so that compile/link status availability (COMPLETION_STATUS_KHR) can be queried without potentially incurring stalls. In other words you can check the status of your shaders compiling without blocking the runtime.",
     "refs": [
         {
-            "name": "KHR_parallel_shader_compile",
+            "name": "WebGL KHR_parallel_shader_compile Extension Specification",
             "href": "https://www.khronos.org/registry/webgl/extensions/KHR_parallel_shader_compile/",
-            "description": "KHR_parallel_shader_compile - KHR_parallel_shader_compile"
+            "description": "(WebGL KHR_parallel_shader_compile Extension)"
         }
     ]
 }

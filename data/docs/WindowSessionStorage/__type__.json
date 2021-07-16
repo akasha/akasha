@@ -6,9 +6,9 @@
     "description": "The read-only sessionStorage property accesses a session Storage object for the current origin. sessionStorage is similar to localStorage; the difference is that while data in localStorage doesn't expire, data in sessionStorage is cleared when the page session ends.",
     "refs": [
         {
-            "name": "HTML Living Standard",
-            "href": "https://html.spec.whatwg.org/multipage/webstorage.html#dom-sessionstorage",
-            "description": "sessionStorage - HTML Living Standard"
+            "name": "HTML Standard",
+            "href": "https://html.spec.whatwg.org/multipage/webstorage.html#dom-sessionstorage-dev",
+            "description": "(HTML) # dom-sessionstorage-dev"
         }
     ]
 }

@@ -6,9 +6,9 @@
     "description": "The RadioNodeList interface represents a collection of radio elements in a &lt;form&gt; or a &lt;fieldset&gt; element.",
     "refs": [
         {
-            "name": "HTML Living Standard",
-            "href": "https://html.spec.whatwg.org/multipage/#radionodelist",
-            "description": "RadioNodeList - HTML Living Standard"
+            "name": "HTML Standard",
+            "href": "https://html.spec.whatwg.org/multipage/common-dom-interfaces.html#radionodelist",
+            "description": "(HTML) # radionodelist"
         }
     ]
 }

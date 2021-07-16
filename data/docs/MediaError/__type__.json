@@ -6,9 +6,9 @@
     "description": "The MediaError interface represents an error which occurred while handling media in an HTML media element based on HTMLMediaElement, such as &lt;audio&gt; or &lt;video&gt;.",
     "refs": [
         {
-            "name": "HTML Living Standard",
-            "href": "https://html.spec.whatwg.org/multipage/embedded-content.html#mediaerror",
-            "description": "MediaError - HTML Living Standard"
+            "name": "HTML Standard",
+            "href": "https://html.spec.whatwg.org/multipage/media.html#error-codes",
+            "description": "(HTML) # error-codes"
         }
     ]
 }

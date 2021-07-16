@@ -8,7 +8,7 @@
         {
             "name": "Push API",
             "href": "https://w3c.github.io/push-api/#pushmanager-interface",
-            "description": "PushManager - Push API"
+            "description": "# pushmanager-interface"
         }
     ]
 }

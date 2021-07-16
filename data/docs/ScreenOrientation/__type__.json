@@ -6,9 +6,9 @@
     "description": "The ScreenOrientation interface of the Screen Orientation API provides information about the current orientation of the document.",
     "refs": [
         {
-            "name": "Screen Orientation API",
+            "name": "The Screen Orientation API",
             "href": "https://w3c.github.io/screen-orientation/#screenorientation-interface",
-            "description": "ScreenOrientation - Screen Orientation API"
+            "description": "# screenorientation-interface"
         }
     ]
 }

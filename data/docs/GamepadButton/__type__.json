@@ -8,7 +8,7 @@
         {
             "name": "Gamepad",
             "href": "https://w3c.github.io/gamepad/#gamepadbutton-interface",
-            "description": "GamepadButton - Gamepad"
+            "description": "# gamepadbutton-interface"
         }
     ]
 }

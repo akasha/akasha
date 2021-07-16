@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "AbstractWorker",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AbstractWorker",
-    "description": "The Worker interface of the Web Workers API represents a background task that can be created via script, which can send messages back to its creator."
+    "description": "The Worker interface of the Web Workers API represents a background task that can be created via script, which can send messages back to its creator.",
+    "refs": [
+        {
+            "name": "HTML Standard",
+            "href": "https://html.spec.whatwg.org/multipage/workers.html#dedicated-workers-and-the-worker-interface",
+            "description": "(HTML) # dedicated-workers-and-the-worker-interface"
+        }
+    ]
 }

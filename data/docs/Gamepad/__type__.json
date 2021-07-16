@@ -8,17 +8,12 @@
         {
             "name": "Gamepad",
             "href": "https://w3c.github.io/gamepad/#gamepad-interface",
-            "description": "Gamepad - Gamepad"
-        },
-        {
-            "name": "WebVR 1.1",
-            "href": "https://immersive-web.github.io/webvr/spec/1.1/#gamepad-getvrdisplays-attribute",
-            "description": "displayId - WebVR 1.1"
+            "description": "# gamepad-interface"
         },
         {
             "name": "Gamepad Extensions",
             "href": "https://w3c.github.io/gamepad/extensions.html#partial-gamepad-interface",
-            "description": "Gamepad extensions - Gamepad Extensions"
+            "description": "# partial-gamepad-interface"
         }
     ]
 }

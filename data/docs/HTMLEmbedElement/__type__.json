@@ -6,14 +6,9 @@
     "description": "The HTMLEmbedElement interface provides special properties (beyond the regular HTMLElement interface it also has available to it by inheritance) for manipulating &lt;embed&gt; elements.",
     "refs": [
         {
-            "name": "HTML Living Standard",
-            "href": "https://html.spec.whatwg.org/multipage/#htmlembedelement",
-            "description": "HTMLEmbedElement - HTML Living Standard"
-        },
-        {
-            "name": "HTML5",
-            "href": "https://www.w3.org/TR/html52/embedded-content-0.html#the-embed-element",
-            "description": "HTMLEmbedElement - HTML5"
+            "name": "HTML Standard",
+            "href": "https://html.spec.whatwg.org/multipage/iframe-embed-object.html#htmlembedelement",
+            "description": "(HTML) # htmlembedelement"
         }
     ]
 }

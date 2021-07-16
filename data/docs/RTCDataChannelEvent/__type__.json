@@ -6,9 +6,9 @@
     "description": "The RTCDataChannelEvent() constructor returns a new RTCDataChannelEvent object, which represents a datachannel event. These events sent to an RTCPeerConnection when its remote peer is asking to open an RTCDataChannel between the two peers.",
     "refs": [
         {
-            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "name": "WebRTC 1.0: Real-Time Communication Between Browsers",
             "href": "https://w3c.github.io/webrtc-pc/#rtcdatachannelevent",
-            "description": "RTCDataChannelEvent - WebRTC 1.0: Real-time Communication Between Browsers"
+            "description": "(WebRTC 1.0) # rtcdatachannelevent"
         }
     ]
 }

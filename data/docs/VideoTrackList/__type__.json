@@ -6,9 +6,9 @@
     "description": "The VideoTrackList interface is used to represent a list of the video tracks contained within a &lt;video&gt; element, with each track represented by a separate VideoTrack object in the list.",
     "refs": [
         {
-            "name": "HTML Living Standard",
-            "href": "https://html.spec.whatwg.org/multipage/#videotracklist",
-            "description": "VideoTrackList - HTML Living Standard"
+            "name": "HTML Standard",
+            "href": "https://html.spec.whatwg.org/multipage/media.html#audiotracklist-and-videotracklist-objects",
+            "description": "(HTML) # audiotracklist-and-videotracklist-objects"
         }
     ]
 }

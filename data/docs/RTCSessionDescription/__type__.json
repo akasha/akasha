@@ -6,9 +6,9 @@
     "description": "The RTCSessionDescription interface describes one end of a connection&mdash;or potential connection&mdash;and how it's configured. Each RTCSessionDescription consists of a description type indicating which part of the offer/answer negotiation process it describes and of the SDP descriptor of the session.",
     "refs": [
         {
-            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "name": "WebRTC 1.0: Real-Time Communication Between Browsers",
             "href": "https://w3c.github.io/webrtc-pc/#rtcsessiondescription-class",
-            "description": "RTCSessionDescription - WebRTC 1.0: Real-time Communication Between Browsers"
+            "description": "(WebRTC 1.0) # rtcsessiondescription-class"
         }
     ]
 }

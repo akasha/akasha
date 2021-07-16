@@ -6,14 +6,9 @@
     "description": "The URL interface is used to parse, construct, normalize, and encode URLs. It works by providing properties which allow you to easily read and modify the components of a URL.",
     "refs": [
         {
-            "name": "File API",
-            "href": "https://w3c.github.io/FileAPI/#creating-revoking",
-            "description": "URL - File API"
-        },
-        {
-            "name": "URL",
+            "name": "URL Standard",
             "href": "https://url.spec.whatwg.org/#api",
-            "description": "API - URL"
+            "description": "(URL) # api"
         }
     ]
 }

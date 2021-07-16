@@ -3,12 +3,12 @@
     "kind": "Type",
     "name": "NavigatorPlugins",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/NavigatorPlugins",
-    "description": "The NavigatorPlugins mixin adds to the Navigator interface methods and properties for discovering and interacting with plugins installed into the browser.",
+    "description": "The Navigator interface represents the state and the identity of the user agent. It allows scripts to query it and to register themselves to carry on some activities.",
     "refs": [
         {
-            "name": "HTML Living Standard",
-            "href": "https://html.spec.whatwg.org/multipage/#navigatorplugins",
-            "description": "NavigatorPlugins - HTML Living Standard"
+            "name": "HTML Standard",
+            "href": "https://html.spec.whatwg.org/multipage/system-state.html#the-navigator-object",
+            "description": "(HTML) # the-navigator-object"
         }
     ]
 }

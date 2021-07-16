@@ -6,9 +6,9 @@
     "description": "The WindowClient interface of the ServiceWorker API represents the scope of a service worker client that is a document in a browsing context, controlled by an active worker. The service worker client independently selects and uses a service worker for its own loading and sub-resources.",
     "refs": [
         {
-            "name": "Service Workers",
+            "name": "Service Workers 1",
             "href": "https://w3c.github.io/ServiceWorker/#windowclient",
-            "description": "WindowClient - Service Workers"
+            "description": "# windowclient"
         }
     ]
 }

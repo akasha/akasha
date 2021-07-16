@@ -6,29 +6,9 @@
     "description": "The HTMLImageElement interface represents an HTML &lt;img&gt; element, providing the properties and methods used to manipulate image elements.",
     "refs": [
         {
-            "name": "CSS Object Model (CSSOM) View Module",
-            "href": "https://drafts.csswg.org/cssom-view/#extensions-to-the-htmlimageelement-interface",
-            "description": "Extensions to HTMLImageElement - CSS Object Model (CSSOM) View Module"
-        },
-        {
-            "name": "HTML Living Standard",
-            "href": "https://html.spec.whatwg.org/multipage/#htmlimageelement",
-            "description": "HTMLImageElement - HTML Living Standard"
-        },
-        {
-            "name": "HTML5",
-            "href": "https://www.w3.org/TR/html52/embedded-content-0.html#the-img-element",
-            "description": "HTMLImageElement - HTML5"
-        },
-        {
-            "name": "Document Object Model (DOM) Level 2 HTML Specification",
-            "href": "https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-17701901",
-            "description": "HTMLImgElement - Document Object Model (DOM) Level 2 HTML Specification"
-        },
-        {
-            "name": "Document Object Model (DOM) Level 1 Specification",
-            "href": "https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-17701901",
-            "description": "HTMLImgElement - Document Object Model (DOM) Level 1 Specification"
+            "name": "HTML Standard",
+            "href": "https://html.spec.whatwg.org/multipage/embedded-content.html#htmlimageelement",
+            "description": "(HTML) # htmlimageelement"
         }
     ]
 }

@@ -6,14 +6,9 @@
     "description": "The HTMLDialogElement interface provides methods to manipulate &lt;dialog&gt; elements. It inherits properties and methods from the HTMLElement interface.",
     "refs": [
         {
-            "name": "HTML Living Standard",
-            "href": "https://html.spec.whatwg.org/multipage/#htmldialogelement",
-            "description": "HTMLDialogElement - HTML Living Standard"
-        },
-        {
-            "name": "HTML 5.2",
-            "href": "https://www.w3.org/TR/html52/interactive-elements.html#the-dialog-element",
-            "description": "&lt;dialog&gt; - HTML 5.2"
+            "name": "HTML Standard",
+            "href": "https://html.spec.whatwg.org/multipage/interactive-elements.html#htmldialogelement",
+            "description": "(HTML) # htmldialogelement"
         }
     ]
 }

@@ -3,12 +3,12 @@
     "kind": "Type",
     "name": "NavigatorConcurrentHardware",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/NavigatorConcurrentHardware",
-    "description": "The NavigatorConcurrentHardware mixin adds to the Navigator interface features which allow Web content to determine how many logical processors the user has available, in order to let content and Web apps optimize their operations to best take advantage of the user's CPU.",
+    "description": "The Navigator interface represents the state and the identity of the user agent. It allows scripts to query it and to register themselves to carry on some activities.",
     "refs": [
         {
-            "name": "HTML Living Standard",
-            "href": "https://html.spec.whatwg.org/multipage/#navigator.hardwareconcurrency",
-            "description": "NavigatorConcurrentHardware - HTML Living Standard"
+            "name": "HTML Standard",
+            "href": "https://html.spec.whatwg.org/multipage/system-state.html#the-navigator-object",
+            "description": "(HTML) # the-navigator-object"
         }
     ]
 }

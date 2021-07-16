@@ -6,14 +6,9 @@
     "description": "The HTMLAudioElement interface provides access to the properties of &lt;audio&gt; elements, as well as methods to manipulate them.",
     "refs": [
         {
-            "name": "HTML Living Standard",
-            "href": "https://html.spec.whatwg.org/multipage/#htmlaudioelement",
-            "description": "HTMLAudioElement - HTML Living Standard"
-        },
-        {
-            "name": "HTML5",
-            "href": "https://www.w3.org/TR/html52/embedded-content-0.html#the-audio-element",
-            "description": "HTMLAudioElement - HTML5"
+            "name": "HTML Standard",
+            "href": "https://html.spec.whatwg.org/multipage/media.html#htmlaudioelement",
+            "description": "(HTML) # htmlaudioelement"
         }
     ]
 }

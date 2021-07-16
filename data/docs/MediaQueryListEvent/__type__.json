@@ -6,9 +6,9 @@
     "description": "The MediaQueryListEvent object stores information on the changes that have happened to a MediaQueryList object &mdash; instances are available as the event object on a function referenced by a MediaQueryList.onchange property or MediaQueryList.addListener() call.",
     "refs": [
         {
-            "name": "CSS Object Model (CSSOM) View Module",
-            "href": "https://drafts.csswg.org/cssom-view/#mediaquerylistevent",
-            "description": "MediaQueryListEvent - CSS Object Model (CSSOM) View Module"
+            "name": "CSSOM View Module",
+            "href": "https://drafts.csswg.org/cssom-view/#the-mediaquerylist-interface",
+            "description": "(CSSOM View) # the-mediaquerylist-interface"
         }
     ]
 }

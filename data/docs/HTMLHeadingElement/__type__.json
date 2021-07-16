@@ -6,24 +6,9 @@
     "description": "The HTMLHeadingElement interface represents the different heading elements, &lt;h1&gt; through &lt;h6&gt;. It inherits methods and properties from the HTMLElement interface.",
     "refs": [
         {
-            "name": "HTML Living Standard",
-            "href": "https://html.spec.whatwg.org/multipage/#htmlheadingelement",
-            "description": "HTMLHeadingElement - HTML Living Standard"
-        },
-        {
-            "name": "HTML5",
-            "href": "https://www.w3.org/TR/html52/sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements",
-            "description": "HTMLHeadingElement - HTML5"
-        },
-        {
-            "name": "Document Object Model (DOM) Level 2 HTML Specification",
-            "href": "https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-43345119",
-            "description": "HTMLHeadingElement - Document Object Model (DOM) Level 2 HTML Specification"
-        },
-        {
-            "name": "Document Object Model (DOM) Level 1 Specification",
-            "href": "https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-43345119",
-            "description": "HTMLHeadingElement - Document Object Model (DOM) Level 1 Specification"
+            "name": "HTML Standard",
+            "href": "https://html.spec.whatwg.org/multipage/sections.html#htmlheadingelement",
+            "description": "(HTML) # htmlheadingelement"
         }
     ]
 }

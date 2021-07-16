@@ -6,9 +6,9 @@
     "description": "The WEBGL_color_buffer_float extension is part of the WebGL API and adds the ability to render to 32-bit floating-point color buffers.",
     "refs": [
         {
-            "name": "WEBGL_color_buffer_float",
+            "name": "WebGL WEBGL_color_buffer_float Extension Specification",
             "href": "https://www.khronos.org/registry/webgl/extensions/WEBGL_color_buffer_float/",
-            "description": "WEBGL_color_buffer_float - WEBGL_color_buffer_float"
+            "description": "(WebGL WEBGL_color_buffer_float Extension)"
         }
     ]
 }

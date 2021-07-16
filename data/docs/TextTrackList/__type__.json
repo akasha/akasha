@@ -6,9 +6,9 @@
     "description": "The TextTrackList interface is used to represent a list of the text tracks defined by the &lt;track&gt; element, with each track represented by a separate textTrack object in the list.",
     "refs": [
         {
-            "name": "HTML Living Standard",
-            "href": "https://html.spec.whatwg.org/multipage/#texttracklist",
-            "description": "TexTrackList - HTML Living Standard"
+            "name": "HTML Standard",
+            "href": "https://html.spec.whatwg.org/multipage/media.html#text-track-api",
+            "description": "(HTML) # text-track-api"
         }
     ]
 }

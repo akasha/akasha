@@ -6,9 +6,9 @@
     "description": "The RTCIceCandidate interface&mdash;part of the WebRTC API&mdash;represents a candidate Internet Connectivity Establishment (ICE) configuration which may be used to establish an RTCPeerConnection.",
     "refs": [
         {
-            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "name": "WebRTC 1.0: Real-Time Communication Between Browsers",
             "href": "https://w3c.github.io/webrtc-pc/#rtcicecandidate-interface",
-            "description": "RTCIceCandidate - WebRTC 1.0: Real-time Communication Between Browsers"
+            "description": "(WebRTC 1.0) # rtcicecandidate-interface"
         }
     ]
 }

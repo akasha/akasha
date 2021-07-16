@@ -6,14 +6,9 @@
     "description": "The HTMLDataListElement interface provides special properties (beyond the HTMLElement object interface it also has available to it by inheritance) to manipulate &lt;datalist&gt; elements and their content.",
     "refs": [
         {
-            "name": "HTML Living Standard",
-            "href": "https://html.spec.whatwg.org/multipage/#htmldatalistelement",
-            "description": "HTMLDataListElement - HTML Living Standard"
-        },
-        {
-            "name": "HTML5",
-            "href": "https://www.w3.org/TR/html52/forms.html#the-datalist-element",
-            "description": "HTMLDataListElement - HTML5"
+            "name": "HTML Standard",
+            "href": "https://html.spec.whatwg.org/multipage/form-elements.html#htmldatalistelement",
+            "description": "(HTML) # htmldatalistelement"
         }
     ]
 }

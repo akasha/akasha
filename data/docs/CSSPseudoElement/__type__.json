@@ -6,9 +6,9 @@
     "description": "The CSSPseudoElement interface represents a pseudo-element that may be the target of an event or animated using the Web Animations API. Instances of this interface may be obtained by calling Element.pseudo().",
     "refs": [
         {
-            "name": "CSS Pseudo-Elements Level 4",
-            "href": "https://drafts.csswg.org/css-pseudo-4/#CSSPseudoElement-interface",
-            "description": "CSSPseudoElement - CSS Pseudo-Elements Level 4"
+            "name": "CSS Pseudo-Elements Module Level 4",
+            "href": "https://drafts.csswg.org/css-pseudo/#CSSPseudoElement-interface",
+            "description": "(CSS Pseudo-Elements 4) # CSSPseudoElement-interface"
         }
     ]
 }

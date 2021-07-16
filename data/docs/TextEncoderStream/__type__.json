@@ -8,7 +8,7 @@
         {
             "name": "Encoding",
             "href": "https://encoding.spec.whatwg.org/#interface-textencoderstream",
-            "description": "TextEncoderStream - Encoding"
+            "description": "# interface-textencoderstream"
         }
     ]
 }

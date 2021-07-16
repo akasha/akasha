@@ -6,9 +6,9 @@
     "description": "The EXT_shader_texture_lod extension is part of the WebGL API and adds additional texture functions to the OpenGL ES Shading Language which provide the shader writer with explicit control of LOD (Level of detail).",
     "refs": [
         {
-            "name": "EXT_shader_texture_lod",
+            "name": "WebGL EXT_shader_texture_lod Khronos Ratified Extension Specification",
             "href": "https://www.khronos.org/registry/webgl/extensions/EXT_shader_texture_lod/",
-            "description": "EXT_shader_texture_lod - EXT_shader_texture_lod"
+            "description": "(WebGL EXT_shader_texture_lod Khronos Ratified Extension)"
         }
     ]
 }

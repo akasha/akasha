@@ -7,8 +7,8 @@
     "refs": [
         {
             "name": "Performance Timeline Level 2",
-            "href": "https://w3c.github.io/performance-timeline/#idl-def-performanceobserverentrylist",
-            "description": "PerformanceObserverEntryList - Performance Timeline Level 2"
+            "href": "https://w3c.github.io/performance-timeline/#performanceobserverentrylist-interface",
+            "description": "(Performance Timeline 2) # performanceobserverentrylist-interface"
         }
     ]
 }

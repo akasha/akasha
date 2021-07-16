@@ -6,9 +6,9 @@
     "description": "The WebRTC API's RTCOfferAnswerOptions dictionary is used to specify options that configure and control the process of creating WebRTC offers or answers.",
     "refs": [
         {
-            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "name": "WebRTC 1.0: Real-Time Communication Between Browsers",
             "href": "https://w3c.github.io/webrtc-pc/#dom-rtcofferansweroptions",
-            "description": "RTCOfferAnswerOptions - WebRTC 1.0: Real-time Communication Between Browsers"
+            "description": "(WebRTC 1.0) # dom-rtcofferansweroptions"
         }
     ]
 }

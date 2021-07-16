@@ -6,14 +6,9 @@
     "description": "The HTMLDataElement interface provides special properties (beyond the regular HTMLElement interface it also has available to it by inheritance) for manipulating &lt;data&gt; elements.",
     "refs": [
         {
-            "name": "HTML Living Standard",
-            "href": "https://html.spec.whatwg.org/multipage/#htmldataelement",
-            "description": "HTMLDataElement - HTML Living Standard"
-        },
-        {
-            "name": "HTML5",
-            "href": "https://www.w3.org/TR/html52/text-level-semantics.html#the-data-element",
-            "description": "HTMLDataElement - HTML5"
+            "name": "HTML Standard",
+            "href": "https://html.spec.whatwg.org/multipage/text-level-semantics.html#htmldataelement",
+            "description": "(HTML) # htmldataelement"
         }
     ]
 }

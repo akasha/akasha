@@ -6,9 +6,9 @@
     "description": "The FormDataEvent interface represents a formdata event &mdash; such an event is fired on an HTMLFormElement object after the entry list representing the form's data is constructed. This happens when the form is submitted, but can also be triggered by the invocation of a FormData() constructor.",
     "refs": [
         {
-            "name": "HTML Living Standard",
+            "name": "HTML Standard",
             "href": "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#the-formdataevent-interface",
-            "description": "FormDataEvent - HTML Living Standard"
+            "description": "(HTML) # the-formdataevent-interface"
         }
     ]
 }

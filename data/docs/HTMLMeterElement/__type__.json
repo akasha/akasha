@@ -6,19 +6,9 @@
     "description": "The HTML &lt;meter&gt; elements expose the HTMLMeterElement interface, which provides special properties and methods (beyond the HTMLElement object interface they also have available to them by inheritance) for manipulating the layout and presentation of &lt;meter&gt; elements.",
     "refs": [
         {
-            "name": "HTML Living Standard",
-            "href": "https://html.spec.whatwg.org/multipage/#htmlmeterelement",
-            "description": "HTMLMeterElement - HTML Living Standard"
-        },
-        {
-            "name": "HTML 5.1",
-            "href": "https://www.w3.org/TR/html51/forms.html#the-meter-element",
-            "description": "HTMLMeterElement - HTML 5.1"
-        },
-        {
-            "name": "HTML5",
-            "href": "https://www.w3.org/TR/html52/forms.html#the-meter-element",
-            "description": "HTMLMeterElement - HTML5"
+            "name": "HTML Standard",
+            "href": "https://html.spec.whatwg.org/multipage/form-elements.html#htmlmeterelement",
+            "description": "(HTML) # htmlmeterelement"
         }
     ]
 }

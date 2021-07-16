@@ -3,12 +3,5 @@
     "kind": "Type",
     "name": "RTCOutboundRtpStreamStats",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats",
-    "description": "The RTCOutboundRtpStreamStats dictionary is the RTCStats-based object which provides metrics and statistics related to an outbound RTP stream being sent by an RTCRtpSender.",
-    "refs": [
-        {
-            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
-            "href": "https://w3c.github.io/webrtc-pc/#outboundrtpstats-dict*",
-            "description": "RTCOutboundRtpStreamStats - WebRTC 1.0: Real-time Communication Between Browsers"
-        }
-    ]
+    "description": "The RTCOutboundRtpStreamStats dictionary is the RTCStats-based object which provides metrics and statistics related to an outbound RTP stream being sent by an RTCRtpSender."
 }

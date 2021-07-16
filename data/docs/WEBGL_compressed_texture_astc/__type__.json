@@ -6,9 +6,9 @@
     "description": "The WEBGL_compressed_texture_astc extension is part of the WebGL API and exposes Adaptive Scalable Texture Compression (ASTC) compressed texture formats to WebGL.",
     "refs": [
         {
-            "name": "WEBGL_compressed_texture_astc",
+            "name": "WebGL WEBGL_compressed_texture_astc Extension Specification",
             "href": "https://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_astc/",
-            "description": "WEBGL_compressed_texture_astc - WEBGL_compressed_texture_astc"
+            "description": "(WebGL WEBGL_compressed_texture_astc Extension)"
         }
     ]
 }

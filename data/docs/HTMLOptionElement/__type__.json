@@ -6,24 +6,9 @@
     "description": "The HTMLOptionElement interface represents &lt;option&gt; elements and inherits all properties and methods of the HTMLElement interface.",
     "refs": [
         {
-            "name": "HTML Living Standard",
-            "href": "https://html.spec.whatwg.org/multipage/#htmloptionelement",
-            "description": "HTMLOptionElement - HTML Living Standard"
-        },
-        {
-            "name": "HTML5",
-            "href": "https://www.w3.org/TR/html52/forms.html#the-option-element",
-            "description": "HTMLOptionElement - HTML5"
-        },
-        {
-            "name": "Document Object Model (DOM) Level 2 HTML Specification",
-            "href": "https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-70901257",
-            "description": "HTMLOptionElement - Document Object Model (DOM) Level 2 HTML Specification"
-        },
-        {
-            "name": "Document Object Model (DOM) Level 1 Specification",
-            "href": "https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-70901257",
-            "description": "HTMLOptionElement - Document Object Model (DOM) Level 1 Specification"
+            "name": "HTML Standard",
+            "href": "https://html.spec.whatwg.org/multipage/form-elements.html#htmloptionelement",
+            "description": "(HTML) # htmloptionelement"
         }
     ]
 }

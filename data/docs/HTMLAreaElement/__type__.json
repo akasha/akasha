@@ -6,9 +6,9 @@
     "description": "The HTMLAreaElement interface provides special properties and methods (beyond those of the regular object HTMLElement interface it also has available to it by inheritance) for manipulating the layout and presentation of &lt;area&gt; elements.",
     "refs": [
         {
-            "name": "HTML Living Standard",
-            "href": "https://html.spec.whatwg.org/multipage/#htmlareaelement",
-            "description": "HTMLAreaElement - HTML Living Standard"
+            "name": "HTML Standard",
+            "href": "https://html.spec.whatwg.org/multipage/image-maps.html#htmlareaelement",
+            "description": "(HTML) # htmlareaelement"
         }
     ]
 }

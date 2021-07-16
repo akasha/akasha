@@ -3,12 +3,5 @@
     "kind": "Type",
     "name": "PerformanceNavigation",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigation",
-    "description": "The legacy PerformanceNavigation interface represents information about how the navigation to the current document was done.",
-    "refs": [
-        {
-            "name": "Navigation Timing",
-            "href": "https://www.w3.org/TR/navigation-timing/#performancenavigation",
-            "description": "PerformanceNavigation - Navigation Timing"
-        }
-    ]
+    "description": "The legacy PerformanceNavigation interface represents information about how the navigation to the current document was done."
 }

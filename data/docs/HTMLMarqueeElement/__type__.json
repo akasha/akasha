@@ -6,24 +6,9 @@
     "description": "The HTMLMarqueeElement interface provides methods to manipulate &lt;marquee&gt; elements.",
     "refs": [
         {
-            "name": "HTML Living Standard",
+            "name": "HTML Standard",
             "href": "https://html.spec.whatwg.org/multipage/obsolete.html#htmlmarqueeelement",
-            "description": "HTMLMarqueeElement - HTML Living Standard"
-        },
-        {
-            "name": "HTML 5.2",
-            "href": "https://www.w3.org/TR/html52/obsolete.html#htmlmarqueeelement",
-            "description": "HTMLMarqueeElement - HTML 5.2"
-        },
-        {
-            "name": "HTML 5.1",
-            "href": "https://www.w3.org/TR/html51/obsolete.html#htmlmarqueeelement-htmlmarqueeelement",
-            "description": "HTMLMarqueeElement - HTML 5.1"
-        },
-        {
-            "name": "HTML5",
-            "href": "https://www.w3.org/TR/html52/obsolete.html#htmlmarqueeelement",
-            "description": "HTMLMarqueeElement - HTML5"
+            "description": "(HTML) # htmlmarqueeelement"
         }
     ]
 }

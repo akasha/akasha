@@ -6,9 +6,9 @@
     "description": "The ExtendableMessageEvent interface of the Service Worker API represents the event object of a message event fired on a service worker (when a message is received on the ServiceWorkerGlobalScope from another context) &mdash; extends the lifetime of such events.",
     "refs": [
         {
-            "name": "Service Workers",
-            "href": "https://w3c.github.io/ServiceWorker/#extendablemessageevent",
-            "description": "ExtendableMessageEvent - Service Workers"
+            "name": "Service Workers 1",
+            "href": "https://w3c.github.io/ServiceWorker/#extendablemessageevent-interface",
+            "description": "# extendablemessageevent-interface"
         }
     ]
 }

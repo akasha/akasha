@@ -8,7 +8,7 @@
         {
             "name": "DeviceOrientation Event Specification",
             "href": "https://w3c.github.io/deviceorientation/#devicemotioneventacceleration",
-            "description": "DeviceMotionEventAcceleration - DeviceOrientation Event Specification"
+            "description": "(DeviceOrientation Event) # devicemotioneventacceleration"
         }
     ]
 }

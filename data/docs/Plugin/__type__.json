@@ -6,9 +6,9 @@
     "description": "The Plugin interface provides information about a browser plugin.",
     "refs": [
         {
-            "name": "HTML Living Standard",
-            "href": "https://html.spec.whatwg.org/multipage/#dom-plugin",
-            "description": "Plugin - HTML Living Standard"
+            "name": "HTML Standard",
+            "href": "https://html.spec.whatwg.org/multipage/obsolete.html#dom-plugin",
+            "description": "(HTML) # dom-plugin"
         }
     ]
 }

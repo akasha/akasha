@@ -6,14 +6,9 @@
     "description": "The HTMLCanvasElement interface provides properties and methods for manipulating the layout and presentation of &lt;canvas&gt; elements. The HTMLCanvasElement interface also inherits the properties and methods of the HTMLElement interface.",
     "refs": [
         {
-            "name": "HTML Living Standard",
-            "href": "https://html.spec.whatwg.org/multipage/#htmlcanvaselement",
-            "description": "HTMLCanvasElement - HTML Living Standard"
-        },
-        {
-            "name": "Media Capture from DOM Elements",
-            "href": "https://w3c.github.io/mediacapture-fromelement/#html-canvas-element-media-capture-extensions",
-            "description": "HTMLCanvasElement - Media Capture from DOM Elements"
+            "name": "HTML Standard",
+            "href": "https://html.spec.whatwg.org/multipage/canvas.html#htmlcanvaselement",
+            "description": "(HTML) # htmlcanvaselement"
         }
     ]
 }

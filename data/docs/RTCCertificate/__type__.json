@@ -6,8 +6,9 @@
     "description": "The interface of the WebRTC API provides an object represents a certificate that an RTCPeerConnection uses to authenticate.",
     "refs": [
         {
-            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
-            "href": "https://w3c.github.io/webrtc-pc/#dom-rtccertificate"
+            "name": "WebRTC 1.0: Real-Time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtccertificate",
+            "description": "(WebRTC 1.0) # dom-rtccertificate"
         }
     ]
 }

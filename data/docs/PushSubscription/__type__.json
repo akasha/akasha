@@ -8,7 +8,7 @@
         {
             "name": "Push API",
             "href": "https://w3c.github.io/push-api/#pushsubscription-interface",
-            "description": "PushSubscription - Push API"
+            "description": "# pushsubscription-interface"
         }
     ]
 }

@@ -6,9 +6,9 @@
     "description": "The RTCStatsReport interface provides a statistics report obtained by calling one of the RTCPeerConnection.getStats(), RTCRtpReceiver.getStats(), and RTCRtpSender.getStats() methods.",
     "refs": [
         {
-            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "name": "WebRTC 1.0: Real-Time Communication Between Browsers",
             "href": "https://w3c.github.io/webrtc-pc/#rtcstatsreport-object",
-            "description": "RTCStatsReport - WebRTC 1.0: Real-time Communication Between Browsers"
+            "description": "(WebRTC 1.0) # rtcstatsreport-object"
         }
     ]
 }

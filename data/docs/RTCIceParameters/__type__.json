@@ -3,12 +3,5 @@
     "kind": "Type",
     "name": "RTCIceParameters",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceParameters",
-    "description": "The RTCIceParameters dictionary specifies the username fragment and password assigned to an ICE session.",
-    "refs": [
-        {
-            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
-            "href": "https://w3c.github.io/webrtc-pc/#rtciceparameters",
-            "description": "RTCIceParameters - WebRTC 1.0: Real-time Communication Between Browsers"
-        }
-    ]
+    "description": "The RTCIceParameters dictionary specifies the username fragment and password assigned to an ICE session."
 }

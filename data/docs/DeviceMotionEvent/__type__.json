@@ -7,8 +7,8 @@
     "refs": [
         {
             "name": "DeviceOrientation Event Specification",
-            "href": "https://w3c.github.io/deviceorientation/#devicemotionevent",
-            "description": "DeviceMotionEvent - DeviceOrientation Event Specification"
+            "href": "https://w3c.github.io/deviceorientation/#devicemotion",
+            "description": "(DeviceOrientation Event) # devicemotion"
         }
     ]
 }

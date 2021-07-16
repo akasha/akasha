@@ -6,9 +6,9 @@
     "description": "The WorkerGlobalScope interface of the Web Workers API is an interface representing the scope of any worker. Workers have no browsing context; this scope contains the information usually conveyed by Window objects &mdash; in this case event handlers, the console or the associated WorkerNavigator object. Each WorkerGlobalScope has its own event loop.",
     "refs": [
         {
-            "name": "HTML Living Standard",
-            "href": "https://html.spec.whatwg.org/multipage/#workerglobalscope",
-            "description": "WorkerGlobalScope - HTML Living Standard"
+            "name": "HTML Standard",
+            "href": "https://html.spec.whatwg.org/multipage/workers.html#the-workerglobalscope-common-interface",
+            "description": "(HTML) # the-workerglobalscope-common-interface"
         }
     ]
 }

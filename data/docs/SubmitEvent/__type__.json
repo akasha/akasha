@@ -6,9 +6,9 @@
     "description": "The SubmitEvent interface defines the object used to represent an HTML form's submit event. This event is fired at the &lt;form&gt; when the form's submit action is invoked.",
     "refs": [
         {
-            "name": "HTML Living Standard",
-            "href": "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#submitevent",
-            "description": "SubmitEvent - HTML Living Standard"
+            "name": "HTML Standard",
+            "href": "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#the-submitevent-interface",
+            "description": "(HTML) # the-submitevent-interface"
         }
     ]
 }

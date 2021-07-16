@@ -6,14 +6,9 @@
     "description": "The IDBRequest interface of the IndexedDB API provides access to results of asynchronous requests to databases and database objects using event handler attributes. Each reading and writing operation on a database is done using a request.",
     "refs": [
         {
-            "name": "Indexed Database API 2.0",
-            "href": "https://www.w3.org/TR/IndexedDB/#idbrequest",
-            "description": "IDBRequest - Indexed Database API 2.0"
-        },
-        {
-            "name": "Indexed Database API 2.0",
-            "href": "https://www.w3.org/TR/IndexedDB/#request-api",
-            "description": "IDBRequest - Indexed Database API 2.0"
+            "name": "Indexed Database API 3.0",
+            "href": "https://w3c.github.io/IndexedDB/#request-api",
+            "description": "(Indexed DB 3.0) # request-api"
         }
     ]
 }

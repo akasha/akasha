@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "AbortController",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AbortController",
-    "description": "The AbortController interface represents a controller object that allows you to abort one or more Web requests as and when desired."
+    "description": "The AbortController interface represents a controller object that allows you to abort one or more Web requests as and when desired.",
+    "refs": [
+        {
+            "name": "DOM Standard",
+            "href": "https://dom.spec.whatwg.org/#interface-abortcontroller",
+            "description": "(DOM) # interface-abortcontroller"
+        }
+    ]
 }

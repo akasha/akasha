@@ -6,14 +6,9 @@
     "description": "The IDBCursor interface of the IndexedDB API represents a cursor for traversing or iterating over multiple records in a database.",
     "refs": [
         {
-            "name": "Indexed Database API 2.0",
-            "href": "https://www.w3.org/TR/IndexedDB/#cursor-interface",
-            "description": "cursor - Indexed Database API 2.0"
-        },
-        {
-            "name": "Indexed Database API 2.0",
-            "href": "https://www.w3.org/TR/IndexedDB/#cursor-interface",
-            "description": "cursor - Indexed Database API 2.0"
+            "name": "Indexed Database API 3.0",
+            "href": "https://w3c.github.io/IndexedDB/#cursor-interface",
+            "description": "(Indexed DB 3.0) # cursor-interface"
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "Media Capture and Streams",
             "href": "https://w3c.github.io/mediacapture-main/#overconstrainederror-interface",
-            "description": "OverconstrainedError - Media Capture and Streams"
+            "description": "# overconstrainederror-interface"
         }
     ]
 }

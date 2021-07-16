@@ -6,9 +6,9 @@
     "description": "The ServiceWorkerGlobalScope interface of the Service Worker API represents the global execution context of a service worker.",
     "refs": [
         {
-            "name": "Service Workers",
+            "name": "Service Workers 1",
             "href": "https://w3c.github.io/ServiceWorker/#serviceworkerglobalscope-interface",
-            "description": "ServiceWorkerGlobalScope - Service Workers"
+            "description": "# serviceworkerglobalscope-interface"
         }
     ]
 }

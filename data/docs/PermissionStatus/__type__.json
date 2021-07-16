@@ -8,7 +8,7 @@
         {
             "name": "Permissions",
             "href": "https://w3c.github.io/permissions/#status-of-a-permission",
-            "description": "PermissionStatus - Permissions"
+            "description": "# status-of-a-permission"
         }
     ]
 }

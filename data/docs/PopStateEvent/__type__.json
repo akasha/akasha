@@ -6,9 +6,9 @@
     "description": "PopStateEvent is an event handler for the popstate event on the window.",
     "refs": [
         {
-            "name": "HTML Living Standard",
-            "href": "https://html.spec.whatwg.org/multipage/browsing-the-web.html#popstateevent",
-            "description": "PopStateEvent - HTML Living Standard"
+            "name": "HTML Standard",
+            "href": "https://html.spec.whatwg.org/multipage/browsing-the-web.html#the-popstateevent-interface",
+            "description": "(HTML) # the-popstateevent-interface"
         }
     ]
 }

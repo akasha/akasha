@@ -6,14 +6,9 @@
     "description": "The DragEvent interface is a DOM event that represents a drag and drop interaction. The user initiates a drag by placing a pointer device (such as a mouse) on the touch surface and then dragging the pointer to a new location (such as another DOM element). Applications are free to interpret a drag and drop interaction in an application-specific way.",
     "refs": [
         {
-            "name": "HTML Living Standard",
-            "href": "https://html.spec.whatwg.org/multipage/#dragevent",
-            "description": "DragEvent - HTML Living Standard"
-        },
-        {
-            "name": "HTML 5.1",
-            "href": "https://www.w3.org/TR/html51/editing.html#the-dragevent-interface",
-            "description": "DragEvent - HTML 5.1"
+            "name": "HTML Standard",
+            "href": "https://html.spec.whatwg.org/multipage/dnd.html#the-dragevent-interface",
+            "description": "(HTML) # the-dragevent-interface"
         }
     ]
 }

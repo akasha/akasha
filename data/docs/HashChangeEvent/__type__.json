@@ -6,9 +6,9 @@
     "description": "The HashChangeEvent interface represents events that fire when the fragment identifier of the URL has changed.",
     "refs": [
         {
-            "name": "HTML Living Standard",
-            "href": "https://html.spec.whatwg.org/multipage/#the-hashchangeevent-interface",
-            "description": "HashChangeEvent - HTML Living Standard"
+            "name": "HTML Standard",
+            "href": "https://html.spec.whatwg.org/multipage/browsing-the-web.html#the-hashchangeevent-interface",
+            "description": "(HTML) # the-hashchangeevent-interface"
         }
     ]
 }

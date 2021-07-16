@@ -8,12 +8,7 @@
         {
             "name": "CSS Object Model (CSSOM)",
             "href": "https://drafts.csswg.org/cssom/#the-cssstyledeclaration-interface",
-            "description": "CSSStyleDeclaration - CSS Object Model (CSSOM)"
-        },
-        {
-            "name": "Document Object Model (DOM) Level 2 Style Specification",
-            "href": "https://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSStyleDeclaration",
-            "description": "CSSStyleDeclaration - Document Object Model (DOM) Level 2 Style Specification"
+            "description": "(CSSOM) # the-cssstyledeclaration-interface"
         }
     ]
 }

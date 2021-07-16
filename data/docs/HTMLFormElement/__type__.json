@@ -6,14 +6,9 @@
     "description": "The HTMLFormElement interface represents a &lt;form&gt; element in the DOM. It allows access to&mdash;and, in some cases, modification of&mdash;aspects of the form, as well as access to its component elements.",
     "refs": [
         {
-            "name": "HTML Living Standard",
-            "href": "https://html.spec.whatwg.org/multipage/#htmlformelement",
-            "description": "HTMLFormElement - HTML Living Standard"
-        },
-        {
-            "name": "HTML5",
-            "href": "https://www.w3.org/TR/html52/sec-forms.html#htmlformelement",
-            "description": "HTMLFormElement - HTML5"
+            "name": "HTML Standard",
+            "href": "https://html.spec.whatwg.org/multipage/forms.html#htmlformelement",
+            "description": "(HTML) # htmlformelement"
         }
     ]
 }

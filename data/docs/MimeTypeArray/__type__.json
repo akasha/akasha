@@ -3,12 +3,12 @@
     "kind": "Type",
     "name": "MimeTypeArray",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MimeTypeArray",
-    "description": "The MimeTypeArray interface returns an array of MimeType instances, each of which contains information about a supported browser plugins. This object is returned by NavigatorPlugins.mimeTypes.",
+    "description": "The MimeTypeArray interface returns an array of MimeType instances, each of which contains information about a supported browser plugins. This object is returned by Navigator.mimeTypes.",
     "refs": [
         {
-            "name": "HTML Living Standard",
-            "href": "https://html.spec.whatwg.org/multipage/#mimetypearray",
-            "description": "MimeTypeArray - HTML Living Standard"
+            "name": "HTML Standard",
+            "href": "https://html.spec.whatwg.org/multipage/obsolete.html#mimetypearray",
+            "description": "(HTML) # mimetypearray"
         }
     ]
 }

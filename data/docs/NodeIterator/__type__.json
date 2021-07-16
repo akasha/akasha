@@ -6,14 +6,9 @@
     "description": "The NodeIterator interface represents an iterator over the members of a list of the nodes in a subtree of the DOM. The nodes will be returned in document order.",
     "refs": [
         {
-            "name": "DOM",
-            "href": "https://dom.spec.whatwg.org/#nodeiterator",
-            "description": "NodeIterator - DOM"
-        },
-        {
-            "name": "Document Object Model (DOM) Level 2 Traversal and Range Specification",
-            "href": "https://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Iterator-overview",
-            "description": "NodeIterator - Document Object Model (DOM) Level 2 Traversal and Range Specification"
+            "name": "DOM Standard",
+            "href": "https://dom.spec.whatwg.org/#interface-nodeiterator",
+            "description": "(DOM) # interface-nodeiterator"
         }
     ]
 }

@@ -6,9 +6,9 @@
     "description": "The WEBGL_compressed_texture_s3tc extension is part of the WebGL API and exposes four S3TC compressed texture formats.",
     "refs": [
         {
-            "name": "WEBGL_compressed_texture_s3tc",
+            "name": "WebGL WEBGL_compressed_texture_s3tc Khronos Ratified Extension Specification",
             "href": "https://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_s3tc/",
-            "description": "WEBGL_compressed_texture_s3tc - WEBGL_compressed_texture_s3tc"
+            "description": "(WebGL WEBGL_compressed_texture_s3tc Khronos Ratified Extension)"
         }
     ]
 }

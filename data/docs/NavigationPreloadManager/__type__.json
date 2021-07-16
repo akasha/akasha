@@ -6,9 +6,9 @@
     "description": "The NavigationPreloadManager interface of the Service Worker API provides methods for managing the preloading of resources with a service worker.",
     "refs": [
         {
-            "name": "Service Workers",
+            "name": "Service Workers 1",
             "href": "https://w3c.github.io/ServiceWorker/#navigation-preload-manager",
-            "description": "NavigationPreloadManager - Service Workers"
+            "description": "# navigation-preload-manager"
         }
     ]
 }

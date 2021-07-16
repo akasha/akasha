@@ -6,9 +6,9 @@
     "description": "This interface is a compiled XPath expression that can be evaluated on a document or specific node to return information from its DOM tree.",
     "refs": [
         {
-            "name": "Document Object Model (DOM) Level 3 XPath Specification",
-            "href": "https://www.w3.org/TR/DOM-Level-3-XPath/xpath.html#XPathExpression",
-            "description": "XPathExpression - Document Object Model (DOM) Level 3 XPath Specification"
+            "name": "DOM Standard",
+            "href": "https://dom.spec.whatwg.org/#interface-xpathexpression",
+            "description": "(DOM) # interface-xpathexpression"
         }
     ]
 }

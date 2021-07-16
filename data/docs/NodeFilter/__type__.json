@@ -6,14 +6,9 @@
     "description": "A NodeFilter interface represents an object used to filter the nodes in a NodeIterator or TreeWalker. A NodeFilter knows nothing about the document or traversing nodes; it only knows how to evaluate a single node against the provided filter.",
     "refs": [
         {
-            "name": "DOM",
+            "name": "DOM Standard",
             "href": "https://dom.spec.whatwg.org/#interface-nodefilter",
-            "description": "NodeFilter - DOM"
-        },
-        {
-            "name": "Document Object Model (DOM) Level 2 Traversal and Range Specification",
-            "href": "https://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-NodeFilter",
-            "description": "NodeFilter - Document Object Model (DOM) Level 2 Traversal and Range Specification"
+            "description": "(DOM) # interface-nodefilter"
         }
     ]
 }

@@ -8,12 +8,12 @@
         {
             "name": "Media Capture and Streams",
             "href": "https://w3c.github.io/mediacapture-main/#media-track-settings",
-            "description": "MediaTrackSettings - Media Capture and Streams"
+            "description": "# media-track-settings"
         },
         {
             "name": "Screen Capture",
             "href": "https://w3c.github.io/mediacapture-screen-share/#extensions-to-mediatracksettings",
-            "description": "MediaTrackSettings extensions - Screen Capture"
+            "description": "# extensions-to-mediatracksettings"
         }
     ]
 }

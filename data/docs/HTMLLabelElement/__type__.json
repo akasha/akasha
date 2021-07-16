@@ -6,24 +6,9 @@
     "description": "The HTMLLabelElement interface gives access to properties specific to &lt;label&gt; elements. It inherits methods and properties from the base HTMLElement interface.",
     "refs": [
         {
-            "name": "HTML Living Standard",
-            "href": "https://html.spec.whatwg.org/multipage/#htmllabelelement",
-            "description": "HTMLLabelElement - HTML Living Standard"
-        },
-        {
-            "name": "HTML5",
-            "href": "https://www.w3.org/TR/html52/forms.html#the-label-element",
-            "description": "HTMLLabelElement - HTML5"
-        },
-        {
-            "name": "Document Object Model (DOM) Level 2 HTML Specification",
-            "href": "https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-13691394",
-            "description": "HTMLLabelElement - Document Object Model (DOM) Level 2 HTML Specification"
-        },
-        {
-            "name": "Document Object Model (DOM) Level 1 Specification",
-            "href": "https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-13691394",
-            "description": "HTMLLabelElement - Document Object Model (DOM) Level 1 Specification"
+            "name": "HTML Standard",
+            "href": "https://html.spec.whatwg.org/multipage/forms.html#htmllabelelement",
+            "description": "(HTML) # htmllabelelement"
         }
     ]
 }

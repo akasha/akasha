@@ -6,9 +6,9 @@
     "description": "The XPathEvaluator interface allows to compile and evaluate XPath expressions.",
     "refs": [
         {
-            "name": "Document Object Model (DOM) Level 3 XPath Specification",
-            "href": "https://www.w3.org/TR/DOM-Level-3-XPath/xpath.html#XPathEvaluator",
-            "description": "XPathEvaluator - Document Object Model (DOM) Level 3 XPath Specification"
+            "name": "DOM Standard",
+            "href": "https://dom.spec.whatwg.org/#interface-xpathevaluator",
+            "description": "(DOM) # interface-xpathevaluator"
         }
     ]
 }

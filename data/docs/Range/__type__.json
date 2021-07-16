@@ -6,24 +6,19 @@
     "description": "The Range interface represents a fragment of a document that can contain nodes and parts of text nodes.",
     "refs": [
         {
-            "name": "DOM",
+            "name": "DOM Standard",
             "href": "https://dom.spec.whatwg.org/#interface-range",
-            "description": "Range - DOM"
+            "description": "(DOM) # interface-range"
         },
         {
             "name": "DOM Parsing and Serialization",
             "href": "https://w3c.github.io/DOM-Parsing/#extensions-to-the-range-interface",
-            "description": "Extensions to Range - DOM Parsing and Serialization"
+            "description": "# extensions-to-the-range-interface"
         },
         {
-            "name": "CSS Object Model (CSSOM) View Module",
+            "name": "CSSOM View Module",
             "href": "https://drafts.csswg.org/cssom-view/#extensions-to-the-range-interface",
-            "description": "Extensions to Range - CSS Object Model (CSSOM) View Module"
-        },
-        {
-            "name": "Document Object Model (DOM) Level 2 Traversal and Range Specification",
-            "href": "https://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level-2-Range-Interface",
-            "description": "Range - Document Object Model (DOM) Level 2 Traversal and Range Specification"
+            "description": "(CSSOM View) # extensions-to-the-range-interface"
         }
     ]
 }

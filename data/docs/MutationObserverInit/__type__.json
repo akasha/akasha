@@ -6,9 +6,9 @@
     "description": "The MutationObserverInit dictionary describes the configuration of a mutation observer. As such, it's primarily used as the type of the options parameter on the MutationObserver.observe() method.",
     "refs": [
         {
-            "name": "DOM",
+            "name": "DOM Standard",
             "href": "https://dom.spec.whatwg.org/#dictdef-mutationobserverinit",
-            "description": "MutationObserverInit - DOM"
+            "description": "(DOM) # dictdef-mutationobserverinit"
         }
     ]
 }

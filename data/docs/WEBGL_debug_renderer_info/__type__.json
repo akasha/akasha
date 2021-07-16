@@ -6,9 +6,9 @@
     "description": "The WEBGL_debug_renderer_info extension is part of the WebGL API and exposes two constants with information about the graphics driver for debugging purposes.",
     "refs": [
         {
-            "name": "WEBGL_debug_renderer_info",
+            "name": "WebGL WEBGL_debug_renderer_info Khronos Ratified Extension Specification",
             "href": "https://www.khronos.org/registry/webgl/extensions/WEBGL_debug_renderer_info/",
-            "description": "WEBGL_debug_renderer_info - WEBGL_debug_renderer_info"
+            "description": "(WebGL WEBGL_debug_renderer_info Khronos Ratified Extension)"
         }
     ]
 }

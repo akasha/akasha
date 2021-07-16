@@ -6,14 +6,9 @@
     "description": "The IDBVersionChangeEvent interface of the IndexedDB API indicates that the version of the database has changed, as the result of an IDBOpenDBRequest.onupgradeneeded event handler function.",
     "refs": [
         {
-            "name": "Indexed Database API 2.0",
-            "href": "https://www.w3.org/TR/IndexedDB/#idbversionchangeevent",
-            "description": "IDBVersionChangeEvent - Indexed Database API 2.0"
-        },
-        {
-            "name": "Indexed Database API 2.0",
-            "href": "https://www.w3.org/TR/IndexedDB/#idbversionchangeevent",
-            "description": "IDBVersionChangeEvent - Indexed Database API 2.0"
+            "name": "Indexed Database API 3.0",
+            "href": "https://w3c.github.io/IndexedDB/#events",
+            "description": "(Indexed DB 3.0) # events"
         }
     ]
 }

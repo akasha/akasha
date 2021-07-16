@@ -6,9 +6,9 @@
     "description": "A StorageEvent is sent to a window when a storage area it has access to is changed within the context of another document.",
     "refs": [
         {
-            "name": "HTML Living Standard",
+            "name": "HTML Standard",
             "href": "https://html.spec.whatwg.org/multipage/webstorage.html#the-storageevent-interface",
-            "description": "The StorageEvent interface - HTML Living Standard"
+            "description": "(HTML) # the-storageevent-interface"
         }
     ]
 }

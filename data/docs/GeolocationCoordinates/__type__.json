@@ -1,0 +1,14 @@
+
+{
+    "kind": "Type",
+    "name": "GeolocationCoordinates",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/GeolocationCoordinates",
+    "description": "The GeolocationCoordinates interface represents the position and altitude of the device on Earth, as well as the accuracy with which these properties are calculated.",
+    "refs": [
+        {
+            "name": "Geolocation API Specification 2nd Edition",
+            "href": "https://w3c.github.io/geolocation-api/#coordinates_interface",
+            "description": "# coordinates_interface"
+        }
+    ]
+}

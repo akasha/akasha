@@ -6,9 +6,9 @@
     "description": "The EXT_sRGB extension is part of the WebGL API and adds sRGB support to textures and framebuffer objects.",
     "refs": [
         {
-            "name": "EXT_sRGB",
+            "name": "WebGL EXT_sRGB Extension Specification",
             "href": "https://www.khronos.org/registry/webgl/extensions/EXT_sRGB/",
-            "description": "EXT_sRGB - EXT_sRGB"
+            "description": "(WebGL EXT_sRGB Extension)"
         }
     ]
 }

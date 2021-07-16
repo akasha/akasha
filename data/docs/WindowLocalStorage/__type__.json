@@ -6,9 +6,9 @@
     "description": "The localStorage read-only property of the window interface allows you to access a Storage object for the Document's origin; the stored data is saved across browser sessions.",
     "refs": [
         {
-            "name": "HTML Living Standard",
-            "href": "https://html.spec.whatwg.org/multipage/webstorage.html#dom-localstorage",
-            "description": "localStorage - HTML Living Standard"
+            "name": "HTML Standard",
+            "href": "https://html.spec.whatwg.org/multipage/webstorage.html#dom-localstorage-dev",
+            "description": "(HTML) # dom-localstorage-dev"
         }
     ]
 }

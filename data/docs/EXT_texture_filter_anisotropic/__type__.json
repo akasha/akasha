@@ -6,9 +6,9 @@
     "description": "The EXT_texture_filter_anisotropic extension is part of the WebGL API and exposes two constants for anisotropic filtering (AF).",
     "refs": [
         {
-            "name": "EXT_texture_filter_anisotropic",
+            "name": "WebGL EXT_texture_filter_anisotropic Khronos Ratified Extension Specification",
             "href": "https://www.khronos.org/registry/webgl/extensions/EXT_texture_filter_anisotropic/",
-            "description": "EXT_texture_filter_anisotropic - EXT_texture_filter_anisotropic"
+            "description": "(WebGL EXT_texture_filter_anisotropic Khronos Ratified Extension)"
         }
     ]
 }

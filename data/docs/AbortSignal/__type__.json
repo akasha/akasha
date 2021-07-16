@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "AbortSignal",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal",
-    "description": "The AbortSignal interface represents a signal object that allows you to communicate with a DOM request (such as a Fetch) and abort it if required via an AbortController object."
+    "description": "The AbortSignal interface represents a signal object that allows you to communicate with a DOM request (such as a fetch request) and abort it if required via an AbortController object.",
+    "refs": [
+        {
+            "name": "DOM Standard",
+            "href": "https://dom.spec.whatwg.org/#interface-AbortSignal",
+            "description": "(DOM) # interface-AbortSignal"
+        }
+    ]
 }

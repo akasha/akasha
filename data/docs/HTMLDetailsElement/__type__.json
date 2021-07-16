@@ -6,9 +6,9 @@
     "description": "The HTMLDetailsElement interface provides special properties (beyond the regular HTMLElement interface it also has available to it by inheritance) for manipulating &lt;details&gt; elements.",
     "refs": [
         {
-            "name": "HTML Living Standard",
+            "name": "HTML Standard",
             "href": "https://html.spec.whatwg.org/multipage/interactive-elements.html#htmldetailselement",
-            "description": "HTMLDetailsElement - HTML Living Standard"
+            "description": "(HTML) # htmldetailselement"
         }
     ]
 }

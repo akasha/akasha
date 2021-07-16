@@ -8,7 +8,7 @@
         {
             "name": "Selection API",
             "href": "https://w3c.github.io/selection-api/#selection-interface",
-            "description": "Selection - Selection API"
+            "description": "# selection-interface"
         }
     ]
 }

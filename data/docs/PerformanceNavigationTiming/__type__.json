@@ -8,7 +8,7 @@
         {
             "name": "Navigation Timing Level 2",
             "href": "https://w3c.github.io/navigation-timing/#sec-PerformanceNavigationTiming",
-            "description": "PerformanceNavigationTiming - Navigation Timing Level 2"
+            "description": "(Navigation Timing 2) # sec-PerformanceNavigationTiming"
         }
     ]
 }

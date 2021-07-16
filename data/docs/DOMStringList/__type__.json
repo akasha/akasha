@@ -6,9 +6,9 @@
     "description": "A type returned by some APIs which contains a list of DOMString (strings).",
     "refs": [
         {
-            "name": "HTML Living Standard",
+            "name": "HTML Standard",
             "href": "https://html.spec.whatwg.org/multipage/common-dom-interfaces.html#the-domstringlist-interface",
-            "description": "DOMStringList - HTML Living Standard"
+            "description": "(HTML) # the-domstringlist-interface"
         }
     ]
 }

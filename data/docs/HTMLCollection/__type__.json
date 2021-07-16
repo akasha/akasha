@@ -6,9 +6,9 @@
     "description": "The HTMLCollection interface represents a generic collection (array-like object similar to arguments) of elements (in document order) and offers methods and properties for selecting from the list.",
     "refs": [
         {
-            "name": "DOM",
-            "href": "https://dom.spec.whatwg.org/#htmlcollection",
-            "description": "HTMLCollection - DOM"
+            "name": "DOM Standard",
+            "href": "https://dom.spec.whatwg.org/#interface-htmlcollection",
+            "description": "(DOM) # interface-htmlcollection"
         }
     ]
 }

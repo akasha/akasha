@@ -6,9 +6,9 @@
     "description": "The Headers interface of the Fetch API allows you to perform various actions on HTTP request and response headers. These actions include retrieving, setting, adding to, and removing headers from the list of the request's headers.",
     "refs": [
         {
-            "name": "Fetch",
+            "name": "Fetch Standard",
             "href": "https://fetch.spec.whatwg.org/#headers-class",
-            "description": "Headers - Fetch"
+            "description": "(Fetch) # headers-class"
         }
     ]
 }

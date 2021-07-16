@@ -6,9 +6,9 @@
     "description": "The Request interface of the Fetch API represents a resource request.",
     "refs": [
         {
-            "name": "Fetch",
+            "name": "Fetch Standard",
             "href": "https://fetch.spec.whatwg.org/#request-class",
-            "description": "Request - Fetch"
+            "description": "(Fetch) # request-class"
         }
     ]
 }

@@ -6,9 +6,9 @@
     "description": "The OffscreenCanvas interface provides a canvas that can be rendered off screen. It is available in both the window and worker contexts.",
     "refs": [
         {
-            "name": "HTML Living Standard",
-            "href": "https://html.spec.whatwg.org/multipage/scripting.html#the-offscreencanvas-interface",
-            "description": "OffscreenCanvas - HTML Living Standard"
+            "name": "HTML Standard",
+            "href": "https://html.spec.whatwg.org/multipage/canvas.html#the-offscreencanvas-interface",
+            "description": "(HTML) # the-offscreencanvas-interface"
         }
     ]
 }
