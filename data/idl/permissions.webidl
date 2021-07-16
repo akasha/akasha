@@ -5,10 +5,9 @@ enum PermissionName {
   "background-sync",
   "bluetooth",
   "camera",
-  "clipboard-read",
-  "clipboard-write",
   "device-info",
   "display-capture",
+  "gamepad",
   "geolocation",
   "gyroscope",
   "magnetometer",
@@ -18,7 +17,8 @@ enum PermissionName {
   "notifications",
   "persistent-storage",
   "push",
-  "speaker"
+  "screen-wake-lock",
+  "speaker-selection"
 };
 
 enum PermissionState {
