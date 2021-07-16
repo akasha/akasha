@@ -66,6 +66,7 @@
       "description": "Convert BufferSource into marker type",
       "sourceSelector": "name=common",
       "config": {
+        "expectedAddCount": 1,
         "namePattern": "^BufferSource$",
         "extendedAttribute": "MarkerType",
         "types": ["typedef"]
@@ -73,10 +74,11 @@
     },
     {
       "name": "AddExtendedAttribute",
-      "description": "Convert MediaProvider into marker type",
-      "sourceSelector": "name=whatwg_html",
+      "description": "Convert ImageBufferSource into marker type",
+      "sourceSelector": "name=webcodecs",
       "config": {
-        "namePattern": "^MediaProvider$",
+        "expectedAddCount": 1,
+        "namePattern": "^ImageBufferSource$",
         "extendedAttribute": "MarkerType",
         "types": ["typedef"]
       }
@@ -200,7 +202,18 @@
       "description": "Convert TexImageSource into a marker type",
       "sourceSelector": "name=webgl1",
       "config": {
+        "expectedAddCount": 1,
         "namePattern": "^TexImageSource$",
+        "extendedAttribute": "MarkerType"
+      }
+    },
+    {
+      "name": "AddExtendedAttribute",
+      "description": "Convert XRWebGLRenderingContext into a marker type",
+      "sourceSelector": "name=webxr",
+      "config": {
+        "expectedAddCount": 1,
+        "namePattern": "^XRWebGLRenderingContext$",
         "extendedAttribute": "MarkerType"
       }
     },
@@ -488,8 +501,38 @@
       "description": "Add MarkerType to make conversion between types easier",
       "sourceSelector": "name=whatwg_html",
       "config": {
+        "expectedAddCount": 8,
+        "namePattern": "^(RenderingContext|OffscreenRenderingContext|CanvasImageSource|HTMLOrSVGImageElement|HTMLOrSVGScriptElement|ImageBitmapSource|MediaProvider|MessageEventSource)$",
+        "extendedAttribute": "MarkerType"
+      }
+    },
+    {
+      "name": "AddExtendedAttribute",
+      "description": "Add MarkerType to make conversion between types easier",
+      "sourceSelector": "name=webgpu",
+      "config": {
+        "expectedAddCount": 2,
+        "namePattern": "^(GPUBindingResource|GPUError)$",
+        "extendedAttribute": "MarkerType"
+      }
+    },
+    {
+      "name": "AddExtendedAttribute",
+      "description": "Add MarkerType to make conversion between types easier",
+      "sourceSelector": "name=credential_management_1",
+      "config": {
         "expectedAddCount": 1,
-        "namePattern": "^RenderingContext$",
+        "namePattern": "^PasswordCredentialInit$",
+        "extendedAttribute": "MarkerType"
+      }
+    },
+    {
+      "name": "AddExtendedAttribute",
+      "description": "Add MarkerType to make conversion between types easier",
+      "sourceSelector": "name=streams",
+      "config": {
+        "expectedAddCount": 2,
+        "namePattern": "^(ReadableStreamReader|ReadableStreamController)$",
         "extendedAttribute": "MarkerType"
       }
     },

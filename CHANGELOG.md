@@ -9,6 +9,21 @@
 * Update the `CSS Object Model` spec to the `Editor’s Draft, 7 July 2021` version. This defined a constructor that can be used to create instances of the `CSSStyleSheet` type.
 * Update the `HTML Living Standard` spec to the `14 July 2021` version. This added back valid definitions for the deprecated `Plugin` and `MimeType` types as well as adding several minor updates to align with features implemented in  modern browsers.
 * Update the `WebGPU` spec to the `W3C Working Draft, 15 July 2021` version. This change included renaming the context type (again!) from `GPUPresentationContext` to `GPUCanvasContext` and ensuring it is typed as an `OffscreenRenderingContext` and a `RenderingContext`. Several other smaller changes were made to the spec and the chrome canary browser version now aligns with this version of the spec.
+* Annotate several union types with the `[MarkerType]` extended attribute. This changed the way these types are implemented in the java binding by converting them into marker interfaces. The union types modified:
+  - `CanvasImageSource`
+  - `GPUBindingResource`
+  - `GPUError`
+  - `HTMLOrSVGImageElement`
+  - `HTMLOrSVGScriptElement`
+  - `ImageBitmapSource`
+  - `ImageBufferSource`
+  - `MessageEventSource`
+  - `PasswordCredentialInit`
+  - `ReadableStreamReader`
+  - `ReadableStreamController`
+  - `OffscreenRenderingContext`
+  - `XRWebGLRenderingContext`
+ This change also resulted in the `WindowProxy` typedef being converted into a marker interface.
 
 ### [v0.13](https://github.com/akasha/akasha/tree/v0.13) (2021-07-14) · [Full Changelog](https://github.com/spritz/spritz/compare/v0.12...v0.13) · [API Differences](https://akasha.github.io/akasha-java/api-diff/?key=akasha-java&old=0.12&new=0.13) · [Source Diff](https://github.com/akasha/akasha-java/compare/v0.12...v0.13)
 
