@@ -3,6 +3,12 @@ namespace CSS {
   CSSOMString escape( CSSOMString ident );
 };
 
+dictionary CSSStyleSheetInit {
+  DOMString baseURL = null;
+  boolean disabled = false;
+  ( MediaList or DOMString ) media = "";
+};
+
 interface mixin ElementCSSInlineStyle {
   [SameObject, PutForwards=cssText]
   readonly attribute CSSStyleDeclaration style;
@@ -105,8 +111,11 @@ interface CSSStyleSheet : StyleSheet {
   [SameObject]
   readonly attribute CSSRuleList cssRules;
   readonly attribute CSSRule? ownerRule;
+  constructor( optional CSSStyleSheetInit options = {} );
   undefined deleteRule( unsigned long index );
   unsigned long insertRule( CSSOMString rule, optional unsigned long index = 0 );
+  Promise<CSSStyleSheet> replace( USVString text );
+  undefined replaceSync( USVString text );
 };
 
 [Exposed=Window]

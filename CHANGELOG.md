@@ -6,6 +6,7 @@
 * Update the `Resource Timing Level 2` spec to the `W3C Editor's Draft 15 July 2021` version. This corrected the type of the `PerformanceResourceTiming.nextHopProtocol` attribute to match the browser implementations but should have no visible impact on the generated API.
 * Update the `WebCodecs` spec to the `W3C Working Draft, 17 June 2021` version. This updated the structure of the `EncodedVideoChunkMetadata` dictionary that is used when defining an optional callback when constructing an instance of `VideoEncoder`.
 * Update the `Content Security Policy Level 3` spec to the `W3C Working Draft, 29 June 2021` version. This refined the parameters passed to the constructor of the `SecurityPolicyViolationEvent` type.
+* Update the `CSS Object Model` spec to the `Editor’s Draft, 7 July 2021` version. This defined a constructor that can be used to create instances of the `CSSStyleSheet` type.
 
 ### [v0.13](https://github.com/akasha/akasha/tree/v0.13) (2021-07-14) · [Full Changelog](https://github.com/spritz/spritz/compare/v0.12...v0.13) · [API Differences](https://akasha.github.io/akasha-java/api-diff/?key=akasha-java&old=0.12&new=0.13) · [Source Diff](https://github.com/akasha/akasha-java/compare/v0.12...v0.13)
 
