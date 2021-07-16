@@ -129,7 +129,7 @@ dictionary EncodedVideoChunkInit {
 
 dictionary EncodedVideoChunkMetadata {
   VideoDecoderConfig decoderConfig;
-  unsigned long temporalLayerId;
+  SvcOutputMetadata svc;
 };
 
 dictionary ImageDecodeOptions {
@@ -168,6 +168,10 @@ dictionary PlaneLayout {
   required unsigned long offset;
   [EnforceRange]
   required unsigned long stride;
+};
+
+dictionary SvcOutputMetadata {
+  unsigned long temporalLayerId;
 };
 
 dictionary VideoDecoderConfig {
