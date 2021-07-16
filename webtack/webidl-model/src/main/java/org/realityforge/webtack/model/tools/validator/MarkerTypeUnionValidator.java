@@ -65,7 +65,7 @@ final class MarkerTypeUnionValidator
   {
     final String message =
       "Typedef named '" + definition.getName() + "' has the " + ExtendedAttributes.MARKER_TYPE +
-      " extended attribute but contains a member type '" + memberType.toString() +
+      " extended attribute but contains a member type '" + memberType +
       "' that is not a reference to an interface or a typedef with the " + ExtendedAttributes.MARKER_TYPE +
       " extended attribute.";
     errors.add( new ValidationError( unionType, message, true ) );
