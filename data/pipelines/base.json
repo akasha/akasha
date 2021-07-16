@@ -494,16 +494,6 @@
       }
     },
     {
-      "name": "RemoveElement",
-      "description": "Patched in whatwg_html_patch to add the GPU rendering context",
-      "sourceSelector": "name=whatwg_html",
-      "config": {
-        "expectedRemoveCount": 1,
-        "namePattern": "^RenderingContext$",
-        "type": ["typedef"]
-      }
-    },
-    {
       "name": "ChangeAttributeType",
       "sourceSelector": "name=geolocation_api",
       "config": {

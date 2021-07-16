@@ -95,11 +95,6 @@ enum GPUIndexFormat {
   "uint32"
 };
 
-enum GPUInputStepMode {
-  "instance",
-  "vertex"
-};
-
 enum GPULoadOp {
   "load"
 };
@@ -153,7 +148,6 @@ enum GPUStencilOperation {
 };
 
 enum GPUStorageTextureAccess {
-  "read-only",
   "write-only"
 };
 
@@ -284,6 +278,11 @@ enum GPUVertexFormat {
   "unorm8x4"
 };
 
+enum GPUVertexStepMode {
+  "instance",
+  "vertex"
+};
+
 typedef ( GPUSampler or GPUTextureView or GPUBufferBinding or GPUExternalTexture ) GPUBindingResource;
 
 typedef unsigned long GPUBufferDynamicOffset;
@@ -379,6 +378,15 @@ dictionary GPUBufferDescriptor : GPUObjectDescriptorBase {
   boolean mappedAtCreation = false;
   required GPUSize64 size;
   required GPUBufferUsageFlags usage;
+};
+
+dictionary GPUCanvasConfiguration {
+  GPUPredefinedColorSpace colorSpace = "srgb";
+  GPUCanvasCompositingAlphaMode compositingAlphaMode = "opaque";
+  required GPUDevice device;
+  required GPUTextureFormat format;
+  GPUExtent3D size;
+  GPUTextureUsageFlags usage = 0x10;
 };
 
 dictionary GPUColorDict {
@@ -500,15 +508,6 @@ dictionary GPUPipelineLayoutDescriptor : GPUObjectDescriptorBase {
   required sequence<GPUBindGroupLayout> bindGroupLayouts;
 };
 
-dictionary GPUPresentationConfiguration {
-  GPUPredefinedColorSpace colorSpace = "srgb";
-  GPUCanvasCompositingAlphaMode compositingAlphaMode = "opaque";
-  required GPUDevice device;
-  required GPUTextureFormat format;
-  GPUExtent3D size;
-  GPUTextureUsageFlags usage = 0x10;
-};
-
 dictionary GPUPrimitiveState {
   boolean clampDepth = false;
   GPUCullMode cullMode = "none";
@@ -605,7 +604,7 @@ dictionary GPUStencilFaceState {
 };
 
 dictionary GPUStorageTextureBindingLayout {
-  required GPUStorageTextureAccess access;
+  GPUStorageTextureAccess access = "write-only";
   required GPUTextureFormat format;
   GPUTextureViewDimension viewDimension = "2d";
 };
@@ -648,7 +647,7 @@ dictionary GPUVertexAttribute {
 dictionary GPUVertexBufferLayout {
   required GPUSize64 arrayStride;
   required sequence<GPUVertexAttribute> attributes;
-  GPUInputStepMode stepMode = "vertex";
+  GPUVertexStepMode stepMode = "vertex";
 };
 
 dictionary GPUVertexState : GPUProgrammableStage {
@@ -730,6 +729,15 @@ interface GPUBufferUsage {
   const GPUFlagsConstant STORAGE = 0x0080;
   const GPUFlagsConstant UNIFORM = 0x0040;
   const GPUFlagsConstant VERTEX = 0x0020;
+};
+
+[Exposed=(Window,DedicatedWorker)]
+interface GPUCanvasContext {
+  readonly attribute ( HTMLCanvasElement or OffscreenCanvas ) canvas;
+  undefined configure( GPUCanvasConfiguration configuration );
+  GPUTexture getCurrentTexture();
+  GPUTextureFormat getPreferredFormat( GPUAdapter adapter );
+  undefined unconfigure();
 };
 
 [Exposed=(Window,DedicatedWorker)]
@@ -844,15 +852,6 @@ interface GPUPipelineLayout {
 };
 
 [Exposed=(Window,DedicatedWorker)]
-interface GPUPresentationContext {
-  readonly attribute ( HTMLCanvasElement or OffscreenCanvas ) canvas;
-  undefined configure( GPUPresentationConfiguration configuration );
-  GPUTexture getCurrentTexture();
-  GPUTextureFormat getPreferredFormat( GPUAdapter adapter );
-  undefined unconfigure();
-};
-
-[Exposed=(Window,DedicatedWorker)]
 interface GPUQuerySet {
   undefined destroy();
 };
@@ -920,20 +919,21 @@ interface GPUSupportedLimits {
   readonly attribute unsigned long maxBindGroups;
   readonly attribute unsigned long maxComputePerDimensionDispatchSize;
   readonly attribute unsigned long maxComputeWorkgroupInvocations;
+  readonly attribute GPUExtent3D maxComputeWorkgroupSize;
   readonly attribute unsigned long maxComputeWorkgroupStorageSize;
   readonly attribute unsigned long maxDynamicStorageBuffersPerPipelineLayout;
   readonly attribute unsigned long maxDynamicUniformBuffersPerPipelineLayout;
   readonly attribute unsigned long maxInterStageShaderComponents;
   readonly attribute unsigned long maxSampledTexturesPerShaderStage;
   readonly attribute unsigned long maxSamplersPerShaderStage;
-  readonly attribute unsigned long maxStorageBufferBindingSize;
+  readonly attribute unsigned long long maxStorageBufferBindingSize;
   readonly attribute unsigned long maxStorageBuffersPerShaderStage;
   readonly attribute unsigned long maxStorageTexturesPerShaderStage;
   readonly attribute unsigned long maxTextureArrayLayers;
   readonly attribute unsigned long maxTextureDimension1D;
   readonly attribute unsigned long maxTextureDimension2D;
   readonly attribute unsigned long maxTextureDimension3D;
-  readonly attribute unsigned long maxUniformBufferBindingSize;
+  readonly attribute unsigned long long maxUniformBufferBindingSize;
   readonly attribute unsigned long maxUniformBuffersPerShaderStage;
   readonly attribute unsigned long maxVertexAttributes;
   readonly attribute unsigned long maxVertexBufferArrayStride;
@@ -953,7 +953,7 @@ interface GPUTextureUsage {
   const GPUFlagsConstant COPY_DST = 0x02;
   const GPUFlagsConstant COPY_SRC = 0x01;
   const GPUFlagsConstant RENDER_ATTACHMENT = 0x10;
-  const GPUFlagsConstant SAMPLED = 0x04;
+  const GPUFlagsConstant SHADER_READ = 0x04;
   const GPUFlagsConstant STORAGE = 0x08;
 };
 

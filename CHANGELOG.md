@@ -8,6 +8,7 @@
 * Update the `Content Security Policy Level 3` spec to the `W3C Working Draft, 29 June 2021` version. This refined the parameters passed to the constructor of the `SecurityPolicyViolationEvent` type.
 * Update the `CSS Object Model` spec to the `Editor’s Draft, 7 July 2021` version. This defined a constructor that can be used to create instances of the `CSSStyleSheet` type.
 * Update the `HTML Living Standard` spec to the `14 July 2021` version. This added back valid definitions for the deprecated `Plugin` and `MimeType` types as well as adding several minor updates to align with features implemented in  modern browsers.
+* Update the `WebGPU` spec to the `W3C Working Draft, 15 July 2021` version. This change included renaming the context type (again!) from `GPUPresentationContext` to `GPUCanvasContext` and ensuring it is typed as an `OffscreenRenderingContext` and a `RenderingContext`. Several other smaller changes were made to the spec and the chrome canary browser version now aligns with this version of the spec.
 
 ### [v0.13](https://github.com/akasha/akasha/tree/v0.13) (2021-07-14) · [Full Changelog](https://github.com/spritz/spritz/compare/v0.12...v0.13) · [API Differences](https://akasha.github.io/akasha-java/api-diff/?key=akasha-java&old=0.12&new=0.13) · [Source Diff](https://github.com/akasha/akasha-java/compare/v0.12...v0.13)
 

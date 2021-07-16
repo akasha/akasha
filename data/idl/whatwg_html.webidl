@@ -118,7 +118,8 @@ enum OffscreenRenderingContextId {
   "2d",
   "bitmaprenderer",
   "webgl",
-  "webgl2"
+  "webgl2",
+  "webgpu"
 };
 
 enum PredefinedColorSpace {
@@ -184,13 +185,13 @@ typedef ( MediaStream or MediaSource or Blob ) MediaProvider;
 
 typedef ( WindowProxy or MessagePort or ServiceWorker ) MessageEventSource;
 
-typedef ( OffscreenCanvasRenderingContext2D or ImageBitmapRenderingContext or WebGLRenderingContext or WebGL2RenderingContext ) OffscreenRenderingContext;
+typedef ( OffscreenCanvasRenderingContext2D or ImageBitmapRenderingContext or WebGLRenderingContext or WebGL2RenderingContext or GPUCanvasContext ) OffscreenRenderingContext;
 
 typedef OnBeforeUnloadEventHandlerNonNull? OnBeforeUnloadEventHandler;
 
 typedef OnErrorEventHandlerNonNull? OnErrorEventHandler;
 
-typedef ( CanvasRenderingContext2D or ImageBitmapRenderingContext or WebGLRenderingContext or WebGL2RenderingContext ) RenderingContext;
+typedef ( CanvasRenderingContext2D or ImageBitmapRenderingContext or WebGLRenderingContext or WebGL2RenderingContext or GPUCanvasContext ) RenderingContext;
 
 typedef ( DOMString or Function ) TimerHandler;
 

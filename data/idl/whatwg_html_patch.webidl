@@ -725,9 +725,6 @@ enum RenderContextType {
   "bitmaprenderer"
 };
 
-[MarkerType]
-typedef ( CanvasRenderingContext2D or ImageBitmapRenderingContext or WebGLRenderingContext or WebGL2RenderingContext or GPUPresentationContext ) RenderingContext;
-
 const enum EventSourceReadyState {
   EventSource.CONNECTING,
   EventSource.OPEN,
