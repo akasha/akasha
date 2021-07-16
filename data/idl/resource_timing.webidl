@@ -8,7 +8,7 @@ interface PerformanceResourceTiming : PerformanceEntry {
   readonly attribute unsigned long long encodedBodySize;
   readonly attribute DOMHighResTimeStamp fetchStart;
   readonly attribute DOMString initiatorType;
-  readonly attribute DOMString nextHopProtocol;
+  readonly attribute ByteString nextHopProtocol;
   readonly attribute DOMHighResTimeStamp redirectEnd;
   readonly attribute DOMHighResTimeStamp redirectStart;
   readonly attribute DOMHighResTimeStamp requestStart;
