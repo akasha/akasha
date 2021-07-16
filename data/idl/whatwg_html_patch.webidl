@@ -714,7 +714,7 @@ enum RenderContextType {
    */
   "webgl2",
   /**
-   * The context type designates a {@link GPUPresentationContext}, a WenGPU rendering context.
+   * The context type designates a {@link GPUCanvasContext}, a WebGPU rendering context.
    * This context is only available on browsers that implement WebGPU specification.
    */
   "webgpu",
