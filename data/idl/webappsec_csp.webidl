@@ -4,17 +4,18 @@ enum SecurityPolicyViolationEventDisposition {
 };
 
 dictionary SecurityPolicyViolationEventInit : EventInit {
-  USVString blockedURL = "";
-  unsigned long colno = 0;
+  USVString blockedURI = "";
+  unsigned long columnNumber = 0;
   required SecurityPolicyViolationEventDisposition disposition;
-  required USVString documentURL;
+  required USVString documentURI;
   required DOMString effectiveDirective;
-  unsigned long lineno = 0;
+  unsigned long lineNumber = 0;
   required DOMString originalPolicy;
   USVString referrer = "";
   DOMString sample = "";
   USVString sourceFile = "";
   required unsigned short statusCode;
+  required DOMString violatedDirective;
 };
 
 [Exposed=Window]
@@ -35,15 +36,11 @@ interface CSPViolationReportBody : ReportBody {
 [Exposed=(Window,Worker)]
 interface SecurityPolicyViolationEvent : Event {
   readonly attribute USVString blockedURI;
-  readonly attribute USVString blockedURL;
-  readonly attribute unsigned long colno;
   readonly attribute unsigned long columnNumber;
   readonly attribute SecurityPolicyViolationEventDisposition disposition;
   readonly attribute USVString documentURI;
-  readonly attribute USVString documentURL;
   readonly attribute DOMString effectiveDirective;
   readonly attribute unsigned long lineNumber;
-  readonly attribute unsigned long lineno;
   readonly attribute DOMString originalPolicy;
   readonly attribute USVString referrer;
   readonly attribute DOMString sample;
