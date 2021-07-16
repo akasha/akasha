@@ -1,6 +1,8 @@
 goog.module('com.example.ExampleCompileTest');
 goog.require('com.example.HTMLCanvasElement.$Overlay');
 goog.require('com.example.HTMLCanvasElementTestCompile');
+goog.require('com.example.HTMLFormElement.$Overlay');
+goog.require('com.example.HTMLFormElementTestCompile');
 goog.require('com.example.HTMLImageElement.$Overlay');
 goog.require('com.example.HTMLImageElementTestCompile');
 goog.require('com.example.HTMLVideoElement.$Overlay');
@@ -13,5 +15,6 @@ goog.require('com.example.MyBufferSource.$Overlay');
 goog.require('com.example.MyBufferSourceTestCompile');
 goog.require('com.example.OffscreenCanvas.$Overlay');
 goog.require('com.example.OffscreenCanvasTestCompile');
+goog.require('com.example.PasswordCredentialData.$Overlay');
 goog.require('com.example.WebGLRenderingContext.$Overlay');
 goog.require('com.example.WebGLRenderingContextTestCompile');

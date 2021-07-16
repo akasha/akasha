@@ -20,6 +20,8 @@ public final class DictionaryDefinition
   private DictionaryDefinition _superDictionary;
   @Nonnull
   private final List<DictionaryDefinition> _directSubDictionary = new ArrayList<>();
+  @Nonnull
+  private final List<TypedefDefinition> _markerTypes = new ArrayList<>();
 
   public DictionaryDefinition( @Nonnull final String name,
                                @Nullable final String inherits,
@@ -58,6 +60,13 @@ public final class DictionaryDefinition
   {
     assert _linked;
     return _directSubDictionary;
+  }
+
+  @Nonnull
+  public List<TypedefDefinition> getMarkerTypes()
+  {
+    assert _linked;
+    return _markerTypes;
   }
 
   void link( @Nonnull final WebIDLSchema schema )
@@ -116,5 +125,10 @@ public final class DictionaryDefinition
     {
       return false;
     }
+  }
+
+  void addMarkerType( @Nonnull final TypedefDefinition definition )
+  {
+    _markerTypes.add( definition );
   }
 }

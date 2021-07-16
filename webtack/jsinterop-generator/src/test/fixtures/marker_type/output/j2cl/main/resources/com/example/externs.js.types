@@ -1,10 +1,13 @@
 HTMLCanvasElement
+HTMLFormElement
 HTMLImageElement
 HTMLVideoElement
 ImageBitmap
 ImageData
 MyBufferSource
 OffscreenCanvas
+PasswordCredentialData
+PasswordCredentialInit
 TexBufferSource
 TexImageSource
 WebGLRenderingContext

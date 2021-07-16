@@ -1,10 +1,13 @@
 HTMLCanvasElement=com.example.HTMLCanvasElement
+HTMLFormElement=com.example.HTMLFormElement
 HTMLImageElement=com.example.HTMLImageElement
 HTMLVideoElement=com.example.HTMLVideoElement
 ImageBitmap=com.example.ImageBitmap
 ImageData=com.example.ImageData
 MyBufferSource=com.example.MyBufferSource
 OffscreenCanvas=com.example.OffscreenCanvas
+PasswordCredentialData=com.example.PasswordCredentialData
+PasswordCredentialInit=com.example.PasswordCredentialInit
 TexBufferSource=com.example.TexBufferSource
 TexImageSource=com.example.TexImageSource
 WebGLRenderingContext=com.example.WebGLRenderingContext

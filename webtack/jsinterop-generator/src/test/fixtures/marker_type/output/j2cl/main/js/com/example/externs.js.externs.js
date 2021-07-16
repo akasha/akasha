@@ -3,6 +3,10 @@
  * @externs
  */
 /**
+ * @typedef {(!PasswordCredentialData|!HTMLFormElement)}
+ */
+var PasswordCredentialInit;
+/**
  * @typedef {(!TexImageSource|!MyBufferSource)}
  */
 var TexBufferSource;
@@ -11,11 +15,21 @@ var TexBufferSource;
  */
 var TexImageSource;
 /**
+ * @typedef {{iconURL:(!string|undefined)}}
+ */
+var PasswordCredentialData;
+/**
  * @constructor
  * @private
  * @nosideeffects
  */
 function HTMLImageElement() {}
+/**
+ * @constructor
+ * @private
+ * @nosideeffects
+ */
+function HTMLFormElement() {}
 /**
  * @constructor
  * @private

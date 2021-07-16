@@ -37,19 +37,19 @@ final class MarkerTypeUnionValidator
           }
           else
           {
-          final String name = ( (TypeReference) memberType ).getName();
-          final TypedefDefinition memberTypedef = schema.findTypedefByName( name );
-          if ( null != memberTypedef )
-          {
-            if ( !memberTypedef.isNoArgsExtendedAttributePresent( ExtendedAttributes.MARKER_TYPE ) )
+            final String name = ( (TypeReference) memberType ).getName();
+            final TypedefDefinition memberTypedef = schema.findTypedefByName( name );
+            if ( null != memberTypedef )
+            {
+              if ( !memberTypedef.isNoArgsExtendedAttributePresent( ExtendedAttributes.MARKER_TYPE ) )
+              {
+                invalidTypedef( definition, unionType, memberType, errors );
+              }
+            }
+            else if ( null == schema.findInterfaceByName( name ) && null == schema.findDictionaryByName( name ) )
             {
               invalidTypedef( definition, unionType, memberType, errors );
             }
-          }
-          else if ( null == schema.findInterfaceByName( name ) )
-          {
-            invalidTypedef( definition, unionType, memberType, errors );
-          }
           }
         }
       }
@@ -66,8 +66,8 @@ final class MarkerTypeUnionValidator
     final String message =
       "Typedef named '" + definition.getName() + "' has the " + ExtendedAttributes.MARKER_TYPE +
       " extended attribute but contains a member type '" + memberType +
-      "' that is not a reference to an interface or a typedef with the " + ExtendedAttributes.MARKER_TYPE +
-      " extended attribute.";
+      "' that is not a reference to an interface, a reference to a dictionary or a typedef with the " +
+      ExtendedAttributes.MARKER_TYPE + " extended attribute.";
     errors.add( new ValidationError( unionType, message, true ) );
   }
 }

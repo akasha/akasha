@@ -1109,6 +1109,11 @@ final class JsinteropAction
       type.addSuperinterface( lookupClassName( inherits ) );
     }
 
+    for ( final TypedefDefinition markerType : definition.getMarkerTypes() )
+    {
+      type.addSuperinterface( lookupClassName( markerType.getName() ) );
+    }
+
     final List<DictionaryMember> requiredMembers = getRequiredDictionaryMembers( definition );
     final List<List<TypedValue>> explodedTypeList =
       explodeTypeList( requiredMembers.stream().map( DictionaryMember::getType ).collect( Collectors.toList() ) );

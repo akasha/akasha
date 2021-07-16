@@ -85,7 +85,15 @@ public final class TypedefDefinition
         }
         else
         {
-          schema.getInterfaceByName( name ).addMarkerType( this );
+          final InterfaceDefinition interfaceType = schema.findInterfaceByName( name );
+          if ( null != interfaceType )
+          {
+            interfaceType.addMarkerType( this );
+          }
+          else
+          {
+            schema.getDictionaryByName( name ).addMarkerType( this );
+          }
         }
       }
     }
