@@ -1,11 +1,11 @@
 
 {
     "name": "MediaDevices",
-    "lastModifiedAt": 1623484726309,
+    "lastModifiedAt": 1626396522838,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604976932077
+            "lastModifiedAt": 1626314569000
         },
         {
             "name": "enumerateDevices",

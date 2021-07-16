@@ -1,11 +1,11 @@
 
 {
     "name": "RTCConfiguration",
-    "lastModifiedAt": 1623484751223,
+    "lastModifiedAt": 1626396765978,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604977449608
+            "lastModifiedAt": 1626314559000
         },
         {
             "name": "bundlePolicy",

@@ -1,7 +1,7 @@
 
 {
     "name": "EventTarget",
-    "lastModifiedAt": 1623484654379,
+    "lastModifiedAt": 1626396861209,
     "entries": [
         {
             "name": "EventTarget",
@@ -9,7 +9,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1604976169734
+            "lastModifiedAt": 1626314575000
         },
         {
             "name": "addEventListener",

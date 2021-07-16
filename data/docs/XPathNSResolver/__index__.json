@@ -1,11 +1,11 @@
 
 {
     "name": "XPathNSResolver",
-    "lastModifiedAt": 1623484938325,
+    "lastModifiedAt": 1626396834873,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604979018032
+            "lastModifiedAt": 1626314571000
         },
         {
             "name": "lookupNamespaceURI",

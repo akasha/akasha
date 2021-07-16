@@ -1,7 +1,7 @@
 
 {
     "name": "MessageEvent",
-    "lastModifiedAt": 1623484728426,
+    "lastModifiedAt": 1626396962428,
     "entries": [
         {
             "name": "MessageEvent",
@@ -9,7 +9,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1604977076258
+            "lastModifiedAt": 1626314561000
         },
         {
             "name": "data",

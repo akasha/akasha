@@ -1,7 +1,7 @@
 
 {
     "name": "SecurityPolicyViolationEvent",
-    "lastModifiedAt": 1623484806584,
+    "lastModifiedAt": 1626396596712,
     "entries": [
         {
             "name": "SecurityPolicyViolationEvent",
@@ -9,7 +9,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1623291369000
+            "lastModifiedAt": 1626314594000
         },
         {
             "name": "blockedURI",

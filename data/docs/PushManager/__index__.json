@@ -1,11 +1,11 @@
 
 {
     "name": "PushManager",
-    "lastModifiedAt": 1623484749727,
+    "lastModifiedAt": 1626396550817,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604977432879
+            "lastModifiedAt": 1626314560000
         },
         {
             "name": "getSubscription",

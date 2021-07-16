@@ -1,11 +1,11 @@
 
 {
     "name": "RTCRtpEncodingParameters",
-    "lastModifiedAt": 1623484761482,
+    "lastModifiedAt": 1626396755012,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604977632106
+            "lastModifiedAt": 1626314592000
         },
         {
             "name": "maxBitrate",

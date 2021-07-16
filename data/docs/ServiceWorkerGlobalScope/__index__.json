@@ -1,11 +1,11 @@
 
 {
     "name": "ServiceWorkerGlobalScope",
-    "lastModifiedAt": 1623484806771,
+    "lastModifiedAt": 1626396555908,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604978030383
+            "lastModifiedAt": 1626314590000
         },
         {
             "name": "activate_event",

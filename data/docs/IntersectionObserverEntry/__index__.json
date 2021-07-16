@@ -1,11 +1,11 @@
 
 {
     "name": "IntersectionObserverEntry",
-    "lastModifiedAt": 1623484717680,
+    "lastModifiedAt": 1626396507014,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604976886227
+            "lastModifiedAt": 1626314576000
         },
         {
             "name": "boundingClientRect",

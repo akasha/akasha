@@ -1,11 +1,11 @@
 
 {
     "name": "HTMLSelectElement",
-    "lastModifiedAt": 1623484685680,
+    "lastModifiedAt": 1626396975723,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1612573613000
+            "lastModifiedAt": 1626314591000
         },
         {
             "name": "add",

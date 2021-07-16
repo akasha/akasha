@@ -1,11 +1,11 @@
 
 {
     "name": "ServiceWorkerRegistration",
-    "lastModifiedAt": 1623484806817,
+    "lastModifiedAt": 1626396555100,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604978045591
+            "lastModifiedAt": 1626314591000
         },
         {
             "name": "active",

@@ -1,11 +1,11 @@
 
 {
     "name": "CustomElementRegistry",
-    "lastModifiedAt": 1623484617428,
+    "lastModifiedAt": 1626396983206,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604975659483
+            "lastModifiedAt": 1626314579000
         },
         {
             "name": "define",

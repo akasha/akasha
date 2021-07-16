@@ -1,11 +1,11 @@
 
 {
     "name": "RTCInboundRtpStreamStats",
-    "lastModifiedAt": 1623484757904,
+    "lastModifiedAt": 1626396808598,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604977530164
+            "lastModifiedAt": 1626314563000
         },
         {
             "name": "averageRtcpInterval",

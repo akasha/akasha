@@ -1,7 +1,7 @@
 
 {
     "name": "PromiseRejectionEvent",
-    "lastModifiedAt": 1623484749219,
+    "lastModifiedAt": 1626397002952,
     "entries": [
         {
             "name": "PromiseRejectionEvent",
@@ -9,7 +9,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1604977412388
+            "lastModifiedAt": 1626314595000
         },
         {
             "name": "promise",

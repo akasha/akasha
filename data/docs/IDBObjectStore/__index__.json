@@ -1,11 +1,11 @@
 
 {
     "name": "IDBObjectStore",
-    "lastModifiedAt": 1623484687115,
+    "lastModifiedAt": 1626396494413,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1612573619000
+            "lastModifiedAt": 1626314594000
         },
         {
             "name": "add",

@@ -1,11 +1,11 @@
 
 {
     "name": "ShadowRoot",
-    "lastModifiedAt": 1623484806860,
+    "lastModifiedAt": 1626396870401,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604978055820
+            "lastModifiedAt": 1626314590000
         },
         {
             "name": "delegatesFocus",

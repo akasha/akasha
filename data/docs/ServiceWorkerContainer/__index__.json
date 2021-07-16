@@ -1,11 +1,11 @@
 
 {
     "name": "ServiceWorkerContainer",
-    "lastModifiedAt": 1623484806726,
+    "lastModifiedAt": 1626396582848,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604978022653
+            "lastModifiedAt": 1626314581000
         },
         {
             "name": "controller",

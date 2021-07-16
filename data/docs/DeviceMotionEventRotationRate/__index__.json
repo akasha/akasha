@@ -1,11 +1,11 @@
 
 {
     "name": "DeviceMotionEventRotationRate",
-    "lastModifiedAt": 1623484632938,
+    "lastModifiedAt": 1626396464149,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604975785471
+            "lastModifiedAt": 1626314593000
         },
         {
             "name": "alpha",

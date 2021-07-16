@@ -1,11 +1,11 @@
 
 {
     "name": "DedicatedWorkerGlobalScope",
-    "lastModifiedAt": 1623484632768,
+    "lastModifiedAt": 1626397009829,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604975768397
+            "lastModifiedAt": 1626314587000
         },
         {
             "name": "close",

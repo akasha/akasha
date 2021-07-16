@@ -1,7 +1,7 @@
 
 {
     "name": "HTMLImageElement",
-    "lastModifiedAt": 1623484683681,
+    "lastModifiedAt": 1626396458388,
     "entries": [
         {
             "name": "Image",
@@ -9,7 +9,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1612573614000
+            "lastModifiedAt": 1626314594000
         },
         {
             "name": "alt",

@@ -1,11 +1,11 @@
 
 {
     "name": "SharedWorkerGlobalScope",
-    "lastModifiedAt": 1623484812067,
+    "lastModifiedAt": 1626396973666,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604978063690
+            "lastModifiedAt": 1626314583000
         },
         {
             "name": "applicationCache",

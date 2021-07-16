@@ -1,7 +1,7 @@
 
 {
     "name": "DOMException",
-    "lastModifiedAt": 1623484617533,
+    "lastModifiedAt": 1626396383231,
     "entries": [
         {
             "name": "DOMException",
@@ -9,7 +9,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1604975668618
+            "lastModifiedAt": 1626314560000
         },
         {
             "name": "code",

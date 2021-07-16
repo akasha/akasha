@@ -1,11 +1,11 @@
 
 {
     "name": "HTMLCanvasElement",
-    "lastModifiedAt": 1623484678188,
+    "lastModifiedAt": 1626397037057,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1612573622000
+            "lastModifiedAt": 1626314572000
         },
         {
             "name": "captureStream",

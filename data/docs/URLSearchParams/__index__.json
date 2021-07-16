@@ -1,7 +1,7 @@
 
 {
     "name": "URLSearchParams",
-    "lastModifiedAt": 1623484875718,
+    "lastModifiedAt": 1626397045090,
     "entries": [
         {
             "name": "URLSearchParams",
@@ -9,7 +9,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1604978308752
+            "lastModifiedAt": 1626314589000
         },
         {
             "name": "append",

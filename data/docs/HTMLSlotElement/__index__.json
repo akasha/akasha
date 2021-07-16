@@ -1,11 +1,11 @@
 
 {
     "name": "HTMLSlotElement",
-    "lastModifiedAt": 1623484685713,
+    "lastModifiedAt": 1626397026851,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1612573606000
+            "lastModifiedAt": 1626314559000
         },
         {
             "name": "assignedElements",

@@ -1,11 +1,11 @@
 
 {
     "name": "HTMLInputElement",
-    "lastModifiedAt": 1623484683734,
+    "lastModifiedAt": 1626396939120,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1612573635000
+            "lastModifiedAt": 1626314573000
         },
         {
             "name": "invalid_event",

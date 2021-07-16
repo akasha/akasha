@@ -1,11 +1,11 @@
 
 {
     "name": "HTMLTableElement",
-    "lastModifiedAt": 1623484686054,
+    "lastModifiedAt": 1626396944653,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604976726844
+            "lastModifiedAt": 1626314588000
         },
         {
             "name": "align",

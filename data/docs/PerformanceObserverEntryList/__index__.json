@@ -1,11 +1,11 @@
 
 {
     "name": "PerformanceObserverEntryList",
-    "lastModifiedAt": 1623484746667,
+    "lastModifiedAt": 1626396533069,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604977340211
+            "lastModifiedAt": 1626314583000
         },
         {
             "name": "getEntries",

@@ -1,11 +1,11 @@
 
 {
     "name": "DOMTokenList",
-    "lastModifiedAt": 1623484618135,
+    "lastModifiedAt": 1626396850042,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604975735842
+            "lastModifiedAt": 1626314588000
         },
         {
             "name": "add",

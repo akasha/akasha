@@ -1,11 +1,11 @@
 
 {
     "name": "RTCRtpTransceiver",
-    "lastModifiedAt": 1623484764673,
+    "lastModifiedAt": 1626396786878,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604977659346
+            "lastModifiedAt": 1626314581000
         },
         {
             "name": "currentDirection",

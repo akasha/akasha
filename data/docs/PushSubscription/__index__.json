@@ -1,11 +1,11 @@
 
 {
     "name": "PushSubscription",
-    "lastModifiedAt": 1623484749904,
+    "lastModifiedAt": 1626396554503,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604977443109
+            "lastModifiedAt": 1626314563000
         },
         {
             "name": "endpoint",

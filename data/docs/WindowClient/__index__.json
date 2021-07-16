@@ -1,11 +1,11 @@
 
 {
     "name": "WindowClient",
-    "lastModifiedAt": 1623484936217,
+    "lastModifiedAt": 1626396580433,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604978770098
+            "lastModifiedAt": 1626314590000
         },
         {
             "name": "focus",

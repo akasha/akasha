@@ -1,11 +1,11 @@
 
 {
     "name": "DataTransferItem",
-    "lastModifiedAt": 1623484618228,
+    "lastModifiedAt": 1626396988034,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604975759452
+            "lastModifiedAt": 1626314584000
         },
         {
             "name": "getAsFile",

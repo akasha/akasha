@@ -1,11 +1,11 @@
 
 {
     "name": "GamepadPose",
-    "lastModifiedAt": 1623484676073,
+    "lastModifiedAt": 1626396476721,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604976240186
+            "lastModifiedAt": 1626314566000
         },
         {
             "name": "angularAcceleration",

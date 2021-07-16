@@ -1,11 +1,11 @@
 
 {
     "name": "PerformanceNavigationTiming",
-    "lastModifiedAt": 1623484746578,
+    "lastModifiedAt": 1626396527432,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604977326668
+            "lastModifiedAt": 1626314594000
         },
         {
             "name": "domComplete",

@@ -1,11 +1,11 @@
 
 {
     "name": "PerformanceTiming",
-    "lastModifiedAt": 1623484746764,
+    "lastModifiedAt": 1626396525857,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604977356637
+            "lastModifiedAt": 1626314574000
         },
         {
             "name": "connectEnd",

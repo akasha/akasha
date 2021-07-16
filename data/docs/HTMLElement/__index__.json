@@ -1,11 +1,11 @@
 
 {
     "name": "HTMLElement",
-    "lastModifiedAt": 1623484680521,
+    "lastModifiedAt": 1626396459296,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604976419077
+            "lastModifiedAt": 1626314561000
         },
         {
             "name": "accessKey",

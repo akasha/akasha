@@ -1,7 +1,7 @@
 
 {
     "name": "Window",
-    "lastModifiedAt": 1623484936159,
+    "lastModifiedAt": 1626396445018,
     "entries": [
         {
             "name": "DOMContentLoaded_event",
@@ -13,7 +13,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1612573623000
+            "lastModifiedAt": 1626314558000
         },
         {
             "name": "afterprint_event",

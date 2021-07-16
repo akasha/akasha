@@ -1,11 +1,11 @@
 
 {
     "name": "ServiceWorker",
-    "lastModifiedAt": 1623484806682,
+    "lastModifiedAt": 1626396582095,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604978019558
+            "lastModifiedAt": 1626314582000
         },
         {
             "name": "onerror",

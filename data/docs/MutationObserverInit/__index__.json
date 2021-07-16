@@ -1,11 +1,11 @@
 
 {
     "name": "MutationObserverInit",
-    "lastModifiedAt": 1623484729949,
+    "lastModifiedAt": 1626396842546,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604977114093
+            "lastModifiedAt": 1626314583000
         },
         {
             "name": "attributeFilter",

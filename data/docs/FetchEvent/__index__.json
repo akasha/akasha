@@ -1,7 +1,7 @@
 
 {
     "name": "FetchEvent",
-    "lastModifiedAt": 1623484654684,
+    "lastModifiedAt": 1626396577215,
     "entries": [
         {
             "name": "FetchEvent",
@@ -13,7 +13,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1604976183279
+            "lastModifiedAt": 1626314593000
         },
         {
             "name": "client",

@@ -1,11 +1,11 @@
 
 {
     "name": "ScreenOrientation",
-    "lastModifiedAt": 1623484805851,
+    "lastModifiedAt": 1626396562340,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1612573608000
+            "lastModifiedAt": 1626314586000
         },
         {
             "name": "angle",

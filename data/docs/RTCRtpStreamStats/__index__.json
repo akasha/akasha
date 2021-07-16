@@ -1,11 +1,11 @@
 
 {
     "name": "RTCRtpStreamStats",
-    "lastModifiedAt": 1623484763833,
+    "lastModifiedAt": 1626396801216,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604977650862
+            "lastModifiedAt": 1626314592000
         },
         {
             "name": "codecId",
