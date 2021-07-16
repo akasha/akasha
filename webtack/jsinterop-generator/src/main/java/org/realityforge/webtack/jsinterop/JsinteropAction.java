@@ -40,6 +40,7 @@ import org.realityforge.webtack.model.ConstEnumerationDefinition;
 import org.realityforge.webtack.model.ConstEnumerationValue;
 import org.realityforge.webtack.model.ConstMember;
 import org.realityforge.webtack.model.ConstValue;
+import org.realityforge.webtack.model.Definition;
 import org.realityforge.webtack.model.DictionaryDefinition;
 import org.realityforge.webtack.model.DictionaryMember;
 import org.realityforge.webtack.model.DocumentationBlockTag;
@@ -982,9 +983,9 @@ final class JsinteropAction
     }
   }
 
-  private boolean isMarkerType( @Nonnull final TypedefDefinition typedef )
+  private boolean isMarkerType( @Nonnull final Definition definition )
   {
-    return typedef.isNoArgsExtendedAttributePresent( ExtendedAttributes.MARKER_TYPE );
+    return definition.isNoArgsExtendedAttributePresent( ExtendedAttributes.MARKER_TYPE );
   }
 
   private void generateUnionOfMethods( @Nonnull final String idlName,
