@@ -743,7 +743,7 @@ const enum WebGLParameterName {
 /**
  * Extension available in both WebGL1 and WebGL2.
  */
- [MarkerType]
+[MarkerType]
 typedef (
   EXT_color_buffer_half_float or
   EXT_float_blend or
@@ -769,7 +769,7 @@ typedef (
 /**
  * WebGL2 extension.
  */
- [MarkerType]
+[MarkerType]
 typedef (
   EXT_color_buffer_float or
   EXT_disjoint_timer_query_webgl2 or
@@ -782,7 +782,7 @@ typedef (
 /**
  * WebGL1 extension.
  */
- [MarkerType]
+[MarkerType]
 typedef (
   ANGLE_instanced_arrays or
   EXT_blend_minmax or
