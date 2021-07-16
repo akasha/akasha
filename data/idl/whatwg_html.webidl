@@ -219,6 +219,7 @@ dictionary CanvasRenderingContext2DSettings {
   boolean alpha = true;
   PredefinedColorSpace colorSpace = "srgb";
   boolean desynchronized = false;
+  boolean willReadFrequently = false;
 };
 
 dictionary CloseEventInit : EventInit {
@@ -422,6 +423,7 @@ interface mixin CanvasPath {
   undefined moveTo( unrestricted double x, unrestricted double y );
   undefined quadraticCurveTo( unrestricted double cpx, unrestricted double cpy, unrestricted double x, unrestricted double y );
   undefined rect( unrestricted double x, unrestricted double y, unrestricted double w, unrestricted double h );
+  undefined roundRect( unrestricted double x, unrestricted double y, unrestricted double w, unrestricted double h, sequence<( unrestricted double or DOMPointInit )> radii );
 };
 
 interface mixin CanvasPathDrawingStyles {
@@ -656,6 +658,7 @@ interface mixin NavigatorOnLine {
 interface mixin NavigatorPlugins {
   [SameObject]
   readonly attribute MimeTypeArray mimeTypes;
+  readonly attribute boolean pdfViewerEnabled;
   [SameObject]
   readonly attribute PluginArray plugins;
   boolean javaEnabled();
@@ -1604,6 +1607,8 @@ interface HTMLMetaElement : HTMLElement {
   [CEReactions]
   attribute DOMString httpEquiv;
   [CEReactions]
+  attribute DOMString media;
+  [CEReactions]
   attribute DOMString name;
   [HTMLConstructor]
   constructor();
@@ -1853,7 +1858,7 @@ interface HTMLSelectElement : HTMLElement {
   undefined remove( long index );
   boolean reportValidity();
   undefined setCustomValidity( DOMString error );
-  getter Element? item( unsigned long index );
+  getter HTMLOptionElement? item( unsigned long index );
   [CEReactions]
   setter undefined ( unsigned long index, HTMLOptionElement? option );
 };
@@ -2220,17 +2225,17 @@ interface MessagePort : EventTarget {
 
 [Exposed=Window]
 interface MimeType {
-  readonly attribute undefined description;
-  readonly attribute undefined enabledPlugin;
-  readonly attribute undefined suffixes;
-  readonly attribute undefined type;
+  readonly attribute DOMString description;
+  readonly attribute Plugin enabledPlugin;
+  readonly attribute DOMString suffixes;
+  readonly attribute DOMString type;
 };
 
-[Exposed=Window]
+[Exposed=Window, LegacyUnenumerableNamedProperties]
 interface MimeTypeArray {
   readonly attribute unsigned long length;
-  object? namedItem( DOMString name );
-  getter object? item( unsigned long index );
+  getter MimeType? item( unsigned long index );
+  getter MimeType? namedItem( DOMString name );
 };
 
 [Exposed=Window]
@@ -2265,22 +2270,22 @@ interface Path2D {
   undefined addPath( Path2D path, optional DOMMatrix2DInit transform = {} );
 };
 
-[Exposed=Window]
+[Exposed=Window, LegacyUnenumerableNamedProperties]
 interface Plugin {
-  readonly attribute undefined description;
-  readonly attribute undefined filename;
-  readonly attribute undefined length;
-  readonly attribute undefined name;
-  undefined namedItem( DOMString name );
-  getter undefined item( unsigned long index );
+  readonly attribute DOMString description;
+  readonly attribute DOMString filename;
+  readonly attribute unsigned long length;
+  readonly attribute DOMString name;
+  getter MimeType? item( unsigned long index );
+  getter MimeType? namedItem( DOMString name );
 };
 
-[Exposed=Window]
+[Exposed=Window, LegacyUnenumerableNamedProperties]
 interface PluginArray {
   readonly attribute unsigned long length;
-  object? namedItem( DOMString name );
   undefined refresh();
-  getter object? item( unsigned long index );
+  getter Plugin? item( unsigned long index );
+  getter Plugin? namedItem( DOMString name );
 };
 
 [Exposed=Window]
@@ -2475,6 +2480,7 @@ interface WebSocket : EventTarget {
 
 [Global=Window, Exposed=Window, LegacyUnenumerableNamedProperties]
 interface Window : EventTarget {
+  readonly attribute Navigator clientInformation;
   readonly attribute boolean closed;
   readonly attribute CustomElementRegistry customElements;
   [LegacyUnforgeable]

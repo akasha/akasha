@@ -246,16 +246,6 @@
     },
     {
       "name": "RemoveElement",
-      "description": "Remove the types that are scheduled for removal from the browser",
-      "sourceSelector": "name=whatwg_html",
-      "config": {
-        "expectedRemoveCount": 2,
-        "namePattern": "^(MimeType|Plugin)$",
-        "type": ["interface_type"]
-      }
-    },
-    {
-      "name": "RemoveElement",
       "description": "Remove the type that only contains methods that must do nothing according to the spec",
       "sourceSelector": "name=whatwg_html",
       "config": {
