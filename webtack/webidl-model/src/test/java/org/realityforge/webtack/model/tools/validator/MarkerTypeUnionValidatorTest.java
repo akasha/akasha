@@ -32,7 +32,7 @@ public class MarkerTypeUnionValidatorTest
 
     final Collection<ValidationError> errors = validate( schema, 1 );
     assertErrorPresent( errors,
-                        "Typedef named 'TexImageSource' has the MarkerType extended attribute but contains a member type 'long' that is not a reference to an interface or a typedef with the MarkerType extended attribute." );
+                        "Typedef named 'TexImageSource' has the MarkerType extended attribute but contains a member type 'long' that is not a reference to an interface, a reference to a dictionary or a typedef with the MarkerType extended attribute." );
   }
 
   @Test
@@ -46,7 +46,7 @@ public class MarkerTypeUnionValidatorTest
 
     final Collection<ValidationError> errors = validate( schema, 1 );
     assertErrorPresent( errors,
-                        "Typedef named 'TexBufferSource' has the MarkerType extended attribute but contains a member type 'TexImageSource' that is not a reference to an interface or a typedef with the MarkerType extended attribute." );
+                        "Typedef named 'TexBufferSource' has the MarkerType extended attribute but contains a member type 'TexImageSource' that is not a reference to an interface, a reference to a dictionary or a typedef with the MarkerType extended attribute." );
   }
   @Test
   public void invalidReferenceMarkerTypeUnion()
@@ -60,7 +60,7 @@ public class MarkerTypeUnionValidatorTest
 
     final Collection<ValidationError> errors = validate( schema, 1 );
     assertErrorPresent( errors,
-                        "Typedef named 'TexImageSource' has the MarkerType extended attribute but contains a member type 'BasicEnumeration' that is not a reference to an interface or a typedef with the MarkerType extended attribute." );
+                        "Typedef named 'TexImageSource' has the MarkerType extended attribute but contains a member type 'BasicEnumeration' that is not a reference to an interface, a reference to a dictionary or a typedef with the MarkerType extended attribute." );
   }
 
   @Override
