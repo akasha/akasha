@@ -1,6 +1,10 @@
 # Change Log
 
-### Unreleased
+### [v0.14](https://github.com/akasha/akasha/tree/v0.14) (2021-07-17) · [Full Changelog](https://github.com/spritz/spritz/compare/v0.13...v0.14) · [API Differences](https://akasha.github.io/akasha-java/api-diff/?key=akasha-java&old=0.13&new=0.14) · [Source Diff](https://github.com/akasha/akasha-java/compare/v0.13...v0.14)
+
+The release includes 75 non breaking API changes and 285 breaking API changes.
+
+Changes in this release:
 
 * Update the `Permissions` spec to the `W3C Working Draft, 13 July 2021` version. This updated the set of valid values for the `PermissionName` enum.
 * Update the `Resource Timing Level 2` spec to the `W3C Editor's Draft 15 July 2021` version. This corrected the type of the `PerformanceResourceTiming.nextHopProtocol` attribute to match the browser implementations but should have no visible impact on the generated API.
