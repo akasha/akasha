@@ -1,0 +1,14 @@
+To: google-web-toolkit@googlegroups.com
+Subject: [ANN] Akasha: Typed Browser API version __VERSION__ released
+
+Akasha is a typed browser API layer that is always up to date with the latest web specifications.
+
+__CHANGES__
+
+To learn more about Akasha and get started:
+
+    https://github.com/akasha/akasha
+
+Thanks!
+
+The Akasha Team

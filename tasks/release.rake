@@ -1,5 +1,34 @@
 require 'buildr/release_tool'
 
+module Buildr
+  class ReleaseTool
+    def generate_announce_email(email_template)
+      stage('GenerateAnnounceEmail', 'Generate an email that can be used to announce the project') do
+
+        changelog = IO.read('CHANGELOG.md')
+        start = changelog.index("### [v#{ENV['PRODUCT_VERSION']}]")
+        raise "Unable to locate version #{ENV['PRODUCT_VERSION']} in change log" if -1 == start
+        start = changelog.index("\n", start)
+        start = changelog.index("\n", start + 1)
+
+        end_index = changelog.index('### [v', start)
+        end_index = changelog.length if end_index.nil?
+
+        changes = changelog[start, end_index - start].strip
+
+        email =
+          IO.
+            read(email_template).
+            gsub(/__VERSION__/, "#{ENV['PRODUCT_VERSION']}").
+            gsub(/__CHANGES__/, changes)
+
+        IO.write('target/announce.txt', template)
+        puts 'Email to announce release generated to target/announce.txt'
+      end
+    end
+  end
+end
+
 Buildr::ReleaseTool.define_release_task do |t|
   t.extract_version_from_changelog
   t.zapwhite
@@ -18,4 +47,5 @@ Buildr::ReleaseTool.define_release_task do |t|
   t.patch_changelog_post_release
   t.push_changes
   t.github_release('akasha/akasha')
+  t.generate_announce_email('docs/announce.txt')
 end
