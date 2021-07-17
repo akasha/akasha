@@ -606,6 +606,22 @@
   {
     "code": "java.field.addedStaticField",
     "description": "Static field added to class.",
+    "newElement": "field akasha.RenderContextType.webgpu",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.RenderContextType",
+      "classSimpleName": "RenderContextType",
+      "elementKind": "field",
+      "fieldName": "webgpu",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.field.addedStaticField",
+    "description": "Static field added to class.",
     "newElement": "field akasha.gpu.GPUTextureUsage.SHADER_READ",
     "classification": {
       "SOURCE": "NON_BREAKING",
@@ -2021,6 +2037,23 @@
       "classSimpleName": "PermissionName",
       "elementKind": "field",
       "fieldName": "speaker",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.field.removedWithConstant",
+    "description": "Field with constant value has been removed.",
+    "oldElement": "field akasha.RenderContextType.gpupresent",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "NON_BREAKING",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.RenderContextType",
+      "classSimpleName": "RenderContextType",
+      "elementKind": "field",
+      "fieldName": "gpupresent",
       "package": "akasha"
     }
   },
