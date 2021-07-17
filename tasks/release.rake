@@ -22,7 +22,7 @@ module Buildr
             gsub(/__VERSION__/, "#{ENV['PRODUCT_VERSION']}").
             gsub(/__CHANGES__/, changes)
 
-        IO.write('target/announce.txt', template)
+        IO.write('target/announce.txt', email)
         puts 'Email to announce release generated to target/announce.txt'
       end
     end
