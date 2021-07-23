@@ -23,6 +23,6 @@ dictionary FetchEventInit : ExtendableEventInit {
   Promise<undefined> handled;
   Promise<any> preloadResponse;
   DOMString replacesClientId = "";
-  required Request request;
   DOMString resultingClientId = "";
+  required Request request;
 };

@@ -4,6 +4,16 @@ dictionary EventInit {
   boolean composed = false;
 };
 
+/**
+ * Test to ensure that required members are not reordered.
+ */
+dictionary GPUColorDict {
+  required double r;
+  required double g;
+  required double b;
+  required double a;
+};
+
 dictionary OptionalAnyDict : RequiredAnyDict {
   any anotherValue = null;
 };

@@ -53,8 +53,8 @@ dictionary EventListenerOptions {
 };
 
 dictionary SpeechRecognitionErrorEventInit : EventInit {
-  required SpeechRecognitionErrorCode error;
   DOMString message = "";
+  required SpeechRecognitionErrorCode error;
 };
 
 dictionary SpeechRecognitionEventInit : EventInit {

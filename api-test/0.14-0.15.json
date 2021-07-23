@@ -1,0 +1,3182 @@
+[
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.gpu.GPURenderPassLayout",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURenderPassLayout",
+      "classSimpleName": "GPURenderPassLayout",
+      "elementKind": "interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.defaultMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.gpu.GPURenderBundleEncoderDescriptor.Builder akasha.gpu.GPURenderBundleEncoderDescriptor.Builder::depthReadOnly(boolean)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURenderBundleEncoderDescriptor.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "method",
+      "methodName": "depthReadOnly",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.defaultMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.gpu.GPURenderBundleEncoderDescriptor.Builder akasha.gpu.GPURenderBundleEncoderDescriptor.Builder::stencilReadOnly(boolean)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURenderBundleEncoderDescriptor.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "method",
+      "methodName": "stencilReadOnly",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.movedToSuperClass",
+    "description": "The method used to be declared in class 'akasha.gpu.GPURenderBundleEncoderDescriptor' but is now declared in superclass 'akasha.gpu.GPURenderPassLayout'.",
+    "newElement": "method akasha.lang.JsArray<java.lang.String> akasha.gpu.GPURenderPassLayout::colorFormats() @ akasha.gpu.GPURenderBundleEncoderDescriptor",
+    "oldElement": "method akasha.lang.JsArray<java.lang.String> akasha.gpu.GPURenderBundleEncoderDescriptor::colorFormats()",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURenderBundleEncoderDescriptor",
+      "classSimpleName": "GPURenderBundleEncoderDescriptor",
+      "elementKind": "method",
+      "methodName": "colorFormats",
+      "newClass": "akasha.gpu.GPURenderPassLayout",
+      "oldClass": "akasha.gpu.GPURenderBundleEncoderDescriptor",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.addedToInterface",
+    "description": "Method was added to an interface.",
+    "newElement": "method boolean akasha.gpu.GPURenderBundleEncoderDescriptor::depthReadOnly()",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "NON_BREAKING",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURenderBundleEncoderDescriptor",
+      "classSimpleName": "GPURenderBundleEncoderDescriptor",
+      "elementKind": "method",
+      "methodName": "depthReadOnly",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.addedToInterface",
+    "description": "Method was added to an interface.",
+    "newElement": "method boolean akasha.gpu.GPURenderBundleEncoderDescriptor::stencilReadOnly()",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "NON_BREAKING",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURenderBundleEncoderDescriptor",
+      "classSimpleName": "GPURenderBundleEncoderDescriptor",
+      "elementKind": "method",
+      "methodName": "stencilReadOnly",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.movedToSuperClass",
+    "description": "The method used to be declared in class 'akasha.gpu.GPURenderBundleEncoderDescriptor' but is now declared in superclass 'akasha.gpu.GPURenderPassLayout'.",
+    "newElement": "method int akasha.gpu.GPURenderPassLayout::sampleCount() @ akasha.gpu.GPURenderBundleEncoderDescriptor",
+    "oldElement": "method int akasha.gpu.GPURenderBundleEncoderDescriptor::sampleCount()",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURenderBundleEncoderDescriptor",
+      "classSimpleName": "GPURenderBundleEncoderDescriptor",
+      "elementKind": "method",
+      "methodName": "sampleCount",
+      "newClass": "akasha.gpu.GPURenderPassLayout",
+      "oldClass": "akasha.gpu.GPURenderBundleEncoderDescriptor",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.movedToSuperClass",
+    "description": "The method used to be declared in class 'akasha.gpu.GPURenderBundleEncoderDescriptor' but is now declared in superclass 'akasha.gpu.GPURenderPassLayout'.",
+    "newElement": "method java.lang.String akasha.gpu.GPURenderPassLayout::depthStencilFormat() @ akasha.gpu.GPURenderBundleEncoderDescriptor",
+    "oldElement": "method java.lang.String akasha.gpu.GPURenderBundleEncoderDescriptor::depthStencilFormat()",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURenderBundleEncoderDescriptor",
+      "classSimpleName": "GPURenderBundleEncoderDescriptor",
+      "elementKind": "method",
+      "methodName": "depthStencilFormat",
+      "newClass": "akasha.gpu.GPURenderPassLayout",
+      "oldClass": "akasha.gpu.GPURenderBundleEncoderDescriptor",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.addedToInterface",
+    "description": "Method was added to an interface.",
+    "newElement": "method void akasha.gpu.GPURenderBundleEncoderDescriptor::setDepthReadOnly(boolean)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "NON_BREAKING",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURenderBundleEncoderDescriptor",
+      "classSimpleName": "GPURenderBundleEncoderDescriptor",
+      "elementKind": "method",
+      "methodName": "setDepthReadOnly",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.addedToInterface",
+    "description": "Method was added to an interface.",
+    "newElement": "method void akasha.gpu.GPURenderBundleEncoderDescriptor::setStencilReadOnly(boolean)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "NON_BREAKING",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURenderBundleEncoderDescriptor",
+      "classSimpleName": "GPURenderBundleEncoderDescriptor",
+      "elementKind": "method",
+      "methodName": "setStencilReadOnly",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.movedToSuperClass",
+    "description": "The method used to be declared in class 'akasha.gpu.GPURenderBundleEncoderDescriptor' but is now declared in superclass 'akasha.gpu.GPURenderPassLayout'.",
+    "newElement": "method void akasha.gpu.GPURenderPassLayout::setColorFormats(akasha.lang.JsArray<java.lang.String>) @ akasha.gpu.GPURenderBundleEncoderDescriptor",
+    "oldElement": "method void akasha.gpu.GPURenderBundleEncoderDescriptor::setColorFormats(akasha.lang.JsArray<java.lang.String>)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURenderBundleEncoderDescriptor",
+      "classSimpleName": "GPURenderBundleEncoderDescriptor",
+      "elementKind": "method",
+      "methodName": "setColorFormats",
+      "newClass": "akasha.gpu.GPURenderPassLayout",
+      "oldClass": "akasha.gpu.GPURenderBundleEncoderDescriptor",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.movedToSuperClass",
+    "description": "The method used to be declared in class 'akasha.gpu.GPURenderBundleEncoderDescriptor' but is now declared in superclass 'akasha.gpu.GPURenderPassLayout'.",
+    "newElement": "method void akasha.gpu.GPURenderPassLayout::setColorFormats(java.lang.String[]) @ akasha.gpu.GPURenderBundleEncoderDescriptor",
+    "oldElement": "method void akasha.gpu.GPURenderBundleEncoderDescriptor::setColorFormats(java.lang.String[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURenderBundleEncoderDescriptor",
+      "classSimpleName": "GPURenderBundleEncoderDescriptor",
+      "elementKind": "method",
+      "methodName": "setColorFormats",
+      "newClass": "akasha.gpu.GPURenderPassLayout",
+      "oldClass": "akasha.gpu.GPURenderBundleEncoderDescriptor",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.movedToSuperClass",
+    "description": "The method used to be declared in class 'akasha.gpu.GPURenderBundleEncoderDescriptor' but is now declared in superclass 'akasha.gpu.GPURenderPassLayout'.",
+    "newElement": "method void akasha.gpu.GPURenderPassLayout::setDepthStencilFormat(java.lang.String) @ akasha.gpu.GPURenderBundleEncoderDescriptor",
+    "oldElement": "method void akasha.gpu.GPURenderBundleEncoderDescriptor::setDepthStencilFormat(java.lang.String)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURenderBundleEncoderDescriptor",
+      "classSimpleName": "GPURenderBundleEncoderDescriptor",
+      "elementKind": "method",
+      "methodName": "setDepthStencilFormat",
+      "newClass": "akasha.gpu.GPURenderPassLayout",
+      "oldClass": "akasha.gpu.GPURenderBundleEncoderDescriptor",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.movedToSuperClass",
+    "description": "The method used to be declared in class 'akasha.gpu.GPURenderBundleEncoderDescriptor' but is now declared in superclass 'akasha.gpu.GPURenderPassLayout'.",
+    "newElement": "method void akasha.gpu.GPURenderPassLayout::setSampleCount(int) @ akasha.gpu.GPURenderBundleEncoderDescriptor",
+    "oldElement": "method void akasha.gpu.GPURenderBundleEncoderDescriptor::setSampleCount(int)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURenderBundleEncoderDescriptor",
+      "classSimpleName": "GPURenderBundleEncoderDescriptor",
+      "elementKind": "method",
+      "methodName": "setSampleCount",
+      "newClass": "akasha.gpu.GPURenderPassLayout",
+      "oldClass": "akasha.gpu.GPURenderBundleEncoderDescriptor",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'akasha.lang.JsArray<akasha.gpu.GPUBindGroupEntry>' to 'akasha.gpu.GPUBindGroupLayout'.",
+    "newElement": "parameter akasha.gpu.GPUBindGroupDescriptor.Builder akasha.gpu.GPUBindGroupDescriptor::create(===akasha.gpu.GPUBindGroupLayout===, akasha.gpu.GPUBindGroupEntry[])",
+    "oldElement": "parameter akasha.gpu.GPUBindGroupDescriptor.Builder akasha.gpu.GPUBindGroupDescriptor::create(===akasha.lang.JsArray<akasha.gpu.GPUBindGroupEntry>===, akasha.gpu.GPUBindGroupLayout)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUBindGroupDescriptor",
+      "classSimpleName": "GPUBindGroupDescriptor",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "newType": "akasha.gpu.GPUBindGroupLayout",
+      "oldType": "akasha.lang.JsArray<akasha.gpu.GPUBindGroupEntry>",
+      "package": "akasha.gpu",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'akasha.gpu.GPUBindGroupEntry[]' to 'akasha.gpu.GPUBindGroupLayout'.",
+    "newElement": "parameter akasha.gpu.GPUBindGroupDescriptor.Builder akasha.gpu.GPUBindGroupDescriptor::create(===akasha.gpu.GPUBindGroupLayout===, akasha.lang.JsArray<akasha.gpu.GPUBindGroupEntry>)",
+    "oldElement": "parameter akasha.gpu.GPUBindGroupDescriptor.Builder akasha.gpu.GPUBindGroupDescriptor::create(===akasha.gpu.GPUBindGroupEntry[]===, akasha.gpu.GPUBindGroupLayout)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUBindGroupDescriptor",
+      "classSimpleName": "GPUBindGroupDescriptor",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "newType": "akasha.gpu.GPUBindGroupLayout",
+      "oldType": "akasha.gpu.GPUBindGroupEntry[]",
+      "package": "akasha.gpu",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'akasha.gpu.GPUBindGroupLayout' to 'akasha.gpu.GPUBindGroupEntry[]'.",
+    "newElement": "parameter akasha.gpu.GPUBindGroupDescriptor.Builder akasha.gpu.GPUBindGroupDescriptor::create(akasha.gpu.GPUBindGroupLayout, ===akasha.gpu.GPUBindGroupEntry[]===)",
+    "oldElement": "parameter akasha.gpu.GPUBindGroupDescriptor.Builder akasha.gpu.GPUBindGroupDescriptor::create(akasha.lang.JsArray<akasha.gpu.GPUBindGroupEntry>, ===akasha.gpu.GPUBindGroupLayout===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUBindGroupDescriptor",
+      "classSimpleName": "GPUBindGroupDescriptor",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "newType": "akasha.gpu.GPUBindGroupEntry[]",
+      "oldType": "akasha.gpu.GPUBindGroupLayout",
+      "package": "akasha.gpu",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'akasha.gpu.GPUBindGroupLayout' to 'akasha.lang.JsArray<akasha.gpu.GPUBindGroupEntry>'.",
+    "newElement": "parameter akasha.gpu.GPUBindGroupDescriptor.Builder akasha.gpu.GPUBindGroupDescriptor::create(akasha.gpu.GPUBindGroupLayout, ===akasha.lang.JsArray<akasha.gpu.GPUBindGroupEntry>===)",
+    "oldElement": "parameter akasha.gpu.GPUBindGroupDescriptor.Builder akasha.gpu.GPUBindGroupDescriptor::create(akasha.gpu.GPUBindGroupEntry[], ===akasha.gpu.GPUBindGroupLayout===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUBindGroupDescriptor",
+      "classSimpleName": "GPUBindGroupDescriptor",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "newType": "akasha.lang.JsArray<akasha.gpu.GPUBindGroupEntry>",
+      "oldType": "akasha.gpu.GPUBindGroupLayout",
+      "package": "akasha.gpu",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.String' to 'akasha.gpu.GPUShaderModule'.",
+    "newElement": "parameter akasha.gpu.GPUFragmentState.Builder akasha.gpu.GPUFragmentState::create(===akasha.gpu.GPUShaderModule===, java.lang.String, akasha.gpu.GPUColorTargetState[])",
+    "oldElement": "parameter akasha.gpu.GPUFragmentState.Builder akasha.gpu.GPUFragmentState::create(===java.lang.String===, akasha.gpu.GPUShaderModule, akasha.gpu.GPUColorTargetState[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUFragmentState",
+      "classSimpleName": "GPUFragmentState",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "newType": "akasha.gpu.GPUShaderModule",
+      "oldType": "java.lang.String",
+      "package": "akasha.gpu",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.String' to 'akasha.gpu.GPUShaderModule'.",
+    "newElement": "parameter akasha.gpu.GPUFragmentState.Builder akasha.gpu.GPUFragmentState::create(===akasha.gpu.GPUShaderModule===, java.lang.String, akasha.lang.JsArray<akasha.gpu.GPUColorTargetState>)",
+    "oldElement": "parameter akasha.gpu.GPUFragmentState.Builder akasha.gpu.GPUFragmentState::create(===java.lang.String===, akasha.gpu.GPUShaderModule, akasha.lang.JsArray<akasha.gpu.GPUColorTargetState>)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUFragmentState",
+      "classSimpleName": "GPUFragmentState",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "newType": "akasha.gpu.GPUShaderModule",
+      "oldType": "java.lang.String",
+      "package": "akasha.gpu",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'akasha.gpu.GPUShaderModule' to 'java.lang.String'.",
+    "newElement": "parameter akasha.gpu.GPUFragmentState.Builder akasha.gpu.GPUFragmentState::create(akasha.gpu.GPUShaderModule, ===java.lang.String===, akasha.gpu.GPUColorTargetState[])",
+    "oldElement": "parameter akasha.gpu.GPUFragmentState.Builder akasha.gpu.GPUFragmentState::create(java.lang.String, ===akasha.gpu.GPUShaderModule===, akasha.gpu.GPUColorTargetState[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUFragmentState",
+      "classSimpleName": "GPUFragmentState",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "newType": "java.lang.String",
+      "oldType": "akasha.gpu.GPUShaderModule",
+      "package": "akasha.gpu",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'akasha.gpu.GPUShaderModule' to 'java.lang.String'.",
+    "newElement": "parameter akasha.gpu.GPUFragmentState.Builder akasha.gpu.GPUFragmentState::create(akasha.gpu.GPUShaderModule, ===java.lang.String===, akasha.lang.JsArray<akasha.gpu.GPUColorTargetState>)",
+    "oldElement": "parameter akasha.gpu.GPUFragmentState.Builder akasha.gpu.GPUFragmentState::create(java.lang.String, ===akasha.gpu.GPUShaderModule===, akasha.lang.JsArray<akasha.gpu.GPUColorTargetState>)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUFragmentState",
+      "classSimpleName": "GPUFragmentState",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "newType": "java.lang.String",
+      "oldType": "akasha.gpu.GPUShaderModule",
+      "package": "akasha.gpu",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.String' to 'akasha.gpu.GPUShaderModule'.",
+    "newElement": "parameter akasha.gpu.GPUProgrammableStage.Builder akasha.gpu.GPUProgrammableStage::create(===akasha.gpu.GPUShaderModule===, java.lang.String)",
+    "oldElement": "parameter akasha.gpu.GPUProgrammableStage.Builder akasha.gpu.GPUProgrammableStage::create(===java.lang.String===, akasha.gpu.GPUShaderModule)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUProgrammableStage",
+      "classSimpleName": "GPUProgrammableStage",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "newType": "akasha.gpu.GPUShaderModule",
+      "oldType": "java.lang.String",
+      "package": "akasha.gpu",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'akasha.gpu.GPUShaderModule' to 'java.lang.String'.",
+    "newElement": "parameter akasha.gpu.GPUProgrammableStage.Builder akasha.gpu.GPUProgrammableStage::create(akasha.gpu.GPUShaderModule, ===java.lang.String===)",
+    "oldElement": "parameter akasha.gpu.GPUProgrammableStage.Builder akasha.gpu.GPUProgrammableStage::create(java.lang.String, ===akasha.gpu.GPUShaderModule===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUProgrammableStage",
+      "classSimpleName": "GPUProgrammableStage",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "newType": "java.lang.String",
+      "oldType": "akasha.gpu.GPUShaderModule",
+      "package": "akasha.gpu",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'akasha.gpu.GPUQueryType'.",
+    "newElement": "parameter akasha.gpu.GPUQuerySetDescriptor.Builder akasha.gpu.GPUQuerySetDescriptor::create(===java.lang.String===, int) @ akasha.gpu.GPUQuerySetDescriptor.Builder",
+    "oldElement": "parameter akasha.gpu.GPUQuerySetDescriptor.Builder akasha.gpu.GPUQuerySetDescriptor::create(===int===, java.lang.String) @ akasha.gpu.GPUQuerySetDescriptor.Builder",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUQueryType",
+      "annotationType": "akasha.gpu.GPUQueryType",
+      "classQualifiedName": "akasha.gpu.GPUQuerySetDescriptor.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'javax.annotation.Nonnull'.",
+    "newElement": "parameter akasha.gpu.GPUQuerySetDescriptor.Builder akasha.gpu.GPUQuerySetDescriptor::create(===java.lang.String===, int) @ akasha.gpu.GPUQuerySetDescriptor.Builder",
+    "oldElement": "parameter akasha.gpu.GPUQuerySetDescriptor.Builder akasha.gpu.GPUQuerySetDescriptor::create(===int===, java.lang.String) @ akasha.gpu.GPUQuerySetDescriptor.Builder",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@javax.annotation.Nonnull",
+      "annotationType": "javax.annotation.Nonnull",
+      "classQualifiedName": "akasha.gpu.GPUQuerySetDescriptor.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'akasha.gpu.GPUQueryType'.",
+    "newElement": "parameter akasha.gpu.GPUQuerySetDescriptor.Builder akasha.gpu.GPUQuerySetDescriptor::create(===java.lang.String===, int)",
+    "oldElement": "parameter akasha.gpu.GPUQuerySetDescriptor.Builder akasha.gpu.GPUQuerySetDescriptor::create(===int===, java.lang.String)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUQueryType",
+      "annotationType": "akasha.gpu.GPUQueryType",
+      "classQualifiedName": "akasha.gpu.GPUQuerySetDescriptor",
+      "classSimpleName": "GPUQuerySetDescriptor",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'javax.annotation.Nonnull'.",
+    "newElement": "parameter akasha.gpu.GPUQuerySetDescriptor.Builder akasha.gpu.GPUQuerySetDescriptor::create(===java.lang.String===, int)",
+    "oldElement": "parameter akasha.gpu.GPUQuerySetDescriptor.Builder akasha.gpu.GPUQuerySetDescriptor::create(===int===, java.lang.String)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@javax.annotation.Nonnull",
+      "annotationType": "javax.annotation.Nonnull",
+      "classQualifiedName": "akasha.gpu.GPUQuerySetDescriptor",
+      "classSimpleName": "GPUQuerySetDescriptor",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'int' to 'java.lang.String'.",
+    "newElement": "parameter akasha.gpu.GPUQuerySetDescriptor.Builder akasha.gpu.GPUQuerySetDescriptor::create(===java.lang.String===, int)",
+    "oldElement": "parameter akasha.gpu.GPUQuerySetDescriptor.Builder akasha.gpu.GPUQuerySetDescriptor::create(===int===, java.lang.String)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUQuerySetDescriptor",
+      "classSimpleName": "GPUQuerySetDescriptor",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "newType": "java.lang.String",
+      "oldType": "int",
+      "package": "akasha.gpu",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.annotation.removed",
+    "description": "Element no longer annotated with 'akasha.gpu.GPUQueryType'.",
+    "newElement": "parameter akasha.gpu.GPUQuerySetDescriptor.Builder akasha.gpu.GPUQuerySetDescriptor::create(java.lang.String, ===int===) @ akasha.gpu.GPUQuerySetDescriptor.Builder",
+    "oldElement": "parameter akasha.gpu.GPUQuerySetDescriptor.Builder akasha.gpu.GPUQuerySetDescriptor::create(int, ===java.lang.String===) @ akasha.gpu.GPUQuerySetDescriptor.Builder",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUQueryType",
+      "annotationType": "akasha.gpu.GPUQueryType",
+      "classQualifiedName": "akasha.gpu.GPUQuerySetDescriptor.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.annotation.removed",
+    "description": "Element no longer annotated with 'javax.annotation.Nonnull'.",
+    "newElement": "parameter akasha.gpu.GPUQuerySetDescriptor.Builder akasha.gpu.GPUQuerySetDescriptor::create(java.lang.String, ===int===) @ akasha.gpu.GPUQuerySetDescriptor.Builder",
+    "oldElement": "parameter akasha.gpu.GPUQuerySetDescriptor.Builder akasha.gpu.GPUQuerySetDescriptor::create(int, ===java.lang.String===) @ akasha.gpu.GPUQuerySetDescriptor.Builder",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@javax.annotation.Nonnull",
+      "annotationType": "javax.annotation.Nonnull",
+      "classQualifiedName": "akasha.gpu.GPUQuerySetDescriptor.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.annotation.removed",
+    "description": "Element no longer annotated with 'akasha.gpu.GPUQueryType'.",
+    "newElement": "parameter akasha.gpu.GPUQuerySetDescriptor.Builder akasha.gpu.GPUQuerySetDescriptor::create(java.lang.String, ===int===)",
+    "oldElement": "parameter akasha.gpu.GPUQuerySetDescriptor.Builder akasha.gpu.GPUQuerySetDescriptor::create(int, ===java.lang.String===)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUQueryType",
+      "annotationType": "akasha.gpu.GPUQueryType",
+      "classQualifiedName": "akasha.gpu.GPUQuerySetDescriptor",
+      "classSimpleName": "GPUQuerySetDescriptor",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.annotation.removed",
+    "description": "Element no longer annotated with 'javax.annotation.Nonnull'.",
+    "newElement": "parameter akasha.gpu.GPUQuerySetDescriptor.Builder akasha.gpu.GPUQuerySetDescriptor::create(java.lang.String, ===int===)",
+    "oldElement": "parameter akasha.gpu.GPUQuerySetDescriptor.Builder akasha.gpu.GPUQuerySetDescriptor::create(int, ===java.lang.String===)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@javax.annotation.Nonnull",
+      "annotationType": "javax.annotation.Nonnull",
+      "classQualifiedName": "akasha.gpu.GPUQuerySetDescriptor",
+      "classSimpleName": "GPUQuerySetDescriptor",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.String' to 'int'.",
+    "newElement": "parameter akasha.gpu.GPUQuerySetDescriptor.Builder akasha.gpu.GPUQuerySetDescriptor::create(java.lang.String, ===int===)",
+    "oldElement": "parameter akasha.gpu.GPUQuerySetDescriptor.Builder akasha.gpu.GPUQuerySetDescriptor::create(int, ===java.lang.String===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUQuerySetDescriptor",
+      "classSimpleName": "GPUQuerySetDescriptor",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "newType": "int",
+      "oldType": "java.lang.String",
+      "package": "akasha.gpu",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.String' to 'akasha.gpu.GPUTextureView'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassColorAttachment.Builder akasha.gpu.GPURenderPassColorAttachment::create(===akasha.gpu.GPUTextureView===, akasha.gpu.GPUColor, java.lang.String)",
+    "oldElement": "parameter akasha.gpu.GPURenderPassColorAttachment.Builder akasha.gpu.GPURenderPassColorAttachment::create(===java.lang.String===, java.lang.String, akasha.gpu.GPUTextureView)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURenderPassColorAttachment",
+      "classSimpleName": "GPURenderPassColorAttachment",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "newType": "akasha.gpu.GPUTextureView",
+      "oldType": "java.lang.String",
+      "package": "akasha.gpu",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'double[]' to 'akasha.gpu.GPUTextureView'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassColorAttachment.Builder akasha.gpu.GPURenderPassColorAttachment::create(===akasha.gpu.GPUTextureView===, akasha.gpu.GPUColorDict, java.lang.String)",
+    "oldElement": "parameter akasha.gpu.GPURenderPassColorAttachment.Builder akasha.gpu.GPURenderPassColorAttachment::create(===double[]===, java.lang.String, akasha.gpu.GPUTextureView)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURenderPassColorAttachment",
+      "classSimpleName": "GPURenderPassColorAttachment",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "newType": "akasha.gpu.GPUTextureView",
+      "oldType": "double[]",
+      "package": "akasha.gpu",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'akasha.lang.JsArray<java.lang.Double>' to 'akasha.gpu.GPUTextureView'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassColorAttachment.Builder akasha.gpu.GPURenderPassColorAttachment::create(===akasha.gpu.GPUTextureView===, akasha.lang.JsArray<java.lang.Double>, java.lang.String)",
+    "oldElement": "parameter akasha.gpu.GPURenderPassColorAttachment.Builder akasha.gpu.GPURenderPassColorAttachment::create(===akasha.lang.JsArray<java.lang.Double>===, java.lang.String, akasha.gpu.GPUTextureView)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURenderPassColorAttachment",
+      "classSimpleName": "GPURenderPassColorAttachment",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "newType": "akasha.gpu.GPUTextureView",
+      "oldType": "akasha.lang.JsArray<java.lang.Double>",
+      "package": "akasha.gpu",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'akasha.gpu.GPUColorDict' to 'akasha.gpu.GPUTextureView'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassColorAttachment.Builder akasha.gpu.GPURenderPassColorAttachment::create(===akasha.gpu.GPUTextureView===, double[], java.lang.String)",
+    "oldElement": "parameter akasha.gpu.GPURenderPassColorAttachment.Builder akasha.gpu.GPURenderPassColorAttachment::create(===akasha.gpu.GPUColorDict===, java.lang.String, akasha.gpu.GPUTextureView)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURenderPassColorAttachment",
+      "classSimpleName": "GPURenderPassColorAttachment",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "newType": "akasha.gpu.GPUTextureView",
+      "oldType": "akasha.gpu.GPUColorDict",
+      "package": "akasha.gpu",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'akasha.gpu.GPUColor' to 'akasha.gpu.GPUTextureView'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassColorAttachment.Builder akasha.gpu.GPURenderPassColorAttachment::create(===akasha.gpu.GPUTextureView===, java.lang.String, java.lang.String)",
+    "oldElement": "parameter akasha.gpu.GPURenderPassColorAttachment.Builder akasha.gpu.GPURenderPassColorAttachment::create(===akasha.gpu.GPUColor===, java.lang.String, akasha.gpu.GPUTextureView)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURenderPassColorAttachment",
+      "classSimpleName": "GPURenderPassColorAttachment",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "newType": "akasha.gpu.GPUTextureView",
+      "oldType": "akasha.gpu.GPUColor",
+      "package": "akasha.gpu",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.annotation.removed",
+    "description": "Element no longer annotated with 'akasha.gpu.GPUStoreOp'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassColorAttachment.Builder akasha.gpu.GPURenderPassColorAttachment::create(akasha.gpu.GPUTextureView, ===akasha.gpu.GPUColor===, java.lang.String) @ akasha.gpu.GPURenderPassColorAttachment.Builder",
+    "oldElement": "parameter akasha.gpu.GPURenderPassColorAttachment.Builder akasha.gpu.GPURenderPassColorAttachment::create(java.lang.String, ===java.lang.String===, akasha.gpu.GPUTextureView) @ akasha.gpu.GPURenderPassColorAttachment.Builder",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUStoreOp",
+      "annotationType": "akasha.gpu.GPUStoreOp",
+      "classQualifiedName": "akasha.gpu.GPURenderPassColorAttachment.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.annotation.removed",
+    "description": "Element no longer annotated with 'akasha.gpu.GPUStoreOp'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassColorAttachment.Builder akasha.gpu.GPURenderPassColorAttachment::create(akasha.gpu.GPUTextureView, ===akasha.gpu.GPUColor===, java.lang.String)",
+    "oldElement": "parameter akasha.gpu.GPURenderPassColorAttachment.Builder akasha.gpu.GPURenderPassColorAttachment::create(java.lang.String, ===java.lang.String===, akasha.gpu.GPUTextureView)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUStoreOp",
+      "annotationType": "akasha.gpu.GPUStoreOp",
+      "classQualifiedName": "akasha.gpu.GPURenderPassColorAttachment",
+      "classSimpleName": "GPURenderPassColorAttachment",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.String' to 'akasha.gpu.GPUColor'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassColorAttachment.Builder akasha.gpu.GPURenderPassColorAttachment::create(akasha.gpu.GPUTextureView, ===akasha.gpu.GPUColor===, java.lang.String)",
+    "oldElement": "parameter akasha.gpu.GPURenderPassColorAttachment.Builder akasha.gpu.GPURenderPassColorAttachment::create(java.lang.String, ===java.lang.String===, akasha.gpu.GPUTextureView)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURenderPassColorAttachment",
+      "classSimpleName": "GPURenderPassColorAttachment",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "newType": "akasha.gpu.GPUColor",
+      "oldType": "java.lang.String",
+      "package": "akasha.gpu",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.annotation.removed",
+    "description": "Element no longer annotated with 'akasha.gpu.GPUStoreOp'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassColorAttachment.Builder akasha.gpu.GPURenderPassColorAttachment::create(akasha.gpu.GPUTextureView, ===akasha.gpu.GPUColorDict===, java.lang.String) @ akasha.gpu.GPURenderPassColorAttachment.Builder",
+    "oldElement": "parameter akasha.gpu.GPURenderPassColorAttachment.Builder akasha.gpu.GPURenderPassColorAttachment::create(double[], ===java.lang.String===, akasha.gpu.GPUTextureView) @ akasha.gpu.GPURenderPassColorAttachment.Builder",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUStoreOp",
+      "annotationType": "akasha.gpu.GPUStoreOp",
+      "classQualifiedName": "akasha.gpu.GPURenderPassColorAttachment.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.annotation.removed",
+    "description": "Element no longer annotated with 'akasha.gpu.GPUStoreOp'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassColorAttachment.Builder akasha.gpu.GPURenderPassColorAttachment::create(akasha.gpu.GPUTextureView, ===akasha.gpu.GPUColorDict===, java.lang.String)",
+    "oldElement": "parameter akasha.gpu.GPURenderPassColorAttachment.Builder akasha.gpu.GPURenderPassColorAttachment::create(double[], ===java.lang.String===, akasha.gpu.GPUTextureView)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUStoreOp",
+      "annotationType": "akasha.gpu.GPUStoreOp",
+      "classQualifiedName": "akasha.gpu.GPURenderPassColorAttachment",
+      "classSimpleName": "GPURenderPassColorAttachment",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.String' to 'akasha.gpu.GPUColorDict'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassColorAttachment.Builder akasha.gpu.GPURenderPassColorAttachment::create(akasha.gpu.GPUTextureView, ===akasha.gpu.GPUColorDict===, java.lang.String)",
+    "oldElement": "parameter akasha.gpu.GPURenderPassColorAttachment.Builder akasha.gpu.GPURenderPassColorAttachment::create(double[], ===java.lang.String===, akasha.gpu.GPUTextureView)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURenderPassColorAttachment",
+      "classSimpleName": "GPURenderPassColorAttachment",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "newType": "akasha.gpu.GPUColorDict",
+      "oldType": "java.lang.String",
+      "package": "akasha.gpu",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.annotation.removed",
+    "description": "Element no longer annotated with 'akasha.gpu.GPUStoreOp'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassColorAttachment.Builder akasha.gpu.GPURenderPassColorAttachment::create(akasha.gpu.GPUTextureView, ===akasha.lang.JsArray<java.lang.Double>===, java.lang.String) @ akasha.gpu.GPURenderPassColorAttachment.Builder",
+    "oldElement": "parameter akasha.gpu.GPURenderPassColorAttachment.Builder akasha.gpu.GPURenderPassColorAttachment::create(akasha.lang.JsArray<java.lang.Double>, ===java.lang.String===, akasha.gpu.GPUTextureView) @ akasha.gpu.GPURenderPassColorAttachment.Builder",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUStoreOp",
+      "annotationType": "akasha.gpu.GPUStoreOp",
+      "classQualifiedName": "akasha.gpu.GPURenderPassColorAttachment.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.annotation.removed",
+    "description": "Element no longer annotated with 'akasha.gpu.GPUStoreOp'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassColorAttachment.Builder akasha.gpu.GPURenderPassColorAttachment::create(akasha.gpu.GPUTextureView, ===akasha.lang.JsArray<java.lang.Double>===, java.lang.String)",
+    "oldElement": "parameter akasha.gpu.GPURenderPassColorAttachment.Builder akasha.gpu.GPURenderPassColorAttachment::create(akasha.lang.JsArray<java.lang.Double>, ===java.lang.String===, akasha.gpu.GPUTextureView)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUStoreOp",
+      "annotationType": "akasha.gpu.GPUStoreOp",
+      "classQualifiedName": "akasha.gpu.GPURenderPassColorAttachment",
+      "classSimpleName": "GPURenderPassColorAttachment",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.String' to 'akasha.lang.JsArray<java.lang.Double>'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassColorAttachment.Builder akasha.gpu.GPURenderPassColorAttachment::create(akasha.gpu.GPUTextureView, ===akasha.lang.JsArray<java.lang.Double>===, java.lang.String)",
+    "oldElement": "parameter akasha.gpu.GPURenderPassColorAttachment.Builder akasha.gpu.GPURenderPassColorAttachment::create(akasha.lang.JsArray<java.lang.Double>, ===java.lang.String===, akasha.gpu.GPUTextureView)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURenderPassColorAttachment",
+      "classSimpleName": "GPURenderPassColorAttachment",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "newType": "akasha.lang.JsArray<java.lang.Double>",
+      "oldType": "java.lang.String",
+      "package": "akasha.gpu",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.annotation.removed",
+    "description": "Element no longer annotated with 'akasha.gpu.GPUStoreOp'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassColorAttachment.Builder akasha.gpu.GPURenderPassColorAttachment::create(akasha.gpu.GPUTextureView, ===double[]===, java.lang.String) @ akasha.gpu.GPURenderPassColorAttachment.Builder",
+    "oldElement": "parameter akasha.gpu.GPURenderPassColorAttachment.Builder akasha.gpu.GPURenderPassColorAttachment::create(akasha.gpu.GPUColorDict, ===java.lang.String===, akasha.gpu.GPUTextureView) @ akasha.gpu.GPURenderPassColorAttachment.Builder",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUStoreOp",
+      "annotationType": "akasha.gpu.GPUStoreOp",
+      "classQualifiedName": "akasha.gpu.GPURenderPassColorAttachment.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.annotation.removed",
+    "description": "Element no longer annotated with 'akasha.gpu.GPUStoreOp'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassColorAttachment.Builder akasha.gpu.GPURenderPassColorAttachment::create(akasha.gpu.GPUTextureView, ===double[]===, java.lang.String)",
+    "oldElement": "parameter akasha.gpu.GPURenderPassColorAttachment.Builder akasha.gpu.GPURenderPassColorAttachment::create(akasha.gpu.GPUColorDict, ===java.lang.String===, akasha.gpu.GPUTextureView)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUStoreOp",
+      "annotationType": "akasha.gpu.GPUStoreOp",
+      "classQualifiedName": "akasha.gpu.GPURenderPassColorAttachment",
+      "classSimpleName": "GPURenderPassColorAttachment",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.String' to 'double[]'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassColorAttachment.Builder akasha.gpu.GPURenderPassColorAttachment::create(akasha.gpu.GPUTextureView, ===double[]===, java.lang.String)",
+    "oldElement": "parameter akasha.gpu.GPURenderPassColorAttachment.Builder akasha.gpu.GPURenderPassColorAttachment::create(akasha.gpu.GPUColorDict, ===java.lang.String===, akasha.gpu.GPUTextureView)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURenderPassColorAttachment",
+      "classSimpleName": "GPURenderPassColorAttachment",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "newType": "double[]",
+      "oldType": "java.lang.String",
+      "package": "akasha.gpu",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.annotation.removed",
+    "description": "Element no longer annotated with 'akasha.gpu.GPUStoreOp'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassColorAttachment.Builder akasha.gpu.GPURenderPassColorAttachment::create(akasha.gpu.GPUTextureView, ===java.lang.String===, java.lang.String) @ akasha.gpu.GPURenderPassColorAttachment.Builder",
+    "oldElement": "parameter akasha.gpu.GPURenderPassColorAttachment.Builder akasha.gpu.GPURenderPassColorAttachment::create(akasha.gpu.GPUColor, ===java.lang.String===, akasha.gpu.GPUTextureView) @ akasha.gpu.GPURenderPassColorAttachment.Builder",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUStoreOp",
+      "annotationType": "akasha.gpu.GPUStoreOp",
+      "classQualifiedName": "akasha.gpu.GPURenderPassColorAttachment.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.annotation.removed",
+    "description": "Element no longer annotated with 'akasha.gpu.GPUStoreOp'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassColorAttachment.Builder akasha.gpu.GPURenderPassColorAttachment::create(akasha.gpu.GPUTextureView, ===java.lang.String===, java.lang.String)",
+    "oldElement": "parameter akasha.gpu.GPURenderPassColorAttachment.Builder akasha.gpu.GPURenderPassColorAttachment::create(akasha.gpu.GPUColor, ===java.lang.String===, akasha.gpu.GPUTextureView)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUStoreOp",
+      "annotationType": "akasha.gpu.GPUStoreOp",
+      "classQualifiedName": "akasha.gpu.GPURenderPassColorAttachment",
+      "classSimpleName": "GPURenderPassColorAttachment",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'akasha.gpu.GPUStoreOp'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassColorAttachment.Builder akasha.gpu.GPURenderPassColorAttachment::create(akasha.gpu.GPUTextureView, akasha.gpu.GPUColor, ===java.lang.String===) @ akasha.gpu.GPURenderPassColorAttachment.Builder",
+    "oldElement": "parameter akasha.gpu.GPURenderPassColorAttachment.Builder akasha.gpu.GPURenderPassColorAttachment::create(java.lang.String, java.lang.String, ===akasha.gpu.GPUTextureView===) @ akasha.gpu.GPURenderPassColorAttachment.Builder",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUStoreOp",
+      "annotationType": "akasha.gpu.GPUStoreOp",
+      "classQualifiedName": "akasha.gpu.GPURenderPassColorAttachment.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "2"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'akasha.gpu.GPUStoreOp'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassColorAttachment.Builder akasha.gpu.GPURenderPassColorAttachment::create(akasha.gpu.GPUTextureView, akasha.gpu.GPUColor, ===java.lang.String===)",
+    "oldElement": "parameter akasha.gpu.GPURenderPassColorAttachment.Builder akasha.gpu.GPURenderPassColorAttachment::create(java.lang.String, java.lang.String, ===akasha.gpu.GPUTextureView===)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUStoreOp",
+      "annotationType": "akasha.gpu.GPUStoreOp",
+      "classQualifiedName": "akasha.gpu.GPURenderPassColorAttachment",
+      "classSimpleName": "GPURenderPassColorAttachment",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "2"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'akasha.gpu.GPUTextureView' to 'java.lang.String'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassColorAttachment.Builder akasha.gpu.GPURenderPassColorAttachment::create(akasha.gpu.GPUTextureView, akasha.gpu.GPUColor, ===java.lang.String===)",
+    "oldElement": "parameter akasha.gpu.GPURenderPassColorAttachment.Builder akasha.gpu.GPURenderPassColorAttachment::create(java.lang.String, java.lang.String, ===akasha.gpu.GPUTextureView===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURenderPassColorAttachment",
+      "classSimpleName": "GPURenderPassColorAttachment",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "newType": "java.lang.String",
+      "oldType": "akasha.gpu.GPUTextureView",
+      "package": "akasha.gpu",
+      "parameterIndex": "2"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'akasha.gpu.GPUStoreOp'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassColorAttachment.Builder akasha.gpu.GPURenderPassColorAttachment::create(akasha.gpu.GPUTextureView, akasha.gpu.GPUColorDict, ===java.lang.String===) @ akasha.gpu.GPURenderPassColorAttachment.Builder",
+    "oldElement": "parameter akasha.gpu.GPURenderPassColorAttachment.Builder akasha.gpu.GPURenderPassColorAttachment::create(double[], java.lang.String, ===akasha.gpu.GPUTextureView===) @ akasha.gpu.GPURenderPassColorAttachment.Builder",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUStoreOp",
+      "annotationType": "akasha.gpu.GPUStoreOp",
+      "classQualifiedName": "akasha.gpu.GPURenderPassColorAttachment.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "2"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'akasha.gpu.GPUStoreOp'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassColorAttachment.Builder akasha.gpu.GPURenderPassColorAttachment::create(akasha.gpu.GPUTextureView, akasha.gpu.GPUColorDict, ===java.lang.String===)",
+    "oldElement": "parameter akasha.gpu.GPURenderPassColorAttachment.Builder akasha.gpu.GPURenderPassColorAttachment::create(double[], java.lang.String, ===akasha.gpu.GPUTextureView===)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUStoreOp",
+      "annotationType": "akasha.gpu.GPUStoreOp",
+      "classQualifiedName": "akasha.gpu.GPURenderPassColorAttachment",
+      "classSimpleName": "GPURenderPassColorAttachment",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "2"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'akasha.gpu.GPUTextureView' to 'java.lang.String'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassColorAttachment.Builder akasha.gpu.GPURenderPassColorAttachment::create(akasha.gpu.GPUTextureView, akasha.gpu.GPUColorDict, ===java.lang.String===)",
+    "oldElement": "parameter akasha.gpu.GPURenderPassColorAttachment.Builder akasha.gpu.GPURenderPassColorAttachment::create(double[], java.lang.String, ===akasha.gpu.GPUTextureView===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURenderPassColorAttachment",
+      "classSimpleName": "GPURenderPassColorAttachment",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "newType": "java.lang.String",
+      "oldType": "akasha.gpu.GPUTextureView",
+      "package": "akasha.gpu",
+      "parameterIndex": "2"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'akasha.gpu.GPUStoreOp'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassColorAttachment.Builder akasha.gpu.GPURenderPassColorAttachment::create(akasha.gpu.GPUTextureView, akasha.lang.JsArray<java.lang.Double>, ===java.lang.String===) @ akasha.gpu.GPURenderPassColorAttachment.Builder",
+    "oldElement": "parameter akasha.gpu.GPURenderPassColorAttachment.Builder akasha.gpu.GPURenderPassColorAttachment::create(akasha.lang.JsArray<java.lang.Double>, java.lang.String, ===akasha.gpu.GPUTextureView===) @ akasha.gpu.GPURenderPassColorAttachment.Builder",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUStoreOp",
+      "annotationType": "akasha.gpu.GPUStoreOp",
+      "classQualifiedName": "akasha.gpu.GPURenderPassColorAttachment.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "2"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'akasha.gpu.GPUStoreOp'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassColorAttachment.Builder akasha.gpu.GPURenderPassColorAttachment::create(akasha.gpu.GPUTextureView, akasha.lang.JsArray<java.lang.Double>, ===java.lang.String===)",
+    "oldElement": "parameter akasha.gpu.GPURenderPassColorAttachment.Builder akasha.gpu.GPURenderPassColorAttachment::create(akasha.lang.JsArray<java.lang.Double>, java.lang.String, ===akasha.gpu.GPUTextureView===)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUStoreOp",
+      "annotationType": "akasha.gpu.GPUStoreOp",
+      "classQualifiedName": "akasha.gpu.GPURenderPassColorAttachment",
+      "classSimpleName": "GPURenderPassColorAttachment",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "2"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'akasha.gpu.GPUTextureView' to 'java.lang.String'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassColorAttachment.Builder akasha.gpu.GPURenderPassColorAttachment::create(akasha.gpu.GPUTextureView, akasha.lang.JsArray<java.lang.Double>, ===java.lang.String===)",
+    "oldElement": "parameter akasha.gpu.GPURenderPassColorAttachment.Builder akasha.gpu.GPURenderPassColorAttachment::create(akasha.lang.JsArray<java.lang.Double>, java.lang.String, ===akasha.gpu.GPUTextureView===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURenderPassColorAttachment",
+      "classSimpleName": "GPURenderPassColorAttachment",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "newType": "java.lang.String",
+      "oldType": "akasha.gpu.GPUTextureView",
+      "package": "akasha.gpu",
+      "parameterIndex": "2"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'akasha.gpu.GPUStoreOp'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassColorAttachment.Builder akasha.gpu.GPURenderPassColorAttachment::create(akasha.gpu.GPUTextureView, double[], ===java.lang.String===) @ akasha.gpu.GPURenderPassColorAttachment.Builder",
+    "oldElement": "parameter akasha.gpu.GPURenderPassColorAttachment.Builder akasha.gpu.GPURenderPassColorAttachment::create(akasha.gpu.GPUColorDict, java.lang.String, ===akasha.gpu.GPUTextureView===) @ akasha.gpu.GPURenderPassColorAttachment.Builder",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUStoreOp",
+      "annotationType": "akasha.gpu.GPUStoreOp",
+      "classQualifiedName": "akasha.gpu.GPURenderPassColorAttachment.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "2"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'akasha.gpu.GPUStoreOp'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassColorAttachment.Builder akasha.gpu.GPURenderPassColorAttachment::create(akasha.gpu.GPUTextureView, double[], ===java.lang.String===)",
+    "oldElement": "parameter akasha.gpu.GPURenderPassColorAttachment.Builder akasha.gpu.GPURenderPassColorAttachment::create(akasha.gpu.GPUColorDict, java.lang.String, ===akasha.gpu.GPUTextureView===)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUStoreOp",
+      "annotationType": "akasha.gpu.GPUStoreOp",
+      "classQualifiedName": "akasha.gpu.GPURenderPassColorAttachment",
+      "classSimpleName": "GPURenderPassColorAttachment",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "2"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'akasha.gpu.GPUTextureView' to 'java.lang.String'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassColorAttachment.Builder akasha.gpu.GPURenderPassColorAttachment::create(akasha.gpu.GPUTextureView, double[], ===java.lang.String===)",
+    "oldElement": "parameter akasha.gpu.GPURenderPassColorAttachment.Builder akasha.gpu.GPURenderPassColorAttachment::create(akasha.gpu.GPUColorDict, java.lang.String, ===akasha.gpu.GPUTextureView===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURenderPassColorAttachment",
+      "classSimpleName": "GPURenderPassColorAttachment",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "newType": "java.lang.String",
+      "oldType": "akasha.gpu.GPUTextureView",
+      "package": "akasha.gpu",
+      "parameterIndex": "2"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'akasha.gpu.GPUStoreOp'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassColorAttachment.Builder akasha.gpu.GPURenderPassColorAttachment::create(akasha.gpu.GPUTextureView, java.lang.String, ===java.lang.String===) @ akasha.gpu.GPURenderPassColorAttachment.Builder",
+    "oldElement": "parameter akasha.gpu.GPURenderPassColorAttachment.Builder akasha.gpu.GPURenderPassColorAttachment::create(akasha.gpu.GPUColor, java.lang.String, ===akasha.gpu.GPUTextureView===) @ akasha.gpu.GPURenderPassColorAttachment.Builder",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUStoreOp",
+      "annotationType": "akasha.gpu.GPUStoreOp",
+      "classQualifiedName": "akasha.gpu.GPURenderPassColorAttachment.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "2"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'akasha.gpu.GPUStoreOp'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassColorAttachment.Builder akasha.gpu.GPURenderPassColorAttachment::create(akasha.gpu.GPUTextureView, java.lang.String, ===java.lang.String===)",
+    "oldElement": "parameter akasha.gpu.GPURenderPassColorAttachment.Builder akasha.gpu.GPURenderPassColorAttachment::create(akasha.gpu.GPUColor, java.lang.String, ===akasha.gpu.GPUTextureView===)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUStoreOp",
+      "annotationType": "akasha.gpu.GPUStoreOp",
+      "classQualifiedName": "akasha.gpu.GPURenderPassColorAttachment",
+      "classSimpleName": "GPURenderPassColorAttachment",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "2"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'akasha.gpu.GPUTextureView' to 'java.lang.String'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassColorAttachment.Builder akasha.gpu.GPURenderPassColorAttachment::create(akasha.gpu.GPUTextureView, java.lang.String, ===java.lang.String===)",
+    "oldElement": "parameter akasha.gpu.GPURenderPassColorAttachment.Builder akasha.gpu.GPURenderPassColorAttachment::create(akasha.gpu.GPUColor, java.lang.String, ===akasha.gpu.GPUTextureView===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURenderPassColorAttachment",
+      "classSimpleName": "GPURenderPassColorAttachment",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "newType": "java.lang.String",
+      "oldType": "akasha.gpu.GPUTextureView",
+      "package": "akasha.gpu",
+      "parameterIndex": "2"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.String' to 'akasha.gpu.GPUTextureView'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(===akasha.gpu.GPUTextureView===, float, java.lang.String, int, java.lang.String)",
+    "oldElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(===java.lang.String===, java.lang.String, java.lang.String, java.lang.String, akasha.gpu.GPUTextureView)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURenderPassDepthStencilAttachment",
+      "classSimpleName": "GPURenderPassDepthStencilAttachment",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "newType": "akasha.gpu.GPUTextureView",
+      "oldType": "java.lang.String",
+      "package": "akasha.gpu",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.String' to 'akasha.gpu.GPUTextureView'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(===akasha.gpu.GPUTextureView===, float, java.lang.String, java.lang.String, java.lang.String)",
+    "oldElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(===java.lang.String===, java.lang.String, int, java.lang.String, akasha.gpu.GPUTextureView)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURenderPassDepthStencilAttachment",
+      "classSimpleName": "GPURenderPassDepthStencilAttachment",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "newType": "akasha.gpu.GPUTextureView",
+      "oldType": "java.lang.String",
+      "package": "akasha.gpu",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'javax.annotation.Nonnull'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(===akasha.gpu.GPUTextureView===, java.lang.String, java.lang.String, int, java.lang.String) @ akasha.gpu.GPURenderPassDepthStencilAttachment.Builder",
+    "oldElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(===float===, java.lang.String, java.lang.String, java.lang.String, akasha.gpu.GPUTextureView) @ akasha.gpu.GPURenderPassDepthStencilAttachment.Builder",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@javax.annotation.Nonnull",
+      "annotationType": "javax.annotation.Nonnull",
+      "classQualifiedName": "akasha.gpu.GPURenderPassDepthStencilAttachment.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'javax.annotation.Nonnull'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(===akasha.gpu.GPUTextureView===, java.lang.String, java.lang.String, int, java.lang.String)",
+    "oldElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(===float===, java.lang.String, java.lang.String, java.lang.String, akasha.gpu.GPUTextureView)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@javax.annotation.Nonnull",
+      "annotationType": "javax.annotation.Nonnull",
+      "classQualifiedName": "akasha.gpu.GPURenderPassDepthStencilAttachment",
+      "classSimpleName": "GPURenderPassDepthStencilAttachment",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'float' to 'akasha.gpu.GPUTextureView'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(===akasha.gpu.GPUTextureView===, java.lang.String, java.lang.String, int, java.lang.String)",
+    "oldElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(===float===, java.lang.String, java.lang.String, java.lang.String, akasha.gpu.GPUTextureView)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURenderPassDepthStencilAttachment",
+      "classSimpleName": "GPURenderPassDepthStencilAttachment",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "newType": "akasha.gpu.GPUTextureView",
+      "oldType": "float",
+      "package": "akasha.gpu",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'javax.annotation.Nonnull'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(===akasha.gpu.GPUTextureView===, java.lang.String, java.lang.String, java.lang.String, java.lang.String) @ akasha.gpu.GPURenderPassDepthStencilAttachment.Builder",
+    "oldElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(===float===, java.lang.String, int, java.lang.String, akasha.gpu.GPUTextureView) @ akasha.gpu.GPURenderPassDepthStencilAttachment.Builder",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@javax.annotation.Nonnull",
+      "annotationType": "javax.annotation.Nonnull",
+      "classQualifiedName": "akasha.gpu.GPURenderPassDepthStencilAttachment.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'javax.annotation.Nonnull'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(===akasha.gpu.GPUTextureView===, java.lang.String, java.lang.String, java.lang.String, java.lang.String)",
+    "oldElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(===float===, java.lang.String, int, java.lang.String, akasha.gpu.GPUTextureView)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@javax.annotation.Nonnull",
+      "annotationType": "javax.annotation.Nonnull",
+      "classQualifiedName": "akasha.gpu.GPURenderPassDepthStencilAttachment",
+      "classSimpleName": "GPURenderPassDepthStencilAttachment",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'float' to 'akasha.gpu.GPUTextureView'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(===akasha.gpu.GPUTextureView===, java.lang.String, java.lang.String, java.lang.String, java.lang.String)",
+    "oldElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(===float===, java.lang.String, int, java.lang.String, akasha.gpu.GPUTextureView)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURenderPassDepthStencilAttachment",
+      "classSimpleName": "GPURenderPassDepthStencilAttachment",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "newType": "akasha.gpu.GPUTextureView",
+      "oldType": "float",
+      "package": "akasha.gpu",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.annotation.removed",
+    "description": "Element no longer annotated with 'akasha.gpu.GPUStoreOp'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(akasha.gpu.GPUTextureView, ===float===, java.lang.String, int, java.lang.String) @ akasha.gpu.GPURenderPassDepthStencilAttachment.Builder",
+    "oldElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(java.lang.String, ===java.lang.String===, java.lang.String, java.lang.String, akasha.gpu.GPUTextureView) @ akasha.gpu.GPURenderPassDepthStencilAttachment.Builder",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUStoreOp",
+      "annotationType": "akasha.gpu.GPUStoreOp",
+      "classQualifiedName": "akasha.gpu.GPURenderPassDepthStencilAttachment.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.annotation.removed",
+    "description": "Element no longer annotated with 'javax.annotation.Nonnull'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(akasha.gpu.GPUTextureView, ===float===, java.lang.String, int, java.lang.String) @ akasha.gpu.GPURenderPassDepthStencilAttachment.Builder",
+    "oldElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(java.lang.String, ===java.lang.String===, java.lang.String, java.lang.String, akasha.gpu.GPUTextureView) @ akasha.gpu.GPURenderPassDepthStencilAttachment.Builder",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@javax.annotation.Nonnull",
+      "annotationType": "javax.annotation.Nonnull",
+      "classQualifiedName": "akasha.gpu.GPURenderPassDepthStencilAttachment.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.annotation.removed",
+    "description": "Element no longer annotated with 'akasha.gpu.GPUStoreOp'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(akasha.gpu.GPUTextureView, ===float===, java.lang.String, int, java.lang.String)",
+    "oldElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(java.lang.String, ===java.lang.String===, java.lang.String, java.lang.String, akasha.gpu.GPUTextureView)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUStoreOp",
+      "annotationType": "akasha.gpu.GPUStoreOp",
+      "classQualifiedName": "akasha.gpu.GPURenderPassDepthStencilAttachment",
+      "classSimpleName": "GPURenderPassDepthStencilAttachment",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.annotation.removed",
+    "description": "Element no longer annotated with 'javax.annotation.Nonnull'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(akasha.gpu.GPUTextureView, ===float===, java.lang.String, int, java.lang.String)",
+    "oldElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(java.lang.String, ===java.lang.String===, java.lang.String, java.lang.String, akasha.gpu.GPUTextureView)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@javax.annotation.Nonnull",
+      "annotationType": "javax.annotation.Nonnull",
+      "classQualifiedName": "akasha.gpu.GPURenderPassDepthStencilAttachment",
+      "classSimpleName": "GPURenderPassDepthStencilAttachment",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.String' to 'float'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(akasha.gpu.GPUTextureView, ===float===, java.lang.String, int, java.lang.String)",
+    "oldElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(java.lang.String, ===java.lang.String===, java.lang.String, java.lang.String, akasha.gpu.GPUTextureView)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURenderPassDepthStencilAttachment",
+      "classSimpleName": "GPURenderPassDepthStencilAttachment",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "newType": "float",
+      "oldType": "java.lang.String",
+      "package": "akasha.gpu",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.annotation.removed",
+    "description": "Element no longer annotated with 'akasha.gpu.GPUStoreOp'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(akasha.gpu.GPUTextureView, ===float===, java.lang.String, java.lang.String, java.lang.String) @ akasha.gpu.GPURenderPassDepthStencilAttachment.Builder",
+    "oldElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(java.lang.String, ===java.lang.String===, int, java.lang.String, akasha.gpu.GPUTextureView) @ akasha.gpu.GPURenderPassDepthStencilAttachment.Builder",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUStoreOp",
+      "annotationType": "akasha.gpu.GPUStoreOp",
+      "classQualifiedName": "akasha.gpu.GPURenderPassDepthStencilAttachment.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.annotation.removed",
+    "description": "Element no longer annotated with 'javax.annotation.Nonnull'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(akasha.gpu.GPUTextureView, ===float===, java.lang.String, java.lang.String, java.lang.String) @ akasha.gpu.GPURenderPassDepthStencilAttachment.Builder",
+    "oldElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(java.lang.String, ===java.lang.String===, int, java.lang.String, akasha.gpu.GPUTextureView) @ akasha.gpu.GPURenderPassDepthStencilAttachment.Builder",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@javax.annotation.Nonnull",
+      "annotationType": "javax.annotation.Nonnull",
+      "classQualifiedName": "akasha.gpu.GPURenderPassDepthStencilAttachment.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.annotation.removed",
+    "description": "Element no longer annotated with 'akasha.gpu.GPUStoreOp'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(akasha.gpu.GPUTextureView, ===float===, java.lang.String, java.lang.String, java.lang.String)",
+    "oldElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(java.lang.String, ===java.lang.String===, int, java.lang.String, akasha.gpu.GPUTextureView)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUStoreOp",
+      "annotationType": "akasha.gpu.GPUStoreOp",
+      "classQualifiedName": "akasha.gpu.GPURenderPassDepthStencilAttachment",
+      "classSimpleName": "GPURenderPassDepthStencilAttachment",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.annotation.removed",
+    "description": "Element no longer annotated with 'javax.annotation.Nonnull'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(akasha.gpu.GPUTextureView, ===float===, java.lang.String, java.lang.String, java.lang.String)",
+    "oldElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(java.lang.String, ===java.lang.String===, int, java.lang.String, akasha.gpu.GPUTextureView)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@javax.annotation.Nonnull",
+      "annotationType": "javax.annotation.Nonnull",
+      "classQualifiedName": "akasha.gpu.GPURenderPassDepthStencilAttachment",
+      "classSimpleName": "GPURenderPassDepthStencilAttachment",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.String' to 'float'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(akasha.gpu.GPUTextureView, ===float===, java.lang.String, java.lang.String, java.lang.String)",
+    "oldElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(java.lang.String, ===java.lang.String===, int, java.lang.String, akasha.gpu.GPUTextureView)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURenderPassDepthStencilAttachment",
+      "classSimpleName": "GPURenderPassDepthStencilAttachment",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "newType": "float",
+      "oldType": "java.lang.String",
+      "package": "akasha.gpu",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.annotation.removed",
+    "description": "Element no longer annotated with 'akasha.gpu.GPUStoreOp'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(akasha.gpu.GPUTextureView, ===java.lang.String===, java.lang.String, int, java.lang.String) @ akasha.gpu.GPURenderPassDepthStencilAttachment.Builder",
+    "oldElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(float, ===java.lang.String===, java.lang.String, java.lang.String, akasha.gpu.GPUTextureView) @ akasha.gpu.GPURenderPassDepthStencilAttachment.Builder",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUStoreOp",
+      "annotationType": "akasha.gpu.GPUStoreOp",
+      "classQualifiedName": "akasha.gpu.GPURenderPassDepthStencilAttachment.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.annotation.removed",
+    "description": "Element no longer annotated with 'akasha.gpu.GPUStoreOp'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(akasha.gpu.GPUTextureView, ===java.lang.String===, java.lang.String, int, java.lang.String)",
+    "oldElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(float, ===java.lang.String===, java.lang.String, java.lang.String, akasha.gpu.GPUTextureView)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUStoreOp",
+      "annotationType": "akasha.gpu.GPUStoreOp",
+      "classQualifiedName": "akasha.gpu.GPURenderPassDepthStencilAttachment",
+      "classSimpleName": "GPURenderPassDepthStencilAttachment",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.annotation.removed",
+    "description": "Element no longer annotated with 'akasha.gpu.GPUStoreOp'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(akasha.gpu.GPUTextureView, ===java.lang.String===, java.lang.String, java.lang.String, java.lang.String) @ akasha.gpu.GPURenderPassDepthStencilAttachment.Builder",
+    "oldElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(float, ===java.lang.String===, int, java.lang.String, akasha.gpu.GPUTextureView) @ akasha.gpu.GPURenderPassDepthStencilAttachment.Builder",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUStoreOp",
+      "annotationType": "akasha.gpu.GPUStoreOp",
+      "classQualifiedName": "akasha.gpu.GPURenderPassDepthStencilAttachment.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.annotation.removed",
+    "description": "Element no longer annotated with 'akasha.gpu.GPUStoreOp'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(akasha.gpu.GPUTextureView, ===java.lang.String===, java.lang.String, java.lang.String, java.lang.String)",
+    "oldElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(float, ===java.lang.String===, int, java.lang.String, akasha.gpu.GPUTextureView)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUStoreOp",
+      "annotationType": "akasha.gpu.GPUStoreOp",
+      "classQualifiedName": "akasha.gpu.GPURenderPassDepthStencilAttachment",
+      "classSimpleName": "GPURenderPassDepthStencilAttachment",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'akasha.gpu.GPUStoreOp'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(akasha.gpu.GPUTextureView, float, ===java.lang.String===, int, java.lang.String) @ akasha.gpu.GPURenderPassDepthStencilAttachment.Builder",
+    "oldElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(java.lang.String, java.lang.String, ===java.lang.String===, java.lang.String, akasha.gpu.GPUTextureView) @ akasha.gpu.GPURenderPassDepthStencilAttachment.Builder",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUStoreOp",
+      "annotationType": "akasha.gpu.GPUStoreOp",
+      "classQualifiedName": "akasha.gpu.GPURenderPassDepthStencilAttachment.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "2"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'akasha.gpu.GPUStoreOp'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(akasha.gpu.GPUTextureView, float, ===java.lang.String===, int, java.lang.String)",
+    "oldElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(java.lang.String, java.lang.String, ===java.lang.String===, java.lang.String, akasha.gpu.GPUTextureView)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUStoreOp",
+      "annotationType": "akasha.gpu.GPUStoreOp",
+      "classQualifiedName": "akasha.gpu.GPURenderPassDepthStencilAttachment",
+      "classSimpleName": "GPURenderPassDepthStencilAttachment",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "2"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'akasha.gpu.GPUStoreOp'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(akasha.gpu.GPUTextureView, float, ===java.lang.String===, java.lang.String, java.lang.String) @ akasha.gpu.GPURenderPassDepthStencilAttachment.Builder",
+    "oldElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(java.lang.String, java.lang.String, ===int===, java.lang.String, akasha.gpu.GPUTextureView) @ akasha.gpu.GPURenderPassDepthStencilAttachment.Builder",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUStoreOp",
+      "annotationType": "akasha.gpu.GPUStoreOp",
+      "classQualifiedName": "akasha.gpu.GPURenderPassDepthStencilAttachment.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "2"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'javax.annotation.Nonnull'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(akasha.gpu.GPUTextureView, float, ===java.lang.String===, java.lang.String, java.lang.String) @ akasha.gpu.GPURenderPassDepthStencilAttachment.Builder",
+    "oldElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(java.lang.String, java.lang.String, ===int===, java.lang.String, akasha.gpu.GPUTextureView) @ akasha.gpu.GPURenderPassDepthStencilAttachment.Builder",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@javax.annotation.Nonnull",
+      "annotationType": "javax.annotation.Nonnull",
+      "classQualifiedName": "akasha.gpu.GPURenderPassDepthStencilAttachment.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "2"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'akasha.gpu.GPUStoreOp'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(akasha.gpu.GPUTextureView, float, ===java.lang.String===, java.lang.String, java.lang.String)",
+    "oldElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(java.lang.String, java.lang.String, ===int===, java.lang.String, akasha.gpu.GPUTextureView)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUStoreOp",
+      "annotationType": "akasha.gpu.GPUStoreOp",
+      "classQualifiedName": "akasha.gpu.GPURenderPassDepthStencilAttachment",
+      "classSimpleName": "GPURenderPassDepthStencilAttachment",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "2"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'javax.annotation.Nonnull'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(akasha.gpu.GPUTextureView, float, ===java.lang.String===, java.lang.String, java.lang.String)",
+    "oldElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(java.lang.String, java.lang.String, ===int===, java.lang.String, akasha.gpu.GPUTextureView)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@javax.annotation.Nonnull",
+      "annotationType": "javax.annotation.Nonnull",
+      "classQualifiedName": "akasha.gpu.GPURenderPassDepthStencilAttachment",
+      "classSimpleName": "GPURenderPassDepthStencilAttachment",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "2"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'int' to 'java.lang.String'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(akasha.gpu.GPUTextureView, float, ===java.lang.String===, java.lang.String, java.lang.String)",
+    "oldElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(java.lang.String, java.lang.String, ===int===, java.lang.String, akasha.gpu.GPUTextureView)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURenderPassDepthStencilAttachment",
+      "classSimpleName": "GPURenderPassDepthStencilAttachment",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "newType": "java.lang.String",
+      "oldType": "int",
+      "package": "akasha.gpu",
+      "parameterIndex": "2"
+    }
+  },
+  {
+    "code": "java.annotation.removed",
+    "description": "Element no longer annotated with 'akasha.gpu.GPUStoreOp'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(akasha.gpu.GPUTextureView, float, java.lang.String, ===int===, java.lang.String) @ akasha.gpu.GPURenderPassDepthStencilAttachment.Builder",
+    "oldElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(java.lang.String, java.lang.String, java.lang.String, ===java.lang.String===, akasha.gpu.GPUTextureView) @ akasha.gpu.GPURenderPassDepthStencilAttachment.Builder",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUStoreOp",
+      "annotationType": "akasha.gpu.GPUStoreOp",
+      "classQualifiedName": "akasha.gpu.GPURenderPassDepthStencilAttachment.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "3"
+    }
+  },
+  {
+    "code": "java.annotation.removed",
+    "description": "Element no longer annotated with 'javax.annotation.Nonnull'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(akasha.gpu.GPUTextureView, float, java.lang.String, ===int===, java.lang.String) @ akasha.gpu.GPURenderPassDepthStencilAttachment.Builder",
+    "oldElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(java.lang.String, java.lang.String, java.lang.String, ===java.lang.String===, akasha.gpu.GPUTextureView) @ akasha.gpu.GPURenderPassDepthStencilAttachment.Builder",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@javax.annotation.Nonnull",
+      "annotationType": "javax.annotation.Nonnull",
+      "classQualifiedName": "akasha.gpu.GPURenderPassDepthStencilAttachment.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "3"
+    }
+  },
+  {
+    "code": "java.annotation.removed",
+    "description": "Element no longer annotated with 'akasha.gpu.GPUStoreOp'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(akasha.gpu.GPUTextureView, float, java.lang.String, ===int===, java.lang.String)",
+    "oldElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(java.lang.String, java.lang.String, java.lang.String, ===java.lang.String===, akasha.gpu.GPUTextureView)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUStoreOp",
+      "annotationType": "akasha.gpu.GPUStoreOp",
+      "classQualifiedName": "akasha.gpu.GPURenderPassDepthStencilAttachment",
+      "classSimpleName": "GPURenderPassDepthStencilAttachment",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "3"
+    }
+  },
+  {
+    "code": "java.annotation.removed",
+    "description": "Element no longer annotated with 'javax.annotation.Nonnull'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(akasha.gpu.GPUTextureView, float, java.lang.String, ===int===, java.lang.String)",
+    "oldElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(java.lang.String, java.lang.String, java.lang.String, ===java.lang.String===, akasha.gpu.GPUTextureView)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@javax.annotation.Nonnull",
+      "annotationType": "javax.annotation.Nonnull",
+      "classQualifiedName": "akasha.gpu.GPURenderPassDepthStencilAttachment",
+      "classSimpleName": "GPURenderPassDepthStencilAttachment",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "3"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.String' to 'int'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(akasha.gpu.GPUTextureView, float, java.lang.String, ===int===, java.lang.String)",
+    "oldElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(java.lang.String, java.lang.String, java.lang.String, ===java.lang.String===, akasha.gpu.GPUTextureView)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURenderPassDepthStencilAttachment",
+      "classSimpleName": "GPURenderPassDepthStencilAttachment",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "newType": "int",
+      "oldType": "java.lang.String",
+      "package": "akasha.gpu",
+      "parameterIndex": "3"
+    }
+  },
+  {
+    "code": "java.annotation.removed",
+    "description": "Element no longer annotated with 'akasha.gpu.GPUStoreOp'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(akasha.gpu.GPUTextureView, float, java.lang.String, ===java.lang.String===, java.lang.String) @ akasha.gpu.GPURenderPassDepthStencilAttachment.Builder",
+    "oldElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(java.lang.String, java.lang.String, int, ===java.lang.String===, akasha.gpu.GPUTextureView) @ akasha.gpu.GPURenderPassDepthStencilAttachment.Builder",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUStoreOp",
+      "annotationType": "akasha.gpu.GPUStoreOp",
+      "classQualifiedName": "akasha.gpu.GPURenderPassDepthStencilAttachment.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "3"
+    }
+  },
+  {
+    "code": "java.annotation.removed",
+    "description": "Element no longer annotated with 'akasha.gpu.GPUStoreOp'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(akasha.gpu.GPUTextureView, float, java.lang.String, ===java.lang.String===, java.lang.String)",
+    "oldElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(java.lang.String, java.lang.String, int, ===java.lang.String===, akasha.gpu.GPUTextureView)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUStoreOp",
+      "annotationType": "akasha.gpu.GPUStoreOp",
+      "classQualifiedName": "akasha.gpu.GPURenderPassDepthStencilAttachment",
+      "classSimpleName": "GPURenderPassDepthStencilAttachment",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "3"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'akasha.gpu.GPUStoreOp'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(akasha.gpu.GPUTextureView, float, java.lang.String, int, ===java.lang.String===) @ akasha.gpu.GPURenderPassDepthStencilAttachment.Builder",
+    "oldElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(java.lang.String, java.lang.String, java.lang.String, java.lang.String, ===akasha.gpu.GPUTextureView===) @ akasha.gpu.GPURenderPassDepthStencilAttachment.Builder",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUStoreOp",
+      "annotationType": "akasha.gpu.GPUStoreOp",
+      "classQualifiedName": "akasha.gpu.GPURenderPassDepthStencilAttachment.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "4"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'akasha.gpu.GPUStoreOp'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(akasha.gpu.GPUTextureView, float, java.lang.String, int, ===java.lang.String===)",
+    "oldElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(java.lang.String, java.lang.String, java.lang.String, java.lang.String, ===akasha.gpu.GPUTextureView===)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUStoreOp",
+      "annotationType": "akasha.gpu.GPUStoreOp",
+      "classQualifiedName": "akasha.gpu.GPURenderPassDepthStencilAttachment",
+      "classSimpleName": "GPURenderPassDepthStencilAttachment",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "4"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'akasha.gpu.GPUTextureView' to 'java.lang.String'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(akasha.gpu.GPUTextureView, float, java.lang.String, int, ===java.lang.String===)",
+    "oldElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(java.lang.String, java.lang.String, java.lang.String, java.lang.String, ===akasha.gpu.GPUTextureView===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURenderPassDepthStencilAttachment",
+      "classSimpleName": "GPURenderPassDepthStencilAttachment",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "newType": "java.lang.String",
+      "oldType": "akasha.gpu.GPUTextureView",
+      "package": "akasha.gpu",
+      "parameterIndex": "4"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'akasha.gpu.GPUStoreOp'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(akasha.gpu.GPUTextureView, float, java.lang.String, java.lang.String, ===java.lang.String===) @ akasha.gpu.GPURenderPassDepthStencilAttachment.Builder",
+    "oldElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(java.lang.String, java.lang.String, int, java.lang.String, ===akasha.gpu.GPUTextureView===) @ akasha.gpu.GPURenderPassDepthStencilAttachment.Builder",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUStoreOp",
+      "annotationType": "akasha.gpu.GPUStoreOp",
+      "classQualifiedName": "akasha.gpu.GPURenderPassDepthStencilAttachment.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "4"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'akasha.gpu.GPUStoreOp'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(akasha.gpu.GPUTextureView, float, java.lang.String, java.lang.String, ===java.lang.String===)",
+    "oldElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(java.lang.String, java.lang.String, int, java.lang.String, ===akasha.gpu.GPUTextureView===)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUStoreOp",
+      "annotationType": "akasha.gpu.GPUStoreOp",
+      "classQualifiedName": "akasha.gpu.GPURenderPassDepthStencilAttachment",
+      "classSimpleName": "GPURenderPassDepthStencilAttachment",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "4"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'akasha.gpu.GPUTextureView' to 'java.lang.String'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(akasha.gpu.GPUTextureView, float, java.lang.String, java.lang.String, ===java.lang.String===)",
+    "oldElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(java.lang.String, java.lang.String, int, java.lang.String, ===akasha.gpu.GPUTextureView===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURenderPassDepthStencilAttachment",
+      "classSimpleName": "GPURenderPassDepthStencilAttachment",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "newType": "java.lang.String",
+      "oldType": "akasha.gpu.GPUTextureView",
+      "package": "akasha.gpu",
+      "parameterIndex": "4"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'akasha.gpu.GPUStoreOp'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(akasha.gpu.GPUTextureView, java.lang.String, ===java.lang.String===, int, java.lang.String) @ akasha.gpu.GPURenderPassDepthStencilAttachment.Builder",
+    "oldElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(float, java.lang.String, ===java.lang.String===, java.lang.String, akasha.gpu.GPUTextureView) @ akasha.gpu.GPURenderPassDepthStencilAttachment.Builder",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUStoreOp",
+      "annotationType": "akasha.gpu.GPUStoreOp",
+      "classQualifiedName": "akasha.gpu.GPURenderPassDepthStencilAttachment.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "2"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'akasha.gpu.GPUStoreOp'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(akasha.gpu.GPUTextureView, java.lang.String, ===java.lang.String===, int, java.lang.String)",
+    "oldElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(float, java.lang.String, ===java.lang.String===, java.lang.String, akasha.gpu.GPUTextureView)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUStoreOp",
+      "annotationType": "akasha.gpu.GPUStoreOp",
+      "classQualifiedName": "akasha.gpu.GPURenderPassDepthStencilAttachment",
+      "classSimpleName": "GPURenderPassDepthStencilAttachment",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "2"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'akasha.gpu.GPUStoreOp'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(akasha.gpu.GPUTextureView, java.lang.String, ===java.lang.String===, java.lang.String, java.lang.String) @ akasha.gpu.GPURenderPassDepthStencilAttachment.Builder",
+    "oldElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(float, java.lang.String, ===int===, java.lang.String, akasha.gpu.GPUTextureView) @ akasha.gpu.GPURenderPassDepthStencilAttachment.Builder",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUStoreOp",
+      "annotationType": "akasha.gpu.GPUStoreOp",
+      "classQualifiedName": "akasha.gpu.GPURenderPassDepthStencilAttachment.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "2"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'javax.annotation.Nonnull'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(akasha.gpu.GPUTextureView, java.lang.String, ===java.lang.String===, java.lang.String, java.lang.String) @ akasha.gpu.GPURenderPassDepthStencilAttachment.Builder",
+    "oldElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(float, java.lang.String, ===int===, java.lang.String, akasha.gpu.GPUTextureView) @ akasha.gpu.GPURenderPassDepthStencilAttachment.Builder",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@javax.annotation.Nonnull",
+      "annotationType": "javax.annotation.Nonnull",
+      "classQualifiedName": "akasha.gpu.GPURenderPassDepthStencilAttachment.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "2"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'akasha.gpu.GPUStoreOp'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(akasha.gpu.GPUTextureView, java.lang.String, ===java.lang.String===, java.lang.String, java.lang.String)",
+    "oldElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(float, java.lang.String, ===int===, java.lang.String, akasha.gpu.GPUTextureView)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUStoreOp",
+      "annotationType": "akasha.gpu.GPUStoreOp",
+      "classQualifiedName": "akasha.gpu.GPURenderPassDepthStencilAttachment",
+      "classSimpleName": "GPURenderPassDepthStencilAttachment",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "2"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'javax.annotation.Nonnull'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(akasha.gpu.GPUTextureView, java.lang.String, ===java.lang.String===, java.lang.String, java.lang.String)",
+    "oldElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(float, java.lang.String, ===int===, java.lang.String, akasha.gpu.GPUTextureView)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@javax.annotation.Nonnull",
+      "annotationType": "javax.annotation.Nonnull",
+      "classQualifiedName": "akasha.gpu.GPURenderPassDepthStencilAttachment",
+      "classSimpleName": "GPURenderPassDepthStencilAttachment",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "2"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'int' to 'java.lang.String'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(akasha.gpu.GPUTextureView, java.lang.String, ===java.lang.String===, java.lang.String, java.lang.String)",
+    "oldElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(float, java.lang.String, ===int===, java.lang.String, akasha.gpu.GPUTextureView)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURenderPassDepthStencilAttachment",
+      "classSimpleName": "GPURenderPassDepthStencilAttachment",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "newType": "java.lang.String",
+      "oldType": "int",
+      "package": "akasha.gpu",
+      "parameterIndex": "2"
+    }
+  },
+  {
+    "code": "java.annotation.removed",
+    "description": "Element no longer annotated with 'akasha.gpu.GPUStoreOp'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(akasha.gpu.GPUTextureView, java.lang.String, java.lang.String, ===int===, java.lang.String) @ akasha.gpu.GPURenderPassDepthStencilAttachment.Builder",
+    "oldElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(float, java.lang.String, java.lang.String, ===java.lang.String===, akasha.gpu.GPUTextureView) @ akasha.gpu.GPURenderPassDepthStencilAttachment.Builder",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUStoreOp",
+      "annotationType": "akasha.gpu.GPUStoreOp",
+      "classQualifiedName": "akasha.gpu.GPURenderPassDepthStencilAttachment.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "3"
+    }
+  },
+  {
+    "code": "java.annotation.removed",
+    "description": "Element no longer annotated with 'javax.annotation.Nonnull'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(akasha.gpu.GPUTextureView, java.lang.String, java.lang.String, ===int===, java.lang.String) @ akasha.gpu.GPURenderPassDepthStencilAttachment.Builder",
+    "oldElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(float, java.lang.String, java.lang.String, ===java.lang.String===, akasha.gpu.GPUTextureView) @ akasha.gpu.GPURenderPassDepthStencilAttachment.Builder",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@javax.annotation.Nonnull",
+      "annotationType": "javax.annotation.Nonnull",
+      "classQualifiedName": "akasha.gpu.GPURenderPassDepthStencilAttachment.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "3"
+    }
+  },
+  {
+    "code": "java.annotation.removed",
+    "description": "Element no longer annotated with 'akasha.gpu.GPUStoreOp'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(akasha.gpu.GPUTextureView, java.lang.String, java.lang.String, ===int===, java.lang.String)",
+    "oldElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(float, java.lang.String, java.lang.String, ===java.lang.String===, akasha.gpu.GPUTextureView)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUStoreOp",
+      "annotationType": "akasha.gpu.GPUStoreOp",
+      "classQualifiedName": "akasha.gpu.GPURenderPassDepthStencilAttachment",
+      "classSimpleName": "GPURenderPassDepthStencilAttachment",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "3"
+    }
+  },
+  {
+    "code": "java.annotation.removed",
+    "description": "Element no longer annotated with 'javax.annotation.Nonnull'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(akasha.gpu.GPUTextureView, java.lang.String, java.lang.String, ===int===, java.lang.String)",
+    "oldElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(float, java.lang.String, java.lang.String, ===java.lang.String===, akasha.gpu.GPUTextureView)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@javax.annotation.Nonnull",
+      "annotationType": "javax.annotation.Nonnull",
+      "classQualifiedName": "akasha.gpu.GPURenderPassDepthStencilAttachment",
+      "classSimpleName": "GPURenderPassDepthStencilAttachment",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "3"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.String' to 'int'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(akasha.gpu.GPUTextureView, java.lang.String, java.lang.String, ===int===, java.lang.String)",
+    "oldElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(float, java.lang.String, java.lang.String, ===java.lang.String===, akasha.gpu.GPUTextureView)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURenderPassDepthStencilAttachment",
+      "classSimpleName": "GPURenderPassDepthStencilAttachment",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "newType": "int",
+      "oldType": "java.lang.String",
+      "package": "akasha.gpu",
+      "parameterIndex": "3"
+    }
+  },
+  {
+    "code": "java.annotation.removed",
+    "description": "Element no longer annotated with 'akasha.gpu.GPUStoreOp'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(akasha.gpu.GPUTextureView, java.lang.String, java.lang.String, ===java.lang.String===, java.lang.String) @ akasha.gpu.GPURenderPassDepthStencilAttachment.Builder",
+    "oldElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(float, java.lang.String, int, ===java.lang.String===, akasha.gpu.GPUTextureView) @ akasha.gpu.GPURenderPassDepthStencilAttachment.Builder",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUStoreOp",
+      "annotationType": "akasha.gpu.GPUStoreOp",
+      "classQualifiedName": "akasha.gpu.GPURenderPassDepthStencilAttachment.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "3"
+    }
+  },
+  {
+    "code": "java.annotation.removed",
+    "description": "Element no longer annotated with 'akasha.gpu.GPUStoreOp'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(akasha.gpu.GPUTextureView, java.lang.String, java.lang.String, ===java.lang.String===, java.lang.String)",
+    "oldElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(float, java.lang.String, int, ===java.lang.String===, akasha.gpu.GPUTextureView)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUStoreOp",
+      "annotationType": "akasha.gpu.GPUStoreOp",
+      "classQualifiedName": "akasha.gpu.GPURenderPassDepthStencilAttachment",
+      "classSimpleName": "GPURenderPassDepthStencilAttachment",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "3"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'akasha.gpu.GPUStoreOp'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(akasha.gpu.GPUTextureView, java.lang.String, java.lang.String, int, ===java.lang.String===) @ akasha.gpu.GPURenderPassDepthStencilAttachment.Builder",
+    "oldElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(float, java.lang.String, java.lang.String, java.lang.String, ===akasha.gpu.GPUTextureView===) @ akasha.gpu.GPURenderPassDepthStencilAttachment.Builder",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUStoreOp",
+      "annotationType": "akasha.gpu.GPUStoreOp",
+      "classQualifiedName": "akasha.gpu.GPURenderPassDepthStencilAttachment.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "4"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'akasha.gpu.GPUStoreOp'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(akasha.gpu.GPUTextureView, java.lang.String, java.lang.String, int, ===java.lang.String===)",
+    "oldElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(float, java.lang.String, java.lang.String, java.lang.String, ===akasha.gpu.GPUTextureView===)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUStoreOp",
+      "annotationType": "akasha.gpu.GPUStoreOp",
+      "classQualifiedName": "akasha.gpu.GPURenderPassDepthStencilAttachment",
+      "classSimpleName": "GPURenderPassDepthStencilAttachment",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "4"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'akasha.gpu.GPUTextureView' to 'java.lang.String'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(akasha.gpu.GPUTextureView, java.lang.String, java.lang.String, int, ===java.lang.String===)",
+    "oldElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(float, java.lang.String, java.lang.String, java.lang.String, ===akasha.gpu.GPUTextureView===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURenderPassDepthStencilAttachment",
+      "classSimpleName": "GPURenderPassDepthStencilAttachment",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "newType": "java.lang.String",
+      "oldType": "akasha.gpu.GPUTextureView",
+      "package": "akasha.gpu",
+      "parameterIndex": "4"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'akasha.gpu.GPUStoreOp'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(akasha.gpu.GPUTextureView, java.lang.String, java.lang.String, java.lang.String, ===java.lang.String===) @ akasha.gpu.GPURenderPassDepthStencilAttachment.Builder",
+    "oldElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(float, java.lang.String, int, java.lang.String, ===akasha.gpu.GPUTextureView===) @ akasha.gpu.GPURenderPassDepthStencilAttachment.Builder",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUStoreOp",
+      "annotationType": "akasha.gpu.GPUStoreOp",
+      "classQualifiedName": "akasha.gpu.GPURenderPassDepthStencilAttachment.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "4"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'akasha.gpu.GPUStoreOp'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(akasha.gpu.GPUTextureView, java.lang.String, java.lang.String, java.lang.String, ===java.lang.String===)",
+    "oldElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(float, java.lang.String, int, java.lang.String, ===akasha.gpu.GPUTextureView===)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUStoreOp",
+      "annotationType": "akasha.gpu.GPUStoreOp",
+      "classQualifiedName": "akasha.gpu.GPURenderPassDepthStencilAttachment",
+      "classSimpleName": "GPURenderPassDepthStencilAttachment",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "4"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'akasha.gpu.GPUTextureView' to 'java.lang.String'.",
+    "newElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(akasha.gpu.GPUTextureView, java.lang.String, java.lang.String, java.lang.String, ===java.lang.String===)",
+    "oldElement": "parameter akasha.gpu.GPURenderPassDepthStencilAttachment.Builder akasha.gpu.GPURenderPassDepthStencilAttachment::create(float, java.lang.String, int, java.lang.String, ===akasha.gpu.GPUTextureView===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURenderPassDepthStencilAttachment",
+      "classSimpleName": "GPURenderPassDepthStencilAttachment",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "newType": "java.lang.String",
+      "oldType": "akasha.gpu.GPUTextureView",
+      "package": "akasha.gpu",
+      "parameterIndex": "4"
+    }
+  },
+  {
+    "code": "java.annotation.removed",
+    "description": "Element no longer annotated with 'akasha.gpu.GPUTextureFormat'.",
+    "newElement": "parameter akasha.gpu.GPUTextureDescriptor.Builder akasha.gpu.GPUTextureDescriptor::create(===akasha.gpu.GPUExtent3D===, java.lang.String, int) @ akasha.gpu.GPUTextureDescriptor.Builder",
+    "oldElement": "parameter akasha.gpu.GPUTextureDescriptor.Builder akasha.gpu.GPUTextureDescriptor::create(===java.lang.String===, double[], int) @ akasha.gpu.GPUTextureDescriptor.Builder",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUTextureFormat",
+      "annotationType": "akasha.gpu.GPUTextureFormat",
+      "classQualifiedName": "akasha.gpu.GPUTextureDescriptor.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.annotation.removed",
+    "description": "Element no longer annotated with 'akasha.gpu.GPUTextureFormat'.",
+    "newElement": "parameter akasha.gpu.GPUTextureDescriptor.Builder akasha.gpu.GPUTextureDescriptor::create(===akasha.gpu.GPUExtent3D===, java.lang.String, int)",
+    "oldElement": "parameter akasha.gpu.GPUTextureDescriptor.Builder akasha.gpu.GPUTextureDescriptor::create(===java.lang.String===, double[], int)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUTextureFormat",
+      "annotationType": "akasha.gpu.GPUTextureFormat",
+      "classQualifiedName": "akasha.gpu.GPUTextureDescriptor",
+      "classSimpleName": "GPUTextureDescriptor",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.String' to 'akasha.gpu.GPUExtent3D'.",
+    "newElement": "parameter akasha.gpu.GPUTextureDescriptor.Builder akasha.gpu.GPUTextureDescriptor::create(===akasha.gpu.GPUExtent3D===, java.lang.String, int)",
+    "oldElement": "parameter akasha.gpu.GPUTextureDescriptor.Builder akasha.gpu.GPUTextureDescriptor::create(===java.lang.String===, double[], int)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUTextureDescriptor",
+      "classSimpleName": "GPUTextureDescriptor",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "newType": "akasha.gpu.GPUExtent3D",
+      "oldType": "java.lang.String",
+      "package": "akasha.gpu",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.annotation.removed",
+    "description": "Element no longer annotated with 'akasha.gpu.GPUTextureFormat'.",
+    "newElement": "parameter akasha.gpu.GPUTextureDescriptor.Builder akasha.gpu.GPUTextureDescriptor::create(===akasha.gpu.GPUExtent3DDict===, java.lang.String, int) @ akasha.gpu.GPUTextureDescriptor.Builder",
+    "oldElement": "parameter akasha.gpu.GPUTextureDescriptor.Builder akasha.gpu.GPUTextureDescriptor::create(===java.lang.String===, akasha.lang.JsArray<java.lang.Double>, int) @ akasha.gpu.GPUTextureDescriptor.Builder",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUTextureFormat",
+      "annotationType": "akasha.gpu.GPUTextureFormat",
+      "classQualifiedName": "akasha.gpu.GPUTextureDescriptor.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.annotation.removed",
+    "description": "Element no longer annotated with 'akasha.gpu.GPUTextureFormat'.",
+    "newElement": "parameter akasha.gpu.GPUTextureDescriptor.Builder akasha.gpu.GPUTextureDescriptor::create(===akasha.gpu.GPUExtent3DDict===, java.lang.String, int)",
+    "oldElement": "parameter akasha.gpu.GPUTextureDescriptor.Builder akasha.gpu.GPUTextureDescriptor::create(===java.lang.String===, akasha.lang.JsArray<java.lang.Double>, int)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUTextureFormat",
+      "annotationType": "akasha.gpu.GPUTextureFormat",
+      "classQualifiedName": "akasha.gpu.GPUTextureDescriptor",
+      "classSimpleName": "GPUTextureDescriptor",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.String' to 'akasha.gpu.GPUExtent3DDict'.",
+    "newElement": "parameter akasha.gpu.GPUTextureDescriptor.Builder akasha.gpu.GPUTextureDescriptor::create(===akasha.gpu.GPUExtent3DDict===, java.lang.String, int)",
+    "oldElement": "parameter akasha.gpu.GPUTextureDescriptor.Builder akasha.gpu.GPUTextureDescriptor::create(===java.lang.String===, akasha.lang.JsArray<java.lang.Double>, int)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUTextureDescriptor",
+      "classSimpleName": "GPUTextureDescriptor",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "newType": "akasha.gpu.GPUExtent3DDict",
+      "oldType": "java.lang.String",
+      "package": "akasha.gpu",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.annotation.removed",
+    "description": "Element no longer annotated with 'akasha.gpu.GPUTextureFormat'.",
+    "newElement": "parameter akasha.gpu.GPUTextureDescriptor.Builder akasha.gpu.GPUTextureDescriptor::create(===akasha.lang.JsArray<java.lang.Double>===, java.lang.String, int) @ akasha.gpu.GPUTextureDescriptor.Builder",
+    "oldElement": "parameter akasha.gpu.GPUTextureDescriptor.Builder akasha.gpu.GPUTextureDescriptor::create(===java.lang.String===, akasha.gpu.GPUExtent3DDict, int) @ akasha.gpu.GPUTextureDescriptor.Builder",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUTextureFormat",
+      "annotationType": "akasha.gpu.GPUTextureFormat",
+      "classQualifiedName": "akasha.gpu.GPUTextureDescriptor.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.annotation.removed",
+    "description": "Element no longer annotated with 'akasha.gpu.GPUTextureFormat'.",
+    "newElement": "parameter akasha.gpu.GPUTextureDescriptor.Builder akasha.gpu.GPUTextureDescriptor::create(===akasha.lang.JsArray<java.lang.Double>===, java.lang.String, int)",
+    "oldElement": "parameter akasha.gpu.GPUTextureDescriptor.Builder akasha.gpu.GPUTextureDescriptor::create(===java.lang.String===, akasha.gpu.GPUExtent3DDict, int)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUTextureFormat",
+      "annotationType": "akasha.gpu.GPUTextureFormat",
+      "classQualifiedName": "akasha.gpu.GPUTextureDescriptor",
+      "classSimpleName": "GPUTextureDescriptor",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.String' to 'akasha.lang.JsArray<java.lang.Double>'.",
+    "newElement": "parameter akasha.gpu.GPUTextureDescriptor.Builder akasha.gpu.GPUTextureDescriptor::create(===akasha.lang.JsArray<java.lang.Double>===, java.lang.String, int)",
+    "oldElement": "parameter akasha.gpu.GPUTextureDescriptor.Builder akasha.gpu.GPUTextureDescriptor::create(===java.lang.String===, akasha.gpu.GPUExtent3DDict, int)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUTextureDescriptor",
+      "classSimpleName": "GPUTextureDescriptor",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "newType": "akasha.lang.JsArray<java.lang.Double>",
+      "oldType": "java.lang.String",
+      "package": "akasha.gpu",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.annotation.removed",
+    "description": "Element no longer annotated with 'akasha.gpu.GPUTextureFormat'.",
+    "newElement": "parameter akasha.gpu.GPUTextureDescriptor.Builder akasha.gpu.GPUTextureDescriptor::create(===double[]===, java.lang.String, int) @ akasha.gpu.GPUTextureDescriptor.Builder",
+    "oldElement": "parameter akasha.gpu.GPUTextureDescriptor.Builder akasha.gpu.GPUTextureDescriptor::create(===java.lang.String===, akasha.gpu.GPUExtent3D, int) @ akasha.gpu.GPUTextureDescriptor.Builder",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUTextureFormat",
+      "annotationType": "akasha.gpu.GPUTextureFormat",
+      "classQualifiedName": "akasha.gpu.GPUTextureDescriptor.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.annotation.removed",
+    "description": "Element no longer annotated with 'akasha.gpu.GPUTextureFormat'.",
+    "newElement": "parameter akasha.gpu.GPUTextureDescriptor.Builder akasha.gpu.GPUTextureDescriptor::create(===double[]===, java.lang.String, int)",
+    "oldElement": "parameter akasha.gpu.GPUTextureDescriptor.Builder akasha.gpu.GPUTextureDescriptor::create(===java.lang.String===, akasha.gpu.GPUExtent3D, int)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUTextureFormat",
+      "annotationType": "akasha.gpu.GPUTextureFormat",
+      "classQualifiedName": "akasha.gpu.GPUTextureDescriptor",
+      "classSimpleName": "GPUTextureDescriptor",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.String' to 'double[]'.",
+    "newElement": "parameter akasha.gpu.GPUTextureDescriptor.Builder akasha.gpu.GPUTextureDescriptor::create(===double[]===, java.lang.String, int)",
+    "oldElement": "parameter akasha.gpu.GPUTextureDescriptor.Builder akasha.gpu.GPUTextureDescriptor::create(===java.lang.String===, akasha.gpu.GPUExtent3D, int)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUTextureDescriptor",
+      "classSimpleName": "GPUTextureDescriptor",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "newType": "double[]",
+      "oldType": "java.lang.String",
+      "package": "akasha.gpu",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'akasha.gpu.GPUTextureFormat'.",
+    "newElement": "parameter akasha.gpu.GPUTextureDescriptor.Builder akasha.gpu.GPUTextureDescriptor::create(akasha.gpu.GPUExtent3D, ===java.lang.String===, int) @ akasha.gpu.GPUTextureDescriptor.Builder",
+    "oldElement": "parameter akasha.gpu.GPUTextureDescriptor.Builder akasha.gpu.GPUTextureDescriptor::create(java.lang.String, ===double[]===, int) @ akasha.gpu.GPUTextureDescriptor.Builder",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUTextureFormat",
+      "annotationType": "akasha.gpu.GPUTextureFormat",
+      "classQualifiedName": "akasha.gpu.GPUTextureDescriptor.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'akasha.gpu.GPUTextureFormat'.",
+    "newElement": "parameter akasha.gpu.GPUTextureDescriptor.Builder akasha.gpu.GPUTextureDescriptor::create(akasha.gpu.GPUExtent3D, ===java.lang.String===, int)",
+    "oldElement": "parameter akasha.gpu.GPUTextureDescriptor.Builder akasha.gpu.GPUTextureDescriptor::create(java.lang.String, ===double[]===, int)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUTextureFormat",
+      "annotationType": "akasha.gpu.GPUTextureFormat",
+      "classQualifiedName": "akasha.gpu.GPUTextureDescriptor",
+      "classSimpleName": "GPUTextureDescriptor",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'double[]' to 'java.lang.String'.",
+    "newElement": "parameter akasha.gpu.GPUTextureDescriptor.Builder akasha.gpu.GPUTextureDescriptor::create(akasha.gpu.GPUExtent3D, ===java.lang.String===, int)",
+    "oldElement": "parameter akasha.gpu.GPUTextureDescriptor.Builder akasha.gpu.GPUTextureDescriptor::create(java.lang.String, ===double[]===, int)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUTextureDescriptor",
+      "classSimpleName": "GPUTextureDescriptor",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "newType": "java.lang.String",
+      "oldType": "double[]",
+      "package": "akasha.gpu",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'akasha.gpu.GPUTextureFormat'.",
+    "newElement": "parameter akasha.gpu.GPUTextureDescriptor.Builder akasha.gpu.GPUTextureDescriptor::create(akasha.gpu.GPUExtent3DDict, ===java.lang.String===, int) @ akasha.gpu.GPUTextureDescriptor.Builder",
+    "oldElement": "parameter akasha.gpu.GPUTextureDescriptor.Builder akasha.gpu.GPUTextureDescriptor::create(java.lang.String, ===akasha.lang.JsArray<java.lang.Double>===, int) @ akasha.gpu.GPUTextureDescriptor.Builder",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUTextureFormat",
+      "annotationType": "akasha.gpu.GPUTextureFormat",
+      "classQualifiedName": "akasha.gpu.GPUTextureDescriptor.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'akasha.gpu.GPUTextureFormat'.",
+    "newElement": "parameter akasha.gpu.GPUTextureDescriptor.Builder akasha.gpu.GPUTextureDescriptor::create(akasha.gpu.GPUExtent3DDict, ===java.lang.String===, int)",
+    "oldElement": "parameter akasha.gpu.GPUTextureDescriptor.Builder akasha.gpu.GPUTextureDescriptor::create(java.lang.String, ===akasha.lang.JsArray<java.lang.Double>===, int)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUTextureFormat",
+      "annotationType": "akasha.gpu.GPUTextureFormat",
+      "classQualifiedName": "akasha.gpu.GPUTextureDescriptor",
+      "classSimpleName": "GPUTextureDescriptor",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'akasha.lang.JsArray<java.lang.Double>' to 'java.lang.String'.",
+    "newElement": "parameter akasha.gpu.GPUTextureDescriptor.Builder akasha.gpu.GPUTextureDescriptor::create(akasha.gpu.GPUExtent3DDict, ===java.lang.String===, int)",
+    "oldElement": "parameter akasha.gpu.GPUTextureDescriptor.Builder akasha.gpu.GPUTextureDescriptor::create(java.lang.String, ===akasha.lang.JsArray<java.lang.Double>===, int)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUTextureDescriptor",
+      "classSimpleName": "GPUTextureDescriptor",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "newType": "java.lang.String",
+      "oldType": "akasha.lang.JsArray<java.lang.Double>",
+      "package": "akasha.gpu",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'akasha.gpu.GPUTextureFormat'.",
+    "newElement": "parameter akasha.gpu.GPUTextureDescriptor.Builder akasha.gpu.GPUTextureDescriptor::create(akasha.lang.JsArray<java.lang.Double>, ===java.lang.String===, int) @ akasha.gpu.GPUTextureDescriptor.Builder",
+    "oldElement": "parameter akasha.gpu.GPUTextureDescriptor.Builder akasha.gpu.GPUTextureDescriptor::create(java.lang.String, ===akasha.gpu.GPUExtent3DDict===, int) @ akasha.gpu.GPUTextureDescriptor.Builder",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUTextureFormat",
+      "annotationType": "akasha.gpu.GPUTextureFormat",
+      "classQualifiedName": "akasha.gpu.GPUTextureDescriptor.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'akasha.gpu.GPUTextureFormat'.",
+    "newElement": "parameter akasha.gpu.GPUTextureDescriptor.Builder akasha.gpu.GPUTextureDescriptor::create(akasha.lang.JsArray<java.lang.Double>, ===java.lang.String===, int)",
+    "oldElement": "parameter akasha.gpu.GPUTextureDescriptor.Builder akasha.gpu.GPUTextureDescriptor::create(java.lang.String, ===akasha.gpu.GPUExtent3DDict===, int)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUTextureFormat",
+      "annotationType": "akasha.gpu.GPUTextureFormat",
+      "classQualifiedName": "akasha.gpu.GPUTextureDescriptor",
+      "classSimpleName": "GPUTextureDescriptor",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'akasha.gpu.GPUExtent3DDict' to 'java.lang.String'.",
+    "newElement": "parameter akasha.gpu.GPUTextureDescriptor.Builder akasha.gpu.GPUTextureDescriptor::create(akasha.lang.JsArray<java.lang.Double>, ===java.lang.String===, int)",
+    "oldElement": "parameter akasha.gpu.GPUTextureDescriptor.Builder akasha.gpu.GPUTextureDescriptor::create(java.lang.String, ===akasha.gpu.GPUExtent3DDict===, int)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUTextureDescriptor",
+      "classSimpleName": "GPUTextureDescriptor",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "newType": "java.lang.String",
+      "oldType": "akasha.gpu.GPUExtent3DDict",
+      "package": "akasha.gpu",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'akasha.gpu.GPUTextureFormat'.",
+    "newElement": "parameter akasha.gpu.GPUTextureDescriptor.Builder akasha.gpu.GPUTextureDescriptor::create(double[], ===java.lang.String===, int) @ akasha.gpu.GPUTextureDescriptor.Builder",
+    "oldElement": "parameter akasha.gpu.GPUTextureDescriptor.Builder akasha.gpu.GPUTextureDescriptor::create(java.lang.String, ===akasha.gpu.GPUExtent3D===, int) @ akasha.gpu.GPUTextureDescriptor.Builder",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUTextureFormat",
+      "annotationType": "akasha.gpu.GPUTextureFormat",
+      "classQualifiedName": "akasha.gpu.GPUTextureDescriptor.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'akasha.gpu.GPUTextureFormat'.",
+    "newElement": "parameter akasha.gpu.GPUTextureDescriptor.Builder akasha.gpu.GPUTextureDescriptor::create(double[], ===java.lang.String===, int)",
+    "oldElement": "parameter akasha.gpu.GPUTextureDescriptor.Builder akasha.gpu.GPUTextureDescriptor::create(java.lang.String, ===akasha.gpu.GPUExtent3D===, int)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUTextureFormat",
+      "annotationType": "akasha.gpu.GPUTextureFormat",
+      "classQualifiedName": "akasha.gpu.GPUTextureDescriptor",
+      "classSimpleName": "GPUTextureDescriptor",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'akasha.gpu.GPUExtent3D' to 'java.lang.String'.",
+    "newElement": "parameter akasha.gpu.GPUTextureDescriptor.Builder akasha.gpu.GPUTextureDescriptor::create(double[], ===java.lang.String===, int)",
+    "oldElement": "parameter akasha.gpu.GPUTextureDescriptor.Builder akasha.gpu.GPUTextureDescriptor::create(java.lang.String, ===akasha.gpu.GPUExtent3D===, int)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUTextureDescriptor",
+      "classSimpleName": "GPUTextureDescriptor",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "newType": "java.lang.String",
+      "oldType": "akasha.gpu.GPUExtent3D",
+      "package": "akasha.gpu",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'java.lang.String' to 'akasha.gpu.GPUShaderModule'.",
+    "newElement": "parameter akasha.gpu.GPUVertexState.Builder akasha.gpu.GPUVertexState::create(===akasha.gpu.GPUShaderModule===, java.lang.String)",
+    "oldElement": "parameter akasha.gpu.GPUVertexState.Builder akasha.gpu.GPUVertexState::create(===java.lang.String===, akasha.gpu.GPUShaderModule)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUVertexState",
+      "classSimpleName": "GPUVertexState",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "newType": "akasha.gpu.GPUShaderModule",
+      "oldType": "java.lang.String",
+      "package": "akasha.gpu",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'akasha.gpu.GPUShaderModule' to 'java.lang.String'.",
+    "newElement": "parameter akasha.gpu.GPUVertexState.Builder akasha.gpu.GPUVertexState::create(akasha.gpu.GPUShaderModule, ===java.lang.String===)",
+    "oldElement": "parameter akasha.gpu.GPUVertexState.Builder akasha.gpu.GPUVertexState::create(java.lang.String, ===akasha.gpu.GPUShaderModule===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUVertexState",
+      "classSimpleName": "GPUVertexState",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "newType": "java.lang.String",
+      "oldType": "akasha.gpu.GPUShaderModule",
+      "package": "akasha.gpu",
+      "parameterIndex": "1"
+    }
+  }
+]

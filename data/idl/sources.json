@@ -1,7 +1,7 @@
 
 [
     {
-        "lastModifiedTime": 1621013258000,
+        "lastModifiedTime": 1626933006000,
         "name": "aria",
         "url": "https://w3c.github.io/aria/"
     },
@@ -33,7 +33,7 @@
         "name": "closure_compiler_patch"
     },
     {
-        "lastModifiedTime": 1622732524000,
+        "lastModifiedTime": 1626681467000,
         "name": "common",
         "selector": "[data-level~=4.] ~ pre.idl",
         "url": "https://heycam.github.io/webidl/"
@@ -53,42 +53,42 @@
         "url": "https://www.w3.org/TR/credential-management-1/"
     },
     {
-        "lastModifiedTime": 1626394401000,
+        "lastModifiedTime": 1627021155000,
         "name": "css_animations_1",
         "url": "https://drafts.csswg.org/css-animations/"
     },
     {
-        "lastModifiedTime": 1626394481000,
+        "lastModifiedTime": 1627021245000,
         "name": "css_conditional_3",
         "url": "https://drafts.csswg.org/css-conditional-3/"
     },
     {
-        "lastModifiedTime": 1626394504000,
+        "lastModifiedTime": 1627021267000,
         "name": "css_counter_styles_3",
         "url": "https://drafts.csswg.org/css-counter-styles-3/"
     },
     {
-        "lastModifiedTime": 1626394551000,
+        "lastModifiedTime": 1627021312000,
         "name": "css_fonts",
         "url": "https://drafts.csswg.org/css-fonts-4/"
     },
     {
-        "lastModifiedTime": 1626395489000,
+        "lastModifiedTime": 1627021635000,
         "name": "css_masking_1",
         "url": "https://drafts.fxtf.org/css-masking-1/"
     },
     {
-        "lastModifiedTime": 1626394656000,
+        "lastModifiedTime": 1627021414000,
         "name": "css_pseudo_4",
         "url": "https://drafts.csswg.org/css-pseudo-4"
     },
     {
-        "lastModifiedTime": 1626394751000,
+        "lastModifiedTime": 1627021505000,
         "name": "css_transitions",
         "url": "https://drafts.csswg.org/css-transitions/"
     },
     {
-        "lastModifiedTime": 1626394827000,
+        "lastModifiedTime": 1627021569000,
         "name": "cssom",
         "url": "https://drafts.csswg.org/cssom/"
     },
@@ -610,7 +610,7 @@
         "url": "https://www.khronos.org/registry/webgl/extensions/OVR_multiview2/"
     },
     {
-        "lastModifiedTime": 1626373556000,
+        "lastModifiedTime": 1626984370000,
         "name": "webgpu",
         "url": "https://www.w3.org/TR/webgpu/"
     },

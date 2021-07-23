@@ -2,6 +2,8 @@
 
 ### Unreleased
 
+* Update the way that the Dictionary factory methods are generated so that the parameters in the factory method are in the same order as they appear in the specification. For some specifications (i.e. WebGPU) the order of members has some semantic connotations (i.e. The `r`, `g`, `b` and `a` members of the `GPUColorDict` should appear in that order in the generated code to respect the way the users of the API expect to arrange the data.)
+
 ### [v0.14](https://github.com/akasha/akasha/tree/v0.14) (2021-07-17) · [Full Changelog](https://github.com/spritz/spritz/compare/v0.13...v0.14) · [API Differences](https://akasha.github.io/akasha-java/api-diff/?key=akasha-java&old=0.13&new=0.14) · [Source Diff](https://github.com/akasha/akasha-java/compare/v0.13...v0.14)
 
 The release includes 75 non breaking API changes and 285 breaking API changes.

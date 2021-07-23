@@ -1,4 +1,5 @@
 EventInit
+GPUColorDict
 OptionalAnyDict
 PromiseRejectionEventInit
 RTCAnswerOptions

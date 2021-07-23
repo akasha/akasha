@@ -1,4 +1,5 @@
 EventInit=com.example.EventInit
+GPUColorDict=com.example.GPUColorDict
 OptionalAnyDict=com.example.OptionalAnyDict
 Promise=com.example.JsPromise
 PromiseRejectionEventInit=com.example.PromiseRejectionEventInit

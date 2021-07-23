@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.StringWriter;
 import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
 import javax.annotation.Nonnull;
 import org.realityforge.webtack.webidl.parser.WebIDLParser;
 import org.testng.annotations.Test;
@@ -67,6 +68,36 @@ public final class DictionaryTest
     }
   }
 
+  @Test
+  public void parseRetainingRequiredMembersDeclaredOrdering()
+    throws IOException
+  {
+    final DictionaryDefinition dictionary =
+      writeThenRead( parse( "dictionary ColorInit {\n" +
+                            "  required short r;\n" +
+                            "  required short g;\n" +
+                            "  required short b;\n" +
+                            "  required short a;\n" +
+                            "  long t;\n" +
+                            "  long s;\n" +
+                            "};\n" ) );
+    assertEquals( dictionary.getName(), "ColorInit" );
+    assertNull( dictionary.getInherits() );
+    final List<DictionaryMember> members = dictionary.getMembers();
+
+    assertEquals( members.size(), 6 );
+
+    assertEquals( members.get( 0 ).getName(), "r" );
+    assertEquals( members.get( 1 ).getName(), "g" );
+    assertEquals( members.get( 2 ).getName(), "b" );
+    assertEquals( members.get( 3 ).getName(), "a" );
+    // Non-required members are sorted by name
+    assertEquals( members.get( 4 ).getName(), "s" );
+    assertEquals( members.get( 5 ).getName(), "t" );
+
+    assertEquals( members.stream().map( NamedElement::getName ).collect( Collectors.joining() ), "rgbast" );
+  }
+
   @Nonnull
   private DictionaryDefinition parse( @Nonnull final String webIDL )
     throws IOException
@@ -77,21 +108,28 @@ public final class DictionaryTest
     assertEquals( actual, actual );
     assertEquals( actual.hashCode(), actual.hashCode() );
 
+    final DictionaryDefinition definition = writeThenRead( actual );
+    assertEquals( definition, definition );
+    assertEquals( definition.hashCode(), definition.hashCode() );
+
+    assertTrue( definition.equiv( actual ) );
+    assertNotSame( definition, actual );
+
+    return actual;
+  }
+
+  @Nonnull
+  private DictionaryDefinition writeThenRead( @Nonnull final DictionaryDefinition definition )
+    throws IOException
+  {
     final StringWriter writer = new StringWriter();
-    WebIDLWriter.writeDictionaryDefinition( writer, actual );
+    WebIDLWriter.writeDictionaryDefinition( writer, definition );
     writer.close();
     final String emittedIDL = writer.toString();
     final List<Definition> definitions = WebIDLModelParser.parse( createParser( emittedIDL ).definitions() );
     assertEquals( definitions.size(), 1 );
-    final Definition definition = definitions.get( 0 );
-    assertTrue( definition instanceof DictionaryDefinition );
-    final DictionaryDefinition element = (DictionaryDefinition) definition;
-    assertEquals( element, element );
-    assertEquals( element.hashCode(), element.hashCode() );
-
-    assertTrue( element.equiv( actual ) );
-    assertNotSame( element, actual );
-
-    return actual;
+    final Definition element = definitions.get( 0 );
+    assertTrue( element instanceof DictionaryDefinition );
+    return (DictionaryDefinition) element;
   }
 }

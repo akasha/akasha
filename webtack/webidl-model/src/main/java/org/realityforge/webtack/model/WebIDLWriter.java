@@ -564,15 +564,38 @@ public final class WebIDLWriter
       writer.write( inherits );
     }
     writer.write( " {\n" );
-    final List<DictionaryMember> members = definition.getMembers()
-      .stream()
-      .sorted( Comparator.comparing( NamedElement::getName ) )
-      .collect( Collectors.toList() );
+    final List<DictionaryMember> members =
+      definition
+        .getMembers()
+        .stream()
+        .sorted( WebIDLWriter::sortDictionaryMembers )
+        .collect( Collectors.toList() );
     for ( final DictionaryMember member : members )
     {
       writeDictionaryMember( writer, member );
     }
     writer.write( "};\n" );
+  }
+
+  private static int sortDictionaryMembers( @Nonnull final DictionaryMember o1,
+                                            @Nonnull final DictionaryMember o2 )
+  {
+    if ( o1.isRequired() && o2.isRequired() )
+    {
+      return 0;
+    }
+    else if ( o1.isRequired() )
+    {
+      return 0;
+    }
+    else if ( o2.isRequired() )
+    {
+      return 1;
+    }
+    else
+    {
+      return o1.getName().compareTo( o2.getName() );
+    }
   }
 
   static void writePartialDictionaryDefinition( @Nonnull final Writer writer,

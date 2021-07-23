@@ -1,5 +1,6 @@
 goog.module('com.example.ExampleCompileTest');
 goog.require('com.example.EventInit.$Overlay');
+goog.require('com.example.GPUColorDict.$Overlay');
 goog.require('com.example.OptionalAnyDict.$Overlay');
 goog.require('com.example.PromiseRejectionEventInit.$Overlay');
 goog.require('com.example.RTCAnswerOptions.$Overlay');

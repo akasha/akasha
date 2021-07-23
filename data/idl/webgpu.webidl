@@ -328,8 +328,8 @@ typedef unsigned long GPUStencilValue;
 typedef unsigned long GPUTextureUsageFlags;
 
 dictionary GPUBindGroupDescriptor : GPUObjectDescriptorBase {
-  required sequence<GPUBindGroupEntry> entries;
   required GPUBindGroupLayout layout;
+  required sequence<GPUBindGroupEntry> entries;
 };
 
 dictionary GPUBindGroupEntry {
@@ -343,12 +343,12 @@ dictionary GPUBindGroupLayoutDescriptor : GPUObjectDescriptorBase {
 
 dictionary GPUBindGroupLayoutEntry {
   required GPUIndex32 binding;
+  required GPUShaderStageFlags visibility;
   GPUBufferBindingLayout buffer;
   GPUExternalTextureBindingLayout externalTexture;
   GPUSamplerBindingLayout sampler;
   GPUStorageTextureBindingLayout storageTexture;
   GPUTextureBindingLayout texture;
-  required GPUShaderStageFlags visibility;
 };
 
 dictionary GPUBlendComponent {
@@ -358,8 +358,8 @@ dictionary GPUBlendComponent {
 };
 
 dictionary GPUBlendState {
-  required GPUBlendComponent alpha;
   required GPUBlendComponent color;
+  required GPUBlendComponent alpha;
 };
 
 dictionary GPUBufferBinding {
@@ -375,30 +375,30 @@ dictionary GPUBufferBindingLayout {
 };
 
 dictionary GPUBufferDescriptor : GPUObjectDescriptorBase {
-  boolean mappedAtCreation = false;
   required GPUSize64 size;
   required GPUBufferUsageFlags usage;
+  boolean mappedAtCreation = false;
 };
 
 dictionary GPUCanvasConfiguration {
-  GPUPredefinedColorSpace colorSpace = "srgb";
-  GPUCanvasCompositingAlphaMode compositingAlphaMode = "opaque";
   required GPUDevice device;
   required GPUTextureFormat format;
+  GPUPredefinedColorSpace colorSpace = "srgb";
+  GPUCanvasCompositingAlphaMode compositingAlphaMode = "opaque";
   GPUExtent3D size;
   GPUTextureUsageFlags usage = 0x10;
 };
 
 dictionary GPUColorDict {
-  required double a;
-  required double b;
-  required double g;
   required double r;
+  required double g;
+  required double b;
+  required double a;
 };
 
 dictionary GPUColorTargetState {
-  GPUBlendState blend;
   required GPUTextureFormat format;
+  GPUBlendState blend;
   GPUColorWriteFlags writeMask = 0xF;
 };
 
@@ -417,12 +417,12 @@ dictionary GPUComputePipelineDescriptor : GPUPipelineDescriptorBase {
 };
 
 dictionary GPUDepthStencilState {
+  required GPUTextureFormat format;
   GPUDepthBias depthBias = 0;
   float depthBiasClamp = 0;
   float depthBiasSlopeScale = 0;
   GPUCompareFunction depthCompare = "always";
   boolean depthWriteEnabled = false;
-  required GPUTextureFormat format;
   GPUStencilFaceState stencilBack = {};
   GPUStencilFaceState stencilFront = {};
   GPUStencilValue stencilReadMask = 0xFFFFFFFF;
@@ -435,17 +435,17 @@ dictionary GPUDeviceDescriptor : GPUObjectDescriptorBase {
 };
 
 dictionary GPUExtent3DDict {
+  required GPUIntegerCoordinate width;
   GPUIntegerCoordinate depthOrArrayLayers = 1;
   GPUIntegerCoordinate height = 1;
-  required GPUIntegerCoordinate width;
 };
 
 dictionary GPUExternalTextureBindingLayout {
 };
 
 dictionary GPUExternalTextureDescriptor : GPUObjectDescriptorBase {
-  GPUPredefinedColorSpace colorSpace = "srgb";
   required HTMLVideoElement source;
+  GPUPredefinedColorSpace colorSpace = "srgb";
 };
 
 dictionary GPUFragmentState : GPUProgrammableStage {
@@ -457,15 +457,15 @@ dictionary GPUImageCopyBuffer : GPUImageDataLayout {
 };
 
 dictionary GPUImageCopyExternalImage {
-  GPUOrigin2D origin = {};
   required ( ImageBitmap or HTMLCanvasElement or OffscreenCanvas ) source;
+  GPUOrigin2D origin = {};
 };
 
 dictionary GPUImageCopyTexture {
+  required GPUTexture texture;
   GPUTextureAspect aspect = "all";
   GPUIntegerCoordinate mipLevel = 0;
   GPUOrigin3D origin = {};
-  required GPUTexture texture;
 };
 
 dictionary GPUImageCopyTextureTagged : GPUImageCopyTexture {
@@ -517,41 +517,40 @@ dictionary GPUPrimitiveState {
 };
 
 dictionary GPUProgrammableStage {
-  record<USVString, GPUPipelineConstantValue> constants;
-  required USVString entryPoint;
   required GPUShaderModule module;
+  required USVString entryPoint;
+  record<USVString, GPUPipelineConstantValue> constants;
 };
 
 dictionary GPUQuerySetDescriptor : GPUObjectDescriptorBase {
+  required GPUQueryType type;
   required GPUSize32 count;
   sequence<GPUPipelineStatisticName> pipelineStatistics = [];
-  required GPUQueryType type;
 };
 
 dictionary GPURenderBundleDescriptor : GPUObjectDescriptorBase {
 };
 
-dictionary GPURenderBundleEncoderDescriptor : GPUObjectDescriptorBase {
-  required sequence<GPUTextureFormat> colorFormats;
-  GPUTextureFormat depthStencilFormat;
-  GPUSize32 sampleCount = 1;
+dictionary GPURenderBundleEncoderDescriptor : GPURenderPassLayout {
+  boolean depthReadOnly = false;
+  boolean stencilReadOnly = false;
 };
 
 dictionary GPURenderPassColorAttachment {
-  required ( GPULoadOp or GPUColor ) loadValue;
-  GPUTextureView resolveTarget;
-  required GPUStoreOp storeOp;
   required GPUTextureView view;
+  GPUTextureView resolveTarget;
+  required ( GPULoadOp or GPUColor ) loadValue;
+  required GPUStoreOp storeOp;
 };
 
 dictionary GPURenderPassDepthStencilAttachment {
-  required ( GPULoadOp or float ) depthLoadValue;
-  boolean depthReadOnly = false;
-  required GPUStoreOp depthStoreOp;
-  required ( GPULoadOp or GPUStencilValue ) stencilLoadValue;
-  boolean stencilReadOnly = false;
-  required GPUStoreOp stencilStoreOp;
   required GPUTextureView view;
+  required ( GPULoadOp or float ) depthLoadValue;
+  required GPUStoreOp depthStoreOp;
+  boolean depthReadOnly = false;
+  required ( GPULoadOp or GPUStencilValue ) stencilLoadValue;
+  required GPUStoreOp stencilStoreOp;
+  boolean stencilReadOnly = false;
 };
 
 dictionary GPURenderPassDescriptor : GPUObjectDescriptorBase {
@@ -560,12 +559,18 @@ dictionary GPURenderPassDescriptor : GPUObjectDescriptorBase {
   GPUQuerySet occlusionQuerySet;
 };
 
+dictionary GPURenderPassLayout : GPUObjectDescriptorBase {
+  required sequence<GPUTextureFormat> colorFormats;
+  GPUTextureFormat depthStencilFormat;
+  GPUSize32 sampleCount = 1;
+};
+
 dictionary GPURenderPipelineDescriptor : GPUPipelineDescriptorBase {
+  required GPUVertexState vertex;
   GPUDepthStencilState depthStencil;
   GPUFragmentState fragment;
   GPUMultisampleState multisample = {};
   GPUPrimitiveState primitive = {};
-  required GPUVertexState vertex;
 };
 
 dictionary GPURequestAdapterOptions {
@@ -616,11 +621,11 @@ dictionary GPUTextureBindingLayout {
 };
 
 dictionary GPUTextureDescriptor : GPUObjectDescriptorBase {
+  required GPUExtent3D size;
   GPUTextureDimension dimension = "2d";
-  required GPUTextureFormat format;
   GPUIntegerCoordinate mipLevelCount = 1;
   GPUSize32 sampleCount = 1;
-  required GPUExtent3D size;
+  required GPUTextureFormat format;
   required GPUTextureUsageFlags usage;
 };
 
@@ -646,8 +651,8 @@ dictionary GPUVertexAttribute {
 
 dictionary GPUVertexBufferLayout {
   required GPUSize64 arrayStride;
-  required sequence<GPUVertexAttribute> attributes;
   GPUVertexStepMode stepMode = "vertex";
+  required sequence<GPUVertexAttribute> attributes;
 };
 
 dictionary GPUVertexState : GPUProgrammableStage {
