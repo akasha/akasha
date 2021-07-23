@@ -1207,7 +1207,7 @@ final class JsinteropAction
       collectRequiredDictionaryMembers( getSchema().getDictionaryByName( inherits ), members );
     }
 
-    definition.getMembers().stream().filter( m -> !m.isOptional() ).forEach( members::add );
+    definition.getMembers().stream().filter( DictionaryMember::isRequired ).forEach( members::add );
   }
 
   private void generateDictionaryMemberGetter( @Nonnull final DictionaryMember member,
@@ -1233,7 +1233,7 @@ final class JsinteropAction
     }
     else
     {
-      if ( !actualType.getKind().isPrimitive() && !member.isOptional() )
+      if ( !actualType.getKind().isPrimitive() && member.isRequired() )
       {
         method.addAnnotation( BasicTypes.NONNULL );
       }

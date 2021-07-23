@@ -40,6 +40,11 @@ public final class DictionaryMember
     return _optional;
   }
 
+  public boolean isRequired()
+  {
+    return !isOptional();
+  }
+
   @Nullable
   public DefaultValue getDefaultValue()
   {
