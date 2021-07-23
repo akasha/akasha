@@ -11,13 +11,13 @@ var OptionalAnyDict;
  */
 var RTCOfferAnswerOptions;
 /**
- * @typedef {{iceRestart:(!boolean|undefined)}}
- */
-var RTCOfferOptions;
-/**
  * @typedef {{r:!number,g:!number,b:!number,a:!number}}
  */
 var GPUColorDict;
+/**
+ * @typedef {{iceRestart:(!boolean|undefined)}}
+ */
+var RTCOfferOptions;
 /**
  * @typedef {{promise:!Promise<*>,reason:(*|undefined),bubbles:(!boolean|undefined),cancelable:(!boolean|undefined),composed:(!boolean|undefined)}}
  */
