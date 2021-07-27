@@ -18,7 +18,7 @@ artifacts:
 
   jsoup: org.jsoup:jsoup:jar:1.13.1
 
-  gir: org.realityforge.gir:gir-core:jar:0.11
+  gir: org.realityforge.gir:gir-core:jar:0.12
 
   javapoet: com.squareup:javapoet:jar:1.13.0
 
@@ -28,8 +28,8 @@ artifacts:
   gwt_user: com.google.gwt:gwt-user:jar:2.9.0
   gwt_dev: com.google.gwt:gwt-dev:jar:2.9.0
 
-  react4j_core: org.realityforge.react4j:react4j-core:jar:0.182
-  react4j_dom: org.realityforge.react4j:react4j-dom:jar:0.182
+  react4j_core: org.realityforge.react4j:react4j-core:jar:0.183
+  react4j_dom: org.realityforge.react4j:react4j-dom:jar:0.183
 
   closure_compiler: com.google.javascript:closure-compiler:jar:v20210302
 
