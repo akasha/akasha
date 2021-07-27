@@ -10,6 +10,7 @@
 * Define the `JsObject.toString_()` operation.
 * Define the `JsObject.hasOwnProperty()` operation.
 * Define the `JsObject.propertyIsEnumerable()` operation.
+* Define the `JsObject.isPrototypeOf()` operation.
 
 ### [v0.15](https://github.com/akasha/akasha/tree/v0.15) (2021-07-23) · [Full Changelog](https://github.com/spritz/spritz/compare/v0.14...v0.15) · [API Differences](https://akasha.github.io/akasha-java/api-diff/?key=akasha-java&old=0.14&new=0.15) · [Source Diff](https://github.com/akasha/akasha-java/compare/v0.14...v0.15)
 

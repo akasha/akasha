@@ -419,6 +419,14 @@ public class JsObject
   public native boolean propertyIsEnumerable( @Nonnull String prop );
 
   /**
+   * The isPrototypeOf() method checks if an object exists in another object's prototype chain.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf">Object.prototype.isPrototypeOf - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-object.prototype.isprototypeof">Object.prototype.isPrototypeOf - ECMAScript (ECMA-262)</a>
+   */
+  public native boolean isPrototypeOf( @Nonnull Object object );
+
+  /**
    * The valueOf() method returns the wrapped primitive value of a Number object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf">Object.prototype.valueOf - MDN</a>
