@@ -6,6 +6,7 @@
 * Explicitly override the `HTMLOptionsCollection.item(...)` and `HTMLOptionsCollection.namedItem(...)` operations inherited from `HTMLCollection` as the `HTMLOptionsCollection` interface guarantees that the return type is `HTMLOptionElement` and thus the usability of the generated classes and externs can be improved by encoding this constraint.
 * Update the `org.realityforge.gir` artifact to version `0.12`.
 * Update the `org.realityforge.react4j` artifacts to version `0.183`.
+* Correct the javadocs for the `JsObject.valueOf_()` operation.
 
 ### [v0.15](https://github.com/akasha/akasha/tree/v0.15) (2021-07-23) · [Full Changelog](https://github.com/spritz/spritz/compare/v0.14...v0.15) · [API Differences](https://akasha.github.io/akasha-java/api-diff/?key=akasha-java&old=0.14&new=0.15) · [Source Diff](https://github.com/akasha/akasha-java/compare/v0.14...v0.15)
 

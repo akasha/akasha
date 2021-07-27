@@ -398,7 +398,7 @@ public class JsObject
    * The valueOf() method returns the wrapped primitive value of a Number object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf">Object.valueOf - MDN</a>
-   * @see <a href="https://tc39.es/ecma262/#sec-number.prototype.valueof">Object.prototype.valueOf - ECMAScript (ECMA-262)</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-object.prototype.valueof">Object.prototype.valueOf - ECMAScript (ECMA-262)</a>
    */
   @JsMethod( name = "valueOf" )
   public native Any valueOf_();
