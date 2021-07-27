@@ -44,7 +44,7 @@ public class JsObject
   }
 
   @Nonnull
-  private static native Object assign( @Nonnull JsObject target, @Nonnull Object... sources );
+  private static native JsObject assign( @Nonnull JsObject target, @Nonnull Object... sources );
 
   /**
    * The Object.create() method creates a new object, using an existing object as the prototype of the newly created object.
@@ -54,14 +54,14 @@ public class JsObject
    */
   @JsOverlay
   @Nonnull
-  public static Object create( @Nullable final Object proto,
-                               @Nullable final JsPropertyMap<ObjectPropertyDescriptor> props )
+  public static JsObject create( @Nullable final Object proto,
+                                 @Nullable final JsPropertyMap<ObjectPropertyDescriptor> props )
   {
     return create( Js.uncheckedCast( proto ), props );
   }
 
-  private static native Object create( @Nullable JsObject proto,
-                                       @Nullable JsPropertyMap<ObjectPropertyDescriptor> props );
+  private static native JsObject create( @Nullable JsObject proto,
+                                         @Nullable JsPropertyMap<ObjectPropertyDescriptor> props );
 
   /**
    * The Object.create() method creates a new object, using an existing object as the prototype of the newly created object.
@@ -77,7 +77,7 @@ public class JsObject
   }
 
   @Nonnull
-  private static native Object create( @Nullable JsObject proto );
+  private static native JsObject create( @Nullable JsObject proto );
 
   /**
    * The Object.defineProperties() method defines new or modifies existing properties directly on an object, returning the object.
@@ -168,7 +168,7 @@ public class JsObject
    * @see <a href="https://tc39.es/ecma262/#sec-object.fromentries">Object.fromEntries - ECMAScript (ECMA-262)</a>
    */
   @Nonnull
-  public static native Object fromEntries( @Nonnull JsIterable<ObjectPropertyEntry> iterable );
+  public static native JsObject fromEntries( @Nonnull JsIterable<ObjectPropertyEntry> iterable );
 
   @Nullable
   private static native ObjectPropertyDescriptor getOwnPropertyDescriptor( @Nonnull JsObject obj,
@@ -255,7 +255,7 @@ public class JsObject
   }
 
   @Nullable
-  private static native Object getPrototypeOf( @Nonnull JsObject obj );
+  private static native JsObject getPrototypeOf( @Nonnull JsObject obj );
 
   /**
    * The Object.getPrototypeOf() method returns the prototype (i.e. the value of the internal [[Prototype]] property) of the specified object.
@@ -265,7 +265,7 @@ public class JsObject
    */
   @JsOverlay
   @Nullable
-  public static Object getPrototypeOf( @Nonnull final Object obj )
+  public static JsObject getPrototypeOf( @Nonnull final Object obj )
   {
     return getPrototypeOf( Js.uncheckedCast( obj ) );
   }

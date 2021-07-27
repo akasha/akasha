@@ -1,0 +1,232 @@
+[
+  {
+    "code": "java.annotation.removed",
+    "description": "Element no longer annotated with 'jsinterop.annotations.JsOverlay'.",
+    "newElement": "method akasha.core.JsObject akasha.core.JsObject::assign(akasha.core.JsObject, java.lang.Object[])",
+    "oldElement": "method java.lang.Object akasha.core.JsObject::assign(java.lang.Object, java.lang.Object[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.core.JsObject",
+      "classSimpleName": "JsObject",
+      "elementKind": "method",
+      "methodName": "assign",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.visibilityReduced",
+    "description": "visibility reduced",
+    "newElement": "method akasha.core.JsObject akasha.core.JsObject::assign(akasha.core.JsObject, java.lang.Object[])",
+    "oldElement": "method java.lang.Object akasha.core.JsObject::assign(java.lang.Object, java.lang.Object[])",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.JsObject",
+      "classSimpleName": "JsObject",
+      "elementKind": "method",
+      "methodName": "assign",
+      "newVisibility": "private",
+      "oldVisibility": "public",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.annotation.removed",
+    "description": "Element no longer annotated with 'jsinterop.annotations.JsOverlay'.",
+    "newElement": "method akasha.core.JsObject akasha.core.JsObject::create(akasha.core.JsObject)",
+    "oldElement": "method java.lang.Object akasha.core.JsObject::create(java.lang.Object, jsinterop.base.JsPropertyMap<akasha.core.ObjectPropertyDescriptor>)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.core.JsObject",
+      "classSimpleName": "JsObject",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.visibilityReduced",
+    "description": "visibility reduced",
+    "newElement": "method akasha.core.JsObject akasha.core.JsObject::create(akasha.core.JsObject)",
+    "oldElement": "method java.lang.Object akasha.core.JsObject::create(java.lang.Object, jsinterop.base.JsPropertyMap<akasha.core.ObjectPropertyDescriptor>)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.JsObject",
+      "classSimpleName": "JsObject",
+      "elementKind": "method",
+      "methodName": "create",
+      "newVisibility": "private",
+      "oldVisibility": "public",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.numberOfParametersChanged",
+    "description": "The number of parameters of the method have changed.",
+    "newElement": "method akasha.core.JsObject akasha.core.JsObject::create(java.lang.Object, jsinterop.base.JsPropertyMap<akasha.core.ObjectPropertyDescriptor>)",
+    "oldElement": "method java.lang.Object akasha.core.JsObject::create(java.lang.Object)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.JsObject",
+      "classSimpleName": "JsObject",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.returnTypeChangedCovariantly",
+    "description": "The return type changed covariantly from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "method akasha.core.JsObject akasha.core.JsObject::create(java.lang.Object, jsinterop.base.JsPropertyMap<akasha.core.ObjectPropertyDescriptor>)",
+    "oldElement": "method java.lang.Object akasha.core.JsObject::create(java.lang.Object)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.JsObject",
+      "classSimpleName": "JsObject",
+      "elementKind": "method",
+      "methodName": "create",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.returnTypeChangedCovariantly",
+    "description": "The return type changed covariantly from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "method akasha.core.JsObject akasha.core.JsObject::fromEntries(akasha.lang.JsIterable<akasha.core.ObjectPropertyEntry>)",
+    "oldElement": "method java.lang.Object akasha.core.JsObject::fromEntries(akasha.lang.JsIterable<akasha.core.ObjectPropertyEntry>)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.JsObject",
+      "classSimpleName": "JsObject",
+      "elementKind": "method",
+      "methodName": "fromEntries",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.returnTypeChangedCovariantly",
+    "description": "The return type changed covariantly from 'java.lang.Object' to 'akasha.core.JsObject'.",
+    "newElement": "method akasha.core.JsObject akasha.core.JsObject::getPrototypeOf(java.lang.Object)",
+    "oldElement": "method java.lang.Object akasha.core.JsObject::getPrototypeOf(java.lang.Object)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.JsObject",
+      "classSimpleName": "JsObject",
+      "elementKind": "method",
+      "methodName": "getPrototypeOf",
+      "newType": "akasha.core.JsObject",
+      "oldType": "java.lang.Object",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "newElement": "method java.lang.Object akasha.core.JsObject::assign(java.lang.Object, java.lang.Object[])",
+    "oldElement": "method java.lang.Object akasha.core.JsObject::assign(akasha.core.JsObject, java.lang.Object[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.core.JsObject",
+      "classSimpleName": "JsObject",
+      "elementKind": "method",
+      "methodName": "assign",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.visibilityIncreased",
+    "description": "visibility increased",
+    "newElement": "method java.lang.Object akasha.core.JsObject::assign(java.lang.Object, java.lang.Object[])",
+    "oldElement": "method java.lang.Object akasha.core.JsObject::assign(akasha.core.JsObject, java.lang.Object[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.JsObject",
+      "classSimpleName": "JsObject",
+      "elementKind": "method",
+      "methodName": "assign",
+      "newVisibility": "public",
+      "oldVisibility": "private",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "newElement": "method java.lang.Object akasha.core.JsObject::create(java.lang.Object)",
+    "oldElement": "method java.lang.Object akasha.core.JsObject::create(akasha.core.JsObject)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.core.JsObject",
+      "classSimpleName": "JsObject",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.visibilityIncreased",
+    "description": "visibility increased",
+    "newElement": "method java.lang.Object akasha.core.JsObject::create(java.lang.Object)",
+    "oldElement": "method java.lang.Object akasha.core.JsObject::create(akasha.core.JsObject)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.JsObject",
+      "classSimpleName": "JsObject",
+      "elementKind": "method",
+      "methodName": "create",
+      "newVisibility": "public",
+      "oldVisibility": "private",
+      "package": "akasha.core"
+    }
+  }
+]
