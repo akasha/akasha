@@ -402,4 +402,14 @@ public class JsObject
    */
   @JsMethod( name = "valueOf" )
   public native Any valueOf_();
+
+  /**
+   * The valueOf() method returns the wrapped primitive value of a Number object.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString">Object.toString - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-object.prototype.tostring">Object.prototype.toString - ECMAScript (ECMA-262)</a>
+   */
+  @JsMethod( name = "toString" )
+  @Nonnull
+  public native String toString_();
 }
