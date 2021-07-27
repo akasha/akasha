@@ -400,7 +400,7 @@ public class JsObject
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty">Object.prototype.hasOwnProperty - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-object.prototype.hasownproperty">Object.prototype.hasOwnProperty - ECMAScript (ECMA-262)</a>
    */
-  public native boolean hasOwnProperty( @Nonnull Symbol symbol );
+  public native boolean hasOwnProperty( @Nonnull Symbol prop );
 
   /**
    * The hasOwnProperty() method returns a boolean indicating whether the object has the specified property as its own property (as opposed to inheriting it).
@@ -408,7 +408,7 @@ public class JsObject
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty">Object.prototype.hasOwnProperty - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-object.prototype.hasownproperty">Object.prototype.hasOwnProperty - ECMAScript (ECMA-262)</a>
    */
-  public native boolean hasOwnProperty( @Nonnull String symbol );
+  public native boolean hasOwnProperty( @Nonnull String prop );
 
   /**
    * The valueOf() method returns the wrapped primitive value of a Number object.
