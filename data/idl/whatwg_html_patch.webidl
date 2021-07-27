@@ -773,3 +773,9 @@ partial interface mixin WindowOrWorkerGlobalScope {
   long setInterval( TimerHandler handler, optional long timeout = 0 );
   long setTimeout( TimerHandler handler, optional long timeout = 0 );
 };
+
+// Override methods from HTMLCollection with more specific types to improve usability
+partial interface HTMLOptionsCollection {
+  getter HTMLOptionElement? item( unsigned long index );
+  getter HTMLOptionElement? namedItem( DOMString name );
+};
