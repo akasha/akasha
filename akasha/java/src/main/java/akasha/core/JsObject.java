@@ -411,6 +411,14 @@ public class JsObject
   public native boolean hasOwnProperty( @Nonnull String prop );
 
   /**
+   * The propertyIsEnumerable() method returns a Boolean indicating whether the specified property is enumerable and is the object's own property.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable">Object.prototype.propertyIsEnumerable - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-object.prototype.propertyisenumerable">Object.prototype.propertyIsEnumerable - ECMAScript (ECMA-262)</a>
+   */
+  public native boolean propertyIsEnumerable( @Nonnull String prop );
+
+  /**
    * The valueOf() method returns the wrapped primitive value of a Number object.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf">Object.prototype.valueOf - MDN</a>
