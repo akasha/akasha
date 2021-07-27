@@ -2,6 +2,7 @@
 
 ### Unreleased
 
+* Update the `org.realityforge.gir` artifact to version `0.12`.
 * Update the `org.realityforge.react4j` artifacts to version `0.183`.
 
 ### [v0.15](https://github.com/akasha/akasha/tree/v0.15) (2021-07-23) · [Full Changelog](https://github.com/spritz/spritz/compare/v0.14...v0.15) · [API Differences](https://akasha.github.io/akasha-java/api-diff/?key=akasha-java&old=0.14&new=0.15) · [Source Diff](https://github.com/akasha/akasha-java/compare/v0.14...v0.15)
