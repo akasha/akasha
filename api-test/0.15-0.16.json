@@ -1,5 +1,81 @@
 [
   {
+    "code": "java.method.inheritedMovedToClass",
+    "description": "The method was previously declared in superclass 'akasha.HTMLCollection' but is now declared in class 'akasha.HTMLOptionsCollection'.",
+    "newElement": "method akasha.HTMLOptionElement akasha.HTMLOptionsCollection::item(int)",
+    "oldElement": "method akasha.Element akasha.HTMLCollection::item(int) @ akasha.HTMLOptionsCollection",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.HTMLOptionsCollection",
+      "classSimpleName": "HTMLOptionsCollection",
+      "elementKind": "method",
+      "methodName": "item",
+      "newClass": "akasha.HTMLOptionsCollection",
+      "oldClass": "akasha.HTMLCollection",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.returnTypeChangedCovariantly",
+    "description": "The return type changed covariantly from 'akasha.Element' to 'akasha.HTMLOptionElement'.",
+    "newElement": "method akasha.HTMLOptionElement akasha.HTMLOptionsCollection::item(int)",
+    "oldElement": "method akasha.Element akasha.HTMLCollection::item(int) @ akasha.HTMLOptionsCollection",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.HTMLOptionsCollection",
+      "classSimpleName": "HTMLOptionsCollection",
+      "elementKind": "method",
+      "methodName": "item",
+      "newType": "akasha.HTMLOptionElement",
+      "oldType": "akasha.Element",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.inheritedMovedToClass",
+    "description": "The method was previously declared in superclass 'akasha.HTMLCollection' but is now declared in class 'akasha.HTMLOptionsCollection'.",
+    "newElement": "method akasha.HTMLOptionElement akasha.HTMLOptionsCollection::namedItem(java.lang.String)",
+    "oldElement": "method akasha.Element akasha.HTMLCollection::namedItem(java.lang.String) @ akasha.HTMLOptionsCollection",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.HTMLOptionsCollection",
+      "classSimpleName": "HTMLOptionsCollection",
+      "elementKind": "method",
+      "methodName": "namedItem",
+      "newClass": "akasha.HTMLOptionsCollection",
+      "oldClass": "akasha.HTMLCollection",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.returnTypeChangedCovariantly",
+    "description": "The return type changed covariantly from 'akasha.Element' to 'akasha.HTMLOptionElement'.",
+    "newElement": "method akasha.HTMLOptionElement akasha.HTMLOptionsCollection::namedItem(java.lang.String)",
+    "oldElement": "method akasha.Element akasha.HTMLCollection::namedItem(java.lang.String) @ akasha.HTMLOptionsCollection",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.HTMLOptionsCollection",
+      "classSimpleName": "HTMLOptionsCollection",
+      "elementKind": "method",
+      "methodName": "namedItem",
+      "newType": "akasha.HTMLOptionElement",
+      "oldType": "akasha.Element",
+      "package": "akasha"
+    }
+  },
+  {
     "code": "java.annotation.removed",
     "description": "Element no longer annotated with 'jsinterop.annotations.JsOverlay'.",
     "newElement": "method akasha.core.JsObject akasha.core.JsObject::assign(akasha.core.JsObject, java.lang.Object[])",
@@ -152,6 +228,70 @@
     }
   },
   {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method boolean akasha.core.JsObject::hasOwnProperty(akasha.core.Symbol)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.JsObject",
+      "classSimpleName": "JsObject",
+      "elementKind": "method",
+      "methodName": "hasOwnProperty",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method boolean akasha.core.JsObject::hasOwnProperty(java.lang.String)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.JsObject",
+      "classSimpleName": "JsObject",
+      "elementKind": "method",
+      "methodName": "hasOwnProperty",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method boolean akasha.core.JsObject::isPrototypeOf(java.lang.Object)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.JsObject",
+      "classSimpleName": "JsObject",
+      "elementKind": "method",
+      "methodName": "isPrototypeOf",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method boolean akasha.core.JsObject::propertyIsEnumerable(java.lang.String)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.JsObject",
+      "classSimpleName": "JsObject",
+      "elementKind": "method",
+      "methodName": "propertyIsEnumerable",
+      "package": "akasha.core"
+    }
+  },
+  {
     "code": "java.annotation.added",
     "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
     "newElement": "method java.lang.Object akasha.core.JsObject::assign(java.lang.Object, java.lang.Object[])",
@@ -226,6 +366,22 @@
       "methodName": "create",
       "newVisibility": "public",
       "oldVisibility": "private",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method java.lang.String akasha.core.JsObject::toString_()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.JsObject",
+      "classSimpleName": "JsObject",
+      "elementKind": "method",
+      "methodName": "toString_",
       "package": "akasha.core"
     }
   }
