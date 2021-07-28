@@ -1,6 +1,10 @@
 # Change Log
 
-### Unreleased
+### [v0.16](https://github.com/akasha/akasha/tree/v0.16) (2021-07-28) · [Full Changelog](https://github.com/spritz/spritz/compare/v0.15...v0.16) · [API Differences](https://akasha.github.io/akasha-java/api-diff/?key=akasha-java&old=0.15&new=0.16) · [Source Diff](https://github.com/akasha/akasha-java/compare/v0.15...v0.16)
+
+The release includes 10 non breaking API changes and 3 breaking API changes.
+
+Changes in this release:
 
 * Change `JsObject.create(...)`, `JsObject.getPrototypeOf(...)` and `JsObject.assign(...)` operations so that they return an instance of type `JsObject` rather than an instance of type `Object`.
 * Explicitly override the `HTMLOptionsCollection.item(...)` and `HTMLOptionsCollection.namedItem(...)` operations inherited from `HTMLCollection` as the `HTMLOptionsCollection` interface guarantees that the return type is `HTMLOptionElement` and thus the usability of the generated classes and externs can be improved by encoding this constraint.
