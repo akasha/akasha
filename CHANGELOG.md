@@ -2,7 +2,7 @@
 
 ### Unreleased
 
-* Convert the type `GPUBufferUsageFlags` into a `const enum` to improve usability in the java binding.
+* Convert the following types into `const enum` representation to improve usability in the java binding. The types modified include: `GPUBufferUsageFlags`, `GPUShaderStageFlags`, `GPUMapModeFlags`, `GPUColorWriteFlags` and `GPUTextureUsageFlags`.
 
 ### [v0.16](https://github.com/akasha/akasha/tree/v0.16) (2021-07-28) · [Full Changelog](https://github.com/spritz/spritz/compare/v0.15...v0.16) · [API Differences](https://akasha.github.io/akasha-java/api-diff/?key=akasha-java&old=0.15&new=0.16) · [Source Diff](https://github.com/akasha/akasha-java/compare/v0.15...v0.16)
 
