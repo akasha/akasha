@@ -6,6 +6,10 @@ import java.util.function.Supplier;
 import javax.annotation.Nonnull;
 import org.realityforge.webtack.model.AbstractTest;
 import org.realityforge.webtack.model.WebIDLSchema;
+import org.realityforge.webtack.model.tools.PipelineContextImpl;
+import org.realityforge.webtack.model.tools.pipeline.ExecutionContext;
+import org.realityforge.webtack.model.tools.pipeline.ProgressListener;
+import org.realityforge.webtack.model.tools.qa.TestProgressListener;
 import org.realityforge.webtack.model.tools.spi.Completable;
 import org.realityforge.webtack.model.tools.spi.Processor;
 import static org.testng.Assert.*;
@@ -41,6 +45,16 @@ public abstract class AbstractProcessorTest
     final WebIDLSchema output = processor.process( input );
     assertNotNull( output );
     Completable.complete( processor );
+    if ( processor instanceof AbstractProcessor )
+    {
+      final PipelineContextImpl pipelineContext = (PipelineContextImpl) ( (AbstractProcessor) processor ).context();
+      final ExecutionContext context = pipelineContext.getContext();
+      final ProgressListener progressListener = context.getProgressListener();
+      if ( progressListener instanceof TestProgressListener )
+      {
+        ( (TestProgressListener) progressListener ).assertErrorCountMatches();
+      }
+    }
 
     final Path outputFile = dir.resolve( outputFilename + WebIDLSchema.EXTENSION );
     maybeWriteSchemaFixture( outputFile, output );

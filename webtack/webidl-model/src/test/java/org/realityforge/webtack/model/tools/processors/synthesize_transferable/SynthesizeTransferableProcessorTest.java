@@ -31,7 +31,7 @@ public final class SynthesizeTransferableProcessorTest
   public void basicBad_expectedTransferableCount()
     throws Exception
   {
-    final TestProgressListener progressListener = new TestProgressListener();
+    final TestProgressListener progressListener = new TestProgressListener( 1 );
     performStandardFixtureTest( "basic", () -> createProcessor( progressListener, 2000 ) );
     progressListener.assertContains(
       "stageError(MyPipeline,MyStage): ERROR: Detected 5 [Transferable] interfaces but expected 2000 interfaces." );

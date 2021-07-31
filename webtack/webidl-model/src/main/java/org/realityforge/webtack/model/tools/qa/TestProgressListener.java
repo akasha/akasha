@@ -15,6 +15,18 @@ public final class TestProgressListener
 {
   @Nonnull
   private final List<String> _trace = new ArrayList<>();
+  private final int _expectedErrorCount;
+  private int _errorCount;
+
+  public TestProgressListener()
+  {
+    this( 0 );
+  }
+
+  public TestProgressListener( final int expectedErrorCount )
+  {
+    _expectedErrorCount = expectedErrorCount;
+  }
 
   @Override
   public void onSourcesFiltered( @Nonnull final PipelineConfig pipeline, @Nonnull final List<SourceConfig> sources )
@@ -61,6 +73,7 @@ public final class TestProgressListener
                           @Nonnull final StageConfig stage,
                           @Nonnull final String message )
   {
+    _errorCount++;
     _trace.add( "stageError(" + pipeline.getName() + "," + stage.getName() + "): ERROR: " + message );
   }
 
@@ -70,6 +83,20 @@ public final class TestProgressListener
                           @Nonnull final List<WebIDLSchema> schemas )
   {
     _trace.add( "afterStage(" + pipeline.getName() + "," + stage.getName() + "), schemaCount=" + schemas.size() );
+  }
+
+  public void assertErrorCountMatches()
+  {
+    if ( _expectedErrorCount != _errorCount )
+    {
+      throw new AssertionError( "Expected number of errors " +
+                                _expectedErrorCount +
+                                " actual number of errors " +
+                                _errorCount +
+                                "\n\nbut trace consisted of:\n\n" +
+                                String.join( "\n", _trace ) +
+                                "\n" );
+    }
   }
 
   @Nonnull

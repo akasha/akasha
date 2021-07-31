@@ -67,4 +67,10 @@ public final class PipelineContextImpl
   {
     _context.getProgressListener().stageError( _pipeline, _stage, message );
   }
+
+  @Nonnull
+  public ExecutionContext getContext()
+  {
+    return _context;
+  }
 }

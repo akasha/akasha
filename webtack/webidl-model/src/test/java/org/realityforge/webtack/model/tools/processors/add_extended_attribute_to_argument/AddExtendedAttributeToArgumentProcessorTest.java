@@ -36,7 +36,7 @@ public final class AddExtendedAttributeToArgumentProcessorTest
   public void basicBad_expectedAddCount()
     throws Exception
   {
-    final TestProgressListener progressListener = new TestProgressListener();
+    final TestProgressListener progressListener = new TestProgressListener( 1 );
     performStandardFixtureTest( "basic",
                                 () -> createProcessor( progressListener,
                                                        "^(ImageBitmap|MessagePort|DedicatedWorkerGlobalScope)$",

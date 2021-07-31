@@ -30,11 +30,12 @@ public final class ChangeDictionaryMemberTypeProcessorTest
                                                        "sequence<Transferable>",
                                                        1 ) );
   }
+
   @Test
   public void basicBad_expectedAddCount()
     throws Exception
   {
-    final TestProgressListener progressListener = new TestProgressListener();
+    final TestProgressListener progressListener = new TestProgressListener( 1 );
     performStandardFixtureTest( "basic",
                                 () -> createProcessor( progressListener,
                                                        "^PostMessageOptions$",
