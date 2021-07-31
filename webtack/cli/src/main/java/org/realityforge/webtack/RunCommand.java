@@ -8,6 +8,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import javax.json.JsonObject;
 import org.realityforge.getopt4j.CLOption;
 import org.realityforge.getopt4j.CLOptionDescriptor;
 import org.realityforge.webtack.model.SourceInterval;
@@ -252,12 +253,14 @@ final class RunCommand
     {
       if ( _logger.isLoggable( Level.FINE ) )
       {
+        final JsonObject config = stage.getConfig();
         final String description = stage.getDescription();
         _logger.log( Level.FINE,
                      "Pipeline named '" + pipeline.getName() +
                      "' is starting stage named '" + stage.getName() + "' with " +
                      schemas.size() + " schemas as input." +
-                     ( null == description ? "" : " Stage description: " + description ) );
+                     ( null == description ? "" : " Stage description: " + description ) +
+                     ( null == config || config.isEmpty() ? "" : " Stage config: " + config ) );
       }
     }
 
