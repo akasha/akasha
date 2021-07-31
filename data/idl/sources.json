@@ -615,6 +615,10 @@
         "url": "https://www.w3.org/TR/webgpu/"
     },
     {
+        "lastModifiedTime": 0,
+        "name": "webgpu_patch"
+    },
+    {
         "lastModifiedTime": 1624865438000,
         "name": "webrtc",
         "url": "https://w3c.github.io/webrtc-pc/"

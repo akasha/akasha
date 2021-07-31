@@ -48,6 +48,16 @@
         "memberNamePattern": "^code$",
         "extendedAttribute": "JavaAnnotation=\"akasha.gpu.WGSL\""
       }
+    },
+    {
+      "name": "RemoveElement",
+      "description": "Remove types that are redefined in webgpu_patch as const enums to improve usability",
+      "sourceSelector": "name=webgpu",
+      "config": {
+        "expectedRemoveCount": 1,
+        "namePattern": "^GPUBufferUsageFlags$",
+        "type": ["typedef"]
+      }
     }
   ]
 }
