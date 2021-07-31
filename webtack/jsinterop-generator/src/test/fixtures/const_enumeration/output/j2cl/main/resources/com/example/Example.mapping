@@ -1,5 +1,8 @@
 EXT_color_buffer_float=com.example.EXT_color_buffer_float
 EXT_float_blend=com.example.EXT_float_blend
+GPUTextureDescriptor=com.example.GPUTextureDescriptor
+GPUTextureUsage=com.example.GPUTextureUsage
+GPUTextureUsageFlags=com.example.GPUTextureUsageFlags
 KHR_parallel_shader_compile=com.example.KHR_parallel_shader_compile
 ReadyStateType2=com.example.req.ReadyStateType2b
 ReadyStateType=com.example.ReadyStateType

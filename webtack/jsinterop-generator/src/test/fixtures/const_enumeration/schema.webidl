@@ -1,3 +1,12 @@
+[Flags]
+const enum GPUTextureUsageFlags {
+  GPUTextureUsage.COPY_SRC,
+  GPUTextureUsage.COPY_DST,
+  GPUTextureUsage.TEXTURE_BINDING,
+  GPUTextureUsage.STORAGE_BINDING,
+  GPUTextureUsage.RENDER_ATTACHMENT
+};
+
 [Exposed=(Window,DedicatedWorker,SharedWorker), JavaSubPackage=req, JavaName=ReadyStateType2b]
 const enum ReadyStateType2 {
   XMLHttpRequest2.UNSENT,
@@ -21,12 +30,24 @@ const enum ReadyStateType {
   XMLHttpRequest.DONE
 };
 
+dictionary GPUTextureDescriptor {
+  required GPUTextureUsageFlags usage;
+};
+
 interface EXT_color_buffer_float {
   const DOMString NAME = "EXT_color_buffer_float";
 };
 
 interface EXT_float_blend {
   const DOMString NAME = "EXT_float_blend";
+};
+
+interface GPUTextureUsage {
+  const unsigned long COPY_DST = 0x02;
+  const unsigned long COPY_SRC = 0x01;
+  const unsigned long RENDER_ATTACHMENT = 0x10;
+  const unsigned long STORAGE_BINDING = 0x08;
+  const unsigned long TEXTURE_BINDING = 0x04;
 };
 
 interface KHR_parallel_shader_compile {

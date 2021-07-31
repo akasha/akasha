@@ -1,5 +1,7 @@
 EXT_color_buffer_float
 EXT_float_blend
+GPUTextureDescriptor
+GPUTextureUsage
 KHR_parallel_shader_compile
 XMLHttpRequest
 XMLHttpRequest2

@@ -125,6 +125,12 @@ public final class ExtendedAttributes
    */
   @Nonnull
   public static final String SYNTHESIZED_RETURN = "SynthesizedReturn";
+  /**
+   * A custom extended property that can appear on a "const enum" that indicates that the const enum
+   * represents potential flags in a bitset.
+   */
+  @Nonnull
+  public static final String FLAGS = "Flags";
 
   private ExtendedAttributes()
   {

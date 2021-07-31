@@ -3,6 +3,10 @@
  * @externs
  */
 /**
+ * @typedef {{usage:!number}}
+ */
+var GPUTextureDescriptor;
+/**
  * @constructor
  * @private
  * @nosideeffects
@@ -19,6 +23,22 @@ function XMLHttpRequest2() {}
 /** @const {!number} */ XMLHttpRequest2.UNSENT;
 /** @const {!number} */ XMLHttpRequest2.prototype.UNSENT;
 /** @type {!number} */ XMLHttpRequest2.prototype.readyState;
+/**
+ * @constructor
+ * @private
+ * @nosideeffects
+ */
+function GPUTextureUsage() {}
+/** @const {!number} */ GPUTextureUsage.COPY_SRC;
+/** @const {!number} */ GPUTextureUsage.prototype.COPY_SRC;
+/** @const {!number} */ GPUTextureUsage.COPY_DST;
+/** @const {!number} */ GPUTextureUsage.prototype.COPY_DST;
+/** @const {!number} */ GPUTextureUsage.TEXTURE_BINDING;
+/** @const {!number} */ GPUTextureUsage.prototype.TEXTURE_BINDING;
+/** @const {!number} */ GPUTextureUsage.STORAGE_BINDING;
+/** @const {!number} */ GPUTextureUsage.prototype.STORAGE_BINDING;
+/** @const {!number} */ GPUTextureUsage.RENDER_ATTACHMENT;
+/** @const {!number} */ GPUTextureUsage.prototype.RENDER_ATTACHMENT;
 /**
  * @constructor
  * @private

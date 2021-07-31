@@ -287,6 +287,7 @@ final class JsinteropAction
     final ConstEnumerationValue firstValue = definition.getValues().get( 0 );
     final ConstMember constant = getSchema().getConstant( firstValue );
     final boolean isInteger = schema.resolveType( constant.getType() ).getKind().isInteger();
+    final boolean isFlags = isInteger && definition.isNoArgsExtendedAttributePresent( ExtendedAttributes.FLAGS );
 
     final AnnotationSpec.Builder annotation = AnnotationSpec.builder( BasicTypes.MAGIC_CONSTANT );
     final List<ConstEnumerationValue> sortedConstants =
@@ -297,7 +298,7 @@ final class JsinteropAction
         .collect( Collectors.toList() );
     for ( final ConstEnumerationValue value : sortedConstants )
     {
-      annotation.addMember( isInteger ? "intValues" : "stringValues",
+      annotation.addMember( isFlags ? "flags" : isInteger ? "intValues" : "stringValues",
                             "$T.$N",
                             lookupClassName( value.getInterfaceName() ),
                             value.getConstName() );
