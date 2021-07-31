@@ -14,6 +14,7 @@ public final class AddExtendedAttributeProcessorFactory
   public String namePattern;
   public String extendedAttribute;
   public List<ElementType> types;
+  public int expectedAddCount;
 
   @Nonnull
   @Override
@@ -22,6 +23,7 @@ public final class AddExtendedAttributeProcessorFactory
     return new AddExtendedAttributeProcessor( context,
                                               requirePattern( "namePattern", namePattern ),
                                               types,
-                                              requireExtendedAttribute( "extendedAttribute", extendedAttribute ) );
+                                              requireExtendedAttribute( "extendedAttribute", extendedAttribute ),
+                                              expectedAddCount );
   }
 }

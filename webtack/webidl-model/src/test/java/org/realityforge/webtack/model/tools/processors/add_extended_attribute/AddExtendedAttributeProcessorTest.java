@@ -4,7 +4,9 @@ import javax.annotation.Nonnull;
 import javax.json.Json;
 import javax.json.JsonArrayBuilder;
 import javax.json.JsonObjectBuilder;
+import org.realityforge.webtack.model.tools.pipeline.ProgressListener;
 import org.realityforge.webtack.model.tools.processors.AbstractProcessorTest;
+import org.realityforge.webtack.model.tools.qa.TestProgressListener;
 import org.realityforge.webtack.model.tools.spi.Processor;
 import org.realityforge.webtack.model.tools.spi.Registry;
 import org.testng.annotations.Test;
@@ -24,7 +26,21 @@ public final class AddExtendedAttributeProcessorTest
     throws Exception
   {
     performStandardFixtureTest( "basic",
-                                () -> createProcessor( "^.*$", "JavaSubPackage=bluetooth" ) );
+                                () -> createProcessor( new TestProgressListener(),
+                                                       "^.*$",
+                                                       "JavaSubPackage=bluetooth",
+                                                       2 ) );
+  }
+
+  @Test
+  public void basicBad_expectedAddCount()
+    throws Exception
+  {
+    final TestProgressListener progressListener = new TestProgressListener( 1 );
+    performStandardFixtureTest( "basic",
+                                () -> createProcessor( progressListener, "^.*$", "JavaSubPackage=bluetooth", 2000 ) );
+    progressListener.assertContains(
+      "stageError(MyPipeline,MyStage): ERROR: Added 2 extended attributes but expected to add 2000 extended attributes." );
   }
 
   @Test
@@ -32,8 +48,10 @@ public final class AddExtendedAttributeProcessorTest
     throws Exception
   {
     performStandardFixtureTest( "update_geolocation_api",
-                                () -> createProcessor( "^(Coordinates|Geolocation|Position|PositionError)$",
-                                                       "LegacyNoInterfaceObject" ) );
+                                () -> createProcessor( new TestProgressListener(),
+                                                       "^(Coordinates|Geolocation|Position|PositionError)$",
+                                                       "LegacyNoInterfaceObject",
+                                                       4 ) );
   }
 
   @Test
@@ -41,20 +59,25 @@ public final class AddExtendedAttributeProcessorTest
     throws Exception
   {
     performStandardFixtureTest( "type_restrict",
-                                () -> createProcessor( "^MyElement.*$",
+                                () -> createProcessor( new TestProgressListener(),
+                                                       "^MyElement.*$",
                                                        "SomeRandomAttribute",
+                                                       1,
                                                        ElementType.dictionary ) );
   }
 
   @Nonnull
-  private Processor createProcessor( @Nonnull final String namePattern,
+  private Processor createProcessor( @Nonnull final ProgressListener progressListener,
+                                     @Nonnull final String namePattern,
                                      @Nonnull final String extendedAttribute,
+                                     final int expectedAddCount,
                                      @Nonnull final ElementType... types )
   {
     final JsonObjectBuilder json = Json
       .createObjectBuilder()
       .add( "namePattern", namePattern )
-      .add( "extendedAttribute", extendedAttribute );
+      .add( "extendedAttribute", extendedAttribute )
+      .add( "expectedAddCount", expectedAddCount );
 
     if ( 0 != types.length )
     {
@@ -65,6 +88,6 @@ public final class AddExtendedAttributeProcessorTest
       }
       json.add( "types", typesJson );
     }
-    return Registry.createProcessor( newPipelineContext(), "AddExtendedAttribute", json.build() );
+    return Registry.createProcessor( newPipelineContext( progressListener ), "AddExtendedAttribute", json.build() );
   }
 }
