@@ -252,10 +252,12 @@ final class RunCommand
     {
       if ( _logger.isLoggable( Level.FINE ) )
       {
+        final String description = stage.getDescription();
         _logger.log( Level.FINE,
                      "Pipeline named '" + pipeline.getName() +
                      "' is starting stage named '" + stage.getName() + "' with " +
-                     schemas.size() + " schemas as input." );
+                     schemas.size() + " schemas as input." +
+                     ( null == description ? "" : " Stage description: " + description ) );
       }
     }
 
