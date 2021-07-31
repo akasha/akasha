@@ -52,7 +52,7 @@ public final class AddExtendedAttributeToMemberProcessorTest
                                                        "^(WebGL2RenderingContext|WebGLRenderingContext)$",
                                                        "^getShaderSource$",
                                                        "JavaAnnotation=\"akasha.gl.GLSL\"",
-                                                       1 ) );
+                                                       2 ) );
   }
 
   @Test
