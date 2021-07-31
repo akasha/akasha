@@ -38,7 +38,7 @@ final class AddExtendedAttributeToMemberProcessor
   @Nonnull
   private final ExtendedAttribute _extendedAttribute;
   private boolean _lastElementMatched;
-  public final int _expectedAddCount;
+  private final int _expectedAddCount;
   private int _addCount;
 
   AddExtendedAttributeToMemberProcessor( @Nonnull final PipelineContext context,
