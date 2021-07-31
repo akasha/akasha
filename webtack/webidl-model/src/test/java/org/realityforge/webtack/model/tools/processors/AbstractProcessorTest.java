@@ -65,7 +65,7 @@ public abstract class AbstractProcessorTest
     catch ( final Exception e )
     {
       final String message = e.getMessage();
-      assertEquals( message.replace( path.toString() + "/", "" ), errorMessage );
+      assertEquals( message.replace( path + "/", "" ), errorMessage );
       return;
     }
     fail( "Expected test failure for " + testDescription );
