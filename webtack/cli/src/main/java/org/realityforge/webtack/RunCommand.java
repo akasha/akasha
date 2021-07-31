@@ -109,7 +109,7 @@ final class RunCommand
         for ( final ValidationError error : ( (ValidationException) cause ).getErrors() )
         {
           final List<SourceInterval> sourceLocations = error.getNode().getSourceLocations();
-          final String prefix = sourceLocations.isEmpty() ? "" : sourceLocations.get( 0 ).getStart().toString() + " ";
+          final String prefix = sourceLocations.isEmpty() ? "" : sourceLocations.get( 0 ).getStart() + " ";
           logger.log( error.shouldHalt() ? Level.SEVERE : Level.WARNING, prefix + error.getMessage() );
         }
         return ExitCodes.ERROR_SCHEMA_INVALID_CODE;
