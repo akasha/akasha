@@ -1,4 +1,5 @@
 {
+  "pre": ["base_webgpu"],
   "stages": [
     {
       "name": "ChangeAttributeType",
@@ -344,35 +345,6 @@
     },
     {
       "name": "AddExtendedAttribute",
-      "description": "Package up the WebGPU specific spec into a separate package",
-      "sourceSelector": "name=webgpu",
-      "config": {
-        "namePattern": "^.*$",
-        "extendedAttribute": "JavaSubPackage=gpu"
-      }
-    },
-    {
-      "name": "AddExtendedAttribute",
-      "description": "Mark the WebGPU types as experimental",
-      "sourceSelector": "name=webgpu",
-      "config": {
-        "namePattern": "^.*$",
-        "extendedAttribute": "JavaAnnotation=\"org.jetbrains.annotations.ApiStatus.Experimental\""
-      }
-    },
-    {
-      "name": "AddExtendedAttributeToMember",
-      "description": "Mark the WebGPU entry point as experimental",
-      "sourceSelector": "name=webgpu",
-      "config": {
-        "expectedAddCount": 1,
-        "elementNamePattern": "^NavigatorGPU$",
-        "memberNamePattern": "^gpu$",
-        "extendedAttribute": "JavaAnnotation=\"org.jetbrains.annotations.ApiStatus.Experimental\""
-      }
-    },
-    {
-      "name": "AddExtendedAttribute",
       "description": "Package up the indexeddb specific specs into a separate package",
       "sourceSelector": "name=indexeddb",
       "config": {
@@ -503,16 +475,6 @@
       "config": {
         "expectedAddCount": 8,
         "namePattern": "^(RenderingContext|OffscreenRenderingContext|CanvasImageSource|HTMLOrSVGImageElement|HTMLOrSVGScriptElement|ImageBitmapSource|MediaProvider|MessageEventSource)$",
-        "extendedAttribute": "MarkerType"
-      }
-    },
-    {
-      "name": "AddExtendedAttribute",
-      "description": "Add MarkerType to make conversion between types easier",
-      "sourceSelector": "name=webgpu",
-      "config": {
-        "expectedAddCount": 2,
-        "namePattern": "^(GPUBindingResource|GPUError)$",
         "extendedAttribute": "MarkerType"
       }
     },
@@ -1297,16 +1259,6 @@
         "expectedRemoveCount": 1,
         "elementNamePattern": "^HTMLInputElement$",
         "memberNamePattern": "^invalid$"
-      }
-    },
-    {
-      "name": "AddExtendedAttributeToMember",
-      "sourceSelector": "name=webgpu",
-      "config": {
-        "expectedAddCount": 1,
-        "elementNamePattern": "^GPUShaderModuleDescriptor$",
-        "memberNamePattern": "^code$",
-        "extendedAttribute": "JavaAnnotation=\"akasha.gpu.WGSL\""
       }
     },
     {
