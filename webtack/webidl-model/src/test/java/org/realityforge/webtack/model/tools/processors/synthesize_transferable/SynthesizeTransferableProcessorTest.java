@@ -24,7 +24,7 @@ public final class SynthesizeTransferableProcessorTest
   public void basic()
     throws Exception
   {
-    performStandardFixtureTest( "basic", () -> createProcessor( 3 ) );
+    performStandardFixtureTest( "basic", () -> createProcessor( 5 ) );
   }
 
   @Test
