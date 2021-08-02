@@ -1,6 +1,10 @@
 # Change Log
 
-### Unreleased
+### [v0.17](https://github.com/akasha/akasha/tree/v0.17) (2021-08-02) · [Full Changelog](https://github.com/spritz/spritz/compare/v0.16...v0.17) · [API Differences](https://akasha.github.io/akasha-java/api-diff/?key=akasha-java&old=0.16&new=0.17) · [Source Diff](https://github.com/akasha/akasha-java/compare/v0.16...v0.17)
+
+The release includes 7 non breaking API changes.
+
+Changes in this release:
 
 * Convert the following types into `const enum` representation to improve usability in the java binding. The types modified include: `GPUBufferUsageFlags`, `GPUShaderStageFlags`, `GPUMapModeFlags`, `GPUColorWriteFlags` and `GPUTextureUsageFlags`.
 * Fix the typing of the `RegExpResult` type so that it is typed as an `Array` in the `akasha:gwt` artifact but continues to be typed as `RegExpResult` for the `akasha:j2cl` artifact. A change introduced in version [`v0.11`](https://github.com/akasha/akasha/tree/v0.11) made it impossible to cast instances of this type in a GWT application without an unchecked cast because GWT was expecting a native javascript type of `RegExpResult` which is actually a closure type and not a javascript type.
