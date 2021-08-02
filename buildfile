@@ -163,14 +163,33 @@ define 'akasha' do
 
   desc 'Akasha Java Browser API for GWT'
   define 'gwt', :base_dir => "#{WORKSPACE_DIR}/akasha/gwt" do
-    java_main_src_dir = "#{WORKSPACE_DIR}/akasha/java/src/main/java"
     java_test_src_dir = "#{WORKSPACE_DIR}/akasha/java/src/test/java"
-    java_src_dir = "#{WORKSPACE_DIR}/akasha/java/src/main/java"
     src_dir = file("#{project._(:target, :generated)}/webtack/main/java" => ['data:run_gwt_complete_pipeline'])
     test_src_dir = file("#{project._(:target, :generated)}/webtack/test/java" => ['data:run_gwt_complete_pipeline'])
     js_src_dir = file("#{project._(:target, :generated)}/webtack/main/js" => ['data:run_gwt_complete_pipeline'])
-    compile.sources << src_dir.to_s << java_main_src_dir
-    test.compile.sources << test_src_dir.to_s << java_test_src_dir
+
+    input_java_dir = "#{WORKSPACE_DIR}/akasha/java/src/main/java"
+    output_java_dir = "#{project._(:target, :generated)}/java/main/java"
+    java_main_src_dir = file(output_java_dir => [input_java_dir]) do
+      Dir["#{input_java_dir}/**/*.java"].each do |f|
+        output_filename = "#{output_java_dir}#{f.gsub(input_java_dir,'')}"
+        FileUtils.mkdir_p( File.dirname(output_filename))
+        IO.write(output_filename, IO.read(f).gsub(/\/\/ GWT_ONLY /, ''))
+      end
+    end
+
+    input_test_dir = "#{WORKSPACE_DIR}/akasha/java/src/test/java"
+    output_test_dir = "#{project._(:target, :generated)}/java/test/java"
+    java_test_src_dir = file(output_test_dir => [input_test_dir]) do
+      Dir["#{input_java_dir}/**/*.java"].each do |f|
+        output_filename = "#{output_test_dir}#{f.gsub(input_test_dir,'')}"
+        FileUtils.mkdir_p( File.dirname(output_filename))
+        IO.write(output_filename, IO.read(f).gsub(/\/\/ GWT_ONLY /, ''))
+      end
+    end
+
+    compile.sources << src_dir.to_s << java_main_src_dir.to_s
+    test.compile.sources << test_src_dir.to_s << java_test_src_dir.to_s
 
     project.no_iml
 
@@ -187,12 +206,12 @@ define 'akasha' do
     pom.dependency_filter = Proc.new { |dep| dep[:scope].to_s != 'test' && deps.include?(dep[:artifact]) }
 
     package(:jar).tap do |j|
-      j.enhance([file(java_main_src_dir)]) do |j2|
+      j.enhance([java_main_src_dir]) do |j2|
         j2.include("#{java_main_src_dir}/*")
       end
     end
     package(:sources).tap do |j|
-      j.enhance([file(java_main_src_dir)]) do |j2|
+      j.enhance([java_main_src_dir]) do |j2|
         j2.include("#{java_main_src_dir}/*")
       end
     end
