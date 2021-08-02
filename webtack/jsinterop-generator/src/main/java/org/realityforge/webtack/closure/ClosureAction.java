@@ -541,7 +541,7 @@ final class ClosureAction
                     null,
                     Collections.emptyList(),
                     Collections.emptyList() );
-     final Argument valueArgument2 =
+    final Argument valueArgument2 =
       new Argument( "value2",
                     elementType,
                     false,
@@ -1461,7 +1461,8 @@ final class ClosureAction
     else if ( Kind.Union == kind )
     {
       final UnionType unionType = (UnionType) type;
-      if ( synthesizeUnionTypes && !unionType.isNoArgsExtendedAttributePresent( ExtendedAttributes.SYNTHESIZED_RETURN ) )
+      if ( synthesizeUnionTypes &&
+           !unionType.isNoArgsExtendedAttributePresent( ExtendedAttributes.SYNTHESIZED_RETURN ) )
       {
         writer.write( synthesizeUnionType( unionType ) );
       }
