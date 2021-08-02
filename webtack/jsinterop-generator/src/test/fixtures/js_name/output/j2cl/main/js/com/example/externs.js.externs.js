@@ -74,6 +74,13 @@ function Element() {}
  * @private
  * @nosideeffects
  */
+function HTMLSelectElement() {}
+/** @type {!HTMLCollection} */ HTMLSelectElement.prototype.selectedOptions;
+/**
+ * @constructor
+ * @private
+ * @nosideeffects
+ */
 function Thing() {}
 /** @type {!number} */ Thing.prototype.zeSize;
 /**

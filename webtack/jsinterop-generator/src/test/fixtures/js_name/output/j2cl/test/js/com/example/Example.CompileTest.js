@@ -8,6 +8,8 @@ goog.require('com.example.HTMLOptionElement.$Overlay');
 goog.require('com.example.HTMLOptionElementTestCompile');
 goog.require('com.example.HTMLReadOnlyOptionsCollection.$Overlay');
 goog.require('com.example.HTMLReadOnlyOptionsCollectionTestCompile');
+goog.require('com.example.HTMLSelectElement.$Overlay');
+goog.require('com.example.HTMLSelectElementTestCompile');
 goog.require('com.example.Int32Array.$Overlay');
 goog.require('com.example.Int32ArrayTestCompile');
 goog.require('com.example.Math.$Overlay');

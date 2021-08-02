@@ -1508,7 +1508,7 @@ final class ClosureAction
               writer.write( namespace );
               writer.write( "." );
             }
-            writer.write( name );
+            writer.write( toJsName( interfaceDefinition ) );
           }
           else
           {

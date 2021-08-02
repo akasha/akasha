@@ -41,6 +41,10 @@ interface HTMLReadOnlyOptionsCollection : HTMLCollection {
   getter HTMLOptionElement? namedItem( DOMString name );
 };
 
+interface HTMLSelectElement {
+  readonly attribute HTMLReadOnlyOptionsCollection selectedOptions;
+};
+
 interface Int32Array {
 };
 

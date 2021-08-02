@@ -3,6 +3,7 @@ EventInit=com.example.EventInit
 HTMLCollection=com.example.HTMLCollection
 HTMLOptionElement=com.example.HTMLOptionElement
 HTMLReadOnlyOptionsCollection=com.example.HTMLReadOnlyOptionsCollection
+HTMLSelectElement=com.example.HTMLSelectElement
 Int32Array=com.example.Int32Array
 Int32List=com.example.Int32List
 Math=com.example.Math

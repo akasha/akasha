@@ -1,6 +1,7 @@
 Element
 HTMLCollection
 HTMLOptionElement
+HTMLSelectElement
 JsEventInit
 JsMath
 JsTransitionEventInit
