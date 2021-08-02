@@ -29,16 +29,16 @@ function XMLHttpRequest2() {}
  * @nosideeffects
  */
 function GPUTextureUsage() {}
-/** @const {!number} */ GPUTextureUsage.COPY_SRC;
-/** @const {!number} */ GPUTextureUsage.prototype.COPY_SRC;
 /** @const {!number} */ GPUTextureUsage.COPY_DST;
 /** @const {!number} */ GPUTextureUsage.prototype.COPY_DST;
-/** @const {!number} */ GPUTextureUsage.TEXTURE_BINDING;
-/** @const {!number} */ GPUTextureUsage.prototype.TEXTURE_BINDING;
-/** @const {!number} */ GPUTextureUsage.STORAGE_BINDING;
-/** @const {!number} */ GPUTextureUsage.prototype.STORAGE_BINDING;
+/** @const {!number} */ GPUTextureUsage.COPY_SRC;
+/** @const {!number} */ GPUTextureUsage.prototype.COPY_SRC;
 /** @const {!number} */ GPUTextureUsage.RENDER_ATTACHMENT;
 /** @const {!number} */ GPUTextureUsage.prototype.RENDER_ATTACHMENT;
+/** @const {!number} */ GPUTextureUsage.STORAGE_BINDING;
+/** @const {!number} */ GPUTextureUsage.prototype.STORAGE_BINDING;
+/** @const {!number} */ GPUTextureUsage.TEXTURE_BINDING;
+/** @const {!number} */ GPUTextureUsage.prototype.TEXTURE_BINDING;
 /**
  * @constructor
  * @private
