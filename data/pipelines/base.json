@@ -510,6 +510,16 @@
     },
     {
       "name": "ChangeAttributeType",
+      "sourceSelector": "name=whatwg_html",
+      "config": {
+        "expectedRemoveCount": 1,
+        "elementNamePattern": "^HTMLSelectElement$",
+        "attributeNamePattern": "^selectedOptions$",
+        "type": "HTMLReadOnlyOptionsCollection"
+      }
+    },
+    {
+      "name": "ChangeAttributeType",
       "sourceSelector": "name=navigation_timing",
       "config": {
         "expectedRemoveCount": 1,

@@ -75,6 +75,40 @@
     }
   },
   {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.HTMLReadOnlyOptionsCollection",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.HTMLReadOnlyOptionsCollection",
+      "classSimpleName": "HTMLReadOnlyOptionsCollection",
+      "elementKind": "class",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.returnTypeChangedCovariantly",
+    "description": "The return type changed covariantly from 'akasha.HTMLCollection' to 'akasha.HTMLReadOnlyOptionsCollection'.",
+    "newElement": "method akasha.HTMLReadOnlyOptionsCollection akasha.HTMLSelectElement::selectedOptions()",
+    "oldElement": "method akasha.HTMLCollection akasha.HTMLSelectElement::selectedOptions()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.HTMLSelectElement",
+      "classSimpleName": "HTMLSelectElement",
+      "elementKind": "method",
+      "methodName": "selectedOptions",
+      "newType": "akasha.HTMLReadOnlyOptionsCollection",
+      "oldType": "akasha.HTMLCollection",
+      "package": "akasha"
+    }
+  },
+  {
     "code": "java.annotation.added",
     "description": "Element newly annotated with 'akasha.gpu.GPUShaderStageFlags'.",
     "element": "method int akasha.gpu.GPUBindGroupLayoutEntry::visibility() @ akasha.gpu.GPUBindGroupLayoutEntry.Builder",

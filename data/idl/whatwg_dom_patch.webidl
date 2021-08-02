@@ -39,3 +39,9 @@ const enum NodeType {
   Node.DOCUMENT_FRAGMENT_NODE,
   Node.NOTATION_NODE
 };
+
+[JavaOnly, JsName=HTMLCollection]
+interface HTMLReadOnlyOptionsCollection : HTMLCollection {
+  getter HTMLOptionElement? item( unsigned long index );
+  getter HTMLOptionElement? namedItem( DOMString name );
+};
