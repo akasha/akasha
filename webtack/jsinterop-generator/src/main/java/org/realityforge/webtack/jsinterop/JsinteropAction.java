@@ -173,6 +173,7 @@ final class JsinteropAction
         else
         {
           generateUnion( definition.getName(),
+                         toJsName( definition ),
                          lookupClassName( definition.getName() ).simpleName(),
                          unionType,
                          getAnnotationStream( definition ).collect( Collectors.toList() ) );
@@ -241,7 +242,11 @@ final class JsinteropAction
       final String name = entry.getKey();
       if ( isIdlTypeNotPredefined( name ) )
       {
-        generateUnion( name, NamingUtil.uppercaseFirstCharacter( name ), entry.getValue(), Collections.emptyList() );
+        generateUnion( name,
+                       name,
+                       NamingUtil.uppercaseFirstCharacter( name ),
+                       entry.getValue(),
+                       Collections.emptyList() );
       }
     }
 
@@ -470,7 +475,7 @@ final class JsinteropAction
 
       for ( final MixinDefinition mixin : globalMixins )
       {
-        generateConstants( mixin.getName(), mixin.getConstants(), type );
+        generateConstants( toJsName( mixin ), mixin.getConstants(), type );
         generateStaticAttributes( mixin.getAttributes(), className, type, testType );
         generateStaticOperations( mixin.getOperations(), className, type, testType );
         generateStaticEventsMethods( type, schema, mixin.getEvents() );
@@ -604,7 +609,7 @@ final class JsinteropAction
         .returns( actualJavaType )
         .addAnnotation( AnnotationSpec
                           .builder( JsinteropTypes.JS_PROPERTY )
-                          .addMember( "name", "$S", name )
+                          .addMember( "name", "$S", toJsName( attribute ) )
                           .build() );
     maybeAddCustomAnnotations( attribute, method );
     maybeAddJavadoc( attribute, method );
@@ -642,17 +647,17 @@ final class JsinteropAction
     final Type attributeType = attribute.getType();
     final WebIDLSchema schema = getSchema();
     final Type actualType = schema.resolveType( attributeType );
-    final String name = attribute.getName();
     final String fieldName = javaName( attribute );
     final TypeName actualJavaType = toTypeName( actualType );
     final FieldSpec.Builder field =
       FieldSpec.builder( actualJavaType, fieldName, Modifier.PUBLIC, Modifier.STATIC );
     maybeAddCustomAnnotations( attribute, field );
     maybeAddJavadoc( attribute, field );
-    if ( !fieldName.equals( name ) )
+    final String jsName = toJsName( attribute );
+    if ( !fieldName.equals( jsName ) )
     {
       field.addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_PROPERTY )
-                             .addMember( "name", "$S", name )
+                             .addMember( "name", "$S", jsName )
                              .build() );
     }
     if ( schema.isNullable( attributeType ) )
@@ -806,6 +811,7 @@ final class JsinteropAction
   }
 
   private void generateUnion( @Nonnull final String idlName,
+                              @Nonnull final String jsName,
                               @Nonnull final String javaName,
                               @Nonnull final UnionType unionType,
                               @Nonnull final Collection<ClassName> additionalAnnotations )
@@ -820,7 +826,7 @@ final class JsinteropAction
                           .builder( JsinteropTypes.JS_TYPE )
                           .addMember( "isNative", "true" )
                           .addMember( "namespace", "$T.GLOBAL", JsinteropTypes.JS_PACKAGE )
-                          .addMember( "name", "$S", OutputType.gwt == _outputType ? "?" : idlName )
+                          .addMember( "name", "$S", OutputType.gwt == _outputType ? "?" : jsName )
                           .build() );
 
     additionalAnnotations.forEach( type::addAnnotation );
@@ -1058,7 +1064,7 @@ final class JsinteropAction
                           .builder( JsinteropTypes.JS_TYPE )
                           .addMember( "isNative", "true" )
                           .addMember( "namespace", "$T.GLOBAL", JsinteropTypes.JS_PACKAGE )
-                          .addMember( "name", "$S", OutputType.gwt == _outputType ? "Object" : definition.getName() )
+                          .addMember( "name", "$S", OutputType.gwt == _outputType ? "Object" : toJsName( definition ) )
                           .build() );
     maybeAddCustomAnnotations( definition, type );
     maybeAddJavadoc( definition, type );
@@ -1099,7 +1105,7 @@ final class JsinteropAction
     type.addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_TYPE )
                           .addMember( "isNative", "true" )
                           .addMember( "namespace", "$T.GLOBAL", JsinteropTypes.JS_PACKAGE )
-                          .addMember( "name", "$S", OutputType.gwt == _outputType ? "Object" : definition.getName() )
+                          .addMember( "name", "$S", OutputType.gwt == _outputType ? "Object" : toJsName( definition ) )
                           .build() );
     maybeAddCustomAnnotations( definition, type );
     maybeAddJavadoc( definition, type );
@@ -1223,7 +1229,7 @@ final class JsinteropAction
         .returns( javaType );
     method.addAnnotation( AnnotationSpec
                             .builder( JsinteropTypes.JS_PROPERTY )
-                            .addMember( "name", "$S", member.getName() )
+                            .addMember( "name", "$S", toJsName( member ) )
                             .build() );
     maybeAddCustomAnnotations( member, method );
     maybeAddJavadoc( member, method );
@@ -1519,7 +1525,7 @@ final class JsinteropAction
     type.addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_TYPE )
                           .addMember( "isNative", "true" )
                           .addMember( "namespace", "$T.GLOBAL", JsinteropTypes.JS_PACKAGE )
-                          .addMember( "name", "$S", exposedOnGlobal ? name : "?" )
+                          .addMember( "name", "$S", exposedOnGlobal ? toJsName( definition ) : "?" )
                           .build() )
       .addAnnotation( FunctionalInterface.class );
     maybeAddCustomAnnotations( definition, type );
@@ -1532,7 +1538,7 @@ final class JsinteropAction
         .addModifiers( Modifier.PUBLIC, Modifier.FINAL );
     writeGeneratedAnnotation( testType );
 
-    generateConstants( definition.getName(), definition.getConstants(), type );
+    generateConstants( toJsName( definition ), definition.getConstants(), type );
 
     final OperationMember operation = definition.getOperation();
     final List<Argument> arguments = operation.getArguments();
@@ -1585,7 +1591,7 @@ final class JsinteropAction
         .addModifiers( Modifier.PUBLIC, Modifier.FINAL );
     writeGeneratedAnnotation( testType );
 
-    generateConstants( definition.getName(), definition.getConstants(), type );
+    generateConstants( toJsName( definition ), definition.getConstants(), type );
 
     type.addMethod( MethodSpec
                       .methodBuilder( "of" )
@@ -1652,7 +1658,7 @@ final class JsinteropAction
     type.addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_TYPE )
                           .addMember( "isNative", "true" )
                           .addMember( "namespace", "$T.GLOBAL", JsinteropTypes.JS_PACKAGE )
-                          .addMember( "name", "$S", noPublicSymbol ? "Object" : name )
+                          .addMember( "name", "$S", noPublicSymbol ? "Object" : toJsName( definition ) )
                           .build() );
 
     writeTopLevelType( name, type );
@@ -1915,7 +1921,7 @@ final class JsinteropAction
         .addAnnotation( AnnotationSpec
                           .builder( JsinteropTypes.JS_TYPE )
                           .addMember( "isNative", "true" )
-                          .addMember( "name", "$S", definition.getName() )
+                          .addMember( "name", "$S", toJsName( definition ) )
                           .addMember( "namespace", "$T.GLOBAL", JsinteropTypes.JS_PACKAGE )
                           .build() );
     writeGeneratedAnnotation( type );
@@ -1928,7 +1934,7 @@ final class JsinteropAction
         .addModifiers( Modifier.PUBLIC, Modifier.FINAL );
     writeGeneratedAnnotation( testType );
 
-    generateConstants( definition.getName(), definition.getConstants(), type );
+    generateConstants( toJsName( definition ), definition.getConstants(), type );
     generateStaticAttributes( definition.getAttributes(), className, type, testType );
     generateStaticOperations( definition.getOperations(), className, type, testType );
 
@@ -2024,7 +2030,7 @@ final class JsinteropAction
       parentConstructor = null;
     }
 
-    generateConstants( definition.getName(), definition.getConstants(), type );
+    generateConstants( toJsName( definition ), definition.getConstants(), type );
     generateAttributes( definition.getAttributes(), className, type, testType );
 
     boolean constructorPresent = false;
@@ -2990,7 +2996,7 @@ final class JsinteropAction
     else
     {
       final String namespace = definition.getNamespace();
-      return ( null == namespace ? "" : namespace + "." ) + definition.getName();
+      return ( null == namespace ? "" : namespace + "." ) + toJsName( definition );
     }
   }
 
@@ -3011,7 +3017,10 @@ final class JsinteropAction
         .methodBuilder( javaName )
         .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
         .returns( actualJavaType )
-        .addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_PROPERTY ).addMember( "name", "$S", name ).build() );
+        .addAnnotation( AnnotationSpec
+                          .builder( JsinteropTypes.JS_PROPERTY )
+                          .addMember( "name", "$S", toJsName( attribute ) )
+                          .build() );
     maybeAddCustomAnnotations( attribute, method );
     maybeAddJavadoc( attribute, method );
 
@@ -3061,7 +3070,7 @@ final class JsinteropAction
     final WebIDLSchema schema = getSchema();
     final Type actualType = schema.resolveType( attributeType );
     final TypeName actualJavaType = toTypeName( actualType );
-    final String name = attribute.getName();
+    final String jsName = toJsName( attribute );
     final String fieldName = javaName( attribute );
     final FieldSpec.Builder field =
       FieldSpec.builder( actualJavaType, fieldName, Modifier.PUBLIC );
@@ -3084,10 +3093,10 @@ final class JsinteropAction
       testWriteMethod.addAnnotation( Deprecated.class );
     }
 
-    if ( !fieldName.equals( name ) )
+    if ( !fieldName.equals( jsName ) )
     {
       field.addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_PROPERTY )
-                             .addMember( "name", "$S", name )
+                             .addMember( "name", "$S", jsName )
                              .build() );
     }
     if ( attribute.getModifiers().contains( AttributeMember.Modifier.STATIC ) )
@@ -3120,7 +3129,7 @@ final class JsinteropAction
     testType.addMethod( testWriteMethod.build() );
   }
 
-  private void generateConstants( @Nonnull final String definitionName,
+  private void generateConstants( @Nonnull final String jsTypeName,
                                   @Nonnull final List<ConstMember> constants,
                                   @Nonnull final TypeSpec.Builder type )
   {
@@ -3140,17 +3149,27 @@ final class JsinteropAction
           .addAnnotation( AnnotationSpec
                             .builder( JsinteropTypes.JS_TYPE )
                             .addMember( "isNative", "true" )
-                            .addMember( "name", "$S", definitionName )
+                            .addMember( "name", "$S", jsTypeName )
                             .addMember( "namespace", "$T.GLOBAL", JsinteropTypes.JS_PACKAGE )
                             .build() );
       for ( final ConstMember constant : noInlineConstants )
       {
-        constantType.addField( FieldSpec
-                                 .builder( toTypeName( getSchema().resolveType( constant.getType() ) ),
-                                           constant.getName(),
-                                           Modifier.PRIVATE,
-                                           Modifier.STATIC )
+        final String name = constant.getName();
+        final String jsName = toJsName( constant );
+        final FieldSpec.Builder field =
+          FieldSpec
+            .builder( toTypeName( getSchema().resolveType( constant.getType() ) ),
+                      name,
+                      Modifier.PRIVATE,
+                      Modifier.STATIC );
+        if ( !name.equals( jsName ) )
+        {
+          field.addAnnotation( AnnotationSpec
+                                 .builder( JsinteropTypes.JS_PROPERTY )
+                                 .addMember( "name", "$S", jsName )
                                  .build() );
+        }
+        constantType.addField( field.build() );
       }
       type.addType( constantType.build() );
     }
@@ -3280,7 +3299,9 @@ final class JsinteropAction
     final OperationMember.Kind operationKind = operation.getKind();
     assert OperationMember.Kind.STATIC != operationKind && OperationMember.Kind.CONSTRUCTOR != operationKind;
     final String name = operation.getName();
+    final String jsName = toJsName( operation );
     assert null != name;
+    assert null != jsName;
     final String methodName = javaMethodName( name, operation );
     final MethodSpec.Builder method =
       MethodSpec
@@ -3295,10 +3316,10 @@ final class JsinteropAction
     maybeAddCustomAnnotations( operation, requireOverlay ? overlayMethod : method );
     maybeAddJavadoc( operation, requireOverlay ? overlayMethod : method );
 
-    if ( requireOverlay || !methodName.equals( name ) )
+    if ( requireOverlay || !methodName.equals( jsName ) )
     {
       method.addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_METHOD )
-                              .addMember( "name", "$S", name )
+                              .addMember( "name", "$S", jsName )
                               .build() );
     }
     if ( operation.isNoArgsExtendedAttributePresent( ExtendedAttributes.NO_SIDE_EFFECTS ) ||
@@ -3444,7 +3465,9 @@ final class JsinteropAction
                                            @Nonnull final TypeSpec.Builder testType )
   {
     final String name = operation.getName();
+    final String jsName = toJsName( operation );
     assert null != name;
+    assert null != jsName;
     final String methodName = javaMethodName( name, operation );
     final MethodSpec.Builder method =
       MethodSpec
@@ -3452,10 +3475,10 @@ final class JsinteropAction
         .addModifiers( Modifier.PUBLIC, Modifier.STATIC, Modifier.NATIVE );
     maybeAddCustomAnnotations( operation, method );
     maybeAddJavadoc( operation, method );
-    if ( !methodName.equals( name ) )
+    if ( !methodName.equals( jsName ) )
     {
       method.addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_METHOD )
-                              .addMember( "name", "$S", name )
+                              .addMember( "name", "$S", jsName )
                               .build() );
     }
     if ( operation.isNoArgsExtendedAttributePresent( ExtendedAttributes.NO_SIDE_EFFECTS ) ||
@@ -3713,7 +3736,9 @@ final class JsinteropAction
   {
     assert OperationMember.Kind.STATIC == operation.getKind();
     final String name = operation.getName();
+    final String jsName = toJsName( operation );
     assert null != name;
+    assert null != jsName;
     final String methodName = javaMethodName( name, operation );
     final MethodSpec.Builder method =
       MethodSpec
@@ -3721,10 +3746,10 @@ final class JsinteropAction
         .addModifiers( Modifier.PUBLIC, Modifier.STATIC, Modifier.NATIVE );
     maybeAddCustomAnnotations( operation, method );
     maybeAddJavadoc( operation, method );
-    if ( !methodName.equals( name ) )
+    if ( !methodName.equals( jsName ) )
     {
       method.addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_METHOD )
-                              .addMember( "name", "$S", name )
+                              .addMember( "name", "$S", jsName )
                               .build() );
     }
     final Type returnType = operation.getReturnType();

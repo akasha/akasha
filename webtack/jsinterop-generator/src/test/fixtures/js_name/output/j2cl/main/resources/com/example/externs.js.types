@@ -1,4 +1,9 @@
 Element
 HTMLCollection
 HTMLOptionElement
+JsEventInit
+JsMath
+JsTransitionEventInit
 NotHTMLCollection
+NumbersList
+Thing

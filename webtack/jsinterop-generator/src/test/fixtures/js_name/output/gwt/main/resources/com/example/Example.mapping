@@ -1,4 +1,11 @@
 Element=com.example.Element
+EventInit=com.example.EventInit
 HTMLCollection=com.example.HTMLCollection
 HTMLOptionElement=com.example.HTMLOptionElement
 HTMLReadOnlyOptionsCollection=com.example.HTMLReadOnlyOptionsCollection
+Int32Array=com.example.Int32Array
+Int32List=com.example.Int32List
+Math=com.example.Math
+Sequence=com.example.JsArray
+Thing=com.example.Thing
+TransitionEventInit=com.example.TransitionEventInit

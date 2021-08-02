@@ -16,9 +16,11 @@ import java.util.Objects;
 import java.util.Set;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import org.realityforge.webtack.model.Attributed;
 import org.realityforge.webtack.model.DocumentationElement;
 import org.realityforge.webtack.model.ExtendedAttribute;
 import org.realityforge.webtack.model.Kind;
+import org.realityforge.webtack.model.Named;
 import org.realityforge.webtack.model.OperationMember;
 import org.realityforge.webtack.model.SequenceType;
 import org.realityforge.webtack.model.Type;
@@ -219,5 +221,19 @@ public abstract class AbstractAction
       }
       return unionType;
     }
+  }
+
+  @Nullable
+  protected final String toJsName( @Nonnull final OperationMember operation )
+  {
+    final String jsName = operation.getIdentValue( ExtendedAttributes.JS_NAME );
+    return null == jsName ? operation.getName() : jsName;
+  }
+
+  @Nonnull
+  protected final <T extends Named & Attributed> String toJsName( @Nonnull final T element )
+  {
+    final String jsName = element.getIdentValue( ExtendedAttributes.JS_NAME );
+    return null == jsName ? element.getName() : jsName;
   }
 }

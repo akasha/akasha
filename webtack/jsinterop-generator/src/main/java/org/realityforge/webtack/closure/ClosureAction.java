@@ -34,7 +34,6 @@ import org.realityforge.webtack.model.InterfaceDefinition;
 import org.realityforge.webtack.model.IterableMember;
 import org.realityforge.webtack.model.Kind;
 import org.realityforge.webtack.model.MapLikeMember;
-import org.realityforge.webtack.model.NamedElement;
 import org.realityforge.webtack.model.NamespaceDefinition;
 import org.realityforge.webtack.model.OperationMember;
 import org.realityforge.webtack.model.PromiseType;
@@ -161,35 +160,35 @@ final class ClosureAction
       writeJsDoc( writer, "@fileoverview", "@externs" );
       for ( final TypedefDefinition definition : schema.getTypedefs() )
       {
-        if ( isNotExcluded( definition ) && tryRecordGeneratedType( definition.getName() ) )
+        if ( isNotExcluded( definition ) && tryRecordGeneratedType( toJsName( definition ) ) )
         {
-          writeTypedef( writer, definition.getName(), definition.getType() );
+          writeTypedef( writer, toJsName( definition ), definition.getType() );
         }
       }
       for ( final CallbackDefinition definition : schema.getCallbacks() )
       {
-        if ( isNotExcluded( definition ) && tryRecordGeneratedType( definition.getName() ) )
+        if ( isNotExcluded( definition ) && tryRecordGeneratedType( toJsName( definition ) ) )
         {
           writeCallback( writer, definition );
         }
       }
       for ( final CallbackInterfaceDefinition definition : schema.getCallbackInterfaces() )
       {
-        if ( isNotExcluded( definition ) && tryRecordGeneratedType( definition.getName() ) )
+        if ( isNotExcluded( definition ) && tryRecordGeneratedType( toJsName( definition ) ) )
         {
           writeCallbackInterface( writer, definition );
         }
       }
       for ( final DictionaryDefinition definition : schema.getDictionaries() )
       {
-        if ( isNotExcluded( definition ) && tryRecordGeneratedType( definition.getName() ) )
+        if ( isNotExcluded( definition ) && tryRecordGeneratedType( toJsName( definition ) ) )
         {
           writeDictionary( writer, definition );
         }
       }
       for ( final NamespaceDefinition definition : schema.getNamespaces() )
       {
-        if ( isNotExcluded( definition ) && tryRecordGeneratedType( definition.getName() ) )
+        if ( isNotExcluded( definition ) && tryRecordGeneratedType( toJsName( definition ) ) )
         {
           writeNamespace( writer, definition );
         }
@@ -252,22 +251,22 @@ final class ClosureAction
     writer.write( "/**\n * @typedef {" );
     writeFunctionType( writer, definition.getArguments(), definition.getReturnType() );
     writer.write( "\n */\n" );
-    writer.write( "var " + definition.getName() + ";\n" );
+    writer.write( "var " + toJsName( definition ) + ";\n" );
   }
 
   private void writeCallbackInterface( @Nonnull final Writer writer,
                                        @Nonnull final CallbackInterfaceDefinition definition )
     throws IOException
   {
-    final String type = definition.getName();
+    final String type = toJsName( definition );
     writer.write( "/**\n * @interface\n */\nfunction " );
     writer.write( type );
     writer.write( "() {}\n" );
     writeConstants( writer, type, definition.getConstants(), true, false );
     final OperationMember operation = definition.getOperation();
-    final String name = operation.getName();
-    assert null != name;
-    writeOperation( writer, type, name, operation.getArguments(), operation.getReturnType(), true, false, false );
+    final String jsName = toJsName( operation );
+    assert null != jsName;
+    writeOperation( writer, type, jsName, operation.getArguments(), operation.getReturnType(), true, false, false );
   }
 
   private void writeDictionary( @Nonnull final Writer writer, @Nonnull final DictionaryDefinition definition )
@@ -284,7 +283,7 @@ final class ClosureAction
     if ( members.isEmpty() )
     {
       writer.write( "/**\n * @record\n */\nvar " );
-      writer.write( definition.getName() );
+      writer.write( toJsName( definition ) );
       writer.write( ";\n" );
     }
     else
@@ -302,7 +301,7 @@ final class ClosureAction
         {
           first = false;
         }
-        writer.write( member.getName() );
+        writer.write( toJsName( member ) );
         writer.write( ":" );
         final Type type = member.getType();
         if ( member.isOptional() )
@@ -339,7 +338,7 @@ final class ClosureAction
       }
 
       writer.write( "}}\n */\nvar " );
-      writer.write( definition.getName() );
+      writer.write( toJsName( definition ) );
       writer.write( ";\n" );
     }
   }
@@ -347,7 +346,7 @@ final class ClosureAction
   private void writeNamespace( @Nonnull final Writer writer, @Nonnull final NamespaceDefinition definition )
     throws IOException
   {
-    final String name = definition.getName();
+    final String name = toJsName( definition );
 
     writeJsDoc( writer, "@const" );
     writer.write( "var " );
@@ -363,7 +362,7 @@ final class ClosureAction
         writer.write( "} */ " );
         writer.write( name );
         writer.write( "." );
-        writer.write( constant.getName() );
+        writer.write( toJsName( constant ) );
         writer.write( ";\n" );
       }
     }
@@ -376,7 +375,7 @@ final class ClosureAction
         writer.write( "} */ " );
         writer.write( name );
         writer.write( "." );
-        writer.write( attribute.getName() );
+        writer.write( toJsName( attribute ) );
         writer.write( ";\n" );
       }
     }
@@ -506,13 +505,6 @@ final class ClosureAction
   }
 
   @Nonnull
-  private String toJsName( @Nonnull final InterfaceDefinition definition )
-  {
-    final String jsName = definition.getIdentValue( ExtendedAttributes.JS_NAME );
-    return null == jsName ? definition.getName() : jsName;
-  }
-
-  @Nonnull
   private String toClosureType( @Nonnull final Type keyType )
     throws IOException
   {
@@ -534,15 +526,6 @@ final class ClosureAction
     final Type elementType = setLike.getType();
     final Argument elementArgument =
       new Argument( "value",
-                    elementType,
-                    false,
-                    false,
-                    null,
-                    null,
-                    Collections.emptyList(),
-                    Collections.emptyList() );
-    final Argument valueArgument2 =
-      new Argument( "value2",
                     elementType,
                     false,
                     false,
@@ -624,7 +607,7 @@ final class ClosureAction
       final boolean setPresent =
         operations
           .stream()
-          .anyMatch( o -> "add".equals( o.getName() ) &&
+          .anyMatch( o -> "add".equals( toJsName( o ) ) &&
                           1 == o.getArguments().size() &&
                           Kind.Void == o.getReturnType().getKind() );
       if ( !setPresent )
@@ -641,7 +624,7 @@ final class ClosureAction
       final boolean deletePresent =
         operations
           .stream()
-          .anyMatch( o -> "delete".equals( o.getName() ) &&
+          .anyMatch( o -> "delete".equals( toJsName( o ) ) &&
                           1 == o.getArguments().size() &&
                           Kind.Boolean == o.getReturnType().getKind() );
       if ( !deletePresent )
@@ -658,7 +641,7 @@ final class ClosureAction
       final boolean clearPresent =
         operations
           .stream()
-          .anyMatch( o -> "clear".equals( o.getName() ) &&
+          .anyMatch( o -> "clear".equals( toJsName( o ) ) &&
                           o.getArguments().isEmpty() &&
                           Kind.Void == o.getReturnType().getKind() );
       if ( !clearPresent )
@@ -788,7 +771,7 @@ final class ClosureAction
       final boolean setPresent =
         operations
           .stream()
-          .anyMatch( o -> "set".equals( o.getName() ) &&
+          .anyMatch( o -> "set".equals( toJsName( o ) ) &&
                           2 == o.getArguments().size() &&
                           Kind.Void == o.getReturnType().getKind() );
       if ( !setPresent )
@@ -805,7 +788,7 @@ final class ClosureAction
       final boolean deletePresent =
         operations
           .stream()
-          .anyMatch( o -> "delete".equals( o.getName() ) &&
+          .anyMatch( o -> "delete".equals( toJsName( o ) ) &&
                           1 == o.getArguments().size() &&
                           Kind.Boolean == o.getReturnType().getKind() );
       if ( !deletePresent )
@@ -822,7 +805,7 @@ final class ClosureAction
       final boolean clearPresent =
         operations
           .stream()
-          .anyMatch( o -> "clear".equals( o.getName() ) &&
+          .anyMatch( o -> "clear".equals( toJsName( o ) ) &&
                           o.getArguments().isEmpty() &&
                           Kind.Void == o.getReturnType().getKind() );
       if ( !clearPresent )
@@ -995,25 +978,25 @@ final class ClosureAction
     final Map<String, List<OperationMember>> operationMap =
       operations
         .stream()
-        .filter( o -> null != o.getName() )
+        .filter( o -> null != toJsName( o ) )
         .filter( o -> OperationMember.Kind.CONSTRUCTOR != o.getKind() )
-        .collect( Collectors.groupingBy( OperationMember::getName ) );
+        .collect( Collectors.groupingBy( this::toJsName ) );
     for ( final Map.Entry<String, List<OperationMember>> entry : operationMap.entrySet() )
     {
-      final String operationName = entry.getKey();
+      final String jsOperationName = entry.getKey();
       final List<OperationMember> operationsToMerge = entry.getValue();
       final OperationMember templateOperation = operationsToMerge.get( 0 );
       if ( isNotExcluded( templateOperation ) )
       {
         final boolean isNonStaticOperation = !onNamespace && OperationMember.Kind.STATIC != templateOperation.getKind();
-        final boolean isOverride = isNonStaticOperation && isOperationOverride.test( operationName );
+        final boolean isOverride = isNonStaticOperation && isOperationOverride.test( jsOperationName );
         final boolean noSideEffects =
           templateOperation.isNoArgsExtendedAttributePresent( ExtendedAttributes.NO_SIDE_EFFECTS );
         if ( 1 == operationsToMerge.size() )
         {
           writeOperation( writer,
                           type,
-                          operationName,
+                          jsOperationName,
                           templateOperation.getArguments(),
                           templateOperation.getReturnType(),
                           isNonStaticOperation,
@@ -1024,7 +1007,7 @@ final class ClosureAction
         {
           writeOperation( writer,
                           type,
-                          operationName,
+                          jsOperationName,
                           deriveArguments( operationsToMerge ),
                           deriveReturnType( operationsToMerge ),
                           isNonStaticOperation,
@@ -1169,13 +1152,13 @@ final class ClosureAction
       {
         writer.write( "prototype." );
       }
-      writer.write( attribute.getName() );
+      writer.write( toJsName( attribute ) );
       writer.write( ";\n" );
     }
     else
     {
       writer.write( "var " );
-      writer.write( attribute.getName() );
+      writer.write( toJsName( attribute ) );
       writer.write( ";\n" );
     }
   }
@@ -1220,20 +1203,20 @@ final class ClosureAction
       {
         writer.write( "prototype." );
       }
-      writer.write( constant.getName() );
+      writer.write( toJsName( constant ) );
       writer.write( ";\n" );
     }
     else
     {
       writer.write( "var " );
-      writer.write( constant.getName() );
+      writer.write( toJsName( constant ) );
       writer.write( ";\n" );
     }
   }
 
   private void writeOperation( @Nonnull final Writer writer,
                                @Nullable final String type,
-                               @Nonnull final String name,
+                               @Nonnull final String jsName,
                                @Nonnull final List<Argument> arguments,
                                @Nonnull final Type returnType,
                                final boolean onPrototype,
@@ -1243,7 +1226,7 @@ final class ClosureAction
   {
     writeOperation( writer,
                     type,
-                    name,
+                    jsName,
                     arguments,
                     returnType,
                     returnType.isNullable(),
@@ -1254,7 +1237,7 @@ final class ClosureAction
 
   private void writeOperation( @Nonnull final Writer writer,
                                @Nullable final String type,
-                               @Nonnull final String name,
+                               @Nonnull final String jsName,
                                @Nonnull final List<Argument> arguments,
                                @Nonnull final Type returnType,
                                final boolean returnNullable,
@@ -1268,7 +1251,7 @@ final class ClosureAction
     writer.write( " * @return {" );
     writeType( writer, returnType, returnNullable, true );
     writer.write( "}\n" );
-    if ( override || ( onPrototype && OBJECT_PROTOTYPE_METHODS.contains( name ) ) )
+    if ( override || ( onPrototype && OBJECT_PROTOTYPE_METHODS.contains( jsName ) ) )
     {
       writer.write( " * @override\n" );
     }
@@ -1285,11 +1268,11 @@ final class ClosureAction
       {
         writer.write( "prototype." );
       }
-      writer.write( name + " = function" + toArgumentsList( arguments ) + " {}\n" );
+      writer.write( jsName + " = function" + toArgumentsList( arguments ) + " {}\n" );
     }
     else
     {
-      writer.write( "function " + name + toArgumentsList( arguments ) + " {}\n" );
+      writer.write( "function " + jsName + toArgumentsList( arguments ) + " {}\n" );
     }
   }
 
@@ -1347,7 +1330,7 @@ final class ClosureAction
         writer.write( "=" );
       }
       writer.write( "} " );
-      writer.write( safeJsArgName( argument.getName() ) );
+      writer.write( safeJsArgName( toJsName( argument ) ) );
       writer.write( "\n" );
     }
   }
@@ -1358,7 +1341,7 @@ final class ClosureAction
     return "(" +
            arguments
              .stream()
-             .map( NamedElement::getName )
+             .map( this::toJsName )
              .map( this::safeJsArgName )
              .collect( Collectors.joining( "," ) ) +
            ")";

@@ -3,6 +3,24 @@
  * @externs
  */
 /**
+ * @typedef {(!Int32Array|!Array<!number>)}
+ */
+var NumbersList;
+/**
+ * @typedef {{jsElapsedTime:(!number|undefined),propertyName:(!string|undefined)}}
+ */
+var JsEventInit;
+/**
+ * @typedef {{jsElapsedTime:(!string|undefined),jsElapsedTime:(!number|undefined),propertyName:(!string|undefined)}}
+ */
+var JsTransitionEventInit;
+/**
+ * @const
+ */
+var JsMath;
+/** @const {!number} */ JsMath.JsE;
+/** @const {!number} */ JsMath.JsPI;
+/**
  * @constructor
  * @private
  * @extends {NotHTMLCollection}
@@ -51,3 +69,15 @@ function HTMLOptionElement() {}
  * @nosideeffects
  */
 function Element() {}
+/**
+ * @constructor
+ * @private
+ * @nosideeffects
+ */
+function Thing() {}
+/** @type {!number} */ Thing.prototype.zeSize;
+/**
+ * @param {!number} i
+ * @return {?Element}
+ */
+Thing.prototype.leItem = function(i) {}

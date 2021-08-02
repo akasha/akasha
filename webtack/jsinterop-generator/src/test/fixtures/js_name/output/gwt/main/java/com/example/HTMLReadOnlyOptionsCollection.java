@@ -11,7 +11,7 @@ import jsinterop.annotations.JsType;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "HTMLReadOnlyOptionsCollection"
+    name = "HTMLCollection"
 )
 public class HTMLReadOnlyOptionsCollection extends HTMLCollection {
   protected HTMLReadOnlyOptionsCollection() {

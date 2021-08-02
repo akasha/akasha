@@ -1,9 +1,17 @@
 goog.module('com.example.ExampleCompileTest');
 goog.require('com.example.Element.$Overlay');
 goog.require('com.example.ElementTestCompile');
+goog.require('com.example.EventInit.$Overlay');
 goog.require('com.example.HTMLCollection.$Overlay');
 goog.require('com.example.HTMLCollectionTestCompile');
 goog.require('com.example.HTMLOptionElement.$Overlay');
 goog.require('com.example.HTMLOptionElementTestCompile');
 goog.require('com.example.HTMLReadOnlyOptionsCollection.$Overlay');
 goog.require('com.example.HTMLReadOnlyOptionsCollectionTestCompile');
+goog.require('com.example.Int32Array.$Overlay');
+goog.require('com.example.Int32ArrayTestCompile');
+goog.require('com.example.Math.$Overlay');
+goog.require('com.example.MathTestCompile');
+goog.require('com.example.Thing.$Overlay');
+goog.require('com.example.ThingTestCompile');
+goog.require('com.example.TransitionEventInit.$Overlay');

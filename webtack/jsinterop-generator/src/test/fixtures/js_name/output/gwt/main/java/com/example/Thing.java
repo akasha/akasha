@@ -2,8 +2,8 @@ package com.example;
 
 import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
-import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -12,22 +12,21 @@ import jsinterop.annotations.JsType;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "NotHTMLCollection"
+    name = "Thing"
 )
-public class HTMLCollection {
-  protected HTMLCollection() {
+public class Thing {
+  protected Thing() {
   }
 
   @JsProperty(
-      name = "length"
+      name = "zeSize"
   )
   public native int length();
 
+  @JsMethod(
+      name = "leItem"
+  )
   @HasNoSideEffects
   @Nullable
   public native Element item(int index);
-
-  @HasNoSideEffects
-  @Nullable
-  public native Element namedItem(@Nonnull String name);
 }

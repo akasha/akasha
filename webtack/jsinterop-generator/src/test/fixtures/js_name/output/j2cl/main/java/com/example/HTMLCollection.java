@@ -12,7 +12,7 @@ import jsinterop.annotations.JsType;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "HTMLCollection"
+    name = "NotHTMLCollection"
 )
 public class HTMLCollection {
   protected HTMLCollection() {
