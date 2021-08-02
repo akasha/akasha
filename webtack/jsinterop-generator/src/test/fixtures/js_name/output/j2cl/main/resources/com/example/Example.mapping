@@ -1,0 +1,4 @@
+Element=com.example.Element
+HTMLCollection=com.example.HTMLCollection
+HTMLOptionElement=com.example.HTMLOptionElement
+HTMLReadOnlyOptionsCollection=com.example.HTMLReadOnlyOptionsCollection

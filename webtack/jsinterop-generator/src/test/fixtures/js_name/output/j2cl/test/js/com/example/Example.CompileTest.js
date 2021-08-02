@@ -1,0 +1,9 @@
+goog.module('com.example.ExampleCompileTest');
+goog.require('com.example.Element.$Overlay');
+goog.require('com.example.ElementTestCompile');
+goog.require('com.example.HTMLCollection.$Overlay');
+goog.require('com.example.HTMLCollectionTestCompile');
+goog.require('com.example.HTMLOptionElement.$Overlay');
+goog.require('com.example.HTMLOptionElementTestCompile');
+goog.require('com.example.HTMLReadOnlyOptionsCollection.$Overlay');
+goog.require('com.example.HTMLReadOnlyOptionsCollectionTestCompile');

@@ -196,7 +196,7 @@ final class ClosureAction
       }
       for ( final InterfaceDefinition definition : schema.getInterfaces() )
       {
-        if ( isNotExcluded( definition ) && tryRecordGeneratedType( definition.getName() ) )
+        if ( isNotExcluded( definition ) && tryRecordGeneratedType( toJsName( definition ) ) )
         {
           writeInterface( writer, definition );
         }
@@ -445,7 +445,7 @@ final class ClosureAction
     }
 
     final String namespace = definition.getNamespace();
-    final String type = ( null == namespace ? "" : namespace + "." ) + definition.getName();
+    final String type = ( null == namespace ? "" : namespace + "." ) + toJsName( definition );
     if ( hasNoJsType || constructors.isEmpty() )
     {
       lines.add( "@nosideeffects" );
@@ -503,6 +503,13 @@ final class ClosureAction
     {
       generateIterableOperations( writer, type, iterable );
     }
+  }
+
+  @Nonnull
+  private String toJsName( @Nonnull final InterfaceDefinition definition )
+  {
+    final String jsName = definition.getIdentValue( ExtendedAttributes.JS_NAME );
+    return null == jsName ? definition.getName() : jsName;
   }
 
   @Nonnull
@@ -1303,7 +1310,7 @@ final class ClosureAction
     if ( null != superType )
     {
       writer.write( " * @extends {" );
-      writer.write( superType );
+      writer.write( toJsName( getSchema().getInterfaceByName( superType ) ) );
       writer.write( "}\n" );
     }
     for ( final String additionalLine : additionalLines )

@@ -85,6 +85,12 @@ public final class ExtendedAttributes
    */
   public static final String JAVA_NO_INLINE = "JavaNoInline";
   /**
+   * A custom extended property that specifies the name of the underlying javascript type for the specified element.
+   * This is used when a WebIDL artifact is not mapped to javascript type directly due to browser incompatibilities
+   * or because the WebIDL is a "synthetic" type introduced to aid modelling for other bindings.
+   */
+  public static final String JS_NAME = "JsName";
+  /**
    * The MarkerType extended attribute can be added to a UnionType to indicate that the union can be treated as
    * a separate type. The member types of the union be interface types or other [MarkerType] typedefs.
    *
