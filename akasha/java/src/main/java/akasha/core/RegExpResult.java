@@ -8,7 +8,10 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.JsPropertyMap;
 
+// GWT_ONLY /*
 @JsType( isNative = true, namespace = JsPackage.GLOBAL, name = "RegExpResult" )
+// GWT_ONLY */
+// GWT_ONLY @JsType( isNative = true, namespace = JsPackage.GLOBAL, name = "Array" )
 public class RegExpResult
   extends JsArray<String>
 {
