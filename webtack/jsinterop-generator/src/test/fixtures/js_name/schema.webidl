@@ -18,7 +18,7 @@ dictionary EventInit {
 
 [JsName=JsTransitionEventInit]
 dictionary TransitionEventInit : EventInit {
-  [JsName=jsElapsedTime]
+  [JsName=js_pseudoElement]
   DOMString pseudoElement = "";
 };
 

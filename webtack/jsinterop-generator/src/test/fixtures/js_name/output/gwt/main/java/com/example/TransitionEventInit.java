@@ -23,7 +23,7 @@ public interface TransitionEventInit extends EventInit {
   }
 
   @JsProperty(
-      name = "jsElapsedTime"
+      name = "js_pseudoElement"
   )
   String pseudoElement();
 

@@ -11,7 +11,7 @@ var NumbersList;
  */
 var JsEventInit;
 /**
- * @typedef {{jsElapsedTime:(!string|undefined),jsElapsedTime:(!number|undefined),propertyName:(!string|undefined)}}
+ * @typedef {{js_pseudoElement:(!string|undefined),jsElapsedTime:(!number|undefined),propertyName:(!string|undefined)}}
  */
 var JsTransitionEventInit;
 /**
