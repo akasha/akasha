@@ -1,5 +1,7 @@
 # Change Log
 
+### Unreleased
+
 ### [v0.17](https://github.com/akasha/akasha/tree/v0.17) (2021-08-02) · [Full Changelog](https://github.com/spritz/spritz/compare/v0.16...v0.17) · [API Differences](https://akasha.github.io/akasha-java/api-diff/?key=akasha-java&old=0.16&new=0.17) · [Source Diff](https://github.com/akasha/akasha-java/compare/v0.16...v0.17)
 
 The release includes 7 non breaking API changes.
