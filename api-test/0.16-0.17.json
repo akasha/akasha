@@ -1,0 +1,1181 @@
+[
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "@interface akasha.gpu.GPUBufferUsageFlags",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUBufferUsageFlags",
+      "classSimpleName": "GPUBufferUsageFlags",
+      "elementKind": "@interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "@interface akasha.gpu.GPUColorWriteFlags",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUColorWriteFlags",
+      "classSimpleName": "GPUColorWriteFlags",
+      "elementKind": "@interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "@interface akasha.gpu.GPUMapModeFlags",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUMapModeFlags",
+      "classSimpleName": "GPUMapModeFlags",
+      "elementKind": "@interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "@interface akasha.gpu.GPUShaderStageFlags",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUShaderStageFlags",
+      "classSimpleName": "GPUShaderStageFlags",
+      "elementKind": "@interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "@interface akasha.gpu.GPUTextureUsageFlags",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUTextureUsageFlags",
+      "classSimpleName": "GPUTextureUsageFlags",
+      "elementKind": "@interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'akasha.gpu.GPUShaderStageFlags'.",
+    "element": "method int akasha.gpu.GPUBindGroupLayoutEntry::visibility() @ akasha.gpu.GPUBindGroupLayoutEntry.Builder",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUShaderStageFlags",
+      "annotationType": "akasha.gpu.GPUShaderStageFlags",
+      "classQualifiedName": "akasha.gpu.GPUBindGroupLayoutEntry.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "method",
+      "methodName": "visibility",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'javax.annotation.Nonnull'.",
+    "element": "method int akasha.gpu.GPUBindGroupLayoutEntry::visibility() @ akasha.gpu.GPUBindGroupLayoutEntry.Builder",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@javax.annotation.Nonnull",
+      "annotationType": "javax.annotation.Nonnull",
+      "classQualifiedName": "akasha.gpu.GPUBindGroupLayoutEntry.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "method",
+      "methodName": "visibility",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'akasha.gpu.GPUShaderStageFlags'.",
+    "element": "method int akasha.gpu.GPUBindGroupLayoutEntry::visibility()",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUShaderStageFlags",
+      "annotationType": "akasha.gpu.GPUShaderStageFlags",
+      "classQualifiedName": "akasha.gpu.GPUBindGroupLayoutEntry",
+      "classSimpleName": "GPUBindGroupLayoutEntry",
+      "elementKind": "method",
+      "methodName": "visibility",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'javax.annotation.Nonnull'.",
+    "element": "method int akasha.gpu.GPUBindGroupLayoutEntry::visibility()",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@javax.annotation.Nonnull",
+      "annotationType": "javax.annotation.Nonnull",
+      "classQualifiedName": "akasha.gpu.GPUBindGroupLayoutEntry",
+      "classSimpleName": "GPUBindGroupLayoutEntry",
+      "elementKind": "method",
+      "methodName": "visibility",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'akasha.gpu.GPUBufferUsageFlags'.",
+    "element": "method int akasha.gpu.GPUBufferDescriptor::usage() @ akasha.gpu.GPUBufferDescriptor.Builder",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUBufferUsageFlags",
+      "annotationType": "akasha.gpu.GPUBufferUsageFlags",
+      "classQualifiedName": "akasha.gpu.GPUBufferDescriptor.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "method",
+      "methodName": "usage",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'javax.annotation.Nonnull'.",
+    "element": "method int akasha.gpu.GPUBufferDescriptor::usage() @ akasha.gpu.GPUBufferDescriptor.Builder",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@javax.annotation.Nonnull",
+      "annotationType": "javax.annotation.Nonnull",
+      "classQualifiedName": "akasha.gpu.GPUBufferDescriptor.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "method",
+      "methodName": "usage",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'akasha.gpu.GPUBufferUsageFlags'.",
+    "element": "method int akasha.gpu.GPUBufferDescriptor::usage()",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUBufferUsageFlags",
+      "annotationType": "akasha.gpu.GPUBufferUsageFlags",
+      "classQualifiedName": "akasha.gpu.GPUBufferDescriptor",
+      "classSimpleName": "GPUBufferDescriptor",
+      "elementKind": "method",
+      "methodName": "usage",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'javax.annotation.Nonnull'.",
+    "element": "method int akasha.gpu.GPUBufferDescriptor::usage()",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@javax.annotation.Nonnull",
+      "annotationType": "javax.annotation.Nonnull",
+      "classQualifiedName": "akasha.gpu.GPUBufferDescriptor",
+      "classSimpleName": "GPUBufferDescriptor",
+      "elementKind": "method",
+      "methodName": "usage",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'akasha.gpu.GPUTextureUsageFlags'.",
+    "element": "method int akasha.gpu.GPUCanvasConfiguration::usage() @ akasha.gpu.GPUCanvasConfiguration.Builder",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUTextureUsageFlags",
+      "annotationType": "akasha.gpu.GPUTextureUsageFlags",
+      "classQualifiedName": "akasha.gpu.GPUCanvasConfiguration.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "method",
+      "methodName": "usage",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'akasha.gpu.GPUTextureUsageFlags'.",
+    "element": "method int akasha.gpu.GPUCanvasConfiguration::usage()",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUTextureUsageFlags",
+      "annotationType": "akasha.gpu.GPUTextureUsageFlags",
+      "classQualifiedName": "akasha.gpu.GPUCanvasConfiguration",
+      "classSimpleName": "GPUCanvasConfiguration",
+      "elementKind": "method",
+      "methodName": "usage",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'akasha.gpu.GPUColorWriteFlags'.",
+    "element": "method int akasha.gpu.GPUColorTargetState::writeMask() @ akasha.gpu.GPUColorTargetState.Builder",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUColorWriteFlags",
+      "annotationType": "akasha.gpu.GPUColorWriteFlags",
+      "classQualifiedName": "akasha.gpu.GPUColorTargetState.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "method",
+      "methodName": "writeMask",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'akasha.gpu.GPUColorWriteFlags'.",
+    "element": "method int akasha.gpu.GPUColorTargetState::writeMask()",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUColorWriteFlags",
+      "annotationType": "akasha.gpu.GPUColorWriteFlags",
+      "classQualifiedName": "akasha.gpu.GPUColorTargetState",
+      "classSimpleName": "GPUColorTargetState",
+      "elementKind": "method",
+      "methodName": "writeMask",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'akasha.gpu.GPUTextureUsageFlags'.",
+    "element": "method int akasha.gpu.GPUTextureDescriptor::usage() @ akasha.gpu.GPUTextureDescriptor.Builder",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUTextureUsageFlags",
+      "annotationType": "akasha.gpu.GPUTextureUsageFlags",
+      "classQualifiedName": "akasha.gpu.GPUTextureDescriptor.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "method",
+      "methodName": "usage",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'javax.annotation.Nonnull'.",
+    "element": "method int akasha.gpu.GPUTextureDescriptor::usage() @ akasha.gpu.GPUTextureDescriptor.Builder",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@javax.annotation.Nonnull",
+      "annotationType": "javax.annotation.Nonnull",
+      "classQualifiedName": "akasha.gpu.GPUTextureDescriptor.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "method",
+      "methodName": "usage",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'akasha.gpu.GPUTextureUsageFlags'.",
+    "element": "method int akasha.gpu.GPUTextureDescriptor::usage()",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUTextureUsageFlags",
+      "annotationType": "akasha.gpu.GPUTextureUsageFlags",
+      "classQualifiedName": "akasha.gpu.GPUTextureDescriptor",
+      "classSimpleName": "GPUTextureDescriptor",
+      "elementKind": "method",
+      "methodName": "usage",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'javax.annotation.Nonnull'.",
+    "element": "method int akasha.gpu.GPUTextureDescriptor::usage()",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@javax.annotation.Nonnull",
+      "annotationType": "javax.annotation.Nonnull",
+      "classQualifiedName": "akasha.gpu.GPUTextureDescriptor",
+      "classSimpleName": "GPUTextureDescriptor",
+      "elementKind": "method",
+      "methodName": "usage",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'akasha.gpu.GPUShaderStageFlags'.",
+    "element": "parameter akasha.gpu.GPUBindGroupLayoutEntry.Builder akasha.gpu.GPUBindGroupLayoutEntry.Builder::visibility(===int===)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUShaderStageFlags",
+      "annotationType": "akasha.gpu.GPUShaderStageFlags",
+      "classQualifiedName": "akasha.gpu.GPUBindGroupLayoutEntry.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "parameter",
+      "methodName": "visibility",
+      "package": "akasha.gpu",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'akasha.gpu.GPUShaderStageFlags'.",
+    "element": "parameter akasha.gpu.GPUBindGroupLayoutEntry.Builder akasha.gpu.GPUBindGroupLayoutEntry::create(int, ===int===) @ akasha.gpu.GPUBindGroupLayoutEntry.Builder",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUShaderStageFlags",
+      "annotationType": "akasha.gpu.GPUShaderStageFlags",
+      "classQualifiedName": "akasha.gpu.GPUBindGroupLayoutEntry.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'akasha.gpu.GPUShaderStageFlags'.",
+    "element": "parameter akasha.gpu.GPUBindGroupLayoutEntry.Builder akasha.gpu.GPUBindGroupLayoutEntry::create(int, ===int===)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUShaderStageFlags",
+      "annotationType": "akasha.gpu.GPUShaderStageFlags",
+      "classQualifiedName": "akasha.gpu.GPUBindGroupLayoutEntry",
+      "classSimpleName": "GPUBindGroupLayoutEntry",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'akasha.gpu.GPUBufferUsageFlags'.",
+    "element": "parameter akasha.gpu.GPUBufferDescriptor.Builder akasha.gpu.GPUBufferDescriptor.Builder::usage(===int===)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUBufferUsageFlags",
+      "annotationType": "akasha.gpu.GPUBufferUsageFlags",
+      "classQualifiedName": "akasha.gpu.GPUBufferDescriptor.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "parameter",
+      "methodName": "usage",
+      "package": "akasha.gpu",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'akasha.gpu.GPUBufferUsageFlags'.",
+    "element": "parameter akasha.gpu.GPUBufferDescriptor.Builder akasha.gpu.GPUBufferDescriptor::create(int, ===int===) @ akasha.gpu.GPUBufferDescriptor.Builder",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUBufferUsageFlags",
+      "annotationType": "akasha.gpu.GPUBufferUsageFlags",
+      "classQualifiedName": "akasha.gpu.GPUBufferDescriptor.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'akasha.gpu.GPUBufferUsageFlags'.",
+    "element": "parameter akasha.gpu.GPUBufferDescriptor.Builder akasha.gpu.GPUBufferDescriptor::create(int, ===int===)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUBufferUsageFlags",
+      "annotationType": "akasha.gpu.GPUBufferUsageFlags",
+      "classQualifiedName": "akasha.gpu.GPUBufferDescriptor",
+      "classSimpleName": "GPUBufferDescriptor",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'akasha.gpu.GPUTextureUsageFlags'.",
+    "element": "parameter akasha.gpu.GPUCanvasConfiguration.Builder akasha.gpu.GPUCanvasConfiguration.Builder::usage(===int===)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUTextureUsageFlags",
+      "annotationType": "akasha.gpu.GPUTextureUsageFlags",
+      "classQualifiedName": "akasha.gpu.GPUCanvasConfiguration.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "parameter",
+      "methodName": "usage",
+      "package": "akasha.gpu",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'akasha.gpu.GPUColorWriteFlags'.",
+    "element": "parameter akasha.gpu.GPUColorTargetState.Builder akasha.gpu.GPUColorTargetState.Builder::writeMask(===int===)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUColorWriteFlags",
+      "annotationType": "akasha.gpu.GPUColorWriteFlags",
+      "classQualifiedName": "akasha.gpu.GPUColorTargetState.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "parameter",
+      "methodName": "writeMask",
+      "package": "akasha.gpu",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'akasha.gpu.GPUTextureUsageFlags'.",
+    "element": "parameter akasha.gpu.GPUTextureDescriptor.Builder akasha.gpu.GPUTextureDescriptor.Builder::usage(===int===)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUTextureUsageFlags",
+      "annotationType": "akasha.gpu.GPUTextureUsageFlags",
+      "classQualifiedName": "akasha.gpu.GPUTextureDescriptor.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "parameter",
+      "methodName": "usage",
+      "package": "akasha.gpu",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'akasha.gpu.GPUTextureUsageFlags'.",
+    "element": "parameter akasha.gpu.GPUTextureDescriptor.Builder akasha.gpu.GPUTextureDescriptor::create(akasha.gpu.GPUExtent3D, java.lang.String, ===int===) @ akasha.gpu.GPUTextureDescriptor.Builder",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUTextureUsageFlags",
+      "annotationType": "akasha.gpu.GPUTextureUsageFlags",
+      "classQualifiedName": "akasha.gpu.GPUTextureDescriptor.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "2"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'akasha.gpu.GPUTextureUsageFlags'.",
+    "element": "parameter akasha.gpu.GPUTextureDescriptor.Builder akasha.gpu.GPUTextureDescriptor::create(akasha.gpu.GPUExtent3D, java.lang.String, ===int===)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUTextureUsageFlags",
+      "annotationType": "akasha.gpu.GPUTextureUsageFlags",
+      "classQualifiedName": "akasha.gpu.GPUTextureDescriptor",
+      "classSimpleName": "GPUTextureDescriptor",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "2"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'akasha.gpu.GPUTextureUsageFlags'.",
+    "element": "parameter akasha.gpu.GPUTextureDescriptor.Builder akasha.gpu.GPUTextureDescriptor::create(akasha.gpu.GPUExtent3DDict, java.lang.String, ===int===) @ akasha.gpu.GPUTextureDescriptor.Builder",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUTextureUsageFlags",
+      "annotationType": "akasha.gpu.GPUTextureUsageFlags",
+      "classQualifiedName": "akasha.gpu.GPUTextureDescriptor.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "2"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'akasha.gpu.GPUTextureUsageFlags'.",
+    "element": "parameter akasha.gpu.GPUTextureDescriptor.Builder akasha.gpu.GPUTextureDescriptor::create(akasha.gpu.GPUExtent3DDict, java.lang.String, ===int===)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUTextureUsageFlags",
+      "annotationType": "akasha.gpu.GPUTextureUsageFlags",
+      "classQualifiedName": "akasha.gpu.GPUTextureDescriptor",
+      "classSimpleName": "GPUTextureDescriptor",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "2"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'akasha.gpu.GPUTextureUsageFlags'.",
+    "element": "parameter akasha.gpu.GPUTextureDescriptor.Builder akasha.gpu.GPUTextureDescriptor::create(akasha.lang.JsArray<java.lang.Double>, java.lang.String, ===int===) @ akasha.gpu.GPUTextureDescriptor.Builder",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUTextureUsageFlags",
+      "annotationType": "akasha.gpu.GPUTextureUsageFlags",
+      "classQualifiedName": "akasha.gpu.GPUTextureDescriptor.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "2"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'akasha.gpu.GPUTextureUsageFlags'.",
+    "element": "parameter akasha.gpu.GPUTextureDescriptor.Builder akasha.gpu.GPUTextureDescriptor::create(akasha.lang.JsArray<java.lang.Double>, java.lang.String, ===int===)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUTextureUsageFlags",
+      "annotationType": "akasha.gpu.GPUTextureUsageFlags",
+      "classQualifiedName": "akasha.gpu.GPUTextureDescriptor",
+      "classSimpleName": "GPUTextureDescriptor",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "2"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'akasha.gpu.GPUTextureUsageFlags'.",
+    "element": "parameter akasha.gpu.GPUTextureDescriptor.Builder akasha.gpu.GPUTextureDescriptor::create(double[], java.lang.String, ===int===) @ akasha.gpu.GPUTextureDescriptor.Builder",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUTextureUsageFlags",
+      "annotationType": "akasha.gpu.GPUTextureUsageFlags",
+      "classQualifiedName": "akasha.gpu.GPUTextureDescriptor.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "2"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'akasha.gpu.GPUTextureUsageFlags'.",
+    "element": "parameter akasha.gpu.GPUTextureDescriptor.Builder akasha.gpu.GPUTextureDescriptor::create(double[], java.lang.String, ===int===)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUTextureUsageFlags",
+      "annotationType": "akasha.gpu.GPUTextureUsageFlags",
+      "classQualifiedName": "akasha.gpu.GPUTextureDescriptor",
+      "classSimpleName": "GPUTextureDescriptor",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "2"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'akasha.gpu.GPUMapModeFlags'.",
+    "element": "parameter akasha.promise.Promise<java.lang.Void> akasha.gpu.GPUBuffer::mapAsync(===int===)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUMapModeFlags",
+      "annotationType": "akasha.gpu.GPUMapModeFlags",
+      "classQualifiedName": "akasha.gpu.GPUBuffer",
+      "classSimpleName": "GPUBuffer",
+      "elementKind": "parameter",
+      "methodName": "mapAsync",
+      "package": "akasha.gpu",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'akasha.gpu.GPUMapModeFlags'.",
+    "element": "parameter akasha.promise.Promise<java.lang.Void> akasha.gpu.GPUBuffer::mapAsync(===int===, int)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUMapModeFlags",
+      "annotationType": "akasha.gpu.GPUMapModeFlags",
+      "classQualifiedName": "akasha.gpu.GPUBuffer",
+      "classSimpleName": "GPUBuffer",
+      "elementKind": "parameter",
+      "methodName": "mapAsync",
+      "package": "akasha.gpu",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'akasha.gpu.GPUMapModeFlags'.",
+    "element": "parameter akasha.promise.Promise<java.lang.Void> akasha.gpu.GPUBuffer::mapAsync(===int===, int, int)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUMapModeFlags",
+      "annotationType": "akasha.gpu.GPUMapModeFlags",
+      "classQualifiedName": "akasha.gpu.GPUBuffer",
+      "classSimpleName": "GPUBuffer",
+      "elementKind": "parameter",
+      "methodName": "mapAsync",
+      "package": "akasha.gpu",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'akasha.gpu.GPUShaderStageFlags'.",
+    "element": "parameter void akasha.gpu.GPUBindGroupLayoutEntry::setVisibility(===int===) @ akasha.gpu.GPUBindGroupLayoutEntry.Builder",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUShaderStageFlags",
+      "annotationType": "akasha.gpu.GPUShaderStageFlags",
+      "classQualifiedName": "akasha.gpu.GPUBindGroupLayoutEntry.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "parameter",
+      "methodName": "setVisibility",
+      "package": "akasha.gpu",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'javax.annotation.Nonnull'.",
+    "element": "parameter void akasha.gpu.GPUBindGroupLayoutEntry::setVisibility(===int===) @ akasha.gpu.GPUBindGroupLayoutEntry.Builder",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@javax.annotation.Nonnull",
+      "annotationType": "javax.annotation.Nonnull",
+      "classQualifiedName": "akasha.gpu.GPUBindGroupLayoutEntry.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "parameter",
+      "methodName": "setVisibility",
+      "package": "akasha.gpu",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'akasha.gpu.GPUShaderStageFlags'.",
+    "element": "parameter void akasha.gpu.GPUBindGroupLayoutEntry::setVisibility(===int===)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUShaderStageFlags",
+      "annotationType": "akasha.gpu.GPUShaderStageFlags",
+      "classQualifiedName": "akasha.gpu.GPUBindGroupLayoutEntry",
+      "classSimpleName": "GPUBindGroupLayoutEntry",
+      "elementKind": "parameter",
+      "methodName": "setVisibility",
+      "package": "akasha.gpu",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'javax.annotation.Nonnull'.",
+    "element": "parameter void akasha.gpu.GPUBindGroupLayoutEntry::setVisibility(===int===)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@javax.annotation.Nonnull",
+      "annotationType": "javax.annotation.Nonnull",
+      "classQualifiedName": "akasha.gpu.GPUBindGroupLayoutEntry",
+      "classSimpleName": "GPUBindGroupLayoutEntry",
+      "elementKind": "parameter",
+      "methodName": "setVisibility",
+      "package": "akasha.gpu",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'akasha.gpu.GPUBufferUsageFlags'.",
+    "element": "parameter void akasha.gpu.GPUBufferDescriptor::setUsage(===int===) @ akasha.gpu.GPUBufferDescriptor.Builder",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUBufferUsageFlags",
+      "annotationType": "akasha.gpu.GPUBufferUsageFlags",
+      "classQualifiedName": "akasha.gpu.GPUBufferDescriptor.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "parameter",
+      "methodName": "setUsage",
+      "package": "akasha.gpu",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'javax.annotation.Nonnull'.",
+    "element": "parameter void akasha.gpu.GPUBufferDescriptor::setUsage(===int===) @ akasha.gpu.GPUBufferDescriptor.Builder",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@javax.annotation.Nonnull",
+      "annotationType": "javax.annotation.Nonnull",
+      "classQualifiedName": "akasha.gpu.GPUBufferDescriptor.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "parameter",
+      "methodName": "setUsage",
+      "package": "akasha.gpu",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'akasha.gpu.GPUBufferUsageFlags'.",
+    "element": "parameter void akasha.gpu.GPUBufferDescriptor::setUsage(===int===)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUBufferUsageFlags",
+      "annotationType": "akasha.gpu.GPUBufferUsageFlags",
+      "classQualifiedName": "akasha.gpu.GPUBufferDescriptor",
+      "classSimpleName": "GPUBufferDescriptor",
+      "elementKind": "parameter",
+      "methodName": "setUsage",
+      "package": "akasha.gpu",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'javax.annotation.Nonnull'.",
+    "element": "parameter void akasha.gpu.GPUBufferDescriptor::setUsage(===int===)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@javax.annotation.Nonnull",
+      "annotationType": "javax.annotation.Nonnull",
+      "classQualifiedName": "akasha.gpu.GPUBufferDescriptor",
+      "classSimpleName": "GPUBufferDescriptor",
+      "elementKind": "parameter",
+      "methodName": "setUsage",
+      "package": "akasha.gpu",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'akasha.gpu.GPUTextureUsageFlags'.",
+    "element": "parameter void akasha.gpu.GPUCanvasConfiguration::setUsage(===int===) @ akasha.gpu.GPUCanvasConfiguration.Builder",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUTextureUsageFlags",
+      "annotationType": "akasha.gpu.GPUTextureUsageFlags",
+      "classQualifiedName": "akasha.gpu.GPUCanvasConfiguration.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "parameter",
+      "methodName": "setUsage",
+      "package": "akasha.gpu",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'javax.annotation.Nonnull'.",
+    "element": "parameter void akasha.gpu.GPUCanvasConfiguration::setUsage(===int===) @ akasha.gpu.GPUCanvasConfiguration.Builder",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@javax.annotation.Nonnull",
+      "annotationType": "javax.annotation.Nonnull",
+      "classQualifiedName": "akasha.gpu.GPUCanvasConfiguration.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "parameter",
+      "methodName": "setUsage",
+      "package": "akasha.gpu",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'akasha.gpu.GPUTextureUsageFlags'.",
+    "element": "parameter void akasha.gpu.GPUCanvasConfiguration::setUsage(===int===)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUTextureUsageFlags",
+      "annotationType": "akasha.gpu.GPUTextureUsageFlags",
+      "classQualifiedName": "akasha.gpu.GPUCanvasConfiguration",
+      "classSimpleName": "GPUCanvasConfiguration",
+      "elementKind": "parameter",
+      "methodName": "setUsage",
+      "package": "akasha.gpu",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'javax.annotation.Nonnull'.",
+    "element": "parameter void akasha.gpu.GPUCanvasConfiguration::setUsage(===int===)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@javax.annotation.Nonnull",
+      "annotationType": "javax.annotation.Nonnull",
+      "classQualifiedName": "akasha.gpu.GPUCanvasConfiguration",
+      "classSimpleName": "GPUCanvasConfiguration",
+      "elementKind": "parameter",
+      "methodName": "setUsage",
+      "package": "akasha.gpu",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'akasha.gpu.GPUColorWriteFlags'.",
+    "element": "parameter void akasha.gpu.GPUColorTargetState::setWriteMask(===int===) @ akasha.gpu.GPUColorTargetState.Builder",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUColorWriteFlags",
+      "annotationType": "akasha.gpu.GPUColorWriteFlags",
+      "classQualifiedName": "akasha.gpu.GPUColorTargetState.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "parameter",
+      "methodName": "setWriteMask",
+      "package": "akasha.gpu",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'javax.annotation.Nonnull'.",
+    "element": "parameter void akasha.gpu.GPUColorTargetState::setWriteMask(===int===) @ akasha.gpu.GPUColorTargetState.Builder",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@javax.annotation.Nonnull",
+      "annotationType": "javax.annotation.Nonnull",
+      "classQualifiedName": "akasha.gpu.GPUColorTargetState.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "parameter",
+      "methodName": "setWriteMask",
+      "package": "akasha.gpu",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'akasha.gpu.GPUColorWriteFlags'.",
+    "element": "parameter void akasha.gpu.GPUColorTargetState::setWriteMask(===int===)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUColorWriteFlags",
+      "annotationType": "akasha.gpu.GPUColorWriteFlags",
+      "classQualifiedName": "akasha.gpu.GPUColorTargetState",
+      "classSimpleName": "GPUColorTargetState",
+      "elementKind": "parameter",
+      "methodName": "setWriteMask",
+      "package": "akasha.gpu",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'javax.annotation.Nonnull'.",
+    "element": "parameter void akasha.gpu.GPUColorTargetState::setWriteMask(===int===)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@javax.annotation.Nonnull",
+      "annotationType": "javax.annotation.Nonnull",
+      "classQualifiedName": "akasha.gpu.GPUColorTargetState",
+      "classSimpleName": "GPUColorTargetState",
+      "elementKind": "parameter",
+      "methodName": "setWriteMask",
+      "package": "akasha.gpu",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'akasha.gpu.GPUTextureUsageFlags'.",
+    "element": "parameter void akasha.gpu.GPUTextureDescriptor::setUsage(===int===) @ akasha.gpu.GPUTextureDescriptor.Builder",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUTextureUsageFlags",
+      "annotationType": "akasha.gpu.GPUTextureUsageFlags",
+      "classQualifiedName": "akasha.gpu.GPUTextureDescriptor.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "parameter",
+      "methodName": "setUsage",
+      "package": "akasha.gpu",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'javax.annotation.Nonnull'.",
+    "element": "parameter void akasha.gpu.GPUTextureDescriptor::setUsage(===int===) @ akasha.gpu.GPUTextureDescriptor.Builder",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@javax.annotation.Nonnull",
+      "annotationType": "javax.annotation.Nonnull",
+      "classQualifiedName": "akasha.gpu.GPUTextureDescriptor.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "parameter",
+      "methodName": "setUsage",
+      "package": "akasha.gpu",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'akasha.gpu.GPUTextureUsageFlags'.",
+    "element": "parameter void akasha.gpu.GPUTextureDescriptor::setUsage(===int===)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.GPUTextureUsageFlags",
+      "annotationType": "akasha.gpu.GPUTextureUsageFlags",
+      "classQualifiedName": "akasha.gpu.GPUTextureDescriptor",
+      "classSimpleName": "GPUTextureDescriptor",
+      "elementKind": "parameter",
+      "methodName": "setUsage",
+      "package": "akasha.gpu",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'javax.annotation.Nonnull'.",
+    "element": "parameter void akasha.gpu.GPUTextureDescriptor::setUsage(===int===)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@javax.annotation.Nonnull",
+      "annotationType": "javax.annotation.Nonnull",
+      "classQualifiedName": "akasha.gpu.GPUTextureDescriptor",
+      "classSimpleName": "GPUTextureDescriptor",
+      "elementKind": "parameter",
+      "methodName": "setUsage",
+      "package": "akasha.gpu",
+      "parameterIndex": "0"
+    }
+  }
+]
