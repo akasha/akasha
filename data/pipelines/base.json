@@ -1,4 +1,5 @@
 {
+  "sourceSelector": "!name=minimal_event",
   "pre": ["base_webgpu", "base_common"],
   "stages": [
     {
