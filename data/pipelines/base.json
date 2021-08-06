@@ -1,27 +1,6 @@
 {
-  "pre": ["base_webgpu"],
+  "pre": ["base_webgpu", "base_common"],
   "stages": [
-    {
-      "name": "ChangeAttributeType",
-      "sourceSelector": "name=common",
-      "config": {
-        "expectedRemoveCount": 1,
-        "elementNamePattern": "^DOMException$",
-        "attributeNamePattern": "^code$",
-        "type": "DOMExceptionCode"
-      }
-    },
-    {
-      "name": "RemoveMember",
-      "description": "Members removed as now inherited from parent interface",
-      "sourceSelector": "name=common",
-      "config": {
-        "expectedRemoveCount": 2,
-        "elementNamePattern": "^DOMException$",
-        "memberNamePattern": "^(message|name)$",
-        "types": ["interface_type"]
-      }
-    },
     {
       "name": "RemoveMember",
       "description": "Remove member so we can apply patch to align with incorrect closure compiler representation",
@@ -53,27 +32,6 @@
       }
     },
     {
-      "name": "ChangeExtends",
-      "description": "Actually model how it logically works",
-      "sourceSelector": "name=common",
-      "config": {
-        "expectedChangeCount": 1,
-        "elementNamePattern": "^DOMException$",
-        "parentType": "Error"
-      }
-    },
-    {
-      "name": "AddExtendedAttribute",
-      "description": "Convert BufferSource into marker type",
-      "sourceSelector": "name=common",
-      "config": {
-        "expectedAddCount": 1,
-        "namePattern": "^BufferSource$",
-        "extendedAttribute": "MarkerType",
-        "types": ["typedef"]
-      }
-    },
-    {
       "name": "AddExtendedAttribute",
       "description": "Convert ImageBufferSource into marker type",
       "sourceSelector": "name=webcodecs",
@@ -82,16 +40,6 @@
         "namePattern": "^ImageBufferSource$",
         "extendedAttribute": "MarkerType",
         "types": ["typedef"]
-      }
-    },
-    {
-      "name": "RemoveElement",
-      "description": "Remove ArrayBufferView as redefined with more general structure in common_patch",
-      "sourceSelector": "name=common",
-      "config": {
-        "expectedRemoveCount": 1,
-        "namePattern": "^ArrayBufferView$",
-        "type": ["typedef"]
       }
     },
     {
@@ -305,15 +253,6 @@
       "config": {
         "namePattern": "^.*$",
         "extendedAttribute": "JavaSubPackage=crypto"
-      }
-    },
-    {
-      "name": "AddExtendedAttribute",
-      "description": "Package up the elements defined by ECMA into a separate package to model behaviour of elemental2-core",
-      "sourceSelector": "name=common",
-      "config": {
-        "namePattern": "^(BufferSource|ArrayBufferView)$",
-        "extendedAttribute": "JavaSubPackage=core"
       }
     },
     {

@@ -1,0 +1,65 @@
+{
+  "stages": [
+    {
+      "name": "ChangeAttributeType",
+      "sourceSelector": "name=common",
+      "config": {
+        "expectedRemoveCount": 1,
+        "elementNamePattern": "^DOMException$",
+        "attributeNamePattern": "^code$",
+        "type": "DOMExceptionCode"
+      }
+    },
+    {
+      "name": "RemoveMember",
+      "description": "Members removed as now inherited from parent interface",
+      "sourceSelector": "name=common",
+      "config": {
+        "expectedRemoveCount": 2,
+        "elementNamePattern": "^DOMException$",
+        "memberNamePattern": "^(message|name)$",
+        "types": ["interface_type"]
+      }
+    },
+    {
+      "name": "ChangeExtends",
+      "description": "Actually model how it logically works",
+      "sourceSelector": "name=common",
+      "config": {
+        "expectedChangeCount": 1,
+        "elementNamePattern": "^DOMException$",
+        "parentType": "Error"
+      }
+    },
+    {
+      "name": "AddExtendedAttribute",
+      "description": "Convert BufferSource into marker type",
+      "sourceSelector": "name=common",
+      "config": {
+        "expectedAddCount": 1,
+        "namePattern": "^BufferSource$",
+        "extendedAttribute": "MarkerType",
+        "types": ["typedef"]
+      }
+    },
+    {
+      "name": "RemoveElement",
+      "description": "Remove ArrayBufferView as redefined with more general structure in common_patch",
+      "sourceSelector": "name=common",
+      "config": {
+        "expectedRemoveCount": 1,
+        "namePattern": "^ArrayBufferView$",
+        "type": ["typedef"]
+      }
+    },
+    {
+      "name": "AddExtendedAttribute",
+      "description": "Package up the elements defined by ECMA into a separate package to model behaviour of elemental2-core",
+      "sourceSelector": "name=common",
+      "config": {
+        "namePattern": "^(BufferSource|ArrayBufferView)$",
+        "extendedAttribute": "JavaSubPackage=core"
+      }
+    }
+  ]
+}
