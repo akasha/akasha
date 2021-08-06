@@ -30,6 +30,8 @@ const enum EventPhase {
   Event.BUBBLING_PHASE
 };
 
+typedef ( boolean or DOMString or undefined ) ReturnValueType;
+
 [Exposed=(Window,Worker,AudioWorklet)]
 interface Event {
   const unsigned short AT_TARGET = 2;
@@ -49,7 +51,7 @@ interface Event {
   readonly attribute DOMHighResTimeStamp timeStamp;
   readonly attribute DOMString type;
   attribute boolean cancelBubble;
-  attribute boolean returnValue;
+  attribute ReturnValueType returnValue;
   constructor( DOMString type, optional EventInit eventInitDict = {} );
   sequence<EventTarget> composedPath();
   undefined initEvent( DOMString type, optional boolean bubbles = false, optional boolean cancelable = false );

@@ -1,0 +1,4 @@
+HTMLCanvasElement=elemental2.dom.HTMLCanvasElement
+OffscreenCanvas=elemental2.dom.OffscreenCanvas
+HTMLVideoElement=elemental2.dom.HTMLVideoElement
+ImageBitmap=elemental2.dom.ImageBitmap

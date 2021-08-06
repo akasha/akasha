@@ -35,7 +35,7 @@ Buildr::ReleaseTool.define_release_task do |t|
   t.ensure_git_clean
   t.verify_no_todo
   t.cleanup_staging
-  t.build(:additional_tasks => "do_test_api_diff akasha:bazel_j2cl_test J2CL=#{ENV['J2CL']}")
+  t.build(:additional_tasks => "do_test_api_diff akasha:j2cl:bazel_j2cl_test akasha:webgpu-j2cl:bazel_j2cl_test J2CL=#{ENV['J2CL']}")
   t.patch_changelog('akasha/akasha',
                     :header_suffix => " · [Source Diff](https://github.com/akasha/akasha-java/compare/v#{ENV['PREVIOUS_PRODUCT_VERSION']}...v#{ENV['PRODUCT_VERSION']})",
                     :api_diff_directory => "#{WORKSPACE_DIR}/api-test",

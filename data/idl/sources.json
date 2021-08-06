@@ -218,6 +218,10 @@
         "name": "minimal_events"
     },
     {
+        "lastModifiedTime": 0,
+        "name": "minimal_webgpu_integration"
+    },
+    {
         "lastModifiedTime": 1626178102000,
         "name": "navigation_timing",
         "url": "https://w3c.github.io/navigation-timing/"

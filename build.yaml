@@ -34,3 +34,7 @@ artifacts:
   closure_compiler: com.google.javascript:closure-compiler:jar:v20210302
 
   javaemul_internal_annotations: org.realityforge.javaemul.internal.annotations:javaemul.internal.annotations:jar:0.01
+
+  elemental2_promise: com.google.elemental2:elemental2-promise:jar:1.1.0
+  elemental2_core: com.google.elemental2:elemental2-core:jar:1.1.0
+  elemental2_dom: com.google.elemental2:elemental2-dom:jar:1.1.0

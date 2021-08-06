@@ -4,7 +4,7 @@ module Buildr
 
       def define_bazel_j2cl_test(root_project, projects, test_module, test_module_file, test_java_dirs, options = {})
         desc 'Verify that the specified packages can be compiled with J2CL'
-        root_project.task('bazel_j2cl_test') do
+        root_project.task(":#{root_project}:bazel_j2cl_test") do
           perform_bazel_test(root_project, projects, test_module, test_module_file, test_java_dirs, options) if ENV['J2CL'].nil? || ENV['J2CL'] == root_project.name
         end
       end
@@ -29,7 +29,9 @@ module Buildr
           FileUtils.cp_r test_java_dir, "#{bazel_workspace_dir}/mysrc/"
         end
 
-        write_build(bazel_workspace_dir, test_module, packages)
+        closure_env = options[:closure_env] || 'CUSTOM'
+        artifact_key = root_project.to_s.gsub(/[:-]/, '_')
+        write_build(bazel_workspace_dir, artifact_key, closure_env, test_module, packages)
         write_dependency_yml(bazel_workspace_dir, cache_dir, packages, options)
         write_dependency_bzl(bazel_workspace_dir, depgen_cache_dir)
 
@@ -80,7 +82,7 @@ http_archive(
 TEXT
       end
 
-      def write_build(dir, test_module, packages)
+      def write_build(dir, artifact_key, closure_env, test_module, packages)
         content = <<TEXT
 package(default_visibility = ["//visibility:public"])
 
@@ -104,11 +106,11 @@ j2cl_library(
     name = "mysrc",
     srcs = glob([ "mysrc/**/*.java"]),
     visibility = ["//visibility:private"],
-    deps = [":javaemul_internal_annotations-j2cl", ":jsinterop_base-j2cl", ":akasha_j2cl-j2cl"],
+    deps = [":javaemul_internal_annotations-j2cl", ":jsinterop_base-j2cl", ":#{artifact_key}-j2cl"],
 )
-closure_js_library( name = "akasha_java-closure", srcs = ["src.js"], deps = [":akasha_j2cl-j2cl", ":mysrc"], )
+closure_js_library( name = "#{artifact_key}-closure", srcs = ["src.js"], deps = [":#{artifact_key}-j2cl", ":mysrc"], )
 
-j2cl_application( name = "akasha_java-app", entry_points = ["#{test_module}"], extra_production_args = ["--env=CUSTOM"], deps = [":akasha_java-closure"], )
+j2cl_application( name = "#{artifact_key}-app", entry_points = ["#{test_module}"], extra_production_args = ["--env=#{closure_env}"], deps = [":#{artifact_key}-closure"], )
 
 TEXT
         File.write("#{dir}/BUILD.bazel", content)

@@ -24,6 +24,6 @@ install:
   - rvm use 2.7.2
   - gem install bundler
   - bundle install
-script: buildr clean package akasha:bazel_j2cl_test
+script: buildr clean package akasha:j2cl:bazel_j2cl_test akasha:webgpu-j2cl:bazel_j2cl_test
 git:
   depth: 10

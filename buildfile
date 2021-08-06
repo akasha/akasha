@@ -252,12 +252,99 @@ define 'akasha' do
     package(:javadoc)
   end
 
-  Buildr::BazelJ2cl.define_bazel_j2cl_test(Buildr.project('akasha'),
+  desc 'Akasha Java Browser WebGPU API for J2CL compatible with Elemental2'
+  define 'webgpu-j2cl', :base_dir => "#{WORKSPACE_DIR}/akasha/webgpu-j2cl" do
+    java_test_src_dir = "#{WORKSPACE_DIR}/akasha/java/src/test/java"
+    src_dir = file("#{project._(:target, :generated)}/webtack/main/java" => ['data:run_j2cl_webgpu_pipeline'])
+    test_src_dir = file("#{project._(:target, :generated)}/webtack/test/java" => ['data:run_j2cl_webgpu_pipeline'])
+    js_src_dir = file("#{project._(:target, :generated)}/webtack/main/js" => ['data:run_j2cl_webgpu_pipeline'])
+
+    input_java_dir = "#{WORKSPACE_DIR}/akasha/java/src/main/java"
+    output_java_dir = "#{project._(:target, :generated)}/java/main/java"
+    java_main_src_dir = file(output_java_dir => [input_java_dir]) do
+      Dir["#{input_java_dir}/**/*.java"].each do |f|
+        output_filename = "#{output_java_dir}#{f.gsub(input_java_dir,'')}"
+        FileUtils.mkdir_p( File.dirname(output_filename))
+        IO.write(output_filename, IO.read(f))
+      end
+    end
+
+    input_js_dir = "#{WORKSPACE_DIR}/akasha/java/src/main/java"
+    output_js_dir = "#{project._(:target, :generated)}/java/main/js"
+    js_main_src_dir = file(output_js_dir => [input_js_dir]) do
+      Dir["#{input_js_dir}/**/*.js"].each do |f|
+        # akasha_patches.extern.js contains the externs required to integrate with base.js from closure
+        next if f.end_with?('akasha_patches.extern.js')
+        output_filename = "#{output_js_dir}#{f.gsub(input_js_dir,'')}"
+        FileUtils.mkdir_p( File.dirname(output_filename))
+        IO.write(output_filename, IO.read(f))
+      end
+    end
+
+    input_test_dir = "#{WORKSPACE_DIR}/akasha/java/src/test/java"
+    output_test_dir = "#{project._(:target, :generated)}/java/test/java"
+    java_test_src_dir = file(output_test_dir => [input_test_dir]) do
+      Dir["#{input_java_dir}/**/*.java"].each do |f|
+        output_filename = "#{output_test_dir}#{f.gsub(input_test_dir,'')}"
+        FileUtils.mkdir_p( File.dirname(output_filename))
+        IO.write(output_filename, IO.read(f))
+      end
+    end
+
+    compile.sources << src_dir.to_s << java_main_src_dir.to_s
+    test.compile.sources << test_src_dir.to_s << java_test_src_dir.to_s
+
+    doc.options.merge!('Xdoclint:all,-reference,-missing' => true)
+
+    compile.using :javac
+
+    deps = artifacts(JSINTEROP_DEPS + [:elemental2_promise, :elemental2_core, :elemental2_dom])
+    compile.with deps
+
+    gwt_enhance(project, :extra_deps => [src_dir])
+
+    pom.include_transitive_dependencies << deps
+    pom.dependency_filter = Proc.new { |dep| dep[:scope].to_s != 'test' && deps.include?(dep[:artifact]) }
+
+    package(:jar).tap do |j|
+      j.enhance([output_js_dir]) do |j2|
+        j2.include("#{output_js_dir}/*")
+      end
+      j.enhance([js_src_dir]) do |j2|
+        j2.include("#{js_src_dir}/*")
+      end
+      j.enhance([java_main_src_dir]) do |j2|
+        j2.include("#{java_main_src_dir}/*")
+      end
+    end
+    package(:sources).tap do |j|
+      j.enhance([output_js_dir]) do |j2|
+        j2.include("#{output_js_dir}/*")
+      end
+      j.enhance([js_src_dir]) do |j2|
+        j2.include("#{js_src_dir}/*")
+      end
+      j.enhance([java_main_src_dir]) do |j2|
+        j2.include("#{java_main_src_dir}/*")
+      end
+    end
+    package(:javadoc)
+  end
+
+  Buildr::BazelJ2cl.define_bazel_j2cl_test(Buildr.project('akasha:j2cl'),
                                            [Buildr.project('akasha:j2cl')],
                                            'akasha.AkashaCompileTest',
                                            Buildr.project('akasha:j2cl')._(:target, :generated, 'webtack/test/js/akasha/Akasha.CompileTest.js'),
                                            [Buildr.project('akasha:j2cl')._(:target, :generated, 'webtack/test/java'), Buildr.project('akasha:j2cl')._(:source, :test, :java)],
                                            :javax_annotation => true)
+
+  Buildr::BazelJ2cl.define_bazel_j2cl_test(Buildr.project('akasha:webgpu-j2cl'),
+                                           [Buildr.project('akasha:webgpu-j2cl')],
+                                           'akasha.AkashaCompileTest',
+                                           Buildr.project('akasha:webgpu-j2cl')._(:target, :generated, 'webtack/test/js/akasha/Akasha.CompileTest.js'),
+                                           [Buildr.project('akasha:webgpu-j2cl')._(:target, :generated, 'webtack/test/java'), Buildr.project('akasha:j2cl')._(:source, :test, :java)],
+                                           :javax_annotation => true,
+                                           :closure_env => 'BROWSER')
 
   iml.excluded_directories << project._('tmp')
 
@@ -279,6 +366,8 @@ define 'akasha' do
 
   ipr.add_java_configuration(project('webtack:cli'), 'org.realityforge.webtack.Main', :name => 'Run - j2cl_complete', :dir => 'file://$PROJECT_DIR$', :args => '-d data run j2cl_complete')
 
+  ipr.add_java_configuration(project('webtack:cli'), 'org.realityforge.webtack.Main', :name => 'Run - j2cl_webgpu', :dir => 'file://$PROJECT_DIR$', :args => '-d data run j2cl_webgpu')
+
   ipr.add_java_configuration(project('webtack:cli'), 'org.realityforge.webtack.Main', :name => 'Run - react4j', :dir => 'file://$PROJECT_DIR$', :args => '-d data run react4j')
 
   ipr.add_java_configuration(project('webtack:cli'), 'org.realityforge.webtack.Main', :name => 'Add', :dir => 'file://$PROJECT_DIR$', :args => '-d data add')
@@ -297,7 +386,7 @@ desc 'Generate source artifacts'
 task('generate:all').enhance([file(File.expand_path("#{File.dirname(__FILE__)}/webtack/webidl-parser/generated/antlr/main/java"))])
 
 Buildr.projects.each do |project|
-  unless %w(akasha:gwt akasha:j2cl).include?(project.name)
+  unless %w(akasha:gwt akasha:j2cl akasha:webgpu-j2cl).include?(project.name)
     project.task('install').actions.clear
     project.task('upload').actions.clear
   end

@@ -69,6 +69,13 @@ task 'data:run_gwt_complete_pipeline' do
   end
 end
 
+desc 'Run the webgpu pipeline for J2CL'
+task 'data:run_j2cl_webgpu_pipeline' do
+  in_dir(WORKSPACE_DIR) do
+    run_webtack(%w(--verbose -d data run j2cl_webgpu))
+  end
+end
+
 desc 'Run the complete pipeline for J2CL'
 task 'data:run_j2cl_complete_pipeline' do
   in_dir(WORKSPACE_DIR) do
