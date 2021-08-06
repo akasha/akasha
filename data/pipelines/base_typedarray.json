@@ -1,0 +1,23 @@
+{
+  "stages": [
+    {
+      "name": "RemoveMember",
+      "description": "Remove member so we can apply patch to align with incorrect closure compiler representation",
+      "sourceSelector": "name=typedarray",
+      "config": {
+        "expectedRemoveCount": 1,
+        "elementNamePattern": "^SharedArrayBuffer$",
+        "memberNamePattern": "^slice$"
+      }
+    },
+    {
+      "name": "AddExtendedAttribute",
+      "description": "Package up the elements defined by ECMA into a separate package to model behaviour of elemental2-core",
+      "sourceSelector": "name=typedarray",
+      "config": {
+        "namePattern": "^.*$",
+        "extendedAttribute": "JavaSubPackage=core"
+      }
+    }
+  ]
+}

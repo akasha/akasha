@@ -1,6 +1,6 @@
 {
   "sourceSelector": "!name=minimal_event",
-  "pre": ["base_webgpu", "base_common"],
+  "pre": ["base_webgpu", "base_common", "base_typedarray"],
   "stages": [
     {
       "name": "RemoveMember",
@@ -20,16 +20,6 @@
         "expectedRemoveCount": 1,
         "elementNamePattern": "^Date$",
         "memberNamePattern": "^UTC$"
-      }
-    },
-    {
-      "name": "RemoveMember",
-      "description": "Remove member so we can apply patch to align with incorrect closure compiler representation",
-      "sourceSelector": "name=typedarray",
-      "config": {
-        "expectedRemoveCount": 1,
-        "elementNamePattern": "^SharedArrayBuffer$",
-        "memberNamePattern": "^slice$"
       }
     },
     {
@@ -242,7 +232,7 @@
     {
       "name": "AddExtendedAttribute",
       "description": "Package up the elements defined by ECMA into a separate package to model behaviour of elemental2-core",
-      "sourceSelector": "name=atomics name=errors name=symbol name=json name=math name=typedarray name=basic_types",
+      "sourceSelector": "name=atomics name=errors name=symbol name=json name=math name=basic_types",
       "config": {
         "namePattern": "^.*$",
         "extendedAttribute": "JavaSubPackage=core"
