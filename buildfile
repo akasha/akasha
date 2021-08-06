@@ -166,7 +166,6 @@ define 'akasha' do
     java_test_src_dir = "#{WORKSPACE_DIR}/akasha/java/src/test/java"
     src_dir = file("#{project._(:target, :generated)}/webtack/main/java" => ['data:run_gwt_complete_pipeline'])
     test_src_dir = file("#{project._(:target, :generated)}/webtack/test/java" => ['data:run_gwt_complete_pipeline'])
-    js_src_dir = file("#{project._(:target, :generated)}/webtack/main/js" => ['data:run_gwt_complete_pipeline'])
 
     input_java_dir = "#{WORKSPACE_DIR}/akasha/java/src/main/java"
     output_java_dir = "#{project._(:target, :generated)}/java/main/java"
