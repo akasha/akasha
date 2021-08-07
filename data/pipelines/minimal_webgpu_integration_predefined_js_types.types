@@ -2,3 +2,4 @@ ImageBitmap
 HTMLVideoElement
 OffscreenCanvas
 HTMLCanvasElement
+GPUDevice.GPUDevice

@@ -126,6 +126,9 @@
           "data/pipelines/minimal_events_predefined_js_types.types",
           "data/pipelines/minimal_webgpu_integration_predefined_js_types.types",
           "data/pipelines/predefined_js_types.types"
+        ],
+        "additionalExternFragments": [
+          "data/pipelines/j2cl_webgpu.externs.js"
         ]
       }
     }
