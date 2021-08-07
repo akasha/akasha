@@ -15,6 +15,40 @@
     }
   },
   {
+    "code": "java.method.returnTypeChanged",
+    "description": "The return type changed from 'akasha.HTMLReadOnlyOptionsCollection' to  'akasha.HTMLCollection'.",
+    "newElement": "method akasha.HTMLCollection akasha.HTMLSelectElement::selectedOptions()",
+    "oldElement": "method akasha.HTMLReadOnlyOptionsCollection akasha.HTMLSelectElement::selectedOptions()",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.HTMLSelectElement",
+      "classSimpleName": "HTMLSelectElement",
+      "elementKind": "method",
+      "methodName": "selectedOptions",
+      "newType": "akasha.HTMLCollection",
+      "oldType": "akasha.HTMLReadOnlyOptionsCollection",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.class.removed",
+    "description": "Class was removed.",
+    "oldElement": "class akasha.HTMLReadOnlyOptionsCollection",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.HTMLReadOnlyOptionsCollection",
+      "classSimpleName": "HTMLReadOnlyOptionsCollection",
+      "elementKind": "class",
+      "package": "akasha"
+    }
+  },
+  {
     "code": "java.class.removed",
     "description": "Class was removed.",
     "oldElement": "interface akasha.StringOrLongLongUnion",

@@ -2,6 +2,15 @@
   "pre": ["base"],
   "stages": [
     {
+      "name": "RemoveElement",
+      "description": "Remove HTMLReadOnlyOptionsCollection as type magic used in this is not easy to achieve with closure compiler",
+      "config": {
+        "expectedRemoveCount": 1,
+        "namePattern": "^HTMLReadOnlyOptionsCollection$",
+        "type": ["interface_type"]
+      }
+    },
+    {
       "name": "Jsinterop",
       "config": {
         "outputType": "j2cl",

@@ -2,6 +2,15 @@
   "pre": ["base"],
   "stages": [
     {
+      "name": "ChangeAttributeType",
+      "config": {
+        "expectedRemoveCount": 1,
+        "elementNamePattern": "^HTMLSelectElement$",
+        "attributeNamePattern": "^selectedOptions$",
+        "type": "HTMLReadOnlyOptionsCollection"
+      }
+    },
+    {
       "name": "Jsinterop",
       "config": {
         "externalTypeMapping": [
