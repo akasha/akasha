@@ -101,18 +101,22 @@ final class ClosureAction
   private final List<String> _predefinedSymbols = new ArrayList<>();
   @Nonnull
   private final Set<String> _generatedTypes = new HashSet<>();
+  @Nonnull
+  private final List<Path> _additionalExternFragmentsPaths;
 
   ClosureAction( @Nonnull final PipelineContext context,
                  @Nonnull final Path outputDirectory,
                  @Nonnull final String key,
                  @Nullable final String globalInterface,
                  @Nonnull final List<Path> predefinedTypeCatalogPaths,
+                 @Nonnull final List<Path> additionalExternFragmentsPaths,
                  final boolean generateTypeCatalog )
   {
     super( context, outputDirectory );
     _key = Objects.requireNonNull( key );
     _globalInterface = globalInterface;
     _generateTypeCatalog = generateTypeCatalog;
+    _additionalExternFragmentsPaths = Objects.requireNonNull( additionalExternFragmentsPaths );
     for ( final Path predefinedTypeCatalog : predefinedTypeCatalogPaths )
     {
       try
@@ -220,6 +224,15 @@ final class ClosureAction
                                            "' does not exist in schema" );
         }
         writeGlobalInterface( writer, definition );
+      }
+
+      for ( final Path path : _additionalExternFragmentsPaths )
+      {
+        for ( final String line : Files.readAllLines( path ) )
+        {
+          writer.write( line );
+          writer.write( "\n" );
+        }
       }
     }
 

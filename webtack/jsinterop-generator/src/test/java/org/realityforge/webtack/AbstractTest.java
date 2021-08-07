@@ -210,6 +210,8 @@ public abstract class AbstractTest
     {
       final List<Path> predefinedTypeCatalogPaths =
         collectFilesWithExtension( ".types", inputDirectory.resolve( "main" ).resolve( "resources" ) );
+      final List<Path> additionalExternFragmentPaths =
+        collectFilesWithExtension( ".extern.js", inputDirectory.resolve( "main" ).resolve( "js" ) );
       final List<Path> commonTypeCatalogPaths =
         collectFilesWithExtension( ".types", commonInput.resolve( "main" ).resolve( "resources" ) );
       predefinedTypeCatalogPaths.addAll( commonTypeCatalogPaths );
@@ -219,7 +221,8 @@ public abstract class AbstractTest
                               packageName,
                               globalInterface,
                               j2clOutputDirectory,
-                              predefinedTypeCatalogPaths );
+                              predefinedTypeCatalogPaths,
+                              additionalExternFragmentPaths );
       assertFilesMatch( directory,
                         workingDirectory,
                         inputJsDirectory,
@@ -362,7 +365,8 @@ public abstract class AbstractTest
                                           @Nonnull final String packageName,
                                           @Nullable final String globalInterface,
                                           @Nonnull final Path outputDirectory,
-                                          @Nonnull final List<Path> predefinedSymbolCatalogPaths )
+                                          @Nonnull final List<Path> predefinedSymbolCatalogPaths,
+                                          @Nonnull final List<Path> additionalExternFragmentPaths )
     throws Exception
   {
     final ClosureActionFactory factory = new ClosureActionFactory();
@@ -371,6 +375,8 @@ public abstract class AbstractTest
     factory.globalInterface = globalInterface;
     factory.predefinedSymbolCatalogs =
       predefinedSymbolCatalogPaths.stream().map( Path::toString ).collect( Collectors.toList() );
+    factory.additionalExternFragments =
+      additionalExternFragmentPaths.stream().map( Path::toString ).collect( Collectors.toList() );
     final Action action = factory.create( newPipelineContext( directory ) );
     action.process( schema );
     return ( (AbstractAction) action ).getGeneratedFiles();
@@ -455,7 +461,7 @@ public abstract class AbstractTest
   private List<Path> collectFilesWithExtension( @Nonnull final String extension, @Nonnull final Path... dirs )
     throws IOException
   {
-    final List<Path> javaFiles = new ArrayList<>();
+    final List<Path> paths = new ArrayList<>();
     for ( final Path dir : dirs )
     {
       if ( dir.toFile().exists() )
@@ -463,10 +469,10 @@ public abstract class AbstractTest
         Files
           .walk( dir )
           .filter( p -> p.toString().endsWith( extension ) )
-          .forEach( javaFiles::add );
+          .forEach( paths::add );
       }
     }
-    return javaFiles;
+    return paths;
   }
 
   @Nonnull

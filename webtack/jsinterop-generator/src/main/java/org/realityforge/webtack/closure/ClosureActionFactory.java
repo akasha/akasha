@@ -19,6 +19,7 @@ public final class ClosureActionFactory
   public String key = "schema";
   public String globalInterface;
   public List<String> predefinedSymbolCatalogs;
+  public List<String> additionalExternFragments;
   public boolean generateTypeCatalog = true;
 
   @Nonnull
@@ -49,12 +50,32 @@ public final class ClosureActionFactory
         predefinedTypeCatalogPaths.add( catalog );
       }
     }
+    final List<Path> additionalExternFragmentsPaths = new ArrayList<>();
+    if ( null != additionalExternFragments )
+    {
+      for ( final String externFragment : additionalExternFragments )
+      {
+        final Path path = Paths.get( externFragment );
+        if ( !Files.exists( path ) )
+        {
+          throw new IllegalArgumentException( "Closure action configuration specified a file that does not exist " +
+                                              "in the additionalExternFragments parameter: " + path );
+        }
+        else if ( !Files.isRegularFile( path ) )
+        {
+          throw new IllegalArgumentException( "Closure action configuration specified a file that is not a regular " +
+                                              "file in the additionalExternFragments parameter: " + path );
+        }
+        additionalExternFragmentsPaths.add( path );
+      }
+    }
 
     return new ClosureAction( context,
                               Paths.get( outputDirectory ),
                               key,
                               globalInterface,
                               predefinedTypeCatalogPaths,
+                              additionalExternFragmentsPaths,
                               generateTypeCatalog );
   }
 }

@@ -1,0 +1,5 @@
+<module>
+  <inherits name='jsinterop.base.Base'/>
+
+  <source path=''/>
+</module>

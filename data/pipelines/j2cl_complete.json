@@ -34,6 +34,9 @@
         "predefinedSymbolCatalogs": [
           "data/pipelines/predefined_js_types.types"
         ],
+        "additionalExternFragments": [
+          "data/pipelines/complete.externs.js"
+        ],
         "globalInterface": "Window"
       }
     }
