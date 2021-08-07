@@ -1,5 +1,5 @@
 {
-  "sourceSelector": "!name=minimal_event",
+  "sourceSelector": "!name=minimal_events !name=minimal_webgpu_integration",
   "pre": ["base_webgpu", "base_common", "base_typedarray"],
   "stages": [
     {
