@@ -21,6 +21,7 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import org.realityforge.webtack.model.Argument;
 import org.realityforge.webtack.model.AttributeMember;
+import org.realityforge.webtack.model.Attributed;
 import org.realityforge.webtack.model.AttributedNode;
 import org.realityforge.webtack.model.CallbackDefinition;
 import org.realityforge.webtack.model.CallbackInterfaceDefinition;
@@ -34,6 +35,7 @@ import org.realityforge.webtack.model.InterfaceDefinition;
 import org.realityforge.webtack.model.IterableMember;
 import org.realityforge.webtack.model.Kind;
 import org.realityforge.webtack.model.MapLikeMember;
+import org.realityforge.webtack.model.Named;
 import org.realityforge.webtack.model.NamespaceDefinition;
 import org.realityforge.webtack.model.OperationMember;
 import org.realityforge.webtack.model.PromiseType;
@@ -96,7 +98,7 @@ final class ClosureAction
   private final String _globalInterface;
   private final boolean _generateTypeCatalog;
   @Nonnull
-  private final List<String> _predefinedTypes = new ArrayList<>();
+  private final List<String> _predefinedSymbols = new ArrayList<>();
   @Nonnull
   private final Set<String> _generatedTypes = new HashSet<>();
 
@@ -120,7 +122,7 @@ final class ClosureAction
           .stream()
           .map( String::trim )
           .filter( t -> !t.isEmpty() )
-          .forEach( _predefinedTypes::add );
+          .forEach( _predefinedSymbols::add );
       }
       catch ( final IOException ioe )
       {
@@ -142,11 +144,6 @@ final class ClosureAction
     return getOutputDirectory().resolve( "main" ).resolve( "resources" );
   }
 
-  boolean tryRecordGeneratedType( @Nonnull final String name )
-  {
-    return !_predefinedTypes.contains( name ) && _generatedTypes.add( name );
-  }
-
   @Override
   public void process( @Nonnull final WebIDLSchema schema )
     throws Exception
@@ -160,42 +157,46 @@ final class ClosureAction
       writeJsDoc( writer, "@fileoverview", "@externs" );
       for ( final TypedefDefinition definition : schema.getTypedefs() )
       {
-        if ( isNotExcluded( definition ) && tryRecordGeneratedType( toJsName( definition ) ) )
+        if ( isNotExcluded( definition ) && tryRecordGeneratedType( definition ) )
         {
-          writeTypedef( writer, toJsName( definition ), definition.getType() );
+          final String jsName = toJsName( definition );
+          if ( shouldGenerateSymbol( jsName ) )
+          {
+            writeTypedef( writer, jsName, definition.getType() );
+          }
         }
       }
       for ( final CallbackDefinition definition : schema.getCallbacks() )
       {
-        if ( isNotExcluded( definition ) && tryRecordGeneratedType( toJsName( definition ) ) )
+        if ( isNotExcluded( definition ) && tryRecordGeneratedType( definition ) )
         {
           writeCallback( writer, definition );
         }
       }
       for ( final CallbackInterfaceDefinition definition : schema.getCallbackInterfaces() )
       {
-        if ( isNotExcluded( definition ) && tryRecordGeneratedType( toJsName( definition ) ) )
+        if ( isNotExcluded( definition ) && tryRecordGeneratedType( definition ) )
         {
           writeCallbackInterface( writer, definition );
         }
       }
       for ( final DictionaryDefinition definition : schema.getDictionaries() )
       {
-        if ( isNotExcluded( definition ) && tryRecordGeneratedType( toJsName( definition ) ) )
+        if ( isNotExcluded( definition ) && tryRecordGeneratedType( definition ) )
         {
           writeDictionary( writer, definition );
         }
       }
       for ( final NamespaceDefinition definition : schema.getNamespaces() )
       {
-        if ( isNotExcluded( definition ) && tryRecordGeneratedType( toJsName( definition ) ) )
+        if ( isNotExcluded( definition ) && tryRecordGeneratedType( definition ) )
         {
           writeNamespace( writer, definition );
         }
       }
       for ( final InterfaceDefinition definition : schema.getInterfaces() )
       {
-        if ( isNotExcluded( definition ) && tryRecordGeneratedType( toJsName( definition ) ) )
+        if ( isNotExcluded( definition ) && tryRecordGeneratedType( definition ) )
         {
           writeInterface( writer, definition );
         }
@@ -234,39 +235,46 @@ final class ClosureAction
   }
 
   private void writeTypedef( @Nonnull final Writer writer,
-                             @Nonnull final String idlName,
+                             @Nonnull final String jsName,
                              @Nonnull final Type unionType )
     throws IOException
   {
     writer.write( "/**\n * @typedef {" );
     writeType( writer, unionType );
     writer.write( "}\n */\nvar " );
-    writer.write( idlName );
+    writer.write( jsName );
     writer.write( ";\n" );
   }
 
   private void writeCallback( @Nonnull final Writer writer, @Nonnull final CallbackDefinition definition )
     throws IOException
   {
-    writer.write( "/**\n * @typedef {" );
-    writeFunctionType( writer, definition.getArguments(), definition.getReturnType() );
-    writer.write( "\n */\n" );
-    writer.write( "var " + toJsName( definition ) + ";\n" );
+    final String jsName = toJsName( definition );
+    if ( shouldGenerateSymbol( jsName ) )
+    {
+      writer.write( "/**\n * @typedef {" );
+      writeFunctionType( writer, definition.getArguments(), definition.getReturnType() );
+      writer.write( "\n */\n" );
+      writer.write( "var " + jsName + ";\n" );
+    }
   }
 
   private void writeCallbackInterface( @Nonnull final Writer writer,
                                        @Nonnull final CallbackInterfaceDefinition definition )
     throws IOException
   {
-    final String type = toJsName( definition );
+    final String jsType = toJsName( definition );
     writer.write( "/**\n * @interface\n */\nfunction " );
-    writer.write( type );
+    writer.write( jsType );
     writer.write( "() {}\n" );
-    writeConstants( writer, type, definition.getConstants(), true, false );
+    writeConstants( writer, jsType, definition.getConstants(), true, false );
     final OperationMember operation = definition.getOperation();
     final String jsName = toJsName( operation );
     assert null != jsName;
-    writeOperation( writer, type, jsName, operation.getArguments(), operation.getReturnType(), true, false, false );
+    if ( shouldGenerateSymbol( jsType + "." + jsName ) )
+    {
+      writeOperation( writer, jsType, jsName, operation.getArguments(), operation.getReturnType(), true, false, false );
+    }
   }
 
   private void writeDictionary( @Nonnull final Writer writer, @Nonnull final DictionaryDefinition definition )
@@ -280,106 +288,114 @@ final class ClosureAction
       dict = dict.getSuperDictionary();
     }
 
-    if ( members.isEmpty() )
+    final String jsTypeName = toJsName( definition );
+    if ( shouldGenerateSymbol( jsTypeName ) )
     {
-      writer.write( "/**\n * @record\n */\nvar " );
-      writer.write( toJsName( definition ) );
-      writer.write( ";\n" );
-    }
-    else
-    {
-      writer.write( "/**\n * @typedef {{" );
-
-      boolean first = true;
-      for ( final DictionaryMember member : members )
+      if ( members.isEmpty() )
       {
-        if ( !first )
+        writer.write( "/**\n * @record\n */\nvar " );
+        writer.write( jsTypeName );
+        writer.write( ";\n" );
+      }
+      else
+      {
+        writer.write( "/**\n * @typedef {{" );
+
+        boolean first = true;
+        for ( final DictionaryMember member : members )
         {
-          writer.write( "," );
-        }
-        else
-        {
-          first = false;
-        }
-        writer.write( toJsName( member ) );
-        writer.write( ":" );
-        final Type type = member.getType();
-        if ( member.isOptional() )
-        {
-          final Type undefinedType = new Type( Kind.Void, Collections.emptyList(), false, Collections.emptyList() );
-          final List<Type> types = new ArrayList<>();
-          if ( Kind.Union == type.getKind() )
+          if ( !first )
           {
-            final UnionType unionType = (UnionType) type;
-            if ( !unionType.isNoArgsExtendedAttributePresent( ExtendedAttributes.SYNTHESIZED_RETURN ) )
-            {
-              final String typeName = synthesizeUnionType( unionType );
-              types.add( new TypeReference( typeName,
-                                            unionType.getExtendedAttributes(),
-                                            unionType.isNullable(),
-                                            unionType.getSourceLocations() ) );
-            }
-            else
-            {
-              types.addAll( unionType.getMemberTypes() );
-            }
+            writer.write( "," );
           }
           else
           {
-            types.add( type );
+            first = false;
           }
-          maybeAddTypeToList( types, undefinedType );
-          writeType( writer, new UnionType( types, Collections.emptyList(), false, Collections.emptyList() ) );
+          writer.write( toJsName( member ) );
+          writer.write( ":" );
+          final Type type = member.getType();
+          if ( member.isOptional() )
+          {
+            final Type undefinedType = new Type( Kind.Void, Collections.emptyList(), false, Collections.emptyList() );
+            final List<Type> types = new ArrayList<>();
+            if ( Kind.Union == type.getKind() )
+            {
+              final UnionType unionType = (UnionType) type;
+              if ( !unionType.isNoArgsExtendedAttributePresent( ExtendedAttributes.SYNTHESIZED_RETURN ) )
+              {
+                final String typeName = synthesizeUnionType( unionType );
+                types.add( new TypeReference( typeName,
+                                              unionType.getExtendedAttributes(),
+                                              unionType.isNullable(),
+                                              unionType.getSourceLocations() ) );
+              }
+              else
+              {
+                types.addAll( unionType.getMemberTypes() );
+              }
+            }
+            else
+            {
+              types.add( type );
+            }
+            maybeAddTypeToList( types, undefinedType );
+            writeType( writer, new UnionType( types, Collections.emptyList(), false, Collections.emptyList() ) );
+          }
+          else
+          {
+            writeType( writer, type, type.isNullable(), true );
+          }
         }
-        else
-        {
-          writeType( writer, type, type.isNullable(), true );
-        }
-      }
 
-      writer.write( "}}\n */\nvar " );
-      writer.write( toJsName( definition ) );
-      writer.write( ";\n" );
+        writer.write( "}}\n */\nvar " );
+        writer.write( jsTypeName );
+        writer.write( ";\n" );
+      }
     }
   }
 
   private void writeNamespace( @Nonnull final Writer writer, @Nonnull final NamespaceDefinition definition )
     throws IOException
   {
-    final String name = toJsName( definition );
+    final String jsType = toJsName( definition );
 
     writeJsDoc( writer, "@const" );
     writer.write( "var " );
-    writer.write( name );
+    writer.write( jsType );
     writer.write( ";\n" );
 
     for ( final ConstMember constant : definition.getConstants() )
     {
       if ( isNotExcluded( constant ) )
       {
-        writer.write( "/** @const {" );
-        writeType( writer, constant.getType() );
-        writer.write( "} */ " );
-        writer.write( name );
-        writer.write( "." );
-        writer.write( toJsName( constant ) );
-        writer.write( ";\n" );
+        final String jsName = jsType + "." + toJsName( constant );
+        if ( shouldGenerateSymbol( jsName ) )
+        {
+          writer.write( "/** @const {" );
+          writeType( writer, constant.getType() );
+          writer.write( "} */ " );
+          writer.write( jsName );
+          writer.write( ";\n" );
+        }
       }
     }
     for ( final AttributeMember attribute : definition.getAttributes() )
     {
       if ( isNotExcluded( attribute ) )
       {
-        writer.write( "/** @type {" );
-        writeType( writer, attribute.getType(), attribute.getType().isNullable(), true );
-        writer.write( "} */ " );
-        writer.write( name );
-        writer.write( "." );
-        writer.write( toJsName( attribute ) );
-        writer.write( ";\n" );
+        final String jsName = jsType + "." + toJsName( attribute );
+        if ( shouldGenerateSymbol( jsName ) )
+        {
+          writer.write( "/** @type {" );
+          writeType( writer, attribute.getType(), attribute.getType().isNullable(), true );
+          writer.write( "} */ " );
+          writer.write( jsName );
+          writer.write( ";\n" );
+        }
       }
     }
-    writeOperations( writer, name, definition.getOperations(), true, s -> false );
+    writeOperations( writer, jsType, definition.getOperations(), true, s -> false );
   }
 
   private void writeUnion( @Nonnull final Writer writer,
@@ -423,84 +439,87 @@ final class ClosureAction
     final SetLikeMember setLike = definition.getSetLikeMember();
     final IterableMember iterable = definition.getIterable();
 
-    final List<String> lines = new ArrayList<>();
-    if ( null != iterable )
+    final String namespace = definition.getNamespace();
+    final String jsType = ( null == namespace ? "" : namespace + "." ) + toJsName( definition );
+    if ( shouldGenerateSymbol( jsType + "." + jsType ) )
     {
-      final Type keyType = iterable.getKeyType();
-      if ( null == keyType )
+      final List<String> lines = new ArrayList<>();
+      if ( null != iterable )
       {
-        lines.add( "@implements {Iterable<!Array<!number|" + toClosureType( iterable.getValueType() ) + ">>}" );
+        final Type keyType = iterable.getKeyType();
+        if ( null == keyType )
+        {
+          lines.add( "@implements {Iterable<!Array<!number|" + toClosureType( iterable.getValueType() ) + ">>}" );
+        }
+        else
+        {
+          lines.add( "@implements {Iterable<!Array<" + toClosureType( keyType ) + "|" +
+                     toClosureType( iterable.getValueType() ) + ">>}" );
+        }
+      }
+      if ( null != mapLike )
+      {
+        lines.add( "@implements {Iterable<!Array<" + toClosureType( mapLike.getKeyType() ) + "|" +
+                   toClosureType( mapLike.getValueType() ) + ">>}" );
+      }
+
+      if ( hasNoJsType || constructors.isEmpty() )
+      {
+        lines.add( "@nosideeffects" );
+        writeConstructor( writer,
+                          jsType,
+                          definition.getInherits(),
+                          Collections.emptyList(),
+                          false,
+                          lines );
+      }
+      else if ( 1 == constructors.size() )
+      {
+        final OperationMember constructor = constructors.get( 0 );
+        final boolean noSideEffects =
+          constructor.isNoArgsExtendedAttributePresent( ExtendedAttributes.NO_SIDE_EFFECTS );
+        if ( noSideEffects )
+        {
+          lines.add( "@nosideeffects" );
+        }
+        writeConstructor( writer,
+                          jsType,
+                          definition.getInherits(),
+                          constructor.getArguments(),
+                          true,
+                          lines );
       }
       else
       {
-        lines.add( "@implements {Iterable<!Array<" + toClosureType( keyType ) + "|" +
-                   toClosureType( iterable.getValueType() ) + ">>}" );
+        final OperationMember constructor = constructors.get( 0 );
+        final boolean noSideEffects =
+          constructor.isNoArgsExtendedAttributePresent( ExtendedAttributes.NO_SIDE_EFFECTS );
+        if ( noSideEffects )
+        {
+          lines.add( "@nosideeffects" );
+        }
+        writeConstructor( writer,
+                          jsType,
+                          definition.getInherits(),
+                          deriveArguments( constructors ),
+                          true,
+                          lines );
       }
     }
+    writeConstants( writer, jsType, definition.getConstants(), !hasNoJsType, true );
+    writeAttributes( writer, jsType, definition.getAttributes() );
+    writeOperations( writer, jsType, operations, false, name -> shouldOperationBeAnOverride( definition, name ) );
     if ( null != mapLike )
     {
-      lines.add( "@implements {Iterable<!Array<" + toClosureType( mapLike.getKeyType() ) + "|" +
-                 toClosureType( mapLike.getValueType() ) + ">>}" );
-    }
-
-    final String namespace = definition.getNamespace();
-    final String type = ( null == namespace ? "" : namespace + "." ) + toJsName( definition );
-    if ( hasNoJsType || constructors.isEmpty() )
-    {
-      lines.add( "@nosideeffects" );
-      writeConstructor( writer,
-                        type,
-                        definition.getInherits(),
-                        Collections.emptyList(),
-                        false,
-                        lines );
-    }
-    else if ( 1 == constructors.size() )
-    {
-      final OperationMember constructor = constructors.get( 0 );
-      final boolean noSideEffects =
-        constructor.isNoArgsExtendedAttributePresent( ExtendedAttributes.NO_SIDE_EFFECTS );
-      if ( noSideEffects )
-      {
-        lines.add( "@nosideeffects" );
-      }
-      writeConstructor( writer,
-                        type,
-                        definition.getInherits(),
-                        constructor.getArguments(),
-                        true,
-                        lines );
-    }
-    else
-    {
-      final OperationMember constructor = constructors.get( 0 );
-      final boolean noSideEffects =
-        constructor.isNoArgsExtendedAttributePresent( ExtendedAttributes.NO_SIDE_EFFECTS );
-      if ( noSideEffects )
-      {
-        lines.add( "@nosideeffects" );
-      }
-      writeConstructor( writer,
-                        type,
-                        definition.getInherits(),
-                        deriveArguments( constructors ),
-                        true,
-                        lines );
-    }
-    writeConstants( writer, type, definition.getConstants(), !hasNoJsType, true );
-    writeAttributes( writer, type, definition.getAttributes() );
-    writeOperations( writer, type, operations, false, name -> shouldOperationBeAnOverride( definition, name ) );
-    if ( null != mapLike )
-    {
-      generateMapLikeOperations( writer, type, definition.getOperations(), mapLike );
+      generateMapLikeOperations( writer, jsType, definition.getOperations(), mapLike );
     }
     if ( null != setLike )
     {
-      generateSetLikeOperations( writer, type, definition.getOperations(), setLike );
+      generateSetLikeOperations( writer, jsType, definition.getOperations(), setLike );
     }
     if ( null != iterable )
     {
-      generateIterableOperations( writer, type, iterable );
+      generateIterableOperations( writer, jsType, iterable );
     }
   }
 
@@ -514,13 +533,13 @@ final class ClosureAction
   }
 
   private void generateSetLikeOperations( @Nonnull final Writer writer,
-                                          @Nonnull final String type,
+                                          @Nonnull final String jsType,
                                           @Nonnull final List<OperationMember> operations,
                                           @Nonnull final SetLikeMember setLike )
     throws IOException
   {
     writer.write( "/** @const {number} */ " );
-    writer.write( type );
+    writer.write( jsType );
     writer.write( ".prototype.size;\n" );
 
     final Type elementType = setLike.getType();
@@ -536,7 +555,7 @@ final class ClosureAction
 
     // has operation
     writeOperation( writer,
-                    type,
+                    jsType,
                     "has",
                     Collections.singletonList( elementArgument ),
                     new Type( Kind.Boolean, Collections.emptyList(), false, Collections.emptyList() ),
@@ -548,7 +567,7 @@ final class ClosureAction
                                                       "Iterator",
                                                       Collections.emptyList() );
     writeOperation( writer,
-                    type,
+                    jsType,
                     "keys",
                     Collections.emptyList(),
                     new SequenceType( elementType,
@@ -560,7 +579,7 @@ final class ClosureAction
                     true );
 
     writeOperation( writer,
-                    type,
+                    jsType,
                     "values",
                     Collections.emptyList(),
                     new SequenceType( elementType,
@@ -579,7 +598,7 @@ final class ClosureAction
     writer.write( ">>}\n" );
     writer.write( " * @nosideeffects\n" );
     writer.write( " */\n" );
-    writer.write( type + ".prototype.entries = function() {};\n" );
+    writer.write( jsType + ".prototype.entries = function() {};\n" );
 
     writer.write( "/**\n" );
     writer.write( " * @return {!Iterator<!Array<" );
@@ -589,7 +608,7 @@ final class ClosureAction
     writer.write( ">>}\n" );
     writer.write( " * @nosideeffects\n" );
     writer.write( " */\n" );
-    writer.write( type + ".prototype[Symbol.iterator] = function() {};\n" );
+    writer.write( jsType + ".prototype[Symbol.iterator] = function() {};\n" );
 
     writer.write( "/**\n" );
     writer.write( " * @param {function(" );
@@ -600,7 +619,7 @@ final class ClosureAction
     writer.write( " * @this {MAP}\n" );
     writer.write( " * @template MAP\n" );
     writer.write( " */\n" );
-    writer.write( type + ".prototype.forEach = function(callback) {};\n" );
+    writer.write( jsType + ".prototype.forEach = function(callback) {};\n" );
 
     if ( !setLike.isReadOnly() )
     {
@@ -613,7 +632,7 @@ final class ClosureAction
       if ( !setPresent )
       {
         writeOperation( writer,
-                        type,
+                        jsType,
                         "add",
                         Collections.singletonList( elementArgument ),
                         new Type( Kind.Void, Collections.emptyList(), false, Collections.emptyList() ),
@@ -630,7 +649,7 @@ final class ClosureAction
       if ( !deletePresent )
       {
         writeOperation( writer,
-                        type,
+                        jsType,
                         "delete",
                         Collections.singletonList( elementArgument ),
                         new Type( Kind.Boolean, Collections.emptyList(), false, Collections.emptyList() ),
@@ -647,7 +666,7 @@ final class ClosureAction
       if ( !clearPresent )
       {
         writeOperation( writer,
-                        type,
+                        jsType,
                         "clear",
                         Collections.emptyList(),
                         new Type( Kind.Void, Collections.emptyList(), false, Collections.emptyList() ),
@@ -659,14 +678,19 @@ final class ClosureAction
   }
 
   private void generateMapLikeOperations( @Nonnull final Writer writer,
-                                          @Nonnull final String type,
+                                          @Nonnull final String jsType,
                                           @Nonnull final List<OperationMember> operations,
                                           @Nonnull final MapLikeMember mapLike )
     throws IOException
   {
-    writer.write( "/** @const {number} */ " );
-    writer.write( type );
-    writer.write( ".prototype.size;\n" );
+
+    final String jsSizeName = jsType + ".prototype.size";
+    if ( shouldGenerateSymbol( jsSizeName ) )
+    {
+      writer.write( "/** @const {number} */ " );
+      writer.write( jsSizeName );
+      writer.write( ";\n" );
+    }
 
     final Type keyType = mapLike.getKeyType();
     final Argument keyArgument =
@@ -691,7 +715,7 @@ final class ClosureAction
 
     // has operation
     writeOperation( writer,
-                    type,
+                    jsType,
                     "has",
                     Collections.singletonList( keyArgument ),
                     new Type( Kind.Boolean, Collections.emptyList(), false, Collections.emptyList() ),
@@ -699,7 +723,7 @@ final class ClosureAction
                     false,
                     true );
     writeOperation( writer,
-                    type,
+                    jsType,
                     "get",
                     Collections.singletonList( keyArgument ),
                     valueType,
@@ -712,7 +736,7 @@ final class ClosureAction
                                                       "Iterator",
                                                       Collections.emptyList() );
     writeOperation( writer,
-                    type,
+                    jsType,
                     "keys",
                     Collections.emptyList(),
                     new SequenceType( keyType,
@@ -724,7 +748,7 @@ final class ClosureAction
                     true );
 
     writeOperation( writer,
-                    type,
+                    jsType,
                     "values",
                     Collections.emptyList(),
                     new SequenceType( valueType,
@@ -743,7 +767,7 @@ final class ClosureAction
     writer.write( ">>}\n" );
     writer.write( " * @nosideeffects\n" );
     writer.write( " */\n" );
-    writer.write( type + ".prototype.entries = function() {};\n" );
+    writer.write( jsType + ".prototype.entries = function() {};\n" );
 
     writer.write( "/**\n" );
     writer.write( " * @return {!Iterator<!Array<" );
@@ -753,7 +777,7 @@ final class ClosureAction
     writer.write( ">>}\n" );
     writer.write( " * @nosideeffects\n" );
     writer.write( " */\n" );
-    writer.write( type + ".prototype[Symbol.iterator] = function() {};\n" );
+    writer.write( jsType + ".prototype[Symbol.iterator] = function() {};\n" );
 
     writer.write( "/**\n" );
     writer.write( " * @param {function(" );
@@ -764,7 +788,7 @@ final class ClosureAction
     writer.write( " * @this {MAP}\n" );
     writer.write( " * @template MAP\n" );
     writer.write( " */\n" );
-    writer.write( type + ".prototype.forEach = function(callback) {};\n" );
+    writer.write( jsType + ".prototype.forEach = function(callback) {};\n" );
 
     if ( !mapLike.isReadOnly() )
     {
@@ -777,7 +801,7 @@ final class ClosureAction
       if ( !setPresent )
       {
         writeOperation( writer,
-                        type,
+                        jsType,
                         "set",
                         Arrays.asList( keyArgument, valueArgument ),
                         new Type( Kind.Void, Collections.emptyList(), false, Collections.emptyList() ),
@@ -794,7 +818,7 @@ final class ClosureAction
       if ( !deletePresent )
       {
         writeOperation( writer,
-                        type,
+                        jsType,
                         "delete",
                         Collections.singletonList( keyArgument ),
                         new Type( Kind.Boolean, Collections.emptyList(), false, Collections.emptyList() ),
@@ -811,7 +835,7 @@ final class ClosureAction
       if ( !clearPresent )
       {
         writeOperation( writer,
-                        type,
+                        jsType,
                         "clear",
                         Collections.emptyList(),
                         new Type( Kind.Void, Collections.emptyList(), false, Collections.emptyList() ),
@@ -1033,7 +1057,7 @@ final class ClosureAction
       _generatedTypes
         .stream()
         .sorted()
-        .filter( t -> !_predefinedTypes.contains( t ) )
+        .filter( t -> !_predefinedSymbols.contains( t ) )
         .collect( Collectors.joining( "\n" ) ) + "\n";
     writeFile( getMainResourcesDirectory().resolve( _key + ".types" ),
                content.getBytes( StandardCharsets.UTF_8 ) );
@@ -1141,24 +1165,20 @@ final class ClosureAction
                                @Nonnull final AttributeMember attribute )
     throws IOException
   {
-    writer.write( "/** @type {" );
-    writeType( writer, attribute.getType(), attribute.getType().isNullable(), true );
-    writer.write( "} */ " );
-    if ( null != type )
+    final String jsSymbolName =
+      ( null != type ?
+        type + "." + ( attribute.getModifiers().contains( AttributeMember.Modifier.STATIC ) ? "" : "prototype." ) :
+        "" ) + toJsName( attribute );
+    if ( shouldGenerateSymbol( jsSymbolName ) )
     {
-      writer.write( type );
-      writer.write( "." );
-      if ( !attribute.getModifiers().contains( AttributeMember.Modifier.STATIC ) )
+      writer.write( "/** @type {" );
+      writeType( writer, attribute.getType(), attribute.getType().isNullable(), true );
+      writer.write( "} */ " );
+      if ( null == type )
       {
-        writer.write( "prototype." );
+        writer.write( "var " );
       }
-      writer.write( toJsName( attribute ) );
-      writer.write( ";\n" );
-    }
-    else
-    {
-      writer.write( "var " );
-      writer.write( toJsName( attribute ) );
+      writer.write( jsSymbolName );
       writer.write( ";\n" );
     }
   }
@@ -1192,30 +1212,24 @@ final class ClosureAction
                               final boolean onPrototype )
     throws IOException
   {
-    writer.write( "/** @const {" );
-    writeType( writer, constant.getType() );
-    writer.write( "} */ " );
-    if ( null != type )
+    final String jsSymbolName =
+      ( null != type ? type + "." + ( onPrototype ? "prototype." : "" ) : "" ) + toJsName( constant );
+    if ( shouldGenerateSymbol( jsSymbolName ) )
     {
-      writer.write( type );
-      writer.write( "." );
-      if ( onPrototype )
+      writer.write( "/** @const {" );
+      writeType( writer, constant.getType() );
+      writer.write( "} */ " );
+      if ( null == type )
       {
-        writer.write( "prototype." );
+        writer.write( "var " );
       }
-      writer.write( toJsName( constant ) );
-      writer.write( ";\n" );
-    }
-    else
-    {
-      writer.write( "var " );
-      writer.write( toJsName( constant ) );
+      writer.write( jsSymbolName );
       writer.write( ";\n" );
     }
   }
 
   private void writeOperation( @Nonnull final Writer writer,
-                               @Nullable final String type,
+                               @Nullable final String jsType,
                                @Nonnull final String jsName,
                                @Nonnull final List<Argument> arguments,
                                @Nonnull final Type returnType,
@@ -1225,7 +1239,7 @@ final class ClosureAction
     throws IOException
   {
     writeOperation( writer,
-                    type,
+                    jsType,
                     jsName,
                     arguments,
                     returnType,
@@ -1236,7 +1250,7 @@ final class ClosureAction
   }
 
   private void writeOperation( @Nonnull final Writer writer,
-                               @Nullable final String type,
+                               @Nullable final String jsType,
                                @Nonnull final String jsName,
                                @Nonnull final List<Argument> arguments,
                                @Nonnull final Type returnType,
@@ -1246,33 +1260,31 @@ final class ClosureAction
                                final boolean noSideEffects )
     throws IOException
   {
-    writer.write( "/**\n" );
-    writeArgumentsJsDoc( writer, arguments );
-    writer.write( " * @return {" );
-    writeType( writer, returnType, returnNullable, true );
-    writer.write( "}\n" );
-    if ( override || ( onPrototype && OBJECT_PROTOTYPE_METHODS.contains( jsName ) ) )
+    final String jsSymbolName = ( null != jsType ? jsType + "." + ( onPrototype ? "prototype." : "" ) : "" ) + jsName;
+    if ( shouldGenerateSymbol( jsSymbolName ) )
     {
-      writer.write( " * @override\n" );
-    }
-    if ( noSideEffects )
-    {
-      writer.write( " * @nosideeffects\n" );
-    }
-    writer.write( " */\n" );
-    if ( null != type )
-    {
-      writer.write( type );
-      writer.write( "." );
-      if ( onPrototype )
+      writer.write( "/**\n" );
+      writeArgumentsJsDoc( writer, arguments );
+      writer.write( " * @return {" );
+      writeType( writer, returnType, returnNullable, true );
+      writer.write( "}\n" );
+      if ( override || ( onPrototype && OBJECT_PROTOTYPE_METHODS.contains( jsName ) ) )
       {
-        writer.write( "prototype." );
+        writer.write( " * @override\n" );
       }
-      writer.write( jsName + " = function" + toArgumentsList( arguments ) + " {}\n" );
-    }
-    else
-    {
-      writer.write( "function " + jsName + toArgumentsList( arguments ) + " {}\n" );
+      if ( noSideEffects )
+      {
+        writer.write( " * @nosideeffects\n" );
+      }
+      writer.write( " */\n" );
+      if ( null != jsType )
+      {
+        writer.write( jsSymbolName + " = function" + toArgumentsList( arguments ) + " {}\n" );
+      }
+      else
+      {
+        writer.write( "function " + jsSymbolName + toArgumentsList( arguments ) + " {}\n" );
+      }
     }
   }
 
@@ -1534,5 +1546,20 @@ final class ClosureAction
   private String mangleName( @Nonnull final String name )
   {
     return Character.isUnicodeIdentifierStart( name.charAt( 0 ) ) ? name + "_" : "_" + name;
+  }
+
+  private <T extends Named & Attributed> boolean tryRecordGeneratedType( @Nonnull final T element )
+  {
+    return tryRecordGeneratedType( toJsName( element ) );
+  }
+
+  private boolean tryRecordGeneratedType( @Nonnull final String jsName )
+  {
+    return shouldGenerateSymbol( jsName ) && _generatedTypes.add( jsName );
+  }
+
+  private boolean shouldGenerateSymbol( @Nonnull final String jsName )
+  {
+    return !_predefinedSymbols.contains( jsName );
   }
 }

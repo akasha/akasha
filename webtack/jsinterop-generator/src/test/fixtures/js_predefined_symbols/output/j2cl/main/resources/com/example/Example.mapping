@@ -1,0 +1,12 @@
+Element=com.example.Element
+EventInit=com.example.EventInit
+Int32Array=com.example.Int32Array
+Int32List2=com.example.Int32List2
+Int32List=com.example.Int32List
+JSON=com.example.JSON
+Math=com.example.Math
+Object=com.example.Object
+Sequence=com.example.JsArray
+Thing2=com.example.Thing2
+Thing=com.example.Thing
+TransitionEventInit=com.example.TransitionEventInit

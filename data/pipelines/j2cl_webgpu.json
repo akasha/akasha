@@ -122,7 +122,7 @@
       "config": {
         "outputDirectory": "akasha/webgpu-j2cl/generated/webtack",
         "key": "akasha/Akasha",
-        "predefinedTypeCatalogs": [
+        "predefinedSymbolCatalogs": [
           "data/pipelines/minimal_events_predefined_js_types.types",
           "data/pipelines/minimal_webgpu_integration_predefined_js_types.types",
           "data/pipelines/predefined_js_types.types"

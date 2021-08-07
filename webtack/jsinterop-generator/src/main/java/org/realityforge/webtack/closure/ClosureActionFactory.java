@@ -18,7 +18,7 @@ public final class ClosureActionFactory
   public String outputDirectory;
   public String key = "schema";
   public String globalInterface;
-  public List<String> predefinedTypeCatalogs;
+  public List<String> predefinedSymbolCatalogs;
   public boolean generateTypeCatalog = true;
 
   @Nonnull
@@ -31,20 +31,20 @@ public final class ClosureActionFactory
     }
 
     final List<Path> predefinedTypeCatalogPaths = new ArrayList<>();
-    if ( null != predefinedTypeCatalogs )
+    if ( null != predefinedSymbolCatalogs )
     {
-      for ( final String typeCatalog : predefinedTypeCatalogs )
+      for ( final String symbolCatalog : predefinedSymbolCatalogs )
       {
-        final Path catalog = Paths.get( typeCatalog );
+        final Path catalog = Paths.get( symbolCatalog );
         if ( !Files.exists( catalog ) )
         {
           throw new IllegalArgumentException( "Closure action configuration specified a file that does not exist " +
-                                              "in the predefinedTypeCatalogs parameter: " + catalog );
+                                              "in the predefinedSymbolCatalogs parameter: " + catalog );
         }
         else if ( !Files.isRegularFile( catalog ) )
         {
           throw new IllegalArgumentException( "Closure action configuration specified a file that is not a regular " +
-                                              "file in the predefinedTypeCatalogs parameter: " + catalog );
+                                              "file in the predefinedSymbolCatalogs parameter: " + catalog );
         }
         predefinedTypeCatalogPaths.add( catalog );
       }
