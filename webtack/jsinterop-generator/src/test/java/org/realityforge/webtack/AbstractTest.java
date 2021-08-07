@@ -211,7 +211,7 @@ public abstract class AbstractTest
       final List<Path> predefinedTypeCatalogPaths =
         collectFilesWithExtension( ".types", inputDirectory.resolve( "main" ).resolve( "resources" ) );
       final List<Path> additionalExternFragmentPaths =
-        collectFilesWithExtension( ".extern.js", inputDirectory.resolve( "main" ).resolve( "js" ) );
+        collectFilesWithExtension( ".externs.fragment.js", inputDirectory.resolve( "main" ).resolve( "js" ) );
       final List<Path> commonTypeCatalogPaths =
         collectFilesWithExtension( ".types", commonInput.resolve( "main" ).resolve( "resources" ) );
       predefinedTypeCatalogPaths.addAll( commonTypeCatalogPaths );
@@ -272,20 +272,20 @@ public abstract class AbstractTest
     final List<Path> jsFiles =
       collectFilesWithExtension( ".js", mainJsDirectory )
         .stream()
-        .filter( f -> !f.toString().endsWith( ".externs.js" ) )
+        .filter( f -> !f.toString().endsWith( ".externs.fragment.js" ) )
         .collect( Collectors.toList() );
     if ( Files.exists( inputJsDirectory ) )
     {
       jsFiles.addAll( collectFilesWithExtension( ".js", inputJsDirectory )
                         .stream()
-                        .filter( f -> !f.toString().endsWith( ".externs.js" ) )
+                        .filter( f -> !f.toString().endsWith( ".externs.fragment.js" ) )
                         .collect( Collectors.toList() ) );
     }
     if ( Files.exists( commonInputJsDirectory ) )
     {
       jsFiles.addAll( collectFilesWithExtension( ".js", commonInputJsDirectory )
                         .stream()
-                        .filter( f -> !f.toString().endsWith( ".externs.js" ) )
+                        .filter( f -> !f.toString().endsWith( ".externs.fragment.js" ) )
                         .collect( Collectors.toList() ) );
     }
     return jsFiles;
