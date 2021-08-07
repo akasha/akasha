@@ -1,3 +1,2 @@
 ArrayBufferView=akasha.core.ArrayBufferView
 ObjectPropertyEntry=akasha.core.ObjectPropertyEntry
-StringOrLongLongUnion=akasha.core.StringOrLongLongUnion

@@ -1,3 +1,4 @@
+StringOrLongLongUnion=.core.StringOrLongLongUnion
 IDBObjectStoreOrIDBIndexOrIDBCursorUnion=.indexeddb.IDBObjectStoreOrIDBIndexOrIDBCursorUnion
 IDBObjectStoreOrIDBIndexUnion=.indexeddb.IDBObjectStoreOrIDBIndexUnion
 BooleanOrMediaTrackConstraintsUnion=.media.BooleanOrMediaTrackConstraintsUnion
