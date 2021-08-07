@@ -269,14 +269,24 @@ public abstract class AbstractTest
     throws IOException
   {
     final Path mainJsDirectory = outputDirectory.resolve( "main" ).resolve( "js" );
-    final List<Path> jsFiles = new ArrayList<>( collectFilesWithExtension( ".js", mainJsDirectory ) );
+    final List<Path> jsFiles =
+      collectFilesWithExtension( ".js", mainJsDirectory )
+        .stream()
+        .filter( f -> !f.toString().endsWith( ".externs.js" ) )
+        .collect( Collectors.toList() );
     if ( Files.exists( inputJsDirectory ) )
     {
-      jsFiles.addAll( collectFilesWithExtension( ".js", inputJsDirectory ) );
+      jsFiles.addAll( collectFilesWithExtension( ".js", inputJsDirectory )
+                        .stream()
+                        .filter( f -> !f.toString().endsWith( ".externs.js" ) )
+                        .collect( Collectors.toList() ) );
     }
     if ( Files.exists( commonInputJsDirectory ) )
     {
-      jsFiles.addAll( collectFilesWithExtension( ".js", commonInputJsDirectory ) );
+      jsFiles.addAll( collectFilesWithExtension( ".js", commonInputJsDirectory )
+                        .stream()
+                        .filter( f -> !f.toString().endsWith( ".externs.js" ) )
+                        .collect( Collectors.toList() ) );
     }
     return jsFiles;
   }
