@@ -62,8 +62,8 @@ the following dependency:
 The closure compiler is shipped with a set of externs that do not align 100% with the externs produced by the Akasha
 project. Thus it is necessary to pass the arguments `-env CUSTOM` when running the closure compiler. It is also
 necessary to add the closure externs shipped as part of the `akasha-java` artifact. These are included in the artifact
-under the names; `akasha/Akasha.externs.js` and `akasha/akasha_patches.extern.js`. The exact way that these build
-steps are specified will depend upon the underlying tool but a simple example using Bazel is available at https://github.com/react4j/react4j-todomvc/tree/raw_bazel_j2cl
+with the extension `*.externs.js`. The exact way that these build steps are specified will depend upon the underlying
+tool but a simple example using Bazel is available at https://github.com/react4j/react4j-todomvc/tree/raw_bazel_j2cl
 
 ### Java Integration
 
