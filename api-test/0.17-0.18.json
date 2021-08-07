@@ -1,0 +1,192 @@
+[
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.core.StringOrLongLongUnion",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.StringOrLongLongUnion",
+      "classSimpleName": "StringOrLongLongUnion",
+      "elementKind": "interface",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.class.removed",
+    "description": "Class was removed.",
+    "oldElement": "interface akasha.StringOrLongLongUnion",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.StringOrLongLongUnion",
+      "classSimpleName": "StringOrLongLongUnion",
+      "elementKind": "interface",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'akasha.lang.JsArray<akasha.StringOrLongLongUnion>' to 'akasha.core.StringOrLongLongUnion[]'.",
+    "newElement": "parameter java.lang.String akasha.core.JSON::stringify(java.lang.Object, ===akasha.core.StringOrLongLongUnion[]===)",
+    "oldElement": "parameter java.lang.String akasha.core.JSON::stringify(java.lang.Object, ===akasha.lang.JsArray<akasha.StringOrLongLongUnion>===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.JSON",
+      "classSimpleName": "JSON",
+      "elementKind": "parameter",
+      "methodName": "stringify",
+      "newType": "akasha.core.StringOrLongLongUnion[]",
+      "oldType": "akasha.lang.JsArray<akasha.StringOrLongLongUnion>",
+      "package": "akasha.core",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'akasha.lang.JsArray<akasha.StringOrLongLongUnion>' to 'akasha.core.StringOrLongLongUnion[]'.",
+    "newElement": "parameter java.lang.String akasha.core.JSON::stringify(java.lang.Object, ===akasha.core.StringOrLongLongUnion[]===, akasha.core.StringifySpaceUnionType)",
+    "oldElement": "parameter java.lang.String akasha.core.JSON::stringify(java.lang.Object, ===akasha.lang.JsArray<akasha.StringOrLongLongUnion>===, akasha.core.StringifySpaceUnionType)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.JSON",
+      "classSimpleName": "JSON",
+      "elementKind": "parameter",
+      "methodName": "stringify",
+      "newType": "akasha.core.StringOrLongLongUnion[]",
+      "oldType": "akasha.lang.JsArray<akasha.StringOrLongLongUnion>",
+      "package": "akasha.core",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'akasha.lang.JsArray<akasha.StringOrLongLongUnion>' to 'akasha.core.StringOrLongLongUnion[]'.",
+    "newElement": "parameter java.lang.String akasha.core.JSON::stringify(java.lang.Object, ===akasha.core.StringOrLongLongUnion[]===, int)",
+    "oldElement": "parameter java.lang.String akasha.core.JSON::stringify(java.lang.Object, ===akasha.lang.JsArray<akasha.StringOrLongLongUnion>===, int)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.JSON",
+      "classSimpleName": "JSON",
+      "elementKind": "parameter",
+      "methodName": "stringify",
+      "newType": "akasha.core.StringOrLongLongUnion[]",
+      "oldType": "akasha.lang.JsArray<akasha.StringOrLongLongUnion>",
+      "package": "akasha.core",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'akasha.lang.JsArray<akasha.StringOrLongLongUnion>' to 'akasha.core.StringOrLongLongUnion[]'.",
+    "newElement": "parameter java.lang.String akasha.core.JSON::stringify(java.lang.Object, ===akasha.core.StringOrLongLongUnion[]===, java.lang.String)",
+    "oldElement": "parameter java.lang.String akasha.core.JSON::stringify(java.lang.Object, ===akasha.lang.JsArray<akasha.StringOrLongLongUnion>===, java.lang.String)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.JSON",
+      "classSimpleName": "JSON",
+      "elementKind": "parameter",
+      "methodName": "stringify",
+      "newType": "akasha.core.StringOrLongLongUnion[]",
+      "oldType": "akasha.lang.JsArray<akasha.StringOrLongLongUnion>",
+      "package": "akasha.core",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'akasha.StringOrLongLongUnion[]' to 'akasha.lang.JsArray<akasha.core.StringOrLongLongUnion>'.",
+    "newElement": "parameter java.lang.String akasha.core.JSON::stringify(java.lang.Object, ===akasha.lang.JsArray<akasha.core.StringOrLongLongUnion>===)",
+    "oldElement": "parameter java.lang.String akasha.core.JSON::stringify(java.lang.Object, ===akasha.StringOrLongLongUnion[]===)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.JSON",
+      "classSimpleName": "JSON",
+      "elementKind": "parameter",
+      "methodName": "stringify",
+      "newType": "akasha.lang.JsArray<akasha.core.StringOrLongLongUnion>",
+      "oldType": "akasha.StringOrLongLongUnion[]",
+      "package": "akasha.core",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'akasha.StringOrLongLongUnion[]' to 'akasha.lang.JsArray<akasha.core.StringOrLongLongUnion>'.",
+    "newElement": "parameter java.lang.String akasha.core.JSON::stringify(java.lang.Object, ===akasha.lang.JsArray<akasha.core.StringOrLongLongUnion>===, akasha.core.StringifySpaceUnionType)",
+    "oldElement": "parameter java.lang.String akasha.core.JSON::stringify(java.lang.Object, ===akasha.StringOrLongLongUnion[]===, akasha.core.StringifySpaceUnionType)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.JSON",
+      "classSimpleName": "JSON",
+      "elementKind": "parameter",
+      "methodName": "stringify",
+      "newType": "akasha.lang.JsArray<akasha.core.StringOrLongLongUnion>",
+      "oldType": "akasha.StringOrLongLongUnion[]",
+      "package": "akasha.core",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'akasha.StringOrLongLongUnion[]' to 'akasha.lang.JsArray<akasha.core.StringOrLongLongUnion>'.",
+    "newElement": "parameter java.lang.String akasha.core.JSON::stringify(java.lang.Object, ===akasha.lang.JsArray<akasha.core.StringOrLongLongUnion>===, int)",
+    "oldElement": "parameter java.lang.String akasha.core.JSON::stringify(java.lang.Object, ===akasha.StringOrLongLongUnion[]===, int)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.JSON",
+      "classSimpleName": "JSON",
+      "elementKind": "parameter",
+      "methodName": "stringify",
+      "newType": "akasha.lang.JsArray<akasha.core.StringOrLongLongUnion>",
+      "oldType": "akasha.StringOrLongLongUnion[]",
+      "package": "akasha.core",
+      "parameterIndex": "1"
+    }
+  },
+  {
+    "code": "java.method.parameterTypeChanged",
+    "description": "The type of the parameter changed from 'akasha.StringOrLongLongUnion[]' to 'akasha.lang.JsArray<akasha.core.StringOrLongLongUnion>'.",
+    "newElement": "parameter java.lang.String akasha.core.JSON::stringify(java.lang.Object, ===akasha.lang.JsArray<akasha.core.StringOrLongLongUnion>===, java.lang.String)",
+    "oldElement": "parameter java.lang.String akasha.core.JSON::stringify(java.lang.Object, ===akasha.StringOrLongLongUnion[]===, java.lang.String)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.JSON",
+      "classSimpleName": "JSON",
+      "elementKind": "parameter",
+      "methodName": "stringify",
+      "newType": "akasha.lang.JsArray<akasha.core.StringOrLongLongUnion>",
+      "oldType": "akasha.StringOrLongLongUnion[]",
+      "package": "akasha.core",
+      "parameterIndex": "1"
+    }
+  }
+]
