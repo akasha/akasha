@@ -41,13 +41,13 @@ public class Thing2 {
   @Nonnull
   public static native Object staticReadonlyObjectValue2();
 
-  @HasNoSideEffects
-  @Nullable
-  public native Element item3(int index);
-
   @Nonnull
   public static native Object staticMethod();
 
   @Nonnull
   public static native Object staticMethod2();
+
+  @HasNoSideEffects
+  @Nullable
+  public native Element item3(int index);
 }
