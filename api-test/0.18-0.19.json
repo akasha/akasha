@@ -1,0 +1,196 @@
+[
+  {
+    "code": "java.field.addedStaticField",
+    "description": "Static field added to class.",
+    "newElement": "field akasha.gpu.GPUTextureUsage.STORAGE_BINDING",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUTextureUsage",
+      "classSimpleName": "GPUTextureUsage",
+      "elementKind": "field",
+      "fieldName": "STORAGE_BINDING",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.field.addedStaticField",
+    "description": "Static field added to class.",
+    "newElement": "field akasha.gpu.GPUTextureUsage.TEXTURE_BINDING",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUTextureUsage",
+      "classSimpleName": "GPUTextureUsage",
+      "elementKind": "field",
+      "fieldName": "TEXTURE_BINDING",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method int akasha.gpu.GPUSupportedLimits::maxComputeInvocationsPerWorkgroup()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUSupportedLimits",
+      "classSimpleName": "GPUSupportedLimits",
+      "elementKind": "method",
+      "methodName": "maxComputeInvocationsPerWorkgroup",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method int akasha.gpu.GPUSupportedLimits::maxComputeWorkgroupSizeX()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUSupportedLimits",
+      "classSimpleName": "GPUSupportedLimits",
+      "elementKind": "method",
+      "methodName": "maxComputeWorkgroupSizeX",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method int akasha.gpu.GPUSupportedLimits::maxComputeWorkgroupSizeY()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUSupportedLimits",
+      "classSimpleName": "GPUSupportedLimits",
+      "elementKind": "method",
+      "methodName": "maxComputeWorkgroupSizeY",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method int akasha.gpu.GPUSupportedLimits::maxComputeWorkgroupSizeZ()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUSupportedLimits",
+      "classSimpleName": "GPUSupportedLimits",
+      "elementKind": "method",
+      "methodName": "maxComputeWorkgroupSizeZ",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method int akasha.gpu.GPUSupportedLimits::maxComputeWorkgroupsPerDimension()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUSupportedLimits",
+      "classSimpleName": "GPUSupportedLimits",
+      "elementKind": "method",
+      "methodName": "maxComputeWorkgroupsPerDimension",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.field.removedWithConstant",
+    "description": "Field with constant value has been removed.",
+    "oldElement": "field akasha.gpu.GPUTextureUsage.SHADER_READ",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "NON_BREAKING",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUTextureUsage",
+      "classSimpleName": "GPUTextureUsage",
+      "elementKind": "field",
+      "fieldName": "SHADER_READ",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.field.removedWithConstant",
+    "description": "Field with constant value has been removed.",
+    "oldElement": "field akasha.gpu.GPUTextureUsage.STORAGE",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "NON_BREAKING",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUTextureUsage",
+      "classSimpleName": "GPUTextureUsage",
+      "elementKind": "field",
+      "fieldName": "STORAGE",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.gpu.GPUExtent3D akasha.gpu.GPUSupportedLimits::maxComputeWorkgroupSize()",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUSupportedLimits",
+      "classSimpleName": "GPUSupportedLimits",
+      "elementKind": "method",
+      "methodName": "maxComputeWorkgroupSize",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method int akasha.gpu.GPUSupportedLimits::maxComputePerDimensionDispatchSize()",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUSupportedLimits",
+      "classSimpleName": "GPUSupportedLimits",
+      "elementKind": "method",
+      "methodName": "maxComputePerDimensionDispatchSize",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method int akasha.gpu.GPUSupportedLimits::maxComputeWorkgroupInvocations()",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUSupportedLimits",
+      "classSimpleName": "GPUSupportedLimits",
+      "elementKind": "method",
+      "methodName": "maxComputeWorkgroupInvocations",
+      "package": "akasha.gpu"
+    }
+  }
+]

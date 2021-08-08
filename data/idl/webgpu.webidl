@@ -431,7 +431,7 @@ dictionary GPUDepthStencilState {
 
 dictionary GPUDeviceDescriptor : GPUObjectDescriptorBase {
   sequence<GPUFeatureName> requiredFeatures = [];
-  record<DOMString, GPUSize32> requiredLimits = {};
+  record<DOMString, GPUSize64> requiredLimits = {};
 };
 
 dictionary GPUExtent3DDict {
@@ -587,7 +587,7 @@ dictionary GPUSamplerDescriptor : GPUObjectDescriptorBase {
   GPUAddressMode addressModeV = "clamp-to-edge";
   GPUAddressMode addressModeW = "clamp-to-edge";
   GPUCompareFunction compare;
-  float lodMaxClamp = 0xffffffff;
+  float lodMaxClamp = 32;
   float lodMinClamp = 0;
   GPUFilterMode magFilter = "nearest";
   [Clamp]
@@ -922,10 +922,12 @@ interface GPUSupportedFeatures {
 [Exposed=(Window,DedicatedWorker)]
 interface GPUSupportedLimits {
   readonly attribute unsigned long maxBindGroups;
-  readonly attribute unsigned long maxComputePerDimensionDispatchSize;
-  readonly attribute unsigned long maxComputeWorkgroupInvocations;
-  readonly attribute GPUExtent3D maxComputeWorkgroupSize;
+  readonly attribute unsigned long maxComputeInvocationsPerWorkgroup;
+  readonly attribute unsigned long maxComputeWorkgroupSizeX;
+  readonly attribute unsigned long maxComputeWorkgroupSizeY;
+  readonly attribute unsigned long maxComputeWorkgroupSizeZ;
   readonly attribute unsigned long maxComputeWorkgroupStorageSize;
+  readonly attribute unsigned long maxComputeWorkgroupsPerDimension;
   readonly attribute unsigned long maxDynamicStorageBuffersPerPipelineLayout;
   readonly attribute unsigned long maxDynamicUniformBuffersPerPipelineLayout;
   readonly attribute unsigned long maxInterStageShaderComponents;
@@ -958,8 +960,8 @@ interface GPUTextureUsage {
   const GPUFlagsConstant COPY_DST = 0x02;
   const GPUFlagsConstant COPY_SRC = 0x01;
   const GPUFlagsConstant RENDER_ATTACHMENT = 0x10;
-  const GPUFlagsConstant SHADER_READ = 0x04;
-  const GPUFlagsConstant STORAGE = 0x08;
+  const GPUFlagsConstant STORAGE_BINDING = 0x08;
+  const GPUFlagsConstant TEXTURE_BINDING = 0x04;
 };
 
 [Exposed=(Window,DedicatedWorker)]

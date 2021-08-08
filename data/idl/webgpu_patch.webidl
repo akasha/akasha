@@ -38,7 +38,7 @@ const enum GPUShaderStageFlags {
 const enum GPUTextureUsageFlags {
   GPUTextureUsage.COPY_SRC,
   GPUTextureUsage.COPY_DST,
-  GPUTextureUsage.SHADER_READ,
-  GPUTextureUsage.STORAGE,
+  GPUTextureUsage.TEXTURE_BINDING,
+  GPUTextureUsage.STORAGE_BINDING,
   GPUTextureUsage.RENDER_ATTACHMENT
 };
