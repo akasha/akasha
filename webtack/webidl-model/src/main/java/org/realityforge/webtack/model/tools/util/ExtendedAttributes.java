@@ -137,6 +137,14 @@ public final class ExtendedAttributes
    */
   @Nonnull
   public static final String FLAGS = "Flags";
+  /**
+   * A custom extended property that can be added to an attribute that indicates that the attribute may not be
+   * present in all environments. This usually results in an overlay method like "is[X]Supported()"  being
+   * generated in the java binding where X is the attribute with an uppercase first letter. The extended attribute
+   * may also accept a name to use to replace X.
+   */
+  @Nonnull
+  public static final String OPTIONAL_SUPPORT = "OptionalSupport";
 
   private ExtendedAttributes()
   {

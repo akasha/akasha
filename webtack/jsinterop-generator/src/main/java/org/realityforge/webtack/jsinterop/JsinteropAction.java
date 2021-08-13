@@ -3000,12 +3000,49 @@ final class JsinteropAction
     }
   }
 
+  private void generateOptionalAttributeGuard( @Nonnull final AttributeMember attribute,
+                                               @Nonnull final ClassName className,
+                                               @Nonnull final TypeSpec.Builder type,
+                                               @Nonnull final TypeSpec.Builder testType )
+  {
+    if ( attribute.getModifiers().contains( AttributeMember.Modifier.STATIC ) )
+    {
+      throw new UnsupportedOperationException( "Optional attribute guards not supported on attribute guards" );
+    }
+    final String attributeName = attribute.getName();
+    final String name =
+      attribute.isNoArgsExtendedAttributePresent( ExtendedAttributes.OPTIONAL_SUPPORT ) ?
+      attributeName.substring( 0, 1 ).toUpperCase() + attributeName.substring( 1 ) :
+      attribute.getIdentValue( ExtendedAttributes.OPTIONAL_SUPPORT );
+    final String methodName = "is" + name + "Supported";
+    type.addMethod( MethodSpec
+                      .methodBuilder( methodName )
+                      .addModifiers( Modifier.PUBLIC, Modifier.FINAL )
+                      .returns( TypeName.BOOLEAN )
+                      .addAnnotation( JsinteropTypes.JS_OVERLAY )
+                      .addStatement( "return $T.asPropertyMap( this ).has( $S )", JsinteropTypes.JS, attributeName )
+                      .build() );
+
+    testType.addMethod( MethodSpec
+                          .methodBuilder( methodName )
+                          .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+                          .returns( TypeName.BOOLEAN )
+                          .addParameter( ParameterSpec.builder( className, "type", Modifier.FINAL ).build() )
+                          .addStatement( "return type.$N()", methodName )
+                          .build() );
+  }
+
   private void generateReadOnlyAttribute( @Nonnull final AttributeMember attribute,
                                           @Nonnull final ClassName className,
                                           @Nonnull final TypeSpec.Builder type,
                                           @Nonnull final TypeSpec.Builder testType )
   {
     assert attribute.getModifiers().contains( AttributeMember.Modifier.READ_ONLY );
+    if ( attribute.isNoArgsExtendedAttributePresent( ExtendedAttributes.OPTIONAL_SUPPORT ) ||
+         null != attribute.getIdentValue( ExtendedAttributes.OPTIONAL_SUPPORT ) )
+    {
+      generateOptionalAttributeGuard( attribute, className, type, testType );
+    }
     final Type attributeType = attribute.getType();
     final WebIDLSchema schema = getSchema();
     final Type actualType = schema.resolveType( attributeType );

@@ -30,7 +30,10 @@ public final class FixtureTest
   {
     final ValidatorRuleConfig validatorRuleConfig = new ValidatorRuleConfig();
     final String scenario = directory.getFileName().toString();
-    if ( "partial_interface".equals( scenario ) || "javadocs".equals( scenario ) || "input_catalog".equals( scenario ) )
+    if ( "partial_interface".equals( scenario ) ||
+         "javadocs".equals( scenario ) ||
+         "input_catalog".equals( scenario ) ||
+         "optional_guards".equals( scenario ) )
     {
       validatorRuleConfig.allowDanglingInterfacePartials = true;
     }
