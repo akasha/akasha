@@ -1,0 +1,22 @@
+{
+  "stages": [
+    {
+      "name": "AddExtendedAttribute",
+      "description": "Package up the speech specific specs into a separate package",
+      "sourceSelector": "name=speech_api",
+      "config": {
+        "namePattern": "^.*$",
+        "extendedAttribute": "JavaSubPackage=speech"
+      }
+    },
+    {
+      "name": "AddExtendedAttribute",
+      "description": "Add LegacyNoInterfaceObject as chrome is non-compliant wrt this. See https://bugs.chromium.org/p/chromium/issues/detail?id=674507",
+      "sourceSelector": "name=speech_api",
+      "config": {
+        "namePattern": "^(SpeechSynthesis|SpeechSynthesisVoice|SpeechRecognition|SpeechRecognitionError|SpeechRecognitionAlternative|SpeechRecognitionResult|SpeechRecognitionResultList|SpeechRecognitionEvent|SpeechGrammar|SpeechGrammarList)$",
+        "extendedAttribute": "LegacyNoInterfaceObject"
+      }
+    }
+  ]
+}
