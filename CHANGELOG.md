@@ -3,12 +3,13 @@
 ### Unreleased
 
 * Update the `WebGPU` spec to the `W3C Working Draft, 6 August 2021` version. This update changed the type of the `GPUDeviceDescriptor.requiredLimits` member, rename of several attributes matching `GPUSupportedLimits.maxCompute.*` and the renaming of a few constants in `GPUTextureUsage`.
-* Start generating `@JsOverlay` methods of the form `boolean isXSupported()` for features that may be optional in an implementation. This allows downstream libraries to detect whether a feature is present before making use of the feature. Additional methods include:
-  - `Navigator.isBluetoothSupported()`
-  - `Navigator.isGpuSupported()`
-  - `Window.isLocalStorageSupported()`
-  - `Window.isSessionStorageSupported()`
-  - `Window.isSpeechSynthesisSupported()`
+* Start generating `@JsOverlay` methods of the form `boolean isXSupported()` for features that may be optional in an implementation. This allows downstream libraries to detect whether a feature is present before making use of the feature. The feature detection can be done at run time or at compile time depending on the needs of the application. The default behaviour of feature detection methods are to perform the checks at runtime, however this can be be changed by defining an appropriately named property in closure compiler to either `true` or `false` when using the J2CL variant or setting the equivalent binding property when using the GWT variant. The name of the property is derived from the symbol that is feature detected.
+  Feature detection methods added and the associated compile time properties include:
+  - `Navigator.isBluetoothSupported()` with a property `akasha.is__Navigator_bluetooth__supported`
+  - `Navigator.isGpuSupported()` with a property `akasha.is__Navigator_gpu__supported`
+  - `Window.isLocalStorageSupported()` with a property `akasha.is__Window_localStorage__supported`
+  - `Window.isSessionStorageSupported()` with a property `akasha.is__Window_sessionStorage__supported`
+  - `Window.isSpeechSynthesisSupported()` with a property `akasha.is__Window_speechSynthesis__supported`
 
 ### [v0.18](https://github.com/akasha/akasha/tree/v0.18) (2021-08-07) · [Full Changelog](https://github.com/spritz/spritz/compare/v0.17...v0.18) · [API Differences](https://akasha.github.io/akasha-java/api-diff/?key=akasha-java&old=0.17&new=0.18) · [Source Diff](https://github.com/akasha/akasha-java/compare/v0.17...v0.18)
 

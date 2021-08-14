@@ -16,7 +16,7 @@ public final class ClosureActionFactory
   implements ActionFactory
 {
   public String outputDirectory;
-  public String key = "schema";
+  public String packageName;
   public String globalInterface;
   public List<String> predefinedSymbolCatalogs;
   public List<String> additionalExternFragments;
@@ -72,7 +72,7 @@ public final class ClosureActionFactory
 
     return new ClosureAction( context,
                               Paths.get( outputDirectory ),
-                              key,
+                              packageName,
                               globalInterface,
                               predefinedTypeCatalogPaths,
                               additionalExternFragmentsPaths,

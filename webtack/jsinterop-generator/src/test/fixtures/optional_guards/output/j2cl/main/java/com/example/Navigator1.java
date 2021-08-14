@@ -20,7 +20,7 @@ public class Navigator1 {
 
   @JsOverlay
   public final boolean isGpuSupported() {
-    return Js.asPropertyMap( this ).has( "gpu" );
+    return "true".equals( System.getProperty( "com.example.is__Navigator1_gpu__supported" ) ) ? true : "false".equals( System.getProperty( "com.example.is__Navigator1_gpu__supported" ) ) ? false : Js.asPropertyMap( this ).has( "gpu" );
   }
 
   @JsProperty(

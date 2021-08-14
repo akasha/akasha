@@ -39,7 +39,7 @@
       "name": "Closure",
       "config": {
         "outputDirectory": "akasha/java/generated/webtack",
-        "key": "akasha/Akasha",
+        "packageName": "akasha",
         "predefinedSymbolCatalogs": [
           "data/pipelines/predefined_js_types.types"
         ],

@@ -381,7 +381,7 @@ public abstract class AbstractTest
   {
     final ClosureActionFactory factory = new ClosureActionFactory();
     factory.outputDirectory = outputDirectory.toString();
-    factory.key = packageName.replace( ".", "/" ) + "/externs.js";
+    factory.packageName = packageName;
     factory.globalInterface = globalInterface;
     factory.predefinedSymbolCatalogs =
       predefinedSymbolCatalogPaths.stream().map( Path::toString ).collect( Collectors.toList() );

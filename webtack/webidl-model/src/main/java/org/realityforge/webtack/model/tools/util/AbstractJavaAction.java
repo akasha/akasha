@@ -18,16 +18,13 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
 import java.util.Properties;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
-import javax.lang.model.SourceVersion;
 import org.realityforge.webtack.model.Attributed;
 import org.realityforge.webtack.model.ConstEnumerationDefinition;
 import org.realityforge.webtack.model.ConstEnumerationValue;
 import org.realityforge.webtack.model.EnumerationDefinition;
-import org.realityforge.webtack.model.EnumerationValue;
 import org.realityforge.webtack.model.FrozenArrayType;
 import org.realityforge.webtack.model.Kind;
 import org.realityforge.webtack.model.Named;
@@ -47,8 +44,6 @@ public abstract class AbstractJavaAction
   @Nonnull
   private static final List<String> OBJECT_METHODS =
     Arrays.asList( "hashCode", "equals", "clone", "toString", "finalize", "getClass", "wait", "notifyAll", "notify" );
-  @Nonnull
-  private final String _packageName;
   private final boolean _enableMagicConstants;
   // Maps idlName -> Qualified Java Name for types that are provided by external libraries
   @Nonnull
@@ -70,8 +65,7 @@ public abstract class AbstractJavaAction
                                 @Nonnull final List<Path> predefinedTypeMappingPaths,
                                 @Nonnull final List<Path> externalTypeMappingPaths )
   {
-    super( context, outputDirectory );
-    _packageName = Objects.requireNonNull( packageName );
+    super( context, outputDirectory, packageName );
     _enableMagicConstants = enableMagicConstants;
     final Properties predefinedTypes = new Properties();
     for ( final Path predefinedTypeMapping : predefinedTypeMappingPaths )
@@ -159,43 +153,6 @@ public abstract class AbstractJavaAction
   }
 
   @Nonnull
-  protected String javaName( @Nonnull final EnumerationValue value )
-  {
-    return javaName( enumerationValueToName( value.getValue() ), value );
-  }
-
-  @Nonnull
-  protected <T extends Named & Attributed> String javaName( @Nonnull final T element )
-  {
-    return javaName( element.getName(), element );
-  }
-
-  @Nonnull
-  private String javaName( @Nonnull final String defaultName, @Nonnull final Attributed node )
-  {
-    final String specifiedName = node.getIdentValue( ExtendedAttributes.JAVA_NAME );
-    return null != specifiedName ? specifiedName : safeName( defaultName );
-  }
-
-  @Nonnull
-  private String enumerationValueToName( @Nonnull final String value )
-  {
-    final StringBuilder sb = new StringBuilder();
-    for ( int i = 0; i < value.length(); i++ )
-    {
-      final char ch = value.charAt( i );
-      sb.append( Character.isUnicodeIdentifierPart( ch ) ? ch : "_" );
-    }
-    return sb.toString();
-  }
-
-  @Nonnull
-  protected String safeName( @Nonnull final String name )
-  {
-    return isNameJavaSafe( name ) ? name : mangleName( name );
-  }
-
-  @Nonnull
   protected <T extends Named & Attributed> String javaMethodName( @Nonnull final T element )
   {
     return javaMethodName( element.getName(), element );
@@ -236,11 +193,6 @@ public abstract class AbstractJavaAction
     return isNameJavaSafe( name ) && !OBJECT_METHODS.contains( name );
   }
 
-  private boolean isNameJavaSafe( @Nonnull final String name )
-  {
-    return SourceVersion.isName( name );
-  }
-
   @Nonnull
   protected Path getMainJavaDirectory()
   {
@@ -272,12 +224,6 @@ public abstract class AbstractJavaAction
     throws IOException
   {
     writeFile( getPackageDirectory( baseDirectory, getPackageName() ).resolve( name ), content );
-  }
-
-  @Nonnull
-  protected String getLeafPackageName()
-  {
-    return _packageName.replaceAll( ".*\\.([^.]+)$", "$1" );
   }
 
   protected void writeTopLevelType( @Nonnull final TypeSpec.Builder type )
@@ -333,12 +279,6 @@ public abstract class AbstractJavaAction
                                .addMember( "value", "$S", generatorClassName )
                                .build() );
     }
-  }
-
-  @Nonnull
-  protected String getPackageName()
-  {
-    return _packageName;
   }
 
   @Nonnull

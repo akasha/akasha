@@ -1,5 +1,6 @@
 package org.realityforge.webtack.closure;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.StringWriter;
 import java.io.Writer;
@@ -36,8 +37,10 @@ import org.realityforge.webtack.model.IterableMember;
 import org.realityforge.webtack.model.Kind;
 import org.realityforge.webtack.model.MapLikeMember;
 import org.realityforge.webtack.model.Named;
+import org.realityforge.webtack.model.NamedDefinition;
 import org.realityforge.webtack.model.NamespaceDefinition;
 import org.realityforge.webtack.model.OperationMember;
+import org.realityforge.webtack.model.PartialInterfaceDefinition;
 import org.realityforge.webtack.model.PromiseType;
 import org.realityforge.webtack.model.RecordType;
 import org.realityforge.webtack.model.SequenceType;
@@ -92,8 +95,6 @@ final class ClosureAction
                    "toSource",
                    "toString",
                    "valueOf" );
-  @Nonnull
-  private final String _key;
   @Nullable
   private final String _globalInterface;
   private final boolean _generateTypeCatalog;
@@ -106,14 +107,13 @@ final class ClosureAction
 
   ClosureAction( @Nonnull final PipelineContext context,
                  @Nonnull final Path outputDirectory,
-                 @Nonnull final String key,
+                 @Nonnull final String packageName,
                  @Nullable final String globalInterface,
                  @Nonnull final List<Path> predefinedTypeCatalogPaths,
                  @Nonnull final List<Path> additionalExternFragmentsPaths,
                  final boolean generateTypeCatalog )
   {
-    super( context, outputDirectory );
-    _key = Objects.requireNonNull( key );
+    super( context, outputDirectory, packageName );
     _globalInterface = globalInterface;
     _generateTypeCatalog = generateTypeCatalog;
     _additionalExternFragmentsPaths = Objects.requireNonNull( additionalExternFragmentsPaths );
@@ -148,6 +148,12 @@ final class ClosureAction
     return getOutputDirectory().resolve( "main" ).resolve( "resources" );
   }
 
+  @Nonnull
+  private String getBaseName()
+  {
+    return getPackageName() + "." + NamingUtil.uppercaseFirstCharacter( getLeafPackageName() );
+  }
+
   @Override
   public void process( @Nonnull final WebIDLSchema schema )
     throws Exception
@@ -156,7 +162,8 @@ final class ClosureAction
 
     FilesUtil.deleteDirectory( getMainJsDirectory() );
 
-    try ( final Writer writer = openWriter( getMainJsDirectory().resolve( _key + ".externs.js" ) ) )
+    final String externsFilename = getBaseName().replaceAll( "\\.", File.separator ) + ".externs.js";
+    try ( final Writer writer = openWriter( getMainJsDirectory().resolve( externsFilename ) ) )
     {
       writeJsDoc( writer, "@fileoverview", "@externs" );
       for ( final TypedefDefinition definition : schema.getTypedefs() )
@@ -236,9 +243,62 @@ final class ClosureAction
       }
     }
 
+    final StringBuffer sb = new StringBuffer();
+    for ( final InterfaceDefinition definition : getSchema().getInterfaces() )
+    {
+      writeNativeJsIfRequired( sb, definition, definition.getAttributes() );
+    }
+    for ( final PartialInterfaceDefinition definition : getSchema().getPartialInterfaces() )
+    {
+      writeNativeJsIfRequired( sb, definition, definition.getAttributes() );
+    }
+    if ( 0 != sb.length() )
+    {
+      final String baseName = getBaseName();
+      final String filename = baseName.replaceAll( "\\.", File.separator ) + ".js";
+      try ( final Writer writer = openWriter( getMainJsDirectory().resolve( filename ) ) )
+      {
+        writer.write( "goog.provide('" + baseName + "');\n" );
+        writer.write( sb.toString() );
+      }
+    }
+
     if ( _generateTypeCatalog )
     {
       writeTypeCatalog();
+    }
+  }
+
+  private void writeNativeJsIfRequired( @Nonnull final StringBuffer defines,
+                                        @Nonnull final NamedDefinition definition,
+                                        @Nonnull final List<AttributeMember> attributes )
+    throws IOException
+  {
+    boolean requiresNativeJs = false;
+    for ( final AttributeMember attribute : attributes )
+    {
+      if ( attribute.isNoArgsExtendedAttributePresent( ExtendedAttributes.OPTIONAL_SUPPORT ) ||
+           null != attribute.getIdentValue( ExtendedAttributes.OPTIONAL_SUPPORT ) )
+      {
+        final String name = deriveOptionalSupportCompileConstant( definition, attribute );
+        defines.append( "\n" );
+        defines.append( "/** @define {string} */\n" );
+        defines.append( name );
+        defines.append( " = goog.define('" );
+        defines.append( name );
+        defines.append( "', 'detect');\n" );
+        requiresNativeJs = true;
+      }
+    }
+    if ( requiresNativeJs )
+    {
+      final String javaType = deriveJavaType( definition, "", "" );
+      final String nativeJs = javaType.replaceAll( "\\.", File.separator ) + ".native.js";
+      try ( final Writer writer = openWriter( getMainJsDirectory().resolve( nativeJs ) ) )
+      {
+        writer.write( "/** @suppress {extraRequire} */\n" );
+        writer.write( "goog.require('" + getBaseName() + "');\n" );
+      }
     }
   }
 
@@ -1072,7 +1132,7 @@ final class ClosureAction
         .sorted()
         .filter( t -> !_predefinedSymbols.contains( t ) )
         .collect( Collectors.joining( "\n" ) ) + "\n";
-    writeFile( getMainResourcesDirectory().resolve( _key + ".types" ),
+    writeFile( getMainResourcesDirectory().resolve( getBaseName().replaceAll( "\\.", File.separator ) + ".types" ),
                content.getBytes( StandardCharsets.UTF_8 ) );
   }
 

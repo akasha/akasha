@@ -16,11 +16,16 @@ import java.util.Objects;
 import java.util.Set;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import javax.lang.model.SourceVersion;
+import org.realityforge.webtack.model.AttributeMember;
 import org.realityforge.webtack.model.Attributed;
 import org.realityforge.webtack.model.DocumentationElement;
+import org.realityforge.webtack.model.EnumerationValue;
 import org.realityforge.webtack.model.ExtendedAttribute;
+import org.realityforge.webtack.model.InterfaceDefinition;
 import org.realityforge.webtack.model.Kind;
 import org.realityforge.webtack.model.Named;
+import org.realityforge.webtack.model.NamedDefinition;
 import org.realityforge.webtack.model.OperationMember;
 import org.realityforge.webtack.model.SequenceType;
 import org.realityforge.webtack.model.Type;
@@ -39,6 +44,8 @@ public abstract class AbstractAction
   private final PipelineContext _context;
   @Nonnull
   private final Path _outputDirectory;
+  @Nonnull
+  private final String _packageName;
   /**
    * Value cached during processing
    */
@@ -49,16 +56,31 @@ public abstract class AbstractAction
   @Nonnull
   private final Map<String, UnionType> _unions = new HashMap<>();
 
-  protected AbstractAction( @Nonnull final PipelineContext context, @Nonnull final Path outputDirectory )
+  protected AbstractAction( @Nonnull final PipelineContext context,
+                            @Nonnull final Path outputDirectory,
+                            @Nonnull final String packageName )
   {
     _context = Objects.requireNonNull( context );
     _outputDirectory = Objects.requireNonNull( outputDirectory );
+    _packageName = Objects.requireNonNull( packageName );
   }
 
   @Nonnull
   protected final PipelineContext context()
   {
     return _context;
+  }
+
+  @Nonnull
+  protected final String getPackageName()
+  {
+    return _packageName;
+  }
+
+  @Nonnull
+  protected final String getLeafPackageName()
+  {
+    return getPackageName().replaceAll( ".*\\.([^.]+)$", "$1" );
   }
 
   @Nonnull
@@ -238,8 +260,100 @@ public abstract class AbstractAction
   }
 
   @Nonnull
+  protected String javaName( @Nonnull final EnumerationValue value )
+  {
+    return javaName( enumerationValueToName( value.getValue() ), value );
+  }
+
+  @Nonnull
+  protected <T extends Named & Attributed> String javaName( @Nonnull final T element )
+  {
+    return javaName( element.getName(), element );
+  }
+
+  @Nonnull
+  private String javaName( @Nonnull final String defaultName, @Nonnull final Attributed node )
+  {
+    final String specifiedName = node.getIdentValue( ExtendedAttributes.JAVA_NAME );
+    return null != specifiedName ? specifiedName : safeName( defaultName );
+  }
+
+  @Nonnull
+  private String enumerationValueToName( @Nonnull final String value )
+  {
+    final StringBuilder sb = new StringBuilder();
+    for ( int i = 0; i < value.length(); i++ )
+    {
+      final char ch = value.charAt( i );
+      sb.append( Character.isUnicodeIdentifierPart( ch ) ? ch : "_" );
+    }
+    return sb.toString();
+  }
+
+  @Nonnull
+  protected final String safeName( @Nonnull final String name )
+  {
+    return isNameJavaSafe( name ) ? name : mangleName( name );
+  }
+
+  protected final boolean isNameJavaSafe( @Nonnull final String name )
+  {
+    return SourceVersion.isName( name );
+  }
+
+  @Nonnull
   protected final String mangleName( @Nonnull final String name )
   {
     return Character.isUnicodeIdentifierStart( name.charAt( 0 ) ) ? name + "_" : "_" + name;
+  }
+
+  @SuppressWarnings( "SameParameterValue" )
+  @Nonnull
+  protected final String deriveJavaType( @Nonnull final NamedDefinition definition,
+                                         @Nonnull final String prefix,
+                                         @Nonnull final String postfix )
+  {
+    return derivePackagePrefix( definition ) + deriveSimpleJavaType( definition, prefix, postfix );
+  }
+
+  @Nonnull
+  protected final String deriveSimpleJavaType( @Nonnull final NamedDefinition definition,
+                                               @Nonnull final String prefix,
+                                               @Nonnull final String postfix )
+  {
+    return prefix + NamingUtil.uppercaseFirstCharacter( javaName( definition ) + postfix );
+  }
+
+  @Nonnull
+  protected final String derivePackagePrefix( @Nonnull final NamedDefinition definition )
+  {
+    final String declaredSubPackage = definition.getIdentValue( ExtendedAttributes.JAVA_SUB_PACKAGE );
+    final String subPackage =
+      null != declaredSubPackage ? asSubPackage( declaredSubPackage ) : asSubPackage( getNamespace( definition ) );
+    return getPackageName() + subPackage + ".";
+  }
+
+  @Nullable
+  protected final String getNamespace( @Nonnull final NamedDefinition definition )
+  {
+    return definition instanceof InterfaceDefinition ? ( (InterfaceDefinition) definition ).getNamespace() : null;
+  }
+
+  @Nonnull
+  protected final String asSubPackage( @Nullable final String value )
+  {
+    return null != value && !value.isEmpty() ? "." + NamingUtil.underscore( value ) : "";
+  }
+
+  @Nonnull
+  protected final String deriveOptionalSupportCompileConstant( @Nonnull final Named definition,
+                                                               @Nonnull final AttributeMember attribute )
+  {
+    final String attributeKey =
+      attribute.isNoArgsExtendedAttributePresent( ExtendedAttributes.OPTIONAL_SUPPORT ) ?
+      attribute.getName() :
+      attribute.getIdentValue( ExtendedAttributes.OPTIONAL_SUPPORT );
+
+    return getPackageName() + ".is__" + definition.getName() + "_" + attributeKey + "__supported";
   }
 }

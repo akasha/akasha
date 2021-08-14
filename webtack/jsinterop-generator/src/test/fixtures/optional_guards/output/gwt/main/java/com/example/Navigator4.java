@@ -26,7 +26,7 @@ public final class Navigator4 {
 
   @JsOverlay
   public final boolean isWebGPUSupported() {
-    return Js.asPropertyMap( this ).has( "gpu" );
+    return "true" == System.getProperty( "com.example.is__Navigator4_WebGPU__supported" ) ? true : "false" == System.getProperty( "com.example.is__Navigator4_WebGPU__supported" ) ? false : Js.asPropertyMap( this ).has( "gpu" );
   }
 
   @JsProperty(

@@ -55,6 +55,7 @@ import org.realityforge.webtack.model.IterableMember;
 import org.realityforge.webtack.model.Kind;
 import org.realityforge.webtack.model.MapLikeMember;
 import org.realityforge.webtack.model.MixinDefinition;
+import org.realityforge.webtack.model.Named;
 import org.realityforge.webtack.model.NamedDefinition;
 import org.realityforge.webtack.model.NamedElement;
 import org.realityforge.webtack.model.NamespaceDefinition;
@@ -802,12 +803,44 @@ final class JsinteropAction
     {
       sb.append( "  <inherits name='" ).append( gwtInherit ).append( "'/>\n" );
     }
+    for ( final InterfaceDefinition definition : getSchema().getInterfaces() )
+    {
+      for ( final AttributeMember attribute : definition.getAttributes() )
+      {
+        emitOptionalAttributeConfig( sb, definition, attribute );
+      }
+    }
+    for ( final PartialInterfaceDefinition definition : getSchema().getPartialInterfaces() )
+    {
+      for ( final AttributeMember attribute : definition.getAttributes() )
+      {
+        emitOptionalAttributeConfig( sb, definition, attribute );
+      }
+    }
+
     sb.append( "\n" );
     sb.append( "  <source path=''/>\n" );
     sb.append( "</module>\n" );
     final String gwtModuleContent = sb.toString();
     final String name = NamingUtil.uppercaseFirstCharacter( getLeafPackageName() );
     writeResourceFile( getMainJavaDirectory(), name + ".gwt.xml", gwtModuleContent.getBytes( StandardCharsets.UTF_8 ) );
+  }
+
+  private void emitOptionalAttributeConfig( @Nonnull final StringBuilder sb,
+                                            @Nonnull final Named definition,
+                                            @Nonnull final AttributeMember attribute )
+  {
+    if ( attribute.isNoArgsExtendedAttributePresent( ExtendedAttributes.OPTIONAL_SUPPORT ) ||
+         null != attribute.getIdentValue( ExtendedAttributes.OPTIONAL_SUPPORT ) )
+    {
+      final String name = deriveOptionalSupportCompileConstant( definition, attribute );
+      sb.append( "\n" );
+      sb.append( "  <!-- Compile time constant controlling whether the generated code will always assume the " )
+        .append( definition.getName() ).append( "." ).append( attribute.getName() )
+        .append( " attribute is present, always assume the attribute is absent or perform runtime detection -->\n" );
+      sb.append( "  <define-property name='" ).append( name ).append( "' values='true,false,detect'/>\n" );
+      sb.append( "  <set-property name='" ).append( name ).append( "' value='detect'/>\n" );
+    }
   }
 
   private void generateUnion( @Nonnull final String idlName,
@@ -1611,7 +1644,7 @@ final class JsinteropAction
                       .addModifiers( Modifier.PRIVATE )
                       .build() );
 
-    generateAttributes( definition.getAttributes(), className, type, testType );
+    generateAttributes( definition, definition.getAttributes(), className, type, testType );
     definition.getOperations()
       .stream()
       .sorted()
@@ -2031,7 +2064,7 @@ final class JsinteropAction
     }
 
     generateConstants( toJsName( definition ), definition.getConstants(), type );
-    generateAttributes( definition.getAttributes(), className, type, testType );
+    generateAttributes( definition, definition.getAttributes(), className, type, testType );
 
     boolean constructorPresent = false;
     for ( final OperationMember operation : definition.getOperations() )
@@ -2176,7 +2209,8 @@ final class JsinteropAction
     return true;
   }
 
-  private void generateAttributes( @Nonnull final List<AttributeMember> attributes,
+  private void generateAttributes( @Nonnull final NamedDefinition definition,
+                                   @Nonnull final List<AttributeMember> attributes,
                                    @Nonnull final ClassName className,
                                    @Nonnull final TypeSpec.Builder type,
                                    @Nonnull final TypeSpec.Builder testType )
@@ -2184,17 +2218,18 @@ final class JsinteropAction
     attributes
       .stream()
       .sorted( Comparator.comparing( NamedElement::getName ) )
-      .forEach( attribute -> generateAttribute( attribute, className, type, testType ) );
+      .forEach( attribute -> generateAttribute( definition, attribute, className, type, testType ) );
   }
 
-  private void generateAttribute( @Nonnull final AttributeMember attribute,
+  private void generateAttribute( @Nonnull final NamedDefinition definition,
+                                  @Nonnull final AttributeMember attribute,
                                   @Nonnull final ClassName className,
                                   @Nonnull final TypeSpec.Builder type,
                                   @Nonnull final TypeSpec.Builder testType )
   {
     if ( attribute.getModifiers().contains( AttributeMember.Modifier.READ_ONLY ) )
     {
-      generateReadOnlyAttribute( attribute, className, type, testType );
+      generateReadOnlyAttribute( definition, attribute, className, type, testType );
     }
     else
     {
@@ -3000,7 +3035,8 @@ final class JsinteropAction
     }
   }
 
-  private void generateOptionalAttributeGuard( @Nonnull final AttributeMember attribute,
+  private void generateOptionalAttributeGuard( @Nonnull final NamedDefinition definition,
+                                               @Nonnull final AttributeMember attribute,
                                                @Nonnull final ClassName className,
                                                @Nonnull final TypeSpec.Builder type,
                                                @Nonnull final TypeSpec.Builder testType )
@@ -3015,13 +3051,41 @@ final class JsinteropAction
       attributeName.substring( 0, 1 ).toUpperCase() + attributeName.substring( 1 ) :
       attribute.getIdentValue( ExtendedAttributes.OPTIONAL_SUPPORT );
     final String methodName = "is" + name + "Supported";
-    type.addMethod( MethodSpec
-                      .methodBuilder( methodName )
-                      .addModifiers( Modifier.PUBLIC, Modifier.FINAL )
-                      .returns( TypeName.BOOLEAN )
-                      .addAnnotation( JsinteropTypes.JS_OVERLAY )
-                      .addStatement( "return $T.asPropertyMap( this ).has( $S )", JsinteropTypes.JS, attributeName )
-                      .build() );
+    final MethodSpec.Builder method = MethodSpec
+      .methodBuilder( methodName )
+      .addModifiers( Modifier.PUBLIC, Modifier.FINAL )
+      .returns( TypeName.BOOLEAN )
+      .addAnnotation( JsinteropTypes.JS_OVERLAY );
+    final String propertyName = deriveOptionalSupportCompileConstant( definition, attribute );
+    if ( OutputType.gwt == _outputType )
+    {
+      method.addStatement( "return $S == $T.getProperty( $S ) ? true : " +
+                           "$S == $T.getProperty( $S ) ? false : " +
+                           "$T.asPropertyMap( this ).has( $S )",
+                           "true",
+                           System.class,
+                           propertyName,
+                           "false",
+                           System.class,
+                           propertyName,
+                           JsinteropTypes.JS,
+                           attributeName );
+    }
+    else
+    {
+      method.addStatement( "return $S.equals( $T.getProperty( $S ) ) ? true : " +
+                           "$S.equals( $T.getProperty( $S ) ) ? false : " +
+                           "$T.asPropertyMap( this ).has( $S )",
+                           "true",
+                           System.class,
+                           propertyName,
+                           "false",
+                           System.class,
+                           propertyName,
+                           JsinteropTypes.JS,
+                           attributeName );
+    }
+    type.addMethod( method.build() );
 
     testType.addMethod( MethodSpec
                           .methodBuilder( methodName )
@@ -3032,7 +3096,8 @@ final class JsinteropAction
                           .build() );
   }
 
-  private void generateReadOnlyAttribute( @Nonnull final AttributeMember attribute,
+  private void generateReadOnlyAttribute( @Nonnull final NamedDefinition definition,
+                                          @Nonnull final AttributeMember attribute,
                                           @Nonnull final ClassName className,
                                           @Nonnull final TypeSpec.Builder type,
                                           @Nonnull final TypeSpec.Builder testType )
@@ -3041,7 +3106,7 @@ final class JsinteropAction
     if ( attribute.isNoArgsExtendedAttributePresent( ExtendedAttributes.OPTIONAL_SUPPORT ) ||
          null != attribute.getIdentValue( ExtendedAttributes.OPTIONAL_SUPPORT ) )
     {
-      generateOptionalAttributeGuard( attribute, className, type, testType );
+      generateOptionalAttributeGuard( definition, attribute, className, type, testType );
     }
     final Type attributeType = attribute.getType();
     final WebIDLSchema schema = getSchema();
@@ -4269,43 +4334,5 @@ final class JsinteropAction
     {
       _modulesToRequireInCompileTest.add( lookupJavaType( name ) + ".$Overlay" );
     }
-  }
-
-  @SuppressWarnings( "SameParameterValue" )
-  @Nonnull
-  private String deriveJavaType( @Nonnull final NamedDefinition definition,
-                                 @Nonnull final String prefix,
-                                 @Nonnull final String postfix )
-  {
-    return derivePackagePrefix( definition ) + deriveSimpleJavaType( definition, prefix, postfix );
-  }
-
-  @Nonnull
-  private String deriveSimpleJavaType( @Nonnull final NamedDefinition definition,
-                                       @Nonnull final String prefix,
-                                       @Nonnull final String postfix )
-  {
-    return prefix + NamingUtil.uppercaseFirstCharacter( javaName( definition ) + postfix );
-  }
-
-  @Nonnull
-  private String derivePackagePrefix( @Nonnull final NamedDefinition definition )
-  {
-    final String declaredSubPackage = definition.getIdentValue( ExtendedAttributes.JAVA_SUB_PACKAGE );
-    final String subPackage =
-      null != declaredSubPackage ? asSubPackage( declaredSubPackage ) : asSubPackage( getNamespace( definition ) );
-    return getPackageName() + subPackage + ".";
-  }
-
-  @Nullable
-  private String getNamespace( @Nonnull final NamedDefinition definition )
-  {
-    return definition instanceof InterfaceDefinition ? ( (InterfaceDefinition) definition ).getNamespace() : null;
-  }
-
-  @Nonnull
-  private String asSubPackage( @Nullable final String value )
-  {
-    return null != value && !value.isEmpty() ? "." + NamingUtil.underscore( value ) : "";
   }
 }
