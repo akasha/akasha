@@ -236,4 +236,10 @@ public abstract class AbstractAction
     final String jsName = element.getIdentValue( ExtendedAttributes.JS_NAME );
     return null == jsName ? element.getName() : jsName;
   }
+
+  @Nonnull
+  protected final String mangleName( @Nonnull final String name )
+  {
+    return Character.isUnicodeIdentifierStart( name.charAt( 0 ) ) ? name + "_" : "_" + name;
+  }
 }

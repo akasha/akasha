@@ -1555,12 +1555,6 @@ final class ClosureAction
     return !JS_RESERVED_WORDS.contains( name ) && !JS_KEY_WORDS.contains( name ) && !JS_LITERALS.contains( name );
   }
 
-  @Nonnull
-  private String mangleName( @Nonnull final String name )
-  {
-    return Character.isUnicodeIdentifierStart( name.charAt( 0 ) ) ? name + "_" : "_" + name;
-  }
-
   private <T extends Named & Attributed> boolean tryRecordGeneratedType( @Nonnull final T element )
   {
     return tryRecordGeneratedType( toJsName( element ) );

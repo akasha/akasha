@@ -242,12 +242,6 @@ public abstract class AbstractJavaAction
   }
 
   @Nonnull
-  private String mangleName( @Nonnull final String name )
-  {
-    return Character.isUnicodeIdentifierStart( name.charAt( 0 ) ) ? name + "_" : "_" + name;
-  }
-
-  @Nonnull
   protected Path getMainJavaDirectory()
   {
     return getOutputDirectory().resolve( "main" ).resolve( "java" );
