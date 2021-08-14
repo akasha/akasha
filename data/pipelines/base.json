@@ -1,6 +1,6 @@
 {
   "sourceSelector": "!name=minimal_events !name=minimal_webgpu_integration",
-  "pre": ["base_webgpu", "base_common", "base_typedarray"],
+  "pre": ["base_webgpu", "base_common", "base_typedarray", "base_bluetooth"],
   "stages": [
     {
       "name": "RemoveMember",
@@ -282,25 +282,6 @@
       "config": {
         "namePattern": "^.*$",
         "extendedAttribute": "JavaSubPackage=rtc"
-      }
-    },
-    {
-      "name": "AddExtendedAttribute",
-      "description": "Package up the bluetooth specific specs into a separate package",
-      "sourceSelector": "name=web_bluetooth",
-      "config": {
-        "namePattern": "^.*$",
-        "extendedAttribute": "JavaSubPackage=bluetooth"
-      }
-    },
-    {
-      "name": "AddExtendedAttributeToMember",
-      "sourceSelector": "name=web_bluetooth",
-      "config": {
-        "expectedAddCount": 1,
-        "elementNamePattern": "^Navigator$",
-        "memberNamePattern": "^bluetooth$",
-        "extendedAttribute": "OptionalSupport"
       }
     },
     {

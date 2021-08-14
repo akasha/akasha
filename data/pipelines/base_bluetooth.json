@@ -1,0 +1,23 @@
+{
+  "stages": [
+    {
+      "name": "AddExtendedAttribute",
+      "description": "Package up the bluetooth specific specs into a separate package",
+      "sourceSelector": "name=web_bluetooth",
+      "config": {
+        "namePattern": "^.*$",
+        "extendedAttribute": "JavaSubPackage=bluetooth"
+      }
+    },
+    {
+      "name": "AddExtendedAttributeToMember",
+      "sourceSelector": "name=web_bluetooth",
+      "config": {
+        "expectedAddCount": 1,
+        "elementNamePattern": "^Navigator$",
+        "memberNamePattern": "^bluetooth$",
+        "extendedAttribute": "OptionalSupport"
+      }
+    }
+  ]
+}
