@@ -8,6 +8,7 @@
   - `Navigator.isGpuSupported()`
   - `Window.isLocalStorageSupported()`
   - `Window.isSessionStorageSupported()`
+  - `Window.isSpeechSynthesisSupported()`
 
 ### [v0.18](https://github.com/akasha/akasha/tree/v0.18) (2021-08-07) · [Full Changelog](https://github.com/spritz/spritz/compare/v0.17...v0.18) · [API Differences](https://akasha.github.io/akasha-java/api-diff/?key=akasha-java&old=0.17&new=0.18) · [Source Diff](https://github.com/akasha/akasha-java/compare/v0.17...v0.18)
 
