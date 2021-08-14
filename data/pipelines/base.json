@@ -188,6 +188,26 @@
       }
     },
     {
+      "name": "AddExtendedAttributeToMember",
+      "sourceSelector": "name=whatwg_html",
+      "config": {
+        "expectedAddCount": 1,
+        "elementNamePattern": "^WindowSessionStorage$",
+        "memberNamePattern": "^sessionStorage$",
+        "extendedAttribute": "OptionalSupport"
+      }
+    },
+    {
+      "name": "AddExtendedAttributeToMember",
+      "sourceSelector": "name=whatwg_html",
+      "config": {
+        "expectedAddCount": 1,
+        "elementNamePattern": "^WindowLocalStorage$",
+        "memberNamePattern": "^localStorage$",
+        "extendedAttribute": "OptionalSupport"
+      }
+    },
+    {
       "name": "RemoveElement",
       "description": "Remove the type so it can be replaced with a more java-friendly form",
       "sourceSelector": "name=whatwg_html",
@@ -271,6 +291,16 @@
       "config": {
         "namePattern": "^.*$",
         "extendedAttribute": "JavaSubPackage=bluetooth"
+      }
+    },
+    {
+      "name": "AddExtendedAttributeToMember",
+      "sourceSelector": "name=web_bluetooth",
+      "config": {
+        "expectedAddCount": 1,
+        "elementNamePattern": "^Navigator$",
+        "memberNamePattern": "^bluetooth$",
+        "extendedAttribute": "OptionalSupport"
       }
     },
     {

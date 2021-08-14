@@ -32,6 +32,70 @@
     }
   },
   {
+    "code": "java.method.finalMethodAddedToNonFinalClass",
+    "description": "A final method has been added to an inheritable class.",
+    "newElement": "method boolean akasha.Navigator::isBluetoothSupported()",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.Navigator",
+      "classSimpleName": "Navigator",
+      "elementKind": "method",
+      "methodName": "isBluetoothSupported",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.finalMethodAddedToNonFinalClass",
+    "description": "A final method has been added to an inheritable class.",
+    "newElement": "method boolean akasha.Navigator::isGpuSupported()",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.Navigator",
+      "classSimpleName": "Navigator",
+      "elementKind": "method",
+      "methodName": "isGpuSupported",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.finalMethodAddedToNonFinalClass",
+    "description": "A final method has been added to an inheritable class.",
+    "newElement": "method boolean akasha.Window::isLocalStorageSupported()",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.Window",
+      "classSimpleName": "Window",
+      "elementKind": "method",
+      "methodName": "isLocalStorageSupported",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.finalMethodAddedToNonFinalClass",
+    "description": "A final method has been added to an inheritable class.",
+    "newElement": "method boolean akasha.Window::isSessionStorageSupported()",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.Window",
+      "classSimpleName": "Window",
+      "elementKind": "method",
+      "methodName": "isSessionStorageSupported",
+      "package": "akasha"
+    }
+  },
+  {
     "code": "java.method.added",
     "description": "Method was added.",
     "newElement": "method int akasha.gpu.GPUSupportedLimits::maxComputeInvocationsPerWorkgroup()",

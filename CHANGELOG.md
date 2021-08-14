@@ -3,6 +3,11 @@
 ### Unreleased
 
 * Update the `WebGPU` spec to the `W3C Working Draft, 6 August 2021` version. This update changed the type of the `GPUDeviceDescriptor.requiredLimits` member, rename of several attributes matching `GPUSupportedLimits.maxCompute.*` and the renaming of a few constants in `GPUTextureUsage`.
+* Start generating `@JsOverlay` methods of the form `boolean isXSupported()` for features that may be optional in an implementation. This allows downstream libraries to detect whether a feature is present before making use of the feature. Additional methods include:
+  - `Navigator.isBluetoothSupported()`
+  - `Navigator.isGpuSupported()`
+  - `Window.isLocalStorageSupported()`
+  - `Window.isSessionStorageSupported()`
 
 ### [v0.18](https://github.com/akasha/akasha/tree/v0.18) (2021-08-07) · [Full Changelog](https://github.com/spritz/spritz/compare/v0.17...v0.18) · [API Differences](https://akasha.github.io/akasha-java/api-diff/?key=akasha-java&old=0.17&new=0.18) · [Source Diff](https://github.com/akasha/akasha-java/compare/v0.17...v0.18)
 
