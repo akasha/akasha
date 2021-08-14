@@ -134,7 +134,7 @@ public abstract class AbstractJavaAction
   @Nonnull
   protected String lookupJavaType( @Nonnull final String idlType )
   {
-    return _idlToJavaTypeMapping.computeIfAbsent( idlType, t -> _packageName + "." + idlType );
+    return _idlToJavaTypeMapping.computeIfAbsent( idlType, t -> getPackageName() + "." + idlType );
   }
 
   protected boolean isIdlTypeNotPredefined( @Nonnull final String idlName )
@@ -271,7 +271,7 @@ public abstract class AbstractJavaAction
                                     @Nonnull final byte[] content )
     throws IOException
   {
-    writeFile( getPackageDirectory( baseDirectory, _packageName ).resolve( name ), content );
+    writeFile( getPackageDirectory( baseDirectory, getPackageName() ).resolve( name ), content );
   }
 
   @Nonnull
@@ -291,7 +291,7 @@ public abstract class AbstractJavaAction
   {
     final TypeSpec typeSpec = type.build();
     final String qualifiedName =
-      null != idlName ? _idlToJavaTypeMapping.get( idlName ) : _packageName + "." + typeSpec.name;
+      null != idlName ? _idlToJavaTypeMapping.get( idlName ) : getPackageName() + "." + typeSpec.name;
     if ( null == qualifiedName )
     {
       throw new IllegalStateException( "Qualified java name missing for IDL type '" + idlName + "'" );
