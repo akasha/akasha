@@ -1,6 +1,10 @@
 <module>
   <inherits name='jsinterop.base.Base'/>
 
+  <!-- Compile time constant controlling whether the generated code will always assume the Window.gpu attribute is present, always assume the attribute is absent or perform runtime detection -->
+  <define-property name='com.example.is__Window_gpu__supported' values='true,false,detect'/>
+  <set-property name='com.example.is__Window_gpu__supported' value='detect'/>
+
   <!-- Compile time constant controlling whether the generated code will always assume the Navigator2.gpu attribute is present, always assume the attribute is absent or perform runtime detection -->
   <define-property name='com.example.is__Navigator2_WebGPU__supported' values='true,false,detect'/>
   <set-property name='com.example.is__Navigator2_WebGPU__supported' value='detect'/>

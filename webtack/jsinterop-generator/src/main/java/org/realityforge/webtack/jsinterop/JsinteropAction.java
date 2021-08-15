@@ -477,7 +477,7 @@ final class JsinteropAction
       for ( final MixinDefinition mixin : globalMixins )
       {
         generateConstants( toJsName( mixin ), mixin.getConstants(), type );
-        generateStaticAttributes( mixin.getAttributes(), className, type, testType );
+        generateStaticAttributes( mixin, mixin.getAttributes(), className, type, testType );
         generateStaticOperations( mixin.getOperations(), className, type, testType );
         generateStaticEventsMethods( type, schema, mixin.getEvents() );
       }
@@ -526,7 +526,7 @@ final class JsinteropAction
     InterfaceDefinition definition = schema.getInterfaceByName( globalInterface );
     while ( null != definition )
     {
-      generateStaticAttributes( definition.getAttributes(), className, type, testType );
+      generateStaticAttributes( definition, definition.getAttributes(), className, type, testType );
       generateStaticOperations( definition.getOperations(), className, type, testType );
       generateStaticEventsMethods( type, schema, definition.getEvents() );
       definition = definition.getSuperInterface();
@@ -565,7 +565,8 @@ final class JsinteropAction
     }
   }
 
-  private void generateStaticAttributes( @Nonnull final List<AttributeMember> attributes,
+  private void generateStaticAttributes( @Nonnull final NamedDefinition definition,
+                                         @Nonnull final List<AttributeMember> attributes,
                                          @Nonnull final ClassName className,
                                          @Nonnull final TypeSpec.Builder type,
                                          @Nonnull final TypeSpec.Builder testType )
@@ -573,17 +574,18 @@ final class JsinteropAction
     attributes
       .stream()
       .sorted( Comparator.comparing( NamedElement::getName ) )
-      .forEach( attribute -> generateStaticAttribute( attribute, className, type, testType ) );
+      .forEach( attribute -> generateStaticAttribute( definition, attribute, className, type, testType ) );
   }
 
-  private void generateStaticAttribute( @Nonnull final AttributeMember attribute,
+  private void generateStaticAttribute( @Nonnull final NamedDefinition definition,
+                                        @Nonnull final AttributeMember attribute,
                                         @Nonnull final ClassName className,
                                         @Nonnull final TypeSpec.Builder type,
                                         @Nonnull final TypeSpec.Builder testType )
   {
     if ( attribute.getModifiers().contains( AttributeMember.Modifier.READ_ONLY ) )
     {
-      generateStaticReadOnlyAttribute( attribute, className, type, testType );
+      generateStaticReadOnlyAttribute( definition, attribute, className, type, testType );
     }
     else
     {
@@ -591,12 +593,81 @@ final class JsinteropAction
     }
   }
 
-  private void generateStaticReadOnlyAttribute( @Nonnull final AttributeMember attribute,
+  private void generateStaticOptionalAttributeGuard( @Nonnull final NamedDefinition definition,
+                                                     @Nonnull final AttributeMember attribute,
+                                                     @Nonnull final ClassName className,
+                                                     @Nonnull final TypeSpec.Builder type,
+                                                     @Nonnull final TypeSpec.Builder testType )
+  {
+    if ( attribute.getModifiers().contains( AttributeMember.Modifier.STATIC ) )
+    {
+      // Static attributes should not have OptionalSupport extended attribute and thus the only way we can get
+      // to this method is instance attributes promoted to static attributes as they appear on a GlobalObject
+      throw new UnsupportedOperationException( "Optional attribute guards not supported on static attributes" );
+    }
+    final String attributeName = attribute.getName();
+    final String name =
+      attribute.isNoArgsExtendedAttributePresent( ExtendedAttributes.OPTIONAL_SUPPORT ) ?
+      attributeName.substring( 0, 1 ).toUpperCase() + attributeName.substring( 1 ) :
+      attribute.getIdentValue( ExtendedAttributes.OPTIONAL_SUPPORT );
+    final String methodName = "is" + name + "Supported";
+    final MethodSpec.Builder method = MethodSpec
+      .methodBuilder( methodName )
+      .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+      .returns( TypeName.BOOLEAN )
+      .addAnnotation( JsinteropTypes.JS_OVERLAY );
+    final String propertyName = deriveOptionalSupportCompileConstant( definition, attribute );
+    if ( OutputType.gwt == _outputType )
+    {
+      method.addStatement( "return $S == $T.getProperty( $S ) ? true : " +
+                           "$S == $T.getProperty( $S ) ? false : " +
+                           "$T.global().has( $S )",
+                           "true",
+                           System.class,
+                           propertyName,
+                           "false",
+                           System.class,
+                           propertyName,
+                           JsinteropTypes.JS,
+                           attributeName );
+    }
+    else
+    {
+      method.addStatement( "return $S.equals( $T.getProperty( $S ) ) ? true : " +
+                           "$S.equals( $T.getProperty( $S ) ) ? false : " +
+                           "$T.global().has( $S )",
+                           "true",
+                           System.class,
+                           propertyName,
+                           "false",
+                           System.class,
+                           propertyName,
+                           JsinteropTypes.JS,
+                           attributeName );
+    }
+    type.addMethod( method.build() );
+
+    testType.addMethod( MethodSpec
+                          .methodBuilder( methodName )
+                          .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+                          .returns( TypeName.BOOLEAN )
+                          .addStatement( "return $T.$N()", className, methodName )
+                          .build() );
+  }
+
+  private void generateStaticReadOnlyAttribute( @Nonnull final NamedDefinition definition,
+                                                @Nonnull final AttributeMember attribute,
                                                 @Nonnull final ClassName className,
                                                 @Nonnull final TypeSpec.Builder type,
                                                 @Nonnull final TypeSpec.Builder testType )
   {
     assert attribute.getModifiers().contains( AttributeMember.Modifier.READ_ONLY );
+    if ( attribute.isNoArgsExtendedAttributePresent( ExtendedAttributes.OPTIONAL_SUPPORT ) ||
+         null != attribute.getIdentValue( ExtendedAttributes.OPTIONAL_SUPPORT ) )
+    {
+      generateStaticOptionalAttributeGuard( definition, attribute, className, type, testType );
+    }
+
     final Type attributeType = attribute.getType();
     final WebIDLSchema schema = getSchema();
     final Type actualType = schema.resolveType( attributeType );
@@ -1968,7 +2039,7 @@ final class JsinteropAction
     writeGeneratedAnnotation( testType );
 
     generateConstants( toJsName( definition ), definition.getConstants(), type );
-    generateStaticAttributes( definition.getAttributes(), className, type, testType );
+    generateStaticAttributes( definition, definition.getAttributes(), className, type, testType );
     generateStaticOperations( definition.getOperations(), className, type, testType );
 
     type.addMethod( MethodSpec.constructorBuilder().addModifiers( Modifier.PRIVATE ).build() );
@@ -3043,7 +3114,7 @@ final class JsinteropAction
   {
     if ( attribute.getModifiers().contains( AttributeMember.Modifier.STATIC ) )
     {
-      throw new UnsupportedOperationException( "Optional attribute guards not supported on attribute guards" );
+      throw new UnsupportedOperationException( "Optional attribute guards not supported on static attributes" );
     }
     final String attributeName = attribute.getName();
     final String name =

@@ -11,6 +11,11 @@ interface Navigator2 {
   readonly attribute GPU gpu;
 };
 
+interface Window {
+  [OptionalSupport]
+  readonly attribute GPU gpu;
+};
+
 partial interface Navigator3 {
   [SameObject, OptionalSupport]
   readonly attribute GPU gpu;

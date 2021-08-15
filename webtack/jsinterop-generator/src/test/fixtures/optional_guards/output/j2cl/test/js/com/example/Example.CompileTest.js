@@ -7,3 +7,7 @@ goog.require('com.example.Navigator2.$Overlay');
 goog.require('com.example.Navigator2TestCompile');
 goog.require('com.example.Navigator3TestCompile');
 goog.require('com.example.Navigator4TestCompile');
+goog.require('com.example.Window.$Overlay');
+goog.require('com.example.WindowGlobal.$Overlay');
+goog.require('com.example.WindowGlobalTestCompile');
+goog.require('com.example.WindowTestCompile');

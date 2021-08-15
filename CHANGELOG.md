@@ -7,9 +7,9 @@
   Feature detection methods added and the associated compile time properties include:
   - `Navigator.isBluetoothSupported()` with a property `akasha.is__Navigator_bluetooth__supported`
   - `Navigator.isGpuSupported()` with a property `akasha.is__Navigator_gpu__supported`
-  - `Window.isLocalStorageSupported()` with a property `akasha.is__Window_localStorage__supported`
-  - `Window.isSessionStorageSupported()` with a property `akasha.is__Window_sessionStorage__supported`
-  - `Window.isSpeechSynthesisSupported()` with a property `akasha.is__Window_speechSynthesis__supported`
+  - `Window.isLocalStorageSupported()` and `WindowGlobal.isLocalStorageSupported()` with a property `akasha.is__Window_localStorage__supported`
+  - `Window.isSessionStorageSupported()` and `WindowGlobal.isSessionStorageSupported()` with a property `akasha.is__Window_sessionStorage__supported`
+  - `Window.isSpeechSynthesisSupported()` and `WindowGlobal.isSpeechSynthesisSupported()` with a property `akasha.is__Window_speechSynthesis__supported`
 
 ### [v0.18](https://github.com/akasha/akasha/tree/v0.18) (2021-08-07) · [Full Changelog](https://github.com/spritz/spritz/compare/v0.17...v0.18) · [API Differences](https://akasha.github.io/akasha-java/api-diff/?key=akasha-java&old=0.17&new=0.18) · [Source Diff](https://github.com/akasha/akasha-java/compare/v0.17...v0.18)
 
