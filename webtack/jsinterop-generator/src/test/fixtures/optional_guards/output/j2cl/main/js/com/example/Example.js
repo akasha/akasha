@@ -1,3 +1,12 @@
+/**
+ * @fileoverview
+ * @suppress {useOfGoogProvide}
+ */
+/**
+ * @suppress {lintChecks}
+ * @const
+ */
+var goog = goog || {};
 goog.provide('com.example.Example');
 
 /** @define {string} */

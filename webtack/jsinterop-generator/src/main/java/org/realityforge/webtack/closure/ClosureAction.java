@@ -258,6 +258,10 @@ final class ClosureAction
       final String filename = baseName.replaceAll( "\\.", File.separator ) + ".js";
       try ( final Writer writer = openWriter( getMainJsDirectory().resolve( filename ) ) )
       {
+        // Suppress use of goog.provide until we can move forward with a new approach
+        writer.write( "/**\n * @fileoverview\n * @suppress {useOfGoogProvide}\n */\n" );
+        // Declare a goog var if required. Hopefully not required when used in building apps, just tests.
+        writer.write( "/**\n * @suppress {lintChecks}\n * @const\n */\nvar goog = goog || {};\n" );
         writer.write( "goog.provide('" + baseName + "');\n" );
         writer.write( sb.toString() );
       }
@@ -296,6 +300,7 @@ final class ClosureAction
       final String nativeJs = javaType.replaceAll( "\\.", File.separator ) + ".native.js";
       try ( final Writer writer = openWriter( getMainJsDirectory().resolve( nativeJs ) ) )
       {
+        writer.write( "/**\n * @fileoverview\n * @suppress {lintChecks}\n */\n" );
         writer.write( "/** @suppress {extraRequire} */\n" );
         writer.write( "goog.require('" + getBaseName() + "');\n" );
       }
