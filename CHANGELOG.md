@@ -1,6 +1,10 @@
 # Change Log
 
-### Unreleased
+### [v0.19](https://github.com/akasha/akasha/tree/v0.19) (2021-08-16) · [Full Changelog](https://github.com/spritz/spritz/compare/v0.18...v0.19) · [API Differences](https://akasha.github.io/akasha-java/api-diff/?key=akasha-java&old=0.18&new=0.19) · [Source Diff](https://github.com/akasha/akasha-java/compare/v0.18...v0.19)
+
+The release includes 10 non breaking API changes, 5 potentially breaking API changes and 5 breaking API changes.
+
+Changes in this release:
 
 * Update the `WebGPU` spec to the `W3C Working Draft, 6 August 2021` version. This update changed the type of the `GPUDeviceDescriptor.requiredLimits` member, rename of several attributes matching `GPUSupportedLimits.maxCompute.*` and the renaming of a few constants in `GPUTextureUsage`.
 * Start generating `@JsOverlay` methods of the form `boolean isXSupported()` for features that may be optional in an implementation. This allows downstream libraries to detect whether a feature is present before making use of the feature. The feature detection can be done at run time or at compile time depending on the needs of the application. The default behaviour of feature detection methods are to perform the checks at runtime, however this can be be changed by defining an appropriately named property in closure compiler to either `true` or `false` when using the J2CL variant or setting the equivalent binding property when using the GWT variant. The name of the property is derived from the symbol that is feature detected.
