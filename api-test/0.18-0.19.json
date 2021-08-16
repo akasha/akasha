@@ -114,6 +114,54 @@
   {
     "code": "java.method.added",
     "description": "Method was added.",
+    "newElement": "method boolean akasha.WindowGlobal::isLocalStorageSupported()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.WindowGlobal",
+      "classSimpleName": "WindowGlobal",
+      "elementKind": "method",
+      "methodName": "isLocalStorageSupported",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method boolean akasha.WindowGlobal::isSessionStorageSupported()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.WindowGlobal",
+      "classSimpleName": "WindowGlobal",
+      "elementKind": "method",
+      "methodName": "isSessionStorageSupported",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method boolean akasha.WindowGlobal::isSpeechSynthesisSupported()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.WindowGlobal",
+      "classSimpleName": "WindowGlobal",
+      "elementKind": "method",
+      "methodName": "isSpeechSynthesisSupported",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
     "newElement": "method int akasha.gpu.GPUSupportedLimits::maxComputeInvocationsPerWorkgroup()",
     "classification": {
       "SOURCE": "NON_BREAKING",
