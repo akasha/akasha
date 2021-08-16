@@ -20,9 +20,18 @@ import jsinterop.base.JsPropertyMap;
 public interface EventInit {
   @JsOverlay
   @Nonnull
-  static Builder create() {
-    return Js.uncheckedCast( JsPropertyMap.of() );
+  static Builder create(@MyAnnotation final boolean bubbles2) {
+    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).bubbles2( bubbles2 );
   }
+
+  @JsProperty(
+      name = "bubbles2"
+  )
+  @MyAnnotation
+  boolean bubbles2();
+
+  @JsProperty
+  void setBubbles2(@MyAnnotation boolean bubbles2);
 
   @JsProperty(
       name = "bubbles"
@@ -41,6 +50,13 @@ public interface EventInit {
   )
   @MyAnnotation
   interface Builder extends EventInit {
+    @JsOverlay
+    @Nonnull
+    default Builder bubbles2(@MyAnnotation final boolean bubbles2) {
+      setBubbles2( bubbles2 );
+      return this;
+    }
+
     @JsOverlay
     @Nonnull
     default Builder bubbles(@MyAnnotation final boolean bubbles) {

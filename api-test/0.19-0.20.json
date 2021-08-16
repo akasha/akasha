@@ -1,0 +1,42 @@
+[
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'akasha.gpu.WGSL'.",
+    "element": "parameter akasha.gpu.GPUShaderModuleDescriptor.Builder akasha.gpu.GPUShaderModuleDescriptor::create(===java.lang.String===) @ akasha.gpu.GPUShaderModuleDescriptor.Builder",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.WGSL",
+      "annotationType": "akasha.gpu.WGSL",
+      "classQualifiedName": "akasha.gpu.GPUShaderModuleDescriptor.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'akasha.gpu.WGSL'.",
+    "element": "parameter akasha.gpu.GPUShaderModuleDescriptor.Builder akasha.gpu.GPUShaderModuleDescriptor::create(===java.lang.String===)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@akasha.gpu.WGSL",
+      "annotationType": "akasha.gpu.WGSL",
+      "classQualifiedName": "akasha.gpu.GPUShaderModuleDescriptor",
+      "classSimpleName": "GPUShaderModuleDescriptor",
+      "elementKind": "parameter",
+      "methodName": "create",
+      "package": "akasha.gpu",
+      "parameterIndex": "0"
+    }
+  }
+]

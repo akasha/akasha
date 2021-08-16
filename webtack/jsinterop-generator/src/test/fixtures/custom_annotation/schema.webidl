@@ -26,6 +26,8 @@ callback interface EventListener {
 [JavaAnnotation="akasha.MyAnnotation"]
 dictionary EventInit {
   [JavaAnnotation="akasha.MyAnnotation"]
+  required boolean bubbles2;
+  [JavaAnnotation="akasha.MyAnnotation"]
   boolean bubbles = false;
 };
 

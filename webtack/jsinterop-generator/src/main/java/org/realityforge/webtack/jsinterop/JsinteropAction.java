@@ -1291,6 +1291,7 @@ final class JsinteropAction
         final TypedValue memberType = types.get( index++ );
         final ParameterSpec.Builder parameter =
           ParameterSpec.builder( memberType.getJavaType(), paramName, Modifier.FINAL );
+        maybeAddCustomAnnotations( member, parameter );
         addMagicConstantAnnotationIfNeeded( member.getType(), parameter );
         addDoNotAutoboxAnnotation( memberType, parameter );
         addNullabilityAnnotation( memberType, parameter );

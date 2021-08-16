@@ -20,7 +20,7 @@ function EventListener() {}
  */
 EventListener.prototype.handleEvent = function(event) {}
 /**
- * @typedef {{bubbles:(!boolean|undefined)}}
+ * @typedef {{bubbles2:!boolean,bubbles:(!boolean|undefined)}}
  */
 var EventInit;
 /**
