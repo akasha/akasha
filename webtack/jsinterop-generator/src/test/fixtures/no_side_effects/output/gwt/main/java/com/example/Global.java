@@ -10,7 +10,7 @@ import jsinterop.annotations.JsType;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "goog.global"
+    name = "$wnd"
 )
 public final class Global {
   private Global() {

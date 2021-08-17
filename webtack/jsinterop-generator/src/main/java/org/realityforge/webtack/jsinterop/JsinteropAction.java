@@ -463,7 +463,7 @@ final class JsinteropAction
       type.addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_TYPE )
                             .addMember( "isNative", "true" )
                             .addMember( "namespace", "$T.GLOBAL", JsinteropTypes.JS_PACKAGE )
-                            .addMember( "name", "$S", "goog.global" )
+                            .addMember( "name", "$S", getGlobalVariable() )
                             .build() );
       type.addMethod( MethodSpec.constructorBuilder().addModifiers( Modifier.PRIVATE ).build() );
 
@@ -496,6 +496,12 @@ final class JsinteropAction
     }
   }
 
+  @Nonnull
+  private String getGlobalVariable()
+  {
+    return OutputType.gwt == _outputType ? "$wnd" : "goog.global";
+  }
+
   private void generateGlobalType( @Nonnull final String globalInterface )
     throws IOException
   {
@@ -510,7 +516,7 @@ final class JsinteropAction
     type.addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_TYPE )
                           .addMember( "isNative", "true" )
                           .addMember( "namespace", "$T.GLOBAL", JsinteropTypes.JS_PACKAGE )
-                          .addMember( "name", "$S", "goog.global" )
+                          .addMember( "name", "$S", getGlobalVariable() )
                           .build() );
 
     final String testJavaName = javaName + "TestCompile";

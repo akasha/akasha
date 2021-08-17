@@ -3,6 +3,7 @@
 ### Unreleased
 
 * Ensure that the `code` parameter to `GPUShaderModuleDescriptor.create()` is annotated with `@WGSL`.
+* Replace usages of `goog.global` with `$wnd` in the GWT variant. If there is an error while the GWT application is initializing or Akasha is used early in the initialization process, there was previously a period where `goog.global` had not been assigned and thus the Akasha code would generate errors when using the symbol. This change eliminated this possibility. 
 
 ### [v0.19](https://github.com/akasha/akasha/tree/v0.19) (2021-08-16) · [Full Changelog](https://github.com/spritz/spritz/compare/v0.18...v0.19) · [API Differences](https://akasha.github.io/akasha-java/api-diff/?key=akasha-java&old=0.18&new=0.19) · [Source Diff](https://github.com/akasha/akasha-java/compare/v0.18...v0.19)
 

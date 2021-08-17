@@ -14,7 +14,7 @@ import jsinterop.base.Js;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "goog.global"
+    name = "$wnd"
 )
 public final class WindowGlobal {
   /**
