@@ -189,6 +189,16 @@
     },
     {
       "name": "AddExtendedAttributeToMember",
+      "sourceSelector": "name=gamepad",
+      "config": {
+        "expectedAddCount": 1,
+        "elementNamePattern": "^Navigator$",
+        "memberNamePattern": "^getGamepads$",
+        "extendedAttribute": "OptionalSupport"
+      }
+    },
+    {
+      "name": "AddExtendedAttributeToMember",
       "sourceSelector": "name=whatwg_html",
       "config": {
         "expectedAddCount": 1,
