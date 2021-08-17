@@ -478,7 +478,7 @@ final class JsinteropAction
       {
         generateConstants( toJsName( mixin ), mixin.getConstants(), type );
         generateStaticAttributes( mixin, mixin.getAttributes(), className, type, testType );
-        generateStaticOperations( mixin.getOperations(), className, type, testType );
+        generateStaticOperations( mixin, mixin.getOperations(), className, type, testType );
         generateStaticEventsMethods( type, schema, mixin.getEvents() );
       }
 
@@ -533,7 +533,7 @@ final class JsinteropAction
     while ( null != definition )
     {
       generateStaticAttributes( definition, definition.getAttributes(), className, type, testType );
-      generateStaticOperations( definition.getOperations(), className, type, testType );
+      generateStaticOperations( definition, definition.getOperations(), className, type, testType );
       generateStaticEventsMethods( type, schema, definition.getEvents() );
       definition = definition.getSuperInterface();
     }
@@ -599,68 +599,6 @@ final class JsinteropAction
     }
   }
 
-  private void generateStaticOptionalAttributeGuard( @Nonnull final NamedDefinition definition,
-                                                     @Nonnull final AttributeMember attribute,
-                                                     @Nonnull final ClassName className,
-                                                     @Nonnull final TypeSpec.Builder type,
-                                                     @Nonnull final TypeSpec.Builder testType )
-  {
-    if ( attribute.getModifiers().contains( AttributeMember.Modifier.STATIC ) )
-    {
-      // Static attributes should not have OptionalSupport extended attribute and thus the only way we can get
-      // to this method is instance attributes promoted to static attributes as they appear on a GlobalObject
-      throw new UnsupportedOperationException( "Optional attribute guards not supported on static attributes" );
-    }
-    final String attributeName = attribute.getName();
-    final String name =
-      attribute.isNoArgsExtendedAttributePresent( ExtendedAttributes.OPTIONAL_SUPPORT ) ?
-      attributeName.substring( 0, 1 ).toUpperCase() + attributeName.substring( 1 ) :
-      attribute.getIdentValue( ExtendedAttributes.OPTIONAL_SUPPORT );
-    final String methodName = "is" + name + "Supported";
-    final MethodSpec.Builder method = MethodSpec
-      .methodBuilder( methodName )
-      .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
-      .returns( TypeName.BOOLEAN )
-      .addAnnotation( JsinteropTypes.JS_OVERLAY );
-    final String propertyName = deriveOptionalSupportCompileConstant( definition, attribute );
-    if ( OutputType.gwt == _outputType )
-    {
-      method.addStatement( "return $S == $T.getProperty( $S ) ? true : " +
-                           "$S == $T.getProperty( $S ) ? false : " +
-                           "$T.global().has( $S )",
-                           "true",
-                           System.class,
-                           propertyName,
-                           "false",
-                           System.class,
-                           propertyName,
-                           JsinteropTypes.JS,
-                           attributeName );
-    }
-    else
-    {
-      method.addStatement( "return $S.equals( $T.getProperty( $S ) ) ? true : " +
-                           "$S.equals( $T.getProperty( $S ) ) ? false : " +
-                           "$T.global().has( $S )",
-                           "true",
-                           System.class,
-                           propertyName,
-                           "false",
-                           System.class,
-                           propertyName,
-                           JsinteropTypes.JS,
-                           attributeName );
-    }
-    type.addMethod( method.build() );
-
-    testType.addMethod( MethodSpec
-                          .methodBuilder( methodName )
-                          .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
-                          .returns( TypeName.BOOLEAN )
-                          .addStatement( "return $T.$N()", className, methodName )
-                          .build() );
-  }
-
   private void generateStaticReadOnlyAttribute( @Nonnull final NamedDefinition definition,
                                                 @Nonnull final AttributeMember attribute,
                                                 @Nonnull final ClassName className,
@@ -671,7 +609,13 @@ final class JsinteropAction
     if ( attribute.isNoArgsExtendedAttributePresent( ExtendedAttributes.OPTIONAL_SUPPORT ) ||
          null != attribute.getIdentValue( ExtendedAttributes.OPTIONAL_SUPPORT ) )
     {
-      generateStaticOptionalAttributeGuard( definition, attribute, className, type, testType );
+      if ( attribute.getModifiers().contains( AttributeMember.Modifier.STATIC ) )
+      {
+        // Static attributes should not have OptionalSupport extended attribute and thus the only way we can get
+        // to this method is instance attributes promoted to static attributes as they appear on a GlobalObject
+        throw new UnsupportedOperationException( "Optional attribute guards not supported on static attributes" );
+      }
+      generateStaticOptionalSupportGuard( definition, attribute, attribute.getName(), className, type, testType );
     }
 
     final Type attributeType = attribute.getType();
@@ -910,7 +854,7 @@ final class JsinteropAction
     if ( attribute.isNoArgsExtendedAttributePresent( ExtendedAttributes.OPTIONAL_SUPPORT ) ||
          null != attribute.getIdentValue( ExtendedAttributes.OPTIONAL_SUPPORT ) )
     {
-      final String name = deriveOptionalSupportCompileConstant( definition, attribute );
+      final String name = deriveOptionalSupportCompileConstant( definition, attribute.getName(), attribute );
       sb.append( "\n" );
       sb.append( "  <!-- Compile time constant controlling whether the generated code will always assume the " )
         .append( definition.getName() ).append( "." ).append( attribute.getName() )
@@ -1654,7 +1598,8 @@ final class JsinteropAction
     final OperationMember operation = definition.getOperation();
     final List<Argument> arguments = operation.getArguments();
     final List<TypedValue> typedValues = asTypedValuesList( arguments );
-    generateDefaultOperation( operation,
+    generateDefaultOperation( definition,
+                              operation,
                               true,
                               operation.getReturnType(),
                               arguments,
@@ -1726,7 +1671,8 @@ final class JsinteropAction
     definition.getOperations()
       .stream()
       .sorted()
-      .forEach( operation -> generateOperation( operation,
+      .forEach( operation -> generateOperation( definition,
+                                                operation,
                                                 deriveOperationReturnType( definition, operation ),
                                                 className,
                                                 type,
@@ -2047,7 +1993,7 @@ final class JsinteropAction
 
     generateConstants( toJsName( definition ), definition.getConstants(), type );
     generateStaticAttributes( definition, definition.getAttributes(), className, type, testType );
-    generateStaticOperations( definition.getOperations(), className, type, testType );
+    generateStaticOperations( definition, definition.getOperations(), className, type, testType );
 
     type.addMethod( MethodSpec.constructorBuilder().addModifiers( Modifier.PRIVATE ).build() );
 
@@ -2062,7 +2008,8 @@ final class JsinteropAction
     }
   }
 
-  private void generateStaticOperations( @Nonnull final List<OperationMember> operations,
+  private void generateStaticOperations( @Nonnull final NamedDefinition definition,
+                                         @Nonnull final List<OperationMember> operations,
                                          @Nonnull final ClassName className,
                                          @Nonnull final TypeSpec.Builder type,
                                          @Nonnull final TypeSpec.Builder testType )
@@ -2078,7 +2025,7 @@ final class JsinteropAction
                OperationMember.Kind.DELETER == operationKind ) &&
              null != operation.getName() ) )
       {
-        generateNamespaceOperation( operation, className, type, testType );
+        generateNamespaceOperation( definition, operation, className, type, testType );
       }
     }
   }
@@ -2148,7 +2095,12 @@ final class JsinteropAction
     for ( final OperationMember operation : definition.getOperations() )
     {
       final boolean processed =
-        generateOperation( operation, deriveOperationReturnType( definition, operation ), className, type, testType );
+        generateOperation( definition,
+                           operation,
+                           deriveOperationReturnType( definition, operation ),
+                           className,
+                           type,
+                           testType );
       if ( !processed && OperationMember.Kind.CONSTRUCTOR == operation.getKind() )
       {
         generateConstructorOperation( operation, parentConstructor, type );
@@ -2231,7 +2183,8 @@ final class JsinteropAction
     }
   }
 
-  private boolean generateOperation( @Nonnull final OperationMember operation,
+  private boolean generateOperation( @Nonnull final NamedDefinition definition,
+                                     @Nonnull final OperationMember operation,
                                      @Nonnull final Type returnType,
                                      @Nonnull final ClassName className,
                                      @Nonnull final TypeSpec.Builder type,
@@ -2241,7 +2194,7 @@ final class JsinteropAction
     final String operationName = operation.getName();
     if ( OperationMember.Kind.DEFAULT == operationKind )
     {
-      generateDefaultOperation( operation, returnType, className, type, testType );
+      generateDefaultOperation( definition, operation, returnType, className, type, testType );
     }
     else if ( ( OperationMember.Kind.STRINGIFIER == operationKind ||
                 OperationMember.Kind.GETTER == operationKind ||
@@ -2249,7 +2202,7 @@ final class JsinteropAction
                 OperationMember.Kind.DELETER == operationKind ) &&
               null != operationName )
     {
-      generateDefaultOperation( operation, returnType, className, type, testType );
+      generateDefaultOperation( definition, operation, returnType, className, type, testType );
     }
     else if ( OperationMember.Kind.GETTER == operationKind &&
               Kind.UnsignedLong == operation.getArguments().get( 0 ).getType().getKind() )
@@ -3113,67 +3066,6 @@ final class JsinteropAction
     }
   }
 
-  private void generateOptionalAttributeGuard( @Nonnull final NamedDefinition definition,
-                                               @Nonnull final AttributeMember attribute,
-                                               @Nonnull final ClassName className,
-                                               @Nonnull final TypeSpec.Builder type,
-                                               @Nonnull final TypeSpec.Builder testType )
-  {
-    if ( attribute.getModifiers().contains( AttributeMember.Modifier.STATIC ) )
-    {
-      throw new UnsupportedOperationException( "Optional attribute guards not supported on static attributes" );
-    }
-    final String attributeName = attribute.getName();
-    final String name =
-      attribute.isNoArgsExtendedAttributePresent( ExtendedAttributes.OPTIONAL_SUPPORT ) ?
-      attributeName.substring( 0, 1 ).toUpperCase() + attributeName.substring( 1 ) :
-      attribute.getIdentValue( ExtendedAttributes.OPTIONAL_SUPPORT );
-    final String methodName = "is" + name + "Supported";
-    final MethodSpec.Builder method = MethodSpec
-      .methodBuilder( methodName )
-      .addModifiers( Modifier.PUBLIC, Modifier.FINAL )
-      .returns( TypeName.BOOLEAN )
-      .addAnnotation( JsinteropTypes.JS_OVERLAY );
-    final String propertyName = deriveOptionalSupportCompileConstant( definition, attribute );
-    if ( OutputType.gwt == _outputType )
-    {
-      method.addStatement( "return $S == $T.getProperty( $S ) ? true : " +
-                           "$S == $T.getProperty( $S ) ? false : " +
-                           "$T.asPropertyMap( this ).has( $S )",
-                           "true",
-                           System.class,
-                           propertyName,
-                           "false",
-                           System.class,
-                           propertyName,
-                           JsinteropTypes.JS,
-                           attributeName );
-    }
-    else
-    {
-      method.addStatement( "return $S.equals( $T.getProperty( $S ) ) ? true : " +
-                           "$S.equals( $T.getProperty( $S ) ) ? false : " +
-                           "$T.asPropertyMap( this ).has( $S )",
-                           "true",
-                           System.class,
-                           propertyName,
-                           "false",
-                           System.class,
-                           propertyName,
-                           JsinteropTypes.JS,
-                           attributeName );
-    }
-    type.addMethod( method.build() );
-
-    testType.addMethod( MethodSpec
-                          .methodBuilder( methodName )
-                          .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
-                          .returns( TypeName.BOOLEAN )
-                          .addParameter( ParameterSpec.builder( className, "type", Modifier.FINAL ).build() )
-                          .addStatement( "return type.$N()", methodName )
-                          .build() );
-  }
-
   private void generateReadOnlyAttribute( @Nonnull final NamedDefinition definition,
                                           @Nonnull final AttributeMember attribute,
                                           @Nonnull final ClassName className,
@@ -3184,7 +3076,11 @@ final class JsinteropAction
     if ( attribute.isNoArgsExtendedAttributePresent( ExtendedAttributes.OPTIONAL_SUPPORT ) ||
          null != attribute.getIdentValue( ExtendedAttributes.OPTIONAL_SUPPORT ) )
     {
-      generateOptionalAttributeGuard( definition, attribute, className, type, testType );
+      if ( attribute.getModifiers().contains( AttributeMember.Modifier.STATIC ) )
+      {
+        throw new UnsupportedOperationException( "Optional attribute guards not supported on static attributes" );
+      }
+      generateOptionalSupportGuard( definition, attribute.getName(), attribute, className, type, testType );
     }
     final Type attributeType = attribute.getType();
     final WebIDLSchema schema = getSchema();
@@ -3440,7 +3336,8 @@ final class JsinteropAction
     type.addField( field.build() );
   }
 
-  private void generateDefaultOperation( @Nonnull final OperationMember operation,
+  private void generateDefaultOperation( @Nonnull final NamedDefinition definition,
+                                         @Nonnull final OperationMember operation,
                                          @Nonnull final Type returnType,
                                          @Nonnull final ClassName className,
                                          @Nonnull final TypeSpec.Builder type,
@@ -3456,12 +3353,21 @@ final class JsinteropAction
         explodeTypeList( argumentList.stream().map( Argument::getType ).collect( Collectors.toList() ) );
       for ( final List<TypedValue> typeList : explodedTypeList )
       {
-        generateDefaultOperation( operation, false, returnType, argumentList, typeList, className, type, testType );
+        generateDefaultOperation( definition,
+                                  operation,
+                                  false,
+                                  returnType,
+                                  argumentList,
+                                  typeList,
+                                  className,
+                                  type,
+                                  testType );
       }
     }
   }
 
-  private void generateDefaultOperation( @Nonnull final OperationMember operation,
+  private void generateDefaultOperation( @Nonnull final NamedDefinition definition,
+                                         @Nonnull final OperationMember operation,
                                          final boolean javaInterface,
                                          @Nonnull final Type returnType,
                                          @Nonnull final List<Argument> arguments,
@@ -3482,6 +3388,13 @@ final class JsinteropAction
     final String jsName = toJsName( operation );
     assert null != name;
     assert null != jsName;
+
+    if ( operation.isNoArgsExtendedAttributePresent( ExtendedAttributes.OPTIONAL_SUPPORT ) ||
+         null != operation.getIdentValue( ExtendedAttributes.OPTIONAL_SUPPORT ) )
+    {
+      generateOptionalSupportGuard( definition, operation.getName(), operation, className, type, testType );
+    }
+
     final String methodName = javaMethodName( name, operation );
     final MethodSpec.Builder method =
       MethodSpec
@@ -3617,7 +3530,8 @@ final class JsinteropAction
     }
   }
 
-  private void generateNamespaceOperation( @Nonnull final OperationMember operation,
+  private void generateNamespaceOperation( @Nonnull final NamedDefinition definition,
+                                           @Nonnull final OperationMember operation,
                                            @Nonnull final ClassName className,
                                            @Nonnull final TypeSpec.Builder type,
                                            @Nonnull final TypeSpec.Builder testType )
@@ -3632,12 +3546,13 @@ final class JsinteropAction
         explodeTypeList( argumentList.stream().map( Argument::getType ).collect( Collectors.toList() ) );
       for ( final List<TypedValue> typeList : explodedTypeList )
       {
-        generateNamespaceOperation( operation, argumentList, typeList, className, type, testType );
+        generateNamespaceOperation( definition, operation, argumentList, typeList, className, type, testType );
       }
     }
   }
 
-  private void generateNamespaceOperation( @Nonnull final OperationMember operation,
+  private void generateNamespaceOperation( @Nonnull final NamedDefinition definition,
+                                           @Nonnull final OperationMember operation,
                                            @Nonnull final List<Argument> arguments,
                                            @Nonnull final List<TypedValue> typeList,
                                            @Nonnull final ClassName className,
@@ -3645,8 +3560,17 @@ final class JsinteropAction
                                            @Nonnull final TypeSpec.Builder testType )
   {
     final String name = operation.getName();
-    final String jsName = toJsName( operation );
     assert null != name;
+    if ( operation.isNoArgsExtendedAttributePresent( ExtendedAttributes.OPTIONAL_SUPPORT ) ||
+         null != operation.getIdentValue( ExtendedAttributes.OPTIONAL_SUPPORT ) )
+    {
+      if ( OperationMember.Kind.STATIC == operation.getKind() )
+      {
+        throw new UnsupportedOperationException( "Optional operation guards not supported on static operations" );
+      }
+      generateStaticOptionalSupportGuard( definition, operation, name, className, type, testType );
+    }
+    final String jsName = toJsName( operation );
     assert null != jsName;
     final String methodName = javaMethodName( name, operation );
     final MethodSpec.Builder method =
@@ -4412,5 +4336,120 @@ final class JsinteropAction
     {
       _modulesToRequireInCompileTest.add( lookupJavaType( name ) + ".$Overlay" );
     }
+  }
+
+  private void generateOptionalSupportGuard( @Nonnull final NamedDefinition definition,
+                                             @Nonnull final String elementName,
+                                             @Nonnull final AttributedNode element,
+                                             @Nonnull final ClassName className,
+                                             @Nonnull final TypeSpec.Builder type,
+                                             @Nonnull final TypeSpec.Builder testType )
+  {
+    final String name = getOptionalSupportKey( elementName, element );
+    final String methodName = "is" + name + "Supported";
+    final MethodSpec.Builder method = MethodSpec
+      .methodBuilder( methodName )
+      .addModifiers( Modifier.PUBLIC, Modifier.FINAL )
+      .returns( TypeName.BOOLEAN )
+      .addAnnotation( JsinteropTypes.JS_OVERLAY );
+    final String propertyName = deriveOptionalSupportCompileConstant( definition, elementName, element );
+    if ( OutputType.gwt == _outputType )
+    {
+      method.addStatement( "return $S == $T.getProperty( $S ) ? true : " +
+                           "$S == $T.getProperty( $S ) ? false : " +
+                           "$T.asPropertyMap( this ).has( $S )",
+                           "true",
+                           System.class,
+                           propertyName,
+                           "false",
+                           System.class,
+                           propertyName,
+                           JsinteropTypes.JS,
+                           elementName );
+    }
+    else
+    {
+      method.addStatement( "return $S.equals( $T.getProperty( $S ) ) ? true : " +
+                           "$S.equals( $T.getProperty( $S ) ) ? false : " +
+                           "$T.asPropertyMap( this ).has( $S )",
+                           "true",
+                           System.class,
+                           propertyName,
+                           "false",
+                           System.class,
+                           propertyName,
+                           JsinteropTypes.JS,
+                           elementName );
+    }
+    type.addMethod( method.build() );
+
+    testType.addMethod( MethodSpec
+                          .methodBuilder( methodName )
+                          .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+                          .returns( TypeName.BOOLEAN )
+                          .addParameter( ParameterSpec.builder( className, "type", Modifier.FINAL ).build() )
+                          .addStatement( "return type.$N()", methodName )
+                          .build() );
+  }
+
+  private void generateStaticOptionalSupportGuard( @Nonnull final NamedDefinition definition,
+                                                   @Nonnull final AttributedNode element,
+                                                   @Nonnull final String elementName,
+                                                   @Nonnull final ClassName className,
+                                                   @Nonnull final TypeSpec.Builder type,
+                                                   @Nonnull final TypeSpec.Builder testType )
+  {
+    final String name = getOptionalSupportKey( elementName, element );
+    final String methodName = "is" + name + "Supported";
+    final MethodSpec.Builder method = MethodSpec
+      .methodBuilder( methodName )
+      .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+      .returns( TypeName.BOOLEAN )
+      .addAnnotation( JsinteropTypes.JS_OVERLAY );
+    final String propertyName = deriveOptionalSupportCompileConstant( definition, elementName, element );
+    if ( OutputType.gwt == _outputType )
+    {
+      method.addStatement( "return $S == $T.getProperty( $S ) ? true : " +
+                           "$S == $T.getProperty( $S ) ? false : " +
+                           "$T.global().has( $S )",
+                           "true",
+                           System.class,
+                           propertyName,
+                           "false",
+                           System.class,
+                           propertyName,
+                           JsinteropTypes.JS,
+                           elementName );
+    }
+    else
+    {
+      method.addStatement( "return $S.equals( $T.getProperty( $S ) ) ? true : " +
+                           "$S.equals( $T.getProperty( $S ) ) ? false : " +
+                           "$T.global().has( $S )",
+                           "true",
+                           System.class,
+                           propertyName,
+                           "false",
+                           System.class,
+                           propertyName,
+                           JsinteropTypes.JS,
+                           elementName );
+    }
+    type.addMethod( method.build() );
+
+    testType.addMethod( MethodSpec
+                          .methodBuilder( methodName )
+                          .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+                          .returns( TypeName.BOOLEAN )
+                          .addStatement( "return $T.$N()", className, methodName )
+                          .build() );
+  }
+
+  @Nullable
+  private String getOptionalSupportKey( @Nonnull final String elementName, @Nonnull final AttributedNode element )
+  {
+    return element.isNoArgsExtendedAttributePresent( ExtendedAttributes.OPTIONAL_SUPPORT ) ?
+           elementName.substring( 0, 1 ).toUpperCase() + elementName.substring( 1 ) :
+           element.getIdentValue( ExtendedAttributes.OPTIONAL_SUPPORT );
   }
 }

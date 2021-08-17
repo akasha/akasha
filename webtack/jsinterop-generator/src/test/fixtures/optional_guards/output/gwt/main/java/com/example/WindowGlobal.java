@@ -28,4 +28,12 @@ public final class WindowGlobal {
   )
   @Nonnull
   public static native GPU gpu();
+
+  @JsOverlay
+  public static boolean isGetGamepadsSupported() {
+    return "true" == System.getProperty( "com.example.is__Window_getGamepads__supported" ) ? true : "false" == System.getProperty( "com.example.is__Window_getGamepads__supported" ) ? false : Js.global().has( "getGamepads" );
+  }
+
+  @Nonnull
+  public static native JsArray<Gamepad> getGamepads();
 }

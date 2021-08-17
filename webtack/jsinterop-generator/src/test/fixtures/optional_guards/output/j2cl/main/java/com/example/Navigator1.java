@@ -28,4 +28,12 @@ public class Navigator1 {
   )
   @Nonnull
   public native GPU gpu();
+
+  @JsOverlay
+  public final boolean isGetGamepadsSupported() {
+    return "true".equals( System.getProperty( "com.example.is__Navigator1_getGamepads__supported" ) ) ? true : "false".equals( System.getProperty( "com.example.is__Navigator1_getGamepads__supported" ) ) ? false : Js.asPropertyMap( this ).has( "getGamepads" );
+  }
+
+  @Nonnull
+  public native JsArray<Gamepad> getGamepads();
 }

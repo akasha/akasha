@@ -246,11 +246,11 @@ final class ClosureAction
     final StringBuffer sb = new StringBuffer();
     for ( final InterfaceDefinition definition : getSchema().getInterfaces() )
     {
-      writeNativeJsIfRequired( sb, definition, definition.getAttributes() );
+      writeNativeJsIfRequired( sb, definition, definition.getAttributes(), definition.getOperations() );
     }
     for ( final PartialInterfaceDefinition definition : getSchema().getPartialInterfaces() )
     {
-      writeNativeJsIfRequired( sb, definition, definition.getAttributes() );
+      writeNativeJsIfRequired( sb, definition, definition.getAttributes(), definition.getOperations() );
     }
     if ( 0 != sb.length() )
     {
@@ -275,7 +275,8 @@ final class ClosureAction
 
   private void writeNativeJsIfRequired( @Nonnull final StringBuffer defines,
                                         @Nonnull final NamedDefinition definition,
-                                        @Nonnull final List<AttributeMember> attributes )
+                                        @Nonnull final List<AttributeMember> attributes,
+                                        @Nonnull final List<OperationMember> operations )
     throws IOException
   {
     boolean requiresNativeJs = false;
@@ -284,7 +285,24 @@ final class ClosureAction
       if ( attribute.isNoArgsExtendedAttributePresent( ExtendedAttributes.OPTIONAL_SUPPORT ) ||
            null != attribute.getIdentValue( ExtendedAttributes.OPTIONAL_SUPPORT ) )
       {
-        final String name = deriveOptionalSupportCompileConstant( definition, attribute );
+        final String name = deriveOptionalSupportCompileConstant( definition, attribute.getName(), attribute );
+        defines.append( "\n" );
+        defines.append( "/** @define {string} */\n" );
+        defines.append( name );
+        defines.append( " = goog.define('" );
+        defines.append( name );
+        defines.append( "', 'detect');\n" );
+        requiresNativeJs = true;
+      }
+    }
+    for ( final OperationMember operation : operations )
+    {
+      if ( operation.isNoArgsExtendedAttributePresent( ExtendedAttributes.OPTIONAL_SUPPORT ) ||
+           null != operation.getIdentValue( ExtendedAttributes.OPTIONAL_SUPPORT ) )
+      {
+        final String operationName = operation.getName();
+        assert null != operationName;
+        final String name = deriveOptionalSupportCompileConstant( definition, operationName, operation );
         defines.append( "\n" );
         defines.append( "/** @define {string} */\n" );
         defines.append( name );

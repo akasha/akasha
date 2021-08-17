@@ -28,4 +28,12 @@ public class Window {
   )
   @Nonnull
   public native GPU gpu();
+
+  @JsOverlay
+  public final boolean isGetGamepadsSupported() {
+    return "true" == System.getProperty( "com.example.is__Window_getGamepads__supported" ) ? true : "false" == System.getProperty( "com.example.is__Window_getGamepads__supported" ) ? false : Js.asPropertyMap( this ).has( "getGamepads" );
+  }
+
+  @Nonnull
+  public native JsArray<Gamepad> getGamepads();
 }

@@ -13,4 +13,12 @@ public final class Navigator2TestCompile {
   public static GPU gpu(final Navigator2 type) {
     return type.gpu();
   }
+
+  public static boolean isGetGamepadsSupported(final Navigator2 type) {
+    return type.isGetGamepadsSupported();
+  }
+
+  public static JsArray<Gamepad> getGamepads(final Navigator2 $instance) {
+    return $instance.getGamepads();
+  }
 }

@@ -1,6 +1,8 @@
 goog.module('com.example.ExampleCompileTest');
 goog.require('com.example.GPU.$Overlay');
 goog.require('com.example.GPUTestCompile');
+goog.require('com.example.Gamepad.$Overlay');
+goog.require('com.example.GamepadTestCompile');
 goog.require('com.example.Navigator1.$Overlay');
 goog.require('com.example.Navigator1TestCompile');
 goog.require('com.example.Navigator2.$Overlay');

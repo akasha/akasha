@@ -17,8 +17,8 @@ import java.util.Set;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import javax.lang.model.SourceVersion;
-import org.realityforge.webtack.model.AttributeMember;
 import org.realityforge.webtack.model.Attributed;
+import org.realityforge.webtack.model.AttributedNode;
 import org.realityforge.webtack.model.DocumentationElement;
 import org.realityforge.webtack.model.EnumerationValue;
 import org.realityforge.webtack.model.ExtendedAttribute;
@@ -347,13 +347,14 @@ public abstract class AbstractAction
 
   @Nonnull
   protected final String deriveOptionalSupportCompileConstant( @Nonnull final Named definition,
-                                                               @Nonnull final AttributeMember attribute )
+                                                               @Nonnull final String elementName,
+                                                               @Nonnull final AttributedNode element )
   {
-    final String attributeKey =
-      attribute.isNoArgsExtendedAttributePresent( ExtendedAttributes.OPTIONAL_SUPPORT ) ?
-      attribute.getName() :
-      attribute.getIdentValue( ExtendedAttributes.OPTIONAL_SUPPORT );
+    final String elementKey =
+      element.isNoArgsExtendedAttributePresent( ExtendedAttributes.OPTIONAL_SUPPORT ) ?
+      elementName :
+      element.getIdentValue( ExtendedAttributes.OPTIONAL_SUPPORT );
 
-    return getPackageName() + ".is__" + definition.getName() + "_" + attributeKey + "__supported";
+    return getPackageName() + ".is__" + definition.getName() + "_" + elementKey + "__supported";
   }
 }

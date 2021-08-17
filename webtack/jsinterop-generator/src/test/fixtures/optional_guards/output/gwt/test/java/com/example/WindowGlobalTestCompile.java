@@ -11,4 +11,12 @@ public final class WindowGlobalTestCompile {
   public static GPU gpu() {
     return WindowGlobal.gpu();
   }
+
+  public static boolean isGetGamepadsSupported() {
+    return WindowGlobal.isGetGamepadsSupported();
+  }
+
+  public static JsArray<Gamepad> getGamepads() {
+    return WindowGlobal.getGamepads();
+  }
 }
