@@ -1,0 +1,13 @@
+{
+  "stages": [
+    {
+      "name": "AddExtendedAttribute",
+      "description": "Package up the indexeddb specific specs into a separate package",
+      "sourceSelector": "name=indexeddb",
+      "config": {
+        "namePattern": "^.*$",
+        "extendedAttribute": "JavaSubPackage=idb"
+      }
+    }
+  ]
+}

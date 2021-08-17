@@ -1,6 +1,6 @@
 {
   "sourceSelector": "!name=minimal_events !name=minimal_webgpu_integration",
-  "pre": ["base_webgpu", "base_common", "base_typedarray", "base_bluetooth", "base_speech_api"],
+  "pre": ["base_webgpu", "base_common", "base_typedarray", "base_bluetooth", "base_speech_api", "base_indexdb"],
   "stages": [
     {
       "name": "RemoveMember",
@@ -282,15 +282,6 @@
       "config": {
         "namePattern": "^.*$",
         "extendedAttribute": "JavaSubPackage=rtc"
-      }
-    },
-    {
-      "name": "AddExtendedAttribute",
-      "description": "Package up the indexeddb specific specs into a separate package",
-      "sourceSelector": "name=indexeddb",
-      "config": {
-        "namePattern": "^.*$",
-        "extendedAttribute": "JavaSubPackage=idb"
       }
     },
     {
