@@ -8,6 +8,16 @@
         "namePattern": "^.*$",
         "extendedAttribute": "JavaSubPackage=idb"
       }
-    }
+    },
+    {
+      "name": "AddExtendedAttributeToMember",
+      "sourceSelector": "name=indexeddb",
+      "config": {
+        "expectedAddCount": 1,
+        "elementNamePattern": "^WindowOrWorkerGlobalScope$",
+        "memberNamePattern": "^indexedDB$",
+        "extendedAttribute": "OptionalSupport"
+      }
+      }
   ]
 }

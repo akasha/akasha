@@ -1,42 +1,34 @@
 [
   {
-    "code": "java.annotation.added",
-    "description": "Element newly annotated with 'akasha.gpu.WGSL'.",
-    "element": "parameter akasha.gpu.GPUShaderModuleDescriptor.Builder akasha.gpu.GPUShaderModuleDescriptor::create(===java.lang.String===) @ akasha.gpu.GPUShaderModuleDescriptor.Builder",
+    "code": "java.method.finalMethodAddedToNonFinalClass",
+    "description": "A final method has been added to an inheritable class.",
+    "newElement": "method boolean akasha.Window::isIndexedDBSupported()",
     "classification": {
-      "SOURCE": "EQUIVALENT",
-      "BINARY": "EQUIVALENT",
-      "SEMANTIC": "POTENTIALLY_BREAKING"
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
     },
     "attachments": {
-      "annotation": "@akasha.gpu.WGSL",
-      "annotationType": "akasha.gpu.WGSL",
-      "classQualifiedName": "akasha.gpu.GPUShaderModuleDescriptor.Builder",
-      "classSimpleName": "Builder",
-      "elementKind": "parameter",
-      "methodName": "create",
-      "package": "akasha.gpu",
-      "parameterIndex": "0"
+      "classQualifiedName": "akasha.Window",
+      "classSimpleName": "Window",
+      "elementKind": "method",
+      "methodName": "isIndexedDBSupported",
+      "package": "akasha"
     }
   },
   {
-    "code": "java.annotation.added",
-    "description": "Element newly annotated with 'akasha.gpu.WGSL'.",
-    "element": "parameter akasha.gpu.GPUShaderModuleDescriptor.Builder akasha.gpu.GPUShaderModuleDescriptor::create(===java.lang.String===)",
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method boolean akasha.WindowGlobal::isIndexedDBSupported()",
     "classification": {
-      "SOURCE": "EQUIVALENT",
-      "BINARY": "EQUIVALENT",
-      "SEMANTIC": "POTENTIALLY_BREAKING"
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
     },
     "attachments": {
-      "annotation": "@akasha.gpu.WGSL",
-      "annotationType": "akasha.gpu.WGSL",
-      "classQualifiedName": "akasha.gpu.GPUShaderModuleDescriptor",
-      "classSimpleName": "GPUShaderModuleDescriptor",
-      "elementKind": "parameter",
-      "methodName": "create",
-      "package": "akasha.gpu",
-      "parameterIndex": "0"
+      "classQualifiedName": "akasha.WindowGlobal",
+      "classSimpleName": "WindowGlobal",
+      "elementKind": "method",
+      "methodName": "isIndexedDBSupported",
+      "package": "akasha"
     }
   }
 ]
