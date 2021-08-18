@@ -1598,8 +1598,7 @@ final class JsinteropAction
     final OperationMember operation = definition.getOperation();
     final List<Argument> arguments = operation.getArguments();
     final List<TypedValue> typedValues = asTypedValuesList( arguments );
-    generateDefaultOperation( definition,
-                              operation,
+    generateDefaultOperation( operation,
                               true,
                               operation.getReturnType(),
                               arguments,
@@ -3343,6 +3342,14 @@ final class JsinteropAction
                                          @Nonnull final TypeSpec.Builder type,
                                          @Nonnull final TypeSpec.Builder testType )
   {
+    if ( operation.isNoArgsExtendedAttributePresent( ExtendedAttributes.OPTIONAL_SUPPORT ) ||
+         null != operation.getIdentValue( ExtendedAttributes.OPTIONAL_SUPPORT ) )
+    {
+      final String name = operation.getName();
+      assert null != name;
+      generateOptionalSupportGuard( definition, name, operation, className, type, testType );
+    }
+
     final List<Argument> arguments = operation.getArguments();
     final int argCount = arguments.size();
     final long optionalCount = arguments.stream().filter( Argument::isOptional ).count();
@@ -3353,21 +3360,20 @@ final class JsinteropAction
         explodeTypeList( argumentList.stream().map( Argument::getType ).collect( Collectors.toList() ) );
       for ( final List<TypedValue> typeList : explodedTypeList )
       {
-        generateDefaultOperation( definition,
-                                  operation,
-                                  false,
-                                  returnType,
-                                  argumentList,
-                                  typeList,
-                                  className,
-                                  type,
-                                  testType );
+        generateDefaultOperation(
+          operation,
+          false,
+          returnType,
+          argumentList,
+          typeList,
+          className,
+          type,
+          testType );
       }
     }
   }
 
-  private void generateDefaultOperation( @Nonnull final NamedDefinition definition,
-                                         @Nonnull final OperationMember operation,
+  private void generateDefaultOperation( @Nonnull final OperationMember operation,
                                          final boolean javaInterface,
                                          @Nonnull final Type returnType,
                                          @Nonnull final List<Argument> arguments,
@@ -3388,12 +3394,6 @@ final class JsinteropAction
     final String jsName = toJsName( operation );
     assert null != name;
     assert null != jsName;
-
-    if ( operation.isNoArgsExtendedAttributePresent( ExtendedAttributes.OPTIONAL_SUPPORT ) ||
-         null != operation.getIdentValue( ExtendedAttributes.OPTIONAL_SUPPORT ) )
-    {
-      generateOptionalSupportGuard( definition, operation.getName(), operation, className, type, testType );
-    }
 
     final String methodName = javaMethodName( name, operation );
     final MethodSpec.Builder method =
@@ -3536,29 +3536,6 @@ final class JsinteropAction
                                            @Nonnull final TypeSpec.Builder type,
                                            @Nonnull final TypeSpec.Builder testType )
   {
-    final List<Argument> arguments = operation.getArguments();
-    final int argCount = arguments.size();
-    final long optionalCount = arguments.stream().filter( Argument::isOptional ).count();
-    for ( int i = 0; i <= optionalCount; i++ )
-    {
-      final List<Argument> argumentList = operation.getArguments().subList( 0, argCount - i );
-      final List<List<TypedValue>> explodedTypeList =
-        explodeTypeList( argumentList.stream().map( Argument::getType ).collect( Collectors.toList() ) );
-      for ( final List<TypedValue> typeList : explodedTypeList )
-      {
-        generateNamespaceOperation( definition, operation, argumentList, typeList, className, type, testType );
-      }
-    }
-  }
-
-  private void generateNamespaceOperation( @Nonnull final NamedDefinition definition,
-                                           @Nonnull final OperationMember operation,
-                                           @Nonnull final List<Argument> arguments,
-                                           @Nonnull final List<TypedValue> typeList,
-                                           @Nonnull final ClassName className,
-                                           @Nonnull final TypeSpec.Builder type,
-                                           @Nonnull final TypeSpec.Builder testType )
-  {
     final String name = operation.getName();
     assert null != name;
     if ( operation.isNoArgsExtendedAttributePresent( ExtendedAttributes.OPTIONAL_SUPPORT ) ||
@@ -3570,6 +3547,31 @@ final class JsinteropAction
       }
       generateStaticOptionalSupportGuard( definition, operation, name, className, type, testType );
     }
+
+    final List<Argument> arguments = operation.getArguments();
+    final int argCount = arguments.size();
+    final long optionalCount = arguments.stream().filter( Argument::isOptional ).count();
+    for ( int i = 0; i <= optionalCount; i++ )
+    {
+      final List<Argument> argumentList = operation.getArguments().subList( 0, argCount - i );
+      final List<List<TypedValue>> explodedTypeList =
+        explodeTypeList( argumentList.stream().map( Argument::getType ).collect( Collectors.toList() ) );
+      for ( final List<TypedValue> typeList : explodedTypeList )
+      {
+        generateNamespaceOperation( operation, argumentList, typeList, className, type, testType );
+      }
+    }
+  }
+
+  private void generateNamespaceOperation( @Nonnull final OperationMember operation,
+                                           @Nonnull final List<Argument> arguments,
+                                           @Nonnull final List<TypedValue> typeList,
+                                           @Nonnull final ClassName className,
+                                           @Nonnull final TypeSpec.Builder type,
+                                           @Nonnull final TypeSpec.Builder testType )
+  {
+    final String name = operation.getName();
+    assert null != name;
     final String jsName = toJsName( operation );
     assert null != jsName;
     final String methodName = javaMethodName( name, operation );

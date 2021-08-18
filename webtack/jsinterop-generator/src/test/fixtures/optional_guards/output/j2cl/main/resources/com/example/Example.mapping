@@ -5,5 +5,7 @@ Navigator1=com.example.Navigator1
 Navigator2=com.example.Navigator2
 Navigator3=com.example.Navigator3
 Navigator4=com.example.Navigator4
+Navigator=com.example.Navigator
 Sequence=com.example.JsArray
+VibratePattern=com.example.VibratePattern
 Window=com.example.Window

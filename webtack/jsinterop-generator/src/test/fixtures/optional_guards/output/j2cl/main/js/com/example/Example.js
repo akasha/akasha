@@ -28,6 +28,9 @@ com.example.is__Navigator1_gpu__supported = goog.define('com.example.is__Navigat
 com.example.is__Navigator1_getGamepads__supported = goog.define('com.example.is__Navigator1_getGamepads__supported', 'detect');
 
 /** @define {string} */
+com.example.is__Navigator_vibrate__supported = goog.define('com.example.is__Navigator_vibrate__supported', 'detect');
+
+/** @define {string} */
 com.example.is__Navigator4_WebGPU__supported = goog.define('com.example.is__Navigator4_WebGPU__supported', 'detect');
 
 /** @define {string} */

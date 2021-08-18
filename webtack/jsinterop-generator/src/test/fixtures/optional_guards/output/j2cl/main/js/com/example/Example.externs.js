@@ -3,6 +3,10 @@
  * @externs
  */
 /**
+ * @typedef {(!number|!Array<!number>)}
+ */
+var VibratePattern;
+/**
  * @constructor
  * @private
  * @nosideeffects
