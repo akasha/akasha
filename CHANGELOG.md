@@ -1,5 +1,7 @@
 # Change Log
 
+### Unreleased
+
 ### [v0.21](https://github.com/akasha/akasha/tree/v0.21) (2021-08-18) · [Full Changelog](https://github.com/spritz/spritz/compare/v0.20...v0.21) · [Source Diff](https://github.com/akasha/akasha-java/compare/v0.20...v0.21)
 
 Changes in this release:
