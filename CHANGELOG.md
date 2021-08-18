@@ -5,7 +5,20 @@
 * Ensure that the `code` parameter to `GPUShaderModuleDescriptor.create()` is annotated with `@WGSL`.
 * Replace usages of `goog.global` with `$wnd` in the GWT variant. If there is an error while the GWT application is initializing or Akasha is used early in the initialization process, there was previously a period where `goog.global` had not been assigned and thus the Akasha code would generate errors when using the symbol. This change eliminated this possibility.
 * Added feature detection method for the `indexDB` feature. This involved the addition of the `WindowGlobal.isIndexedDBSupported()` and `Window.isIndexedDBSupported()` methods as well as the addition of the compile time constant `"akasha.is__Window_indexedDB__supported"`.
-* Added feature detection method for the `getGamepad` feature. This involved the addition of the `Navigator.isGetGamepadsSupported()` method as well as the addition of the compile time constant `"akasha.is__Navigator_isGetGamepadsSupported__supported"`.
+* Added feature detection methods for features exposed on the `Navigator` type. Feature detection methods added and the associated compile time properties include:
+  - `Navigator.isClipboardSupported()` with a property `akasha.is__Navigator_clipboard__supported`
+  - `Navigator.isCredentialsSupported()` with a property `akasha.is__Navigator_credentials__supported`
+  - `Navigator.isGeolocationSupported()` with a property `akasha.is__Navigator_geolocation__supported`
+  - `Navigator.isGetGamepadsSupported()` with a property `akasha.is__Navigator_isGetGamepadsSupported__supported`
+  - `Navigator.isMediaDevicesSupported()` with a property `akasha.is__Navigator_mediaDevices__supported`
+  - `Navigator.isPermissionsSupported()` with a property `akasha.is__Navigator_permissions__supported`
+  - `Navigator.isRequestMediaKeySystemAccessSupported()` with a property `akasha.is__Navigator_requestMediaKeySystemAccess__supported`
+  - `Navigator.isSendBeaconSupported()` with a property `akasha.is__Navigator_sendBeacon__supported`
+  - `Navigator.isServiceWorkerSupported()` with a property `akasha.is__Navigator_serviceWorker__supported`
+  - `Navigator.isShareSupported()` with a property `akasha.is__Navigator_share__supported`
+  - `Navigator.isVibrateSupported()` with a property `akasha.is__Navigator_vibrate__supported`
+  - `Navigator.isWakeLockSupported()` with a property `akasha.is__Navigator_wakeLock__supported`
+  - `Navigator.isXrSupported()` with a property `akasha.is__Navigator_xr__supported`
 
 ### [v0.19](https://github.com/akasha/akasha/tree/v0.19) (2021-08-16) · [Full Changelog](https://github.com/spritz/spritz/compare/v0.18...v0.19) · [API Differences](https://akasha.github.io/akasha-java/api-diff/?key=akasha-java&old=0.18&new=0.19) · [Source Diff](https://github.com/akasha/akasha-java/compare/v0.18...v0.19)
 

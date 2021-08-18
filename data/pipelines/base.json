@@ -189,11 +189,131 @@
     },
     {
       "name": "AddExtendedAttributeToMember",
+      "sourceSelector": "name=beacon",
+      "config": {
+        "expectedAddCount": 1,
+        "elementNamePattern": "^Navigator$",
+        "memberNamePattern": "^sendBeacon$",
+        "extendedAttribute": "OptionalSupport"
+      }
+    },
+    {
+      "name": "AddExtendedAttributeToMember",
+      "sourceSelector": "name=clipboard_apis",
+      "config": {
+        "expectedAddCount": 1,
+        "elementNamePattern": "^Navigator$",
+        "memberNamePattern": "^clipboard$",
+        "extendedAttribute": "OptionalSupport"
+      }
+    },
+    {
+      "name": "AddExtendedAttributeToMember",
+      "sourceSelector": "name=credential_management_1",
+      "config": {
+        "expectedAddCount": 1,
+        "elementNamePattern": "^Navigator$",
+        "memberNamePattern": "^credentials$",
+        "extendedAttribute": "OptionalSupport"
+      }
+    },
+    {
+      "name": "AddExtendedAttributeToMember",
+      "sourceSelector": "name=encrypted_media",
+      "config": {
+        "expectedAddCount": 1,
+        "elementNamePattern": "^Navigator$",
+        "memberNamePattern": "^requestMediaKeySystemAccess$",
+        "extendedAttribute": "OptionalSupport"
+      }
+    },
+    {
+      "name": "AddExtendedAttributeToMember",
       "sourceSelector": "name=gamepad",
       "config": {
         "expectedAddCount": 1,
         "elementNamePattern": "^Navigator$",
         "memberNamePattern": "^getGamepads$",
+        "extendedAttribute": "OptionalSupport"
+      }
+    },
+    {
+      "name": "AddExtendedAttributeToMember",
+      "sourceSelector": "name=geolocation_api",
+      "config": {
+        "expectedAddCount": 1,
+        "elementNamePattern": "^Navigator$",
+        "memberNamePattern": "^geolocation$",
+        "extendedAttribute": "OptionalSupport"
+      }
+    },
+    {
+      "name": "AddExtendedAttributeToMember",
+      "sourceSelector": "name=mediacapture_main",
+      "config": {
+        "expectedAddCount": 2,
+        "elementNamePattern": "^Navigator$",
+        "memberNamePattern": "^(getUserMedia|mediaDevices)$",
+        "extendedAttribute": "OptionalSupport"
+      }
+    },
+    {
+      "name": "AddExtendedAttributeToMember",
+      "sourceSelector": "name=permissions",
+      "config": {
+        "expectedAddCount": 1,
+        "elementNamePattern": "^Navigator$",
+        "memberNamePattern": "^permissions$",
+        "extendedAttribute": "OptionalSupport"
+      }
+    },
+    {
+      "name": "AddExtendedAttributeToMember",
+      "sourceSelector": "name=screen_wake_lock",
+      "config": {
+        "expectedAddCount": 1,
+        "elementNamePattern": "^Navigator$",
+        "memberNamePattern": "^wakeLock$",
+        "extendedAttribute": "OptionalSupport"
+      }
+    },
+    {
+      "name": "AddExtendedAttributeToMember",
+      "sourceSelector": "name=serviceworker",
+      "config": {
+        "expectedAddCount": 1,
+        "elementNamePattern": "^Navigator$",
+        "memberNamePattern": "^serviceWorker$",
+        "extendedAttribute": "OptionalSupport"
+      }
+    },
+    {
+      "name": "AddExtendedAttributeToMember",
+      "sourceSelector": "name=vibration",
+      "config": {
+        "expectedAddCount": 1,
+        "elementNamePattern": "^Navigator$",
+        "memberNamePattern": "^vibrate$",
+        "extendedAttribute": "OptionalSupport"
+      }
+    },
+    {
+      "name": "AddExtendedAttributeToMember",
+      "sourceSelector": "name=web_share",
+      "config": {
+        "expectedAddCount": 1,
+        "elementNamePattern": "^Navigator$",
+        "memberNamePattern": "^share$",
+        "extendedAttribute": "OptionalSupport"
+      }
+    },
+    {
+      "name": "AddExtendedAttributeToMember",
+      "sourceSelector": "name=webxr",
+      "config": {
+        "expectedAddCount": 1,
+        "elementNamePattern": "^Navigator$",
+        "memberNamePattern": "^xr$",
         "extendedAttribute": "OptionalSupport"
       }
     },

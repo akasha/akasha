@@ -2,6 +2,54 @@
   {
     "code": "java.method.finalMethodAddedToNonFinalClass",
     "description": "A final method has been added to an inheritable class.",
+    "newElement": "method boolean akasha.Navigator::isClipboardSupported()",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.Navigator",
+      "classSimpleName": "Navigator",
+      "elementKind": "method",
+      "methodName": "isClipboardSupported",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.finalMethodAddedToNonFinalClass",
+    "description": "A final method has been added to an inheritable class.",
+    "newElement": "method boolean akasha.Navigator::isCredentialsSupported()",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.Navigator",
+      "classSimpleName": "Navigator",
+      "elementKind": "method",
+      "methodName": "isCredentialsSupported",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.finalMethodAddedToNonFinalClass",
+    "description": "A final method has been added to an inheritable class.",
+    "newElement": "method boolean akasha.Navigator::isGeolocationSupported()",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.Navigator",
+      "classSimpleName": "Navigator",
+      "elementKind": "method",
+      "methodName": "isGeolocationSupported",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.finalMethodAddedToNonFinalClass",
+    "description": "A final method has been added to an inheritable class.",
     "newElement": "method boolean akasha.Navigator::isGetGamepadsSupported()",
     "classification": {
       "SOURCE": "POTENTIALLY_BREAKING",
@@ -12,6 +60,150 @@
       "classSimpleName": "Navigator",
       "elementKind": "method",
       "methodName": "isGetGamepadsSupported",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.finalMethodAddedToNonFinalClass",
+    "description": "A final method has been added to an inheritable class.",
+    "newElement": "method boolean akasha.Navigator::isMediaDevicesSupported()",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.Navigator",
+      "classSimpleName": "Navigator",
+      "elementKind": "method",
+      "methodName": "isMediaDevicesSupported",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.finalMethodAddedToNonFinalClass",
+    "description": "A final method has been added to an inheritable class.",
+    "newElement": "method boolean akasha.Navigator::isPermissionsSupported()",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.Navigator",
+      "classSimpleName": "Navigator",
+      "elementKind": "method",
+      "methodName": "isPermissionsSupported",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.finalMethodAddedToNonFinalClass",
+    "description": "A final method has been added to an inheritable class.",
+    "newElement": "method boolean akasha.Navigator::isRequestMediaKeySystemAccessSupported()",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.Navigator",
+      "classSimpleName": "Navigator",
+      "elementKind": "method",
+      "methodName": "isRequestMediaKeySystemAccessSupported",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.finalMethodAddedToNonFinalClass",
+    "description": "A final method has been added to an inheritable class.",
+    "newElement": "method boolean akasha.Navigator::isSendBeaconSupported()",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.Navigator",
+      "classSimpleName": "Navigator",
+      "elementKind": "method",
+      "methodName": "isSendBeaconSupported",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.finalMethodAddedToNonFinalClass",
+    "description": "A final method has been added to an inheritable class.",
+    "newElement": "method boolean akasha.Navigator::isServiceWorkerSupported()",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.Navigator",
+      "classSimpleName": "Navigator",
+      "elementKind": "method",
+      "methodName": "isServiceWorkerSupported",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.finalMethodAddedToNonFinalClass",
+    "description": "A final method has been added to an inheritable class.",
+    "newElement": "method boolean akasha.Navigator::isShareSupported()",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.Navigator",
+      "classSimpleName": "Navigator",
+      "elementKind": "method",
+      "methodName": "isShareSupported",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.finalMethodAddedToNonFinalClass",
+    "description": "A final method has been added to an inheritable class.",
+    "newElement": "method boolean akasha.Navigator::isVibrateSupported()",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.Navigator",
+      "classSimpleName": "Navigator",
+      "elementKind": "method",
+      "methodName": "isVibrateSupported",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.finalMethodAddedToNonFinalClass",
+    "description": "A final method has been added to an inheritable class.",
+    "newElement": "method boolean akasha.Navigator::isWakeLockSupported()",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.Navigator",
+      "classSimpleName": "Navigator",
+      "elementKind": "method",
+      "methodName": "isWakeLockSupported",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.finalMethodAddedToNonFinalClass",
+    "description": "A final method has been added to an inheritable class.",
+    "newElement": "method boolean akasha.Navigator::isXrSupported()",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.Navigator",
+      "classSimpleName": "Navigator",
+      "elementKind": "method",
+      "methodName": "isXrSupported",
       "package": "akasha"
     }
   },
