@@ -1,6 +1,8 @@
 # Change Log
 
-### Unreleased
+### [v0.21](https://github.com/akasha/akasha/tree/v0.21) (2021-08-18) · [Full Changelog](https://github.com/spritz/spritz/compare/v0.20...v0.21) · [Source Diff](https://github.com/akasha/akasha-java/compare/v0.20...v0.21)
+
+Changes in this release:
 
 * Fix bug present in `v0.20` where the compile time constants for features associated with operations rather than attributes did not have the compile time properties defined in the gwt variant of the library.
 
