@@ -64,11 +64,9 @@ dictionary IDBIndexParameters2 {
 /**
  * This is a predefined type.
  */
-[Exposed=(Window,Worker)]
 interface IDBIndex {
 };
 
-[Exposed=(Window,Worker)]
 interface IDBObjectStore {
   attribute EventHandler1 handler1;
   attribute EventHandler2 handler2;

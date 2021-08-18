@@ -220,7 +220,6 @@ interface DOMTokenList {
   iterable<DOMString>;
 };
 
-[Exposed=(Window,Worker,AudioWorklet)]
 interface Event {
   const unsigned short AT_TARGET = 2;
   const unsigned short BUBBLING_PHASE = 3;
@@ -252,7 +251,6 @@ interface Event {
   undefined stopPropagation();
 };
 
-[Exposed=(Window,Worker,AudioWorklet)]
 interface EventTarget {
   constructor();
   boolean dispatchEvent( Event event );
@@ -284,7 +282,6 @@ interface MyThingCollection {
 /**
  * A test for a read-only maplike.
  */
-[Exposed=Window]
 interface RTCStatsReport {
   readonly maplike<DOMString, object>;
 };
@@ -293,7 +290,6 @@ interface RTCStatsReport {
  * A test for a read-write maplike.
  * Also uses a value type that has a different boxed type non-boxed type.
  */
-[Exposed=Window]
 interface SomeMapLikeDefiningOverrides {
   maplike<DOMString, long>;
   undefined clear();
@@ -305,7 +301,6 @@ interface SomeMapLikeDefiningOverrides {
  * A test for a read-write maplike.
  * Also uses types that have a different boxed type and non-boxed type.
  */
-[Exposed=Window]
 interface SomeOtherType {
   maplike<long, long>;
 };
@@ -313,7 +308,6 @@ interface SomeOtherType {
 /**
  * A test for a read-only setlike.
  */
-[Exposed=Window]
 interface SomeReadOnlySetLike {
   readonly setlike<DOMString>;
 };
@@ -321,19 +315,16 @@ interface SomeReadOnlySetLike {
 /**
  * A test for a read-write setlike.
  */
-[Exposed=Window]
 interface SomeWriteSetLike {
   setlike<DOMString>;
 };
 
-[Exposed=Window]
 interface SpeechRecognitionErrorEvent : Event {
   readonly attribute DOMString message;
   constructor( DOMString type );
   stringifier DOMString messageDescription();
 };
 
-[Exposed=Window]
 interface Storage {
   readonly attribute unsigned long length;
   undefined clear();

@@ -3,14 +3,14 @@ dictionary PostMessageOptions {
   sequence<object> transfer = [];
 };
 
-[Exposed=(Window,Worker), Serializable, Transferable]
+[Serializable, Transferable]
 interface ImageBitmap {
   readonly attribute unsigned long height;
   readonly attribute unsigned long width;
   undefined close();
 };
 
-[Exposed=(Window,Worker,AudioWorklet), Transferable]
+[Transferable]
 interface MessagePort {
   undefined close();
   undefined postMessage( any message, [Transferable] sequence<object> transfer );

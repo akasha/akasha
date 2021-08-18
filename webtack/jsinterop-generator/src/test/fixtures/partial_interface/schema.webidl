@@ -1,4 +1,3 @@
-[Exposed=Window]
 interface SpeechSynthesis {
   readonly attribute boolean paused;
   readonly attribute boolean pending;
@@ -28,7 +27,6 @@ partial interface Headers {
 /**
  * A test for a read-only maplike.
  */
-[Exposed=Window]
 partial interface RTCStatsReport {
   readonly maplike<DOMString, object>;
 };
@@ -37,7 +35,6 @@ partial interface RTCStatsReport {
  * A test for a read-write maplike.
  * Also uses a value type that has a different boxed type non-boxed type.
  */
-[Exposed=Window]
 partial interface SomeMapLikeDefiningOverrides {
   maplike<DOMString, long>;
   undefined clear();
@@ -49,7 +46,6 @@ partial interface SomeMapLikeDefiningOverrides {
  * A test for a read-write maplike.
  * Also uses types that have a different boxed type and non-boxed type.
  */
-[Exposed=Window]
 partial interface SomeOtherType {
   maplike<long, long>;
 };

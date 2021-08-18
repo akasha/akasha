@@ -316,7 +316,7 @@ dictionary MyDictionary {
   Promise<undefined> voidPromiseValue;
 };
 
-[SecureContext, Exposed=(Window,Worker)]
+[SecureContext]
 interface MyType1 {
   readonly attribute any readonlyAnyValue;
   readonly attribute FrozenArray<boolean> readonlyBooleanFrozenArrayValue;
@@ -386,7 +386,7 @@ interface MyType1 {
   readonly attribute sequence<any> requiredAnySequenceValue;
 };
 
-[SecureContext, Exposed=(Window,Worker)]
+[SecureContext]
 interface MyType2 {
   attribute any anyValue;
   attribute FrozenArray<boolean> booleanFrozenArrayValue;
@@ -463,7 +463,7 @@ interface MyType2 {
   attribute Promise<undefined> voidPromiseValue;
 };
 
-[SecureContext, Exposed=(Window,Worker)]
+[SecureContext]
 interface MyType3 {
   [SequenceType=Iterable]
   sequence<any> anyIterableMethod( [SequenceType=Iterable] sequence<any> v1, optional [SequenceType=Iterable] sequence<any> v2 );
@@ -543,7 +543,7 @@ interface MyType3 {
   Promise<undefined> voidPromiseMethod( Promise<undefined> v1, optional Promise<undefined> v2 );
 };
 
-[SecureContext, Exposed=(Window,Worker)]
+[SecureContext]
 interface MyType4 {
   [SequenceType=Iterable]
   static sequence<any> anyIterableMethod( [SequenceType=Iterable] sequence<any> v1, optional [SequenceType=Iterable] sequence<any> v2 );
@@ -626,7 +626,7 @@ interface MyType4 {
 /**
  * Interface contains static read-only attributes.
  */
-[SecureContext, Exposed=(Window,Worker)]
+[SecureContext]
 interface MyType5 {
   static readonly attribute any readonlyAnyValue;
   static readonly attribute FrozenArray<boolean> readonlyBooleanFrozenArrayValue;
@@ -699,7 +699,7 @@ interface MyType5 {
 /**
  * Interface contains static mutable attributes.
  */
-[SecureContext, Exposed=(Window,Worker)]
+[SecureContext]
 interface MyType6 {
   static attribute any anyValue;
   static attribute FrozenArray<boolean> booleanFrozenArrayValue;
@@ -776,6 +776,6 @@ interface MyType6 {
   static attribute Promise<undefined> voidPromiseValue;
 };
 
-[SecureContext, Exposed=(Window,Worker)]
+[SecureContext]
 interface SomeType {
 };

@@ -9,7 +9,6 @@ callback interface txCallback {
   undefined handleEvent( Event event );
 };
 
-[Exposed=(Window,Worker,AudioWorklet)]
 interface Event {
   constructor();
 };

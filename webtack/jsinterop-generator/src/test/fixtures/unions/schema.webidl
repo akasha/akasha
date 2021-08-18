@@ -52,20 +52,20 @@ dictionary EventListenerOptions {
 interface ArrayBuffer {
 };
 
-[Exposed=Window, SecureContext]
+[SecureContext]
 interface BluetoothRemoteGATTCharacteristic : EventTarget {
   Promise<undefined> writeValue( BufferSource value );
   Promise<undefined> writeValueWithResponse( BufferSource value );
   Promise<undefined> writeValueWithoutResponse( BufferSource value );
 };
 
-[Exposed=Window, SecureContext]
+[SecureContext]
 interface BluetoothRemoteGATTServer {
   Promise<BluetoothRemoteGATTService> getPrimaryService( BluetoothServiceUUID service );
   Promise<sequence<BluetoothRemoteGATTService>> getPrimaryServices( optional BluetoothServiceUUID service );
 };
 
-[Exposed=Window, SecureContext]
+[SecureContext]
 interface BluetoothRemoteGATTService : EventTarget {
   Promise<BluetoothRemoteGATTService> getIncludedService( BluetoothServiceUUID service );
   Promise<sequence<BluetoothRemoteGATTService>> getIncludedServices( optional BluetoothServiceUUID service );

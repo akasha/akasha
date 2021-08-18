@@ -7,7 +7,7 @@ const enum GPUTextureUsageFlags {
   GPUTextureUsage.RENDER_ATTACHMENT
 };
 
-[Exposed=(Window,DedicatedWorker,SharedWorker), JavaSubPackage=req, JavaName=ReadyStateType2b]
+[JavaSubPackage=req, JavaName=ReadyStateType2b]
 const enum ReadyStateType2 {
   XMLHttpRequest2.UNSENT,
   XMLHttpRequest2.OPENED,
@@ -54,7 +54,6 @@ interface KHR_parallel_shader_compile {
   const DOMString NAME = "KHR_parallel_shader_compile";
 };
 
-[Exposed=(Window,DedicatedWorker,SharedWorker)]
 interface XMLHttpRequest {
   const unsigned short DONE = 4;
   const unsigned short HEADERS_RECEIVED = 2;
@@ -83,7 +82,7 @@ interface XMLHttpRequest {
 /**
  * Type and associated const enum is in a separate package.
  */
-[Exposed=(Window,DedicatedWorker,SharedWorker), JavaSubPackage=req, JavaName=XMLHR2]
+[JavaSubPackage=req, JavaName=XMLHR2]
 interface XMLHttpRequest2 {
   const unsigned short DONE = 4;
   const unsigned short HEADERS_RECEIVED = 2;

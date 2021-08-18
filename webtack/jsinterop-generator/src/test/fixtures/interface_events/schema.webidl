@@ -44,7 +44,6 @@ dictionary EventListenerOptions {
 interface Event {
 };
 
-[Exposed=(Window,Worker,AudioWorklet)]
 interface EventTarget {
   constructor();
   undefined addEventListener( DOMString type, EventListener? callback, optional ( AddEventListenerOptions or boolean ) options = {} );

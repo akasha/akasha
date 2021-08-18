@@ -10,7 +10,7 @@ typedef ( DOMString or Blob ) ClipboardItemDataType;
 
 callback ClipboardItemDelayedCallback = ClipboardItemData ();
 
-[Exposed=(Window,Worker), Serializable]
+[Serializable]
 interface Blob {
   readonly attribute DOMString type;
 };

@@ -25,7 +25,6 @@ callback OnActionHandler = undefined ( optional DOMString type );
  *
  * @see <a href="http://example.com/API/NodeFilter">NodeFilter - MDN</a>
  */
-[Exposed=Window]
 callback interface NodeFilter {
   /**
    * Documentation for FILTER_ACCEPT.
@@ -63,7 +62,6 @@ dictionary EventInit {
  *
  * @see <a href="http://example.com/API/Event">Event - MDN</a>
  */
-[Exposed=(Window,Worker,AudioWorklet)]
 interface Event {
   /**
    * Documentation for constant Event.AT_TARGET.

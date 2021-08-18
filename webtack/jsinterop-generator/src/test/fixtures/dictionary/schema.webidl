@@ -58,7 +58,6 @@ dictionary txAuthGenericArg {
   required USVString contentType;
 };
 
-[Exposed=Window]
 interface Storage {
   readonly attribute unsigned long length;
   undefined clear();

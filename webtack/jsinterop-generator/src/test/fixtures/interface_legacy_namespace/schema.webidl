@@ -1,6 +1,5 @@
 typedef ArrayBuffer BufferSource;
 
-[Exposed=(Window,Worker,Worklet)]
 namespace WebAssembly {
   Promise<Module> compile( BufferSource bytes );
 };
@@ -17,7 +16,7 @@ interface ArrayBuffer {
 interface CompileError {
 };
 
-[LegacyNamespace=WebAssembly, Exposed=(Window,Worker,Worklet)]
+[LegacyNamespace=WebAssembly]
 interface Global {
   attribute any value;
   constructor( GlobalDescriptor descriptor, optional any v );

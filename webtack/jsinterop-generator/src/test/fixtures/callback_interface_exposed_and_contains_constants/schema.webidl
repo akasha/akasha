@@ -19,7 +19,6 @@ callback interface NodeFilter {
   unsigned short acceptNode( Node node );
 };
 
-[Exposed=Window]
 interface Node {
   constructor();
 };

@@ -48,7 +48,7 @@ interface Performance {
   long now();
 };
 
-[Exposed=(Window,Worker), LegacyNoInterfaceObject]
+[LegacyNoInterfaceObject]
 interface WEBGL_debug_shaders {
   [NoSideEffects]
   DOMString getTranslatedShaderSource( long shaderId );

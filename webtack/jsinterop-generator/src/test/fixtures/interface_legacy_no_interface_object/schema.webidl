@@ -1,4 +1,4 @@
-[Exposed=Window, LegacyNoInterfaceObject]
+[LegacyNoInterfaceObject]
 interface SpeechSynthesisVoice {
   readonly attribute boolean default;
   readonly attribute DOMString lang;

@@ -19,7 +19,7 @@ namespace Math {
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly">WebAssembly - MDN</a>
  */
-[Exposed=(Window,Worker,Worklet)]
+[Exposed=Window]
 namespace WebAssembly {
   /**
    * The WebAssembly.validate() function validates a given typed array of WebAssembly binary code, returning whether the bytes form a valid wasm module (true) or not (false).
@@ -35,7 +35,7 @@ namespace WebAssembly {
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/console">console - MDN</a>
  */
-[Exposed=(Window,Worker,Worklet)]
+[Exposed=Window]
 namespace console {
   undefined assert( optional boolean condition = false, any... data );
   /**

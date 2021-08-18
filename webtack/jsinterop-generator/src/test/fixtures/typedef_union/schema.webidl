@@ -4,7 +4,7 @@ typedef ( DOMString or Blob ) ClipboardItemDataType;
 
 typedef ( double? or sequence<double?> ) IndexedKeyframeOffsetType;
 
-[Exposed=(Window,Worker), Serializable]
+[Serializable]
 interface Blob {
   readonly attribute DOMString type;
 };
