@@ -6,6 +6,7 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import org.realityforge.webtack.model.tools.spi.Action;
 import org.realityforge.webtack.model.tools.spi.ActionFactory;
 import org.realityforge.webtack.model.tools.spi.Name;
@@ -17,8 +18,10 @@ public final class ClosureActionFactory
 {
   public String outputDirectory;
   public String packageName;
+  @Nullable
   public String globalInterface;
   public List<String> predefinedSymbolCatalogs;
+  @Nullable
   public List<String> additionalExternFragments;
   public boolean generateTypeCatalog = true;
 

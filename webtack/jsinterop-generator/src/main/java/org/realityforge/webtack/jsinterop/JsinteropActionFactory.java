@@ -8,6 +8,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.stream.Stream;
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import javax.lang.model.SourceVersion;
 import org.realityforge.webtack.model.tools.spi.Action;
 import org.realityforge.webtack.model.tools.spi.ActionFactory;
@@ -22,14 +23,17 @@ public final class JsinteropActionFactory
    * The expected consumer of the generate classes. There are slightly different strategies depending on whether
    * the code is being generated for GWT or J2CL consumers.
    */
+  @Nonnull
   public OutputType outputType = OutputType.gwt;
   /**
    * The base directory in which to generate code.
    */
+  @Nullable
   public String outputDirectory;
   /**
    * The base package under which to generate code.
    */
+  @Nullable
   public String packageName;
   /**
    * The global interface expected for generated library.
@@ -41,15 +45,18 @@ public final class JsinteropActionFactory
    * A list of files that list types that are predefined.
    * Each file contains lines of the form: "[idl_type_name]=[qualified java class name]"
    */
+  @Nullable
   public List<String> predefinedTypeMapping;
   /**
    * A list of files that override the name of the generated java class for an idl type.
    * Each file contains lines of the form: "[idl_type_name]=[qualified java class name]"
    */
+  @Nullable
   public List<String> externalTypeMapping;
   /**
    * A list of inherits to add to the generated to the generated gwt module.
    */
+  @Nullable
   public List<String> gwtInherits;
   /**
    * A flag controlling whether java classes are generated that reference
@@ -81,6 +88,7 @@ public final class JsinteropActionFactory
    * A list of files that override the name of closure modules to include in compile test.
    * Each file contains one closure module per lilne
    */
+  @Nullable
   public List<String> extraClosureModulesToRequireInCompileTest;
 
   @Nonnull
