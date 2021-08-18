@@ -1,25 +1,49 @@
 <module>
   <inherits name='jsinterop.base.Base'/>
 
-  <!-- Compile time constant controlling whether the generated code will always assume the Window.gpu attribute is present, always assume the attribute is absent or perform runtime detection -->
+  <!-- Configuration to control whether the code will assume the Window.gpu feature is present, absent or will perform runtime detection -->
   <define-property name='com.example.is__Window_gpu__supported' values='true,false,detect'/>
   <set-property name='com.example.is__Window_gpu__supported' value='detect'/>
 
-  <!-- Compile time constant controlling whether the generated code will always assume the Navigator2.gpu attribute is present, always assume the attribute is absent or perform runtime detection -->
+  <!-- Configuration to control whether the code will assume the Window.getGamepads feature is present, absent or will perform runtime detection -->
+  <define-property name='com.example.is__Window_getGamepads__supported' values='true,false,detect'/>
+  <set-property name='com.example.is__Window_getGamepads__supported' value='detect'/>
+
+  <!-- Configuration to control whether the code will assume the Navigator2.gpu feature is present, absent or will perform runtime detection -->
   <define-property name='com.example.is__Navigator2_WebGPU__supported' values='true,false,detect'/>
   <set-property name='com.example.is__Navigator2_WebGPU__supported' value='detect'/>
 
-  <!-- Compile time constant controlling whether the generated code will always assume the Navigator1.gpu attribute is present, always assume the attribute is absent or perform runtime detection -->
+  <!-- Configuration to control whether the code will assume the Navigator2.getGamepads feature is present, absent or will perform runtime detection -->
+  <define-property name='com.example.is__Navigator2_getGamepads__supported' values='true,false,detect'/>
+  <set-property name='com.example.is__Navigator2_getGamepads__supported' value='detect'/>
+
+  <!-- Configuration to control whether the code will assume the Navigator1.gpu feature is present, absent or will perform runtime detection -->
   <define-property name='com.example.is__Navigator1_gpu__supported' values='true,false,detect'/>
   <set-property name='com.example.is__Navigator1_gpu__supported' value='detect'/>
 
-  <!-- Compile time constant controlling whether the generated code will always assume the Navigator4.gpu attribute is present, always assume the attribute is absent or perform runtime detection -->
+  <!-- Configuration to control whether the code will assume the Navigator1.getGamepads feature is present, absent or will perform runtime detection -->
+  <define-property name='com.example.is__Navigator1_getGamepads__supported' values='true,false,detect'/>
+  <set-property name='com.example.is__Navigator1_getGamepads__supported' value='detect'/>
+
+  <!-- Configuration to control whether the code will assume the Navigator.vibrate feature is present, absent or will perform runtime detection -->
+  <define-property name='com.example.is__Navigator_vibrate__supported' values='true,false,detect'/>
+  <set-property name='com.example.is__Navigator_vibrate__supported' value='detect'/>
+
+  <!-- Configuration to control whether the code will assume the Navigator4.gpu feature is present, absent or will perform runtime detection -->
   <define-property name='com.example.is__Navigator4_WebGPU__supported' values='true,false,detect'/>
   <set-property name='com.example.is__Navigator4_WebGPU__supported' value='detect'/>
 
-  <!-- Compile time constant controlling whether the generated code will always assume the Navigator3.gpu attribute is present, always assume the attribute is absent or perform runtime detection -->
+  <!-- Configuration to control whether the code will assume the Navigator4.getGamepads feature is present, absent or will perform runtime detection -->
+  <define-property name='com.example.is__Navigator4_getGamepads__supported' values='true,false,detect'/>
+  <set-property name='com.example.is__Navigator4_getGamepads__supported' value='detect'/>
+
+  <!-- Configuration to control whether the code will assume the Navigator3.gpu feature is present, absent or will perform runtime detection -->
   <define-property name='com.example.is__Navigator3_gpu__supported' values='true,false,detect'/>
   <set-property name='com.example.is__Navigator3_gpu__supported' value='detect'/>
+
+  <!-- Configuration to control whether the code will assume the Navigator3.getGamepads feature is present, absent or will perform runtime detection -->
+  <define-property name='com.example.is__Navigator3_getGamepads__supported' values='true,false,detect'/>
+  <set-property name='com.example.is__Navigator3_getGamepads__supported' value='detect'/>
 
   <source path=''/>
 </module>

@@ -2,6 +2,8 @@
 
 ### Unreleased
 
+* Fix bug present in `v0.20` where the compile time constants for features associated with operations rather than attributes did not have the compile time properties defined in the gwt variant of the library.
+
 ### [v0.20](https://github.com/akasha/akasha/tree/v0.20) (2021-08-18) · [Full Changelog](https://github.com/spritz/spritz/compare/v0.19...v0.20) · [API Differences](https://akasha.github.io/akasha-java/api-diff/?key=akasha-java&old=0.19&new=0.20) · [Source Diff](https://github.com/akasha/akasha-java/compare/v0.19...v0.20)
 
 The release includes 1 non breaking API change and 14 potentially breaking API changes.

@@ -828,14 +828,30 @@ final class JsinteropAction
     {
       for ( final AttributeMember attribute : definition.getAttributes() )
       {
-        emitOptionalAttributeConfig( sb, definition, attribute );
+        emitOptionalSupportConfig( sb, definition, attribute.getName(), attribute );
+      }
+      for ( final OperationMember operation : definition.getOperations() )
+      {
+        final String operationName = operation.getName();
+        if ( null != operationName )
+        {
+          emitOptionalSupportConfig( sb, definition, operationName, operation );
+        }
       }
     }
     for ( final PartialInterfaceDefinition definition : getSchema().getPartialInterfaces() )
     {
       for ( final AttributeMember attribute : definition.getAttributes() )
       {
-        emitOptionalAttributeConfig( sb, definition, attribute );
+        emitOptionalSupportConfig( sb, definition, attribute.getName(), attribute );
+      }
+      for ( final OperationMember operation : definition.getOperations() )
+      {
+        final String operationName = operation.getName();
+        if ( null != operationName )
+        {
+          emitOptionalSupportConfig( sb, definition, operationName, operation );
+        }
       }
     }
 
@@ -847,18 +863,19 @@ final class JsinteropAction
     writeResourceFile( getMainJavaDirectory(), name + ".gwt.xml", gwtModuleContent.getBytes( StandardCharsets.UTF_8 ) );
   }
 
-  private void emitOptionalAttributeConfig( @Nonnull final StringBuilder sb,
-                                            @Nonnull final Named definition,
-                                            @Nonnull final AttributeMember attribute )
+  private void emitOptionalSupportConfig( @Nonnull final StringBuilder sb,
+                                          @Nonnull final Named definition,
+                                          @Nonnull final String elementName,
+                                          @Nonnull final AttributedNode element )
   {
-    if ( attribute.isNoArgsExtendedAttributePresent( ExtendedAttributes.OPTIONAL_SUPPORT ) ||
-         null != attribute.getIdentValue( ExtendedAttributes.OPTIONAL_SUPPORT ) )
+    if ( element.isNoArgsExtendedAttributePresent( ExtendedAttributes.OPTIONAL_SUPPORT ) ||
+         null != element.getIdentValue( ExtendedAttributes.OPTIONAL_SUPPORT ) )
     {
-      final String name = deriveOptionalSupportCompileConstant( definition, attribute.getName(), attribute );
+      final String name = deriveOptionalSupportCompileConstant( definition, elementName, element );
       sb.append( "\n" );
-      sb.append( "  <!-- Compile time constant controlling whether the generated code will always assume the " )
-        .append( definition.getName() ).append( "." ).append( attribute.getName() )
-        .append( " attribute is present, always assume the attribute is absent or perform runtime detection -->\n" );
+      sb.append( "  <!-- Configuration to control whether the code will assume the " )
+        .append( definition.getName() ).append( "." ).append( elementName )
+        .append( " feature is present, absent or will perform runtime detection -->\n" );
       sb.append( "  <define-property name='" ).append( name ).append( "' values='true,false,detect'/>\n" );
       sb.append( "  <set-property name='" ).append( name ).append( "' value='detect'/>\n" );
     }
