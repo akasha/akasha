@@ -32,7 +32,7 @@ public abstract class Element
   {
     return getExtendedAttributes()
       .stream()
-      .filter( a -> a.getKind() == ExtendedAttribute.Kind.IDENT || a.getKind() == ExtendedAttribute.Kind.IDENT_LIST )
+      .filter( a -> ExtendedAttribute.Kind.IDENT == a.getKind() || ExtendedAttribute.Kind.IDENT_LIST == a.getKind() )
       .anyMatch( a -> a.getName().equals( ExtendedAttributes.EXPOSED ) );
   }
 
