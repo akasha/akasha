@@ -138,6 +138,7 @@ the browser API easier for java developers. A few differences from Elemental2 in
 * WebIDL enumerations are annotated with the `@MagicConstant` annotation when translated to java code. The
   Jetbrains/IntelliJ IDE suite will detect this annotation and allow auto-completion of enumeration values or
   report errors when incorrect values are supplied.
+* Feature detection is baked in and can be done at compile time or at run time. Features that are only available in some browsers or some contexts have an associated method `MyType.isXSupported()` that will return `true` when the feature detection has determined that the `X` feature is present. This feature detection will occur at runtime but the result can be forced to either `true` or `false` by setting a compile time flag (a define in J2CL, a binding property in GWT) named after the feature (i.e. `akasha.is__MyType_x__supported`). For example, the speech synthesis feature is usually accessible from the `window.speechSynthesis` property (or the the `speechSynthesis` property if in the main browser thread). Akasha generates an instance method `isSpeechSynthesisSupported()` on the `Window` type and a static method `WindowGlobal.isSpeechSynthesisSupported()` that can be used to detect whether the feature is enabled.
 * Several other minor usability improvements, particularly with respect to union types.
 
 One of the greatest advantages of Akasha is the ability to quickly generate API for new specifications. First you
