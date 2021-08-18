@@ -1,6 +1,9 @@
 package org.realityforge.webtack.model;
 
 import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import org.realityforge.webtack.model.tools.util.ExtendedAttributes;
@@ -26,6 +29,19 @@ public abstract class Element
   public DocumentationElement getDocumentation()
   {
     return _documentation;
+  }
+
+  @Nonnull
+  public Set<String> getExposureSet()
+  {
+    return getExtendedAttributes()
+      .stream()
+      .filter( a -> ExtendedAttribute.Kind.IDENT == a.getKind() || ExtendedAttribute.Kind.IDENT_LIST == a.getKind() )
+      .filter( a -> a.getName().equals( ExtendedAttributes.EXPOSED ) )
+      .flatMap( a -> ExtendedAttribute.Kind.IDENT == a.getKind() ?
+                     Stream.of( a.getIdent() ) :
+                     a.getIdentList().stream() )
+      .collect( Collectors.toSet() );
   }
 
   public boolean isExposedOnAnyGlobal()
