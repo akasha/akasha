@@ -270,6 +270,7 @@ public abstract class AbstractAction
                        Collections.emptyList() );
       if ( unionType.getMemberTypes().stream().noneMatch( t -> Kind.Promise == t.getKind() ) )
       {
+        // Ensure a Union type is defined as it is referenced from jsinterop
         synthesizeUnionType( unionType );
       }
       return unionType;
