@@ -1,0 +1,8 @@
+AudioWorkletGlobalScope
+DedicatedWorkerGlobalScope
+EventTarget
+ServiceWorkerGlobalScope
+SharedWorkerGlobalScope
+Window
+WorkerGlobalScope
+WorkletGlobalScope

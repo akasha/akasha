@@ -57,6 +57,11 @@ public abstract class AbstractAction
   private final Map<String, UnionType> _unions = new HashMap<>();
   @Nonnull
   private final Set<String> _exposureSet = new HashSet<>();
+  /**
+   * Maps the interface name to the set of ExposureSet keys associated with the interface.
+   */
+  @Nonnull
+  private final Map<String, List<String>> _globalInterfaces = new HashMap<>();
 
   protected AbstractAction( @Nonnull final PipelineContext context,
                             @Nonnull final Path outputDirectory,
@@ -113,6 +118,11 @@ public abstract class AbstractAction
     for ( final InterfaceDefinition definition : schema.getInterfaces() )
     {
       _exposureSet.addAll( definition.getExposureSet() );
+      final List<String> globalInterfaces = definition.getIdentValueOrValues( ExtendedAttributes.GLOBAL );
+      if ( !globalInterfaces.isEmpty() )
+      {
+        _globalInterfaces.put( definition.getName(), globalInterfaces );
+      }
     }
     // Remove any exposures for which we have no corresponding type defined
     _exposureSet.removeIf( globalInterface -> null == schema.findInterfaceByName( globalInterface ) );
@@ -123,6 +133,12 @@ public abstract class AbstractAction
   protected final Set<String> getExposureSet()
   {
     return _exposureSet;
+  }
+
+  @Nonnull
+  protected final Map<String, List<String>> getGlobalInterfaces()
+  {
+    return _globalInterfaces;
   }
 
   @Nonnull

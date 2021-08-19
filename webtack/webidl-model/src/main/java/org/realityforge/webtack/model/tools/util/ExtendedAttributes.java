@@ -27,6 +27,20 @@ public final class ExtendedAttributes
   @Nonnull
   public static final String EXPOSED = "Exposed";
   /**
+   * If the [Global] extended attribute appears on an interface, it indicates that objects implementing this
+   * interface will be used as the global object in a Realm.
+   *
+   * <p>The [Global] extended attribute must either take an identifier or take an identifier list. The global
+   * names for the interface are the identifiers that can be used to reference it in the [Exposed] extended
+   * attribute. A single name can be shared across multiple different global interfaces, allowing an interface
+   * to more easily use [Exposed] to expose itself to all of them at once. For example, "Worker" is used to
+   * refer to several distinct types of threading-related global interfaces.</p>
+   *
+   * @see <a href="https://heycam.github.io/webidl/#Global">Global - WebIDL Specification</a>
+   */
+  @Nonnull
+  public static final String GLOBAL = "Global";
+  /**
    * A attribute applied to no arg constructors that implies special handling by the environment.
    *
    * @see <a href="https://html.spec.whatwg.org/#htmlconstructor">[HTMLConstructor] - HTML Specification</a>

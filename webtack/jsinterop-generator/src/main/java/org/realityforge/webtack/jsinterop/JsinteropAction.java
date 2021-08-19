@@ -87,8 +87,6 @@ final class JsinteropAction
   private final Pattern _linkMatcher = Pattern.compile( "\\{@link ([^ }]*)" );
   @Nonnull
   private final OutputType _outputType;
-  @Nullable
-  private final String _globalInterface;
   @Nonnull
   private final List<String> _gwtInherits;
   private final boolean _generateCompileTest;
@@ -103,7 +101,6 @@ final class JsinteropAction
                    @Nonnull final OutputType outputType,
                    @Nonnull final Path outputDirectory,
                    @Nonnull final String packageName,
-                   @Nullable final String globalInterface,
                    @Nonnull final List<Path> predefinedTypeMappingPaths,
                    @Nonnull final List<Path> externalTypeMappingPaths,
                    @Nonnull final List<Path> extraClosureModulesToRequireInCompileTestPaths,
@@ -120,7 +117,6 @@ final class JsinteropAction
            predefinedTypeMappingPaths,
            externalTypeMappingPaths );
     _outputType = Objects.requireNonNull( outputType );
-    _globalInterface = globalInterface;
     _generateCompileTest = generateCompileTest;
     _gwtInherits = Objects.requireNonNull( gwtInherits );
     _generateTypeMapping = generateTypeMapping;
@@ -256,9 +252,9 @@ final class JsinteropAction
       writeGwtModule();
     }
 
-    if ( null != _globalInterface )
+    for ( final String globalInterface : getGlobalInterfaces().keySet() )
     {
-      generateGlobalType( _globalInterface );
+      generateGlobalType( globalInterface );
     }
     if ( _generateGlobal )
     {
@@ -4331,9 +4327,9 @@ final class JsinteropAction
     schema.getInterfaces().forEach( this::registerDefinition );
     schema.getPartialInterfaces().forEach( this::registerDefinition );
     schema.getNamespaces().forEach( this::registerDefinition );
-    if ( null != _globalInterface )
+    for ( final String globalInterface : getGlobalInterfaces().keySet() )
     {
-      final InterfaceDefinition global = schema.getInterfaceByName( _globalInterface );
+      final InterfaceDefinition global = schema.getInterfaceByName( globalInterface );
       tryRegisterIdlToJavaTypeMapping( "$Global" + global.getName(), deriveJavaType( global, "", "Global" ) );
     }
     if ( _generateGlobal )

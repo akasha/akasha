@@ -36,12 +36,6 @@ public final class JsinteropActionFactory
   @Nullable
   public String packageName;
   /**
-   * The global interface expected for generated library.
-   * If this is specified, then only types that are exposed
-   * on that global interface are present in generated output.
-   */
-  public String globalInterface;
-  /**
    * A list of files that list types that are predefined.
    * Each file contains lines of the form: "[idl_type_name]=[qualified java class name]"
    */
@@ -187,7 +181,6 @@ public final class JsinteropActionFactory
                                 outputType,
                                 Paths.get( outputDirectory ),
                                 packageName,
-                                globalInterface,
                                 predefinedTypeMappingPaths,
                                 externalTypeMappingPaths,
                                 extraClosureModulesToRequireInCompileTestPaths,

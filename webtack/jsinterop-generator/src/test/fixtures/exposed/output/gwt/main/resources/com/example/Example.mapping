@@ -1,0 +1,13 @@
+$GlobalAudioWorkletGlobalScope=com.example.AudioWorkletGlobalScopeGlobal
+$GlobalDedicatedWorkerGlobalScope=com.example.DedicatedWorkerGlobalScopeGlobal
+$GlobalServiceWorkerGlobalScope=com.example.ServiceWorkerGlobalScopeGlobal
+$GlobalSharedWorkerGlobalScope=com.example.SharedWorkerGlobalScopeGlobal
+$GlobalWindow=com.example.WindowGlobal
+AudioWorkletGlobalScope=com.example.AudioWorkletGlobalScope
+DedicatedWorkerGlobalScope=com.example.DedicatedWorkerGlobalScope
+EventTarget=com.example.EventTarget
+ServiceWorkerGlobalScope=com.example.ServiceWorkerGlobalScope
+SharedWorkerGlobalScope=com.example.SharedWorkerGlobalScope
+Window=com.example.Window
+WorkerGlobalScope=com.example.WorkerGlobalScope
+WorkletGlobalScope=com.example.WorkletGlobalScope

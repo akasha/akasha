@@ -128,7 +128,6 @@ public abstract class AbstractTest
                                      @Nonnull final Path commonDirectory,
                                      @Nonnull final WebIDLSchema schema,
                                      @Nonnull final String packageName,
-                                     @Nullable final String globalInterface,
                                      final boolean compileTest,
                                      @Nonnull final ValidatorRuleConfig validator,
                                      @Nonnull final List<String> gwtInherits )
@@ -174,7 +173,6 @@ public abstract class AbstractTest
                                 schema,
                                 OutputType.gwt,
                                 packageName,
-                                globalInterface,
                                 gwtInherits,
                                 compileTest,
                                 gwtOutputDirectory,
@@ -195,7 +193,6 @@ public abstract class AbstractTest
                                 schema,
                                 OutputType.j2cl,
                                 packageName,
-                                globalInterface,
                                 null,
                                 compileTest,
                                 j2clOutputDirectory,
@@ -219,7 +216,6 @@ public abstract class AbstractTest
         performClosureAction( directory,
                               schema,
                               packageName,
-                              globalInterface,
                               j2clOutputDirectory,
                               predefinedTypeCatalogPaths,
                               additionalExternFragmentPaths );
@@ -345,7 +341,6 @@ public abstract class AbstractTest
                                             @Nonnull final WebIDLSchema schema,
                                             @Nonnull final OutputType outputType,
                                             @Nonnull final String packageName,
-                                            @Nullable final String globalInterface,
                                             @Nullable final List<String> gwtInherits,
                                             final boolean compileTest,
                                             @Nonnull final Path outputDirectory,
@@ -357,7 +352,6 @@ public abstract class AbstractTest
     factory.outputType = outputType;
     factory.packageName = packageName;
     factory.generateCompileTest = compileTest;
-    factory.globalInterface = globalInterface;
     factory.gwtInherits = OutputType.gwt == outputType ? gwtInherits : null;
     factory.outputDirectory = outputDirectory.toString();
     factory.predefinedTypeMapping =
@@ -373,7 +367,6 @@ public abstract class AbstractTest
   private Set<Path> performClosureAction( @Nonnull final Path directory,
                                           @Nonnull final WebIDLSchema schema,
                                           @Nonnull final String packageName,
-                                          @Nullable final String globalInterface,
                                           @Nonnull final Path outputDirectory,
                                           @Nonnull final List<Path> predefinedSymbolCatalogPaths,
                                           @Nonnull final List<Path> additionalExternFragmentPaths )
@@ -382,7 +375,6 @@ public abstract class AbstractTest
     final ClosureActionFactory factory = new ClosureActionFactory();
     factory.outputDirectory = outputDirectory.toString();
     factory.packageName = packageName;
-    factory.globalInterface = globalInterface;
     factory.predefinedSymbolCatalogs =
       predefinedSymbolCatalogPaths.stream().map( Path::toString ).collect( Collectors.toList() );
     factory.additionalExternFragments =

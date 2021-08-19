@@ -19,7 +19,6 @@ public final class ClosureActionFactory
   public String outputDirectory;
   public String packageName;
   @Nullable
-  public String globalInterface;
   public List<String> predefinedSymbolCatalogs;
   @Nullable
   public List<String> additionalExternFragments;
@@ -76,7 +75,6 @@ public final class ClosureActionFactory
     return new ClosureAction( context,
                               Paths.get( outputDirectory ),
                               packageName,
-                              globalInterface,
                               predefinedTypeCatalogPaths,
                               additionalExternFragmentsPaths,
                               generateTypeCatalog );

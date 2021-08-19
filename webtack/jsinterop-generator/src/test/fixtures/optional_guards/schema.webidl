@@ -24,7 +24,7 @@ interface Navigator2 {
   sequence<Gamepad?> getGamepads();
 };
 
-[Exposed=Window]
+[Global=Window, Exposed=Window]
 interface Window {
   [OptionalSupport]
   readonly attribute GPU gpu;

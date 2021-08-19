@@ -95,8 +95,6 @@ final class ClosureAction
                    "toSource",
                    "toString",
                    "valueOf" );
-  @Nullable
-  private final String _globalInterface;
   private final boolean _generateTypeCatalog;
   @Nonnull
   private final List<String> _predefinedSymbols = new ArrayList<>();
@@ -108,13 +106,11 @@ final class ClosureAction
   ClosureAction( @Nonnull final PipelineContext context,
                  @Nonnull final Path outputDirectory,
                  @Nonnull final String packageName,
-                 @Nullable final String globalInterface,
                  @Nonnull final List<Path> predefinedTypeCatalogPaths,
                  @Nonnull final List<Path> additionalExternFragmentsPaths,
                  final boolean generateTypeCatalog )
   {
     super( context, outputDirectory, packageName );
-    _globalInterface = globalInterface;
     _generateTypeCatalog = generateTypeCatalog;
     _additionalExternFragmentsPaths = Objects.requireNonNull( additionalExternFragmentsPaths );
     for ( final Path predefinedTypeCatalog : predefinedTypeCatalogPaths )
@@ -221,16 +217,9 @@ final class ClosureAction
         }
       }
 
-      if ( null != _globalInterface )
+      for ( final String globalInterface : getGlobalInterfaces().keySet() )
       {
-        final InterfaceDefinition definition = schema.findInterfaceByName( _globalInterface );
-        if ( null == definition )
-        {
-          throw new IllegalStateException( "Declared globalInterface '" +
-                                           _globalInterface +
-                                           "' does not exist in schema" );
-        }
-        writeGlobalInterface( writer, definition );
+        writeGlobalInterface( writer, schema.getInterfaceByName( globalInterface ) );
       }
 
       for ( final Path path : _additionalExternFragmentsPaths )
