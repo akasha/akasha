@@ -1017,3 +1017,7 @@ partial interface EXT_disjoint_timer_query_webgl2 {
   [JavaOnly]
   const DOMString NAME = "EXT_disjoint_timer_query_webgl2";
 };
+
+partial interface mixin WebGLRenderingContextBase {
+  readonly attribute ( HTMLCanvasElement or OffscreenCanvas ) canvas;
+};

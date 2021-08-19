@@ -1,0 +1,649 @@
+[
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.Client",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.Client",
+      "classSimpleName": "Client",
+      "elementKind": "class",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.Clients",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.Clients",
+      "classSimpleName": "Clients",
+      "elementKind": "class",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.DedicatedWorkerGlobal",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.DedicatedWorkerGlobal",
+      "classSimpleName": "DedicatedWorkerGlobal",
+      "elementKind": "class",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.DedicatedWorkerGlobalScope",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.DedicatedWorkerGlobalScope",
+      "classSimpleName": "DedicatedWorkerGlobalScope",
+      "elementKind": "class",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.ExtendableEvent",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.ExtendableEvent",
+      "classSimpleName": "ExtendableEvent",
+      "elementKind": "class",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.ExtendableMessageEvent",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.ExtendableMessageEvent",
+      "classSimpleName": "ExtendableMessageEvent",
+      "elementKind": "class",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.FetchEvent",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.FetchEvent",
+      "classSimpleName": "FetchEvent",
+      "elementKind": "class",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.FileReaderSync",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.FileReaderSync",
+      "classSimpleName": "FileReaderSync",
+      "elementKind": "class",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.PushEvent",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.PushEvent",
+      "classSimpleName": "PushEvent",
+      "elementKind": "class",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.PushMessageData",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.PushMessageData",
+      "classSimpleName": "PushMessageData",
+      "elementKind": "class",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.PushSubscriptionChangeEvent",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.PushSubscriptionChangeEvent",
+      "classSimpleName": "PushSubscriptionChangeEvent",
+      "elementKind": "class",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.ServiceWorkerGlobal",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.ServiceWorkerGlobal",
+      "classSimpleName": "ServiceWorkerGlobal",
+      "elementKind": "class",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.ServiceWorkerGlobalScope",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.ServiceWorkerGlobalScope",
+      "classSimpleName": "ServiceWorkerGlobalScope",
+      "elementKind": "class",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.SharedWorkerGlobal",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.SharedWorkerGlobal",
+      "classSimpleName": "SharedWorkerGlobal",
+      "elementKind": "class",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.SharedWorkerGlobalScope",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.SharedWorkerGlobalScope",
+      "classSimpleName": "SharedWorkerGlobalScope",
+      "elementKind": "class",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.SyncEvent",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.SyncEvent",
+      "classSimpleName": "SyncEvent",
+      "elementKind": "class",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.WindowClient",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.WindowClient",
+      "classSimpleName": "WindowClient",
+      "elementKind": "class",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.WorkerGlobalScope",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.WorkerGlobalScope",
+      "classSimpleName": "WorkerGlobalScope",
+      "elementKind": "class",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.WorkerLocation",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.WorkerLocation",
+      "classSimpleName": "WorkerLocation",
+      "elementKind": "class",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.WorkerNavigator",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.WorkerNavigator",
+      "classSimpleName": "WorkerNavigator",
+      "elementKind": "class",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.WorkletGlobalScope",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.WorkletGlobalScope",
+      "classSimpleName": "WorkletGlobalScope",
+      "elementKind": "class",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.audio.AudioWorkletGlobal",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.audio.AudioWorkletGlobal",
+      "classSimpleName": "AudioWorkletGlobal",
+      "elementKind": "class",
+      "package": "akasha.audio"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.audio.AudioWorkletGlobalScope",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.audio.AudioWorkletGlobalScope",
+      "classSimpleName": "AudioWorkletGlobalScope",
+      "elementKind": "class",
+      "package": "akasha.audio"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.audio.AudioWorkletProcessor",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.audio.AudioWorkletProcessor",
+      "classSimpleName": "AudioWorkletProcessor",
+      "elementKind": "class",
+      "package": "akasha.audio"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.notifications.NotificationEvent",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.notifications.NotificationEvent",
+      "classSimpleName": "NotificationEvent",
+      "elementKind": "class",
+      "package": "akasha.notifications"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.rtc.RTCIdentityProviderGlobalScope",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.rtc.RTCIdentityProviderGlobalScope",
+      "classSimpleName": "RTCIdentityProviderGlobalScope",
+      "elementKind": "class",
+      "package": "akasha.rtc"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.rtc.RTCIdentityProviderRegistrar",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.rtc.RTCIdentityProviderRegistrar",
+      "classSimpleName": "RTCIdentityProviderRegistrar",
+      "elementKind": "class",
+      "package": "akasha.rtc"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.ClientOrServiceWorkerOrMessagePortUnion",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.ClientOrServiceWorkerOrMessagePortUnion",
+      "classSimpleName": "ClientOrServiceWorkerOrMessagePortUnion",
+      "elementKind": "interface",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.ClientOrUndefinedUnion",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.ClientOrUndefinedUnion",
+      "classSimpleName": "ClientOrUndefinedUnion",
+      "elementKind": "interface",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.ExtendableEventHandler",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.ExtendableEventHandler",
+      "classSimpleName": "ExtendableEventHandler",
+      "elementKind": "interface",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.ExtendableEventListener",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.ExtendableEventListener",
+      "classSimpleName": "ExtendableEventListener",
+      "elementKind": "interface",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.ExtendableMessageEventHandler",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.ExtendableMessageEventHandler",
+      "classSimpleName": "ExtendableMessageEventHandler",
+      "elementKind": "interface",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.ExtendableMessageEventInit",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.ExtendableMessageEventInit",
+      "classSimpleName": "ExtendableMessageEventInit",
+      "elementKind": "interface",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.ExtendableMessageEventListener",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.ExtendableMessageEventListener",
+      "classSimpleName": "ExtendableMessageEventListener",
+      "elementKind": "interface",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.PushEventHandler",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.PushEventHandler",
+      "classSimpleName": "PushEventHandler",
+      "elementKind": "interface",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.PushEventListener",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.PushEventListener",
+      "classSimpleName": "PushEventListener",
+      "elementKind": "interface",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.PushSubscriptionChangeEventHandler",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.PushSubscriptionChangeEventHandler",
+      "classSimpleName": "PushSubscriptionChangeEventHandler",
+      "elementKind": "interface",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.PushSubscriptionChangeEventListener",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.PushSubscriptionChangeEventListener",
+      "classSimpleName": "PushSubscriptionChangeEventListener",
+      "elementKind": "interface",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.audio.AudioWorkletProcessorConstructor",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.audio.AudioWorkletProcessorConstructor",
+      "classSimpleName": "AudioWorkletProcessorConstructor",
+      "elementKind": "interface",
+      "package": "akasha.audio"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.notifications.NotificationEventHandler",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.notifications.NotificationEventHandler",
+      "classSimpleName": "NotificationEventHandler",
+      "elementKind": "interface",
+      "package": "akasha.notifications"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.notifications.NotificationEventListener",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.notifications.NotificationEventListener",
+      "classSimpleName": "NotificationEventListener",
+      "elementKind": "interface",
+      "package": "akasha.notifications"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method akasha.HTMLCanvasElementOrOffscreenCanvasUnion akasha.gl.WebGL2RenderingContext::canvas()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gl.WebGL2RenderingContext",
+      "classSimpleName": "WebGL2RenderingContext",
+      "elementKind": "method",
+      "methodName": "canvas",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method akasha.HTMLCanvasElementOrOffscreenCanvasUnion akasha.gl.WebGLRenderingContext::canvas()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gl.WebGLRenderingContext",
+      "classSimpleName": "WebGLRenderingContext",
+      "elementKind": "method",
+      "methodName": "canvas",
+      "package": "akasha.gl"
+    }
+  }
+]

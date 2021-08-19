@@ -148,6 +148,17 @@
       }
     },
     {
+      "name": "RemoveMember",
+      "description": "The spec defines two attributes with name name in two different exposure sets so we just remove them so it can be re-added",
+      "sourceSelector": "name=webgl1",
+      "config": {
+        "expectedRemoveCount": 2,
+        "elementNamePattern": "^WebGLRenderingContextBase$",
+        "memberNamePattern": "^canvas$",
+        "types": ["mixin"]
+      }
+    },
+    {
       "name": "AddExtendedAttribute",
       "description": "Convert XRWebGLRenderingContext into a marker type",
       "sourceSelector": "name=webxr",
