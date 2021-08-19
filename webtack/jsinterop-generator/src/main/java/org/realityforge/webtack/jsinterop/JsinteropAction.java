@@ -913,8 +913,9 @@ final class JsinteropAction
         //                  .returns( TypeName.BOOLEAN )
         //                  .addStatement( "return ( ($T) this ) instanceof $T", TypeName.OBJECT, javaType )
         //                  .build() );
+        final String typeName = ( (TypeReference) memberType ).getName();
         type.addMethod( MethodSpec
-                          .methodBuilder( "as" + ( (TypeReference) memberType ).getName() )
+                          .methodBuilder( "as" + NamingUtil.uppercaseFirstCharacter( typeName ) )
                           .addAnnotation( JsinteropTypes.JS_OVERLAY )
                           .addModifiers( Modifier.PUBLIC, Modifier.DEFAULT )
                           .returns( javaType )

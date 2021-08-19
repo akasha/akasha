@@ -27,7 +27,7 @@ public interface LongOrTxModeUnion {
   }
 
   @JsOverlay
-  default String astxMode() {
+  default String asTxMode() {
     return Js.cast( this );
   }
 }
