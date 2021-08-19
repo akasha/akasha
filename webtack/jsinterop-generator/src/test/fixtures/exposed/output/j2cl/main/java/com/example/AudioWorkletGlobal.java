@@ -12,8 +12,8 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "goog.global"
 )
-public final class AudioWorkletGlobalScopeGlobal {
-  private AudioWorkletGlobalScopeGlobal() {
+public final class AudioWorkletGlobal {
+  private AudioWorkletGlobal() {
   }
 
   @JsProperty(

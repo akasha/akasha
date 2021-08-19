@@ -10,10 +10,10 @@ import jsinterop.annotations.JsType;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "$wnd"
+    name = "goog.global"
 )
-public final class ServiceWorkerGlobalScopeGlobal {
-  private ServiceWorkerGlobalScopeGlobal() {
+public final class ServiceWorkerGlobal {
+  private ServiceWorkerGlobal() {
   }
 
   @JsProperty(

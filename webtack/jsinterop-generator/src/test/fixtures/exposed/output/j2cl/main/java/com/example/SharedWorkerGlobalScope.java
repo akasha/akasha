@@ -1,7 +1,9 @@
 package com.example;
 
+import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -13,6 +15,18 @@ import jsinterop.annotations.JsType;
     name = "SharedWorkerGlobalScope"
 )
 public class SharedWorkerGlobalScope extends WorkerGlobalScope {
+  /**
+   * Operation appears in Window scope with different typing
+   */
+  @Nullable
+  public MessageEventHandler onmessageerror;
+
+  /**
+   * Operation appears in Window scope with same typing
+   */
+  @Nullable
+  public EventHandler onstuff;
+
   protected SharedWorkerGlobalScope() {
   }
 
@@ -21,4 +35,14 @@ public class SharedWorkerGlobalScope extends WorkerGlobalScope {
   )
   @Nonnull
   public native String sharedWorkerGlobalScopeAttribute();
+
+  /**
+   * Operation also appears in Window scope with same typing
+   */
+  public native int requestAnimationFrame(@DoNotAutobox @Nullable Object callback);
+
+  /**
+   * Operation also appears in Window scope with different typing
+   */
+  public native int requestAnimationFrame2(@Nonnull String callbackId);
 }

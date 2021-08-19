@@ -10,21 +10,21 @@ import jsinterop.annotations.JsType;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "goog.global"
+    name = "$wnd"
 )
-public final class ServiceWorkerGlobalScopeGlobal {
-  private ServiceWorkerGlobalScopeGlobal() {
+public final class AudioWorkletGlobal {
+  private AudioWorkletGlobal() {
   }
 
   @JsProperty(
-      name = "serviceWorkerGlobalScopeAttribute"
+      name = "audioWorkletGlobalScopeAttribute"
   )
   @Nonnull
-  public static native String serviceWorkerGlobalScopeAttribute();
+  public static native String audioWorkletGlobalScopeAttribute();
 
   @JsProperty(
-      name = "workerGlobalScopeAttribute"
+      name = "workletGlobalScopeAttribute"
   )
   @Nonnull
-  public static native String workerGlobalScopeAttribute();
+  public static native String workletGlobalScopeAttribute();
 }

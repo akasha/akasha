@@ -3,12 +3,12 @@ package com.example;
 import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
-public final class ServiceWorkerGlobalScopeGlobalTestCompile {
+public final class ServiceWorkerGlobalTestCompile {
   public static String serviceWorkerGlobalScopeAttribute() {
-    return ServiceWorkerGlobalScopeGlobal.serviceWorkerGlobalScopeAttribute();
+    return ServiceWorkerGlobal.serviceWorkerGlobalScopeAttribute();
   }
 
   public static String workerGlobalScopeAttribute() {
-    return ServiceWorkerGlobalScopeGlobal.workerGlobalScopeAttribute();
+    return ServiceWorkerGlobal.workerGlobalScopeAttribute();
   }
 }

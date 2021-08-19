@@ -10,17 +10,17 @@ import jsinterop.annotations.JsType;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "goog.global"
+    name = "$wnd"
 )
-public final class SharedWorkerGlobalScopeGlobal {
-  private SharedWorkerGlobalScopeGlobal() {
+public final class DedicatedWorkerGlobal {
+  private DedicatedWorkerGlobal() {
   }
 
   @JsProperty(
-      name = "sharedWorkerGlobalScopeAttribute"
+      name = "dedicatedWorkerGlobalScopeAttribute"
   )
   @Nonnull
-  public static native String sharedWorkerGlobalScopeAttribute();
+  public static native String dedicatedWorkerGlobalScopeAttribute();
 
   @JsProperty(
       name = "workerGlobalScopeAttribute"

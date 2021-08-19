@@ -12,15 +12,15 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "$wnd"
 )
-public final class SharedWorkerGlobalScopeGlobal {
-  private SharedWorkerGlobalScopeGlobal() {
+public final class ServiceWorkerGlobal {
+  private ServiceWorkerGlobal() {
   }
 
   @JsProperty(
-      name = "sharedWorkerGlobalScopeAttribute"
+      name = "serviceWorkerGlobalScopeAttribute"
   )
   @Nonnull
-  public static native String sharedWorkerGlobalScopeAttribute();
+  public static native String serviceWorkerGlobalScopeAttribute();
 
   @JsProperty(
       name = "workerGlobalScopeAttribute"

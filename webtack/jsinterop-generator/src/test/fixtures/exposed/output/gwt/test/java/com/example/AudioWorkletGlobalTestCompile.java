@@ -3,12 +3,12 @@ package com.example;
 import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
-public final class AudioWorkletGlobalScopeGlobalTestCompile {
+public final class AudioWorkletGlobalTestCompile {
   public static String audioWorkletGlobalScopeAttribute() {
-    return AudioWorkletGlobalScopeGlobal.audioWorkletGlobalScopeAttribute();
+    return AudioWorkletGlobal.audioWorkletGlobalScopeAttribute();
   }
 
   public static String workletGlobalScopeAttribute() {
-    return AudioWorkletGlobalScopeGlobal.workletGlobalScopeAttribute();
+    return AudioWorkletGlobal.workletGlobalScopeAttribute();
   }
 }

@@ -1,6 +1,11 @@
 AudioWorkletGlobalScope
 DedicatedWorkerGlobalScope
+Event
+EventHandler
 EventTarget
+MessageEvent
+MessageEventHandler
+NullableEventHandler
 ServiceWorkerGlobalScope
 SharedWorkerGlobalScope
 Window

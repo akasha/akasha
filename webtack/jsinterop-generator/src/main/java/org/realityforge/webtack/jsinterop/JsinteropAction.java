@@ -4330,7 +4330,14 @@ final class JsinteropAction
     for ( final String globalInterface : getGlobalInterfaces().keySet() )
     {
       final InterfaceDefinition global = schema.getInterfaceByName( globalInterface );
-      tryRegisterIdlToJavaTypeMapping( "$Global" + global.getName(), deriveJavaType( global, "", "Global" ) );
+      final List<String> exposureSets = global.getExposureSet();
+      if ( 1 != exposureSets.size() )
+      {
+        throw new UnsupportedOperationException( "Global interface " + globalInterface + " is expected to be " +
+                                                 "in a single ExposureSet but is in " + exposureSets );
+      }
+      final String javaName = derivePackagePrefix( global ) + exposureSets.get( 0 ) + "Global";
+      tryRegisterIdlToJavaTypeMapping( "$Global" + global.getName(), javaName );
     }
     if ( _generateGlobal )
     {

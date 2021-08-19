@@ -3,6 +3,18 @@
  * @externs
  */
 /**
+ * @typedef {?EventHandler}
+ */
+var NullableEventHandler;
+/**
+ * @typedef {function(!Event): undefined}
+ */
+var EventHandler;
+/**
+ * @typedef {function(!MessageEvent): undefined}
+ */
+var MessageEventHandler;
+/**
  * @constructor
  * @private
  * @extends {EventTarget}
@@ -10,6 +22,18 @@
  */
 function Window() {}
 /** @type {!string} */ Window.prototype.windowAttribute;
+/** @type {!NullableEventHandler} */ Window.prototype.onmessageerror;
+/** @type {?EventHandler} */ Window.prototype.onstuff;
+/**
+ * @param {*} callback
+ * @return {!number}
+ */
+Window.prototype.requestAnimationFrame = function(callback) {}
+/**
+ * @param {!number} callbackId
+ * @return {!number}
+ */
+Window.prototype.requestAnimationFrame2 = function(callbackId) {}
 /**
  * @constructor
  * @private
@@ -44,6 +68,19 @@ function DedicatedWorkerGlobalScope() {}
 /**
  * @constructor
  * @private
+ * @extends {Event}
+ * @nosideeffects
+ */
+function MessageEvent() {}
+/**
+ * @constructor
+ * @private
+ * @nosideeffects
+ */
+function Event() {}
+/**
+ * @constructor
+ * @private
  * @extends {WorkerGlobalScope}
  * @nosideeffects
  */
@@ -57,6 +94,18 @@ function ServiceWorkerGlobalScope() {}
  */
 function SharedWorkerGlobalScope() {}
 /** @type {!string} */ SharedWorkerGlobalScope.prototype.sharedWorkerGlobalScopeAttribute;
+/** @type {?MessageEventHandler} */ SharedWorkerGlobalScope.prototype.onmessageerror;
+/** @type {?EventHandler} */ SharedWorkerGlobalScope.prototype.onstuff;
+/**
+ * @param {*} callback
+ * @return {!number}
+ */
+SharedWorkerGlobalScope.prototype.requestAnimationFrame = function(callback) {}
+/**
+ * @param {!string} callbackId
+ * @return {!number}
+ */
+SharedWorkerGlobalScope.prototype.requestAnimationFrame2 = function(callbackId) {}
 /**
  * @constructor
  * @private
@@ -64,7 +113,21 @@ function SharedWorkerGlobalScope() {}
  */
 function EventTarget() {}
 /** @type {!string} */ var windowAttribute;
+/** @type {!NullableEventHandler} */ var onmessageerror;
+/** @type {?EventHandler} */ var onstuff;
 /** @type {!string} */ var audioWorkletGlobalScopeAttribute;
 /** @type {!string} */ var dedicatedWorkerGlobalScopeAttribute;
 /** @type {!string} */ var serviceWorkerGlobalScopeAttribute;
 /** @type {!string} */ var sharedWorkerGlobalScopeAttribute;
+/** @type {?MessageEventHandler} */ var onmessageerror;
+/** @type {?EventHandler} */ var onstuff;
+/**
+ * @param {*} arg0
+ * @return {!number}
+ */
+function requestAnimationFrame(arg0) {}
+/**
+ * @param {(!number|!string)} arg0
+ * @return {!number}
+ */
+function requestAnimationFrame2(arg0) {}

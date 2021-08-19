@@ -217,10 +217,24 @@ final class ClosureAction
         }
       }
 
-      for ( final String globalInterface : getGlobalInterfaces().keySet() )
+      final List<InterfaceDefinition> globalInterfaces =
+        getGlobalInterfaces()
+          .keySet()
+          .stream()
+          .map( schema::getInterfaceByName )
+          .collect( Collectors.toList() );
+      final List<ConstMember> constants = new ArrayList<>();
+      final List<AttributeMember> attributes = new ArrayList<>();
+      final List<OperationMember> operations = new ArrayList<>();
+      for ( final InterfaceDefinition globalInterface : globalInterfaces )
       {
-        writeGlobalInterface( writer, schema.getInterfaceByName( globalInterface ) );
+        constants.addAll( globalInterface.getConstants() );
+        attributes.addAll( globalInterface.getAttributes() );
+        operations.addAll( globalInterface.getOperations() );
       }
+      writeConstants( writer, null, constants, true, false );
+      writeAttributes( writer, null, attributes );
+      writeOperations( writer, null, operations, false, name -> false );
 
       for ( final Path path : _additionalExternFragmentsPaths )
       {
@@ -1125,14 +1139,6 @@ final class ClosureAction
         }
       }
     }
-  }
-
-  private void writeGlobalInterface( @Nonnull final Writer writer, @Nonnull final InterfaceDefinition definition )
-    throws IOException
-  {
-    writeConstants( writer, null, definition.getConstants(), true, false );
-    writeAttributes( writer, null, definition.getAttributes() );
-    writeOperations( writer, null, definition.getOperations(), false, name -> false );
   }
 
   private void writeTypeCatalog()
