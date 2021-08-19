@@ -31,4 +31,9 @@ public interface Int32List {
   static Int32List of(@Nonnull final double[] value) {
     return Js.cast( value );
   }
+
+  @JsOverlay
+  default Int32Array asInt32Array() {
+    return Js.cast( this );
+  }
 }

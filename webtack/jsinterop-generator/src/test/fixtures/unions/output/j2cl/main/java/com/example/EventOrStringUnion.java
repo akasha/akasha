@@ -25,4 +25,9 @@ public interface EventOrStringUnion {
   static EventOrStringUnion of(@Nonnull final String value) {
     return Js.cast( value );
   }
+
+  @JsOverlay
+  default Event asEvent() {
+    return Js.cast( this );
+  }
 }

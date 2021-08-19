@@ -85,4 +85,14 @@ public interface BufferSource {
   static BufferSource of(@Nonnull final ArrayBuffer value) {
     return Js.cast( value );
   }
+
+  @JsOverlay
+  default ArrayBufferView asArrayBufferView() {
+    return Js.cast( this );
+  }
+
+  @JsOverlay
+  default ArrayBuffer asArrayBuffer() {
+    return Js.cast( this );
+  }
 }

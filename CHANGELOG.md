@@ -3,6 +3,7 @@
 ### Unreleased
 
 * Generate static types for global execution contexts of a service worker (i.e. `SharedWorkerGlobal`), a worker (i.e. `DedicatedWorkerGlobal`), a shared worker (i.e. `SharedWorkerGlobal`) and audio worklets (i.e. `AudioWorkletGlobal`).
+* Change the way the java binding generates unions so that methods of the form `as[X]()` exist for every component type `X` that is part of the union.
 
 ### [v0.21](https://github.com/akasha/akasha/tree/v0.21) (2021-08-18) · [Full Changelog](https://github.com/spritz/spritz/compare/v0.20...v0.21) · [Source Diff](https://github.com/akasha/akasha-java/compare/v0.20...v0.21)
 

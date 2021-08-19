@@ -900,32 +900,26 @@ final class JsinteropAction
 
     generateUnionOfMethods( idlName, unionType, type );
 
-    // We only ever generate these methods for synthesized return types. It is unclear whether
-    // we should be generating them in other scenarios and whether there would be any value in
-    // that. It is the behaviour of Elemental2 but I have never seen usage of this feature...
-    if ( unionType.isNoArgsExtendedAttributePresent( ExtendedAttributes.SYNTHESIZED_RETURN ) )
+    for ( final Type memberType : unionType.getMemberTypes() )
     {
-      for ( final Type memberType : unionType.getMemberTypes() )
+      final Kind memberTypeKind = memberType.getKind();
+      if ( Kind.TypeReference == memberTypeKind )
       {
-        final Kind memberTypeKind = memberType.getKind();
-        if ( Kind.TypeReference == memberTypeKind )
-        {
-          final TypeName javaType = toTypeName( memberType );
-          //type.addMethod( MethodSpec
-          //                  .methodBuilder( "is" + ( (TypeReference) memberType ).getName() )
-          //                  .addAnnotation( JsinteropTypes.JS_OVERLAY )
-          //                  .addModifiers( Modifier.PUBLIC, Modifier.DEFAULT )
-          //                  .returns( TypeName.BOOLEAN )
-          //                  .addStatement( "return ( ($T) this ) instanceof $T", TypeName.OBJECT, javaType )
-          //                  .build() );
-          type.addMethod( MethodSpec
-                            .methodBuilder( "as" + ( (TypeReference) memberType ).getName() )
-                            .addAnnotation( JsinteropTypes.JS_OVERLAY )
-                            .addModifiers( Modifier.PUBLIC, Modifier.DEFAULT )
-                            .returns( javaType )
-                            .addStatement( "return $T.cast( this )", JsinteropTypes.JS )
-                            .build() );
-        }
+        final TypeName javaType = toTypeName( memberType );
+        //type.addMethod( MethodSpec
+        //                  .methodBuilder( "is" + ( (TypeReference) memberType ).getName() )
+        //                  .addAnnotation( JsinteropTypes.JS_OVERLAY )
+        //                  .addModifiers( Modifier.PUBLIC, Modifier.DEFAULT )
+        //                  .returns( TypeName.BOOLEAN )
+        //                  .addStatement( "return ( ($T) this ) instanceof $T", TypeName.OBJECT, javaType )
+        //                  .build() );
+        type.addMethod( MethodSpec
+                          .methodBuilder( "as" + ( (TypeReference) memberType ).getName() )
+                          .addAnnotation( JsinteropTypes.JS_OVERLAY )
+                          .addModifiers( Modifier.PUBLIC, Modifier.DEFAULT )
+                          .returns( javaType )
+                          .addStatement( "return $T.cast( this )", JsinteropTypes.JS )
+                          .build() );
       }
     }
 
