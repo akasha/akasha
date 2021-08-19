@@ -55,8 +55,6 @@ public abstract class AbstractAction
   private final Set<Path> _generatedFiles = new HashSet<>();
   @Nonnull
   private final Map<String, UnionType> _unions = new HashMap<>();
-  @Nonnull
-  private final Set<String> _exposureSet = new HashSet<>();
   /**
    * Maps the interface name to the set of ExposureSet keys associated with the interface.
    */
@@ -114,25 +112,16 @@ public abstract class AbstractAction
     _generatedFiles.clear();
     _schema = Objects.requireNonNull( schema );
     _unions.clear();
-    _exposureSet.clear();
+    _globalInterfaces.clear();
     for ( final InterfaceDefinition definition : schema.getInterfaces() )
     {
-      _exposureSet.addAll( definition.getExposureSet() );
       final List<String> globalInterfaces = definition.getIdentValueOrValues( ExtendedAttributes.GLOBAL );
       if ( !globalInterfaces.isEmpty() )
       {
         _globalInterfaces.put( definition.getName(), globalInterfaces );
       }
     }
-    // Remove any exposures for which we have no corresponding type defined
-    _exposureSet.removeIf( globalInterface -> null == schema.findInterfaceByName( globalInterface ) );
     schema.link();
-  }
-
-  @Nonnull
-  protected final Set<String> getExposureSet()
-  {
-    return _exposureSet;
   }
 
   @Nonnull
