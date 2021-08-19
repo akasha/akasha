@@ -1680,7 +1680,8 @@ final class JsinteropAction
                       .build() );
 
     generateAttributes( definition, definition.getAttributes(), className, type, testType );
-    definition.getOperations()
+    definition
+      .getOperations()
       .stream()
       .sorted()
       .forEach( operation -> generateOperation( definition,
