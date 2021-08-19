@@ -21,8 +21,7 @@
           "data/pipelines/complete_predefined.mapping"
         ],
         "outputDirectory": "akasha/gwt/generated/webtack",
-        "packageName": "akasha",
-        "globalInterface": "Window"
+        "packageName": "akasha"
       }
     },
     {

@@ -25,8 +25,7 @@
           "data/pipelines/complete_predefined.mapping"
         ],
         "outputDirectory": "akasha/java/generated/webtack",
-        "packageName": "akasha",
-        "globalInterface": "Window"
+        "packageName": "akasha"
       }
     },
     {
@@ -45,8 +44,7 @@
         ],
         "additionalExternFragments": [
           "data/pipelines/complete.externs.js"
-        ],
-        "globalInterface": "Window"
+        ]
       }
     }
   ]

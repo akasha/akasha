@@ -1142,30 +1142,6 @@
       "name": "Flatten"
     },
     {
-      "name": "ExtractExposureSet",
-      "config": {
-        "globalInterface": "Window"
-      }
-    },
-    {
-      "name": "RemoveElement",
-      "description": "The AudioWorkletProcessorConstructor is only used by elements exposed in the AudioWorklet exposure and references interfaces not available in Window exposure",
-      "config": {
-        "expectedRemoveCount": 1,
-        "namePattern": "^AudioWorkletProcessorConstructor$",
-        "type": ["callback"]
-      }
-    },
-    {
-      "name": "RemoveElement",
-      "description": "The ExtendableMessageEventInit is only used by elements exposed in the ServiceWorker exposure and references interfaces not available in Window exposure",
-      "config": {
-        "expectedRemoveCount": 1,
-        "namePattern": "^ExtendableMessageEventInit$",
-        "type": ["dictionary"]
-      }
-    },
-    {
       "name": "Validate"
     },
     {
