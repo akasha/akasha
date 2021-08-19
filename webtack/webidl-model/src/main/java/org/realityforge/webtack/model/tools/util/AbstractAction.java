@@ -17,6 +17,7 @@ import java.util.Set;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import javax.lang.model.SourceVersion;
+import org.realityforge.webtack.model.AttributeMember;
 import org.realityforge.webtack.model.Attributed;
 import org.realityforge.webtack.model.AttributedNode;
 import org.realityforge.webtack.model.DocumentationElement;
@@ -219,6 +220,30 @@ public abstract class AbstractAction
   }
 
   @Nonnull
+  protected final Type deriveAttributeType( @Nonnull final List<AttributeMember> attributes )
+  {
+    final List<Type> types = new ArrayList<>();
+    for ( final AttributeMember attribute : attributes )
+    {
+      maybeAddTypeToList( types, attribute.getType() );
+    }
+    if ( 1 == types.size() )
+    {
+      return types.get( 0 );
+    }
+    else
+    {
+      final ExtendedAttribute extendedAttribute =
+        ExtendedAttribute.createExtendedAttributeNoArgs( ExtendedAttributes.SYNTHESIZED_RETURN,
+                                                         Collections.emptyList() );
+      return new UnionType( types,
+                          Collections.singletonList( extendedAttribute ),
+                          types.stream().anyMatch( Type::isNullable ),
+                          Collections.emptyList() );
+    }
+  }
+
+  @Nonnull
   protected final Type deriveReturnType( @Nonnull final List<OperationMember> operations )
   {
     final List<Type> types = new ArrayList<>();
@@ -250,11 +275,12 @@ public abstract class AbstractAction
     }
     else
     {
+      final ExtendedAttribute extendedAttribute =
+        ExtendedAttribute.createExtendedAttributeNoArgs( ExtendedAttributes.SYNTHESIZED_RETURN,
+                                                         Collections.emptyList() );
       final UnionType unionType =
         new UnionType( types,
-                       Collections.singletonList( ExtendedAttribute.createExtendedAttributeNoArgs(
-                         ExtendedAttributes.SYNTHESIZED_RETURN,
-                         Collections.emptyList() ) ),
+                       Collections.singletonList( extendedAttribute ),
                        types.stream().anyMatch( Type::isNullable ),
                        Collections.emptyList() );
       if ( unionType.getMemberTypes().stream().noneMatch( t -> Kind.Promise == t.getKind() ) )

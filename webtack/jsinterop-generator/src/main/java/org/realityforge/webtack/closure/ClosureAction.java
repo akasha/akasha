@@ -217,24 +217,7 @@ final class ClosureAction
         }
       }
 
-      final List<InterfaceDefinition> globalInterfaces =
-        getGlobalInterfaces()
-          .keySet()
-          .stream()
-          .map( schema::getInterfaceByName )
-          .collect( Collectors.toList() );
-      final List<ConstMember> constants = new ArrayList<>();
-      final List<AttributeMember> attributes = new ArrayList<>();
-      final List<OperationMember> operations = new ArrayList<>();
-      for ( final InterfaceDefinition globalInterface : globalInterfaces )
-      {
-        constants.addAll( globalInterface.getConstants() );
-        attributes.addAll( globalInterface.getAttributes() );
-        operations.addAll( globalInterface.getOperations() );
-      }
-      writeConstants( writer, null, constants, true, false );
-      writeAttributes( writer, null, attributes );
-      writeOperations( writer, null, operations, false, name -> false );
+      writeGlobalInterfaces( writer );
 
       for ( final Path path : _additionalExternFragmentsPaths )
       {
@@ -274,6 +257,48 @@ final class ClosureAction
     {
       writeTypeCatalog();
     }
+  }
+
+  private void writeGlobalInterfaces( @Nonnull final Writer writer )
+    throws IOException
+  {
+    final WebIDLSchema schema = getSchema();
+    final List<InterfaceDefinition> globalInterfaces =
+      getGlobalInterfaces()
+        .keySet()
+        .stream()
+        .map( schema::getInterfaceByName )
+        .collect( Collectors.toList() );
+    final List<ConstMember> constants = new ArrayList<>();
+    final List<AttributeMember> attributes = new ArrayList<>();
+    final List<OperationMember> operations = new ArrayList<>();
+    for ( final InterfaceDefinition globalInterface : globalInterfaces )
+    {
+      constants.addAll( globalInterface.getConstants() );
+      attributes.addAll( globalInterface.getAttributes() );
+      operations.addAll( globalInterface.getOperations() );
+    }
+    writeConstants( writer, null, constants, true, false );
+
+    final Map<String, List<AttributeMember>> attributeMap =
+      attributes
+        .stream()
+        .collect( Collectors.groupingBy( this::toJsName ) );
+    for ( final Map.Entry<String, List<AttributeMember>> entry : attributeMap.entrySet() )
+    {
+      final List<AttributeMember> attributesToMerge = entry.getValue();
+      final AttributeMember templateAttribute = attributesToMerge.get( 0 );
+      if ( isNotExcluded( templateAttribute ) )
+      {
+        writeAttribute( writer,
+                        null,
+                        templateAttribute,
+                        1 == attributesToMerge.size() ?
+                        templateAttribute.getType() :
+                        deriveAttributeType( attributesToMerge ) );
+      }
+    }
+    writeOperations( writer, null, operations, false, name -> false );
   }
 
   private void writeNativeJsIfRequired( @Nonnull final StringBuffer defines,
@@ -1256,6 +1281,15 @@ final class ClosureAction
                                @Nonnull final AttributeMember attribute )
     throws IOException
   {
+    writeAttribute( writer, type, attribute, attribute.getType() );
+  }
+
+  private void writeAttribute( @Nonnull final Writer writer,
+                               @Nullable final String type,
+                               @Nonnull final AttributeMember attribute,
+                               @Nonnull final Type attributeType )
+    throws IOException
+  {
     final String jsSymbolName =
       ( null != type ?
         type + "." + ( attribute.getModifiers().contains( AttributeMember.Modifier.STATIC ) ? "" : "prototype." ) :
@@ -1263,7 +1297,7 @@ final class ClosureAction
     if ( shouldGenerateSymbol( jsSymbolName ) )
     {
       writer.write( "/** @type {" );
-      writeType( writer, attribute.getType(), attribute.getType().isNullable(), true );
+      writeType( writer, attributeType, attributeType.isNullable(), true );
       writer.write( "} */ " );
       if ( null == type )
       {

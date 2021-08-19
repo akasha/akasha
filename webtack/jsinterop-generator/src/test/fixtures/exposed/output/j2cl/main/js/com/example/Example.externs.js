@@ -112,15 +112,13 @@ SharedWorkerGlobalScope.prototype.requestAnimationFrame2 = function(callbackId) 
  * @nosideeffects
  */
 function EventTarget() {}
+/** @type {(!NullableEventHandler|?MessageEventHandler)} */ var onmessageerror;
 /** @type {!string} */ var windowAttribute;
-/** @type {!NullableEventHandler} */ var onmessageerror;
-/** @type {?EventHandler} */ var onstuff;
-/** @type {!string} */ var audioWorkletGlobalScopeAttribute;
-/** @type {!string} */ var dedicatedWorkerGlobalScopeAttribute;
-/** @type {!string} */ var serviceWorkerGlobalScopeAttribute;
 /** @type {!string} */ var sharedWorkerGlobalScopeAttribute;
-/** @type {?MessageEventHandler} */ var onmessageerror;
 /** @type {?EventHandler} */ var onstuff;
+/** @type {!string} */ var dedicatedWorkerGlobalScopeAttribute;
+/** @type {!string} */ var audioWorkletGlobalScopeAttribute;
+/** @type {!string} */ var serviceWorkerGlobalScopeAttribute;
 /**
  * @param {*} arg0
  * @return {!number}
