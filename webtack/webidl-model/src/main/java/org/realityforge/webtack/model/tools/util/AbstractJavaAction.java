@@ -236,8 +236,7 @@ public abstract class AbstractJavaAction
     throws IOException
   {
     final TypeSpec typeSpec = type.build();
-    final String qualifiedName =
-      null != idlName ? _idlToJavaTypeMapping.get( idlName ) : getPackageName() + "." + typeSpec.name;
+    final String qualifiedName = getQualifiedName( idlName, typeSpec.name );
     if ( null == qualifiedName )
     {
       throw new IllegalStateException( "Qualified java name missing for IDL type '" + idlName + "'" );
@@ -248,6 +247,12 @@ public abstract class AbstractJavaAction
       lookupClassName( idlName );
     }
     emitJavaType( getMainJavaDirectory(), typeSpec, qualifiedName );
+  }
+
+  @Nullable
+  protected final String getQualifiedName( @Nullable final String idlName, @Nonnull final String localName )
+  {
+    return null != idlName ? _idlToJavaTypeMapping.get( idlName ) : getPackageName() + "." + localName;
   }
 
   protected void emitJavaType( @Nonnull final Path outputDirectory,
