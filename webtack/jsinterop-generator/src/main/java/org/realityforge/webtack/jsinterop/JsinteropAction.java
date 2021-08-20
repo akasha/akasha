@@ -3434,7 +3434,8 @@ final class JsinteropAction
 
     final MethodSpec.Builder testMethod =
       MethodSpec
-        .methodBuilder( methodName ).addModifiers( Modifier.PUBLIC, Modifier.STATIC );
+        .methodBuilder( methodName )
+        .addModifiers( Modifier.PUBLIC, Modifier.STATIC );
     final DocumentationElement documentation = operation.getDocumentation();
     if ( null != documentation && documentation.hasDeprecatedTag() )
     {
