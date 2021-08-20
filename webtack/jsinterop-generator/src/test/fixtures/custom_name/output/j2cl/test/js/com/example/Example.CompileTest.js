@@ -6,3 +6,4 @@ goog.require('com.example.EventEarTestCompile');
 goog.require('com.example.EventOptions.$Overlay');
 goog.require('com.example.MyEvent.$Overlay');
 goog.require('com.example.MyEventTestCompile');
+goog.require('com.example.StrOrNumberUnionTestCompile');

@@ -10,6 +10,7 @@ goog.require('com.example.Navigator2TestCompile');
 goog.require('com.example.Navigator3TestCompile');
 goog.require('com.example.Navigator4TestCompile');
 goog.require('com.example.NavigatorTestCompile');
+goog.require('com.example.VibratePatternTestCompile');
 goog.require('com.example.Window.$Overlay');
 goog.require('com.example.WindowGlobal.$Overlay');
 goog.require('com.example.WindowGlobalTestCompile');

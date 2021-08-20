@@ -6,6 +6,7 @@ goog.require('com.example.EventInit.$Overlay');
 goog.require('com.example.EventListener.$Overlay');
 goog.require('com.example.EventListenerTestCompile');
 goog.require('com.example.EventTestCompile');
+goog.require('com.example.MyTypedefedUnionTestCompile');
 goog.require('com.example.WebGL2RenderingContext.$Overlay');
 goog.require('com.example.WebGL2RenderingContextTestCompile');
 goog.require('com.example.WebGLShader.$Overlay');

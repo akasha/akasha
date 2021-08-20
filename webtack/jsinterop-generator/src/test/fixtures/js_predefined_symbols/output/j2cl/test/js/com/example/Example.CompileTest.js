@@ -4,6 +4,8 @@ goog.require('com.example.ElementTestCompile');
 goog.require('com.example.EventInit.$Overlay');
 goog.require('com.example.Int32Array.$Overlay');
 goog.require('com.example.Int32ArrayTestCompile');
+goog.require('com.example.Int32List2TestCompile');
+goog.require('com.example.Int32ListTestCompile');
 goog.require('com.example.JSON.$Overlay');
 goog.require('com.example.JSONTestCompile');
 goog.require('com.example.Math.$Overlay');

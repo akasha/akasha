@@ -6,3 +6,4 @@ goog.require('com.example.myinterfaces.Event.$Overlay');
 goog.require('com.example.myinterfaces.EventTestCompile');
 goog.require('com.example.mynamespaces.CSS.$Overlay');
 goog.require('com.example.mynamespaces.CSSTestCompile');
+goog.require('com.example.mytypedefs.MyTypedefedUnionTestCompile');

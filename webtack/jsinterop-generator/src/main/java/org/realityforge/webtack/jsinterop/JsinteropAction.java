@@ -884,6 +884,9 @@ final class JsinteropAction
                               @Nonnull final Collection<ClassName> additionalAnnotations )
     throws IOException
   {
+    final String qualifiedName = getQualifiedName( idlName, javaName );
+    assert null != qualifiedName;
+    final ClassName className = ClassName.bestGuess( qualifiedName );
     final TypeSpec.Builder type =
       TypeSpec
         .interfaceBuilder( javaName )
@@ -896,9 +899,17 @@ final class JsinteropAction
                           .addMember( "name", "$S", OutputType.gwt == _outputType ? "?" : jsName )
                           .build() );
 
+    final String testJavaName = javaName + "TestCompile";
+    final String qualifiedTestName = qualifiedName + "TestCompile";
+    final TypeSpec.Builder testType =
+      TypeSpec
+        .classBuilder( testJavaName )
+        .addModifiers( Modifier.PUBLIC, Modifier.FINAL );
+    writeGeneratedAnnotation( testType );
+
     additionalAnnotations.forEach( type::addAnnotation );
 
-    generateUnionOfMethods( idlName, unionType, type );
+    generateUnionOfMethods( idlName, unionType, type, testType );
 
     for ( final Type memberType : unionType.getMemberTypes() )
     {
@@ -907,24 +918,46 @@ final class JsinteropAction
       {
         final TypeName javaType = toTypeName( memberType );
         final String key = NamingUtil.uppercaseFirstCharacter( ( (TypeReference) memberType ).getName() );
+        final String isMethodName = "is" + key;
         type.addMethod( MethodSpec
-                          .methodBuilder( "is" + key )
+                          .methodBuilder( isMethodName )
                           .addAnnotation( JsinteropTypes.JS_OVERLAY )
                           .addModifiers( Modifier.PUBLIC, Modifier.DEFAULT )
                           .returns( TypeName.BOOLEAN )
                           .addStatement( "return ( ($T) this ) instanceof $T", TypeName.OBJECT, javaType )
                           .build() );
+        testType.addMethod( MethodSpec
+                              .methodBuilder( isMethodName )
+                              .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+                              .returns( TypeName.BOOLEAN )
+                              .addParameter( ParameterSpec.builder( className, "$instance", Modifier.FINAL ).build() )
+                              .addStatement( "return $N.$N()", "$instance", isMethodName )
+                              .build() );
+        final String asMethodName = "as" + key;
         type.addMethod( MethodSpec
-                          .methodBuilder( "as" + key )
+                          .methodBuilder( asMethodName )
                           .addAnnotation( JsinteropTypes.JS_OVERLAY )
                           .addModifiers( Modifier.PUBLIC, Modifier.DEFAULT )
                           .returns( javaType )
                           .addStatement( "return $T.cast( this )", JsinteropTypes.JS )
                           .build() );
+        testType.addMethod( MethodSpec
+                              .methodBuilder( asMethodName )
+                              .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+                              .returns( javaType )
+                              .addParameter( ParameterSpec.builder( className, "$instance", Modifier.FINAL ).build() )
+                              .addStatement( "return $N.$N()", "$instance", asMethodName )
+                              .build() );
       }
     }
 
     writeTopLevelType( idlName, type );
+
+    if ( _generateCompileTest )
+    {
+      emitJavaType( getTestJavaDirectory(), testType.build(), qualifiedTestName );
+      _modulesToRequireInCompileTest.add( qualifiedTestName );
+    }
   }
 
   @Nonnull
@@ -1059,7 +1092,8 @@ final class JsinteropAction
 
   private void generateUnionOfMethods( @Nonnull final String idlName,
                                        @Nonnull final UnionType unionType,
-                                       @Nonnull final TypeSpec.Builder type )
+                                       @Nonnull final TypeSpec.Builder type,
+                                       @Nonnull final TypeSpec.Builder testType )
   {
     final TypeName self = lookupClassName( idlName );
     final List<Type> memberTypes = unionType.getMemberTypes();
@@ -1074,6 +1108,12 @@ final class JsinteropAction
                           .addStatement( "return $T.cast( $T.undefined() )", JsinteropTypes.JS, JsinteropTypes.JS )
                           .returns( self )
                           .build() );
+        testType.addMethod( MethodSpec
+                              .methodBuilder( "of"  )
+                              .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+                              .returns( self )
+                              .addStatement( "return $T.$N()", self, "of" )
+                              .build() );
       }
       else
       {
@@ -1109,7 +1149,15 @@ final class JsinteropAction
                             .addStatement( "return $T.cast( value )", JsinteropTypes.JS )
                             .returns( self )
                             .build() );
-        }
+          testType.addMethod( MethodSpec
+                                .methodBuilder( "of"  )
+                                .addAnnotation( methodNullability )
+                                .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+                                .returns( self )
+                                .addParameter( ParameterSpec.builder( self, "$instance", Modifier.FINAL ).build() )
+                                .addParameter( parameter.build() )
+                                .addStatement( "return $T.$N( $N )", self, "of", "value" )
+                                .build() );        }
       }
     }
   }

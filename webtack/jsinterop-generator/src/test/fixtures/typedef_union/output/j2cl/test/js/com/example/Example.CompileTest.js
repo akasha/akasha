@@ -1,12 +1,15 @@
 goog.module('com.example.ExampleCompileTest');
+goog.require('com.example.ArrayBufferViewTestCompile');
 goog.require('com.example.Blob.$Overlay');
 goog.require('com.example.BlobTestCompile');
+goog.require('com.example.ClipboardItemDataTypeTestCompile');
 goog.require('com.example.DataView.$Overlay');
 goog.require('com.example.DataViewTestCompile');
 goog.require('com.example.Float32Array.$Overlay');
 goog.require('com.example.Float32ArrayTestCompile');
 goog.require('com.example.Float64Array.$Overlay');
 goog.require('com.example.Float64ArrayTestCompile');
+goog.require('com.example.IndexedKeyframeOffsetTypeTestCompile');
 goog.require('com.example.Int16Array.$Overlay');
 goog.require('com.example.Int16ArrayTestCompile');
 goog.require('com.example.Int32Array.$Overlay');

@@ -12,6 +12,7 @@ goog.require('com.example.HTMLSelectElement.$Overlay');
 goog.require('com.example.HTMLSelectElementTestCompile');
 goog.require('com.example.Int32Array.$Overlay');
 goog.require('com.example.Int32ArrayTestCompile');
+goog.require('com.example.Int32ListTestCompile');
 goog.require('com.example.Math.$Overlay');
 goog.require('com.example.MathTestCompile');
 goog.require('com.example.Thing.$Overlay');
