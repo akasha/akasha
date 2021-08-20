@@ -6,6 +6,7 @@ import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
+import jsinterop.base.Js;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -34,7 +35,7 @@ public class AudioNode {
   @JsOverlay
   @Nonnull
   public final AudioNode connect(@Nonnull AudioNode destinationNode, int output, int input) {
-    return _connect( destinationNode, output, input ).asAudioNode();
+    return Js.uncheckedCast( _connect( destinationNode, output, input ) );
   }
 
   @JsMethod(
@@ -53,7 +54,7 @@ public class AudioNode {
   @JsOverlay
   @Nonnull
   public final AudioNode connect(@Nonnull AudioNode destinationNode, int output) {
-    return _connect( destinationNode, output ).asAudioNode();
+    return Js.uncheckedCast( _connect( destinationNode, output ) );
   }
 
   @JsMethod(
@@ -72,7 +73,7 @@ public class AudioNode {
   @JsOverlay
   @Nonnull
   public final AudioNode connect(@Nonnull AudioNode destinationNode) {
-    return _connect( destinationNode ).asAudioNode();
+    return Js.uncheckedCast( _connect( destinationNode ) );
   }
 
   @JsMethod(

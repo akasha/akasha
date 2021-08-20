@@ -3546,6 +3546,22 @@ final class JsinteropAction
       overlayCallStatement.append( "return " );
       testCallStatement.append( "return " );
     }
+    final Type actualReturnType = operation.getReturnType();
+    final Kind kind = actualReturnType.getKind();
+    if ( requireOverlay )
+    {
+      if ( Kind.TypeReference == kind )
+      {
+        overlayCallStatement.append( "$T.uncheckedCast( " );
+        overlayCallArgs.add( JsinteropTypes.JS );
+      }
+      else if ( Kind.Void != kind )
+      {
+        // This scenario does not exist atm so no need to expend effort to support scenario
+        throw new IllegalStateException( "Synthesized union type consisting of more than just " +
+                                         "type references is not supported" );
+      }
+    }
     overlayCallStatement.append( "$N(" );
     overlayCallArgs.add( "_" + methodName );
 
@@ -3585,20 +3601,9 @@ final class JsinteropAction
     overlayCallStatement.append( ")" );
     testCallStatement.append( ")" );
 
-    if ( requireOverlay )
+    if ( requireOverlay && Kind.TypeReference == kind )
     {
-      final Type actualReturnType = operation.getReturnType();
-      final Kind kind = actualReturnType.getKind();
-      if ( Kind.TypeReference == kind )
-      {
-        overlayCallStatement.append( ".as" ).append( ( (TypeReference) actualReturnType ).getName() ).append( "()" );
-      }
-      else if ( Kind.Void != kind )
-      {
-        // This scenario does not exist atm so no need to expend effort to support scenario
-        throw new IllegalStateException( "Synthesized union type consisting of more than just " +
-                                         "type references is not supported" );
-      }
+      overlayCallStatement.append( " )" );
     }
 
     overlayMethod.addStatement( overlayCallStatement.toString(), overlayCallArgs.toArray() );

@@ -7,6 +7,7 @@ import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
+import jsinterop.base.Js;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -34,7 +35,7 @@ public class Document {
   @JsOverlay
   @Nonnull
   public final Document open(@Nonnull String unused1, @Nonnull String unused2) {
-    return _open( unused1, unused2 ).asDocument();
+    return Js.uncheckedCast( _open( unused1, unused2 ) );
   }
 
   @JsMethod(
@@ -53,7 +54,7 @@ public class Document {
   @JsOverlay
   @Nonnull
   public final Document open(@Nonnull String unused1) {
-    return _open( unused1 ).asDocument();
+    return Js.uncheckedCast( _open( unused1 ) );
   }
 
   @JsMethod(
@@ -72,7 +73,7 @@ public class Document {
   @JsOverlay
   @Nonnull
   public final Document open() {
-    return _open().asDocument();
+    return Js.uncheckedCast( _open() );
   }
 
   @JsMethod(
@@ -93,6 +94,6 @@ public class Document {
   @Nullable
   public final WindowProxy open(@Nonnull String url, @Nonnull String name,
       @Nonnull String features) {
-    return _open( url, name, features ).asWindowProxy();
+    return Js.uncheckedCast( _open( url, name, features ) );
   }
 }
