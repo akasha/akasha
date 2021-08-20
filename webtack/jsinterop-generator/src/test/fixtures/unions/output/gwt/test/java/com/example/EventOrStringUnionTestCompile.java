@@ -1,17 +1,14 @@
 package com.example;
 
 import javax.annotation.Generated;
-import javax.annotation.Nonnull;
 
 @Generated("org.realityforge.webtack")
 public final class EventOrStringUnionTestCompile {
-  public static EventOrStringUnion of(final EventOrStringUnion $instance,
-      @Nonnull final Event value) {
+  public static EventOrStringUnion of(final EventOrStringUnion $instance, final Event value) {
     return EventOrStringUnion.of( value );
   }
 
-  public static EventOrStringUnion of(final EventOrStringUnion $instance,
-      @Nonnull final String value) {
+  public static EventOrStringUnion of(final EventOrStringUnion $instance, final String value) {
     return EventOrStringUnion.of( value );
   }
 

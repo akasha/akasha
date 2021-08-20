@@ -1,11 +1,10 @@
 package com.example;
 
 import javax.annotation.Generated;
-import javax.annotation.Nonnull;
 
 @Generated("org.realityforge.webtack")
 public final class MyTypedefedUnionTestCompile {
-  public static MyTypedefedUnion of(final MyTypedefedUnion $instance, @Nonnull final String value) {
+  public static MyTypedefedUnion of(final MyTypedefedUnion $instance, final String value) {
     return MyTypedefedUnion.of( value );
   }
 

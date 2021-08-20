@@ -1188,12 +1188,17 @@ final class JsinteropAction
                             .addStatement( "return $T.cast( value )", JsinteropTypes.JS )
                             .returns( self )
                             .build() );
+          final ParameterSpec.Builder testParameter =
+            ParameterSpec.builder( typedValue.getJavaType(), "value", Modifier.FINAL );
+
+          addMagicConstantAnnotationIfNeeded( typedValue.getType(), testParameter );
+
           testType.addMethod( MethodSpec
                                 .methodBuilder( "of" )
                                 .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
                                 .returns( self )
                                 .addParameter( ParameterSpec.builder( self, "$instance", Modifier.FINAL ).build() )
-                                .addParameter( parameter.build() )
+                                .addParameter( testParameter.build() )
                                 .addStatement( "return $T.$N( $N )", self, "of", "value" )
                                 .build() );
         }

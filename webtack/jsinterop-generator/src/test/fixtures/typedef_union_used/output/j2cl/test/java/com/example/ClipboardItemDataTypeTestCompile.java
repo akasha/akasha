@@ -1,17 +1,15 @@
 package com.example;
 
 import javax.annotation.Generated;
-import javax.annotation.Nonnull;
 
 @Generated("org.realityforge.webtack")
 public final class ClipboardItemDataTypeTestCompile {
   public static ClipboardItemDataType of(final ClipboardItemDataType $instance,
-      @Nonnull final String value) {
+      final String value) {
     return ClipboardItemDataType.of( value );
   }
 
-  public static ClipboardItemDataType of(final ClipboardItemDataType $instance,
-      @Nonnull final Blob value) {
+  public static ClipboardItemDataType of(final ClipboardItemDataType $instance, final Blob value) {
     return ClipboardItemDataType.of( value );
   }
 

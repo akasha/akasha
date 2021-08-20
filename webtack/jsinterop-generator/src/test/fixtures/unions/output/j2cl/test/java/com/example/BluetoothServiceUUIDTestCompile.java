@@ -1,12 +1,10 @@
 package com.example;
 
 import javax.annotation.Generated;
-import javax.annotation.Nonnull;
 
 @Generated("org.realityforge.webtack")
 public final class BluetoothServiceUUIDTestCompile {
-  public static BluetoothServiceUUID of(final BluetoothServiceUUID $instance,
-      @Nonnull final String value) {
+  public static BluetoothServiceUUID of(final BluetoothServiceUUID $instance, final String value) {
     return BluetoothServiceUUID.of( value );
   }
 

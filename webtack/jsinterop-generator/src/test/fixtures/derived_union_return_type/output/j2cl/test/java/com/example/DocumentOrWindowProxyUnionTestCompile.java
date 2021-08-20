@@ -1,18 +1,16 @@
 package com.example;
 
 import javax.annotation.Generated;
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 
 @Generated("org.realityforge.webtack")
 public final class DocumentOrWindowProxyUnionTestCompile {
   public static DocumentOrWindowProxyUnion of(final DocumentOrWindowProxyUnion $instance,
-      @Nonnull final Document value) {
+      final Document value) {
     return DocumentOrWindowProxyUnion.of( value );
   }
 
   public static DocumentOrWindowProxyUnion of(final DocumentOrWindowProxyUnion $instance,
-      @Nullable final WindowProxy value) {
+      final WindowProxy value) {
     return DocumentOrWindowProxyUnion.of( value );
   }
 

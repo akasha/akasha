@@ -1,12 +1,10 @@
 package com.example;
 
 import javax.annotation.Generated;
-import javax.annotation.Nonnull;
 
 @Generated("org.realityforge.webtack")
 public final class StringOrOctetUnionTestCompile {
-  public static StringOrOctetUnion of(final StringOrOctetUnion $instance,
-      @Nonnull final String value) {
+  public static StringOrOctetUnion of(final StringOrOctetUnion $instance, final String value) {
     return StringOrOctetUnion.of( value );
   }
 

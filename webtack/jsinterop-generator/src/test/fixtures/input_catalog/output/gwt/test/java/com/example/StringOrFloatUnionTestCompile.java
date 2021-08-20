@@ -1,12 +1,10 @@
 package com.example;
 
 import javax.annotation.Generated;
-import javax.annotation.Nonnull;
 
 @Generated("org.realityforge.webtack")
 public final class StringOrFloatUnionTestCompile {
-  public static StringOrFloatUnion of(final StringOrFloatUnion $instance,
-      @Nonnull final String value) {
+  public static StringOrFloatUnion of(final StringOrFloatUnion $instance, final String value) {
     return StringOrFloatUnion.of( value );
   }
 

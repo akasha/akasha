@@ -1,11 +1,10 @@
 package com.example;
 
 import javax.annotation.Generated;
-import javax.annotation.Nonnull;
 
 @Generated("org.realityforge.webtack")
 public final class TxCodeTestCompile {
-  public static TxCode of(final TxCode $instance, @Nonnull final String value) {
+  public static TxCode of(final TxCode $instance, final String value) {
     return TxCode.of( value );
   }
 

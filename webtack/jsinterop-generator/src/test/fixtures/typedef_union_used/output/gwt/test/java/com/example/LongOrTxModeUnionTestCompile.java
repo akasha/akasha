@@ -1,7 +1,6 @@
 package com.example;
 
 import javax.annotation.Generated;
-import javax.annotation.Nonnull;
 
 @Generated("org.realityforge.webtack")
 public final class LongOrTxModeUnionTestCompile {
@@ -10,7 +9,7 @@ public final class LongOrTxModeUnionTestCompile {
   }
 
   public static LongOrTxModeUnion of(final LongOrTxModeUnion $instance,
-      @TxMode @Nonnull final String value) {
+      @TxMode final String value) {
     return LongOrTxModeUnion.of( value );
   }
 

@@ -1,12 +1,11 @@
 package com.example;
 
 import javax.annotation.Generated;
-import javax.annotation.Nonnull;
 
 @Generated("org.realityforge.webtack")
 public final class AudioNodeOrUndefinedUnionTestCompile {
   public static AudioNodeOrUndefinedUnion of(final AudioNodeOrUndefinedUnion $instance,
-      @Nonnull final AudioNode value) {
+      final AudioNode value) {
     return AudioNodeOrUndefinedUnion.of( value );
   }
 

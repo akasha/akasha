@@ -1,56 +1,46 @@
 package com.example;
 
 import javax.annotation.Generated;
-import javax.annotation.Nonnull;
 
 @Generated("org.realityforge.webtack")
 public final class ArrayBufferViewTestCompile {
-  public static ArrayBufferView of(final ArrayBufferView $instance,
-      @Nonnull final Int8Array value) {
+  public static ArrayBufferView of(final ArrayBufferView $instance, final Int8Array value) {
     return ArrayBufferView.of( value );
   }
 
-  public static ArrayBufferView of(final ArrayBufferView $instance,
-      @Nonnull final Int16Array value) {
+  public static ArrayBufferView of(final ArrayBufferView $instance, final Int16Array value) {
     return ArrayBufferView.of( value );
   }
 
-  public static ArrayBufferView of(final ArrayBufferView $instance,
-      @Nonnull final Int32Array value) {
+  public static ArrayBufferView of(final ArrayBufferView $instance, final Int32Array value) {
     return ArrayBufferView.of( value );
   }
 
-  public static ArrayBufferView of(final ArrayBufferView $instance,
-      @Nonnull final Uint8Array value) {
+  public static ArrayBufferView of(final ArrayBufferView $instance, final Uint8Array value) {
     return ArrayBufferView.of( value );
   }
 
-  public static ArrayBufferView of(final ArrayBufferView $instance,
-      @Nonnull final Uint16Array value) {
+  public static ArrayBufferView of(final ArrayBufferView $instance, final Uint16Array value) {
     return ArrayBufferView.of( value );
   }
 
-  public static ArrayBufferView of(final ArrayBufferView $instance,
-      @Nonnull final Uint32Array value) {
+  public static ArrayBufferView of(final ArrayBufferView $instance, final Uint32Array value) {
     return ArrayBufferView.of( value );
   }
 
-  public static ArrayBufferView of(final ArrayBufferView $instance,
-      @Nonnull final Uint8ClampedArray value) {
+  public static ArrayBufferView of(final ArrayBufferView $instance, final Uint8ClampedArray value) {
     return ArrayBufferView.of( value );
   }
 
-  public static ArrayBufferView of(final ArrayBufferView $instance,
-      @Nonnull final Float32Array value) {
+  public static ArrayBufferView of(final ArrayBufferView $instance, final Float32Array value) {
     return ArrayBufferView.of( value );
   }
 
-  public static ArrayBufferView of(final ArrayBufferView $instance,
-      @Nonnull final Float64Array value) {
+  public static ArrayBufferView of(final ArrayBufferView $instance, final Float64Array value) {
     return ArrayBufferView.of( value );
   }
 
-  public static ArrayBufferView of(final ArrayBufferView $instance, @Nonnull final DataView value) {
+  public static ArrayBufferView of(final ArrayBufferView $instance, final DataView value) {
     return ArrayBufferView.of( value );
   }
 

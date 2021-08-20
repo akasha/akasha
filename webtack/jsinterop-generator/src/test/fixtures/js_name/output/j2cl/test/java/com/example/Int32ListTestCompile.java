@@ -1,19 +1,18 @@
 package com.example;
 
 import javax.annotation.Generated;
-import javax.annotation.Nonnull;
 
 @Generated("org.realityforge.webtack")
 public final class Int32ListTestCompile {
-  public static Int32List of(final Int32List $instance, @Nonnull final Int32Array value) {
+  public static Int32List of(final Int32List $instance, final Int32Array value) {
     return Int32List.of( value );
   }
 
-  public static Int32List of(final Int32List $instance, @Nonnull final JsArray<Double> value) {
+  public static Int32List of(final Int32List $instance, final JsArray<Double> value) {
     return Int32List.of( value );
   }
 
-  public static Int32List of(final Int32List $instance, @Nonnull final double[] value) {
+  public static Int32List of(final Int32List $instance, final double[] value) {
     return Int32List.of( value );
   }
 

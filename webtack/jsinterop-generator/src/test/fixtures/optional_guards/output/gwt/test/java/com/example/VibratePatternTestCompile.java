@@ -1,7 +1,6 @@
 package com.example;
 
 import javax.annotation.Generated;
-import javax.annotation.Nonnull;
 
 @Generated("org.realityforge.webtack")
 public final class VibratePatternTestCompile {
@@ -9,12 +8,11 @@ public final class VibratePatternTestCompile {
     return VibratePattern.of( value );
   }
 
-  public static VibratePattern of(final VibratePattern $instance,
-      @Nonnull final JsArray<Double> value) {
+  public static VibratePattern of(final VibratePattern $instance, final JsArray<Double> value) {
     return VibratePattern.of( value );
   }
 
-  public static VibratePattern of(final VibratePattern $instance, @Nonnull final double[] value) {
+  public static VibratePattern of(final VibratePattern $instance, final double[] value) {
     return VibratePattern.of( value );
   }
 
