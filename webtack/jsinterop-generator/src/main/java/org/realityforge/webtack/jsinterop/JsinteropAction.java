@@ -1190,7 +1190,6 @@ final class JsinteropAction
                             .build() );
           testType.addMethod( MethodSpec
                                 .methodBuilder( "of" )
-                                .addAnnotation( methodNullability )
                                 .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
                                 .returns( self )
                                 .addParameter( ParameterSpec.builder( self, "$instance", Modifier.FINAL ).build() )

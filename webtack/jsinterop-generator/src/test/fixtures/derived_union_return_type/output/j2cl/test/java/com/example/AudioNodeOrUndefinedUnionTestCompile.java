@@ -5,7 +5,6 @@ import javax.annotation.Nonnull;
 
 @Generated("org.realityforge.webtack")
 public final class AudioNodeOrUndefinedUnionTestCompile {
-  @Nonnull
   public static AudioNodeOrUndefinedUnion of(final AudioNodeOrUndefinedUnion $instance,
       @Nonnull final AudioNode value) {
     return AudioNodeOrUndefinedUnion.of( value );

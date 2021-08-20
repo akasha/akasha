@@ -5,13 +5,11 @@ import javax.annotation.Nonnull;
 
 @Generated("org.realityforge.webtack")
 public final class ClipboardItemDataTypeTestCompile {
-  @Nonnull
   public static ClipboardItemDataType of(final ClipboardItemDataType $instance,
       @Nonnull final String value) {
     return ClipboardItemDataType.of( value );
   }
 
-  @Nonnull
   public static ClipboardItemDataType of(final ClipboardItemDataType $instance,
       @Nonnull final Blob value) {
     return ClipboardItemDataType.of( value );

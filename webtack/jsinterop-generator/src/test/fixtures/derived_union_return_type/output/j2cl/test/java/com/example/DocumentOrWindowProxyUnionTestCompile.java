@@ -6,13 +6,11 @@ import javax.annotation.Nullable;
 
 @Generated("org.realityforge.webtack")
 public final class DocumentOrWindowProxyUnionTestCompile {
-  @Nonnull
   public static DocumentOrWindowProxyUnion of(final DocumentOrWindowProxyUnion $instance,
       @Nonnull final Document value) {
     return DocumentOrWindowProxyUnion.of( value );
   }
 
-  @Nullable
   public static DocumentOrWindowProxyUnion of(final DocumentOrWindowProxyUnion $instance,
       @Nullable final WindowProxy value) {
     return DocumentOrWindowProxyUnion.of( value );

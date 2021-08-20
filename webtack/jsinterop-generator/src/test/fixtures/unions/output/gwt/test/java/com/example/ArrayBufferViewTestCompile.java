@@ -5,61 +5,51 @@ import javax.annotation.Nonnull;
 
 @Generated("org.realityforge.webtack")
 public final class ArrayBufferViewTestCompile {
-  @Nonnull
   public static ArrayBufferView of(final ArrayBufferView $instance,
       @Nonnull final Int8Array value) {
     return ArrayBufferView.of( value );
   }
 
-  @Nonnull
   public static ArrayBufferView of(final ArrayBufferView $instance,
       @Nonnull final Int16Array value) {
     return ArrayBufferView.of( value );
   }
 
-  @Nonnull
   public static ArrayBufferView of(final ArrayBufferView $instance,
       @Nonnull final Int32Array value) {
     return ArrayBufferView.of( value );
   }
 
-  @Nonnull
   public static ArrayBufferView of(final ArrayBufferView $instance,
       @Nonnull final Uint8Array value) {
     return ArrayBufferView.of( value );
   }
 
-  @Nonnull
   public static ArrayBufferView of(final ArrayBufferView $instance,
       @Nonnull final Uint16Array value) {
     return ArrayBufferView.of( value );
   }
 
-  @Nonnull
   public static ArrayBufferView of(final ArrayBufferView $instance,
       @Nonnull final Uint32Array value) {
     return ArrayBufferView.of( value );
   }
 
-  @Nonnull
   public static ArrayBufferView of(final ArrayBufferView $instance,
       @Nonnull final Uint8ClampedArray value) {
     return ArrayBufferView.of( value );
   }
 
-  @Nonnull
   public static ArrayBufferView of(final ArrayBufferView $instance,
       @Nonnull final Float32Array value) {
     return ArrayBufferView.of( value );
   }
 
-  @Nonnull
   public static ArrayBufferView of(final ArrayBufferView $instance,
       @Nonnull final Float64Array value) {
     return ArrayBufferView.of( value );
   }
 
-  @Nonnull
   public static ArrayBufferView of(final ArrayBufferView $instance, @Nonnull final DataView value) {
     return ArrayBufferView.of( value );
   }

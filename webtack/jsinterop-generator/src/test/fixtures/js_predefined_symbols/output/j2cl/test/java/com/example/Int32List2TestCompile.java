@@ -5,17 +5,14 @@ import javax.annotation.Nonnull;
 
 @Generated("org.realityforge.webtack")
 public final class Int32List2TestCompile {
-  @Nonnull
   public static Int32List2 of(final Int32List2 $instance, @Nonnull final Int32Array value) {
     return Int32List2.of( value );
   }
 
-  @Nonnull
   public static Int32List2 of(final Int32List2 $instance, @Nonnull final JsArray<Double> value) {
     return Int32List2.of( value );
   }
 
-  @Nonnull
   public static Int32List2 of(final Int32List2 $instance, @Nonnull final double[] value) {
     return Int32List2.of( value );
   }

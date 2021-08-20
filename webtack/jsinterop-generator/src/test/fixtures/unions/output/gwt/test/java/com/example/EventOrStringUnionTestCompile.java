@@ -5,13 +5,11 @@ import javax.annotation.Nonnull;
 
 @Generated("org.realityforge.webtack")
 public final class EventOrStringUnionTestCompile {
-  @Nonnull
   public static EventOrStringUnion of(final EventOrStringUnion $instance,
       @Nonnull final Event value) {
     return EventOrStringUnion.of( value );
   }
 
-  @Nonnull
   public static EventOrStringUnion of(final EventOrStringUnion $instance,
       @Nonnull final String value) {
     return EventOrStringUnion.of( value );
