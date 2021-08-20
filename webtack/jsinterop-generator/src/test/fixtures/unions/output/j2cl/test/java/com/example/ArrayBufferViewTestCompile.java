@@ -44,14 +44,6 @@ public final class ArrayBufferViewTestCompile {
     return ArrayBufferView.of( value );
   }
 
-  public static boolean isInt8Array(final ArrayBufferView $instance) {
-    return $instance.isInt8Array();
-  }
-
-  public static Int8Array asInt8Array(final ArrayBufferView $instance) {
-    return $instance.asInt8Array();
-  }
-
   public static boolean isInt16Array(final ArrayBufferView $instance) {
     return $instance.isInt16Array();
   }
@@ -68,28 +60,12 @@ public final class ArrayBufferViewTestCompile {
     return $instance.asInt32Array();
   }
 
-  public static boolean isUint8Array(final ArrayBufferView $instance) {
-    return $instance.isUint8Array();
+  public static boolean isInt8Array(final ArrayBufferView $instance) {
+    return $instance.isInt8Array();
   }
 
-  public static Uint8Array asUint8Array(final ArrayBufferView $instance) {
-    return $instance.asUint8Array();
-  }
-
-  public static boolean isUint16Array(final ArrayBufferView $instance) {
-    return $instance.isUint16Array();
-  }
-
-  public static Uint16Array asUint16Array(final ArrayBufferView $instance) {
-    return $instance.asUint16Array();
-  }
-
-  public static boolean isUint32Array(final ArrayBufferView $instance) {
-    return $instance.isUint32Array();
-  }
-
-  public static Uint32Array asUint32Array(final ArrayBufferView $instance) {
-    return $instance.asUint32Array();
+  public static Int8Array asInt8Array(final ArrayBufferView $instance) {
+    return $instance.asInt8Array();
   }
 
   public static boolean isUint8ClampedArray(final ArrayBufferView $instance) {
@@ -122,5 +98,29 @@ public final class ArrayBufferViewTestCompile {
 
   public static DataView asDataView(final ArrayBufferView $instance) {
     return $instance.asDataView();
+  }
+
+  public static boolean isUint8Array(final ArrayBufferView $instance) {
+    return $instance.isUint8Array();
+  }
+
+  public static Uint8Array asUint8Array(final ArrayBufferView $instance) {
+    return $instance.asUint8Array();
+  }
+
+  public static boolean isUint32Array(final ArrayBufferView $instance) {
+    return $instance.isUint32Array();
+  }
+
+  public static Uint32Array asUint32Array(final ArrayBufferView $instance) {
+    return $instance.asUint32Array();
+  }
+
+  public static boolean isUint16Array(final ArrayBufferView $instance) {
+    return $instance.isUint16Array();
+  }
+
+  public static Uint16Array asUint16Array(final ArrayBufferView $instance) {
+    return $instance.asUint16Array();
   }
 }

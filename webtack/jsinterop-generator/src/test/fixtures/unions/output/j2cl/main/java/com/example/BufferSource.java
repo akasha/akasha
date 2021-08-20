@@ -87,22 +87,112 @@ public interface BufferSource {
   }
 
   @JsOverlay
-  default boolean isArrayBufferView() {
-    return ( (Object) this ) instanceof ArrayBufferView;
-  }
-
-  @JsOverlay
-  default ArrayBufferView asArrayBufferView() {
-    return Js.cast( this );
-  }
-
-  @JsOverlay
   default boolean isArrayBuffer() {
     return ( (Object) this ) instanceof ArrayBuffer;
   }
 
   @JsOverlay
   default ArrayBuffer asArrayBuffer() {
+    return Js.cast( this );
+  }
+
+  @JsOverlay
+  default boolean isInt16Array() {
+    return ( (Object) this ) instanceof Int16Array;
+  }
+
+  @JsOverlay
+  default Int16Array asInt16Array() {
+    return Js.cast( this );
+  }
+
+  @JsOverlay
+  default boolean isInt32Array() {
+    return ( (Object) this ) instanceof Int32Array;
+  }
+
+  @JsOverlay
+  default Int32Array asInt32Array() {
+    return Js.cast( this );
+  }
+
+  @JsOverlay
+  default boolean isInt8Array() {
+    return ( (Object) this ) instanceof Int8Array;
+  }
+
+  @JsOverlay
+  default Int8Array asInt8Array() {
+    return Js.cast( this );
+  }
+
+  @JsOverlay
+  default boolean isUint8ClampedArray() {
+    return ( (Object) this ) instanceof Uint8ClampedArray;
+  }
+
+  @JsOverlay
+  default Uint8ClampedArray asUint8ClampedArray() {
+    return Js.cast( this );
+  }
+
+  @JsOverlay
+  default boolean isFloat32Array() {
+    return ( (Object) this ) instanceof Float32Array;
+  }
+
+  @JsOverlay
+  default Float32Array asFloat32Array() {
+    return Js.cast( this );
+  }
+
+  @JsOverlay
+  default boolean isFloat64Array() {
+    return ( (Object) this ) instanceof Float64Array;
+  }
+
+  @JsOverlay
+  default Float64Array asFloat64Array() {
+    return Js.cast( this );
+  }
+
+  @JsOverlay
+  default boolean isDataView() {
+    return ( (Object) this ) instanceof DataView;
+  }
+
+  @JsOverlay
+  default DataView asDataView() {
+    return Js.cast( this );
+  }
+
+  @JsOverlay
+  default boolean isUint8Array() {
+    return ( (Object) this ) instanceof Uint8Array;
+  }
+
+  @JsOverlay
+  default Uint8Array asUint8Array() {
+    return Js.cast( this );
+  }
+
+  @JsOverlay
+  default boolean isUint32Array() {
+    return ( (Object) this ) instanceof Uint32Array;
+  }
+
+  @JsOverlay
+  default Uint32Array asUint32Array() {
+    return Js.cast( this );
+  }
+
+  @JsOverlay
+  default boolean isUint16Array() {
+    return ( (Object) this ) instanceof Uint16Array;
+  }
+
+  @JsOverlay
+  default Uint16Array asUint16Array() {
     return Js.cast( this );
   }
 }

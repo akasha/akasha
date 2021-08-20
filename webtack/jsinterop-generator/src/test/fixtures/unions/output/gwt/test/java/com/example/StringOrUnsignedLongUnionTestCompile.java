@@ -14,19 +14,19 @@ public final class StringOrUnsignedLongUnionTestCompile {
     return StringOrUnsignedLongUnion.of( value );
   }
 
-  public static boolean isString(final StringOrUnsignedLongUnion $instance) {
-    return $instance.isString();
-  }
-
-  public static String asString(final StringOrUnsignedLongUnion $instance) {
-    return $instance.asString();
-  }
-
   public static boolean isInt(final StringOrUnsignedLongUnion $instance) {
     return $instance.isInt();
   }
 
   public static int asInt(final StringOrUnsignedLongUnion $instance) {
     return $instance.asInt();
+  }
+
+  public static boolean isString(final StringOrUnsignedLongUnion $instance) {
+    return $instance.isString();
+  }
+
+  public static String asString(final StringOrUnsignedLongUnion $instance) {
+    return $instance.asString();
   }
 }

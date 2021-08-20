@@ -12,19 +12,19 @@ public final class StrOrNumberUnionTestCompile {
     return StrOrNumberUnion.of( value );
   }
 
-  public static boolean isString(final StrOrNumberUnion $instance) {
-    return $instance.isString();
-  }
-
-  public static String asString(final StrOrNumberUnion $instance) {
-    return $instance.asString();
-  }
-
   public static boolean isDouble(final StrOrNumberUnion $instance) {
     return $instance.isDouble();
   }
 
   public static double asDouble(final StrOrNumberUnion $instance) {
     return $instance.asDouble();
+  }
+
+  public static boolean isString(final StrOrNumberUnion $instance) {
+    return $instance.isString();
+  }
+
+  public static String asString(final StrOrNumberUnion $instance) {
+    return $instance.asString();
   }
 }

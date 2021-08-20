@@ -911,7 +911,14 @@ final class JsinteropAction
 
     generateUnionOfMethods( idlName, unionType, type, testType );
 
-    for ( final Type memberType : unionType.getMemberTypes() )
+    final List<Type> types =
+      toComponentTypes( unionType )
+        .stream()
+        .sorted( Comparator.comparing( Type::getKind ) )
+        .distinct()
+        .collect( Collectors.toList() );
+
+    for ( final Type memberType : types )
     {
       final Kind memberTypeKind = memberType.getKind();
       final TypeName javaType = toTypeName( memberType );
@@ -996,6 +1003,43 @@ final class JsinteropAction
     {
       emitJavaType( getTestJavaDirectory(), testType.build(), qualifiedTestName );
       _modulesToRequireInCompileTest.add( qualifiedTestName );
+    }
+  }
+
+  @Nonnull
+  private Set<Type> toComponentTypes( @Nonnull final UnionType unionType )
+  {
+    final Set<Type> results = new HashSet<>();
+    collectComponentTypes( results, unionType );
+    return results;
+  }
+
+  private void collectComponentTypes( @Nonnull final Set<Type> results, @Nonnull final Type type )
+  {
+    if ( Kind.Union == type.getKind() )
+    {
+      for ( final Type memberType : ( (UnionType) type ).getMemberTypes() )
+      {
+        collectComponentTypes( results, memberType );
+      }
+    }
+    else if ( Kind.TypeReference == type.getKind() )
+    {
+      final String name = ( (TypeReference) type ).getName();
+      final WebIDLSchema schema = getSchema();
+      final TypedefDefinition typedef = schema.findTypedefByName( name );
+      if ( null != typedef )
+      {
+        collectComponentTypes( results, typedef.getType() );
+      }
+      else
+      {
+        results.add( type );
+      }
+    }
+    else
+    {
+      results.add( type );
     }
   }
 
