@@ -906,16 +906,16 @@ final class JsinteropAction
       if ( Kind.TypeReference == memberTypeKind )
       {
         final TypeName javaType = toTypeName( memberType );
-        //type.addMethod( MethodSpec
-        //                  .methodBuilder( "is" + ( (TypeReference) memberType ).getName() )
-        //                  .addAnnotation( JsinteropTypes.JS_OVERLAY )
-        //                  .addModifiers( Modifier.PUBLIC, Modifier.DEFAULT )
-        //                  .returns( TypeName.BOOLEAN )
-        //                  .addStatement( "return ( ($T) this ) instanceof $T", TypeName.OBJECT, javaType )
-        //                  .build() );
-        final String typeName = ( (TypeReference) memberType ).getName();
+        final String key = NamingUtil.uppercaseFirstCharacter( ( (TypeReference) memberType ).getName() );
         type.addMethod( MethodSpec
-                          .methodBuilder( "as" + NamingUtil.uppercaseFirstCharacter( typeName ) )
+                          .methodBuilder( "is" + key )
+                          .addAnnotation( JsinteropTypes.JS_OVERLAY )
+                          .addModifiers( Modifier.PUBLIC, Modifier.DEFAULT )
+                          .returns( TypeName.BOOLEAN )
+                          .addStatement( "return ( ($T) this ) instanceof $T", TypeName.OBJECT, javaType )
+                          .build() );
+        type.addMethod( MethodSpec
+                          .methodBuilder( "as" + key )
                           .addAnnotation( JsinteropTypes.JS_OVERLAY )
                           .addModifiers( Modifier.PUBLIC, Modifier.DEFAULT )
                           .returns( javaType )

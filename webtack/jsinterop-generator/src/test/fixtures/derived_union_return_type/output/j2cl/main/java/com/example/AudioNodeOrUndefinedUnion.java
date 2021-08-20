@@ -26,6 +26,11 @@ public interface AudioNodeOrUndefinedUnion {
   }
 
   @JsOverlay
+  default boolean isAudioNode() {
+    return ( (Object) this ) instanceof AudioNode;
+  }
+
+  @JsOverlay
   default AudioNode asAudioNode() {
     return Js.cast( this );
   }

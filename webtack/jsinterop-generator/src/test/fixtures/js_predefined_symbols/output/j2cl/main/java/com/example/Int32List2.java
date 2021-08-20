@@ -33,6 +33,11 @@ public interface Int32List2 {
   }
 
   @JsOverlay
+  default boolean isInt32Array() {
+    return ( (Object) this ) instanceof Int32Array;
+  }
+
+  @JsOverlay
   default Int32Array asInt32Array() {
     return Js.cast( this );
   }

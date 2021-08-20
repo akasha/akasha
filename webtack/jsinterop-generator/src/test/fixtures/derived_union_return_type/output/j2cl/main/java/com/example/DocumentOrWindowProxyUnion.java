@@ -28,8 +28,18 @@ public interface DocumentOrWindowProxyUnion {
   }
 
   @JsOverlay
+  default boolean isDocument() {
+    return ( (Object) this ) instanceof Document;
+  }
+
+  @JsOverlay
   default Document asDocument() {
     return Js.cast( this );
+  }
+
+  @JsOverlay
+  default boolean isWindowProxy() {
+    return ( (Object) this ) instanceof WindowProxy;
   }
 
   @JsOverlay

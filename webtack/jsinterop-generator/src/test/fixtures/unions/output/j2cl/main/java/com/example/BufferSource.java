@@ -87,8 +87,18 @@ public interface BufferSource {
   }
 
   @JsOverlay
+  default boolean isArrayBufferView() {
+    return ( (Object) this ) instanceof ArrayBufferView;
+  }
+
+  @JsOverlay
   default ArrayBufferView asArrayBufferView() {
     return Js.cast( this );
+  }
+
+  @JsOverlay
+  default boolean isArrayBuffer() {
+    return ( (Object) this ) instanceof ArrayBuffer;
   }
 
   @JsOverlay

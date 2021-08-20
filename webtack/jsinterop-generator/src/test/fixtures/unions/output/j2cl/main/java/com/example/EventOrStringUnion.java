@@ -27,6 +27,11 @@ public interface EventOrStringUnion {
   }
 
   @JsOverlay
+  default boolean isEvent() {
+    return ( (Object) this ) instanceof Event;
+  }
+
+  @JsOverlay
   default Event asEvent() {
     return Js.cast( this );
   }

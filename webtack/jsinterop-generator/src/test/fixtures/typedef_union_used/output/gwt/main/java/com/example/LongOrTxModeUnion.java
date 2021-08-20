@@ -27,6 +27,11 @@ public interface LongOrTxModeUnion {
   }
 
   @JsOverlay
+  default boolean isTxMode() {
+    return ( (Object) this ) instanceof String;
+  }
+
+  @JsOverlay
   default String asTxMode() {
     return Js.cast( this );
   }
