@@ -35,4 +35,14 @@ public interface EventOrStringUnion {
   default Event asEvent() {
     return Js.cast( this );
   }
+
+  @JsOverlay
+  default boolean isString() {
+    return ( (Object) this ) instanceof String;
+  }
+
+  @JsOverlay
+  default String asString() {
+    return Js.cast( this );
+  }
 }

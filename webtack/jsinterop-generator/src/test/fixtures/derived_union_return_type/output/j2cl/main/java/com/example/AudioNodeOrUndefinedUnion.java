@@ -34,4 +34,9 @@ public interface AudioNodeOrUndefinedUnion {
   default AudioNode asAudioNode() {
     return Js.cast( this );
   }
+
+  @JsOverlay
+  default boolean isVoid() {
+    return Js.isTripleEqual( Js.undefined(), this );
+  }
 }

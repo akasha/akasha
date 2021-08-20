@@ -17,6 +17,14 @@ public final class ClipboardItemDataTypeTestCompile {
     return ClipboardItemDataType.of( value );
   }
 
+  public static boolean isString(final ClipboardItemDataType $instance) {
+    return $instance.isString();
+  }
+
+  public static String asString(final ClipboardItemDataType $instance) {
+    return $instance.asString();
+  }
+
   public static boolean isBlob(final ClipboardItemDataType $instance) {
     return $instance.isBlob();
   }

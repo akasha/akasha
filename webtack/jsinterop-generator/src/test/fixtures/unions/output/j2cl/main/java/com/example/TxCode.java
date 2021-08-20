@@ -25,4 +25,24 @@ public interface TxCode {
   static TxCode of(final int value) {
     return Js.cast( value );
   }
+
+  @JsOverlay
+  default boolean isString() {
+    return ( (Object) this ) instanceof String;
+  }
+
+  @JsOverlay
+  default String asString() {
+    return Js.cast( this );
+  }
+
+  @JsOverlay
+  default boolean isInt() {
+    return ( (Object) this ) instanceof Double;
+  }
+
+  @JsOverlay
+  default int asInt() {
+    return Js.cast( this );
+  }
 }

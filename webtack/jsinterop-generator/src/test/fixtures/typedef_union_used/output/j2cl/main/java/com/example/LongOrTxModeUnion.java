@@ -27,6 +27,16 @@ public interface LongOrTxModeUnion {
   }
 
   @JsOverlay
+  default boolean isInt() {
+    return ( (Object) this ) instanceof Double;
+  }
+
+  @JsOverlay
+  default int asInt() {
+    return Js.cast( this );
+  }
+
+  @JsOverlay
   default boolean isTxMode() {
     return ( (Object) this ) instanceof String;
   }

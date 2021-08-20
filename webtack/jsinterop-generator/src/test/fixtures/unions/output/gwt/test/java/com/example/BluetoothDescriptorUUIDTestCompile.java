@@ -16,4 +16,20 @@ public final class BluetoothDescriptorUUIDTestCompile {
       final int value) {
     return BluetoothDescriptorUUID.of( value );
   }
+
+  public static boolean isString(final BluetoothDescriptorUUID $instance) {
+    return $instance.isString();
+  }
+
+  public static String asString(final BluetoothDescriptorUUID $instance) {
+    return $instance.asString();
+  }
+
+  public static boolean isInt(final BluetoothDescriptorUUID $instance) {
+    return $instance.isInt();
+  }
+
+  public static int asInt(final BluetoothDescriptorUUID $instance) {
+    return $instance.asInt();
+  }
 }

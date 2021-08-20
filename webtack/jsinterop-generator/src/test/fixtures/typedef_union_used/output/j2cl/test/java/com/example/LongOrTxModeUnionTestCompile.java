@@ -16,6 +16,14 @@ public final class LongOrTxModeUnionTestCompile {
     return LongOrTxModeUnion.of( value );
   }
 
+  public static boolean isInt(final LongOrTxModeUnion $instance) {
+    return $instance.isInt();
+  }
+
+  public static int asInt(final LongOrTxModeUnion $instance) {
+    return $instance.asInt();
+  }
+
   public static boolean isTxMode(final LongOrTxModeUnion $instance) {
     return $instance.isTxMode();
   }

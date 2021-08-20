@@ -25,4 +25,24 @@ public interface StringOrFloatUnion {
   static StringOrFloatUnion of(final float value) {
     return Js.cast( value );
   }
+
+  @JsOverlay
+  default boolean isString() {
+    return ( (Object) this ) instanceof String;
+  }
+
+  @JsOverlay
+  default String asString() {
+    return Js.cast( this );
+  }
+
+  @JsOverlay
+  default boolean isFloat() {
+    return ( (Object) this ) instanceof Double;
+  }
+
+  @JsOverlay
+  default float asFloat() {
+    return Js.cast( this );
+  }
 }

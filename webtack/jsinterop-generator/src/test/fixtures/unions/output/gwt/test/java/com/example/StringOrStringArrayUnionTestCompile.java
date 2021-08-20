@@ -22,4 +22,20 @@ public final class StringOrStringArrayUnionTestCompile {
       @Nonnull final String[] value) {
     return StringOrStringArrayUnion.of( value );
   }
+
+  public static boolean isString(final StringOrStringArrayUnion $instance) {
+    return $instance.isString();
+  }
+
+  public static String asString(final StringOrStringArrayUnion $instance) {
+    return $instance.asString();
+  }
+
+  public static boolean isArray(final StringOrStringArrayUnion $instance) {
+    return $instance.isArray();
+  }
+
+  public static JsArray<String> asArray(final StringOrStringArrayUnion $instance) {
+    return $instance.asArray();
+  }
 }

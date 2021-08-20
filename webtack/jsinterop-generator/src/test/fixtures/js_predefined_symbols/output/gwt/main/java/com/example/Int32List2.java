@@ -41,4 +41,14 @@ public interface Int32List2 {
   default Int32Array asInt32Array() {
     return Js.cast( this );
   }
+
+  @JsOverlay
+  default boolean isArray() {
+    return ( (Object) this ) instanceof JsArray;
+  }
+
+  @JsOverlay
+  default JsArray<Double> asArray() {
+    return Js.cast( this );
+  }
 }

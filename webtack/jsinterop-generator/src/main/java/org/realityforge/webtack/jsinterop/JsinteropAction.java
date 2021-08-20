@@ -914,25 +914,64 @@ final class JsinteropAction
     for ( final Type memberType : unionType.getMemberTypes() )
     {
       final Kind memberTypeKind = memberType.getKind();
-      if ( Kind.TypeReference == memberTypeKind )
+      final TypeName javaType = toTypeName( memberType );
+      final String key =
+        Kind.TypeReference == memberTypeKind ?
+        NamingUtil.uppercaseFirstCharacter( ( (TypeReference) memberType ).getName() ) :
+        memberTypeKind.isString() ? "String" :
+        memberTypeKind.isPrimitive() ? NamingUtil.uppercaseFirstCharacter( javaType.unbox().toString() ) :
+        Kind.Sequence == memberTypeKind ? "Array" :
+        Kind.Object == memberTypeKind ? "Object" :
+        Kind.Record == memberTypeKind ? "PropertyMap" :
+        memberTypeKind.name();
+      final String isMethodName = "is" + key;
+      final MethodSpec.Builder isMethod =
+        MethodSpec
+          .methodBuilder( isMethodName )
+          .addAnnotation( JsinteropTypes.JS_OVERLAY )
+          .addModifiers( Modifier.PUBLIC, Modifier.DEFAULT )
+          .returns( TypeName.BOOLEAN );
+      if ( Kind.Void == memberTypeKind )
       {
-        final TypeName javaType = toTypeName( memberType );
-        final String key = NamingUtil.uppercaseFirstCharacter( ( (TypeReference) memberType ).getName() );
-        final String isMethodName = "is" + key;
-        type.addMethod( MethodSpec
-                          .methodBuilder( isMethodName )
-                          .addAnnotation( JsinteropTypes.JS_OVERLAY )
-                          .addModifiers( Modifier.PUBLIC, Modifier.DEFAULT )
-                          .returns( TypeName.BOOLEAN )
-                          .addStatement( "return ( ($T) this ) instanceof $T", TypeName.OBJECT, javaType )
-                          .build() );
-        testType.addMethod( MethodSpec
-                              .methodBuilder( isMethodName )
-                              .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
-                              .returns( TypeName.BOOLEAN )
-                              .addParameter( ParameterSpec.builder( className, "$instance", Modifier.FINAL ).build() )
-                              .addStatement( "return $N.$N()", "$instance", isMethodName )
-                              .build() );
+        isMethod.addStatement( "return $T.isTripleEqual( $T.undefined(), this )",
+                               JsinteropTypes.JS,
+                               JsinteropTypes.JS );
+      }
+      else if ( Kind.TypeReference == memberTypeKind ||
+                memberTypeKind.isPrimitive() ||
+                memberTypeKind.isString() )
+      {
+        isMethod.addStatement( "return ( ($T) this ) instanceof $T",
+                               TypeName.OBJECT,
+                               toTypeName( memberType, true ) );
+      }
+      else if ( Kind.Sequence == memberTypeKind )
+      {
+        isMethod.addStatement( "return ( ($T) this ) instanceof $T",
+                               TypeName.OBJECT,
+                               lookupClassName( Kind.Sequence.name() ) );
+      }
+      else if ( Kind.Object == memberTypeKind || Kind.Record == memberTypeKind )
+      {
+        isMethod.addStatement( "return ( ($T) this ) instanceof $T",
+                               TypeName.OBJECT,
+                               lookupClassName( Kind.Object.name() ) );
+      }
+      else
+      {
+        throw new UnsupportedOperationException( "Union contains member type of " + memberTypeKind +
+                                                 " which is not currently supported" );
+      }
+      type.addMethod( isMethod.build() );
+      testType.addMethod( MethodSpec
+                            .methodBuilder( isMethodName )
+                            .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+                            .returns( TypeName.BOOLEAN )
+                            .addParameter( ParameterSpec.builder( className, "$instance", Modifier.FINAL ).build() )
+                            .addStatement( "return $N.$N()", "$instance", isMethodName )
+                            .build() );
+      if ( Kind.Void != memberTypeKind )
+      {
         final String asMethodName = "as" + key;
         type.addMethod( MethodSpec
                           .methodBuilder( asMethodName )
@@ -1109,7 +1148,7 @@ final class JsinteropAction
                           .returns( self )
                           .build() );
         testType.addMethod( MethodSpec
-                              .methodBuilder( "of"  )
+                              .methodBuilder( "of" )
                               .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
                               .returns( self )
                               .addStatement( "return $T.$N()", self, "of" )
@@ -1150,14 +1189,15 @@ final class JsinteropAction
                             .returns( self )
                             .build() );
           testType.addMethod( MethodSpec
-                                .methodBuilder( "of"  )
+                                .methodBuilder( "of" )
                                 .addAnnotation( methodNullability )
                                 .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
                                 .returns( self )
                                 .addParameter( ParameterSpec.builder( self, "$instance", Modifier.FINAL ).build() )
                                 .addParameter( parameter.build() )
                                 .addStatement( "return $T.$N( $N )", self, "of", "value" )
-                                .build() );        }
+                                .build() );
+        }
       }
     }
   }

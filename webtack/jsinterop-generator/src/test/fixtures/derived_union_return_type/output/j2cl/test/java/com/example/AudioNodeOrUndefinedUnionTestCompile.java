@@ -22,4 +22,8 @@ public final class AudioNodeOrUndefinedUnionTestCompile {
   public static AudioNode asAudioNode(final AudioNodeOrUndefinedUnion $instance) {
     return $instance.asAudioNode();
   }
+
+  public static boolean isVoid(final AudioNodeOrUndefinedUnion $instance) {
+    return $instance.isVoid();
+  }
 }

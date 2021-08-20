@@ -25,4 +25,24 @@ public interface StringOrOctetUnion {
   static StringOrOctetUnion of(final short value) {
     return Js.cast( value );
   }
+
+  @JsOverlay
+  default boolean isString() {
+    return ( (Object) this ) instanceof String;
+  }
+
+  @JsOverlay
+  default String asString() {
+    return Js.cast( this );
+  }
+
+  @JsOverlay
+  default boolean isShort() {
+    return ( (Object) this ) instanceof Double;
+  }
+
+  @JsOverlay
+  default short asShort() {
+    return Js.cast( this );
+  }
 }
