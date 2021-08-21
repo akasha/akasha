@@ -28,6 +28,13 @@ var EventInit;
 function Node() {}
 /**
  * @constructor
+ * @private
+ * @nosideeffects
+ */
+function WindowToSoul() {}
+/** @type {!string} */ WindowToSoul.prototype.someVar;
+/**
+ * @constructor
  * @param {!string} type
  * @param {!EventInit=} eventInitDict
  */
@@ -51,3 +58,4 @@ Event.filterGlobalEvent = function(type) {}
  * @nosideeffects
  */
 function EventTarget() {}
+/** @type {!string} */ var someVar;

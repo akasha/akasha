@@ -115,6 +115,22 @@ interface Node {
 };
 
 /**
+ * Documentation for WindowToSoul type that defines a global execution context.
+ *
+ * @see <a href="http://example.com/API/WindowToSoul">WindowToSoul - MDN</a>
+ */
+[Global=Window, Exposed=Window, LegacyUnenumerableNamedProperties]
+interface WindowToSoul {
+  /**
+   * Documentation for Window.someVar attribute.
+   *
+   * @see <a href="http://example.com/API/WindowToSoul/someVar">WindowToSoul.someVar - MDN</a>
+   */
+  [SameObject]
+  readonly attribute DOMString someVar;
+};
+
+/**
  * Documentation for Window partial.
  *
  * @see <a href="http://example.com/API/Window">Window - MDN</a>

@@ -1,3 +1,4 @@
+$GlobalWindowToSoul=com.example.WindowGlobal
 Event=com.example.Event
 EventInit=com.example.EventInit
 EventTarget=com.example.EventTarget
@@ -7,3 +8,4 @@ OnActionHandler=com.example.OnActionHandler
 Sequence=com.example.JsArray
 SpeechRecognitionErrorCode=com.example.SpeechRecognitionErrorCode
 Window=com.example.Window
+WindowToSoul=com.example.WindowToSoul

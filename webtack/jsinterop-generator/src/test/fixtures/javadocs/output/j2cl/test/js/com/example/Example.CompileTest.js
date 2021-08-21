@@ -8,4 +8,8 @@ goog.require('com.example.Node.$Overlay');
 goog.require('com.example.NodeFilter.$Overlay');
 goog.require('com.example.NodeFilterTestCompile');
 goog.require('com.example.NodeTestCompile');
+goog.require('com.example.WindowGlobal.$Overlay');
+goog.require('com.example.WindowGlobalTestCompile');
 goog.require('com.example.WindowTestCompile');
+goog.require('com.example.WindowToSoul.$Overlay');
+goog.require('com.example.WindowToSoulTestCompile');

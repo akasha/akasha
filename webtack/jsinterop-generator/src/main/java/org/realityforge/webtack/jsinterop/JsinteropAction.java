@@ -526,6 +526,7 @@ final class JsinteropAction
 
     final WebIDLSchema schema = getSchema();
     InterfaceDefinition definition = schema.getInterfaceByName( globalInterface );
+    maybeAddJavadoc( definition, type );
     while ( null != definition )
     {
       generateStaticAttributes( definition, definition.getAttributes(), className, type, testType );
