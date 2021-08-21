@@ -914,23 +914,14 @@ final class JsinteropAction
     final List<Type> types =
       toComponentTypes( unionType )
         .stream()
-        .sorted( Comparator.comparing( Type::getKind ) )
-        .distinct()
+        .sorted( Comparator.comparing( this::toUnionComponentKey ) )
         .collect( Collectors.toList() );
 
-    for ( final Type memberType : types )
+    for ( final Type componentType : types )
     {
-      final Kind memberTypeKind = memberType.getKind();
-      final TypeName javaType = toTypeName( memberType );
-      final String key =
-        Kind.TypeReference == memberTypeKind ?
-        NamingUtil.uppercaseFirstCharacter( ( (TypeReference) memberType ).getName() ) :
-        memberTypeKind.isString() ? "String" :
-        memberTypeKind.isPrimitive() ? NamingUtil.uppercaseFirstCharacter( javaType.unbox().toString() ) :
-        Kind.Sequence == memberTypeKind ? "Array" :
-        Kind.Object == memberTypeKind ? "Object" :
-        Kind.Record == memberTypeKind ? "PropertyMap" :
-        memberTypeKind.name();
+      final TypeName javaType = toTypeName( componentType );
+      final String key = toUnionComponentKey( componentType );
+      final Kind kind = componentType.getKind();
       final String isMethodName = "is" + key;
       final MethodSpec.Builder isMethod =
         MethodSpec
@@ -938,27 +929,27 @@ final class JsinteropAction
           .addAnnotation( JsinteropTypes.JS_OVERLAY )
           .addModifiers( Modifier.PUBLIC, Modifier.DEFAULT )
           .returns( TypeName.BOOLEAN );
-      if ( Kind.Void == memberTypeKind )
+      if ( Kind.Void == kind )
       {
         isMethod.addStatement( "return $T.isTripleEqual( $T.undefined(), this )",
                                JsinteropTypes.JS,
                                JsinteropTypes.JS );
       }
-      else if ( Kind.TypeReference == memberTypeKind ||
-                memberTypeKind.isPrimitive() ||
-                memberTypeKind.isString() )
+      else if ( Kind.TypeReference == kind ||
+                kind.isPrimitive() ||
+                kind.isString() )
       {
         isMethod.addStatement( "return ( ($T) this ) instanceof $T",
                                TypeName.OBJECT,
-                               toTypeName( memberType, true ) );
+                               toTypeName( componentType, true ) );
       }
-      else if ( Kind.Sequence == memberTypeKind )
+      else if ( Kind.Sequence == kind )
       {
         isMethod.addStatement( "return ( ($T) this ) instanceof $T",
                                TypeName.OBJECT,
                                lookupClassName( Kind.Sequence.name() ) );
       }
-      else if ( Kind.Object == memberTypeKind || Kind.Record == memberTypeKind )
+      else if ( Kind.Object == kind || Kind.Record == kind )
       {
         isMethod.addStatement( "return ( ($T) this ) instanceof $T",
                                TypeName.OBJECT,
@@ -966,7 +957,7 @@ final class JsinteropAction
       }
       else
       {
-        throw new UnsupportedOperationException( "Union contains member type of " + memberTypeKind +
+        throw new UnsupportedOperationException( "Union contains member type of " + kind +
                                                  " which is not currently supported" );
       }
       type.addMethod( isMethod.build() );
@@ -977,16 +968,20 @@ final class JsinteropAction
                             .addParameter( ParameterSpec.builder( className, "$instance", Modifier.FINAL ).build() )
                             .addStatement( "return $N.$N()", "$instance", isMethodName )
                             .build() );
-      if ( Kind.Void != memberTypeKind )
+      if ( Kind.Void != kind )
       {
         final String asMethodName = "as" + key;
-        type.addMethod( MethodSpec
-                          .methodBuilder( asMethodName )
-                          .addAnnotation( JsinteropTypes.JS_OVERLAY )
-                          .addModifiers( Modifier.PUBLIC, Modifier.DEFAULT )
-                          .returns( javaType )
-                          .addStatement( "return $T.cast( this )", JsinteropTypes.JS )
-                          .build() );
+        final MethodSpec.Builder asMethod =
+          MethodSpec
+            .methodBuilder( asMethodName )
+            .addAnnotation( JsinteropTypes.JS_OVERLAY )
+            .addModifiers( Modifier.PUBLIC, Modifier.DEFAULT )
+            .returns( javaType );
+
+        addMagicConstantAnnotationIfNeeded( componentType, asMethod );
+
+        asMethod.addStatement( "return $T.cast( this )", JsinteropTypes.JS );
+        type.addMethod( asMethod.build() );
         testType.addMethod( MethodSpec
                               .methodBuilder( asMethodName )
                               .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
@@ -1004,6 +999,28 @@ final class JsinteropAction
       emitJavaType( getTestJavaDirectory(), testType.build(), qualifiedTestName );
       _modulesToRequireInCompileTest.add( qualifiedTestName );
     }
+  }
+
+  @Nonnull
+  private String toUnionComponentKey( final Type memberType )
+  {
+    final Kind memberTypeKind = memberType.getKind();
+    final String key =
+      Kind.TypeReference == memberTypeKind ?
+      NamingUtil.uppercaseFirstCharacter( ( (TypeReference) memberType ).getName() ) :
+      memberTypeKind.isString() ? "String" :
+      memberTypeKind.isPrimitive() ? NamingUtil.uppercaseFirstCharacter( toTypeName( memberType ).unbox().toString() ) :
+      Kind.Sequence == memberTypeKind ? "Array" :
+      Kind.Object == memberTypeKind ? "Object" :
+      Kind.Record == memberTypeKind ? "PropertyMap" :
+      memberTypeKind.name();
+    return key;
+  }
+
+  @Nonnull
+  private String getSortKey( @Nonnull final Type t )
+  {
+    return Kind.TypeReference == t.getKind() ? ( (TypeReference) t ).getName() : t.getKind().name();
   }
 
   @Nonnull

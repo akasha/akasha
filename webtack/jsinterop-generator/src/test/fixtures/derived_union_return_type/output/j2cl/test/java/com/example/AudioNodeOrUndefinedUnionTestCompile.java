@@ -13,15 +13,15 @@ public final class AudioNodeOrUndefinedUnionTestCompile {
     return AudioNodeOrUndefinedUnion.of();
   }
 
-  public static boolean isVoid(final AudioNodeOrUndefinedUnion $instance) {
-    return $instance.isVoid();
-  }
-
   public static boolean isAudioNode(final AudioNodeOrUndefinedUnion $instance) {
     return $instance.isAudioNode();
   }
 
   public static AudioNode asAudioNode(final AudioNodeOrUndefinedUnion $instance) {
     return $instance.asAudioNode();
+  }
+
+  public static boolean isVoid(final AudioNodeOrUndefinedUnion $instance) {
+    return $instance.isVoid();
   }
 }

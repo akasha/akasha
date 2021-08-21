@@ -26,11 +26,6 @@ public interface AudioNodeOrUndefinedUnion {
   }
 
   @JsOverlay
-  default boolean isVoid() {
-    return Js.isTripleEqual( Js.undefined(), this );
-  }
-
-  @JsOverlay
   default boolean isAudioNode() {
     return ( (Object) this ) instanceof AudioNode;
   }
@@ -38,5 +33,10 @@ public interface AudioNodeOrUndefinedUnion {
   @JsOverlay
   default AudioNode asAudioNode() {
     return Js.cast( this );
+  }
+
+  @JsOverlay
+  default boolean isVoid() {
+    return Js.isTripleEqual( Js.undefined(), this );
   }
 }

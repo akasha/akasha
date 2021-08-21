@@ -409,7 +409,8 @@ public abstract class AbstractJavaAction
           return toTypeName( schema
                                .getInterfaceByName( value.getInterfaceName() )
                                .getConstantByName( value.getConstName() )
-                               .getType() );
+                               .getType(),
+                             boxed );
         }
         else
         {

@@ -16,19 +16,19 @@ public final class Int32ListTestCompile {
     return Int32List.of( value );
   }
 
-  public static boolean isInt32Array(final Int32List $instance) {
-    return $instance.isInt32Array();
-  }
-
-  public static Int32Array asInt32Array(final Int32List $instance) {
-    return $instance.asInt32Array();
-  }
-
   public static boolean isArray(final Int32List $instance) {
     return $instance.isArray();
   }
 
   public static JsArray<Double> asArray(final Int32List $instance) {
     return $instance.asArray();
+  }
+
+  public static boolean isInt32Array(final Int32List $instance) {
+    return $instance.isInt32Array();
+  }
+
+  public static Int32Array asInt32Array(final Int32List $instance) {
+    return $instance.asInt32Array();
   }
 }

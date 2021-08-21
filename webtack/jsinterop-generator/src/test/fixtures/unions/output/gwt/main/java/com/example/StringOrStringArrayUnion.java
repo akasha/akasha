@@ -33,22 +33,22 @@ public interface StringOrStringArrayUnion {
   }
 
   @JsOverlay
-  default boolean isString() {
-    return ( (Object) this ) instanceof String;
-  }
-
-  @JsOverlay
-  default String asString() {
-    return Js.cast( this );
-  }
-
-  @JsOverlay
   default boolean isArray() {
     return ( (Object) this ) instanceof JsArray;
   }
 
   @JsOverlay
   default JsArray<String> asArray() {
+    return Js.cast( this );
+  }
+
+  @JsOverlay
+  default boolean isString() {
+    return ( (Object) this ) instanceof String;
+  }
+
+  @JsOverlay
+  default String asString() {
     return Js.cast( this );
   }
 }

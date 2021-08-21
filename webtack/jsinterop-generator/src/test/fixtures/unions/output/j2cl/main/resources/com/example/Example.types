@@ -13,9 +13,12 @@ EventListener3
 EventListenerOptions
 EventOrStringUnion
 EventTarget
+GPUTextureUsage
 MyNamedBufferSource
 OnBufferSourceHandler
 OnErrorEventHandler
+PermissionStateOrLong
+ReadyStateTypeOrString
 SomeDataContainer
 SomeInterface
 SomeServiceContainer
@@ -23,4 +26,5 @@ StringOrLongLongUnion
 StringOrOctetUnion
 StringOrStringArrayUnion
 StringOrUnsignedLongUnion
+XMLHttpRequest
 txCode

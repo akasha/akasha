@@ -1,3 +1,17 @@
+enum PermissionState {
+  "denied",
+  "granted",
+  "prompt"
+};
+
+const enum ReadyStateType {
+  XMLHttpRequest.UNSENT,
+  XMLHttpRequest.OPENED,
+  XMLHttpRequest.HEADERS_RECEIVED,
+  XMLHttpRequest.LOADING,
+  XMLHttpRequest.DONE
+};
+
 typedef ( Int8Array or Int16Array or Int32Array or Uint8Array or Uint16Array or Uint32Array or Uint8ClampedArray or Float32Array or Float64Array or DataView ) ArrayBufferView;
 
 typedef ( DOMString or unsigned long ) BluetoothCharacteristicUUID;
@@ -9,6 +23,10 @@ typedef ( DOMString or unsigned long ) BluetoothServiceUUID;
 typedef ( ArrayBufferView or ArrayBuffer ) BufferSource;
 
 typedef BufferSource MyNamedBufferSource;
+
+typedef ( PermissionState or long ) PermissionStateOrLong;
+
+typedef ( ReadyStateType or DOMString ) ReadyStateTypeOrString;
 
 /**
  * This tests that lowercase name converted to uppercase when converted into java.
@@ -87,6 +105,14 @@ interface Float32Array {
 interface Float64Array {
 };
 
+interface GPUTextureUsage {
+  const unsigned long COPY_DST = 0x02;
+  const unsigned long COPY_SRC = 0x01;
+  const unsigned long RENDER_ATTACHMENT = 0x10;
+  const unsigned long STORAGE_BINDING = 0x08;
+  const unsigned long TEXTURE_BINDING = 0x04;
+};
+
 interface Int16Array {
 };
 
@@ -125,4 +151,12 @@ interface Uint8Array {
 };
 
 interface Uint8ClampedArray {
+};
+
+interface XMLHttpRequest {
+  const unsigned short DONE = 4;
+  const unsigned short HEADERS_RECEIVED = 2;
+  const unsigned short LOADING = 3;
+  const unsigned short OPENED = 1;
+  const unsigned short UNSENT = 0;
 };

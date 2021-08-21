@@ -19,19 +19,19 @@ public final class StringOrStringArrayUnionTestCompile {
     return StringOrStringArrayUnion.of( value );
   }
 
-  public static boolean isString(final StringOrStringArrayUnion $instance) {
-    return $instance.isString();
-  }
-
-  public static String asString(final StringOrStringArrayUnion $instance) {
-    return $instance.asString();
-  }
-
   public static boolean isArray(final StringOrStringArrayUnion $instance) {
     return $instance.isArray();
   }
 
   public static JsArray<String> asArray(final StringOrStringArrayUnion $instance) {
     return $instance.asArray();
+  }
+
+  public static boolean isString(final StringOrStringArrayUnion $instance) {
+    return $instance.isString();
+  }
+
+  public static String asString(final StringOrStringArrayUnion $instance) {
+    return $instance.asString();
   }
 }
