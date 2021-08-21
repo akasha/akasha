@@ -1002,25 +1002,17 @@ final class JsinteropAction
   }
 
   @Nonnull
-  private String toUnionComponentKey( final Type memberType )
+  private String toUnionComponentKey( @Nonnull final Type type )
   {
-    final Kind memberTypeKind = memberType.getKind();
-    final String key =
-      Kind.TypeReference == memberTypeKind ?
-      NamingUtil.uppercaseFirstCharacter( ( (TypeReference) memberType ).getName() ) :
-      memberTypeKind.isString() ? "String" :
-      memberTypeKind.isPrimitive() ? NamingUtil.uppercaseFirstCharacter( toTypeName( memberType ).unbox().toString() ) :
-      Kind.Sequence == memberTypeKind ? "Array" :
-      Kind.Object == memberTypeKind ? "Object" :
-      Kind.Record == memberTypeKind ? "PropertyMap" :
-      memberTypeKind.name();
-    return key;
-  }
-
-  @Nonnull
-  private String getSortKey( @Nonnull final Type t )
-  {
-    return Kind.TypeReference == t.getKind() ? ( (TypeReference) t ).getName() : t.getKind().name();
+    final Kind kind = type.getKind();
+    return Kind.TypeReference == kind ?
+           NamingUtil.uppercaseFirstCharacter( ( (TypeReference) type ).getName() ) :
+           kind.isString() ? "String" :
+           kind.isPrimitive() ? NamingUtil.uppercaseFirstCharacter( toTypeName( type ).unbox().toString() ) :
+           Kind.Sequence == kind ? "Array" :
+           Kind.Object == kind ? "Object" :
+           Kind.Record == kind ? "PropertyMap" :
+           kind.name();
   }
 
   @Nonnull
