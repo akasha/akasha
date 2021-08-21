@@ -936,9 +936,24 @@ final class JsinteropAction
                                JsinteropTypes.JS,
                                JsinteropTypes.JS );
       }
-      else if ( Kind.TypeReference == kind ||
-                kind.isPrimitive() ||
-                kind.isString() )
+      else if ( Kind.TypeReference == kind )
+      {
+        final TypeReference typeReference = (TypeReference) componentType;
+        final DictionaryDefinition dictionary = getSchema().findDictionaryByName( typeReference.getName() );
+        if( null == dictionary )
+        {
+          isMethod.addStatement( "return ( ($T) this ) instanceof $T",
+                                 TypeName.OBJECT,
+                                 toTypeName( componentType, true ) );
+        }
+        else
+        {
+          isMethod.addStatement( "return ( ($T) this ) instanceof $T",
+                                 TypeName.OBJECT,
+                                 lookupClassName( Kind.Object.name() ) );
+        }
+      }
+      else if ( kind.isPrimitive() || kind.isString() )
       {
         isMethod.addStatement( "return ( ($T) this ) instanceof $T",
                                TypeName.OBJECT,

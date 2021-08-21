@@ -22,6 +22,8 @@ typedef ( DOMString or unsigned long ) BluetoothServiceUUID;
 
 typedef ( ArrayBufferView or ArrayBuffer ) BufferSource;
 
+typedef ( MyDictionary or DOMString ) MyDictionaryOrString;
+
 typedef BufferSource MyNamedBufferSource;
 
 typedef ( PermissionState or long ) PermissionStateOrLong;
@@ -65,6 +67,11 @@ dictionary BluetoothDataFilterInit2 {
 
 dictionary EventListenerOptions {
   boolean capture = false;
+};
+
+dictionary MyDictionary {
+  required DOMString name;
+  DOMString description;
 };
 
 interface ArrayBuffer {
@@ -120,6 +127,10 @@ interface Int32Array {
 };
 
 interface Int8Array {
+};
+
+[JavaName=JsObject]
+interface Object {
 };
 
 interface SomeDataContainer {

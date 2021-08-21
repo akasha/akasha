@@ -3,6 +3,10 @@
  * @externs
  */
 /**
+ * @typedef {(!MyDictionary|!string)}
+ */
+var MyDictionaryOrString;
+/**
  * @typedef {(!string|!number)}
  */
 var BluetoothDescriptorUUID;
@@ -64,6 +68,10 @@ var EventListenerOptions;
  * @typedef {{dataPrefix:!MyNamedBufferSource,mask:(!MyNamedBufferSource|undefined)}}
  */
 var BluetoothDataFilterInit2;
+/**
+ * @typedef {{name:!string,description:(!string|undefined)}}
+ */
+var MyDictionary;
 /**
  * @typedef {{allowedServices:StringOrStringArrayUnion,otherServices:(!StringOrStringArrayUnion|undefined),requiredUuids:!Array<StringOrLongLongUnion>,uuids:(!Array<StringOrOctetUnion>|undefined)}}
  */
