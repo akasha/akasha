@@ -5,5 +5,9 @@ EventListenerOptions
 EventTarget
 FocusEvent
 FocusEventListener
+Navigator
 ScrollToOptions
+SharedWorkerGlobalScope
 Window
+WorkerGlobalScope
+WorkerNavigator

@@ -22,6 +22,10 @@ public final class WindowTestCompile {
     type.name = value;
   }
 
+  public static Navigator navigator(final Window type) {
+    return type.navigator();
+  }
+
   public static void scroll(final Window $instance, final double x, final double y) {
     $instance.scroll( x, y );
   }

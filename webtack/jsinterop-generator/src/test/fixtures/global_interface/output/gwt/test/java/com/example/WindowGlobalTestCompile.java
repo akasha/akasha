@@ -20,6 +20,10 @@ public final class WindowGlobalTestCompile {
     WindowGlobal.name = value;
   }
 
+  public static Navigator navigator() {
+    return WindowGlobal.navigator();
+  }
+
   public static void scroll(final double x, final double y) {
     WindowGlobal.scroll( x, y );
   }

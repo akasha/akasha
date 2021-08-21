@@ -116,7 +116,9 @@ function EventTarget() {}
 /** @type {!string} */ var windowAttribute;
 /** @type {!string} */ var sharedWorkerGlobalScopeAttribute;
 /** @type {?EventHandler} */ var onstuff;
+/** @type {!string} */ var workerGlobalScopeAttribute;
 /** @type {!string} */ var dedicatedWorkerGlobalScopeAttribute;
+/** @type {!string} */ var workletGlobalScopeAttribute;
 /** @type {!string} */ var audioWorkletGlobalScopeAttribute;
 /** @type {!string} */ var serviceWorkerGlobalScopeAttribute;
 /**

@@ -41,6 +41,7 @@ var AddEventListenerOptions;
 function Window() {}
 /** @type {!boolean} */ Window.prototype.closed;
 /** @type {!boolean} */ Window.prototype.isSecureContext;
+/** @type {!Navigator} */ Window.prototype.navigator;
 /** @type {!string} */ Window.prototype.name;
 /**
  * @param {!string} name
@@ -58,7 +59,28 @@ Window.prototype.scroll = function(arg0,arg1) {}
  * @private
  * @nosideeffects
  */
+function WorkerGlobalScope() {}
+/** @type {!WorkerNavigator} */ WorkerGlobalScope.prototype.navigator;
+/**
+ * @constructor
+ * @private
+ * @nosideeffects
+ */
+function Navigator() {}
+/**
+ * @constructor
+ * @private
+ * @nosideeffects
+ */
 function Event() {}
+/**
+ * @constructor
+ * @private
+ * @extends {WorkerGlobalScope}
+ * @nosideeffects
+ */
+function SharedWorkerGlobalScope() {}
+/** @type {!string} */ SharedWorkerGlobalScope.prototype.name;
 /**
  * @constructor
  * @private
@@ -66,6 +88,12 @@ function Event() {}
  * @nosideeffects
  */
 function FocusEvent() {}
+/**
+ * @constructor
+ * @private
+ * @nosideeffects
+ */
+function WorkerNavigator() {}
 /**
  * @constructor
  * @private
@@ -94,8 +122,23 @@ EventTarget.prototype.dispatchEvent = function(event) {}
  */
 EventTarget.prototype.addEventListener = function(type,callback,options) {}
 /** @type {!string} */ var name;
+/** @type {(!Navigator|!WorkerNavigator)} */ var navigator;
 /** @type {!boolean} */ var closed;
+/** @type {!string} */ var id;
 /** @type {!boolean} */ var isSecureContext;
+/** @type {!boolean} */ var open;
+/**
+ * @param {!string} type
+ * @param {?EventListener} callback
+ * @param {(!EventListenerOptions|!boolean)=} options
+ * @return {undefined}
+ */
+function removeEventListener(type,callback,options) {}
+/**
+ * @param {!Event} event
+ * @return {!boolean}
+ */
+function dispatchEvent(event) {}
 /**
  * @param {!string} name
  * @return {!Object}
@@ -107,3 +150,10 @@ function get(name) {}
  * @return {undefined}
  */
 function scroll(arg0,arg1) {}
+/**
+ * @param {!string} type
+ * @param {?EventListener} callback
+ * @param {(!AddEventListenerOptions|!boolean)=} options
+ * @return {undefined}
+ */
+function addEventListener(type,callback,options) {}

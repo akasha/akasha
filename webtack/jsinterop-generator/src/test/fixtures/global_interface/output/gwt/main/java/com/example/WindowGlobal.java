@@ -45,6 +45,12 @@ public final class WindowGlobal {
   )
   public static native boolean isSecureContext();
 
+  @JsProperty(
+      name = "navigator"
+  )
+  @Nonnull
+  public static native Navigator navigator();
+
   public static native void scroll(double x, double y);
 
   public static native void scroll(@Nonnull ScrollToOptions options);

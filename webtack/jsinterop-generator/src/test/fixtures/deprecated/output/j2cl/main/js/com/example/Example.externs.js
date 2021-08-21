@@ -97,3 +97,22 @@ EventTarget.prototype.dispatchEvent = function(event) {}
 EventTarget.prototype.addEventListener = function(type,callback,options) {}
 /** @type {!string} */ var name;
 /** @type {!boolean} */ var isSecureContext;
+/**
+ * @param {!string} type
+ * @param {?EventListener} callback
+ * @param {(!EventListenerOptions|!boolean)=} options
+ * @return {undefined}
+ */
+function removeEventListener(type,callback,options) {}
+/**
+ * @param {!Event} event
+ * @return {!boolean}
+ */
+function dispatchEvent(event) {}
+/**
+ * @param {!string} type
+ * @param {?EventListener} callback
+ * @param {(!AddEventListenerOptions|!boolean)=} options
+ * @return {undefined}
+ */
+function addEventListener(type,callback,options) {}

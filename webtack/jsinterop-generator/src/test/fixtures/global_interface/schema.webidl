@@ -45,6 +45,15 @@ interface EventTarget {
 interface FocusEvent : Event {
 };
 
+interface Navigator {
+};
+
+[Global=(Worker,SharedWorker), Exposed=SharedWorker]
+interface SharedWorkerGlobalScope : WorkerGlobalScope {
+  [Replaceable]
+  readonly attribute DOMString name;
+};
+
 [Global=Window, Exposed=Window, LegacyUnenumerableNamedProperties]
 interface Window : EventTarget {
   readonly attribute boolean closed;
@@ -55,6 +64,7 @@ interface Window : EventTarget {
    * @see <a href="https://w3c.github.io/webappsec-secure-contexts/">Secure Contexts</a>
    */
   readonly attribute boolean isSecureContext;
+  readonly attribute Navigator navigator;
   /**
    * The Window.name property gets/sets the name of the window's browsing context.
    */
@@ -65,4 +75,12 @@ interface Window : EventTarget {
   undefined scroll( unrestricted double x, unrestricted double y );
   undefined scroll( optional ScrollToOptions options = {} );
   getter object get( DOMString name );
+};
+
+[Exposed=Worker]
+interface WorkerGlobalScope {
+  readonly attribute WorkerNavigator navigator;
+};
+
+interface WorkerNavigator {
 };

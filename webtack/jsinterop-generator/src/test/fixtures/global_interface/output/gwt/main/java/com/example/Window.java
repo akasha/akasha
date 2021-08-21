@@ -41,6 +41,12 @@ public class Window extends EventTarget {
   )
   public native boolean isSecureContext();
 
+  @JsProperty(
+      name = "navigator"
+  )
+  @Nonnull
+  public native Navigator navigator();
+
   public native void scroll(double x, double y);
 
   public native void scroll(@Nonnull ScrollToOptions options);

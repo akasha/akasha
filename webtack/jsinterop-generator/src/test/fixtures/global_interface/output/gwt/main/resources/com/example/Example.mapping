@@ -1,3 +1,4 @@
+$GlobalSharedWorkerGlobalScope=com.example.SharedWorkerGlobal
 $GlobalWindow=com.example.WindowGlobal
 AddEventListenerOptions=com.example.AddEventListenerOptions
 Event=com.example.Event
@@ -6,6 +7,10 @@ EventListenerOptions=com.example.EventListenerOptions
 EventTarget=com.example.EventTarget
 FocusEvent=com.example.FocusEvent
 FocusEventListener=com.example.FocusEventListener
+Navigator=com.example.Navigator
 Object=com.example.Object
 ScrollToOptions=com.example.ScrollToOptions
+SharedWorkerGlobalScope=com.example.SharedWorkerGlobalScope
 Window=com.example.Window
+WorkerGlobalScope=com.example.WorkerGlobalScope
+WorkerNavigator=com.example.WorkerNavigator
