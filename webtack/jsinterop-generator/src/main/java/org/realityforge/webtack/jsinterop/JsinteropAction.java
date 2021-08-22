@@ -3692,16 +3692,10 @@ final class JsinteropAction
     if ( Kind.Void != returnType.getKind() )
     {
       final Type actualType = getSchema().resolveType( returnType );
-      final TypeName javaReturnType;
-      if ( Kind.Sequence == actualType.getKind() )
-      {
-        javaReturnType = toSequenceType( (SequenceType) actualType,
-                                         operation.getIdentValue( ExtendedAttributes.SEQUENCE_TYPE ) );
-      }
-      else
-      {
-        javaReturnType = toTypeName( returnType );
-      }
+      final TypeName javaReturnType =
+        Kind.Sequence == actualType.getKind() ?
+        toSequenceType( (SequenceType) actualType, operation.getIdentValue( ExtendedAttributes.SEQUENCE_TYPE ) ) :
+        toTypeName( returnType );
       testMethod.returns( javaReturnType );
     }
   }
