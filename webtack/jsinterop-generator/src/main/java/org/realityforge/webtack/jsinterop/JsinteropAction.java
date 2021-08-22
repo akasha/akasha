@@ -940,7 +940,7 @@ final class JsinteropAction
       {
         final TypeReference typeReference = (TypeReference) componentType;
         final DictionaryDefinition dictionary = getSchema().findDictionaryByName( typeReference.getName() );
-        if( null == dictionary )
+        if ( null == dictionary )
         {
           isMethod.addStatement( "return ( ($T) this ) instanceof $T",
                                  TypeName.OBJECT,
