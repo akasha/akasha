@@ -3,8 +3,9 @@ package com.example;
 import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 import jsinterop.annotations.JsFunction;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -36,29 +37,29 @@ public final class RTCStatsReport implements JsIterable<RTCStatsReport.Entry> {
   public native int size();
 
   @HasNoSideEffects
-  public native boolean has(@Nonnull String key);
+  public native boolean has(@JsNonNull String key);
 
   @HasNoSideEffects
-  @Nullable
-  public native Object get(@Nonnull String key);
+  @JsNullable
+  public native Object get(@JsNonNull String key);
 
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native JsIterator<String> keys();
 
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native JsIterator<Object> values();
 
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native JsIterator<Entry> entries();
 
-  public native void forEach(@Nonnull ForEachCallback callback);
+  public native void forEach(@JsNonNull ForEachCallback callback);
 
-  public native void forEach(@Nonnull ForEachCallback2 callback);
+  public native void forEach(@JsNonNull ForEachCallback2 callback);
 
-  public native void forEach(@Nonnull ForEachCallback3 callback);
+  public native void forEach(@JsNonNull ForEachCallback3 callback);
 
   @JsType(
       isNative = true,
@@ -82,18 +83,18 @@ public final class RTCStatsReport implements JsIterable<RTCStatsReport.Entry> {
   @JsFunction
   @FunctionalInterface
   public interface ForEachCallback {
-    void item(@Nonnull Object value);
+    void item(@JsNonNull Object value);
   }
 
   @JsFunction
   @FunctionalInterface
   public interface ForEachCallback2 {
-    void item(@Nonnull Object value, @Nonnull String key);
+    void item(@JsNonNull Object value, @JsNonNull String key);
   }
 
   @JsFunction
   @FunctionalInterface
   public interface ForEachCallback3 {
-    void item(@Nonnull Object value, @Nonnull String key, @Nonnull RTCStatsReport map);
+    void item(@JsNonNull Object value, @JsNonNull String key, @JsNonNull RTCStatsReport map);
   }
 }

@@ -4,6 +4,7 @@ import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsFunction;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -28,29 +29,29 @@ public class SomeWriteSetLike {
   public native int size();
 
   @HasNoSideEffects
-  public native boolean has(@Nonnull String value);
+  public native boolean has(@JsNonNull String value);
 
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native JsIterator<String> keys();
 
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native JsIterator<String> values();
 
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native JsIterator<Entry> entries();
 
-  public native void forEach(@Nonnull ForEachCallback callback);
+  public native void forEach(@JsNonNull ForEachCallback callback);
 
-  public native void forEach(@Nonnull ForEachCallback2 callback);
+  public native void forEach(@JsNonNull ForEachCallback2 callback);
 
-  public native void forEach(@Nonnull ForEachCallback3 callback);
+  public native void forEach(@JsNonNull ForEachCallback3 callback);
 
-  public native void add(@Nonnull String value);
+  public native void add(@JsNonNull String value);
 
-  public native boolean delete(@Nonnull String value);
+  public native boolean delete(@JsNonNull String value);
 
   public native void clear();
 
@@ -76,18 +77,18 @@ public class SomeWriteSetLike {
   @JsFunction
   @FunctionalInterface
   public interface ForEachCallback {
-    void item(@Nonnull String value);
+    void item(@JsNonNull String value);
   }
 
   @JsFunction
   @FunctionalInterface
   public interface ForEachCallback2 {
-    void item(@Nonnull String value, @Nonnull String value2);
+    void item(@JsNonNull String value, @JsNonNull String value2);
   }
 
   @JsFunction
   @FunctionalInterface
   public interface ForEachCallback3 {
-    void item(@Nonnull String value, @Nonnull String value2, @Nonnull SomeWriteSetLike set);
+    void item(@JsNonNull String value, @JsNonNull String value2, @JsNonNull SomeWriteSetLike set);
   }
 }

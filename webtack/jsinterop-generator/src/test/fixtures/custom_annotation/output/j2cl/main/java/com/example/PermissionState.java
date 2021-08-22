@@ -4,7 +4,7 @@ import akasha.MyAnnotation;
 import akasha.MyAnnotation2;
 import java.lang.annotation.Documented;
 import javax.annotation.Generated;
-import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
@@ -14,14 +14,14 @@ import org.intellij.lang.annotations.MagicConstant;
     valuesFromClass = PermissionState.class
 )
 public @interface PermissionState {
-  @Nonnull
+  @JsNonNull
   String denied = "denied";
 
-  @Nonnull
+  @JsNonNull
   @MyAnnotation2
   String granted = "granted";
 
-  @Nonnull
+  @JsNonNull
   String prompt = "prompt";
 
   final class Util {
@@ -34,11 +34,11 @@ public @interface PermissionState {
       return value;
     }
 
-    public static void assertValid(@Nonnull final String value) {
+    public static void assertValid(@JsNonNull final String value) {
       assert isValid( value );
     }
 
-    public static boolean isValid(@Nonnull final String value) {
+    public static boolean isValid(@JsNonNull final String value) {
       return PermissionState.denied.equals( value ) || PermissionState.granted.equals( value ) || PermissionState.prompt.equals( value );
     }
   }

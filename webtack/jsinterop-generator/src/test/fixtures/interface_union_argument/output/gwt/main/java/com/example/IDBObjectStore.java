@@ -2,6 +2,7 @@ package com.example;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -21,24 +22,24 @@ public class IDBObjectStore {
   )
   public native boolean autoIncrement();
 
-  @Nonnull
+  @JsNonNull
   public native IDBIndex createIndex(@Nonnull String name, @Nonnull String keyPath,
       @Nonnull IDBIndexParameters options);
 
-  @Nonnull
+  @JsNonNull
   public native IDBIndex createIndex(@Nonnull String name, @Nonnull JsArray<String> keyPath,
       @Nonnull IDBIndexParameters options);
 
-  @Nonnull
+  @JsNonNull
   public native IDBIndex createIndex(@Nonnull String name, @Nonnull String[] keyPath,
       @Nonnull IDBIndexParameters options);
 
-  @Nonnull
+  @JsNonNull
   public native IDBIndex createIndex(@Nonnull String name, @Nonnull String keyPath);
 
-  @Nonnull
+  @JsNonNull
   public native IDBIndex createIndex(@Nonnull String name, @Nonnull JsArray<String> keyPath);
 
-  @Nonnull
+  @JsNonNull
   public native IDBIndex createIndex(@Nonnull String name, @Nonnull String[] keyPath);
 }

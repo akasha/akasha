@@ -2,7 +2,7 @@ package com.example;
 
 import java.lang.annotation.Documented;
 import javax.annotation.Generated;
-import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
@@ -11,13 +11,13 @@ import org.intellij.lang.annotations.MagicConstant;
     valuesFromClass = OverSampleType.class
 )
 public @interface OverSampleType {
-  @Nonnull
+  @JsNonNull
   String _2x = "2x";
 
-  @Nonnull
+  @JsNonNull
   String _4x = "4x";
 
-  @Nonnull
+  @JsNonNull
   String none = "none";
 
   final class Util {
@@ -30,11 +30,11 @@ public @interface OverSampleType {
       return value;
     }
 
-    public static void assertValid(@Nonnull final String value) {
+    public static void assertValid(@JsNonNull final String value) {
       assert isValid( value );
     }
 
-    public static boolean isValid(@Nonnull final String value) {
+    public static boolean isValid(@JsNonNull final String value) {
       return OverSampleType._2x.equals( value ) || OverSampleType._4x.equals( value ) || OverSampleType.none.equals( value );
     }
   }

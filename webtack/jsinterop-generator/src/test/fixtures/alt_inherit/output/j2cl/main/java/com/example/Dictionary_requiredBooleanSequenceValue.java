@@ -3,6 +3,7 @@ package com.example;
 import com.other.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -32,11 +33,11 @@ public interface Dictionary_requiredBooleanSequenceValue {
   @JsProperty(
       name = "requiredBooleanSequenceValue"
   )
-  @Nonnull
+  @JsNonNull
   JsArray<Boolean> requiredBooleanSequenceValue();
 
   @JsProperty
-  void setRequiredBooleanSequenceValue(@Nonnull JsArray<Boolean> requiredBooleanSequenceValue);
+  void setRequiredBooleanSequenceValue(@JsNonNull JsArray<Boolean> requiredBooleanSequenceValue);
 
   @JsOverlay
   default void setRequiredBooleanSequenceValue(

@@ -2,6 +2,7 @@ package com.example;
 
 import javax.annotation.Generated;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
@@ -22,7 +23,7 @@ public class MyThingCollection {
   }
 
   @JsOverlay
-  @Nullable
+  @JsNullable
   public final MyThing getAt(final int index) {
     return Js.<JsArrayLike<MyThing>>cast( this ).getAt( index );
   }

@@ -2,7 +2,7 @@ package com.example;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
@@ -15,16 +15,16 @@ import jsinterop.base.Js;
     name = "SpeechSynthesisUtterance"
 )
 public class SpeechSynthesisUtterance extends EventTarget {
-  @Nullable
+  @JsNullable
   public EventHandler onend;
 
-  @Nullable
+  @JsNullable
   public SpeechSynthesisEventHandler onpause;
 
-  @Nullable
+  @JsNullable
   public EventHandler onresume;
 
-  @Nullable
+  @JsNullable
   public SpeechSynthesisEventHandler onstart;
 
   protected SpeechSynthesisUtterance() {

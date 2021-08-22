@@ -2,6 +2,7 @@ package com.example;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -29,7 +30,7 @@ public interface Sub2 extends Sub1 {
   JsArray<XRSessionInit> sessions();
 
   @JsProperty
-  void setSessions(@Nonnull JsArray<XRSessionInit> sessions);
+  void setSessions(@JsNonNull JsArray<XRSessionInit> sessions);
 
   @JsOverlay
   default void setSessions(@Nonnull final XRSessionInit... sessions) {

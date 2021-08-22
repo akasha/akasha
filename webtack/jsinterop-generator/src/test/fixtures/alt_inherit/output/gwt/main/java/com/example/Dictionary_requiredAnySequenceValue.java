@@ -6,6 +6,7 @@ import com.other.JsIterator;
 import com.other.JsIteratorIterable;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -42,39 +43,39 @@ public interface Dictionary_requiredAnySequenceValue {
   @JsProperty(
       name = "requiredAnyIterableValue"
   )
-  @Nonnull
+  @JsNonNull
   JsIterable<Any> requiredAnyIterableValue();
 
   @JsProperty
-  void setRequiredAnyIterableValue(@Nonnull JsIterable<Any> requiredAnyIterableValue);
+  void setRequiredAnyIterableValue(@JsNonNull JsIterable<Any> requiredAnyIterableValue);
 
   @JsProperty(
       name = "requiredAnyIteratorIterableValue"
   )
-  @Nonnull
+  @JsNonNull
   JsIteratorIterable<Any> requiredAnyIteratorIterableValue();
 
   @JsProperty
   void setRequiredAnyIteratorIterableValue(
-      @Nonnull JsIteratorIterable<Any> requiredAnyIteratorIterableValue);
+      @JsNonNull JsIteratorIterable<Any> requiredAnyIteratorIterableValue);
 
   @JsProperty(
       name = "requiredAnyIteratorValue"
   )
-  @Nonnull
+  @JsNonNull
   JsIterator<Any> requiredAnyIteratorValue();
 
   @JsProperty
-  void setRequiredAnyIteratorValue(@Nonnull JsIterator<Any> requiredAnyIteratorValue);
+  void setRequiredAnyIteratorValue(@JsNonNull JsIterator<Any> requiredAnyIteratorValue);
 
   @JsProperty(
       name = "requiredAnySequenceValue"
   )
-  @Nonnull
+  @JsNonNull
   JsArray<Any> requiredAnySequenceValue();
 
   @JsProperty
-  void setRequiredAnySequenceValue(@Nonnull JsArray<Any> requiredAnySequenceValue);
+  void setRequiredAnySequenceValue(@JsNonNull JsArray<Any> requiredAnySequenceValue);
 
   @JsOverlay
   default void setRequiredAnySequenceValue(@Nonnull final Any... requiredAnySequenceValue) {

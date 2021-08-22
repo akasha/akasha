@@ -1,7 +1,7 @@
 package com.example;
 
 import javax.annotation.Generated;
-import javax.annotation.Nullable;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
@@ -13,12 +13,12 @@ import jsinterop.base.Any;
     name = "WebAssemblyGlobal"
 )
 public class WebAssemblyGlobal {
-  @Nullable
+  @JsNullable
   public Any value;
 
   protected WebAssemblyGlobal() {
   }
 
-  @Nullable
+  @JsNullable
   public native Any valueOf();
 }

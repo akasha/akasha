@@ -3,6 +3,7 @@ package com.example;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -26,12 +27,12 @@ public interface Dictionary_requiredNullableShortFrozenArrayValue {
   @JsProperty(
       name = "requiredNullableShortFrozenArrayValue"
   )
-  @Nullable
+  @JsNullable
   JsArray<Double> requiredNullableShortFrozenArrayValue();
 
   @JsProperty
   void setRequiredNullableShortFrozenArrayValue(
-      @Nullable JsArray<Double> requiredNullableShortFrozenArrayValue);
+      @JsNullable JsArray<Double> requiredNullableShortFrozenArrayValue);
 
   @Generated("org.realityforge.webtack")
   @JsType(

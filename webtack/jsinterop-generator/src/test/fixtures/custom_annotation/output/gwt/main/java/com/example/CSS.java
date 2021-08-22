@@ -3,6 +3,7 @@ package com.example;
 import akasha.MyAnnotation2;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -17,6 +18,6 @@ public final class CSS {
   }
 
   @MyAnnotation2
-  @Nonnull
+  @JsNonNull
   public static native String escape(@Nonnull String ident);
 }

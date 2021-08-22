@@ -3,6 +3,7 @@ package com.example;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
@@ -21,7 +22,7 @@ public class AudioNode {
   @JsMethod(
       name = "connect"
   )
-  @Nonnull
+  @JsNonNull
   public native AudioNodeOrUndefinedUnion _connect(@Nonnull AudioNode destinationNode, int output,
       int input);
 
@@ -33,7 +34,7 @@ public class AudioNode {
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audionode-connect-destinationparam-output">connect() to an AudioParam - Web Audio API</a>
    */
   @JsOverlay
-  @Nonnull
+  @JsNonNull
   public final AudioNode connect(@Nonnull AudioNode destinationNode, int output, int input) {
     return Js.uncheckedCast( _connect( destinationNode, output, input ) );
   }
@@ -41,7 +42,7 @@ public class AudioNode {
   @JsMethod(
       name = "connect"
   )
-  @Nonnull
+  @JsNonNull
   public native AudioNodeOrUndefinedUnion _connect(@Nonnull AudioNode destinationNode, int output);
 
   /**
@@ -52,7 +53,7 @@ public class AudioNode {
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audionode-connect-destinationparam-output">connect() to an AudioParam - Web Audio API</a>
    */
   @JsOverlay
-  @Nonnull
+  @JsNonNull
   public final AudioNode connect(@Nonnull AudioNode destinationNode, int output) {
     return Js.uncheckedCast( _connect( destinationNode, output ) );
   }
@@ -60,7 +61,7 @@ public class AudioNode {
   @JsMethod(
       name = "connect"
   )
-  @Nonnull
+  @JsNonNull
   public native AudioNodeOrUndefinedUnion _connect(@Nonnull AudioNode destinationNode);
 
   /**
@@ -71,7 +72,7 @@ public class AudioNode {
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audionode-connect-destinationparam-output">connect() to an AudioParam - Web Audio API</a>
    */
   @JsOverlay
-  @Nonnull
+  @JsNonNull
   public final AudioNode connect(@Nonnull AudioNode destinationNode) {
     return Js.uncheckedCast( _connect( destinationNode ) );
   }
@@ -79,7 +80,7 @@ public class AudioNode {
   @JsMethod(
       name = "connect"
   )
-  @Nonnull
+  @JsNonNull
   public native AudioNodeOrUndefinedUnion _connect(@Nonnull AudioParam destinationParam,
       int output);
 
@@ -98,7 +99,7 @@ public class AudioNode {
   @JsMethod(
       name = "connect"
   )
-  @Nonnull
+  @JsNonNull
   public native AudioNodeOrUndefinedUnion _connect(@Nonnull AudioParam destinationParam);
 
   /**

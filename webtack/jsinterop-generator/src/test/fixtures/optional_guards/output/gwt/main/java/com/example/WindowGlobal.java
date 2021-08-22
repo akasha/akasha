@@ -1,7 +1,7 @@
 package com.example;
 
 import javax.annotation.Generated;
-import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -26,7 +26,7 @@ public final class WindowGlobal {
   @JsProperty(
       name = "gpu"
   )
-  @Nonnull
+  @JsNonNull
   public static native GPU gpu();
 
   @JsOverlay
@@ -34,6 +34,6 @@ public final class WindowGlobal {
     return "true" == System.getProperty( "com.example.is__Window_getGamepads__supported" ) ? true : "false" == System.getProperty( "com.example.is__Window_getGamepads__supported" ) ? false : Js.global().has( "getGamepads" );
   }
 
-  @Nonnull
+  @JsNonNull
   public static native JsArray<Gamepad> getGamepads();
 }

@@ -4,6 +4,8 @@ import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -18,13 +20,13 @@ public final class SharedWorkerGlobal {
   /**
    * Operation appears in Window scope with different typing
    */
-  @Nullable
+  @JsNullable
   public static MessageEventHandler onmessageerror;
 
   /**
    * Operation appears in Window scope with same typing
    */
-  @Nullable
+  @JsNullable
   public static EventHandler onstuff;
 
   private SharedWorkerGlobal() {
@@ -33,7 +35,7 @@ public final class SharedWorkerGlobal {
   @JsProperty(
       name = "sharedWorkerGlobalScopeAttribute"
   )
-  @Nonnull
+  @JsNonNull
   public static native String sharedWorkerGlobalScopeAttribute();
 
   /**
@@ -49,6 +51,6 @@ public final class SharedWorkerGlobal {
   @JsProperty(
       name = "workerGlobalScopeAttribute"
   )
-  @Nonnull
+  @JsNonNull
   public static native String workerGlobalScopeAttribute();
 }

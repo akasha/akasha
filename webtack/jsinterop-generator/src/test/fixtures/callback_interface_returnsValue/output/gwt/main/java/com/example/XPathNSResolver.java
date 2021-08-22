@@ -2,6 +2,7 @@ package com.example;
 
 import javax.annotation.Generated;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -13,6 +14,6 @@ import jsinterop.annotations.JsType;
 )
 @FunctionalInterface
 public interface XPathNSResolver {
-  @Nullable
+  @JsNullable
   String lookupNamespaceURI(@Nullable String prefix);
 }

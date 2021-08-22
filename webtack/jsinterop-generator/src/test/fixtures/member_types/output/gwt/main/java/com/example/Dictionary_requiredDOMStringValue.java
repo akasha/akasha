@@ -2,6 +2,7 @@ package com.example;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -25,11 +26,11 @@ public interface Dictionary_requiredDOMStringValue {
   @JsProperty(
       name = "requiredDOMStringValue"
   )
-  @Nonnull
+  @JsNonNull
   String requiredDOMStringValue();
 
   @JsProperty
-  void setRequiredDOMStringValue(@Nonnull String requiredDOMStringValue);
+  void setRequiredDOMStringValue(@JsNonNull String requiredDOMStringValue);
 
   @Generated("org.realityforge.webtack")
   @JsType(

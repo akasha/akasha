@@ -2,6 +2,7 @@ package com.example;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -26,11 +27,11 @@ public interface GPUTextureDescriptor {
       name = "usage"
   )
   @GPUTextureUsageFlags
-  @Nonnull
+  @JsNonNull
   int usage();
 
   @JsProperty
-  void setUsage(@GPUTextureUsageFlags @Nonnull int usage);
+  void setUsage(@GPUTextureUsageFlags @JsNonNull int usage);
 
   @Generated("org.realityforge.webtack")
   @JsType(

@@ -2,7 +2,7 @@ package com.example;
 
 import java.lang.annotation.Documented;
 import javax.annotation.Generated;
-import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
@@ -11,13 +11,13 @@ import org.intellij.lang.annotations.MagicConstant;
     valuesFromClass = MyPermissionState.class
 )
 public @interface MyPermissionState {
-  @Nonnull
+  @JsNonNull
   String denied = "denied";
 
-  @Nonnull
+  @JsNonNull
   String granted = "granted";
 
-  @Nonnull
+  @JsNonNull
   String prompt = "prompt";
 
   final class Util {
@@ -30,11 +30,11 @@ public @interface MyPermissionState {
       return value;
     }
 
-    public static void assertValid(@Nonnull final String value) {
+    public static void assertValid(@JsNonNull final String value) {
       assert isValid( value );
     }
 
-    public static boolean isValid(@Nonnull final String value) {
+    public static boolean isValid(@JsNonNull final String value) {
       return MyPermissionState.denied.equals( value ) || MyPermissionState.granted.equals( value ) || MyPermissionState.prompt.equals( value );
     }
   }

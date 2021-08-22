@@ -2,8 +2,9 @@ package com.example;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
@@ -22,7 +23,7 @@ public class Document {
   @JsMethod(
       name = "open"
   )
-  @Nullable
+  @JsNullable
   public native DocumentOrWindowProxyUnion _open(@Nonnull String unused1, @Nonnull String unused2);
 
   /**
@@ -33,7 +34,7 @@ public class Document {
    * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-72161170">document.open() - Document Object Model (DOM) Level 2 HTML Specification</a>
    */
   @JsOverlay
-  @Nonnull
+  @JsNonNull
   public final Document open(@Nonnull String unused1, @Nonnull String unused2) {
     return Js.uncheckedCast( _open( unused1, unused2 ) );
   }
@@ -41,7 +42,7 @@ public class Document {
   @JsMethod(
       name = "open"
   )
-  @Nullable
+  @JsNullable
   public native DocumentOrWindowProxyUnion _open(@Nonnull String unused1);
 
   /**
@@ -52,7 +53,7 @@ public class Document {
    * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-72161170">document.open() - Document Object Model (DOM) Level 2 HTML Specification</a>
    */
   @JsOverlay
-  @Nonnull
+  @JsNonNull
   public final Document open(@Nonnull String unused1) {
     return Js.uncheckedCast( _open( unused1 ) );
   }
@@ -60,7 +61,7 @@ public class Document {
   @JsMethod(
       name = "open"
   )
-  @Nullable
+  @JsNullable
   public native DocumentOrWindowProxyUnion _open();
 
   /**
@@ -71,7 +72,7 @@ public class Document {
    * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-72161170">document.open() - Document Object Model (DOM) Level 2 HTML Specification</a>
    */
   @JsOverlay
-  @Nonnull
+  @JsNonNull
   public final Document open() {
     return Js.uncheckedCast( _open() );
   }
@@ -79,7 +80,7 @@ public class Document {
   @JsMethod(
       name = "open"
   )
-  @Nullable
+  @JsNullable
   public native DocumentOrWindowProxyUnion _open(@Nonnull String url, @Nonnull String name,
       @Nonnull String features);
 
@@ -91,7 +92,7 @@ public class Document {
    * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-72161170">document.open() - Document Object Model (DOM) Level 2 HTML Specification</a>
    */
   @JsOverlay
-  @Nullable
+  @JsNullable
   public final WindowProxy open(@Nonnull String url, @Nonnull String name,
       @Nonnull String features) {
     return Js.uncheckedCast( _open( url, name, features ) );

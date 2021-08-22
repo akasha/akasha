@@ -26,7 +26,8 @@ public final class WaveShaperNodeTestCompile {
     return $instance.getSample();
   }
 
-  public static void setSample(final WaveShaperNode $instance, final String sample) {
+  public static void setSample(final WaveShaperNode $instance,
+      @OverSampleType final String sample) {
     $instance.setSample( sample );
   }
 }

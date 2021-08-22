@@ -2,6 +2,7 @@ package com.example;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -15,14 +16,14 @@ public class WaveShaperNode {
   /**
    * regular attribute is an enum.
    */
-  @Nonnull
+  @JsNonNull
   @OverSampleType
   public String oversample;
 
   /**
    * static attribute is an enum.
    */
-  @Nonnull
+  @JsNonNull
   @OverSampleType
   public String static_oversample;
 
@@ -33,7 +34,7 @@ public class WaveShaperNode {
    * attribute return value is an enum.
    */
   @OverSampleType
-  @Nonnull
+  @JsNonNull
   public native String getSample();
 
   /**

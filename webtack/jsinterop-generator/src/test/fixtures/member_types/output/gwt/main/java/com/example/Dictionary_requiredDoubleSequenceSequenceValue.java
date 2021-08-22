@@ -2,6 +2,7 @@ package com.example;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -32,12 +33,12 @@ public interface Dictionary_requiredDoubleSequenceSequenceValue {
   @JsProperty(
       name = "requiredDoubleSequenceSequenceValue"
   )
-  @Nonnull
+  @JsNonNull
   JsArray<JsArray<Double>> requiredDoubleSequenceSequenceValue();
 
   @JsProperty
   void setRequiredDoubleSequenceSequenceValue(
-      @Nonnull JsArray<JsArray<Double>> requiredDoubleSequenceSequenceValue);
+      @JsNonNull JsArray<JsArray<Double>> requiredDoubleSequenceSequenceValue);
 
   @JsOverlay
   @SuppressWarnings("unchecked")

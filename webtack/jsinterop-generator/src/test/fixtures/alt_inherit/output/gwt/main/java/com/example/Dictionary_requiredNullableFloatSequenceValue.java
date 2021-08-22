@@ -4,6 +4,7 @@ import com.other.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -33,12 +34,12 @@ public interface Dictionary_requiredNullableFloatSequenceValue {
   @JsProperty(
       name = "requiredNullableFloatSequenceValue"
   )
-  @Nullable
+  @JsNullable
   JsArray<Double> requiredNullableFloatSequenceValue();
 
   @JsProperty
   void setRequiredNullableFloatSequenceValue(
-      @Nullable JsArray<Double> requiredNullableFloatSequenceValue);
+      @JsNullable JsArray<Double> requiredNullableFloatSequenceValue);
 
   @JsOverlay
   default void setRequiredNullableFloatSequenceValue(

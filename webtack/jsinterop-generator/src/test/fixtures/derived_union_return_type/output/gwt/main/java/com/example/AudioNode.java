@@ -2,6 +2,7 @@ package com.example;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -22,7 +23,7 @@ public class AudioNode {
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audionode-connect">connect() to an AudioNode - Web Audio API</a>
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audionode-connect-destinationparam-output">connect() to an AudioParam - Web Audio API</a>
    */
-  @Nonnull
+  @JsNonNull
   public native AudioNode connect(@Nonnull AudioNode destinationNode, int output, int input);
 
   /**
@@ -32,7 +33,7 @@ public class AudioNode {
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audionode-connect">connect() to an AudioNode - Web Audio API</a>
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audionode-connect-destinationparam-output">connect() to an AudioParam - Web Audio API</a>
    */
-  @Nonnull
+  @JsNonNull
   public native AudioNode connect(@Nonnull AudioNode destinationNode, int output);
 
   /**
@@ -42,7 +43,7 @@ public class AudioNode {
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audionode-connect">connect() to an AudioNode - Web Audio API</a>
    * @see <a href="https://webaudio.github.io/web-audio-api/#dom-audionode-connect-destinationparam-output">connect() to an AudioParam - Web Audio API</a>
    */
-  @Nonnull
+  @JsNonNull
   public native AudioNode connect(@Nonnull AudioNode destinationNode);
 
   /**

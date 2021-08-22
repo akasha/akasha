@@ -3,6 +3,7 @@ package com.example;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -32,12 +33,12 @@ public interface Dictionary_requiredNullableBooleanSequenceValue {
   @JsProperty(
       name = "requiredNullableBooleanSequenceValue"
   )
-  @Nullable
+  @JsNullable
   JsArray<Boolean> requiredNullableBooleanSequenceValue();
 
   @JsProperty
   void setRequiredNullableBooleanSequenceValue(
-      @Nullable JsArray<Boolean> requiredNullableBooleanSequenceValue);
+      @JsNullable JsArray<Boolean> requiredNullableBooleanSequenceValue);
 
   @JsOverlay
   default void setRequiredNullableBooleanSequenceValue(

@@ -2,6 +2,7 @@ package com.example;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -28,7 +29,7 @@ public interface RTCCertificateStats {
   String _isNot();
 
   @JsProperty
-  void setIsNot(@Nonnull String isNot);
+  void setIsNot(@JsNonNull String isNot);
 
   @JsProperty(
       name = "issuerCertificateId"
@@ -36,7 +37,7 @@ public interface RTCCertificateStats {
   String _issuerCertificateId();
 
   @JsProperty
-  void setIssuerCertificateId(@Nonnull String issuerCertificateId);
+  void setIssuerCertificateId(@JsNonNull String issuerCertificateId);
 
   @Generated("org.realityforge.webtack")
   @JsType(

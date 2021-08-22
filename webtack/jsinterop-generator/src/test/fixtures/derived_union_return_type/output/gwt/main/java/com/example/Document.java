@@ -2,7 +2,8 @@ package com.example;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -23,7 +24,7 @@ public class Document {
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-document-open">document.open() - HTML Living Standard</a>
    * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-72161170">document.open() - Document Object Model (DOM) Level 2 HTML Specification</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Document open(@Nonnull String unused1, @Nonnull String unused2);
 
   /**
@@ -33,7 +34,7 @@ public class Document {
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-document-open">document.open() - HTML Living Standard</a>
    * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-72161170">document.open() - Document Object Model (DOM) Level 2 HTML Specification</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Document open(@Nonnull String unused1);
 
   /**
@@ -43,7 +44,7 @@ public class Document {
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-document-open">document.open() - HTML Living Standard</a>
    * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-72161170">document.open() - Document Object Model (DOM) Level 2 HTML Specification</a>
    */
-  @Nonnull
+  @JsNonNull
   public native Document open();
 
   /**
@@ -53,7 +54,7 @@ public class Document {
    * @see <a href="https://html.spec.whatwg.org/multipage/#dom-document-open">document.open() - HTML Living Standard</a>
    * @see <a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-72161170">document.open() - Document Object Model (DOM) Level 2 HTML Specification</a>
    */
-  @Nullable
+  @JsNullable
   public native WindowProxy open(@Nonnull String url, @Nonnull String name,
       @Nonnull String features);
 }

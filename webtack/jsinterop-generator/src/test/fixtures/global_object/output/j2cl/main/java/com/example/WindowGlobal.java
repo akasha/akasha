@@ -1,7 +1,7 @@
 package com.example;
 
 import javax.annotation.Generated;
-import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -13,7 +13,7 @@ import jsinterop.annotations.JsType;
     name = "goog.global"
 )
 public final class WindowGlobal {
-  @Nonnull
+  @JsNonNull
   public static String name;
 
   private WindowGlobal() {

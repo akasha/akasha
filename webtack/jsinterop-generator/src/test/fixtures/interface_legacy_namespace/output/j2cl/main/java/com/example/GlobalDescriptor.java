@@ -4,6 +4,7 @@ import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -36,11 +37,11 @@ public interface GlobalDescriptor {
   @JsProperty(
       name = "value"
   )
-  @Nullable
+  @JsNullable
   Any value();
 
   @JsProperty
-  void setValue(@DoNotAutobox @Nullable Object value);
+  void setValue(@DoNotAutobox @JsNullable Object value);
 
   @Generated("org.realityforge.webtack")
   @JsType(

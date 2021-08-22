@@ -6,8 +6,8 @@ import com.other.JsIterator;
 import com.other.JsIteratorIterable;
 import com.other.JsPromise;
 import javax.annotation.Generated;
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
@@ -23,191 +23,191 @@ import jsinterop.base.JsPropertyMap;
     name = "MyType6"
 )
 public class MyType6 {
-  @Nullable
+  @JsNullable
   public static Any anyValue;
 
-  @Nonnull
+  @JsNonNull
   public static JsArray<Boolean> booleanFrozenArrayValue;
 
-  @Nonnull
+  @JsNonNull
   public static JsArray<Boolean> booleanSequenceValue;
 
   public static boolean booleanValue;
 
-  @Nonnull
+  @JsNonNull
   public static JsPropertyMap<String> byteStringRecordValue;
 
-  @Nonnull
+  @JsNonNull
   public static String byteStringValue;
 
   public static byte byteValue;
 
-  @Nonnull
+  @JsNonNull
   public static JsPropertyMap<String> domStringRecordValue;
 
-  @Nonnull
+  @JsNonNull
   public static String domStringValue;
 
-  @Nonnull
+  @JsNonNull
   public static JsArray<Double> doubleFrozenArrayValue;
 
-  @Nonnull
+  @JsNonNull
   public static JsPropertyMap<Double> doubleRecordValue;
 
-  @Nonnull
+  @JsNonNull
   public static JsArray<Double> doubleSequenceValue;
 
   public static double doubleValue;
 
-  @Nonnull
+  @JsNonNull
   public static JsArray<Double> floatFrozenArrayValue;
 
-  @Nonnull
+  @JsNonNull
   public static JsArray<Double> floatSequenceValue;
 
   public static float floatValue;
 
-  @Nonnull
+  @JsNonNull
   public static JsPromise<JsArray<Double>> longLongPromiseValue;
 
   public static int longLongValue;
 
   public static int longValue;
 
-  @Nonnull
+  @JsNonNull
   public static JsPropertyMap<String> mixedStringRecordValue;
 
-  @Nullable
+  @JsNullable
   public static JsArray<Boolean> nullableBooleanFrozenArrayValue;
 
-  @Nullable
+  @JsNullable
   public static JsArray<Boolean> nullableBooleanSequenceValue;
 
-  @Nullable
+  @JsNullable
   public static Boolean nullableBooleanValue;
 
-  @Nullable
+  @JsNullable
   public static String nullableByteStringValue;
 
-  @Nullable
+  @JsNullable
   public static Double nullableByteValue;
 
-  @Nullable
+  @JsNullable
   public static String nullableDOMStringValue;
 
-  @Nullable
+  @JsNullable
   public static JsArray<Double> nullableDoubleFrozenArrayValue;
 
-  @Nullable
+  @JsNullable
   public static JsArray<Double> nullableDoubleSequenceValue;
 
-  @Nullable
+  @JsNullable
   public static Double nullableDoubleValue;
 
-  @Nullable
+  @JsNullable
   public static JsArray<Double> nullableFloatFrozenArrayValue;
 
-  @Nullable
+  @JsNullable
   public static JsArray<Double> nullableFloatSequenceValue;
 
-  @Nullable
+  @JsNullable
   public static Double nullableFloatValue;
 
-  @Nullable
+  @JsNullable
   public static Double nullableLongLongValue;
 
-  @Nullable
+  @JsNullable
   public static Double nullableLongValue;
 
-  @Nullable
-  public static Object nullableObjectValue;
+  @JsNullable
+  public static JsObject nullableObjectValue;
 
-  @Nullable
+  @JsNullable
   public static Double nullableOctetValue;
 
-  @Nullable
+  @JsNullable
   public static JsArray<Double> nullableShortFrozenArrayValue;
 
-  @Nonnull
+  @JsNonNull
   public static JsPromise<Double> nullableShortPromiseValue;
 
-  @Nullable
+  @JsNullable
   public static JsArray<Double> nullableShortSequenceValue;
 
-  @Nullable
+  @JsNullable
   public static Double nullableShortValue;
 
-  @Nullable
+  @JsNullable
   public static JsArray<SomeType> nullableSomeTypeFrozenArrayValue;
 
-  @Nonnull
+  @JsNonNull
   public static JsPromise<SomeType> nullableSomeTypePromiseValue;
 
-  @Nullable
+  @JsNullable
   public static JsArray<SomeType> nullableSomeTypeSequenceValue;
 
-  @Nullable
+  @JsNullable
   public static SomeType nullableSomeTypeValue;
 
-  @Nullable
+  @JsNullable
   public static String nullableUSVStringValue;
 
-  @Nullable
+  @JsNullable
   public static Double nullableUnrestrictedDoubleValue;
 
-  @Nullable
+  @JsNullable
   public static Double nullableUnrestrictedFloatValue;
 
-  @Nullable
+  @JsNullable
   public static Double nullableUnsignedLongLongValue;
 
-  @Nullable
+  @JsNullable
   public static Double nullableUnsignedLongValue;
 
-  @Nullable
+  @JsNullable
   public static Double nullableUnsignedShortValue;
 
-  @Nonnull
-  public static Object objectValue;
+  @JsNonNull
+  public static JsObject objectValue;
 
   public static short octetValue;
 
-  @Nonnull
+  @JsNonNull
   public static JsIterable<Any> requiredAnyIterableValue;
 
-  @Nonnull
+  @JsNonNull
   public static JsIteratorIterable<Any> requiredAnyIteratorIterableValue;
 
-  @Nonnull
+  @JsNonNull
   public static JsIterator<Any> requiredAnyIteratorValue;
 
-  @Nonnull
+  @JsNonNull
   public static JsArray<Any> requiredAnySequenceValue;
 
-  @Nonnull
+  @JsNonNull
   public static JsArray<Double> shortFrozenArrayValue;
 
-  @Nonnull
+  @JsNonNull
   public static JsPromise<Double> shortPromiseValue;
 
-  @Nonnull
+  @JsNonNull
   public static JsArray<Double> shortSequenceValue;
 
   public static short shortValue;
 
-  @Nonnull
+  @JsNonNull
   public static JsArray<SomeType> someTypeFrozenArrayValue;
 
-  @Nonnull
+  @JsNonNull
   public static JsPromise<SomeType> someTypePromiseValue;
 
-  @Nonnull
+  @JsNonNull
   public static JsArray<SomeType> someTypeSequenceValue;
 
-  @Nonnull
+  @JsNonNull
   public static SomeType someTypeValue;
 
-  @Nonnull
+  @JsNonNull
   public static JsPropertyMap<SomeType> typeReferenceRecordValue;
 
   public static double unrestrictedDoubleValue;
@@ -220,13 +220,13 @@ public class MyType6 {
 
   public static int unsignedShortValue;
 
-  @Nonnull
+  @JsNonNull
   public static JsPropertyMap<String> usvStringRecordValue;
 
-  @Nonnull
+  @JsNonNull
   public static String usvStringValue;
 
-  @Nonnull
+  @JsNonNull
   public static JsPromise<Void> voidPromiseValue;
 
   protected MyType6() {

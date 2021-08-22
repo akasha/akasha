@@ -2,8 +2,9 @@ package com.example;
 
 import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
-import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -18,13 +19,13 @@ public final class WindowGlobal {
   /**
    * Operation appears in SharedWorker scope with different typing
    */
-  @Nullable
+  @JsNullable
   public static EventHandler onmessageerror;
 
   /**
    * Operation appears in SharedWorker scope with same typing
    */
-  @Nullable
+  @JsNullable
   public static EventHandler onstuff;
 
   private WindowGlobal() {
@@ -33,7 +34,7 @@ public final class WindowGlobal {
   @JsProperty(
       name = "windowAttribute"
   )
-  @Nonnull
+  @JsNonNull
   public static native String windowAttribute();
 
   /**

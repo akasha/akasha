@@ -2,6 +2,7 @@ package com.example;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -25,11 +26,11 @@ public interface MyDictionary {
   @JsProperty(
       name = "name"
   )
-  @Nonnull
+  @JsNonNull
   String name();
 
   @JsProperty
-  void setName(@Nonnull String name);
+  void setName(@JsNonNull String name);
 
   @JsProperty(
       name = "description"
@@ -37,7 +38,7 @@ public interface MyDictionary {
   String description();
 
   @JsProperty
-  void setDescription(@Nonnull String description);
+  void setDescription(@JsNonNull String description);
 
   @Generated("org.realityforge.webtack")
   @JsType(

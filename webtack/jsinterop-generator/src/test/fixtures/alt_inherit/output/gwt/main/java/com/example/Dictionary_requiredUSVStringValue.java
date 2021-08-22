@@ -2,6 +2,7 @@ package com.example;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -25,11 +26,11 @@ public interface Dictionary_requiredUSVStringValue {
   @JsProperty(
       name = "requiredUSVStringValue"
   )
-  @Nonnull
+  @JsNonNull
   String requiredUSVStringValue();
 
   @JsProperty
-  void setRequiredUSVStringValue(@Nonnull String requiredUSVStringValue);
+  void setRequiredUSVStringValue(@JsNonNull String requiredUSVStringValue);
 
   @Generated("org.realityforge.webtack")
   @JsType(

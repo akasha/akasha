@@ -2,6 +2,7 @@ package com.example;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -29,11 +30,11 @@ public interface SpeechRecognitionErrorEventInit {
       name = "error"
   )
   @SpeechRecognitionErrorCode
-  @Nonnull
+  @JsNonNull
   String error();
 
   @JsProperty
-  void setError(@SpeechRecognitionErrorCode @Nonnull String error);
+  void setError(@SpeechRecognitionErrorCode @JsNonNull String error);
 
   /**
    * Required attribute is an enum

@@ -3,6 +3,7 @@ package com.example;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -26,12 +27,12 @@ public interface Dictionary_requiredNullableUnsignedLongLongValue {
   @JsProperty(
       name = "requiredNullableUnsignedLongLongValue"
   )
-  @Nullable
+  @JsNullable
   Double requiredNullableUnsignedLongLongValue();
 
   @JsProperty
   void setRequiredNullableUnsignedLongLongValue(
-      @Nullable Double requiredNullableUnsignedLongLongValue);
+      @JsNullable Double requiredNullableUnsignedLongLongValue);
 
   @Generated("org.realityforge.webtack")
   @JsType(

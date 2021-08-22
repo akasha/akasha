@@ -3,6 +3,7 @@ package com.example;
 import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -19,7 +20,7 @@ public class Window extends EventTarget {
   /**
    * The Window.name property gets/sets the name of the window's browsing context.
    */
-  @Nonnull
+  @JsNonNull
   public String name;
 
   protected Window() {
@@ -54,7 +55,7 @@ public class Window extends EventTarget {
   public native void scroll();
 
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native Object get(@Nonnull String name);
 
   @JsOverlay

@@ -3,8 +3,9 @@ package com.example;
 import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 import jsinterop.annotations.JsFunction;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
@@ -33,7 +34,7 @@ public final class Headers implements JsIterable<Headers.Entry> {
 
   public native void delete(@Nonnull String name);
 
-  @Nullable
+  @JsNullable
   public native String get(@Nonnull String name);
 
   public native boolean has(@Nonnull String name);
@@ -41,22 +42,22 @@ public final class Headers implements JsIterable<Headers.Entry> {
   public native void set(@Nonnull String name, @Nonnull String value);
 
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native JsIterator<String> keys();
 
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native JsIterator<String> values();
 
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native JsIterator<Entry> entries();
 
-  public native void forEach(@Nonnull ForEachCallback callback);
+  public native void forEach(@JsNonNull ForEachCallback callback);
 
-  public native void forEach(@Nonnull ForEachCallback2 callback);
+  public native void forEach(@JsNonNull ForEachCallback2 callback);
 
-  public native void forEach(@Nonnull ForEachCallback3 callback);
+  public native void forEach(@JsNonNull ForEachCallback3 callback);
 
   @JsType(
       isNative = true,
@@ -80,18 +81,18 @@ public final class Headers implements JsIterable<Headers.Entry> {
   @JsFunction
   @FunctionalInterface
   public interface ForEachCallback {
-    void item(@Nonnull String value);
+    void item(@JsNonNull String value);
   }
 
   @JsFunction
   @FunctionalInterface
   public interface ForEachCallback2 {
-    void item(@Nonnull String value, String key);
+    void item(@JsNonNull String value, String key);
   }
 
   @JsFunction
   @FunctionalInterface
   public interface ForEachCallback3 {
-    void item(@Nonnull String value, String key, @Nonnull Headers iterable);
+    void item(@JsNonNull String value, String key, @JsNonNull Headers iterable);
   }
 }

@@ -2,6 +2,7 @@ package com.example;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -18,18 +19,18 @@ public final class WebAssembly {
   private WebAssembly() {
   }
 
-  @Nonnull
+  @JsNonNull
   public static native JsPromise<WebAssemblyInstantiatedSource> instantiate(
       @Nonnull BufferSource bytes, @Nonnull Object importObject);
 
-  @Nonnull
+  @JsNonNull
   public static native JsPromise<WebAssemblyInstantiatedSource> instantiate(
       @Nonnull BufferSource bytes);
 
-  @Nonnull
+  @JsNonNull
   public static native JsPromise<Instance> instantiate(@Nonnull Module moduleObject,
       @Nonnull Object importObject);
 
-  @Nonnull
+  @JsNonNull
   public static native JsPromise<Instance> instantiate(@Nonnull Module moduleObject);
 }

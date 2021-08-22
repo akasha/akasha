@@ -3,6 +3,7 @@ package com.example;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -26,11 +27,11 @@ public interface Dictionary_requiredNullableFloatValue {
   @JsProperty(
       name = "requiredNullableFloatValue"
   )
-  @Nullable
+  @JsNullable
   Double requiredNullableFloatValue();
 
   @JsProperty
-  void setRequiredNullableFloatValue(@Nullable Double requiredNullableFloatValue);
+  void setRequiredNullableFloatValue(@JsNullable Double requiredNullableFloatValue);
 
   @Generated("org.realityforge.webtack")
   @JsType(

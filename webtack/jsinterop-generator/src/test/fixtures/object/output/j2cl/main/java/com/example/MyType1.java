@@ -2,6 +2,7 @@ package com.example;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -13,10 +14,10 @@ import jsinterop.annotations.JsType;
     name = "MyType1"
 )
 public class MyType1 {
-  @Nonnull
+  @JsNonNull
   public static JsObject staticObjectValue;
 
-  @Nonnull
+  @JsNonNull
   public JsObject objectValue;
 
   protected MyType1() {
@@ -34,15 +35,15 @@ public class MyType1 {
   @Nonnull
   public static native JsObject staticReadonlyObjectValue();
 
-  @Nonnull
+  @JsNonNull
   public static native JsObject staticOjectMethod(@Nonnull JsObject v1, @Nonnull JsObject v2);
 
-  @Nonnull
+  @JsNonNull
   public static native JsObject staticOjectMethod(@Nonnull JsObject v1);
 
-  @Nonnull
+  @JsNonNull
   public native JsObject objectMethod(@Nonnull JsObject v1, @Nonnull JsObject v2);
 
-  @Nonnull
+  @JsNonNull
   public native JsObject objectMethod(@Nonnull JsObject v1);
 }

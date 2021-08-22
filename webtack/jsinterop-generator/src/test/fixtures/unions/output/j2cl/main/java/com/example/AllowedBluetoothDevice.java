@@ -2,6 +2,7 @@ package com.example;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -61,11 +62,11 @@ public interface AllowedBluetoothDevice {
   @JsProperty(
       name = "allowedServices"
   )
-  @Nonnull
+  @JsNonNull
   StringOrStringArrayUnion allowedServices();
 
   @JsProperty
-  void setAllowedServices(@Nonnull StringOrStringArrayUnion allowedServices);
+  void setAllowedServices(@JsNonNull StringOrStringArrayUnion allowedServices);
 
   @JsOverlay
   default void setAllowedServices(@Nonnull final String allowedServices) {
@@ -88,7 +89,7 @@ public interface AllowedBluetoothDevice {
   StringOrStringArrayUnion otherServices();
 
   @JsProperty
-  void setOtherServices(@Nonnull StringOrStringArrayUnion otherServices);
+  void setOtherServices(@JsNonNull StringOrStringArrayUnion otherServices);
 
   @JsOverlay
   default void setOtherServices(@Nonnull final String otherServices) {
@@ -108,11 +109,11 @@ public interface AllowedBluetoothDevice {
   @JsProperty(
       name = "requiredUuids"
   )
-  @Nonnull
+  @JsNonNull
   JsArray<StringOrLongLongUnion> requiredUuids();
 
   @JsProperty
-  void setRequiredUuids(@Nonnull JsArray<StringOrLongLongUnion> requiredUuids);
+  void setRequiredUuids(@JsNonNull JsArray<StringOrLongLongUnion> requiredUuids);
 
   @JsOverlay
   default void setRequiredUuids(@Nonnull final StringOrLongLongUnion... requiredUuids) {
@@ -125,7 +126,7 @@ public interface AllowedBluetoothDevice {
   JsArray<StringOrOctetUnion> uuids();
 
   @JsProperty
-  void setUuids(@Nonnull JsArray<StringOrOctetUnion> uuids);
+  void setUuids(@JsNonNull JsArray<StringOrOctetUnion> uuids);
 
   @JsOverlay
   default void setUuids(@Nonnull final StringOrOctetUnion... uuids) {

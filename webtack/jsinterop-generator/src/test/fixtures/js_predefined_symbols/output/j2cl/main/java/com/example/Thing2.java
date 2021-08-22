@@ -3,7 +3,8 @@ package com.example;
 import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -15,10 +16,10 @@ import jsinterop.annotations.JsType;
     name = "Thing2"
 )
 public class Thing2 {
-  @Nonnull
+  @JsNonNull
   public static Object staticObjectValue;
 
-  @Nonnull
+  @JsNonNull
   public static Object staticObjectValue2;
 
   protected Thing2() {
@@ -41,13 +42,13 @@ public class Thing2 {
   @Nonnull
   public static native Object staticReadonlyObjectValue2();
 
-  @Nonnull
+  @JsNonNull
   public static native Object staticMethod();
 
-  @Nonnull
+  @JsNonNull
   public static native Object staticMethod2();
 
   @HasNoSideEffects
-  @Nullable
+  @JsNullable
   public native Element item3(int index);
 }

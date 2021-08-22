@@ -7,6 +7,7 @@ import com.biz.MyIDBIndexParameters;
 import com.biz.MyStringOrLongLongUnion;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -17,48 +18,48 @@ import jsinterop.annotations.JsType;
     name = "IDBObjectStore"
 )
 public class IDBObjectStore {
-  @Nonnull
+  @JsNonNull
   public MyEventHandler1 handler1;
 
-  @Nonnull
+  @JsNonNull
   public EventHandler2 handler2;
 
   protected IDBObjectStore() {
   }
 
-  @Nonnull
+  @JsNonNull
   public native MyIDBIndex createIndex(@Nonnull String name, @Nonnull String keyPath,
       @Nonnull MyIDBIndexParameters options);
 
-  @Nonnull
+  @JsNonNull
   public native MyIDBIndex createIndex(@Nonnull String name, @Nonnull JsArray<String> keyPath,
       @Nonnull MyIDBIndexParameters options);
 
-  @Nonnull
+  @JsNonNull
   public native MyIDBIndex createIndex(@Nonnull String name, @Nonnull String[] keyPath,
       @Nonnull MyIDBIndexParameters options);
 
-  @Nonnull
+  @JsNonNull
   public native MyIDBIndex createIndex(@Nonnull String name, @Nonnull String keyPath);
 
-  @Nonnull
+  @JsNonNull
   public native MyIDBIndex createIndex(@Nonnull String name, @Nonnull JsArray<String> keyPath);
 
-  @Nonnull
+  @JsNonNull
   public native MyIDBIndex createIndex(@Nonnull String name, @Nonnull String[] keyPath);
 
-  @Nonnull
+  @JsNonNull
   public native MyIDBIndex createIndex2(@Nonnull String name, @Nonnull IDBIndexParameters2 options);
 
-  @Nonnull
+  @JsNonNull
   public native MyIDBIndex createIndex2(@Nonnull String name);
 
   public native void registerListeners(@Nonnull MyEventListener eventListener,
       @Nonnull CompletionCallback completionCallback);
 
-  @Nonnull
+  @JsNonNull
   public native StringOrFloatUnion returnSomeUnionThatIsNotPredefined();
 
-  @Nonnull
+  @JsNonNull
   public native MyStringOrLongLongUnion returnSomeUnionThatIsPredefined();
 }

@@ -5,6 +5,7 @@ import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
@@ -16,7 +17,7 @@ import jsinterop.base.Any;
     name = "WebAssembly.Global"
 )
 public class Global {
-  @Nullable
+  @JsNullable
   public Any value;
 
   public Global(@Nonnull final GlobalDescriptor descriptor,
@@ -26,6 +27,6 @@ public class Global {
   public Global(@Nonnull final GlobalDescriptor descriptor) {
   }
 
-  @Nullable
+  @JsNullable
   public native Any valueOf();
 }

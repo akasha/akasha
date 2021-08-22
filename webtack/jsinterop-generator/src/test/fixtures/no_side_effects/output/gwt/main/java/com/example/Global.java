@@ -3,6 +3,7 @@ package com.example;
 import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -17,7 +18,7 @@ public final class Global {
   }
 
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public static native String escape(@Nonnull String str);
 
   @HasNoSideEffects
@@ -28,6 +29,6 @@ public final class Global {
 
   public static native int parseInt(@Nonnull String string, int radix);
 
-  @Nonnull
+  @JsNonNull
   public static native String unescape(@Nonnull String str);
 }

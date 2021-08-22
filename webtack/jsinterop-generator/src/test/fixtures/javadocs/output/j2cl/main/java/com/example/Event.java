@@ -2,6 +2,7 @@ package com.example;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -69,7 +70,7 @@ public class Event {
    * @return the event.
    * @see <a href="http://example.com/API/Event/filterGlobalEvent">Event.filterGlobalEvent - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public static native Event filterGlobalEvent(@Nonnull String type);
 
   /**
@@ -78,6 +79,6 @@ public class Event {
    * @return the path.
    * @see <a href="http://example.com/API/Event/composedPath">Event.composedPath - MDN</a>
    */
-  @Nonnull
+  @JsNonNull
   public native JsArray<EventTarget> composedPath();
 }

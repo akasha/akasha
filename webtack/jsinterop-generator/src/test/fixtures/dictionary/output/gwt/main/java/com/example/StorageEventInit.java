@@ -3,6 +3,8 @@ package com.example;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -26,38 +28,38 @@ public interface StorageEventInit extends EventInit {
   @JsProperty(
       name = "key"
   )
-  @Nullable
+  @JsNullable
   String key();
 
   @JsProperty
-  void setKey(@Nullable String key);
+  void setKey(@JsNullable String key);
 
   @JsProperty(
       name = "newValue"
   )
-  @Nullable
+  @JsNullable
   String newValue();
 
   @JsProperty
-  void setNewValue(@Nullable String newValue);
+  void setNewValue(@JsNullable String newValue);
 
   @JsProperty(
       name = "oldValue"
   )
-  @Nullable
+  @JsNullable
   String oldValue();
 
   @JsProperty
-  void setOldValue(@Nullable String oldValue);
+  void setOldValue(@JsNullable String oldValue);
 
   @JsProperty(
       name = "storageArea"
   )
-  @Nullable
+  @JsNullable
   Storage storageArea();
 
   @JsProperty
-  void setStorageArea(@Nullable Storage storageArea);
+  void setStorageArea(@JsNullable Storage storageArea);
 
   @JsProperty(
       name = "url"
@@ -65,7 +67,7 @@ public interface StorageEventInit extends EventInit {
   String url();
 
   @JsProperty
-  void setUrl(@Nonnull String url);
+  void setUrl(@JsNonNull String url);
 
   @Generated("org.realityforge.webtack")
   @JsType(

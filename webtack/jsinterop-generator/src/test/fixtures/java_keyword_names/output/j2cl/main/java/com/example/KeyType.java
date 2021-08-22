@@ -2,7 +2,7 @@ package com.example;
 
 import java.lang.annotation.Documented;
 import javax.annotation.Generated;
-import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
@@ -11,13 +11,13 @@ import org.intellij.lang.annotations.MagicConstant;
     valuesFromClass = KeyType.class
 )
 public @interface KeyType {
-  @Nonnull
+  @JsNonNull
   String private_ = "private";
 
-  @Nonnull
+  @JsNonNull
   String public_ = "public";
 
-  @Nonnull
+  @JsNonNull
   String secret = "secret";
 
   final class Util {
@@ -30,11 +30,11 @@ public @interface KeyType {
       return value;
     }
 
-    public static void assertValid(@Nonnull final String value) {
+    public static void assertValid(@JsNonNull final String value) {
       assert isValid( value );
     }
 
-    public static boolean isValid(@Nonnull final String value) {
+    public static boolean isValid(@JsNonNull final String value) {
       return KeyType.private_.equals( value ) || KeyType.public_.equals( value ) || KeyType.secret.equals( value );
     }
   }

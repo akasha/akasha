@@ -4,6 +4,7 @@ import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -20,10 +21,10 @@ public final class WindowGlobal {
   /**
    * The Window.name property gets/sets the name of the window's browsing context.
    */
-  @Nonnull
+  @JsNonNull
   public static String name;
 
-  @Nonnull
+  @JsNonNull
   public static String id;
 
   private WindowGlobal() {
@@ -48,7 +49,7 @@ public final class WindowGlobal {
   @JsProperty(
       name = "navigator"
   )
-  @Nonnull
+  @JsNonNull
   public static native Navigator navigator();
 
   public static native void scroll(double x, double y);
@@ -58,7 +59,7 @@ public final class WindowGlobal {
   public static native void scroll();
 
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public static native Object get(@Nonnull String name);
 
   @JsOverlay

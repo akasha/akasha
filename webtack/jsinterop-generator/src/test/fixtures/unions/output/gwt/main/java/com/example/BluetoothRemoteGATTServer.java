@@ -2,6 +2,7 @@ package com.example;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -15,27 +16,27 @@ public class BluetoothRemoteGATTServer {
   protected BluetoothRemoteGATTServer() {
   }
 
-  @Nonnull
+  @JsNonNull
   public native JsPromise<BluetoothRemoteGATTService> getPrimaryService(
       @Nonnull BluetoothServiceUUID service);
 
-  @Nonnull
+  @JsNonNull
   public native JsPromise<BluetoothRemoteGATTService> getPrimaryService(@Nonnull String service);
 
-  @Nonnull
+  @JsNonNull
   public native JsPromise<BluetoothRemoteGATTService> getPrimaryService(int service);
 
-  @Nonnull
+  @JsNonNull
   public native JsPromise<JsArray<BluetoothRemoteGATTService>> getPrimaryServices(
       @Nonnull BluetoothServiceUUID service);
 
-  @Nonnull
+  @JsNonNull
   public native JsPromise<JsArray<BluetoothRemoteGATTService>> getPrimaryServices(
       @Nonnull String service);
 
-  @Nonnull
+  @JsNonNull
   public native JsPromise<JsArray<BluetoothRemoteGATTService>> getPrimaryServices(int service);
 
-  @Nonnull
+  @JsNonNull
   public native JsPromise<JsArray<BluetoothRemoteGATTService>> getPrimaryServices();
 }

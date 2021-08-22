@@ -2,6 +2,7 @@ package com.example;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -15,17 +16,17 @@ public class RTCPeerConnection {
   protected RTCPeerConnection() {
   }
 
-  @Nonnull
+  @JsNonNull
   public native JsPromise<RTCSessionDescriptionInit> createOffer(@Nonnull RTCOfferOptions options);
 
-  @Nonnull
+  @JsNonNull
   public native JsPromise<RTCSessionDescriptionInit> createOffer();
 
-  @Nonnull
+  @JsNonNull
   public native JsPromise<Void> createOffer(@Nonnull RTCSessionDescriptionCallback successCallback,
       @Nonnull RTCPeerConnectionErrorCallback failureCallback, @Nonnull RTCOfferOptions options);
 
-  @Nonnull
+  @JsNonNull
   public native JsPromise<Void> createOffer(@Nonnull RTCSessionDescriptionCallback successCallback,
       @Nonnull RTCPeerConnectionErrorCallback failureCallback);
 }

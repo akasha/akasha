@@ -2,6 +2,7 @@ package com.example;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -31,11 +32,11 @@ public interface Dictionary_requiredShortSequenceValue {
   @JsProperty(
       name = "requiredShortSequenceValue"
   )
-  @Nonnull
+  @JsNonNull
   JsArray<Double> requiredShortSequenceValue();
 
   @JsProperty
-  void setRequiredShortSequenceValue(@Nonnull JsArray<Double> requiredShortSequenceValue);
+  void setRequiredShortSequenceValue(@JsNonNull JsArray<Double> requiredShortSequenceValue);
 
   @JsOverlay
   default void setRequiredShortSequenceValue(@Nonnull final double... requiredShortSequenceValue) {

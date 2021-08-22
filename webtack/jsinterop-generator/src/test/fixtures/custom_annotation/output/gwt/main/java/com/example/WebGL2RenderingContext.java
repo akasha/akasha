@@ -4,7 +4,7 @@ import akasha.MyAnnotation;
 import akasha.gl.GLSL;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -20,6 +20,6 @@ public class WebGL2RenderingContext {
   }
 
   @GLSL
-  @Nullable
+  @JsNullable
   public native String getShaderSource(@MyAnnotation @Nonnull WebGLShader shader);
 }

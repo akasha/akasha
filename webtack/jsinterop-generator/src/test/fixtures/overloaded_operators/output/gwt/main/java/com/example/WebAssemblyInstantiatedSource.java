@@ -2,6 +2,7 @@ package com.example;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -25,20 +26,20 @@ public interface WebAssemblyInstantiatedSource {
   @JsProperty(
       name = "instance"
   )
-  @Nonnull
+  @JsNonNull
   Instance instance();
 
   @JsProperty
-  void setInstance(@Nonnull Instance instance);
+  void setInstance(@JsNonNull Instance instance);
 
   @JsProperty(
       name = "module"
   )
-  @Nonnull
+  @JsNonNull
   Module module();
 
   @JsProperty
-  void setModule(@Nonnull Module module);
+  void setModule(@JsNonNull Module module);
 
   @Generated("org.realityforge.webtack")
   @JsType(

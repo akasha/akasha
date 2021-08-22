@@ -1,7 +1,7 @@
 package com.example;
 
 import javax.annotation.Generated;
-import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -13,55 +13,55 @@ import jsinterop.annotations.JsType;
     name = "MyType2"
 )
 public class MyType2 {
-  @Nonnull
+  @JsNonNull
   public Object clone;
 
   @JsProperty(
       name = "default"
   )
-  @Nonnull
+  @JsNonNull
   public Object default_;
 
-  @Nonnull
+  @JsNonNull
   public Object equals;
 
-  @Nonnull
+  @JsNonNull
   public Object finalize;
 
-  @Nonnull
+  @JsNonNull
   public Object getClass;
 
-  @Nonnull
+  @JsNonNull
   public Object hashCode;
 
-  @Nonnull
+  @JsNonNull
   public Object is;
 
-  @Nonnull
+  @JsNonNull
   public Object notify;
 
-  @Nonnull
+  @JsNonNull
   public Object notifyAll;
 
   @JsProperty(
       name = "private"
   )
-  @Nonnull
+  @JsNonNull
   public Object private_;
 
   @JsProperty(
       name = "protected"
   )
-  @Nonnull
+  @JsNonNull
   public Object protected_;
 
   @JsProperty(
       name = "public"
   )
-  @Nonnull
+  @JsNonNull
   public Object public_;
 
-  @Nonnull
+  @JsNonNull
   public Object wait;
 
   protected MyType2() {

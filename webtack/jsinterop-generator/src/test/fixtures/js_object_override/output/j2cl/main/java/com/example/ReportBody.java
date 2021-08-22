@@ -1,7 +1,7 @@
 package com.example;
 
 import javax.annotation.Generated;
-import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -15,6 +15,6 @@ public class ReportBody {
   protected ReportBody() {
   }
 
-  @Nonnull
+  @JsNonNull
   public native Object toJSON();
 }

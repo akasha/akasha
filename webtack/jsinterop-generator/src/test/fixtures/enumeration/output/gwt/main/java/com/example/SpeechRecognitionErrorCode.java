@@ -2,7 +2,7 @@ package com.example;
 
 import java.lang.annotation.Documented;
 import javax.annotation.Generated;
-import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
@@ -11,28 +11,28 @@ import org.intellij.lang.annotations.MagicConstant;
     valuesFromClass = SpeechRecognitionErrorCode.class
 )
 public @interface SpeechRecognitionErrorCode {
-  @Nonnull
+  @JsNonNull
   String aborted = "aborted";
 
-  @Nonnull
+  @JsNonNull
   String audio_capture = "audio-capture";
 
-  @Nonnull
+  @JsNonNull
   String bad_grammar = "bad-grammar";
 
-  @Nonnull
+  @JsNonNull
   String language_not_supported = "language-not-supported";
 
-  @Nonnull
+  @JsNonNull
   String network = "network";
 
-  @Nonnull
+  @JsNonNull
   String no_speech = "no-speech";
 
-  @Nonnull
+  @JsNonNull
   String not_allowed = "not-allowed";
 
-  @Nonnull
+  @JsNonNull
   String service_not_allowed = "service-not-allowed";
 
   final class Util {
@@ -45,11 +45,11 @@ public @interface SpeechRecognitionErrorCode {
       return value;
     }
 
-    public static void assertValid(@Nonnull final String value) {
+    public static void assertValid(@JsNonNull final String value) {
       assert isValid( value );
     }
 
-    public static boolean isValid(@Nonnull final String value) {
+    public static boolean isValid(@JsNonNull final String value) {
       return SpeechRecognitionErrorCode.aborted.equals( value ) || SpeechRecognitionErrorCode.audio_capture.equals( value ) || SpeechRecognitionErrorCode.bad_grammar.equals( value ) || SpeechRecognitionErrorCode.language_not_supported.equals( value ) || SpeechRecognitionErrorCode.network.equals( value ) || SpeechRecognitionErrorCode.no_speech.equals( value ) || SpeechRecognitionErrorCode.not_allowed.equals( value ) || SpeechRecognitionErrorCode.service_not_allowed.equals( value );
     }
   }

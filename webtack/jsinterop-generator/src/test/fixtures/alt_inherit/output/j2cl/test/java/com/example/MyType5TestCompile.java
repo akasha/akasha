@@ -128,7 +128,7 @@ public final class MyType5TestCompile {
     return MyType5.readonlyNullableLongValue();
   }
 
-  public static Object readonlyNullableObjectValue() {
+  public static JsObject readonlyNullableObjectValue() {
     return MyType5.readonlyNullableObjectValue();
   }
 
@@ -192,7 +192,7 @@ public final class MyType5TestCompile {
     return MyType5.readonlyNullableUnsignedShortValue();
   }
 
-  public static Object readonlyObjectValue() {
+  public static JsObject readonlyObjectValue() {
     return MyType5.readonlyObjectValue();
   }
 

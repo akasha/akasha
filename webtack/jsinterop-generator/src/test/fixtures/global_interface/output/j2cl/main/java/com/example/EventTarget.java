@@ -3,6 +3,7 @@ package com.example;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -16,7 +17,7 @@ import jsinterop.base.Js;
     name = "EventTarget"
 )
 public class EventTarget {
-  @Nonnull
+  @JsNonNull
   public String id;
 
   protected EventTarget() {

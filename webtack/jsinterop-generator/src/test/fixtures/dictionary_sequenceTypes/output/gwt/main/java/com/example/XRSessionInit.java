@@ -2,6 +2,7 @@ package com.example;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -29,7 +30,7 @@ public interface XRSessionInit {
   JsArray<Any> optionalFeatures();
 
   @JsProperty
-  void setOptionalFeatures(@Nonnull JsArray<Any> optionalFeatures);
+  void setOptionalFeatures(@JsNonNull JsArray<Any> optionalFeatures);
 
   @JsOverlay
   default void setOptionalFeatures(@Nonnull final Any... optionalFeatures) {
@@ -42,7 +43,7 @@ public interface XRSessionInit {
   JsArray<Any> requiredFeatures();
 
   @JsProperty
-  void setRequiredFeatures(@Nonnull JsArray<Any> requiredFeatures);
+  void setRequiredFeatures(@JsNonNull JsArray<Any> requiredFeatures);
 
   @JsOverlay
   default void setRequiredFeatures(@Nonnull final Any... requiredFeatures) {

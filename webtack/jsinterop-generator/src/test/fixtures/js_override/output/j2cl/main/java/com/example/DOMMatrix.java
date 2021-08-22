@@ -2,6 +2,7 @@ package com.example;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -15,9 +16,9 @@ public class DOMMatrix extends DOMMatrixReadOnly {
   protected DOMMatrix() {
   }
 
-  @Nonnull
+  @JsNonNull
   public static native DOMMatrix fromMatrix(@Nonnull Object other);
 
-  @Nonnull
+  @JsNonNull
   public static native DOMMatrix fromMatrix();
 }

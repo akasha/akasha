@@ -2,6 +2,7 @@ package com.example;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -22,9 +23,9 @@ public class SomeInterface {
 
   public static native void myStaticMethodWithUnionArg(int serviceUuid);
 
-  @Nonnull
+  @JsNonNull
   public static native StringOrUnsignedLongUnion myStaticMethodWithUnionReturn();
 
-  @Nonnull
+  @JsNonNull
   public native StringOrUnsignedLongUnion getUuid();
 }

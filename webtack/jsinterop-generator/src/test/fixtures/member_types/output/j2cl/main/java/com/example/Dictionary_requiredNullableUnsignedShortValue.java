@@ -3,6 +3,7 @@ package com.example;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -26,11 +27,11 @@ public interface Dictionary_requiredNullableUnsignedShortValue {
   @JsProperty(
       name = "requiredNullableUnsignedShortValue"
   )
-  @Nullable
+  @JsNullable
   Double requiredNullableUnsignedShortValue();
 
   @JsProperty
-  void setRequiredNullableUnsignedShortValue(@Nullable Double requiredNullableUnsignedShortValue);
+  void setRequiredNullableUnsignedShortValue(@JsNullable Double requiredNullableUnsignedShortValue);
 
   @Generated("org.realityforge.webtack")
   @JsType(

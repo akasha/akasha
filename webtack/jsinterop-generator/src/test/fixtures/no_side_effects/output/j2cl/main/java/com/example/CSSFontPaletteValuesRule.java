@@ -3,8 +3,9 @@ package com.example;
 import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 import jsinterop.annotations.JsFunction;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -17,10 +18,10 @@ import jsinterop.annotations.JsType;
     name = "CSSFontPaletteValuesRule"
 )
 public class CSSFontPaletteValuesRule implements JsIterable<CSSFontPaletteValuesRule.Entry> {
-  @Nonnull
+  @JsNonNull
   public String basePalette;
 
-  @Nonnull
+  @JsNonNull
   public String fontFamily;
 
   protected CSSFontPaletteValuesRule() {
@@ -35,28 +36,28 @@ public class CSSFontPaletteValuesRule implements JsIterable<CSSFontPaletteValues
   public native boolean has(int key);
 
   @HasNoSideEffects
-  @Nullable
+  @JsNullable
   public native String get(int key);
 
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native JsIterator<Double> keys();
 
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native JsIterator<String> values();
 
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native JsIterator<Entry> entries();
 
-  public native void forEach(@Nonnull ForEachCallback callback);
+  public native void forEach(@JsNonNull ForEachCallback callback);
 
-  public native void forEach(@Nonnull ForEachCallback2 callback);
+  public native void forEach(@JsNonNull ForEachCallback2 callback);
 
-  public native void forEach(@Nonnull ForEachCallback3 callback);
+  public native void forEach(@JsNonNull ForEachCallback3 callback);
 
-  public native void set(int key, @Nonnull String value);
+  public native void set(int key, @JsNonNull String value);
 
   public native boolean delete(int key);
 
@@ -83,18 +84,18 @@ public class CSSFontPaletteValuesRule implements JsIterable<CSSFontPaletteValues
   @JsFunction
   @FunctionalInterface
   public interface ForEachCallback {
-    void item(@Nonnull String value);
+    void item(@JsNonNull String value);
   }
 
   @JsFunction
   @FunctionalInterface
   public interface ForEachCallback2 {
-    void item(@Nonnull String value, int key);
+    void item(@JsNonNull String value, int key);
   }
 
   @JsFunction
   @FunctionalInterface
   public interface ForEachCallback3 {
-    void item(@Nonnull String value, int key, @Nonnull CSSFontPaletteValuesRule map);
+    void item(@JsNonNull String value, int key, @JsNonNull CSSFontPaletteValuesRule map);
   }
 }

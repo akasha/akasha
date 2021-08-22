@@ -2,6 +2,7 @@ package com.example;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -25,11 +26,11 @@ public interface Dictionary_requiredDoubleFrozenArrayValue {
   @JsProperty(
       name = "requiredDoubleFrozenArrayValue"
   )
-  @Nonnull
+  @JsNonNull
   JsArray<Double> requiredDoubleFrozenArrayValue();
 
   @JsProperty
-  void setRequiredDoubleFrozenArrayValue(@Nonnull JsArray<Double> requiredDoubleFrozenArrayValue);
+  void setRequiredDoubleFrozenArrayValue(@JsNonNull JsArray<Double> requiredDoubleFrozenArrayValue);
 
   @Generated("org.realityforge.webtack")
   @JsType(

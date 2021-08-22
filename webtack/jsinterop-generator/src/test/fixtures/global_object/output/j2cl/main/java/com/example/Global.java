@@ -2,6 +2,7 @@ package com.example;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -15,12 +16,12 @@ public final class Global {
   private Global() {
   }
 
-  @Nonnull
+  @JsNonNull
   public static native String decodeURI(@Nonnull String encodedURI);
 
-  @Nonnull
+  @JsNonNull
   public static native String decodeURIComponent(@Nonnull String encodedURI);
 
-  @Nonnull
+  @JsNonNull
   public static native String encodeURI(@Nonnull String uri);
 }

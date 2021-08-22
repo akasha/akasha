@@ -3,6 +3,7 @@ package com.example;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -19,18 +20,18 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredNullableObjectValue {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nullable final Object requiredNullableObjectValue) {
+  static Builder create(@Nullable final JsObject requiredNullableObjectValue) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredNullableObjectValue( requiredNullableObjectValue );
   }
 
   @JsProperty(
       name = "requiredNullableObjectValue"
   )
-  @Nullable
-  Object requiredNullableObjectValue();
+  @JsNullable
+  JsObject requiredNullableObjectValue();
 
   @JsProperty
-  void setRequiredNullableObjectValue(@Nullable Object requiredNullableObjectValue);
+  void setRequiredNullableObjectValue(@JsNullable JsObject requiredNullableObjectValue);
 
   @Generated("org.realityforge.webtack")
   @JsType(
@@ -42,7 +43,7 @@ public interface Dictionary_requiredNullableObjectValue {
     @JsOverlay
     @Nonnull
     default Builder requiredNullableObjectValue(
-        @Nullable final Object requiredNullableObjectValue) {
+        @Nullable final JsObject requiredNullableObjectValue) {
       setRequiredNullableObjectValue( requiredNullableObjectValue );
       return this;
     }

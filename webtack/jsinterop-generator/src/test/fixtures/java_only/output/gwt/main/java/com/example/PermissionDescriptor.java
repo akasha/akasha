@@ -2,6 +2,7 @@ package com.example;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -25,20 +26,20 @@ public interface PermissionDescriptor {
   @JsProperty(
       name = "name1"
   )
-  @Nonnull
+  @JsNonNull
   String name1();
 
   @JsProperty
-  void setName1(@Nonnull String name1);
+  void setName1(@JsNonNull String name1);
 
   @JsProperty(
       name = "name2"
   )
-  @Nonnull
+  @JsNonNull
   String name2();
 
   @JsProperty
-  void setName2(@Nonnull String name2);
+  void setName2(@JsNonNull String name2);
 
   @JsProperty(
       name = "userVisibleOnly1"

@@ -4,6 +4,7 @@ import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -18,13 +19,13 @@ public class SharedWorkerGlobalScope extends WorkerGlobalScope {
   /**
    * Operation appears in Window scope with different typing
    */
-  @Nullable
+  @JsNullable
   public MessageEventHandler onmessageerror;
 
   /**
    * Operation appears in Window scope with same typing
    */
-  @Nullable
+  @JsNullable
   public EventHandler onstuff;
 
   protected SharedWorkerGlobalScope() {

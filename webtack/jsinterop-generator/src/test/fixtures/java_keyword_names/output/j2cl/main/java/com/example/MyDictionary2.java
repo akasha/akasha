@@ -2,6 +2,7 @@ package com.example;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -28,7 +29,7 @@ public interface MyDictionary2 {
   Object clone_();
 
   @JsProperty
-  void setClone(@Nonnull Object clone);
+  void setClone(@JsNonNull Object clone);
 
   @JsProperty(
       name = "default"
@@ -36,7 +37,7 @@ public interface MyDictionary2 {
   Object default_();
 
   @JsProperty
-  void setDefault(@Nonnull Object default_);
+  void setDefault(@JsNonNull Object default_);
 
   @JsProperty(
       name = "equals"
@@ -44,7 +45,7 @@ public interface MyDictionary2 {
   Object equals_();
 
   @JsProperty
-  void setEquals(@Nonnull Object equals);
+  void setEquals(@JsNonNull Object equals);
 
   @JsProperty(
       name = "finalize"
@@ -52,7 +53,7 @@ public interface MyDictionary2 {
   Object finalize_();
 
   @JsProperty
-  void setFinalize(@Nonnull Object finalize);
+  void setFinalize(@JsNonNull Object finalize);
 
   @JsProperty(
       name = "getClass"
@@ -60,7 +61,7 @@ public interface MyDictionary2 {
   Object getClass_();
 
   @JsProperty
-  void setGetClass(@Nonnull Object getClass);
+  void setGetClass(@JsNonNull Object getClass);
 
   @JsProperty(
       name = "hashCode"
@@ -68,7 +69,7 @@ public interface MyDictionary2 {
   Object hashCode_();
 
   @JsProperty
-  void setHashCode(@Nonnull Object hashCode);
+  void setHashCode(@JsNonNull Object hashCode);
 
   @JsProperty(
       name = "is"
@@ -76,7 +77,7 @@ public interface MyDictionary2 {
   Object _is();
 
   @JsProperty
-  void setIs(@Nonnull Object is);
+  void setIs(@JsNonNull Object is);
 
   @JsProperty(
       name = "notify"
@@ -84,7 +85,7 @@ public interface MyDictionary2 {
   Object notify_();
 
   @JsProperty
-  void setNotify(@Nonnull Object notify);
+  void setNotify(@JsNonNull Object notify);
 
   @JsProperty(
       name = "notifyAll"
@@ -92,7 +93,7 @@ public interface MyDictionary2 {
   Object notifyAll_();
 
   @JsProperty
-  void setNotifyAll(@Nonnull Object notifyAll);
+  void setNotifyAll(@JsNonNull Object notifyAll);
 
   @JsProperty(
       name = "private"
@@ -100,7 +101,7 @@ public interface MyDictionary2 {
   Object private_();
 
   @JsProperty
-  void setPrivate(@Nonnull Object private_);
+  void setPrivate(@JsNonNull Object private_);
 
   @JsProperty(
       name = "protected"
@@ -108,7 +109,7 @@ public interface MyDictionary2 {
   Object protected_();
 
   @JsProperty
-  void setProtected(@Nonnull Object protected_);
+  void setProtected(@JsNonNull Object protected_);
 
   @JsProperty(
       name = "public"
@@ -116,7 +117,7 @@ public interface MyDictionary2 {
   Object public_();
 
   @JsProperty
-  void setPublic(@Nonnull Object public_);
+  void setPublic(@JsNonNull Object public_);
 
   @JsProperty(
       name = "toString"
@@ -124,7 +125,7 @@ public interface MyDictionary2 {
   Object toString_();
 
   @JsProperty
-  void setToString(@Nonnull Object toString);
+  void setToString(@JsNonNull Object toString);
 
   @JsProperty(
       name = "wait"
@@ -132,7 +133,7 @@ public interface MyDictionary2 {
   Object wait_();
 
   @JsProperty
-  void setWait(@Nonnull Object wait);
+  void setWait(@JsNonNull Object wait);
 
   @Generated("org.realityforge.webtack")
   @JsType(

@@ -634,11 +634,11 @@ final class JsinteropAction
     maybeAddJavadoc( attribute, method );
     if ( schema.isNullable( attributeType ) )
     {
-      method.addAnnotation( BasicTypes.NULLABLE );
+      method.addAnnotation( JsinteropTypes.JS_NULLABLE );
     }
     else if ( !actualJavaType.isPrimitive() )
     {
-      method.addAnnotation( BasicTypes.NONNULL );
+      method.addAnnotation( JsinteropTypes.JS_NONNULL );
     }
     addMagicConstantAnnotationIfNeeded( actualType, method );
     type.addMethod( method.build() );
@@ -681,11 +681,11 @@ final class JsinteropAction
     }
     if ( schema.isNullable( attributeType ) )
     {
-      field.addAnnotation( BasicTypes.NULLABLE );
+      field.addAnnotation( JsinteropTypes.JS_NULLABLE );
     }
     else if ( !actualType.getKind().isPrimitive() )
     {
-      field.addAnnotation( BasicTypes.NONNULL );
+      field.addAnnotation( JsinteropTypes.JS_NONNULL );
     }
     addMagicConstantAnnotationIfNeeded( actualType, field );
     type.addField( field.build() );
@@ -1460,13 +1460,13 @@ final class JsinteropAction
     addMagicConstantAnnotationIfNeeded( member.getType(), method );
     if ( getSchema().isNullable( member.getType() ) )
     {
-      method.addAnnotation( BasicTypes.NULLABLE );
+      method.addAnnotation( JsinteropTypes.JS_NULLABLE );
     }
     else
     {
       if ( !actualType.getKind().isPrimitive() && member.isRequired() )
       {
-        method.addAnnotation( BasicTypes.NONNULL );
+        method.addAnnotation( JsinteropTypes.JS_NONNULL );
       }
     }
     type.addMethod( method.build() );
@@ -1495,11 +1495,11 @@ final class JsinteropAction
 
     if ( getSchema().isNullable( member.getType() ) )
     {
-      parameter.addAnnotation( BasicTypes.NULLABLE );
+      parameter.addAnnotation( JsinteropTypes.JS_NULLABLE );
     }
     else if ( !actualType.getKind().isPrimitive() )
     {
-      parameter.addAnnotation( BasicTypes.NONNULL );
+      parameter.addAnnotation( JsinteropTypes.JS_NONNULL );
     }
     method.addParameter( parameter.build() );
     type.addMethod( method.build() );
@@ -1993,7 +1993,7 @@ final class JsinteropAction
                                   .addParameter( indexParam )
                                   .addParameter( ParameterSpec
                                                    .builder( lookupClassName( idlName ), "iterable" )
-                                                   .addAnnotation( BasicTypes.NONNULL )
+                                                   .addAnnotation( JsinteropTypes.JS_NONNULL )
                                                    .build() )
                                   .build() )
                     .build() );
@@ -2002,7 +2002,7 @@ final class JsinteropAction
         .methodBuilder( "forEach" )
         .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
         .addParameter( ParameterSpec.builder( ClassName.bestGuess( "ForEachCallback" ), "callback" )
-                         .addAnnotation( BasicTypes.NONNULL )
+                         .addAnnotation( JsinteropTypes.JS_NONNULL )
                          .build() );
     maybeAddJavadoc( documentation, forEach1 );
     type.addMethod( forEach1.build() );
@@ -2022,7 +2022,7 @@ final class JsinteropAction
         .methodBuilder( "forEach" )
         .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
         .addParameter( ParameterSpec.builder( ClassName.bestGuess( "ForEachCallback2" ), "callback" )
-                         .addAnnotation( BasicTypes.NONNULL )
+                         .addAnnotation( JsinteropTypes.JS_NONNULL )
                          .build() );
     maybeAddJavadoc( documentation, forEach2 );
     type.addMethod( forEach2.build() );
@@ -2042,7 +2042,7 @@ final class JsinteropAction
         .methodBuilder( "forEach" )
         .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
         .addParameter( ParameterSpec.builder( ClassName.bestGuess( "ForEachCallback3" ), "callback" )
-                         .addAnnotation( BasicTypes.NONNULL )
+                         .addAnnotation( JsinteropTypes.JS_NONNULL )
                          .build() );
     maybeAddJavadoc( documentation, forEach3 );
     type.addMethod( forEach3.build() );
@@ -2068,7 +2068,7 @@ final class JsinteropAction
       MethodSpec
         .methodBuilder( methodName )
         .addAnnotation( JsinteropTypes.HAS_NO_SIDE_EFFECTS )
-        .addAnnotation( BasicTypes.NONNULL )
+        .addAnnotation( JsinteropTypes.JS_NONNULL )
         .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
         .returns( iteratorType( ClassName.bestGuess( "Entry" ) ) );
     maybeAddJavadoc( getDocumentationElement( idlName, methodName ), method );
@@ -2094,7 +2094,7 @@ final class JsinteropAction
       MethodSpec
         .methodBuilder( methodName )
         .addAnnotation( JsinteropTypes.HAS_NO_SIDE_EFFECTS )
-        .addAnnotation( BasicTypes.NONNULL )
+        .addAnnotation( JsinteropTypes.JS_NONNULL )
         .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
         .returns( iteratorType( keyType.box() ) );
     maybeAddJavadoc( getDocumentationElement( idlName, methodName ), method );
@@ -2119,7 +2119,7 @@ final class JsinteropAction
     final MethodSpec.Builder method =
       MethodSpec.methodBuilder( methodName )
         .addAnnotation( JsinteropTypes.HAS_NO_SIDE_EFFECTS )
-        .addAnnotation( BasicTypes.NONNULL )
+        .addAnnotation( JsinteropTypes.JS_NONNULL )
         .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
         .returns( iteratorType( toTypeName( iterable.getValueType() ) ) );
     maybeAddJavadoc( getDocumentationElement( idlName, methodName ), method );
@@ -2494,7 +2494,7 @@ final class JsinteropAction
         .methodBuilder( "keys" )
         .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
         .addAnnotation( JsinteropTypes.HAS_NO_SIDE_EFFECTS )
-        .addAnnotation( BasicTypes.NONNULL )
+        .addAnnotation( JsinteropTypes.JS_NONNULL )
         .returns( iteratorType( boxedElementType ) );
     maybeAddJavadoc( getDocumentationElement( definitionName, "keys" ), keys );
     type.addMethod( keys.build() );
@@ -2512,7 +2512,7 @@ final class JsinteropAction
         .methodBuilder( "values" )
         .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
         .addAnnotation( JsinteropTypes.HAS_NO_SIDE_EFFECTS )
-        .addAnnotation( BasicTypes.NONNULL )
+        .addAnnotation( JsinteropTypes.JS_NONNULL )
         .returns( iteratorType( boxedElementType ) );
     maybeAddJavadoc( getDocumentationElement( definitionName, "values" ), values );
     type.addMethod( values.build() );
@@ -2532,7 +2532,7 @@ final class JsinteropAction
         .methodBuilder( "entries" )
         .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
         .addAnnotation( JsinteropTypes.HAS_NO_SIDE_EFFECTS )
-        .addAnnotation( BasicTypes.NONNULL )
+        .addAnnotation( JsinteropTypes.JS_NONNULL )
         .returns( iteratorType( ClassName.bestGuess( "Entry" ) ) );
     maybeAddJavadoc( getDocumentationElement( definitionName, "entries" ), entries );
     type.addMethod( entries.build() );
@@ -2580,7 +2580,7 @@ final class JsinteropAction
                                   .addParameter( elementParam2 )
                                   .addParameter( ParameterSpec
                                                    .builder( lookupClassName( definitionName ), "set" )
-                                                   .addAnnotation( BasicTypes.NONNULL )
+                                                   .addAnnotation( JsinteropTypes.JS_NONNULL )
                                                    .build() )
                                   .build() )
                     .build() );
@@ -2591,7 +2591,7 @@ final class JsinteropAction
         .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
         .addParameter( ParameterSpec
                          .builder( ClassName.bestGuess( "ForEachCallback" ), "callback" )
-                         .addAnnotation( BasicTypes.NONNULL )
+                         .addAnnotation( JsinteropTypes.JS_NONNULL )
                          .build() );
     maybeAddJavadoc( forEachDocumentation, forEach1 );
     type.addMethod( forEach1.build() );
@@ -2611,7 +2611,7 @@ final class JsinteropAction
         .methodBuilder( "forEach" )
         .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
         .addParameter( ParameterSpec.builder( ClassName.bestGuess( "ForEachCallback2" ), "callback" )
-                         .addAnnotation( BasicTypes.NONNULL )
+                         .addAnnotation( JsinteropTypes.JS_NONNULL )
                          .build() );
     maybeAddJavadoc( forEachDocumentation, forEach2 );
     type.addMethod( forEach2.build() );
@@ -2630,7 +2630,7 @@ final class JsinteropAction
       .methodBuilder( "forEach" )
       .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
       .addParameter( ParameterSpec.builder( ClassName.bestGuess( "ForEachCallback3" ), "callback" )
-                       .addAnnotation( BasicTypes.NONNULL )
+                       .addAnnotation( JsinteropTypes.JS_NONNULL )
                        .build() );
     maybeAddJavadoc( forEachDocumentation, forEach3 );
     type.addMethod( forEach3.build() );
@@ -2781,7 +2781,7 @@ final class JsinteropAction
       .methodBuilder( "get" )
       .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
       .addAnnotation( JsinteropTypes.HAS_NO_SIDE_EFFECTS )
-      .addAnnotation( BasicTypes.NULLABLE )
+      .addAnnotation( JsinteropTypes.JS_NULLABLE )
       .addParameter( keyParam )
       .returns( boxedValueType );
     maybeAddJavadoc( getDocumentationElement( definitionName, "get" ), get );
@@ -2801,7 +2801,7 @@ final class JsinteropAction
         .methodBuilder( "keys" )
         .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
         .addAnnotation( JsinteropTypes.HAS_NO_SIDE_EFFECTS )
-        .addAnnotation( BasicTypes.NONNULL )
+        .addAnnotation( JsinteropTypes.JS_NONNULL )
         .returns( iteratorType( boxedKeyType ) );
     maybeAddJavadoc( getDocumentationElement( definitionName, "keys" ), keys );
     type.addMethod( keys.build() );
@@ -2819,7 +2819,7 @@ final class JsinteropAction
         .methodBuilder( "values" )
         .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
         .addAnnotation( JsinteropTypes.HAS_NO_SIDE_EFFECTS )
-        .addAnnotation( BasicTypes.NONNULL )
+        .addAnnotation( JsinteropTypes.JS_NONNULL )
         .returns( iteratorType( boxedValueType ) );
     maybeAddJavadoc( getDocumentationElement( definitionName, "values" ), values );
     type.addMethod( values.build() );
@@ -2839,7 +2839,7 @@ final class JsinteropAction
         .methodBuilder( "entries" )
         .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
         .addAnnotation( JsinteropTypes.HAS_NO_SIDE_EFFECTS )
-        .addAnnotation( BasicTypes.NONNULL )
+        .addAnnotation( JsinteropTypes.JS_NONNULL )
         .returns( iteratorType( ClassName.bestGuess( "Entry" ) ) );
     maybeAddJavadoc( getDocumentationElement( definitionName, "entries" ), entries );
     type.addMethod( entries.build() );
@@ -2887,7 +2887,7 @@ final class JsinteropAction
                                   .addParameter( keyParam )
                                   .addParameter( ParameterSpec
                                                    .builder( lookupClassName( definitionName ), "map" )
-                                                   .addAnnotation( BasicTypes.NONNULL )
+                                                   .addAnnotation( JsinteropTypes.JS_NONNULL )
                                                    .build() )
                                   .build() )
                     .build() );
@@ -2898,7 +2898,7 @@ final class JsinteropAction
         .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
         .addParameter( ParameterSpec
                          .builder( ClassName.bestGuess( "ForEachCallback" ), "callback" )
-                         .addAnnotation( BasicTypes.NONNULL )
+                         .addAnnotation( JsinteropTypes.JS_NONNULL )
                          .build() );
     maybeAddJavadoc( forEachDocumentation, forEach1 );
     type.addMethod( forEach1.build() );
@@ -2918,7 +2918,7 @@ final class JsinteropAction
         .methodBuilder( "forEach" )
         .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
         .addParameter( ParameterSpec.builder( ClassName.bestGuess( "ForEachCallback2" ), "callback" )
-                         .addAnnotation( BasicTypes.NONNULL )
+                         .addAnnotation( JsinteropTypes.JS_NONNULL )
                          .build() );
     maybeAddJavadoc( forEachDocumentation, forEach2 );
     type.addMethod( forEach2.build() );
@@ -2937,7 +2937,7 @@ final class JsinteropAction
       .methodBuilder( "forEach" )
       .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
       .addParameter( ParameterSpec.builder( ClassName.bestGuess( "ForEachCallback3" ), "callback" )
-                       .addAnnotation( BasicTypes.NONNULL )
+                       .addAnnotation( JsinteropTypes.JS_NONNULL )
                        .build() );
     maybeAddJavadoc( forEachDocumentation, forEach3 );
     type.addMethod( forEach3.build() );
@@ -3126,11 +3126,11 @@ final class JsinteropAction
     final WebIDLSchema schema = getSchema();
     if ( schema.isNullable( type ) )
     {
-      builder.addAnnotation( BasicTypes.NULLABLE );
+      builder.addAnnotation( JsinteropTypes.JS_NULLABLE );
     }
     else if ( !schema.resolveType( type ).getKind().isPrimitive() )
     {
-      builder.addAnnotation( BasicTypes.NONNULL );
+      builder.addAnnotation( JsinteropTypes.JS_NONNULL );
     }
   }
 
@@ -3361,11 +3361,11 @@ final class JsinteropAction
 
     if ( schema.isNullable( attributeType ) )
     {
-      field.addAnnotation( BasicTypes.NULLABLE );
+      field.addAnnotation( JsinteropTypes.JS_NULLABLE );
     }
     else if ( !actualType.getKind().isPrimitive() )
     {
-      field.addAnnotation( BasicTypes.NONNULL );
+      field.addAnnotation( JsinteropTypes.JS_NONNULL );
     }
     addMagicConstantAnnotationIfNeeded( actualType, field );
     type.addField( field.build() );
@@ -4089,22 +4089,16 @@ final class JsinteropAction
       final Type actualType = getSchema().resolveType( returnType );
       if ( getSchema().isNullable( returnType ) )
       {
-        method.addAnnotation( BasicTypes.NULLABLE );
+        method.addAnnotation( JsinteropTypes.JS_NULLABLE );
       }
       else if ( !actualType.getKind().isPrimitive() )
       {
-        method.addAnnotation( BasicTypes.NONNULL );
+        method.addAnnotation( JsinteropTypes.JS_NONNULL );
       }
-      final TypeName type;
-      if ( Kind.Sequence == actualType.getKind() )
-      {
-        type = toSequenceType( (SequenceType) actualType,
-                               operation.getIdentValue( ExtendedAttributes.SEQUENCE_TYPE ) );
-      }
-      else
-      {
-        type = toTypeName( returnType );
-      }
+      final TypeName type =
+        Kind.Sequence == actualType.getKind() ?
+        toSequenceType( (SequenceType) actualType, operation.getIdentValue( ExtendedAttributes.SEQUENCE_TYPE ) ) :
+        toTypeName( returnType );
       method.returns( type );
     }
   }
@@ -4238,6 +4232,7 @@ final class JsinteropAction
     if ( null != testParameter )
     {
       addDoNotAutoboxAnnotation( typedValue, testParameter );
+      addMagicConstantAnnotationIfNeeded( actualType, testParameter );
       testMethod.addParameter( testParameter.build() );
     }
   }
@@ -4276,7 +4271,7 @@ final class JsinteropAction
         final FieldSpec.Builder field =
           FieldSpec
             .builder( BasicTypes.STRING, value, Modifier.PUBLIC, Modifier.STATIC, Modifier.FINAL )
-            .addAnnotation( BasicTypes.NONNULL )
+            .addAnnotation( JsinteropTypes.JS_NONNULL )
             .initializer( "$S", enumerationValue.getValue() );
         maybeAddCustomAnnotations( enumerationValue, field );
         maybeAddJavadoc( enumerationValue.getDocumentation(), field );
@@ -4316,7 +4311,7 @@ final class JsinteropAction
                                   .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
                                   .addParameter( ParameterSpec
                                                    .builder( BasicTypes.STRING, "value", Modifier.FINAL )
-                                                   .addAnnotation( BasicTypes.NONNULL )
+                                                   .addAnnotation( JsinteropTypes.JS_NONNULL )
                                                    .build() )
                                   .addStatement( "assert isValid( value )" )
                                   .build() )
@@ -4326,7 +4321,7 @@ final class JsinteropAction
                                   .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
                                   .addParameter( ParameterSpec
                                                    .builder( BasicTypes.STRING, "value", Modifier.FINAL )
-                                                   .addAnnotation( BasicTypes.NONNULL )
+                                                   .addAnnotation( JsinteropTypes.JS_NONNULL )
                                                    .build() )
                                   .addStatement( "return " + test, params.toArray() )
                                   .build() )

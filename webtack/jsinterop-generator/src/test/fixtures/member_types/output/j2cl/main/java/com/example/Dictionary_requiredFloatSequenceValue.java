@@ -2,6 +2,7 @@ package com.example;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -31,11 +32,11 @@ public interface Dictionary_requiredFloatSequenceValue {
   @JsProperty(
       name = "requiredFloatSequenceValue"
   )
-  @Nonnull
+  @JsNonNull
   JsArray<Double> requiredFloatSequenceValue();
 
   @JsProperty
-  void setRequiredFloatSequenceValue(@Nonnull JsArray<Double> requiredFloatSequenceValue);
+  void setRequiredFloatSequenceValue(@JsNonNull JsArray<Double> requiredFloatSequenceValue);
 
   @JsOverlay
   default void setRequiredFloatSequenceValue(@Nonnull final double... requiredFloatSequenceValue) {

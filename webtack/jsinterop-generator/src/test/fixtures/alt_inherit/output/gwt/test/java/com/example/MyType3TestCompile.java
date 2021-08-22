@@ -44,12 +44,12 @@ public final class MyType3TestCompile {
     return $instance.anyIteratorMethod( v1 );
   }
 
-  public static Any anyMethod(final MyType3 $instance, @DoNotAutobox final java.lang.Object v1,
-      @DoNotAutobox final java.lang.Object v2) {
+  public static Any anyMethod(final MyType3 $instance, @DoNotAutobox final Object v1,
+      @DoNotAutobox final Object v2) {
     return $instance.anyMethod( v1, v2 );
   }
 
-  public static Any anyMethod(final MyType3 $instance, @DoNotAutobox final java.lang.Object v1) {
+  public static Any anyMethod(final MyType3 $instance, @DoNotAutobox final Object v1) {
     return $instance.anyMethod( v1 );
   }
 
@@ -505,12 +505,12 @@ public final class MyType3TestCompile {
     return $instance.nullableLongMethod( v1 );
   }
 
-  public static Object nullableObjectMethod(final MyType3 $instance, final Object v1,
-      final Object v2) {
+  public static JsObject nullableObjectMethod(final MyType3 $instance, final JsObject v1,
+      final JsObject v2) {
     return $instance.nullableObjectMethod( v1, v2 );
   }
 
-  public static Object nullableObjectMethod(final MyType3 $instance, final Object v1) {
+  public static JsObject nullableObjectMethod(final MyType3 $instance, final JsObject v1) {
     return $instance.nullableObjectMethod( v1 );
   }
 
@@ -695,11 +695,12 @@ public final class MyType3TestCompile {
     return $instance.nullableUnsignedShortMethod( v1 );
   }
 
-  public static Object objectMethod(final MyType3 $instance, final Object v1, final Object v2) {
+  public static JsObject objectMethod(final MyType3 $instance, final JsObject v1,
+      final JsObject v2) {
     return $instance.objectMethod( v1, v2 );
   }
 
-  public static Object objectMethod(final MyType3 $instance, final Object v1) {
+  public static JsObject objectMethod(final MyType3 $instance, final JsObject v1) {
     return $instance.objectMethod( v1 );
   }
 

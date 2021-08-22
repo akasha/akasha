@@ -3,8 +3,9 @@ package com.example;
 import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 import jsinterop.annotations.JsFunction;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -40,26 +41,26 @@ public final class SomeOtherType implements JsIterable<SomeOtherType.Entry> {
   public native boolean has(int key);
 
   @HasNoSideEffects
-  @Nullable
+  @JsNullable
   public native Double get(int key);
 
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native JsIterator<Double> keys();
 
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native JsIterator<Double> values();
 
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native JsIterator<Entry> entries();
 
-  public native void forEach(@Nonnull ForEachCallback callback);
+  public native void forEach(@JsNonNull ForEachCallback callback);
 
-  public native void forEach(@Nonnull ForEachCallback2 callback);
+  public native void forEach(@JsNonNull ForEachCallback2 callback);
 
-  public native void forEach(@Nonnull ForEachCallback3 callback);
+  public native void forEach(@JsNonNull ForEachCallback3 callback);
 
   public native void set(int key, int value);
 
@@ -99,6 +100,6 @@ public final class SomeOtherType implements JsIterable<SomeOtherType.Entry> {
   @JsFunction
   @FunctionalInterface
   public interface ForEachCallback3 {
-    void item(int value, int key, @Nonnull SomeOtherType map);
+    void item(int value, int key, @JsNonNull SomeOtherType map);
   }
 }

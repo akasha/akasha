@@ -9,6 +9,8 @@ import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -33,11 +35,11 @@ public interface MyDictionary {
   @JsProperty(
       name = "anyValue"
   )
-  @Nullable
+  @JsNullable
   Any anyValue();
 
   @JsProperty
-  void setAnyValue(@DoNotAutobox @Nullable java.lang.Object anyValue);
+  void setAnyValue(@DoNotAutobox @JsNullable Object anyValue);
 
   @JsProperty(
       name = "booleanFrozenArrayValue"
@@ -45,7 +47,7 @@ public interface MyDictionary {
   JsArray<Boolean> booleanFrozenArrayValue();
 
   @JsProperty
-  void setBooleanFrozenArrayValue(@Nonnull JsArray<Boolean> booleanFrozenArrayValue);
+  void setBooleanFrozenArrayValue(@JsNonNull JsArray<Boolean> booleanFrozenArrayValue);
 
   @JsProperty(
       name = "booleanSequenceValue"
@@ -53,7 +55,7 @@ public interface MyDictionary {
   JsArray<Boolean> booleanSequenceValue();
 
   @JsProperty
-  void setBooleanSequenceValue(@Nonnull JsArray<Boolean> booleanSequenceValue);
+  void setBooleanSequenceValue(@JsNonNull JsArray<Boolean> booleanSequenceValue);
 
   @JsOverlay
   default void setBooleanSequenceValue(@Nonnull final Boolean... booleanSequenceValue) {
@@ -74,7 +76,7 @@ public interface MyDictionary {
   JsPropertyMap<String> byteStringRecordValue();
 
   @JsProperty
-  void setByteStringRecordValue(@Nonnull JsPropertyMap<String> byteStringRecordValue);
+  void setByteStringRecordValue(@JsNonNull JsPropertyMap<String> byteStringRecordValue);
 
   @JsProperty(
       name = "byteStringValue"
@@ -82,7 +84,7 @@ public interface MyDictionary {
   String byteStringValue();
 
   @JsProperty
-  void setByteStringValue(@Nonnull String byteStringValue);
+  void setByteStringValue(@JsNonNull String byteStringValue);
 
   @JsProperty(
       name = "byteValue"
@@ -98,7 +100,7 @@ public interface MyDictionary {
   JsPropertyMap<String> domStringRecordValue();
 
   @JsProperty
-  void setDomStringRecordValue(@Nonnull JsPropertyMap<String> domStringRecordValue);
+  void setDomStringRecordValue(@JsNonNull JsPropertyMap<String> domStringRecordValue);
 
   @JsProperty(
       name = "domStringValue"
@@ -106,7 +108,7 @@ public interface MyDictionary {
   String domStringValue();
 
   @JsProperty
-  void setDomStringValue(@Nonnull String domStringValue);
+  void setDomStringValue(@JsNonNull String domStringValue);
 
   @JsProperty(
       name = "doubleFrozenArrayValue"
@@ -114,7 +116,7 @@ public interface MyDictionary {
   JsArray<Double> doubleFrozenArrayValue();
 
   @JsProperty
-  void setDoubleFrozenArrayValue(@Nonnull JsArray<Double> doubleFrozenArrayValue);
+  void setDoubleFrozenArrayValue(@JsNonNull JsArray<Double> doubleFrozenArrayValue);
 
   @JsProperty(
       name = "doubleRecordValue"
@@ -122,7 +124,7 @@ public interface MyDictionary {
   JsPropertyMap<Double> doubleRecordValue();
 
   @JsProperty
-  void setDoubleRecordValue(@Nonnull JsPropertyMap<Double> doubleRecordValue);
+  void setDoubleRecordValue(@JsNonNull JsPropertyMap<Double> doubleRecordValue);
 
   @JsProperty(
       name = "doubleSequenceValue"
@@ -130,7 +132,7 @@ public interface MyDictionary {
   JsArray<Double> doubleSequenceValue();
 
   @JsProperty
-  void setDoubleSequenceValue(@Nonnull JsArray<Double> doubleSequenceValue);
+  void setDoubleSequenceValue(@JsNonNull JsArray<Double> doubleSequenceValue);
 
   @JsOverlay
   default void setDoubleSequenceValue(@Nonnull final double... doubleSequenceValue) {
@@ -151,7 +153,7 @@ public interface MyDictionary {
   JsArray<Double> floatFrozenArrayValue();
 
   @JsProperty
-  void setFloatFrozenArrayValue(@Nonnull JsArray<Double> floatFrozenArrayValue);
+  void setFloatFrozenArrayValue(@JsNonNull JsArray<Double> floatFrozenArrayValue);
 
   @JsProperty(
       name = "floatSequenceValue"
@@ -159,7 +161,7 @@ public interface MyDictionary {
   JsArray<Double> floatSequenceValue();
 
   @JsProperty
-  void setFloatSequenceValue(@Nonnull JsArray<Double> floatSequenceValue);
+  void setFloatSequenceValue(@JsNonNull JsArray<Double> floatSequenceValue);
 
   @JsOverlay
   default void setFloatSequenceValue(@Nonnull final double... floatSequenceValue) {
@@ -196,26 +198,26 @@ public interface MyDictionary {
   JsPropertyMap<String> mixedStringRecordValue();
 
   @JsProperty
-  void setMixedStringRecordValue(@Nonnull JsPropertyMap<String> mixedStringRecordValue);
+  void setMixedStringRecordValue(@JsNonNull JsPropertyMap<String> mixedStringRecordValue);
 
   @JsProperty(
       name = "nullableBooleanFrozenArrayValue"
   )
-  @Nullable
+  @JsNullable
   JsArray<Boolean> nullableBooleanFrozenArrayValue();
 
   @JsProperty
   void setNullableBooleanFrozenArrayValue(
-      @Nullable JsArray<Boolean> nullableBooleanFrozenArrayValue);
+      @JsNullable JsArray<Boolean> nullableBooleanFrozenArrayValue);
 
   @JsProperty(
       name = "nullableBooleanSequenceValue"
   )
-  @Nullable
+  @JsNullable
   JsArray<Boolean> nullableBooleanSequenceValue();
 
   @JsProperty
-  void setNullableBooleanSequenceValue(@Nullable JsArray<Boolean> nullableBooleanSequenceValue);
+  void setNullableBooleanSequenceValue(@JsNullable JsArray<Boolean> nullableBooleanSequenceValue);
 
   @JsOverlay
   default void setNullableBooleanSequenceValue(
@@ -226,56 +228,57 @@ public interface MyDictionary {
   @JsProperty(
       name = "nullableBooleanValue"
   )
-  @Nullable
+  @JsNullable
   Boolean nullableBooleanValue();
 
   @JsProperty
-  void setNullableBooleanValue(@Nullable Boolean nullableBooleanValue);
+  void setNullableBooleanValue(@JsNullable Boolean nullableBooleanValue);
 
   @JsProperty(
       name = "nullableByteStringValue"
   )
-  @Nullable
+  @JsNullable
   String nullableByteStringValue();
 
   @JsProperty
-  void setNullableByteStringValue(@Nullable String nullableByteStringValue);
+  void setNullableByteStringValue(@JsNullable String nullableByteStringValue);
 
   @JsProperty(
       name = "nullableByteValue"
   )
-  @Nullable
+  @JsNullable
   Double nullableByteValue();
 
   @JsProperty
-  void setNullableByteValue(@Nullable Double nullableByteValue);
+  void setNullableByteValue(@JsNullable Double nullableByteValue);
 
   @JsProperty(
       name = "nullableDOMStringValue"
   )
-  @Nullable
+  @JsNullable
   String nullableDOMStringValue();
 
   @JsProperty
-  void setNullableDOMStringValue(@Nullable String nullableDOMStringValue);
+  void setNullableDOMStringValue(@JsNullable String nullableDOMStringValue);
 
   @JsProperty(
       name = "nullableDoubleFrozenArrayValue"
   )
-  @Nullable
+  @JsNullable
   JsArray<Double> nullableDoubleFrozenArrayValue();
 
   @JsProperty
-  void setNullableDoubleFrozenArrayValue(@Nullable JsArray<Double> nullableDoubleFrozenArrayValue);
+  void setNullableDoubleFrozenArrayValue(
+      @JsNullable JsArray<Double> nullableDoubleFrozenArrayValue);
 
   @JsProperty(
       name = "nullableDoubleSequenceValue"
   )
-  @Nullable
+  @JsNullable
   JsArray<Double> nullableDoubleSequenceValue();
 
   @JsProperty
-  void setNullableDoubleSequenceValue(@Nullable JsArray<Double> nullableDoubleSequenceValue);
+  void setNullableDoubleSequenceValue(@JsNullable JsArray<Double> nullableDoubleSequenceValue);
 
   @JsOverlay
   default void setNullableDoubleSequenceValue(
@@ -286,29 +289,29 @@ public interface MyDictionary {
   @JsProperty(
       name = "nullableDoubleValue"
   )
-  @Nullable
+  @JsNullable
   Double nullableDoubleValue();
 
   @JsProperty
-  void setNullableDoubleValue(@Nullable Double nullableDoubleValue);
+  void setNullableDoubleValue(@JsNullable Double nullableDoubleValue);
 
   @JsProperty(
       name = "nullableFloatFrozenArrayValue"
   )
-  @Nullable
+  @JsNullable
   JsArray<Double> nullableFloatFrozenArrayValue();
 
   @JsProperty
-  void setNullableFloatFrozenArrayValue(@Nullable JsArray<Double> nullableFloatFrozenArrayValue);
+  void setNullableFloatFrozenArrayValue(@JsNullable JsArray<Double> nullableFloatFrozenArrayValue);
 
   @JsProperty(
       name = "nullableFloatSequenceValue"
   )
-  @Nullable
+  @JsNullable
   JsArray<Double> nullableFloatSequenceValue();
 
   @JsProperty
-  void setNullableFloatSequenceValue(@Nullable JsArray<Double> nullableFloatSequenceValue);
+  void setNullableFloatSequenceValue(@JsNullable JsArray<Double> nullableFloatSequenceValue);
 
   @JsOverlay
   default void setNullableFloatSequenceValue(@Nullable final double... nullableFloatSequenceValue) {
@@ -318,56 +321,56 @@ public interface MyDictionary {
   @JsProperty(
       name = "nullableFloatValue"
   )
-  @Nullable
+  @JsNullable
   Double nullableFloatValue();
 
   @JsProperty
-  void setNullableFloatValue(@Nullable Double nullableFloatValue);
+  void setNullableFloatValue(@JsNullable Double nullableFloatValue);
 
   @JsProperty(
       name = "nullableLongLongValue"
   )
-  @Nullable
+  @JsNullable
   Double nullableLongLongValue();
 
   @JsProperty
-  void setNullableLongLongValue(@Nullable Double nullableLongLongValue);
+  void setNullableLongLongValue(@JsNullable Double nullableLongLongValue);
 
   @JsProperty(
       name = "nullableLongValue"
   )
-  @Nullable
+  @JsNullable
   Double nullableLongValue();
 
   @JsProperty
-  void setNullableLongValue(@Nullable Double nullableLongValue);
+  void setNullableLongValue(@JsNullable Double nullableLongValue);
 
   @JsProperty(
       name = "nullableObjectValue"
   )
-  @Nullable
-  Object nullableObjectValue();
+  @JsNullable
+  JsObject nullableObjectValue();
 
   @JsProperty
-  void setNullableObjectValue(@Nullable Object nullableObjectValue);
+  void setNullableObjectValue(@JsNullable JsObject nullableObjectValue);
 
   @JsProperty(
       name = "nullableOctetValue"
   )
-  @Nullable
+  @JsNullable
   Double nullableOctetValue();
 
   @JsProperty
-  void setNullableOctetValue(@Nullable Double nullableOctetValue);
+  void setNullableOctetValue(@JsNullable Double nullableOctetValue);
 
   @JsProperty(
       name = "nullableShortFrozenArrayValue"
   )
-  @Nullable
+  @JsNullable
   JsArray<Double> nullableShortFrozenArrayValue();
 
   @JsProperty
-  void setNullableShortFrozenArrayValue(@Nullable JsArray<Double> nullableShortFrozenArrayValue);
+  void setNullableShortFrozenArrayValue(@JsNullable JsArray<Double> nullableShortFrozenArrayValue);
 
   @JsProperty(
       name = "nullableShortPromiseValue"
@@ -375,16 +378,16 @@ public interface MyDictionary {
   JsPromise<Double> nullableShortPromiseValue();
 
   @JsProperty
-  void setNullableShortPromiseValue(@Nonnull JsPromise<Double> nullableShortPromiseValue);
+  void setNullableShortPromiseValue(@JsNonNull JsPromise<Double> nullableShortPromiseValue);
 
   @JsProperty(
       name = "nullableShortSequenceValue"
   )
-  @Nullable
+  @JsNullable
   JsArray<Double> nullableShortSequenceValue();
 
   @JsProperty
-  void setNullableShortSequenceValue(@Nullable JsArray<Double> nullableShortSequenceValue);
+  void setNullableShortSequenceValue(@JsNullable JsArray<Double> nullableShortSequenceValue);
 
   @JsOverlay
   default void setNullableShortSequenceValue(@Nullable final double... nullableShortSequenceValue) {
@@ -394,21 +397,21 @@ public interface MyDictionary {
   @JsProperty(
       name = "nullableShortValue"
   )
-  @Nullable
+  @JsNullable
   Double nullableShortValue();
 
   @JsProperty
-  void setNullableShortValue(@Nullable Double nullableShortValue);
+  void setNullableShortValue(@JsNullable Double nullableShortValue);
 
   @JsProperty(
       name = "nullableSomeTypeFrozenArrayValue"
   )
-  @Nullable
+  @JsNullable
   JsArray<SomeType> nullableSomeTypeFrozenArrayValue();
 
   @JsProperty
   void setNullableSomeTypeFrozenArrayValue(
-      @Nullable JsArray<SomeType> nullableSomeTypeFrozenArrayValue);
+      @JsNullable JsArray<SomeType> nullableSomeTypeFrozenArrayValue);
 
   @JsProperty(
       name = "nullableSomeTypePromiseValue"
@@ -416,16 +419,17 @@ public interface MyDictionary {
   JsPromise<SomeType> nullableSomeTypePromiseValue();
 
   @JsProperty
-  void setNullableSomeTypePromiseValue(@Nonnull JsPromise<SomeType> nullableSomeTypePromiseValue);
+  void setNullableSomeTypePromiseValue(@JsNonNull JsPromise<SomeType> nullableSomeTypePromiseValue);
 
   @JsProperty(
       name = "nullableSomeTypeSequenceValue"
   )
-  @Nullable
+  @JsNullable
   JsArray<SomeType> nullableSomeTypeSequenceValue();
 
   @JsProperty
-  void setNullableSomeTypeSequenceValue(@Nullable JsArray<SomeType> nullableSomeTypeSequenceValue);
+  void setNullableSomeTypeSequenceValue(
+      @JsNullable JsArray<SomeType> nullableSomeTypeSequenceValue);
 
   @JsOverlay
   default void setNullableSomeTypeSequenceValue(
@@ -436,73 +440,73 @@ public interface MyDictionary {
   @JsProperty(
       name = "nullableSomeTypeValue"
   )
-  @Nullable
+  @JsNullable
   SomeType nullableSomeTypeValue();
 
   @JsProperty
-  void setNullableSomeTypeValue(@Nullable SomeType nullableSomeTypeValue);
+  void setNullableSomeTypeValue(@JsNullable SomeType nullableSomeTypeValue);
 
   @JsProperty(
       name = "nullableUSVStringValue"
   )
-  @Nullable
+  @JsNullable
   String nullableUSVStringValue();
 
   @JsProperty
-  void setNullableUSVStringValue(@Nullable String nullableUSVStringValue);
+  void setNullableUSVStringValue(@JsNullable String nullableUSVStringValue);
 
   @JsProperty(
       name = "nullableUnrestrictedDoubleValue"
   )
-  @Nullable
+  @JsNullable
   Double nullableUnrestrictedDoubleValue();
 
   @JsProperty
-  void setNullableUnrestrictedDoubleValue(@Nullable Double nullableUnrestrictedDoubleValue);
+  void setNullableUnrestrictedDoubleValue(@JsNullable Double nullableUnrestrictedDoubleValue);
 
   @JsProperty(
       name = "nullableUnrestrictedFloatValue"
   )
-  @Nullable
+  @JsNullable
   Double nullableUnrestrictedFloatValue();
 
   @JsProperty
-  void setNullableUnrestrictedFloatValue(@Nullable Double nullableUnrestrictedFloatValue);
+  void setNullableUnrestrictedFloatValue(@JsNullable Double nullableUnrestrictedFloatValue);
 
   @JsProperty(
       name = "nullableUnsignedLongLongValue"
   )
-  @Nullable
+  @JsNullable
   Double nullableUnsignedLongLongValue();
 
   @JsProperty
-  void setNullableUnsignedLongLongValue(@Nullable Double nullableUnsignedLongLongValue);
+  void setNullableUnsignedLongLongValue(@JsNullable Double nullableUnsignedLongLongValue);
 
   @JsProperty(
       name = "nullableUnsignedLongValue"
   )
-  @Nullable
+  @JsNullable
   Double nullableUnsignedLongValue();
 
   @JsProperty
-  void setNullableUnsignedLongValue(@Nullable Double nullableUnsignedLongValue);
+  void setNullableUnsignedLongValue(@JsNullable Double nullableUnsignedLongValue);
 
   @JsProperty(
       name = "nullableUnsignedShortValue"
   )
-  @Nullable
+  @JsNullable
   Double nullableUnsignedShortValue();
 
   @JsProperty
-  void setNullableUnsignedShortValue(@Nullable Double nullableUnsignedShortValue);
+  void setNullableUnsignedShortValue(@JsNullable Double nullableUnsignedShortValue);
 
   @JsProperty(
       name = "objectValue"
   )
-  Object objectValue();
+  JsObject objectValue();
 
   @JsProperty
-  void setObjectValue(@Nonnull Object objectValue);
+  void setObjectValue(@JsNonNull JsObject objectValue);
 
   @JsProperty(
       name = "octetValue"
@@ -518,7 +522,7 @@ public interface MyDictionary {
   JsIterable<Any> requiredAnyIterableValue();
 
   @JsProperty
-  void setRequiredAnyIterableValue(@Nonnull JsIterable<Any> requiredAnyIterableValue);
+  void setRequiredAnyIterableValue(@JsNonNull JsIterable<Any> requiredAnyIterableValue);
 
   @JsProperty(
       name = "requiredAnyIteratorIterableValue"
@@ -527,7 +531,7 @@ public interface MyDictionary {
 
   @JsProperty
   void setRequiredAnyIteratorIterableValue(
-      @Nonnull JsIteratorIterable<Any> requiredAnyIteratorIterableValue);
+      @JsNonNull JsIteratorIterable<Any> requiredAnyIteratorIterableValue);
 
   @JsProperty(
       name = "requiredAnyIteratorValue"
@@ -535,7 +539,7 @@ public interface MyDictionary {
   JsIterator<Any> requiredAnyIteratorValue();
 
   @JsProperty
-  void setRequiredAnyIteratorValue(@Nonnull JsIterator<Any> requiredAnyIteratorValue);
+  void setRequiredAnyIteratorValue(@JsNonNull JsIterator<Any> requiredAnyIteratorValue);
 
   @JsProperty(
       name = "requiredAnySequenceValue"
@@ -543,7 +547,7 @@ public interface MyDictionary {
   JsArray<Any> requiredAnySequenceValue();
 
   @JsProperty
-  void setRequiredAnySequenceValue(@Nonnull JsArray<Any> requiredAnySequenceValue);
+  void setRequiredAnySequenceValue(@JsNonNull JsArray<Any> requiredAnySequenceValue);
 
   @JsOverlay
   default void setRequiredAnySequenceValue(@Nonnull final Any... requiredAnySequenceValue) {
@@ -556,7 +560,7 @@ public interface MyDictionary {
   JsPromise<JsArray<Double>> sequencePromiseValue();
 
   @JsProperty
-  void setSequencePromiseValue(@Nonnull JsPromise<JsArray<Double>> sequencePromiseValue);
+  void setSequencePromiseValue(@JsNonNull JsPromise<JsArray<Double>> sequencePromiseValue);
 
   @JsProperty(
       name = "shortFrozenArrayValue"
@@ -564,7 +568,7 @@ public interface MyDictionary {
   JsArray<Double> shortFrozenArrayValue();
 
   @JsProperty
-  void setShortFrozenArrayValue(@Nonnull JsArray<Double> shortFrozenArrayValue);
+  void setShortFrozenArrayValue(@JsNonNull JsArray<Double> shortFrozenArrayValue);
 
   @JsProperty(
       name = "shortPromiseValue"
@@ -572,7 +576,7 @@ public interface MyDictionary {
   JsPromise<Double> shortPromiseValue();
 
   @JsProperty
-  void setShortPromiseValue(@Nonnull JsPromise<Double> shortPromiseValue);
+  void setShortPromiseValue(@JsNonNull JsPromise<Double> shortPromiseValue);
 
   @JsProperty(
       name = "shortSequenceValue"
@@ -580,7 +584,7 @@ public interface MyDictionary {
   JsArray<Double> shortSequenceValue();
 
   @JsProperty
-  void setShortSequenceValue(@Nonnull JsArray<Double> shortSequenceValue);
+  void setShortSequenceValue(@JsNonNull JsArray<Double> shortSequenceValue);
 
   @JsOverlay
   default void setShortSequenceValue(@Nonnull final double... shortSequenceValue) {
@@ -601,7 +605,7 @@ public interface MyDictionary {
   JsArray<SomeType> someTypeFrozenArrayValue();
 
   @JsProperty
-  void setSomeTypeFrozenArrayValue(@Nonnull JsArray<SomeType> someTypeFrozenArrayValue);
+  void setSomeTypeFrozenArrayValue(@JsNonNull JsArray<SomeType> someTypeFrozenArrayValue);
 
   @JsProperty(
       name = "someTypePromiseValue"
@@ -609,7 +613,7 @@ public interface MyDictionary {
   JsPromise<SomeType> someTypePromiseValue();
 
   @JsProperty
-  void setSomeTypePromiseValue(@Nonnull JsPromise<SomeType> someTypePromiseValue);
+  void setSomeTypePromiseValue(@JsNonNull JsPromise<SomeType> someTypePromiseValue);
 
   @JsProperty(
       name = "someTypeSequenceValue"
@@ -617,7 +621,7 @@ public interface MyDictionary {
   JsArray<SomeType> someTypeSequenceValue();
 
   @JsProperty
-  void setSomeTypeSequenceValue(@Nonnull JsArray<SomeType> someTypeSequenceValue);
+  void setSomeTypeSequenceValue(@JsNonNull JsArray<SomeType> someTypeSequenceValue);
 
   @JsOverlay
   default void setSomeTypeSequenceValue(@Nonnull final SomeType... someTypeSequenceValue) {
@@ -630,7 +634,7 @@ public interface MyDictionary {
   SomeType someTypeValue();
 
   @JsProperty
-  void setSomeTypeValue(@Nonnull SomeType someTypeValue);
+  void setSomeTypeValue(@JsNonNull SomeType someTypeValue);
 
   @JsProperty(
       name = "typeReferenceRecordValue"
@@ -638,7 +642,7 @@ public interface MyDictionary {
   JsPropertyMap<SomeType> typeReferenceRecordValue();
 
   @JsProperty
-  void setTypeReferenceRecordValue(@Nonnull JsPropertyMap<SomeType> typeReferenceRecordValue);
+  void setTypeReferenceRecordValue(@JsNonNull JsPropertyMap<SomeType> typeReferenceRecordValue);
 
   @JsProperty(
       name = "unrestrictedDoubleValue"
@@ -686,7 +690,7 @@ public interface MyDictionary {
   JsPropertyMap<String> usvStringRecordValue();
 
   @JsProperty
-  void setUsvStringRecordValue(@Nonnull JsPropertyMap<String> usvStringRecordValue);
+  void setUsvStringRecordValue(@JsNonNull JsPropertyMap<String> usvStringRecordValue);
 
   @JsProperty(
       name = "usvStringValue"
@@ -694,7 +698,7 @@ public interface MyDictionary {
   String usvStringValue();
 
   @JsProperty
-  void setUsvStringValue(@Nonnull String usvStringValue);
+  void setUsvStringValue(@JsNonNull String usvStringValue);
 
   @JsProperty(
       name = "voidPromiseValue"
@@ -702,7 +706,7 @@ public interface MyDictionary {
   JsPromise<Void> voidPromiseValue();
 
   @JsProperty
-  void setVoidPromiseValue(@Nonnull JsPromise<Void> voidPromiseValue);
+  void setVoidPromiseValue(@JsNonNull JsPromise<Void> voidPromiseValue);
 
   @Generated("org.realityforge.webtack")
   @JsType(
@@ -713,7 +717,7 @@ public interface MyDictionary {
   interface Builder extends MyDictionary {
     @JsOverlay
     @Nonnull
-    default Builder anyValue(@DoNotAutobox @Nullable final java.lang.Object anyValue) {
+    default Builder anyValue(@DoNotAutobox @Nullable final Object anyValue) {
       setAnyValue( anyValue );
       return this;
     }
@@ -999,7 +1003,7 @@ public interface MyDictionary {
 
     @JsOverlay
     @Nonnull
-    default Builder nullableObjectValue(@Nullable final Object nullableObjectValue) {
+    default Builder nullableObjectValue(@Nullable final JsObject nullableObjectValue) {
       setNullableObjectValue( nullableObjectValue );
       return this;
     }
@@ -1136,7 +1140,7 @@ public interface MyDictionary {
 
     @JsOverlay
     @Nonnull
-    default Builder objectValue(@Nonnull final Object objectValue) {
+    default Builder objectValue(@Nonnull final JsObject objectValue) {
       setObjectValue( objectValue );
       return this;
     }

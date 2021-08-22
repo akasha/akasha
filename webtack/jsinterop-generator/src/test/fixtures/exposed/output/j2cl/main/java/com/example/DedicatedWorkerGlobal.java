@@ -1,7 +1,7 @@
 package com.example;
 
 import javax.annotation.Generated;
-import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -19,12 +19,12 @@ public final class DedicatedWorkerGlobal {
   @JsProperty(
       name = "dedicatedWorkerGlobalScopeAttribute"
   )
-  @Nonnull
+  @JsNonNull
   public static native String dedicatedWorkerGlobalScopeAttribute();
 
   @JsProperty(
       name = "workerGlobalScopeAttribute"
   )
-  @Nonnull
+  @JsNonNull
   public static native String workerGlobalScopeAttribute();
 }

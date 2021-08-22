@@ -2,6 +2,7 @@ package com.example;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -23,6 +24,6 @@ public final class CSS {
    * @deprecated
    */
   @Deprecated
-  @Nonnull
+  @JsNonNull
   public static native String escape(@Nonnull String ident);
 }

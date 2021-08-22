@@ -2,6 +2,7 @@ package com.example;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -28,7 +29,7 @@ public interface AudioWorkletNodeOptions {
   JsPropertyMap<Boolean> otherData1();
 
   @JsProperty
-  void setOtherData1(@Nonnull JsPropertyMap<Boolean> otherData1);
+  void setOtherData1(@JsNonNull JsPropertyMap<Boolean> otherData1);
 
   @JsProperty(
       name = "otherData10"
@@ -36,7 +37,7 @@ public interface AudioWorkletNodeOptions {
   JsPropertyMap<Double> otherData10();
 
   @JsProperty
-  void setOtherData10(@Nonnull JsPropertyMap<Double> otherData10);
+  void setOtherData10(@JsNonNull JsPropertyMap<Double> otherData10);
 
   @JsProperty(
       name = "otherData11"
@@ -44,7 +45,7 @@ public interface AudioWorkletNodeOptions {
   JsPropertyMap<Double> otherData11();
 
   @JsProperty
-  void setOtherData11(@Nonnull JsPropertyMap<Double> otherData11);
+  void setOtherData11(@JsNonNull JsPropertyMap<Double> otherData11);
 
   @JsProperty(
       name = "otherData2"
@@ -52,7 +53,7 @@ public interface AudioWorkletNodeOptions {
   JsPropertyMap<Double> otherData2();
 
   @JsProperty
-  void setOtherData2(@Nonnull JsPropertyMap<Double> otherData2);
+  void setOtherData2(@JsNonNull JsPropertyMap<Double> otherData2);
 
   @JsProperty(
       name = "otherData3"
@@ -60,7 +61,7 @@ public interface AudioWorkletNodeOptions {
   JsPropertyMap<Double> otherData3();
 
   @JsProperty
-  void setOtherData3(@Nonnull JsPropertyMap<Double> otherData3);
+  void setOtherData3(@JsNonNull JsPropertyMap<Double> otherData3);
 
   @JsProperty(
       name = "otherData4"
@@ -68,7 +69,7 @@ public interface AudioWorkletNodeOptions {
   JsPropertyMap<Double> otherData4();
 
   @JsProperty
-  void setOtherData4(@Nonnull JsPropertyMap<Double> otherData4);
+  void setOtherData4(@JsNonNull JsPropertyMap<Double> otherData4);
 
   @JsProperty(
       name = "otherData5"
@@ -76,7 +77,7 @@ public interface AudioWorkletNodeOptions {
   JsPropertyMap<Double> otherData5();
 
   @JsProperty
-  void setOtherData5(@Nonnull JsPropertyMap<Double> otherData5);
+  void setOtherData5(@JsNonNull JsPropertyMap<Double> otherData5);
 
   @JsProperty(
       name = "otherData6"
@@ -84,7 +85,7 @@ public interface AudioWorkletNodeOptions {
   JsPropertyMap<Double> otherData6();
 
   @JsProperty
-  void setOtherData6(@Nonnull JsPropertyMap<Double> otherData6);
+  void setOtherData6(@JsNonNull JsPropertyMap<Double> otherData6);
 
   @JsProperty(
       name = "otherData7"
@@ -92,7 +93,7 @@ public interface AudioWorkletNodeOptions {
   JsPropertyMap<Double> otherData7();
 
   @JsProperty
-  void setOtherData7(@Nonnull JsPropertyMap<Double> otherData7);
+  void setOtherData7(@JsNonNull JsPropertyMap<Double> otherData7);
 
   @JsProperty(
       name = "otherData8"
@@ -100,7 +101,7 @@ public interface AudioWorkletNodeOptions {
   JsPropertyMap<Double> otherData8();
 
   @JsProperty
-  void setOtherData8(@Nonnull JsPropertyMap<Double> otherData8);
+  void setOtherData8(@JsNonNull JsPropertyMap<Double> otherData8);
 
   @JsProperty(
       name = "otherData9"
@@ -108,7 +109,7 @@ public interface AudioWorkletNodeOptions {
   JsPropertyMap<Double> otherData9();
 
   @JsProperty
-  void setOtherData9(@Nonnull JsPropertyMap<Double> otherData9);
+  void setOtherData9(@JsNonNull JsPropertyMap<Double> otherData9);
 
   @JsProperty(
       name = "parameterData"
@@ -116,7 +117,7 @@ public interface AudioWorkletNodeOptions {
   JsPropertyMap<Double> parameterData();
 
   @JsProperty
-  void setParameterData(@Nonnull JsPropertyMap<Double> parameterData);
+  void setParameterData(@JsNonNull JsPropertyMap<Double> parameterData);
 
   @Generated("org.realityforge.webtack")
   @JsType(

@@ -3,6 +3,7 @@ package com.example;
 import com.example.web_assembly.Module;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -16,6 +17,6 @@ public final class WebAssembly {
   private WebAssembly() {
   }
 
-  @Nonnull
+  @JsNonNull
   public static native JsPromise<Module> compile(@Nonnull ArrayBuffer bytes);
 }

@@ -285,11 +285,11 @@ public final class MyType6TestCompile {
     MyType6.nullableLongValue = value;
   }
 
-  public static Object nullableObjectValue() {
+  public static JsObject nullableObjectValue() {
     return MyType6.nullableObjectValue;
   }
 
-  public static void nullableObjectValue(final Object value) {
+  public static void nullableObjectValue(final JsObject value) {
     MyType6.nullableObjectValue = value;
   }
 
@@ -413,11 +413,11 @@ public final class MyType6TestCompile {
     MyType6.nullableUnsignedShortValue = value;
   }
 
-  public static Object objectValue() {
+  public static JsObject objectValue() {
     return MyType6.objectValue;
   }
 
-  public static void objectValue(final Object value) {
+  public static void objectValue(final JsObject value) {
     MyType6.objectValue = value;
   }
 

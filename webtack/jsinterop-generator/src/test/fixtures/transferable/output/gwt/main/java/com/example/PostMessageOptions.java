@@ -2,6 +2,7 @@ package com.example;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -28,7 +29,7 @@ public interface PostMessageOptions {
   JsArray<Object> transfer();
 
   @JsProperty
-  void setTransfer(@Nonnull JsArray<Object> transfer);
+  void setTransfer(@JsNonNull JsArray<Object> transfer);
 
   @JsOverlay
   default void setTransfer(@Nonnull final Object... transfer) {

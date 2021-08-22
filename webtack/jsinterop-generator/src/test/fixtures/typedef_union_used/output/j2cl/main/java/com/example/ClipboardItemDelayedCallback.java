@@ -1,13 +1,13 @@
 package com.example;
 
 import javax.annotation.Generated;
-import javax.annotation.Nonnull;
 import jsinterop.annotations.JsFunction;
+import jsinterop.annotations.JsNonNull;
 
 @Generated("org.realityforge.webtack")
 @JsFunction
 @FunctionalInterface
 public interface ClipboardItemDelayedCallback {
-  @Nonnull
+  @JsNonNull
   JsPromise<ClipboardItemDataType> onInvoke();
 }

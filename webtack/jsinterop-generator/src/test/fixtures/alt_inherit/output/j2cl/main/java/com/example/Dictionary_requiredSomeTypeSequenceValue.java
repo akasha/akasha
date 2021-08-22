@@ -3,6 +3,7 @@ package com.example;
 import com.other.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -32,11 +33,11 @@ public interface Dictionary_requiredSomeTypeSequenceValue {
   @JsProperty(
       name = "requiredSomeTypeSequenceValue"
   )
-  @Nonnull
+  @JsNonNull
   JsArray<SomeType> requiredSomeTypeSequenceValue();
 
   @JsProperty
-  void setRequiredSomeTypeSequenceValue(@Nonnull JsArray<SomeType> requiredSomeTypeSequenceValue);
+  void setRequiredSomeTypeSequenceValue(@JsNonNull JsArray<SomeType> requiredSomeTypeSequenceValue);
 
   @JsOverlay
   default void setRequiredSomeTypeSequenceValue(

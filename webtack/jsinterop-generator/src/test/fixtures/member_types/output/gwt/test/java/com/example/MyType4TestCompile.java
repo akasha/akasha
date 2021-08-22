@@ -37,12 +37,11 @@ public final class MyType4TestCompile {
     return MyType4.anyIteratorMethod( v1 );
   }
 
-  public static Any anyMethod(@DoNotAutobox final java.lang.Object v1,
-      @DoNotAutobox final java.lang.Object v2) {
+  public static Any anyMethod(@DoNotAutobox final Object v1, @DoNotAutobox final Object v2) {
     return MyType4.anyMethod( v1, v2 );
   }
 
-  public static Any anyMethod(@DoNotAutobox final java.lang.Object v1) {
+  public static Any anyMethod(@DoNotAutobox final Object v1) {
     return MyType4.anyMethod( v1 );
   }
 
@@ -457,11 +456,11 @@ public final class MyType4TestCompile {
     return MyType4.nullableLongMethod( v1 );
   }
 
-  public static Object nullableObjectMethod(final Object v1, final Object v2) {
+  public static JsObject nullableObjectMethod(final JsObject v1, final JsObject v2) {
     return MyType4.nullableObjectMethod( v1, v2 );
   }
 
-  public static Object nullableObjectMethod(final Object v1) {
+  public static JsObject nullableObjectMethod(final JsObject v1) {
     return MyType4.nullableObjectMethod( v1 );
   }
 
@@ -628,11 +627,11 @@ public final class MyType4TestCompile {
     return MyType4.nullableUnsignedShortMethod( v1 );
   }
 
-  public static Object objectMethod(final Object v1, final Object v2) {
+  public static JsObject objectMethod(final JsObject v1, final JsObject v2) {
     return MyType4.objectMethod( v1, v2 );
   }
 
-  public static Object objectMethod(final Object v1) {
+  public static JsObject objectMethod(final JsObject v1) {
     return MyType4.objectMethod( v1 );
   }
 

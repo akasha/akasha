@@ -4,6 +4,7 @@ import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -28,11 +29,11 @@ public interface OptionalAnyDict extends RequiredAnyDict {
   @JsProperty(
       name = "anotherValue"
   )
-  @Nullable
+  @JsNullable
   Any anotherValue();
 
   @JsProperty
-  void setAnotherValue(@DoNotAutobox @Nullable Object anotherValue);
+  void setAnotherValue(@DoNotAutobox @JsNullable Object anotherValue);
 
   @Generated("org.realityforge.webtack")
   @JsType(

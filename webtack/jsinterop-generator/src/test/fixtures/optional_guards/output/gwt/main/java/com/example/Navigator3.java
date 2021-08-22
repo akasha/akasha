@@ -2,6 +2,7 @@ package com.example;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -40,6 +41,6 @@ public final class Navigator3 {
     return "true" == System.getProperty( "com.example.is__Navigator3_getGamepads__supported" ) ? true : "false" == System.getProperty( "com.example.is__Navigator3_getGamepads__supported" ) ? false : Js.asPropertyMap( this ).has( "getGamepads" );
   }
 
-  @Nonnull
+  @JsNonNull
   public native JsArray<Gamepad> getGamepads();
 }

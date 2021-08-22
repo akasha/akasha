@@ -3,6 +3,8 @@ package com.example;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -26,11 +28,11 @@ public interface MyDictionary {
   @JsProperty(
       name = "nullableObjectValue"
   )
-  @Nullable
+  @JsNullable
   JsObject nullableObjectValue();
 
   @JsProperty
-  void setNullableObjectValue(@Nullable JsObject nullableObjectValue);
+  void setNullableObjectValue(@JsNullable JsObject nullableObjectValue);
 
   @JsProperty(
       name = "objectValue"
@@ -38,16 +40,16 @@ public interface MyDictionary {
   JsObject objectValue();
 
   @JsProperty
-  void setObjectValue(@Nonnull JsObject objectValue);
+  void setObjectValue(@JsNonNull JsObject objectValue);
 
   @JsProperty(
       name = "requiredObjectValue"
   )
-  @Nonnull
+  @JsNonNull
   JsObject requiredObjectValue();
 
   @JsProperty
-  void setRequiredObjectValue(@Nonnull JsObject requiredObjectValue);
+  void setRequiredObjectValue(@JsNonNull JsObject requiredObjectValue);
 
   @Generated("org.realityforge.webtack")
   @JsType(

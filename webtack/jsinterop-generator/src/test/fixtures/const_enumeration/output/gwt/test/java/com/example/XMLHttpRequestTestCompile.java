@@ -22,7 +22,7 @@ public final class XMLHttpRequestTestCompile {
     return $instance.getSample();
   }
 
-  public static void setSample(final XMLHttpRequest $instance, final int sample) {
+  public static void setSample(final XMLHttpRequest $instance, @ReadyStateType final int sample) {
     $instance.setSample( sample );
   }
 }

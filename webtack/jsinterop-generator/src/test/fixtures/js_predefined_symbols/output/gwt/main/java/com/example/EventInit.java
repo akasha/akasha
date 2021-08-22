@@ -2,6 +2,7 @@ package com.example;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -36,7 +37,7 @@ public interface EventInit {
   String propertyName();
 
   @JsProperty
-  void setPropertyName(@Nonnull String propertyName);
+  void setPropertyName(@JsNonNull String propertyName);
 
   @JsProperty(
       name = "propertyName2"
@@ -44,7 +45,7 @@ public interface EventInit {
   String propertyName2();
 
   @JsProperty
-  void setPropertyName2(@Nonnull String propertyName2);
+  void setPropertyName2(@JsNonNull String propertyName2);
 
   @Generated("org.realityforge.webtack")
   @JsType(

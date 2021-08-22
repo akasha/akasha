@@ -2,7 +2,7 @@ package com.example;
 
 import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
-import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -17,6 +17,6 @@ public class WEBGL_debug_shaders {
   }
 
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native String getTranslatedShaderSource(int shaderId);
 }

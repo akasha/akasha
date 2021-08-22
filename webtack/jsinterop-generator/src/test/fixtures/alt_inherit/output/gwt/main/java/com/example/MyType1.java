@@ -195,7 +195,7 @@ public class MyType1 {
       name = "readonlyNullableObjectValue"
   )
   @Nullable
-  public native Object readonlyNullableObjectValue();
+  public native JsObject readonlyNullableObjectValue();
 
   @JsProperty(
       name = "readonlyNullableOctetValue"
@@ -291,7 +291,7 @@ public class MyType1 {
       name = "readonlyObjectValue"
   )
   @Nonnull
-  public native Object readonlyObjectValue();
+  public native JsObject readonlyObjectValue();
 
   @JsProperty(
       name = "readonlyOctetValue"

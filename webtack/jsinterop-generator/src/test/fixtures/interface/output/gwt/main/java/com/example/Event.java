@@ -4,6 +4,8 @@ import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -31,7 +33,7 @@ public class Event {
 
   public boolean cancelBubble;
 
-  @Nullable
+  @JsNullable
   public Any mutableAny;
 
   public boolean returnValue;
@@ -102,15 +104,15 @@ public class Event {
   @Nonnull
   public native String type();
 
-  @Nonnull
+  @JsNonNull
   public native JsPromise<Any> anyInReturnedPromise();
 
   public native void anyParameter(@DoNotAutobox @Nullable Object value);
 
-  @Nullable
+  @JsNullable
   public native Any anyReturning();
 
-  @Nonnull
+  @JsNonNull
   public native JsArray<EventTarget> composedPath();
 
   public native void initEvent(@Nonnull String type, boolean bubbles, boolean cancelable);

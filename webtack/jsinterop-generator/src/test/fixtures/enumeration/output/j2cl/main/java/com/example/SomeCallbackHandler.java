@@ -3,6 +3,7 @@ package com.example;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsFunction;
+import jsinterop.annotations.JsNonNull;
 
 /**
  * Callback has both return type and argument as enums.
@@ -12,6 +13,6 @@ import jsinterop.annotations.JsFunction;
 @FunctionalInterface
 public interface SomeCallbackHandler {
   @SpeechRecognitionErrorCode
-  @Nonnull
+  @JsNonNull
   String onInvoke(@TxMode @Nonnull String blah);
 }

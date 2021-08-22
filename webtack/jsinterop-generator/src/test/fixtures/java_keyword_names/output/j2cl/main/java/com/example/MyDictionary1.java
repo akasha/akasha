@@ -2,6 +2,7 @@ package com.example;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -30,128 +31,128 @@ public interface MyDictionary1 {
   @JsProperty(
       name = "clone"
   )
-  @Nonnull
+  @JsNonNull
   Object clone_();
 
   @JsProperty
-  void setClone(@Nonnull Object clone);
+  void setClone(@JsNonNull Object clone);
 
   @JsProperty(
       name = "default"
   )
-  @Nonnull
+  @JsNonNull
   Object default_();
 
   @JsProperty
-  void setDefault(@Nonnull Object default_);
+  void setDefault(@JsNonNull Object default_);
 
   @JsProperty(
       name = "equals"
   )
-  @Nonnull
+  @JsNonNull
   Object equals_();
 
   @JsProperty
-  void setEquals(@Nonnull Object equals);
+  void setEquals(@JsNonNull Object equals);
 
   @JsProperty(
       name = "finalize"
   )
-  @Nonnull
+  @JsNonNull
   Object finalize_();
 
   @JsProperty
-  void setFinalize(@Nonnull Object finalize);
+  void setFinalize(@JsNonNull Object finalize);
 
   @JsProperty(
       name = "getClass"
   )
-  @Nonnull
+  @JsNonNull
   Object getClass_();
 
   @JsProperty
-  void setGetClass(@Nonnull Object getClass);
+  void setGetClass(@JsNonNull Object getClass);
 
   @JsProperty(
       name = "hashCode"
   )
-  @Nonnull
+  @JsNonNull
   Object hashCode_();
 
   @JsProperty
-  void setHashCode(@Nonnull Object hashCode);
+  void setHashCode(@JsNonNull Object hashCode);
 
   @JsProperty(
       name = "is"
   )
-  @Nonnull
+  @JsNonNull
   Object _is();
 
   @JsProperty
-  void setIs(@Nonnull Object is);
+  void setIs(@JsNonNull Object is);
 
   @JsProperty(
       name = "notify"
   )
-  @Nonnull
+  @JsNonNull
   Object notify_();
 
   @JsProperty
-  void setNotify(@Nonnull Object notify);
+  void setNotify(@JsNonNull Object notify);
 
   @JsProperty(
       name = "notifyAll"
   )
-  @Nonnull
+  @JsNonNull
   Object notifyAll_();
 
   @JsProperty
-  void setNotifyAll(@Nonnull Object notifyAll);
+  void setNotifyAll(@JsNonNull Object notifyAll);
 
   @JsProperty(
       name = "private"
   )
-  @Nonnull
+  @JsNonNull
   Object private_();
 
   @JsProperty
-  void setPrivate(@Nonnull Object private_);
+  void setPrivate(@JsNonNull Object private_);
 
   @JsProperty(
       name = "protected"
   )
-  @Nonnull
+  @JsNonNull
   Object protected_();
 
   @JsProperty
-  void setProtected(@Nonnull Object protected_);
+  void setProtected(@JsNonNull Object protected_);
 
   @JsProperty(
       name = "public"
   )
-  @Nonnull
+  @JsNonNull
   Object public_();
 
   @JsProperty
-  void setPublic(@Nonnull Object public_);
+  void setPublic(@JsNonNull Object public_);
 
   @JsProperty(
       name = "toString"
   )
-  @Nonnull
+  @JsNonNull
   Object toString_();
 
   @JsProperty
-  void setToString(@Nonnull Object toString);
+  void setToString(@JsNonNull Object toString);
 
   @JsProperty(
       name = "wait"
   )
-  @Nonnull
+  @JsNonNull
   Object wait_();
 
   @JsProperty
-  void setWait(@Nonnull Object wait);
+  void setWait(@JsNonNull Object wait);
 
   @Generated("org.realityforge.webtack")
   @JsType(

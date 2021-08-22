@@ -1,8 +1,8 @@
 package com.example;
 
 import javax.annotation.Generated;
-import javax.annotation.Nonnull;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -16,12 +16,12 @@ public class JsString {
   protected JsString() {
   }
 
-  @Nonnull
+  @JsNonNull
   public native String valueOf();
 
   @JsMethod(
       name = "toString"
   )
-  @Nonnull
+  @JsNonNull
   public native String toString_();
 }

@@ -4,6 +4,7 @@ import com.other.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -28,12 +29,12 @@ public interface Dictionary_requiredNullableSomeTypeFrozenArrayValue {
   @JsProperty(
       name = "requiredNullableSomeTypeFrozenArrayValue"
   )
-  @Nullable
+  @JsNullable
   JsArray<SomeType> requiredNullableSomeTypeFrozenArrayValue();
 
   @JsProperty
   void setRequiredNullableSomeTypeFrozenArrayValue(
-      @Nullable JsArray<SomeType> requiredNullableSomeTypeFrozenArrayValue);
+      @JsNullable JsArray<SomeType> requiredNullableSomeTypeFrozenArrayValue);
 
   @Generated("org.realityforge.webtack")
   @JsType(

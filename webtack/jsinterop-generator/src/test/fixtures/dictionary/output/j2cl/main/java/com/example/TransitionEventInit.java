@@ -2,6 +2,7 @@ package com.example;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -36,7 +37,7 @@ public interface TransitionEventInit extends EventInit {
   String propertyName();
 
   @JsProperty
-  void setPropertyName(@Nonnull String propertyName);
+  void setPropertyName(@JsNonNull String propertyName);
 
   @JsProperty(
       name = "pseudoElement"
@@ -44,7 +45,7 @@ public interface TransitionEventInit extends EventInit {
   String pseudoElement();
 
   @JsProperty
-  void setPseudoElement(@Nonnull String pseudoElement);
+  void setPseudoElement(@JsNonNull String pseudoElement);
 
   @Generated("org.realityforge.webtack")
   @JsType(

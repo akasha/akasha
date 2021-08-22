@@ -285,11 +285,11 @@ public final class MyType2TestCompile {
     type.nullableLongValue = value;
   }
 
-  public static Object nullableObjectValue(final MyType2 type) {
+  public static JsObject nullableObjectValue(final MyType2 type) {
     return type.nullableObjectValue;
   }
 
-  public static void nullableObjectValue(final MyType2 type, final Object value) {
+  public static void nullableObjectValue(final MyType2 type, final JsObject value) {
     type.nullableObjectValue = value;
   }
 
@@ -417,11 +417,11 @@ public final class MyType2TestCompile {
     type.nullableUnsignedShortValue = value;
   }
 
-  public static Object objectValue(final MyType2 type) {
+  public static JsObject objectValue(final MyType2 type) {
     return type.objectValue;
   }
 
-  public static void objectValue(final MyType2 type, final Object value) {
+  public static void objectValue(final MyType2 type, final JsObject value) {
     type.objectValue = value;
   }
 

@@ -2,6 +2,7 @@ package com.example;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -28,11 +29,11 @@ public interface TxAuthGenericArg {
   @JsProperty(
       name = "contentType"
   )
-  @Nonnull
+  @JsNonNull
   String contentType();
 
   @JsProperty
-  void setContentType(@Nonnull String contentType);
+  void setContentType(@JsNonNull String contentType);
 
   /**
    * This tests that lowercase name converted to uppercase when converted into java.

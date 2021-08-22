@@ -2,6 +2,7 @@ package com.example;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -28,7 +29,7 @@ public interface ElementCreationOptions {
   String _is();
 
   @JsProperty
-  void setIs(@Nonnull String is);
+  void setIs(@JsNonNull String is);
 
   @Generated("org.realityforge.webtack")
   @JsType(

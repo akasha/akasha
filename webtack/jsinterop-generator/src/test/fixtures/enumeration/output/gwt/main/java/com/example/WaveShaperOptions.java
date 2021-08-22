@@ -2,6 +2,7 @@ package com.example;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -32,7 +33,7 @@ public interface WaveShaperOptions {
   String oversample();
 
   @JsProperty
-  void setOversample(@OverSampleType @Nonnull String oversample);
+  void setOversample(@OverSampleType @JsNonNull String oversample);
 
   /**
    * Optional attribute is an enum

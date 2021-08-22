@@ -58,6 +58,8 @@ goog.require('com.example.Dictionary_requiredUnrestrictedFloatValue.$Overlay');
 goog.require('com.example.Dictionary_requiredUnsignedLongLongValue.$Overlay');
 goog.require('com.example.Dictionary_requiredUnsignedLongValue.$Overlay');
 goog.require('com.example.Dictionary_requiredUnsignedShortValue.$Overlay');
+goog.require('com.example.JsObject.$Overlay');
+goog.require('com.example.JsObjectTestCompile');
 goog.require('com.example.MyDictionary.$Overlay');
 goog.require('com.example.MyType1.$Overlay');
 goog.require('com.example.MyType1TestCompile');

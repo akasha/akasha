@@ -776,6 +776,10 @@ interface MyType6 {
   static attribute Promise<undefined> voidPromiseValue;
 };
 
+[JavaName=JsObject]
+interface Object {
+};
+
 [SecureContext]
 interface SomeType {
 };

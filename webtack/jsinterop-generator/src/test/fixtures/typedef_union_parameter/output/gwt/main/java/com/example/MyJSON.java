@@ -4,6 +4,7 @@ import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -17,16 +18,16 @@ public class MyJSON {
   protected MyJSON() {
   }
 
-  @Nonnull
+  @JsNonNull
   public native String stringify(@DoNotAutobox @Nullable Object value,
       @Nullable StringifySpaceUnionType space);
 
-  @Nonnull
+  @JsNonNull
   public native String stringify(@DoNotAutobox @Nullable Object value, @Nonnull String space);
 
-  @Nonnull
+  @JsNonNull
   public native String stringify(@DoNotAutobox @Nullable Object value, int space);
 
-  @Nonnull
+  @JsNonNull
   public native String stringify(@DoNotAutobox @Nullable Object value);
 }

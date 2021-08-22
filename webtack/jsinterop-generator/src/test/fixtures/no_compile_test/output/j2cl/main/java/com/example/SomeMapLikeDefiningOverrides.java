@@ -3,8 +3,9 @@ package com.example;
 import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 import jsinterop.annotations.JsFunction;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -32,29 +33,29 @@ public class SomeMapLikeDefiningOverrides implements JsIterable<SomeMapLikeDefin
   public native int size();
 
   @HasNoSideEffects
-  public native boolean has(@Nonnull String key);
+  public native boolean has(@JsNonNull String key);
 
   @HasNoSideEffects
-  @Nullable
-  public native Double get(@Nonnull String key);
+  @JsNullable
+  public native Double get(@JsNonNull String key);
 
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native JsIterator<String> keys();
 
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native JsIterator<Double> values();
 
   @HasNoSideEffects
-  @Nonnull
+  @JsNonNull
   public native JsIterator<Entry> entries();
 
-  public native void forEach(@Nonnull ForEachCallback callback);
+  public native void forEach(@JsNonNull ForEachCallback callback);
 
-  public native void forEach(@Nonnull ForEachCallback2 callback);
+  public native void forEach(@JsNonNull ForEachCallback2 callback);
 
-  public native void forEach(@Nonnull ForEachCallback3 callback);
+  public native void forEach(@JsNonNull ForEachCallback3 callback);
 
   @JsType(
       isNative = true,
@@ -83,12 +84,12 @@ public class SomeMapLikeDefiningOverrides implements JsIterable<SomeMapLikeDefin
   @JsFunction
   @FunctionalInterface
   public interface ForEachCallback2 {
-    void item(int value, @Nonnull String key);
+    void item(int value, @JsNonNull String key);
   }
 
   @JsFunction
   @FunctionalInterface
   public interface ForEachCallback3 {
-    void item(int value, @Nonnull String key, @Nonnull SomeMapLikeDefiningOverrides map);
+    void item(int value, @JsNonNull String key, @JsNonNull SomeMapLikeDefiningOverrides map);
   }
 }

@@ -2,6 +2,7 @@ package com.example;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -97,11 +98,11 @@ public interface BluetoothDataFilterInit2 {
   @JsProperty(
       name = "dataPrefix"
   )
-  @Nonnull
+  @JsNonNull
   BufferSource dataPrefix();
 
   @JsProperty
-  void setDataPrefix(@Nonnull BufferSource dataPrefix);
+  void setDataPrefix(@JsNonNull BufferSource dataPrefix);
 
   @JsOverlay
   default void setDataPrefix(@Nonnull final ArrayBufferView dataPrefix) {
@@ -169,7 +170,7 @@ public interface BluetoothDataFilterInit2 {
   BufferSource mask();
 
   @JsProperty
-  void setMask(@Nonnull BufferSource mask);
+  void setMask(@JsNonNull BufferSource mask);
 
   @JsOverlay
   default void setMask(@Nonnull final ArrayBufferView mask) {
