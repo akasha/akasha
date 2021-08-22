@@ -2,6 +2,7 @@
 // defined in the WebIDL spec then out schema will work with it.
 typedef Symbol symbol;
 
+[JsName=symbol]
 interface Symbol {
 
   static readonly attribute Symbol asyncIterator;
