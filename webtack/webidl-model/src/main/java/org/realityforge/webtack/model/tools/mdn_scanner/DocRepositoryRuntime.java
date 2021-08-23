@@ -1,15 +1,18 @@
 package org.realityforge.webtack.model.tools.mdn_scanner;
 
+import java.io.FileReader;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.StandardCopyOption;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Properties;
 import java.util.Set;
 import java.util.stream.Collectors;
 import javax.annotation.Nonnull;
@@ -33,10 +36,73 @@ public final class DocRepositoryRuntime
   private final Path _dataDirectory;
   @Nonnull
   private final Jsonb _jsonb = JsonbBuilder.create();
+  @Nonnull
+  private final Map<String, List<String>> _typeAliases = new HashMap<>();
+  @Nonnull
+  private final Map<String, Map<String, List<String>>> _memberAliases = new HashMap<>();
 
   public DocRepositoryRuntime( @Nonnull final Path dataDirectory )
   {
     _dataDirectory = Objects.requireNonNull( dataDirectory );
+    loadTypeAliases();
+    loadMemberAliases();
+  }
+
+  private void loadTypeAliases()
+  {
+    final Path path = _dataDirectory.resolve( "type_aliases.txt" );
+    if ( Files.exists( path ) )
+    {
+      final Properties properties = new Properties();
+      try
+      {
+        properties.load( new FileReader( path.toFile() ) );
+        for ( final String type : properties.stringPropertyNames() )
+        {
+          final List<String> aliases =
+            Arrays
+              .stream( properties.getProperty( type, "" ).split( "\\w+" ) )
+              .map( String::trim )
+              .filter( alias -> !alias.isEmpty() )
+              .collect( Collectors.toList() );
+          _typeAliases.put( type, aliases );
+        }
+      }
+      catch ( final IOException ioe )
+      {
+        throw new IllegalStateException( "Failed to read type alias file " + path, ioe );
+      }
+    }
+  }
+
+  private void loadMemberAliases()
+  {
+    final Path path = _dataDirectory.resolve( "member_aliases.txt" );
+    if ( Files.exists( path ) )
+    {
+      final Properties properties = new Properties();
+      try
+      {
+        properties.load( new FileReader( path.toFile() ) );
+        for ( final String key : properties.stringPropertyNames() )
+        {
+          final int splitAt = key.indexOf( '.' );
+          final String type = -1 == splitAt ? key : key.substring( 0, splitAt );
+          final String member = -1 == splitAt ? key : key.substring( splitAt + 1 );
+          final List<String> aliases =
+            Arrays
+              .stream( properties.getProperty( key, "" ).split( "[ ]+" ) )
+              .map( String::trim )
+              .filter( alias -> !alias.isEmpty() )
+              .collect( Collectors.toList() );
+          _memberAliases.computeIfAbsent( type, t -> new HashMap<>() ).put( member, aliases );
+        }
+      }
+      catch ( final IOException ioe )
+      {
+        throw new IllegalStateException( "Failed to read member alias file " + path, ioe );
+      }
+    }
   }
 
   @Nonnull
@@ -63,7 +129,51 @@ public final class DocRepositoryRuntime
   @Nullable
   public DocEntry findDocEntry( @Nonnull final String type, @Nullable final String member )
   {
-    final String memberKey = null == member ? EntryIndex.TYPE_KEY : member;
+    DocEntry entry = doFindDocEntry( type, member );
+    if ( null != entry )
+    {
+      return entry;
+    }
+    else
+    {
+      final Map<String, List<String>> memberAliasMap = _memberAliases.get( type );
+      final List<String> memberAliases = null != memberAliasMap ? memberAliasMap.get( toMemberKey( member ) ) : null;
+      if ( null != memberAliases )
+      {
+        for ( final String memberAlias : memberAliases )
+        {
+          final String[] parts = memberAlias.split( "\\." );
+          if ( 2 == parts.length )
+          {
+            entry = doFindDocEntry( parts[ 0 ], parts[ 1 ] );
+            if ( null != entry )
+            {
+              return entry;
+            }
+          }
+        }
+      }
+
+      final List<String> typeAliases = _typeAliases.get( type );
+      if ( null != typeAliases )
+      {
+        for ( final String typeAlias : typeAliases )
+        {
+          entry = doFindDocEntry( typeAlias, member );
+          if ( null != entry )
+          {
+            return entry;
+          }
+        }
+      }
+      return null;
+    }
+  }
+
+  @Nullable
+  private DocEntry doFindDocEntry( @Nonnull final String type, @Nullable final String member )
+  {
+    final String memberKey = toMemberKey( member );
     final String name = type + "." + memberKey;
     final DocEntry entry = _cache.get( name );
     if ( null != entry )
@@ -96,6 +206,12 @@ public final class DocRepositoryRuntime
         }
       }
     }
+  }
+
+  @Nonnull
+  private String toMemberKey( @Nullable final String member )
+  {
+    return null == member ? EntryIndex.TYPE_KEY : member;
   }
 
   public void removeEntry( @Nonnull final EntryIndex entryIndex )
