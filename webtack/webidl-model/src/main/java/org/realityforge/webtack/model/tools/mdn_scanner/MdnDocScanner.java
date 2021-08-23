@@ -166,8 +166,6 @@ public final class MdnDocScanner
     if ( null != result )
     {
       _listener.postEntryFetch( entryIndex, url );
-      index.getContent().setLastModifiedAt( System.currentTimeMillis() );
-      index.save();
       final Path tmpTarget = getTmpTarget( entryIndex );
       try
       {
@@ -178,7 +176,7 @@ public final class MdnDocScanner
         throw new IndexIOException( "Failed to copy fetched content to temp file", ioe );
       }
 
-      extractEntry( entryIndex, entry, kind, result.getUrl(), tmpTarget, result.getLastModifiedAt() );
+      extractEntry( index, entryIndex, entry, kind, result.getUrl(), tmpTarget, result.getLastModifiedAt() );
 
       if ( removeSource )
       {
@@ -242,7 +240,8 @@ public final class MdnDocScanner
     }
   }
 
-  private void extractEntry( @Nonnull final EntryIndex entryIndex,
+  private void extractEntry( @Nonnull final DocIndex index,
+                             @Nonnull final EntryIndex entryIndex,
                              @Nullable final DocEntry docEntry,
                              @Nonnull final DocKind kind,
                              @Nonnull final String url,
@@ -344,6 +343,8 @@ public final class MdnDocScanner
       }
       else if ( _runtime.save( entryIndex, entry, modifiedAt ) )
       {
+        index.getContent().setLastModifiedAt( modifiedAt );
+        index.save();
         _listener.entryUpdated( entryIndex, entry );
       }
       else
