@@ -87,6 +87,7 @@ public class DocEntry
     this.description = description;
   }
 
+  @Nullable
   public ExternalRef[] getRefs()
   {
     return refs;
