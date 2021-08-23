@@ -392,10 +392,6 @@ public final class MdnDocScanner
   {
     final String typeName = entryIndex.getDocIndex().getName();
 
-    // We use the localName as some APIs have been updated in spec but MDN still uses "old"
-    // name and redirects at http level when you request the new name. i.e. XR type was called XRSystem
-    final Element localNameElement = document.selectFirst( "meta[property=\"og:title\"]" );
-
     final List<String> constructorNames = new ArrayList<>();
     final List<String> propertyNames = new ArrayList<>();
     final List<String> methodsNames = new ArrayList<>();
