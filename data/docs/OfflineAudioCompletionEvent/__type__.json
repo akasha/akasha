@@ -8,7 +8,7 @@
         {
             "name": "Web Audio API",
             "href": "https://webaudio.github.io/web-audio-api/#OfflineAudioCompletionEvent",
-            "description": "OfflineAudioCompletionEvent - Web Audio API"
+            "description": "# OfflineAudioCompletionEvent"
         }
     ]
 }

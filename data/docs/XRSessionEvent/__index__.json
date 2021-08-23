@@ -1,7 +1,7 @@
 
 {
     "name": "XRSessionEvent",
-    "lastModifiedAt": 1623484942021,
+    "lastModifiedAt": 1629724194243,
     "entries": [
         {
             "name": "XRSessionEvent",
@@ -9,7 +9,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1604979086980
+            "lastModifiedAt": 1629517773000
         },
         {
             "name": "session",

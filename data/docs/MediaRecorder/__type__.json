@@ -7,7 +7,8 @@
     "refs": [
         {
             "name": "MediaStream Recording",
-            "href": "https://w3c.github.io/mediacapture-record/#mediarecorder-api"
+            "href": "https://w3c.github.io/mediacapture-record/#mediarecorder-api",
+            "description": "# mediarecorder-api"
         }
     ]
 }

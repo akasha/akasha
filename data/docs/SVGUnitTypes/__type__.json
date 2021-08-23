@@ -6,14 +6,9 @@
     "description": "The SVGUnitTypes interface defines a commonly used set of constants used for reflecting gradientUnits, patternContentUnits and other similar attributes.",
     "refs": [
         {
-            "name": "Scalable Vector Graphics (SVG) 2",
-            "href": "https://svgwg.org/svg2-draft/types.html#InterfaceSVGUnitTypes",
-            "description": "SVGUnitTypes - Scalable Vector Graphics (SVG) 2"
-        },
-        {
             "name": "Scalable Vector Graphics (SVG) 1.1 (Second Edition)",
-            "href": "https://www.w3.org/TR/SVG11/types.html#InterfaceSVGUnitTypes",
-            "description": "SVGUnitTypes - Scalable Vector Graphics (SVG) 1.1 (Second Edition)"
+            "href": "https://svgwg.org/svg2-draft/types.html#InterfaceSVGUnitTypes",
+            "description": "(SVG) # InterfaceSVGUnitTypes"
         }
     ]
 }

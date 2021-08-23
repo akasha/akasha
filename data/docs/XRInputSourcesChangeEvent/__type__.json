@@ -7,8 +7,8 @@
     "refs": [
         {
             "name": "WebXR Device API",
-            "href": "https://immersive-web.github.io/webxr/#xrinputsourceschangeevent",
-            "description": "XRInputSourcesChangeEvent - WebXR Device API"
+            "href": "https://immersive-web.github.io/webxr/#xrinputsourceschangeevent-interface",
+            "description": "# xrinputsourceschangeevent-interface"
         }
     ]
 }

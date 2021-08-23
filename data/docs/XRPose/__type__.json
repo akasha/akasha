@@ -3,12 +3,12 @@
     "kind": "Type",
     "name": "XRPose",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRPose",
-    "description": "XRPose is a WebXR API interface representing a position and orientation in the 3D space, relative to the XRSpace within which it resides.",
+    "description": "XRPose is a WebXR API interface representing a position and orientation in the 3D space, relative to the XRSpace within which it resides. The XRSpace&mdash;which is either an XRReferenceSpace or an XRBoundedReferenceSpace&mdash;defines the coordinate system used for the pose and, in the case of an XRViewerPose, its underlying views.",
     "refs": [
         {
             "name": "WebXR Device API",
             "href": "https://immersive-web.github.io/webxr/#xrpose-interface",
-            "description": "XRPose - WebXR Device API"
+            "description": "# xrpose-interface"
         }
     ]
 }

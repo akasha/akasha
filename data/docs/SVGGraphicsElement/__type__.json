@@ -6,9 +6,9 @@
     "description": "The SVGGraphicsElement interface represents SVG elements whose primary purpose is to directly render graphics into a group.",
     "refs": [
         {
-            "name": "Scalable Vector Graphics (SVG) 2",
+            "name": "Scalable Vector Graphics (SVG) 1.1 (Second Edition)",
             "href": "https://svgwg.org/svg2-draft/types.html#InterfaceSVGGraphicsElement",
-            "description": "SVGGraphicsElement - Scalable Vector Graphics (SVG) 2"
+            "description": "(SVG) # InterfaceSVGGraphicsElement"
         }
     ]
 }

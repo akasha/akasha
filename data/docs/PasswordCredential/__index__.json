@@ -1,7 +1,7 @@
 
 {
     "name": "PasswordCredential",
-    "lastModifiedAt": 1623484745810,
+    "lastModifiedAt": 1629723660549,
     "entries": [
         {
             "name": "PasswordCredential",
@@ -9,7 +9,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1623291396000
+            "lastModifiedAt": 1629517770000
         },
         {
             "name": "additionalData",

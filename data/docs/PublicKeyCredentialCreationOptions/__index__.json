@@ -1,11 +1,11 @@
 
 {
     "name": "PublicKeyCredentialCreationOptions",
-    "lastModifiedAt": 1623484749454,
+    "lastModifiedAt": 1629723681453,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604977418429
+            "lastModifiedAt": 1629517776000
         },
         {
             "name": "attestation",

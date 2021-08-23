@@ -3,7 +3,7 @@
     "kind": "Type",
     "name": "BiquadFilterNode",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/BiquadFilterNode",
-    "description": "The BiquadFilterNode interface represents a simple low-order filter, and is created using the BaseAudioContext/createBiquadFilter method. It is an AudioNode that can represent different kinds of filters, tone control devices, and graphic equalizers.",
+    "description": "The BiquadFilterNode interface represents a simple low-order filter, and is created using the BaseAudioContext/createBiquadFilter method. It is an AudioNode that can represent different kinds of filters, tone control devices, and graphic equalizers. A BiquadFilterNode always has exactly one input and one output.",
     "refs": [
         {
             "name": "Web Audio API",

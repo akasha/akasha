@@ -6,9 +6,9 @@
     "description": "The PublicKeyCredential interface provides information about a public key / private key pair, which is a credential for logging in to a service using an un-phishable and data-breach resistant asymmetric key pair instead of a password. It inherits from Credential, and was created by the Web Authentication API extension to the Credential Management API. Other interfaces that inherit from Credential are PasswordCredential and FederatedCredential.",
     "refs": [
         {
-            "name": "Web Authentication: An API for accessing Public Key Credentials Level 1",
+            "name": "Web Authentication: An API for accessing Public Key Credentials - Level 3",
             "href": "https://w3c.github.io/webauthn/#iface-pkcredential",
-            "description": "PublicKeyCredential interface - Web Authentication: An API for accessing Public Key Credentials Level 1"
+            "description": "(Web Authentication) # iface-pkcredential"
         }
     ]
 }

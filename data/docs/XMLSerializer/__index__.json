@@ -1,11 +1,11 @@
 
 {
     "name": "XMLSerializer",
-    "lastModifiedAt": 1623484938176,
+    "lastModifiedAt": 1629724173141,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604979011648
+            "lastModifiedAt": 1629517797000
         },
         {
             "name": "serializeToString",

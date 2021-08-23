@@ -1,11 +1,11 @@
 
 {
     "name": "SVGAnimatedString",
-    "lastModifiedAt": 1623484797860,
+    "lastModifiedAt": 1629723787409,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604977777385
+            "lastModifiedAt": 1629517802000
         },
         {
             "name": "animVal",

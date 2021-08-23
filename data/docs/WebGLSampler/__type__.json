@@ -6,9 +6,9 @@
     "description": "The WebGLSampler interface is part of the WebGL 2 API and stores sampling parameters for WebGLTexture access inside of a shader.",
     "refs": [
         {
-            "name": "WebGL 2.0",
+            "name": "WebGL 2.0 Specification",
             "href": "https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.3",
-            "description": "WebGLSample - WebGL 2.0"
+            "description": "(WebGL 2.0) # 3.3"
         }
     ]
 }

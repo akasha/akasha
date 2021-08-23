@@ -6,9 +6,9 @@
     "description": "The WebGLTexture interface is part of the WebGL API and represents an opaque texture object providing storage and state for texturing operations.",
     "refs": [
         {
-            "name": "WebGL 1.0",
+            "name": "WebGL Specification",
             "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.9",
-            "description": "WebGLTexture - WebGL 1.0"
+            "description": "(WebGL) # 5.9"
         }
     ]
 }

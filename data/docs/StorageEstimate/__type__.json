@@ -6,9 +6,9 @@
     "description": "The StorageEstimate dictionary is used by the StorageManager to provide estimates of the size of a site's or application's data store and how much of it is in use. The estimate() method returns an object that conforms to this dictionary when its Promise resolves.",
     "refs": [
         {
-            "name": "Storage",
+            "name": "Storage Standard",
             "href": "https://storage.spec.whatwg.org/#dictdef-storageestimate",
-            "description": "StorageEstimate - Storage"
+            "description": "(Storage) # dictdef-storageestimate"
         }
     ]
 }

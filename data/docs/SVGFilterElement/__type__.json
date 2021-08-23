@@ -6,14 +6,9 @@
     "description": "The SVGFilterElement interface provides access to the properties of &lt;filter&gt; elements, as well as methods to manipulate them.",
     "refs": [
         {
-            "name": "Filter Effects Module Level 1",
+            "name": "Filter Effects Module Level 2",
             "href": "https://drafts.fxtf.org/filter-effects/#InterfaceSVGFilterElement",
-            "description": "SVGFilterElement - Filter Effects Module Level 1"
-        },
-        {
-            "name": "Scalable Vector Graphics (SVG) 1.1 (Second Edition)",
-            "href": "https://www.w3.org/TR/SVG11/filters.html#InterfaceSVGFilterElement",
-            "description": "SVGFilterElement - Scalable Vector Graphics (SVG) 1.1 (Second Edition)"
+            "description": "(Filter Effects 2) # InterfaceSVGFilterElement"
         }
     ]
 }

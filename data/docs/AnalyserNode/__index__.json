@@ -1,7 +1,7 @@
 
 {
     "name": "AnalyserNode",
-    "lastModifiedAt": 1623473233026,
+    "lastModifiedAt": 1629723103917,
     "entries": [
         {
             "name": "AnalyserNode",
@@ -9,7 +9,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1623463404000
+            "lastModifiedAt": 1629596405000
         },
         {
             "name": "fftSize",

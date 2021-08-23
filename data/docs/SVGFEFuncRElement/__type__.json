@@ -6,14 +6,9 @@
     "description": "The SVGFEFuncRElement interface corresponds to the &lt;feFuncR&gt; element.",
     "refs": [
         {
-            "name": "Filter Effects Module Level 1",
+            "name": "Filter Effects Module Level 2",
             "href": "https://drafts.fxtf.org/filter-effects/#InterfaceSVGFEFuncRElement",
-            "description": "SVGFEFuncRElement - Filter Effects Module Level 1"
-        },
-        {
-            "name": "Scalable Vector Graphics (SVG) 1.1 (Second Edition)",
-            "href": "https://www.w3.org/TR/SVG11/filters.html#InterfaceSVGFEFuncRElement",
-            "description": "SVGFEFuncRElement - Scalable Vector Graphics (SVG) 1.1 (Second Edition)"
+            "description": "(Filter Effects 2) # InterfaceSVGFEFuncRElement"
         }
     ]
 }

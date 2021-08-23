@@ -8,7 +8,7 @@
         {
             "name": "Web Speech API",
             "href": "https://wicg.github.io/speech-api/#speechreco-alternative",
-            "description": "SpeechRecognitionAlternative - Web Speech API"
+            "description": "# speechreco-alternative"
         }
     ]
 }

@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "FullscreenOptions",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/FullscreenOptions",
-    "description": "The FullscreenOptions dictionary is used to provide configuration options when calling requestFullscreen() on an element to place that element into full-screen mode."
+    "description": "The Element.requestFullscreen() method issues an asynchronous request to make the element be displayed in full-screen mode.",
+    "refs": [
+        {
+            "name": "Fullscreen API Standard",
+            "href": "https://fullscreen.spec.whatwg.org/#ref-for-dom-element-requestfullscreen%E2%91%A0",
+            "description": "(Fullscreen API) # ref-for-dom-element-requestfullscreen①"
+        }
+    ]
 }

@@ -7,8 +7,8 @@
     "refs": [
         {
             "name": "Web Speech API",
-            "href": "https://wicg.github.io/speech-api/#tts-section",
-            "description": "SpeechSynthesisUtterance - Web Speech API"
+            "href": "https://wicg.github.io/speech-api/#speechsynthesisutterance",
+            "description": "# speechsynthesisutterance"
         }
     ]
 }

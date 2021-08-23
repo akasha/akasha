@@ -1,7 +1,7 @@
 
 {
     "name": "KeyframeEffect",
-    "lastModifiedAt": 1623484720248,
+    "lastModifiedAt": 1629723508011,
     "entries": [
         {
             "name": "KeyframeEffect",
@@ -9,7 +9,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1604976909373
+            "lastModifiedAt": 1629517782000
         },
         {
             "name": "composite",

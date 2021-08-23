@@ -7,11 +7,8 @@
     "refs": [
         {
             "name": "Credential Management Level 1",
-            "href": "https://w3c.github.io/webappsec-credential-management/"
-        },
-        {
-            "name": "Web Authentication: An API for accessing Public Key Credentials Level 1",
-            "href": "https://w3c.github.io/webauthn/"
+            "href": "https://w3c.github.io/webappsec-credential-management/#credentialscontainer",
+            "description": "(Credential Management 1) # credentialscontainer"
         }
     ]
 }

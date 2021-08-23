@@ -6,14 +6,9 @@
     "description": "The SVGEllipseElement interface provides access to the properties of &lt;ellipse&gt; elements.",
     "refs": [
         {
-            "name": "Scalable Vector Graphics (SVG) 2",
-            "href": "https://svgwg.org/svg2-draft/shapes.html#InterfaceSVGEllipseElement",
-            "description": "SVGEllipseElement - Scalable Vector Graphics (SVG) 2"
-        },
-        {
             "name": "Scalable Vector Graphics (SVG) 1.1 (Second Edition)",
-            "href": "https://www.w3.org/TR/SVG11/shapes.html#InterfaceSVGEllipseElement",
-            "description": "SVGEllipseElement - Scalable Vector Graphics (SVG) 1.1 (Second Edition)"
+            "href": "https://svgwg.org/svg2-draft/shapes.html#InterfaceSVGEllipseElement",
+            "description": "(SVG) # InterfaceSVGEllipseElement"
         }
     ]
 }

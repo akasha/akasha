@@ -6,14 +6,9 @@
     "description": "The SVGStyleElement interface corresponds to the SVG &lt;style&gt; element.",
     "refs": [
         {
-            "name": "Scalable Vector Graphics (SVG) 2",
-            "href": "https://svgwg.org/svg2-draft/styling.html#InterfaceSVGStyleElement",
-            "description": "SVGStyleElement - Scalable Vector Graphics (SVG) 2"
-        },
-        {
             "name": "Scalable Vector Graphics (SVG) 1.1 (Second Edition)",
-            "href": "https://www.w3.org/TR/SVG11/styling.html#InterfaceSVGStyleElement",
-            "description": "SVGStyleElement - Scalable Vector Graphics (SVG) 1.1 (Second Edition)"
+            "href": "https://svgwg.org/svg2-draft/styling.html#InterfaceSVGStyleElement",
+            "description": "(SVG) # InterfaceSVGStyleElement"
         }
     ]
 }

@@ -1,7 +1,7 @@
 
 {
     "name": "Object",
-    "lastModifiedAt": 1623484744567,
+    "lastModifiedAt": 1629723639641,
     "entries": [
         {
             "name": "__defineGetter__",
@@ -29,7 +29,7 @@
         },
         {
             "name": "assign",
-            "lastModifiedAt": 1623291350000
+            "lastModifiedAt": 1629517810000
         },
         {
             "name": "constructor",
@@ -49,7 +49,7 @@
         },
         {
             "name": "entries",
-            "lastModifiedAt": 1623424376000
+            "lastModifiedAt": 1629517810000
         },
         {
             "name": "freeze",
@@ -78,6 +78,10 @@
         {
             "name": "getPrototypeOf",
             "lastModifiedAt": 1623424377000
+        },
+        {
+            "name": "hasOwn",
+            "lastModifiedAt": 1629517810000
         },
         {
             "name": "hasOwnProperty",

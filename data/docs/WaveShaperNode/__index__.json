@@ -1,7 +1,7 @@
 
 {
     "name": "WaveShaperNode",
-    "lastModifiedAt": 1623484915919,
+    "lastModifiedAt": 1629724119292,
     "entries": [
         {
             "name": "WaveShaperNode",
@@ -9,7 +9,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1613525162000
+            "lastModifiedAt": 1629596410000
         },
         {
             "name": "curve",

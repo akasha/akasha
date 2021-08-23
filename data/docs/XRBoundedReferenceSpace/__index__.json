@@ -1,11 +1,11 @@
 
 {
     "name": "XRBoundedReferenceSpace",
-    "lastModifiedAt": 1623484939016,
+    "lastModifiedAt": 1629724177961,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604979031159
+            "lastModifiedAt": 1629517780000
         },
         {
             "name": "boundsGeometry",

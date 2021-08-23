@@ -6,9 +6,9 @@
     "description": "The parameter passed into the onnotificationclick handler, the NotificationEvent interface represents a notification click event that is dispatched on the ServiceWorkerGlobalScope of a ServiceWorker.",
     "refs": [
         {
-            "name": "Notifications API",
+            "name": "Notifications API Standard",
             "href": "https://notifications.spec.whatwg.org/#notificationevent",
-            "description": "NotificationEvent - Notifications API"
+            "description": "(Notifications API) # notificationevent"
         }
     ]
 }

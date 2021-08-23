@@ -3,12 +3,12 @@
     "kind": "Type",
     "name": "XRRenderStateInit",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRRenderStateInit",
-    "description": "The XRRenderStateInit dictionary is a writeable version of the XRRenderState interface, and is used when calling an XRSession's updateRenderState() method to apply changes to the render state prior to rendering the next frame.",
+    "description": "The updateRenderState() method of the XRSession interface of WebXR API schedules changes to be applied to the active render state prior to rendering of the next frame.",
     "refs": [
         {
             "name": "WebXR Device API",
-            "href": "https://immersive-web.github.io/webxr/#dictdef-xrrenderstateinit",
-            "description": "XRRenderStateInit - WebXR Device API"
+            "href": "https://immersive-web.github.io/webxr/#dom-xrsession-updaterenderstate",
+            "description": "# dom-xrsession-updaterenderstate"
         }
     ]
 }

@@ -6,14 +6,9 @@
     "description": "The SVGAngle interface is used to represent a value that can be an &lt;angle&gt; or &lt;number&gt; value. An SVGAngle reflected through the animVal attribute is always read only.",
     "refs": [
         {
-            "name": "Scalable Vector Graphics (SVG) 2",
-            "href": "https://svgwg.org/svg2-draft/types.html#InterfaceSVGAngle",
-            "description": "SVGElement - Scalable Vector Graphics (SVG) 2"
-        },
-        {
             "name": "Scalable Vector Graphics (SVG) 1.1 (Second Edition)",
-            "href": "https://www.w3.org/TR/SVG11/types.html#InterfaceSVGAngle",
-            "description": "SVGElement - Scalable Vector Graphics (SVG) 1.1 (Second Edition)"
+            "href": "https://svgwg.org/svg2-draft/types.html#InterfaceSVGAngle",
+            "description": "(SVG) # InterfaceSVGAngle"
         }
     ]
 }

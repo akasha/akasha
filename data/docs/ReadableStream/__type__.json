@@ -6,9 +6,9 @@
     "description": "The ReadableStream interface of the Streams API represents a readable stream of byte data. The Fetch API offers a concrete instance of a ReadableStream through the body property of a Response object.",
     "refs": [
         {
-            "name": "Streams",
+            "name": "Streams Standard",
             "href": "https://streams.spec.whatwg.org/#rs-class",
-            "description": "ReadableStream - Streams"
+            "description": "(Streams) # rs-class"
         }
     ]
 }

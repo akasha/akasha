@@ -3,12 +3,12 @@
     "kind": "Type",
     "name": "XRInputSourceEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceEvent",
-    "description": "The WebXR Device API's XRInputSourceEvent interface describes an event which has occurred on a WebXR user input device such as a hand controller, gaze tracking system, or motion tracking system.",
+    "description": "The WebXR Device API's XRInputSourceEvent interface describes an event which has occurred on a WebXR user input device such as a hand controller, gaze tracking system, or motion tracking system. More specifically, they represent a change in the state of an XRInputSource.",
     "refs": [
         {
             "name": "WebXR Device API",
-            "href": "https://immersive-web.github.io/webxr/#xrinputsourceevent",
-            "description": "XRInputSourceEvent - WebXR Device API"
+            "href": "https://immersive-web.github.io/webxr/#xrinputsourceevent-interface",
+            "description": "# xrinputsourceevent-interface"
         }
     ]
 }

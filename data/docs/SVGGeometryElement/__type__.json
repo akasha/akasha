@@ -6,9 +6,9 @@
     "description": "The SVGGeometryElement interface represents SVG elements whose rendering is defined by geometry with an equivalent path, and which can be filled and stroked. This includes paths and the basic shapes.",
     "refs": [
         {
-            "name": "Scalable Vector Graphics (SVG) 2",
+            "name": "Scalable Vector Graphics (SVG) 1.1 (Second Edition)",
             "href": "https://svgwg.org/svg2-draft/types.html#InterfaceSVGGeometryElement",
-            "description": "SVGGeometryElement - Scalable Vector Graphics (SVG) 2"
+            "description": "(SVG) # InterfaceSVGGeometryElement"
         }
     ]
 }

@@ -6,9 +6,9 @@
     "description": "The WebGLUniformLocation interface is part of the WebGL API and represents the location of a uniform variable in a shader program.",
     "refs": [
         {
-            "name": "WebGL 1.0",
+            "name": "WebGL Specification",
             "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.10",
-            "description": "WebGLUniformLocation - WebGL 1.0"
+            "description": "(WebGL) # 5.10"
         }
     ]
 }

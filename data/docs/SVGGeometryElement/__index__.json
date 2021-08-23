@@ -1,11 +1,11 @@
 
 {
     "name": "SVGGeometryElement",
-    "lastModifiedAt": 1623484800374,
+    "lastModifiedAt": 1629723820670,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604977886239
+            "lastModifiedAt": 1629517787000
         },
         {
             "name": "getPointAtLength",

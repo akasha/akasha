@@ -7,13 +7,8 @@
     "refs": [
         {
             "name": "User Timing Level 2",
-            "href": "https://w3c.github.io/user-timing/#dom-performance-measure",
-            "description": "PerformanceMeasure - User Timing Level 2"
-        },
-        {
-            "name": "User Timing",
-            "href": "https://www.w3.org/TR/user-timing/#performancemeasure",
-            "description": "PerformanceMeasure - User Timing"
+            "href": "https://w3c.github.io/user-timing/#performancemeasure",
+            "description": "(User Timing 2) # performancemeasure"
         }
     ]
 }

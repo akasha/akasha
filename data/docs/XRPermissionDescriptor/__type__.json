@@ -8,7 +8,7 @@
         {
             "name": "WebXR Device API",
             "href": "https://immersive-web.github.io/webxr/#dictdef-xrpermissiondescriptor",
-            "description": "XRPermissionDescriptor - WebXR Device API"
+            "description": "# dictdef-xrpermissiondescriptor"
         }
     ]
 }

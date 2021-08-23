@@ -7,8 +7,8 @@
     "refs": [
         {
             "name": "Web Cryptography API",
-            "href": "https://www.w3.org/TR/WebCryptoAPI/#crypto-interface",
-            "description": "Crypto - Web Cryptography API"
+            "href": "https://w3c.github.io/webcrypto/#crypto-interface",
+            "description": "# crypto-interface"
         }
     ]
 }

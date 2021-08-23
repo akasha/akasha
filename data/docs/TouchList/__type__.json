@@ -6,12 +6,9 @@
     "description": "The TouchList interface represents a list of contact points on a touch surface. For example, if the user has three fingers on the touch surface (such as a screen or trackpad), the corresponding TouchList object would have one Touch object for each finger, for a total of three entries.",
     "refs": [
         {
-            "name": "Touch Events – Level 2",
-            "href": "https://w3c.github.io/touch-events/#touchlist-interface"
-        },
-        {
             "name": "Touch Events",
-            "href": "https://www.w3.org/TR/touch-events/#touchlist-interface"
+            "href": "https://w3c.github.io/touch-events/#touchlist-interface",
+            "description": "# touchlist-interface"
         }
     ]
 }

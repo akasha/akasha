@@ -1,7 +1,7 @@
 
 {
     "name": "WritableStream",
-    "lastModifiedAt": 1623484937974,
+    "lastModifiedAt": 1629724170182,
     "entries": [
         {
             "name": "WritableStream",
@@ -9,7 +9,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1612573603000
+            "lastModifiedAt": 1629517792000
         },
         {
             "name": "abort",

@@ -3,12 +3,12 @@
     "kind": "Type",
     "name": "XRInputSource",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSource",
-    "description": "The WebXR Device API's XRInputSource interface describes a single source of control input which is part of the user's WebXR-compatible virtual or augmented reality system.",
+    "description": "The WebXR Device API's XRInputSource interface describes a single source of control input which is part of the user's WebXR-compatible virtual or augmented reality system. The device is specific to the platform being used, but provides the direction in which it is being aimed and optionally may generate events if the user triggers performs actions using the device.",
     "refs": [
         {
             "name": "WebXR Device API",
             "href": "https://immersive-web.github.io/webxr/#xrinputsource-interface",
-            "description": "XRInputSource - WebXR Device API"
+            "description": "# xrinputsource-interface"
         }
     ]
 }

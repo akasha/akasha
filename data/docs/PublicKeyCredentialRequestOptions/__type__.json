@@ -6,9 +6,9 @@
     "description": "The PublicKeyCredentialRequestOptions dictionary of the Web Authentication API holds the options passed to navigator.credentials.get() in order to fetch a given PublicKeyCredential.",
     "refs": [
         {
-            "name": "Web Authentication: An API for accessing Public Key Credentials Level 1",
+            "name": "Web Authentication: An API for accessing Public Key Credentials - Level 3",
             "href": "https://w3c.github.io/webauthn/#dictdef-publickeycredentialrequestoptions",
-            "description": "PublicKeyCredentialRequestOptions dictionary - Web Authentication: An API for accessing Public Key Credentials Level 1"
+            "description": "(Web Authentication) # dictdef-publickeycredentialrequestoptions"
         }
     ]
 }

@@ -3,7 +3,7 @@
     "kind": "Method",
     "name": "Date.setYear",
     "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/setYear",
-    "description": "The setYear() method sets the year for a specified date according to local time. Because setYear() does not set full years (&quot;year 2000 problem&quot;), it is no longer used and has been replaced by the setFullYear() method.",
+    "description": "The legacy setYear() method sets the year for a specified date according to local time.",
     "refs": [
         {
             "name": "ECMAScript Language Specification",

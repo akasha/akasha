@@ -1,7 +1,7 @@
 
 {
     "name": "DOMRectReadOnly",
-    "lastModifiedAt": 1623484618001,
+    "lastModifiedAt": 1629723211919,
     "entries": [
         {
             "name": "DOMRectReadOnly",
@@ -9,7 +9,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1612573626000
+            "lastModifiedAt": 1629517786000
         },
         {
             "name": "bottom",

@@ -6,9 +6,9 @@
     "description": "The SVGFEDropShadowElement interface corresponds to the &lt;feDropShadow&gt; element.",
     "refs": [
         {
-            "name": "Filter Effects Module Level 1",
+            "name": "Filter Effects Module Level 2",
             "href": "https://drafts.fxtf.org/filter-effects/#InterfaceSVGFEDropShadowElement",
-            "description": "SVGFEDropShadowElement - Filter Effects Module Level 1"
+            "description": "(Filter Effects 2) # InterfaceSVGFEDropShadowElement"
         }
     ]
 }

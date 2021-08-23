@@ -1,7 +1,7 @@
 
 {
     "name": "IntersectionObserver",
-    "lastModifiedAt": 1626396506274,
+    "lastModifiedAt": 1629723500465,
     "entries": [
         {
             "name": "IntersectionObserver",
@@ -9,7 +9,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1626314568000
+            "lastModifiedAt": 1629596409000
         },
         {
             "name": "disconnect",

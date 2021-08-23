@@ -1,11 +1,11 @@
 
 {
     "name": "SVGPathElement",
-    "lastModifiedAt": 1623484800950,
+    "lastModifiedAt": 1629723830655,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1612573607000
+            "lastModifiedAt": 1629517787000
         },
         {
             "name": "getPointAtLength",

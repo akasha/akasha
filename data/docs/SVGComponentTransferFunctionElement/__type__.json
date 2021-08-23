@@ -6,14 +6,9 @@
     "description": "The SVGComponentTransferFunctionElement interface defines a base interface used by the component transfer function interfaces.",
     "refs": [
         {
-            "name": "Filter Effects Module Level 1",
+            "name": "Filter Effects Module Level 2",
             "href": "https://drafts.fxtf.org/filter-effects/#InterfaceSVGComponentTransferFunctionElement",
-            "description": "SVGComponentTransferFunctionElement - Filter Effects Module Level 1"
-        },
-        {
-            "name": "Scalable Vector Graphics (SVG) 1.1 (Second Edition)",
-            "href": "https://www.w3.org/TR/SVG11/filters.html#InterfaceSVGComponentTransferFunctionElement",
-            "description": "SVGComponentTransferFunctionElement - Scalable Vector Graphics (SVG) 1.1 (Second Edition)"
+            "description": "(Filter Effects 2) # InterfaceSVGComponentTransferFunctionElement"
         }
     ]
 }

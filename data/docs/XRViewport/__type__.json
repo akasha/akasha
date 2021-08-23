@@ -8,7 +8,7 @@
         {
             "name": "WebXR Device API",
             "href": "https://immersive-web.github.io/webxr/#xrviewport-interface",
-            "description": "XRViewport - WebXR Device API"
+            "description": "# xrviewport-interface"
         }
     ]
 }

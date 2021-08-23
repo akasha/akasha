@@ -6,8 +6,9 @@
     "description": "XMLHttpRequestEventTarget is the interface that describes the event handlers you can implement in an object that will handle events for an XMLHttpRequest.",
     "refs": [
         {
-            "name": "XMLHttpRequest",
-            "href": "https://xhr.spec.whatwg.org/"
+            "name": "XMLHttpRequest Standard",
+            "href": "https://xhr.spec.whatwg.org/#xmlhttprequesteventtarget",
+            "description": "(XMLHttpRequest) # xmlhttprequesteventtarget"
         }
     ]
 }

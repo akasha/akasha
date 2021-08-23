@@ -7,8 +7,8 @@
     "refs": [
         {
             "name": "Web Speech API",
-            "href": "https://wicg.github.io/speech-api/#dom-speechgrammarlist-speechgrammarlist",
-            "description": "SpeechGrammarList() - Web Speech API"
+            "href": "https://wicg.github.io/speech-api/#speechgrammarlist",
+            "description": "# speechgrammarlist"
         }
     ]
 }

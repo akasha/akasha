@@ -8,7 +8,7 @@
         {
             "name": "Web Speech API",
             "href": "https://wicg.github.io/speech-api/#speechsynthesisevent",
-            "description": "SpeechSynthesisEvent - Web Speech API"
+            "description": "# speechsynthesisevent"
         }
     ]
 }

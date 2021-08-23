@@ -3,7 +3,7 @@
     "kind": "Type",
     "name": "GlobalEventHandlers",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers",
-    "description": "The GlobalEventHandlers mixin describes the event handlers common to several interfaces like HTMLElement, Document, or Window.",
+    "description": "The GlobalEventHandlers mixin describes the event handlers common to several interfaces like HTMLElement, Document, or Window. Each of these interfaces can, of course, add more event handlers in addition to the ones listed below.",
     "refs": [
         {
             "name": "HTML Standard",

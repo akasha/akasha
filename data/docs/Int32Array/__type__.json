@@ -7,8 +7,8 @@
     "refs": [
         {
             "name": "ECMAScript Language Specification",
-            "href": "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-typedarray-constructors",
-            "description": "(ECMAScript) # sec-typedarray-constructors"
+            "href": "https://tc39.es/ecma262/multipage/indexed-collections.html#table-49",
+            "description": "(ECMAScript) # table-49"
         }
     ]
 }

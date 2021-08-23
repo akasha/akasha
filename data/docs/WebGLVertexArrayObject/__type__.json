@@ -6,9 +6,9 @@
     "description": "The WebGLVertexArrayObject interface is part of the WebGL 2 API, represents vertex array objects (VAOs) pointing to vertex array data, and provides names for different sets of vertex data.",
     "refs": [
         {
-            "name": "WebGL 2.0",
+            "name": "WebGL 2.0 Specification",
             "href": "https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.6",
-            "description": "WebGLVertexArrayObject - WebGL 2.0"
+            "description": "(WebGL 2.0) # 3.6"
         }
     ]
 }

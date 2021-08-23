@@ -3,11 +3,5 @@
     "kind": "Type",
     "name": "NotificationAction",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/NotificationAction",
-    "description": "The NotificationAction interface of the Notifications API is used to represent action buttons the user can click to interact with notifications.",
-    "refs": [
-        {
-            "name": "Notifications API",
-            "href": "https://notifications.spec.whatwg.org/"
-        }
-    ]
+    "description": "The NotificationAction interface of the Notifications API is used to represent action buttons the user can click to interact with notifications."
 }

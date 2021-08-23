@@ -3,11 +3,12 @@
     "kind": "Type",
     "name": "NavigatorStorage",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/NavigatorStorage",
-    "description": "The NavigatorStorage mixin adds to the Navigator and WorkerNavigator interfaces the Navigator.storage property, which provides access to the StorageManager singleton used for controlling the persistence of data stores as well as obtaining information",
+    "description": "The Navigator interface represents the state and the identity of the user agent. It allows scripts to query it and to register themselves to carry on some activities.",
     "refs": [
         {
-            "name": "Storage",
-            "href": "https://storage.spec.whatwg.org/"
+            "name": "HTML Standard",
+            "href": "https://html.spec.whatwg.org/multipage/system-state.html#the-navigator-object",
+            "description": "(HTML) # the-navigator-object"
         }
     ]
 }

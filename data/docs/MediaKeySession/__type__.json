@@ -8,7 +8,7 @@
         {
             "name": "Encrypted Media Extensions",
             "href": "https://w3c.github.io/encrypted-media/#mediakeysession-interface",
-            "description": "MediaKeySession - Encrypted Media Extensions"
+            "description": "# mediakeysession-interface"
         }
     ]
 }

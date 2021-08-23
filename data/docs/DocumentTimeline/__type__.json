@@ -6,9 +6,9 @@
     "description": "The DocumentTimeline interface of the Web Animations API represents animation timelines, including the default document timeline (accessed via Document.timeline).",
     "refs": [
         {
-            "name": "Web Animations",
-            "href": "https://drafts.csswg.org/web-animations-1/#the-documenttimeline-interface",
-            "description": "DocumentTimeline - Web Animations"
+            "name": "Web Animations Level 2",
+            "href": "https://drafts.csswg.org/web-animations/#the-documenttimeline-interface",
+            "description": "(Web Animations 2) # the-documenttimeline-interface"
         }
     ]
 }

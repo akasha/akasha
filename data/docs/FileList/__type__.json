@@ -8,12 +8,12 @@
         {
             "name": "File API",
             "href": "https://w3c.github.io/FileAPI/#filelist-section",
-            "description": "FileList - File API"
+            "description": "# filelist-section"
         },
         {
-            "name": "HTML Living Standard",
-            "href": "https://html.spec.whatwg.org/multipage/#concept-input-type-file-selected",
-            "description": "selected files - HTML Living Standard"
+            "name": "HTML Standard",
+            "href": "https://html.spec.whatwg.org/multipage/input.html#dom-input-files-dev",
+            "description": "(HTML) # dom-input-files-dev"
         }
     ]
 }

@@ -6,14 +6,9 @@
     "description": "The Touch interface represents a single contact point on a touch-sensitive device. The contact point is commonly a finger or stylus and the device may be a touchscreen or trackpad.",
     "refs": [
         {
-            "name": "Touch Events – Level 2",
-            "href": "https://w3c.github.io/touch-events/#touch-interface",
-            "description": "Touch - Touch Events &ndash; Level 2"
-        },
-        {
             "name": "Touch Events",
-            "href": "https://www.w3.org/TR/touch-events/#touch-interface",
-            "description": "Touch - Touch Events"
+            "href": "https://w3c.github.io/touch-events/#touch-interface",
+            "description": "# touch-interface"
         }
     ]
 }

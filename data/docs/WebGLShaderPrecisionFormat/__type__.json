@@ -6,9 +6,9 @@
     "description": "The WebGLShaderPrecisionFormat interface is part of the WebGL API and represents the information returned by calling the WebGLRenderingContext.getShaderPrecisionFormat() method.",
     "refs": [
         {
-            "name": "WebGL 1.0",
+            "name": "WebGL Specification",
             "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.12",
-            "description": "WebGLShaderPrecisionFormat - WebGL 1.0"
+            "description": "(WebGL) # 5.12"
         }
     ]
 }

@@ -1,11 +1,11 @@
 
 {
     "name": "SVGImageElement",
-    "lastModifiedAt": 1623484800514,
+    "lastModifiedAt": 1629723823335,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1612573610000
+            "lastModifiedAt": 1629517760000
         },
         {
             "name": "decode",

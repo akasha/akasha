@@ -6,14 +6,9 @@
     "description": "The SVGFETileElement interface corresponds to the &lt;feTile&gt; element.",
     "refs": [
         {
-            "name": "Filter Effects Module Level 1",
+            "name": "Filter Effects Module Level 2",
             "href": "https://drafts.fxtf.org/filter-effects/#InterfaceSVGFETileElement",
-            "description": "SVGFETileElement - Filter Effects Module Level 1"
-        },
-        {
-            "name": "Scalable Vector Graphics (SVG) 1.1 (Second Edition)",
-            "href": "https://www.w3.org/TR/SVG11/filters.html#InterfaceSVGFETileElement",
-            "description": "SVGFETileElement - Scalable Vector Graphics (SVG) 1.1 (Second Edition)"
+            "description": "(Filter Effects 2) # InterfaceSVGFETileElement"
         }
     ]
 }

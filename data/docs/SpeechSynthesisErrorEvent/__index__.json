@@ -1,11 +1,11 @@
 
 {
     "name": "SpeechSynthesisErrorEvent",
-    "lastModifiedAt": 1623484813791,
+    "lastModifiedAt": 1629723884279,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604978140998
+            "lastModifiedAt": 1629517786000
         },
         {
             "name": "error",

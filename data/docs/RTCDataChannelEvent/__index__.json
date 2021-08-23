@@ -1,7 +1,7 @@
 
 {
     "name": "RTCDataChannelEvent",
-    "lastModifiedAt": 1626396786035,
+    "lastModifiedAt": 1629723692188,
     "entries": [
         {
             "name": "RTCDataChannelEvent",
@@ -9,7 +9,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1626314582000
+            "lastModifiedAt": 1629517780000
         },
         {
             "name": "channel",

@@ -3,7 +3,7 @@
     "kind": "Type",
     "name": "CSSRuleList",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/CSSRuleList",
-    "description": "A CSSRuleList is an (indirect-modify only) array-like object containing an ordered collection of CSSRule objects.",
+    "description": "A CSSRuleList represents an ordered collection of read-only CSSRule objects.",
     "refs": [
         {
             "name": "CSS Object Model (CSSOM)",

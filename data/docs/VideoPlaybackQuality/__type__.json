@@ -7,8 +7,8 @@
     "refs": [
         {
             "name": "Media Playback Quality",
-            "href": "https://w3c.github.io/media-playback-quality/#idl-def-videoplaybackquality",
-            "description": "VideoPlaybackQuality - Media Playback Quality"
+            "href": "https://w3c.github.io/media-playback-quality/#videoplaybackquality-interface",
+            "description": "# videoplaybackquality-interface"
         }
     ]
 }

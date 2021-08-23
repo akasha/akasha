@@ -7,7 +7,8 @@
     "refs": [
         {
             "name": "WebVTT: The Web Video Text Tracks Format",
-            "href": "https://w3c.github.io/webvtt/"
+            "href": "https://w3c.github.io/webvtt/#the-vttregion-interface",
+            "description": "# the-vttregion-interface"
         }
     ]
 }

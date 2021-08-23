@@ -6,9 +6,9 @@
     "description": "The GeolocationCoordinates interface represents the position and altitude of the device on Earth, as well as the accuracy with which these properties are calculated.",
     "refs": [
         {
-            "name": "Geolocation API",
+            "name": "Geolocation API Specification 2nd Edition",
             "href": "https://w3c.github.io/geolocation-api/#coordinates_interface",
-            "description": "GeolocationCoordinates - Geolocation API"
+            "description": "# coordinates_interface"
         }
     ]
 }

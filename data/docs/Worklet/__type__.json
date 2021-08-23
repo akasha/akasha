@@ -3,7 +3,7 @@
     "kind": "Type",
     "name": "Worklet",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Worklet",
-    "description": "The Worklet interface is a lightweight version of Web Workers and gives developers access to low-level parts of the rendering pipeline. With Worklets, you can run JavaScript and WebAssembly code to do graphics rendering or audio processing where high performance is required.The Worklet interface is a lightweight version of Web Workers and gives developers access to low-level parts of the rendering pipeline.",
+    "description": "The Worklet interface is a lightweight version of Web Workers and gives developers access to low-level parts of the rendering pipeline.",
     "refs": [
         {
             "name": "HTML Standard",

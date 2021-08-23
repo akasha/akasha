@@ -8,7 +8,7 @@
         {
             "name": "File API",
             "href": "https://w3c.github.io/FileAPI/#file-section",
-            "description": "The File interface - File API"
+            "description": "# file-section"
         }
     ]
 }

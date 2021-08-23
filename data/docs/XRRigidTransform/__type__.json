@@ -8,7 +8,7 @@
         {
             "name": "WebXR Device API",
             "href": "https://immersive-web.github.io/webxr/#xrrigidtransform-interface",
-            "description": "XRRigidTransform - WebXR Device API"
+            "description": "# xrrigidtransform-interface"
         }
     ]
 }

@@ -3,12 +3,12 @@
     "kind": "Type",
     "name": "XRWebGLLayerInit",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayerInit",
-    "description": "The WebXR Device API's XRWebGLLayerInit dictionary is used to provide configuration options when creating a new XRWebGLLayer object with the XRWebGLLayer() constructor.",
+    "description": "The WebXR Device API XRWebGLLayer() constructor creates and returns a new XRWebGLLayer object, providing the linkage between the WebXR device and the WebGL graphics layer used to render the 3D scene.",
     "refs": [
         {
             "name": "WebXR Device API",
-            "href": "https://immersive-web.github.io/webxr/#dictdef-xrwebgllayerinit",
-            "description": "XRWebGLLayerInit - WebXR Device API"
+            "href": "https://immersive-web.github.io/webxr/#dom-xrwebgllayer-xrwebgllayer",
+            "description": "# dom-xrwebgllayer-xrwebgllayer"
         }
     ]
 }

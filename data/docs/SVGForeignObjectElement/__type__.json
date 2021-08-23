@@ -6,14 +6,9 @@
     "description": "The SVGForeignObjectElement interface provides access to the properties of &lt;foreignObject&gt; elements, as well as methods to manipulate them.",
     "refs": [
         {
-            "name": "Scalable Vector Graphics (SVG) 2",
-            "href": "https://svgwg.org/svg2-draft/embedded.html#ForeignObjectElement",
-            "description": "SVGForeignObjectElement - Scalable Vector Graphics (SVG) 2"
-        },
-        {
             "name": "Scalable Vector Graphics (SVG) 1.1 (Second Edition)",
-            "href": "https://www.w3.org/TR/SVG11/extend.html#InterfaceSVGForeignObjectElement",
-            "description": "SVGForeignObjectElement - Scalable Vector Graphics (SVG) 1.1 (Second Edition)"
+            "href": "https://svgwg.org/svg2-draft/embedded.html#InterfaceSVGForeignObjectElement",
+            "description": "(SVG) # InterfaceSVGForeignObjectElement"
         }
     ]
 }

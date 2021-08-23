@@ -3,12 +3,5 @@
     "kind": "Type",
     "name": "ReportingObserverOptions",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/ReportingObserverOptions",
-    "description": "The ReportingObserverOptions dictionary of the Reporting API allows options to be set in the constructor when creating a ReportingObserver.",
-    "refs": [
-        {
-            "name": "Reporting API",
-            "href": "https://w3c.github.io/reporting/#dictdef-reportingobserveroptions",
-            "description": "ReportingObserverOptions - Reporting API"
-        }
-    ]
+    "description": "The ReportingObserverOptions dictionary of the Reporting API allows options to be set in the constructor when creating a ReportingObserver."
 }

@@ -7,7 +7,8 @@
     "refs": [
         {
             "name": "Credential Management Level 1",
-            "href": "https://w3c.github.io/webappsec-credential-management/"
+            "href": "https://w3c.github.io/webappsec-credential-management/#federated",
+            "description": "(Credential Management 1) # federated"
         }
     ]
 }

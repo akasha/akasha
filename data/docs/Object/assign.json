@@ -3,7 +3,7 @@
     "kind": "Method",
     "name": "Object.assign",
     "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign",
-    "description": "The Object.assign() method copies all enumerable own properties from one or more source objects to a target object. It returns the target object.",
+    "description": "The Object.assign() method copies all enumerable own properties from one or more source objects to a target object. It returns the modified target object.",
     "refs": [
         {
             "name": "ECMAScript Language Specification",

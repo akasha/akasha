@@ -3,12 +3,12 @@
     "kind": "Type",
     "name": "XRFrame",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRFrame",
-    "description": "A WebXR Device API XRFrame object is passed into the requestAnimationFrame() callback function and provides access to the information needed in order to render a single frame of animation for an XRSession describing a VR or AR sccene. Events which communicate the tracking state of objects also provide an XRFrame reference as part of their structure.A WebXR Device API XRFrame object is passed into the requestAnimationFrame() callback function and provides access to the information needed in order to render a single frame of animation for an XRSession describing a VR or AR sccene.In addition to providing a reference to the XRSession for which this frame is to be rendered, the getViewerPose() method is provided to obtain the XRViewerPose describing the viewer's position and orientation in space, and getPose() can be used to create an XRPose describing the relative position of one XRSpace relative to another.",
+    "description": "A WebXR Device API XRFrame object is passed into the requestAnimationFrame() callback function and provides access to the information needed in order to render a single frame of animation for an XRSession describing a VR or AR scene. Events which communicate the tracking state of objects also provide an XRFrame reference as part of their structure.",
     "refs": [
         {
             "name": "WebXR Device API",
             "href": "https://immersive-web.github.io/webxr/#xrframe-interface",
-            "description": "XRFrame - WebXR Device API"
+            "description": "# xrframe-interface"
         }
     ]
 }

@@ -6,9 +6,9 @@
     "description": "The StorageManager interface of the Storage API provides an interface for managing persistance permissions and estimating available storage. You can get a reference to this interface using either navigator.storage or WorkerNavigator.storage.",
     "refs": [
         {
-            "name": "Storage",
+            "name": "Storage Standard",
             "href": "https://storage.spec.whatwg.org/#storagemanager",
-            "description": "StorageManger - Storage"
+            "description": "(Storage) # storagemanager"
         }
     ]
 }

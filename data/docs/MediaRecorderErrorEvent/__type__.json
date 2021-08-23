@@ -8,7 +8,7 @@
         {
             "name": "MediaStream Recording",
             "href": "https://w3c.github.io/mediacapture-record/#errorevent-section",
-            "description": "MediaRecorderErrorEvent - MediaStream Recording"
+            "description": "# errorevent-section"
         }
     ]
 }

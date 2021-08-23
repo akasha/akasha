@@ -6,9 +6,9 @@
     "description": "The PublicKeyCredentialCreationOptions dictionary of the Web Authentication API holds options passed to navigators.credentials.create() in order to create a PublicKeyCredential.",
     "refs": [
         {
-            "name": "Web Authentication: An API for accessing Public Key Credentials Level 1",
+            "name": "Web Authentication: An API for accessing Public Key Credentials - Level 3",
             "href": "https://w3c.github.io/webauthn/#dictdef-publickeycredentialcreationoptions",
-            "description": "PublicKeyCredentialCreationOptions dictionary - Web Authentication: An API for accessing Public Key Credentials Level 1"
+            "description": "(Web Authentication) # dictdef-publickeycredentialcreationoptions"
         }
     ]
 }
