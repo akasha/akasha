@@ -16,6 +16,7 @@ import org.realityforge.webtack.model.DictionaryMember;
 import org.realityforge.webtack.model.DocumentationElement;
 import org.realityforge.webtack.model.Element;
 import org.realityforge.webtack.model.EventMember;
+import org.realityforge.webtack.model.EventMemberContainer;
 import org.realityforge.webtack.model.ExtendedAttribute;
 import org.realityforge.webtack.model.InterfaceDefinition;
 import org.realityforge.webtack.model.MixinDefinition;
@@ -48,6 +49,8 @@ final class MergeDocsProcessor
   @Nullable
   private String _type;
   private boolean _typeIsMixin;
+  @Nullable
+  private EventMemberContainer _eventContainer;
   @Nullable
   private WebIDLSchema _schema;
 
@@ -104,6 +107,7 @@ final class MergeDocsProcessor
     final String namespace = input.getNamespace();
     _type = ( null == namespace ? "" : namespace + "." ) + input.getName();
     _typeIsMixin = false;
+    _eventContainer = input;
     final DocEntry docEntry = findTypeDocEntry();
     final InterfaceDefinition definition =
       new InterfaceDefinition( input.getName(),
@@ -122,6 +126,7 @@ final class MergeDocsProcessor
                                transformExtendedAttributes( input.getExtendedAttributes() ),
                                transformSourceLocations( input.getSourceLocations() ) );
     _type = null;
+    _eventContainer = null;
     return definition;
   }
 
@@ -147,7 +152,8 @@ final class MergeDocsProcessor
           assert null != eventName;
           if ( events.stream().noneMatch( e -> e.getName().equals( eventName ) ) && !partialContainsEvent( eventName ) )
           {
-            final String eventType = eventDocEntry.getEventType();
+            final String eventTypeOverride = index.getEventMap().get( eventName );
+            final String eventType = null == eventTypeOverride ? eventDocEntry.getEventType() : eventTypeOverride;
             assert null != eventType;
             // Some events are a union and we don't yet represent this scenario so this will fail
             // It will also skip adding events that are documented on MDN but are deprecated and no longer part of the spec
@@ -172,6 +178,32 @@ final class MergeDocsProcessor
                                                               Collections.emptyList() ),
                                            DocEntryUtil.createDocumentationElement( eventDocEntry ),
                                            attributes,
+                                           Collections.emptyList() ) );
+            }
+          }
+        }
+      }
+
+      if ( null != index )
+      {
+        for ( final Map.Entry<String, String> entry : index.getEventMap().entrySet() )
+        {
+          final String eventName = entry.getKey();
+          final String eventType = entry.getValue();
+          assert null != _eventContainer;
+          // Only create event if not already defined
+          if ( events.stream().noneMatch( e -> e.getName().equals( eventName ) ) && !partialContainsEvent( eventName ) )
+          {
+            assert null != _schema;
+            if ( null != _schema.findInterfaceByName( eventType ) )
+            {
+              events.add( new EventMember( eventName,
+                                           new TypeReference( eventType,
+                                                              Collections.emptyList(),
+                                                              false,
+                                                              Collections.emptyList() ),
+                                           null,
+                                           Collections.emptyList(),
                                            Collections.emptyList() ) );
             }
           }
@@ -220,6 +252,7 @@ final class MergeDocsProcessor
   protected PartialInterfaceDefinition transformPartialInterface( @Nonnull final PartialInterfaceDefinition input )
   {
     _type = input.getName();
+    _eventContainer = input;
     _typeIsMixin = false;
     final DocEntry docEntry = findTypeDocEntry();
     final PartialInterfaceDefinition definition =
@@ -242,6 +275,7 @@ final class MergeDocsProcessor
                                       transformExtendedAttributes( input.getExtendedAttributes() ),
                                       transformSourceLocations( input.getSourceLocations() ) );
     _type = null;
+    _eventContainer = null;
     return definition;
   }
 
@@ -250,6 +284,7 @@ final class MergeDocsProcessor
   protected MixinDefinition transformMixin( @Nonnull final MixinDefinition input )
   {
     _type = input.getName();
+    _eventContainer = input;
     _typeIsMixin = true;
     final DocEntry docEntry = findTypeDocEntry();
     final MixinDefinition definition =
@@ -264,6 +299,7 @@ final class MergeDocsProcessor
                            transformExtendedAttributes( input.getExtendedAttributes() ),
                            transformSourceLocations( input.getSourceLocations() ) );
     _type = null;
+    _eventContainer = null;
     return definition;
   }
 
@@ -272,6 +308,7 @@ final class MergeDocsProcessor
   protected PartialMixinDefinition transformPartialMixin( @Nonnull final PartialMixinDefinition input )
   {
     _type = input.getName();
+    _eventContainer = input;
     _typeIsMixin = true;
     final DocEntry docEntry = findTypeDocEntry();
     final PartialMixinDefinition definition =
@@ -286,6 +323,7 @@ final class MergeDocsProcessor
                                   transformExtendedAttributes( input.getExtendedAttributes() ),
                                   transformSourceLocations( input.getSourceLocations() ) );
     _type = null;
+    _eventContainer = null;
     return definition;
   }
 

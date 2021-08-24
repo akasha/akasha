@@ -115,6 +115,7 @@ interface mixin GlobalEventHandlers {
    */
   event FocusEvent focus;
   event Event undocumented2;
+  event Event unhandledrejection;
 };
 
 /**
@@ -134,7 +135,7 @@ partial interface mixin GlobalEventHandlers {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/abort_event">abort event - MDN</a>
    */
-  event Event abort;
+  event AbortEvent abort;
   /**
    * Existing documentation, with doc entry.
    */
@@ -156,6 +157,10 @@ partial interface mixin GlobalEventHandlers {
    */
   event Event other;
   event Event undocumented;
+  event Event unhandledrejection;
+};
+
+interface AbortEvent : Event {
 };
 
 interface BlurEvent : Event {

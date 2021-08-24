@@ -49,6 +49,9 @@ partial interface mixin GlobalEventHandlers {
   event Event undocumented;
 };
 
+interface AbortEvent : Event {
+};
+
 interface BlurEvent : Event {
 };
 
