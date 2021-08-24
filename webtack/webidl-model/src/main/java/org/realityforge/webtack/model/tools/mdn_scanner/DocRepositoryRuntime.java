@@ -155,7 +155,7 @@ public final class DocRepositoryRuntime
         }
       }
 
-      final List<String> typeAliases = findALlTypeAliases( type );
+      final List<String> typeAliases = findTypeAliases( type );
       for ( final String typeAlias : typeAliases )
       {
         entry = doFindDocEntry( typeAlias, member );
@@ -169,7 +169,7 @@ public final class DocRepositoryRuntime
   }
 
   @Nonnull
-  public List<String> findALlTypeAliases( @Nonnull final String type )
+  public List<String> findTypeAliases( @Nonnull final String type )
   {
     final List<String> aliases = _typeAliases.get( type );
     return null != aliases ? new ArrayList<>( aliases ) : Collections.emptyList();
