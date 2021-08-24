@@ -2,7 +2,7 @@ package com.example;
 
 import java.lang.annotation.Documented;
 import javax.annotation.Generated;
-import jsinterop.annotations.JsNonNull;
+import javax.annotation.Nonnull;
 import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
@@ -11,13 +11,13 @@ import org.intellij.lang.annotations.MagicConstant;
     valuesFromClass = TxMode.class
 )
 public @interface TxMode {
-  @JsNonNull
+  @Nonnull
   String not_allowed = "not-allowed";
 
-  @JsNonNull
+  @Nonnull
   String requires = "requires";
 
-  @JsNonNull
+  @Nonnull
   String requires_new = "requires_new";
 
   final class Util {
@@ -30,11 +30,11 @@ public @interface TxMode {
       return value;
     }
 
-    public static void assertValid(@JsNonNull final String value) {
+    public static void assertValid(@Nonnull final String value) {
       assert isValid( value );
     }
 
-    public static boolean isValid(@JsNonNull final String value) {
+    public static boolean isValid(@Nonnull final String value) {
       return TxMode.not_allowed.equals( value ) || TxMode.requires.equals( value ) || TxMode.requires_new.equals( value );
     }
   }

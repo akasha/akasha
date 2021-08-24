@@ -2,7 +2,7 @@ package com.example;
 
 import java.lang.annotation.Documented;
 import javax.annotation.Generated;
-import jsinterop.annotations.JsNonNull;
+import javax.annotation.Nonnull;
 import org.intellij.lang.annotations.MagicConstant;
 
 /**
@@ -14,22 +14,22 @@ import org.intellij.lang.annotations.MagicConstant;
     valuesFromClass = XMLHttpRequestResponseType.class
 )
 public @interface XMLHttpRequestResponseType {
-  @JsNonNull
+  @Nonnull
   String default_text = "";
 
-  @JsNonNull
+  @Nonnull
   String arraybuffer = "arraybuffer";
 
-  @JsNonNull
+  @Nonnull
   String blob = "blob";
 
-  @JsNonNull
+  @Nonnull
   String document = "document";
 
-  @JsNonNull
+  @Nonnull
   String json = "json";
 
-  @JsNonNull
+  @Nonnull
   String text = "text";
 
   final class Util {
@@ -42,11 +42,11 @@ public @interface XMLHttpRequestResponseType {
       return value;
     }
 
-    public static void assertValid(@JsNonNull final String value) {
+    public static void assertValid(@Nonnull final String value) {
       assert isValid( value );
     }
 
-    public static boolean isValid(@JsNonNull final String value) {
+    public static boolean isValid(@Nonnull final String value) {
       return XMLHttpRequestResponseType.default_text.equals( value ) || XMLHttpRequestResponseType.arraybuffer.equals( value ) || XMLHttpRequestResponseType.blob.equals( value ) || XMLHttpRequestResponseType.document.equals( value ) || XMLHttpRequestResponseType.json.equals( value ) || XMLHttpRequestResponseType.text.equals( value );
     }
   }

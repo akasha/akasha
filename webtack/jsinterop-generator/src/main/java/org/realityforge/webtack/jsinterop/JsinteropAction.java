@@ -4271,7 +4271,7 @@ final class JsinteropAction
         final FieldSpec.Builder field =
           FieldSpec
             .builder( BasicTypes.STRING, value, Modifier.PUBLIC, Modifier.STATIC, Modifier.FINAL )
-            .addAnnotation( JsinteropTypes.JS_NONNULL )
+            .addAnnotation( BasicTypes.NONNULL )
             .initializer( "$S", enumerationValue.getValue() );
         maybeAddCustomAnnotations( enumerationValue, field );
         maybeAddJavadoc( enumerationValue.getDocumentation(), field );
@@ -4311,7 +4311,7 @@ final class JsinteropAction
                                   .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
                                   .addParameter( ParameterSpec
                                                    .builder( BasicTypes.STRING, "value", Modifier.FINAL )
-                                                   .addAnnotation( JsinteropTypes.JS_NONNULL )
+                                                   .addAnnotation( BasicTypes.NONNULL )
                                                    .build() )
                                   .addStatement( "assert isValid( value )" )
                                   .build() )
@@ -4321,7 +4321,7 @@ final class JsinteropAction
                                   .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
                                   .addParameter( ParameterSpec
                                                    .builder( BasicTypes.STRING, "value", Modifier.FINAL )
-                                                   .addAnnotation( JsinteropTypes.JS_NONNULL )
+                                                   .addAnnotation( BasicTypes.NONNULL )
                                                    .build() )
                                   .addStatement( "return " + test, params.toArray() )
                                   .build() )

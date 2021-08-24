@@ -2,7 +2,7 @@ package com.example;
 
 import java.lang.annotation.Documented;
 import javax.annotation.Generated;
-import jsinterop.annotations.JsNonNull;
+import javax.annotation.Nonnull;
 import org.intellij.lang.annotations.MagicConstant;
 
 /**
@@ -21,7 +21,7 @@ public @interface SpeechRecognitionErrorCode {
    *
    * @see <a href="http://example.com/API/SpeechRecognitionErrorCode/aborted">SpeechRecognitionErrorCode.aborted - MDN</a>
    */
-  @JsNonNull
+  @Nonnull
   String aborted = "aborted";
 
   final class Util {
@@ -34,11 +34,11 @@ public @interface SpeechRecognitionErrorCode {
       return value;
     }
 
-    public static void assertValid(@JsNonNull final String value) {
+    public static void assertValid(@Nonnull final String value) {
       assert isValid( value );
     }
 
-    public static boolean isValid(@JsNonNull final String value) {
+    public static boolean isValid(@Nonnull final String value) {
       return SpeechRecognitionErrorCode.aborted.equals( value );
     }
   }
