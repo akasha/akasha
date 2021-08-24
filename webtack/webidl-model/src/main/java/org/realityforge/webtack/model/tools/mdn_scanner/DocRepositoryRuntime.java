@@ -137,8 +137,7 @@ public final class DocRepositoryRuntime
     }
     else
     {
-      final Map<String, List<String>> memberAliasMap = _memberAliases.get( type );
-      final List<String> memberAliases = null != memberAliasMap ? memberAliasMap.get( toMemberKey( member ) ) : null;
+      final List<String> memberAliases = findMemberAliasesForType( type ).get( toMemberKey( member ) );
       if ( null != memberAliases )
       {
         for ( final String memberAlias : memberAliases )
@@ -173,6 +172,13 @@ public final class DocRepositoryRuntime
   {
     final List<String> aliases = _typeAliases.get( type );
     return null != aliases ? new ArrayList<>( aliases ) : Collections.emptyList();
+  }
+
+  @Nonnull
+  public Map<String, List<String>> findMemberAliasesForType( @Nonnull final String type )
+  {
+    final Map<String, List<String>> aliases = _memberAliases.get( type );
+    return null != aliases ? aliases : Collections.emptyMap();
   }
 
   @Nullable
