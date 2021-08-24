@@ -1,4 +1,5 @@
 ServiceWorkerGlobalScope.message_event=Window.message_event
+ServiceWorkerGlobalScope.messageerror_event=Window.messageerror_event
 WebGL2RenderingContext.uniform1f=WebGLRenderingContext.uniform
 WebGL2RenderingContext.uniform1fv=WebGLRenderingContext.uniform
 WebGL2RenderingContext.uniform1i=WebGLRenderingContext.uniform
