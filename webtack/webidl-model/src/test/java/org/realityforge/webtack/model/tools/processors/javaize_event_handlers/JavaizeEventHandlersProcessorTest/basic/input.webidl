@@ -66,7 +66,6 @@ interface SpeechSynthesisEvent : Event {
 interface SpeechSynthesisUtterance {
   attribute NullableEventHandler onend;
   attribute NullableEventHandler onstart;
-  event SpeechSynthesisEvent end;
   event SpeechSynthesisEvent start;
 };
 

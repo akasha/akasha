@@ -66,7 +66,7 @@ callback interface SpeechSynthesisEventListener {
  * This interface defines events which subtypes define event handlers for.
  */
 interface Element {
-  attribute NullableEventHandler oncancel;
+  attribute EventHandler? oncancel;
   /**
    * blur has no handler property and thus no handler type but should have a listener as we will
    * create a helper method to subscribe.
@@ -118,12 +118,11 @@ interface SpeechSynthesisEvent : Event {
 interface SpeechSynthesisUtterance {
   attribute NullableEventHandler onend;
   attribute SpeechSynthesisEventHandler? onstart;
-  event SpeechSynthesisEvent end;
   event SpeechSynthesisEvent start;
 };
 
 partial interface SpeechSynthesisUtterance {
-  attribute SpeechSynthesisEventHandler? onpause;
-  attribute NullableEventHandler onresume;
+  attribute NullableEventHandler onpause;
+  attribute SpeechSynthesisEventHandler? onresume;
   event SpeechSynthesisEvent resume;
 };
