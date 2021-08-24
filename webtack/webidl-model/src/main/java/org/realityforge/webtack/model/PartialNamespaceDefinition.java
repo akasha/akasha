@@ -9,7 +9,7 @@ import javax.annotation.Nullable;
 
 public final class PartialNamespaceDefinition
   extends NamedDefinition
-  implements OperationMemberContainer, ConstantMemberContainer
+  implements ConstantMemberContainer, AttributeMemberContainer, OperationMemberContainer
 {
   @Nonnull
   private final List<ConstMember> _constants;
