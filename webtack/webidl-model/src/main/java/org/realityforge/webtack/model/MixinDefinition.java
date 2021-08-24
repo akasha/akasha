@@ -10,7 +10,6 @@ import javax.annotation.Nullable;
 public final class MixinDefinition
   extends NamedDefinition
   implements ConstantMemberContainer, AttributeMemberContainer, OperationMemberContainer, EventMemberContainer
-
 {
   @Nonnull
   private final List<ConstMember> _constants;
