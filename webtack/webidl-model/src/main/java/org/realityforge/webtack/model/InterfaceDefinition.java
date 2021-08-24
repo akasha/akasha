@@ -79,6 +79,13 @@ public final class InterfaceDefinition
     return _superInterface;
   }
 
+  @Nullable
+  @Override
+  public EventMemberContainer getParentEventMemberContainer()
+  {
+    return getSuperInterface();
+  }
+
   @Nonnull
   public List<InterfaceDefinition> getDirectSubInterfaces()
   {
@@ -117,20 +124,6 @@ public final class InterfaceDefinition
   public List<EventMember> getEvents()
   {
     return _events;
-  }
-
-  @Nullable
-  @Override
-  public EventMember findEventByName( @Nonnull final String name )
-  {
-    return getEvents()
-      .stream()
-      .filter( e -> e.getName().equals( name ) )
-      .findFirst()
-      .orElseGet( () -> {
-        final InterfaceDefinition parent = getSuperInterface();
-        return null == parent ? null : parent.getEventByName( name );
-      } );
   }
 
   @Nullable
