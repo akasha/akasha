@@ -181,6 +181,7 @@ final class MergeDocsProcessor
     return events;
   }
 
+  @SuppressWarnings( "BooleanMethodIsAlwaysInverted" )
   private boolean partialContainsEvent( @Nonnull final String eventName )
   {
     return _typeIsMixin ? anyPartialMixinContainEvent( eventName ) : anyPartialInterfaceContainEvent( eventName );
