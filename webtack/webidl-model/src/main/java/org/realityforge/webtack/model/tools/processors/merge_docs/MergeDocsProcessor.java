@@ -45,8 +45,10 @@ final class MergeDocsProcessor
   private final Map<String, ArrayList<String>> _aliases;
   @Nonnull
   private final Map<String, ArrayList<String>> _memberAliases;
+  @Nullable
   private String _type;
   private boolean _typeIsMixin;
+  @Nullable
   private WebIDLSchema _schema;
 
   MergeDocsProcessor( @Nonnull final PipelineContext context,
@@ -130,6 +132,7 @@ final class MergeDocsProcessor
     final List<EventMember> events = super.transformEventMembers( inputs );
     if ( _createEvents )
     {
+      assert null != _type;
       final DocIndex index = context().docRepository().findIndexForType( _type );
       final List<EntryIndex> entries =
         null != index ?
@@ -148,6 +151,7 @@ final class MergeDocsProcessor
             assert null != eventType;
             // Some events are a union and we don't yet represent this scenario so this will fail
             // It will also skip adding events that are documented on MDN but are deprecated and no longer part of the spec
+            assert null != _schema;
             if ( null != _schema.findInterfaceByName( eventType ) )
             {
               final List<ExtendedAttribute> attributes = new ArrayList<>();
@@ -184,6 +188,8 @@ final class MergeDocsProcessor
 
   private boolean anyPartialMixinContainEvent( @Nonnull final String eventName )
   {
+    assert null != _schema;
+    assert null != _type;
     for ( final PartialMixinDefinition definition : _schema.findPartialMixinsByName( _type ) )
     {
       if ( definition.getEvents().stream().anyMatch( e -> e.getName().equals( eventName ) ) )
@@ -196,6 +202,8 @@ final class MergeDocsProcessor
 
   private boolean anyPartialInterfaceContainEvent( @Nonnull final String eventName )
   {
+    assert null != _schema;
+    assert null != _type;
     for ( final PartialInterfaceDefinition definition : _schema.findPartialInterfacesByName( _type ) )
     {
       if ( definition.getEvents().stream().anyMatch( e -> e.getName().equals( eventName ) ) )
