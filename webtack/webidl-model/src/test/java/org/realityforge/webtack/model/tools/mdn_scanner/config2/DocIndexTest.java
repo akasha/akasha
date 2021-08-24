@@ -23,7 +23,6 @@ public final class DocIndexTest
     FileUtil.write( directory.resolve( DocIndex.FILENAME ), "{\"name\": \"" + name + "\",\"entries\": []}" );
 
     final DocIndex repository = load( directory,
-                                      "\n" +
                                       "{\n" +
                                       "    \"name\": \"" + name + "\",\n" +
                                       "    \"lastModifiedAt\": 0,\n" +
@@ -55,8 +54,7 @@ public final class DocIndexTest
   {
     final Path directory = getWorkingDirectory();
     final String name = directory.getFileName().toString();
-    final String content = "\n" +
-                           "{\n" +
+    final String content = "{\n" +
                            "    \"name\": \"" + name + "\",\n" +
                            "    \"lastModifiedAt\": 1579594580000,\n" +
                            "    \"entries\": [\n" +
@@ -88,7 +86,6 @@ public final class DocIndexTest
     final Path directory = getWorkingDirectory();
     final String name = directory.getFileName().toString();
     final String content =
-      "\n" +
       "{\n" +
       "    \"name\": \"" + name + "\",\n" +
       "    \"lastModifiedAt\": 1579594580000,\n" +

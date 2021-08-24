@@ -185,8 +185,10 @@ public final class DocIndex
         jsonb.toJson( content, outputStream );
       }
       jsonb.close();
-      // Add newline as json output omits trailing new line
-      Files.write( path, new byte[]{ '\n' }, StandardOpenOption.APPEND );
+      // Strip leading new line and add trailing newline to json output
+      final String newContent =
+        Files.readAllLines( path ).stream().filter( s -> !s.isEmpty() ).collect( Collectors.joining( "\n" ) ) + "\n";
+      Files.write( path, newContent.getBytes( StandardCharsets.UTF_8 ), StandardOpenOption.WRITE );
     }
     catch ( final Exception e )
     {
