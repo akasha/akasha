@@ -35,8 +35,6 @@ public final class InterfaceDefinition
   @Nullable
   private InterfaceDefinition _superInterface;
   @Nonnull
-  private final List<InterfaceDefinition> _directSubInterfaces = new ArrayList<>();
-  @Nonnull
   private final List<TypedefDefinition> _markerTypes = new ArrayList<>();
 
   public InterfaceDefinition( @Nonnull final String name,
@@ -84,13 +82,6 @@ public final class InterfaceDefinition
   public EventMemberContainer getParentEventMemberContainer()
   {
     return getSuperInterface();
-  }
-
-  @Nonnull
-  public List<InterfaceDefinition> getDirectSubInterfaces()
-  {
-    assert _linked;
-    return _directSubInterfaces;
   }
 
   @Nonnull
@@ -264,7 +255,6 @@ public final class InterfaceDefinition
     if ( null != _inherits )
     {
       _superInterface = schema.getInterfaceByName( _inherits );
-      _superInterface._directSubInterfaces.add( this );
     }
     _linked = true;
   }
