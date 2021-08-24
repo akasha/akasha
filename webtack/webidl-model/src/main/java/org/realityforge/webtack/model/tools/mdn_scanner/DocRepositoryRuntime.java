@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.StandardCopyOption;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
@@ -154,20 +155,24 @@ public final class DocRepositoryRuntime
         }
       }
 
-      final List<String> typeAliases = _typeAliases.get( type );
-      if ( null != typeAliases )
+      final List<String> typeAliases = findALlTypeAliases( type );
+      for ( final String typeAlias : typeAliases )
       {
-        for ( final String typeAlias : typeAliases )
+        entry = doFindDocEntry( typeAlias, member );
+        if ( null != entry )
         {
-          entry = doFindDocEntry( typeAlias, member );
-          if ( null != entry )
-          {
-            return entry;
-          }
+          return entry;
         }
       }
       return null;
     }
+  }
+
+  @Nonnull
+  public List<String> findALlTypeAliases( @Nonnull final String type )
+  {
+    final List<String> aliases = _typeAliases.get( type );
+    return null != aliases ? new ArrayList<>( aliases ) : Collections.emptyList();
   }
 
   @Nullable
