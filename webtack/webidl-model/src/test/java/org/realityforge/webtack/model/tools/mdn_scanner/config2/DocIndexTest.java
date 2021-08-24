@@ -122,7 +122,7 @@ public final class DocIndexTest
     final Path outputDir = getWorkingDirectory().resolve( "output" );
     final DocIndex index = DocIndex.open( JsonbBuilder.create(), directory );
     final Path outputFile = outputDir.resolve( DocIndex.FILENAME );
-    DocIndex.save( new DocIndex( index.getName(), outputDir, index.getContent() ) );
+    DocIndex.save( new DocIndex( index.getName(), outputDir, index.getContent(), null ) );
     final String actualOutput = new String( Files.readAllBytes( outputFile ), StandardCharsets.UTF_8 );
     assertEquals( actualOutput, expectedOutput );
     return index;

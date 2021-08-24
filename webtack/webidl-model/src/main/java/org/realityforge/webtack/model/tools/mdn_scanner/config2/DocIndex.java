@@ -2,15 +2,22 @@ package org.realityforge.webtack.model.tools.mdn_scanner.config2;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
+import java.util.Properties;
+import java.util.stream.Collectors;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import javax.json.bind.Jsonb;
@@ -23,17 +30,26 @@ public final class DocIndex
   @Nonnull
   public static final String FILENAME = "__index__.json";
   @Nonnull
+  public static final String EVENT_MAP = "__event_map__.properties";
+  @Nonnull
   private final String _name;
   @Nonnull
   private final Path _directory;
   @Nonnull
   private final DocIndexContent _content;
+  // Maps eventName => eventType and assumes a eventHandler named "oneventname"
+  @Nullable
+  private final Map<String, String> _eventMap;
 
-  DocIndex( @Nonnull final String name, @Nonnull final Path directory, @Nonnull final DocIndexContent content )
+  DocIndex( @Nonnull final String name,
+            @Nonnull final Path directory,
+            @Nonnull final DocIndexContent content,
+            @Nullable final Map<String, String> eventMap )
   {
     _name = Objects.requireNonNull( name );
     _directory = Objects.requireNonNull( directory );
     _content = Objects.requireNonNull( content );
+    _eventMap = eventMap;
     for ( final EntryIndex entry : _content.getEntries() )
     {
       if ( null == entry.getName() )
@@ -66,6 +82,12 @@ public final class DocIndex
   public List<EntryIndex> getEntries()
   {
     return getContent().getEntries();
+  }
+
+  @Nonnull
+  public Map<String, String> getEventMap()
+  {
+    return null == _eventMap ? Collections.emptyMap() : _eventMap;
   }
 
   public void removeEntry( @Nonnull final EntryIndex entry )
@@ -148,9 +170,10 @@ public final class DocIndex
     content.setName( name );
     content.setLastModifiedAt( 0 );
     content.setEntries( new ArrayList<>() );
-    return new DocIndex( directory.getFileName().toString(), directory, content );
+    return new DocIndex( directory.getFileName().toString(), directory, content, null );
   }
 
+  @SuppressWarnings( { "unchecked", "rawtypes" } )
   @Nonnull
   private static DocIndex load( @Nonnull final Jsonb jsonb, @Nonnull final Path directory )
     throws IndexException
@@ -159,7 +182,15 @@ public final class DocIndex
     try ( final InputStream inputStream = new FileInputStream( path.toFile() ) )
     {
       final DocIndexContent content = jsonb.fromJson( inputStream, DocIndexContent.class );
-      return new DocIndex( content.getName(), directory, content );
+      Map<String, String> eventMap = null;
+      final Path eventMapPath = directory.resolve( EVENT_MAP );
+      if ( Files.exists( eventMapPath ) )
+      {
+        final Properties properties = new Properties();
+        properties.load( new FileReader( eventMapPath.toFile() ) );
+        eventMap = new HashMap<>( (Map<String, String>) (Map) properties );
+      }
+      return new DocIndex( content.getName(), directory, content, eventMap );
     }
     catch ( final IOException ioe )
     {
