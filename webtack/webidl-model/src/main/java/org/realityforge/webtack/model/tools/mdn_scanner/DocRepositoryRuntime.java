@@ -61,7 +61,7 @@ public final class DocRepositoryRuntime
         {
           final List<String> aliases =
             Arrays
-              .stream( properties.getProperty( type, "" ).split( "\\w+" ) )
+              .stream( properties.getProperty( type, "" ).split( "[ ]+" ) )
               .map( String::trim )
               .filter( alias -> !alias.isEmpty() )
               .collect( Collectors.toList() );
