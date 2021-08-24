@@ -13,7 +13,7 @@ public interface AttributeMemberContainer
   @Nullable
   default AttributeMember findAttributeByName( @Nonnull final String name )
   {
-    return getAttributes().stream().filter( c -> c.getName().equals( name ) ).findFirst().orElse( null );
+    return getAttributes().stream().filter( a -> a.getName().equals( name ) ).findFirst().orElse( null );
   }
 
   @Nonnull
