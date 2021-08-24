@@ -120,6 +120,20 @@ public final class InterfaceDefinition
   }
 
   @Nullable
+  @Override
+  public EventMember findEventByName( @Nonnull final String name )
+  {
+    return getEvents()
+      .stream()
+      .filter( e -> e.getName().equals( name ) )
+      .findFirst()
+      .orElseGet( () -> {
+        final InterfaceDefinition parent = getSuperInterface();
+        return null == parent ? null : parent.getEventByName( name );
+      } );
+  }
+
+  @Nullable
   public IterableMember getIterable()
   {
     return _iterable;
