@@ -9,7 +9,7 @@ import javax.annotation.Nullable;
 
 public final class PartialInterfaceDefinition
   extends NamedDefinition
-  implements ConstantMemberContainer, AttributeMemberContainer, OperationMemberContainer
+  implements ConstantMemberContainer, AttributeMemberContainer, OperationMemberContainer, EventMemberContainer
 {
   @Nonnull
   private final List<ConstMember> _constants;

@@ -11,7 +11,7 @@ import org.realityforge.webtack.model.tools.util.ExtendedAttributes;
 
 public final class InterfaceDefinition
   extends NamedDefinition
-  implements ConstantMemberContainer, AttributeMemberContainer, OperationMemberContainer
+  implements ConstantMemberContainer, AttributeMemberContainer, OperationMemberContainer, EventMemberContainer
 {
   @Nullable
   private final String _inherits;
