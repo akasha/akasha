@@ -1,22 +1,22 @@
 {
-  "name": "WebGLPowerPreference",
-  "lastModifiedAt": 0,
-  "entries": [
-    {
-      "name": "__type__",
-      "lastModifiedAt": 0
-    },
-    {
-      "name": "default",
-      "lastModifiedAt": 0
-    },
-    {
-      "name": "high-performance",
-      "lastModifiedAt": 0
-    },
-    {
-      "name": "low-power",
-      "lastModifiedAt": 0
-    }
-  ]
+    "name": "WebGLPowerPreference",
+    "lastModifiedAt": 0,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 0
+        },
+        {
+            "name": "default",
+            "lastModifiedAt": 0
+        },
+        {
+            "name": "high-performance",
+            "lastModifiedAt": 0
+        },
+        {
+            "name": "low-power",
+            "lastModifiedAt": 0
+        }
+    ]
 }

@@ -1,19 +1,18 @@
-
 {
-  "name": "ImageBitmapRenderingContextSettings",
-  "lastModifiedAt": 0,
-  "entries": [
-    {
-      "name": "__type__",
-      "lastModifiedAt": 0
-    },
-    {
-      "name": "alpha",
-      "lastModifiedAt": 0
-    },
-    {
-      "name": "desynchronized",
-      "lastModifiedAt": 0
-    }
-  ]
+    "name": "ImageBitmapRenderingContextSettings",
+    "lastModifiedAt": 0,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 0
+        },
+        {
+            "name": "alpha",
+            "lastModifiedAt": 0
+        },
+        {
+            "name": "desynchronized",
+            "lastModifiedAt": 0
+        }
+    ]
 }
