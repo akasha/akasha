@@ -433,17 +433,13 @@ final class FlattenProcessor
       {
         final String name = event.getName();
         final EventMember existing = events.get( name );
-        if ( null != existing )
+        if ( null == existing )
         {
-          throw new IllegalModelException( "Failed to merge event named '" + name + "' from mixin named '" +
-                                           mixin.getName() + "' into interface " +
-                                           "named '" + definition.getName() + "' as the interface already " +
-                                           "contains an event with the same name. Existing defined in:\n" +
-                                           describeLocations( existing, "\n" ) + "\n" +
-                                           "Attempting to add member defined in:\n" +
-                                           describeLocations( event, "\n" ) );
+          // As EventMembers are synthesized from multiple sources, it is extremely difficult to omit
+          // duplications at definition time so we allow duplicates and assume the event member defined
+          // on the type rather than the mixin is the authoritative version.
+          events.put( name, event );
         }
-        events.put( name, event );
       }
     }
     return new InterfaceDefinition( definition.getName(),

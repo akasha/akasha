@@ -1,18 +1,18 @@
-partial interface mixin DocumentOrShadowRoot {
-  event Event myevent;
-};
-
-interface Event {
-};
-
 interface mixin DocumentOrShadowRoot {
 };
 
-Document includes DocumentOrShadowRoot;
-
-partial interface Document {
+partial interface mixin DocumentOrShadowRoot {
   event Event myevent;
 };
 
 interface Document {
 };
+
+interface Event {
+};
+
+partial interface Document {
+  event Event myevent;
+};
+
+Document includes DocumentOrShadowRoot;

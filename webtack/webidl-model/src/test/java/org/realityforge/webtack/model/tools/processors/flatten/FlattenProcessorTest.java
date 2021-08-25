@@ -78,11 +78,6 @@ public final class FlattenProcessorTest
                     "input.webidl:12:2\n" +
                     "Attempting to add member defined in:\n" +
                     "input.webidl:17:0" },
-      new Object[]{ "mixin_and_partial_interface_into_interface_duplicate_event",
-                    "Failed to merge event named 'myevent' from mixin named 'DocumentOrShadowRoot' into interface named 'Document' as the interface already contains an event with the same name. Existing defined in:\n" +
-                    "input.webidl:14:2\n" +
-                    "Attempting to add member defined in:\n" +
-                    "input.webidl:1:0" },
       new Object[]{ "partial_namespace_duplicate_attribute",
                     "Failed to merge attribute named 'URL' into namespace named 'WebAssembly' as the namespace already contains an attribute with the same name. Existing defined in:\n" +
                     "input.webidl:8:2\n" +
