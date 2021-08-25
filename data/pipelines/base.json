@@ -1088,7 +1088,8 @@
       "name": "Validate"
     },
     {
-      "name": "DedupEventMember"
+      "name": "DedupEventMember",
+      "description": "Dedup required as Merge stage has merged mixins interfaces which may have resulted in duplicates"
     },
     {
       "name": "RenameType",
@@ -1150,6 +1151,10 @@
       "config": {
         "createEvents": true
       }
+    },
+    {
+      "name": "DedupEventMember",
+      "description": "Dedup required as MergeDocs stage may have created new events and new duplicates"
     },
     {
       "name": "ChangeArgumentType",
