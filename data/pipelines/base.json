@@ -1088,6 +1088,9 @@
       "name": "Validate"
     },
     {
+      "name": "DedupEventMember"
+    },
+    {
       "name": "RenameType",
       "description": "Reworked naming convention of typedef so that the underlying type has a nicer name for the java interface",
       "config": {
@@ -1146,15 +1149,6 @@
       "description": "Add documentation from doc repository. We need to this here again as some documentation is defined on interfaces when it comes form a mixin",
       "config": {
         "createEvents": true
-      }
-    },
-    {
-      "name": "RemoveMember",
-      "description": "the invalid event is documented on HTMLInputElement and HTMLElement which causes a problem in codegen as HTMLInputElement extends HTMLElement and overlay methods are final",
-      "config": {
-        "expectedRemoveCount": 1,
-        "elementNamePattern": "^HTMLInputElement$",
-        "memberNamePattern": "^invalid$"
       }
     },
     {
