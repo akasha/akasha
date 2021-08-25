@@ -114,18 +114,22 @@ final class FlattenProcessor
       }
     }
 
-    return new WebIDLSchema( schema.getCallbacks()
+    return new WebIDLSchema( schema
+                               .getCallbacks()
                                .stream()
                                .collect( Collectors.toMap( CallbackDefinition::getName, Function.identity() ) ),
-                             schema.getCallbackInterfaces()
+                             schema
+                               .getCallbackInterfaces()
                                .stream()
                                .collect( Collectors.toMap( CallbackInterfaceDefinition::getName,
                                                            Function.identity() ) ),
                              dictionaries,
-                             schema.getEnumerations()
+                             schema
+                               .getEnumerations()
                                .stream()
                                .collect( Collectors.toMap( EnumerationDefinition::getName, Function.identity() ) ),
-                             schema.getConstEnumerations()
+                             schema
+                               .getConstEnumerations()
                                .stream()
                                .collect( Collectors.toMap( ConstEnumerationDefinition::getName, Function.identity() ) ),
                              interfaces,
@@ -547,7 +551,8 @@ final class FlattenProcessor
   @Nonnull
   private static <T extends Node> String describeLocations( @Nonnull final T existing, @Nonnull final String delimiter )
   {
-    return existing.getSourceLocations()
+    return existing
+      .getSourceLocations()
       .stream()
       .map( l -> l.getStart().toString() )
       .collect( Collectors.joining( delimiter ) );
