@@ -1,11 +1,8 @@
 package org.realityforge.webtack.model.tools.repository.config;
 
 import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.InputStream;
-import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -13,9 +10,8 @@ import java.util.Objects;
 import java.util.stream.Collectors;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
-import javax.json.bind.Jsonb;
 import javax.json.bind.JsonbBuilder;
-import javax.json.bind.JsonbConfig;
+import org.realityforge.webtack.model.tools.util.JsonUtil;
 
 public final class RepositoryConfig
 {
@@ -56,20 +52,13 @@ public final class RepositoryConfig
     throws Exception
   {
     final Path path = config.getConfigLocation();
-    final JsonbConfig jsonbConfig = new JsonbConfig().withFormatting( true );
-    Files.createDirectories( path.getParent() );
-    final Jsonb jsonb = JsonbBuilder.create( jsonbConfig );
-    try ( final FileOutputStream outputStream = new FileOutputStream( path.toFile() ) )
-    {
-      jsonb.toJson( config.getSources()
-                      .stream()
-                      .sorted( Comparator.comparing( SourceConfig::getName ) )
-                      .collect( Collectors.toList() ),
-                    outputStream );
-    }
-    jsonb.close();
-    // Add newline as json output omits trailing new line
-    Files.write( path, new byte[]{ '\n' }, StandardOpenOption.APPEND );
+    JsonUtil.saveJson( path,
+                       ( jsonb, outputStream ) -> jsonb.toJson( config
+                                                                  .getSources()
+                                                                  .stream()
+                                                                  .sorted( Comparator.comparing( SourceConfig::getName ) )
+                                                                  .collect( Collectors.toList() ),
+                                                                outputStream ) );
   }
 
   @Nonnull

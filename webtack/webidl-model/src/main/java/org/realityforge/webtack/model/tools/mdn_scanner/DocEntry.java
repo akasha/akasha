@@ -1,17 +1,13 @@
 package org.realityforge.webtack.model.tools.mdn_scanner;
 
 import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.InputStream;
-import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.StandardOpenOption;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import javax.json.bind.Jsonb;
-import javax.json.bind.JsonbBuilder;
-import javax.json.bind.JsonbConfig;
 import javax.json.bind.annotation.JsonbPropertyOrder;
+import org.realityforge.webtack.model.tools.util.JsonUtil;
 
 @JsonbPropertyOrder( { "kind",
                        "name",
@@ -171,15 +167,6 @@ public class DocEntry
   static void save( @Nonnull final DocEntry entry, @Nonnull final Path path )
     throws Exception
   {
-    Files.createDirectories( path.getParent() );
-    final JsonbConfig jsonbConfig = new JsonbConfig().withFormatting( true );
-    final Jsonb jsonb = JsonbBuilder.create( jsonbConfig );
-    try ( final FileOutputStream outputStream = new FileOutputStream( path.toFile() ) )
-    {
-      jsonb.toJson( entry, outputStream );
-    }
-    jsonb.close();
-    // Add newline as json output omits trailing new line
-    Files.write( path, new byte[]{ '\n' }, StandardOpenOption.APPEND );
+    JsonUtil.saveJson( path, ( jsonb, outputStream ) -> jsonb.toJson( entry, outputStream ) );
   }
 }

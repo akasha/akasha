@@ -1,14 +1,11 @@
 package org.realityforge.webtack.model.tools.mdn_scanner.config2;
 
 import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
-import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -17,13 +14,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Properties;
-import java.util.stream.Collectors;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import javax.json.bind.Jsonb;
-import javax.json.bind.JsonbBuilder;
-import javax.json.bind.JsonbConfig;
 import org.realityforge.webtack.model.tools.io.FilesUtil;
+import org.realityforge.webtack.model.tools.util.JsonUtil;
 
 public final class DocIndex
 {
@@ -203,23 +198,11 @@ public final class DocIndex
   {
     try
     {
-      final Path directory = index.getDirectory();
-      Files.createDirectories( directory );
-      final JsonbConfig jsonbConfig = new JsonbConfig().withFormatting( true );
-      final Jsonb jsonb = JsonbBuilder.create( jsonbConfig );
-      final Path path = directory.resolve( FILENAME );
+      final Path path = index.getDirectory().resolve( FILENAME );
       final DocIndexContent content = index.getContent();
       final List<EntryIndex> entries = content.getEntries();
       entries.sort( Comparator.comparing( EntryIndex::getName ) );
-      try ( final FileOutputStream outputStream = new FileOutputStream( path.toFile() ) )
-      {
-        jsonb.toJson( content, outputStream );
-      }
-      jsonb.close();
-      // Strip leading new line and add trailing newline to json output
-      final String newContent =
-        Files.readAllLines( path ).stream().filter( s -> !s.isEmpty() ).collect( Collectors.joining( "\n" ) ) + "\n";
-      Files.write( path, newContent.getBytes( StandardCharsets.UTF_8 ), StandardOpenOption.WRITE );
+      JsonUtil.saveJson( path, ( jsonb, outputStream ) -> jsonb.toJson( content, outputStream ) );
     }
     catch ( final Exception e )
     {
