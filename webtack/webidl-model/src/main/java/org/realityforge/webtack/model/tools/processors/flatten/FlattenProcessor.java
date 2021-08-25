@@ -432,14 +432,10 @@ final class FlattenProcessor
       for ( final EventMember event : mixin.getEvents() )
       {
         final String name = event.getName();
-        final EventMember existing = events.get( name );
-        if ( null == existing )
-        {
-          // As EventMembers are synthesized from multiple sources, it is extremely difficult to omit
-          // duplications at definition time so we allow duplicates and assume the event member defined
-          // on the type rather than the mixin is the authoritative version.
-          events.put( name, event );
-        }
+        // As EventMembers are synthesized from multiple sources, it is extremely difficult to omit
+        // duplications at definition time so we allow duplicates and assume the event member defined
+        // on the type rather than the mixin is the authoritative version.
+        events.putIfAbsent( name, event );
       }
     }
     return new InterfaceDefinition( definition.getName(),
