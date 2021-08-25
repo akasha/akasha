@@ -49,6 +49,6 @@ public interface VibratePattern {
 
   @JsOverlay
   default int asInt() {
-    return Js.cast( this );
+    return Js.asInt( this );
   }
 }

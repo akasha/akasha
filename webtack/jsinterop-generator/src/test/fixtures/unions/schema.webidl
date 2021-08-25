@@ -30,6 +30,38 @@ typedef ( PermissionState or long ) PermissionStateOrLong;
 
 typedef ( ReadyStateType or DOMString ) ReadyStateTypeOrString;
 
+typedef ( boolean or USVString ) UnionBooleanOrString;
+
+typedef ( sequence<boolean> or ByteString ) UnionBooleanSequenceOrString;
+
+typedef ( byte or DOMString ) UnionByteOrString;
+
+typedef ( double or DOMString ) UnionDoubleOrString;
+
+typedef ( sequence<double> or ByteString ) UnionDoubleSequenceOrString;
+
+typedef ( float or DOMString ) UnionFloatOrString;
+
+typedef ( long long or DOMString ) UnionLongLongOrString;
+
+typedef ( long or DOMString ) UnionLongOrString;
+
+typedef ( object or DOMString ) UnionObjectOrString;
+
+typedef ( octet or DOMString ) UnionOctetOrString;
+
+typedef ( short or DOMString ) UnionShortOrString;
+
+typedef ( unrestricted double or DOMString ) UnionUnrestrictedDoubleOrString;
+
+typedef ( unrestricted float or DOMString ) UnionUnrestrictedFloatOrString;
+
+typedef ( unsigned long long or DOMString ) UnionUnsignedLongLongOrString;
+
+typedef ( unsigned long or DOMString ) UnionUnsignedLongOrString;
+
+typedef ( unsigned short or DOMString ) UnionUnsignedShortOrString;
+
 /**
  * This tests that lowercase name converted to uppercase when converted into java.
  */

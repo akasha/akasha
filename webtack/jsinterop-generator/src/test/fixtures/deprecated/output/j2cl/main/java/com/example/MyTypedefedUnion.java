@@ -33,7 +33,7 @@ public interface MyTypedefedUnion {
 
   @JsOverlay
   default double asDouble() {
-    return Js.cast( this );
+    return Js.asDouble( this );
   }
 
   @JsOverlay
@@ -43,6 +43,6 @@ public interface MyTypedefedUnion {
 
   @JsOverlay
   default String asString() {
-    return Js.cast( this );
+    return Js.asString( this );
   }
 }

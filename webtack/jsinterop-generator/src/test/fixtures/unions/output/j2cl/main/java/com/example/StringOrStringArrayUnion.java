@@ -49,6 +49,6 @@ public interface StringOrStringArrayUnion {
 
   @JsOverlay
   default String asString() {
-    return Js.cast( this );
+    return Js.asString( this );
   }
 }

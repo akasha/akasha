@@ -33,7 +33,7 @@ public interface StringOrFloatUnion {
 
   @JsOverlay
   default float asFloat() {
-    return Js.cast( this );
+    return Js.asFloat( this );
   }
 
   @JsOverlay
@@ -43,6 +43,6 @@ public interface StringOrFloatUnion {
 
   @JsOverlay
   default String asString() {
-    return Js.cast( this );
+    return Js.asString( this );
   }
 }

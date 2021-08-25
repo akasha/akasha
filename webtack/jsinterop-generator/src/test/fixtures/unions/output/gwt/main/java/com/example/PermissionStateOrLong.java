@@ -33,7 +33,7 @@ public interface PermissionStateOrLong {
 
   @JsOverlay
   default int asInt() {
-    return Js.cast( this );
+    return Js.asInt( this );
   }
 
   @JsOverlay
@@ -44,6 +44,6 @@ public interface PermissionStateOrLong {
   @JsOverlay
   @PermissionState
   default String asPermissionState() {
-    return Js.cast( this );
+    return Js.asString( this );
   }
 }

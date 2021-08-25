@@ -33,7 +33,7 @@ public interface LongOrTxModeUnion {
 
   @JsOverlay
   default int asInt() {
-    return Js.cast( this );
+    return Js.asInt( this );
   }
 
   @JsOverlay
@@ -44,6 +44,6 @@ public interface LongOrTxModeUnion {
   @JsOverlay
   @TxMode
   default String asTxMode() {
-    return Js.cast( this );
+    return Js.asString( this );
   }
 }

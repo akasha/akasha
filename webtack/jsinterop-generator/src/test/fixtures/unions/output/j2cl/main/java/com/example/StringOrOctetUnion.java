@@ -33,7 +33,7 @@ public interface StringOrOctetUnion {
 
   @JsOverlay
   default short asShort() {
-    return Js.cast( this );
+    return Js.asShort( this );
   }
 
   @JsOverlay
@@ -43,6 +43,6 @@ public interface StringOrOctetUnion {
 
   @JsOverlay
   default String asString() {
-    return Js.cast( this );
+    return Js.asString( this );
   }
 }

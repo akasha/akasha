@@ -34,7 +34,7 @@ public interface ReadyStateTypeOrString {
   @JsOverlay
   @ReadyStateType
   default int asReadyStateType() {
-    return Js.cast( this );
+    return Js.asInt( this );
   }
 
   @JsOverlay
@@ -44,6 +44,6 @@ public interface ReadyStateTypeOrString {
 
   @JsOverlay
   default String asString() {
-    return Js.cast( this );
+    return Js.asString( this );
   }
 }

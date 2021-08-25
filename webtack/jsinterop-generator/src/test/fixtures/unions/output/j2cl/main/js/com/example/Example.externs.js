@@ -3,17 +3,57 @@
  * @externs
  */
 /**
+ * @typedef {(!string|!number)}
+ */
+var BluetoothDescriptorUUID;
+/**
+ * @typedef {(!number|!string)}
+ */
+var UnionFloatOrString;
+/**
+ * @typedef {(!number|!string)}
+ */
+var UnionUnsignedLongLongOrString;
+/**
+ * @typedef {(!number|!string)}
+ */
+var ReadyStateTypeOrString;
+/**
+ * @typedef {(!number|!string)}
+ */
+var UnionUnsignedLongOrString;
+/**
+ * @typedef {(!boolean|!string)}
+ */
+var UnionBooleanOrString;
+/**
+ * @typedef {(!Array<!number>|!string)}
+ */
+var UnionDoubleSequenceOrString;
+/**
+ * @typedef {(!number|!string)}
+ */
+var UnionUnrestrictedDoubleOrString;
+/**
+ * @typedef {!BufferSource}
+ */
+var MyNamedBufferSource;
+/**
  * @typedef {(!MyDictionary|!string)}
  */
 var MyDictionaryOrString;
 /**
  * @typedef {(!string|!number)}
  */
-var BluetoothDescriptorUUID;
-/**
- * @typedef {(!string|!number)}
- */
 var PermissionStateOrLong;
+/**
+ * @typedef {(!Array<!boolean>|!string)}
+ */
+var UnionBooleanSequenceOrString;
+/**
+ * @typedef {(!number|!string)}
+ */
+var UnionShortOrString;
 /**
  * @typedef {(!string|!number)}
  */
@@ -21,11 +61,27 @@ var BluetoothServiceUUID;
 /**
  * @typedef {(!number|!string)}
  */
-var ReadyStateTypeOrString;
+var UnionUnrestrictedFloatOrString;
 /**
- * @typedef {!BufferSource}
+ * @typedef {(!number|!string)}
  */
-var MyNamedBufferSource;
+var UnionDoubleOrString;
+/**
+ * @typedef {(!number|!string)}
+ */
+var UnionByteOrString;
+/**
+ * @typedef {(!number|!string)}
+ */
+var UnionOctetOrString;
+/**
+ * @typedef {(!number|!string)}
+ */
+var UnionUnsignedShortOrString;
+/**
+ * @typedef {(!number|!string)}
+ */
+var UnionLongOrString;
 /**
  * @typedef {(!string|!number)}
  */
@@ -34,6 +90,14 @@ var txCode;
  * @typedef {(!string|!number)}
  */
 var BluetoothCharacteristicUUID;
+/**
+ * @typedef {(!number|!string)}
+ */
+var UnionLongLongOrString;
+/**
+ * @typedef {(!Object|!string)}
+ */
+var UnionObjectOrString;
 /**
  * @typedef {function(!BufferSource=): undefined}
  */

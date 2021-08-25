@@ -33,7 +33,7 @@ public interface StringOrLongLongUnion {
 
   @JsOverlay
   default int asInt() {
-    return Js.cast( this );
+    return Js.asInt( this );
   }
 
   @JsOverlay
@@ -43,6 +43,6 @@ public interface StringOrLongLongUnion {
 
   @JsOverlay
   default String asString() {
-    return Js.cast( this );
+    return Js.asString( this );
   }
 }

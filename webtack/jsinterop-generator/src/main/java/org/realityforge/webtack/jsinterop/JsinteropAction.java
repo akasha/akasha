@@ -996,7 +996,7 @@ final class JsinteropAction
 
         addMagicConstantAnnotationIfNeeded( componentType, asMethod );
 
-        asMethod.addStatement( "return $T.cast( this )", JsinteropTypes.JS );
+        asMethod.addStatement( "return $T.$N( this )", JsinteropTypes.JS, getJsAccessor( javaType ) );
         type.addMethod( asMethod.build() );
         testType.addMethod( MethodSpec
                               .methodBuilder( asMethodName )
@@ -3038,50 +3038,56 @@ final class JsinteropAction
   {
     // This code assumes that keys and values are non-nullable and this is true with current
     // set of specs so we can deal with nullability when/if it is required
-    final String accessorMethod;
+    if ( !type.isPrimitive() )
+    {
+      method.addAnnotation( BasicTypes.NONNULL );
+    }
+    method.addStatement( "return getAtAsAny( " + index + " ).$N()", getJsAccessor( type ) );
+  }
+
+  @Nonnull
+  private String getJsAccessor( @Nonnull final TypeName type )
+  {
     if ( TypeName.BOOLEAN == type )
     {
-      accessorMethod = "asBoolean";
+      return "asBoolean";
     }
     else if ( TypeName.BYTE == type )
     {
-      accessorMethod = "asByte";
+      return "asByte";
     }
     else if ( TypeName.CHAR == type )
     {
-      accessorMethod = "asChar";
+      return "asChar";
     }
     else if ( TypeName.SHORT == type )
     {
-      accessorMethod = "asShort";
+      return "asShort";
     }
     else if ( TypeName.INT == type )
     {
-      accessorMethod = "asInt";
+      return "asInt";
     }
     else if ( TypeName.LONG == type )
     {
-      accessorMethod = "asLong";
+      return "asLong";
     }
     else if ( TypeName.FLOAT == type )
     {
-      accessorMethod = "asFloat";
+      return "asFloat";
     }
     else if ( TypeName.DOUBLE == type )
     {
-      accessorMethod = "asDouble";
+      return "asDouble";
     }
     else if ( BasicTypes.STRING.equals( type ) )
     {
-      method.addAnnotation( BasicTypes.NONNULL );
-      accessorMethod = "asString";
+      return "asString";
     }
     else
     {
-      method.addAnnotation( BasicTypes.NONNULL );
-      accessorMethod = "cast";
+      return "cast";
     }
-    method.addStatement( "return getAtAsAny( " + index + " ).$N()", accessorMethod );
   }
 
   private void generateEntry( @Nonnull final String keyMethodName,
