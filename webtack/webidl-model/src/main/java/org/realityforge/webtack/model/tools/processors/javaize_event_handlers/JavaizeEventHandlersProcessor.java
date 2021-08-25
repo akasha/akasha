@@ -294,7 +294,7 @@ final class JavaizeEventHandlersProcessor
     {
       assert null != _eventContainer;
       // Lookup event sans "on" prefix on handler
-      final EventMember eventMember = _eventContainer.findEventByName( input.getName().substring( 2 ) );
+      final EventMember eventMember = _eventContainer.findEventByName( input.getName().substring( 2 ), true );
       if ( null != eventMember )
       {
         // Several events are documented that are historic (or unions) so this code essentially guards
