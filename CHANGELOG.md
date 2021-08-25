@@ -10,14 +10,17 @@
   - **Animation**: `cancel` `finish` `remove`
   - **AudioWorkletNode**: `processorerror`
   - **BaseAudioContext**: `statechange`
+  - **Element**: `click` `contextmenu`
   - **EventSource**: `error`
   - **GlobalEventHandlers**: `abort` `animationcancel` `animationend` `animationiteration` `animationstart` `auxclick` `beforeinput` `blur` `cancel` `canplay` `canplaythrough` `change` `click` `close` `compositionend` `compositionstart` `compositionupdate` `contextmenu` `cuechange` `dblclick` `drag` `dragend` `dragenter` `dragexit` `dragleave` `dragover` `dragstart` `drop` `durationchange` `emptied` `ended` `error` `focus` `focusin` `focusout` `gotpointercapture` `input` `invalid` `keydown` `keypress` `keyup` `load` `loadeddata` `loadedmetadata` `loadstart` `lostpointercapture` `mousedown` `mouseenter` `mouseleave` `mousemove` `mouseout` `mouseover` `mouseup` `pause` `play` `playing` `pointercancel` `pointerdown` `pointerenter` `pointerleave` `pointermove` `pointerout` `pointerover` `pointerup` `progress` `ratechange` `reset` `resize` `scroll` `securitypolicyviolation` `seeked` `seeking` `select` `selectionchange` `selectstart` `stalled` `submit` `suspend` `timeupdate` `toggle` `touchcancel` `touchend` `touchmove` `touchstart` `transitioncancel` `transitionend` `transitionrun` `transitionstart` `volumechange` `waiting` `wheel`
+  - **HTMLCanvasElement**: `contextlost` `contextrestored`
   - **IDBDatabase**: `versionchange`
   - **MediaDevices**: `devicechange`
   - **MediaKeySession**: `keystatuseschange` `message`
   - **MediaQueryList**: `change`
   - **MediaSource**: `sourceclose` `sourceended` `sourceopen`
   - **Notification**: `click` `close` `error` `show`
+  - **OffscreenCanvas**: `contextlost` `contextrestored`
   - **PermissionStatus**: `change`
   - **RTCDtlsTransport**: `error` `statechange`
   - **ScreenOrientation**: `change`
@@ -28,7 +31,7 @@
   - **TextTrackCue**: `enter` `exit`
   - **TextTrackList**: `removetrack`
   - **WindowEventHandlers**: `afterprint` `beforeprint` `beforeunload` `hashchange` `languagechange` `message` `messageerror` `offline` `online` `pagehide` `pageshow` `popstate` `rejectionhandled` `storage` `unhandledrejection` `unload`
-  - **WorkerGlobalScope**: `rejectionhandled` `unhandledrejection`
+  - **WorkerGlobalScope**: `offline` `online` `rejectionhandled` `unhandledrejection`
   - **XMLHttpRequestEventTarget**: `abort` `error` `load` `loadend` `loadstart` `progress` `timeout`
 
 ### [v0.21](https://github.com/akasha/akasha/tree/v0.21) (2021-08-18) · [Full Changelog](https://github.com/spritz/spritz/compare/v0.20...v0.21) · [Source Diff](https://github.com/akasha/akasha-java/compare/v0.20...v0.21)
