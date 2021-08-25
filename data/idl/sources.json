@@ -1,4 +1,3 @@
-
 [
     {
         "lastModifiedTime": 1626933006000,
@@ -273,6 +272,11 @@
         "lastModifiedTime": 1623915120000,
         "name": "requestidlecallback",
         "url": "https://w3c.github.io/requestidlecallback/"
+    },
+    {
+        "lastModifiedTime": 1581341291000,
+        "name": "resize_observer",
+        "url": "https://www.w3.org/TR/resize-observer/"
     },
     {
         "lastModifiedTime": 1626332362000,

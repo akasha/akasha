@@ -1,0 +1,13 @@
+{
+    "kind": "Type",
+    "name": "ResizeObserverEntry",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/ResizeObserverEntry",
+    "description": "The ResizeObserverEntry interface represents the object passed to the ResizeObserver() constructor's callback function, which allows you to access the new dimensions of the Element or SVGElement being observed.",
+    "refs": [
+        {
+            "name": "Resize Observer",
+            "href": "https://drafts.csswg.org/resize-observer/#resize-observer-entry-interface",
+            "description": "# resize-observer-entry-interface"
+        }
+    ]
+}

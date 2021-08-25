@@ -1,0 +1,13 @@
+{
+    "kind": "Type",
+    "name": "ResizeObserver",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/ResizeObserver",
+    "description": "The ResizeObserver interface reports changes to the dimensions of an Element's content or border box, or the bounding box of an SVGElement.",
+    "refs": [
+        {
+            "name": "Resize Observer",
+            "href": "https://drafts.csswg.org/resize-observer/#resize-observer-interface",
+            "description": "# resize-observer-interface"
+        }
+    ]
+}
