@@ -5,6 +5,31 @@
 * Generate static types for global execution contexts of a service worker (i.e. `SharedWorkerGlobal`), a worker (i.e. `DedicatedWorkerGlobal`), a shared worker (i.e. `SharedWorkerGlobal`) and audio worklets (i.e. `AudioWorkletGlobal`).
 * Change the way the java binding generates unions so that methods of the form `as[X]()` and `is[X]()` exist for every component type `X` that is part of the union.
 * Replace usages of `@javax.annotations.Nullable` with `@jsinterop.annotations.JsNullable` and `@javax.annotations.Nonnull` with `@jsinterop.annotations.JsNonNull` on natively exposed elements to provide additional guidance to the J2CL/closure compiler variant of the java binding.
+* Add event handling code to types (i.e. `addXListener(...)` and `removeXListener(...)` methods etc.) to more types and more events. The types and associated events as follows:
+  - **AbstractWorker**: `error`
+  - **Animation**: `cancel` `finish` `remove`
+  - **AudioWorkletNode**: `processorerror`
+  - **BaseAudioContext**: `statechange`
+  - **EventSource**: `error`
+  - **GlobalEventHandlers**: `abort` `animationcancel` `animationend` `animationiteration` `animationstart` `auxclick` `beforeinput` `blur` `cancel` `canplay` `canplaythrough` `change` `click` `close` `compositionend` `compositionstart` `compositionupdate` `contextmenu` `cuechange` `dblclick` `drag` `dragend` `dragenter` `dragexit` `dragleave` `dragover` `dragstart` `drop` `durationchange` `emptied` `ended` `error` `focus` `focusin` `focusout` `gotpointercapture` `input` `invalid` `keydown` `keypress` `keyup` `load` `loadeddata` `loadedmetadata` `loadstart` `lostpointercapture` `mousedown` `mouseenter` `mouseleave` `mousemove` `mouseout` `mouseover` `mouseup` `pause` `play` `playing` `pointercancel` `pointerdown` `pointerenter` `pointerleave` `pointermove` `pointerout` `pointerover` `pointerup` `progress` `ratechange` `reset` `resize` `scroll` `securitypolicyviolation` `seeked` `seeking` `select` `selectionchange` `selectstart` `stalled` `submit` `suspend` `timeupdate` `toggle` `touchcancel` `touchend` `touchmove` `touchstart` `transitioncancel` `transitionend` `transitionrun` `transitionstart` `volumechange` `waiting` `wheel`
+  - **IDBDatabase**: `versionchange`
+  - **MediaDevices**: `devicechange`
+  - **MediaKeySession**: `keystatuseschange` `message`
+  - **MediaQueryList**: `change`
+  - **MediaSource**: `sourceclose` `sourceended` `sourceopen`
+  - **Notification**: `click` `close` `error` `show`
+  - **PermissionStatus**: `change`
+  - **RTCDtlsTransport**: `error` `statechange`
+  - **ScreenOrientation**: `change`
+  - **ServiceWorkerContainer**: `controllerchange` `messageerror`
+  - **ServiceWorkerRegistration**: `updatefound`
+  - **SourceBuffer**: `abort` `error` `update` `updateend` `updatestart`
+  - **SourceBufferList**: `addsourcebuffer` `removesourcebuffer`
+  - **TextTrackCue**: `enter` `exit`
+  - **TextTrackList**: `removetrack`
+  - **WindowEventHandlers**: `afterprint` `beforeprint` `beforeunload` `hashchange` `languagechange` `message` `messageerror` `offline` `online` `pagehide` `pageshow` `popstate` `rejectionhandled` `storage` `unhandledrejection` `unload`
+  - **WorkerGlobalScope**: `rejectionhandled` `unhandledrejection`
+  - **XMLHttpRequestEventTarget**: `abort` `error` `load` `loadend` `loadstart` `progress` `timeout`
 
 ### [v0.21](https://github.com/akasha/akasha/tree/v0.21) (2021-08-18) · [Full Changelog](https://github.com/spritz/spritz/compare/v0.20...v0.21) · [Source Diff](https://github.com/akasha/akasha-java/compare/v0.20...v0.21)
 
