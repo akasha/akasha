@@ -1,6 +1,6 @@
 {
     "name": "CustomEvent",
-    "lastModifiedAt": 1626396848408,
+    "lastModifiedAt": 1629769792000,
     "entries": [
         {
             "name": "CustomEvent",
@@ -8,7 +8,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1626314591000
+            "lastModifiedAt": 1629769792000
         },
         {
             "name": "detail",

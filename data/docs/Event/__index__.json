@@ -1,6 +1,6 @@
 {
     "name": "Event",
-    "lastModifiedAt": 1626396869729,
+    "lastModifiedAt": 1629769821000,
     "entries": [
         {
             "name": "Event",
@@ -8,7 +8,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1626314582000
+            "lastModifiedAt": 1629769821000
         },
         {
             "name": "bubbles",

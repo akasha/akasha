@@ -1,6 +1,6 @@
 {
     "name": "Uint16Array",
-    "lastModifiedAt": 1623484875769,
+    "lastModifiedAt": 1629769826000,
     "entries": [
         {
             "name": "Uint16Array",
@@ -8,7 +8,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1623291352000
+            "lastModifiedAt": 1629769826000
         }
     ]
 }

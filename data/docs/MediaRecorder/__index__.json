@@ -1,6 +1,6 @@
 {
     "name": "MediaRecorder",
-    "lastModifiedAt": 1629723558555,
+    "lastModifiedAt": 1629769797000,
     "entries": [
         {
             "name": "MediaRecorder",
@@ -8,7 +8,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1629517776000
+            "lastModifiedAt": 1629769797000
         },
         {
             "name": "audioBitsPerSecond",

@@ -1,6 +1,6 @@
 {
     "name": "AnimationPlaybackEvent",
-    "lastModifiedAt": 1623484597375,
+    "lastModifiedAt": 1629769795000,
     "entries": [
         {
             "name": "AnimationPlaybackEvent",
@@ -8,7 +8,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1623463390000
+            "lastModifiedAt": 1629769795000
         },
         {
             "name": "currentTime",

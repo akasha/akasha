@@ -1,10 +1,10 @@
 {
     "name": "TreeWalker",
-    "lastModifiedAt": 1626396866345,
+    "lastModifiedAt": 1629769784000,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1626314592000
+            "lastModifiedAt": 1629769784000
         },
         {
             "name": "currentNode",

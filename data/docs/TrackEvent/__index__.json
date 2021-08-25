@@ -1,6 +1,6 @@
 {
     "name": "TrackEvent",
-    "lastModifiedAt": 1626397006918,
+    "lastModifiedAt": 1629769817000,
     "entries": [
         {
             "name": "TrackEvent",
@@ -8,7 +8,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1626314591000
+            "lastModifiedAt": 1629769817000
         },
         {
             "name": "track",

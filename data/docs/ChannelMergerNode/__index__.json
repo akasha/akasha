@@ -1,6 +1,6 @@
 {
     "name": "ChannelMergerNode",
-    "lastModifiedAt": 1623484613641,
+    "lastModifiedAt": 1629769792000,
     "entries": [
         {
             "name": "ChannelMergerNode",
@@ -8,7 +8,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1623463409000
+            "lastModifiedAt": 1629769792000
         }
     ]
 }

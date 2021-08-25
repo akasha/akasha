@@ -1,10 +1,10 @@
 {
     "name": "NamedNodeMap",
-    "lastModifiedAt": 1626396863156,
+    "lastModifiedAt": 1629769819000,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1626314561000
+            "lastModifiedAt": 1629769819000
         },
         {
             "name": "getNamedItem",

@@ -1,10 +1,10 @@
 {
     "name": "RTCSctpTransport",
-    "lastModifiedAt": 1626396783658,
+    "lastModifiedAt": 1629769810000,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1626314588000
+            "lastModifiedAt": 1629769810000
         },
         {
             "name": "state",

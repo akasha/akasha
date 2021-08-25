@@ -1,10 +1,10 @@
 {
     "name": "IDBCursor",
-    "lastModifiedAt": 1626396497318,
+    "lastModifiedAt": 1629855678000,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1626314559000
+            "lastModifiedAt": 1629855678000
         },
         {
             "name": "advance",

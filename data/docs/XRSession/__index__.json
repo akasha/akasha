@@ -1,10 +1,10 @@
 {
     "name": "XRSession",
-    "lastModifiedAt": 1629724193550,
+    "lastModifiedAt": 1629769806000,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1629517787000
+            "lastModifiedAt": 1629769806000
         },
         {
             "name": "cancelAnimationFrame",

@@ -1,10 +1,10 @@
 {
     "name": "MediaTrackSettings",
-    "lastModifiedAt": 1626396512042,
+    "lastModifiedAt": 1629769811000,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1626314582000
+            "lastModifiedAt": 1629769811000
         },
         {
             "name": "aspectRatio",

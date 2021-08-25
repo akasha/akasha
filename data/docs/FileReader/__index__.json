@@ -1,6 +1,6 @@
 {
     "name": "FileReader",
-    "lastModifiedAt": 1629723350547,
+    "lastModifiedAt": 1629769813000,
     "entries": [
         {
             "name": "FileReader",
@@ -8,7 +8,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1629517796000
+            "lastModifiedAt": 1629769813000
         },
         {
             "name": "abort",

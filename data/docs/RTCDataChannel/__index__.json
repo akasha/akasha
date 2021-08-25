@@ -1,10 +1,10 @@
 {
     "name": "RTCDataChannel",
-    "lastModifiedAt": 1626396779642,
+    "lastModifiedAt": 1629769785000,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1626314569000
+            "lastModifiedAt": 1629769785000
         },
         {
             "name": "binaryType",

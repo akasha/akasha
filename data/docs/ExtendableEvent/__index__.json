@@ -1,6 +1,6 @@
 {
     "name": "ExtendableEvent",
-    "lastModifiedAt": 1626396578077,
+    "lastModifiedAt": 1629855677000,
     "entries": [
         {
             "name": "ExtendableEvent",
@@ -8,7 +8,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1626314588000
+            "lastModifiedAt": 1629855677000
         },
         {
             "name": "waitUntil",

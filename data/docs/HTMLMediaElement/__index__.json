@@ -1,10 +1,10 @@
 {
     "name": "HTMLMediaElement",
-    "lastModifiedAt": 1626397012288,
+    "lastModifiedAt": 1629769798000,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1626314577000
+            "lastModifiedAt": 1629769798000
         },
         {
             "name": "abort_event",

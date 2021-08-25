@@ -1,10 +1,10 @@
 {
     "name": "WorkerGlobalScope",
-    "lastModifiedAt": 1626396953880,
+    "lastModifiedAt": 1629769814000,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1626314560000
+            "lastModifiedAt": 1629769814000
         },
         {
             "name": "atob",

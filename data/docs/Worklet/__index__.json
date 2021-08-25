@@ -1,10 +1,10 @@
 {
     "name": "Worklet",
-    "lastModifiedAt": 1629724169391,
+    "lastModifiedAt": 1629769785000,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1629596406000
+            "lastModifiedAt": 1629769785000
         },
         {
             "name": "addModule",

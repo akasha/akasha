@@ -1,6 +1,6 @@
 {
     "name": "RTCDTMFToneChangeEvent",
-    "lastModifiedAt": 1626396778702,
+    "lastModifiedAt": 1629769814000,
     "entries": [
         {
             "name": "RTCDTMFToneChangeEvent",
@@ -8,7 +8,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1626314572000
+            "lastModifiedAt": 1629769814000
         },
         {
             "name": "tone",

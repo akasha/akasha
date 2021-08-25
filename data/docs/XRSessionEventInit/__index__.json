@@ -1,10 +1,10 @@
 {
     "name": "XRSessionEventInit",
-    "lastModifiedAt": 1629724195490,
+    "lastModifiedAt": 1629769795000,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1629517773000
+            "lastModifiedAt": 1629769795000
         },
         {
             "name": "session",

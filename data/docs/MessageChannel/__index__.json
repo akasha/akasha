@@ -1,6 +1,6 @@
 {
     "name": "MessageChannel",
-    "lastModifiedAt": 1626396979177,
+    "lastModifiedAt": 1629769787000,
     "entries": [
         {
             "name": "MessageChannel",
@@ -8,7 +8,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1626314576000
+            "lastModifiedAt": 1629769787000
         },
         {
             "name": "port1",

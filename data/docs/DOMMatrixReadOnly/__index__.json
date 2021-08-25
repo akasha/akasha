@@ -1,6 +1,6 @@
 {
     "name": "DOMMatrixReadOnly",
-    "lastModifiedAt": 1629723205549,
+    "lastModifiedAt": 1629769790000,
     "entries": [
         {
             "name": "DOMMatrixReadOnly",
@@ -8,7 +8,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1629517768000
+            "lastModifiedAt": 1629769790000
         },
         {
             "name": "flipX",

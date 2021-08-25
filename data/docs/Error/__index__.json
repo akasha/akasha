@@ -1,6 +1,6 @@
 {
     "name": "Error",
-    "lastModifiedAt": 1623484644613,
+    "lastModifiedAt": 1629769824000,
     "entries": [
         {
             "name": "Error",
@@ -8,39 +8,39 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1623291352000
+            "lastModifiedAt": 1629769824000
         },
         {
             "name": "columnNumber",
-            "lastModifiedAt": 1606560318267
+            "lastModifiedAt": 1629769824000
         },
         {
             "name": "fileName",
-            "lastModifiedAt": 1606560319822
+            "lastModifiedAt": 1629769823000
         },
         {
             "name": "lineNumber",
-            "lastModifiedAt": 1606560320639
+            "lastModifiedAt": 1629769824000
         },
         {
             "name": "message",
-            "lastModifiedAt": 1623463360000
+            "lastModifiedAt": 1629769824000
         },
         {
             "name": "name",
-            "lastModifiedAt": 1623463360000
+            "lastModifiedAt": 1629769823000
         },
         {
             "name": "stack",
-            "lastModifiedAt": 1606560322396
+            "lastModifiedAt": 1629769824000
         },
         {
             "name": "toSource",
-            "lastModifiedAt": 1612573599000
+            "lastModifiedAt": 1629769824000
         },
         {
             "name": "toString",
-            "lastModifiedAt": 1623463360000
+            "lastModifiedAt": 1629769824000
         }
     ]
 }

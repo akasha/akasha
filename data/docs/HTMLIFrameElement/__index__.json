@@ -1,10 +1,10 @@
 {
     "name": "HTMLIFrameElement",
-    "lastModifiedAt": 1626397018412,
+    "lastModifiedAt": 1629769789000,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1626314592000
+            "lastModifiedAt": 1629769789000
         },
         {
             "name": "allowPaymentRequest",

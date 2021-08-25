@@ -1,6 +1,6 @@
 {
     "name": "TouchEvent",
-    "lastModifiedAt": 1629723992416,
+    "lastModifiedAt": 1629769804000,
     "entries": [
         {
             "name": "TouchEvent",
@@ -8,7 +8,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1629683111000
+            "lastModifiedAt": 1629769804000
         },
         {
             "name": "altKey",

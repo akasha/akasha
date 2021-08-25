@@ -1,6 +1,6 @@
 {
     "name": "AnimationEvent",
-    "lastModifiedAt": 1627023263047,
+    "lastModifiedAt": 1629769802000,
     "entries": [
         {
             "name": "AnimationEvent",
@@ -8,7 +8,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1623463394000
+            "lastModifiedAt": 1629769802000
         },
         {
             "name": "animationName",

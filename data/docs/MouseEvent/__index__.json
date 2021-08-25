@@ -1,6 +1,6 @@
 {
     "name": "MouseEvent",
-    "lastModifiedAt": 1626396457407,
+    "lastModifiedAt": 1629769783000,
     "entries": [
         {
             "name": "MouseEvent",
@@ -16,7 +16,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1626314574000
+            "lastModifiedAt": 1629769783000
         },
         {
             "name": "altKey",

@@ -1,10 +1,10 @@
 {
     "name": "AuthenticatorAssertionResponse",
-    "lastModifiedAt": 1623484604047,
+    "lastModifiedAt": 1629769804000,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1623463434000
+            "lastModifiedAt": 1629769804000
         },
         {
             "name": "authenticatorData",

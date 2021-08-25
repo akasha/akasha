@@ -1,6 +1,6 @@
 {
     "name": "MediaKeyMessageEvent",
-    "lastModifiedAt": 1629723551375,
+    "lastModifiedAt": 1629769794000,
     "entries": [
         {
             "name": "MediaKeyMessageEvent",
@@ -8,7 +8,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1629517772000
+            "lastModifiedAt": 1629769794000
         },
         {
             "name": "message",

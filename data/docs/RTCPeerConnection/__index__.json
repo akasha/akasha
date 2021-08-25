@@ -1,6 +1,6 @@
 {
     "name": "RTCPeerConnection",
-    "lastModifiedAt": 1626396785165,
+    "lastModifiedAt": 1629769782000,
     "entries": [
         {
             "name": "RTCPeerConnection",
@@ -8,7 +8,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1626314568000
+            "lastModifiedAt": 1629769782000
         },
         {
             "name": "addIceCandidate",

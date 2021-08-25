@@ -1,10 +1,10 @@
 {
     "name": "RTCIceServer",
-    "lastModifiedAt": 1626396760010,
+    "lastModifiedAt": 1629769813000,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1599280524773
+            "lastModifiedAt": 1629769813000
         },
         {
             "name": "credential",

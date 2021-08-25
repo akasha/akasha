@@ -1,10 +1,10 @@
 {
     "name": "CharacterData",
-    "lastModifiedAt": 1626396867814,
+    "lastModifiedAt": 1629769790000,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1623463369000
+            "lastModifiedAt": 1629769790000
         },
         {
             "name": "nextElementSibling",

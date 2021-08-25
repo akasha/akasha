@@ -1,10 +1,10 @@
 {
     "name": "HTMLVideoElement",
-    "lastModifiedAt": 1626397016605,
+    "lastModifiedAt": 1629769808000,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1626314569000
+            "lastModifiedAt": 1629769808000
         },
         {
             "name": "autoPictureInPicture",

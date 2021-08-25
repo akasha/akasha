@@ -1,6 +1,6 @@
 {
     "name": "AudioBufferSourceNode",
-    "lastModifiedAt": 1629723118456,
+    "lastModifiedAt": 1629769804000,
     "entries": [
         {
             "name": "AudioBufferSourceNode",
@@ -8,7 +8,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1629596410000
+            "lastModifiedAt": 1629769804000
         },
         {
             "name": "buffer",

@@ -1,10 +1,10 @@
 {
     "name": "BluetoothDevice",
-    "lastModifiedAt": 1623484604808,
+    "lastModifiedAt": 1629769806000,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1623463432000
+            "lastModifiedAt": 1629769806000
         },
         {
             "name": "advertisementreceived_event",

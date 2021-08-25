@@ -1,6 +1,6 @@
 {
     "name": "AudioBuffer",
-    "lastModifiedAt": 1623484602971,
+    "lastModifiedAt": 1629769799000,
     "entries": [
         {
             "name": "AudioBuffer",
@@ -8,7 +8,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1623463388000
+            "lastModifiedAt": 1629769799000
         },
         {
             "name": "copyFromChannel",

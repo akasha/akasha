@@ -1,10 +1,10 @@
 {
     "name": "WebGLContextEvent",
-    "lastModifiedAt": 1629724144825,
+    "lastModifiedAt": 1629769784000,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1629517762000
+            "lastModifiedAt": 1629769784000
         },
         {
             "name": "statusMessage",

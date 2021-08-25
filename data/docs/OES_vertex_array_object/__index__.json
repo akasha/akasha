@@ -1,10 +1,10 @@
 {
     "name": "OES_vertex_array_object",
-    "lastModifiedAt": 1626396680774,
+    "lastModifiedAt": 1629769796000,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1626314590000
+            "lastModifiedAt": 1629769796000
         },
         {
             "name": "bindVertexArrayOES",

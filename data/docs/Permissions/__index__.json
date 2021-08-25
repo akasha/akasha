@@ -1,10 +1,10 @@
 {
     "name": "Permissions",
-    "lastModifiedAt": 1626396542106,
+    "lastModifiedAt": 1629769790000,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1626314575000
+            "lastModifiedAt": 1629769790000
         },
         {
             "name": "query",

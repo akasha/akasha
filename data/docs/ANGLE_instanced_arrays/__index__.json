@@ -1,10 +1,10 @@
 {
     "name": "ANGLE_instanced_arrays",
-    "lastModifiedAt": 1626396633166,
+    "lastModifiedAt": 1629769822000,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1626314583000
+            "lastModifiedAt": 1629769822000
         },
         {
             "name": "drawArraysInstancedANGLE",

@@ -1,6 +1,6 @@
 {
     "name": "MediaElementAudioSourceNode",
-    "lastModifiedAt": 1629723549723,
+    "lastModifiedAt": 1629769817000,
     "entries": [
         {
             "name": "MediaElementAudioSourceNode",
@@ -8,7 +8,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1629517801000
+            "lastModifiedAt": 1629769817000
         },
         {
             "name": "mediaElement",

@@ -1,10 +1,10 @@
 {
     "name": "WEBGL_debug_shaders",
-    "lastModifiedAt": 1626396644446,
+    "lastModifiedAt": 1629769818000,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1626314581000
+            "lastModifiedAt": 1629769818000
         },
         {
             "name": "getTranslatedShaderSource",

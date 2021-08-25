@@ -1,6 +1,6 @@
 {
     "name": "Touch",
-    "lastModifiedAt": 1629723991569,
+    "lastModifiedAt": 1629769818000,
     "entries": [
         {
             "name": "Touch",
@@ -8,7 +8,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1629517802000
+            "lastModifiedAt": 1629769818000
         },
         {
             "name": "clientX",

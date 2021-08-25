@@ -1,10 +1,10 @@
 {
     "name": "ClipboardItem",
-    "lastModifiedAt": 1629723188473,
+    "lastModifiedAt": 1629769799000,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1629596409000
+            "lastModifiedAt": 1629769799000
         },
         {
             "name": "getType",

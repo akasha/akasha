@@ -1,6 +1,6 @@
 {
     "name": "Uint32Array",
-    "lastModifiedAt": 1623484885537,
+    "lastModifiedAt": 1629769825000,
     "entries": [
         {
             "name": "Uint32Array",
@@ -8,7 +8,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1623291351000
+            "lastModifiedAt": 1629769825000
         }
     ]
 }

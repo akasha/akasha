@@ -1,6 +1,6 @@
 {
     "name": "AudioContext",
-    "lastModifiedAt": 1623484603092,
+    "lastModifiedAt": 1629769798000,
     "entries": [
         {
             "name": "AudioContext",
@@ -8,7 +8,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1623463404000
+            "lastModifiedAt": 1629769798000
         },
         {
             "name": "baseLatency",

@@ -1,6 +1,6 @@
 {
     "name": "SyntaxError",
-    "lastModifiedAt": 1623484834397,
+    "lastModifiedAt": 1629769826000,
     "entries": [
         {
             "name": "SyntaxError",
@@ -8,7 +8,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1623291351000
+            "lastModifiedAt": 1629769826000
         }
     ]
 }

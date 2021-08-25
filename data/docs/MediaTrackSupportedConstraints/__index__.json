@@ -1,10 +1,10 @@
 {
     "name": "MediaTrackSupportedConstraints",
-    "lastModifiedAt": 1626396517725,
+    "lastModifiedAt": 1629769801000,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1597192177237
+            "lastModifiedAt": 1629769801000
         },
         {
             "name": "aspectRatio",

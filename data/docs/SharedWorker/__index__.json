@@ -1,6 +1,6 @@
 {
     "name": "SharedWorker",
-    "lastModifiedAt": 1626396957820,
+    "lastModifiedAt": 1629769818000,
     "entries": [
         {
             "name": "SharedWorker",
@@ -8,7 +8,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1626314593000
+            "lastModifiedAt": 1629769818000
         },
         {
             "name": "onerror",

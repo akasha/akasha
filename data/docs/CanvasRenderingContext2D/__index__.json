@@ -1,10 +1,10 @@
 {
     "name": "CanvasRenderingContext2D",
-    "lastModifiedAt": 1626396963497,
+    "lastModifiedAt": 1629769786000,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1623463440000
+            "lastModifiedAt": 1629769786000
         },
         {
             "name": "addHitRegion",

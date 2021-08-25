@@ -1,10 +1,10 @@
 {
     "name": "TextMetrics",
-    "lastModifiedAt": 1626397029930,
+    "lastModifiedAt": 1629769816000,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1626314590000
+            "lastModifiedAt": 1629769816000
         },
         {
             "name": "actualBoundingBoxAscent",

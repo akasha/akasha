@@ -1,150 +1,150 @@
 {
     "name": "Object",
-    "lastModifiedAt": 1629723639641,
+    "lastModifiedAt": 1629769824000,
     "entries": [
         {
             "name": "__defineGetter__",
-            "lastModifiedAt": 1623424377000
+            "lastModifiedAt": 1629769824000
         },
         {
             "name": "__defineSetter__",
-            "lastModifiedAt": 1623424377000
+            "lastModifiedAt": 1629769824000
         },
         {
             "name": "__lookupGetter__",
-            "lastModifiedAt": 1623424377000
+            "lastModifiedAt": 1629769824000
         },
         {
             "name": "__lookupSetter__",
-            "lastModifiedAt": 1623424377000
+            "lastModifiedAt": 1629769824000
         },
         {
             "name": "__proto__",
-            "lastModifiedAt": 1623424377000
+            "lastModifiedAt": 1629769824000
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1623291350000
+            "lastModifiedAt": 1629769824000
         },
         {
             "name": "assign",
-            "lastModifiedAt": 1629517810000
+            "lastModifiedAt": 1629769824000
         },
         {
             "name": "constructor",
-            "lastModifiedAt": 1623424376000
+            "lastModifiedAt": 1629769824000
         },
         {
             "name": "create",
-            "lastModifiedAt": 1623424377000
+            "lastModifiedAt": 1629769824000
         },
         {
             "name": "defineProperties",
-            "lastModifiedAt": 1623424377000
+            "lastModifiedAt": 1629769824000
         },
         {
             "name": "defineProperty",
-            "lastModifiedAt": 1623424377000
+            "lastModifiedAt": 1629769824000
         },
         {
             "name": "entries",
-            "lastModifiedAt": 1629517810000
+            "lastModifiedAt": 1629769824000
         },
         {
             "name": "freeze",
-            "lastModifiedAt": 1623424376000
+            "lastModifiedAt": 1629769824000
         },
         {
             "name": "fromEntries",
-            "lastModifiedAt": 1623424377000
+            "lastModifiedAt": 1629769824000
         },
         {
             "name": "getOwnPropertyDescriptor",
-            "lastModifiedAt": 1623424376000
+            "lastModifiedAt": 1629769824000
         },
         {
             "name": "getOwnPropertyDescriptors",
-            "lastModifiedAt": 1623424377000
+            "lastModifiedAt": 1629769824000
         },
         {
             "name": "getOwnPropertyNames",
-            "lastModifiedAt": 1623424377000
+            "lastModifiedAt": 1629769824000
         },
         {
             "name": "getOwnPropertySymbols",
-            "lastModifiedAt": 1623424376000
+            "lastModifiedAt": 1629769824000
         },
         {
             "name": "getPrototypeOf",
-            "lastModifiedAt": 1623424377000
+            "lastModifiedAt": 1629769824000
         },
         {
             "name": "hasOwn",
-            "lastModifiedAt": 1629517810000
+            "lastModifiedAt": 1629769824000
         },
         {
             "name": "hasOwnProperty",
-            "lastModifiedAt": 1623424376000
+            "lastModifiedAt": 1629769824000
         },
         {
             "name": "is",
-            "lastModifiedAt": 1623291350000
+            "lastModifiedAt": 1629769824000
         },
         {
             "name": "isExtensible",
-            "lastModifiedAt": 1623424376000
+            "lastModifiedAt": 1629769824000
         },
         {
             "name": "isFrozen",
-            "lastModifiedAt": 1623424377000
+            "lastModifiedAt": 1629769824000
         },
         {
             "name": "isPrototypeOf",
-            "lastModifiedAt": 1623424376000
+            "lastModifiedAt": 1629769824000
         },
         {
             "name": "isSealed",
-            "lastModifiedAt": 1623424377000
+            "lastModifiedAt": 1629769824000
         },
         {
             "name": "keys",
-            "lastModifiedAt": 1623424377000
+            "lastModifiedAt": 1629769824000
         },
         {
             "name": "preventExtensions",
-            "lastModifiedAt": 1623424376000
+            "lastModifiedAt": 1629769824000
         },
         {
             "name": "propertyIsEnumerable",
-            "lastModifiedAt": 1623424377000
+            "lastModifiedAt": 1629769824000
         },
         {
             "name": "seal",
-            "lastModifiedAt": 1623424376000
+            "lastModifiedAt": 1629769824000
         },
         {
             "name": "setPrototypeOf",
-            "lastModifiedAt": 1623424377000
+            "lastModifiedAt": 1629769824000
         },
         {
             "name": "toLocaleString",
-            "lastModifiedAt": 1623424377000
+            "lastModifiedAt": 1629769824000
         },
         {
             "name": "toSource",
-            "lastModifiedAt": 1623424376000
+            "lastModifiedAt": 1629769824000
         },
         {
             "name": "toString",
-            "lastModifiedAt": 1623424377000
+            "lastModifiedAt": 1629769824000
         },
         {
             "name": "valueOf",
-            "lastModifiedAt": 1623424376000
+            "lastModifiedAt": 1629769824000
         },
         {
             "name": "values",
-            "lastModifiedAt": 1623424377000
+            "lastModifiedAt": 1629769824000
         }
     ]
 }

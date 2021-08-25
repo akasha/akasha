@@ -1,10 +1,10 @@
 {
     "name": "CSSStyleDeclaration",
-    "lastModifiedAt": 1626396439033,
+    "lastModifiedAt": 1629769812000,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1626314577000
+            "lastModifiedAt": 1629769812000
         },
         {
             "name": "getPropertyCSSValue",

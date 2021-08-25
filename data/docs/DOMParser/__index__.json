@@ -1,6 +1,6 @@
 {
     "name": "DOMParser",
-    "lastModifiedAt": 1626396946297,
+    "lastModifiedAt": 1629769789000,
     "entries": [
         {
             "name": "DOMParser",
@@ -8,7 +8,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1626314575000
+            "lastModifiedAt": 1629769789000
         }
     ]
 }

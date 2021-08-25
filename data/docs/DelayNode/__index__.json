@@ -1,6 +1,6 @@
 {
     "name": "DelayNode",
-    "lastModifiedAt": 1629723287586,
+    "lastModifiedAt": 1629769811000,
     "entries": [
         {
             "name": "DelayNode",
@@ -8,7 +8,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1629517793000
+            "lastModifiedAt": 1629769811000
         },
         {
             "name": "delayTime",

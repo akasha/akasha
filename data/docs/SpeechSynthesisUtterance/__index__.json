@@ -1,6 +1,6 @@
 {
     "name": "SpeechSynthesisUtterance",
-    "lastModifiedAt": 1629723886316,
+    "lastModifiedAt": 1629769810000,
     "entries": [
         {
             "name": "SpeechSynthesisUtterance",
@@ -8,7 +8,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1629517792000
+            "lastModifiedAt": 1629769810000
         },
         {
             "name": "boundary_event",

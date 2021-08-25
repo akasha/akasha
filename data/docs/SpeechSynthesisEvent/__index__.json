@@ -1,10 +1,10 @@
 {
     "name": "SpeechSynthesisEvent",
-    "lastModifiedAt": 1629723885210,
+    "lastModifiedAt": 1629769796000,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1629517776000
+            "lastModifiedAt": 1629769796000
         },
         {
             "name": "charIndex",

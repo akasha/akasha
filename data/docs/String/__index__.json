@@ -1,214 +1,214 @@
 {
     "name": "String",
-    "lastModifiedAt": 1623484824982,
+    "lastModifiedAt": 1629769826000,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1623291349000
+            "lastModifiedAt": 1629769826000
         },
         {
             "name": "anchor",
-            "lastModifiedAt": 1623463356000
+            "lastModifiedAt": 1629769826000
         },
         {
             "name": "at",
-            "lastModifiedAt": 1623463355000
+            "lastModifiedAt": 1629769826000
         },
         {
             "name": "big",
-            "lastModifiedAt": 1623463356000
+            "lastModifiedAt": 1629769825000
         },
         {
             "name": "blink",
-            "lastModifiedAt": 1623463356000
+            "lastModifiedAt": 1629769825000
         },
         {
             "name": "bold",
-            "lastModifiedAt": 1623463355000
+            "lastModifiedAt": 1629769826000
         },
         {
             "name": "charAt",
-            "lastModifiedAt": 1623463355000
+            "lastModifiedAt": 1629769825000
         },
         {
             "name": "charCodeAt",
-            "lastModifiedAt": 1623463356000
+            "lastModifiedAt": 1629769825000
         },
         {
             "name": "codePointAt",
-            "lastModifiedAt": 1623463356000
+            "lastModifiedAt": 1629769826000
         },
         {
             "name": "concat",
-            "lastModifiedAt": 1623424375000
+            "lastModifiedAt": 1629769826000
         },
         {
             "name": "endsWith",
-            "lastModifiedAt": 1623463355000
+            "lastModifiedAt": 1629769826000
         },
         {
             "name": "fixed",
-            "lastModifiedAt": 1623463356000
+            "lastModifiedAt": 1629769826000
         },
         {
             "name": "fontcolor",
-            "lastModifiedAt": 1623463355000
+            "lastModifiedAt": 1629769826000
         },
         {
             "name": "fontsize",
-            "lastModifiedAt": 1623463355000
+            "lastModifiedAt": 1629769825000
         },
         {
             "name": "fromCharCode",
-            "lastModifiedAt": 1623463356000
+            "lastModifiedAt": 1629769826000
         },
         {
             "name": "fromCodePoint",
-            "lastModifiedAt": 1623463356000
+            "lastModifiedAt": 1629769825000
         },
         {
             "name": "includes",
-            "lastModifiedAt": 1623463355000
+            "lastModifiedAt": 1629769826000
         },
         {
             "name": "indexOf",
-            "lastModifiedAt": 1623463355000
+            "lastModifiedAt": 1629769826000
         },
         {
             "name": "italics",
-            "lastModifiedAt": 1623463355000
+            "lastModifiedAt": 1629769825000
         },
         {
             "name": "lastIndexOf",
-            "lastModifiedAt": 1623463356000
+            "lastModifiedAt": 1629769825000
         },
         {
             "name": "link",
-            "lastModifiedAt": 1623463355000
+            "lastModifiedAt": 1629769825000
         },
         {
             "name": "localeCompare",
-            "lastModifiedAt": 1623463355000
+            "lastModifiedAt": 1629769825000
         },
         {
             "name": "match",
-            "lastModifiedAt": 1623291349000
+            "lastModifiedAt": 1629769826000
         },
         {
             "name": "matchAll",
-            "lastModifiedAt": 1623463356000
+            "lastModifiedAt": 1629769826000
         },
         {
             "name": "normalize",
-            "lastModifiedAt": 1623463355000
+            "lastModifiedAt": 1629769826000
         },
         {
             "name": "padEnd",
-            "lastModifiedAt": 1623463355000
+            "lastModifiedAt": 1629769826000
         },
         {
             "name": "padStart",
-            "lastModifiedAt": 1623463356000
+            "lastModifiedAt": 1629769826000
         },
         {
             "name": "prototype",
-            "lastModifiedAt": 1623291349000
+            "lastModifiedAt": 1629769826000
         },
         {
             "name": "raw",
-            "lastModifiedAt": 1623463355000
+            "lastModifiedAt": 1629769826000
         },
         {
             "name": "repeat",
-            "lastModifiedAt": 1623463355000
+            "lastModifiedAt": 1629769825000
         },
         {
             "name": "replace",
-            "lastModifiedAt": 1623291350000
+            "lastModifiedAt": 1629769825000
         },
         {
             "name": "replaceAll",
-            "lastModifiedAt": 1623463356000
+            "lastModifiedAt": 1629769826000
         },
         {
             "name": "search",
-            "lastModifiedAt": 1623463356000
+            "lastModifiedAt": 1629769826000
         },
         {
             "name": "slice",
-            "lastModifiedAt": 1623463356000
+            "lastModifiedAt": 1629769826000
         },
         {
             "name": "small",
-            "lastModifiedAt": 1623463356000
+            "lastModifiedAt": 1629769826000
         },
         {
             "name": "split",
-            "lastModifiedAt": 1623463356000
+            "lastModifiedAt": 1629769826000
         },
         {
             "name": "startsWith",
-            "lastModifiedAt": 1623463355000
+            "lastModifiedAt": 1629769826000
         },
         {
             "name": "strike",
-            "lastModifiedAt": 1623463355000
+            "lastModifiedAt": 1629769826000
         },
         {
             "name": "sub",
-            "lastModifiedAt": 1623463355000
+            "lastModifiedAt": 1629769826000
         },
         {
             "name": "substr",
-            "lastModifiedAt": 1623424375000
+            "lastModifiedAt": 1629769826000
         },
         {
             "name": "substring",
-            "lastModifiedAt": 1623463355000
+            "lastModifiedAt": 1629769826000
         },
         {
             "name": "sup",
-            "lastModifiedAt": 1623463355000
+            "lastModifiedAt": 1629769825000
         },
         {
             "name": "toLocaleLowerCase",
-            "lastModifiedAt": 1623463356000
+            "lastModifiedAt": 1629769826000
         },
         {
             "name": "toLocaleUpperCase",
-            "lastModifiedAt": 1623463355000
+            "lastModifiedAt": 1629769826000
         },
         {
             "name": "toLowerCase",
-            "lastModifiedAt": 1623463355000
+            "lastModifiedAt": 1629769825000
         },
         {
             "name": "toSource",
-            "lastModifiedAt": 1623463355000
+            "lastModifiedAt": 1629769826000
         },
         {
             "name": "toString",
-            "lastModifiedAt": 1623463356000
+            "lastModifiedAt": 1629769826000
         },
         {
             "name": "toUpperCase",
-            "lastModifiedAt": 1623463356000
+            "lastModifiedAt": 1629769826000
         },
         {
             "name": "trim",
-            "lastModifiedAt": 1623463355000
+            "lastModifiedAt": 1629769825000
         },
         {
             "name": "trimEnd",
-            "lastModifiedAt": 1623463356000
+            "lastModifiedAt": 1629769825000
         },
         {
             "name": "trimStart",
-            "lastModifiedAt": 1623463355000
+            "lastModifiedAt": 1629769826000
         },
         {
             "name": "valueOf",
-            "lastModifiedAt": 1623463355000
+            "lastModifiedAt": 1629769826000
         }
     ]
 }

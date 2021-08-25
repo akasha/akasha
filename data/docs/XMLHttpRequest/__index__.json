@@ -1,6 +1,6 @@
 {
     "name": "XMLHttpRequest",
-    "lastModifiedAt": 1629724171506,
+    "lastModifiedAt": 1629769784000,
     "entries": [
         {
             "name": "XMLHttpRequest",
@@ -8,7 +8,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1629683105000
+            "lastModifiedAt": 1629769784000
         },
         {
             "name": "abort",

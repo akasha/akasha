@@ -1,10 +1,10 @@
 {
     "name": "RTCPeerConnectionIceErrorEvent",
-    "lastModifiedAt": 1626396776614,
+    "lastModifiedAt": 1629769791000,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1626314575000
+            "lastModifiedAt": 1629769791000
         },
         {
             "name": "address",

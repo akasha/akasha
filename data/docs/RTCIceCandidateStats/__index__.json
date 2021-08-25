@@ -1,10 +1,10 @@
 {
     "name": "RTCIceCandidateStats",
-    "lastModifiedAt": 1626396806134,
+    "lastModifiedAt": 1629769822000,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1626314582000
+            "lastModifiedAt": 1629769822000
         },
         {
             "name": "address",

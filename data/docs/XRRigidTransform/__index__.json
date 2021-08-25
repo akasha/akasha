@@ -1,6 +1,6 @@
 {
     "name": "XRRigidTransform",
-    "lastModifiedAt": 1629724192538,
+    "lastModifiedAt": 1629769806000,
     "entries": [
         {
             "name": "XRRigidTransform",
@@ -8,7 +8,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1629517787000
+            "lastModifiedAt": 1629769806000
         },
         {
             "name": "inverse",

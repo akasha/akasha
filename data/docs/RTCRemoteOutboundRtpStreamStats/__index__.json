@@ -1,10 +1,10 @@
 {
     "name": "RTCRemoteOutboundRtpStreamStats",
-    "lastModifiedAt": 1626396824783,
+    "lastModifiedAt": 1629769810000,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1626314589000
+            "lastModifiedAt": 1629769810000
         },
         {
             "name": "localId",

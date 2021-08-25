@@ -1,6 +1,6 @@
 {
     "name": "OscillatorNode",
-    "lastModifiedAt": 1629723655927,
+    "lastModifiedAt": 1629769819000,
     "entries": [
         {
             "name": "OscillatorNode",
@@ -8,7 +8,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1629517803000
+            "lastModifiedAt": 1629769819000
         },
         {
             "name": "detune",

@@ -1,6 +1,6 @@
 {
     "name": "PointerEvent",
-    "lastModifiedAt": 1629723674079,
+    "lastModifiedAt": 1629769801000,
     "entries": [
         {
             "name": "PointerEvent",
@@ -8,7 +8,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1629683110000
+            "lastModifiedAt": 1629769801000
         },
         {
             "name": "getCoalescedEvents",

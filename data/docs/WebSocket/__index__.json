@@ -1,6 +1,6 @@
 {
     "name": "WebSocket",
-    "lastModifiedAt": 1626397031672,
+    "lastModifiedAt": 1629769796000,
     "entries": [
         {
             "name": "WebSocket",
@@ -8,7 +8,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1626314576000
+            "lastModifiedAt": 1629769796000
         },
         {
             "name": "binaryType",

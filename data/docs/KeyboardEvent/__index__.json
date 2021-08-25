@@ -1,6 +1,6 @@
 {
     "name": "KeyboardEvent",
-    "lastModifiedAt": 1629723507308,
+    "lastModifiedAt": 1629855677000,
     "entries": [
         {
             "name": "KeyboardEvent",
@@ -8,7 +8,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1629683104000
+            "lastModifiedAt": 1629855677000
         },
         {
             "name": "altKey",

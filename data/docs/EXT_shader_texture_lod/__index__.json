@@ -1,10 +1,10 @@
 {
     "name": "EXT_shader_texture_lod",
-    "lastModifiedAt": 1626396658555,
+    "lastModifiedAt": 1629769795000,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1626314583000
+            "lastModifiedAt": 1629769795000
         }
     ]
 }

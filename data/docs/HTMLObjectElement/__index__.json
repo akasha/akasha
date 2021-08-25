@@ -1,10 +1,10 @@
 {
     "name": "HTMLObjectElement",
-    "lastModifiedAt": 1626397028621,
+    "lastModifiedAt": 1629769788000,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1626314577000
+            "lastModifiedAt": 1629769788000
         },
         {
             "name": "checkValidity",

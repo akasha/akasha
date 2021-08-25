@@ -1,6 +1,6 @@
 {
     "name": "OffscreenCanvas",
-    "lastModifiedAt": 1626396974797,
+    "lastModifiedAt": 1629769787000,
     "entries": [
         {
             "name": "OffscreenCanvas",
@@ -8,7 +8,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1626314593000
+            "lastModifiedAt": 1629769787000
         },
         {
             "name": "convertToBlob",

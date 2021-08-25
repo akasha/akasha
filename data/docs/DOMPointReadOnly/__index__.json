@@ -1,6 +1,6 @@
 {
     "name": "DOMPointReadOnly",
-    "lastModifiedAt": 1629723209126,
+    "lastModifiedAt": 1629769810000,
     "entries": [
         {
             "name": "DOMPointReadOnly",
@@ -8,7 +8,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1629517793000
+            "lastModifiedAt": 1629769810000
         },
         {
             "name": "fromPoint",

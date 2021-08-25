@@ -1,10 +1,10 @@
 {
     "name": "WindowOrWorkerGlobalScope",
-    "lastModifiedAt": 1626396493041,
+    "lastModifiedAt": 1629769790000,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1626314565000
+            "lastModifiedAt": 1629769790000
         },
         {
             "name": "atob",

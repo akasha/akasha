@@ -1,10 +1,10 @@
 {
     "name": "XRReferenceSpaceEventInit",
-    "lastModifiedAt": 1629724189517,
+    "lastModifiedAt": 1629769794000,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1629517772000
+            "lastModifiedAt": 1629769794000
         },
         {
             "name": "referenceSpace",

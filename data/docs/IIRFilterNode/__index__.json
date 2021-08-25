@@ -1,6 +1,6 @@
 {
     "name": "IIRFilterNode",
-    "lastModifiedAt": 1629723461747,
+    "lastModifiedAt": 1629769792000,
     "entries": [
         {
             "name": "IIRFilterNode",
@@ -8,7 +8,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1629517770000
+            "lastModifiedAt": 1629769792000
         },
         {
             "name": "getFrequencyResponse",

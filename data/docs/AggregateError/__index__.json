@@ -1,6 +1,6 @@
 {
     "name": "AggregateError",
-    "lastModifiedAt": 1629723096957,
+    "lastModifiedAt": 1629769825000,
     "entries": [
         {
             "name": "AggregateError",
@@ -8,7 +8,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1629517810000
+            "lastModifiedAt": 1629769825000
         }
     ]
 }

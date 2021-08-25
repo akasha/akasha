@@ -1,6 +1,6 @@
 {
     "name": "ReadableStream",
-    "lastModifiedAt": 1629723736704,
+    "lastModifiedAt": 1629769805000,
     "entries": [
         {
             "name": "ReadableStream",
@@ -8,7 +8,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1629517786000
+            "lastModifiedAt": 1629769805000
         },
         {
             "name": "cancel",

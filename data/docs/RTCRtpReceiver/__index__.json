@@ -1,10 +1,10 @@
 {
     "name": "RTCRtpReceiver",
-    "lastModifiedAt": 1626396789098,
+    "lastModifiedAt": 1629769794000,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1626314583000
+            "lastModifiedAt": 1629769794000
         },
         {
             "name": "getCapabilities",

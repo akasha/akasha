@@ -1,6 +1,6 @@
 {
     "name": "Animation",
-    "lastModifiedAt": 1623484596939,
+    "lastModifiedAt": 1629769794000,
     "entries": [
         {
             "name": "Animation",
@@ -8,7 +8,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1623463444000
+            "lastModifiedAt": 1629769794000
         },
         {
             "name": "cancel",

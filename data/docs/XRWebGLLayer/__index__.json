@@ -1,6 +1,6 @@
 {
     "name": "XRWebGLLayer",
-    "lastModifiedAt": 1629724201865,
+    "lastModifiedAt": 1629769788000,
     "entries": [
         {
             "name": "XRWebGLLayer",
@@ -8,7 +8,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1629517765000
+            "lastModifiedAt": 1629769788000
         },
         {
             "name": "antialias",

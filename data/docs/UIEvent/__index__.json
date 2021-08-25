@@ -1,6 +1,6 @@
 {
     "name": "UIEvent",
-    "lastModifiedAt": 1629724044677,
+    "lastModifiedAt": 1629769789000,
     "entries": [
         {
             "name": "UIEvent",
@@ -8,7 +8,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1629517766000
+            "lastModifiedAt": 1629769789000
         },
         {
             "name": "cancelBubble",

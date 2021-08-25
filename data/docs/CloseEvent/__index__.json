@@ -1,6 +1,6 @@
 {
     "name": "CloseEvent",
-    "lastModifiedAt": 1626396949406,
+    "lastModifiedAt": 1629769788000,
     "entries": [
         {
             "name": "CloseEvent",
@@ -8,7 +8,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1623463385000
+            "lastModifiedAt": 1629769788000
         },
         {
             "name": "initCloseEvent",

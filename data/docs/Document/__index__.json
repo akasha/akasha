@@ -1,6 +1,6 @@
 {
     "name": "Document",
-    "lastModifiedAt": 1626396460046,
+    "lastModifiedAt": 1629769794000,
     "entries": [
         {
             "name": "DOMContentLoaded_event",
@@ -16,7 +16,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1626314580000
+            "lastModifiedAt": 1629769794000
         },
         {
             "name": "adoptNode",

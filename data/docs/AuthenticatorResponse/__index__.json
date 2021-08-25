@@ -1,10 +1,10 @@
 {
     "name": "AuthenticatorResponse",
-    "lastModifiedAt": 1623484604164,
+    "lastModifiedAt": 1629769816000,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1623463378000
+            "lastModifiedAt": 1629769816000
         },
         {
             "name": "clientDataJSON",

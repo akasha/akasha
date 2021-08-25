@@ -1,6 +1,6 @@
 {
     "name": "AudioWorkletNode",
-    "lastModifiedAt": 1623484603897,
+    "lastModifiedAt": 1629769799000,
     "entries": [
         {
             "name": "AudioWorkletNode",
@@ -8,7 +8,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1623463397000
+            "lastModifiedAt": 1629769799000
         },
         {
             "name": "onprocessorerror",

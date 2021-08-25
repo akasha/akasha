@@ -1,34 +1,34 @@
 {
     "name": "Number",
-    "lastModifiedAt": 1623484739289,
+    "lastModifiedAt": 1629769827000,
     "entries": [
         {
             "name": "EPSILON",
-            "lastModifiedAt": 1623463360000
+            "lastModifiedAt": 1629769827000
         },
         {
             "name": "MAX_SAFE_INTEGER",
-            "lastModifiedAt": 1623424379000
+            "lastModifiedAt": 1629769827000
         },
         {
             "name": "MAX_VALUE",
-            "lastModifiedAt": 1623424379000
+            "lastModifiedAt": 1629769827000
         },
         {
             "name": "MIN_SAFE_INTEGER",
-            "lastModifiedAt": 1623424379000
+            "lastModifiedAt": 1629769827000
         },
         {
             "name": "MIN_VALUE",
-            "lastModifiedAt": 1623424379000
+            "lastModifiedAt": 1629769827000
         },
         {
             "name": "NEGATIVE_INFINITY",
-            "lastModifiedAt": 1623463360000
+            "lastModifiedAt": 1629769827000
         },
         {
             "name": "NaN",
-            "lastModifiedAt": 1623424379000
+            "lastModifiedAt": 1629769827000
         },
         {
             "name": "Number",
@@ -36,63 +36,63 @@
         },
         {
             "name": "POSITIVE_INFINITY",
-            "lastModifiedAt": 1623463359000
+            "lastModifiedAt": 1629769827000
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1623291351000
+            "lastModifiedAt": 1629769827000
         },
         {
             "name": "isFinite",
-            "lastModifiedAt": 1623463359000
+            "lastModifiedAt": 1629769827000
         },
         {
             "name": "isInteger",
-            "lastModifiedAt": 1623463359000
+            "lastModifiedAt": 1629769827000
         },
         {
             "name": "isNaN",
-            "lastModifiedAt": 1623424379000
+            "lastModifiedAt": 1629769827000
         },
         {
             "name": "isSafeInteger",
-            "lastModifiedAt": 1623424379000
+            "lastModifiedAt": 1629769827000
         },
         {
             "name": "parseFloat",
-            "lastModifiedAt": 1623463359000
+            "lastModifiedAt": 1629769827000
         },
         {
             "name": "parseInt",
-            "lastModifiedAt": 1623463359000
+            "lastModifiedAt": 1629769827000
         },
         {
             "name": "toExponential",
-            "lastModifiedAt": 1623463360000
+            "lastModifiedAt": 1629769827000
         },
         {
             "name": "toFixed",
-            "lastModifiedAt": 1623463359000
+            "lastModifiedAt": 1629769827000
         },
         {
             "name": "toLocaleString",
-            "lastModifiedAt": 1623463359000
+            "lastModifiedAt": 1629769827000
         },
         {
             "name": "toPrecision",
-            "lastModifiedAt": 1623463359000
+            "lastModifiedAt": 1629769827000
         },
         {
             "name": "toSource",
-            "lastModifiedAt": 1623463359000
+            "lastModifiedAt": 1629769827000
         },
         {
             "name": "toString",
-            "lastModifiedAt": 1623463359000
+            "lastModifiedAt": 1629769827000
         },
         {
             "name": "valueOf",
-            "lastModifiedAt": 1623463359000
+            "lastModifiedAt": 1629769827000
         }
     ]
 }

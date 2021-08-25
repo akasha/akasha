@@ -1,10 +1,10 @@
 {
     "name": "EffectTiming",
-    "lastModifiedAt": 1629723312906,
+    "lastModifiedAt": 1629769804000,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1629517785000
+            "lastModifiedAt": 1629769804000
         },
         {
             "name": "delay",

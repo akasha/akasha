@@ -1,6 +1,6 @@
 {
     "name": "EventSource",
-    "lastModifiedAt": 1629723343214,
+    "lastModifiedAt": 1629855678000,
     "entries": [
         {
             "name": "EventSource",
@@ -8,7 +8,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1629596414000
+            "lastModifiedAt": 1629855678000
         },
         {
             "name": "close",
