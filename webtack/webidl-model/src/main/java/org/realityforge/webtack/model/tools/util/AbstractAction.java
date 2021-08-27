@@ -28,6 +28,7 @@ import org.realityforge.webtack.model.Kind;
 import org.realityforge.webtack.model.Named;
 import org.realityforge.webtack.model.NamedDefinition;
 import org.realityforge.webtack.model.OperationMember;
+import org.realityforge.webtack.model.PromiseType;
 import org.realityforge.webtack.model.SequenceType;
 import org.realityforge.webtack.model.Type;
 import org.realityforge.webtack.model.TypeReference;
@@ -212,6 +213,11 @@ public abstract class AbstractAction
     else if ( Kind.Void == kind )
     {
       sb.append( "Undefined" );
+    }
+    else if ( Kind.Promise == kind )
+    {
+      appendTypeToUnionName( sb, ( (PromiseType) type ).getResolveType() );
+      sb.append( "Promise" );
     }
     else
     {
