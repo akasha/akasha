@@ -6,6 +6,7 @@ EventTarget
 FocusEvent
 FocusEventListener
 Navigator
+NavigatorOrWorkerNavigatorUnion
 ScrollToOptions
 SharedWorkerGlobalScope
 Window

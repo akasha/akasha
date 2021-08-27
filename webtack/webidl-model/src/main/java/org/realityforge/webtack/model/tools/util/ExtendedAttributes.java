@@ -143,6 +143,35 @@ public final class ExtendedAttributes
   @Nonnull
   public static final String SYNTHETIC = "Synthetic";
   /**
+   * A extended attribute that indicates that a type was created internally for modelling purposes and
+   * should not be used outside the library. This typically applied to Unions to represent return value
+   * of operations with the same name but different return types or attributes across global contexts
+   * that differ by type.
+   *
+   * This may result in types being generated with annotations warning on usage @Api.Internal or as package access.
+   */
+  @Nonnull
+  public static final String INTERNAL = "Internal";
+  /**
+   * Operations with the same name in WebIDL may return different types but in the javascript binding
+   * there is a single function with a return type that varies based on the parameter types and counts.
+   * To model this scenario in Closure Compiler compatible manner, the return type for the closure function
+   * representing these operations must return a union of all the return types. Then the jsinterop
+   * binding adds a @JsOverlay method that "casts" to the specific type expected type of the oepration.
+   *
+   * This extended attribute specifies the name of the union that represents the underlying return type.
+   */
+  @Nonnull
+  public static final String TYPE_OVERRIDE = "TypeOverride";
+  /**
+   * Multiple global execution contexts that can be modelled with the Window type, the
+   * SharedWorkerGlobalScope type etc. These may have attributes and operations of with the same name
+   * but different types. In a similar method to the {@link #TYPE_OVERRIDE}, this extend attribute
+   * specifies the underlying type of the attribute or return type of the operation.
+   */
+  @Nonnull
+  public static final String GLOBAL_TYPE_OVERRIDE = "GlobalTypeOverride";
+  /**
    * A custom extended property that can appear on a "const enum" that indicates that the const enum
    * represents potential flags in a bitset.
    */

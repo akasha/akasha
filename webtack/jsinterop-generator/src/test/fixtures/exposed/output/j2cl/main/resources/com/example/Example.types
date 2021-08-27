@@ -6,6 +6,7 @@ EventTarget
 MessageEvent
 MessageEventHandler
 NullableEventHandler
+NullableEventHandlerOrMessageEventHandlerUnion
 ServiceWorkerGlobalScope
 SharedWorkerGlobalScope
 Window

@@ -14,6 +14,7 @@ org.realityforge.webtack.model.tools.processors.extend_object.ExtendObjectProces
 org.realityforge.webtack.model.tools.processors.extract_exposure_set.ExtractExposureSetProcessorFactory
 org.realityforge.webtack.model.tools.processors.flatten.FlattenProcessorFactory
 org.realityforge.webtack.model.tools.processors.javaize_event_handlers.JavaizeEventHandlersProcessorFactory
+org.realityforge.webtack.model.tools.processors.js_symbol_dedup.JsSymbolDedupProcessorFactory
 org.realityforge.webtack.model.tools.processors.merge_docs.MergeDocsProcessorFactory
 org.realityforge.webtack.model.tools.processors.remove_element.RemoveElementProcessorFactory
 org.realityforge.webtack.model.tools.processors.remove_extended_attribute.RemoveExtendedAttributeProcessorFactory

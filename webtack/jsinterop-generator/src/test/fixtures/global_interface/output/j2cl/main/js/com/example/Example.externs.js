@@ -157,3 +157,7 @@ function scroll(arg0,arg1) {}
  * @return {undefined}
  */
 function addEventListener(type,callback,options) {}
+/**
+ * @typedef {(!Navigator|!WorkerNavigator)}
+ */
+var NavigatorOrWorkerNavigatorUnion;

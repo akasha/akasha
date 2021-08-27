@@ -11,6 +11,9 @@
       }
     },
     {
+      "name": "JsSymbolDedup"
+    },
+    {
       "name": "Jsinterop",
       "config": {
         "outputType": "j2cl",

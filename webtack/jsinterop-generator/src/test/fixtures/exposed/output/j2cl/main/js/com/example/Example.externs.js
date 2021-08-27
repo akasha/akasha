@@ -131,3 +131,7 @@ function requestAnimationFrame(arg0) {}
  * @return {!number}
  */
 function requestAnimationFrame2(arg0) {}
+/**
+ * @typedef {(!NullableEventHandler|?MessageEventHandler)}
+ */
+var NullableEventHandlerOrMessageEventHandlerUnion;
