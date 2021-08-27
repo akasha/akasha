@@ -274,14 +274,14 @@ final class ClosureAction
     final List<OperationMember> operations = new ArrayList<>();
     for ( final InterfaceDefinition globalInterface : globalInterfaces )
     {
-       InterfaceDefinition current = globalInterface;
-       while( null != current )
-       {
-         constants.addAll( current.getConstants() );
-         attributes.addAll( current.getAttributes() );
-         operations.addAll( current.getOperations() );
-         current = current.getSuperInterface();
-       }
+      InterfaceDefinition current = globalInterface;
+      while ( null != current )
+      {
+        constants.addAll( current.getConstants() );
+        attributes.addAll( current.getAttributes() );
+        operations.addAll( current.getOperations() );
+        current = current.getSuperInterface();
+      }
     }
     writeConstants( writer, null, constants, true, false );
 
