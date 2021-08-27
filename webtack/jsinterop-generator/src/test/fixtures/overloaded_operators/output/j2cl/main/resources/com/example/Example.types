@@ -7,4 +7,5 @@ Point
 ScrollToOptions
 WebAssembly
 WebAssemblyInstantiatedSource
+WebAssemblyInstantiatedSourcePromiseOrInstancePromiseUnion
 Window

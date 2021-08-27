@@ -17,7 +17,7 @@ var WebAssembly;
 /**
  * @param {(!BufferSource|!Module)} arg0
  * @param {!Object=} arg1
- * @return {(!Promise<!WebAssemblyInstantiatedSource>|!Promise<!Instance>)}
+ * @return {WebAssemblyInstantiatedSourcePromiseOrInstancePromiseUnion}
  */
 WebAssembly.instantiate = function(arg0,arg1) {}
 /**
@@ -73,3 +73,7 @@ function Other() {}
  * @return {undefined}
  */
 Other.prototype.castSpell = function(arg0,arg1) {}
+/**
+ * @typedef {(!Promise<!WebAssemblyInstantiatedSource>|!Promise<!Instance>)}
+ */
+var WebAssemblyInstantiatedSourcePromiseOrInstancePromiseUnion;

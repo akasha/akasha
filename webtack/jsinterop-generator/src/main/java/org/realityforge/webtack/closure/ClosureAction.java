@@ -451,18 +451,10 @@ final class ClosureAction
             if ( Kind.Union == type.getKind() )
             {
               final UnionType unionType = (UnionType) type;
-              if ( !unionType.isNoArgsExtendedAttributePresent( ExtendedAttributes.SYNTHESIZED_RETURN ) )
-              {
-                final String typeName = synthesizeUnionType( unionType );
-                types.add( new TypeReference( typeName,
-                                              unionType.getExtendedAttributes(),
-                                              unionType.isNullable(),
-                                              unionType.getSourceLocations() ) );
-              }
-              else
-              {
-                types.addAll( unionType.getMemberTypes() );
-              }
+              types.add( new TypeReference( synthesizeUnionType( unionType ),
+                                            unionType.getExtendedAttributes(),
+                                            unionType.isNullable(),
+                                            unionType.getSourceLocations() ) );
             }
             else
             {
@@ -1586,8 +1578,7 @@ final class ClosureAction
     else if ( Kind.Union == kind )
     {
       final UnionType unionType = (UnionType) type;
-      if ( synthesizeUnionTypes &&
-           !unionType.isNoArgsExtendedAttributePresent( ExtendedAttributes.SYNTHESIZED_RETURN ) )
+      if ( synthesizeUnionTypes )
       {
         writer.write( synthesizeUnionType( unionType ) );
       }

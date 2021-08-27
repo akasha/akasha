@@ -38,7 +38,7 @@ function RTCPeerConnection() {}
  * @param {(!RTCOfferOptions|!RTCSessionDescriptionCallback)=} arg0
  * @param {!RTCPeerConnectionErrorCallback=} arg1
  * @param {!RTCOfferOptions=} arg2
- * @return {(!Promise<!RTCSessionDescriptionInit>|!Promise<undefined>)}
+ * @return {RTCSessionDescriptionInitPromiseOrUndefinedPromiseUnion}
  */
 RTCPeerConnection.prototype.createOffer = function(arg0,arg1,arg2) {}
 /**
@@ -83,6 +83,10 @@ AudioNode.prototype.connect = function(arg0,arg1,arg2) {}
  * @typedef {(!Document|?WindowProxy)}
  */
 var DocumentOrWindowProxyUnion;
+/**
+ * @typedef {(!Promise<!RTCSessionDescriptionInit>|!Promise<undefined>)}
+ */
+var RTCSessionDescriptionInitPromiseOrUndefinedPromiseUnion;
 /**
  * @typedef {(!AudioNode|undefined)}
  */
