@@ -18,6 +18,8 @@ module Buildr
         cache_dir = root_project._(:target, :artifact_cache)
         bazel_workspace_dir = root_project._(:target, :bazel_workspace)
 
+        additional_dependencies = options[:additional_dependencies] || []
+
         install_artifacts_into_local_cache(cache_dir, projects)
 
         FileUtils.rm_rf bazel_workspace_dir
@@ -31,7 +33,7 @@ module Buildr
 
         closure_env = options[:closure_env] || 'CUSTOM'
         artifact_key = root_project.to_s.gsub(/[:-]/, '_')
-        write_build(bazel_workspace_dir, artifact_key, closure_env, test_module, packages)
+        write_build(bazel_workspace_dir, artifact_key, closure_env, test_module, additional_dependencies)
         write_dependency_yml(bazel_workspace_dir, cache_dir, packages, options)
         write_dependency_bzl(bazel_workspace_dir, depgen_cache_dir)
 
@@ -82,7 +84,7 @@ http_archive(
 TEXT
       end
 
-      def write_build(dir, artifact_key, closure_env, test_module, packages)
+      def write_build(dir, artifact_key, closure_env, test_module, additional_dependencies)
         content = <<TEXT
 package(default_visibility = ["//visibility:public"])
 
@@ -106,7 +108,7 @@ j2cl_library(
     name = "mysrc",
     srcs = glob([ "mysrc/**/*.java"]),
     visibility = ["//visibility:private"],
-    deps = [":javaemul_internal_annotations-j2cl", ":jsinterop_base-j2cl", ":#{artifact_key}-j2cl"],
+    deps = [":javaemul_internal_annotations-j2cl", ":jsinterop_base-j2cl", ":#{artifact_key}-j2cl", #{additional_dependencies.collect{|d|"\"#{d}\""}.join(", ") + (additional_dependencies.empty? ? '' : ", ")}],
 )
 closure_js_library( name = "#{artifact_key}-closure", srcs = ["src.js"], deps = [":#{artifact_key}-j2cl", ":mysrc"], )
 

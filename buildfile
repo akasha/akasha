@@ -344,6 +344,7 @@ define 'akasha' do
                                            Buildr.project('akasha:webgpu-j2cl')._(:target, :generated, 'webtack/test/js/akasha/Akasha.CompileTest.js'),
                                            [Buildr.project('akasha:webgpu-j2cl')._(:target, :generated, 'webtack/test/java'), Buildr.project('akasha:j2cl')._(:source, :test, :java)],
                                            :javax_annotation => true,
+                                           :additional_dependencies => [":elemental2_dom-j2cl"],
                                            :closure_env => 'BROWSER')
 
   iml.excluded_directories << project._('tmp')
