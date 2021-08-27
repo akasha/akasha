@@ -54,6 +54,7 @@ import org.realityforge.webtack.model.tools.io.FilesUtil;
 import org.realityforge.webtack.model.tools.spi.PipelineContext;
 import org.realityforge.webtack.model.tools.util.AbstractAction;
 import org.realityforge.webtack.model.tools.util.ExtendedAttributes;
+import org.realityforge.webtack.model.tools.util.JsUtil;
 import org.realityforge.webtack.model.tools.util.NamingUtil;
 
 final class ClosureAction
@@ -166,7 +167,7 @@ final class ClosureAction
       {
         if ( isNotExcluded( definition ) && tryRecordGeneratedType( definition ) )
         {
-          final String jsName = toJsName( definition );
+          final String jsName = JsUtil.toJsName( definition );
           if ( shouldGenerateSymbol( jsName ) )
           {
             writeTypedef( writer, jsName, definition.getType() );
@@ -288,7 +289,7 @@ final class ClosureAction
     final Map<String, List<AttributeMember>> attributeMap =
       attributes
         .stream()
-        .collect( Collectors.groupingBy( this::toJsName ) );
+        .collect( Collectors.groupingBy( JsUtil::toJsName ) );
     for ( final Map.Entry<String, List<AttributeMember>> entry : attributeMap.entrySet() )
     {
       final List<AttributeMember> attributesToMerge = entry.getValue();
@@ -378,7 +379,7 @@ final class ClosureAction
   private void writeCallback( @Nonnull final Writer writer, @Nonnull final CallbackDefinition definition )
     throws IOException
   {
-    final String jsName = toJsName( definition );
+    final String jsName = JsUtil.toJsName( definition );
     if ( shouldGenerateSymbol( jsName ) )
     {
       writer.write( "/**\n * @typedef {" );
@@ -392,13 +393,13 @@ final class ClosureAction
                                        @Nonnull final CallbackInterfaceDefinition definition )
     throws IOException
   {
-    final String jsType = toJsName( definition );
+    final String jsType = JsUtil.toJsName( definition );
     writer.write( "/**\n * @interface\n */\nfunction " );
     writer.write( jsType );
     writer.write( "() {}\n" );
     writeConstants( writer, jsType, definition.getConstants(), true, false );
     final OperationMember operation = definition.getOperation();
-    final String jsName = toJsName( operation );
+    final String jsName = JsUtil.toJsName( operation );
     assert null != jsName;
     if ( shouldGenerateSymbol( jsType + "." + jsName ) )
     {
@@ -417,7 +418,7 @@ final class ClosureAction
       dict = dict.getSuperDictionary();
     }
 
-    final String jsTypeName = toJsName( definition );
+    final String jsTypeName = JsUtil.toJsName( definition );
     if ( shouldGenerateSymbol( jsTypeName ) )
     {
       if ( members.isEmpty() )
@@ -441,7 +442,7 @@ final class ClosureAction
           {
             first = false;
           }
-          writer.write( toJsName( member ) );
+          writer.write( JsUtil.toJsName( member ) );
           writer.write( ":" );
           final Type type = member.getType();
           if ( member.isOptional() )
@@ -479,7 +480,7 @@ final class ClosureAction
   private void writeNamespace( @Nonnull final Writer writer, @Nonnull final NamespaceDefinition definition )
     throws IOException
   {
-    final String jsType = toJsName( definition );
+    final String jsType = JsUtil.toJsName( definition );
 
     writeJsDoc( writer, "@const" );
     writer.write( "var " );
@@ -490,7 +491,7 @@ final class ClosureAction
     {
       if ( isNotExcluded( constant ) )
       {
-        final String jsName = jsType + "." + toJsName( constant );
+        final String jsName = jsType + "." + JsUtil.toJsName( constant );
         if ( shouldGenerateSymbol( jsName ) )
         {
           writer.write( "/** @const {" );
@@ -505,7 +506,7 @@ final class ClosureAction
     {
       if ( isNotExcluded( attribute ) )
       {
-        final String jsName = jsType + "." + toJsName( attribute );
+        final String jsName = jsType + "." + JsUtil.toJsName( attribute );
         if ( shouldGenerateSymbol( jsName ) )
         {
           writer.write( "/** @type {" );
@@ -561,7 +562,7 @@ final class ClosureAction
     final IterableMember iterable = definition.getIterable();
 
     final String namespace = definition.getNamespace();
-    final String jsType = ( null == namespace ? "" : namespace + "." ) + toJsName( definition );
+    final String jsType = ( null == namespace ? "" : namespace + "." ) + JsUtil.toJsName( definition );
     if ( shouldGenerateSymbol( jsType + "." + jsType ) )
     {
       final List<String> lines = new ArrayList<>();
@@ -747,7 +748,7 @@ final class ClosureAction
       final boolean setPresent =
         operations
           .stream()
-          .anyMatch( o -> "add".equals( toJsName( o ) ) &&
+          .anyMatch( o -> "add".equals( JsUtil.toJsName( o ) ) &&
                           1 == o.getArguments().size() &&
                           Kind.Void == o.getReturnType().getKind() );
       if ( !setPresent )
@@ -764,7 +765,7 @@ final class ClosureAction
       final boolean deletePresent =
         operations
           .stream()
-          .anyMatch( o -> "delete".equals( toJsName( o ) ) &&
+          .anyMatch( o -> "delete".equals( JsUtil.toJsName( o ) ) &&
                           1 == o.getArguments().size() &&
                           Kind.Boolean == o.getReturnType().getKind() );
       if ( !deletePresent )
@@ -781,7 +782,7 @@ final class ClosureAction
       final boolean clearPresent =
         operations
           .stream()
-          .anyMatch( o -> "clear".equals( toJsName( o ) ) &&
+          .anyMatch( o -> "clear".equals( JsUtil.toJsName( o ) ) &&
                           o.getArguments().isEmpty() &&
                           Kind.Void == o.getReturnType().getKind() );
       if ( !clearPresent )
@@ -916,7 +917,7 @@ final class ClosureAction
       final boolean setPresent =
         operations
           .stream()
-          .anyMatch( o -> "set".equals( toJsName( o ) ) &&
+          .anyMatch( o -> "set".equals( JsUtil.toJsName( o ) ) &&
                           2 == o.getArguments().size() &&
                           Kind.Void == o.getReturnType().getKind() );
       if ( !setPresent )
@@ -933,7 +934,7 @@ final class ClosureAction
       final boolean deletePresent =
         operations
           .stream()
-          .anyMatch( o -> "delete".equals( toJsName( o ) ) &&
+          .anyMatch( o -> "delete".equals( JsUtil.toJsName( o ) ) &&
                           1 == o.getArguments().size() &&
                           Kind.Boolean == o.getReturnType().getKind() );
       if ( !deletePresent )
@@ -950,7 +951,7 @@ final class ClosureAction
       final boolean clearPresent =
         operations
           .stream()
-          .anyMatch( o -> "clear".equals( toJsName( o ) ) &&
+          .anyMatch( o -> "clear".equals( JsUtil.toJsName( o ) ) &&
                           o.getArguments().isEmpty() &&
                           Kind.Void == o.getReturnType().getKind() );
       if ( !clearPresent )
@@ -1123,9 +1124,9 @@ final class ClosureAction
     final Map<String, List<OperationMember>> operationMap =
       operations
         .stream()
-        .filter( o -> null != toJsName( o ) )
+        .filter( o -> null != JsUtil.toJsName( o ) )
         .filter( o -> OperationMember.Kind.CONSTRUCTOR != o.getKind() )
-        .collect( Collectors.groupingBy( this::toJsName ) );
+        .collect( Collectors.groupingBy( JsUtil::toJsName ) );
     for ( final Map.Entry<String, List<OperationMember>> entry : operationMap.entrySet() )
     {
       final String jsOperationName = entry.getKey();
@@ -1290,7 +1291,7 @@ final class ClosureAction
     final String jsSymbolName =
       ( null != type ?
         type + "." + ( attribute.getModifiers().contains( AttributeMember.Modifier.STATIC ) ? "" : "prototype." ) :
-        "" ) + toJsName( attribute );
+        "" ) + JsUtil.toJsName( attribute );
     if ( shouldGenerateSymbol( jsSymbolName ) )
     {
       writer.write( "/** @type {" );
@@ -1335,7 +1336,7 @@ final class ClosureAction
     throws IOException
   {
     final String jsSymbolName =
-      ( null != type ? type + "." + ( onPrototype ? "prototype." : "" ) : "" ) + toJsName( constant );
+      ( null != type ? type + "." + ( onPrototype ? "prototype." : "" ) : "" ) + JsUtil.toJsName( constant );
     if ( shouldGenerateSymbol( jsSymbolName ) )
     {
       writer.write( "/** @const {" );
@@ -1427,7 +1428,7 @@ final class ClosureAction
     if ( null != superType )
     {
       writer.write( " * @extends {" );
-      writer.write( toJsName( getSchema().getInterfaceByName( superType ) ) );
+      writer.write( JsUtil.toJsName( getSchema().getInterfaceByName( superType ) ) );
       writer.write( "}\n" );
     }
     for ( final String additionalLine : additionalLines )
@@ -1464,7 +1465,7 @@ final class ClosureAction
         writer.write( "=" );
       }
       writer.write( "} " );
-      writer.write( safeJsArgName( toJsName( argument ) ) );
+      writer.write( safeJsArgName( JsUtil.toJsName( argument ) ) );
       writer.write( "\n" );
     }
   }
@@ -1475,7 +1476,7 @@ final class ClosureAction
     return "(" +
            arguments
              .stream()
-             .map( this::toJsName )
+             .map( JsUtil::toJsName )
              .map( this::safeJsArgName )
              .collect( Collectors.joining( "," ) ) +
            ")";
@@ -1641,7 +1642,7 @@ final class ClosureAction
               writer.write( namespace );
               writer.write( "." );
             }
-            writer.write( toJsName( interfaceDefinition ) );
+            writer.write( JsUtil.toJsName( interfaceDefinition ) );
           }
           else
           {
@@ -1665,7 +1666,7 @@ final class ClosureAction
 
   private <T extends Named & Attributed> boolean tryRecordGeneratedType( @Nonnull final T element )
   {
-    return tryRecordGeneratedType( toJsName( element ) );
+    return tryRecordGeneratedType( JsUtil.toJsName( element ) );
   }
 
   private boolean tryRecordGeneratedType( @Nonnull final String jsName )

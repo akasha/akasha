@@ -286,20 +286,6 @@ public abstract class AbstractAction
     }
   }
 
-  @Nullable
-  protected final String toJsName( @Nonnull final OperationMember operation )
-  {
-    final String jsName = operation.getIdentValue( ExtendedAttributes.JS_NAME );
-    return null == jsName ? operation.getName() : jsName;
-  }
-
-  @Nonnull
-  protected final <T extends Named & Attributed> String toJsName( @Nonnull final T element )
-  {
-    final String jsName = element.getIdentValue( ExtendedAttributes.JS_NAME );
-    return null == jsName ? element.getName() : jsName;
-  }
-
   @Nonnull
   protected String javaName( @Nonnull final EnumerationValue value )
   {
