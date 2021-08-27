@@ -212,6 +212,9 @@ final class ClosureAction
           writeInterface( writer, definition );
         }
       }
+
+      writeGlobalInterfaces( writer );
+
       for ( final Map.Entry<String, UnionType> entry : getUnions().entrySet() )
       {
         final String name = entry.getKey();
@@ -220,8 +223,6 @@ final class ClosureAction
           writeUnion( writer, NamingUtil.uppercaseFirstCharacter( name ), entry.getValue() );
         }
       }
-
-      writeGlobalInterfaces( writer );
 
       for ( final Path path : _additionalExternFragmentsPaths )
       {

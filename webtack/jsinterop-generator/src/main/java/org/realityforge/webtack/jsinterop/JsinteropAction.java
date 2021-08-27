@@ -235,19 +235,6 @@ final class JsinteropAction
       }
     }
 
-    for ( final Map.Entry<String, UnionType> entry : getUnions().entrySet() )
-    {
-      final String name = entry.getKey();
-      if ( isIdlTypeNotPredefined( name ) )
-      {
-        generateUnion( name,
-                       name,
-                       NamingUtil.uppercaseFirstCharacter( name ),
-                       entry.getValue(),
-                       Collections.emptyList() );
-      }
-    }
-
     if ( OutputType.gwt == _outputType )
     {
       writeGwtModule();
@@ -260,6 +247,19 @@ final class JsinteropAction
     if ( _generateGlobal )
     {
       generateGlobalType();
+    }
+
+    for ( final Map.Entry<String, UnionType> entry : getUnions().entrySet() )
+    {
+      final String name = entry.getKey();
+      if ( isIdlTypeNotPredefined( name ) )
+      {
+        generateUnion( name,
+                       name,
+                       NamingUtil.uppercaseFirstCharacter( name ),
+                       entry.getValue(),
+                       Collections.emptyList() );
+      }
     }
 
     if ( _generateCompileTest && OutputType.j2cl == _outputType )
@@ -980,6 +980,10 @@ final class JsinteropAction
         isMethod.addStatement( "return ( ($T) this ) instanceof $T",
                                TypeName.OBJECT,
                                lookupClassName( Kind.Object.name() ) );
+      }
+      else if ( Kind.Any == kind )
+      {
+        isMethod.addStatement( "return true" );
       }
       else
       {
