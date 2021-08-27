@@ -34,6 +34,7 @@
   - **WindowEventHandlers**: `afterprint` `beforeprint` `beforeunload` `hashchange` `languagechange` `message` `messageerror` `offline` `online` `pagehide` `pageshow` `popstate` `rejectionhandled` `storage` `unhandledrejection` `unload`
   - **WorkerGlobalScope**: `offline` `online` `rejectionhandled` `unhandledrejection`
   - **XMLHttpRequestEventTarget**: `abort` `error` `load` `loadend` `loadstart` `progress` `timeout`
+* Move the classes `IDBObjectStoreOrIDBIndexUnion` and `IDBObjectStoreOrIDBIndexOrIDBCursorUnion` from the `akasha.indexdb` package to the `akasha.idb` package. This was done to align with the rename of `indexDB` package that occurred prior to the initial release of akasha.
 
 ### [v0.21](https://github.com/akasha/akasha/tree/v0.21) (2021-08-18) · [Full Changelog](https://github.com/spritz/spritz/compare/v0.20...v0.21) · [Source Diff](https://github.com/akasha/akasha-java/compare/v0.20...v0.21)
 
