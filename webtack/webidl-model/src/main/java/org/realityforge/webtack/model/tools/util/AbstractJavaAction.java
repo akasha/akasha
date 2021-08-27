@@ -589,6 +589,6 @@ public abstract class AbstractJavaAction
   @Nonnull
   protected final ParameterizedTypeName iteratorType( @Nonnull final TypeName componentType )
   {
-    return ParameterizedTypeName.get( lookupClassName( "Iterator" ), componentType );
+    return ParameterizedTypeName.get( lookupClassName( ITERATOR_TYPE_NAME ), componentType );
   }
 }

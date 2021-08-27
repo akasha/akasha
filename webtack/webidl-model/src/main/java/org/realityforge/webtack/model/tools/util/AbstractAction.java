@@ -43,6 +43,8 @@ public abstract class AbstractAction
   implements Action
 {
   @Nonnull
+  protected static final String ITERATOR_TYPE_NAME = "Iterator";
+  @Nonnull
   private final PipelineContext _context;
   @Nonnull
   private final Path _outputDirectory;
