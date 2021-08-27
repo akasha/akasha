@@ -137,14 +137,14 @@ public final class ExtendedAttributes
   @Nonnull
   public static final String GLOBAL_OBJECT = "GlobalObject";
   /**
-   * In javascript there is a single function with name whereas in WebIDL there can be multiple operations
-   * with the same name that take different arguments and potentially return different types. When binding
-   * to jsinterop with closure externs, special care must be taken when multiple operations exist with the
-   * same name that return different types based on arguments. In this scenario we create a UnionType for
-   * all the return alternatives and add this extended type onto the union.
+   * Operations with the same name in WebIDL may return different types but in the javascript binding
+   * there is a single function with a return type that varies based on the parameter types and counts.
+   * In this scenario we create a UnionType containing the return alternatives and must generate a
+   * single jsinterop annotated native method and a single closure method as well as adapter @JsOverlay
+   * methods in java.
    */
   @Nonnull
-  public static final String SYNTHESIZED_RETURN = "SynthesizedReturn";
+  public static final String SYNTHETIC = "Synthetic";
   /**
    * A custom extended property that can appear on a "const enum" that indicates that the const enum
    * represents potential flags in a bitset.

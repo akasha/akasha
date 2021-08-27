@@ -112,7 +112,7 @@ SharedWorkerGlobalScope.prototype.requestAnimationFrame2 = function(callbackId) 
  * @nosideeffects
  */
 function EventTarget() {}
-/** @type {(!NullableEventHandler|?MessageEventHandler)} */ var onmessageerror;
+/** @type {NullableEventHandlerOrMessageEventHandlerUnion} */ var onmessageerror;
 /** @type {!string} */ var windowAttribute;
 /** @type {!string} */ var sharedWorkerGlobalScopeAttribute;
 /** @type {?EventHandler} */ var onstuff;

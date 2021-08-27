@@ -122,7 +122,7 @@ EventTarget.prototype.dispatchEvent = function(event) {}
  */
 EventTarget.prototype.addEventListener = function(type,callback,options) {}
 /** @type {!string} */ var name;
-/** @type {(!Navigator|!WorkerNavigator)} */ var navigator;
+/** @type {NavigatorOrWorkerNavigatorUnion} */ var navigator;
 /** @type {!boolean} */ var closed;
 /** @type {!string} */ var id;
 /** @type {!boolean} */ var isSecureContext;

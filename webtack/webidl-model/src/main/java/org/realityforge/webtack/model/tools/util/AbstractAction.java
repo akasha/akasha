@@ -233,20 +233,7 @@ public abstract class AbstractAction
     {
       maybeAddTypeToList( types, attribute.getType() );
     }
-    if ( 1 == types.size() )
-    {
-      return types.get( 0 );
-    }
-    else
-    {
-      final ExtendedAttribute extendedAttribute =
-        ExtendedAttribute.createExtendedAttributeNoArgs( ExtendedAttributes.SYNTHESIZED_RETURN,
-                                                         Collections.emptyList() );
-      return new UnionType( types,
-                          Collections.singletonList( extendedAttribute ),
-                          types.stream().anyMatch( Type::isNullable ),
-                          Collections.emptyList() );
-    }
+    return convertToUnionIfRequired( types );
   }
 
   @Nonnull
@@ -257,7 +244,7 @@ public abstract class AbstractAction
     {
       maybeAddTypeToList( types, operation.getReturnType() );
     }
-    return toReturnType( types );
+    return convertToUnionIfRequired( types );
   }
 
   protected final void maybeAddTypeToList( @Nonnull final List<Type> types, @Nonnull final Type candidate )
@@ -272,8 +259,15 @@ public abstract class AbstractAction
     types.add( candidate );
   }
 
+  /**
+   * Return a type that represents the specified type list.
+   * If the list contains a single type then it is just the type, otherwise it is a union representing the types.
+   *
+   * @param types the types.
+   * @return the type representing the specified type list.
+   */
   @Nonnull
-  private Type toReturnType( @Nonnull final List<Type> types )
+  protected final Type convertToUnionIfRequired( @Nonnull final List<Type> types )
   {
     if ( 1 == types.size() )
     {
@@ -281,19 +275,13 @@ public abstract class AbstractAction
     }
     else
     {
-      final ExtendedAttribute extendedAttribute =
-        ExtendedAttribute.createExtendedAttributeNoArgs( ExtendedAttributes.SYNTHESIZED_RETURN,
-                                                         Collections.emptyList() );
-      final UnionType unionType =
-        new UnionType( types,
-                       Collections.singletonList( extendedAttribute ),
-                       types.stream().anyMatch( Type::isNullable ),
-                       Collections.emptyList() );
-      if ( unionType.getMemberTypes().stream().noneMatch( t -> Kind.Promise == t.getKind() ) )
-      {
-        // Ensure a Union type is defined as it is referenced from jsinterop
-        synthesizeUnionType( unionType );
-      }
+      final List<ExtendedAttribute> extendedAttributes =
+        Collections.singletonList( ExtendedAttribute.createExtendedAttributeNoArgs( ExtendedAttributes.SYNTHETIC,
+                                                                                    Collections.emptyList() ) );
+      final boolean nullable = types.stream().anyMatch( Type::isNullable );
+      final UnionType unionType = new UnionType( types, extendedAttributes, nullable, Collections.emptyList() );
+      // Ensure a Union type is defined as it is referenced from jsinterop
+      synthesizeUnionType( unionType );
       return unionType;
     }
   }
