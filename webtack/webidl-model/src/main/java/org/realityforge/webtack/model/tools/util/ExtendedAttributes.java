@@ -137,11 +137,8 @@ public final class ExtendedAttributes
   @Nonnull
   public static final String GLOBAL_OBJECT = "GlobalObject";
   /**
-   * Operations with the same name in WebIDL may return different types but in the javascript binding
-   * there is a single function with a return type that varies based on the parameter types and counts.
-   * In this scenario we create a UnionType containing the return alternatives and must generate a
-   * single jsinterop annotated native method and a single closure method as well as adapter @JsOverlay
-   * methods in java.
+   * A type that appears on a Union to indicate it was synthesized without an underlying nominal type.
+   * Typically this is to represent unnamed union return types.
    */
   @Nonnull
   public static final String SYNTHETIC = "Synthetic";
