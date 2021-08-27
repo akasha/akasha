@@ -278,8 +278,7 @@ public abstract class AbstractAction
     else
     {
       final List<ExtendedAttribute> extendedAttributes =
-        Collections.singletonList( ExtendedAttribute.createExtendedAttributeNoArgs( ExtendedAttributes.SYNTHETIC,
-                                                                                    Collections.emptyList() ) );
+        Collections.singletonList( ExtendedAttribute.createNoArgs( ExtendedAttributes.SYNTHETIC ) );
       final boolean nullable = types.stream().anyMatch( Type::isNullable );
       final UnionType unionType = new UnionType( types, extendedAttributes, nullable, Collections.emptyList() );
       // Ensure a Union type is defined as it is referenced from jsinterop

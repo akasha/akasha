@@ -17,8 +17,7 @@ public final class ExtendedAttributeTest
   public void NO_ARGS()
   {
     final String name = randomString();
-    final ExtendedAttribute extendedAttribute =
-      ExtendedAttribute.createExtendedAttributeNoArgs( name, Collections.emptyList() );
+    final ExtendedAttribute extendedAttribute = ExtendedAttribute.createNoArgs( name );
     assertEquals( extendedAttribute.getName(), name );
     assertEquals( extendedAttribute.getKind(), ExtendedAttribute.Kind.NO_ARGS );
     assertThrows( IllegalStateException.class,
@@ -54,8 +53,7 @@ public final class ExtendedAttributeTest
   {
     final String name = randomString();
     final String value = randomString() + "." + randomString();
-    final ExtendedAttribute extendedAttribute =
-      ExtendedAttribute.createExtendedAttributeNamedString( name, value, Collections.emptyList() );
+    final ExtendedAttribute extendedAttribute = ExtendedAttribute.createNamedString( name, value );
     assertEquals( extendedAttribute.getName(), name );
     assertEquals( extendedAttribute.getKind(), ExtendedAttribute.Kind.NAMED_STRING );
     assertEquals( extendedAttribute.getValue(), value );
@@ -95,8 +93,7 @@ public final class ExtendedAttributeTest
   {
     final String name = randomString();
     final String ident = randomString();
-    final ExtendedAttribute extendedAttribute =
-      ExtendedAttribute.createExtendedAttributeIdent( name, ident, Collections.emptyList() );
+    final ExtendedAttribute extendedAttribute = ExtendedAttribute.createIdent( name, ident );
     assertEquals( extendedAttribute.getName(), name );
     assertEquals( extendedAttribute.getKind(), ExtendedAttribute.Kind.IDENT );
     assertEquals( extendedAttribute.getIdent(), ident );
@@ -133,8 +130,7 @@ public final class ExtendedAttributeTest
   {
     final String name = randomString();
     final List<String> identList = Arrays.asList( randomString(), randomString() );
-    final ExtendedAttribute extendedAttribute =
-      ExtendedAttribute.createExtendedAttributeIdentList( name, identList, Collections.emptyList() );
+    final ExtendedAttribute extendedAttribute = ExtendedAttribute.createIdentList( name, identList );
     assertEquals( extendedAttribute.getName(), name );
     assertEquals( extendedAttribute.getKind(), ExtendedAttribute.Kind.IDENT_LIST );
     assertEquals( extendedAttribute.getIdentList(), identList );
@@ -171,10 +167,10 @@ public final class ExtendedAttributeTest
     final List<String> identList = Arrays.asList( randomString(), randomString() );
     final String identListName = randomString();
     final ExtendedAttribute extendedAttribute =
-      ExtendedAttribute.createExtendedAttributeNamedIdentList( name,
-                                                               identListName,
-                                                               identList,
-                                                               Collections.emptyList() );
+      ExtendedAttribute.createNamedIdentList( name,
+                                              identListName,
+                                              identList,
+                                              Collections.emptyList() );
     assertEquals( extendedAttribute.getName(), name );
     assertEquals( extendedAttribute.getKind(), ExtendedAttribute.Kind.NAMED_IDENT_LIST );
     assertEquals( extendedAttribute.getIdentListName(), identListName );

@@ -2,6 +2,7 @@ package org.realityforge.webtack.model;
 
 import java.io.IOException;
 import java.io.StringReader;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Objects;
@@ -59,8 +60,14 @@ public final class ExtendedAttribute
   }
 
   @Nonnull
-  public static ExtendedAttribute createExtendedAttributeNoArgs( @Nonnull final String name,
-                                                                 @Nonnull final List<SourceInterval> sourceLocations )
+  public static ExtendedAttribute createNoArgs( @Nonnull final String name )
+  {
+    return createNoArgs( name, Collections.emptyList() );
+  }
+
+  @Nonnull
+  public static ExtendedAttribute createNoArgs( @Nonnull final String name,
+                                                @Nonnull final List<SourceInterval> sourceLocations )
   {
     return new ExtendedAttribute( Objects.requireNonNull( name ),
                                   Kind.NO_ARGS,
@@ -74,9 +81,15 @@ public final class ExtendedAttribute
   }
 
   @Nonnull
-  public static ExtendedAttribute createExtendedAttributeIdent( @Nonnull final String name,
-                                                                @Nonnull final String ident,
-                                                                @Nonnull final List<SourceInterval> sourceLocations )
+  public static ExtendedAttribute createIdent( @Nonnull final String name, @Nonnull final String ident )
+  {
+    return createIdent( name, ident, Collections.emptyList() );
+  }
+
+  @Nonnull
+  public static ExtendedAttribute createIdent( @Nonnull final String name,
+                                               @Nonnull final String ident,
+                                               @Nonnull final List<SourceInterval> sourceLocations )
   {
     return new ExtendedAttribute( Objects.requireNonNull( name ),
                                   Kind.IDENT,
@@ -90,9 +103,15 @@ public final class ExtendedAttribute
   }
 
   @Nonnull
-  public static ExtendedAttribute createExtendedAttributeNamedString( @Nonnull final String name,
-                                                                      @Nonnull final String ident,
-                                                                      @Nonnull final List<SourceInterval> sourceLocations )
+  public static ExtendedAttribute createNamedString( @Nonnull final String name, @Nonnull final String ident )
+  {
+    return createNamedString( name, ident, Collections.emptyList() );
+  }
+
+  @Nonnull
+  public static ExtendedAttribute createNamedString( @Nonnull final String name,
+                                                     @Nonnull final String ident,
+                                                     @Nonnull final List<SourceInterval> sourceLocations )
   {
     return new ExtendedAttribute( Objects.requireNonNull( name ),
                                   Kind.NAMED_STRING,
@@ -106,9 +125,16 @@ public final class ExtendedAttribute
   }
 
   @Nonnull
-  public static ExtendedAttribute createExtendedAttributeIdentList( @Nonnull final String name,
-                                                                    @Nonnull final List<String> identList,
-                                                                    @Nonnull final List<SourceInterval> sourceLocations )
+  public static ExtendedAttribute createIdentList( @Nonnull final String name,
+                                                   @Nonnull final List<String> identList )
+  {
+    return createIdentList( name, identList, Collections.emptyList() );
+  }
+
+  @Nonnull
+  public static ExtendedAttribute createIdentList( @Nonnull final String name,
+                                                   @Nonnull final List<String> identList,
+                                                   @Nonnull final List<SourceInterval> sourceLocations )
   {
     return new ExtendedAttribute( Objects.requireNonNull( name ),
                                   Kind.IDENT_LIST,
@@ -122,10 +148,18 @@ public final class ExtendedAttribute
   }
 
   @Nonnull
-  public static ExtendedAttribute createExtendedAttributeNamedIdentList( @Nonnull final String name,
-                                                                         @Nonnull final String identListName,
-                                                                         @Nonnull final List<String> identList,
-                                                                         @Nonnull final List<SourceInterval> sourceLocations )
+  public static ExtendedAttribute createNamedIdentList( @Nonnull final String name,
+                                                        @Nonnull final String identListName,
+                                                        @Nonnull final List<String> identList )
+  {
+    return createNamedIdentList( name, identListName, identList, Collections.emptyList() );
+  }
+
+  @Nonnull
+  public static ExtendedAttribute createNamedIdentList( @Nonnull final String name,
+                                                        @Nonnull final String identListName,
+                                                        @Nonnull final List<String> identList,
+                                                        @Nonnull final List<SourceInterval> sourceLocations )
   {
     return new ExtendedAttribute( Objects.requireNonNull( name ),
                                   Kind.NAMED_IDENT_LIST,

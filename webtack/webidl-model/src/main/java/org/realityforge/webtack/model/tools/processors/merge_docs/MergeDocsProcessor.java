@@ -163,13 +163,11 @@ final class MergeDocsProcessor
               final List<ExtendedAttribute> attributes = new ArrayList<>();
               if ( Boolean.FALSE == eventDocEntry.getEventBubbles() )
               {
-                attributes.add( ExtendedAttribute.createExtendedAttributeNoArgs( "NoBubble",
-                                                                                 Collections.emptyList() ) );
+                attributes.add( ExtendedAttribute.createNoArgs( "NoBubble" ) );
               }
               if ( Boolean.FALSE == eventDocEntry.getEventCancelable() )
               {
-                attributes.add( ExtendedAttribute.createExtendedAttributeNoArgs( "NoCancel",
-                                                                                 Collections.emptyList() ) );
+                attributes.add( ExtendedAttribute.createNoArgs( "NoCancel" ) );
               }
               events.add( new EventMember( eventName,
                                            new TypeReference( eventType,

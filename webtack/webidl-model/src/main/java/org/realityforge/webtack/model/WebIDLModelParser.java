@@ -1136,21 +1136,21 @@ public final class WebIDLModelParser
     final WebIDLParser.ExtendedAttributeNoArgsContext noArgsContext = ctx.extendedAttributeNoArgs();
     if ( null != noArgsContext )
     {
-      return ExtendedAttribute.createExtendedAttributeNoArgs( noArgsContext.IDENTIFIER().getText(), sourceIntervals );
+      return ExtendedAttribute.createNoArgs( noArgsContext.IDENTIFIER().getText(), sourceIntervals );
     }
     final WebIDLParser.ExtendedAttributeNamedStringContext namedStringContext = ctx.extendedAttributeNamedString();
     if ( null != namedStringContext )
     {
-      return ExtendedAttribute.createExtendedAttributeNamedString( namedStringContext.IDENTIFIER().getText(),
-                                                                   extractString( namedStringContext.STRING() ),
-                                                                   sourceIntervals );
+      return ExtendedAttribute.createNamedString( namedStringContext.IDENTIFIER().getText(),
+                                                  extractString( namedStringContext.STRING() ),
+                                                  sourceIntervals );
     }
     final WebIDLParser.ExtendedAttributeIdentContext identContext = ctx.extendedAttributeIdent();
     if ( null != identContext )
     {
-      return ExtendedAttribute.createExtendedAttributeIdent( identContext.IDENTIFIER( 0 ).getText(),
-                                                             identContext.IDENTIFIER( 1 ).getText(),
-                                                             sourceIntervals );
+      return ExtendedAttribute.createIdent( identContext.IDENTIFIER( 0 ).getText(),
+                                            identContext.IDENTIFIER( 1 ).getText(),
+                                            sourceIntervals );
     }
     final WebIDLParser.ExtendedAttributeNamedIdentListContext namedIdentListContext =
       ctx.extendedAttributeNamedIdentList();
@@ -1158,19 +1158,19 @@ public final class WebIDLModelParser
     {
       final List<String> identifiers = new ArrayList<>();
       collectIdentifiers( identifiers, namedIdentListContext.identifierList() );
-      return ExtendedAttribute.createExtendedAttributeNamedIdentList( namedIdentListContext.IDENTIFIER( 0 ).getText(),
-                                                                      namedIdentListContext.IDENTIFIER( 1 ).getText(),
-                                                                      Collections.unmodifiableList( identifiers ),
-                                                                      sourceIntervals );
+      return ExtendedAttribute.createNamedIdentList( namedIdentListContext.IDENTIFIER( 0 ).getText(),
+                                                     namedIdentListContext.IDENTIFIER( 1 ).getText(),
+                                                     Collections.unmodifiableList( identifiers ),
+                                                     sourceIntervals );
     }
     final WebIDLParser.ExtendedAttributeIdentListContext identListContext = ctx.extendedAttributeIdentList();
     if ( null != identListContext )
     {
       final List<String> identifiers = new ArrayList<>();
       collectIdentifiers( identifiers, identListContext.identifierList() );
-      return ExtendedAttribute.createExtendedAttributeIdentList( identListContext.IDENTIFIER().getText(),
-                                                                 Collections.unmodifiableList( identifiers ),
-                                                                 sourceIntervals );
+      return ExtendedAttribute.createIdentList( identListContext.IDENTIFIER().getText(),
+                                                Collections.unmodifiableList( identifiers ),
+                                                sourceIntervals );
     }
     final WebIDLParser.ExtendedAttributeArgListContext argListContext = ctx.extendedAttributeArgList();
     if ( null != argListContext )

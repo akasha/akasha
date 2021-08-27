@@ -96,6 +96,9 @@ final class ClosureAction
                    "toSource",
                    "toString",
                    "valueOf" );
+  @Nonnull
+  private static final ExtendedAttribute ITERATOR_ATTRIBUTE =
+    ExtendedAttribute.createIdent( ExtendedAttributes.SEQUENCE_TYPE, ITERATOR_TYPE_NAME );
   private final boolean _generateTypeCatalog;
   @Nonnull
   private final List<String> _predefinedSymbols = new ArrayList<>();
@@ -684,16 +687,12 @@ final class ClosureAction
                     true,
                     false,
                     true );
-    final ExtendedAttribute iteratorExtendedAttribute =
-      ExtendedAttribute.createExtendedAttributeIdent( ExtendedAttributes.SEQUENCE_TYPE,
-                                                      "Iterator",
-                                                      Collections.emptyList() );
     writeOperation( writer,
                     jsType,
                     "keys",
                     Collections.emptyList(),
                     new SequenceType( elementType,
-                                      Collections.singletonList( iteratorExtendedAttribute ),
+                                      Collections.singletonList( ITERATOR_ATTRIBUTE ),
                                       false,
                                       Collections.emptyList() ),
                     true,
@@ -705,7 +704,7 @@ final class ClosureAction
                     "values",
                     Collections.emptyList(),
                     new SequenceType( elementType,
-                                      Collections.singletonList( iteratorExtendedAttribute ),
+                                      Collections.singletonList( ITERATOR_ATTRIBUTE ),
                                       false,
                                       Collections.emptyList() ),
                     true,
@@ -853,16 +852,12 @@ final class ClosureAction
                     true,
                     false,
                     true );
-    final ExtendedAttribute iteratorExtendedAttribute =
-      ExtendedAttribute.createExtendedAttributeIdent( ExtendedAttributes.SEQUENCE_TYPE,
-                                                      "Iterator",
-                                                      Collections.emptyList() );
     writeOperation( writer,
                     jsType,
                     "keys",
                     Collections.emptyList(),
                     new SequenceType( keyType,
-                                      Collections.singletonList( iteratorExtendedAttribute ),
+                                      Collections.singletonList( ITERATOR_ATTRIBUTE ),
                                       false,
                                       Collections.emptyList() ),
                     true,
@@ -874,7 +869,7 @@ final class ClosureAction
                     "values",
                     Collections.emptyList(),
                     new SequenceType( valueType,
-                                      Collections.singletonList( iteratorExtendedAttribute ),
+                                      Collections.singletonList( ITERATOR_ATTRIBUTE ),
                                       false,
                                       Collections.emptyList() ),
                     true,
@@ -1054,10 +1049,6 @@ final class ClosureAction
                                            @Nonnull final IterableMember iterable )
     throws IOException
   {
-    final ExtendedAttribute iteratorExtendedAttribute =
-      ExtendedAttribute.createExtendedAttributeIdent( ExtendedAttributes.SEQUENCE_TYPE,
-                                                      "Iterator",
-                                                      Collections.emptyList() );
     final Type declaredKeyType = iterable.getKeyType();
     final Type keyType =
       null == declaredKeyType ?
@@ -1068,7 +1059,7 @@ final class ClosureAction
                     "keys",
                     Collections.emptyList(),
                     new SequenceType( keyType,
-                                      Collections.singletonList( iteratorExtendedAttribute ),
+                                      Collections.singletonList( ITERATOR_ATTRIBUTE ),
                                       false,
                                       Collections.emptyList() ),
                     true,
@@ -1081,16 +1072,12 @@ final class ClosureAction
                                              @Nonnull final IterableMember iterable )
     throws IOException
   {
-    final ExtendedAttribute iteratorExtendedAttribute =
-      ExtendedAttribute.createExtendedAttributeIdent( ExtendedAttributes.SEQUENCE_TYPE,
-                                                      "Iterator",
-                                                      Collections.emptyList() );
     writeOperation( writer,
                     type,
                     "values",
                     Collections.emptyList(),
                     new SequenceType( iterable.getValueType(),
-                                      Collections.singletonList( iteratorExtendedAttribute ),
+                                      Collections.singletonList( ITERATOR_ATTRIBUTE ),
                                       false,
                                       Collections.emptyList() ),
                     true,

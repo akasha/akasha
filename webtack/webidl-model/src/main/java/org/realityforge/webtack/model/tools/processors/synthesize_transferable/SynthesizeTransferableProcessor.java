@@ -96,7 +96,7 @@ final class SynthesizeTransferableProcessor
                                   Collections.emptyList(),
                                   true );
       final ExtendedAttribute markerType =
-        ExtendedAttribute.createExtendedAttributeNoArgs( "MarkerType", Collections.emptyList() );
+        ExtendedAttribute.createNoArgs( ExtendedAttributes.MARKER_TYPE );
       final TypedefDefinition definition =
         new TypedefDefinition( "Transferable",
                                type,

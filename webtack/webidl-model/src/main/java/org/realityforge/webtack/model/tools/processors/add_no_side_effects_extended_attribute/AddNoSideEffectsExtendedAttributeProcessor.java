@@ -3,7 +3,6 @@ package org.realityforge.webtack.model.tools.processors.add_no_side_effects_exte
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Objects;
@@ -11,13 +10,11 @@ import java.util.Set;
 import java.util.stream.Collectors;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
-import org.realityforge.webtack.model.DictionaryDefinition;
 import org.realityforge.webtack.model.ExtendedAttribute;
 import org.realityforge.webtack.model.InterfaceDefinition;
 import org.realityforge.webtack.model.MixinDefinition;
 import org.realityforge.webtack.model.NamespaceDefinition;
 import org.realityforge.webtack.model.OperationMember;
-import org.realityforge.webtack.model.PartialDictionaryDefinition;
 import org.realityforge.webtack.model.PartialInterfaceDefinition;
 import org.realityforge.webtack.model.PartialMixinDefinition;
 import org.realityforge.webtack.model.PartialNamespaceDefinition;
@@ -33,8 +30,7 @@ final class AddNoSideEffectsExtendedAttributeProcessor
 {
   @Nonnull
   private static final ExtendedAttribute NO_SIDE_EFFECTS =
-    ExtendedAttribute.createExtendedAttributeNoArgs( ExtendedAttributes.NO_SIDE_EFFECTS,
-                                                     Collections.emptyList() );
+    ExtendedAttribute.createNoArgs( ExtendedAttributes.NO_SIDE_EFFECTS );
   @Nonnull
   private final Set<String> _operationsToMatch;
   private String _elementName;

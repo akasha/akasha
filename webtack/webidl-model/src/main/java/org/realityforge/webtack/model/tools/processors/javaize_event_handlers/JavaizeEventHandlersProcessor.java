@@ -159,9 +159,8 @@ final class JavaizeEventHandlersProcessor
     final String declaredSubPackage = definition.getIdentValue( ExtendedAttributes.JAVA_SUB_PACKAGE );
     if ( null != declaredSubPackage )
     {
-      extendedAttributes.add( ExtendedAttribute.createExtendedAttributeIdent( ExtendedAttributes.JAVA_SUB_PACKAGE,
-                                                                              declaredSubPackage,
-                                                                              Collections.emptyList() ) );
+      extendedAttributes.add( ExtendedAttribute.createIdent( ExtendedAttributes.JAVA_SUB_PACKAGE,
+                                                             declaredSubPackage ) );
     }
     return extendedAttributes;
   }
