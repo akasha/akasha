@@ -21,7 +21,7 @@ public final class RepositoryConfigTest
     final Path file = getWorkingDirectory().resolve( RepositoryConfig.FILENAME );
     FileUtil.write( file, "[]" );
 
-    final RepositoryConfig repository = load( file, "\n[\n]\n" );
+    final RepositoryConfig repository = load( file, "[\n]\n" );
 
     assertEquals( repository.getConfigLocation(), file );
     assertTrue( repository.getSources().isEmpty() );
@@ -45,19 +45,19 @@ public final class RepositoryConfigTest
     throws Exception
   {
     final Path file = getWorkingDirectory().resolve( RepositoryConfig.FILENAME );
-    final String content = "\n" +
-                           "[\n" +
-                           "    {\n" +
-                           "        \"lastModifiedTime\": 1579594580000,\n" +
-                           "        \"name\": \"speech_api\",\n" +
-                           "        \"selector\": \"[data-level~=4.] ~ pre.idl\",\n" +
-                           "        \"tags\": [\n" +
-                           "            \"a\",\n" +
-                           "            \"b\"\n" +
-                           "        ],\n" +
-                           "        \"url\": \"https://wicg.github.io/speech-api/\"\n" +
-                           "    }\n" +
-                           "]\n";
+    final String content =
+      "[\n" +
+      "    {\n" +
+      "        \"lastModifiedTime\": 1579594580000,\n" +
+      "        \"name\": \"speech_api\",\n" +
+      "        \"selector\": \"[data-level~=4.] ~ pre.idl\",\n" +
+      "        \"tags\": [\n" +
+      "            \"a\",\n" +
+      "            \"b\"\n" +
+      "        ],\n" +
+      "        \"url\": \"https://wicg.github.io/speech-api/\"\n" +
+      "    }\n" +
+      "]\n";
     FileUtil.write( file, content );
 
     final RepositoryConfig repository = load( file, content );
@@ -88,7 +88,6 @@ public final class RepositoryConfigTest
     FileUtil.write( file, "[{\"name\": \"speech_api\"}]" );
 
     final String expectedOutput =
-      "\n" +
       "[\n" +
       "    {\n" +
       "        \"lastModifiedTime\": 0,\n" +
@@ -117,7 +116,6 @@ public final class RepositoryConfigTest
   {
     final Path file = getWorkingDirectory().resolve( RepositoryConfig.FILENAME );
     final String expectedOutput =
-      "\n" +
       "[\n" +
       "    {\n" +
       "        \"lastModifiedTime\": 0,\n" +
