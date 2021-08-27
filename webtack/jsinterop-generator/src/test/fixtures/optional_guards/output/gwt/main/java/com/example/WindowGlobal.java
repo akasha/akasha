@@ -3,7 +3,6 @@ package com.example;
 import javax.annotation.Generated;
 import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
@@ -11,7 +10,7 @@ import jsinterop.base.Js;
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
-    namespace = JsPackage.GLOBAL,
+    namespace = "<window>",
     name = "$wnd"
 )
 public final class WindowGlobal {

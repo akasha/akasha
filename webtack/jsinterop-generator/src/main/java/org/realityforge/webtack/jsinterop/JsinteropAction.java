@@ -456,11 +456,7 @@ final class JsinteropAction
           .classBuilder( javaName )
           .addModifiers( Modifier.PUBLIC, Modifier.FINAL );
       writeGeneratedAnnotation( type );
-      type.addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_TYPE )
-                            .addMember( "isNative", "true" )
-                            .addMember( "namespace", "$T.GLOBAL", JsinteropTypes.JS_PACKAGE )
-                            .addMember( "name", "$S", getGlobalVariable() )
-                            .build() );
+      type.addAnnotation( getGlobalAnnotation() );
       type.addMethod( MethodSpec.constructorBuilder().addModifiers( Modifier.PRIVATE ).build() );
 
       final String testJavaName = javaName + "TestCompile";
@@ -493,9 +489,26 @@ final class JsinteropAction
   }
 
   @Nonnull
-  private String getGlobalVariable()
+  private AnnotationSpec getGlobalAnnotation()
   {
-    return OutputType.gwt == _outputType ? "$wnd" : "goog.global";
+    final AnnotationSpec.Builder annotation =
+      AnnotationSpec
+        .builder( JsinteropTypes.JS_TYPE )
+        .addMember( "isNative", "true" );
+
+    if ( OutputType.gwt == _outputType )
+    {
+      annotation
+        .addMember( "namespace", "$S", "<window>" )
+        .addMember( "name", "$S", "$wnd" );
+    }
+    else
+    {
+      annotation
+        .addMember( "namespace", "$T.GLOBAL", JsinteropTypes.JS_PACKAGE )
+        .addMember( "name", "$S", "goog.global" );
+    }
+    return annotation.build();
   }
 
   private void generateGlobalType( @Nonnull final String globalInterface )
@@ -509,11 +522,7 @@ final class JsinteropAction
         .classBuilder( javaName )
         .addModifiers( Modifier.PUBLIC, Modifier.FINAL );
     writeGeneratedAnnotation( type );
-    type.addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_TYPE )
-                          .addMember( "isNative", "true" )
-                          .addMember( "namespace", "$T.GLOBAL", JsinteropTypes.JS_PACKAGE )
-                          .addMember( "name", "$S", getGlobalVariable() )
-                          .build() );
+    type.addAnnotation( getGlobalAnnotation() );
 
     final String testJavaName = javaName + "TestCompile";
     final TypeSpec.Builder testType =
