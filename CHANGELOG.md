@@ -27,6 +27,7 @@
   - **RTCDtlsTransport**: `error` `statechange`
   - **ScreenOrientation**: `change`
   - **ServiceWorkerContainer**: `controllerchange` `messageerror`
+  - **ServiceWorkerGlobalScope**: `canmakepayment` `fetch` `messageerror` `notificationclose` `paymentrequest` `sync`
   - **ServiceWorkerRegistration**: `updatefound`
   - **SourceBuffer**: `abort` `error` `update` `updateend` `updatestart`
   - **SourceBufferList**: `addsourcebuffer` `removesourcebuffer`
