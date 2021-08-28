@@ -16,27 +16,35 @@ interface AudioNode {
 interface AudioParam {
 };
 
+interface Cache : Object {
+  Promise<FrozenArray<DOMString>> keys( optional DOMString request );
+};
+
+interface CacheStorage : Object {
+  Promise<sequence<DOMString>> keys();
+};
+
 [Global=(Worker,DedicatedWorker), Exposed=DedicatedWorker]
 interface DedicatedWorkerGlobalScope : WorkerGlobalScope {
   attribute MessageEventHandler? onmessage;
   attribute MessageEventHandler? onmessageerror;
 };
 
-interface Document {
+interface Document : Object {
   Document open( optional DOMString unused1, optional DOMString unused2 );
   WindowProxy? open( USVString url, DOMString name, DOMString features );
 };
 
-interface Element {
+interface Element : Object {
 };
 
-interface Event {
+interface Event : Object {
 };
 
 interface ExtendableMessageEvent : MessageEvent {
 };
 
-interface HTMLCollection {
+interface HTMLCollection : Object {
   getter Element? item( unsigned long index );
   getter Element? namedItem( DOMString name );
 };
@@ -56,6 +64,13 @@ interface MessageEvent : Event {
 };
 
 interface Navigator {
+};
+
+interface Object {
+  /**
+   * A static method should not cause collisions with instance operations with the same name.
+   */
+  static sequence<DOMString> keys( object obj );
 };
 
 [Global=(Worker,ServiceWorker), Exposed=ServiceWorker]

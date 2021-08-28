@@ -8,10 +8,10 @@ typedef ( Document or Window ) DocumentOrWindowUnion;
 typedef ( Element? or HTMLOptionElement? )? ElementOrHTMLOptionElementUnion;
 
 [Internal, Synthetic]
-typedef ( EventHandler? or MessageEventHandler? )? EventHandlerOrMessageEventHandlerUnion;
+typedef ( MessageEventHandler? or EventHandler? )? MessageEventHandlerOrEventHandlerUnion;
 
 [Internal, Synthetic]
-typedef ( ExtendableMessageEventHandler? or MessageEventHandler? )? ExtendableMessageEventHandlerOrMessageEventHandlerUnion;
+typedef ( MessageEventHandler? or ExtendableMessageEventHandler? )? MessageEventHandlerOrExtendableMessageEventHandlerUnion;
 
 typedef EventHandler? NullableEventHandler;
 
@@ -42,31 +42,39 @@ interface AudioNode {
 interface AudioParam {
 };
 
+interface Cache : Object {
+  Promise<FrozenArray<DOMString>> keys( optional DOMString request );
+};
+
+interface CacheStorage : Object {
+  Promise<sequence<DOMString>> keys();
+};
+
 [Global=(Worker,DedicatedWorker), Exposed=DedicatedWorker]
 interface DedicatedWorkerGlobalScope : WorkerGlobalScope {
-  [GlobalTypeOverride=ExtendableMessageEventHandlerOrMessageEventHandlerUnion]
+  [GlobalTypeOverride=MessageEventHandlerOrExtendableMessageEventHandlerUnion]
   attribute MessageEventHandler? onmessage;
-  [GlobalTypeOverride=EventHandlerOrMessageEventHandlerUnion]
+  [GlobalTypeOverride=MessageEventHandlerOrEventHandlerUnion]
   attribute MessageEventHandler? onmessageerror;
 };
 
-interface Document {
+interface Document : Object {
   [TypeOverride=DocumentOrWindowUnion]
   Document open( optional DOMString unused1, optional DOMString unused2 );
   [TypeOverride=DocumentOrWindowUnion]
   WindowProxy? open( USVString url, DOMString name, DOMString features );
 };
 
-interface Element {
+interface Element : Object {
 };
 
-interface Event {
+interface Event : Object {
 };
 
 interface ExtendableMessageEvent : MessageEvent {
 };
 
-interface HTMLCollection {
+interface HTMLCollection : Object {
   [TypeOverride=ElementOrHTMLOptionElementUnion]
   getter Element? item( unsigned long index );
   [TypeOverride=ElementOrHTMLOptionElementUnion]
@@ -92,11 +100,18 @@ interface MessageEvent : Event {
 interface Navigator {
 };
 
+interface Object {
+  /**
+   * A static method should not cause collisions with instance operations with the same name.
+   */
+  static sequence<DOMString> keys( object obj );
+};
+
 [Global=(Worker,ServiceWorker), Exposed=ServiceWorker]
 interface ServiceWorkerGlobalScope : WorkerGlobalScope {
-  [GlobalTypeOverride=ExtendableMessageEventHandlerOrMessageEventHandlerUnion]
+  [GlobalTypeOverride=MessageEventHandlerOrExtendableMessageEventHandlerUnion]
   attribute ExtendableMessageEventHandler? onmessage;
-  [GlobalTypeOverride=EventHandlerOrMessageEventHandlerUnion]
+  [GlobalTypeOverride=MessageEventHandlerOrEventHandlerUnion]
   attribute NullableEventHandler onmessageerror;
 };
 
@@ -108,9 +123,9 @@ interface Window {
   readonly attribute Navigator navigator;
   [GlobalTypeOverride=WorkerGlobalScopeOrWindowUnion]
   readonly attribute WindowProxy self;
-  [GlobalTypeOverride=ExtendableMessageEventHandlerOrMessageEventHandlerUnion]
+  [GlobalTypeOverride=MessageEventHandlerOrExtendableMessageEventHandlerUnion]
   attribute MessageEventHandler? onmessage;
-  [GlobalTypeOverride=EventHandlerOrMessageEventHandlerUnion]
+  [GlobalTypeOverride=MessageEventHandlerOrEventHandlerUnion]
   attribute MessageEventHandler? onmessageerror;
 };
 

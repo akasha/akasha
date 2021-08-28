@@ -59,6 +59,7 @@ final class JsSymbolDedupProcessor
   @Nonnull
   private final Map<String, UnionType> _globalOperationTypeOverrides = new HashMap<>();
   private boolean _processingGlobalInterface;
+  private WebIDLSchema _schema;
 
   JsSymbolDedupProcessor( @Nonnull final PipelineContext context )
   {
@@ -69,6 +70,7 @@ final class JsSymbolDedupProcessor
   @Override
   public WebIDLSchema process( @Nonnull final WebIDLSchema schema )
   {
+    _schema = schema;
     _unions.clear();
     _globalInterfaces.clear();
     _globalAttributeTypeOverrides.clear();
@@ -89,7 +91,10 @@ final class JsSymbolDedupProcessor
       InterfaceDefinition current = globalInterface.getSuperInterface();
       while ( null != current )
       {
-        _globalInterfaces.add( current );
+        if ( isNotSpecialObjectType( current ) )
+        {
+          _globalInterfaces.add( current );
+        }
         current = current.getSuperInterface();
       }
     }
@@ -101,8 +106,11 @@ final class JsSymbolDedupProcessor
       InterfaceDefinition current = globalInterface;
       while ( null != current )
       {
-        attributes.addAll( current.getAttributes() );
-        operations.addAll( current.getOperations() );
+        if ( isNotSpecialObjectType( current ) )
+        {
+          attributes.addAll( current.getAttributes() );
+          operations.addAll( current.getOperations() );
+        }
         current = current.getSuperInterface();
       }
     }
@@ -117,13 +125,12 @@ final class JsSymbolDedupProcessor
       .filter( entry -> 1 != entry.getValue().size() )
       .forEach( entry -> {
         final String name = entry.getKey();
-        final List<AttributeMember> members = entry.getValue();
-        final Type derivedAttributeType = deriveAttributeType( members );
-        if ( members.get( 0 ).getType() != derivedAttributeType )
+        final Type derivedType = deriveAttributeType( entry.getValue() );
+        if ( derivedType.isNoArgsExtendedAttributePresent( ExtendedAttributes.SYNTHETIC ) )
         {
-          assert derivedAttributeType instanceof UnionType;
+          assert derivedType instanceof UnionType;
           // If a new UnionType was created then mark attribute as overridden
-          _globalAttributeTypeOverrides.put( name, (UnionType) derivedAttributeType );
+          _globalAttributeTypeOverrides.put( name, (UnionType) derivedType );
         }
       } );
 
@@ -131,6 +138,7 @@ final class JsSymbolDedupProcessor
       .stream()
       .filter( o -> null != JsUtil.toJsName( o ) )
       .filter( o -> OperationMember.Kind.CONSTRUCTOR != o.getKind() )
+      .filter( o -> OperationMember.Kind.STATIC != o.getKind() )
       .collect( Collectors.groupingBy( JsUtil::toJsName ) )
       .entrySet()
       .stream()
@@ -138,16 +146,21 @@ final class JsSymbolDedupProcessor
       .forEach( entry -> {
         final String name = entry.getKey();
         final List<OperationMember> members = entry.getValue();
-        final Type derivedAttributeType = deriveReturnType( members );
-        if ( members.get( 0 ).getReturnType() != derivedAttributeType )
+        final Type derivedType = deriveReturnType( members );
+        if ( derivedType.isNoArgsExtendedAttributePresent( ExtendedAttributes.SYNTHETIC ) )
         {
-          assert derivedAttributeType instanceof UnionType;
+          assert derivedType instanceof UnionType;
           // If a new UnionType was created then mark operation as overridden
-          _globalOperationTypeOverrides.put( name, (UnionType) derivedAttributeType );
+          _globalOperationTypeOverrides.put( name, (UnionType) derivedType );
         }
       } );
 
     return super.process( schema );
+  }
+
+  private boolean isNotSpecialObjectType( @Nonnull final InterfaceDefinition current )
+  {
+    return !current.getName().equals( "Object" );
   }
 
   @Nullable
@@ -159,9 +172,12 @@ final class JsSymbolDedupProcessor
     try
     {
       final List<OperationMember> operations = new ArrayList<>();
-      for ( final InterfaceDefinition type : getInterfaceDefinitionsInInheritanceHierarchy( input ) )
+      if ( isNotSpecialObjectType( input ) )
       {
-        operations.addAll( type.getOperations() );
+        for ( final InterfaceDefinition type : getInterfaceDefinitionsInInheritanceHierarchy( input ) )
+        {
+          operations.addAll( type.getOperations() );
+        }
       }
 
       operations
@@ -174,13 +190,17 @@ final class JsSymbolDedupProcessor
         .filter( entry -> 1 != entry.getValue().size() )
         .forEach( entry -> {
           final String name = entry.getKey();
-          final List<OperationMember> members = entry.getValue();
-          final Type derivedAttributeType = deriveReturnType( members );
-          if ( members.get( 0 ).getReturnType() != derivedAttributeType )
+          if ( null != input.findOperationByName( name ) )
           {
-            assert derivedAttributeType instanceof UnionType;
-            // If a new UnionType was created then mark attribute as overridden
-            _operationTypeOverrides.put( name, (UnionType) derivedAttributeType );
+            // For any operation of the current interface, that has overrides then register them
+            final List<OperationMember> members = entry.getValue();
+            final Type derivedAttributeType = deriveReturnType( members );
+            if ( members.get( 0 ).getReturnType() != derivedAttributeType )
+            {
+              assert derivedAttributeType instanceof UnionType;
+              // If a new UnionType was created then mark attribute as overridden
+              _operationTypeOverrides.put( name, (UnionType) derivedAttributeType );
+            }
           }
         } );
 
@@ -208,7 +228,10 @@ final class JsSymbolDedupProcessor
     InterfaceDefinition current = input;
     while ( null != current )
     {
-      types.add( current );
+      if ( isNotSpecialObjectType( current ) )
+      {
+        types.add( current );
+      }
       current = current.getSuperInterface();
     }
     return types.stream().sorted( Comparator.comparing( NamedDefinition::getName ) ).collect( Collectors.toList() );
@@ -427,6 +450,13 @@ final class JsSymbolDedupProcessor
 
   private void maybeAddTypeToList( @Nonnull final List<Type> types, @Nonnull final Type candidate )
   {
+    for ( final Type type : types )
+    {
+      if ( type.equiv( candidate ) )
+      {
+        return;
+      }
+    }
     if ( Kind.Union == candidate.getKind() )
     {
       final List<Type> memberTypes = ( (UnionType) candidate ).getMemberTypes();
@@ -447,13 +477,6 @@ final class JsSymbolDedupProcessor
       }
     }
 
-    for ( final Type type : types )
-    {
-      if ( type.equiv( candidate ) )
-      {
-        return;
-      }
-    }
     types.add( candidate );
   }
 
