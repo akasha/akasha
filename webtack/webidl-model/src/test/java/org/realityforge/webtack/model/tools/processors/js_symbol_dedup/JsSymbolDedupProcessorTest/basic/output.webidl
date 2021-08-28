@@ -2,23 +2,23 @@
 typedef ( AudioNode or undefined ) AudioNodeOrUndefinedUnion;
 
 [Internal, Synthetic]
-typedef ( Document or WindowProxy? )? DocumentOrWindowProxyUnion;
+typedef ( Document or Window ) DocumentOrWindowUnion;
 
 [Internal, Synthetic]
 typedef ( Element? or HTMLOptionElement? )? ElementOrHTMLOptionElementUnion;
 
 [Internal, Synthetic]
-typedef ( MessageEventHandler? or ExtendableMessageEventHandler? )? MessageEventHandlerOrExtendableMessageEventHandlerUnion;
+typedef ( EventHandler? or MessageEventHandler? )? EventHandlerOrMessageEventHandlerUnion;
 
 [Internal, Synthetic]
-typedef ( MessageEventHandler? or NullableEventHandler )? MessageEventHandlerOrNullableEventHandlerUnion;
+typedef ( ExtendableMessageEventHandler? or MessageEventHandler? )? ExtendableMessageEventHandlerOrMessageEventHandlerUnion;
 
 typedef EventHandler? NullableEventHandler;
 
 typedef Window WindowProxy;
 
 [Internal, Synthetic]
-typedef ( WorkerGlobalScope or WindowProxy ) WorkerGlobalScopeOrWindowProxyUnion;
+typedef ( WorkerGlobalScope or Window ) WorkerGlobalScopeOrWindowUnion;
 
 [Internal, Synthetic]
 typedef ( WorkerLocation or Location ) WorkerLocationOrLocationUnion;
@@ -44,16 +44,16 @@ interface AudioParam {
 
 [Global=(Worker,DedicatedWorker), Exposed=DedicatedWorker]
 interface DedicatedWorkerGlobalScope : WorkerGlobalScope {
-  [GlobalTypeOverride=MessageEventHandlerOrExtendableMessageEventHandlerUnion]
+  [GlobalTypeOverride=ExtendableMessageEventHandlerOrMessageEventHandlerUnion]
   attribute MessageEventHandler? onmessage;
-  [GlobalTypeOverride=MessageEventHandlerOrNullableEventHandlerUnion]
+  [GlobalTypeOverride=EventHandlerOrMessageEventHandlerUnion]
   attribute MessageEventHandler? onmessageerror;
 };
 
 interface Document {
-  [TypeOverride=DocumentOrWindowProxyUnion]
+  [TypeOverride=DocumentOrWindowUnion]
   Document open( optional DOMString unused1, optional DOMString unused2 );
-  [TypeOverride=DocumentOrWindowProxyUnion]
+  [TypeOverride=DocumentOrWindowUnion]
   WindowProxy? open( USVString url, DOMString name, DOMString features );
 };
 
@@ -94,9 +94,9 @@ interface Navigator {
 
 [Global=(Worker,ServiceWorker), Exposed=ServiceWorker]
 interface ServiceWorkerGlobalScope : WorkerGlobalScope {
-  [GlobalTypeOverride=MessageEventHandlerOrExtendableMessageEventHandlerUnion]
+  [GlobalTypeOverride=ExtendableMessageEventHandlerOrMessageEventHandlerUnion]
   attribute ExtendableMessageEventHandler? onmessage;
-  [GlobalTypeOverride=MessageEventHandlerOrNullableEventHandlerUnion]
+  [GlobalTypeOverride=EventHandlerOrMessageEventHandlerUnion]
   attribute NullableEventHandler onmessageerror;
 };
 
@@ -106,11 +106,11 @@ interface Window {
   readonly attribute Location location;
   [GlobalTypeOverride=WorkerNavigatorOrNavigatorUnion]
   readonly attribute Navigator navigator;
-  [GlobalTypeOverride=WorkerGlobalScopeOrWindowProxyUnion]
+  [GlobalTypeOverride=WorkerGlobalScopeOrWindowUnion]
   readonly attribute WindowProxy self;
-  [GlobalTypeOverride=MessageEventHandlerOrExtendableMessageEventHandlerUnion]
+  [GlobalTypeOverride=ExtendableMessageEventHandlerOrMessageEventHandlerUnion]
   attribute MessageEventHandler? onmessage;
-  [GlobalTypeOverride=MessageEventHandlerOrNullableEventHandlerUnion]
+  [GlobalTypeOverride=EventHandlerOrMessageEventHandlerUnion]
   attribute MessageEventHandler? onmessageerror;
 };
 
@@ -119,7 +119,7 @@ interface WorkerGlobalScope {
   readonly attribute WorkerLocation location;
   [GlobalTypeOverride=WorkerNavigatorOrNavigatorUnion]
   readonly attribute WorkerNavigator navigator;
-  [GlobalTypeOverride=WorkerGlobalScopeOrWindowProxyUnion]
+  [GlobalTypeOverride=WorkerGlobalScopeOrWindowUnion]
   readonly attribute WorkerGlobalScope self;
 };
 

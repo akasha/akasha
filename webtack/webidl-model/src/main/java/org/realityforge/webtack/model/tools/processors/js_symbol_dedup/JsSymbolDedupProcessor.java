@@ -427,6 +427,26 @@ final class JsSymbolDedupProcessor
 
   private void maybeAddTypeToList( @Nonnull final List<Type> types, @Nonnull final Type candidate )
   {
+    if ( Kind.Union == candidate.getKind() )
+    {
+      final List<Type> memberTypes = ( (UnionType) candidate ).getMemberTypes();
+      for ( final Type memberType : memberTypes )
+      {
+        maybeAddTypeToList( types, memberType );
+      }
+      return;
+    }
+    else if ( Kind.TypeReference == candidate.getKind() )
+    {
+      final String name = ( (TypeReference) candidate ).getName();
+      final TypedefDefinition typedef = _schema.findTypedefByName( name );
+      if ( null != typedef )
+      {
+        maybeAddTypeToList( types, typedef.getType() );
+        return;
+      }
+    }
+
     for ( final Type type : types )
     {
       if ( type.equiv( candidate ) )
