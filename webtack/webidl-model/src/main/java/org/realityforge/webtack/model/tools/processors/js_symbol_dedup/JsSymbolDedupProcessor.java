@@ -349,7 +349,7 @@ final class JsSymbolDedupProcessor
   }
 
   @Nonnull
-  private String deriveTypeDefNameForUnionType( final @Nonnull UnionType type )
+  private String deriveTypeDefNameForUnionType( @Nonnull final UnionType type )
   {
     final StringBuilder sb = new StringBuilder();
     for ( final Type memberType : type.getMemberTypes() )
