@@ -8,23 +8,27 @@ typedef ( Document or Window ) DocumentOrWindowUnion;
 typedef ( Element? or HTMLOptionElement? )? ElementOrHTMLOptionElementUnion;
 
 [Internal, Synthetic]
-typedef ( MessageEventHandler? or EventHandler? )? MessageEventHandlerOrEventHandlerUnion;
+typedef ( EventHandler? or MessageEventHandler? )? EventHandlerOrMessageEventHandlerUnion;
 
 [Internal, Synthetic]
-typedef ( MessageEventHandler? or ExtendableMessageEventHandler? )? MessageEventHandlerOrExtendableMessageEventHandlerUnion;
+typedef ( ExtendableMessageEventHandler? or MessageEventHandler? )? ExtendableMessageEventHandlerOrMessageEventHandlerUnion;
+
+[Internal, Synthetic]
+typedef ( Location or WorkerLocation ) LocationOrWorkerLocationUnion;
+
+[Internal, Synthetic]
+typedef ( Navigator or WorkerNavigator ) NavigatorOrWorkerNavigatorUnion;
 
 typedef EventHandler? NullableEventHandler;
 
+typedef ( double or sequence<double> ) Numbers;
+
+typedef double Timestamp;
+
+[Internal, Synthetic]
+typedef ( Window or WorkerGlobalScope ) WindowOrWorkerGlobalScopeUnion;
+
 typedef Window WindowProxy;
-
-[Internal, Synthetic]
-typedef ( WorkerGlobalScope or Window ) WorkerGlobalScopeOrWindowUnion;
-
-[Internal, Synthetic]
-typedef ( WorkerLocation or Location ) WorkerLocationOrLocationUnion;
-
-[Internal, Synthetic]
-typedef ( WorkerNavigator or Navigator ) WorkerNavigatorOrNavigatorUnion;
 
 callback EventHandler = undefined ( Event event );
 
@@ -52,9 +56,9 @@ interface CacheStorage : Object {
 
 [Global=(Worker,DedicatedWorker), Exposed=DedicatedWorker]
 interface DedicatedWorkerGlobalScope : WorkerGlobalScope {
-  [GlobalTypeOverride=MessageEventHandlerOrExtendableMessageEventHandlerUnion]
+  [GlobalTypeOverride=ExtendableMessageEventHandlerOrMessageEventHandlerUnion]
   attribute MessageEventHandler? onmessage;
-  [GlobalTypeOverride=MessageEventHandlerOrEventHandlerUnion]
+  [GlobalTypeOverride=EventHandlerOrMessageEventHandlerUnion]
   attribute MessageEventHandler? onmessageerror;
 };
 
@@ -97,6 +101,47 @@ interface Location {
 interface MessageEvent : Event {
 };
 
+[Global=MyFakeGlobalType1, Exposed=ServiceWorker]
+interface MyFakeGlobalType1 {
+  readonly attribute double counter;
+  /**
+   * This should not have a union as the other myOperations are all equivalent (when resolved)
+   */
+  double myOperation( DOMString myParam );
+};
+
+[Global=MyFakeGlobalType2, Exposed=ServiceWorker]
+interface MyFakeGlobalType2 {
+  readonly attribute Timestamp counter;
+  /**
+   * This should not have a union as the other myOperations are all equivalent (when resolved)
+   */
+  Timestamp myOperation( DOMString myParam1, DOMString myParam2 );
+};
+
+interface MyFakeType {
+  /**
+   * This should not have a union as the other myOperations are all equivalent (when resolved)
+   */
+  double myOperation( DOMString myParam );
+  /**
+   * This should not have a union as the other myOperations are all equivalent (when resolved)
+   */
+  double myOperation();
+  /**
+   * This should not have a union as the other myOperations are all equivalent (when resolved)
+   */
+  Timestamp myOperation( DOMString myParam1, DOMString myParam2 );
+  /**
+   * This should not have a union as the return types are equivalent.
+   */
+  Numbers myOperation2( DOMString myParam );
+  /**
+   * This should not have a union as the return types are equivalent.
+   */
+  Numbers myOperation2();
+};
+
 interface Navigator {
 };
 
@@ -109,32 +154,32 @@ interface Object {
 
 [Global=(Worker,ServiceWorker), Exposed=ServiceWorker]
 interface ServiceWorkerGlobalScope : WorkerGlobalScope {
-  [GlobalTypeOverride=MessageEventHandlerOrExtendableMessageEventHandlerUnion]
+  [GlobalTypeOverride=ExtendableMessageEventHandlerOrMessageEventHandlerUnion]
   attribute ExtendableMessageEventHandler? onmessage;
-  [GlobalTypeOverride=MessageEventHandlerOrEventHandlerUnion]
+  [GlobalTypeOverride=EventHandlerOrMessageEventHandlerUnion]
   attribute NullableEventHandler onmessageerror;
 };
 
 [Global=Window, Exposed=Window]
 interface Window {
-  [GlobalTypeOverride=WorkerLocationOrLocationUnion]
+  [GlobalTypeOverride=LocationOrWorkerLocationUnion]
   readonly attribute Location location;
-  [GlobalTypeOverride=WorkerNavigatorOrNavigatorUnion]
+  [GlobalTypeOverride=NavigatorOrWorkerNavigatorUnion]
   readonly attribute Navigator navigator;
-  [GlobalTypeOverride=WorkerGlobalScopeOrWindowUnion]
+  [GlobalTypeOverride=WindowOrWorkerGlobalScopeUnion]
   readonly attribute WindowProxy self;
-  [GlobalTypeOverride=MessageEventHandlerOrExtendableMessageEventHandlerUnion]
+  [GlobalTypeOverride=ExtendableMessageEventHandlerOrMessageEventHandlerUnion]
   attribute MessageEventHandler? onmessage;
-  [GlobalTypeOverride=MessageEventHandlerOrEventHandlerUnion]
+  [GlobalTypeOverride=EventHandlerOrMessageEventHandlerUnion]
   attribute MessageEventHandler? onmessageerror;
 };
 
 interface WorkerGlobalScope {
-  [GlobalTypeOverride=WorkerLocationOrLocationUnion]
+  [GlobalTypeOverride=LocationOrWorkerLocationUnion]
   readonly attribute WorkerLocation location;
-  [GlobalTypeOverride=WorkerNavigatorOrNavigatorUnion]
+  [GlobalTypeOverride=NavigatorOrWorkerNavigatorUnion]
   readonly attribute WorkerNavigator navigator;
-  [GlobalTypeOverride=WorkerGlobalScopeOrWindowUnion]
+  [GlobalTypeOverride=WindowOrWorkerGlobalScopeUnion]
   readonly attribute WorkerGlobalScope self;
 };
 

@@ -44,6 +44,7 @@ import org.realityforge.webtack.model.tools.spi.PipelineContext;
 import org.realityforge.webtack.model.tools.util.ExtendedAttributes;
 import org.realityforge.webtack.model.tools.util.JsUtil;
 import org.realityforge.webtack.model.tools.util.NamingUtil;
+import org.realityforge.webtack.model.tools.util.UnionUtil;
 
 final class JsSymbolDedupProcessor
   extends AbstractProcessor
@@ -429,55 +430,19 @@ final class JsSymbolDedupProcessor
   @Nonnull
   private Type deriveAttributeType( @Nonnull final List<AttributeMember> attributes )
   {
-    final List<Type> types = new ArrayList<>();
-    for ( final AttributeMember attribute : attributes )
-    {
-      maybeAddTypeToList( types, attribute.getType() );
-    }
-    return convertToUnionIfRequired( types );
+    return convertToUnionIfRequired( attributes
+                                       .stream()
+                                       .map( AttributeMember::getType )
+                                       .collect( Collectors.toList() ) );
   }
 
   @Nonnull
   private Type deriveReturnType( @Nonnull final List<OperationMember> operations )
   {
-    final List<Type> types = new ArrayList<>();
-    for ( final OperationMember operation : operations )
-    {
-      maybeAddTypeToList( types, operation.getReturnType() );
-    }
-    return convertToUnionIfRequired( types );
-  }
-
-  private void maybeAddTypeToList( @Nonnull final List<Type> types, @Nonnull final Type candidate )
-  {
-    for ( final Type type : types )
-    {
-      if ( type.equiv( candidate ) )
-      {
-        return;
-      }
-    }
-    if ( Kind.Union == candidate.getKind() )
-    {
-      final List<Type> memberTypes = ( (UnionType) candidate ).getMemberTypes();
-      for ( final Type memberType : memberTypes )
-      {
-        maybeAddTypeToList( types, memberType );
-      }
-      return;
-    }
-    else if ( Kind.TypeReference == candidate.getKind() )
-    {
-      final String name = ( (TypeReference) candidate ).getName();
-      final TypedefDefinition typedef = _schema.findTypedefByName( name );
-      if ( null != typedef )
-      {
-        maybeAddTypeToList( types, typedef.getType() );
-        return;
-      }
-    }
-
-    types.add( candidate );
+    return convertToUnionIfRequired( operations
+                                       .stream()
+                                       .map( OperationMember::getReturnType )
+                                       .collect( Collectors.toList() ) );
   }
 
   /**
@@ -490,20 +455,15 @@ final class JsSymbolDedupProcessor
   @Nonnull
   private Type convertToUnionIfRequired( @Nonnull final List<Type> types )
   {
-    if ( 1 == types.size() )
+    final UnionType unionType = UnionUtil.createUnionIfRequired( _schema, types );
+    if ( null != unionType )
     {
-      return types.get( 0 );
+      registerUnionTypeName( unionType );
+      return unionType;
     }
     else
     {
-      final List<ExtendedAttribute> attributes = new ArrayList<>();
-      attributes.add( ExtendedAttribute.createNoArgs( ExtendedAttributes.INTERNAL ) );
-      attributes.add( ExtendedAttribute.createNoArgs( ExtendedAttributes.SYNTHETIC ) );
-      final boolean nullable = types.stream().anyMatch( Type::isNullable );
-      final UnionType unionType = new UnionType( types, attributes, nullable, Collections.emptyList() );
-      // Ensure a Union type is defined as it is referenced from jsinterop
-      registerUnionTypeName( unionType );
-      return unionType;
+      return types.get( 0 );
     }
   }
 }

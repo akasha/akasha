@@ -1,5 +1,9 @@
 typedef EventHandler? NullableEventHandler;
 
+typedef ( double or sequence<double> ) Numbers;
+
+typedef double Timestamp;
+
 typedef Window WindowProxy;
 
 callback EventHandler = undefined ( Event event );
@@ -61,6 +65,47 @@ interface Location {
 };
 
 interface MessageEvent : Event {
+};
+
+[Global=MyFakeGlobalType1, Exposed=ServiceWorker]
+interface MyFakeGlobalType1 {
+  readonly attribute double counter;
+  /**
+   * This should not have a union as the other myOperations are all equivalent (when resolved)
+   */
+  double myOperation( DOMString myParam );
+};
+
+[Global=MyFakeGlobalType2, Exposed=ServiceWorker]
+interface MyFakeGlobalType2 {
+  readonly attribute Timestamp counter;
+  /**
+   * This should not have a union as the other myOperations are all equivalent (when resolved)
+   */
+  Timestamp myOperation( DOMString myParam1, DOMString myParam2 );
+};
+
+interface MyFakeType {
+  /**
+   * This should not have a union as the other myOperations are all equivalent (when resolved)
+   */
+  double myOperation( DOMString myParam );
+  /**
+   * This should not have a union as the other myOperations are all equivalent (when resolved)
+   */
+  double myOperation();
+  /**
+   * This should not have a union as the other myOperations are all equivalent (when resolved)
+   */
+  Timestamp myOperation( DOMString myParam1, DOMString myParam2 );
+  /**
+   * This should not have a union as the return types are equivalent.
+   */
+  Numbers myOperation2( DOMString myParam );
+  /**
+   * This should not have a union as the return types are equivalent.
+   */
+  Numbers myOperation2();
 };
 
 interface Navigator {

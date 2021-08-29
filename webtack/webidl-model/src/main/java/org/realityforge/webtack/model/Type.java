@@ -8,6 +8,7 @@ import javax.annotation.Nonnull;
 
 public class Type
   extends AttributedNode
+  implements Comparable<Type>
 {
   @Nonnull
   private final Kind _kind;
@@ -39,6 +40,24 @@ public class Type
   public final boolean isNullable()
   {
     return _nullable;
+  }
+
+  @Override
+  public int compareTo( @Nonnull final Type o )
+  {
+    final int compareTo = getKind().name().compareTo( o.getKind().name() );
+    if ( 0 != compareTo )
+    {
+      return compareTo;
+    }
+    else if ( Kind.TypeReference == o.getKind() )
+    {
+      return ( (TypeReference) this ).getName().compareTo( ( (TypeReference) o ).getName() );
+    }
+    else
+    {
+      return 0;
+    }
   }
 
   @Override
