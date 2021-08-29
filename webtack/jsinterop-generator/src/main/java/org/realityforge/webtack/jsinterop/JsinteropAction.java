@@ -3552,15 +3552,7 @@ final class JsinteropAction
         explodeTypeList( argumentList.stream().map( Argument::getType ).collect( Collectors.toList() ) );
       for ( final List<TypedValue> typeList : explodedTypeList )
       {
-        generateDefaultOperation(
-          operation,
-          false,
-          returnType,
-          argumentList,
-          typeList,
-          className,
-          type,
-          testType );
+        generateDefaultOperation( operation, false, returnType, argumentList, typeList, className, type, testType );
       }
     }
   }
