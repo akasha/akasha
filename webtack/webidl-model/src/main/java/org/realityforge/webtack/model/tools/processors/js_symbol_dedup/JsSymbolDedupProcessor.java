@@ -416,11 +416,6 @@ final class JsSymbolDedupProcessor
     {
       sb.append( "Any" );
     }
-    else if ( Kind.Promise == kind )
-    {
-      appendTypeToUnionName( sb, ( (PromiseType) type ).getResolveType() );
-      sb.append( "Promise" );
-    }
     else
     {
       throw new UnsupportedOperationException( "Contains kind " + kind + " in union which has not been implemented" );
