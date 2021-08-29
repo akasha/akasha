@@ -1,0 +1,6 @@
+AudioNode=com.example.AudioNode
+AudioNodeOrUndefinedUnion=com.example.AudioNodeOrUndefinedUnion
+AudioParam=com.example.AudioParam
+Document=com.example.Document
+DocumentOrWindowUnion=com.example.DocumentOrWindowUnion
+Window=com.example.Window

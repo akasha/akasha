@@ -1,0 +1,11 @@
+goog.module('com.example.ExampleCompileTest');
+goog.require('com.example.AudioNode.$Overlay');
+goog.require('com.example.AudioNodeOrUndefinedUnionTestCompile');
+goog.require('com.example.AudioNodeTestCompile');
+goog.require('com.example.AudioParam.$Overlay');
+goog.require('com.example.AudioParamTestCompile');
+goog.require('com.example.Document.$Overlay');
+goog.require('com.example.DocumentOrWindowUnionTestCompile');
+goog.require('com.example.DocumentTestCompile');
+goog.require('com.example.Window.$Overlay');
+goog.require('com.example.WindowTestCompile');

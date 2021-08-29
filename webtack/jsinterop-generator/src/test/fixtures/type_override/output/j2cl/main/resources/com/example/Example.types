@@ -1,0 +1,8 @@
+AudioNode
+AudioNodeOrUndefinedUnion
+AudioParam
+Document
+DocumentOrWindowProxyUnion
+DocumentOrWindowUnion
+Window
+WindowProxy

@@ -60,7 +60,6 @@ import org.realityforge.webtack.model.NamedDefinition;
 import org.realityforge.webtack.model.NamedElement;
 import org.realityforge.webtack.model.NamespaceDefinition;
 import org.realityforge.webtack.model.OperationMember;
-import org.realityforge.webtack.model.OperationMemberContainer;
 import org.realityforge.webtack.model.PartialInterfaceDefinition;
 import org.realityforge.webtack.model.SequenceType;
 import org.realityforge.webtack.model.SetLikeMember;
@@ -1858,7 +1857,7 @@ final class JsinteropAction
       .sorted()
       .forEach( operation -> generateOperation( definition,
                                                 operation,
-                                                deriveOperationReturnType( definition, operation ),
+                                                deriveOperationReturnType( operation ),
                                                 className,
                                                 type,
                                                 testType ) );
@@ -1915,19 +1914,27 @@ final class JsinteropAction
   }
 
   @Nonnull
-  private Type deriveOperationReturnType( @Nonnull final OperationMemberContainer definition,
-                                          @Nonnull final OperationMember operation )
+  private Type deriveOperationReturnType( @Nonnull final OperationMember operation )
   {
-    final String operationName = operation.getName();
-
-    // We only care about merging return types in closure binding due to the way the type system works
-    return OutputType.j2cl == _outputType &&
-           // We are matching on operations by name so must have a name
-           null != operationName &&
-           // Promises seems to be handled fine in the underlying Closure type system
-           Kind.Promise != operation.getReturnType().getKind() ?
-           deriveReturnType( definition.findAllOperationsByName( operationName ) ) :
-           operation.getReturnType();
+    final Type returnType = operation.getReturnType();
+    if ( OutputType.gwt == _outputType )
+    {
+      // GWT does not need to jump through hoops to align types.
+      // We only care about merging return types in closure binding due to the way the type system works.
+      return returnType;
+    }
+    else
+    {
+      final String typeOverride = operation.getIdentValue( ExtendedAttributes.TYPE_OVERRIDE );
+      final TypedefDefinition typeOverrideType =
+        null == typeOverride ? null : getSchema().getTypedefByName( typeOverride );
+      return null != typeOverrideType ?
+             new TypeReference( typeOverride,
+                                Collections.emptyList(),
+                                returnType.isNullable(),
+                                returnType.getSourceLocations() ) :
+             returnType;
+    }
   }
 
   private void generatePairIterableElements( @Nonnull final String idlName,
@@ -2256,16 +2263,18 @@ final class JsinteropAction
     final WebIDLSchema schema = getSchema();
     if ( null != inherits )
     {
-      parentConstructor = schema
-        .getInterfaceByName( inherits )
-        .getOperations()
-        .stream()
-        .filter( o -> OperationMember.Kind.CONSTRUCTOR == o.getKind() )
-        .min( Comparator.comparingLong( o -> o.getArguments()
+      parentConstructor =
+        schema
+          .getInterfaceByName( inherits )
+          .getOperations()
           .stream()
-          .filter( a -> !a.isOptional() && !a.isVariadic() )
-          .count() ) )
-        .orElse( null );
+          .filter( o -> OperationMember.Kind.CONSTRUCTOR == o.getKind() )
+          .min( Comparator.comparingLong( o -> o
+            .getArguments()
+            .stream()
+            .filter( a -> !a.isOptional() && !a.isVariadic() )
+            .count() ) )
+          .orElse( null );
       type.superclass( lookupClassName( inherits ) );
     }
     else
@@ -2282,7 +2291,7 @@ final class JsinteropAction
       final boolean processed =
         generateOperation( definition,
                            operation,
-                           deriveOperationReturnType( definition, operation ),
+                           deriveOperationReturnType( operation ),
                            className,
                            type,
                            testType );
@@ -3583,7 +3592,8 @@ final class JsinteropAction
     final MethodSpec.Builder method =
       MethodSpec
         .methodBuilder( ( requireOverlay ? "_" : "" ) + methodName )
-        .addModifiers( Modifier.PUBLIC, javaInterface ? Modifier.ABSTRACT : Modifier.NATIVE );
+        .addModifiers( requireOverlay ? Modifier.PRIVATE : Modifier.PUBLIC,
+                       javaInterface ? Modifier.ABSTRACT : Modifier.NATIVE );
     final MethodSpec.Builder overlayMethod =
       MethodSpec
         .methodBuilder( methodName )
@@ -3674,7 +3684,6 @@ final class JsinteropAction
       generateArgument( argument, typedValue, false, false, overlayMethod, null );
       generateArgument( argument, typedValue, false, false, method, testMethod );
     }
-    type.addMethod( method.build() );
 
     if ( !arguments.isEmpty() )
     {
@@ -3694,6 +3703,8 @@ final class JsinteropAction
     {
       type.addMethod( overlayMethod.build() );
     }
+
+    type.addMethod( method.build() );
 
     testMethod.addStatement( testCallStatement.toString(), testCallArgs.toArray() );
     testType.addMethod( testMethod.build() );
