@@ -36,6 +36,10 @@ callback ExtendableMessageEventHandler = undefined ( ExtendableMessageEvent even
 
 callback MessageEventHandler = undefined ( MessageEvent event );
 
+callback RTCPeerConnectionErrorCallback = undefined ( DOMException error );
+
+callback RTCSessionDescriptionCallback = undefined ( RTCSessionDescriptionInit description );
+
 interface AudioNode {
   [TypeOverride=AudioNodeOrUndefinedUnion]
   AudioNode connect( AudioNode destinationNode, optional unsigned long output = 0, optional unsigned long input = 0 );
@@ -150,6 +154,17 @@ interface Object {
    * A static method should not cause collisions with instance operations with the same name.
    */
   static sequence<DOMString> keys( object obj );
+};
+
+interface RTCOfferOptions {
+};
+
+interface RTCPeerConnection {
+  Promise<RTCSessionDescriptionInit> createOffer( optional RTCOfferOptions options = {} );
+  Promise<undefined> createOffer( RTCSessionDescriptionCallback successCallback, RTCPeerConnectionErrorCallback failureCallback, optional RTCOfferOptions options = {} );
+};
+
+interface RTCSessionDescriptionInit {
 };
 
 [Global=(Worker,ServiceWorker), Exposed=ServiceWorker]

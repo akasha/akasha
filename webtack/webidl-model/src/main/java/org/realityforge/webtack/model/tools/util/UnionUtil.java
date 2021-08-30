@@ -69,6 +69,21 @@ public final class UnionUtil
         return null;
       }
 
+      // Promises can not be in unions according to WebIDL
+      // Luckily closures type system does not object to when multiple operations with the same name
+      // return promises with different resolve types. So we just skip scenario where all are promises
+      // (i.e. happens for RTCPeerConnection.prototype.createOffer)
+      final long promiseCount = componentTypes.stream().filter( t -> Kind.Promise == t.getKind() ).count();
+      if ( promiseCount == componentTypes.size() )
+      {
+        return null;
+      }
+      else if ( promiseCount > 0 )
+      {
+        throw new UnsupportedOperationException( "createUnionIfRequired called with multiple distinct types," +
+                                                 " some of which are promises." );
+      }
+
       final List<ExtendedAttribute> attributes = new ArrayList<>();
       attributes.add( ExtendedAttribute.createNoArgs( ExtendedAttributes.INTERNAL ) );
       attributes.add( ExtendedAttribute.createNoArgs( ExtendedAttributes.SYNTHETIC ) );
