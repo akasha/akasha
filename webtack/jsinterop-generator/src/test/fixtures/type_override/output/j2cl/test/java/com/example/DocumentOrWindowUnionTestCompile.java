@@ -4,13 +4,11 @@ import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class DocumentOrWindowUnionTestCompile {
-  public static DocumentOrWindowUnion of(final DocumentOrWindowUnion $instance,
-      final Document value) {
+  public static DocumentOrWindowUnion of(final Document value) {
     return DocumentOrWindowUnion.of( value );
   }
 
-  public static DocumentOrWindowUnion of(final DocumentOrWindowUnion $instance,
-      final Window value) {
+  public static DocumentOrWindowUnion of(final Window value) {
     return DocumentOrWindowUnion.of( value );
   }
 

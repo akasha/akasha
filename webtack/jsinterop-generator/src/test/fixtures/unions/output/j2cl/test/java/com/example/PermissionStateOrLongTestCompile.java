@@ -4,12 +4,11 @@ import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class PermissionStateOrLongTestCompile {
-  public static PermissionStateOrLong of(final PermissionStateOrLong $instance,
-      @PermissionState final String value) {
+  public static PermissionStateOrLong of(@PermissionState final String value) {
     return PermissionStateOrLong.of( value );
   }
 
-  public static PermissionStateOrLong of(final PermissionStateOrLong $instance, final int value) {
+  public static PermissionStateOrLong of(final int value) {
     return PermissionStateOrLong.of( value );
   }
 

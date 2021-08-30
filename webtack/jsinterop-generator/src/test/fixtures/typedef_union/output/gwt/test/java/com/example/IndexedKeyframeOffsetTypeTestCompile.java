@@ -4,18 +4,15 @@ import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class IndexedKeyframeOffsetTypeTestCompile {
-  public static IndexedKeyframeOffsetType of(final IndexedKeyframeOffsetType $instance,
-      final Double value) {
+  public static IndexedKeyframeOffsetType of(final Double value) {
     return IndexedKeyframeOffsetType.of( value );
   }
 
-  public static IndexedKeyframeOffsetType of(final IndexedKeyframeOffsetType $instance,
-      final JsArray<Double> value) {
+  public static IndexedKeyframeOffsetType of(final JsArray<Double> value) {
     return IndexedKeyframeOffsetType.of( value );
   }
 
-  public static IndexedKeyframeOffsetType of(final IndexedKeyframeOffsetType $instance,
-      final double[] value) {
+  public static IndexedKeyframeOffsetType of(final double[] value) {
     return IndexedKeyframeOffsetType.of( value );
   }
 

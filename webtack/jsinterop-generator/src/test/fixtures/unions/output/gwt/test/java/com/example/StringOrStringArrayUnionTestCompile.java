@@ -4,18 +4,15 @@ import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class StringOrStringArrayUnionTestCompile {
-  public static StringOrStringArrayUnion of(final StringOrStringArrayUnion $instance,
-      final String value) {
+  public static StringOrStringArrayUnion of(final String value) {
     return StringOrStringArrayUnion.of( value );
   }
 
-  public static StringOrStringArrayUnion of(final StringOrStringArrayUnion $instance,
-      final JsArray<String> value) {
+  public static StringOrStringArrayUnion of(final JsArray<String> value) {
     return StringOrStringArrayUnion.of( value );
   }
 
-  public static StringOrStringArrayUnion of(final StringOrStringArrayUnion $instance,
-      final String[] value) {
+  public static StringOrStringArrayUnion of(final String[] value) {
     return StringOrStringArrayUnion.of( value );
   }
 

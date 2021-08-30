@@ -4,11 +4,11 @@ import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class TxCodeTestCompile {
-  public static TxCode of(final TxCode $instance, final String value) {
+  public static TxCode of(final String value) {
     return TxCode.of( value );
   }
 
-  public static TxCode of(final TxCode $instance, final int value) {
+  public static TxCode of(final int value) {
     return TxCode.of( value );
   }
 

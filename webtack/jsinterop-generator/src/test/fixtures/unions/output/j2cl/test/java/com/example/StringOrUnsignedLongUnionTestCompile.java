@@ -4,13 +4,11 @@ import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class StringOrUnsignedLongUnionTestCompile {
-  public static StringOrUnsignedLongUnion of(final StringOrUnsignedLongUnion $instance,
-      final String value) {
+  public static StringOrUnsignedLongUnion of(final String value) {
     return StringOrUnsignedLongUnion.of( value );
   }
 
-  public static StringOrUnsignedLongUnion of(final StringOrUnsignedLongUnion $instance,
-      final int value) {
+  public static StringOrUnsignedLongUnion of(final int value) {
     return StringOrUnsignedLongUnion.of( value );
   }
 

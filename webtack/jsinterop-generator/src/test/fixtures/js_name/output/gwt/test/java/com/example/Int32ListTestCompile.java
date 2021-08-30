@@ -4,15 +4,15 @@ import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class Int32ListTestCompile {
-  public static Int32List of(final Int32List $instance, final Int32Array value) {
+  public static Int32List of(final Int32Array value) {
     return Int32List.of( value );
   }
 
-  public static Int32List of(final Int32List $instance, final JsArray<Double> value) {
+  public static Int32List of(final JsArray<Double> value) {
     return Int32List.of( value );
   }
 
-  public static Int32List of(final Int32List $instance, final double[] value) {
+  public static Int32List of(final double[] value) {
     return Int32List.of( value );
   }
 

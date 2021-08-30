@@ -4,13 +4,11 @@ import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class StringifySpaceUnionTypeTestCompile {
-  public static StringifySpaceUnionType of(final StringifySpaceUnionType $instance,
-      final String value) {
+  public static StringifySpaceUnionType of(final String value) {
     return StringifySpaceUnionType.of( value );
   }
 
-  public static StringifySpaceUnionType of(final StringifySpaceUnionType $instance,
-      final int value) {
+  public static StringifySpaceUnionType of(final int value) {
     return StringifySpaceUnionType.of( value );
   }
 

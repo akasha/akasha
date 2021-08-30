@@ -4,18 +4,15 @@ import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class UnionBooleanSequenceOrStringTestCompile {
-  public static UnionBooleanSequenceOrString of(final UnionBooleanSequenceOrString $instance,
-      final JsArray<Boolean> value) {
+  public static UnionBooleanSequenceOrString of(final JsArray<Boolean> value) {
     return UnionBooleanSequenceOrString.of( value );
   }
 
-  public static UnionBooleanSequenceOrString of(final UnionBooleanSequenceOrString $instance,
-      final Boolean[] value) {
+  public static UnionBooleanSequenceOrString of(final Boolean[] value) {
     return UnionBooleanSequenceOrString.of( value );
   }
 
-  public static UnionBooleanSequenceOrString of(final UnionBooleanSequenceOrString $instance,
-      final String value) {
+  public static UnionBooleanSequenceOrString of(final String value) {
     return UnionBooleanSequenceOrString.of( value );
   }
 

@@ -4,12 +4,11 @@ import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class MyDictionaryOrStringTestCompile {
-  public static MyDictionaryOrString of(final MyDictionaryOrString $instance,
-      final MyDictionary value) {
+  public static MyDictionaryOrString of(final MyDictionary value) {
     return MyDictionaryOrString.of( value );
   }
 
-  public static MyDictionaryOrString of(final MyDictionaryOrString $instance, final String value) {
+  public static MyDictionaryOrString of(final String value) {
     return MyDictionaryOrString.of( value );
   }
 

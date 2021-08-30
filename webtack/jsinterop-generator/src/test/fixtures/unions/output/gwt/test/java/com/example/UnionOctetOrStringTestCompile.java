@@ -4,11 +4,11 @@ import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class UnionOctetOrStringTestCompile {
-  public static UnionOctetOrString of(final UnionOctetOrString $instance, final short value) {
+  public static UnionOctetOrString of(final short value) {
     return UnionOctetOrString.of( value );
   }
 
-  public static UnionOctetOrString of(final UnionOctetOrString $instance, final String value) {
+  public static UnionOctetOrString of(final String value) {
     return UnionOctetOrString.of( value );
   }
 

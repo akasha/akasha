@@ -4,13 +4,11 @@ import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class UnionUnrestrictedFloatOrStringTestCompile {
-  public static UnionUnrestrictedFloatOrString of(final UnionUnrestrictedFloatOrString $instance,
-      final float value) {
+  public static UnionUnrestrictedFloatOrString of(final float value) {
     return UnionUnrestrictedFloatOrString.of( value );
   }
 
-  public static UnionUnrestrictedFloatOrString of(final UnionUnrestrictedFloatOrString $instance,
-      final String value) {
+  public static UnionUnrestrictedFloatOrString of(final String value) {
     return UnionUnrestrictedFloatOrString.of( value );
   }
 

@@ -4,15 +4,15 @@ import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class VibratePatternTestCompile {
-  public static VibratePattern of(final VibratePattern $instance, final int value) {
+  public static VibratePattern of(final int value) {
     return VibratePattern.of( value );
   }
 
-  public static VibratePattern of(final VibratePattern $instance, final JsArray<Double> value) {
+  public static VibratePattern of(final JsArray<Double> value) {
     return VibratePattern.of( value );
   }
 
-  public static VibratePattern of(final VibratePattern $instance, final double[] value) {
+  public static VibratePattern of(final double[] value) {
     return VibratePattern.of( value );
   }
 

@@ -4,12 +4,11 @@ import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class LongOrTxModeUnionTestCompile {
-  public static LongOrTxModeUnion of(final LongOrTxModeUnion $instance, final int value) {
+  public static LongOrTxModeUnion of(final int value) {
     return LongOrTxModeUnion.of( value );
   }
 
-  public static LongOrTxModeUnion of(final LongOrTxModeUnion $instance,
-      @TxMode final String value) {
+  public static LongOrTxModeUnion of(@TxMode final String value) {
     return LongOrTxModeUnion.of( value );
   }
 

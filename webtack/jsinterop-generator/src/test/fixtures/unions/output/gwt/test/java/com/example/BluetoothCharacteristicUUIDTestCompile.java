@@ -4,13 +4,11 @@ import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class BluetoothCharacteristicUUIDTestCompile {
-  public static BluetoothCharacteristicUUID of(final BluetoothCharacteristicUUID $instance,
-      final String value) {
+  public static BluetoothCharacteristicUUID of(final String value) {
     return BluetoothCharacteristicUUID.of( value );
   }
 
-  public static BluetoothCharacteristicUUID of(final BluetoothCharacteristicUUID $instance,
-      final int value) {
+  public static BluetoothCharacteristicUUID of(final int value) {
     return BluetoothCharacteristicUUID.of( value );
   }
 

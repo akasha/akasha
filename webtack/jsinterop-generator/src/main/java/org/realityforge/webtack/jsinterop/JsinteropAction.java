@@ -469,8 +469,8 @@ final class JsinteropAction
       for ( final MixinDefinition mixin : globalMixins )
       {
         generateConstants( JsUtil.toJsName( mixin ), mixin.getConstants(), type );
-        generateStaticAttributes( mixin, mixin.getAttributes(), className, type, testType );
-        generateStaticOperations( mixin, mixin.getOperations(), className, type, testType );
+        generateStaticAttributes( mixin, mixin.getAttributes(), true, className, type, testType );
+        generateStaticOperations( mixin, mixin.getOperations(), true, className, type, testType );
         generateStaticEventsMethods( type, schema, mixin.getEvents() );
       }
 
@@ -538,8 +538,8 @@ final class JsinteropAction
     maybeAddJavadoc( definition, type );
     while ( null != definition )
     {
-      generateStaticAttributes( definition, definition.getAttributes(), className, type, testType );
-      generateStaticOperations( definition, definition.getOperations(), className, type, testType );
+      generateStaticAttributes( definition, definition.getAttributes(), true, className, type, testType );
+      generateStaticOperations( definition, definition.getOperations(), true, className, type, testType );
       generateStaticEventsMethods( type, schema, definition.getEvents() );
       definition = definition.getSuperInterface();
     }
@@ -579,6 +579,7 @@ final class JsinteropAction
 
   private void generateStaticAttributes( @Nonnull final NamedDefinition definition,
                                          @Nonnull final List<AttributeMember> attributes,
+                                         final boolean isGlobal,
                                          @Nonnull final ClassName className,
                                          @Nonnull final TypeSpec.Builder type,
                                          @Nonnull final TypeSpec.Builder testType )
@@ -586,27 +587,29 @@ final class JsinteropAction
     attributes
       .stream()
       .sorted( Comparator.comparing( NamedElement::getName ) )
-      .forEach( attribute -> generateStaticAttribute( definition, attribute, className, type, testType ) );
+      .forEach( attribute -> generateStaticAttribute( definition, attribute, isGlobal, className, type, testType ) );
   }
 
   private void generateStaticAttribute( @Nonnull final NamedDefinition definition,
                                         @Nonnull final AttributeMember attribute,
+                                        final boolean isGlobal,
                                         @Nonnull final ClassName className,
                                         @Nonnull final TypeSpec.Builder type,
                                         @Nonnull final TypeSpec.Builder testType )
   {
     if ( attribute.getModifiers().contains( AttributeMember.Modifier.READ_ONLY ) )
     {
-      generateStaticReadOnlyAttribute( definition, attribute, className, type, testType );
+      generateStaticReadOnlyAttribute( definition, attribute, isGlobal, className, type, testType );
     }
     else
     {
-      generateStaticReadWriteAttribute( attribute, className, type, testType );
+      generateStaticReadWriteAttribute( attribute, isGlobal, className, type, testType );
     }
   }
 
   private void generateStaticReadOnlyAttribute( @Nonnull final NamedDefinition definition,
                                                 @Nonnull final AttributeMember attribute,
+                                                final boolean isGlobal,
                                                 @Nonnull final ClassName className,
                                                 @Nonnull final TypeSpec.Builder type,
                                                 @Nonnull final TypeSpec.Builder testType )
@@ -624,23 +627,36 @@ final class JsinteropAction
       generateStaticOptionalSupportGuard( definition, attribute, attribute.getName(), className, type, testType );
     }
 
-    final Type attributeType = attribute.getType();
+    final Type attributeType =
+      isGlobal ? deriveAttributeType( attribute, ExtendedAttributes.GLOBAL_TYPE_OVERRIDE ) : attribute.getType();
     final WebIDLSchema schema = getSchema();
     final Type actualType = schema.resolveType( attributeType );
+
+    final boolean requireOverlay = OutputType.j2cl == _outputType && !attributeType.equals( attribute.getType() );
+
     final String name = attribute.getName();
     final TypeName actualJavaType = toTypeName( actualType );
     final String javaName = safeJsPropertyMethodName( name, TypeName.BOOLEAN.equals( actualJavaType ) );
     final MethodSpec.Builder method =
       MethodSpec
-        .methodBuilder( javaName )
-        .addModifiers( Modifier.PUBLIC, Modifier.STATIC, Modifier.NATIVE )
+        .methodBuilder( ( requireOverlay ? "_" : "" ) + javaName )
+        .addModifiers( requireOverlay ? Modifier.PRIVATE : Modifier.PUBLIC,
+                       Modifier.STATIC,
+                       Modifier.NATIVE )
         .returns( actualJavaType )
         .addAnnotation( AnnotationSpec
                           .builder( JsinteropTypes.JS_PROPERTY )
                           .addMember( "name", "$S", JsUtil.toJsName( attribute ) )
                           .build() );
-    maybeAddCustomAnnotations( attribute, method );
-    maybeAddJavadoc( attribute, method );
+    final MethodSpec.Builder overlayMethod =
+      MethodSpec
+        .methodBuilder( javaName )
+        .returns( toTypeName( attribute.getType() ) )
+        .addAnnotation( JsinteropTypes.JS_OVERLAY )
+        .addModifiers( Modifier.PUBLIC, Modifier.STATIC, Modifier.FINAL );
+
+    maybeAddCustomAnnotations( attribute, requireOverlay ? overlayMethod : method );
+    maybeAddJavadoc( attribute, requireOverlay ? overlayMethod : method );
     if ( schema.isNullable( attributeType ) )
     {
       method.addAnnotation( JsinteropTypes.JS_NULLABLE );
@@ -650,13 +666,28 @@ final class JsinteropAction
       method.addAnnotation( JsinteropTypes.JS_NONNULL );
     }
     addMagicConstantAnnotationIfNeeded( actualType, method );
+
+    final Kind kind = attribute.getType().getKind();
+    if ( requireOverlay && Kind.TypeReference != kind )
+    {
+      // This scenario does not exist atm so no need to expend effort to support scenario
+      throw new IllegalStateException( "Synthesized union type consisting of more than just " +
+                                       "type references is not supported" );
+    }
+
+    if ( requireOverlay )
+    {
+      overlayMethod.addStatement( "return $T.uncheckedCast( $N() )", JsinteropTypes.JS, "_" + javaName );
+      type.addMethod( overlayMethod.build() );
+    }
+
     type.addMethod( method.build() );
 
     final MethodSpec.Builder testMethod =
       MethodSpec
         .methodBuilder( javaName )
         .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
-        .returns( actualJavaType )
+        .returns( toTypeName( schema.resolveType( attribute.getType() ) ) )
         .addStatement( "return $T.$N()", className, javaName );
     final DocumentationElement documentation = attribute.getDocumentation();
     if ( null != documentation && documentation.hasDeprecatedTag() )
@@ -667,12 +698,30 @@ final class JsinteropAction
   }
 
   private void generateStaticReadWriteAttribute( @Nonnull final AttributeMember attribute,
+                                                 final boolean isGlobal,
                                                  @Nonnull final ClassName className,
                                                  @Nonnull final TypeSpec.Builder type,
                                                  @Nonnull final TypeSpec.Builder testType )
   {
     assert !attribute.getModifiers().contains( AttributeMember.Modifier.READ_ONLY );
-    final Type attributeType = attribute.getType();
+    final Type attributeType =
+      isGlobal ? deriveAttributeType( attribute, ExtendedAttributes.GLOBAL_TYPE_OVERRIDE ) : attribute.getType();
+    if ( !attribute.getType().equals( attributeType ) )
+    {
+      generateStaticReadWriteAttributeAsMethodPair( attribute, className, type, testType, attributeType );
+    }
+    else
+    {
+      generateStaticReadWriteAttributeAsField( attribute, className, type, testType, attributeType );
+    }
+  }
+
+  private void generateStaticReadWriteAttributeAsField( @Nonnull final AttributeMember attribute,
+                                                        @Nonnull final ClassName className,
+                                                        @Nonnull final TypeSpec.Builder type,
+                                                        @Nonnull final TypeSpec.Builder testType,
+                                                        @Nonnull final Type attributeType )
+  {
     final WebIDLSchema schema = getSchema();
     final Type actualType = schema.resolveType( attributeType );
     final String fieldName = javaName( attribute );
@@ -711,6 +760,105 @@ final class JsinteropAction
         .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
         .addStatement( "$T.$N = value", className, fieldName )
         .addParameter( ParameterSpec.builder( actualJavaType, "value", Modifier.FINAL ).build() );
+
+    final DocumentationElement documentation = attribute.getDocumentation();
+    if ( null != documentation && documentation.hasDeprecatedTag() )
+    {
+      testReadMethod.addAnnotation( Deprecated.class );
+      testWriteMethod.addAnnotation( Deprecated.class );
+    }
+    testType.addMethod( testReadMethod.build() );
+    testType.addMethod( testWriteMethod.build() );
+  }
+
+  private void generateStaticReadWriteAttributeAsMethodPair( @Nonnull final AttributeMember attribute,
+                                                             @Nonnull final ClassName className,
+                                                             @Nonnull final TypeSpec.Builder type,
+                                                             @Nonnull final TypeSpec.Builder testType,
+                                                             @Nonnull final Type attributeType )
+  {
+    final boolean requireOverlay = OutputType.j2cl == _outputType && !attribute.getType().equals( attributeType );
+
+    final WebIDLSchema schema = getSchema();
+    final Type actualType = schema.resolveType( attributeType );
+    final String fieldName = javaName( attribute );
+    final TypeName actualJavaType = toTypeName( actualType );
+
+    final MethodSpec.Builder readMethod =
+      MethodSpec
+        .methodBuilder( ( requireOverlay ? "_" : "" ) + fieldName )
+        .addModifiers( requireOverlay ? Modifier.PRIVATE : Modifier.PUBLIC,
+                       Modifier.STATIC,
+                       Modifier.NATIVE )
+        .returns( actualJavaType );
+    final MethodSpec.Builder writeMethod =
+      MethodSpec
+        .methodBuilder( "set" + NamingUtil.uppercaseFirstCharacter( fieldName ) )
+        .addModifiers( Modifier.PUBLIC, Modifier.STATIC, Modifier.NATIVE );
+    final MethodSpec.Builder overlayMethod =
+      MethodSpec
+        .methodBuilder( fieldName )
+        .addAnnotation( JsinteropTypes.JS_OVERLAY )
+        .addModifiers( Modifier.PUBLIC, Modifier.STATIC, Modifier.FINAL )
+        .returns( toTypeName( attribute.getType() ) );
+
+    maybeAddCustomAnnotations( attribute, requireOverlay ? overlayMethod : readMethod );
+    maybeAddJavadoc( attribute, requireOverlay ? overlayMethod : readMethod );
+    addMagicConstantAnnotationIfNeeded( actualType, requireOverlay ? overlayMethod : readMethod );
+    final String jsName = JsUtil.toJsName( attribute );
+    if ( requireOverlay || !fieldName.equals( jsName ) )
+    {
+      readMethod.addAnnotation( AnnotationSpec
+                                  .builder( JsinteropTypes.JS_PROPERTY )
+                                  .addMember( "name", "$S", jsName )
+                                  .build() );
+      writeMethod.addAnnotation( AnnotationSpec
+                                   .builder( JsinteropTypes.JS_PROPERTY )
+                                   .addMember( "name", "$S", jsName )
+                                   .build() );
+    }
+
+    final ParameterSpec.Builder writeParameter =
+      ParameterSpec.builder( toTypeName( attribute.getType() ), "value", Modifier.FINAL );
+    if ( schema.isNullable( attributeType ) )
+    {
+      readMethod.addAnnotation( JsinteropTypes.JS_NULLABLE );
+      writeParameter.addAnnotation( JsinteropTypes.JS_NULLABLE );
+    }
+    else if ( !actualType.getKind().isPrimitive() )
+    {
+      readMethod.addAnnotation( JsinteropTypes.JS_NONNULL );
+      writeParameter.addAnnotation( JsinteropTypes.JS_NONNULL );
+    }
+    final Kind kind = attribute.getType().getKind();
+    if ( requireOverlay && Kind.TypeReference != kind )
+    {
+      // This scenario does not exist atm so no need to expend effort to support scenario
+      throw new IllegalStateException( "Synthesized union type consisting of more than just " +
+                                       "type references is not supported" );
+    }
+
+    if ( requireOverlay )
+    {
+      overlayMethod.addStatement( "return $T.uncheckedCast( $N() )", JsinteropTypes.JS, "_" + fieldName );
+      type.addMethod( overlayMethod.build() );
+    }
+    type.addMethod( readMethod.build() );
+    writeMethod.addParameter( writeParameter.build() );
+    type.addMethod( writeMethod.build() );
+
+    final MethodSpec.Builder testReadMethod =
+      MethodSpec
+        .methodBuilder( fieldName )
+        .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+        .returns( toTypeName( attribute.getType() ) )
+        .addStatement( "return $T.$N()", className, fieldName );
+    final MethodSpec.Builder testWriteMethod =
+      MethodSpec
+        .methodBuilder( fieldName )
+        .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+        .addStatement( "$T.$N( value )", className, "set" + NamingUtil.uppercaseFirstCharacter( fieldName ) )
+        .addParameter( ParameterSpec.builder( toTypeName( attribute.getType() ), "value", Modifier.FINAL ).build() );
 
     final DocumentationElement documentation = attribute.getDocumentation();
     if ( null != documentation && documentation.hasDeprecatedTag() )
@@ -1270,19 +1418,33 @@ final class JsinteropAction
                             .addStatement( "return $T.cast( value )", JsinteropTypes.JS )
                             .returns( self )
                             .build() );
+          final MethodSpec.Builder testOfMethod = MethodSpec
+            .methodBuilder( "of" )
+            .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+            .returns( self )
+            .addStatement( "return $T.$N( $N )", self, "of", "value" );
+
           final ParameterSpec.Builder testParameter =
             ParameterSpec.builder( typedValue.getJavaType(), "value", Modifier.FINAL );
+          if ( Kind.TypeReference == memberType.getKind() )
+          {
+            final String name = ( (TypeReference) memberType ).getName();
+            final boolean referencesFunctionType = null != getSchema().findCallbackByName( name );
+            if ( referencesFunctionType )
+            {
+              // If the elements of a union are a @FunctionalInterface then overloading the
+              // of methods could be ambiguous so suppress the warning
+              testOfMethod.addAnnotation( AnnotationSpec
+                                            .builder( SuppressWarnings.class )
+                                            .addMember( "value", "$S", "overloads" )
+                                            .build() );
+            }
+          }
 
           addMagicConstantAnnotationIfNeeded( typedValue.getType(), testParameter );
+          testOfMethod.addParameter( testParameter.build() );
 
-          testType.addMethod( MethodSpec
-                                .methodBuilder( "of" )
-                                .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
-                                .returns( self )
-                                .addParameter( ParameterSpec.builder( self, "$instance", Modifier.FINAL ).build() )
-                                .addParameter( testParameter.build() )
-                                .addStatement( "return $T.$N( $N )", self, "of", "value" )
-                                .build() );
+          testType.addMethod( testOfMethod.build() );
         }
       }
     }
@@ -1666,7 +1828,7 @@ final class JsinteropAction
   }
 
   @Nonnull
-  private String getMutatorName( @Nonnull final DictionaryMember member )
+  private String getMutatorName( @Nonnull final NamedElement member )
   {
     return "set" + NamingUtil.uppercaseFirstCharacter( member.getName() );
   }
@@ -1857,7 +2019,7 @@ final class JsinteropAction
       .sorted()
       .forEach( operation -> generateOperation( definition,
                                                 operation,
-                                                deriveOperationReturnType( operation ),
+                                                deriveReturnType( operation, ExtendedAttributes.TYPE_OVERRIDE ),
                                                 className,
                                                 type,
                                                 testType ) );
@@ -1914,7 +2076,7 @@ final class JsinteropAction
   }
 
   @Nonnull
-  private Type deriveOperationReturnType( @Nonnull final OperationMember operation )
+  private Type deriveReturnType( @Nonnull final OperationMember operation, @Nonnull final String typeOverrideKey )
   {
     final Type returnType = operation.getReturnType();
     if ( OutputType.gwt == _outputType )
@@ -1925,7 +2087,7 @@ final class JsinteropAction
     }
     else
     {
-      final String typeOverride = operation.getIdentValue( ExtendedAttributes.TYPE_OVERRIDE );
+      final String typeOverride = operation.getIdentValue( typeOverrideKey );
       final TypedefDefinition typeOverrideType =
         null == typeOverride ? null : getSchema().getTypedefByName( typeOverride );
       return null != typeOverrideType ?
@@ -1934,6 +2096,31 @@ final class JsinteropAction
                                 returnType.isNullable(),
                                 returnType.getSourceLocations() ) :
              returnType;
+    }
+  }
+
+  @SuppressWarnings( "SameParameterValue" )
+  @Nonnull
+  private Type deriveAttributeType( @Nonnull final AttributeMember operation, @Nonnull final String typeOverrideKey )
+  {
+    final Type type = operation.getType();
+    if ( OutputType.gwt == _outputType )
+    {
+      // GWT does not need to jump through hoops to align types.
+      // We only care about merging return types in closure binding due to the way the type system works.
+      return type;
+    }
+    else
+    {
+      final String typeOverride = operation.getIdentValue( typeOverrideKey );
+      final TypedefDefinition typeOverrideType =
+        null == typeOverride ? null : getSchema().getTypedefByName( typeOverride );
+      return null != typeOverrideType ?
+             new TypeReference( typeOverride,
+                                Collections.emptyList(),
+                                type.isNullable(),
+                                type.getSourceLocations() ) :
+             type;
     }
   }
 
@@ -2184,8 +2371,8 @@ final class JsinteropAction
     writeGeneratedAnnotation( testType );
 
     generateConstants( JsUtil.toJsName( definition ), definition.getConstants(), type );
-    generateStaticAttributes( definition, definition.getAttributes(), className, type, testType );
-    generateStaticOperations( definition, definition.getOperations(), className, type, testType );
+    generateStaticAttributes( definition, definition.getAttributes(), false, className, type, testType );
+    generateStaticOperations( definition, definition.getOperations(), false, className, type, testType );
 
     type.addMethod( MethodSpec.constructorBuilder().addModifiers( Modifier.PRIVATE ).build() );
 
@@ -2202,6 +2389,7 @@ final class JsinteropAction
 
   private void generateStaticOperations( @Nonnull final NamedDefinition definition,
                                          @Nonnull final List<OperationMember> operations,
+                                         final boolean isGlobal,
                                          @Nonnull final ClassName className,
                                          @Nonnull final TypeSpec.Builder type,
                                          @Nonnull final TypeSpec.Builder testType )
@@ -2217,7 +2405,7 @@ final class JsinteropAction
                OperationMember.Kind.DELETER == operationKind ) &&
              null != operation.getName() ) )
       {
-        generateNamespaceOperation( definition, operation, className, type, testType );
+        generateStaticOperation( definition, operation, isGlobal, className, type, testType );
       }
     }
   }
@@ -2291,7 +2479,7 @@ final class JsinteropAction
       final boolean processed =
         generateOperation( definition,
                            operation,
-                           deriveOperationReturnType( operation ),
+                           deriveReturnType( operation, ExtendedAttributes.TYPE_OVERRIDE ),
                            className,
                            type,
                            testType );
@@ -3725,11 +3913,12 @@ final class JsinteropAction
     }
   }
 
-  private void generateNamespaceOperation( @Nonnull final NamedDefinition definition,
-                                           @Nonnull final OperationMember operation,
-                                           @Nonnull final ClassName className,
-                                           @Nonnull final TypeSpec.Builder type,
-                                           @Nonnull final TypeSpec.Builder testType )
+  private void generateStaticOperation( @Nonnull final NamedDefinition definition,
+                                        @Nonnull final OperationMember operation,
+                                        final boolean isGlobal,
+                                        @Nonnull final ClassName className,
+                                        @Nonnull final TypeSpec.Builder type,
+                                        @Nonnull final TypeSpec.Builder testType )
   {
     final String name = operation.getName();
     assert null != name;
@@ -3743,6 +3932,8 @@ final class JsinteropAction
       generateStaticOptionalSupportGuard( definition, operation, name, className, type, testType );
     }
 
+    final Type returnType =
+      isGlobal ? deriveReturnType( operation, ExtendedAttributes.GLOBAL_TYPE_OVERRIDE ) : operation.getReturnType();
     final List<Argument> arguments = operation.getArguments();
     final int argCount = arguments.size();
     final long optionalCount = arguments.stream().filter( Argument::isOptional ).count();
@@ -3753,18 +3944,21 @@ final class JsinteropAction
         explodeTypeList( argumentList.stream().map( Argument::getType ).collect( Collectors.toList() ) );
       for ( final List<TypedValue> typeList : explodedTypeList )
       {
-        generateNamespaceOperation( operation, argumentList, typeList, className, type, testType );
+        generateStaticOperation( operation, returnType, argumentList, typeList, className, type, testType );
       }
     }
   }
 
-  private void generateNamespaceOperation( @Nonnull final OperationMember operation,
-                                           @Nonnull final List<Argument> arguments,
-                                           @Nonnull final List<TypedValue> typeList,
-                                           @Nonnull final ClassName className,
-                                           @Nonnull final TypeSpec.Builder type,
-                                           @Nonnull final TypeSpec.Builder testType )
+  private void generateStaticOperation( @Nonnull final OperationMember operation,
+                                        @Nonnull final Type returnType,
+                                        @Nonnull final List<Argument> arguments,
+                                        @Nonnull final List<TypedValue> typeList,
+                                        @Nonnull final ClassName className,
+                                        @Nonnull final TypeSpec.Builder type,
+                                        @Nonnull final TypeSpec.Builder testType )
   {
+    final boolean requireOverlay = OutputType.j2cl == _outputType && !operation.getReturnType().equals( returnType );
+
     final String name = operation.getName();
     assert null != name;
     final String jsName = JsUtil.toJsName( operation );
@@ -3772,11 +3966,20 @@ final class JsinteropAction
     final String methodName = javaMethodName( name, operation );
     final MethodSpec.Builder method =
       MethodSpec
+        .methodBuilder( ( requireOverlay ? "_" : "" ) + methodName )
+        .addModifiers( requireOverlay ? Modifier.PRIVATE : Modifier.PUBLIC,
+                       Modifier.STATIC,
+                       Modifier.NATIVE );
+
+    final MethodSpec.Builder overlayMethod =
+      MethodSpec
         .methodBuilder( methodName )
-        .addModifiers( Modifier.PUBLIC, Modifier.STATIC, Modifier.NATIVE );
-    maybeAddCustomAnnotations( operation, method );
-    maybeAddJavadoc( operation, method );
-    if ( !methodName.equals( jsName ) )
+        .addAnnotation( JsinteropTypes.JS_OVERLAY )
+        .addModifiers( Modifier.PUBLIC, Modifier.STATIC, Modifier.FINAL );
+
+    maybeAddCustomAnnotations( operation, requireOverlay ? overlayMethod : method );
+    maybeAddJavadoc( operation, requireOverlay ? overlayMethod : method );
+    if ( requireOverlay || !methodName.equals( jsName ) )
     {
       method.addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_METHOD )
                               .addMember( "name", "$S", jsName )
@@ -3787,7 +3990,7 @@ final class JsinteropAction
     {
       method.addAnnotation( JsinteropTypes.HAS_NO_SIDE_EFFECTS );
     }
-    final Type returnType = operation.getReturnType();
+    emitReturnType( operation, operation.getReturnType(), overlayMethod );
     emitReturnType( operation, returnType, method );
 
     final MethodSpec.Builder testMethod =
@@ -3801,12 +4004,36 @@ final class JsinteropAction
 
     emitTestReturnType( operation, returnType, testMethod );
 
+    final StringBuilder overlayCallStatement = new StringBuilder();
+    final List<Object> overlayCallArgs = new ArrayList<>();
+
     final StringBuilder testCallStatement = new StringBuilder();
     final List<Object> testCallArgs = new ArrayList<>();
     if ( Kind.Void != returnType.getKind() )
     {
+      overlayCallStatement.append( "return " );
       testCallStatement.append( "return " );
     }
+
+    final Type actualReturnType = operation.getReturnType();
+    final Kind kind = actualReturnType.getKind();
+    if ( requireOverlay )
+    {
+      if ( Kind.TypeReference == kind )
+      {
+        overlayCallStatement.append( "$T.uncheckedCast( " );
+        overlayCallArgs.add( JsinteropTypes.JS );
+      }
+      else if ( Kind.Void != kind )
+      {
+        // This scenario does not exist atm so no need to expend effort to support scenario
+        throw new IllegalStateException( "Synthesized union type consisting of more than just " +
+                                         "type references is not supported" );
+      }
+    }
+    overlayCallStatement.append( "$N(" );
+    overlayCallArgs.add( "_" + methodName );
+
     testCallStatement.append( "$T.$N(" );
     testCallArgs.add( className );
     testCallArgs.add( methodName );
@@ -3816,24 +4043,44 @@ final class JsinteropAction
     {
       if ( 0 == index )
       {
+        overlayCallStatement.append( " " );
         testCallStatement.append( " " );
       }
       else
       {
+        overlayCallStatement.append( ", " );
         testCallStatement.append( ", " );
       }
+      overlayCallStatement.append( "$N" );
+      overlayCallArgs.add( javaName( argument ) );
+
       testCallStatement.append( "$N" );
       testCallArgs.add( javaName( argument ) );
       final TypedValue typedValue = typeList.get( index++ );
+      generateArgument( argument, typedValue, false, false, overlayMethod, null );
       generateArgument( argument, typedValue, false, false, method, testMethod );
     }
-    type.addMethod( method.build() );
 
     if ( !arguments.isEmpty() )
     {
+      overlayCallStatement.append( " " );
       testCallStatement.append( " " );
     }
+    overlayCallStatement.append( ")" );
     testCallStatement.append( ")" );
+
+    if ( requireOverlay && Kind.TypeReference == kind )
+    {
+      overlayCallStatement.append( " )" );
+    }
+
+    overlayMethod.addStatement( overlayCallStatement.toString(), overlayCallArgs.toArray() );
+    if ( requireOverlay )
+    {
+      type.addMethod( overlayMethod.build() );
+    }
+
+    type.addMethod( method.build() );
 
     testMethod.addStatement( testCallStatement.toString(), testCallArgs.toArray() );
     testType.addMethod( testMethod.build() );

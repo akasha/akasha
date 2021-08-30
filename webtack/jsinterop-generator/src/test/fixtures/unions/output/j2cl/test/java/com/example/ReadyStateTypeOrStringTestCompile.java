@@ -4,13 +4,11 @@ import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class ReadyStateTypeOrStringTestCompile {
-  public static ReadyStateTypeOrString of(final ReadyStateTypeOrString $instance,
-      @ReadyStateType final int value) {
+  public static ReadyStateTypeOrString of(@ReadyStateType final int value) {
     return ReadyStateTypeOrString.of( value );
   }
 
-  public static ReadyStateTypeOrString of(final ReadyStateTypeOrString $instance,
-      final String value) {
+  public static ReadyStateTypeOrString of(final String value) {
     return ReadyStateTypeOrString.of( value );
   }
 

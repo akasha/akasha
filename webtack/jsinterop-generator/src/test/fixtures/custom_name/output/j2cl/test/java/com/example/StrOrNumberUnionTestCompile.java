@@ -4,11 +4,11 @@ import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class StrOrNumberUnionTestCompile {
-  public static StrOrNumberUnion of(final StrOrNumberUnion $instance, final String value) {
+  public static StrOrNumberUnion of(final String value) {
     return StrOrNumberUnion.of( value );
   }
 
-  public static StrOrNumberUnion of(final StrOrNumberUnion $instance, final double value) {
+  public static StrOrNumberUnion of(final double value) {
     return StrOrNumberUnion.of( value );
   }
 
