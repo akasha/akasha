@@ -1,6 +1,10 @@
 # Change Log
 
-### Unreleased
+### [v0.22](https://github.com/akasha/akasha/tree/v0.22) (2021-08-30) · [Full Changelog](https://github.com/spritz/spritz/compare/v0.21...v0.22) · [API Differences](https://akasha.github.io/akasha-java/api-diff/?key=akasha-java&old=0.21&new=0.22) · [Source Diff](https://github.com/akasha/akasha-java/compare/v0.21...v0.22)
+
+The release includes 554 non breaking API changes, 854 potentially breaking API changes and 143 breaking API changes.
+
+Changes in this release:
 
 * Add the `Resize Observer` spec at `W3C First Public Working Draft, 11 February 2020` version to set of specs that are used to generated the browser API. This added the `ResizeObserver` type and related infrastructure.
 * Fix a bug mapping the `WindowGlobal` type that was introduced in version `0.20` when using the `xsiframe` linker from within a GWT application. The fix is to use the `<window>` namespace rather than the `<global>` namespace.
