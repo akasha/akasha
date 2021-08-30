@@ -1632,6 +1632,9 @@
     },
     {
       "name": "ExtendObject"
+    },
+    {
+      "name": "JsSymbolDedup"
     }
   ]
 }
