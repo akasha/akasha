@@ -15,7 +15,7 @@ import org.jetbrains.annotations.ApiStatus;
     name = "?"
 )
 @ApiStatus.Internal
-public interface DocumentOrWindowUnion {
+interface DocumentOrWindowUnion {
   @JsOverlay
   @Nonnull
   static DocumentOrWindowUnion of(@Nonnull final Document value) {

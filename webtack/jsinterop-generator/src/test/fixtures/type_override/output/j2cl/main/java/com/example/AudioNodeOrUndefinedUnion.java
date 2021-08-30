@@ -15,7 +15,7 @@ import org.jetbrains.annotations.ApiStatus;
     name = "AudioNodeOrUndefinedUnion"
 )
 @ApiStatus.Internal
-public interface AudioNodeOrUndefinedUnion {
+interface AudioNodeOrUndefinedUnion {
   @JsOverlay
   @Nonnull
   static AudioNodeOrUndefinedUnion of(@Nonnull final AudioNode value) {

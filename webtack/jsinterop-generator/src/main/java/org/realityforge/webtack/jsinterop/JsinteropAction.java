@@ -169,9 +169,14 @@ final class JsinteropAction
         }
         else
         {
+          // In the future we may use another extended attribute but for now [Internal] works
+          // as all the cases that Internal is used, they are used within the same package
+          final boolean packageAccess =
+            definition.isNoArgsExtendedAttributePresent( ExtendedAttributes.INTERNAL );
           generateUnion( definition.getName(),
                          JsUtil.toJsName( definition ),
                          lookupClassName( definition.getName() ).simpleName(),
+                         packageAccess,
                          unionType,
                          getAnnotationStream( definition ).collect( Collectors.toList() ) );
         }
@@ -256,6 +261,7 @@ final class JsinteropAction
         generateUnion( name,
                        name,
                        NamingUtil.uppercaseFirstCharacter( name ),
+                       false,
                        entry.getValue(),
                        Collections.emptyList() );
       }
@@ -1038,6 +1044,7 @@ final class JsinteropAction
   private void generateUnion( @Nonnull final String idlName,
                               @Nonnull final String jsName,
                               @Nonnull final String javaName,
+                              final boolean packageAccess,
                               @Nonnull final UnionType unionType,
                               @Nonnull final Collection<ClassName> additionalAnnotations )
     throws IOException
@@ -1047,8 +1054,11 @@ final class JsinteropAction
     final ClassName className = ClassName.bestGuess( qualifiedName );
     final TypeSpec.Builder type =
       TypeSpec
-        .interfaceBuilder( javaName )
-        .addModifiers( Modifier.PUBLIC );
+        .interfaceBuilder( javaName );
+    if ( !packageAccess )
+    {
+      type.addModifiers( Modifier.PUBLIC );
+    }
     writeGeneratedAnnotation( type );
     type.addAnnotation( AnnotationSpec
                           .builder( JsinteropTypes.JS_TYPE )
