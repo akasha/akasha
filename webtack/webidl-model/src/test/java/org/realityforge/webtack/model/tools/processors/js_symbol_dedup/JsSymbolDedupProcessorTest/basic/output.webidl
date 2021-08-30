@@ -5,9 +5,6 @@ typedef ( AudioNode or undefined ) AudioNodeOrUndefinedUnion;
 typedef ( Document or Window ) DocumentOrWindowUnion;
 
 [Internal, Synthetic]
-typedef ( Element? or HTMLOptionElement? )? ElementOrHTMLOptionElementUnion;
-
-[Internal, Synthetic]
 typedef ( EventHandler? or MessageEventHandler? )? EventHandlerOrMessageEventHandlerUnion;
 
 [Internal, Synthetic]
@@ -83,9 +80,7 @@ interface ExtendableMessageEvent : MessageEvent {
 };
 
 interface HTMLCollection : Object {
-  [TypeOverride=ElementOrHTMLOptionElementUnion]
   getter Element? item( unsigned long index );
-  [TypeOverride=ElementOrHTMLOptionElementUnion]
   getter Element? namedItem( DOMString name );
 };
 
@@ -93,9 +88,7 @@ interface HTMLOptionElement : Element {
 };
 
 interface HTMLOptionsCollection : HTMLCollection {
-  [TypeOverride=ElementOrHTMLOptionElementUnion]
   getter HTMLOptionElement? item( unsigned long index );
-  [TypeOverride=ElementOrHTMLOptionElementUnion]
   getter HTMLOptionElement? namedItem( DOMString name );
 };
 

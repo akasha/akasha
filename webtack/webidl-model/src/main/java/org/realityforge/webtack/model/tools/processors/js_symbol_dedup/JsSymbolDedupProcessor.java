@@ -2,13 +2,11 @@ package org.realityforge.webtack.model.tools.processors.js_symbol_dedup;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.Stack;
 import java.util.stream.Collectors;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -25,14 +23,12 @@ import org.realityforge.webtack.model.IncludesStatement;
 import org.realityforge.webtack.model.InterfaceDefinition;
 import org.realityforge.webtack.model.Kind;
 import org.realityforge.webtack.model.MixinDefinition;
-import org.realityforge.webtack.model.NamedDefinition;
 import org.realityforge.webtack.model.NamespaceDefinition;
 import org.realityforge.webtack.model.OperationMember;
 import org.realityforge.webtack.model.PartialDictionaryDefinition;
 import org.realityforge.webtack.model.PartialInterfaceDefinition;
 import org.realityforge.webtack.model.PartialMixinDefinition;
 import org.realityforge.webtack.model.PartialNamespaceDefinition;
-import org.realityforge.webtack.model.PromiseType;
 import org.realityforge.webtack.model.SequenceType;
 import org.realityforge.webtack.model.Type;
 import org.realityforge.webtack.model.TypeReference;
@@ -175,10 +171,9 @@ final class JsSymbolDedupProcessor
       final List<OperationMember> operations = new ArrayList<>();
       if ( isNotSpecialObjectType( input ) )
       {
-        for ( final InterfaceDefinition type : getInterfaceDefinitionsInInheritanceHierarchy( input ) )
-        {
-          operations.addAll( type.getOperations() );
-        }
+        // We very deliberately do not look at parent or child types as closure type system
+        // allows redefining the operation on parent or child types as appropriate
+        operations.addAll( input.getOperations() );
       }
 
       operations
@@ -211,31 +206,6 @@ final class JsSymbolDedupProcessor
     {
       _processingGlobalInterface = false;
     }
-  }
-
-  @Nonnull
-  private List<InterfaceDefinition> getInterfaceDefinitionsInInheritanceHierarchy( @Nonnull final InterfaceDefinition input )
-  {
-    final Set<InterfaceDefinition> types = new HashSet<>();
-    final Stack<InterfaceDefinition> toDescendDown = new Stack<>();
-    toDescendDown.add( input );
-    while ( !toDescendDown.isEmpty() )
-    {
-      final InterfaceDefinition current = toDescendDown.pop();
-      types.add( current );
-      toDescendDown.addAll( current.getDirectSubInterfaces() );
-    }
-
-    InterfaceDefinition current = input;
-    while ( null != current )
-    {
-      if ( isNotSpecialObjectType( current ) )
-      {
-        types.add( current );
-      }
-      current = current.getSuperInterface();
-    }
-    return types.stream().sorted( Comparator.comparing( NamedDefinition::getName ) ).collect( Collectors.toList() );
   }
 
   @Nullable
