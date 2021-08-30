@@ -48,6 +48,7 @@ public class MarkerTypeUnionValidatorTest
     assertErrorPresent( errors,
                         "Typedef named 'TexBufferSource' has the MarkerType extended attribute but contains a member type 'TexImageSource' that is not a reference to an interface, a reference to a dictionary or a typedef with the MarkerType extended attribute." );
   }
+
   @Test
   public void invalidReferenceMarkerTypeUnion()
   {

@@ -39,7 +39,8 @@ public final class JsinteropTypes
   @Nonnull
   public static final ClassName DO_NOT_AUTOBOX = ClassName.get( "javaemul.internal.annotations", "DoNotAutobox" );
   @Nonnull
-  public static final ClassName HAS_NO_SIDE_EFFECTS = ClassName.get( "javaemul.internal.annotations", "HasNoSideEffects" );
+  public static final ClassName HAS_NO_SIDE_EFFECTS =
+    ClassName.get( "javaemul.internal.annotations", "HasNoSideEffects" );
 
   private JsinteropTypes()
   {
