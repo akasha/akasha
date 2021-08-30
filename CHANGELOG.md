@@ -37,6 +37,7 @@
   - **WorkerGlobalScope**: `offline` `online` `rejectionhandled` `unhandledrejection`
   - **XMLHttpRequestEventTarget**: `abort` `error` `load` `loadend` `loadstart` `progress` `timeout`
 * Move the classes `IDBObjectStoreOrIDBIndexUnion` and `IDBObjectStoreOrIDBIndexOrIDBCursorUnion` from the `akasha.indexdb` package to the `akasha.idb` package. This was done to align with the rename of `indexDB` package that occurred prior to the initial release of akasha.
+* Annotate several synthesized unions with the `@org.jetbrains.annotations.ApiStatus.Internal` annotation to make it clear that these types should not be used in user code. IntelliJ IDE will also generate a warning if user code interacts directly with internal types.
 
 ### [v0.21](https://github.com/akasha/akasha/tree/v0.21) (2021-08-18) · [Full Changelog](https://github.com/spritz/spritz/compare/v0.20...v0.21) · [Source Diff](https://github.com/akasha/akasha-java/compare/v0.20...v0.21)
 

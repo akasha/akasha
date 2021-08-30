@@ -4629,13 +4629,19 @@ final class JsinteropAction
   @Nonnull
   private Stream<ClassName> getAnnotationStream( @Nonnull final AttributedNode element )
   {
-    return element
-      .getExtendedAttributes()
-      .stream()
-      .filter( a -> ExtendedAttribute.Kind.NAMED_STRING == a.getKind() &&
-                    a.getName().equals( ExtendedAttributes.JAVA_ANNOTATION ) )
-      .map( ExtendedAttribute::getValue )
-      .map( ClassName::bestGuess );
+    final Stream<ClassName> accessAnnotations =
+      element.isNoArgsExtendedAttributePresent( ExtendedAttributes.INTERNAL ) ?
+      Stream.of( BasicTypes.INTERNAL_API ) :
+      Stream.empty();
+    final Stream<ClassName> declaredAnnotations =
+      element
+        .getExtendedAttributes()
+        .stream()
+        .filter( a -> ExtendedAttribute.Kind.NAMED_STRING == a.getKind() &&
+                      a.getName().equals( ExtendedAttributes.JAVA_ANNOTATION ) )
+        .map( ExtendedAttribute::getValue )
+        .map( ClassName::bestGuess );
+    return Stream.concat( declaredAnnotations, accessAnnotations );
   }
 
   private void maybeAddJavadoc( @Nonnull final Element element, @Nonnull final FieldSpec.Builder field )

@@ -15,6 +15,8 @@ public final class BasicTypes
   public static final ClassName NULLABLE = ClassName.get( "javax.annotation", "Nullable" );
   @Nonnull
   public static final ClassName MAGIC_CONSTANT = ClassName.get( "org.intellij.lang.annotations", "MagicConstant" );
+  @Nonnull
+  public static final ClassName INTERNAL_API = ClassName.bestGuess( "org.jetbrains.annotations.ApiStatus.Internal" );
 
   private BasicTypes()
   {
