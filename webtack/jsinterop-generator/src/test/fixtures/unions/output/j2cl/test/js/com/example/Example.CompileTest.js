@@ -43,6 +43,8 @@ goog.require('com.example.JsObject.$Overlay');
 goog.require('com.example.JsObjectTestCompile');
 goog.require('com.example.MyDictionary.$Overlay');
 goog.require('com.example.MyDictionaryOrStringTestCompile');
+goog.require('com.example.OnBufferSourceHandlerTestCompile');
+goog.require('com.example.OnErrorEventHandlerTestCompile');
 goog.require('com.example.PermissionStateOrLongTestCompile');
 goog.require('com.example.ReadyStateTypeOrStringTestCompile');
 goog.require('com.example.SomeDataContainer.$Overlay');

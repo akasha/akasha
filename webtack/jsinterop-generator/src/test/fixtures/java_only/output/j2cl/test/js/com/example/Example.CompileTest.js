@@ -11,5 +11,7 @@ goog.require('com.example.Math2.$Overlay');
 goog.require('com.example.Math2TestCompile');
 goog.require('com.example.MyType2.$Overlay');
 goog.require('com.example.MyType2TestCompile');
+goog.require('com.example.OnBlahEventHandlerTestCompile');
+goog.require('com.example.OnBleeEventHandlerTestCompile');
 goog.require('com.example.PermissionDescriptor.$Overlay');
 goog.require('com.example.PushPermissionDescriptor.$Overlay');

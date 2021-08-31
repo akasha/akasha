@@ -1846,9 +1846,11 @@ final class JsinteropAction
   private void generateCallback( @Nonnull final CallbackDefinition definition )
     throws IOException
   {
+    final ClassName className = lookupClassName( definition.getName() );
+    final String javaName = className.simpleName();
     final TypeSpec.Builder type =
       TypeSpec
-        .interfaceBuilder( lookupClassName( definition.getName() ).simpleName() )
+        .interfaceBuilder( javaName )
         .addModifiers( Modifier.PUBLIC );
     writeGeneratedAnnotation( type );
     type
@@ -1861,13 +1863,89 @@ final class JsinteropAction
         .addModifiers( Modifier.PUBLIC, Modifier.ABSTRACT );
     maybeAddCustomAnnotations( definition, method );
     emitReturnType( definition, definition.getReturnType(), method );
-    for ( final Argument argument : definition.getArguments() )
+    final List<Argument> arguments = definition.getArguments();
+
+    final String testJavaName = javaName + "TestCompile";
+    final TypeSpec.Builder testType =
+      TypeSpec
+        .classBuilder( testJavaName )
+        .addModifiers( Modifier.PUBLIC, Modifier.FINAL );
+    writeGeneratedAnnotation( testType );
+
+    final FieldSpec.Builder typeReferenceField =
+      FieldSpec.builder( className, "$typeReference$", Modifier.STATIC );
+    final DocumentationElement documentation = definition.getDocumentation();
+    if ( null != documentation && documentation.hasDeprecatedTag() )
     {
-      generateArgument( argument, asTypedValue( argument.getType(), argument.isOptional() ), false, true, method );
+      typeReferenceField.addAnnotation( Deprecated.class );
     }
+
+    testType.addField( typeReferenceField.build() );
+
+    final MethodSpec.Builder testMethod =
+      MethodSpec
+        .methodBuilder( "onInvoke" )
+        .addModifiers( Modifier.PUBLIC, Modifier.STATIC );
+
+    if ( null != documentation && documentation.hasDeprecatedTag() )
+    {
+      testMethod.addAnnotation( Deprecated.class );
+    }
+
+    emitTestReturnType( definition, definition.getReturnType(), testMethod );
+    testMethod.addParameter( ParameterSpec.builder( className, "$instance", Modifier.FINAL ).build() );
+
+    final StringBuilder testCallStatement = new StringBuilder();
+    final List<Object> testCallArgs = new ArrayList<>();
+    if ( Kind.Void != definition.getReturnType().getKind() )
+    {
+      testCallStatement.append( "return " );
+    }
+    testCallStatement.append( "$N.$N(" );
+    testCallArgs.add( "$instance" );
+    testCallArgs.add( "onInvoke" );
+
+    boolean first = true;
+    for ( final Argument argument : arguments )
+    {
+      if ( first )
+      {
+        testCallStatement.append( " " );
+        first = false;
+      }
+      else
+      {
+        testCallStatement.append( ", " );
+      }
+
+      testCallStatement.append( "$N" );
+      testCallArgs.add( javaName( argument ) );
+
+      final TypedValue typedValue = asTypedValue( argument.getType(), argument.isOptional() );
+      generateArgument( argument, typedValue, false, true, method, testMethod );
+    }
+
+    if ( !arguments.isEmpty() )
+    {
+      testCallStatement.append( " " );
+    }
+    testCallStatement.append( ")" );
+
     type.addMethod( method.build() );
 
+    testMethod.addStatement( testCallStatement.toString(), testCallArgs.toArray() );
+    testType.addMethod( testMethod.build() );
+
     writeTopLevelType( definition.getName(), type );
+
+    if ( _generateCompileTest )
+    {
+      emitJavaType( getTestJavaDirectory(),
+                    testType.build(),
+                    ClassName.get( className.packageName(), testJavaName ).toString() );
+
+      _modulesToRequireInCompileTest.add( className.canonicalName() + "TestCompile" );
+    }
   }
 
   private void generateMarkerType( @Nonnull final TypedefDefinition definition )
@@ -3879,7 +3957,7 @@ final class JsinteropAction
       testCallStatement.append( "$N" );
       testCallArgs.add( javaName( argument ) );
       final TypedValue typedValue = typeList.get( index++ );
-      generateArgument( argument, typedValue, false, false, overlayMethod, null );
+      generateArgument( argument, typedValue, false, overlayMethod );
       generateArgument( argument, typedValue, false, false, method, testMethod );
     }
 
@@ -3908,18 +3986,13 @@ final class JsinteropAction
     testType.addMethod( testMethod.build() );
   }
 
-  private void emitTestReturnType( @Nonnull final OperationMember operation,
+  private void emitTestReturnType( @Nonnull final AttributedNode operation,
                                    @Nonnull final Type returnType,
                                    @Nonnull final MethodSpec.Builder testMethod )
   {
     if ( Kind.Void != returnType.getKind() )
     {
-      final Type actualType = getSchema().resolveType( returnType );
-      final TypeName javaReturnType =
-        Kind.Sequence == actualType.getKind() ?
-        toSequenceType( (SequenceType) actualType, operation.getIdentValue( ExtendedAttributes.SEQUENCE_TYPE ) ) :
-        toTypeName( returnType );
-      testMethod.returns( javaReturnType );
+      testMethod.returns( asReturnType( operation, returnType, getSchema().resolveType( returnType ) ) );
     }
   }
 
@@ -4114,7 +4187,7 @@ final class JsinteropAction
     final Type itemType = operation.getReturnType();
     emitReturnType( operation, itemType, method );
     final Argument argument = arguments.get( 0 );
-    generateArgument( argument, asTypedValue( argument.getType() ), true, false, method );
+    generateArgument( argument, asTypedValue( argument.getType() ), true, method );
     final Kind itemTypeKind = itemType.getKind();
     final boolean mustConvert =
       itemTypeKind.isPrimitive() && Kind.Double != itemTypeKind && Kind.UnrestrictedDouble != itemTypeKind;
@@ -4154,10 +4227,10 @@ final class JsinteropAction
     maybeAddJavadoc( operation, method );
     method.addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_OVERLAY ).build() );
     final Argument indexArgument = arguments.get( 0 );
-    generateArgument( indexArgument, asTypedValue( indexArgument.getType() ), true, false, method );
+    generateArgument( indexArgument, asTypedValue( indexArgument.getType() ), true, method );
 
     final Argument valueArgument = arguments.get( 1 );
-    generateArgument( valueArgument, asTypedValue( valueArgument.getType() ), true, false, method );
+    generateArgument( valueArgument, asTypedValue( valueArgument.getType() ), true, method );
 
     method.addStatement( "$T.<$T>cast( this ).setAt( $N, $N )",
                          JsinteropTypes.JS,
@@ -4186,7 +4259,7 @@ final class JsinteropAction
     final Type itemType = operation.getReturnType();
     emitReturnType( operation, itemType, method );
     final Argument argument = arguments.get( 0 );
-    generateArgument( argument, asTypedValue( argument.getType() ), true, false, method );
+    generateArgument( argument, asTypedValue( argument.getType() ), true, method );
     final Kind itemTypeKind = itemType.getKind();
     final boolean mustConvert =
       itemTypeKind.isPrimitive() && Kind.Double != itemTypeKind && Kind.UnrestrictedDouble != itemTypeKind;
@@ -4226,10 +4299,10 @@ final class JsinteropAction
     maybeAddJavadoc( operation, method );
     method.addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_OVERLAY ).build() );
     final Argument indexArgument = arguments.get( 0 );
-    generateArgument( indexArgument, asTypedValue( indexArgument.getType() ), true, false, method );
+    generateArgument( indexArgument, asTypedValue( indexArgument.getType() ), true, method );
 
     final Argument valueArgument = arguments.get( 1 );
-    generateArgument( valueArgument, asTypedValue( valueArgument.getType() ), true, false, method );
+    generateArgument( valueArgument, asTypedValue( valueArgument.getType() ), true, method );
 
     method.addStatement( "$T.<$T>cast( this ).set( $N, $N )",
                          JsinteropTypes.JS,
@@ -4256,7 +4329,7 @@ final class JsinteropAction
     maybeAddJavadoc( operation, method );
     method.addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_OVERLAY ).build() );
     final Argument argument = arguments.get( 0 );
-    generateArgument( argument, asTypedValue( argument.getType() ), true, false, method );
+    generateArgument( argument, asTypedValue( argument.getType() ), true, method );
     method.addStatement( "$T.<$T>cast( this ).delete( $N )",
                          JsinteropTypes.JS,
                          ParameterizedTypeName.get( JsinteropTypes.JS_PROPERTY_MAP,
@@ -4377,12 +4450,18 @@ final class JsinteropAction
       {
         method.addAnnotation( JsinteropTypes.JS_NONNULL );
       }
-      final TypeName type =
-        Kind.Sequence == actualType.getKind() ?
-        toSequenceType( (SequenceType) actualType, operation.getIdentValue( ExtendedAttributes.SEQUENCE_TYPE ) ) :
-        toTypeName( returnType );
-      method.returns( type );
+      method.returns( asReturnType( operation, returnType, actualType ) );
     }
+  }
+
+  @Nonnull
+  private TypeName asReturnType( @Nonnull final AttributedNode operation,
+                                 @Nonnull final Type returnType,
+                                 @Nonnull final Type actualType )
+  {
+    return Kind.Sequence == actualType.getKind() ?
+           toSequenceType( (SequenceType) actualType, operation.getIdentValue( ExtendedAttributes.SEQUENCE_TYPE ) ) :
+           toTypeName( returnType );
   }
 
   private void generateConstructorOperation( @Nonnull final OperationMember operation,
@@ -4416,7 +4495,7 @@ final class JsinteropAction
     int index = 0;
     for ( final Argument argument : argumentList )
     {
-      generateArgument( argument, typeList.get( index++ ), true, false, method );
+      generateArgument( argument, typeList.get( index++ ), true, method );
     }
     if ( null != parentConstructor )
     {
@@ -4473,10 +4552,9 @@ final class JsinteropAction
   private void generateArgument( @Nonnull final Argument argument,
                                  @Nonnull final TypedValue typedValue,
                                  final boolean isFinal,
-                                 final boolean applyJsOptional,
                                  @Nonnull final MethodSpec.Builder method )
   {
-    generateArgument( argument, typedValue, isFinal, applyJsOptional, method, null );
+    generateArgument( argument, typedValue, isFinal, false, method, null );
   }
 
   private void generateArgument( @Nonnull final Argument argument,

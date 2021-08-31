@@ -12,6 +12,7 @@ goog.require('com.example.EventTargetTestCompile');
 goog.require('com.example.EventTestCompile');
 goog.require('com.example.Global.$Overlay');
 goog.require('com.example.GlobalTestCompile');
+goog.require('com.example.MyEventHandlerTestCompile');
 goog.require('com.example.MyTypedefedUnionTestCompile');
 goog.require('com.example.OtherEventListener.$Overlay');
 goog.require('com.example.OtherEventListenerTestCompile');
