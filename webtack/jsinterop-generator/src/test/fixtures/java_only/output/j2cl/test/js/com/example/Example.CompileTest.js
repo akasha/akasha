@@ -14,4 +14,6 @@ goog.require('com.example.MyType2TestCompile');
 goog.require('com.example.OnBlahEventHandlerTestCompile');
 goog.require('com.example.OnBleeEventHandlerTestCompile');
 goog.require('com.example.PermissionDescriptor.$Overlay');
+goog.require('com.example.PermissionDescriptorTestCompile');
 goog.require('com.example.PushPermissionDescriptor.$Overlay');
+goog.require('com.example.PushPermissionDescriptorTestCompile');

@@ -3,6 +3,7 @@ goog.require('com.example.CSS.$Overlay');
 goog.require('com.example.CSSTestCompile');
 goog.require('com.example.Event.$Overlay');
 goog.require('com.example.EventInit.$Overlay');
+goog.require('com.example.EventInitTestCompile');
 goog.require('com.example.EventListener.$Overlay');
 goog.require('com.example.EventListenerTestCompile');
 goog.require('com.example.EventTestCompile');

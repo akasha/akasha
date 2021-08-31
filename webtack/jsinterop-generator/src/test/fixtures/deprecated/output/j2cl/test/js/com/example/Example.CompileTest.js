@@ -1,11 +1,14 @@
 goog.module('com.example.ExampleCompileTest');
 goog.require('com.example.AddEventListenerOptions.$Overlay');
+goog.require('com.example.AddEventListenerOptionsTestCompile');
 goog.require('com.example.CSS.$Overlay');
 goog.require('com.example.CSSTestCompile');
 goog.require('com.example.Event.$Overlay');
 goog.require('com.example.EventInit.$Overlay');
+goog.require('com.example.EventInitTestCompile');
 goog.require('com.example.EventListener.$Overlay');
 goog.require('com.example.EventListenerOptions.$Overlay');
+goog.require('com.example.EventListenerOptionsTestCompile');
 goog.require('com.example.EventListenerTestCompile');
 goog.require('com.example.EventTarget.$Overlay');
 goog.require('com.example.EventTargetTestCompile');

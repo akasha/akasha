@@ -16,5 +16,6 @@ goog.require('com.example.MyBufferSourceTestCompile');
 goog.require('com.example.OffscreenCanvas.$Overlay');
 goog.require('com.example.OffscreenCanvasTestCompile');
 goog.require('com.example.PasswordCredentialData.$Overlay');
+goog.require('com.example.PasswordCredentialDataTestCompile');
 goog.require('com.example.WebGLRenderingContext.$Overlay');
 goog.require('com.example.WebGLRenderingContextTestCompile');

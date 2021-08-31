@@ -1,8 +1,10 @@
 goog.module('com.example.ExampleCompileTest');
 goog.require('com.example.AddEventListenerOptions.$Overlay');
+goog.require('com.example.AddEventListenerOptionsTestCompile');
 goog.require('com.example.Event.$Overlay');
 goog.require('com.example.EventListener.$Overlay');
 goog.require('com.example.EventListenerOptions.$Overlay');
+goog.require('com.example.EventListenerOptionsTestCompile');
 goog.require('com.example.EventListenerTestCompile');
 goog.require('com.example.EventTarget.$Overlay');
 goog.require('com.example.EventTargetTestCompile');
@@ -14,6 +16,7 @@ goog.require('com.example.FocusEventTestCompile');
 goog.require('com.example.Navigator.$Overlay');
 goog.require('com.example.NavigatorTestCompile');
 goog.require('com.example.ScrollToOptions.$Overlay');
+goog.require('com.example.ScrollToOptionsTestCompile');
 goog.require('com.example.SharedWorkerGlobal.$Overlay');
 goog.require('com.example.SharedWorkerGlobalScope.$Overlay');
 goog.require('com.example.SharedWorkerGlobalScopeTestCompile');

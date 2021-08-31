@@ -1460,9 +1460,12 @@ final class JsinteropAction
     }
   }
 
-  private void generateDictionaryBuilder( @Nonnull final DictionaryDefinition definition,
-                                          @Nonnull final TypeSpec.Builder container )
+  private void generateDictionaryBuilder( @Nonnull final ClassName containerClassName,
+                                          @Nonnull final DictionaryDefinition definition,
+                                          @Nonnull final TypeSpec.Builder container,
+                                          @Nonnull final TypeSpec.Builder testType )
   {
+    final ClassName className = containerClassName.nestedClass( "Builder" );
     final TypeSpec.Builder type =
       TypeSpec
         .interfaceBuilder( "Builder" )
@@ -1472,8 +1475,9 @@ final class JsinteropAction
                           .builder( JsinteropTypes.JS_TYPE )
                           .addMember( "isNative", "true" )
                           .addMember( "namespace", "$T.GLOBAL", JsinteropTypes.JS_PACKAGE )
-                          .addMember( "name", "$S", OutputType.gwt == _outputType ? "Object" :
-                                                    JsUtil.toJsName( definition ) )
+                          .addMember( "name",
+                                      "$S",
+                                      OutputType.gwt == _outputType ? "Object" : JsUtil.toJsName( definition ) )
                           .build() );
     maybeAddCustomAnnotations( definition, type );
     maybeAddJavadoc( definition, type );
@@ -1484,7 +1488,7 @@ final class JsinteropAction
     {
       for ( final TypedValue typedValue : explodeType( member.getType() ) )
       {
-        generateDictionaryMemberSetterReturningThis( definition, member, typedValue, type );
+        generateDictionaryMemberSetterReturningThis( className, member, typedValue, type, testType );
       }
     }
     DictionaryDefinition parent = definition.getSuperDictionary();
@@ -1494,7 +1498,7 @@ final class JsinteropAction
       {
         for ( final TypedValue memberType : explodeType( member.getType() ) )
         {
-          generateDictionaryMemberSetterReturningThis( definition, member, memberType, type );
+          generateDictionaryMemberSetterReturningThis( className, member, memberType, type, testType );
         }
       }
       parent = parent.getSuperDictionary();
@@ -1506,9 +1510,11 @@ final class JsinteropAction
   private void generateDictionary( @Nonnull final DictionaryDefinition definition )
     throws IOException
   {
+    final ClassName className = lookupClassName( definition.getName() );
+    final String javaName = className.simpleName();
     final TypeSpec.Builder type =
       TypeSpec
-        .interfaceBuilder( lookupClassName( definition.getName() ).simpleName() )
+        .interfaceBuilder( javaName )
         .addModifiers( Modifier.PUBLIC );
     writeGeneratedAnnotation( type );
     type.addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_TYPE )
@@ -1526,6 +1532,23 @@ final class JsinteropAction
       type.addSuperinterface( lookupClassName( inherits ) );
     }
 
+    final String testJavaName = javaName + "TestCompile";
+    final TypeSpec.Builder testType =
+      TypeSpec
+        .classBuilder( testJavaName )
+        .addModifiers( Modifier.PUBLIC, Modifier.FINAL );
+    writeGeneratedAnnotation( testType );
+
+    final FieldSpec.Builder typeReferenceField =
+      FieldSpec.builder( className, "$typeReference$", Modifier.STATIC );
+    final DocumentationElement documentation = definition.getDocumentation();
+    if ( null != documentation && documentation.hasDeprecatedTag() )
+    {
+      typeReferenceField.addAnnotation( Deprecated.class );
+    }
+
+    testType.addField( typeReferenceField.build() );
+
     for ( final TypedefDefinition markerType : definition.getMarkerTypes() )
     {
       type.addSuperinterface( lookupClassName( markerType.getName() ) );
@@ -1536,7 +1559,7 @@ final class JsinteropAction
       explodeTypeList( requiredMembers.stream().map( DictionaryMember::getType ).collect( Collectors.toList() ) );
     for ( final List<TypedValue> argTypes : explodedTypeList )
     {
-      generateDictionaryCreateMethod( definition, requiredMembers, argTypes, type );
+      generateDictionaryCreateMethod( definition, requiredMembers, argTypes, type, testType );
     }
 
     final WebIDLSchema schema = getSchema();
@@ -1545,37 +1568,62 @@ final class JsinteropAction
       final Type actualType = schema.resolveType( member.getType() );
       final TypeName javaType = toTypeName( actualType );
 
-      generateDictionaryMemberGetter( member, actualType, javaType, type );
-      generateDictionaryMemberSetter( member, actualType, javaType, type );
+      generateDictionaryMemberGetter( className, member, actualType, javaType, type, testType );
+      generateDictionaryMemberSetter( className, member, actualType, javaType, type, testType );
       for ( final TypedValue typedValue : explodeType( member.getType() ) )
       {
         if ( Kind.Any != actualType.getKind() && !javaType.equals( typedValue.getJavaType() ) )
         {
-          generateDictionaryMemberOverlaySetter( member, typedValue, type );
+          generateDictionaryMemberOverlaySetter( className, member, typedValue, type, testType );
         }
       }
     }
-    generateDictionaryBuilder( definition, type );
+    generateDictionaryBuilder( className, definition, type, testType );
 
     writeTopLevelType( definition.getName(), type );
+
+    if ( _generateCompileTest )
+    {
+      emitJavaType( getTestJavaDirectory(),
+                    testType.build(),
+                    ClassName.get( className.packageName(), testJavaName ).toString() );
+
+      _modulesToRequireInCompileTest.add( className.canonicalName() + "TestCompile" );
+    }
   }
 
   private void generateDictionaryCreateMethod( @Nonnull final DictionaryDefinition dictionary,
                                                @Nonnull final List<DictionaryMember> requiredMembers,
                                                @Nonnull final List<TypedValue> types,
-                                               @Nonnull final TypeSpec.Builder type )
+                                               @Nonnull final TypeSpec.Builder type,
+                                               @Nonnull final TypeSpec.Builder testType )
   {
-    final ClassName self = lookupClassName( dictionary.getName() );
-    final ClassName target = self.nestedClass( "Builder" );
-    final MethodSpec.Builder method = MethodSpec
-      .methodBuilder( "create" )
-      .addAnnotation( JsinteropTypes.JS_OVERLAY )
-      .addAnnotation( BasicTypes.NONNULL )
-      .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
-      .returns( target );
+    final ClassName className = lookupClassName( dictionary.getName() );
+    final ClassName target = className.nestedClass( "Builder" );
+    final MethodSpec.Builder method =
+      MethodSpec
+        .methodBuilder( "create" )
+        .addAnnotation( JsinteropTypes.JS_OVERLAY )
+        .addAnnotation( BasicTypes.NONNULL )
+        .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+        .returns( target );
+
+    final MethodSpec.Builder testMethod =
+      MethodSpec
+        .methodBuilder( "create" )
+        .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+        .returns( target );
+
+    final DocumentationElement documentation = dictionary.getDocumentation();
+    if ( null != documentation && documentation.hasDeprecatedTag() )
+    {
+      testMethod.addAnnotation( Deprecated.class );
+    }
+
     if ( requiredMembers.isEmpty() )
     {
       method.addStatement( "return $T.uncheckedCast( $T.of() )", JsinteropTypes.JS, JsinteropTypes.JS_PROPERTY_MAP );
+      testMethod.addStatement( "return $T.create()", className );
     }
     else
     {
@@ -1586,9 +1634,20 @@ final class JsinteropAction
       params.add( target );
       params.add( JsinteropTypes.JS_PROPERTY_MAP );
 
+      final StringBuilder testCallStatement = new StringBuilder();
+      final List<Object> testCallArgs = new ArrayList<>();
+
+      testCallStatement.append( "return $T.create( " );
+      testCallArgs.add( className );
+
       int index = 0;
       for ( final DictionaryMember member : requiredMembers )
       {
+        if ( 0 != index )
+        {
+          testCallStatement.append( ", " );
+        }
+
         final String paramName = javaName( member );
         sb.append( ".$N( $N )" );
         params.add( javaMethodName( member ) );
@@ -1602,10 +1661,21 @@ final class JsinteropAction
         addDoNotAutoboxAnnotation( memberType, parameter );
         addNullabilityAnnotation( memberType, parameter );
         method.addParameter( parameter.build() );
+
+        final ParameterSpec.Builder testParameter =
+          ParameterSpec.builder( memberType.getJavaType(), paramName, Modifier.FINAL );
+        testMethod.addParameter( testParameter.build() );
+        testCallStatement.append( "$N" );
+        testCallArgs.add( paramName );
       }
       method.addStatement( sb.toString(), params.toArray() );
+
+      testCallStatement.append( " )" );
+      testMethod.addStatement( testCallStatement.toString(), testCallArgs.toArray() );
     }
+
     type.addMethod( method.build() );
+    testType.addMethod( testMethod.build() );
   }
 
   @Nonnull
@@ -1628,14 +1698,17 @@ final class JsinteropAction
     definition.getMembers().stream().filter( DictionaryMember::isRequired ).forEach( members::add );
   }
 
-  private void generateDictionaryMemberGetter( @Nonnull final DictionaryMember member,
+  private void generateDictionaryMemberGetter( @Nonnull final ClassName className,
+                                               @Nonnull final DictionaryMember member,
                                                @Nonnull final Type actualType,
                                                @Nonnull final TypeName javaType,
-                                               @Nonnull final TypeSpec.Builder type )
+                                               @Nonnull final TypeSpec.Builder type,
+                                               @Nonnull final TypeSpec.Builder testType )
   {
+    final String javaName = safeJsPropertyMethodName( member.getName(), TypeName.BOOLEAN.equals( javaType ) );
     final MethodSpec.Builder method =
       MethodSpec
-        .methodBuilder( safeJsPropertyMethodName( member.getName(), TypeName.BOOLEAN.equals( javaType ) ) )
+        .methodBuilder( javaName )
         .addModifiers( Modifier.PUBLIC, Modifier.ABSTRACT )
         .returns( javaType );
     method.addAnnotation( AnnotationSpec
@@ -1657,16 +1730,34 @@ final class JsinteropAction
       }
     }
     type.addMethod( method.build() );
+
+    final MethodSpec.Builder testMethod =
+      MethodSpec
+        .methodBuilder( javaName )
+        .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+        .returns( javaType )
+        .addParameter( ParameterSpec.builder( className, "$instance", Modifier.FINAL ).build() )
+        .addStatement( "return $N.$N()", "$instance", javaName );
+
+    final DocumentationElement documentation = member.getDocumentation();
+    if ( null != documentation && documentation.hasDeprecatedTag() )
+    {
+      testMethod.addAnnotation( Deprecated.class );
+    }
+    testType.addMethod( testMethod.build() );
   }
 
-  private void generateDictionaryMemberSetter( @Nonnull final DictionaryMember member,
+  private void generateDictionaryMemberSetter( @Nonnull final ClassName className,
+                                               @Nonnull final DictionaryMember member,
                                                @Nonnull final Type actualType,
                                                @Nonnull final TypeName javaType,
-                                               @Nonnull final TypeSpec.Builder type )
+                                               @Nonnull final TypeSpec.Builder type,
+                                               @Nonnull final TypeSpec.Builder testType )
   {
+    final String javaName = getMutatorName( member );
     final MethodSpec.Builder method =
       MethodSpec
-        .methodBuilder( getMutatorName( member ) )
+        .methodBuilder( javaName )
         .addModifiers( Modifier.PUBLIC, Modifier.ABSTRACT )
         .addAnnotation( JsinteropTypes.JS_PROPERTY );
     maybeAddJavadoc( member, method );
@@ -1690,16 +1781,33 @@ final class JsinteropAction
     }
     method.addParameter( parameter.build() );
     type.addMethod( method.build() );
+
+    final MethodSpec.Builder testMethod =
+      MethodSpec
+        .methodBuilder( javaName )
+        .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+        .addParameter( ParameterSpec.builder( className, "$instance", Modifier.FINAL ).build() )
+        .addParameter( ParameterSpec.builder( isAny ? TypeName.OBJECT : javaType, javaName( member ) ).build() )
+        .addStatement( "$N.$N( $N )", "$instance", javaName, javaName( member ) );
+
+    final DocumentationElement documentation = member.getDocumentation();
+    if ( null != documentation && documentation.hasDeprecatedTag() )
+    {
+      testMethod.addAnnotation( Deprecated.class );
+    }
+    testType.addMethod( testMethod.build() );
   }
 
-  private void generateDictionaryMemberOverlaySetter( @Nonnull final DictionaryMember member,
+  private void generateDictionaryMemberOverlaySetter( @Nonnull final ClassName className,
+                                                      @Nonnull final DictionaryMember member,
                                                       @Nonnull final TypedValue typedValue,
-                                                      @Nonnull final TypeSpec.Builder type )
+                                                      @Nonnull final TypeSpec.Builder type,
+                                                      @Nonnull final TypeSpec.Builder testType )
   {
-    final String mutatorName = getMutatorName( member );
+    final String javaName = getMutatorName( member );
     final MethodSpec.Builder method =
       MethodSpec
-        .methodBuilder( mutatorName )
+        .methodBuilder( javaName )
         .addModifiers( Modifier.PUBLIC, Modifier.DEFAULT )
         .addAnnotation( JsinteropTypes.JS_OVERLAY );
     maybeAddJavadoc( member, method );
@@ -1732,19 +1840,19 @@ final class JsinteropAction
     final Type resolvedType = schema.resolveType( typedValue.getType(), true );
     if ( Kind.Union == declaredType.getKind() || unwrapsToUnion( declaredType ) )
     {
-      method.addStatement( "$N( $T.of( $N ) )", mutatorName, toTypeName( declaredType ), paramName );
+      method.addStatement( "$N( $T.of( $N ) )", javaName, toTypeName( declaredType ), paramName );
     }
     else if ( Kind.Sequence == declaredType.getKind() || Kind.Sequence == resolvedType.getKind() )
     {
       method.addStatement( "$N( $T.<$T>uncheckedCast( $N ) )",
-                           mutatorName,
+                           javaName,
                            JsinteropTypes.JS,
                            toSequenceType( (SequenceType) resolvedType ),
                            paramName );
     }
     else if ( Kind.Any == declaredType.getKind() && typedValue.doNotAutobox() )
     {
-      method.addStatement( "$N( $T.asAny( $N ) )", mutatorName, JsinteropTypes.JS, paramName );
+      method.addStatement( "$N( $T.asAny( $N ) )", javaName, JsinteropTypes.JS, paramName );
     }
     else
     {
@@ -1752,6 +1860,21 @@ final class JsinteropAction
                                                typedValue.getType() + " from " + declaredType );
     }
     type.addMethod( method.build() );
+
+    final MethodSpec.Builder testMethod =
+      MethodSpec
+        .methodBuilder( javaName )
+        .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+        .addParameter( ParameterSpec.builder( className, "$instance", Modifier.FINAL ).build() )
+        .addParameter( ParameterSpec.builder( javaType, paramName, Modifier.FINAL ).build() )
+        .addStatement( "$N.$N( $N )", "$instance", javaName, paramName );
+
+    final DocumentationElement documentation = member.getDocumentation();
+    if ( null != documentation && documentation.hasDeprecatedTag() )
+    {
+      testMethod.addAnnotation( Deprecated.class );
+    }
+    testType.addMethod( testMethod.build() );
   }
 
   private boolean unwrapsToUnion( @Nonnull final Type type )
@@ -1770,20 +1893,20 @@ final class JsinteropAction
     return false;
   }
 
-  private void generateDictionaryMemberSetterReturningThis( @Nonnull final DictionaryDefinition dictionary,
+  private void generateDictionaryMemberSetterReturningThis( @Nonnull final ClassName className,
                                                             @Nonnull final DictionaryMember member,
                                                             @Nonnull final TypedValue typedValue,
-                                                            @Nonnull final TypeSpec.Builder type )
+                                                            @Nonnull final TypeSpec.Builder type,
+                                                            @Nonnull final TypeSpec.Builder testType )
   {
-    final ClassName self = lookupClassName( dictionary.getName() );
-    final ClassName target = self.nestedClass( "Builder" );
+    final String javaName = javaMethodName( member );
     final MethodSpec.Builder method =
       MethodSpec
-        .methodBuilder( javaMethodName( member ) )
+        .methodBuilder( javaName )
         .addModifiers( Modifier.PUBLIC, Modifier.DEFAULT )
         .addAnnotation( JsinteropTypes.JS_OVERLAY )
         .addAnnotation( BasicTypes.NONNULL )
-        .returns( target );
+        .returns( className );
     maybeAddJavadoc( member, method );
     final TypeName javaType = typedValue.getJavaType();
     final String paramName = javaName( member );
@@ -1812,6 +1935,22 @@ final class JsinteropAction
     method.addStatement( "$N( $N )", getMutatorName( member ), paramName );
     method.addStatement( "return this" );
     type.addMethod( method.build() );
+
+    final MethodSpec.Builder testMethod =
+      MethodSpec
+        .methodBuilder( javaName )
+        .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+        .returns( className )
+        .addParameter( ParameterSpec.builder( className, "$instance", Modifier.FINAL ).build() )
+        .addParameter( ParameterSpec.builder( javaType, paramName, Modifier.FINAL ).build() )
+        .addStatement( "return $N.$N( $N )", "$instance", javaName, paramName );
+
+    final DocumentationElement documentation = member.getDocumentation();
+    if ( null != documentation && documentation.hasDeprecatedTag() )
+    {
+      testMethod.addAnnotation( Deprecated.class );
+    }
+    testType.addMethod( testMethod.build() );
   }
 
   private void addNullabilityAnnotation( @Nonnull final TypedValue typedValue,

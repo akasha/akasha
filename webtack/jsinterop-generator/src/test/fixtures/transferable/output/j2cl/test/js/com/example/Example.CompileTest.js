@@ -4,3 +4,4 @@ goog.require('com.example.ImageBitmapTestCompile');
 goog.require('com.example.MessagePort.$Overlay');
 goog.require('com.example.MessagePortTestCompile');
 goog.require('com.example.PostMessageOptions.$Overlay');
+goog.require('com.example.PostMessageOptionsTestCompile');

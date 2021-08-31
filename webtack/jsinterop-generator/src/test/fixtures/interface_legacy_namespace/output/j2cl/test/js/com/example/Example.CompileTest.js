@@ -2,6 +2,7 @@ goog.module('com.example.ExampleCompileTest');
 goog.require('com.example.ArrayBuffer.$Overlay');
 goog.require('com.example.ArrayBufferTestCompile');
 goog.require('com.example.GlobalDescriptor.$Overlay');
+goog.require('com.example.GlobalDescriptorTestCompile');
 goog.require('com.example.WebAssembly.$Overlay');
 goog.require('com.example.WebAssemblyTestCompile');
 goog.require('com.example.web_assembly.CompileError.$Overlay');

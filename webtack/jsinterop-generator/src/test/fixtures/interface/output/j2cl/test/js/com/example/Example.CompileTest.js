@@ -49,6 +49,7 @@ goog.require('com.example.DOMTokenList.$Overlay');
 goog.require('com.example.DOMTokenListTestCompile');
 goog.require('com.example.Event.$Overlay');
 goog.require('com.example.EventInit.$Overlay');
+goog.require('com.example.EventInitTestCompile');
 goog.require('com.example.EventTarget.$Overlay');
 goog.require('com.example.EventTargetTestCompile');
 goog.require('com.example.EventTestCompile');

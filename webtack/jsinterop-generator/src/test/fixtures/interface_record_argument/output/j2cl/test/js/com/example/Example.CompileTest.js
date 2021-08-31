@@ -1,10 +1,13 @@
 goog.module('com.example.ExampleCompileTest');
 goog.require('com.example.AudioWorkletNodeOptions.$Overlay');
+goog.require('com.example.AudioWorkletNodeOptionsTestCompile');
 goog.require('com.example.ClipboardItem.$Overlay');
 goog.require('com.example.ClipboardItemData.$Overlay');
 goog.require('com.example.ClipboardItemDataTestCompile');
 goog.require('com.example.ClipboardItemOptions.$Overlay');
+goog.require('com.example.ClipboardItemOptionsTestCompile');
 goog.require('com.example.ClipboardItemTestCompile');
 goog.require('com.example.Headers.$Overlay');
 goog.require('com.example.HeadersTestCompile');
 goog.require('com.example.OtherDict.$Overlay');
+goog.require('com.example.OtherDictTestCompile');

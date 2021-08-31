@@ -1,5 +1,9 @@
 goog.module('com.example.ExampleCompileTest');
 goog.require('com.example.Base.$Overlay');
+goog.require('com.example.BaseTestCompile');
 goog.require('com.example.Sub1.$Overlay');
+goog.require('com.example.Sub1TestCompile');
 goog.require('com.example.Sub2.$Overlay');
+goog.require('com.example.Sub2TestCompile');
 goog.require('com.example.XRSessionInit.$Overlay');
+goog.require('com.example.XRSessionInitTestCompile');
