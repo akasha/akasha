@@ -1686,6 +1686,13 @@
         "namePattern": "^(GPUImageCopyExternalImageSource|ExtendableMessageEventSource)$",
         "extendedAttribute": "Synthetic"
       }
+    },
+    {
+      "name": "AddExtendedAttribute",
+      "config": {
+        "namePattern": "^(GPUImageCopyExternalImageSource)$",
+        "extendedAttribute": "JavaSubPackage=gpu"
+      }
     }
   ]
 }
