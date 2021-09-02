@@ -1661,11 +1661,20 @@
       }
     },
     {
+      "name": "RenameType",
+      "description": "Rename synthesized type",
+      "config": {
+        "expectedRenameCount": 1,
+        "namePattern": "^ClientOrServiceWorkerOrMessagePortUnion$",
+        "replacement": "ExtendableMessageEventSource"
+      }
+    },
+    {
       "name": "AddExtendedAttribute",
       "description": "Convert synthetic union types into marker types",
       "config": {
-        "expectedAddCount": 1,
-        "namePattern": "^GPUImageCopyExternalImageSource$",
+        "expectedAddCount": 2,
+        "namePattern": "^(GPUImageCopyExternalImageSource|ExtendableMessageEventSource)$",
         "extendedAttribute": "MarkerType"
       }
     },
@@ -1673,8 +1682,8 @@
       "name": "RemoveExtendedAttribute",
       "description": "Extended attribute now no longer relevant as we have patched types",
       "config": {
-        "expectedRemoveCount": 1,
-        "namePattern": "^GPUImageCopyExternalImageSource$",
+        "expectedRemoveCount": 2,
+        "namePattern": "^(GPUImageCopyExternalImageSource|ExtendableMessageEventSource)$",
         "extendedAttribute": "Synthetic"
       }
     }
