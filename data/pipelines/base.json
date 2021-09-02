@@ -1637,6 +1637,12 @@
       "name": "JsSymbolDedup"
     },
     {
+      "name": "NameAnonymousUnions",
+      "config": {
+        "expectedChangeCount": 27
+      }
+    },
+    {
       "name": "AddExtendedAttribute",
       "description": "After JsSymbolDedup runs we move one of the synthesized unions to correct sub-package",
       "config": {
