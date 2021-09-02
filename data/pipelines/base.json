@@ -1637,18 +1637,45 @@
       "name": "JsSymbolDedup"
     },
     {
-      "name": "NameAnonymousUnions",
-      "config": {
-        "expectedChangeCount": 27
-      }
-    },
-    {
       "name": "AddExtendedAttribute",
       "description": "After JsSymbolDedup runs we move one of the synthesized unions to correct sub-package",
       "config": {
         "expectedAddCount": 1,
         "namePattern": "^AudioNodeOrUndefinedUnion$",
         "extendedAttribute": "JavaSubPackage=audio"
+      }
+    },
+    {
+      "name": "NameAnonymousUnions",
+      "config": {
+        "expectedChangeCount": 27
+      }
+    },
+    {
+      "name": "RenameType",
+      "description": "Rename synthesized type",
+      "config": {
+        "expectedRenameCount": 1,
+        "namePattern": "^ImageBitmapOrHTMLCanvasElementOrOffscreenCanvasUnion$",
+        "replacement": "GPUImageCopyExternalImageSource"
+      }
+    },
+    {
+      "name": "AddExtendedAttribute",
+      "description": "Convert synthetic union types into marker types",
+      "config": {
+        "expectedAddCount": 1,
+        "namePattern": "^GPUImageCopyExternalImageSource$",
+        "extendedAttribute": "MarkerType"
+      }
+    },
+    {
+      "name": "RemoveExtendedAttribute",
+      "description": "Extended attribute now no longer relevant as we have patched types",
+      "config": {
+        "expectedRemoveCount": 1,
+        "namePattern": "^GPUImageCopyExternalImageSource$",
+        "extendedAttribute": "Synthetic"
       }
     }
   ]
