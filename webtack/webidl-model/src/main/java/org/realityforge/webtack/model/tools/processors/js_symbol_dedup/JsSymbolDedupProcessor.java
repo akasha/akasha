@@ -21,7 +21,6 @@ import org.realityforge.webtack.model.ExtendedAttribute;
 import org.realityforge.webtack.model.IllegalModelException;
 import org.realityforge.webtack.model.IncludesStatement;
 import org.realityforge.webtack.model.InterfaceDefinition;
-import org.realityforge.webtack.model.Kind;
 import org.realityforge.webtack.model.MixinDefinition;
 import org.realityforge.webtack.model.NamespaceDefinition;
 import org.realityforge.webtack.model.OperationMember;
@@ -29,9 +28,7 @@ import org.realityforge.webtack.model.PartialDictionaryDefinition;
 import org.realityforge.webtack.model.PartialInterfaceDefinition;
 import org.realityforge.webtack.model.PartialMixinDefinition;
 import org.realityforge.webtack.model.PartialNamespaceDefinition;
-import org.realityforge.webtack.model.SequenceType;
 import org.realityforge.webtack.model.Type;
-import org.realityforge.webtack.model.TypeReference;
 import org.realityforge.webtack.model.TypedefDefinition;
 import org.realityforge.webtack.model.UnionType;
 import org.realityforge.webtack.model.WebIDLSchema;
@@ -39,7 +36,6 @@ import org.realityforge.webtack.model.tools.processors.AbstractProcessor;
 import org.realityforge.webtack.model.tools.spi.PipelineContext;
 import org.realityforge.webtack.model.tools.util.ExtendedAttributes;
 import org.realityforge.webtack.model.tools.util.JsUtil;
-import org.realityforge.webtack.model.tools.util.NamingUtil;
 import org.realityforge.webtack.model.tools.util.UnionUtil;
 
 final class JsSymbolDedupProcessor
@@ -238,7 +234,7 @@ final class JsSymbolDedupProcessor
   {
     final List<ExtendedAttribute> extendedAttributes = new ArrayList<>( input.getExtendedAttributes() );
     extendedAttributes.add( ExtendedAttribute.createIdent( overrideKey,
-                                                           deriveTypeDefNameForUnionType( overrideType ) ) );
+                                                           UnionUtil.deriveTypeDefNameForUnionType( overrideType ) ) );
     return extendedAttributes;
   }
 
@@ -335,60 +331,10 @@ final class JsSymbolDedupProcessor
 
   private void registerUnionTypeName( @Nonnull final UnionType type )
   {
-    final String name = deriveTypeDefNameForUnionType( type );
+    final String name = UnionUtil.deriveTypeDefNameForUnionType( type );
     if ( !_unions.containsKey( name ) )
     {
       _unions.put( name, type );
-    }
-  }
-
-  @Nonnull
-  private String deriveTypeDefNameForUnionType( @Nonnull final UnionType type )
-  {
-    final StringBuilder sb = new StringBuilder();
-    for ( final Type memberType : type.getMemberTypes() )
-    {
-      if ( 0 != sb.length() )
-      {
-        sb.append( "Or" );
-      }
-      appendTypeToUnionName( sb, memberType );
-    }
-    sb.append( "Union" );
-    return sb.toString();
-  }
-
-  private void appendTypeToUnionName( @Nonnull final StringBuilder sb, @Nonnull final Type type )
-  {
-    final Kind kind = type.getKind();
-    if ( kind.isString() )
-    {
-      sb.append( "String" );
-    }
-    else if ( kind.isPrimitive() || Kind.FrozenArray == kind || Kind.Object == kind )
-    {
-      sb.append( kind.name() );
-    }
-    else if ( Kind.TypeReference == kind )
-    {
-      sb.append( NamingUtil.uppercaseFirstCharacter( ( (TypeReference) type ).getName() ) );
-    }
-    else if ( Kind.Sequence == kind )
-    {
-      appendTypeToUnionName( sb, ( (SequenceType) type ).getItemType() );
-      sb.append( "Array" );
-    }
-    else if ( Kind.Void == kind )
-    {
-      sb.append( "Undefined" );
-    }
-    else if ( Kind.Any == kind )
-    {
-      sb.append( "Any" );
-    }
-    else
-    {
-      throw new UnsupportedOperationException( "Contains kind " + kind + " in union which has not been implemented" );
     }
   }
 

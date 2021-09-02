@@ -23,6 +23,56 @@ public final class UnionUtil
   {
   }
 
+  @Nonnull
+  public static String deriveTypeDefNameForUnionType( @Nonnull final UnionType type )
+  {
+    final StringBuilder sb = new StringBuilder();
+    for ( final Type memberType : type.getMemberTypes() )
+    {
+      if ( 0 != sb.length() )
+      {
+        sb.append( "Or" );
+      }
+      appendTypeToUnionName( sb, memberType );
+    }
+    sb.append( "Union" );
+    return sb.toString();
+  }
+
+  private static void appendTypeToUnionName( @Nonnull final StringBuilder sb, @Nonnull final Type type )
+  {
+    final Kind kind = type.getKind();
+    if ( kind.isString() )
+    {
+      sb.append( "String" );
+    }
+    else if ( kind.isPrimitive() || Kind.FrozenArray == kind || Kind.Object == kind )
+    {
+      sb.append( kind.name() );
+    }
+    else if ( Kind.TypeReference == kind )
+    {
+      sb.append( NamingUtil.uppercaseFirstCharacter( ( (TypeReference) type ).getName() ) );
+    }
+    else if ( Kind.Sequence == kind )
+    {
+      appendTypeToUnionName( sb, ( (SequenceType) type ).getItemType() );
+      sb.append( "Array" );
+    }
+    else if ( Kind.Void == kind )
+    {
+      sb.append( "Undefined" );
+    }
+    else if ( Kind.Any == kind )
+    {
+      sb.append( "Any" );
+    }
+    else
+    {
+      throw new UnsupportedOperationException( "Contains kind " + kind + " in union which has not been implemented" );
+    }
+  }
+
   /**
    * Return a UnionType that is compatible with the specified types or null if all the types are equivalent.
    *
