@@ -20,6 +20,14 @@ public final class RemoveExtendedAttributeProcessorTest
   }
 
   @Test
+  public void basic()
+    throws Exception
+  {
+    performStandardFixtureTest( "basic",
+                                () -> createProcessor( "^GPUImageCopyExternalImageSource$",
+                                                       "Synthetic" ) );
+  }
+  @Test
   public void update_geolocation_api()
     throws Exception
   {

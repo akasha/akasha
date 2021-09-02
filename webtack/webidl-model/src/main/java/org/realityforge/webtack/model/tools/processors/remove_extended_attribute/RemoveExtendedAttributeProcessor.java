@@ -18,6 +18,7 @@ import org.realityforge.webtack.model.PartialDictionaryDefinition;
 import org.realityforge.webtack.model.PartialInterfaceDefinition;
 import org.realityforge.webtack.model.PartialMixinDefinition;
 import org.realityforge.webtack.model.PartialNamespaceDefinition;
+import org.realityforge.webtack.model.TypedefDefinition;
 import org.realityforge.webtack.model.tools.processors.AbstractProcessor;
 import org.realityforge.webtack.model.tools.spi.Completable;
 import org.realityforge.webtack.model.tools.spi.PipelineContext;
@@ -244,6 +245,24 @@ final class RemoveExtendedAttributeProcessor
                                             shrinkExtendedAttributes( input.getExtendedAttributes() ) :
                                             transformExtendedAttributes( input.getExtendedAttributes() ),
                                             transformSourceLocations( input.getSourceLocations() ) );
+  }
+
+  @Nonnull
+  @Override
+  protected TypedefDefinition transformTypedef( @Nonnull final TypedefDefinition input )
+  {
+    return new TypedefDefinition( input.getName(),
+                                  transformType( input.getType() ),
+                                  transformDocumentation( input.getDocumentation() ),
+                                  matches( input ) ?
+                                  shrinkExtendedAttributes( input.getExtendedAttributes() ) :
+                                  transformExtendedAttributes( input.getExtendedAttributes() ),
+                                  transformSourceLocations( input.getSourceLocations() ) );
+  }
+
+  private boolean matches( @Nonnull final TypedefDefinition input )
+  {
+    return matchesType( ElementType.callback ) && matchesName( input.getName() );
   }
 
   private boolean matches( @Nonnull final CallbackDefinition input )
