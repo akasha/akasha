@@ -1,6 +1,10 @@
 # Change Log
 
-### Unreleased
+### [v0.23](https://github.com/akasha/akasha/tree/v0.23) (2021-09-03) · [Full Changelog](https://github.com/spritz/spritz/compare/v0.22...v0.23) · [API Differences](https://akasha.github.io/akasha-java/api-diff/?key=akasha-java&old=0.22&new=0.23) · [Source Diff](https://github.com/akasha/akasha-java/compare/v0.22...v0.23)
+
+The release includes 70 non breaking API changes, 37 potentially breaking API changes and 40 breaking API changes.
+
+Changes in this release:
 
 * Rename several union types to reflect intent, migrate the unions to the java package where they are used and convert unions to marker interfaces where appropriate. i.e. The union type `IDBObjectStoreOrIDBIndexUnion` was renamed to `IDBCursorSource`, converted to a marker interface and migrated the `akasha.idb` java package. See the API diff for a full list of unions migrated.
 * Type the `AudioTrack.kind` attribute as an enumeration contain the set of valid values.
