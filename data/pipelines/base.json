@@ -1652,6 +1652,42 @@
       }
     },
     {
+      "name": "AddExtendedAttribute",
+      "description": "After NameAnonymousUnions runs we move one of the synthesized unions to correct sub-package",
+      "config": {
+        "expectedAddCount": 1,
+        "namePattern": "^AudioContextLatencyCategoryOrDoubleUnion$",
+        "extendedAttribute": "JavaSubPackage=audio"
+      }
+    },
+    {
+      "name": "AddExtendedAttribute",
+      "description": "After NameAnonymousUnions runs we move one of the synthesized unions to correct sub-package",
+      "config": {
+        "expectedAddCount": 2,
+        "namePattern": "^(MediaListOrStringUnion|BooleanOrMediaTrackConstraintsUnion)$",
+        "extendedAttribute": "JavaSubPackage=media"
+      }
+    },
+    {
+      "name": "AddExtendedAttribute",
+      "description": "After NameAnonymousUnions runs we move one of the synthesized unions to correct sub-package",
+      "config": {
+        "expectedAddCount": 4,
+        "namePattern": "^(GPULoadOpOrFloatUnion|GPUDeviceLostReasonOrUndefinedUnion|GPULoadOpOrGPUColorUnion|GPULoadOpOrGPUStencilValueUnion)$",
+        "extendedAttribute": "JavaSubPackage=gpu"
+      }
+    },
+    {
+      "name": "AddExtendedAttribute",
+      "description": "Mark API as experimental",
+      "config": {
+        "expectedAddCount": 4,
+        "namePattern": "^(GPULoadOpOrFloatUnion|GPUDeviceLostReasonOrUndefinedUnion|GPULoadOpOrGPUColorUnion|GPULoadOpOrGPUStencilValueUnion)$",
+        "extendedAttribute": "JavaAnnotation=\"org.jetbrains.annotations.ApiStatus.Experimental\""
+      }
+    },
+    {
       "name": "RenameType",
       "description": "Rename synthesized type",
       "config": {
@@ -1670,11 +1706,83 @@
       }
     },
     {
+      "name": "RenameType",
+      "description": "Rename synthesized type",
+      "config": {
+        "expectedRenameCount": 1,
+        "namePattern": "^IDBObjectStoreOrIDBIndexUnion$",
+        "replacement": "IDBCursorSource"
+      }
+    },
+    {
+      "name": "RenameType",
+      "description": "Rename synthesized type",
+      "config": {
+        "expectedRenameCount": 1,
+        "namePattern": "^IDBObjectStoreOrIDBIndexOrIDBCursorUnion$",
+        "replacement": "IDBRequestSource"
+      }
+    },
+    {
+      "name": "RenameType",
+      "description": "Rename synthesized type",
+      "config": {
+        "expectedRenameCount": 1,
+        "namePattern": "^VideoTrackOrAudioTrackOrTextTrackUnion$",
+        "replacement": "Track"
+      }
+    },
+    {
+      "name": "RenameType",
+      "description": "Rename synthesized type",
+      "config": {
+        "expectedRenameCount": 1,
+        "namePattern": "^ElementOrDocumentUnion$",
+        "replacement": "IntersectionRoot"
+      }
+    },
+    {
+      "name": "RenameType",
+      "description": "Rename synthesized type",
+      "config": {
+        "expectedRenameCount": 1,
+        "namePattern": "^ElementOrProcessingInstructionUnion$",
+        "replacement": "StyleSheetOwnerNode"
+      }
+    },
+    {
+      "name": "RenameType",
+      "description": "Rename synthesized type",
+      "config": {
+        "expectedRenameCount": 1,
+        "namePattern": "^HTMLCollectionOrElementUnion$",
+        "replacement": "HTMLAllCollectionItem"
+      }
+    },
+    {
+      "name": "RenameType",
+      "description": "Rename synthesized type",
+      "config": {
+        "expectedRenameCount": 1,
+        "namePattern": "^HTMLCanvasElementOrOffscreenCanvasUnion$",
+        "replacement": "Canvas"
+      }
+    },
+    {
+      "name": "RenameType",
+      "description": "Rename synthesized type",
+      "config": {
+        "expectedRenameCount": 1,
+        "namePattern": "^RadioNodeListOrElementUnion$",
+        "replacement": "HTMLFormControl"
+      }
+    },
+    {
       "name": "AddExtendedAttribute",
       "description": "Convert synthetic union types into marker types",
       "config": {
-        "expectedAddCount": 2,
-        "namePattern": "^(GPUImageCopyExternalImageSource|ExtendableMessageEventSource)$",
+        "expectedAddCount": 10,
+        "namePattern": "^(Canvas|GPUImageCopyExternalImageSource|HTMLFormControl|HTMLAllCollectionItem|StyleSheetOwnerNode|IntersectionRoot|IDBCursorSource|IDBRequestSource|Track|ExtendableMessageEventSource)$",
         "extendedAttribute": "MarkerType"
       }
     },
@@ -1682,14 +1790,31 @@
       "name": "RemoveExtendedAttribute",
       "description": "Extended attribute now no longer relevant as we have patched types",
       "config": {
-        "expectedRemoveCount": 2,
-        "namePattern": "^(GPUImageCopyExternalImageSource|ExtendableMessageEventSource)$",
+        "expectedRemoveCount": 10,
+        "namePattern": "^(Canvas|GPUImageCopyExternalImageSource|HTMLFormControl|HTMLAllCollectionItem|StyleSheetOwnerNode|IntersectionRoot|IDBCursorSource|IDBRequestSource|Track|ExtendableMessageEventSource)$",
         "extendedAttribute": "Synthetic"
       }
     },
     {
       "name": "AddExtendedAttribute",
       "config": {
+        "expectedAddCount": 2,
+        "namePattern": "^(IDBCursorSource|IDBRequestSource)$",
+        "extendedAttribute": "JavaSubPackage=idb"
+      }
+    },
+    {
+      "name": "AddExtendedAttribute",
+      "config": {
+        "expectedAddCount": 1,
+        "namePattern": "^StringOrUUIDArrayUnion$",
+        "extendedAttribute": "JavaSubPackage=bluetooth"
+      }
+    },
+    {
+      "name": "AddExtendedAttribute",
+      "config": {
+        "expectedAddCount": 1,
         "namePattern": "^(GPUImageCopyExternalImageSource)$",
         "extendedAttribute": "JavaSubPackage=gpu"
       }
