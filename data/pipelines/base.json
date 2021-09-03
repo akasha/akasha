@@ -552,6 +552,16 @@
       "sourceSelector": "name=whatwg_html",
       "config": {
         "expectedRemoveCount": 1,
+        "elementNamePattern": "^AudioTrack$",
+        "attributeNamePattern": "^kind$",
+        "type": "AudioTrackKind"
+      }
+    },
+    {
+      "name": "ChangeAttributeType",
+      "sourceSelector": "name=whatwg_html",
+      "config": {
+        "expectedRemoveCount": 1,
         "elementNamePattern": "^HTMLFormElement$",
         "attributeNamePattern": "^method$",
         "type": "FormMethodType"
