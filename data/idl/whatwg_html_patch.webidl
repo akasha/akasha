@@ -779,3 +779,40 @@ partial interface HTMLOptionsCollection {
   getter HTMLOptionElement? item( unsigned long index );
   getter HTMLOptionElement? namedItem( DOMString name );
 };
+
+/**
+ * An enumeration describing the values of the AudioTrack.kind property.
+ * The kind property contains a string indicating the category of audio contained in the AudioTrack.
+ * The kind can be used to determine the scenarios in which specific tracks should be enabled or disabled.
+ */
+enum AudioTrackKind {
+  /**
+   * A potential alternative to the main track, such as a different audio take or a version of the soundtrack with only the music and no dialogue.
+   */
+  "alternative",
+  /**
+   * An audio track providing audible descriptions of the action depicted in a video track.
+   */
+  "descriptions",
+  /**
+   * The primary audio track.
+   */
+  "main",
+  /**
+   * The primary audio track with audio descriptions mixed into it.
+   */
+  "main-desc",
+  /**
+   * A translated version of the primary audio track.
+   */
+  "translation",
+  /**
+   * An audio track containing a commentary. This might be used to contain the director's commentary track on a movie, for example.
+   */
+  "commentary",
+  /**
+   * The track doesn't have an explicit kind, or the kind provided by the track's metadata isn't recognized by the user agent.
+   */
+  [JavaName=unspecified]
+  ""
+};

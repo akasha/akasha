@@ -3,6 +3,7 @@
 ### Unreleased
 
 * Rename several union types to reflect intent, migrate the unions to the java package where they are used and convert unions to marker interfaces where appropriate. i.e. The union type `IDBObjectStoreOrIDBIndexUnion` was renamed to `IDBCursorSource`, converted to a marker interface and migrated the `akasha.idb` java package. See the API diff for a full list of unions migrated.
+* Type the `AudioTrack.kind` attribute as an enumeration contain the set of valid values.
 
 ### [v0.22](https://github.com/akasha/akasha/tree/v0.22) (2021-08-30) · [Full Changelog](https://github.com/spritz/spritz/compare/v0.21...v0.22) · [API Differences](https://akasha.github.io/akasha-java/api-diff/?key=akasha-java&old=0.21&new=0.22) · [Source Diff](https://github.com/akasha/akasha-java/compare/v0.21...v0.22)
 
