@@ -2,8 +2,6 @@ package org.realityforge.webtack.model.tools.validator;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.HashSet;
-import java.util.Set;
 import javax.annotation.Nonnull;
 import org.realityforge.webtack.model.ConstEnumerationDefinition;
 import org.realityforge.webtack.model.ConstEnumerationValue;
@@ -22,7 +20,6 @@ final class ConstEnumerationValidator
     final Collection<ValidationError> errors = new ArrayList<>();
     for ( final ConstEnumerationDefinition definition : schema.getConstEnumerations() )
     {
-      final Set<String> names = new HashSet<>();
       Type valueType = null;
       for ( final ConstEnumerationValue value : definition.getValues() )
       {
