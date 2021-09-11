@@ -2588,6 +2588,7 @@ final class JsinteropAction
                           .addMember( "namespace", "$T.GLOBAL", JsinteropTypes.JS_PACKAGE )
                           .build() );
     writeGeneratedAnnotation( type );
+    maybeAddCustomAnnotations( definition, type );
     maybeAddJavadoc( definition, type );
 
     final String testJavaName = javaName + "TestCompile";
