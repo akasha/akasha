@@ -327,6 +327,51 @@ typedef unsigned long GPUStencilValue;
 
 typedef unsigned long GPUTextureUsageFlags;
 
+[Exposed=(Window,DedicatedWorker)]
+namespace GPUBufferUsage {
+  const GPUFlagsConstant COPY_DST = 0x0008;
+  const GPUFlagsConstant COPY_SRC = 0x0004;
+  const GPUFlagsConstant INDEX = 0x0010;
+  const GPUFlagsConstant INDIRECT = 0x0100;
+  const GPUFlagsConstant MAP_READ = 0x0001;
+  const GPUFlagsConstant MAP_WRITE = 0x0002;
+  const GPUFlagsConstant QUERY_RESOLVE = 0x0200;
+  const GPUFlagsConstant STORAGE = 0x0080;
+  const GPUFlagsConstant UNIFORM = 0x0040;
+  const GPUFlagsConstant VERTEX = 0x0020;
+};
+
+[Exposed=(Window,DedicatedWorker)]
+namespace GPUColorWrite {
+  const GPUFlagsConstant ALL = 0xF;
+  const GPUFlagsConstant ALPHA = 0x8;
+  const GPUFlagsConstant BLUE = 0x4;
+  const GPUFlagsConstant GREEN = 0x2;
+  const GPUFlagsConstant RED = 0x1;
+};
+
+[Exposed=(Window,DedicatedWorker)]
+namespace GPUMapMode {
+  const GPUFlagsConstant READ = 0x0001;
+  const GPUFlagsConstant WRITE = 0x0002;
+};
+
+[Exposed=(Window,DedicatedWorker)]
+namespace GPUShaderStage {
+  const GPUFlagsConstant COMPUTE = 0x4;
+  const GPUFlagsConstant FRAGMENT = 0x2;
+  const GPUFlagsConstant VERTEX = 0x1;
+};
+
+[Exposed=(Window,DedicatedWorker)]
+namespace GPUTextureUsage {
+  const GPUFlagsConstant COPY_DST = 0x02;
+  const GPUFlagsConstant COPY_SRC = 0x01;
+  const GPUFlagsConstant RENDER_ATTACHMENT = 0x10;
+  const GPUFlagsConstant STORAGE_BINDING = 0x08;
+  const GPUFlagsConstant TEXTURE_BINDING = 0x04;
+};
+
 dictionary GPUBindGroupDescriptor : GPUObjectDescriptorBase {
   required GPUBindGroupLayout layout;
   required sequence<GPUBindGroupEntry> entries;
@@ -574,7 +619,7 @@ dictionary GPURenderPipelineDescriptor : GPUPipelineDescriptorBase {
 };
 
 dictionary GPURequestAdapterOptions {
-  boolean forceSoftware = false;
+  boolean forceFallbackAdapter = false;
   GPUPowerPreference powerPreference;
 };
 
@@ -686,35 +731,35 @@ interface mixin GPURenderEncoderBase {
 };
 
 interface mixin NavigatorGPU {
-  [SameObject]
+  [SameObject, SecureContext]
   readonly attribute GPU gpu;
 };
 
-[Exposed=(Window,DedicatedWorker)]
+[Exposed=(Window,DedicatedWorker), SecureContext]
 interface GPU {
   Promise<GPUAdapter?> requestAdapter( optional GPURequestAdapterOptions options = {} );
 };
 
-[Exposed=(Window,DedicatedWorker)]
+[Exposed=(Window,DedicatedWorker), SecureContext]
 interface GPUAdapter {
   [SameObject]
   readonly attribute GPUSupportedFeatures features;
-  readonly attribute boolean isSoftware;
+  readonly attribute boolean isFallbackAdapter;
   [SameObject]
   readonly attribute GPUSupportedLimits limits;
   readonly attribute DOMString name;
   Promise<GPUDevice> requestDevice( optional GPUDeviceDescriptor descriptor = {} );
 };
 
-[Exposed=(Window,DedicatedWorker)]
+[Exposed=(Window,DedicatedWorker), SecureContext]
 interface GPUBindGroup {
 };
 
-[Exposed=(Window,DedicatedWorker)]
+[Exposed=(Window,DedicatedWorker), SecureContext]
 interface GPUBindGroupLayout {
 };
 
-[Exposed=(Window,DedicatedWorker)]
+[Exposed=(Window,DedicatedWorker), SecureContext]
 interface GPUBuffer {
   undefined destroy();
   ArrayBuffer getMappedRange( optional GPUSize64 offset = 0, optional GPUSize64 size );
@@ -722,21 +767,7 @@ interface GPUBuffer {
   undefined unmap();
 };
 
-[Exposed=(Window,DedicatedWorker)]
-interface GPUBufferUsage {
-  const GPUFlagsConstant COPY_DST = 0x0008;
-  const GPUFlagsConstant COPY_SRC = 0x0004;
-  const GPUFlagsConstant INDEX = 0x0010;
-  const GPUFlagsConstant INDIRECT = 0x0100;
-  const GPUFlagsConstant MAP_READ = 0x0001;
-  const GPUFlagsConstant MAP_WRITE = 0x0002;
-  const GPUFlagsConstant QUERY_RESOLVE = 0x0200;
-  const GPUFlagsConstant STORAGE = 0x0080;
-  const GPUFlagsConstant UNIFORM = 0x0040;
-  const GPUFlagsConstant VERTEX = 0x0020;
-};
-
-[Exposed=(Window,DedicatedWorker)]
+[Exposed=(Window,DedicatedWorker), SecureContext]
 interface GPUCanvasContext {
   readonly attribute ( HTMLCanvasElement or OffscreenCanvas ) canvas;
   undefined configure( GPUCanvasConfiguration configuration );
@@ -745,21 +776,12 @@ interface GPUCanvasContext {
   undefined unconfigure();
 };
 
-[Exposed=(Window,DedicatedWorker)]
-interface GPUColorWrite {
-  const GPUFlagsConstant ALL = 0xF;
-  const GPUFlagsConstant ALPHA = 0x8;
-  const GPUFlagsConstant BLUE = 0x4;
-  const GPUFlagsConstant GREEN = 0x2;
-  const GPUFlagsConstant RED = 0x1;
-};
-
-[Exposed=(Window,DedicatedWorker)]
+[Exposed=(Window,DedicatedWorker), SecureContext]
 interface GPUCommandBuffer {
   readonly attribute Promise<double> executionTime;
 };
 
-[Exposed=(Window,DedicatedWorker)]
+[Exposed=(Window,DedicatedWorker), SecureContext]
 interface GPUCommandEncoder {
   GPUComputePassEncoder beginComputePass( optional GPUComputePassDescriptor descriptor = {} );
   GPURenderPassEncoder beginRenderPass( GPURenderPassDescriptor descriptor );
@@ -775,12 +797,12 @@ interface GPUCommandEncoder {
   undefined writeTimestamp( GPUQuerySet querySet, GPUSize32 queryIndex );
 };
 
-[Exposed=(Window,DedicatedWorker), Serializable]
+[Exposed=(Window,DedicatedWorker), Serializable, SecureContext]
 interface GPUCompilationInfo {
   readonly attribute FrozenArray<GPUCompilationMessage> messages;
 };
 
-[Exposed=(Window,DedicatedWorker), Serializable]
+[Exposed=(Window,DedicatedWorker), Serializable, SecureContext]
 interface GPUCompilationMessage {
   readonly attribute unsigned long long length;
   readonly attribute unsigned long long lineNum;
@@ -790,7 +812,7 @@ interface GPUCompilationMessage {
   readonly attribute GPUCompilationMessageType type;
 };
 
-[Exposed=(Window,DedicatedWorker)]
+[Exposed=(Window,DedicatedWorker), SecureContext]
 interface GPUComputePassEncoder {
   undefined beginPipelineStatisticsQuery( GPUQuerySet querySet, GPUSize32 queryIndex );
   undefined dispatch( GPUSize32 x, optional GPUSize32 y = 1, optional GPUSize32 z = 1 );
@@ -801,11 +823,11 @@ interface GPUComputePassEncoder {
   undefined writeTimestamp( GPUQuerySet querySet, GPUSize32 queryIndex );
 };
 
-[Exposed=(Window,DedicatedWorker)]
+[Exposed=(Window,DedicatedWorker), SecureContext]
 interface GPUComputePipeline {
 };
 
-[Exposed=(Window,DedicatedWorker)]
+[Exposed=(Window,DedicatedWorker), SecureContext]
 interface GPUDevice : EventTarget {
   [SameObject]
   readonly attribute GPUSupportedFeatures features;
@@ -837,14 +859,8 @@ interface GPUDeviceLostInfo {
   readonly attribute ( GPUDeviceLostReason or undefined ) reason;
 };
 
-[Exposed=(Window,DedicatedWorker)]
+[Exposed=(Window,DedicatedWorker), SecureContext]
 interface GPUExternalTexture {
-};
-
-[Exposed=(Window,DedicatedWorker)]
-interface GPUMapMode {
-  const GPUFlagsConstant READ = 0x0001;
-  const GPUFlagsConstant WRITE = 0x0002;
 };
 
 [Exposed=(Window,DedicatedWorker)]
@@ -852,16 +868,16 @@ interface GPUOutOfMemoryError {
   constructor();
 };
 
-[Exposed=(Window,DedicatedWorker)]
+[Exposed=(Window,DedicatedWorker), SecureContext]
 interface GPUPipelineLayout {
 };
 
-[Exposed=(Window,DedicatedWorker)]
+[Exposed=(Window,DedicatedWorker), SecureContext]
 interface GPUQuerySet {
   undefined destroy();
 };
 
-[Exposed=(Window,DedicatedWorker)]
+[Exposed=(Window,DedicatedWorker), SecureContext]
 interface GPUQueue {
   undefined copyExternalImageToTexture( GPUImageCopyExternalImage source, GPUImageCopyTextureTagged destination, GPUExtent3D copySize );
   Promise<undefined> onSubmittedWorkDone();
@@ -870,16 +886,16 @@ interface GPUQueue {
   undefined writeTexture( GPUImageCopyTexture destination, [AllowShared] BufferSource data, GPUImageDataLayout dataLayout, GPUExtent3D size );
 };
 
-[Exposed=(Window,DedicatedWorker)]
+[Exposed=(Window,DedicatedWorker), SecureContext]
 interface GPURenderBundle {
 };
 
-[Exposed=(Window,DedicatedWorker)]
+[Exposed=(Window,DedicatedWorker), SecureContext]
 interface GPURenderBundleEncoder {
   GPURenderBundle finish( optional GPURenderBundleDescriptor descriptor = {} );
 };
 
-[Exposed=(Window,DedicatedWorker)]
+[Exposed=(Window,DedicatedWorker), SecureContext]
 interface GPURenderPassEncoder {
   undefined beginOcclusionQuery( GPUSize32 queryIndex );
   undefined beginPipelineStatisticsQuery( GPUQuerySet querySet, GPUSize32 queryIndex );
@@ -894,24 +910,17 @@ interface GPURenderPassEncoder {
   undefined writeTimestamp( GPUQuerySet querySet, GPUSize32 queryIndex );
 };
 
-[Exposed=(Window,DedicatedWorker)]
+[Exposed=(Window,DedicatedWorker), SecureContext]
 interface GPURenderPipeline {
 };
 
-[Exposed=(Window,DedicatedWorker)]
+[Exposed=(Window,DedicatedWorker), SecureContext]
 interface GPUSampler {
 };
 
-[Exposed=(Window,DedicatedWorker)]
+[Exposed=(Window,DedicatedWorker), SecureContext]
 interface GPUShaderModule {
   Promise<GPUCompilationInfo> compilationInfo();
-};
-
-[Exposed=(Window,DedicatedWorker)]
-interface GPUShaderStage {
-  const GPUFlagsConstant COMPUTE = 0x4;
-  const GPUFlagsConstant FRAGMENT = 0x2;
-  const GPUFlagsConstant VERTEX = 0x1;
 };
 
 [Exposed=(Window,DedicatedWorker)]
@@ -949,22 +958,13 @@ interface GPUSupportedLimits {
   readonly attribute unsigned long minUniformBufferOffsetAlignment;
 };
 
-[Exposed=(Window,DedicatedWorker)]
+[Exposed=(Window,DedicatedWorker), SecureContext]
 interface GPUTexture {
   GPUTextureView createView( optional GPUTextureViewDescriptor descriptor = {} );
   undefined destroy();
 };
 
-[Exposed=(Window,DedicatedWorker)]
-interface GPUTextureUsage {
-  const GPUFlagsConstant COPY_DST = 0x02;
-  const GPUFlagsConstant COPY_SRC = 0x01;
-  const GPUFlagsConstant RENDER_ATTACHMENT = 0x10;
-  const GPUFlagsConstant STORAGE_BINDING = 0x08;
-  const GPUFlagsConstant TEXTURE_BINDING = 0x04;
-};
-
-[Exposed=(Window,DedicatedWorker)]
+[Exposed=(Window,DedicatedWorker), SecureContext]
 interface GPUTextureView {
 };
 

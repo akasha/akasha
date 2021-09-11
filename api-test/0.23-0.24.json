@@ -1,0 +1,387 @@
+[
+  {
+    "code": "java.class.noLongerInheritsFromClass",
+    "description": "Class no longer inherits from 'akasha.core.JsObject'.",
+    "element": "class akasha.gpu.GPUBufferUsage",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUBufferUsage",
+      "classSimpleName": "GPUBufferUsage",
+      "elementKind": "class",
+      "package": "akasha.gpu",
+      "superClass": "akasha.core.JsObject"
+    }
+  },
+  {
+    "code": "java.class.nowFinal",
+    "description": "Class is now final.",
+    "element": "class akasha.gpu.GPUBufferUsage",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUBufferUsage",
+      "classSimpleName": "GPUBufferUsage",
+      "elementKind": "class",
+      "newModifiers": "public final",
+      "oldModifiers": "public",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.noLongerInheritsFromClass",
+    "description": "Class no longer inherits from 'akasha.core.JsObject'.",
+    "element": "class akasha.gpu.GPUColorWrite",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUColorWrite",
+      "classSimpleName": "GPUColorWrite",
+      "elementKind": "class",
+      "package": "akasha.gpu",
+      "superClass": "akasha.core.JsObject"
+    }
+  },
+  {
+    "code": "java.class.nowFinal",
+    "description": "Class is now final.",
+    "element": "class akasha.gpu.GPUColorWrite",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUColorWrite",
+      "classSimpleName": "GPUColorWrite",
+      "elementKind": "class",
+      "newModifiers": "public final",
+      "oldModifiers": "public",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.noLongerInheritsFromClass",
+    "description": "Class no longer inherits from 'akasha.core.JsObject'.",
+    "element": "class akasha.gpu.GPUMapMode",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUMapMode",
+      "classSimpleName": "GPUMapMode",
+      "elementKind": "class",
+      "package": "akasha.gpu",
+      "superClass": "akasha.core.JsObject"
+    }
+  },
+  {
+    "code": "java.class.nowFinal",
+    "description": "Class is now final.",
+    "element": "class akasha.gpu.GPUMapMode",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUMapMode",
+      "classSimpleName": "GPUMapMode",
+      "elementKind": "class",
+      "newModifiers": "public final",
+      "oldModifiers": "public",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.noLongerInheritsFromClass",
+    "description": "Class no longer inherits from 'akasha.core.JsObject'.",
+    "element": "class akasha.gpu.GPUShaderStage",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUShaderStage",
+      "classSimpleName": "GPUShaderStage",
+      "elementKind": "class",
+      "package": "akasha.gpu",
+      "superClass": "akasha.core.JsObject"
+    }
+  },
+  {
+    "code": "java.class.nowFinal",
+    "description": "Class is now final.",
+    "element": "class akasha.gpu.GPUShaderStage",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUShaderStage",
+      "classSimpleName": "GPUShaderStage",
+      "elementKind": "class",
+      "newModifiers": "public final",
+      "oldModifiers": "public",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.noLongerInheritsFromClass",
+    "description": "Class no longer inherits from 'akasha.core.JsObject'.",
+    "element": "class akasha.gpu.GPUTextureUsage",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUTextureUsage",
+      "classSimpleName": "GPUTextureUsage",
+      "elementKind": "class",
+      "package": "akasha.gpu",
+      "superClass": "akasha.core.JsObject"
+    }
+  },
+  {
+    "code": "java.class.nowFinal",
+    "description": "Class is now final.",
+    "element": "class akasha.gpu.GPUTextureUsage",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUTextureUsage",
+      "classSimpleName": "GPUTextureUsage",
+      "elementKind": "class",
+      "newModifiers": "public final",
+      "oldModifiers": "public",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.defaultMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.gpu.GPURequestAdapterOptions.Builder akasha.gpu.GPURequestAdapterOptions.Builder::forceFallbackAdapter(boolean)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURequestAdapterOptions.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "method",
+      "methodName": "forceFallbackAdapter",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method boolean akasha.gpu.GPUAdapter::isFallbackAdapter()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUAdapter",
+      "classSimpleName": "GPUAdapter",
+      "elementKind": "method",
+      "methodName": "isFallbackAdapter",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.addedToInterface",
+    "description": "Method was added to an interface.",
+    "newElement": "method boolean akasha.gpu.GPURequestAdapterOptions::forceFallbackAdapter()",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "NON_BREAKING",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURequestAdapterOptions",
+      "classSimpleName": "GPURequestAdapterOptions",
+      "elementKind": "method",
+      "methodName": "forceFallbackAdapter",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.visibilityReduced",
+    "description": "visibility reduced",
+    "element": "method void akasha.gpu.GPUBufferUsage::<init>()",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUBufferUsage",
+      "classSimpleName": "GPUBufferUsage",
+      "elementKind": "constructor",
+      "methodName": "<init>",
+      "newVisibility": "private",
+      "oldVisibility": "protected",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.visibilityReduced",
+    "description": "visibility reduced",
+    "element": "method void akasha.gpu.GPUColorWrite::<init>()",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUColorWrite",
+      "classSimpleName": "GPUColorWrite",
+      "elementKind": "constructor",
+      "methodName": "<init>",
+      "newVisibility": "private",
+      "oldVisibility": "protected",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.visibilityReduced",
+    "description": "visibility reduced",
+    "element": "method void akasha.gpu.GPUMapMode::<init>()",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUMapMode",
+      "classSimpleName": "GPUMapMode",
+      "elementKind": "constructor",
+      "methodName": "<init>",
+      "newVisibility": "private",
+      "oldVisibility": "protected",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.addedToInterface",
+    "description": "Method was added to an interface.",
+    "newElement": "method void akasha.gpu.GPURequestAdapterOptions::setForceFallbackAdapter(boolean)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "NON_BREAKING",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURequestAdapterOptions",
+      "classSimpleName": "GPURequestAdapterOptions",
+      "elementKind": "method",
+      "methodName": "setForceFallbackAdapter",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.visibilityReduced",
+    "description": "visibility reduced",
+    "element": "method void akasha.gpu.GPUShaderStage::<init>()",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUShaderStage",
+      "classSimpleName": "GPUShaderStage",
+      "elementKind": "constructor",
+      "methodName": "<init>",
+      "newVisibility": "private",
+      "oldVisibility": "protected",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.visibilityReduced",
+    "description": "visibility reduced",
+    "element": "method void akasha.gpu.GPUTextureUsage::<init>()",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUTextureUsage",
+      "classSimpleName": "GPUTextureUsage",
+      "elementKind": "constructor",
+      "methodName": "<init>",
+      "newVisibility": "private",
+      "oldVisibility": "protected",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.gpu.GPURequestAdapterOptions.Builder akasha.gpu.GPURequestAdapterOptions.Builder::forceSoftware(boolean)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURequestAdapterOptions.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "method",
+      "methodName": "forceSoftware",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method boolean akasha.gpu.GPUAdapter::isSoftware()",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUAdapter",
+      "classSimpleName": "GPUAdapter",
+      "elementKind": "method",
+      "methodName": "isSoftware",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method boolean akasha.gpu.GPURequestAdapterOptions::forceSoftware()",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURequestAdapterOptions",
+      "classSimpleName": "GPURequestAdapterOptions",
+      "elementKind": "method",
+      "methodName": "forceSoftware",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method void akasha.gpu.GPURequestAdapterOptions::setForceSoftware(boolean)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURequestAdapterOptions",
+      "classSimpleName": "GPURequestAdapterOptions",
+      "elementKind": "method",
+      "methodName": "setForceSoftware",
+      "package": "akasha.gpu"
+    }
+  }
+]
