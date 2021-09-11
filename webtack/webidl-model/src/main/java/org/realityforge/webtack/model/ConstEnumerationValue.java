@@ -9,7 +9,7 @@ public final class ConstEnumerationValue
   extends AttributedNode
 {
   @Nonnull
-  private final String _interfaceName;
+  private final String _typeName;
   @Nonnull
   private final String _constName;
   /**
@@ -18,22 +18,22 @@ public final class ConstEnumerationValue
   @Nullable
   private final DocumentationElement _documentation;
 
-  public ConstEnumerationValue( @Nonnull final String interfaceName,
+  public ConstEnumerationValue( @Nonnull final String typeName,
                                 @Nonnull final String constName,
                                 @Nullable final DocumentationElement documentation,
                                 @Nonnull final List<ExtendedAttribute> extendedAttributes,
                                 @Nonnull final List<SourceInterval> sourceLocations )
   {
     super( extendedAttributes, sourceLocations );
-    _interfaceName = Objects.requireNonNull( interfaceName );
+    _typeName = Objects.requireNonNull( typeName );
     _constName = Objects.requireNonNull( constName );
     _documentation = documentation;
   }
 
   @Nonnull
-  public String getInterfaceName()
+  public String getTypeName()
   {
-    return _interfaceName;
+    return _typeName;
   }
 
   @Nonnull
@@ -62,7 +62,7 @@ public final class ConstEnumerationValue
     else
     {
       final ConstEnumerationValue other = (ConstEnumerationValue) o;
-      return _interfaceName.equals( other._interfaceName ) &&
+      return _typeName.equals( other._typeName ) &&
              _constName.equals( other._constName ) &&
              Objects.equals( _documentation, other._documentation );
     }
@@ -71,13 +71,13 @@ public final class ConstEnumerationValue
   @Override
   public int hashCode()
   {
-    return Objects.hash( super.hashCode(), _interfaceName, _constName, _documentation );
+    return Objects.hash( super.hashCode(), _typeName, _constName, _documentation );
   }
 
   public boolean equiv( @Nonnull final ConstEnumerationValue other )
   {
     final DocumentationElement documentation = other.getDocumentation();
-    return _interfaceName.equals( other._interfaceName ) &&
+    return _typeName.equals( other._typeName ) &&
            _constName.equals( other._constName ) &&
            ( null == _documentation ) == ( null == documentation ) &&
            ( null == _documentation || _documentation.equiv( documentation ) );

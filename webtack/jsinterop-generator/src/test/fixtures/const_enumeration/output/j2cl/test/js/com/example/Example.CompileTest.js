@@ -3,6 +3,8 @@ goog.require('com.example.EXT_color_buffer_float.$Overlay');
 goog.require('com.example.EXT_color_buffer_floatTestCompile');
 goog.require('com.example.EXT_float_blend.$Overlay');
 goog.require('com.example.EXT_float_blendTestCompile');
+goog.require('com.example.GPUColorWrite.$Overlay');
+goog.require('com.example.GPUColorWriteTestCompile');
 goog.require('com.example.GPUTextureDescriptor.$Overlay');
 goog.require('com.example.GPUTextureDescriptorTestCompile');
 goog.require('com.example.GPUTextureUsage.$Overlay');

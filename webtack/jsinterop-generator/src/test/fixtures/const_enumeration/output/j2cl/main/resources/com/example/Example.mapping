@@ -1,5 +1,7 @@
 EXT_color_buffer_float=com.example.EXT_color_buffer_float
 EXT_float_blend=com.example.EXT_float_blend
+GPUColorWrite=com.example.GPUColorWrite
+GPUColorWriteFlags=com.example.GPUColorWriteFlags
 GPUTextureDescriptor=com.example.GPUTextureDescriptor
 GPUTextureUsage=com.example.GPUTextureUsage
 GPUTextureUsageFlags=com.example.GPUTextureUsageFlags

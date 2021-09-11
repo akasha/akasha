@@ -7,6 +7,15 @@
  */
 var GPUTextureDescriptor;
 /**
+ * @const
+ */
+var GPUColorWrite;
+/** @const {!number} */ GPUColorWrite.ALL;
+/** @const {!number} */ GPUColorWrite.ALPHA;
+/** @const {!number} */ GPUColorWrite.BLUE;
+/** @const {!number} */ GPUColorWrite.GREEN;
+/** @const {!number} */ GPUColorWrite.RED;
+/**
  * @constructor
  * @private
  * @nosideeffects

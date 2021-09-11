@@ -24,6 +24,7 @@ import javax.annotation.Nullable;
 import org.realityforge.webtack.model.Attributed;
 import org.realityforge.webtack.model.ConstEnumerationDefinition;
 import org.realityforge.webtack.model.ConstEnumerationValue;
+import org.realityforge.webtack.model.ConstantMemberContainer;
 import org.realityforge.webtack.model.EnumerationDefinition;
 import org.realityforge.webtack.model.FrozenArrayType;
 import org.realityforge.webtack.model.Kind;
@@ -406,11 +407,13 @@ public abstract class AbstractJavaAction
         if ( null != definition )
         {
           final ConstEnumerationValue value = definition.getValues().get( 0 );
-          return toTypeName( schema
-                               .getInterfaceByName( value.getInterfaceName() )
-                               .getConstantByName( value.getConstName() )
-                               .getType(),
-                             boxed );
+          final String typeName = value.getTypeName();
+          ConstantMemberContainer container = schema.findInterfaceByName( typeName );
+          if( null == container )
+          {
+            container = schema.getNamespaceByName( typeName );
+          }
+          return toTypeName( container.getConstantByName( value.getConstName() ).getType(), boxed );
         }
         else
         {

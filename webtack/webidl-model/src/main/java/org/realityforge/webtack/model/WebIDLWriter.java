@@ -538,7 +538,7 @@ public final class WebIDLWriter
       writeDocumentationIfRequired( writer, value.getDocumentation(), "  " );
       writeIndent( writer );
       writeAttributesIfRequired( writer, value.getExtendedAttributes(), " " );
-      writer.write( value.getInterfaceName() );
+      writer.write( value.getTypeName() );
       writer.write( "." );
       writer.write( value.getConstName() );
       if ( size != index++ )

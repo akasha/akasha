@@ -1,5 +1,6 @@
 EXT_color_buffer_float
 EXT_float_blend
+GPUColorWrite
 GPUTextureDescriptor
 GPUTextureUsage
 KHR_parallel_shader_compile

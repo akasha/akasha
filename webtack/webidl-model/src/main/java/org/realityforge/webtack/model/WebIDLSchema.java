@@ -238,7 +238,13 @@ public final class WebIDLSchema
   @Nonnull
   public ConstMember getConstant( @Nonnull final ConstEnumerationValue value )
   {
-    return getInterfaceByName( value.getInterfaceName() ).getConstantByName( value.getConstName() );
+    final String typeName = value.getTypeName();
+    ConstantMemberContainer container = findInterfaceByName( typeName );
+    if ( null == container )
+    {
+      container = getNamespaceByName( typeName );
+    }
+    return container.getConstantByName( value.getConstName() );
   }
 
   @Nonnull

@@ -8,7 +8,7 @@ import javax.annotation.Nonnull;
 import org.realityforge.webtack.model.ConstEnumerationDefinition;
 import org.realityforge.webtack.model.ConstEnumerationValue;
 import org.realityforge.webtack.model.ConstMember;
-import org.realityforge.webtack.model.InterfaceDefinition;
+import org.realityforge.webtack.model.ConstantMemberContainer;
 import org.realityforge.webtack.model.Type;
 import org.realityforge.webtack.model.WebIDLSchema;
 
@@ -26,12 +26,16 @@ final class ConstEnumerationValidator
       Type valueType = null;
       for ( final ConstEnumerationValue value : definition.getValues() )
       {
-        final InterfaceDefinition type = schema.findInterfaceByName( value.getInterfaceName() );
+         ConstantMemberContainer type = schema.findInterfaceByName( value.getTypeName() );
+        if ( null == type )
+        {
+          type = schema.findNamespaceByName( value.getTypeName() );
+        }
         if ( null == type )
         {
           final String message =
             "Constant named '" + value.getConstName() + "' referenced by const enumeration named '" +
-            definition.getName() + "' references an unknown type named '" + value.getInterfaceName() + "'";
+            definition.getName() + "' references an unknown type named '" + value.getTypeName() + "'";
           errors.add( new ValidationError( value, message, true ) );
         }
         else
@@ -41,7 +45,7 @@ final class ConstEnumerationValidator
           {
             final String message =
               "Constant named '" + value.getConstName() + "' referenced by const enumeration named '" +
-              definition.getName() + "' does not exist on type named '" + value.getInterfaceName() + "'";
+              definition.getName() + "' does not exist on type named '" + value.getTypeName() + "'";
             errors.add( new ValidationError( value, message, true ) );
           }
           else

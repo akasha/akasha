@@ -7,6 +7,15 @@ const enum GPUTextureUsageFlags {
   GPUTextureUsage.RENDER_ATTACHMENT
 };
 
+[Flags]
+const enum GPUColorWriteFlags {
+  GPUColorWrite.RED,
+  GPUColorWrite.GREEN,
+  GPUColorWrite.BLUE,
+  GPUColorWrite.ALPHA,
+  GPUColorWrite.ALL
+};
+
 [JavaSubPackage=req, JavaName=ReadyStateType2b]
 const enum ReadyStateType2 {
   XMLHttpRequest2.UNSENT,
@@ -28,6 +37,14 @@ const enum ReadyStateType {
   XMLHttpRequest.HEADERS_RECEIVED,
   XMLHttpRequest.LOADING,
   XMLHttpRequest.DONE
+};
+
+namespace GPUColorWrite {
+  const unsigned long ALL = 0xF;
+  const unsigned long ALPHA = 0x8;
+  const unsigned long BLUE = 0x4;
+  const unsigned long GREEN = 0x2;
+  const unsigned long RED = 0x1;
 };
 
 dictionary GPUTextureDescriptor {

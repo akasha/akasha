@@ -308,7 +308,7 @@ final class JsinteropAction
     {
       annotation.addMember( isFlags ? "flags" : isInteger ? "intValues" : "stringValues",
                             "$T.$N",
-                            lookupClassName( value.getInterfaceName() ),
+                            lookupClassName( value.getTypeName() ),
                             value.getConstName() );
     }
     type.addAnnotation( annotation.build() );
@@ -323,10 +323,10 @@ final class JsinteropAction
       definition
         .getValues()
         .stream()
-        .peek( v -> params.add( lookupClassName( v.getInterfaceName() ) ) )
+        .peek( v -> params.add( lookupClassName( v.getTypeName() ) ) )
         .peek( v -> params.add( v.getConstName() ) )
         .peek( v -> descriptions.add( "$T.$N" ) )
-        .peek( v -> describeParams.add( lookupClassName( v.getInterfaceName() ) ) )
+        .peek( v -> describeParams.add( lookupClassName( v.getTypeName() ) ) )
         .peek( v -> describeParams.add( v.getConstName() ) )
         .peek( v -> describeParams.add( v.getConstName() ) )
         .peek( v -> describeBlocks.add( isInteger ? "$T.$N == value ? $S : " : "$T.$N.equals( value ) ? $S : " ) )
@@ -403,7 +403,7 @@ final class JsinteropAction
       Integer.compare( parseNumericConstantValue( v1 ), parseNumericConstantValue( v2 ) ) :
       v1.compareTo( v2 );
     return 0 == value ?
-           ( o1.getInterfaceName() + o1.getConstName() ).compareTo( o2.getInterfaceName() + o2.getConstName() ) :
+           ( o1.getTypeName() + o1.getConstName() ).compareTo( o2.getTypeName() + o2.getConstName() ) :
            value;
   }
 

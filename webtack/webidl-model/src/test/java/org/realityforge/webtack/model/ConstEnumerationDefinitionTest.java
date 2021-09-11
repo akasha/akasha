@@ -39,7 +39,7 @@ public final class ConstEnumerationDefinitionTest
     // This is to ensure that we order by insertion order
     assertEquals( values
                     .stream()
-                    .map( v -> v.getInterfaceName() + "." + v.getConstName() )
+                    .map( v -> v.getTypeName() + "." + v.getConstName() )
                     .collect( Collectors.joining( "|" ) ),
                   "XMLHttpRequest.UNSENT|XMLHttpRequest.OPENED|XMLHttpRequest.HEADERS_RECEIVED|XMLHttpRequest.LOADING|XMLHttpRequest.DONE" );
     final ConstEnumerationValue enumerationValue = values.get( 0 );
