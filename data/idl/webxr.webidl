@@ -46,9 +46,9 @@ dictionary XRInputSourceEventInit : EventInit {
 };
 
 dictionary XRInputSourcesChangeEventInit : EventInit {
+  required XRSession session;
   required FrozenArray<XRInputSource> added;
   required FrozenArray<XRInputSource> removed;
-  required XRSession session;
 };
 
 dictionary XRPermissionDescriptor : PermissionDescriptor {

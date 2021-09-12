@@ -89,8 +89,8 @@ dictionary EcdsaParams : Algorithm {
 
 dictionary HkdfParams : Algorithm {
   required HashAlgorithmIdentifier hash;
-  required BufferSource info;
   required BufferSource salt;
+  required BufferSource info;
 };
 
 dictionary HmacImportParams : Algorithm {
@@ -136,9 +136,9 @@ dictionary KeyAlgorithm {
 };
 
 dictionary Pbkdf2Params : Algorithm {
-  required HashAlgorithmIdentifier hash;
-  required [EnforceRange] unsigned long iterations;
   required BufferSource salt;
+  required [EnforceRange] unsigned long iterations;
+  required HashAlgorithmIdentifier hash;
 };
 
 dictionary RsaHashedImportParams : Algorithm {

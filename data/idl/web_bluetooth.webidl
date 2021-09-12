@@ -7,10 +7,10 @@ typedef ( DOMString or unsigned long ) BluetoothServiceUUID;
 typedef DOMString UUID;
 
 dictionary AllowedBluetoothDevice {
-  required sequence<unsigned short> allowedManufacturerData;
-  required ( DOMString or sequence<UUID> ) allowedServices;
   required DOMString deviceId;
   required boolean mayUseGATT;
+  required ( DOMString or sequence<UUID> ) allowedServices;
+  required sequence<unsigned short> allowedManufacturerData;
 };
 
 dictionary BluetoothAdvertisingEventInit : EventInit {

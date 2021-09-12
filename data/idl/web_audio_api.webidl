@@ -112,9 +112,9 @@ dictionary AudioParamDescriptor {
 };
 
 dictionary AudioProcessingEventInit : EventInit {
+  required double playbackTime;
   required AudioBuffer inputBuffer;
   required AudioBuffer outputBuffer;
-  required double playbackTime;
 };
 
 dictionary AudioTimestamp {
@@ -173,8 +173,8 @@ dictionary GainOptions : AudioNodeOptions {
 };
 
 dictionary IIRFilterOptions : AudioNodeOptions {
-  required sequence<double> feedback;
   required sequence<double> feedforward;
+  required sequence<double> feedback;
 };
 
 dictionary MediaElementAudioSourceOptions {
@@ -195,8 +195,8 @@ dictionary OfflineAudioCompletionEventInit : EventInit {
 
 dictionary OfflineAudioContextOptions {
   required unsigned long length;
-  unsigned long numberOfChannels = 1;
   required float sampleRate;
+  unsigned long numberOfChannels = 1;
 };
 
 dictionary OscillatorOptions : AudioNodeOptions {

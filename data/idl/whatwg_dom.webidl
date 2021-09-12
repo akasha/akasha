@@ -84,10 +84,10 @@ dictionary ShadowRootInit {
 };
 
 dictionary StaticRangeInit {
-  required Node endContainer;
-  required unsigned long endOffset;
   required Node startContainer;
   required unsigned long startOffset;
+  required Node endContainer;
+  required unsigned long endOffset;
 };
 
 interface mixin ChildNode {

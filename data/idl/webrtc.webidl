@@ -261,16 +261,16 @@ dictionary RTCRtpCapabilities {
 };
 
 dictionary RTCRtpCodecCapability {
-  required unsigned long clockRate;
   required DOMString mimeType;
+  required unsigned long clockRate;
   unsigned short channels;
   DOMString sdpFmtpLine;
 };
 
 dictionary RTCRtpCodecParameters {
-  required unsigned long clockRate;
-  required DOMString mimeType;
   required octet payloadType;
+  required DOMString mimeType;
+  required unsigned long clockRate;
   unsigned short channels;
   DOMString sdpFmtpLine;
 };
@@ -280,9 +280,9 @@ dictionary RTCRtpCodingParameters {
 };
 
 dictionary RTCRtpContributingSource {
-  required unsigned long rtpTimestamp;
-  required unsigned long source;
   required DOMHighResTimeStamp timestamp;
+  required unsigned long source;
+  required unsigned long rtpTimestamp;
   double audioLevel;
 };
 
@@ -300,23 +300,23 @@ dictionary RTCRtpHeaderExtensionCapability {
 };
 
 dictionary RTCRtpHeaderExtensionParameters {
-  required unsigned short id;
   required DOMString uri;
+  required unsigned short id;
   boolean encrypted = false;
 };
 
 dictionary RTCRtpParameters {
-  required sequence<RTCRtpCodecParameters> codecs;
   required sequence<RTCRtpHeaderExtensionParameters> headerExtensions;
   required RTCRtcpParameters rtcp;
+  required sequence<RTCRtpCodecParameters> codecs;
 };
 
 dictionary RTCRtpReceiveParameters : RTCRtpParameters {
 };
 
 dictionary RTCRtpSendParameters : RTCRtpParameters {
-  required sequence<RTCRtpEncodingParameters> encodings;
   required DOMString transactionId;
+  required sequence<RTCRtpEncodingParameters> encodings;
 };
 
 dictionary RTCRtpSynchronizationSource : RTCRtpContributingSource {
@@ -334,16 +334,16 @@ dictionary RTCSessionDescriptionInit {
 };
 
 dictionary RTCStats {
-  required DOMString id;
   required DOMHighResTimeStamp timestamp;
   required RTCStatsType type;
+  required DOMString id;
 };
 
 dictionary RTCTrackEventInit : EventInit {
   required RTCRtpReceiver receiver;
   required MediaStreamTrack track;
-  sequence<MediaStream> streams = [];
   required RTCRtpTransceiver transceiver;
+  sequence<MediaStream> streams = [];
 };
 
 partial dictionary RTCOfferOptions {
