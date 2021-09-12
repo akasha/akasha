@@ -2,12 +2,5 @@
     "kind": "Type",
     "name": "EcdsaParams",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/EcdsaParams",
-    "description": "The EcdsaParams dictionary of the Web Crypto API represents the object that should be passed as the algorithm parameter into SubtleCrypto.sign() or SubtleCrypto.verify() when using the ECDSA algorithm.",
-    "refs": [
-        {
-            "name": "Web Cryptography API",
-            "href": "https://www.w3.org/TR/WebCryptoAPI/#dfn-EcdsaParams",
-            "description": "SubtleCrypto.EcdsaParams - Web Cryptography API"
-        }
-    ]
+    "description": "The EcdsaParams dictionary of the Web Crypto API represents the object that should be passed as the algorithm parameter into SubtleCrypto.sign() or SubtleCrypto.verify() when using the ECDSA algorithm."
 }

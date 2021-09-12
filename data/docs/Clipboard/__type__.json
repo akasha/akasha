@@ -2,7 +2,7 @@
     "kind": "Type",
     "name": "Clipboard",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Clipboard",
-    "description": "Clipboard interface implements the Clipboard API, providing&mdash;if the user grants permission&mdash;both read and write access to the contents of the system clipboard. The Clipboard API can be used to implement cut, copy, and paste features within a web application.",
+    "description": "The Clipboard interface implements the Clipboard API, providing&mdash;if the user grants permission&mdash;both read and write access to the contents of the system clipboard. The Clipboard API can be used to implement cut, copy, and paste features within a web application.",
     "refs": [
         {
             "name": "Clipboard API and events",

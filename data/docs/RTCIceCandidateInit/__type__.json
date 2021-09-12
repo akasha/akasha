@@ -2,12 +2,12 @@
     "kind": "Type",
     "name": "RTCIceCandidateInit",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateInit",
-    "description": "The WebRTC API's RTCIceCandidateInit dictionary, which contains the information needed to fundamentally describe an RTCIceCandidate.",
+    "description": "The RTCIceCandidate() constructor creates and returns a new RTCIceCandidate object, which can be configured to represent a single ICE candidate.",
     "refs": [
         {
             "name": "WebRTC 1.0: Real-Time Communication Between Browsers",
-            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcicecandidateinit",
-            "description": "(WebRTC 1.0) # dom-rtcicecandidateinit"
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcicecandidate-constructor",
+            "description": "(WebRTC 1.0) # dom-rtcicecandidate-constructor"
         }
     ]
 }

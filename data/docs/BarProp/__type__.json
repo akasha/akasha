@@ -1,0 +1,13 @@
+{
+    "kind": "Type",
+    "name": "BarProp",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/BarProp",
+    "description": "The BarProp interface of the Document Object Model represents the web browser user interface elements that are exposed to scripts in web pages. Each of the following interface elements are represented by a BarProp object.",
+    "refs": [
+        {
+            "name": "HTML Standard",
+            "href": "https://html.spec.whatwg.org/multipage/window-object.html#barprop",
+            "description": "(HTML) # barprop"
+        }
+    ]
+}

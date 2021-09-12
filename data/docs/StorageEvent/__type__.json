@@ -2,7 +2,7 @@
     "kind": "Type",
     "name": "StorageEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/StorageEvent",
-    "description": "A StorageEvent is sent to a window when a storage area it has access to is changed within the context of another document.",
+    "description": "The StorageEvent interface is implemented by the storage event, which is sent to a window when a storage area the window has access to is changed within the context of another document.",
     "refs": [
         {
             "name": "HTML Standard",

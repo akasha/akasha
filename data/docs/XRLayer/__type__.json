@@ -1,0 +1,13 @@
+{
+    "kind": "Type",
+    "name": "XRLayer",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRLayer",
+    "description": "The XRLayer interface of the WebXR Device API is the base class for WebXR layer types. It inherits methods from EventTarget.",
+    "refs": [
+        {
+            "name": "WebXR Device API",
+            "href": "https://immersive-web.github.io/webxr/#xrlayer-interface",
+            "description": "# xrlayer-interface"
+        }
+    ]
+}

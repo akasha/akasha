@@ -6,8 +6,8 @@
     "refs": [
         {
             "name": "Permissions",
-            "href": "https://w3c.github.io/permissions/#status-of-a-permission",
-            "description": "# status-of-a-permission"
+            "href": "https://w3c.github.io/permissions/#permissionstatus-interface",
+            "description": "# permissionstatus-interface"
         }
     ]
 }

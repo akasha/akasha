@@ -2,12 +2,5 @@
     "kind": "Type",
     "name": "WindowOrWorkerGlobalScope",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope",
-    "description": "The WindowOrWorkerGlobalScope mixin describes several features common to the Window and WorkerGlobalScope interfaces.",
-    "refs": [
-        {
-            "name": "HTML Standard",
-            "href": "https://html.spec.whatwg.org/multipage/webappapis.html#windoworworkerglobalscope-mixin",
-            "description": "(HTML) # windoworworkerglobalscope-mixin"
-        }
-    ]
+    "description": "The WindowOrWorkerGlobalScope mixin describes several features common to the Window and WorkerGlobalScope interfaces."
 }
