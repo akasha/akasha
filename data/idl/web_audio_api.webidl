@@ -79,8 +79,8 @@ dictionary AnalyserOptions : AudioNodeOptions {
 
 dictionary AudioBufferOptions {
   required unsigned long length;
-  unsigned long numberOfChannels = 1;
   required float sampleRate;
+  unsigned long numberOfChannels = 1;
 };
 
 dictionary AudioBufferSourceOptions {

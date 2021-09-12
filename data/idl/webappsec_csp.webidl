@@ -4,18 +4,18 @@ enum SecurityPolicyViolationEventDisposition {
 };
 
 dictionary SecurityPolicyViolationEventInit : EventInit {
+  required USVString documentURI;
+  required DOMString violatedDirective;
+  required DOMString effectiveDirective;
+  required DOMString originalPolicy;
+  required SecurityPolicyViolationEventDisposition disposition;
+  required unsigned short statusCode;
   USVString blockedURI = "";
   unsigned long columnNumber = 0;
-  required SecurityPolicyViolationEventDisposition disposition;
-  required USVString documentURI;
-  required DOMString effectiveDirective;
   unsigned long lineNumber = 0;
-  required DOMString originalPolicy;
   USVString referrer = "";
   DOMString sample = "";
   USVString sourceFile = "";
-  required unsigned short statusCode;
-  required DOMString violatedDirective;
 };
 
 [Exposed=Window]

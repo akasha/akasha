@@ -238,11 +238,11 @@ dictionary RTCOfferOptions : RTCOfferAnswerOptions {
 };
 
 dictionary RTCPeerConnectionIceErrorEventInit : EventInit {
-  DOMString? address;
   required unsigned short errorCode;
+  DOMString? address;
+  USVString errorText;
   unsigned short? port;
   DOMString url;
-  USVString errorText;
 };
 
 dictionary RTCPeerConnectionIceEventInit : EventInit {
@@ -268,10 +268,10 @@ dictionary RTCRtpCodecCapability {
 };
 
 dictionary RTCRtpCodecParameters {
-  unsigned short channels;
   required unsigned long clockRate;
   required DOMString mimeType;
   required octet payloadType;
+  unsigned short channels;
   DOMString sdpFmtpLine;
 };
 
@@ -280,10 +280,10 @@ dictionary RTCRtpCodingParameters {
 };
 
 dictionary RTCRtpContributingSource {
-  double audioLevel;
   required unsigned long rtpTimestamp;
   required unsigned long source;
   required DOMHighResTimeStamp timestamp;
+  double audioLevel;
 };
 
 dictionary RTCRtpDecodingParameters : RTCRtpCodingParameters {
@@ -300,9 +300,9 @@ dictionary RTCRtpHeaderExtensionCapability {
 };
 
 dictionary RTCRtpHeaderExtensionParameters {
-  boolean encrypted = false;
   required unsigned short id;
   required DOMString uri;
+  boolean encrypted = false;
 };
 
 dictionary RTCRtpParameters {
@@ -329,8 +329,8 @@ dictionary RTCRtpTransceiverInit {
 };
 
 dictionary RTCSessionDescriptionInit {
-  DOMString sdp = "";
   required RTCSdpType type;
+  DOMString sdp = "";
 };
 
 dictionary RTCStats {
