@@ -38,7 +38,7 @@ enum XRVisibilityState {
 
 typedef ( WebGLRenderingContext or WebGL2RenderingContext ) XRWebGLRenderingContext;
 
-callback XRFrameRequestCallback = void ( DOMHighResTimeStamp time, XRFrame frame );
+callback XRFrameRequestCallback = undefined ( DOMHighResTimeStamp time, XRFrame frame );
 
 dictionary XRInputSourceEventInit : EventInit {
   required XRFrame frame;
@@ -94,7 +94,7 @@ partial dictionary WebGLContextAttributes {
 
 partial interface mixin WebGLRenderingContextBase {
   [NewObject]
-  Promise<void> makeXRCompatible();
+  Promise<undefined> makeXRCompatible();
 };
 
 [SecureContext, Exposed=Window]
@@ -217,12 +217,13 @@ interface XRSession : EventTarget {
   attribute EventHandler onsqueezeend;
   attribute EventHandler onsqueezestart;
   attribute EventHandler onvisibilitychange;
-  void cancelAnimationFrame( unsigned long handle );
-  Promise<void> end();
+  undefined cancelAnimationFrame( unsigned long handle );
+  Promise<undefined> end();
   unsigned long requestAnimationFrame( XRFrameRequestCallback callback );
   [NewObject]
   Promise<XRReferenceSpace> requestReferenceSpace( XRReferenceSpaceType type );
-  void updateRenderState( optional XRRenderStateInit state = {} );
+  undefined updateRenderState( optional XRRenderStateInit state = {} );
+  Promise<undefined> updateTargetFrameRate( float rate );
 };
 
 [SecureContext, Exposed=Window]

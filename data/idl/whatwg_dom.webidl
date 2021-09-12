@@ -78,8 +78,8 @@ dictionary MutationObserverInit {
 };
 
 dictionary ShadowRootInit {
-  boolean delegatesFocus = false;
   required ShadowRootMode mode;
+  boolean delegatesFocus = false;
   SlotAssignmentMode slotAssignment = "named";
 };
 

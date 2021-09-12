@@ -14,8 +14,8 @@ dictionary AllowedBluetoothDevice {
 };
 
 dictionary BluetoothAdvertisingEventInit : EventInit {
-  unsigned short appearance;
   required BluetoothDevice device;
+  unsigned short appearance;
   BluetoothManufacturerDataMap manufacturerData;
   DOMString name;
   byte rssi;

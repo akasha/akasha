@@ -44,8 +44,8 @@ dictionary AesDerivedKeyParams : Algorithm {
 };
 
 dictionary AesGcmParams : Algorithm {
-  BufferSource additionalData;
   required BufferSource iv;
+  BufferSource additionalData;
   [EnforceRange]
   octet tagLength;
 };
@@ -189,7 +189,7 @@ interface Crypto {
   ArrayBufferView getRandomValues( ArrayBufferView array );
 };
 
-[SecureContext, Exposed=(Window,Worker)]
+[SecureContext, Exposed=(Window,Worker), Serializable]
 interface CryptoKey {
   readonly attribute object algorithm;
   readonly attribute boolean extractable;

@@ -219,9 +219,9 @@ dictionary RTCIceParameters {
 };
 
 dictionary RTCIceServer {
+  required ( DOMString or sequence<DOMString> ) urls;
   DOMString credential;
   RTCIceCredentialType credentialType = "password";
-  required ( DOMString or sequence<DOMString> ) urls;
   DOMString username;
 };
 
@@ -240,9 +240,9 @@ dictionary RTCOfferOptions : RTCOfferAnswerOptions {
 dictionary RTCPeerConnectionIceErrorEventInit : EventInit {
   DOMString? address;
   required unsigned short errorCode;
-  USVString errorText;
   unsigned short? port;
   DOMString url;
+  USVString errorText;
 };
 
 dictionary RTCPeerConnectionIceEventInit : EventInit {
@@ -261,9 +261,9 @@ dictionary RTCRtpCapabilities {
 };
 
 dictionary RTCRtpCodecCapability {
-  unsigned short channels;
   required unsigned long clockRate;
   required DOMString mimeType;
+  unsigned short channels;
   DOMString sdpFmtpLine;
 };
 
@@ -341,8 +341,8 @@ dictionary RTCStats {
 
 dictionary RTCTrackEventInit : EventInit {
   required RTCRtpReceiver receiver;
-  sequence<MediaStream> streams = [];
   required MediaStreamTrack track;
+  sequence<MediaStream> streams = [];
   required RTCRtpTransceiver transceiver;
 };
 

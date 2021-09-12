@@ -1,6 +1,6 @@
 dictionary SyncEventInit : ExtendableEventInit {
-  boolean lastChance = false;
   required DOMString tag;
+  boolean lastChance = false;
 };
 
 [Exposed=ServiceWorker]

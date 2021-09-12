@@ -104,11 +104,11 @@ dictionary AudioNodeOptions {
 };
 
 dictionary AudioParamDescriptor {
+  required DOMString name;
   AutomationRate automationRate = "a-rate";
   float defaultValue = 0;
   float maxValue = 3.4028235e38;
   float minValue = -3.4028235e38;
-  required DOMString name;
 };
 
 dictionary AudioProcessingEventInit : EventInit {

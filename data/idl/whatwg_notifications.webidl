@@ -18,13 +18,13 @@ dictionary GetNotificationOptions {
 
 dictionary NotificationAction {
   required DOMString action;
-  USVString icon;
   required DOMString title;
+  USVString icon;
 };
 
 dictionary NotificationEventInit : ExtendableEventInit {
-  DOMString action = "";
   required Notification notification;
+  DOMString action = "";
 };
 
 dictionary NotificationOptions {

@@ -50,11 +50,11 @@ dictionary ExtendableMessageEventInit : ExtendableEventInit {
 };
 
 dictionary FetchEventInit : ExtendableEventInit {
+  required Request request;
   DOMString clientId = "";
   Promise<undefined> handled;
   Promise<any> preloadResponse;
   DOMString replacesClientId = "";
-  required Request request;
   DOMString resultingClientId = "";
 };
 
