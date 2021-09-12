@@ -79,6 +79,10 @@ dictionary XRSessionInit {
   sequence<any> requiredFeatures;
 };
 
+dictionary XRSessionSupportedPermissionDescriptor : PermissionDescriptor {
+  XRSessionMode mode;
+};
+
 dictionary XRWebGLLayerInit {
   boolean alpha = true;
   boolean antialias = true;
@@ -160,7 +164,11 @@ interface XRPermissionStatus : PermissionStatus {
 
 [SecureContext, Exposed=Window]
 interface XRPose {
+  [SameObject]
+  readonly attribute DOMPointReadOnly? angularVelocity;
   readonly attribute boolean emulatedPosition;
+  [SameObject]
+  readonly attribute DOMPointReadOnly? linearVelocity;
   [SameObject]
   readonly attribute XRRigidTransform transform;
 };
@@ -203,12 +211,15 @@ interface XRRigidTransform {
 
 [SecureContext, Exposed=Window]
 interface XRSession : EventTarget {
+  readonly attribute float? frameRate;
   [SameObject]
   readonly attribute XRInputSourceArray inputSources;
   [SameObject]
   readonly attribute XRRenderState renderState;
+  readonly attribute Float32Array? supportedFrameRates;
   readonly attribute XRVisibilityState visibilityState;
   attribute EventHandler onend;
+  attribute EventHandler onframeratechange;
   attribute EventHandler oninputsourceschange;
   attribute EventHandler onselect;
   attribute EventHandler onselectend;
@@ -249,8 +260,10 @@ interface XRSystem : EventTarget {
 interface XRView {
   readonly attribute XREye eye;
   readonly attribute Float32Array projectionMatrix;
+  readonly attribute double? recommendedViewportScale;
   [SameObject]
   readonly attribute XRRigidTransform transform;
+  undefined requestViewportScale( double? scale );
 };
 
 [SecureContext, Exposed=Window]
@@ -275,6 +288,7 @@ interface XRWebGLLayer : XRLayer {
   readonly attribute unsigned long framebufferHeight;
   readonly attribute unsigned long framebufferWidth;
   readonly attribute boolean ignoreDepthValues;
+  attribute float? fixedFoveation;
   static double getNativeFramebufferScaleFactor( XRSession session );
   constructor( XRSession session, XRWebGLRenderingContext context, optional XRWebGLLayerInit layerInit = {} );
   XRViewport? getViewport( XRView view );
