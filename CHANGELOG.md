@@ -2,6 +2,7 @@
 
 ### Unreleased
 * Update the `WebGPU` spec to the `W3C Working Draft, 10 September 2021` version. This update resulted in a few minor name changes (i.e. the `GPURequestAdapterOptions.forceSoftware` member was renamed to `GPURequestAdapterOptions.forceFallbackAdapter`, `GPUAdapter.isSoftware` was renamed to `GPUAdapter.isFallbackAdapter`) as well as improved modelling of the types that contain constants (i.e. `GPUMapMode` no longer extends `JsObject` and is a final class in the java binding).
+* Updates acrtoss several specifications resulted in `PostMessageOptions` being renamed to `StructuredSerializeOptions`.
 
 ### [v0.23](https://github.com/akasha/akasha/tree/v0.23) (2021-09-03) · [Full Changelog](https://github.com/spritz/spritz/compare/v0.22...v0.23) · [API Differences](https://akasha.github.io/akasha-java/api-diff/?key=akasha-java&old=0.22&new=0.23) · [Source Diff](https://github.com/akasha/akasha-java/compare/v0.22...v0.23)
 

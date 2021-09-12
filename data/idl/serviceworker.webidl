@@ -117,7 +117,7 @@ interface Client {
   readonly attribute ClientType type;
   readonly attribute USVString url;
   undefined postMessage( any message, sequence<object> transfer );
-  undefined postMessage( any message, optional PostMessageOptions options = {} );
+  undefined postMessage( any message, optional StructuredSerializeOptions options = {} );
 };
 
 [Exposed=ServiceWorker]
@@ -176,7 +176,7 @@ interface ServiceWorker : EventTarget {
   readonly attribute ServiceWorkerState state;
   attribute EventHandler onstatechange;
   undefined postMessage( any message, sequence<object> transfer );
-  undefined postMessage( any message, optional PostMessageOptions options = {} );
+  undefined postMessage( any message, optional StructuredSerializeOptions options = {} );
 };
 
 [SecureContext, Exposed=(Window,Worker)]

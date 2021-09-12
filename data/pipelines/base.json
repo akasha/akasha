@@ -532,7 +532,7 @@
       "sourceSelector": "name=whatwg_html",
       "config": {
         "expectedRemoveCount": 1,
-        "dictionaryNamePattern": "^PostMessageOptions$",
+        "dictionaryNamePattern": "^StructuredSerializeOptions$",
         "dictionaryMemberNamePattern": "^transfer$",
         "type": "sequence<Transferable>"
       }

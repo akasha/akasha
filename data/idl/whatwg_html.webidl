@@ -302,10 +302,6 @@ dictionary PopStateEventInit : EventInit {
   any state = null;
 };
 
-dictionary PostMessageOptions {
-  sequence<object> transfer = [];
-};
-
 dictionary PromiseRejectionEventInit : EventInit {
   required Promise<any> promise;
   any reason;
@@ -317,6 +313,10 @@ dictionary StorageEventInit : EventInit {
   DOMString? oldValue = null;
   Storage? storageArea = null;
   USVString url = "";
+};
+
+dictionary StructuredSerializeOptions {
+  sequence<object> transfer = [];
 };
 
 dictionary SubmitEventInit : EventInit {
@@ -340,7 +340,7 @@ dictionary ValidityStateFlags {
   boolean valueMissing = false;
 };
 
-dictionary WindowPostMessageOptions : PostMessageOptions {
+dictionary WindowPostMessageOptions : StructuredSerializeOptions {
   USVString targetOrigin = "/";
 };
 
@@ -857,7 +857,7 @@ interface DedicatedWorkerGlobalScope : WorkerGlobalScope {
   attribute EventHandler onmessageerror;
   undefined close();
   undefined postMessage( any message, sequence<object> transfer );
-  undefined postMessage( any message, optional PostMessageOptions options = {} );
+  undefined postMessage( any message, optional StructuredSerializeOptions options = {} );
 };
 
 [Exposed=Window]
@@ -2220,7 +2220,7 @@ interface MessagePort : EventTarget {
   attribute EventHandler onmessageerror;
   undefined close();
   undefined postMessage( any message, sequence<object> transfer );
-  undefined postMessage( any message, optional PostMessageOptions options = {} );
+  undefined postMessage( any message, optional StructuredSerializeOptions options = {} );
   undefined start();
 };
 
@@ -2540,7 +2540,7 @@ interface Worker : EventTarget {
   attribute EventHandler onmessageerror;
   constructor( USVString scriptURL, optional WorkerOptions options = {} );
   undefined postMessage( any message, sequence<object> transfer );
-  undefined postMessage( any message, optional PostMessageOptions options = {} );
+  undefined postMessage( any message, optional StructuredSerializeOptions options = {} );
   undefined terminate();
 };
 
