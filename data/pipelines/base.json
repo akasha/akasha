@@ -428,6 +428,14 @@
       }
     },
     {
+      "name": "AddExtendedAttribute",
+      "sourceSelector": "name=webcodecs",
+      "config": {
+        "namePattern": "^.*$",
+        "extendedAttribute": "JavaSubPackage=codecs"
+      }
+    },
+    {
       "name": "RenameType",
       "description": "Both permissions.webdidl and deviceorientation.webidl define PermissionState and they have different shapes",
       "sourceSelector": "name=deviceorientation",
