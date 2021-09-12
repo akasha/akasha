@@ -1,5 +1,7 @@
 # Change Log
 
+### Unreleased
+
 ### [v0.24](https://github.com/akasha/akasha/tree/v0.24) (2021-09-12) · [Full Changelog](https://github.com/spritz/spritz/compare/v0.23...v0.24) · [API Differences](https://akasha.github.io/akasha-java/api-diff/?key=akasha-java&old=0.23&new=0.24) · [Source Diff](https://github.com/akasha/akasha-java/compare/v0.23...v0.24)
 
 The release includes 110 non breaking API changes, 196 potentially breaking API changes and 95 breaking API changes.
