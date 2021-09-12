@@ -171,7 +171,7 @@ enum WorkerType {
   "module"
 };
 
-typedef ( HTMLOrSVGImageElement or HTMLVideoElement or HTMLCanvasElement or ImageBitmap or OffscreenCanvas ) CanvasImageSource;
+typedef ( HTMLOrSVGImageElement or HTMLVideoElement or HTMLCanvasElement or ImageBitmap or OffscreenCanvas or VideoFrame ) CanvasImageSource;
 
 typedef EventHandlerNonNull? EventHandler;
 
@@ -451,6 +451,7 @@ interface mixin CanvasShadowStyles {
 };
 
 interface mixin CanvasState {
+  boolean isContextLost();
   undefined reset();
   undefined restore();
   undefined save();
@@ -520,7 +521,9 @@ interface mixin GlobalEventHandlers {
   attribute EventHandler onchange;
   attribute EventHandler onclick;
   attribute EventHandler onclose;
+  attribute EventHandler oncontextlost;
   attribute EventHandler oncontextmenu;
+  attribute EventHandler oncontextrestored;
   attribute EventHandler oncuechange;
   attribute EventHandler ondblclick;
   attribute EventHandler ondrag;
@@ -700,8 +703,10 @@ interface mixin WindowOrWorkerGlobalScope {
   Promise<ImageBitmap> createImageBitmap( ImageBitmapSource image, optional ImageBitmapOptions options = {} );
   Promise<ImageBitmap> createImageBitmap( ImageBitmapSource image, long sx, long sy, long sw, long sh, optional ImageBitmapOptions options = {} );
   undefined queueMicrotask( VoidFunction callback );
+  undefined reportError( any e );
   long setInterval( TimerHandler handler, optional long timeout = 0, any... arguments );
   long setTimeout( TimerHandler handler, optional long timeout = 0, any... arguments );
+  any structuredClone( any value, optional StructuredSerializeOptions options = {} );
 };
 
 interface mixin WindowSessionStorage {
@@ -1815,6 +1820,7 @@ interface HTMLScriptElement : HTMLElement {
   attribute DOMString text;
   [CEReactions]
   attribute DOMString type;
+  static boolean supports( DOMString type );
   [HTMLConstructor]
   constructor();
 };
@@ -2246,6 +2252,8 @@ interface Navigator {
 [Exposed=(Window,Worker), Transferable]
 interface OffscreenCanvas : EventTarget {
   attribute [EnforceRange] unsigned long long height;
+  attribute EventHandler oncontextlost;
+  attribute EventHandler oncontextrestored;
   attribute [EnforceRange] unsigned long long width;
   constructor( [EnforceRange] unsigned long long width, [EnforceRange] unsigned long long height );
   Promise<Blob> convertToBlob( optional ImageEncodeOptions options = {} );
