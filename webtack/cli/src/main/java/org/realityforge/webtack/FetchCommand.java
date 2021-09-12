@@ -139,9 +139,9 @@ final class FetchCommand
       final String url = source.getUrl();
       if ( null == url )
       {
-        if ( logger.isLoggable( Level.INFO ) )
+        if ( logger.isLoggable( Level.FINE ) )
         {
-          logger.log( Level.INFO, "Source named '" + sourceName + "' has no url, no need to fetch" );
+          logger.log( Level.FINE, "Source named '" + sourceName + "' has no url, no need to fetch" );
         }
         continue;
       }
