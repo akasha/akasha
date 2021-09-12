@@ -3,6 +3,10 @@
     "lastModifiedAt": 1629769826000,
     "entries": [
         {
+            "name": "Object.prototype.__proto__",
+            "lastModifiedAt": 0
+        },
+        {
             "name": "Uint16Array",
             "lastModifiedAt": 1606791018461
         },
