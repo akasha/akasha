@@ -5,9 +5,7 @@ enum PermissionName {
   "background-sync",
   "bluetooth",
   "camera",
-  "device-info",
   "display-capture",
-  "gamepad",
   "geolocation",
   "gyroscope",
   "magnetometer",
@@ -18,7 +16,8 @@ enum PermissionName {
   "persistent-storage",
   "push",
   "screen-wake-lock",
-  "speaker-selection"
+  "speaker-selection",
+  "xr-spatial-tracking"
 };
 
 enum PermissionState {
@@ -43,18 +42,13 @@ dictionary PermissionDescriptor {
   required PermissionName name;
 };
 
-dictionary PermissionSetParameters {
-  required PermissionDescriptor descriptor;
-  boolean oneRealm = false;
-  required PermissionState state;
-};
-
 dictionary PushPermissionDescriptor : PermissionDescriptor {
   boolean userVisibleOnly = false;
 };
 
 [Exposed=(Window,Worker)]
 interface PermissionStatus : EventTarget {
+  readonly attribute PermissionName name;
   readonly attribute PermissionState state;
   attribute EventHandler onchange;
 };
