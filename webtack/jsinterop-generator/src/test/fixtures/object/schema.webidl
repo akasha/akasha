@@ -1,7 +1,7 @@
 dictionary MyDictionary {
+  required object requiredObjectValue;
   object? nullableObjectValue;
   object objectValue;
-  required object requiredObjectValue;
 };
 
 interface MyType1 {

@@ -19,10 +19,10 @@ dictionary ExtendableEventInit : EventInit {
 };
 
 dictionary FetchEventInit : ExtendableEventInit {
+  required Request request;
   DOMString clientId = "";
   Promise<undefined> handled;
   Promise<any> preloadResponse;
   DOMString replacesClientId = "";
   DOMString resultingClientId = "";
-  required Request request;
 };

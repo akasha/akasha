@@ -5,8 +5,8 @@ namespace WebAssembly {
 };
 
 dictionary GlobalDescriptor {
-  boolean mutable = false;
   required any value;
+  boolean mutable = false;
 };
 
 interface ArrayBuffer {

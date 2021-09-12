@@ -51,13 +51,13 @@ dictionary EventListenerOptions {
 };
 
 dictionary SpeechRecognitionErrorEventInit : EventInit {
-  DOMString message = "";
   required SpeechRecognitionErrorCode error;
+  DOMString message = "";
 };
 
 dictionary SpeechRecognitionEventInit : EventInit {
-  unsigned long resultIndex = 0;
   required SpeechRecognitionResultList results;
+  unsigned long resultIndex = 0;
 };
 
 dictionary SpeechSynthesisErrorEventInit : SpeechSynthesisEventInit {
@@ -65,11 +65,11 @@ dictionary SpeechSynthesisErrorEventInit : SpeechSynthesisEventInit {
 };
 
 dictionary SpeechSynthesisEventInit : EventInit {
+  required SpeechSynthesisUtterance utterance;
   unsigned long charIndex = 0;
   unsigned long charLength = 0;
   float elapsedTime = 0;
   DOMString name = "";
-  required SpeechSynthesisUtterance utterance;
 };
 
 [Exposed=(Window,Worker,AudioWorklet)]

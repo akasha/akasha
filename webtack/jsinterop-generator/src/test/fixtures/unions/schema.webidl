@@ -82,8 +82,8 @@ callback interface EventListener3 {
 
 dictionary AllowedBluetoothDevice {
   required ( DOMString or sequence<DOMString> ) allowedServices;
-  ( DOMString or sequence<DOMString> ) otherServices;
   required sequence<( DOMString or long long )> requiredUuids;
+  ( DOMString or sequence<DOMString> ) otherServices;
   sequence<( DOMString or octet )> uuids;
 };
 

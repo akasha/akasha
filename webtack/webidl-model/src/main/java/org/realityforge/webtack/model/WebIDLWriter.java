@@ -586,7 +586,7 @@ public final class WebIDLWriter
     }
     else if ( o1.isRequired() )
     {
-      return 0;
+      return -1;
     }
     else if ( o2.isRequired() )
     {

@@ -98,6 +98,114 @@ public final class DictionaryTest
     assertEquals( members.stream().map( NamedElement::getName ).collect( Collectors.joining() ), "rgbast" );
   }
 
+  @Test
+  public void parseThenWriteRetainsRequiredMembersDeclaredOrdering()
+    throws IOException
+  {
+    final StringWriter writer = new StringWriter();
+    WebIDLWriter.writeDictionaryDefinition( writer,
+                                            parse( "dictionary SecurityPolicyViolationEventInit {\n" +
+                                                   "  required USVString documentURI;\n" +
+                                                   "  USVString blockedURI = \"\";\n" +
+                                                   "  USVString referrer = \"\";\n" +
+                                                   "  required DOMString violatedDirective;\n" +
+                                                   "  required DOMString effectiveDirective;\n" +
+                                                   "  required DOMString originalPolicy;\n" +
+                                                   "  DOMString sample = \"\";\n" +
+                                                   "  USVString sourceFile = \"\";\n" +
+                                                   "  required unsigned short statusCode;\n" +
+                                                   "  unsigned long columnNumber = 0;\n" +
+                                                   "  unsigned long lineNumber = 0;\n" +
+                                                   "};\n" ) );
+    writer.close();
+    final String emittedIDL = writer.toString();
+    assertEquals( emittedIDL,
+                  "dictionary SecurityPolicyViolationEventInit {\n" +
+                  "  required USVString documentURI;\n" +
+                  "  required DOMString violatedDirective;\n" +
+                  "  required DOMString effectiveDirective;\n" +
+                  "  required DOMString originalPolicy;\n" +
+                  "  required unsigned short statusCode;\n" +
+                  "  USVString blockedURI = \"\";\n" +
+                  "  unsigned long columnNumber = 0;\n" +
+                  "  unsigned long lineNumber = 0;\n" +
+                  "  USVString referrer = \"\";\n" +
+                  "  DOMString sample = \"\";\n" +
+                  "  USVString sourceFile = \"\";\n" +
+                  "};\n" );
+    final List<Definition> definitions = WebIDLModelParser.parse( createParser( emittedIDL ).definitions() );
+    assertEquals( definitions.size(), 1 );
+    final Definition element = definitions.get( 0 );
+    assertTrue( element instanceof DictionaryDefinition );
+
+    final DictionaryDefinition dictionary = (DictionaryDefinition) element;
+    assertEquals( dictionary.getName(), "SecurityPolicyViolationEventInit" );
+    assertNull( dictionary.getInherits() );
+    final List<DictionaryMember> members = dictionary.getMembers();
+
+    assertEquals( members.size(), 11 );
+
+    assertEquals( members.get( 0 ).getName(), "documentURI" );
+    assertEquals( members.get( 1 ).getName(), "violatedDirective" );
+    assertEquals( members.get( 2 ).getName(), "effectiveDirective" );
+    assertEquals( members.get( 3 ).getName(), "originalPolicy" );
+    assertEquals( members.get( 4 ).getName(), "statusCode" );
+  }
+
+  @Test
+  public void parseThenWriteRetainsRequiredMembersDeclaredOrdering2()
+    throws IOException
+  {
+    final StringWriter writer = new StringWriter();
+    WebIDLWriter.writeDictionaryDefinition( writer,
+                                            parse( "dictionary SecurityPolicyViolationEventInit {\n" +
+                                                   "  USVString sourceFile = \"\";\n" +
+                                                   "  required USVString documentURI;\n" +
+                                                   "  USVString blockedURI = \"\";\n" +
+                                                   "  USVString referrer = \"\";\n" +
+                                                   "  required DOMString violatedDirective;\n" +
+                                                   "  required DOMString effectiveDirective;\n" +
+                                                   "  required DOMString originalPolicy;\n" +
+                                                   "  DOMString sample = \"\";\n" +
+                                                   "  required unsigned short statusCode;\n" +
+                                                   "  unsigned long columnNumber = 0;\n" +
+                                                   "  unsigned long lineNumber = 0;\n" +
+                                                   "};\n" ) );
+    writer.close();
+    final String emittedIDL = writer.toString();
+    assertEquals( emittedIDL,
+                  "dictionary SecurityPolicyViolationEventInit {\n" +
+                  "  required USVString documentURI;\n" +
+                  "  required DOMString violatedDirective;\n" +
+                  "  required DOMString effectiveDirective;\n" +
+                  "  required DOMString originalPolicy;\n" +
+                  "  required unsigned short statusCode;\n" +
+                  "  USVString blockedURI = \"\";\n" +
+                  "  unsigned long columnNumber = 0;\n" +
+                  "  unsigned long lineNumber = 0;\n" +
+                  "  USVString referrer = \"\";\n" +
+                  "  DOMString sample = \"\";\n" +
+                  "  USVString sourceFile = \"\";\n" +
+                  "};\n" );
+    final List<Definition> definitions = WebIDLModelParser.parse( createParser( emittedIDL ).definitions() );
+    assertEquals( definitions.size(), 1 );
+    final Definition element = definitions.get( 0 );
+    assertTrue( element instanceof DictionaryDefinition );
+
+    final DictionaryDefinition dictionary = (DictionaryDefinition) element;
+    assertEquals( dictionary.getName(), "SecurityPolicyViolationEventInit" );
+    assertNull( dictionary.getInherits() );
+    final List<DictionaryMember> members = dictionary.getMembers();
+
+    assertEquals( members.size(), 11 );
+
+    assertEquals( members.get( 0 ).getName(), "documentURI" );
+    assertEquals( members.get( 1 ).getName(), "violatedDirective" );
+    assertEquals( members.get( 2 ).getName(), "effectiveDirective" );
+    assertEquals( members.get( 3 ).getName(), "originalPolicy" );
+    assertEquals( members.get( 4 ).getName(), "statusCode" );
+  }
+
   @Nonnull
   private DictionaryDefinition parse( @Nonnull final String webIDL )
     throws IOException

@@ -44,11 +44,11 @@ dictionary SpeechSynthesisErrorEventInit : SpeechSynthesisEventInit {
 };
 
 dictionary SpeechSynthesisEventInit : EventInit {
+  required SpeechSynthesisUtterance utterance;
   unsigned long charIndex = 0;
   unsigned long charLength = 0;
   float elapsedTime = 0;
   DOMString name = "";
-  required SpeechSynthesisUtterance utterance;
 };
 
 [Exposed=(Window,Worker,AudioWorklet)]

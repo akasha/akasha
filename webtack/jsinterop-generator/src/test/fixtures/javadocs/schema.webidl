@@ -47,13 +47,13 @@ callback interface NodeFilter {
  */
 dictionary EventInit {
   /**
-   * Documentation for member EventInit.bubbles.
-   */
-  boolean bubbles = false;
-  /**
    * Documentation for required member EventInit.cancelable.
    */
   required boolean cancelable;
+  /**
+   * Documentation for member EventInit.bubbles.
+   */
+  boolean bubbles = false;
 };
 
 /**
