@@ -10,14 +10,6 @@ public final class EventInitTestCompile {
     return EventInit.create( cancelable );
   }
 
-  public static boolean bubbles(final EventInit $instance) {
-    return $instance.bubbles();
-  }
-
-  public static void setBubbles(final EventInit $instance, boolean bubbles) {
-    $instance.setBubbles( bubbles );
-  }
-
   public static boolean cancelable(final EventInit $instance) {
     return $instance.cancelable();
   }
@@ -26,13 +18,21 @@ public final class EventInitTestCompile {
     $instance.setCancelable( cancelable );
   }
 
-  public static EventInit.Builder bubbles(final EventInit.Builder $instance,
-      final boolean bubbles) {
-    return $instance.bubbles( bubbles );
+  public static boolean bubbles(final EventInit $instance) {
+    return $instance.bubbles();
+  }
+
+  public static void setBubbles(final EventInit $instance, boolean bubbles) {
+    $instance.setBubbles( bubbles );
   }
 
   public static EventInit.Builder cancelable(final EventInit.Builder $instance,
       final boolean cancelable) {
     return $instance.cancelable( cancelable );
+  }
+
+  public static EventInit.Builder bubbles(final EventInit.Builder $instance,
+      final boolean bubbles) {
+    return $instance.bubbles( bubbles );
   }
 }

@@ -3,7 +3,7 @@
  * @externs
  */
 /**
- * @typedef {{nullableObjectValue:(?Object|undefined),objectValue:(!Object|undefined),requiredObjectValue:!Object}}
+ * @typedef {{requiredObjectValue:!Object,nullableObjectValue:(?Object|undefined),objectValue:(!Object|undefined)}}
  */
 var MyDictionary;
 /**

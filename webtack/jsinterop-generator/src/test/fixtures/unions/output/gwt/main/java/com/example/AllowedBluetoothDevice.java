@@ -84,6 +84,20 @@ public interface AllowedBluetoothDevice {
   }
 
   @JsProperty(
+      name = "requiredUuids"
+  )
+  @JsNonNull
+  JsArray<StringOrLongLongUnion> requiredUuids();
+
+  @JsProperty
+  void setRequiredUuids(@JsNonNull JsArray<StringOrLongLongUnion> requiredUuids);
+
+  @JsOverlay
+  default void setRequiredUuids(@Nonnull final StringOrLongLongUnion... requiredUuids) {
+    setRequiredUuids( Js.<JsArray<StringOrLongLongUnion>>uncheckedCast( requiredUuids ) );
+  }
+
+  @JsProperty(
       name = "otherServices"
   )
   StringOrStringArrayUnion otherServices();
@@ -104,20 +118,6 @@ public interface AllowedBluetoothDevice {
   @JsOverlay
   default void setOtherServices(@Nonnull final String... otherServices) {
     setOtherServices( StringOrStringArrayUnion.of( otherServices ) );
-  }
-
-  @JsProperty(
-      name = "requiredUuids"
-  )
-  @JsNonNull
-  JsArray<StringOrLongLongUnion> requiredUuids();
-
-  @JsProperty
-  void setRequiredUuids(@JsNonNull JsArray<StringOrLongLongUnion> requiredUuids);
-
-  @JsOverlay
-  default void setRequiredUuids(@Nonnull final StringOrLongLongUnion... requiredUuids) {
-    setRequiredUuids( Js.<JsArray<StringOrLongLongUnion>>uncheckedCast( requiredUuids ) );
   }
 
   @JsProperty(
@@ -163,6 +163,20 @@ public interface AllowedBluetoothDevice {
 
     @JsOverlay
     @Nonnull
+    default Builder requiredUuids(@Nonnull final JsArray<StringOrLongLongUnion> requiredUuids) {
+      setRequiredUuids( requiredUuids );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder requiredUuids(@Nonnull final StringOrLongLongUnion... requiredUuids) {
+      setRequiredUuids( requiredUuids );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
     default Builder otherServices(@Nonnull final String otherServices) {
       setOtherServices( otherServices );
       return this;
@@ -179,20 +193,6 @@ public interface AllowedBluetoothDevice {
     @Nonnull
     default Builder otherServices(@Nonnull final String... otherServices) {
       setOtherServices( otherServices );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder requiredUuids(@Nonnull final JsArray<StringOrLongLongUnion> requiredUuids) {
-      setRequiredUuids( requiredUuids );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder requiredUuids(@Nonnull final StringOrLongLongUnion... requiredUuids) {
-      setRequiredUuids( requiredUuids );
       return this;
     }
 

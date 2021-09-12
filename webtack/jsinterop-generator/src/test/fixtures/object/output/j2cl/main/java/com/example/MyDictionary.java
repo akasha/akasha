@@ -26,6 +26,15 @@ public interface MyDictionary {
   }
 
   @JsProperty(
+      name = "requiredObjectValue"
+  )
+  @JsNonNull
+  JsObject requiredObjectValue();
+
+  @JsProperty
+  void setRequiredObjectValue(@JsNonNull JsObject requiredObjectValue);
+
+  @JsProperty(
       name = "nullableObjectValue"
   )
   @JsNullable
@@ -42,15 +51,6 @@ public interface MyDictionary {
   @JsProperty
   void setObjectValue(@JsNonNull JsObject objectValue);
 
-  @JsProperty(
-      name = "requiredObjectValue"
-  )
-  @JsNonNull
-  JsObject requiredObjectValue();
-
-  @JsProperty
-  void setRequiredObjectValue(@JsNonNull JsObject requiredObjectValue);
-
   @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
@@ -58,6 +58,13 @@ public interface MyDictionary {
       name = "MyDictionary"
   )
   interface Builder extends MyDictionary {
+    @JsOverlay
+    @Nonnull
+    default Builder requiredObjectValue(@Nonnull final JsObject requiredObjectValue) {
+      setRequiredObjectValue( requiredObjectValue );
+      return this;
+    }
+
     @JsOverlay
     @Nonnull
     default Builder nullableObjectValue(@Nullable final JsObject nullableObjectValue) {
@@ -69,13 +76,6 @@ public interface MyDictionary {
     @Nonnull
     default Builder objectValue(@Nonnull final JsObject objectValue) {
       setObjectValue( objectValue );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder requiredObjectValue(@Nonnull final JsObject requiredObjectValue) {
-      setRequiredObjectValue( requiredObjectValue );
       return this;
     }
   }

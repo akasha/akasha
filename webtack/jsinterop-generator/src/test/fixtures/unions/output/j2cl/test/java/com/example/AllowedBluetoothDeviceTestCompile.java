@@ -60,6 +60,21 @@ public final class AllowedBluetoothDeviceTestCompile {
     $instance.setAllowedServices( allowedServices );
   }
 
+  public static JsArray<StringOrLongLongUnion> requiredUuids(
+      final AllowedBluetoothDevice $instance) {
+    return $instance.requiredUuids();
+  }
+
+  public static void setRequiredUuids(final AllowedBluetoothDevice $instance,
+      JsArray<StringOrLongLongUnion> requiredUuids) {
+    $instance.setRequiredUuids( requiredUuids );
+  }
+
+  public static void setRequiredUuids(final AllowedBluetoothDevice $instance,
+      final StringOrLongLongUnion[] requiredUuids) {
+    $instance.setRequiredUuids( requiredUuids );
+  }
+
   public static StringOrStringArrayUnion otherServices(final AllowedBluetoothDevice $instance) {
     return $instance.otherServices();
   }
@@ -82,21 +97,6 @@ public final class AllowedBluetoothDeviceTestCompile {
   public static void setOtherServices(final AllowedBluetoothDevice $instance,
       final String[] otherServices) {
     $instance.setOtherServices( otherServices );
-  }
-
-  public static JsArray<StringOrLongLongUnion> requiredUuids(
-      final AllowedBluetoothDevice $instance) {
-    return $instance.requiredUuids();
-  }
-
-  public static void setRequiredUuids(final AllowedBluetoothDevice $instance,
-      JsArray<StringOrLongLongUnion> requiredUuids) {
-    $instance.setRequiredUuids( requiredUuids );
-  }
-
-  public static void setRequiredUuids(final AllowedBluetoothDevice $instance,
-      final StringOrLongLongUnion[] requiredUuids) {
-    $instance.setRequiredUuids( requiredUuids );
   }
 
   public static JsArray<StringOrOctetUnion> uuids(final AllowedBluetoothDevice $instance) {
@@ -128,6 +128,17 @@ public final class AllowedBluetoothDeviceTestCompile {
     return $instance.allowedServices( allowedServices );
   }
 
+  public static AllowedBluetoothDevice.Builder requiredUuids(
+      final AllowedBluetoothDevice.Builder $instance,
+      final JsArray<StringOrLongLongUnion> requiredUuids) {
+    return $instance.requiredUuids( requiredUuids );
+  }
+
+  public static AllowedBluetoothDevice.Builder requiredUuids(
+      final AllowedBluetoothDevice.Builder $instance, final StringOrLongLongUnion[] requiredUuids) {
+    return $instance.requiredUuids( requiredUuids );
+  }
+
   public static AllowedBluetoothDevice.Builder otherServices(
       final AllowedBluetoothDevice.Builder $instance, final String otherServices) {
     return $instance.otherServices( otherServices );
@@ -141,17 +152,6 @@ public final class AllowedBluetoothDeviceTestCompile {
   public static AllowedBluetoothDevice.Builder otherServices(
       final AllowedBluetoothDevice.Builder $instance, final String[] otherServices) {
     return $instance.otherServices( otherServices );
-  }
-
-  public static AllowedBluetoothDevice.Builder requiredUuids(
-      final AllowedBluetoothDevice.Builder $instance,
-      final JsArray<StringOrLongLongUnion> requiredUuids) {
-    return $instance.requiredUuids( requiredUuids );
-  }
-
-  public static AllowedBluetoothDevice.Builder requiredUuids(
-      final AllowedBluetoothDevice.Builder $instance, final StringOrLongLongUnion[] requiredUuids) {
-    return $instance.requiredUuids( requiredUuids );
   }
 
   public static AllowedBluetoothDevice.Builder uuids(final AllowedBluetoothDevice.Builder $instance,

@@ -26,20 +26,6 @@ public interface EventInit {
   }
 
   /**
-   * Documentation for member EventInit.bubbles.
-   */
-  @JsProperty(
-      name = "bubbles"
-  )
-  boolean bubbles();
-
-  /**
-   * Documentation for member EventInit.bubbles.
-   */
-  @JsProperty
-  void setBubbles(boolean bubbles);
-
-  /**
    * Documentation for required member EventInit.cancelable.
    */
   @JsProperty(
@@ -54,6 +40,20 @@ public interface EventInit {
   void setCancelable(boolean cancelable);
 
   /**
+   * Documentation for member EventInit.bubbles.
+   */
+  @JsProperty(
+      name = "bubbles"
+  )
+  boolean bubbles();
+
+  /**
+   * Documentation for member EventInit.bubbles.
+   */
+  @JsProperty
+  void setBubbles(boolean bubbles);
+
+  /**
    * Documentation for EventInit.
    */
   @Generated("org.realityforge.webtack")
@@ -64,22 +64,22 @@ public interface EventInit {
   )
   interface Builder extends EventInit {
     /**
-     * Documentation for member EventInit.bubbles.
-     */
-    @JsOverlay
-    @Nonnull
-    default Builder bubbles(final boolean bubbles) {
-      setBubbles( bubbles );
-      return this;
-    }
-
-    /**
      * Documentation for required member EventInit.cancelable.
      */
     @JsOverlay
     @Nonnull
     default Builder cancelable(final boolean cancelable) {
       setCancelable( cancelable );
+      return this;
+    }
+
+    /**
+     * Documentation for member EventInit.bubbles.
+     */
+    @JsOverlay
+    @Nonnull
+    default Builder bubbles(final boolean bubbles) {
+      setBubbles( bubbles );
       return this;
     }
   }

@@ -3,7 +3,7 @@
  * @externs
  */
 /**
- * @typedef {{mutable:(!boolean|undefined),value:*}}
+ * @typedef {{value:*,mutable:(!boolean|undefined)}}
  */
 var GlobalDescriptor;
 /**

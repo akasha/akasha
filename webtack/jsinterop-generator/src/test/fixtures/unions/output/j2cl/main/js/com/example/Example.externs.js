@@ -137,7 +137,7 @@ var BluetoothDataFilterInit2;
  */
 var MyDictionary;
 /**
- * @typedef {{allowedServices:StringOrStringArrayUnion,otherServices:(!StringOrStringArrayUnion|undefined),requiredUuids:!Array<StringOrLongLongUnion>,uuids:(!Array<StringOrOctetUnion>|undefined)}}
+ * @typedef {{allowedServices:StringOrStringArrayUnion,requiredUuids:!Array<StringOrLongLongUnion>,otherServices:(!StringOrStringArrayUnion|undefined),uuids:(!Array<StringOrOctetUnion>|undefined)}}
  */
 var AllowedBluetoothDevice;
 /**

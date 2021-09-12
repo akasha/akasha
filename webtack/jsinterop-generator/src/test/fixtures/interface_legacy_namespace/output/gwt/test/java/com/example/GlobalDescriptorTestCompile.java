@@ -11,14 +11,6 @@ public final class GlobalDescriptorTestCompile {
     return GlobalDescriptor.create( value );
   }
 
-  public static boolean mutable(final GlobalDescriptor $instance) {
-    return $instance.mutable();
-  }
-
-  public static void setMutable(final GlobalDescriptor $instance, boolean mutable) {
-    $instance.setMutable( mutable );
-  }
-
   public static Any value(final GlobalDescriptor $instance) {
     return $instance.value();
   }
@@ -27,13 +19,21 @@ public final class GlobalDescriptorTestCompile {
     $instance.setValue( value );
   }
 
-  public static GlobalDescriptor.Builder mutable(final GlobalDescriptor.Builder $instance,
-      final boolean mutable) {
-    return $instance.mutable( mutable );
+  public static boolean mutable(final GlobalDescriptor $instance) {
+    return $instance.mutable();
+  }
+
+  public static void setMutable(final GlobalDescriptor $instance, boolean mutable) {
+    $instance.setMutable( mutable );
   }
 
   public static GlobalDescriptor.Builder value(final GlobalDescriptor.Builder $instance,
       final Object value) {
     return $instance.value( value );
+  }
+
+  public static GlobalDescriptor.Builder mutable(final GlobalDescriptor.Builder $instance,
+      final boolean mutable) {
+    return $instance.mutable( mutable );
   }
 }

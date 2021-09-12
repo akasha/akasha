@@ -27,14 +27,6 @@ public interface GlobalDescriptor {
   }
 
   @JsProperty(
-      name = "mutable"
-  )
-  boolean mutable();
-
-  @JsProperty
-  void setMutable(boolean mutable);
-
-  @JsProperty(
       name = "value"
   )
   @JsNullable
@@ -42,6 +34,14 @@ public interface GlobalDescriptor {
 
   @JsProperty
   void setValue(@DoNotAutobox @JsNullable Object value);
+
+  @JsProperty(
+      name = "mutable"
+  )
+  boolean mutable();
+
+  @JsProperty
+  void setMutable(boolean mutable);
 
   @Generated("org.realityforge.webtack")
   @JsType(
@@ -52,15 +52,15 @@ public interface GlobalDescriptor {
   interface Builder extends GlobalDescriptor {
     @JsOverlay
     @Nonnull
-    default Builder mutable(final boolean mutable) {
-      setMutable( mutable );
+    default Builder value(@DoNotAutobox @Nullable final Object value) {
+      setValue( value );
       return this;
     }
 
     @JsOverlay
     @Nonnull
-    default Builder value(@DoNotAutobox @Nullable final Object value) {
-      setValue( value );
+    default Builder mutable(final boolean mutable) {
+      setMutable( mutable );
       return this;
     }
   }
