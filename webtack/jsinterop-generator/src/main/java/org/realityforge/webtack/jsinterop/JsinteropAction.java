@@ -472,8 +472,6 @@ final class JsinteropAction
           .addModifiers( Modifier.PUBLIC, Modifier.FINAL );
       writeGeneratedAnnotation( testType );
 
-      addTypeReferenceField( testType, null, className );
-
       for ( final MixinDefinition mixin : globalMixins )
       {
         generateConstants( JsUtil.toJsName( mixin ), mixin.getConstants(), type );
@@ -545,7 +543,6 @@ final class JsinteropAction
     InterfaceDefinition definition = schema.getInterfaceByName( globalInterface );
 
     maybeAddJavadoc( definition, type );
-    addTypeReferenceField( testType, definition, className );
 
     while ( null != definition )
     {
@@ -2592,8 +2589,6 @@ final class JsinteropAction
         .classBuilder( testJavaName )
         .addModifiers( Modifier.PUBLIC, Modifier.FINAL );
     writeGeneratedAnnotation( testType );
-
-    addTypeReferenceField( testType, definition, className );
 
     generateConstants( JsUtil.toJsName( definition ), definition.getConstants(), type );
     generateStaticAttributes( definition, definition.getAttributes(), false, className, type, testType );

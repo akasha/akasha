@@ -5,8 +5,6 @@ import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class SharedWorkerGlobalTestCompile {
-  static SharedWorkerGlobal $typeReference$;
-
   public static MessageEventHandler onmessageerror() {
     return SharedWorkerGlobal.onmessageerror;
   }

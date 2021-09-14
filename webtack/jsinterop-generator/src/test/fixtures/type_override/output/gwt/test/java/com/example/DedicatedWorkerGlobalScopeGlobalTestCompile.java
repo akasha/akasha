@@ -4,8 +4,6 @@ import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class DedicatedWorkerGlobalScopeGlobalTestCompile {
-  static DedicatedWorkerGlobalScopeGlobal $typeReference$;
-
   public static WorkerLocation location() {
     return DedicatedWorkerGlobalScopeGlobal.location();
   }

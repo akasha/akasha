@@ -5,8 +5,6 @@ import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class ConsoleTestCompile {
-  static Console $typeReference$;
-
   public static void assert_(final boolean condition, @DoNotAutobox final Object[] data) {
     Console.assert_( condition, data );
   }

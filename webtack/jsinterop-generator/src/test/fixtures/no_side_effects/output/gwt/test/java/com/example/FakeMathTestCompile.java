@@ -4,8 +4,6 @@ import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class FakeMathTestCompile {
-  static FakeMath $typeReference$;
-
   public static double abs(final double x) {
     return FakeMath.abs( x );
   }
