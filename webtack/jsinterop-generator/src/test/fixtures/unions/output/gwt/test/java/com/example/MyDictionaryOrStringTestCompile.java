@@ -4,6 +4,8 @@ import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class MyDictionaryOrStringTestCompile {
+  static MyDictionaryOrString $typeReference$;
+
   public static MyDictionaryOrString of(final MyDictionary value) {
     return MyDictionaryOrString.of( value );
   }

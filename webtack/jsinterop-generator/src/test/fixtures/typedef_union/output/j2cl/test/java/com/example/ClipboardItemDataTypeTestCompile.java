@@ -4,6 +4,8 @@ import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class ClipboardItemDataTypeTestCompile {
+  static ClipboardItemDataType $typeReference$;
+
   public static ClipboardItemDataType of(final String value) {
     return ClipboardItemDataType.of( value );
   }

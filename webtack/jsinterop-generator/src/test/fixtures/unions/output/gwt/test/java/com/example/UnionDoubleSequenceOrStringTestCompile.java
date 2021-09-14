@@ -4,6 +4,8 @@ import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class UnionDoubleSequenceOrStringTestCompile {
+  static UnionDoubleSequenceOrString $typeReference$;
+
   public static UnionDoubleSequenceOrString of(final JsArray<Double> value) {
     return UnionDoubleSequenceOrString.of( value );
   }

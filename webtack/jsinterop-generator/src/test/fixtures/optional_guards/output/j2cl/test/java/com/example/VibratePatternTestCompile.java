@@ -4,6 +4,8 @@ import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class VibratePatternTestCompile {
+  static VibratePattern $typeReference$;
+
   public static VibratePattern of(final int value) {
     return VibratePattern.of( value );
   }

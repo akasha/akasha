@@ -4,6 +4,8 @@ import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class TxCodeTestCompile {
+  static TxCode $typeReference$;
+
   public static TxCode of(final String value) {
     return TxCode.of( value );
   }

@@ -4,6 +4,8 @@ import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class CSSTestCompile {
+  static CSS $typeReference$;
+
   public static String escape(final String ident) {
     return CSS.escape( ident );
   }

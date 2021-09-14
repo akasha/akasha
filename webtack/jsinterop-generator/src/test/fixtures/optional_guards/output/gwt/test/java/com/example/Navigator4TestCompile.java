@@ -4,6 +4,8 @@ import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class Navigator4TestCompile {
+  static Navigator4 $typeReference$;
+
   public static boolean isWebGPUSupported(final Navigator4 type) {
     return type.isWebGPUSupported();
   }

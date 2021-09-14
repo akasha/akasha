@@ -4,6 +4,8 @@ import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class ArrayBufferViewTestCompile {
+  static ArrayBufferView $typeReference$;
+
   public static ArrayBufferView of(final Int8Array value) {
     return ArrayBufferView.of( value );
   }

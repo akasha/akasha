@@ -4,6 +4,8 @@ import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class DocumentOrWindowUnionTestCompile {
+  static DocumentOrWindowUnion $typeReference$;
+
   public static DocumentOrWindowUnion of(final Document value) {
     return DocumentOrWindowUnion.of( value );
   }

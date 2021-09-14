@@ -4,6 +4,8 @@ import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class Int32List2TestCompile {
+  static Int32List2 $typeReference$;
+
   public static Int32List2 of(final Int32Array value) {
     return Int32List2.of( value );
   }

@@ -4,6 +4,8 @@ import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class WorkerNavigatorOrNavigatorUnionTestCompile {
+  static WorkerNavigatorOrNavigatorUnion $typeReference$;
+
   public static WorkerNavigatorOrNavigatorUnion of(final WorkerNavigator value) {
     return WorkerNavigatorOrNavigatorUnion.of( value );
   }

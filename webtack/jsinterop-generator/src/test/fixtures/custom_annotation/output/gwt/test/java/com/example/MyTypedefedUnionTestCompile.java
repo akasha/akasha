@@ -4,6 +4,8 @@ import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class MyTypedefedUnionTestCompile {
+  static MyTypedefedUnion $typeReference$;
+
   public static MyTypedefedUnion of(final String value) {
     return MyTypedefedUnion.of( value );
   }

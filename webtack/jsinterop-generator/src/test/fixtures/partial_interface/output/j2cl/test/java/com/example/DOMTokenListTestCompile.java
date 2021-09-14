@@ -4,6 +4,8 @@ import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class DOMTokenListTestCompile {
+  static DOMTokenList $typeReference$;
+
   public static JsIterator<Double> keys(DOMTokenList $instance) {
     return $instance.keys();
   }

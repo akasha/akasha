@@ -4,6 +4,8 @@ import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class StringOrLongLongUnionTestCompile {
+  static StringOrLongLongUnion $typeReference$;
+
   public static StringOrLongLongUnion of(final String value) {
     return StringOrLongLongUnion.of( value );
   }

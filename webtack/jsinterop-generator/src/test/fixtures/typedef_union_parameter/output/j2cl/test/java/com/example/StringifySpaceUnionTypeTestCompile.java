@@ -4,6 +4,8 @@ import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class StringifySpaceUnionTypeTestCompile {
+  static StringifySpaceUnionType $typeReference$;
+
   public static StringifySpaceUnionType of(final String value) {
     return StringifySpaceUnionType.of( value );
   }

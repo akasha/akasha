@@ -4,6 +4,8 @@ import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class StringOrFloatUnionTestCompile {
+  static StringOrFloatUnion $typeReference$;
+
   public static StringOrFloatUnion of(final String value) {
     return StringOrFloatUnion.of( value );
   }

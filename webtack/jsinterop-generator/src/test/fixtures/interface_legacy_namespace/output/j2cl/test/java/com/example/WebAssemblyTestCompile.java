@@ -5,6 +5,8 @@ import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class WebAssemblyTestCompile {
+  static WebAssembly $typeReference$;
+
   public static JsPromise<Module> compile(final ArrayBuffer bytes) {
     return WebAssembly.compile( bytes );
   }

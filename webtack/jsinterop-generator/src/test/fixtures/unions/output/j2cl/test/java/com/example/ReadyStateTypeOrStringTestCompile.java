@@ -4,6 +4,8 @@ import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class ReadyStateTypeOrStringTestCompile {
+  static ReadyStateTypeOrString $typeReference$;
+
   public static ReadyStateTypeOrString of(@ReadyStateType final int value) {
     return ReadyStateTypeOrString.of( value );
   }

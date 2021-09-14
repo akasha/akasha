@@ -4,6 +4,8 @@ import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class ServiceWorkerGlobalScopeGlobalTestCompile {
+  static ServiceWorkerGlobalScopeGlobal $typeReference$;
+
   public static ExtendableMessageEventHandler onmessage() {
     return ServiceWorkerGlobalScopeGlobal.onmessage;
   }

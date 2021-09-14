@@ -4,6 +4,8 @@ import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class HeadersTestCompile {
+  static Headers $typeReference$;
+
   public static void append(final Headers $instance, final String name, final String value) {
     $instance.append( name, value );
   }

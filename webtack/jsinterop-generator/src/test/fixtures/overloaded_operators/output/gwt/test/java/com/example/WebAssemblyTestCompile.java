@@ -4,6 +4,8 @@ import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class WebAssemblyTestCompile {
+  static WebAssembly $typeReference$;
+
   public static JsPromise<WebAssemblyInstantiatedSource> instantiate(final BufferSource bytes,
       final Object importObject) {
     return WebAssembly.instantiate( bytes, importObject );

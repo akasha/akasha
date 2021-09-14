@@ -4,6 +4,8 @@ import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class EventOrStringUnionTestCompile {
+  static EventOrStringUnion $typeReference$;
+
   public static EventOrStringUnion of(final Event value) {
     return EventOrStringUnion.of( value );
   }

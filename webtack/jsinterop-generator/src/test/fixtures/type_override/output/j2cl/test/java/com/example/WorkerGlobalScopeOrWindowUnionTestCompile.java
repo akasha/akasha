@@ -4,6 +4,8 @@ import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class WorkerGlobalScopeOrWindowUnionTestCompile {
+  static WorkerGlobalScopeOrWindowUnion $typeReference$;
+
   public static WorkerGlobalScopeOrWindowUnion of(final WorkerGlobalScope value) {
     return WorkerGlobalScopeOrWindowUnion.of( value );
   }

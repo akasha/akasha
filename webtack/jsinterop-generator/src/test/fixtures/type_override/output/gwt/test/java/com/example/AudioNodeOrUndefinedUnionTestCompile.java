@@ -4,6 +4,8 @@ import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class AudioNodeOrUndefinedUnionTestCompile {
+  static AudioNodeOrUndefinedUnion $typeReference$;
+
   public static AudioNodeOrUndefinedUnion of(final AudioNode value) {
     return AudioNodeOrUndefinedUnion.of( value );
   }

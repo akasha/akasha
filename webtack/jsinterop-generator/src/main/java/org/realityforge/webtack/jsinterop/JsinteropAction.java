@@ -472,6 +472,8 @@ final class JsinteropAction
           .addModifiers( Modifier.PUBLIC, Modifier.FINAL );
       writeGeneratedAnnotation( testType );
 
+      addTypeReferenceField( testType, null, className );
+
       for ( final MixinDefinition mixin : globalMixins )
       {
         generateConstants( JsUtil.toJsName( mixin ), mixin.getConstants(), type );
@@ -541,7 +543,10 @@ final class JsinteropAction
 
     final WebIDLSchema schema = getSchema();
     InterfaceDefinition definition = schema.getInterfaceByName( globalInterface );
+
     maybeAddJavadoc( definition, type );
+    addTypeReferenceField( testType, definition, className );
+
     while ( null != definition )
     {
       generateStaticAttributes( definition, definition.getAttributes(), true, className, type, testType );
@@ -1075,6 +1080,8 @@ final class JsinteropAction
         .addModifiers( Modifier.PUBLIC, Modifier.FINAL );
     writeGeneratedAnnotation( testType );
 
+    addTypeReferenceField( testType, null, className );
+
     additionalAnnotations.forEach( type::addAnnotation );
 
     generateUnionOfMethods( idlName, unionType, type, testType );
@@ -1539,15 +1546,7 @@ final class JsinteropAction
         .addModifiers( Modifier.PUBLIC, Modifier.FINAL );
     writeGeneratedAnnotation( testType );
 
-    final FieldSpec.Builder typeReferenceField =
-      FieldSpec.builder( className, "$typeReference$", Modifier.STATIC );
-    final DocumentationElement documentation = definition.getDocumentation();
-    if ( null != documentation && documentation.hasDeprecatedTag() )
-    {
-      typeReferenceField.addAnnotation( Deprecated.class );
-    }
-
-    testType.addField( typeReferenceField.build() );
+    addTypeReferenceField( testType, definition, className );
 
     for ( final TypedefDefinition markerType : definition.getMarkerTypes() )
     {
@@ -2011,21 +2010,14 @@ final class JsinteropAction
         .addModifiers( Modifier.PUBLIC, Modifier.FINAL );
     writeGeneratedAnnotation( testType );
 
-    final FieldSpec.Builder typeReferenceField =
-      FieldSpec.builder( className, "$typeReference$", Modifier.STATIC );
-    final DocumentationElement documentation = definition.getDocumentation();
-    if ( null != documentation && documentation.hasDeprecatedTag() )
-    {
-      typeReferenceField.addAnnotation( Deprecated.class );
-    }
-
-    testType.addField( typeReferenceField.build() );
+    addTypeReferenceField( testType, definition, className );
 
     final MethodSpec.Builder testMethod =
       MethodSpec
         .methodBuilder( "onInvoke" )
         .addModifiers( Modifier.PUBLIC, Modifier.STATIC );
 
+    final DocumentationElement documentation = definition.getDocumentation();
     if ( null != documentation && documentation.hasDeprecatedTag() )
     {
       testMethod.addAnnotation( Deprecated.class );
@@ -2166,6 +2158,8 @@ final class JsinteropAction
         .addModifiers( Modifier.PUBLIC, Modifier.FINAL );
     writeGeneratedAnnotation( testType );
 
+    addTypeReferenceField( testType, definition, className );
+
     generateConstants( JsUtil.toJsName( definition ), definition.getConstants(), type );
 
     final OperationMember operation = definition.getOperation();
@@ -2218,6 +2212,7 @@ final class JsinteropAction
         .classBuilder( testJavaName )
         .addModifiers( Modifier.PUBLIC, Modifier.FINAL );
     writeGeneratedAnnotation( testType );
+    addTypeReferenceField( testType, definition, className );
 
     generateConstants( JsUtil.toJsName( definition ), definition.getConstants(), type );
 
@@ -2598,6 +2593,8 @@ final class JsinteropAction
         .addModifiers( Modifier.PUBLIC, Modifier.FINAL );
     writeGeneratedAnnotation( testType );
 
+    addTypeReferenceField( testType, definition, className );
+
     generateConstants( JsUtil.toJsName( definition ), definition.getConstants(), type );
     generateStaticAttributes( definition, definition.getAttributes(), false, className, type, testType );
     generateStaticOperations( definition, definition.getOperations(), false, className, type, testType );
@@ -2613,6 +2610,19 @@ final class JsinteropAction
 
       _modulesToRequireInCompileTest.add( className.canonicalName() + "TestCompile" );
     }
+  }
+
+  private void addTypeReferenceField( @Nonnull final TypeSpec.Builder testType,
+                                      @Nullable final Element element,
+                                      @Nonnull final ClassName className )
+  {
+    final FieldSpec.Builder typeReferenceField = FieldSpec.builder( className, "$typeReference$", Modifier.STATIC );
+    final DocumentationElement documentation = null == element ? null : element.getDocumentation();
+    if ( null != documentation && documentation.hasDeprecatedTag() )
+    {
+      typeReferenceField.addAnnotation( Deprecated.class );
+    }
+    testType.addField( typeReferenceField.build() );
   }
 
   private void generateStaticOperations( @Nonnull final NamedDefinition definition,
@@ -2659,15 +2669,7 @@ final class JsinteropAction
         .addModifiers( Modifier.PUBLIC, Modifier.FINAL );
     writeGeneratedAnnotation( testType );
 
-    final FieldSpec.Builder typeReferenceField =
-      FieldSpec.builder( className, "$typeReference$", Modifier.STATIC );
-    final DocumentationElement documentation = definition.getDocumentation();
-    if ( null != documentation && documentation.hasDeprecatedTag() )
-    {
-      typeReferenceField.addAnnotation( Deprecated.class );
-    }
-
-    testType.addField( typeReferenceField.build() );
+    addTypeReferenceField( testType, definition, className );
 
     for ( final TypedefDefinition markerType : definition.getMarkerTypes() )
     {

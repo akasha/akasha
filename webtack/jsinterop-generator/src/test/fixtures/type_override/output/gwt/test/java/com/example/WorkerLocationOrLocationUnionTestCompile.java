@@ -4,6 +4,8 @@ import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class WorkerLocationOrLocationUnionTestCompile {
+  static WorkerLocationOrLocationUnion $typeReference$;
+
   public static WorkerLocationOrLocationUnion of(final WorkerLocation value) {
     return WorkerLocationOrLocationUnion.of( value );
   }

@@ -4,6 +4,8 @@ import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class RTCStatsReportTestCompile {
+  static RTCStatsReport $typeReference$;
+
   public static int size(RTCStatsReport $instance) {
     return $instance.size();
   }

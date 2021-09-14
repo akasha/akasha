@@ -4,6 +4,8 @@ import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class Navigator3TestCompile {
+  static Navigator3 $typeReference$;
+
   public static boolean isGpuSupported(final Navigator3 type) {
     return type.isGpuSupported();
   }

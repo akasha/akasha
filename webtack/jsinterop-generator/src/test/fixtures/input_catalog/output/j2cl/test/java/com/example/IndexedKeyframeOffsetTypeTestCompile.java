@@ -4,6 +4,8 @@ import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class IndexedKeyframeOffsetTypeTestCompile {
+  static IndexedKeyframeOffsetType $typeReference$;
+
   public static IndexedKeyframeOffsetType of(final Double value) {
     return IndexedKeyframeOffsetType.of( value );
   }

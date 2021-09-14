@@ -4,6 +4,8 @@ import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class ExtendableMessageEventHandlerOrMessageEventHandlerUnionTestCompile {
+  static ExtendableMessageEventHandlerOrMessageEventHandlerUnion $typeReference$;
+
   @SuppressWarnings("overloads")
   public static ExtendableMessageEventHandlerOrMessageEventHandlerUnion of(
       final ExtendableMessageEventHandler value) {

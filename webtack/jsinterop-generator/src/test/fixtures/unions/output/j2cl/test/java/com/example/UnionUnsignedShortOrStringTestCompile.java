@@ -4,6 +4,8 @@ import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class UnionUnsignedShortOrStringTestCompile {
+  static UnionUnsignedShortOrString $typeReference$;
+
   public static UnionUnsignedShortOrString of(final int value) {
     return UnionUnsignedShortOrString.of( value );
   }
