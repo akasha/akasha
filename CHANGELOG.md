@@ -33,7 +33,7 @@ The release includes 554 non breaking API changes, 854 potentially breaking API 
 
 Changes in this release:
 
-* Add the `Resize Observer` spec at `W3C First Public Working Draft, 11 February 2020` version to set of specs that are used to generated the browser API. This added the `ResizeObserver` type and related infrastructure.
+* Add the `Resize Observer` spec at `W3C First Public Working Draft, 11 February 2020` version to the set of specs that are used to generate the browser API. This added the `ResizeObserver` type and related infrastructure.
 * Fix a bug mapping the `WindowGlobal` type that was introduced in version `0.20` when using the `xsiframe` linker from within a GWT application. The fix is to use the `<window>` namespace rather than the `<global>` namespace.
 * Generate static types for global execution contexts of a service worker (i.e. `SharedWorkerGlobal`), a worker (i.e. `DedicatedWorkerGlobal`), a shared worker (i.e. `SharedWorkerGlobal`) and audio worklets (i.e. `AudioWorkletGlobal`).
 * Change the way the java binding generates unions so that methods of the form `as[X]()` and `is[X]()` exist for every component type `X` that is part of the union.
