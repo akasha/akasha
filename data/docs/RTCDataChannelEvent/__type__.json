@@ -2,7 +2,7 @@
     "kind": "Type",
     "name": "RTCDataChannelEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannelEvent",
-    "description": "Also inherits properties from Event.",
+    "description": "The RTCDataChannelEvent interface represents an event related to a specific RTCDataChannel.",
     "refs": [
         {
             "name": "WebRTC 1.0: Real-Time Communication Between Browsers",

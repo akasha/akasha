@@ -1,6 +1,0 @@
-{
-    "kind": "Type",
-    "name": "WindowOrWorkerGlobalScope",
-    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope",
-    "description": "The WindowOrWorkerGlobalScope mixin describes several features common to the Window and WorkerGlobalScope interfaces."
-}

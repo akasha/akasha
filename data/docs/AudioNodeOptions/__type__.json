@@ -2,12 +2,12 @@
     "kind": "Type",
     "name": "AudioNodeOptions",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioNodeOptions",
-    "description": "The AudioNodeOptions dictionary of the Web Audio API specifies options that can be used when creating new AudioNode objects.",
+    "description": "The AudioNode interface is a generic interface for representing an audio processing module.",
     "refs": [
         {
             "name": "Web Audio API",
-            "href": "https://webaudio.github.io/web-audio-api/#AudioNodeOptions",
-            "description": "# AudioNodeOptions"
+            "href": "https://webaudio.github.io/web-audio-api/#AudioNode",
+            "description": "# AudioNode"
         }
     ]
 }

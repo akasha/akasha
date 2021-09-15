@@ -2,5 +2,5 @@
     "kind": "Type",
     "name": "EcKeyImportParams",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/EcKeyImportParams",
-    "description": "A DOMString representing the name of the elliptic curve to use. This may be any of the following names for NIST-approved curves:"
+    "description": "A DOMString. This should be set to ECDSA or ECDH, depending on the algorithm you want to use."
 }
