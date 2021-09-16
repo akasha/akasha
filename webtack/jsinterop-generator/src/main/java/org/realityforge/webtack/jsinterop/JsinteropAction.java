@@ -474,7 +474,7 @@ final class JsinteropAction
 
       for ( final MixinDefinition mixin : globalMixins )
       {
-        generateConstants( JsUtil.toJsName( mixin ), mixin.getConstants(), type );
+        generateConstants( className, JsUtil.toJsName( mixin ), mixin.getConstants(), type, testType );
         generateStaticAttributes( mixin, mixin.getAttributes(), true, className, type, testType );
         generateStaticOperations( mixin, mixin.getOperations(), true, className, type, testType );
         generateStaticEventsMethods( type, schema, mixin.getEvents() );
@@ -2157,7 +2157,7 @@ final class JsinteropAction
 
     addTypeReferenceField( testType, definition, className );
 
-    generateConstants( JsUtil.toJsName( definition ), definition.getConstants(), type );
+    generateConstants( className, JsUtil.toJsName( definition ), definition.getConstants(), type, testType );
 
     final OperationMember operation = definition.getOperation();
     final List<Argument> arguments = operation.getArguments();
@@ -2211,7 +2211,7 @@ final class JsinteropAction
     writeGeneratedAnnotation( testType );
     addTypeReferenceField( testType, definition, className );
 
-    generateConstants( JsUtil.toJsName( definition ), definition.getConstants(), type );
+    generateConstants( className, JsUtil.toJsName( definition ), definition.getConstants(), type, testType );
 
     type.addMethod( MethodSpec
                       .methodBuilder( "of" )
@@ -2590,7 +2590,7 @@ final class JsinteropAction
         .addModifiers( Modifier.PUBLIC, Modifier.FINAL );
     writeGeneratedAnnotation( testType );
 
-    generateConstants( JsUtil.toJsName( definition ), definition.getConstants(), type );
+    generateConstants( className, JsUtil.toJsName( definition ), definition.getConstants(), type, testType );
     generateStaticAttributes( definition, definition.getAttributes(), false, className, type, testType );
     generateStaticOperations( definition, definition.getOperations(), false, className, type, testType );
 
@@ -2695,7 +2695,7 @@ final class JsinteropAction
       parentConstructor = null;
     }
 
-    generateConstants( JsUtil.toJsName( definition ), definition.getConstants(), type );
+    generateConstants( className, JsUtil.toJsName( definition ), definition.getConstants(), type, testType );
     generateAttributes( definition, definition.getAttributes(), className, type, testType );
 
     boolean constructorPresent = false;
@@ -3818,9 +3818,11 @@ final class JsinteropAction
     testType.addMethod( testWriteMethod.build() );
   }
 
-  private void generateConstants( @Nonnull final String jsTypeName,
+  private void generateConstants( @Nonnull final ClassName className,
+                                  @Nonnull final String jsTypeName,
                                   @Nonnull final List<ConstMember> constants,
-                                  @Nonnull final TypeSpec.Builder type )
+                                  @Nonnull final TypeSpec.Builder type,
+                                  @Nonnull final TypeSpec.Builder testType )
   {
     final List<ConstMember> noInlineConstants =
       constants
@@ -3845,12 +3847,8 @@ final class JsinteropAction
       {
         final String name = constant.getName();
         final String jsName = JsUtil.toJsName( constant );
-        final FieldSpec.Builder field =
-          FieldSpec
-            .builder( toTypeName( getSchema().resolveType( constant.getType() ) ),
-                      name,
-                      Modifier.PRIVATE,
-                      Modifier.STATIC );
+        final TypeName typeName = toTypeName( getSchema().resolveType( constant.getType() ) );
+        final FieldSpec.Builder field = FieldSpec.builder( typeName, name, Modifier.PRIVATE, Modifier.STATIC );
         if ( !name.equals( jsName ) )
         {
           field.addAnnotation( AnnotationSpec
@@ -3859,6 +3857,19 @@ final class JsinteropAction
                                  .build() );
         }
         constantType.addField( field.build() );
+
+        final MethodSpec.Builder testMethod =
+          MethodSpec
+            .methodBuilder( "get" + name )
+            .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+            .returns( typeName )
+            .addStatement( "return $T.$N", className, name );
+        final DocumentationElement documentation = constant.getDocumentation();
+        if ( null != documentation && documentation.hasDeprecatedTag() )
+        {
+          testMethod.addAnnotation( Deprecated.class );
+        }
+        testType.addMethod( testMethod.build() );
       }
       type.addType( constantType.build() );
     }
