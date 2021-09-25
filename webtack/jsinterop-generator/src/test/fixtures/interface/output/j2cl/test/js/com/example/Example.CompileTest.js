@@ -55,6 +55,8 @@ goog.require('com.example.EventTargetTestCompile');
 goog.require('com.example.EventTestCompile');
 goog.require('com.example.Headers.$Overlay');
 goog.require('com.example.HeadersTestCompile');
+goog.require('com.example.Int8Array.$Overlay');
+goog.require('com.example.Int8ArrayTestCompile');
 goog.require('com.example.MyThing.$Overlay');
 goog.require('com.example.MyThingCollection.$Overlay');
 goog.require('com.example.MyThingCollectionTestCompile');

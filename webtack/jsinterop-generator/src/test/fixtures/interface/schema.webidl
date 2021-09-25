@@ -268,6 +268,13 @@ interface Headers {
   undefined set( ByteString name, ByteString value );
 };
 
+/**
+ * An indexed iterable where the type needs to be boxed.
+ */
+interface Int8Array {
+  iterable<byte>;
+};
+
 interface MyThing {
 };
 

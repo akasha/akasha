@@ -2550,7 +2550,7 @@ final class JsinteropAction
         .addAnnotation( JsinteropTypes.HAS_NO_SIDE_EFFECTS )
         .addAnnotation( JsinteropTypes.JS_NONNULL )
         .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
-        .returns( iteratorType( toTypeName( iterable.getValueType() ) ) );
+        .returns( iteratorType( toTypeName( iterable.getValueType(), true ) ) );
     maybeAddJavadoc( getDocumentationElement( idlName, methodName ), method );
     type.addMethod( method.build() );
 
@@ -2558,7 +2558,7 @@ final class JsinteropAction
                           .methodBuilder( methodName )
                           .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
                           .addParameter( ParameterSpec.builder( className, "$instance" ).build() )
-                          .returns( iteratorType( toTypeName( iterable.getValueType() ) ) )
+                          .returns( iteratorType( toTypeName( iterable.getValueType(), true ) ) )
                           .addStatement( "return $N.$N()", "$instance", methodName )
                           .build() );
   }

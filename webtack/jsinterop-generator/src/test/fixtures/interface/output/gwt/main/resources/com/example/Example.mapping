@@ -26,6 +26,7 @@ Event=com.example.Event
 EventInit=com.example.EventInit
 EventTarget=com.example.EventTarget
 Headers=com.example.Headers
+Int8Array=com.example.Int8Array
 Iterable=com.example.JsIterable
 Iterator=com.example.JsIterator
 MyThing=com.example.MyThing
