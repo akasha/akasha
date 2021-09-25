@@ -1,0 +1,3278 @@
+[
+  {
+    "code": "java.class.nowImplementsInterface",
+    "description": "Class now implements interface 'akasha.lang.JsIterable<akasha.core.Float32Array.Entry>'.",
+    "element": "class akasha.core.Float32Array",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Float32Array",
+      "classSimpleName": "Float32Array",
+      "elementKind": "class",
+      "interface": "akasha.lang.JsIterable<akasha.core.Float32Array.Entry>",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.core.Float32Array.Entry",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Float32Array.Entry",
+      "classSimpleName": "Entry",
+      "elementKind": "class",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.class.nowImplementsInterface",
+    "description": "Class now implements interface 'akasha.lang.JsIterable<akasha.core.Float64Array.Entry>'.",
+    "element": "class akasha.core.Float64Array",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Float64Array",
+      "classSimpleName": "Float64Array",
+      "elementKind": "class",
+      "interface": "akasha.lang.JsIterable<akasha.core.Float64Array.Entry>",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.core.Float64Array.Entry",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Float64Array.Entry",
+      "classSimpleName": "Entry",
+      "elementKind": "class",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.class.nowImplementsInterface",
+    "description": "Class now implements interface 'akasha.lang.JsIterable<akasha.core.Int16Array.Entry>'.",
+    "element": "class akasha.core.Int16Array",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Int16Array",
+      "classSimpleName": "Int16Array",
+      "elementKind": "class",
+      "interface": "akasha.lang.JsIterable<akasha.core.Int16Array.Entry>",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.core.Int16Array.Entry",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Int16Array.Entry",
+      "classSimpleName": "Entry",
+      "elementKind": "class",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.class.nowImplementsInterface",
+    "description": "Class now implements interface 'akasha.lang.JsIterable<akasha.core.Int32Array.Entry>'.",
+    "element": "class akasha.core.Int32Array",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Int32Array",
+      "classSimpleName": "Int32Array",
+      "elementKind": "class",
+      "interface": "akasha.lang.JsIterable<akasha.core.Int32Array.Entry>",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.core.Int32Array.Entry",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Int32Array.Entry",
+      "classSimpleName": "Entry",
+      "elementKind": "class",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.class.nowImplementsInterface",
+    "description": "Class now implements interface 'akasha.lang.JsIterable<akasha.core.Int8Array.Entry>'.",
+    "element": "class akasha.core.Int8Array",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Int8Array",
+      "classSimpleName": "Int8Array",
+      "elementKind": "class",
+      "interface": "akasha.lang.JsIterable<akasha.core.Int8Array.Entry>",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.core.Int8Array.Entry",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Int8Array.Entry",
+      "classSimpleName": "Entry",
+      "elementKind": "class",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.class.nowImplementsInterface",
+    "description": "Class now implements interface 'akasha.lang.JsIterable<akasha.core.Uint16Array.Entry>'.",
+    "element": "class akasha.core.Uint16Array",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint16Array",
+      "classSimpleName": "Uint16Array",
+      "elementKind": "class",
+      "interface": "akasha.lang.JsIterable<akasha.core.Uint16Array.Entry>",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.core.Uint16Array.Entry",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint16Array.Entry",
+      "classSimpleName": "Entry",
+      "elementKind": "class",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.class.nowImplementsInterface",
+    "description": "Class now implements interface 'akasha.lang.JsIterable<akasha.core.Uint32Array.Entry>'.",
+    "element": "class akasha.core.Uint32Array",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint32Array",
+      "classSimpleName": "Uint32Array",
+      "elementKind": "class",
+      "interface": "akasha.lang.JsIterable<akasha.core.Uint32Array.Entry>",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.core.Uint32Array.Entry",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint32Array.Entry",
+      "classSimpleName": "Entry",
+      "elementKind": "class",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.class.nowImplementsInterface",
+    "description": "Class now implements interface 'akasha.lang.JsIterable<akasha.core.Uint8Array.Entry>'.",
+    "element": "class akasha.core.Uint8Array",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint8Array",
+      "classSimpleName": "Uint8Array",
+      "elementKind": "class",
+      "interface": "akasha.lang.JsIterable<akasha.core.Uint8Array.Entry>",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.core.Uint8Array.Entry",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint8Array.Entry",
+      "classSimpleName": "Entry",
+      "elementKind": "class",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.class.nowImplementsInterface",
+    "description": "Class now implements interface 'akasha.lang.JsIterable<akasha.core.Uint8ClampedArray.Entry>'.",
+    "element": "class akasha.core.Uint8ClampedArray",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint8ClampedArray",
+      "classSimpleName": "Uint8ClampedArray",
+      "elementKind": "class",
+      "interface": "akasha.lang.JsIterable<akasha.core.Uint8ClampedArray.Entry>",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.core.Uint8ClampedArray.Entry",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint8ClampedArray.Entry",
+      "classSimpleName": "Entry",
+      "elementKind": "class",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.field.typeChanged",
+    "description": "The type of the field changed from 'akasha.EventHandler' to 'akasha.gpu.GPUUncapturedErrorEventHandler'.",
+    "element": "field akasha.gpu.GPUDevice.onuncapturederror",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUDevice",
+      "classSimpleName": "GPUDevice",
+      "elementKind": "field",
+      "fieldName": "onuncapturederror",
+      "newType": "akasha.gpu.GPUUncapturedErrorEventHandler",
+      "oldType": "akasha.EventHandler",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.core.Float32Array.ForEachCallback",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Float32Array.ForEachCallback",
+      "classSimpleName": "ForEachCallback",
+      "elementKind": "interface",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.core.Float32Array.ForEachCallback2",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Float32Array.ForEachCallback2",
+      "classSimpleName": "ForEachCallback2",
+      "elementKind": "interface",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.core.Float32Array.ForEachCallback3",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Float32Array.ForEachCallback3",
+      "classSimpleName": "ForEachCallback3",
+      "elementKind": "interface",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.core.Float64Array.ForEachCallback",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Float64Array.ForEachCallback",
+      "classSimpleName": "ForEachCallback",
+      "elementKind": "interface",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.core.Float64Array.ForEachCallback2",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Float64Array.ForEachCallback2",
+      "classSimpleName": "ForEachCallback2",
+      "elementKind": "interface",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.core.Float64Array.ForEachCallback3",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Float64Array.ForEachCallback3",
+      "classSimpleName": "ForEachCallback3",
+      "elementKind": "interface",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.core.Int16Array.ForEachCallback",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Int16Array.ForEachCallback",
+      "classSimpleName": "ForEachCallback",
+      "elementKind": "interface",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.core.Int16Array.ForEachCallback2",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Int16Array.ForEachCallback2",
+      "classSimpleName": "ForEachCallback2",
+      "elementKind": "interface",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.core.Int16Array.ForEachCallback3",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Int16Array.ForEachCallback3",
+      "classSimpleName": "ForEachCallback3",
+      "elementKind": "interface",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.core.Int32Array.ForEachCallback",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Int32Array.ForEachCallback",
+      "classSimpleName": "ForEachCallback",
+      "elementKind": "interface",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.core.Int32Array.ForEachCallback2",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Int32Array.ForEachCallback2",
+      "classSimpleName": "ForEachCallback2",
+      "elementKind": "interface",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.core.Int32Array.ForEachCallback3",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Int32Array.ForEachCallback3",
+      "classSimpleName": "ForEachCallback3",
+      "elementKind": "interface",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.core.Int8Array.ForEachCallback",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Int8Array.ForEachCallback",
+      "classSimpleName": "ForEachCallback",
+      "elementKind": "interface",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.core.Int8Array.ForEachCallback2",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Int8Array.ForEachCallback2",
+      "classSimpleName": "ForEachCallback2",
+      "elementKind": "interface",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.core.Int8Array.ForEachCallback3",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Int8Array.ForEachCallback3",
+      "classSimpleName": "ForEachCallback3",
+      "elementKind": "interface",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.core.Uint16Array.ForEachCallback",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint16Array.ForEachCallback",
+      "classSimpleName": "ForEachCallback",
+      "elementKind": "interface",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.core.Uint16Array.ForEachCallback2",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint16Array.ForEachCallback2",
+      "classSimpleName": "ForEachCallback2",
+      "elementKind": "interface",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.core.Uint16Array.ForEachCallback3",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint16Array.ForEachCallback3",
+      "classSimpleName": "ForEachCallback3",
+      "elementKind": "interface",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.core.Uint32Array.ForEachCallback",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint32Array.ForEachCallback",
+      "classSimpleName": "ForEachCallback",
+      "elementKind": "interface",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.core.Uint32Array.ForEachCallback2",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint32Array.ForEachCallback2",
+      "classSimpleName": "ForEachCallback2",
+      "elementKind": "interface",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.core.Uint32Array.ForEachCallback3",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint32Array.ForEachCallback3",
+      "classSimpleName": "ForEachCallback3",
+      "elementKind": "interface",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.core.Uint8Array.ForEachCallback",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint8Array.ForEachCallback",
+      "classSimpleName": "ForEachCallback",
+      "elementKind": "interface",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.core.Uint8Array.ForEachCallback2",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint8Array.ForEachCallback2",
+      "classSimpleName": "ForEachCallback2",
+      "elementKind": "interface",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.core.Uint8Array.ForEachCallback3",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint8Array.ForEachCallback3",
+      "classSimpleName": "ForEachCallback3",
+      "elementKind": "interface",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.core.Uint8ClampedArray.ForEachCallback",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint8ClampedArray.ForEachCallback",
+      "classSimpleName": "ForEachCallback",
+      "elementKind": "interface",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.core.Uint8ClampedArray.ForEachCallback2",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint8ClampedArray.ForEachCallback2",
+      "classSimpleName": "ForEachCallback2",
+      "elementKind": "interface",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.core.Uint8ClampedArray.ForEachCallback3",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint8ClampedArray.ForEachCallback3",
+      "classSimpleName": "ForEachCallback3",
+      "elementKind": "interface",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.gpu.GPUUncapturedErrorEventHandler",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUUncapturedErrorEventHandler",
+      "classSimpleName": "GPUUncapturedErrorEventHandler",
+      "elementKind": "interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.gpu.GPUUncapturedErrorEventListener",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUUncapturedErrorEventListener",
+      "classSimpleName": "GPUUncapturedErrorEventListener",
+      "elementKind": "interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method akasha.core.Float32Array akasha.core.Float32Array::fill(float)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Float32Array",
+      "classSimpleName": "Float32Array",
+      "elementKind": "method",
+      "methodName": "fill",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method akasha.core.Float32Array akasha.core.Float32Array::fill(float, int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Float32Array",
+      "classSimpleName": "Float32Array",
+      "elementKind": "method",
+      "methodName": "fill",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method akasha.core.Float32Array akasha.core.Float32Array::fill(float, int, int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Float32Array",
+      "classSimpleName": "Float32Array",
+      "elementKind": "method",
+      "methodName": "fill",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method akasha.core.Float64Array akasha.core.Float64Array::fill(double)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Float64Array",
+      "classSimpleName": "Float64Array",
+      "elementKind": "method",
+      "methodName": "fill",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method akasha.core.Float64Array akasha.core.Float64Array::fill(double, int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Float64Array",
+      "classSimpleName": "Float64Array",
+      "elementKind": "method",
+      "methodName": "fill",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method akasha.core.Float64Array akasha.core.Float64Array::fill(double, int, int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Float64Array",
+      "classSimpleName": "Float64Array",
+      "elementKind": "method",
+      "methodName": "fill",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method akasha.core.Int16Array akasha.core.Int16Array::fill(short)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Int16Array",
+      "classSimpleName": "Int16Array",
+      "elementKind": "method",
+      "methodName": "fill",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method akasha.core.Int16Array akasha.core.Int16Array::fill(short, int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Int16Array",
+      "classSimpleName": "Int16Array",
+      "elementKind": "method",
+      "methodName": "fill",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method akasha.core.Int16Array akasha.core.Int16Array::fill(short, int, int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Int16Array",
+      "classSimpleName": "Int16Array",
+      "elementKind": "method",
+      "methodName": "fill",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method akasha.core.Int32Array akasha.core.Int32Array::fill(int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Int32Array",
+      "classSimpleName": "Int32Array",
+      "elementKind": "method",
+      "methodName": "fill",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method akasha.core.Int32Array akasha.core.Int32Array::fill(int, int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Int32Array",
+      "classSimpleName": "Int32Array",
+      "elementKind": "method",
+      "methodName": "fill",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method akasha.core.Int32Array akasha.core.Int32Array::fill(int, int, int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Int32Array",
+      "classSimpleName": "Int32Array",
+      "elementKind": "method",
+      "methodName": "fill",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method akasha.core.Int8Array akasha.core.Int8Array::fill(byte)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Int8Array",
+      "classSimpleName": "Int8Array",
+      "elementKind": "method",
+      "methodName": "fill",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method akasha.core.Int8Array akasha.core.Int8Array::fill(byte, int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Int8Array",
+      "classSimpleName": "Int8Array",
+      "elementKind": "method",
+      "methodName": "fill",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method akasha.core.Int8Array akasha.core.Int8Array::fill(byte, int, int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Int8Array",
+      "classSimpleName": "Int8Array",
+      "elementKind": "method",
+      "methodName": "fill",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method akasha.core.Uint16Array akasha.core.Uint16Array::fill(int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint16Array",
+      "classSimpleName": "Uint16Array",
+      "elementKind": "method",
+      "methodName": "fill",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method akasha.core.Uint16Array akasha.core.Uint16Array::fill(int, int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint16Array",
+      "classSimpleName": "Uint16Array",
+      "elementKind": "method",
+      "methodName": "fill",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method akasha.core.Uint16Array akasha.core.Uint16Array::fill(int, int, int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint16Array",
+      "classSimpleName": "Uint16Array",
+      "elementKind": "method",
+      "methodName": "fill",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method akasha.core.Uint32Array akasha.core.Uint32Array::fill(int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint32Array",
+      "classSimpleName": "Uint32Array",
+      "elementKind": "method",
+      "methodName": "fill",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method akasha.core.Uint32Array akasha.core.Uint32Array::fill(int, int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint32Array",
+      "classSimpleName": "Uint32Array",
+      "elementKind": "method",
+      "methodName": "fill",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method akasha.core.Uint32Array akasha.core.Uint32Array::fill(int, int, int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint32Array",
+      "classSimpleName": "Uint32Array",
+      "elementKind": "method",
+      "methodName": "fill",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method akasha.core.Uint8Array akasha.core.Uint8Array::fill(short)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint8Array",
+      "classSimpleName": "Uint8Array",
+      "elementKind": "method",
+      "methodName": "fill",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method akasha.core.Uint8Array akasha.core.Uint8Array::fill(short, int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint8Array",
+      "classSimpleName": "Uint8Array",
+      "elementKind": "method",
+      "methodName": "fill",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method akasha.core.Uint8Array akasha.core.Uint8Array::fill(short, int, int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint8Array",
+      "classSimpleName": "Uint8Array",
+      "elementKind": "method",
+      "methodName": "fill",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method akasha.core.Uint8ClampedArray akasha.core.Uint8ClampedArray::fill(short)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint8ClampedArray",
+      "classSimpleName": "Uint8ClampedArray",
+      "elementKind": "method",
+      "methodName": "fill",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method akasha.core.Uint8ClampedArray akasha.core.Uint8ClampedArray::fill(short, int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint8ClampedArray",
+      "classSimpleName": "Uint8ClampedArray",
+      "elementKind": "method",
+      "methodName": "fill",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method akasha.core.Uint8ClampedArray akasha.core.Uint8ClampedArray::fill(short, int, int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint8ClampedArray",
+      "classSimpleName": "Uint8ClampedArray",
+      "elementKind": "method",
+      "methodName": "fill",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method akasha.lang.JsIterator<akasha.core.Float32Array.Entry> akasha.core.Float32Array::entries()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Float32Array",
+      "classSimpleName": "Float32Array",
+      "elementKind": "method",
+      "methodName": "entries",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method akasha.lang.JsIterator<akasha.core.Float64Array.Entry> akasha.core.Float64Array::entries()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Float64Array",
+      "classSimpleName": "Float64Array",
+      "elementKind": "method",
+      "methodName": "entries",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method akasha.lang.JsIterator<akasha.core.Int16Array.Entry> akasha.core.Int16Array::entries()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Int16Array",
+      "classSimpleName": "Int16Array",
+      "elementKind": "method",
+      "methodName": "entries",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method akasha.lang.JsIterator<akasha.core.Int32Array.Entry> akasha.core.Int32Array::entries()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Int32Array",
+      "classSimpleName": "Int32Array",
+      "elementKind": "method",
+      "methodName": "entries",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method akasha.lang.JsIterator<akasha.core.Int8Array.Entry> akasha.core.Int8Array::entries()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Int8Array",
+      "classSimpleName": "Int8Array",
+      "elementKind": "method",
+      "methodName": "entries",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method akasha.lang.JsIterator<akasha.core.Uint16Array.Entry> akasha.core.Uint16Array::entries()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint16Array",
+      "classSimpleName": "Uint16Array",
+      "elementKind": "method",
+      "methodName": "entries",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method akasha.lang.JsIterator<akasha.core.Uint32Array.Entry> akasha.core.Uint32Array::entries()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint32Array",
+      "classSimpleName": "Uint32Array",
+      "elementKind": "method",
+      "methodName": "entries",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method akasha.lang.JsIterator<akasha.core.Uint8Array.Entry> akasha.core.Uint8Array::entries()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint8Array",
+      "classSimpleName": "Uint8Array",
+      "elementKind": "method",
+      "methodName": "entries",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method akasha.lang.JsIterator<akasha.core.Uint8ClampedArray.Entry> akasha.core.Uint8ClampedArray::entries()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint8ClampedArray",
+      "classSimpleName": "Uint8ClampedArray",
+      "elementKind": "method",
+      "methodName": "entries",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method akasha.lang.JsIterator<java.lang.Double> akasha.core.Float32Array::keys()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Float32Array",
+      "classSimpleName": "Float32Array",
+      "elementKind": "method",
+      "methodName": "keys",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method akasha.lang.JsIterator<java.lang.Double> akasha.core.Float32Array::values()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Float32Array",
+      "classSimpleName": "Float32Array",
+      "elementKind": "method",
+      "methodName": "values",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method akasha.lang.JsIterator<java.lang.Double> akasha.core.Float64Array::keys()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Float64Array",
+      "classSimpleName": "Float64Array",
+      "elementKind": "method",
+      "methodName": "keys",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method akasha.lang.JsIterator<java.lang.Double> akasha.core.Float64Array::values()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Float64Array",
+      "classSimpleName": "Float64Array",
+      "elementKind": "method",
+      "methodName": "values",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method akasha.lang.JsIterator<java.lang.Double> akasha.core.Int16Array::keys()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Int16Array",
+      "classSimpleName": "Int16Array",
+      "elementKind": "method",
+      "methodName": "keys",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method akasha.lang.JsIterator<java.lang.Double> akasha.core.Int16Array::values()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Int16Array",
+      "classSimpleName": "Int16Array",
+      "elementKind": "method",
+      "methodName": "values",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method akasha.lang.JsIterator<java.lang.Double> akasha.core.Int32Array::keys()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Int32Array",
+      "classSimpleName": "Int32Array",
+      "elementKind": "method",
+      "methodName": "keys",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method akasha.lang.JsIterator<java.lang.Double> akasha.core.Int32Array::values()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Int32Array",
+      "classSimpleName": "Int32Array",
+      "elementKind": "method",
+      "methodName": "values",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method akasha.lang.JsIterator<java.lang.Double> akasha.core.Int8Array::keys()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Int8Array",
+      "classSimpleName": "Int8Array",
+      "elementKind": "method",
+      "methodName": "keys",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method akasha.lang.JsIterator<java.lang.Double> akasha.core.Int8Array::values()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Int8Array",
+      "classSimpleName": "Int8Array",
+      "elementKind": "method",
+      "methodName": "values",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method akasha.lang.JsIterator<java.lang.Double> akasha.core.Uint16Array::keys()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint16Array",
+      "classSimpleName": "Uint16Array",
+      "elementKind": "method",
+      "methodName": "keys",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method akasha.lang.JsIterator<java.lang.Double> akasha.core.Uint16Array::values()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint16Array",
+      "classSimpleName": "Uint16Array",
+      "elementKind": "method",
+      "methodName": "values",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method akasha.lang.JsIterator<java.lang.Double> akasha.core.Uint32Array::keys()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint32Array",
+      "classSimpleName": "Uint32Array",
+      "elementKind": "method",
+      "methodName": "keys",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method akasha.lang.JsIterator<java.lang.Double> akasha.core.Uint32Array::values()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint32Array",
+      "classSimpleName": "Uint32Array",
+      "elementKind": "method",
+      "methodName": "values",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method akasha.lang.JsIterator<java.lang.Double> akasha.core.Uint8Array::keys()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint8Array",
+      "classSimpleName": "Uint8Array",
+      "elementKind": "method",
+      "methodName": "keys",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method akasha.lang.JsIterator<java.lang.Double> akasha.core.Uint8Array::values()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint8Array",
+      "classSimpleName": "Uint8Array",
+      "elementKind": "method",
+      "methodName": "values",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method akasha.lang.JsIterator<java.lang.Double> akasha.core.Uint8ClampedArray::keys()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint8ClampedArray",
+      "classSimpleName": "Uint8ClampedArray",
+      "elementKind": "method",
+      "methodName": "keys",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method akasha.lang.JsIterator<java.lang.Double> akasha.core.Uint8ClampedArray::values()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint8ClampedArray",
+      "classSimpleName": "Uint8ClampedArray",
+      "elementKind": "method",
+      "methodName": "values",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method boolean akasha.core.Float32Array::includes(float)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Float32Array",
+      "classSimpleName": "Float32Array",
+      "elementKind": "method",
+      "methodName": "includes",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method boolean akasha.core.Float32Array::includes(float, int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Float32Array",
+      "classSimpleName": "Float32Array",
+      "elementKind": "method",
+      "methodName": "includes",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method boolean akasha.core.Float64Array::includes(double)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Float64Array",
+      "classSimpleName": "Float64Array",
+      "elementKind": "method",
+      "methodName": "includes",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method boolean akasha.core.Float64Array::includes(double, int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Float64Array",
+      "classSimpleName": "Float64Array",
+      "elementKind": "method",
+      "methodName": "includes",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method boolean akasha.core.Int16Array::includes(short)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Int16Array",
+      "classSimpleName": "Int16Array",
+      "elementKind": "method",
+      "methodName": "includes",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method boolean akasha.core.Int16Array::includes(short, int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Int16Array",
+      "classSimpleName": "Int16Array",
+      "elementKind": "method",
+      "methodName": "includes",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method boolean akasha.core.Int32Array::includes(int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Int32Array",
+      "classSimpleName": "Int32Array",
+      "elementKind": "method",
+      "methodName": "includes",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method boolean akasha.core.Int32Array::includes(int, int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Int32Array",
+      "classSimpleName": "Int32Array",
+      "elementKind": "method",
+      "methodName": "includes",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method boolean akasha.core.Int8Array::includes(byte)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Int8Array",
+      "classSimpleName": "Int8Array",
+      "elementKind": "method",
+      "methodName": "includes",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method boolean akasha.core.Int8Array::includes(byte, int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Int8Array",
+      "classSimpleName": "Int8Array",
+      "elementKind": "method",
+      "methodName": "includes",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method boolean akasha.core.Uint16Array::includes(int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint16Array",
+      "classSimpleName": "Uint16Array",
+      "elementKind": "method",
+      "methodName": "includes",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method boolean akasha.core.Uint16Array::includes(int, int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint16Array",
+      "classSimpleName": "Uint16Array",
+      "elementKind": "method",
+      "methodName": "includes",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method boolean akasha.core.Uint32Array::includes(int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint32Array",
+      "classSimpleName": "Uint32Array",
+      "elementKind": "method",
+      "methodName": "includes",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method boolean akasha.core.Uint32Array::includes(int, int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint32Array",
+      "classSimpleName": "Uint32Array",
+      "elementKind": "method",
+      "methodName": "includes",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method boolean akasha.core.Uint8Array::includes(short)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint8Array",
+      "classSimpleName": "Uint8Array",
+      "elementKind": "method",
+      "methodName": "includes",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method boolean akasha.core.Uint8Array::includes(short, int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint8Array",
+      "classSimpleName": "Uint8Array",
+      "elementKind": "method",
+      "methodName": "includes",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method boolean akasha.core.Uint8ClampedArray::includes(short)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint8ClampedArray",
+      "classSimpleName": "Uint8ClampedArray",
+      "elementKind": "method",
+      "methodName": "includes",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method boolean akasha.core.Uint8ClampedArray::includes(short, int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint8ClampedArray",
+      "classSimpleName": "Uint8ClampedArray",
+      "elementKind": "method",
+      "methodName": "includes",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method int akasha.core.Float32Array::indexOf(float)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Float32Array",
+      "classSimpleName": "Float32Array",
+      "elementKind": "method",
+      "methodName": "indexOf",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method int akasha.core.Float32Array::indexOf(float, int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Float32Array",
+      "classSimpleName": "Float32Array",
+      "elementKind": "method",
+      "methodName": "indexOf",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method int akasha.core.Float32Array::lastIndexOf(float)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Float32Array",
+      "classSimpleName": "Float32Array",
+      "elementKind": "method",
+      "methodName": "lastIndexOf",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method int akasha.core.Float32Array::lastIndexOf(float, int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Float32Array",
+      "classSimpleName": "Float32Array",
+      "elementKind": "method",
+      "methodName": "lastIndexOf",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method int akasha.core.Float64Array::indexOf(double)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Float64Array",
+      "classSimpleName": "Float64Array",
+      "elementKind": "method",
+      "methodName": "indexOf",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method int akasha.core.Float64Array::indexOf(double, int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Float64Array",
+      "classSimpleName": "Float64Array",
+      "elementKind": "method",
+      "methodName": "indexOf",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method int akasha.core.Float64Array::lastIndexOf(double)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Float64Array",
+      "classSimpleName": "Float64Array",
+      "elementKind": "method",
+      "methodName": "lastIndexOf",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method int akasha.core.Float64Array::lastIndexOf(double, int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Float64Array",
+      "classSimpleName": "Float64Array",
+      "elementKind": "method",
+      "methodName": "lastIndexOf",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method int akasha.core.Int16Array::indexOf(short)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Int16Array",
+      "classSimpleName": "Int16Array",
+      "elementKind": "method",
+      "methodName": "indexOf",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method int akasha.core.Int16Array::indexOf(short, int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Int16Array",
+      "classSimpleName": "Int16Array",
+      "elementKind": "method",
+      "methodName": "indexOf",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method int akasha.core.Int16Array::lastIndexOf(short)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Int16Array",
+      "classSimpleName": "Int16Array",
+      "elementKind": "method",
+      "methodName": "lastIndexOf",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method int akasha.core.Int16Array::lastIndexOf(short, int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Int16Array",
+      "classSimpleName": "Int16Array",
+      "elementKind": "method",
+      "methodName": "lastIndexOf",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method int akasha.core.Int32Array::indexOf(int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Int32Array",
+      "classSimpleName": "Int32Array",
+      "elementKind": "method",
+      "methodName": "indexOf",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method int akasha.core.Int32Array::indexOf(int, int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Int32Array",
+      "classSimpleName": "Int32Array",
+      "elementKind": "method",
+      "methodName": "indexOf",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method int akasha.core.Int32Array::lastIndexOf(int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Int32Array",
+      "classSimpleName": "Int32Array",
+      "elementKind": "method",
+      "methodName": "lastIndexOf",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method int akasha.core.Int32Array::lastIndexOf(int, int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Int32Array",
+      "classSimpleName": "Int32Array",
+      "elementKind": "method",
+      "methodName": "lastIndexOf",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method int akasha.core.Int8Array::indexOf(byte)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Int8Array",
+      "classSimpleName": "Int8Array",
+      "elementKind": "method",
+      "methodName": "indexOf",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method int akasha.core.Int8Array::indexOf(byte, int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Int8Array",
+      "classSimpleName": "Int8Array",
+      "elementKind": "method",
+      "methodName": "indexOf",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method int akasha.core.Int8Array::lastIndexOf(byte)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Int8Array",
+      "classSimpleName": "Int8Array",
+      "elementKind": "method",
+      "methodName": "lastIndexOf",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method int akasha.core.Int8Array::lastIndexOf(byte, int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Int8Array",
+      "classSimpleName": "Int8Array",
+      "elementKind": "method",
+      "methodName": "lastIndexOf",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method int akasha.core.Uint16Array::indexOf(int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint16Array",
+      "classSimpleName": "Uint16Array",
+      "elementKind": "method",
+      "methodName": "indexOf",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method int akasha.core.Uint16Array::indexOf(int, int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint16Array",
+      "classSimpleName": "Uint16Array",
+      "elementKind": "method",
+      "methodName": "indexOf",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method int akasha.core.Uint16Array::lastIndexOf(int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint16Array",
+      "classSimpleName": "Uint16Array",
+      "elementKind": "method",
+      "methodName": "lastIndexOf",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method int akasha.core.Uint16Array::lastIndexOf(int, int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint16Array",
+      "classSimpleName": "Uint16Array",
+      "elementKind": "method",
+      "methodName": "lastIndexOf",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method int akasha.core.Uint32Array::indexOf(int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint32Array",
+      "classSimpleName": "Uint32Array",
+      "elementKind": "method",
+      "methodName": "indexOf",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method int akasha.core.Uint32Array::indexOf(int, int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint32Array",
+      "classSimpleName": "Uint32Array",
+      "elementKind": "method",
+      "methodName": "indexOf",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method int akasha.core.Uint32Array::lastIndexOf(int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint32Array",
+      "classSimpleName": "Uint32Array",
+      "elementKind": "method",
+      "methodName": "lastIndexOf",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method int akasha.core.Uint32Array::lastIndexOf(int, int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint32Array",
+      "classSimpleName": "Uint32Array",
+      "elementKind": "method",
+      "methodName": "lastIndexOf",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method int akasha.core.Uint8Array::indexOf(short)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint8Array",
+      "classSimpleName": "Uint8Array",
+      "elementKind": "method",
+      "methodName": "indexOf",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method int akasha.core.Uint8Array::indexOf(short, int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint8Array",
+      "classSimpleName": "Uint8Array",
+      "elementKind": "method",
+      "methodName": "indexOf",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method int akasha.core.Uint8Array::lastIndexOf(short)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint8Array",
+      "classSimpleName": "Uint8Array",
+      "elementKind": "method",
+      "methodName": "lastIndexOf",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method int akasha.core.Uint8Array::lastIndexOf(short, int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint8Array",
+      "classSimpleName": "Uint8Array",
+      "elementKind": "method",
+      "methodName": "lastIndexOf",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method int akasha.core.Uint8ClampedArray::indexOf(short)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint8ClampedArray",
+      "classSimpleName": "Uint8ClampedArray",
+      "elementKind": "method",
+      "methodName": "indexOf",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method int akasha.core.Uint8ClampedArray::indexOf(short, int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint8ClampedArray",
+      "classSimpleName": "Uint8ClampedArray",
+      "elementKind": "method",
+      "methodName": "indexOf",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method int akasha.core.Uint8ClampedArray::lastIndexOf(short)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint8ClampedArray",
+      "classSimpleName": "Uint8ClampedArray",
+      "elementKind": "method",
+      "methodName": "lastIndexOf",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method int akasha.core.Uint8ClampedArray::lastIndexOf(short, int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint8ClampedArray",
+      "classSimpleName": "Uint8ClampedArray",
+      "elementKind": "method",
+      "methodName": "lastIndexOf",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method java.lang.String akasha.core.Float32Array::join()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Float32Array",
+      "classSimpleName": "Float32Array",
+      "elementKind": "method",
+      "methodName": "join",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method java.lang.String akasha.core.Float32Array::join(java.lang.String)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Float32Array",
+      "classSimpleName": "Float32Array",
+      "elementKind": "method",
+      "methodName": "join",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method java.lang.String akasha.core.Float64Array::join()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Float64Array",
+      "classSimpleName": "Float64Array",
+      "elementKind": "method",
+      "methodName": "join",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method java.lang.String akasha.core.Float64Array::join(java.lang.String)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Float64Array",
+      "classSimpleName": "Float64Array",
+      "elementKind": "method",
+      "methodName": "join",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method java.lang.String akasha.core.Int16Array::join()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Int16Array",
+      "classSimpleName": "Int16Array",
+      "elementKind": "method",
+      "methodName": "join",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method java.lang.String akasha.core.Int16Array::join(java.lang.String)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Int16Array",
+      "classSimpleName": "Int16Array",
+      "elementKind": "method",
+      "methodName": "join",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method java.lang.String akasha.core.Int32Array::join()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Int32Array",
+      "classSimpleName": "Int32Array",
+      "elementKind": "method",
+      "methodName": "join",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method java.lang.String akasha.core.Int32Array::join(java.lang.String)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Int32Array",
+      "classSimpleName": "Int32Array",
+      "elementKind": "method",
+      "methodName": "join",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method java.lang.String akasha.core.Int8Array::join()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Int8Array",
+      "classSimpleName": "Int8Array",
+      "elementKind": "method",
+      "methodName": "join",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method java.lang.String akasha.core.Int8Array::join(java.lang.String)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Int8Array",
+      "classSimpleName": "Int8Array",
+      "elementKind": "method",
+      "methodName": "join",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method java.lang.String akasha.core.Uint16Array::join()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint16Array",
+      "classSimpleName": "Uint16Array",
+      "elementKind": "method",
+      "methodName": "join",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method java.lang.String akasha.core.Uint16Array::join(java.lang.String)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint16Array",
+      "classSimpleName": "Uint16Array",
+      "elementKind": "method",
+      "methodName": "join",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method java.lang.String akasha.core.Uint32Array::join()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint32Array",
+      "classSimpleName": "Uint32Array",
+      "elementKind": "method",
+      "methodName": "join",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method java.lang.String akasha.core.Uint32Array::join(java.lang.String)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint32Array",
+      "classSimpleName": "Uint32Array",
+      "elementKind": "method",
+      "methodName": "join",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method java.lang.String akasha.core.Uint8Array::join()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint8Array",
+      "classSimpleName": "Uint8Array",
+      "elementKind": "method",
+      "methodName": "join",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method java.lang.String akasha.core.Uint8Array::join(java.lang.String)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint8Array",
+      "classSimpleName": "Uint8Array",
+      "elementKind": "method",
+      "methodName": "join",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method java.lang.String akasha.core.Uint8ClampedArray::join()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint8ClampedArray",
+      "classSimpleName": "Uint8ClampedArray",
+      "elementKind": "method",
+      "methodName": "join",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method java.lang.String akasha.core.Uint8ClampedArray::join(java.lang.String)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint8ClampedArray",
+      "classSimpleName": "Uint8ClampedArray",
+      "elementKind": "method",
+      "methodName": "join",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method void akasha.core.Float32Array::forEach(akasha.core.Float32Array.ForEachCallback)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Float32Array",
+      "classSimpleName": "Float32Array",
+      "elementKind": "method",
+      "methodName": "forEach",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method void akasha.core.Float32Array::forEach(akasha.core.Float32Array.ForEachCallback2)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Float32Array",
+      "classSimpleName": "Float32Array",
+      "elementKind": "method",
+      "methodName": "forEach",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method void akasha.core.Float32Array::forEach(akasha.core.Float32Array.ForEachCallback3)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Float32Array",
+      "classSimpleName": "Float32Array",
+      "elementKind": "method",
+      "methodName": "forEach",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method void akasha.core.Float64Array::forEach(akasha.core.Float64Array.ForEachCallback)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Float64Array",
+      "classSimpleName": "Float64Array",
+      "elementKind": "method",
+      "methodName": "forEach",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method void akasha.core.Float64Array::forEach(akasha.core.Float64Array.ForEachCallback2)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Float64Array",
+      "classSimpleName": "Float64Array",
+      "elementKind": "method",
+      "methodName": "forEach",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method void akasha.core.Float64Array::forEach(akasha.core.Float64Array.ForEachCallback3)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Float64Array",
+      "classSimpleName": "Float64Array",
+      "elementKind": "method",
+      "methodName": "forEach",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method void akasha.core.Int16Array::forEach(akasha.core.Int16Array.ForEachCallback)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Int16Array",
+      "classSimpleName": "Int16Array",
+      "elementKind": "method",
+      "methodName": "forEach",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method void akasha.core.Int16Array::forEach(akasha.core.Int16Array.ForEachCallback2)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Int16Array",
+      "classSimpleName": "Int16Array",
+      "elementKind": "method",
+      "methodName": "forEach",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method void akasha.core.Int16Array::forEach(akasha.core.Int16Array.ForEachCallback3)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Int16Array",
+      "classSimpleName": "Int16Array",
+      "elementKind": "method",
+      "methodName": "forEach",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method void akasha.core.Int32Array::forEach(akasha.core.Int32Array.ForEachCallback)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Int32Array",
+      "classSimpleName": "Int32Array",
+      "elementKind": "method",
+      "methodName": "forEach",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method void akasha.core.Int32Array::forEach(akasha.core.Int32Array.ForEachCallback2)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Int32Array",
+      "classSimpleName": "Int32Array",
+      "elementKind": "method",
+      "methodName": "forEach",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method void akasha.core.Int32Array::forEach(akasha.core.Int32Array.ForEachCallback3)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Int32Array",
+      "classSimpleName": "Int32Array",
+      "elementKind": "method",
+      "methodName": "forEach",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method void akasha.core.Int8Array::forEach(akasha.core.Int8Array.ForEachCallback)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Int8Array",
+      "classSimpleName": "Int8Array",
+      "elementKind": "method",
+      "methodName": "forEach",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method void akasha.core.Int8Array::forEach(akasha.core.Int8Array.ForEachCallback2)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Int8Array",
+      "classSimpleName": "Int8Array",
+      "elementKind": "method",
+      "methodName": "forEach",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method void akasha.core.Int8Array::forEach(akasha.core.Int8Array.ForEachCallback3)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Int8Array",
+      "classSimpleName": "Int8Array",
+      "elementKind": "method",
+      "methodName": "forEach",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method void akasha.core.Uint16Array::forEach(akasha.core.Uint16Array.ForEachCallback)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint16Array",
+      "classSimpleName": "Uint16Array",
+      "elementKind": "method",
+      "methodName": "forEach",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method void akasha.core.Uint16Array::forEach(akasha.core.Uint16Array.ForEachCallback2)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint16Array",
+      "classSimpleName": "Uint16Array",
+      "elementKind": "method",
+      "methodName": "forEach",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method void akasha.core.Uint16Array::forEach(akasha.core.Uint16Array.ForEachCallback3)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint16Array",
+      "classSimpleName": "Uint16Array",
+      "elementKind": "method",
+      "methodName": "forEach",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method void akasha.core.Uint32Array::forEach(akasha.core.Uint32Array.ForEachCallback)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint32Array",
+      "classSimpleName": "Uint32Array",
+      "elementKind": "method",
+      "methodName": "forEach",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method void akasha.core.Uint32Array::forEach(akasha.core.Uint32Array.ForEachCallback2)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint32Array",
+      "classSimpleName": "Uint32Array",
+      "elementKind": "method",
+      "methodName": "forEach",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method void akasha.core.Uint32Array::forEach(akasha.core.Uint32Array.ForEachCallback3)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint32Array",
+      "classSimpleName": "Uint32Array",
+      "elementKind": "method",
+      "methodName": "forEach",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method void akasha.core.Uint8Array::forEach(akasha.core.Uint8Array.ForEachCallback)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint8Array",
+      "classSimpleName": "Uint8Array",
+      "elementKind": "method",
+      "methodName": "forEach",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method void akasha.core.Uint8Array::forEach(akasha.core.Uint8Array.ForEachCallback2)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint8Array",
+      "classSimpleName": "Uint8Array",
+      "elementKind": "method",
+      "methodName": "forEach",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method void akasha.core.Uint8Array::forEach(akasha.core.Uint8Array.ForEachCallback3)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint8Array",
+      "classSimpleName": "Uint8Array",
+      "elementKind": "method",
+      "methodName": "forEach",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method void akasha.core.Uint8ClampedArray::forEach(akasha.core.Uint8ClampedArray.ForEachCallback)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint8ClampedArray",
+      "classSimpleName": "Uint8ClampedArray",
+      "elementKind": "method",
+      "methodName": "forEach",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method void akasha.core.Uint8ClampedArray::forEach(akasha.core.Uint8ClampedArray.ForEachCallback2)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint8ClampedArray",
+      "classSimpleName": "Uint8ClampedArray",
+      "elementKind": "method",
+      "methodName": "forEach",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method void akasha.core.Uint8ClampedArray::forEach(akasha.core.Uint8ClampedArray.ForEachCallback3)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint8ClampedArray",
+      "classSimpleName": "Uint8ClampedArray",
+      "elementKind": "method",
+      "methodName": "forEach",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.finalMethodAddedToNonFinalClass",
+    "description": "A final method has been added to an inheritable class.",
+    "newElement": "method void akasha.gpu.GPUDevice::addUncapturederrorListener(akasha.gpu.GPUUncapturedErrorEventListener)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUDevice",
+      "classSimpleName": "GPUDevice",
+      "elementKind": "method",
+      "methodName": "addUncapturederrorListener",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.finalMethodAddedToNonFinalClass",
+    "description": "A final method has been added to an inheritable class.",
+    "newElement": "method void akasha.gpu.GPUDevice::addUncapturederrorListener(akasha.gpu.GPUUncapturedErrorEventListener, akasha.AddEventListenerOptions)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUDevice",
+      "classSimpleName": "GPUDevice",
+      "elementKind": "method",
+      "methodName": "addUncapturederrorListener",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.finalMethodAddedToNonFinalClass",
+    "description": "A final method has been added to an inheritable class.",
+    "newElement": "method void akasha.gpu.GPUDevice::addUncapturederrorListener(akasha.gpu.GPUUncapturedErrorEventListener, boolean)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUDevice",
+      "classSimpleName": "GPUDevice",
+      "elementKind": "method",
+      "methodName": "addUncapturederrorListener",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.finalMethodAddedToNonFinalClass",
+    "description": "A final method has been added to an inheritable class.",
+    "newElement": "method void akasha.gpu.GPUDevice::removeUncapturederrorListener(akasha.gpu.GPUUncapturedErrorEventListener)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUDevice",
+      "classSimpleName": "GPUDevice",
+      "elementKind": "method",
+      "methodName": "removeUncapturederrorListener",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.finalMethodAddedToNonFinalClass",
+    "description": "A final method has been added to an inheritable class.",
+    "newElement": "method void akasha.gpu.GPUDevice::removeUncapturederrorListener(akasha.gpu.GPUUncapturedErrorEventListener, akasha.EventListenerOptions)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUDevice",
+      "classSimpleName": "GPUDevice",
+      "elementKind": "method",
+      "methodName": "removeUncapturederrorListener",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.finalMethodAddedToNonFinalClass",
+    "description": "A final method has been added to an inheritable class.",
+    "newElement": "method void akasha.gpu.GPUDevice::removeUncapturederrorListener(akasha.gpu.GPUUncapturedErrorEventListener, boolean)",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUDevice",
+      "classSimpleName": "GPUDevice",
+      "elementKind": "method",
+      "methodName": "removeUncapturederrorListener",
+      "package": "akasha.gpu"
+    }
+  }
+]
