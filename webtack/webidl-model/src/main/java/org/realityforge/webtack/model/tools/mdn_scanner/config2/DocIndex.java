@@ -90,7 +90,7 @@ public final class DocIndex
   {
     final List<EntryIndex> entries = getEntries();
     entries.remove( entry );
-    if ( entries.isEmpty() )
+    if ( entries.isEmpty() && getEventMap().isEmpty() )
     {
       remove();
     }
