@@ -3,7 +3,7 @@
 ### Unreleased
 
 * Specify the type of the `uncapturederror` event emitted by the `GPUDevice` type as `GPUUncapturedErrorEvent`.
-* Define the following methods on TypedArray types: `fill`, `includes`, `indexOf`, `lastIndexOf`, `join`
+* Define the following methods on TypedArray types: `fill`, `includes`, `indexOf`, `lastIndexOf`, `join`, `forEach`, `values`, `keys`, `entries`
 
 ### [v0.24](https://github.com/akasha/akasha/tree/v0.24) (2021-09-12) · [Full Changelog](https://github.com/spritz/spritz/compare/v0.23...v0.24) · [API Differences](https://akasha.github.io/akasha-java/api-diff/?key=akasha-java&old=0.23&new=0.24) · [Source Diff](https://github.com/akasha/akasha-java/compare/v0.23...v0.24)
 

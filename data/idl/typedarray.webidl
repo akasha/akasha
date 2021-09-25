@@ -151,6 +151,7 @@ interface Int8Array {
    */
   Int8Array copyWithin(unsigned long target, unsigned long start, optional unsigned long end);
 
+  iterable<byte>;
   getter byte (unsigned long index);
   setter void (unsigned long index, byte value);
   void set(Int8Array array, optional unsigned long offset);
@@ -209,6 +210,7 @@ interface Uint8Array {
    */
   Uint8Array copyWithin(unsigned long target, unsigned long start, optional unsigned long end);
 
+  iterable<octet>;
   getter octet (unsigned long index);
   setter void (unsigned long index, octet value);
   void set(Uint8Array array, optional unsigned long offset);
@@ -268,6 +270,7 @@ interface Uint8ClampedArray {
    */
   Uint8ClampedArray copyWithin(unsigned long target, unsigned long start, optional unsigned long end);
 
+  iterable<octet>;
   getter octet (unsigned long index);
   setter void (unsigned long index, [Clamp] octet value);
   void set(Uint8ClampedArray array, optional unsigned long offset);
@@ -327,6 +330,7 @@ interface Int16Array {
    */
   Int16Array copyWithin(unsigned long target, unsigned long start, optional unsigned long end);
 
+  iterable<short>;
   getter short (unsigned long index);
   setter void (unsigned long index, short value);
   void set(Int16Array array, optional unsigned long offset);
@@ -386,6 +390,7 @@ interface Uint16Array {
    */
   Uint16Array copyWithin(unsigned long target, unsigned long start, optional unsigned long end);
 
+  iterable<unsigned short>;
   getter unsigned short (unsigned long index);
   setter void (unsigned long index, unsigned short value);
   void set(Uint16Array array, optional unsigned long offset);
@@ -445,6 +450,7 @@ interface Int32Array {
    */
   Int32Array copyWithin(unsigned long target, unsigned long start, optional unsigned long end);
 
+  iterable<long>;
   getter long (unsigned long index);
   setter void (unsigned long index, long value);
   void set(Int32Array array, optional unsigned long offset);
@@ -504,6 +510,7 @@ interface Uint32Array {
    */
   Uint32Array copyWithin(unsigned long target, unsigned long start, optional unsigned long end);
 
+  iterable<unsigned long>;
   getter unsigned long (unsigned long index);
   setter void (unsigned long index, unsigned long value);
   void set(Uint32Array array, optional unsigned long offset);
@@ -563,6 +570,7 @@ interface Float32Array {
    */
   Float32Array copyWithin(unsigned long target, unsigned long start, optional unsigned long end);
 
+  iterable<unrestricted float>;
   getter unrestricted float (unsigned long index);
   setter void (unsigned long index, unrestricted float value);
   void set(Float32Array array, optional unsigned long offset);
@@ -623,6 +631,7 @@ interface Float64Array {
    */
   Float64Array copyWithin(unsigned long target, unsigned long start, optional unsigned long end);
 
+  iterable<unrestricted double>;
   getter unrestricted double (unsigned long index);
   setter void (unsigned long index, unrestricted double value);
   void set(Float64Array array, optional unsigned long offset);
