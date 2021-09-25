@@ -19,7 +19,8 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredSomeTypeFrozenArrayValue {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final JsArray<SomeType> requiredSomeTypeFrozenArrayValue) {
+  static Builder requiredSomeTypeFrozenArrayValue(
+      @Nonnull final JsArray<SomeType> requiredSomeTypeFrozenArrayValue) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredSomeTypeFrozenArrayValue( requiredSomeTypeFrozenArrayValue );
   }
 

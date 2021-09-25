@@ -20,7 +20,8 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredDoubleFrozenArrayValue {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final JsArray<Double> requiredDoubleFrozenArrayValue) {
+  static Builder requiredDoubleFrozenArrayValue(
+      @Nonnull final JsArray<Double> requiredDoubleFrozenArrayValue) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredDoubleFrozenArrayValue( requiredDoubleFrozenArrayValue );
   }
 

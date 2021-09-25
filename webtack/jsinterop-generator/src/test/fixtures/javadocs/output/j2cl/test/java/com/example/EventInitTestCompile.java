@@ -6,8 +6,8 @@ import javax.annotation.Generated;
 public final class EventInitTestCompile {
   static EventInit $typeReference$;
 
-  public static EventInit.Builder create(final boolean cancelable) {
-    return EventInit.create( cancelable );
+  public static EventInit.Builder cancelable(final boolean cancelable) {
+    return EventInit.cancelable( cancelable );
   }
 
   public static boolean cancelable(final EventInit $instance) {

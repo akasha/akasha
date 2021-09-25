@@ -22,7 +22,7 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredAnyValue {
   @JsOverlay
   @Nonnull
-  static Builder create(@DoNotAutobox @Nullable final Object requiredAnyValue) {
+  static Builder requiredAnyValue(@DoNotAutobox @Nullable final Object requiredAnyValue) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredAnyValue( requiredAnyValue );
   }
 

@@ -20,13 +20,15 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredNullableFloatSequenceValue {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nullable final JsArray<Double> requiredNullableFloatSequenceValue) {
+  static Builder requiredNullableFloatSequenceValue(
+      @Nullable final JsArray<Double> requiredNullableFloatSequenceValue) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredNullableFloatSequenceValue( requiredNullableFloatSequenceValue );
   }
 
   @JsOverlay
   @Nonnull
-  static Builder create(@Nullable final double[] requiredNullableFloatSequenceValue) {
+  static Builder requiredNullableFloatSequenceValue(
+      @Nullable final double[] requiredNullableFloatSequenceValue) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredNullableFloatSequenceValue( requiredNullableFloatSequenceValue );
   }
 

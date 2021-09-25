@@ -6,8 +6,9 @@ import javax.annotation.Generated;
 public final class Dictionary_requiredObjectValueTestCompile {
   static Dictionary_requiredObjectValue $typeReference$;
 
-  public static Dictionary_requiredObjectValue.Builder create(final JsObject requiredObjectValue) {
-    return Dictionary_requiredObjectValue.create( requiredObjectValue );
+  public static Dictionary_requiredObjectValue.Builder requiredObjectValue(
+      final JsObject requiredObjectValue) {
+    return Dictionary_requiredObjectValue.requiredObjectValue( requiredObjectValue );
   }
 
   public static JsObject requiredObjectValue(final Dictionary_requiredObjectValue $instance) {

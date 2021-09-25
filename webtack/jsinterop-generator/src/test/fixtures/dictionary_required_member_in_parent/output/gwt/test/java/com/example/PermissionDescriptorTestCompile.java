@@ -6,8 +6,8 @@ import javax.annotation.Generated;
 public final class PermissionDescriptorTestCompile {
   static PermissionDescriptor $typeReference$;
 
-  public static PermissionDescriptor.Builder create(final String name) {
-    return PermissionDescriptor.create( name );
+  public static PermissionDescriptor.Builder name(final String name) {
+    return PermissionDescriptor.name( name );
   }
 
   public static String name(final PermissionDescriptor $instance) {

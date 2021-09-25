@@ -6,9 +6,9 @@ import javax.annotation.Generated;
 public final class Dictionary_requiredNullableBooleanValueTestCompile {
   static Dictionary_requiredNullableBooleanValue $typeReference$;
 
-  public static Dictionary_requiredNullableBooleanValue.Builder create(
+  public static Dictionary_requiredNullableBooleanValue.Builder requiredNullableBooleanValue(
       final Boolean requiredNullableBooleanValue) {
-    return Dictionary_requiredNullableBooleanValue.create( requiredNullableBooleanValue );
+    return Dictionary_requiredNullableBooleanValue.requiredNullableBooleanValue( requiredNullableBooleanValue );
   }
 
   public static Boolean requiredNullableBooleanValue(

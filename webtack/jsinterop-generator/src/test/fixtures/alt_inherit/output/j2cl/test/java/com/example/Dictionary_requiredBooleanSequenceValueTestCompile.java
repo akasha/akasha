@@ -7,14 +7,14 @@ import javax.annotation.Generated;
 public final class Dictionary_requiredBooleanSequenceValueTestCompile {
   static Dictionary_requiredBooleanSequenceValue $typeReference$;
 
-  public static Dictionary_requiredBooleanSequenceValue.Builder create(
+  public static Dictionary_requiredBooleanSequenceValue.Builder requiredBooleanSequenceValue(
       final JsArray<Boolean> requiredBooleanSequenceValue) {
-    return Dictionary_requiredBooleanSequenceValue.create( requiredBooleanSequenceValue );
+    return Dictionary_requiredBooleanSequenceValue.requiredBooleanSequenceValue( requiredBooleanSequenceValue );
   }
 
-  public static Dictionary_requiredBooleanSequenceValue.Builder create(
+  public static Dictionary_requiredBooleanSequenceValue.Builder requiredBooleanSequenceValue(
       final Boolean[] requiredBooleanSequenceValue) {
-    return Dictionary_requiredBooleanSequenceValue.create( requiredBooleanSequenceValue );
+    return Dictionary_requiredBooleanSequenceValue.requiredBooleanSequenceValue( requiredBooleanSequenceValue );
   }
 
   public static JsArray<Boolean> requiredBooleanSequenceValue(

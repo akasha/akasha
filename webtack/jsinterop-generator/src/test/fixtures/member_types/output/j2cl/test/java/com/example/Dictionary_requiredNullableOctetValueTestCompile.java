@@ -6,9 +6,9 @@ import javax.annotation.Generated;
 public final class Dictionary_requiredNullableOctetValueTestCompile {
   static Dictionary_requiredNullableOctetValue $typeReference$;
 
-  public static Dictionary_requiredNullableOctetValue.Builder create(
+  public static Dictionary_requiredNullableOctetValue.Builder requiredNullableOctetValue(
       final Double requiredNullableOctetValue) {
-    return Dictionary_requiredNullableOctetValue.create( requiredNullableOctetValue );
+    return Dictionary_requiredNullableOctetValue.requiredNullableOctetValue( requiredNullableOctetValue );
   }
 
   public static Double requiredNullableOctetValue(

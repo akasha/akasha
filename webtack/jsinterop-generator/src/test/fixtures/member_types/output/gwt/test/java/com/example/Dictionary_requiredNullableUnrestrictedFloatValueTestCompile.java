@@ -6,9 +6,9 @@ import javax.annotation.Generated;
 public final class Dictionary_requiredNullableUnrestrictedFloatValueTestCompile {
   static Dictionary_requiredNullableUnrestrictedFloatValue $typeReference$;
 
-  public static Dictionary_requiredNullableUnrestrictedFloatValue.Builder create(
+  public static Dictionary_requiredNullableUnrestrictedFloatValue.Builder requiredNullableUnrestrictedFloatValue(
       final Double requiredNullableUnrestrictedFloatValue) {
-    return Dictionary_requiredNullableUnrestrictedFloatValue.create( requiredNullableUnrestrictedFloatValue );
+    return Dictionary_requiredNullableUnrestrictedFloatValue.requiredNullableUnrestrictedFloatValue( requiredNullableUnrestrictedFloatValue );
   }
 
   public static Double requiredNullableUnrestrictedFloatValue(

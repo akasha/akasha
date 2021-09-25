@@ -21,7 +21,7 @@ import jsinterop.base.JsPropertyMap;
 public interface EventInit {
   @JsOverlay
   @Nonnull
-  static Builder create(final boolean cancelable) {
+  static Builder cancelable(final boolean cancelable) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).cancelable( cancelable );
   }
 

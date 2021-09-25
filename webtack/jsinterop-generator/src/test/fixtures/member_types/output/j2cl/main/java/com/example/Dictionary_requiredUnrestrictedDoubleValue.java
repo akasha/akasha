@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredUnrestrictedDoubleValue {
   @JsOverlay
   @Nonnull
-  static Builder create(final double requiredUnrestrictedDoubleValue) {
+  static Builder requiredUnrestrictedDoubleValue(final double requiredUnrestrictedDoubleValue) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredUnrestrictedDoubleValue( requiredUnrestrictedDoubleValue );
   }
 

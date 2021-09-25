@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredOctetValue {
   @JsOverlay
   @Nonnull
-  static Builder create(final short requiredOctetValue) {
+  static Builder requiredOctetValue(final short requiredOctetValue) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredOctetValue( requiredOctetValue );
   }
 

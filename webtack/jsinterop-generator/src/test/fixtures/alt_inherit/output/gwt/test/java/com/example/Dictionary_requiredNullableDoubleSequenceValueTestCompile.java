@@ -7,14 +7,14 @@ import javax.annotation.Generated;
 public final class Dictionary_requiredNullableDoubleSequenceValueTestCompile {
   static Dictionary_requiredNullableDoubleSequenceValue $typeReference$;
 
-  public static Dictionary_requiredNullableDoubleSequenceValue.Builder create(
+  public static Dictionary_requiredNullableDoubleSequenceValue.Builder requiredNullableDoubleSequenceValue(
       final JsArray<Double> requiredNullableDoubleSequenceValue) {
-    return Dictionary_requiredNullableDoubleSequenceValue.create( requiredNullableDoubleSequenceValue );
+    return Dictionary_requiredNullableDoubleSequenceValue.requiredNullableDoubleSequenceValue( requiredNullableDoubleSequenceValue );
   }
 
-  public static Dictionary_requiredNullableDoubleSequenceValue.Builder create(
+  public static Dictionary_requiredNullableDoubleSequenceValue.Builder requiredNullableDoubleSequenceValue(
       final double[] requiredNullableDoubleSequenceValue) {
-    return Dictionary_requiredNullableDoubleSequenceValue.create( requiredNullableDoubleSequenceValue );
+    return Dictionary_requiredNullableDoubleSequenceValue.requiredNullableDoubleSequenceValue( requiredNullableDoubleSequenceValue );
   }
 
   public static JsArray<Double> requiredNullableDoubleSequenceValue(

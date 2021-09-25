@@ -6,9 +6,9 @@ import javax.annotation.Generated;
 public final class Dictionary_requiredNullableUnrestrictedDoubleValueTestCompile {
   static Dictionary_requiredNullableUnrestrictedDoubleValue $typeReference$;
 
-  public static Dictionary_requiredNullableUnrestrictedDoubleValue.Builder create(
+  public static Dictionary_requiredNullableUnrestrictedDoubleValue.Builder requiredNullableUnrestrictedDoubleValue(
       final Double requiredNullableUnrestrictedDoubleValue) {
-    return Dictionary_requiredNullableUnrestrictedDoubleValue.create( requiredNullableUnrestrictedDoubleValue );
+    return Dictionary_requiredNullableUnrestrictedDoubleValue.requiredNullableUnrestrictedDoubleValue( requiredNullableUnrestrictedDoubleValue );
   }
 
   public static Double requiredNullableUnrestrictedDoubleValue(

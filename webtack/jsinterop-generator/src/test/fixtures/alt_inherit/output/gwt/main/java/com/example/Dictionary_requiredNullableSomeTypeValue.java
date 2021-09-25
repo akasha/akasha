@@ -20,7 +20,8 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredNullableSomeTypeValue {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nullable final SomeType requiredNullableSomeTypeValue) {
+  static Builder requiredNullableSomeTypeValue(
+      @Nullable final SomeType requiredNullableSomeTypeValue) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredNullableSomeTypeValue( requiredNullableSomeTypeValue );
   }
 

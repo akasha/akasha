@@ -20,13 +20,15 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredBooleanSequenceValue {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final JsArray<Boolean> requiredBooleanSequenceValue) {
+  static Builder requiredBooleanSequenceValue(
+      @Nonnull final JsArray<Boolean> requiredBooleanSequenceValue) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredBooleanSequenceValue( requiredBooleanSequenceValue );
   }
 
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final Boolean[] requiredBooleanSequenceValue) {
+  static Builder requiredBooleanSequenceValue(
+      @Nonnull final Boolean[] requiredBooleanSequenceValue) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredBooleanSequenceValue( requiredBooleanSequenceValue );
   }
 

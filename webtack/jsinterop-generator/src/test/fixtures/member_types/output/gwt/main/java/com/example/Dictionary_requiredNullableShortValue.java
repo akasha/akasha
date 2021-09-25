@@ -20,7 +20,7 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredNullableShortValue {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nullable final Double requiredNullableShortValue) {
+  static Builder requiredNullableShortValue(@Nullable final Double requiredNullableShortValue) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredNullableShortValue( requiredNullableShortValue );
   }
 

@@ -732,6 +732,566 @@
     }
   },
   {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.CameraDevicePermissionDescriptor.Builder akasha.CameraDevicePermissionDescriptor::name(java.lang.String)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.CameraDevicePermissionDescriptor",
+      "classSimpleName": "CameraDevicePermissionDescriptor",
+      "elementKind": "method",
+      "methodName": "name",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.CredentialData.Builder akasha.CredentialData::id(java.lang.String)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.CredentialData",
+      "classSimpleName": "CredentialData",
+      "elementKind": "method",
+      "methodName": "id",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.DevicePermissionDescriptor.Builder akasha.DevicePermissionDescriptor::name(java.lang.String)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.DevicePermissionDescriptor",
+      "classSimpleName": "DevicePermissionDescriptor",
+      "elementKind": "method",
+      "methodName": "name",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.FetchEventInit.Builder akasha.FetchEventInit::request(akasha.Request)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.FetchEventInit",
+      "classSimpleName": "FetchEventInit",
+      "elementKind": "method",
+      "methodName": "request",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.FormDataEventInit.Builder akasha.FormDataEventInit::formData(akasha.FormData)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.FormDataEventInit",
+      "classSimpleName": "FormDataEventInit",
+      "elementKind": "method",
+      "methodName": "formData",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.GamepadEventInit.Builder akasha.GamepadEventInit::gamepad(akasha.Gamepad)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.GamepadEventInit",
+      "classSimpleName": "GamepadEventInit",
+      "elementKind": "method",
+      "methodName": "gamepad",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.GenerateTestReportParameters.Builder akasha.GenerateTestReportParameters::message(java.lang.String)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.GenerateTestReportParameters",
+      "classSimpleName": "GenerateTestReportParameters",
+      "elementKind": "method",
+      "methodName": "message",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.MidiPermissionDescriptor.Builder akasha.MidiPermissionDescriptor::name(java.lang.String)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.MidiPermissionDescriptor",
+      "classSimpleName": "MidiPermissionDescriptor",
+      "elementKind": "method",
+      "methodName": "name",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.PermissionDescriptor.Builder akasha.PermissionDescriptor::name(java.lang.String)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.PermissionDescriptor",
+      "classSimpleName": "PermissionDescriptor",
+      "elementKind": "method",
+      "methodName": "name",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.PromiseRejectionEventInit.Builder akasha.PromiseRejectionEventInit::promise(akasha.promise.Promise<jsinterop.base.Any>)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.PromiseRejectionEventInit",
+      "classSimpleName": "PromiseRejectionEventInit",
+      "elementKind": "method",
+      "methodName": "promise",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.PublicKeyCredentialEntity.Builder akasha.PublicKeyCredentialEntity::name(java.lang.String)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.PublicKeyCredentialEntity",
+      "classSimpleName": "PublicKeyCredentialEntity",
+      "elementKind": "method",
+      "methodName": "name",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.PublicKeyCredentialRequestOptions.Builder akasha.PublicKeyCredentialRequestOptions::challenge(akasha.core.BufferSource)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.PublicKeyCredentialRequestOptions",
+      "classSimpleName": "PublicKeyCredentialRequestOptions",
+      "elementKind": "method",
+      "methodName": "challenge",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.PublicKeyCredentialRpEntity.Builder akasha.PublicKeyCredentialRpEntity::name(java.lang.String)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.PublicKeyCredentialRpEntity",
+      "classSimpleName": "PublicKeyCredentialRpEntity",
+      "elementKind": "method",
+      "methodName": "name",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.PushPermissionDescriptor.Builder akasha.PushPermissionDescriptor::name(java.lang.String)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.PushPermissionDescriptor",
+      "classSimpleName": "PushPermissionDescriptor",
+      "elementKind": "method",
+      "methodName": "name",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.QueuingStrategyInit.Builder akasha.QueuingStrategyInit::highWaterMark(double)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.QueuingStrategyInit",
+      "classSimpleName": "QueuingStrategyInit",
+      "elementKind": "method",
+      "methodName": "highWaterMark",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.ShadowRootInit.Builder akasha.ShadowRootInit::mode(java.lang.String)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.ShadowRootInit",
+      "classSimpleName": "ShadowRootInit",
+      "elementKind": "method",
+      "methodName": "mode",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.SyncEventInit.Builder akasha.SyncEventInit::tag(java.lang.String)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.SyncEventInit",
+      "classSimpleName": "SyncEventInit",
+      "elementKind": "method",
+      "methodName": "tag",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.TokenBinding.Builder akasha.TokenBinding::status(java.lang.String)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.TokenBinding",
+      "classSimpleName": "TokenBinding",
+      "elementKind": "method",
+      "methodName": "status",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.audio.AudioParamDescriptor.Builder akasha.audio.AudioParamDescriptor::name(java.lang.String)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.audio.AudioParamDescriptor",
+      "classSimpleName": "AudioParamDescriptor",
+      "elementKind": "method",
+      "methodName": "name",
+      "package": "akasha.audio"
+    }
+  },
+  {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.audio.MediaElementAudioSourceOptions.Builder akasha.audio.MediaElementAudioSourceOptions::mediaElement(akasha.HTMLMediaElement)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.audio.MediaElementAudioSourceOptions",
+      "classSimpleName": "MediaElementAudioSourceOptions",
+      "elementKind": "method",
+      "methodName": "mediaElement",
+      "package": "akasha.audio"
+    }
+  },
+  {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.audio.MediaStreamAudioSourceOptions.Builder akasha.audio.MediaStreamAudioSourceOptions::mediaStream(akasha.media.MediaStream)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.audio.MediaStreamAudioSourceOptions",
+      "classSimpleName": "MediaStreamAudioSourceOptions",
+      "elementKind": "method",
+      "methodName": "mediaStream",
+      "package": "akasha.audio"
+    }
+  },
+  {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.audio.MediaStreamTrackAudioSourceOptions.Builder akasha.audio.MediaStreamTrackAudioSourceOptions::mediaStreamTrack(akasha.media.MediaStreamTrack)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.audio.MediaStreamTrackAudioSourceOptions",
+      "classSimpleName": "MediaStreamTrackAudioSourceOptions",
+      "elementKind": "method",
+      "methodName": "mediaStreamTrack",
+      "package": "akasha.audio"
+    }
+  },
+  {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.audio.OfflineAudioCompletionEventInit.Builder akasha.audio.OfflineAudioCompletionEventInit::renderedBuffer(akasha.audio.AudioBuffer)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.audio.OfflineAudioCompletionEventInit",
+      "classSimpleName": "OfflineAudioCompletionEventInit",
+      "elementKind": "method",
+      "methodName": "renderedBuffer",
+      "package": "akasha.audio"
+    }
+  },
+  {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.bluetooth.BluetoothAdvertisingEventInit.Builder akasha.bluetooth.BluetoothAdvertisingEventInit::device(akasha.bluetooth.BluetoothDevice)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.bluetooth.BluetoothAdvertisingEventInit",
+      "classSimpleName": "BluetoothAdvertisingEventInit",
+      "elementKind": "method",
+      "methodName": "device",
+      "package": "akasha.bluetooth"
+    }
+  },
+  {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.bluetooth.BluetoothManufacturerDataFilterInit.Builder akasha.bluetooth.BluetoothManufacturerDataFilterInit::companyIdentifier(int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.bluetooth.BluetoothManufacturerDataFilterInit",
+      "classSimpleName": "BluetoothManufacturerDataFilterInit",
+      "elementKind": "method",
+      "methodName": "companyIdentifier",
+      "package": "akasha.bluetooth"
+    }
+  },
+  {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.bluetooth.BluetoothPermissionDescriptor.Builder akasha.bluetooth.BluetoothPermissionDescriptor::name(java.lang.String)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.bluetooth.BluetoothPermissionDescriptor",
+      "classSimpleName": "BluetoothPermissionDescriptor",
+      "elementKind": "method",
+      "methodName": "name",
+      "package": "akasha.bluetooth"
+    }
+  },
+  {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.bluetooth.BluetoothPermissionStorage.Builder akasha.bluetooth.BluetoothPermissionStorage::allowedDevices(akasha.bluetooth.AllowedBluetoothDevice[])",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.bluetooth.BluetoothPermissionStorage",
+      "classSimpleName": "BluetoothPermissionStorage",
+      "elementKind": "method",
+      "methodName": "allowedDevices",
+      "package": "akasha.bluetooth"
+    }
+  },
+  {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.bluetooth.BluetoothPermissionStorage.Builder akasha.bluetooth.BluetoothPermissionStorage::allowedDevices(akasha.lang.JsArray<akasha.bluetooth.AllowedBluetoothDevice>)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.bluetooth.BluetoothPermissionStorage",
+      "classSimpleName": "BluetoothPermissionStorage",
+      "elementKind": "method",
+      "methodName": "allowedDevices",
+      "package": "akasha.bluetooth"
+    }
+  },
+  {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.bluetooth.BluetoothServiceDataFilterInit.Builder akasha.bluetooth.BluetoothServiceDataFilterInit::service(akasha.bluetooth.BluetoothServiceUUID)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.bluetooth.BluetoothServiceDataFilterInit",
+      "classSimpleName": "BluetoothServiceDataFilterInit",
+      "elementKind": "method",
+      "methodName": "service",
+      "package": "akasha.bluetooth"
+    }
+  },
+  {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.bluetooth.BluetoothServiceDataFilterInit.Builder akasha.bluetooth.BluetoothServiceDataFilterInit::service(int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.bluetooth.BluetoothServiceDataFilterInit",
+      "classSimpleName": "BluetoothServiceDataFilterInit",
+      "elementKind": "method",
+      "methodName": "service",
+      "package": "akasha.bluetooth"
+    }
+  },
+  {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.bluetooth.BluetoothServiceDataFilterInit.Builder akasha.bluetooth.BluetoothServiceDataFilterInit::service(java.lang.String)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.bluetooth.BluetoothServiceDataFilterInit",
+      "classSimpleName": "BluetoothServiceDataFilterInit",
+      "elementKind": "method",
+      "methodName": "service",
+      "package": "akasha.bluetooth"
+    }
+  },
+  {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.clipboard.ClipboardPermissionDescriptor.Builder akasha.clipboard.ClipboardPermissionDescriptor::name(java.lang.String)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.clipboard.ClipboardPermissionDescriptor",
+      "classSimpleName": "ClipboardPermissionDescriptor",
+      "elementKind": "method",
+      "methodName": "name",
+      "package": "akasha.clipboard"
+    }
+  },
+  {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.codecs.AudioDataCopyToOptions.Builder akasha.codecs.AudioDataCopyToOptions::planeIndex(int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.codecs.AudioDataCopyToOptions",
+      "classSimpleName": "AudioDataCopyToOptions",
+      "elementKind": "method",
+      "methodName": "planeIndex",
+      "package": "akasha.codecs"
+    }
+  },
+  {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.codecs.AudioEncoderConfig.Builder akasha.codecs.AudioEncoderConfig::codec(java.lang.String)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.codecs.AudioEncoderConfig",
+      "classSimpleName": "AudioEncoderConfig",
+      "elementKind": "method",
+      "methodName": "codec",
+      "package": "akasha.codecs"
+    }
+  },
+  {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.codecs.VideoDecoderConfig.Builder akasha.codecs.VideoDecoderConfig::codec(java.lang.String)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.codecs.VideoDecoderConfig",
+      "classSimpleName": "VideoDecoderConfig",
+      "elementKind": "method",
+      "methodName": "codec",
+      "package": "akasha.codecs"
+    }
+  },
+  {
     "code": "java.method.added",
     "description": "Method was added.",
     "newElement": "method akasha.core.Float32Array akasha.core.Float32Array::fill(float)",
@@ -1164,6 +1724,438 @@
     }
   },
   {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.crypto.Algorithm.Builder akasha.crypto.Algorithm::name(java.lang.String)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.Algorithm",
+      "classSimpleName": "Algorithm",
+      "elementKind": "method",
+      "methodName": "name",
+      "package": "akasha.crypto"
+    }
+  },
+  {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.crypto.KeyAlgorithm.Builder akasha.crypto.KeyAlgorithm::name(java.lang.String)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.KeyAlgorithm",
+      "classSimpleName": "KeyAlgorithm",
+      "elementKind": "method",
+      "methodName": "name",
+      "package": "akasha.crypto"
+    }
+  },
+  {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.crypto.RsaOaepParams.Builder akasha.crypto.RsaOaepParams::name(java.lang.String)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.RsaOaepParams",
+      "classSimpleName": "RsaOaepParams",
+      "elementKind": "method",
+      "methodName": "name",
+      "package": "akasha.crypto"
+    }
+  },
+  {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.gpu.GPUBindGroupLayoutDescriptor.Builder akasha.gpu.GPUBindGroupLayoutDescriptor::entries(akasha.gpu.GPUBindGroupLayoutEntry[])",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUBindGroupLayoutDescriptor",
+      "classSimpleName": "GPUBindGroupLayoutDescriptor",
+      "elementKind": "method",
+      "methodName": "entries",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.gpu.GPUBindGroupLayoutDescriptor.Builder akasha.gpu.GPUBindGroupLayoutDescriptor::entries(akasha.lang.JsArray<akasha.gpu.GPUBindGroupLayoutEntry>)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUBindGroupLayoutDescriptor",
+      "classSimpleName": "GPUBindGroupLayoutDescriptor",
+      "elementKind": "method",
+      "methodName": "entries",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.gpu.GPUBufferBinding.Builder akasha.gpu.GPUBufferBinding::buffer(akasha.gpu.GPUBuffer)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUBufferBinding",
+      "classSimpleName": "GPUBufferBinding",
+      "elementKind": "method",
+      "methodName": "buffer",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.gpu.GPUColorTargetState.Builder akasha.gpu.GPUColorTargetState::format(java.lang.String)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUColorTargetState",
+      "classSimpleName": "GPUColorTargetState",
+      "elementKind": "method",
+      "methodName": "format",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.gpu.GPUComputePipelineDescriptor.Builder akasha.gpu.GPUComputePipelineDescriptor::compute(akasha.gpu.GPUProgrammableStage)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUComputePipelineDescriptor",
+      "classSimpleName": "GPUComputePipelineDescriptor",
+      "elementKind": "method",
+      "methodName": "compute",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.gpu.GPUDepthStencilState.Builder akasha.gpu.GPUDepthStencilState::format(java.lang.String)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUDepthStencilState",
+      "classSimpleName": "GPUDepthStencilState",
+      "elementKind": "method",
+      "methodName": "format",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.gpu.GPUExtent3DDict.Builder akasha.gpu.GPUExtent3DDict::width(int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUExtent3DDict",
+      "classSimpleName": "GPUExtent3DDict",
+      "elementKind": "method",
+      "methodName": "width",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.gpu.GPUExternalTextureDescriptor.Builder akasha.gpu.GPUExternalTextureDescriptor::source(akasha.HTMLVideoElement)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUExternalTextureDescriptor",
+      "classSimpleName": "GPUExternalTextureDescriptor",
+      "elementKind": "method",
+      "methodName": "source",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.gpu.GPUImageCopyBuffer.Builder akasha.gpu.GPUImageCopyBuffer::buffer(akasha.gpu.GPUBuffer)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUImageCopyBuffer",
+      "classSimpleName": "GPUImageCopyBuffer",
+      "elementKind": "method",
+      "methodName": "buffer",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.gpu.GPUImageCopyExternalImage.Builder akasha.gpu.GPUImageCopyExternalImage::source(akasha.gpu.GPUImageCopyExternalImageSource)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUImageCopyExternalImage",
+      "classSimpleName": "GPUImageCopyExternalImage",
+      "elementKind": "method",
+      "methodName": "source",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.gpu.GPUImageCopyTexture.Builder akasha.gpu.GPUImageCopyTexture::texture(akasha.gpu.GPUTexture)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUImageCopyTexture",
+      "classSimpleName": "GPUImageCopyTexture",
+      "elementKind": "method",
+      "methodName": "texture",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.gpu.GPUImageCopyTextureTagged.Builder akasha.gpu.GPUImageCopyTextureTagged::texture(akasha.gpu.GPUTexture)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUImageCopyTextureTagged",
+      "classSimpleName": "GPUImageCopyTextureTagged",
+      "elementKind": "method",
+      "methodName": "texture",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.gpu.GPUPipelineLayoutDescriptor.Builder akasha.gpu.GPUPipelineLayoutDescriptor::bindGroupLayouts(akasha.gpu.GPUBindGroupLayout[])",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUPipelineLayoutDescriptor",
+      "classSimpleName": "GPUPipelineLayoutDescriptor",
+      "elementKind": "method",
+      "methodName": "bindGroupLayouts",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.gpu.GPUPipelineLayoutDescriptor.Builder akasha.gpu.GPUPipelineLayoutDescriptor::bindGroupLayouts(akasha.lang.JsArray<akasha.gpu.GPUBindGroupLayout>)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUPipelineLayoutDescriptor",
+      "classSimpleName": "GPUPipelineLayoutDescriptor",
+      "elementKind": "method",
+      "methodName": "bindGroupLayouts",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.gpu.GPURenderBundleEncoderDescriptor.Builder akasha.gpu.GPURenderBundleEncoderDescriptor::colorFormats(akasha.lang.JsArray<java.lang.String>)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURenderBundleEncoderDescriptor",
+      "classSimpleName": "GPURenderBundleEncoderDescriptor",
+      "elementKind": "method",
+      "methodName": "colorFormats",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.gpu.GPURenderBundleEncoderDescriptor.Builder akasha.gpu.GPURenderBundleEncoderDescriptor::colorFormats(java.lang.String[])",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURenderBundleEncoderDescriptor",
+      "classSimpleName": "GPURenderBundleEncoderDescriptor",
+      "elementKind": "method",
+      "methodName": "colorFormats",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.gpu.GPURenderPassDescriptor.Builder akasha.gpu.GPURenderPassDescriptor::colorAttachments(akasha.gpu.GPURenderPassColorAttachment[])",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURenderPassDescriptor",
+      "classSimpleName": "GPURenderPassDescriptor",
+      "elementKind": "method",
+      "methodName": "colorAttachments",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.gpu.GPURenderPassDescriptor.Builder akasha.gpu.GPURenderPassDescriptor::colorAttachments(akasha.lang.JsArray<akasha.gpu.GPURenderPassColorAttachment>)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURenderPassDescriptor",
+      "classSimpleName": "GPURenderPassDescriptor",
+      "elementKind": "method",
+      "methodName": "colorAttachments",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.gpu.GPURenderPassLayout.Builder akasha.gpu.GPURenderPassLayout::colorFormats(akasha.lang.JsArray<java.lang.String>)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURenderPassLayout",
+      "classSimpleName": "GPURenderPassLayout",
+      "elementKind": "method",
+      "methodName": "colorFormats",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.gpu.GPURenderPassLayout.Builder akasha.gpu.GPURenderPassLayout::colorFormats(java.lang.String[])",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURenderPassLayout",
+      "classSimpleName": "GPURenderPassLayout",
+      "elementKind": "method",
+      "methodName": "colorFormats",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.gpu.GPURenderPipelineDescriptor.Builder akasha.gpu.GPURenderPipelineDescriptor::vertex(akasha.gpu.GPUVertexState)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURenderPipelineDescriptor",
+      "classSimpleName": "GPURenderPipelineDescriptor",
+      "elementKind": "method",
+      "methodName": "vertex",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.gpu.GPUShaderModuleDescriptor.Builder akasha.gpu.GPUShaderModuleDescriptor::code(java.lang.String)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUShaderModuleDescriptor",
+      "classSimpleName": "GPUShaderModuleDescriptor",
+      "elementKind": "method",
+      "methodName": "code",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.gpu.GPUStorageTextureBindingLayout.Builder akasha.gpu.GPUStorageTextureBindingLayout::format(java.lang.String)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUStorageTextureBindingLayout",
+      "classSimpleName": "GPUStorageTextureBindingLayout",
+      "elementKind": "method",
+      "methodName": "format",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.gpu.GPUUncapturedErrorEventInit.Builder akasha.gpu.GPUUncapturedErrorEventInit::error(akasha.gpu.GPUError)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUUncapturedErrorEventInit",
+      "classSimpleName": "GPUUncapturedErrorEventInit",
+      "elementKind": "method",
+      "methodName": "error",
+      "package": "akasha.gpu"
+    }
+  },
+  {
     "code": "java.method.added",
     "description": "Method was added.",
     "newElement": "method akasha.lang.JsIterator<akasha.core.Float32Array.Entry> akasha.core.Float32Array::entries()",
@@ -1593,6 +2585,374 @@
       "elementKind": "method",
       "methodName": "values",
       "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.media.BlobEventInit.Builder akasha.media.BlobEventInit::data(akasha.Blob)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.media.BlobEventInit",
+      "classSimpleName": "BlobEventInit",
+      "elementKind": "method",
+      "methodName": "data",
+      "package": "akasha.media"
+    }
+  },
+  {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.media.MediaRecorderErrorEventInit.Builder akasha.media.MediaRecorderErrorEventInit::error(akasha.DOMException)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.media.MediaRecorderErrorEventInit",
+      "classSimpleName": "MediaRecorderErrorEventInit",
+      "elementKind": "method",
+      "methodName": "error",
+      "package": "akasha.media"
+    }
+  },
+  {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.media.MediaStreamTrackEventInit.Builder akasha.media.MediaStreamTrackEventInit::track(akasha.media.MediaStreamTrack)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.media.MediaStreamTrackEventInit",
+      "classSimpleName": "MediaStreamTrackEventInit",
+      "elementKind": "method",
+      "methodName": "track",
+      "package": "akasha.media"
+    }
+  },
+  {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.notifications.NotificationEventInit.Builder akasha.notifications.NotificationEventInit::notification(akasha.notifications.Notification)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.notifications.NotificationEventInit",
+      "classSimpleName": "NotificationEventInit",
+      "elementKind": "method",
+      "methodName": "notification",
+      "package": "akasha.notifications"
+    }
+  },
+  {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.rtc.RTCDataChannelEventInit.Builder akasha.rtc.RTCDataChannelEventInit::channel(akasha.rtc.RTCDataChannel)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.rtc.RTCDataChannelEventInit",
+      "classSimpleName": "RTCDataChannelEventInit",
+      "elementKind": "method",
+      "methodName": "channel",
+      "package": "akasha.rtc"
+    }
+  },
+  {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.rtc.RTCErrorEventInit.Builder akasha.rtc.RTCErrorEventInit::error(akasha.rtc.RTCError)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.rtc.RTCErrorEventInit",
+      "classSimpleName": "RTCErrorEventInit",
+      "elementKind": "method",
+      "methodName": "error",
+      "package": "akasha.rtc"
+    }
+  },
+  {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.rtc.RTCErrorInit.Builder akasha.rtc.RTCErrorInit::errorDetail(java.lang.String)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.rtc.RTCErrorInit",
+      "classSimpleName": "RTCErrorInit",
+      "elementKind": "method",
+      "methodName": "errorDetail",
+      "package": "akasha.rtc"
+    }
+  },
+  {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.rtc.RTCIceServer.Builder akasha.rtc.RTCIceServer::urls(akasha.StringOrStringArrayUnion)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.rtc.RTCIceServer",
+      "classSimpleName": "RTCIceServer",
+      "elementKind": "method",
+      "methodName": "urls",
+      "package": "akasha.rtc"
+    }
+  },
+  {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.rtc.RTCIceServer.Builder akasha.rtc.RTCIceServer::urls(akasha.lang.JsArray<java.lang.String>)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.rtc.RTCIceServer",
+      "classSimpleName": "RTCIceServer",
+      "elementKind": "method",
+      "methodName": "urls",
+      "package": "akasha.rtc"
+    }
+  },
+  {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.rtc.RTCIceServer.Builder akasha.rtc.RTCIceServer::urls(java.lang.String)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.rtc.RTCIceServer",
+      "classSimpleName": "RTCIceServer",
+      "elementKind": "method",
+      "methodName": "urls",
+      "package": "akasha.rtc"
+    }
+  },
+  {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.rtc.RTCIceServer.Builder akasha.rtc.RTCIceServer::urls(java.lang.String[])",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.rtc.RTCIceServer",
+      "classSimpleName": "RTCIceServer",
+      "elementKind": "method",
+      "methodName": "urls",
+      "package": "akasha.rtc"
+    }
+  },
+  {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.rtc.RTCIdentityProviderDetails.Builder akasha.rtc.RTCIdentityProviderDetails::domain(java.lang.String)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.rtc.RTCIdentityProviderDetails",
+      "classSimpleName": "RTCIdentityProviderDetails",
+      "elementKind": "method",
+      "methodName": "domain",
+      "package": "akasha.rtc"
+    }
+  },
+  {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.rtc.RTCPeerConnectionIceErrorEventInit.Builder akasha.rtc.RTCPeerConnectionIceErrorEventInit::errorCode(int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.rtc.RTCPeerConnectionIceErrorEventInit",
+      "classSimpleName": "RTCPeerConnectionIceErrorEventInit",
+      "elementKind": "method",
+      "methodName": "errorCode",
+      "package": "akasha.rtc"
+    }
+  },
+  {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.rtc.RTCSessionDescriptionInit.Builder akasha.rtc.RTCSessionDescriptionInit::type(java.lang.String)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.rtc.RTCSessionDescriptionInit",
+      "classSimpleName": "RTCSessionDescriptionInit",
+      "elementKind": "method",
+      "methodName": "type",
+      "package": "akasha.rtc"
+    }
+  },
+  {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.speech.SpeechRecognitionErrorEventInit.Builder akasha.speech.SpeechRecognitionErrorEventInit::error(java.lang.String)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.speech.SpeechRecognitionErrorEventInit",
+      "classSimpleName": "SpeechRecognitionErrorEventInit",
+      "elementKind": "method",
+      "methodName": "error",
+      "package": "akasha.speech"
+    }
+  },
+  {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.speech.SpeechRecognitionEventInit.Builder akasha.speech.SpeechRecognitionEventInit::results(akasha.speech.SpeechRecognitionResultList)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.speech.SpeechRecognitionEventInit",
+      "classSimpleName": "SpeechRecognitionEventInit",
+      "elementKind": "method",
+      "methodName": "results",
+      "package": "akasha.speech"
+    }
+  },
+  {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.speech.SpeechSynthesisEventInit.Builder akasha.speech.SpeechSynthesisEventInit::utterance(akasha.speech.SpeechSynthesisUtterance)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.speech.SpeechSynthesisEventInit",
+      "classSimpleName": "SpeechSynthesisEventInit",
+      "elementKind": "method",
+      "methodName": "utterance",
+      "package": "akasha.speech"
+    }
+  },
+  {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.wasm.GlobalDescriptor.Builder akasha.wasm.GlobalDescriptor::value(java.lang.String)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.wasm.GlobalDescriptor",
+      "classSimpleName": "GlobalDescriptor",
+      "elementKind": "method",
+      "methodName": "value",
+      "package": "akasha.wasm"
+    }
+  },
+  {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.wasm.MemoryDescriptor.Builder akasha.wasm.MemoryDescriptor::initial(int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.wasm.MemoryDescriptor",
+      "classSimpleName": "MemoryDescriptor",
+      "elementKind": "method",
+      "methodName": "initial",
+      "package": "akasha.wasm"
+    }
+  },
+  {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.xr.XRPermissionDescriptor.Builder akasha.xr.XRPermissionDescriptor::name(java.lang.String)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRPermissionDescriptor",
+      "classSimpleName": "XRPermissionDescriptor",
+      "elementKind": "method",
+      "methodName": "name",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.xr.XRReferenceSpaceEventInit.Builder akasha.xr.XRReferenceSpaceEventInit::referenceSpace(akasha.xr.XRReferenceSpace)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRReferenceSpaceEventInit",
+      "classSimpleName": "XRReferenceSpaceEventInit",
+      "elementKind": "method",
+      "methodName": "referenceSpace",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.xr.XRSessionEventInit.Builder akasha.xr.XRSessionEventInit::session(akasha.xr.XRSession)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRSessionEventInit",
+      "classSimpleName": "XRSessionEventInit",
+      "elementKind": "method",
+      "methodName": "session",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.method.staticMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.xr.XRSessionSupportedPermissionDescriptor.Builder akasha.xr.XRSessionSupportedPermissionDescriptor::name(java.lang.String)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRSessionSupportedPermissionDescriptor",
+      "classSimpleName": "XRSessionSupportedPermissionDescriptor",
+      "elementKind": "method",
+      "methodName": "name",
+      "package": "akasha.xr"
     }
   },
   {
@@ -3273,6 +4633,1366 @@
       "elementKind": "method",
       "methodName": "removeUncapturederrorListener",
       "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.CameraDevicePermissionDescriptor.Builder akasha.CameraDevicePermissionDescriptor::create(java.lang.String)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.CameraDevicePermissionDescriptor",
+      "classSimpleName": "CameraDevicePermissionDescriptor",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.CredentialData.Builder akasha.CredentialData::create(java.lang.String)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.CredentialData",
+      "classSimpleName": "CredentialData",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.DevicePermissionDescriptor.Builder akasha.DevicePermissionDescriptor::create(java.lang.String)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.DevicePermissionDescriptor",
+      "classSimpleName": "DevicePermissionDescriptor",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.FetchEventInit.Builder akasha.FetchEventInit::create(akasha.Request)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.FetchEventInit",
+      "classSimpleName": "FetchEventInit",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.FormDataEventInit.Builder akasha.FormDataEventInit::create(akasha.FormData)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.FormDataEventInit",
+      "classSimpleName": "FormDataEventInit",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.GamepadEventInit.Builder akasha.GamepadEventInit::create(akasha.Gamepad)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.GamepadEventInit",
+      "classSimpleName": "GamepadEventInit",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.GenerateTestReportParameters.Builder akasha.GenerateTestReportParameters::create(java.lang.String)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.GenerateTestReportParameters",
+      "classSimpleName": "GenerateTestReportParameters",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.MidiPermissionDescriptor.Builder akasha.MidiPermissionDescriptor::create(java.lang.String)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.MidiPermissionDescriptor",
+      "classSimpleName": "MidiPermissionDescriptor",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.PermissionDescriptor.Builder akasha.PermissionDescriptor::create(java.lang.String)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.PermissionDescriptor",
+      "classSimpleName": "PermissionDescriptor",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.PromiseRejectionEventInit.Builder akasha.PromiseRejectionEventInit::create(akasha.promise.Promise<jsinterop.base.Any>)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.PromiseRejectionEventInit",
+      "classSimpleName": "PromiseRejectionEventInit",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.PublicKeyCredentialEntity.Builder akasha.PublicKeyCredentialEntity::create(java.lang.String)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.PublicKeyCredentialEntity",
+      "classSimpleName": "PublicKeyCredentialEntity",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.PublicKeyCredentialRequestOptions.Builder akasha.PublicKeyCredentialRequestOptions::create(akasha.core.BufferSource)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.PublicKeyCredentialRequestOptions",
+      "classSimpleName": "PublicKeyCredentialRequestOptions",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.PublicKeyCredentialRpEntity.Builder akasha.PublicKeyCredentialRpEntity::create(java.lang.String)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.PublicKeyCredentialRpEntity",
+      "classSimpleName": "PublicKeyCredentialRpEntity",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.PushPermissionDescriptor.Builder akasha.PushPermissionDescriptor::create(java.lang.String)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.PushPermissionDescriptor",
+      "classSimpleName": "PushPermissionDescriptor",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.QueuingStrategyInit.Builder akasha.QueuingStrategyInit::create(double)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.QueuingStrategyInit",
+      "classSimpleName": "QueuingStrategyInit",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.ShadowRootInit.Builder akasha.ShadowRootInit::create(java.lang.String)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.ShadowRootInit",
+      "classSimpleName": "ShadowRootInit",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.SyncEventInit.Builder akasha.SyncEventInit::create(java.lang.String)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.SyncEventInit",
+      "classSimpleName": "SyncEventInit",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.TokenBinding.Builder akasha.TokenBinding::create(java.lang.String)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.TokenBinding",
+      "classSimpleName": "TokenBinding",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.audio.AudioParamDescriptor.Builder akasha.audio.AudioParamDescriptor::create(java.lang.String)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.audio.AudioParamDescriptor",
+      "classSimpleName": "AudioParamDescriptor",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.audio"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.audio.MediaElementAudioSourceOptions.Builder akasha.audio.MediaElementAudioSourceOptions::create(akasha.HTMLMediaElement)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.audio.MediaElementAudioSourceOptions",
+      "classSimpleName": "MediaElementAudioSourceOptions",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.audio"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.audio.MediaStreamAudioSourceOptions.Builder akasha.audio.MediaStreamAudioSourceOptions::create(akasha.media.MediaStream)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.audio.MediaStreamAudioSourceOptions",
+      "classSimpleName": "MediaStreamAudioSourceOptions",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.audio"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.audio.MediaStreamTrackAudioSourceOptions.Builder akasha.audio.MediaStreamTrackAudioSourceOptions::create(akasha.media.MediaStreamTrack)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.audio.MediaStreamTrackAudioSourceOptions",
+      "classSimpleName": "MediaStreamTrackAudioSourceOptions",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.audio"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.audio.OfflineAudioCompletionEventInit.Builder akasha.audio.OfflineAudioCompletionEventInit::create(akasha.audio.AudioBuffer)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.audio.OfflineAudioCompletionEventInit",
+      "classSimpleName": "OfflineAudioCompletionEventInit",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.audio"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.bluetooth.BluetoothAdvertisingEventInit.Builder akasha.bluetooth.BluetoothAdvertisingEventInit::create(akasha.bluetooth.BluetoothDevice)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.bluetooth.BluetoothAdvertisingEventInit",
+      "classSimpleName": "BluetoothAdvertisingEventInit",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.bluetooth"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.bluetooth.BluetoothManufacturerDataFilterInit.Builder akasha.bluetooth.BluetoothManufacturerDataFilterInit::create(int)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.bluetooth.BluetoothManufacturerDataFilterInit",
+      "classSimpleName": "BluetoothManufacturerDataFilterInit",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.bluetooth"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.bluetooth.BluetoothPermissionDescriptor.Builder akasha.bluetooth.BluetoothPermissionDescriptor::create(java.lang.String)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.bluetooth.BluetoothPermissionDescriptor",
+      "classSimpleName": "BluetoothPermissionDescriptor",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.bluetooth"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.bluetooth.BluetoothPermissionStorage.Builder akasha.bluetooth.BluetoothPermissionStorage::create(akasha.bluetooth.AllowedBluetoothDevice[])",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.bluetooth.BluetoothPermissionStorage",
+      "classSimpleName": "BluetoothPermissionStorage",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.bluetooth"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.bluetooth.BluetoothPermissionStorage.Builder akasha.bluetooth.BluetoothPermissionStorage::create(akasha.lang.JsArray<akasha.bluetooth.AllowedBluetoothDevice>)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.bluetooth.BluetoothPermissionStorage",
+      "classSimpleName": "BluetoothPermissionStorage",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.bluetooth"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.bluetooth.BluetoothServiceDataFilterInit.Builder akasha.bluetooth.BluetoothServiceDataFilterInit::create(akasha.bluetooth.BluetoothServiceUUID)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.bluetooth.BluetoothServiceDataFilterInit",
+      "classSimpleName": "BluetoothServiceDataFilterInit",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.bluetooth"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.bluetooth.BluetoothServiceDataFilterInit.Builder akasha.bluetooth.BluetoothServiceDataFilterInit::create(int)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.bluetooth.BluetoothServiceDataFilterInit",
+      "classSimpleName": "BluetoothServiceDataFilterInit",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.bluetooth"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.bluetooth.BluetoothServiceDataFilterInit.Builder akasha.bluetooth.BluetoothServiceDataFilterInit::create(java.lang.String)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.bluetooth.BluetoothServiceDataFilterInit",
+      "classSimpleName": "BluetoothServiceDataFilterInit",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.bluetooth"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.clipboard.ClipboardPermissionDescriptor.Builder akasha.clipboard.ClipboardPermissionDescriptor::create(java.lang.String)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.clipboard.ClipboardPermissionDescriptor",
+      "classSimpleName": "ClipboardPermissionDescriptor",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.clipboard"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.codecs.AudioDataCopyToOptions.Builder akasha.codecs.AudioDataCopyToOptions::create(int)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.codecs.AudioDataCopyToOptions",
+      "classSimpleName": "AudioDataCopyToOptions",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.codecs"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.codecs.AudioEncoderConfig.Builder akasha.codecs.AudioEncoderConfig::create(java.lang.String)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.codecs.AudioEncoderConfig",
+      "classSimpleName": "AudioEncoderConfig",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.codecs"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.codecs.VideoDecoderConfig.Builder akasha.codecs.VideoDecoderConfig::create(java.lang.String)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.codecs.VideoDecoderConfig",
+      "classSimpleName": "VideoDecoderConfig",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.codecs"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.crypto.Algorithm.Builder akasha.crypto.Algorithm::create(java.lang.String)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.Algorithm",
+      "classSimpleName": "Algorithm",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.crypto"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.crypto.KeyAlgorithm.Builder akasha.crypto.KeyAlgorithm::create(java.lang.String)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.KeyAlgorithm",
+      "classSimpleName": "KeyAlgorithm",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.crypto"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.crypto.RsaOaepParams.Builder akasha.crypto.RsaOaepParams::create(java.lang.String)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.RsaOaepParams",
+      "classSimpleName": "RsaOaepParams",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.crypto"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.gpu.GPUBindGroupLayoutDescriptor.Builder akasha.gpu.GPUBindGroupLayoutDescriptor::create(akasha.gpu.GPUBindGroupLayoutEntry[])",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUBindGroupLayoutDescriptor",
+      "classSimpleName": "GPUBindGroupLayoutDescriptor",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.gpu.GPUBindGroupLayoutDescriptor.Builder akasha.gpu.GPUBindGroupLayoutDescriptor::create(akasha.lang.JsArray<akasha.gpu.GPUBindGroupLayoutEntry>)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUBindGroupLayoutDescriptor",
+      "classSimpleName": "GPUBindGroupLayoutDescriptor",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.gpu.GPUBufferBinding.Builder akasha.gpu.GPUBufferBinding::create(akasha.gpu.GPUBuffer)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUBufferBinding",
+      "classSimpleName": "GPUBufferBinding",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.gpu.GPUColorTargetState.Builder akasha.gpu.GPUColorTargetState::create(java.lang.String)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUColorTargetState",
+      "classSimpleName": "GPUColorTargetState",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.gpu.GPUComputePipelineDescriptor.Builder akasha.gpu.GPUComputePipelineDescriptor::create(akasha.gpu.GPUProgrammableStage)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUComputePipelineDescriptor",
+      "classSimpleName": "GPUComputePipelineDescriptor",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.gpu.GPUDepthStencilState.Builder akasha.gpu.GPUDepthStencilState::create(java.lang.String)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUDepthStencilState",
+      "classSimpleName": "GPUDepthStencilState",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.gpu.GPUExtent3DDict.Builder akasha.gpu.GPUExtent3DDict::create(int)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUExtent3DDict",
+      "classSimpleName": "GPUExtent3DDict",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.gpu.GPUExternalTextureDescriptor.Builder akasha.gpu.GPUExternalTextureDescriptor::create(akasha.HTMLVideoElement)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUExternalTextureDescriptor",
+      "classSimpleName": "GPUExternalTextureDescriptor",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.gpu.GPUImageCopyBuffer.Builder akasha.gpu.GPUImageCopyBuffer::create(akasha.gpu.GPUBuffer)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUImageCopyBuffer",
+      "classSimpleName": "GPUImageCopyBuffer",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.gpu.GPUImageCopyExternalImage.Builder akasha.gpu.GPUImageCopyExternalImage::create(akasha.gpu.GPUImageCopyExternalImageSource)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUImageCopyExternalImage",
+      "classSimpleName": "GPUImageCopyExternalImage",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.gpu.GPUImageCopyTexture.Builder akasha.gpu.GPUImageCopyTexture::create(akasha.gpu.GPUTexture)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUImageCopyTexture",
+      "classSimpleName": "GPUImageCopyTexture",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.gpu.GPUImageCopyTextureTagged.Builder akasha.gpu.GPUImageCopyTextureTagged::create(akasha.gpu.GPUTexture)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUImageCopyTextureTagged",
+      "classSimpleName": "GPUImageCopyTextureTagged",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.gpu.GPUPipelineLayoutDescriptor.Builder akasha.gpu.GPUPipelineLayoutDescriptor::create(akasha.gpu.GPUBindGroupLayout[])",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUPipelineLayoutDescriptor",
+      "classSimpleName": "GPUPipelineLayoutDescriptor",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.gpu.GPUPipelineLayoutDescriptor.Builder akasha.gpu.GPUPipelineLayoutDescriptor::create(akasha.lang.JsArray<akasha.gpu.GPUBindGroupLayout>)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUPipelineLayoutDescriptor",
+      "classSimpleName": "GPUPipelineLayoutDescriptor",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.gpu.GPURenderBundleEncoderDescriptor.Builder akasha.gpu.GPURenderBundleEncoderDescriptor::create(akasha.lang.JsArray<java.lang.String>)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURenderBundleEncoderDescriptor",
+      "classSimpleName": "GPURenderBundleEncoderDescriptor",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.gpu.GPURenderBundleEncoderDescriptor.Builder akasha.gpu.GPURenderBundleEncoderDescriptor::create(java.lang.String[])",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURenderBundleEncoderDescriptor",
+      "classSimpleName": "GPURenderBundleEncoderDescriptor",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.gpu.GPURenderPassDescriptor.Builder akasha.gpu.GPURenderPassDescriptor::create(akasha.gpu.GPURenderPassColorAttachment[])",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURenderPassDescriptor",
+      "classSimpleName": "GPURenderPassDescriptor",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.gpu.GPURenderPassDescriptor.Builder akasha.gpu.GPURenderPassDescriptor::create(akasha.lang.JsArray<akasha.gpu.GPURenderPassColorAttachment>)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURenderPassDescriptor",
+      "classSimpleName": "GPURenderPassDescriptor",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.gpu.GPURenderPassLayout.Builder akasha.gpu.GPURenderPassLayout::create(akasha.lang.JsArray<java.lang.String>)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURenderPassLayout",
+      "classSimpleName": "GPURenderPassLayout",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.gpu.GPURenderPassLayout.Builder akasha.gpu.GPURenderPassLayout::create(java.lang.String[])",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURenderPassLayout",
+      "classSimpleName": "GPURenderPassLayout",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.gpu.GPURenderPipelineDescriptor.Builder akasha.gpu.GPURenderPipelineDescriptor::create(akasha.gpu.GPUVertexState)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURenderPipelineDescriptor",
+      "classSimpleName": "GPURenderPipelineDescriptor",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.gpu.GPUShaderModuleDescriptor.Builder akasha.gpu.GPUShaderModuleDescriptor::create(java.lang.String)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUShaderModuleDescriptor",
+      "classSimpleName": "GPUShaderModuleDescriptor",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.gpu.GPUStorageTextureBindingLayout.Builder akasha.gpu.GPUStorageTextureBindingLayout::create(java.lang.String)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUStorageTextureBindingLayout",
+      "classSimpleName": "GPUStorageTextureBindingLayout",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.gpu.GPUUncapturedErrorEventInit.Builder akasha.gpu.GPUUncapturedErrorEventInit::create(akasha.gpu.GPUError)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUUncapturedErrorEventInit",
+      "classSimpleName": "GPUUncapturedErrorEventInit",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.media.BlobEventInit.Builder akasha.media.BlobEventInit::create(akasha.Blob)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.media.BlobEventInit",
+      "classSimpleName": "BlobEventInit",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.media"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.media.MediaRecorderErrorEventInit.Builder akasha.media.MediaRecorderErrorEventInit::create(akasha.DOMException)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.media.MediaRecorderErrorEventInit",
+      "classSimpleName": "MediaRecorderErrorEventInit",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.media"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.media.MediaStreamTrackEventInit.Builder akasha.media.MediaStreamTrackEventInit::create(akasha.media.MediaStreamTrack)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.media.MediaStreamTrackEventInit",
+      "classSimpleName": "MediaStreamTrackEventInit",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.media"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.notifications.NotificationEventInit.Builder akasha.notifications.NotificationEventInit::create(akasha.notifications.Notification)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.notifications.NotificationEventInit",
+      "classSimpleName": "NotificationEventInit",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.notifications"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.rtc.RTCDataChannelEventInit.Builder akasha.rtc.RTCDataChannelEventInit::create(akasha.rtc.RTCDataChannel)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.rtc.RTCDataChannelEventInit",
+      "classSimpleName": "RTCDataChannelEventInit",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.rtc"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.rtc.RTCErrorEventInit.Builder akasha.rtc.RTCErrorEventInit::create(akasha.rtc.RTCError)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.rtc.RTCErrorEventInit",
+      "classSimpleName": "RTCErrorEventInit",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.rtc"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.rtc.RTCErrorInit.Builder akasha.rtc.RTCErrorInit::create(java.lang.String)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.rtc.RTCErrorInit",
+      "classSimpleName": "RTCErrorInit",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.rtc"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.rtc.RTCIceServer.Builder akasha.rtc.RTCIceServer::create(akasha.StringOrStringArrayUnion)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.rtc.RTCIceServer",
+      "classSimpleName": "RTCIceServer",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.rtc"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.rtc.RTCIceServer.Builder akasha.rtc.RTCIceServer::create(akasha.lang.JsArray<java.lang.String>)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.rtc.RTCIceServer",
+      "classSimpleName": "RTCIceServer",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.rtc"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.rtc.RTCIceServer.Builder akasha.rtc.RTCIceServer::create(java.lang.String)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.rtc.RTCIceServer",
+      "classSimpleName": "RTCIceServer",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.rtc"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.rtc.RTCIceServer.Builder akasha.rtc.RTCIceServer::create(java.lang.String[])",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.rtc.RTCIceServer",
+      "classSimpleName": "RTCIceServer",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.rtc"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.rtc.RTCIdentityProviderDetails.Builder akasha.rtc.RTCIdentityProviderDetails::create(java.lang.String)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.rtc.RTCIdentityProviderDetails",
+      "classSimpleName": "RTCIdentityProviderDetails",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.rtc"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.rtc.RTCPeerConnectionIceErrorEventInit.Builder akasha.rtc.RTCPeerConnectionIceErrorEventInit::create(int)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.rtc.RTCPeerConnectionIceErrorEventInit",
+      "classSimpleName": "RTCPeerConnectionIceErrorEventInit",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.rtc"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.rtc.RTCSessionDescriptionInit.Builder akasha.rtc.RTCSessionDescriptionInit::create(java.lang.String)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.rtc.RTCSessionDescriptionInit",
+      "classSimpleName": "RTCSessionDescriptionInit",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.rtc"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.speech.SpeechRecognitionErrorEventInit.Builder akasha.speech.SpeechRecognitionErrorEventInit::create(java.lang.String)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.speech.SpeechRecognitionErrorEventInit",
+      "classSimpleName": "SpeechRecognitionErrorEventInit",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.speech"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.speech.SpeechRecognitionEventInit.Builder akasha.speech.SpeechRecognitionEventInit::create(akasha.speech.SpeechRecognitionResultList)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.speech.SpeechRecognitionEventInit",
+      "classSimpleName": "SpeechRecognitionEventInit",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.speech"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.speech.SpeechSynthesisEventInit.Builder akasha.speech.SpeechSynthesisEventInit::create(akasha.speech.SpeechSynthesisUtterance)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.speech.SpeechSynthesisEventInit",
+      "classSimpleName": "SpeechSynthesisEventInit",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.speech"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.wasm.GlobalDescriptor.Builder akasha.wasm.GlobalDescriptor::create(java.lang.String)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.wasm.GlobalDescriptor",
+      "classSimpleName": "GlobalDescriptor",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.wasm"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.wasm.MemoryDescriptor.Builder akasha.wasm.MemoryDescriptor::create(int)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.wasm.MemoryDescriptor",
+      "classSimpleName": "MemoryDescriptor",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.wasm"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.xr.XRPermissionDescriptor.Builder akasha.xr.XRPermissionDescriptor::create(java.lang.String)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRPermissionDescriptor",
+      "classSimpleName": "XRPermissionDescriptor",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.xr.XRReferenceSpaceEventInit.Builder akasha.xr.XRReferenceSpaceEventInit::create(akasha.xr.XRReferenceSpace)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRReferenceSpaceEventInit",
+      "classSimpleName": "XRReferenceSpaceEventInit",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.xr.XRSessionEventInit.Builder akasha.xr.XRSessionEventInit::create(akasha.xr.XRSession)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRSessionEventInit",
+      "classSimpleName": "XRSessionEventInit",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.xr.XRSessionSupportedPermissionDescriptor.Builder akasha.xr.XRSessionSupportedPermissionDescriptor::create(java.lang.String)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRSessionSupportedPermissionDescriptor",
+      "classSimpleName": "XRSessionSupportedPermissionDescriptor",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.xr"
     }
   }
 ]

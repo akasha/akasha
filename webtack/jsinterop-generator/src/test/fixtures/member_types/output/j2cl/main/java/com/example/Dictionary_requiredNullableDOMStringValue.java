@@ -20,7 +20,8 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredNullableDOMStringValue {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nullable final String requiredNullableDOMStringValue) {
+  static Builder requiredNullableDOMStringValue(
+      @Nullable final String requiredNullableDOMStringValue) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredNullableDOMStringValue( requiredNullableDOMStringValue );
   }
 

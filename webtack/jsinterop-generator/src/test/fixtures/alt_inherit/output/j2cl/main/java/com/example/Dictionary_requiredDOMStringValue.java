@@ -19,7 +19,7 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredDOMStringValue {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final String requiredDOMStringValue) {
+  static Builder requiredDOMStringValue(@Nonnull final String requiredDOMStringValue) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredDOMStringValue( requiredDOMStringValue );
   }
 

@@ -22,7 +22,7 @@ import jsinterop.base.JsPropertyMap;
 public interface TxAuthGenericArg {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final String contentType) {
+  static Builder contentType(@Nonnull final String contentType) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).contentType( contentType );
   }
 

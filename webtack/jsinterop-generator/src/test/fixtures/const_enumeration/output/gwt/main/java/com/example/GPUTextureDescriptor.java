@@ -19,7 +19,7 @@ import jsinterop.base.JsPropertyMap;
 public interface GPUTextureDescriptor {
   @JsOverlay
   @Nonnull
-  static Builder create(@GPUTextureUsageFlags final int usage) {
+  static Builder usage(@GPUTextureUsageFlags final int usage) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).usage( usage );
   }
 

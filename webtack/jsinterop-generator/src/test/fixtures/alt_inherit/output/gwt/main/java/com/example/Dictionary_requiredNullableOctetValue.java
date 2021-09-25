@@ -20,7 +20,7 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredNullableOctetValue {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nullable final Double requiredNullableOctetValue) {
+  static Builder requiredNullableOctetValue(@Nullable final Double requiredNullableOctetValue) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredNullableOctetValue( requiredNullableOctetValue );
   }
 

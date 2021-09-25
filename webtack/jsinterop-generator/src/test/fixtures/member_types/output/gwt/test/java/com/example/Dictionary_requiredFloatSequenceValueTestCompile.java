@@ -6,14 +6,14 @@ import javax.annotation.Generated;
 public final class Dictionary_requiredFloatSequenceValueTestCompile {
   static Dictionary_requiredFloatSequenceValue $typeReference$;
 
-  public static Dictionary_requiredFloatSequenceValue.Builder create(
+  public static Dictionary_requiredFloatSequenceValue.Builder requiredFloatSequenceValue(
       final JsArray<Double> requiredFloatSequenceValue) {
-    return Dictionary_requiredFloatSequenceValue.create( requiredFloatSequenceValue );
+    return Dictionary_requiredFloatSequenceValue.requiredFloatSequenceValue( requiredFloatSequenceValue );
   }
 
-  public static Dictionary_requiredFloatSequenceValue.Builder create(
+  public static Dictionary_requiredFloatSequenceValue.Builder requiredFloatSequenceValue(
       final double[] requiredFloatSequenceValue) {
-    return Dictionary_requiredFloatSequenceValue.create( requiredFloatSequenceValue );
+    return Dictionary_requiredFloatSequenceValue.requiredFloatSequenceValue( requiredFloatSequenceValue );
   }
 
   public static JsArray<Double> requiredFloatSequenceValue(

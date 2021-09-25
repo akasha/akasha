@@ -19,7 +19,7 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredObjectValue {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final JsObject requiredObjectValue) {
+  static Builder requiredObjectValue(@Nonnull final JsObject requiredObjectValue) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredObjectValue( requiredObjectValue );
   }
 

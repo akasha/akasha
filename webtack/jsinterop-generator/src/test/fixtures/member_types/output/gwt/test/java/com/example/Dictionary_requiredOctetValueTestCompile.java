@@ -6,8 +6,9 @@ import javax.annotation.Generated;
 public final class Dictionary_requiredOctetValueTestCompile {
   static Dictionary_requiredOctetValue $typeReference$;
 
-  public static Dictionary_requiredOctetValue.Builder create(final short requiredOctetValue) {
-    return Dictionary_requiredOctetValue.create( requiredOctetValue );
+  public static Dictionary_requiredOctetValue.Builder requiredOctetValue(
+      final short requiredOctetValue) {
+    return Dictionary_requiredOctetValue.requiredOctetValue( requiredOctetValue );
   }
 
   public static short requiredOctetValue(final Dictionary_requiredOctetValue $instance) {

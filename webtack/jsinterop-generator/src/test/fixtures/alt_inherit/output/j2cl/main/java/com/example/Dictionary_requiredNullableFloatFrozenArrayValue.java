@@ -21,7 +21,8 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredNullableFloatFrozenArrayValue {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nullable final JsArray<Double> requiredNullableFloatFrozenArrayValue) {
+  static Builder requiredNullableFloatFrozenArrayValue(
+      @Nullable final JsArray<Double> requiredNullableFloatFrozenArrayValue) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredNullableFloatFrozenArrayValue( requiredNullableFloatFrozenArrayValue );
   }
 

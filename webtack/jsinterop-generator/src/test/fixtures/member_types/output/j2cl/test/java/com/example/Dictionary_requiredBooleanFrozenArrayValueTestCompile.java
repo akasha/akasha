@@ -6,9 +6,9 @@ import javax.annotation.Generated;
 public final class Dictionary_requiredBooleanFrozenArrayValueTestCompile {
   static Dictionary_requiredBooleanFrozenArrayValue $typeReference$;
 
-  public static Dictionary_requiredBooleanFrozenArrayValue.Builder create(
+  public static Dictionary_requiredBooleanFrozenArrayValue.Builder requiredBooleanFrozenArrayValue(
       final JsArray<Boolean> requiredBooleanFrozenArrayValue) {
-    return Dictionary_requiredBooleanFrozenArrayValue.create( requiredBooleanFrozenArrayValue );
+    return Dictionary_requiredBooleanFrozenArrayValue.requiredBooleanFrozenArrayValue( requiredBooleanFrozenArrayValue );
   }
 
   public static JsArray<Boolean> requiredBooleanFrozenArrayValue(

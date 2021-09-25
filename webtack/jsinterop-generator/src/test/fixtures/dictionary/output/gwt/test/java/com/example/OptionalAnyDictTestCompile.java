@@ -7,8 +7,8 @@ import jsinterop.base.Any;
 public final class OptionalAnyDictTestCompile {
   static OptionalAnyDict $typeReference$;
 
-  public static OptionalAnyDict.Builder create(final Object someValue) {
-    return OptionalAnyDict.create( someValue );
+  public static OptionalAnyDict.Builder someValue(final Object someValue) {
+    return OptionalAnyDict.someValue( someValue );
   }
 
   public static Any anotherValue(final OptionalAnyDict $instance) {

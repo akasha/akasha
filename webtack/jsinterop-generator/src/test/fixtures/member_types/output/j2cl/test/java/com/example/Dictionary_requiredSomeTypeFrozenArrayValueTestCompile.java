@@ -6,9 +6,9 @@ import javax.annotation.Generated;
 public final class Dictionary_requiredSomeTypeFrozenArrayValueTestCompile {
   static Dictionary_requiredSomeTypeFrozenArrayValue $typeReference$;
 
-  public static Dictionary_requiredSomeTypeFrozenArrayValue.Builder create(
+  public static Dictionary_requiredSomeTypeFrozenArrayValue.Builder requiredSomeTypeFrozenArrayValue(
       final JsArray<SomeType> requiredSomeTypeFrozenArrayValue) {
-    return Dictionary_requiredSomeTypeFrozenArrayValue.create( requiredSomeTypeFrozenArrayValue );
+    return Dictionary_requiredSomeTypeFrozenArrayValue.requiredSomeTypeFrozenArrayValue( requiredSomeTypeFrozenArrayValue );
   }
 
   public static JsArray<SomeType> requiredSomeTypeFrozenArrayValue(

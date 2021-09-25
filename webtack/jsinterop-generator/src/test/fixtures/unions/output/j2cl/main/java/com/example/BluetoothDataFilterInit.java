@@ -19,79 +19,79 @@ import jsinterop.base.JsPropertyMap;
 public interface BluetoothDataFilterInit {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final BufferSource dataPrefix) {
+  static Builder dataPrefix(@Nonnull final BufferSource dataPrefix) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).dataPrefix( dataPrefix );
   }
 
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final ArrayBufferView dataPrefix) {
+  static Builder dataPrefix(@Nonnull final ArrayBufferView dataPrefix) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).dataPrefix( dataPrefix );
   }
 
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final Int8Array dataPrefix) {
+  static Builder dataPrefix(@Nonnull final Int8Array dataPrefix) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).dataPrefix( dataPrefix );
   }
 
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final Int16Array dataPrefix) {
+  static Builder dataPrefix(@Nonnull final Int16Array dataPrefix) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).dataPrefix( dataPrefix );
   }
 
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final Int32Array dataPrefix) {
+  static Builder dataPrefix(@Nonnull final Int32Array dataPrefix) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).dataPrefix( dataPrefix );
   }
 
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final Uint8Array dataPrefix) {
+  static Builder dataPrefix(@Nonnull final Uint8Array dataPrefix) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).dataPrefix( dataPrefix );
   }
 
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final Uint16Array dataPrefix) {
+  static Builder dataPrefix(@Nonnull final Uint16Array dataPrefix) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).dataPrefix( dataPrefix );
   }
 
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final Uint32Array dataPrefix) {
+  static Builder dataPrefix(@Nonnull final Uint32Array dataPrefix) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).dataPrefix( dataPrefix );
   }
 
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final Uint8ClampedArray dataPrefix) {
+  static Builder dataPrefix(@Nonnull final Uint8ClampedArray dataPrefix) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).dataPrefix( dataPrefix );
   }
 
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final Float32Array dataPrefix) {
+  static Builder dataPrefix(@Nonnull final Float32Array dataPrefix) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).dataPrefix( dataPrefix );
   }
 
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final Float64Array dataPrefix) {
+  static Builder dataPrefix(@Nonnull final Float64Array dataPrefix) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).dataPrefix( dataPrefix );
   }
 
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final DataView dataPrefix) {
+  static Builder dataPrefix(@Nonnull final DataView dataPrefix) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).dataPrefix( dataPrefix );
   }
 
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final ArrayBuffer dataPrefix) {
+  static Builder dataPrefix(@Nonnull final ArrayBuffer dataPrefix) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).dataPrefix( dataPrefix );
   }
 

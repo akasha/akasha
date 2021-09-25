@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredBooleanValue {
   @JsOverlay
   @Nonnull
-  static Builder create(final boolean requiredBooleanValue) {
+  static Builder requiredBooleanValue(final boolean requiredBooleanValue) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredBooleanValue( requiredBooleanValue );
   }
 

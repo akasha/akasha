@@ -7,8 +7,8 @@ import jsinterop.base.Any;
 public final class GlobalDescriptorTestCompile {
   static GlobalDescriptor $typeReference$;
 
-  public static GlobalDescriptor.Builder create(final Object value) {
-    return GlobalDescriptor.create( value );
+  public static GlobalDescriptor.Builder value(final Object value) {
+    return GlobalDescriptor.value( value );
   }
 
   public static Any value(final GlobalDescriptor $instance) {

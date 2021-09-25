@@ -7,14 +7,14 @@ import javax.annotation.Generated;
 public final class Dictionary_requiredShortSequenceValueTestCompile {
   static Dictionary_requiredShortSequenceValue $typeReference$;
 
-  public static Dictionary_requiredShortSequenceValue.Builder create(
+  public static Dictionary_requiredShortSequenceValue.Builder requiredShortSequenceValue(
       final JsArray<Double> requiredShortSequenceValue) {
-    return Dictionary_requiredShortSequenceValue.create( requiredShortSequenceValue );
+    return Dictionary_requiredShortSequenceValue.requiredShortSequenceValue( requiredShortSequenceValue );
   }
 
-  public static Dictionary_requiredShortSequenceValue.Builder create(
+  public static Dictionary_requiredShortSequenceValue.Builder requiredShortSequenceValue(
       final double[] requiredShortSequenceValue) {
-    return Dictionary_requiredShortSequenceValue.create( requiredShortSequenceValue );
+    return Dictionary_requiredShortSequenceValue.requiredShortSequenceValue( requiredShortSequenceValue );
   }
 
   public static JsArray<Double> requiredShortSequenceValue(

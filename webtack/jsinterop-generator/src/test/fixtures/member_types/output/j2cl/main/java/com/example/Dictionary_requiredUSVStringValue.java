@@ -19,7 +19,7 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredUSVStringValue {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final String requiredUSVStringValue) {
+  static Builder requiredUSVStringValue(@Nonnull final String requiredUSVStringValue) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredUSVStringValue( requiredUSVStringValue );
   }
 

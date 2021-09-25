@@ -6,8 +6,8 @@ import javax.annotation.Generated;
 public final class EventInitTestCompile {
   static EventInit $typeReference$;
 
-  public static EventInit.Builder create(final boolean bubbles2) {
-    return EventInit.create( bubbles2 );
+  public static EventInit.Builder bubbles2(final boolean bubbles2) {
+    return EventInit.bubbles2( bubbles2 );
   }
 
   public static boolean bubbles2(final EventInit $instance) {

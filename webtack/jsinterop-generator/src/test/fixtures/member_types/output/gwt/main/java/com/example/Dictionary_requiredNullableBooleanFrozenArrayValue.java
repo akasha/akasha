@@ -20,7 +20,8 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredNullableBooleanFrozenArrayValue {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nullable final JsArray<Boolean> requiredNullableBooleanFrozenArrayValue) {
+  static Builder requiredNullableBooleanFrozenArrayValue(
+      @Nullable final JsArray<Boolean> requiredNullableBooleanFrozenArrayValue) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredNullableBooleanFrozenArrayValue( requiredNullableBooleanFrozenArrayValue );
   }
 

@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredUnsignedShortValue {
   @JsOverlay
   @Nonnull
-  static Builder create(final int requiredUnsignedShortValue) {
+  static Builder requiredUnsignedShortValue(final int requiredUnsignedShortValue) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredUnsignedShortValue( requiredUnsignedShortValue );
   }
 

@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredFloatValue {
   @JsOverlay
   @Nonnull
-  static Builder create(final float requiredFloatValue) {
+  static Builder requiredFloatValue(final float requiredFloatValue) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredFloatValue( requiredFloatValue );
   }
 

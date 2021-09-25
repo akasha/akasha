@@ -6,9 +6,9 @@ import javax.annotation.Generated;
 public final class Dictionary_requiredNullableDOMStringValueTestCompile {
   static Dictionary_requiredNullableDOMStringValue $typeReference$;
 
-  public static Dictionary_requiredNullableDOMStringValue.Builder create(
+  public static Dictionary_requiredNullableDOMStringValue.Builder requiredNullableDOMStringValue(
       final String requiredNullableDOMStringValue) {
-    return Dictionary_requiredNullableDOMStringValue.create( requiredNullableDOMStringValue );
+    return Dictionary_requiredNullableDOMStringValue.requiredNullableDOMStringValue( requiredNullableDOMStringValue );
   }
 
   public static String requiredNullableDOMStringValue(

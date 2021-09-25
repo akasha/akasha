@@ -7,8 +7,8 @@ import jsinterop.base.Any;
 public final class RequiredAnyDictTestCompile {
   static RequiredAnyDict $typeReference$;
 
-  public static RequiredAnyDict.Builder create(final Object someValue) {
-    return RequiredAnyDict.create( someValue );
+  public static RequiredAnyDict.Builder someValue(final Object someValue) {
+    return RequiredAnyDict.someValue( someValue );
   }
 
   public static Any someValue(final RequiredAnyDict $instance) {

@@ -6,56 +6,56 @@ import javax.annotation.Generated;
 public final class BluetoothDataFilterInitTestCompile {
   static BluetoothDataFilterInit $typeReference$;
 
-  public static BluetoothDataFilterInit.Builder create(final BufferSource dataPrefix) {
-    return BluetoothDataFilterInit.create( dataPrefix );
+  public static BluetoothDataFilterInit.Builder dataPrefix(final BufferSource dataPrefix) {
+    return BluetoothDataFilterInit.dataPrefix( dataPrefix );
   }
 
-  public static BluetoothDataFilterInit.Builder create(final ArrayBufferView dataPrefix) {
-    return BluetoothDataFilterInit.create( dataPrefix );
+  public static BluetoothDataFilterInit.Builder dataPrefix(final ArrayBufferView dataPrefix) {
+    return BluetoothDataFilterInit.dataPrefix( dataPrefix );
   }
 
-  public static BluetoothDataFilterInit.Builder create(final Int8Array dataPrefix) {
-    return BluetoothDataFilterInit.create( dataPrefix );
+  public static BluetoothDataFilterInit.Builder dataPrefix(final Int8Array dataPrefix) {
+    return BluetoothDataFilterInit.dataPrefix( dataPrefix );
   }
 
-  public static BluetoothDataFilterInit.Builder create(final Int16Array dataPrefix) {
-    return BluetoothDataFilterInit.create( dataPrefix );
+  public static BluetoothDataFilterInit.Builder dataPrefix(final Int16Array dataPrefix) {
+    return BluetoothDataFilterInit.dataPrefix( dataPrefix );
   }
 
-  public static BluetoothDataFilterInit.Builder create(final Int32Array dataPrefix) {
-    return BluetoothDataFilterInit.create( dataPrefix );
+  public static BluetoothDataFilterInit.Builder dataPrefix(final Int32Array dataPrefix) {
+    return BluetoothDataFilterInit.dataPrefix( dataPrefix );
   }
 
-  public static BluetoothDataFilterInit.Builder create(final Uint8Array dataPrefix) {
-    return BluetoothDataFilterInit.create( dataPrefix );
+  public static BluetoothDataFilterInit.Builder dataPrefix(final Uint8Array dataPrefix) {
+    return BluetoothDataFilterInit.dataPrefix( dataPrefix );
   }
 
-  public static BluetoothDataFilterInit.Builder create(final Uint16Array dataPrefix) {
-    return BluetoothDataFilterInit.create( dataPrefix );
+  public static BluetoothDataFilterInit.Builder dataPrefix(final Uint16Array dataPrefix) {
+    return BluetoothDataFilterInit.dataPrefix( dataPrefix );
   }
 
-  public static BluetoothDataFilterInit.Builder create(final Uint32Array dataPrefix) {
-    return BluetoothDataFilterInit.create( dataPrefix );
+  public static BluetoothDataFilterInit.Builder dataPrefix(final Uint32Array dataPrefix) {
+    return BluetoothDataFilterInit.dataPrefix( dataPrefix );
   }
 
-  public static BluetoothDataFilterInit.Builder create(final Uint8ClampedArray dataPrefix) {
-    return BluetoothDataFilterInit.create( dataPrefix );
+  public static BluetoothDataFilterInit.Builder dataPrefix(final Uint8ClampedArray dataPrefix) {
+    return BluetoothDataFilterInit.dataPrefix( dataPrefix );
   }
 
-  public static BluetoothDataFilterInit.Builder create(final Float32Array dataPrefix) {
-    return BluetoothDataFilterInit.create( dataPrefix );
+  public static BluetoothDataFilterInit.Builder dataPrefix(final Float32Array dataPrefix) {
+    return BluetoothDataFilterInit.dataPrefix( dataPrefix );
   }
 
-  public static BluetoothDataFilterInit.Builder create(final Float64Array dataPrefix) {
-    return BluetoothDataFilterInit.create( dataPrefix );
+  public static BluetoothDataFilterInit.Builder dataPrefix(final Float64Array dataPrefix) {
+    return BluetoothDataFilterInit.dataPrefix( dataPrefix );
   }
 
-  public static BluetoothDataFilterInit.Builder create(final DataView dataPrefix) {
-    return BluetoothDataFilterInit.create( dataPrefix );
+  public static BluetoothDataFilterInit.Builder dataPrefix(final DataView dataPrefix) {
+    return BluetoothDataFilterInit.dataPrefix( dataPrefix );
   }
 
-  public static BluetoothDataFilterInit.Builder create(final ArrayBuffer dataPrefix) {
-    return BluetoothDataFilterInit.create( dataPrefix );
+  public static BluetoothDataFilterInit.Builder dataPrefix(final ArrayBuffer dataPrefix) {
+    return BluetoothDataFilterInit.dataPrefix( dataPrefix );
   }
 
   public static BufferSource dataPrefix(final BluetoothDataFilterInit $instance) {

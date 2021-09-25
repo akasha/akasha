@@ -20,13 +20,15 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredNullableSomeTypeSequenceValue {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nullable final JsArray<SomeType> requiredNullableSomeTypeSequenceValue) {
+  static Builder requiredNullableSomeTypeSequenceValue(
+      @Nullable final JsArray<SomeType> requiredNullableSomeTypeSequenceValue) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredNullableSomeTypeSequenceValue( requiredNullableSomeTypeSequenceValue );
   }
 
   @JsOverlay
   @Nonnull
-  static Builder create(@Nullable final SomeType[] requiredNullableSomeTypeSequenceValue) {
+  static Builder requiredNullableSomeTypeSequenceValue(
+      @Nullable final SomeType[] requiredNullableSomeTypeSequenceValue) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredNullableSomeTypeSequenceValue( requiredNullableSomeTypeSequenceValue );
   }
 

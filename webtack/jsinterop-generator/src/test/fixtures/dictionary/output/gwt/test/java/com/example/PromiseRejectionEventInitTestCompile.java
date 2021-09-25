@@ -7,8 +7,8 @@ import jsinterop.base.Any;
 public final class PromiseRejectionEventInitTestCompile {
   static PromiseRejectionEventInit $typeReference$;
 
-  public static PromiseRejectionEventInit.Builder create(final JsPromise<Any> promise) {
-    return PromiseRejectionEventInit.create( promise );
+  public static PromiseRejectionEventInit.Builder promise(final JsPromise<Any> promise) {
+    return PromiseRejectionEventInit.promise( promise );
   }
 
   public static JsPromise<Any> promise(final PromiseRejectionEventInit $instance) {

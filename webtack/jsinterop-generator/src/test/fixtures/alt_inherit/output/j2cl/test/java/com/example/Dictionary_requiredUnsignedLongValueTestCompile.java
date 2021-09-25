@@ -6,9 +6,9 @@ import javax.annotation.Generated;
 public final class Dictionary_requiredUnsignedLongValueTestCompile {
   static Dictionary_requiredUnsignedLongValue $typeReference$;
 
-  public static Dictionary_requiredUnsignedLongValue.Builder create(
+  public static Dictionary_requiredUnsignedLongValue.Builder requiredUnsignedLongValue(
       final int requiredUnsignedLongValue) {
-    return Dictionary_requiredUnsignedLongValue.create( requiredUnsignedLongValue );
+    return Dictionary_requiredUnsignedLongValue.requiredUnsignedLongValue( requiredUnsignedLongValue );
   }
 
   public static int requiredUnsignedLongValue(

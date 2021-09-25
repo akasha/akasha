@@ -6,9 +6,9 @@ import javax.annotation.Generated;
 public final class Dictionary_requiredNullableShortValueTestCompile {
   static Dictionary_requiredNullableShortValue $typeReference$;
 
-  public static Dictionary_requiredNullableShortValue.Builder create(
+  public static Dictionary_requiredNullableShortValue.Builder requiredNullableShortValue(
       final Double requiredNullableShortValue) {
-    return Dictionary_requiredNullableShortValue.create( requiredNullableShortValue );
+    return Dictionary_requiredNullableShortValue.requiredNullableShortValue( requiredNullableShortValue );
   }
 
   public static Double requiredNullableShortValue(

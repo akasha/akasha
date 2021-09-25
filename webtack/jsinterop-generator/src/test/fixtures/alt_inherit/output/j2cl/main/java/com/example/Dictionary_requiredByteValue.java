@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredByteValue {
   @JsOverlay
   @Nonnull
-  static Builder create(final byte requiredByteValue) {
+  static Builder requiredByteValue(final byte requiredByteValue) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredByteValue( requiredByteValue );
   }
 

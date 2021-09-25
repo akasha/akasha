@@ -6,9 +6,9 @@ import javax.annotation.Generated;
 public final class Dictionary_requiredUnrestrictedFloatValueTestCompile {
   static Dictionary_requiredUnrestrictedFloatValue $typeReference$;
 
-  public static Dictionary_requiredUnrestrictedFloatValue.Builder create(
+  public static Dictionary_requiredUnrestrictedFloatValue.Builder requiredUnrestrictedFloatValue(
       final float requiredUnrestrictedFloatValue) {
-    return Dictionary_requiredUnrestrictedFloatValue.create( requiredUnrestrictedFloatValue );
+    return Dictionary_requiredUnrestrictedFloatValue.requiredUnrestrictedFloatValue( requiredUnrestrictedFloatValue );
   }
 
   public static float requiredUnrestrictedFloatValue(

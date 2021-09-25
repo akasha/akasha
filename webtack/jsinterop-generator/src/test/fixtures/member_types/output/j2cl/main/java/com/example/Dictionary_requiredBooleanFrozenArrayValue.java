@@ -19,7 +19,8 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredBooleanFrozenArrayValue {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final JsArray<Boolean> requiredBooleanFrozenArrayValue) {
+  static Builder requiredBooleanFrozenArrayValue(
+      @Nonnull final JsArray<Boolean> requiredBooleanFrozenArrayValue) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredBooleanFrozenArrayValue( requiredBooleanFrozenArrayValue );
   }
 

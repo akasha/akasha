@@ -20,7 +20,8 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredNullableShortFrozenArrayValue {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nullable final JsArray<Double> requiredNullableShortFrozenArrayValue) {
+  static Builder requiredNullableShortFrozenArrayValue(
+      @Nullable final JsArray<Double> requiredNullableShortFrozenArrayValue) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredNullableShortFrozenArrayValue( requiredNullableShortFrozenArrayValue );
   }
 

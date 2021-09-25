@@ -1596,9 +1596,10 @@ final class JsinteropAction
   {
     final ClassName className = lookupClassName( dictionary.getName() );
     final ClassName target = className.nestedClass( "Builder" );
+    final String methodName = 1 == requiredMembers.size() ? requiredMembers.get( 0 ).getName() : "create";
     final MethodSpec.Builder method =
       MethodSpec
-        .methodBuilder( "create" )
+        .methodBuilder( methodName )
         .addAnnotation( JsinteropTypes.JS_OVERLAY )
         .addAnnotation( BasicTypes.NONNULL )
         .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
@@ -1606,7 +1607,7 @@ final class JsinteropAction
 
     final MethodSpec.Builder testMethod =
       MethodSpec
-        .methodBuilder( "create" )
+        .methodBuilder( methodName )
         .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
         .returns( target );
 
@@ -1633,8 +1634,9 @@ final class JsinteropAction
       final StringBuilder testCallStatement = new StringBuilder();
       final List<Object> testCallArgs = new ArrayList<>();
 
-      testCallStatement.append( "return $T.create( " );
+      testCallStatement.append( "return $T.$N( " );
       testCallArgs.add( className );
+      testCallArgs.add( methodName );
 
       int index = 0;
       for ( final DictionaryMember member : requiredMembers )

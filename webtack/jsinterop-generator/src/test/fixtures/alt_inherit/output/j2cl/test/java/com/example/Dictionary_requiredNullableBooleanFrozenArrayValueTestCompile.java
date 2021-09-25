@@ -7,9 +7,9 @@ import javax.annotation.Generated;
 public final class Dictionary_requiredNullableBooleanFrozenArrayValueTestCompile {
   static Dictionary_requiredNullableBooleanFrozenArrayValue $typeReference$;
 
-  public static Dictionary_requiredNullableBooleanFrozenArrayValue.Builder create(
+  public static Dictionary_requiredNullableBooleanFrozenArrayValue.Builder requiredNullableBooleanFrozenArrayValue(
       final JsArray<Boolean> requiredNullableBooleanFrozenArrayValue) {
-    return Dictionary_requiredNullableBooleanFrozenArrayValue.create( requiredNullableBooleanFrozenArrayValue );
+    return Dictionary_requiredNullableBooleanFrozenArrayValue.requiredNullableBooleanFrozenArrayValue( requiredNullableBooleanFrozenArrayValue );
   }
 
   public static JsArray<Boolean> requiredNullableBooleanFrozenArrayValue(

@@ -6,9 +6,9 @@ import javax.annotation.Generated;
 public final class Dictionary_requiredUSVStringValueTestCompile {
   static Dictionary_requiredUSVStringValue $typeReference$;
 
-  public static Dictionary_requiredUSVStringValue.Builder create(
+  public static Dictionary_requiredUSVStringValue.Builder requiredUSVStringValue(
       final String requiredUSVStringValue) {
-    return Dictionary_requiredUSVStringValue.create( requiredUSVStringValue );
+    return Dictionary_requiredUSVStringValue.requiredUSVStringValue( requiredUSVStringValue );
   }
 
   public static String requiredUSVStringValue(final Dictionary_requiredUSVStringValue $instance) {

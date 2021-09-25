@@ -19,13 +19,14 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredDoubleSequenceValue {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final JsArray<Double> requiredDoubleSequenceValue) {
+  static Builder requiredDoubleSequenceValue(
+      @Nonnull final JsArray<Double> requiredDoubleSequenceValue) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredDoubleSequenceValue( requiredDoubleSequenceValue );
   }
 
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final double[] requiredDoubleSequenceValue) {
+  static Builder requiredDoubleSequenceValue(@Nonnull final double[] requiredDoubleSequenceValue) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredDoubleSequenceValue( requiredDoubleSequenceValue );
   }
 

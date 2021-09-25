@@ -20,7 +20,7 @@ import jsinterop.base.JsPropertyMap;
 public interface EventInit {
   @JsOverlay
   @Nonnull
-  static Builder create(@MyAnnotation final boolean bubbles2) {
+  static Builder bubbles2(@MyAnnotation final boolean bubbles2) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).bubbles2( bubbles2 );
   }
 

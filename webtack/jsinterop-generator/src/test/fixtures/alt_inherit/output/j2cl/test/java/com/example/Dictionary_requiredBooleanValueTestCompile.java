@@ -6,8 +6,9 @@ import javax.annotation.Generated;
 public final class Dictionary_requiredBooleanValueTestCompile {
   static Dictionary_requiredBooleanValue $typeReference$;
 
-  public static Dictionary_requiredBooleanValue.Builder create(final boolean requiredBooleanValue) {
-    return Dictionary_requiredBooleanValue.create( requiredBooleanValue );
+  public static Dictionary_requiredBooleanValue.Builder requiredBooleanValue(
+      final boolean requiredBooleanValue) {
+    return Dictionary_requiredBooleanValue.requiredBooleanValue( requiredBooleanValue );
   }
 
   public static boolean requiredBooleanValue(final Dictionary_requiredBooleanValue $instance) {

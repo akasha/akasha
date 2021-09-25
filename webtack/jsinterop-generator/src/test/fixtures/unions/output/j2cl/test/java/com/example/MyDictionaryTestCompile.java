@@ -6,8 +6,8 @@ import javax.annotation.Generated;
 public final class MyDictionaryTestCompile {
   static MyDictionary $typeReference$;
 
-  public static MyDictionary.Builder create(final String name) {
-    return MyDictionary.create( name );
+  public static MyDictionary.Builder name(final String name) {
+    return MyDictionary.name( name );
   }
 
   public static String name(final MyDictionary $instance) {

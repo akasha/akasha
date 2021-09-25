@@ -7,8 +7,9 @@ import jsinterop.base.Any;
 public final class Dictionary_requiredAnyValueTestCompile {
   static Dictionary_requiredAnyValue $typeReference$;
 
-  public static Dictionary_requiredAnyValue.Builder create(final Object requiredAnyValue) {
-    return Dictionary_requiredAnyValue.create( requiredAnyValue );
+  public static Dictionary_requiredAnyValue.Builder requiredAnyValue(
+      final Object requiredAnyValue) {
+    return Dictionary_requiredAnyValue.requiredAnyValue( requiredAnyValue );
   }
 
   public static Any requiredAnyValue(final Dictionary_requiredAnyValue $instance) {

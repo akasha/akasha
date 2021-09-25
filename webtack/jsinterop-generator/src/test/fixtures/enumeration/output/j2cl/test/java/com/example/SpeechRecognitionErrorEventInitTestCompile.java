@@ -6,8 +6,8 @@ import javax.annotation.Generated;
 public final class SpeechRecognitionErrorEventInitTestCompile {
   static SpeechRecognitionErrorEventInit $typeReference$;
 
-  public static SpeechRecognitionErrorEventInit.Builder create(final String error) {
-    return SpeechRecognitionErrorEventInit.create( error );
+  public static SpeechRecognitionErrorEventInit.Builder error(final String error) {
+    return SpeechRecognitionErrorEventInit.error( error );
   }
 
   public static String error(final SpeechRecognitionErrorEventInit $instance) {

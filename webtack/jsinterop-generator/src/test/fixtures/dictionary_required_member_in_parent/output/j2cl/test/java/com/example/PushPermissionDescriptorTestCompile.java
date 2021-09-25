@@ -6,8 +6,8 @@ import javax.annotation.Generated;
 public final class PushPermissionDescriptorTestCompile {
   static PushPermissionDescriptor $typeReference$;
 
-  public static PushPermissionDescriptor.Builder create(final String name) {
-    return PushPermissionDescriptor.create( name );
+  public static PushPermissionDescriptor.Builder name(final String name) {
+    return PushPermissionDescriptor.name( name );
   }
 
   public static boolean userVisibleOnly(final PushPermissionDescriptor $instance) {

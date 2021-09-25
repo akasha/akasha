@@ -6,14 +6,14 @@ import javax.annotation.Generated;
 public final class Dictionary_requiredNullableSomeTypeSequenceValueTestCompile {
   static Dictionary_requiredNullableSomeTypeSequenceValue $typeReference$;
 
-  public static Dictionary_requiredNullableSomeTypeSequenceValue.Builder create(
+  public static Dictionary_requiredNullableSomeTypeSequenceValue.Builder requiredNullableSomeTypeSequenceValue(
       final JsArray<SomeType> requiredNullableSomeTypeSequenceValue) {
-    return Dictionary_requiredNullableSomeTypeSequenceValue.create( requiredNullableSomeTypeSequenceValue );
+    return Dictionary_requiredNullableSomeTypeSequenceValue.requiredNullableSomeTypeSequenceValue( requiredNullableSomeTypeSequenceValue );
   }
 
-  public static Dictionary_requiredNullableSomeTypeSequenceValue.Builder create(
+  public static Dictionary_requiredNullableSomeTypeSequenceValue.Builder requiredNullableSomeTypeSequenceValue(
       final SomeType[] requiredNullableSomeTypeSequenceValue) {
-    return Dictionary_requiredNullableSomeTypeSequenceValue.create( requiredNullableSomeTypeSequenceValue );
+    return Dictionary_requiredNullableSomeTypeSequenceValue.requiredNullableSomeTypeSequenceValue( requiredNullableSomeTypeSequenceValue );
   }
 
   public static JsArray<SomeType> requiredNullableSomeTypeSequenceValue(
