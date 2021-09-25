@@ -156,6 +156,11 @@ interface Int8Array {
   void set(Int8Array array, optional unsigned long offset);
   void set(sequence<byte> array, optional unsigned long offset);
   Int8Array subarray(long start, long end);
+  Int8Array fill(byte value, optional long long start, optional long long end);
+  boolean includes(byte searchElement, optional long long fromIndex);
+  long long indexOf(byte searchElement, optional long long fromIndex);
+  long long lastIndexOf(byte searchElement, optional long long fromIndex);
+  DOMString join(optional DOMString separator);
 };
 Int8Array includes ArrayBufferViewImpl;
 
@@ -209,6 +214,11 @@ interface Uint8Array {
   void set(Uint8Array array, optional unsigned long offset);
   void set(sequence<octet> array, optional unsigned long offset);
   Uint8Array subarray(long start, long end);
+  Uint8Array fill(octet value, optional long long start, optional long long end);
+  boolean includes(octet searchElement, optional long long fromIndex);
+  long long indexOf(octet searchElement, optional long long fromIndex);
+  long long lastIndexOf(octet searchElement, optional long long fromIndex);
+  DOMString join(optional DOMString separator);
 };
 Uint8Array includes ArrayBufferViewImpl;
 
@@ -263,6 +273,11 @@ interface Uint8ClampedArray {
   void set(Uint8ClampedArray array, optional unsigned long offset);
   void set(sequence<octet> array, optional unsigned long offset);
   Uint8ClampedArray subarray(long start, long end);
+  Uint8ClampedArray fill(octet value, optional long long start, optional long long end);
+  boolean includes(octet searchElement, optional long long fromIndex);
+  long long indexOf(octet searchElement, optional long long fromIndex);
+  long long lastIndexOf(octet searchElement, optional long long fromIndex);
+  DOMString join(optional DOMString separator);
 };
 Uint8ClampedArray includes ArrayBufferViewImpl;
 
@@ -317,6 +332,11 @@ interface Int16Array {
   void set(Int16Array array, optional unsigned long offset);
   void set(sequence<short> array, optional unsigned long offset);
   Int16Array subarray(long start, long end);
+  Int16Array fill(short value, optional long long start, optional long long end);
+  boolean includes(short searchElement, optional long long fromIndex);
+  long long indexOf(short searchElement, optional long long fromIndex);
+  long long lastIndexOf(short searchElement, optional long long fromIndex);
+  DOMString join(optional DOMString separator);
 };
 Int16Array includes ArrayBufferViewImpl;
 
@@ -371,6 +391,11 @@ interface Uint16Array {
   void set(Uint16Array array, optional unsigned long offset);
   void set(sequence<unsigned short> array, optional unsigned long offset);
   Uint16Array subarray(long start, long end);
+  Uint16Array fill(unsigned short value, optional long long start, optional long long end);
+  boolean includes(unsigned short searchElement, optional long long fromIndex);
+  long long indexOf(unsigned short searchElement, optional long long fromIndex);
+  long long lastIndexOf(unsigned short searchElement, optional long long fromIndex);
+  DOMString join(optional DOMString separator);
 };
 Uint16Array includes ArrayBufferViewImpl;
 
@@ -425,6 +450,11 @@ interface Int32Array {
   void set(Int32Array array, optional unsigned long offset);
   void set(sequence<long> array, optional unsigned long offset);
   Int32Array subarray(long start, long end);
+  Int32Array fill(long value, optional long long start, optional long long end);
+  boolean includes(long searchElement, optional long long fromIndex);
+  long long indexOf(long searchElement, optional long long fromIndex);
+  long long lastIndexOf(long searchElement, optional long long fromIndex);
+  DOMString join(optional DOMString separator);
 };
 Int32Array includes ArrayBufferViewImpl;
 
@@ -479,6 +509,11 @@ interface Uint32Array {
   void set(Uint32Array array, optional unsigned long offset);
   void set(sequence<unsigned long> array, optional unsigned long offset);
   Uint32Array subarray(long start, long end);
+  Uint32Array fill(unsigned long value, optional long long start, optional long long end);
+  boolean includes(unsigned long searchElement, optional long long fromIndex);
+  long long indexOf(unsigned long searchElement, optional long long fromIndex);
+  long long lastIndexOf(unsigned long searchElement, optional long long fromIndex);
+  DOMString join(optional DOMString separator);
 };
 Uint32Array includes ArrayBufferViewImpl;
 
@@ -533,6 +568,11 @@ interface Float32Array {
   void set(Float32Array array, optional unsigned long offset);
   void set(sequence<unrestricted float> array, optional unsigned long offset);
   Float32Array subarray(long start, long end);
+  Float32Array fill(unrestricted float value, optional long long start, optional long long end);
+  boolean includes(unrestricted float searchElement, optional long long fromIndex);
+  long long indexOf(unrestricted float searchElement, optional long long fromIndex);
+  long long lastIndexOf(unrestricted float searchElement, optional long long fromIndex);
+  DOMString join(optional DOMString separator);
 };
 Float32Array includes ArrayBufferViewImpl;
 
@@ -588,6 +628,11 @@ interface Float64Array {
   void set(Float64Array array, optional unsigned long offset);
   void set(sequence<unrestricted double> array, optional unsigned long offset);
   Float64Array subarray(long start, long end);
+  Float64Array fill(unrestricted double value, optional long long start, optional long long end);
+  boolean includes(unrestricted double searchElement, optional long long fromIndex);
+  long long indexOf(unrestricted double searchElement, optional long long fromIndex);
+  long long lastIndexOf(unrestricted double searchElement, optional long long fromIndex);
+  DOMString join(optional DOMString separator);
 };
 Float64Array includes ArrayBufferViewImpl;
 
