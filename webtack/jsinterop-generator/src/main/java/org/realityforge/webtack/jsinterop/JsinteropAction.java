@@ -1402,8 +1402,9 @@ final class JsinteropAction
       {
         for ( final TypedValue typedValue : explodeType( memberType ) )
         {
+          final TypeName javaType = typedValue.getJavaType();
           final ParameterSpec.Builder parameter =
-            ParameterSpec.builder( typedValue.getJavaType(), "value", Modifier.FINAL );
+            ParameterSpec.builder( javaType, "value", Modifier.FINAL );
 
           addMagicConstantAnnotationIfNeeded( typedValue.getType(), parameter );
           final ClassName methodNullability;
@@ -1422,24 +1423,39 @@ final class JsinteropAction
           {
             methodNullability = BasicTypes.NONNULL;
           }
+          final MethodSpec.Builder method =
+            MethodSpec
+              .methodBuilder( "of" )
+              .addAnnotation( JsinteropTypes.JS_OVERLAY )
+              .addAnnotation( methodNullability )
+              .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+              .addParameter( parameter.build() )
+              .addStatement( "return $T.cast( value )", JsinteropTypes.JS )
+              .returns( self );
 
-          type.addMethod( MethodSpec
-                            .methodBuilder( "of" )
-                            .addAnnotation( JsinteropTypes.JS_OVERLAY )
-                            .addAnnotation( methodNullability )
-                            .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
-                            .addParameter( parameter.build() )
-                            .addStatement( "return $T.cast( value )", JsinteropTypes.JS )
-                            .returns( self )
-                            .build() );
+          if ( javaType instanceof ArrayTypeName )
+          {
+            method.varargs();
+            final ArrayTypeName javaArrayType = (ArrayTypeName) javaType;
+            if ( javaArrayType.componentType instanceof ArrayTypeName ||
+                 javaArrayType.componentType instanceof ParameterizedTypeName )
+            {
+              method.addAnnotation( AnnotationSpec
+                                      .builder( SuppressWarnings.class )
+                                      .addMember( "value", "$S", "unchecked" )
+                                      .build() );
+            }
+          }
+
+          type.addMethod( method.build() );
+
           final MethodSpec.Builder testOfMethod = MethodSpec
             .methodBuilder( "of" )
             .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
             .returns( self )
             .addStatement( "return $T.$N( $N )", self, "of", "value" );
 
-          final ParameterSpec.Builder testParameter =
-            ParameterSpec.builder( typedValue.getJavaType(), "value", Modifier.FINAL );
+          final ParameterSpec.Builder testParameter = ParameterSpec.builder( javaType, "value", Modifier.FINAL );
           if ( Kind.TypeReference == memberType.getKind() )
           {
             final String name = ( (TypeReference) memberType ).getName();

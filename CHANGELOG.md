@@ -3,6 +3,7 @@
 ### Unreleased
 
 * Convert the last parameter of a dictionary "create" method into a varargs method if it is an array type.
+* Convert the of method of union types into a varargs method if one the selected value is an array type.
 
 ### [v0.25](https://github.com/akasha/akasha/tree/v0.25) (2021-09-26) · [Full Changelog](https://github.com/spritz/spritz/compare/v0.24...v0.25) · [API Differences](https://akasha.github.io/akasha-java/api-diff/?key=akasha-java&old=0.24&new=0.25) · [Source Diff](https://github.com/akasha/akasha-java/compare/v0.24...v0.25)
 

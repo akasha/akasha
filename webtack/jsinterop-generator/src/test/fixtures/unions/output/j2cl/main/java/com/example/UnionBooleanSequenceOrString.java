@@ -22,7 +22,7 @@ public interface UnionBooleanSequenceOrString {
 
   @JsOverlay
   @Nonnull
-  static UnionBooleanSequenceOrString of(@Nonnull final Boolean[] value) {
+  static UnionBooleanSequenceOrString of(@Nonnull final Boolean... value) {
     return Js.cast( value );
   }
 

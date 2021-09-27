@@ -29,7 +29,7 @@ public interface IndexedKeyframeOffsetType {
 
   @JsOverlay
   @Nonnull
-  static IndexedKeyframeOffsetType of(@Nonnull final double[] value) {
+  static IndexedKeyframeOffsetType of(@Nonnull final double... value) {
     return Js.cast( value );
   }
 

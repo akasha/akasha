@@ -22,7 +22,7 @@ public interface UnionDoubleSequenceOrString {
 
   @JsOverlay
   @Nonnull
-  static UnionDoubleSequenceOrString of(@Nonnull final double[] value) {
+  static UnionDoubleSequenceOrString of(@Nonnull final double... value) {
     return Js.cast( value );
   }
 
