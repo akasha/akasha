@@ -27,7 +27,7 @@ public interface Dictionary_requiredBooleanSequenceValue {
   @JsOverlay
   @Nonnull
   static Builder requiredBooleanSequenceValue(
-      @Nonnull final Boolean[] requiredBooleanSequenceValue) {
+      @Nonnull final Boolean... requiredBooleanSequenceValue) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredBooleanSequenceValue( requiredBooleanSequenceValue );
   }
 

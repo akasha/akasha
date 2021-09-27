@@ -28,7 +28,7 @@ public interface Dictionary_requiredNullableShortSequenceValue {
   @JsOverlay
   @Nonnull
   static Builder requiredNullableShortSequenceValue(
-      @Nullable final double[] requiredNullableShortSequenceValue) {
+      @Nullable final double... requiredNullableShortSequenceValue) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredNullableShortSequenceValue( requiredNullableShortSequenceValue );
   }
 

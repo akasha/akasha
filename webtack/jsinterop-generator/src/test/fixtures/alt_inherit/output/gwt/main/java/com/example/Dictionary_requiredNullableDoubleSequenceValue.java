@@ -29,7 +29,7 @@ public interface Dictionary_requiredNullableDoubleSequenceValue {
   @JsOverlay
   @Nonnull
   static Builder requiredNullableDoubleSequenceValue(
-      @Nullable final double[] requiredNullableDoubleSequenceValue) {
+      @Nullable final double... requiredNullableDoubleSequenceValue) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredNullableDoubleSequenceValue( requiredNullableDoubleSequenceValue );
   }
 

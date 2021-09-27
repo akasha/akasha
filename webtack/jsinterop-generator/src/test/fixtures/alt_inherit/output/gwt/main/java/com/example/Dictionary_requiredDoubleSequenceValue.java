@@ -27,7 +27,7 @@ public interface Dictionary_requiredDoubleSequenceValue {
 
   @JsOverlay
   @Nonnull
-  static Builder requiredDoubleSequenceValue(@Nonnull final double[] requiredDoubleSequenceValue) {
+  static Builder requiredDoubleSequenceValue(@Nonnull final double... requiredDoubleSequenceValue) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredDoubleSequenceValue( requiredDoubleSequenceValue );
   }
 

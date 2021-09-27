@@ -26,7 +26,7 @@ public interface Dictionary_requiredShortSequenceValue {
 
   @JsOverlay
   @Nonnull
-  static Builder requiredShortSequenceValue(@Nonnull final double[] requiredShortSequenceValue) {
+  static Builder requiredShortSequenceValue(@Nonnull final double... requiredShortSequenceValue) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredShortSequenceValue( requiredShortSequenceValue );
   }
 

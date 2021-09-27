@@ -14,6 +14,14 @@ dictionary GPUColorDict {
   required double a;
 };
 
+dictionary GPURenderPassColorAttachment {
+};
+
+dictionary GPURenderPassDescriptor {
+  required sequence<GPURenderPassColorAttachment> colorAttachments;
+  GPUQuerySet occlusionQuerySet;
+};
+
 dictionary OptionalAnyDict : RequiredAnyDict {
   any anotherValue = null;
 };
@@ -56,6 +64,9 @@ dictionary TransitionEventInit : EventInit {
  */
 dictionary txAuthGenericArg {
   required USVString contentType;
+};
+
+interface GPUQuerySet {
 };
 
 interface Storage {

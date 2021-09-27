@@ -1,5 +1,8 @@
 EventInit=com.example.EventInit
 GPUColorDict=com.example.GPUColorDict
+GPUQuerySet=com.example.GPUQuerySet
+GPURenderPassColorAttachment=com.example.GPURenderPassColorAttachment
+GPURenderPassDescriptor=com.example.GPURenderPassDescriptor
 OptionalAnyDict=com.example.OptionalAnyDict
 Promise=com.example.JsPromise
 PromiseRejectionEventInit=com.example.PromiseRejectionEventInit
@@ -7,6 +10,7 @@ RTCAnswerOptions=com.example.RTCAnswerOptions
 RTCOfferAnswerOptions=com.example.RTCOfferAnswerOptions
 RTCOfferOptions=com.example.RTCOfferOptions
 RequiredAnyDict=com.example.RequiredAnyDict
+Sequence=com.example.JsArray
 Storage=com.example.Storage
 StorageEventInit=com.example.StorageEventInit
 TransitionEventInit=com.example.TransitionEventInit

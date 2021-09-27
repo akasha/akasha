@@ -27,8 +27,9 @@ public interface Dictionary_requiredDoubleSequenceSequenceValue {
 
   @JsOverlay
   @Nonnull
+  @SuppressWarnings("unchecked")
   static Builder requiredDoubleSequenceSequenceValue(
-      @Nonnull final JsArray<Double>[] requiredDoubleSequenceSequenceValue) {
+      @Nonnull final JsArray<Double>... requiredDoubleSequenceSequenceValue) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredDoubleSequenceSequenceValue( requiredDoubleSequenceSequenceValue );
   }
 

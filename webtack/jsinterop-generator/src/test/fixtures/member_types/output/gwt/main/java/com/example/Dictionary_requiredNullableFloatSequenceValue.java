@@ -28,7 +28,7 @@ public interface Dictionary_requiredNullableFloatSequenceValue {
   @JsOverlay
   @Nonnull
   static Builder requiredNullableFloatSequenceValue(
-      @Nullable final double[] requiredNullableFloatSequenceValue) {
+      @Nullable final double... requiredNullableFloatSequenceValue) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredNullableFloatSequenceValue( requiredNullableFloatSequenceValue );
   }
 

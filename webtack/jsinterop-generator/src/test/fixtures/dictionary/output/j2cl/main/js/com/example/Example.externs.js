@@ -3,6 +3,22 @@
  * @externs
  */
 /**
+ * @typedef {{promise:!Promise<*>,reason:(*|undefined),bubbles:(!boolean|undefined),cancelable:(!boolean|undefined),composed:(!boolean|undefined)}}
+ */
+var PromiseRejectionEventInit;
+/**
+ * @typedef {{bubbles:(!boolean|undefined),cancelable:(!boolean|undefined),composed:(!boolean|undefined)}}
+ */
+var EventInit;
+/**
+ * @typedef {{colorAttachments:!Array<!GPURenderPassColorAttachment>,occlusionQuerySet:(!GPUQuerySet|undefined)}}
+ */
+var GPURenderPassDescriptor;
+/**
+ * @typedef {{elapsedTime:(!number|undefined),propertyName:(!string|undefined),pseudoElement:(!string|undefined),bubbles:(!boolean|undefined),cancelable:(!boolean|undefined),composed:(!boolean|undefined)}}
+ */
+var TransitionEventInit;
+/**
  * @typedef {{anotherValue:(*|undefined),someValue:*}}
  */
 var OptionalAnyDict;
@@ -19,21 +35,13 @@ var GPUColorDict;
  */
 var RTCOfferOptions;
 /**
- * @typedef {{promise:!Promise<*>,reason:(*|undefined),bubbles:(!boolean|undefined),cancelable:(!boolean|undefined),composed:(!boolean|undefined)}}
- */
-var PromiseRejectionEventInit;
-/**
  * @typedef {{contentType:!string}}
  */
 var txAuthGenericArg;
 /**
- * @typedef {{bubbles:(!boolean|undefined),cancelable:(!boolean|undefined),composed:(!boolean|undefined)}}
+ * @record
  */
-var EventInit;
-/**
- * @typedef {{elapsedTime:(!number|undefined),propertyName:(!string|undefined),pseudoElement:(!string|undefined),bubbles:(!boolean|undefined),cancelable:(!boolean|undefined),composed:(!boolean|undefined)}}
- */
-var TransitionEventInit;
+var GPURenderPassColorAttachment;
 /**
  * @typedef {{someValue:*}}
  */
@@ -78,3 +86,9 @@ Storage.prototype.setItem = function(key,value) {}
  * @return {?string}
  */
 Storage.prototype.key = function(index) {}
+/**
+ * @constructor
+ * @private
+ * @nosideeffects
+ */
+function GPUQuerySet() {}

@@ -27,7 +27,7 @@ public interface Dictionary_requiredSomeTypeSequenceValue {
   @JsOverlay
   @Nonnull
   static Builder requiredSomeTypeSequenceValue(
-      @Nonnull final SomeType[] requiredSomeTypeSequenceValue) {
+      @Nonnull final SomeType... requiredSomeTypeSequenceValue) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredSomeTypeSequenceValue( requiredSomeTypeSequenceValue );
   }
 

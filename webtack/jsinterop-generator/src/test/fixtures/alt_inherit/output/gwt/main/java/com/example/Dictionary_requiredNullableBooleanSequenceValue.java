@@ -29,7 +29,7 @@ public interface Dictionary_requiredNullableBooleanSequenceValue {
   @JsOverlay
   @Nonnull
   static Builder requiredNullableBooleanSequenceValue(
-      @Nullable final Boolean[] requiredNullableBooleanSequenceValue) {
+      @Nullable final Boolean... requiredNullableBooleanSequenceValue) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredNullableBooleanSequenceValue( requiredNullableBooleanSequenceValue );
   }
 

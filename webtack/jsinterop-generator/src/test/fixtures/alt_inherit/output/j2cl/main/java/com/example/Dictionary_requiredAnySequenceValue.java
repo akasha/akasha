@@ -36,7 +36,7 @@ public interface Dictionary_requiredAnySequenceValue {
   static Builder create(@Nonnull final JsIterable<Any> requiredAnyIterableValue,
       @Nonnull final JsIteratorIterable<Any> requiredAnyIteratorIterableValue,
       @Nonnull final JsIterator<Any> requiredAnyIteratorValue,
-      @Nonnull final Any[] requiredAnySequenceValue) {
+      @Nonnull final Any... requiredAnySequenceValue) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredAnyIterableValue( requiredAnyIterableValue ).requiredAnyIteratorIterableValue( requiredAnyIteratorIterableValue ).requiredAnyIteratorValue( requiredAnyIteratorValue ).requiredAnySequenceValue( requiredAnySequenceValue );
   }
 

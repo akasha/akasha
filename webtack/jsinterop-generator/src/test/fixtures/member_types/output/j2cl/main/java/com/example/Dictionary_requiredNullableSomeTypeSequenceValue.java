@@ -28,7 +28,7 @@ public interface Dictionary_requiredNullableSomeTypeSequenceValue {
   @JsOverlay
   @Nonnull
   static Builder requiredNullableSomeTypeSequenceValue(
-      @Nullable final SomeType[] requiredNullableSomeTypeSequenceValue) {
+      @Nullable final SomeType... requiredNullableSomeTypeSequenceValue) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredNullableSomeTypeSequenceValue( requiredNullableSomeTypeSequenceValue );
   }
 

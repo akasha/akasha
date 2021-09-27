@@ -1652,16 +1652,31 @@ final class JsinteropAction
         params.add( paramName );
 
         final TypedValue memberType = types.get( index++ );
-        final ParameterSpec.Builder parameter =
-          ParameterSpec.builder( memberType.getJavaType(), paramName, Modifier.FINAL );
+        final TypeName javaType = memberType.getJavaType();
+        final ParameterSpec.Builder parameter = ParameterSpec.builder( javaType, paramName, Modifier.FINAL );
         maybeAddCustomAnnotations( member, parameter );
         addMagicConstantAnnotationIfNeeded( member.getType(), parameter );
         addDoNotAutoboxAnnotation( memberType, parameter );
         addNullabilityAnnotation( memberType, parameter );
+
+        if ( requiredMembers.size() == index && javaType instanceof ArrayTypeName )
+        {
+          method.varargs();
+          final ArrayTypeName javaArrayType = (ArrayTypeName) javaType;
+          if ( javaArrayType.componentType instanceof ArrayTypeName ||
+               javaArrayType.componentType instanceof ParameterizedTypeName )
+          {
+            method.addAnnotation( AnnotationSpec
+                                    .builder( SuppressWarnings.class )
+                                    .addMember( "value", "$S", "unchecked" )
+                                    .build() );
+          }
+        }
+
         method.addParameter( parameter.build() );
 
         final ParameterSpec.Builder testParameter =
-          ParameterSpec.builder( memberType.getJavaType(), paramName, Modifier.FINAL );
+          ParameterSpec.builder( javaType, paramName, Modifier.FINAL );
         testMethod.addParameter( testParameter.build() );
         testCallStatement.append( "$N" );
         testCallArgs.add( paramName );
@@ -1811,8 +1826,7 @@ final class JsinteropAction
     maybeAddJavadoc( member, method );
     final String paramName = javaName( member );
     final TypeName javaType = typedValue.getJavaType();
-    final ParameterSpec.Builder parameter =
-      ParameterSpec.builder( javaType, paramName, Modifier.FINAL );
+    final ParameterSpec.Builder parameter = ParameterSpec.builder( javaType, paramName, Modifier.FINAL );
 
     if ( javaType instanceof ArrayTypeName )
     {

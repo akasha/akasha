@@ -27,7 +27,7 @@ public interface Dictionary_requiredFloatSequenceValue {
 
   @JsOverlay
   @Nonnull
-  static Builder requiredFloatSequenceValue(@Nonnull final double[] requiredFloatSequenceValue) {
+  static Builder requiredFloatSequenceValue(@Nonnull final double... requiredFloatSequenceValue) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredFloatSequenceValue( requiredFloatSequenceValue );
   }
 
