@@ -1,0 +1,22 @@
+{
+  "stages": [
+    {
+      "name": "RenameType",
+      "description": "Reworked naming convention of typedef so that the underlying type has a nicer name for the java interface",
+      "config": {
+        "expectedRenameCount": 1,
+        "namePattern": "^EventHandler$",
+        "replacement": "NullableEventHandler"
+      }
+    },
+    {
+      "name": "RenameType",
+      "description": "Reworked naming convention of typedef so that the underlying type has a nicer name for the java interface",
+      "config": {
+        "expectedRenameCount": 1,
+        "namePattern": "^EventHandlerNonNull$",
+        "replacement": "EventHandler"
+      }
+    }
+  ]
+}
