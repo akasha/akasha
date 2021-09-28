@@ -1,6 +1,8 @@
 # Change Log
 
-### Unreleased
+### [v0.26](https://github.com/akasha/akasha/tree/v0.26) (2021-09-28) · [Full Changelog](https://github.com/spritz/spritz/compare/v0.25...v0.26) · [Source Diff](https://github.com/akasha/akasha-java/compare/v0.25...v0.26)
+
+Changes in this release:
 
 * Convert the last parameter of a dictionary "create" method into a varargs method if it is an array type.
 * Convert the of method of union types into a varargs method if one the selected value is an array type.
