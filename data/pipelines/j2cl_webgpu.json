@@ -1,6 +1,6 @@
 {
   "sourceSelector": "name=common name=common_patch name=errors name=webgpu name=webgpu_patch name=minimal_events name=typedarray name=basic_types name=minimal_webgpu_integration",
-  "pre": ["base_webgpu", "base_common", "base_typedarray"],
+  "pre": ["base_webgpu", "base_common", "base_events", "base_typedarray"],
   "stages": [
     {
       "name": "MergeDocs",
