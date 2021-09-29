@@ -44,6 +44,13 @@ function Window() {}
 /** @type {!Navigator} */ Window.prototype.navigator;
 /** @type {!string} */ Window.prototype.name;
 /**
+ * @param {*} message
+ * @param {!string} targetOrigin
+ * @param {!Array<!Transferable>=} transfer
+ * @return {undefined}
+ */
+Window.prototype.postMessage = function(message,targetOrigin,transfer) {}
+/**
  * @param {!string} name
  * @return {!Object}
  */
@@ -67,6 +74,12 @@ function WorkerGlobalScope() {}
  * @nosideeffects
  */
 function Navigator() {}
+/**
+ * @constructor
+ * @private
+ * @nosideeffects
+ */
+function Transferable() {}
 /**
  * @constructor
  * @private
@@ -139,6 +152,13 @@ function removeEventListener(type,callback,options) {}
  * @return {!boolean}
  */
 function dispatchEvent(event) {}
+/**
+ * @param {*} message
+ * @param {!string} targetOrigin
+ * @param {!Array<!Transferable>=} transfer
+ * @return {undefined}
+ */
+function postMessage(message,targetOrigin,transfer) {}
 /**
  * @param {!string} name
  * @return {!Object}

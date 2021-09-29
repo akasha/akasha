@@ -4220,7 +4220,11 @@ final class JsinteropAction
                                         @Nonnull final TypeSpec.Builder type,
                                         @Nonnull final TypeSpec.Builder testType )
   {
-    final boolean requireOverlay = OutputType.j2cl == _outputType && !operation.getReturnType().equals( returnType );
+    final boolean returnTypeNeedsCast =
+      OutputType.j2cl == _outputType && !operation.getReturnType().equals( returnType );
+    final boolean varargsMethod =
+      !typeList.isEmpty() && typeList.get( typeList.size() - 1 ).getJavaType() instanceof ArrayTypeName;
+    final boolean requireOverlay = returnTypeNeedsCast || varargsMethod;
 
     final String name = operation.getName();
     assert null != name;
@@ -4280,7 +4284,7 @@ final class JsinteropAction
 
     final Type actualReturnType = operation.getReturnType();
     final Kind kind = actualReturnType.getKind();
-    if ( requireOverlay )
+    if ( returnTypeNeedsCast )
     {
       if ( Kind.TypeReference == kind )
       {
@@ -4302,6 +4306,7 @@ final class JsinteropAction
     testCallArgs.add( methodName );
 
     int index = 0;
+    final int argumentCount = arguments.size();
     for ( final Argument argument : arguments )
     {
       if ( 0 == index )
@@ -4320,8 +4325,23 @@ final class JsinteropAction
       testCallStatement.append( "$N" );
       testCallArgs.add( javaName( argument ) );
       final TypedValue typedValue = typeList.get( index++ );
-      generateArgument( argument, typedValue, false, false, overlayMethod, null );
+      generateArgument( argument, typedValue, true, false, overlayMethod, null );
       generateArgument( argument, typedValue, false, false, method, testMethod );
+
+      if ( argumentCount == index && varargsMethod )
+      {
+        final TypeName javaType = typedValue.getJavaType();
+        overlayMethod.varargs();
+        final ArrayTypeName javaArrayType = (ArrayTypeName) javaType;
+        if ( javaArrayType.componentType instanceof ArrayTypeName ||
+             javaArrayType.componentType instanceof ParameterizedTypeName )
+        {
+          method.addAnnotation( AnnotationSpec
+                                  .builder( SuppressWarnings.class )
+                                  .addMember( "value", "$S", "unchecked" )
+                                  .build() );
+        }
+      }
     }
 
     if ( !arguments.isEmpty() )
@@ -4332,7 +4352,7 @@ final class JsinteropAction
     overlayCallStatement.append( ")" );
     testCallStatement.append( ")" );
 
-    if ( requireOverlay && Kind.TypeReference == kind )
+    if ( returnTypeNeedsCast && Kind.TypeReference == kind )
     {
       overlayCallStatement.append( " )" );
     }

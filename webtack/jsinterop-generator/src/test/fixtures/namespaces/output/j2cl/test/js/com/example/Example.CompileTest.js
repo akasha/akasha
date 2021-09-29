@@ -7,6 +7,8 @@ goog.require('com.example.Console.$Overlay');
 goog.require('com.example.ConsoleTestCompile');
 goog.require('com.example.JsMath.$Overlay');
 goog.require('com.example.JsMathTestCompile');
+goog.require('com.example.VarargsType.$Overlay');
+goog.require('com.example.VarargsTypeTestCompile');
 goog.require('com.example.WebAssembly.$Overlay');
 goog.require('com.example.WebAssemblyTestCompile');
 goog.require('com.example.Window.$Overlay');

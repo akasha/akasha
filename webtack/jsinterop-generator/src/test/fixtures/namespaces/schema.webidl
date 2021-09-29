@@ -15,6 +15,14 @@ namespace Math {
 };
 
 /**
+ * This tests auto convert to varargs in jsinterop binding.
+ */
+namespace VarargsType {
+  undefined myOperation1( sequence<DOMString> tokens );
+  undefined myOperation2( sequence<DOMString> tokens1, sequence<DOMString> tokens2 );
+};
+
+/**
  * The WebAssembly JavaScript object acts as the namespace for all WebAssembly-related functionality.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly">WebAssembly - MDN</a>
@@ -44,6 +52,10 @@ namespace console {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/console/clear">console.clear - MDN</a>
    */
   undefined clear();
+  /**
+   * Last argument is optional and a varargs candidate
+   */
+  undefined table( optional any tabularData, optional sequence<DOMString> properties );
   /**
    * Outputs a warning message to the Web Console.
    *

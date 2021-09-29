@@ -22,6 +22,12 @@ console.assert = function(condition,data) {}
  */
 console.clear = function() {}
 /**
+ * @param {*=} tabularData
+ * @param {!Array<!string>=} properties
+ * @return {undefined}
+ */
+console.table = function(tabularData,properties) {}
+/**
  * @const
  */
 var CSS;
@@ -30,6 +36,21 @@ var CSS;
  * @return {!string}
  */
 CSS.escape = function(ident) {}
+/**
+ * @const
+ */
+var VarargsType;
+/**
+ * @param {!Array<!string>} tokens1
+ * @param {!Array<!string>} tokens2
+ * @return {undefined}
+ */
+VarargsType.myOperation2 = function(tokens1,tokens2) {}
+/**
+ * @param {!Array<!string>} tokens
+ * @return {undefined}
+ */
+VarargsType.myOperation1 = function(tokens) {}
 /**
  * @const
  */

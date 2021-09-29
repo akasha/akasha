@@ -21,6 +21,8 @@ goog.require('com.example.SharedWorkerGlobal.$Overlay');
 goog.require('com.example.SharedWorkerGlobalScope.$Overlay');
 goog.require('com.example.SharedWorkerGlobalScopeTestCompile');
 goog.require('com.example.SharedWorkerGlobalTestCompile');
+goog.require('com.example.Transferable.$Overlay');
+goog.require('com.example.TransferableTestCompile');
 goog.require('com.example.Window.$Overlay');
 goog.require('com.example.WindowGlobal.$Overlay');
 goog.require('com.example.WindowGlobalTestCompile');

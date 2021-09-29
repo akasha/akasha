@@ -9,6 +9,7 @@ Navigator
 NavigatorOrWorkerNavigatorUnion
 ScrollToOptions
 SharedWorkerGlobalScope
+Transferable
 Window
 WorkerGlobalScope
 WorkerNavigator

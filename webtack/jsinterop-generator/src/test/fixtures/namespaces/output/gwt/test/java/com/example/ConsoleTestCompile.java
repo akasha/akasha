@@ -20,4 +20,21 @@ public final class ConsoleTestCompile {
   public static void warn(@DoNotAutobox final Object[] data) {
     Console.warn( data );
   }
+
+  public static void table(@DoNotAutobox final Object tabularData,
+      final JsArray<String> properties) {
+    Console.table( tabularData, properties );
+  }
+
+  public static void table(@DoNotAutobox final Object tabularData, final String[] properties) {
+    Console.table( tabularData, properties );
+  }
+
+  public static void table(@DoNotAutobox final Object tabularData) {
+    Console.table( tabularData );
+  }
+
+  public static void table() {
+    Console.table();
+  }
 }

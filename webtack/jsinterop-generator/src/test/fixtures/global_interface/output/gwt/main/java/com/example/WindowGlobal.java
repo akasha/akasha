@@ -1,9 +1,11 @@
 package com.example;
 
+import javaemul.internal.annotations.DoNotAutobox;
 import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsProperty;
@@ -60,6 +62,24 @@ public final class WindowGlobal {
   @HasNoSideEffects
   @JsNonNull
   public static native Object get(@Nonnull String name);
+
+  public static native void postMessage(@DoNotAutobox @Nullable java.lang.Object message,
+      @Nonnull String targetOrigin, @Nonnull JsArray<Transferable> transfer);
+
+  @JsOverlay
+  public static final void postMessage(@DoNotAutobox @Nullable final java.lang.Object message,
+      @Nonnull final String targetOrigin, @Nonnull final Transferable... transfer) {
+    _postMessage( message, targetOrigin, transfer );
+  }
+
+  @JsMethod(
+      name = "postMessage"
+  )
+  private static native void _postMessage(@DoNotAutobox @Nullable java.lang.Object message,
+      @Nonnull String targetOrigin, @Nonnull Transferable[] transfer);
+
+  public static native void postMessage(@DoNotAutobox @Nullable java.lang.Object message,
+      @Nonnull String targetOrigin);
 
   @JsOverlay
   public static void addDOMContentLoadedListener(@Nonnull final EventListener callback,

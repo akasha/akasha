@@ -1,0 +1,113 @@
+[
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.Console::table(java.lang.Object, java.lang.String[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.Console",
+      "classSimpleName": "Console",
+      "elementKind": "method",
+      "methodName": "table",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.nowFinalInFinalClass",
+    "description": "Method is now final in a final class.",
+    "element": "method void akasha.Console::table(java.lang.Object, java.lang.String[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.Console",
+      "classSimpleName": "Console",
+      "elementKind": "method",
+      "methodName": "table",
+      "newModifiers": "public static final",
+      "oldModifiers": "public static native",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.DedicatedWorkerGlobal::postMessage(java.lang.Object, akasha.Transferable[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.DedicatedWorkerGlobal",
+      "classSimpleName": "DedicatedWorkerGlobal",
+      "elementKind": "method",
+      "methodName": "postMessage",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.nowFinalInFinalClass",
+    "description": "Method is now final in a final class.",
+    "element": "method void akasha.DedicatedWorkerGlobal::postMessage(java.lang.Object, akasha.Transferable[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.DedicatedWorkerGlobal",
+      "classSimpleName": "DedicatedWorkerGlobal",
+      "elementKind": "method",
+      "methodName": "postMessage",
+      "newModifiers": "public static final",
+      "oldModifiers": "public static native",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.WindowGlobal::postMessage(java.lang.Object, java.lang.String, akasha.Transferable[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.WindowGlobal",
+      "classSimpleName": "WindowGlobal",
+      "elementKind": "method",
+      "methodName": "postMessage",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.nowFinalInFinalClass",
+    "description": "Method is now final in a final class.",
+    "element": "method void akasha.WindowGlobal::postMessage(java.lang.Object, java.lang.String, akasha.Transferable[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.WindowGlobal",
+      "classSimpleName": "WindowGlobal",
+      "elementKind": "method",
+      "methodName": "postMessage",
+      "newModifiers": "public static final",
+      "oldModifiers": "public static native",
+      "package": "akasha"
+    }
+  }
+]

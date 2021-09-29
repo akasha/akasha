@@ -1,5 +1,6 @@
 package com.example;
 
+import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 
 @Generated("org.realityforge.webtack")
@@ -40,5 +41,22 @@ public final class WindowTestCompile {
 
   public static Object get(final Window $instance, final String name) {
     return $instance.get( name );
+  }
+
+  public static void postMessage(final Window $instance,
+      @DoNotAutobox final java.lang.Object message, final String targetOrigin,
+      final JsArray<Transferable> transfer) {
+    $instance.postMessage( message, targetOrigin, transfer );
+  }
+
+  public static void postMessage(final Window $instance,
+      @DoNotAutobox final java.lang.Object message, final String targetOrigin,
+      final Transferable[] transfer) {
+    $instance.postMessage( message, targetOrigin, transfer );
+  }
+
+  public static void postMessage(final Window $instance,
+      @DoNotAutobox final java.lang.Object message, final String targetOrigin) {
+    $instance.postMessage( message, targetOrigin );
   }
 }

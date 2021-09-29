@@ -1,8 +1,10 @@
 package com.example;
 
+import javaemul.internal.annotations.DoNotAutobox;
 import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -57,6 +59,15 @@ public class Window extends EventTarget {
   @HasNoSideEffects
   @JsNonNull
   public native Object get(@Nonnull String name);
+
+  public native void postMessage(@DoNotAutobox @Nullable java.lang.Object message,
+      @Nonnull String targetOrigin, @Nonnull JsArray<Transferable> transfer);
+
+  public native void postMessage(@DoNotAutobox @Nullable java.lang.Object message,
+      @Nonnull String targetOrigin, @Nonnull Transferable[] transfer);
+
+  public native void postMessage(@DoNotAutobox @Nullable java.lang.Object message,
+      @Nonnull String targetOrigin);
 
   @JsOverlay
   public final void addDOMContentLoadedListener(@Nonnull final EventListener callback,
