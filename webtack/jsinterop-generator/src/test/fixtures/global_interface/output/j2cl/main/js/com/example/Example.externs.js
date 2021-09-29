@@ -51,7 +51,7 @@ Window.prototype.get = function(name) {}
 /**
  * @param {*} message
  * @param {!string} targetOrigin
- * @param {!Array<!Transferable>=} transfer
+ * @param {!Array<!Transferable2>=} transfer
  * @return {undefined}
  */
 Window.prototype.postMessage = function(message,targetOrigin,transfer) {}
@@ -73,13 +73,13 @@ function WorkerGlobalScope() {}
  * @private
  * @nosideeffects
  */
-function Navigator() {}
+function Transferable2() {}
 /**
  * @constructor
  * @private
  * @nosideeffects
  */
-function Transferable() {}
+function Navigator() {}
 /**
  * @constructor
  * @private
@@ -160,7 +160,7 @@ function get(name) {}
 /**
  * @param {*} message
  * @param {!string} targetOrigin
- * @param {!Array<!Transferable>=} transfer
+ * @param {!Array<!Transferable2>=} transfer
  * @return {undefined}
  */
 function postMessage(message,targetOrigin,transfer) {}

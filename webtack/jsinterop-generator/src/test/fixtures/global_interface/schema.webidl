@@ -54,7 +54,7 @@ interface SharedWorkerGlobalScope : WorkerGlobalScope {
   readonly attribute DOMString name;
 };
 
-interface Transferable {
+interface Transferable2 {
 };
 
 [Global=Window, Exposed=Window, LegacyUnenumerableNamedProperties]
@@ -75,7 +75,7 @@ interface Window : EventTarget {
   [NoBubble, NoCancel]
   event Event DOMContentLoaded;
   event FocusEvent focus;
-  undefined postMessage( any message, USVString targetOrigin, optional sequence<Transferable> transfer = [] );
+  undefined postMessage( any message, USVString targetOrigin, optional sequence<Transferable2> transfer = [] );
   undefined scroll( unrestricted double x, unrestricted double y );
   undefined scroll( optional ScrollToOptions options = {} );
   getter object get( DOMString name );

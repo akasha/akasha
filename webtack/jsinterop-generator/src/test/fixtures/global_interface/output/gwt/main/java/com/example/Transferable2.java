@@ -8,9 +8,9 @@ import jsinterop.annotations.JsType;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Transferable"
+    name = "Transferable2"
 )
-public class Transferable {
-  protected Transferable() {
+public class Transferable2 {
+  protected Transferable2() {
   }
 }

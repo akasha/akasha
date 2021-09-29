@@ -54,11 +54,11 @@ public final class WindowGlobal {
   public static native Navigator navigator();
 
   public static native void postMessage(@DoNotAutobox @Nullable java.lang.Object message,
-      @Nonnull String targetOrigin, @Nonnull JsArray<Transferable> transfer);
+      @Nonnull String targetOrigin, @Nonnull JsArray<Transferable2> transfer);
 
   @JsOverlay
   public static final void postMessage(@DoNotAutobox @Nullable final java.lang.Object message,
-      @Nonnull final String targetOrigin, @Nonnull final Transferable... transfer) {
+      @Nonnull final String targetOrigin, @Nonnull final Transferable2... transfer) {
     _postMessage( message, targetOrigin, transfer );
   }
 
@@ -66,7 +66,7 @@ public final class WindowGlobal {
       name = "postMessage"
   )
   private static native void _postMessage(@DoNotAutobox @Nullable java.lang.Object message,
-      @Nonnull String targetOrigin, @Nonnull Transferable[] transfer);
+      @Nonnull String targetOrigin, @Nonnull Transferable2[] transfer);
 
   public static native void postMessage(@DoNotAutobox @Nullable java.lang.Object message,
       @Nonnull String targetOrigin);

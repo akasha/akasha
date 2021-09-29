@@ -52,11 +52,11 @@ public class Window extends EventTarget {
   public native Navigator navigator();
 
   public native void postMessage(@DoNotAutobox @Nullable java.lang.Object message,
-      @Nonnull String targetOrigin, @Nonnull JsArray<Transferable> transfer);
+      @Nonnull String targetOrigin, @Nonnull JsArray<Transferable2> transfer);
 
   @JsOverlay
   public final void postMessage(@DoNotAutobox @Nullable final java.lang.Object message,
-      @Nonnull final String targetOrigin, @Nonnull final Transferable... transfer) {
+      @Nonnull final String targetOrigin, @Nonnull final Transferable2... transfer) {
     _postMessage( message, targetOrigin, transfer );
   }
 
@@ -64,7 +64,7 @@ public class Window extends EventTarget {
       name = "postMessage"
   )
   private native void _postMessage(@DoNotAutobox @Nullable java.lang.Object message,
-      @Nonnull String targetOrigin, @Nonnull Transferable[] transfer);
+      @Nonnull String targetOrigin, @Nonnull Transferable2[] transfer);
 
   public native void postMessage(@DoNotAutobox @Nullable java.lang.Object message,
       @Nonnull String targetOrigin);

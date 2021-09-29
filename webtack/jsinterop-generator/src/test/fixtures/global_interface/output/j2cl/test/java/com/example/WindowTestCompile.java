@@ -29,13 +29,13 @@ public final class WindowTestCompile {
 
   public static void postMessage(final Window $instance,
       @DoNotAutobox final java.lang.Object message, final String targetOrigin,
-      final JsArray<Transferable> transfer) {
+      final JsArray<Transferable2> transfer) {
     $instance.postMessage( message, targetOrigin, transfer );
   }
 
   public static void postMessage(final Window $instance,
       @DoNotAutobox final java.lang.Object message, final String targetOrigin,
-      final Transferable[] transfer) {
+      final Transferable2[] transfer) {
     $instance.postMessage( message, targetOrigin, transfer );
   }
 

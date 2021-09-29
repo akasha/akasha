@@ -26,12 +26,12 @@ public final class WindowGlobalTestCompile {
   }
 
   public static void postMessage(@DoNotAutobox final java.lang.Object message,
-      final String targetOrigin, final JsArray<Transferable> transfer) {
+      final String targetOrigin, final JsArray<Transferable2> transfer) {
     WindowGlobal.postMessage( message, targetOrigin, transfer );
   }
 
   public static void postMessage(@DoNotAutobox final java.lang.Object message,
-      final String targetOrigin, final Transferable[] transfer) {
+      final String targetOrigin, final Transferable2[] transfer) {
     WindowGlobal.postMessage( message, targetOrigin, transfer );
   }
 
