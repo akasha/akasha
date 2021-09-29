@@ -6,6 +6,7 @@
   * `Console.table(...)`
   * `DedicatedWorkerGlobal.postMessage(...)`
   * `WindowGlobal.postMessage(...)`
+* Convert operations on interface types in the jsinterop binding if the last argument is an array type.
 
 ### [v0.26](https://github.com/akasha/akasha/tree/v0.26) (2021-09-28) · [Full Changelog](https://github.com/spritz/spritz/compare/v0.25...v0.26) · [Source Diff](https://github.com/akasha/akasha-java/compare/v0.25...v0.26)
 

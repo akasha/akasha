@@ -25,6 +25,21 @@ public final class WindowGlobalTestCompile {
     return WindowGlobal.navigator();
   }
 
+  public static void postMessage(@DoNotAutobox final java.lang.Object message,
+      final String targetOrigin, final JsArray<Transferable> transfer) {
+    WindowGlobal.postMessage( message, targetOrigin, transfer );
+  }
+
+  public static void postMessage(@DoNotAutobox final java.lang.Object message,
+      final String targetOrigin, final Transferable[] transfer) {
+    WindowGlobal.postMessage( message, targetOrigin, transfer );
+  }
+
+  public static void postMessage(@DoNotAutobox final java.lang.Object message,
+      final String targetOrigin) {
+    WindowGlobal.postMessage( message, targetOrigin );
+  }
+
   public static void scroll(final double x, final double y) {
     WindowGlobal.scroll( x, y );
   }
@@ -39,21 +54,6 @@ public final class WindowGlobalTestCompile {
 
   public static Object get(final String name) {
     return WindowGlobal.get( name );
-  }
-
-  public static void postMessage(@DoNotAutobox final java.lang.Object message,
-      final String targetOrigin, final JsArray<Transferable> transfer) {
-    WindowGlobal.postMessage( message, targetOrigin, transfer );
-  }
-
-  public static void postMessage(@DoNotAutobox final java.lang.Object message,
-      final String targetOrigin, final Transferable[] transfer) {
-    WindowGlobal.postMessage( message, targetOrigin, transfer );
-  }
-
-  public static void postMessage(@DoNotAutobox final java.lang.Object message,
-      final String targetOrigin) {
-    WindowGlobal.postMessage( message, targetOrigin );
   }
 
   public static String id() {

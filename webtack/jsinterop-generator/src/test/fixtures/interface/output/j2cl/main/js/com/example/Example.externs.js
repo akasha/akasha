@@ -155,6 +155,22 @@ SomeReadOnlySetLike.prototype.forEach = function(callback) {};
  * @private
  * @nosideeffects
  */
+function VarargsType() {}
+/**
+ * @param {!Array<!string>} tokens
+ * @return {undefined}
+ */
+VarargsType.prototype.myOperation2 = function(tokens) {}
+/**
+ * @param {!Array<!string>} tokens
+ * @return {undefined}
+ */
+VarargsType.myOperation1 = function(tokens) {}
+/**
+ * @constructor
+ * @private
+ * @nosideeffects
+ */
 function AnonymousNamedAccessorsFloat() {}
 /**
  * @constructor

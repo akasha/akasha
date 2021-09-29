@@ -2,6 +2,1899 @@
   {
     "code": "java.annotation.added",
     "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method akasha.audio.IIRFilterNode akasha.audio.BaseAudioContext::createIIRFilter(akasha.lang.JsArray<java.lang.Double>, double[]) @ akasha.audio.AudioContext",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.audio.AudioContext",
+      "classSimpleName": "AudioContext",
+      "elementKind": "method",
+      "methodName": "createIIRFilter",
+      "package": "akasha.audio"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method akasha.audio.IIRFilterNode akasha.audio.BaseAudioContext::createIIRFilter(akasha.lang.JsArray<java.lang.Double>, double[]) @ akasha.audio.OfflineAudioContext",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.audio.OfflineAudioContext",
+      "classSimpleName": "OfflineAudioContext",
+      "elementKind": "method",
+      "methodName": "createIIRFilter",
+      "package": "akasha.audio"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method akasha.audio.IIRFilterNode akasha.audio.BaseAudioContext::createIIRFilter(akasha.lang.JsArray<java.lang.Double>, double[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.audio.BaseAudioContext",
+      "classSimpleName": "BaseAudioContext",
+      "elementKind": "method",
+      "methodName": "createIIRFilter",
+      "package": "akasha.audio"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method akasha.audio.IIRFilterNode akasha.audio.BaseAudioContext::createIIRFilter(akasha.lang.JsArray<java.lang.Double>, double[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.audio.BaseAudioContext",
+      "classSimpleName": "BaseAudioContext",
+      "elementKind": "method",
+      "methodName": "createIIRFilter",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.audio"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method akasha.audio.IIRFilterNode akasha.audio.BaseAudioContext::createIIRFilter(double[], double[]) @ akasha.audio.AudioContext",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.audio.AudioContext",
+      "classSimpleName": "AudioContext",
+      "elementKind": "method",
+      "methodName": "createIIRFilter",
+      "package": "akasha.audio"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method akasha.audio.IIRFilterNode akasha.audio.BaseAudioContext::createIIRFilter(double[], double[]) @ akasha.audio.OfflineAudioContext",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.audio.OfflineAudioContext",
+      "classSimpleName": "OfflineAudioContext",
+      "elementKind": "method",
+      "methodName": "createIIRFilter",
+      "package": "akasha.audio"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method akasha.audio.IIRFilterNode akasha.audio.BaseAudioContext::createIIRFilter(double[], double[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.audio.BaseAudioContext",
+      "classSimpleName": "BaseAudioContext",
+      "elementKind": "method",
+      "methodName": "createIIRFilter",
+      "package": "akasha.audio"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method akasha.audio.IIRFilterNode akasha.audio.BaseAudioContext::createIIRFilter(double[], double[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.audio.BaseAudioContext",
+      "classSimpleName": "BaseAudioContext",
+      "elementKind": "method",
+      "methodName": "createIIRFilter",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.audio"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method akasha.audio.PeriodicWave akasha.audio.BaseAudioContext::createPeriodicWave(akasha.lang.JsArray<java.lang.Double>, double[]) @ akasha.audio.AudioContext",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.audio.AudioContext",
+      "classSimpleName": "AudioContext",
+      "elementKind": "method",
+      "methodName": "createPeriodicWave",
+      "package": "akasha.audio"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method akasha.audio.PeriodicWave akasha.audio.BaseAudioContext::createPeriodicWave(akasha.lang.JsArray<java.lang.Double>, double[]) @ akasha.audio.OfflineAudioContext",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.audio.OfflineAudioContext",
+      "classSimpleName": "OfflineAudioContext",
+      "elementKind": "method",
+      "methodName": "createPeriodicWave",
+      "package": "akasha.audio"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method akasha.audio.PeriodicWave akasha.audio.BaseAudioContext::createPeriodicWave(akasha.lang.JsArray<java.lang.Double>, double[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.audio.BaseAudioContext",
+      "classSimpleName": "BaseAudioContext",
+      "elementKind": "method",
+      "methodName": "createPeriodicWave",
+      "package": "akasha.audio"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method akasha.audio.PeriodicWave akasha.audio.BaseAudioContext::createPeriodicWave(akasha.lang.JsArray<java.lang.Double>, double[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.audio.BaseAudioContext",
+      "classSimpleName": "BaseAudioContext",
+      "elementKind": "method",
+      "methodName": "createPeriodicWave",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.audio"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method akasha.audio.PeriodicWave akasha.audio.BaseAudioContext::createPeriodicWave(double[], double[]) @ akasha.audio.AudioContext",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.audio.AudioContext",
+      "classSimpleName": "AudioContext",
+      "elementKind": "method",
+      "methodName": "createPeriodicWave",
+      "package": "akasha.audio"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method akasha.audio.PeriodicWave akasha.audio.BaseAudioContext::createPeriodicWave(double[], double[]) @ akasha.audio.OfflineAudioContext",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.audio.OfflineAudioContext",
+      "classSimpleName": "OfflineAudioContext",
+      "elementKind": "method",
+      "methodName": "createPeriodicWave",
+      "package": "akasha.audio"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method akasha.audio.PeriodicWave akasha.audio.BaseAudioContext::createPeriodicWave(double[], double[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.audio.BaseAudioContext",
+      "classSimpleName": "BaseAudioContext",
+      "elementKind": "method",
+      "methodName": "createPeriodicWave",
+      "package": "akasha.audio"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method akasha.audio.PeriodicWave akasha.audio.BaseAudioContext::createPeriodicWave(double[], double[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.audio.BaseAudioContext",
+      "classSimpleName": "BaseAudioContext",
+      "elementKind": "method",
+      "methodName": "createPeriodicWave",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.audio"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method akasha.idb.IDBIndex akasha.idb.IDBObjectStore::createIndex(java.lang.String, java.lang.String[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.idb.IDBObjectStore",
+      "classSimpleName": "IDBObjectStore",
+      "elementKind": "method",
+      "methodName": "createIndex",
+      "package": "akasha.idb"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method akasha.idb.IDBIndex akasha.idb.IDBObjectStore::createIndex(java.lang.String, java.lang.String[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.idb.IDBObjectStore",
+      "classSimpleName": "IDBObjectStore",
+      "elementKind": "method",
+      "methodName": "createIndex",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.idb"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method akasha.idb.IDBTransaction akasha.idb.IDBDatabase::transaction(java.lang.String[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.idb.IDBDatabase",
+      "classSimpleName": "IDBDatabase",
+      "elementKind": "method",
+      "methodName": "transaction",
+      "package": "akasha.idb"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method akasha.idb.IDBTransaction akasha.idb.IDBDatabase::transaction(java.lang.String[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.idb.IDBDatabase",
+      "classSimpleName": "IDBDatabase",
+      "elementKind": "method",
+      "methodName": "transaction",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.idb"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method akasha.lang.JsArray<java.lang.Double> akasha.gl.WebGL2RenderingContext::getUniformIndices(akasha.gl.WebGLProgram, java.lang.String[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.gl.WebGL2RenderingContext",
+      "classSimpleName": "WebGL2RenderingContext",
+      "elementKind": "method",
+      "methodName": "getUniformIndices",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method akasha.lang.JsArray<java.lang.Double> akasha.gl.WebGL2RenderingContext::getUniformIndices(akasha.gl.WebGLProgram, java.lang.String[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gl.WebGL2RenderingContext",
+      "classSimpleName": "WebGL2RenderingContext",
+      "elementKind": "method",
+      "methodName": "getUniformIndices",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method akasha.promise.Promise<akasha.MediaKeySystemAccess> akasha.Navigator::requestMediaKeySystemAccess(java.lang.String, akasha.MediaKeySystemConfiguration[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.Navigator",
+      "classSimpleName": "Navigator",
+      "elementKind": "method",
+      "methodName": "requestMediaKeySystemAccess",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method akasha.promise.Promise<akasha.MediaKeySystemAccess> akasha.Navigator::requestMediaKeySystemAccess(java.lang.String, akasha.MediaKeySystemConfiguration[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.Navigator",
+      "classSimpleName": "Navigator",
+      "elementKind": "method",
+      "methodName": "requestMediaKeySystemAccess",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::importKey(java.lang.String, akasha.core.BufferSource, akasha.core.JsObject, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "method",
+      "methodName": "importKey",
+      "package": "akasha.crypto"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::importKey(java.lang.String, akasha.core.BufferSource, akasha.core.JsObject, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "method",
+      "methodName": "importKey",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.crypto"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::importKey(java.lang.String, akasha.core.BufferSource, akasha.crypto.AlgorithmIdentifier, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "method",
+      "methodName": "importKey",
+      "package": "akasha.crypto"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::importKey(java.lang.String, akasha.core.BufferSource, akasha.crypto.AlgorithmIdentifier, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "method",
+      "methodName": "importKey",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.crypto"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::importKey(java.lang.String, akasha.core.BufferSource, java.lang.String, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "method",
+      "methodName": "importKey",
+      "package": "akasha.crypto"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::importKey(java.lang.String, akasha.core.BufferSource, java.lang.String, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "method",
+      "methodName": "importKey",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.crypto"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::importKey(java.lang.String, akasha.crypto.JsonWebKey, akasha.core.JsObject, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "method",
+      "methodName": "importKey",
+      "package": "akasha.crypto"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::importKey(java.lang.String, akasha.crypto.JsonWebKey, akasha.core.JsObject, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "method",
+      "methodName": "importKey",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.crypto"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::importKey(java.lang.String, akasha.crypto.JsonWebKey, akasha.crypto.AlgorithmIdentifier, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "method",
+      "methodName": "importKey",
+      "package": "akasha.crypto"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::importKey(java.lang.String, akasha.crypto.JsonWebKey, akasha.crypto.AlgorithmIdentifier, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "method",
+      "methodName": "importKey",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.crypto"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::importKey(java.lang.String, akasha.crypto.JsonWebKey, java.lang.String, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "method",
+      "methodName": "importKey",
+      "package": "akasha.crypto"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::importKey(java.lang.String, akasha.crypto.JsonWebKey, java.lang.String, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "method",
+      "methodName": "importKey",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.crypto"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::unwrapKey(java.lang.String, akasha.core.BufferSource, akasha.crypto.CryptoKey, akasha.core.JsObject, akasha.core.JsObject, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "method",
+      "methodName": "unwrapKey",
+      "package": "akasha.crypto"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::unwrapKey(java.lang.String, akasha.core.BufferSource, akasha.crypto.CryptoKey, akasha.core.JsObject, akasha.core.JsObject, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "method",
+      "methodName": "unwrapKey",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.crypto"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::unwrapKey(java.lang.String, akasha.core.BufferSource, akasha.crypto.CryptoKey, akasha.core.JsObject, akasha.crypto.AlgorithmIdentifier, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "method",
+      "methodName": "unwrapKey",
+      "package": "akasha.crypto"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::unwrapKey(java.lang.String, akasha.core.BufferSource, akasha.crypto.CryptoKey, akasha.core.JsObject, akasha.crypto.AlgorithmIdentifier, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "method",
+      "methodName": "unwrapKey",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.crypto"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::unwrapKey(java.lang.String, akasha.core.BufferSource, akasha.crypto.CryptoKey, akasha.core.JsObject, java.lang.String, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "method",
+      "methodName": "unwrapKey",
+      "package": "akasha.crypto"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::unwrapKey(java.lang.String, akasha.core.BufferSource, akasha.crypto.CryptoKey, akasha.core.JsObject, java.lang.String, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "method",
+      "methodName": "unwrapKey",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.crypto"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::unwrapKey(java.lang.String, akasha.core.BufferSource, akasha.crypto.CryptoKey, akasha.crypto.AlgorithmIdentifier, akasha.core.JsObject, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "method",
+      "methodName": "unwrapKey",
+      "package": "akasha.crypto"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::unwrapKey(java.lang.String, akasha.core.BufferSource, akasha.crypto.CryptoKey, akasha.crypto.AlgorithmIdentifier, akasha.core.JsObject, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "method",
+      "methodName": "unwrapKey",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.crypto"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::unwrapKey(java.lang.String, akasha.core.BufferSource, akasha.crypto.CryptoKey, akasha.crypto.AlgorithmIdentifier, akasha.crypto.AlgorithmIdentifier, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "method",
+      "methodName": "unwrapKey",
+      "package": "akasha.crypto"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::unwrapKey(java.lang.String, akasha.core.BufferSource, akasha.crypto.CryptoKey, akasha.crypto.AlgorithmIdentifier, akasha.crypto.AlgorithmIdentifier, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "method",
+      "methodName": "unwrapKey",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.crypto"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::unwrapKey(java.lang.String, akasha.core.BufferSource, akasha.crypto.CryptoKey, akasha.crypto.AlgorithmIdentifier, java.lang.String, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "method",
+      "methodName": "unwrapKey",
+      "package": "akasha.crypto"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::unwrapKey(java.lang.String, akasha.core.BufferSource, akasha.crypto.CryptoKey, akasha.crypto.AlgorithmIdentifier, java.lang.String, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "method",
+      "methodName": "unwrapKey",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.crypto"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::unwrapKey(java.lang.String, akasha.core.BufferSource, akasha.crypto.CryptoKey, java.lang.String, akasha.core.JsObject, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "method",
+      "methodName": "unwrapKey",
+      "package": "akasha.crypto"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::unwrapKey(java.lang.String, akasha.core.BufferSource, akasha.crypto.CryptoKey, java.lang.String, akasha.core.JsObject, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "method",
+      "methodName": "unwrapKey",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.crypto"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::unwrapKey(java.lang.String, akasha.core.BufferSource, akasha.crypto.CryptoKey, java.lang.String, akasha.crypto.AlgorithmIdentifier, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "method",
+      "methodName": "unwrapKey",
+      "package": "akasha.crypto"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::unwrapKey(java.lang.String, akasha.core.BufferSource, akasha.crypto.CryptoKey, java.lang.String, akasha.crypto.AlgorithmIdentifier, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "method",
+      "methodName": "unwrapKey",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.crypto"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::unwrapKey(java.lang.String, akasha.core.BufferSource, akasha.crypto.CryptoKey, java.lang.String, java.lang.String, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "method",
+      "methodName": "unwrapKey",
+      "package": "akasha.crypto"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method akasha.promise.Promise<akasha.crypto.CryptoKey> akasha.crypto.SubtleCrypto::unwrapKey(java.lang.String, akasha.core.BufferSource, akasha.crypto.CryptoKey, java.lang.String, java.lang.String, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "method",
+      "methodName": "unwrapKey",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.crypto"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method akasha.promise.Promise<java.lang.Void> akasha.Cache::addAll(akasha.RequestInfo[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.Cache",
+      "classSimpleName": "Cache",
+      "elementKind": "method",
+      "methodName": "addAll",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method akasha.promise.Promise<java.lang.Void> akasha.Cache::addAll(akasha.RequestInfo[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.Cache",
+      "classSimpleName": "Cache",
+      "elementKind": "method",
+      "methodName": "addAll",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method akasha.promise.Promise<java.lang.Void> akasha.clipboard.Clipboard::write(akasha.clipboard.ClipboardItem[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.clipboard.Clipboard",
+      "classSimpleName": "Clipboard",
+      "elementKind": "method",
+      "methodName": "write",
+      "package": "akasha.clipboard"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method akasha.promise.Promise<java.lang.Void> akasha.clipboard.Clipboard::write(akasha.clipboard.ClipboardItem[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.clipboard.Clipboard",
+      "classSimpleName": "Clipboard",
+      "elementKind": "method",
+      "methodName": "write",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.clipboard"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::deriveKey(akasha.core.JsObject, akasha.crypto.CryptoKey, akasha.core.JsObject, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "method",
+      "methodName": "deriveKey",
+      "package": "akasha.crypto"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::deriveKey(akasha.core.JsObject, akasha.crypto.CryptoKey, akasha.core.JsObject, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "method",
+      "methodName": "deriveKey",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.crypto"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::deriveKey(akasha.core.JsObject, akasha.crypto.CryptoKey, akasha.crypto.AlgorithmIdentifier, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "method",
+      "methodName": "deriveKey",
+      "package": "akasha.crypto"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::deriveKey(akasha.core.JsObject, akasha.crypto.CryptoKey, akasha.crypto.AlgorithmIdentifier, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "method",
+      "methodName": "deriveKey",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.crypto"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::deriveKey(akasha.core.JsObject, akasha.crypto.CryptoKey, java.lang.String, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "method",
+      "methodName": "deriveKey",
+      "package": "akasha.crypto"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::deriveKey(akasha.core.JsObject, akasha.crypto.CryptoKey, java.lang.String, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "method",
+      "methodName": "deriveKey",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.crypto"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::deriveKey(akasha.crypto.AlgorithmIdentifier, akasha.crypto.CryptoKey, akasha.core.JsObject, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "method",
+      "methodName": "deriveKey",
+      "package": "akasha.crypto"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::deriveKey(akasha.crypto.AlgorithmIdentifier, akasha.crypto.CryptoKey, akasha.core.JsObject, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "method",
+      "methodName": "deriveKey",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.crypto"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::deriveKey(akasha.crypto.AlgorithmIdentifier, akasha.crypto.CryptoKey, akasha.crypto.AlgorithmIdentifier, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "method",
+      "methodName": "deriveKey",
+      "package": "akasha.crypto"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::deriveKey(akasha.crypto.AlgorithmIdentifier, akasha.crypto.CryptoKey, akasha.crypto.AlgorithmIdentifier, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "method",
+      "methodName": "deriveKey",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.crypto"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::deriveKey(akasha.crypto.AlgorithmIdentifier, akasha.crypto.CryptoKey, java.lang.String, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "method",
+      "methodName": "deriveKey",
+      "package": "akasha.crypto"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::deriveKey(akasha.crypto.AlgorithmIdentifier, akasha.crypto.CryptoKey, java.lang.String, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "method",
+      "methodName": "deriveKey",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.crypto"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::deriveKey(java.lang.String, akasha.crypto.CryptoKey, akasha.core.JsObject, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "method",
+      "methodName": "deriveKey",
+      "package": "akasha.crypto"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::deriveKey(java.lang.String, akasha.crypto.CryptoKey, akasha.core.JsObject, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "method",
+      "methodName": "deriveKey",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.crypto"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::deriveKey(java.lang.String, akasha.crypto.CryptoKey, akasha.crypto.AlgorithmIdentifier, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "method",
+      "methodName": "deriveKey",
+      "package": "akasha.crypto"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::deriveKey(java.lang.String, akasha.crypto.CryptoKey, akasha.crypto.AlgorithmIdentifier, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "method",
+      "methodName": "deriveKey",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.crypto"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::deriveKey(java.lang.String, akasha.crypto.CryptoKey, java.lang.String, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "method",
+      "methodName": "deriveKey",
+      "package": "akasha.crypto"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::deriveKey(java.lang.String, akasha.crypto.CryptoKey, java.lang.String, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "method",
+      "methodName": "deriveKey",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.crypto"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::generateKey(akasha.core.JsObject, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "method",
+      "methodName": "generateKey",
+      "package": "akasha.crypto"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::generateKey(akasha.core.JsObject, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "method",
+      "methodName": "generateKey",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.crypto"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::generateKey(akasha.crypto.AlgorithmIdentifier, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "method",
+      "methodName": "generateKey",
+      "package": "akasha.crypto"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::generateKey(akasha.crypto.AlgorithmIdentifier, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "method",
+      "methodName": "generateKey",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.crypto"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::generateKey(java.lang.String, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "method",
+      "methodName": "generateKey",
+      "package": "akasha.crypto"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method akasha.promise.Promise<jsinterop.base.Any> akasha.crypto.SubtleCrypto::generateKey(java.lang.String, boolean, java.lang.String[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.crypto.SubtleCrypto",
+      "classSimpleName": "SubtleCrypto",
+      "elementKind": "method",
+      "methodName": "generateKey",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.crypto"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method boolean akasha.Navigator::vibrate(double[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.Navigator",
+      "classSimpleName": "Navigator",
+      "elementKind": "method",
+      "methodName": "vibrate",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method boolean akasha.Navigator::vibrate(double[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.Navigator",
+      "classSimpleName": "Navigator",
+      "elementKind": "method",
+      "methodName": "vibrate",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method int akasha.core.JsString::localeCompare(java.lang.String, java.lang.String[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.core.JsString",
+      "classSimpleName": "JsString",
+      "elementKind": "method",
+      "methodName": "localeCompare",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.annotation.removed",
+    "description": "Element no longer annotated with 'javaemul.internal.annotations.HasNoSideEffects'.",
+    "element": "method int akasha.core.JsString::localeCompare(java.lang.String, java.lang.String[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@javaemul.internal.annotations.HasNoSideEffects",
+      "annotationType": "javaemul.internal.annotations.HasNoSideEffects",
+      "classQualifiedName": "akasha.core.JsString",
+      "classSimpleName": "JsString",
+      "elementKind": "method",
+      "methodName": "localeCompare",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method int akasha.core.JsString::localeCompare(java.lang.String, java.lang.String[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.JsString",
+      "classSimpleName": "JsString",
+      "elementKind": "method",
+      "methodName": "localeCompare",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method java.lang.String akasha.core.JsString::toLocaleLowerCase(java.lang.String[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.core.JsString",
+      "classSimpleName": "JsString",
+      "elementKind": "method",
+      "methodName": "toLocaleLowerCase",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.annotation.removed",
+    "description": "Element no longer annotated with 'javaemul.internal.annotations.HasNoSideEffects'.",
+    "element": "method java.lang.String akasha.core.JsString::toLocaleLowerCase(java.lang.String[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@javaemul.internal.annotations.HasNoSideEffects",
+      "annotationType": "javaemul.internal.annotations.HasNoSideEffects",
+      "classQualifiedName": "akasha.core.JsString",
+      "classSimpleName": "JsString",
+      "elementKind": "method",
+      "methodName": "toLocaleLowerCase",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method java.lang.String akasha.core.JsString::toLocaleLowerCase(java.lang.String[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.JsString",
+      "classSimpleName": "JsString",
+      "elementKind": "method",
+      "methodName": "toLocaleLowerCase",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method java.lang.String akasha.core.JsString::toLocaleUpperCase(java.lang.String[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.core.JsString",
+      "classSimpleName": "JsString",
+      "elementKind": "method",
+      "methodName": "toLocaleUpperCase",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.annotation.removed",
+    "description": "Element no longer annotated with 'javaemul.internal.annotations.HasNoSideEffects'.",
+    "element": "method java.lang.String akasha.core.JsString::toLocaleUpperCase(java.lang.String[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@javaemul.internal.annotations.HasNoSideEffects",
+      "annotationType": "javaemul.internal.annotations.HasNoSideEffects",
+      "classQualifiedName": "akasha.core.JsString",
+      "classSimpleName": "JsString",
+      "elementKind": "method",
+      "methodName": "toLocaleUpperCase",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method java.lang.String akasha.core.JsString::toLocaleUpperCase(java.lang.String[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.JsString",
+      "classSimpleName": "JsString",
+      "elementKind": "method",
+      "methodName": "toLocaleUpperCase",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.CSSFontFeatureValuesMap::set(java.lang.String, double[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.CSSFontFeatureValuesMap",
+      "classSimpleName": "CSSFontFeatureValuesMap",
+      "elementKind": "method",
+      "methodName": "set",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method void akasha.CSSFontFeatureValuesMap::set(java.lang.String, double[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.CSSFontFeatureValuesMap",
+      "classSimpleName": "CSSFontFeatureValuesMap",
+      "elementKind": "method",
+      "methodName": "set",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.CanvasRenderingContext2D::roundRect(double, double, double, double, akasha.UnrestrictedDoubleOrDOMPointInitUnion[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.CanvasRenderingContext2D",
+      "classSimpleName": "CanvasRenderingContext2D",
+      "elementKind": "method",
+      "methodName": "roundRect",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method void akasha.CanvasRenderingContext2D::roundRect(double, double, double, double, akasha.UnrestrictedDoubleOrDOMPointInitUnion[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.CanvasRenderingContext2D",
+      "classSimpleName": "CanvasRenderingContext2D",
+      "elementKind": "method",
+      "methodName": "roundRect",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.CanvasRenderingContext2D::setLineDash(double[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.CanvasRenderingContext2D",
+      "classSimpleName": "CanvasRenderingContext2D",
+      "elementKind": "method",
+      "methodName": "setLineDash",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method void akasha.CanvasRenderingContext2D::setLineDash(double[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.CanvasRenderingContext2D",
+      "classSimpleName": "CanvasRenderingContext2D",
+      "elementKind": "method",
+      "methodName": "setLineDash",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.Client::postMessage(java.lang.Object, akasha.Transferable[]) @ akasha.WindowClient",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.WindowClient",
+      "classSimpleName": "WindowClient",
+      "elementKind": "method",
+      "methodName": "postMessage",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.Client::postMessage(java.lang.Object, akasha.Transferable[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.Client",
+      "classSimpleName": "Client",
+      "elementKind": "method",
+      "methodName": "postMessage",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method void akasha.Client::postMessage(java.lang.Object, akasha.Transferable[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.Client",
+      "classSimpleName": "Client",
+      "elementKind": "method",
+      "methodName": "postMessage",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
     "element": "method void akasha.Console::table(java.lang.Object, java.lang.String[])",
     "classification": {
       "SOURCE": "EQUIVALENT",
@@ -76,6 +1969,302 @@
   {
     "code": "java.annotation.added",
     "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.DedicatedWorkerGlobalScope::postMessage(java.lang.Object, akasha.Transferable[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.DedicatedWorkerGlobalScope",
+      "classSimpleName": "DedicatedWorkerGlobalScope",
+      "elementKind": "method",
+      "methodName": "postMessage",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method void akasha.DedicatedWorkerGlobalScope::postMessage(java.lang.Object, akasha.Transferable[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.DedicatedWorkerGlobalScope",
+      "classSimpleName": "DedicatedWorkerGlobalScope",
+      "elementKind": "method",
+      "methodName": "postMessage",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.MessageEvent::initMessageEvent(java.lang.String, boolean, boolean, java.lang.Object, java.lang.String, java.lang.String, akasha.MessageEventSource, akasha.MessagePort[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.MessageEvent",
+      "classSimpleName": "MessageEvent",
+      "elementKind": "method",
+      "methodName": "initMessageEvent",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method void akasha.MessageEvent::initMessageEvent(java.lang.String, boolean, boolean, java.lang.Object, java.lang.String, java.lang.String, akasha.MessageEventSource, akasha.MessagePort[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.MessageEvent",
+      "classSimpleName": "MessageEvent",
+      "elementKind": "method",
+      "methodName": "initMessageEvent",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.MessagePort::postMessage(java.lang.Object, akasha.Transferable[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.MessagePort",
+      "classSimpleName": "MessagePort",
+      "elementKind": "method",
+      "methodName": "postMessage",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method void akasha.MessagePort::postMessage(java.lang.Object, akasha.Transferable[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.MessagePort",
+      "classSimpleName": "MessagePort",
+      "elementKind": "method",
+      "methodName": "postMessage",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.OffscreenCanvasRenderingContext2D::roundRect(double, double, double, double, akasha.UnrestrictedDoubleOrDOMPointInitUnion[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.OffscreenCanvasRenderingContext2D",
+      "classSimpleName": "OffscreenCanvasRenderingContext2D",
+      "elementKind": "method",
+      "methodName": "roundRect",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method void akasha.OffscreenCanvasRenderingContext2D::roundRect(double, double, double, double, akasha.UnrestrictedDoubleOrDOMPointInitUnion[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.OffscreenCanvasRenderingContext2D",
+      "classSimpleName": "OffscreenCanvasRenderingContext2D",
+      "elementKind": "method",
+      "methodName": "roundRect",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.OffscreenCanvasRenderingContext2D::setLineDash(double[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.OffscreenCanvasRenderingContext2D",
+      "classSimpleName": "OffscreenCanvasRenderingContext2D",
+      "elementKind": "method",
+      "methodName": "setLineDash",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method void akasha.OffscreenCanvasRenderingContext2D::setLineDash(double[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.OffscreenCanvasRenderingContext2D",
+      "classSimpleName": "OffscreenCanvasRenderingContext2D",
+      "elementKind": "method",
+      "methodName": "setLineDash",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.Path2D::roundRect(double, double, double, double, akasha.UnrestrictedDoubleOrDOMPointInitUnion[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.Path2D",
+      "classSimpleName": "Path2D",
+      "elementKind": "method",
+      "methodName": "roundRect",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method void akasha.Path2D::roundRect(double, double, double, double, akasha.UnrestrictedDoubleOrDOMPointInitUnion[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.Path2D",
+      "classSimpleName": "Path2D",
+      "elementKind": "method",
+      "methodName": "roundRect",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.ServiceWorker::postMessage(java.lang.Object, akasha.Transferable[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.ServiceWorker",
+      "classSimpleName": "ServiceWorker",
+      "elementKind": "method",
+      "methodName": "postMessage",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method void akasha.ServiceWorker::postMessage(java.lang.Object, akasha.Transferable[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.ServiceWorker",
+      "classSimpleName": "ServiceWorker",
+      "elementKind": "method",
+      "methodName": "postMessage",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.Window::postMessage(java.lang.Object, java.lang.String, akasha.Transferable[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.Window",
+      "classSimpleName": "Window",
+      "elementKind": "method",
+      "methodName": "postMessage",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method void akasha.Window::postMessage(java.lang.Object, java.lang.String, akasha.Transferable[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.Window",
+      "classSimpleName": "Window",
+      "elementKind": "method",
+      "methodName": "postMessage",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
     "element": "method void akasha.WindowGlobal::postMessage(java.lang.Object, java.lang.String, akasha.Transferable[])",
     "classification": {
       "SOURCE": "EQUIVALENT",
@@ -108,6 +2297,2596 @@
       "newModifiers": "public static final",
       "oldModifiers": "public static native",
       "package": "akasha"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.Worker::postMessage(java.lang.Object, akasha.Transferable[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.Worker",
+      "classSimpleName": "Worker",
+      "elementKind": "method",
+      "methodName": "postMessage",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method void akasha.Worker::postMessage(java.lang.Object, akasha.Transferable[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.Worker",
+      "classSimpleName": "Worker",
+      "elementKind": "method",
+      "methodName": "postMessage",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.core.Float32Array::set(double[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.core.Float32Array",
+      "classSimpleName": "Float32Array",
+      "elementKind": "method",
+      "methodName": "set",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method void akasha.core.Float32Array::set(double[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Float32Array",
+      "classSimpleName": "Float32Array",
+      "elementKind": "method",
+      "methodName": "set",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.core.Float64Array::set(double[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.core.Float64Array",
+      "classSimpleName": "Float64Array",
+      "elementKind": "method",
+      "methodName": "set",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method void akasha.core.Float64Array::set(double[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Float64Array",
+      "classSimpleName": "Float64Array",
+      "elementKind": "method",
+      "methodName": "set",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.core.Int16Array::set(double[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.core.Int16Array",
+      "classSimpleName": "Int16Array",
+      "elementKind": "method",
+      "methodName": "set",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method void akasha.core.Int16Array::set(double[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Int16Array",
+      "classSimpleName": "Int16Array",
+      "elementKind": "method",
+      "methodName": "set",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.core.Int32Array::set(double[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.core.Int32Array",
+      "classSimpleName": "Int32Array",
+      "elementKind": "method",
+      "methodName": "set",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method void akasha.core.Int32Array::set(double[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Int32Array",
+      "classSimpleName": "Int32Array",
+      "elementKind": "method",
+      "methodName": "set",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.core.Int8Array::set(double[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.core.Int8Array",
+      "classSimpleName": "Int8Array",
+      "elementKind": "method",
+      "methodName": "set",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method void akasha.core.Int8Array::set(double[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Int8Array",
+      "classSimpleName": "Int8Array",
+      "elementKind": "method",
+      "methodName": "set",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.core.Uint16Array::set(double[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.core.Uint16Array",
+      "classSimpleName": "Uint16Array",
+      "elementKind": "method",
+      "methodName": "set",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method void akasha.core.Uint16Array::set(double[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint16Array",
+      "classSimpleName": "Uint16Array",
+      "elementKind": "method",
+      "methodName": "set",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.core.Uint32Array::set(double[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.core.Uint32Array",
+      "classSimpleName": "Uint32Array",
+      "elementKind": "method",
+      "methodName": "set",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method void akasha.core.Uint32Array::set(double[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint32Array",
+      "classSimpleName": "Uint32Array",
+      "elementKind": "method",
+      "methodName": "set",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.core.Uint8Array::set(double[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.core.Uint8Array",
+      "classSimpleName": "Uint8Array",
+      "elementKind": "method",
+      "methodName": "set",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method void akasha.core.Uint8Array::set(double[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint8Array",
+      "classSimpleName": "Uint8Array",
+      "elementKind": "method",
+      "methodName": "set",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.core.Uint8ClampedArray::set(double[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.core.Uint8ClampedArray",
+      "classSimpleName": "Uint8ClampedArray",
+      "elementKind": "method",
+      "methodName": "set",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method void akasha.core.Uint8ClampedArray::set(double[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.Uint8ClampedArray",
+      "classSimpleName": "Uint8ClampedArray",
+      "elementKind": "method",
+      "methodName": "set",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.gl.WEBGL_draw_buffers::drawBuffersWEBGL(double[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.gl.WEBGL_draw_buffers",
+      "classSimpleName": "WEBGL_draw_buffers",
+      "elementKind": "method",
+      "methodName": "drawBuffersWEBGL",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method void akasha.gl.WEBGL_draw_buffers::drawBuffersWEBGL(double[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gl.WEBGL_draw_buffers",
+      "classSimpleName": "WEBGL_draw_buffers",
+      "elementKind": "method",
+      "methodName": "drawBuffersWEBGL",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.gl.WebGL2RenderingContext::clearBufferfv(int, int, double[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.gl.WebGL2RenderingContext",
+      "classSimpleName": "WebGL2RenderingContext",
+      "elementKind": "method",
+      "methodName": "clearBufferfv",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method void akasha.gl.WebGL2RenderingContext::clearBufferfv(int, int, double[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gl.WebGL2RenderingContext",
+      "classSimpleName": "WebGL2RenderingContext",
+      "elementKind": "method",
+      "methodName": "clearBufferfv",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.gl.WebGL2RenderingContext::clearBufferiv(int, int, double[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.gl.WebGL2RenderingContext",
+      "classSimpleName": "WebGL2RenderingContext",
+      "elementKind": "method",
+      "methodName": "clearBufferiv",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method void akasha.gl.WebGL2RenderingContext::clearBufferiv(int, int, double[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gl.WebGL2RenderingContext",
+      "classSimpleName": "WebGL2RenderingContext",
+      "elementKind": "method",
+      "methodName": "clearBufferiv",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.gl.WebGL2RenderingContext::clearBufferuiv(int, int, double[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.gl.WebGL2RenderingContext",
+      "classSimpleName": "WebGL2RenderingContext",
+      "elementKind": "method",
+      "methodName": "clearBufferuiv",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method void akasha.gl.WebGL2RenderingContext::clearBufferuiv(int, int, double[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gl.WebGL2RenderingContext",
+      "classSimpleName": "WebGL2RenderingContext",
+      "elementKind": "method",
+      "methodName": "clearBufferuiv",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.gl.WebGL2RenderingContext::drawBuffers(double[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.gl.WebGL2RenderingContext",
+      "classSimpleName": "WebGL2RenderingContext",
+      "elementKind": "method",
+      "methodName": "drawBuffers",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method void akasha.gl.WebGL2RenderingContext::drawBuffers(double[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gl.WebGL2RenderingContext",
+      "classSimpleName": "WebGL2RenderingContext",
+      "elementKind": "method",
+      "methodName": "drawBuffers",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.gl.WebGL2RenderingContext::invalidateFramebuffer(int, double[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.gl.WebGL2RenderingContext",
+      "classSimpleName": "WebGL2RenderingContext",
+      "elementKind": "method",
+      "methodName": "invalidateFramebuffer",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method void akasha.gl.WebGL2RenderingContext::invalidateFramebuffer(int, double[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gl.WebGL2RenderingContext",
+      "classSimpleName": "WebGL2RenderingContext",
+      "elementKind": "method",
+      "methodName": "invalidateFramebuffer",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.gl.WebGL2RenderingContext::uniform1fv(akasha.gl.WebGLUniformLocation, double[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.gl.WebGL2RenderingContext",
+      "classSimpleName": "WebGL2RenderingContext",
+      "elementKind": "method",
+      "methodName": "uniform1fv",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method void akasha.gl.WebGL2RenderingContext::uniform1fv(akasha.gl.WebGLUniformLocation, double[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gl.WebGL2RenderingContext",
+      "classSimpleName": "WebGL2RenderingContext",
+      "elementKind": "method",
+      "methodName": "uniform1fv",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.gl.WebGL2RenderingContext::uniform1iv(akasha.gl.WebGLUniformLocation, double[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.gl.WebGL2RenderingContext",
+      "classSimpleName": "WebGL2RenderingContext",
+      "elementKind": "method",
+      "methodName": "uniform1iv",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method void akasha.gl.WebGL2RenderingContext::uniform1iv(akasha.gl.WebGLUniformLocation, double[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gl.WebGL2RenderingContext",
+      "classSimpleName": "WebGL2RenderingContext",
+      "elementKind": "method",
+      "methodName": "uniform1iv",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.gl.WebGL2RenderingContext::uniform1uiv(akasha.gl.WebGLUniformLocation, double[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.gl.WebGL2RenderingContext",
+      "classSimpleName": "WebGL2RenderingContext",
+      "elementKind": "method",
+      "methodName": "uniform1uiv",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method void akasha.gl.WebGL2RenderingContext::uniform1uiv(akasha.gl.WebGLUniformLocation, double[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gl.WebGL2RenderingContext",
+      "classSimpleName": "WebGL2RenderingContext",
+      "elementKind": "method",
+      "methodName": "uniform1uiv",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.gl.WebGL2RenderingContext::uniform2fv(akasha.gl.WebGLUniformLocation, double[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.gl.WebGL2RenderingContext",
+      "classSimpleName": "WebGL2RenderingContext",
+      "elementKind": "method",
+      "methodName": "uniform2fv",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method void akasha.gl.WebGL2RenderingContext::uniform2fv(akasha.gl.WebGLUniformLocation, double[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gl.WebGL2RenderingContext",
+      "classSimpleName": "WebGL2RenderingContext",
+      "elementKind": "method",
+      "methodName": "uniform2fv",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.gl.WebGL2RenderingContext::uniform2iv(akasha.gl.WebGLUniformLocation, double[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.gl.WebGL2RenderingContext",
+      "classSimpleName": "WebGL2RenderingContext",
+      "elementKind": "method",
+      "methodName": "uniform2iv",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method void akasha.gl.WebGL2RenderingContext::uniform2iv(akasha.gl.WebGLUniformLocation, double[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gl.WebGL2RenderingContext",
+      "classSimpleName": "WebGL2RenderingContext",
+      "elementKind": "method",
+      "methodName": "uniform2iv",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.gl.WebGL2RenderingContext::uniform2uiv(akasha.gl.WebGLUniformLocation, double[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.gl.WebGL2RenderingContext",
+      "classSimpleName": "WebGL2RenderingContext",
+      "elementKind": "method",
+      "methodName": "uniform2uiv",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method void akasha.gl.WebGL2RenderingContext::uniform2uiv(akasha.gl.WebGLUniformLocation, double[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gl.WebGL2RenderingContext",
+      "classSimpleName": "WebGL2RenderingContext",
+      "elementKind": "method",
+      "methodName": "uniform2uiv",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.gl.WebGL2RenderingContext::uniform3fv(akasha.gl.WebGLUniformLocation, double[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.gl.WebGL2RenderingContext",
+      "classSimpleName": "WebGL2RenderingContext",
+      "elementKind": "method",
+      "methodName": "uniform3fv",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method void akasha.gl.WebGL2RenderingContext::uniform3fv(akasha.gl.WebGLUniformLocation, double[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gl.WebGL2RenderingContext",
+      "classSimpleName": "WebGL2RenderingContext",
+      "elementKind": "method",
+      "methodName": "uniform3fv",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.gl.WebGL2RenderingContext::uniform3iv(akasha.gl.WebGLUniformLocation, double[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.gl.WebGL2RenderingContext",
+      "classSimpleName": "WebGL2RenderingContext",
+      "elementKind": "method",
+      "methodName": "uniform3iv",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method void akasha.gl.WebGL2RenderingContext::uniform3iv(akasha.gl.WebGLUniformLocation, double[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gl.WebGL2RenderingContext",
+      "classSimpleName": "WebGL2RenderingContext",
+      "elementKind": "method",
+      "methodName": "uniform3iv",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.gl.WebGL2RenderingContext::uniform3uiv(akasha.gl.WebGLUniformLocation, double[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.gl.WebGL2RenderingContext",
+      "classSimpleName": "WebGL2RenderingContext",
+      "elementKind": "method",
+      "methodName": "uniform3uiv",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method void akasha.gl.WebGL2RenderingContext::uniform3uiv(akasha.gl.WebGLUniformLocation, double[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gl.WebGL2RenderingContext",
+      "classSimpleName": "WebGL2RenderingContext",
+      "elementKind": "method",
+      "methodName": "uniform3uiv",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.gl.WebGL2RenderingContext::uniform4fv(akasha.gl.WebGLUniformLocation, double[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.gl.WebGL2RenderingContext",
+      "classSimpleName": "WebGL2RenderingContext",
+      "elementKind": "method",
+      "methodName": "uniform4fv",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method void akasha.gl.WebGL2RenderingContext::uniform4fv(akasha.gl.WebGLUniformLocation, double[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gl.WebGL2RenderingContext",
+      "classSimpleName": "WebGL2RenderingContext",
+      "elementKind": "method",
+      "methodName": "uniform4fv",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.gl.WebGL2RenderingContext::uniform4iv(akasha.gl.WebGLUniformLocation, double[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.gl.WebGL2RenderingContext",
+      "classSimpleName": "WebGL2RenderingContext",
+      "elementKind": "method",
+      "methodName": "uniform4iv",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method void akasha.gl.WebGL2RenderingContext::uniform4iv(akasha.gl.WebGLUniformLocation, double[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gl.WebGL2RenderingContext",
+      "classSimpleName": "WebGL2RenderingContext",
+      "elementKind": "method",
+      "methodName": "uniform4iv",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.gl.WebGL2RenderingContext::uniform4uiv(akasha.gl.WebGLUniformLocation, double[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.gl.WebGL2RenderingContext",
+      "classSimpleName": "WebGL2RenderingContext",
+      "elementKind": "method",
+      "methodName": "uniform4uiv",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method void akasha.gl.WebGL2RenderingContext::uniform4uiv(akasha.gl.WebGLUniformLocation, double[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gl.WebGL2RenderingContext",
+      "classSimpleName": "WebGL2RenderingContext",
+      "elementKind": "method",
+      "methodName": "uniform4uiv",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.gl.WebGL2RenderingContext::uniformMatrix2fv(akasha.gl.WebGLUniformLocation, boolean, double[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.gl.WebGL2RenderingContext",
+      "classSimpleName": "WebGL2RenderingContext",
+      "elementKind": "method",
+      "methodName": "uniformMatrix2fv",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method void akasha.gl.WebGL2RenderingContext::uniformMatrix2fv(akasha.gl.WebGLUniformLocation, boolean, double[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gl.WebGL2RenderingContext",
+      "classSimpleName": "WebGL2RenderingContext",
+      "elementKind": "method",
+      "methodName": "uniformMatrix2fv",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.gl.WebGL2RenderingContext::uniformMatrix2x3fv(akasha.gl.WebGLUniformLocation, boolean, double[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.gl.WebGL2RenderingContext",
+      "classSimpleName": "WebGL2RenderingContext",
+      "elementKind": "method",
+      "methodName": "uniformMatrix2x3fv",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method void akasha.gl.WebGL2RenderingContext::uniformMatrix2x3fv(akasha.gl.WebGLUniformLocation, boolean, double[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gl.WebGL2RenderingContext",
+      "classSimpleName": "WebGL2RenderingContext",
+      "elementKind": "method",
+      "methodName": "uniformMatrix2x3fv",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.gl.WebGL2RenderingContext::uniformMatrix2x4fv(akasha.gl.WebGLUniformLocation, boolean, double[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.gl.WebGL2RenderingContext",
+      "classSimpleName": "WebGL2RenderingContext",
+      "elementKind": "method",
+      "methodName": "uniformMatrix2x4fv",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method void akasha.gl.WebGL2RenderingContext::uniformMatrix2x4fv(akasha.gl.WebGLUniformLocation, boolean, double[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gl.WebGL2RenderingContext",
+      "classSimpleName": "WebGL2RenderingContext",
+      "elementKind": "method",
+      "methodName": "uniformMatrix2x4fv",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.gl.WebGL2RenderingContext::uniformMatrix3fv(akasha.gl.WebGLUniformLocation, boolean, double[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.gl.WebGL2RenderingContext",
+      "classSimpleName": "WebGL2RenderingContext",
+      "elementKind": "method",
+      "methodName": "uniformMatrix3fv",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method void akasha.gl.WebGL2RenderingContext::uniformMatrix3fv(akasha.gl.WebGLUniformLocation, boolean, double[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gl.WebGL2RenderingContext",
+      "classSimpleName": "WebGL2RenderingContext",
+      "elementKind": "method",
+      "methodName": "uniformMatrix3fv",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.gl.WebGL2RenderingContext::uniformMatrix3x2fv(akasha.gl.WebGLUniformLocation, boolean, double[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.gl.WebGL2RenderingContext",
+      "classSimpleName": "WebGL2RenderingContext",
+      "elementKind": "method",
+      "methodName": "uniformMatrix3x2fv",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method void akasha.gl.WebGL2RenderingContext::uniformMatrix3x2fv(akasha.gl.WebGLUniformLocation, boolean, double[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gl.WebGL2RenderingContext",
+      "classSimpleName": "WebGL2RenderingContext",
+      "elementKind": "method",
+      "methodName": "uniformMatrix3x2fv",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.gl.WebGL2RenderingContext::uniformMatrix3x4fv(akasha.gl.WebGLUniformLocation, boolean, double[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.gl.WebGL2RenderingContext",
+      "classSimpleName": "WebGL2RenderingContext",
+      "elementKind": "method",
+      "methodName": "uniformMatrix3x4fv",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method void akasha.gl.WebGL2RenderingContext::uniformMatrix3x4fv(akasha.gl.WebGLUniformLocation, boolean, double[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gl.WebGL2RenderingContext",
+      "classSimpleName": "WebGL2RenderingContext",
+      "elementKind": "method",
+      "methodName": "uniformMatrix3x4fv",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.gl.WebGL2RenderingContext::uniformMatrix4fv(akasha.gl.WebGLUniformLocation, boolean, double[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.gl.WebGL2RenderingContext",
+      "classSimpleName": "WebGL2RenderingContext",
+      "elementKind": "method",
+      "methodName": "uniformMatrix4fv",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method void akasha.gl.WebGL2RenderingContext::uniformMatrix4fv(akasha.gl.WebGLUniformLocation, boolean, double[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gl.WebGL2RenderingContext",
+      "classSimpleName": "WebGL2RenderingContext",
+      "elementKind": "method",
+      "methodName": "uniformMatrix4fv",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.gl.WebGL2RenderingContext::uniformMatrix4x2fv(akasha.gl.WebGLUniformLocation, boolean, double[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.gl.WebGL2RenderingContext",
+      "classSimpleName": "WebGL2RenderingContext",
+      "elementKind": "method",
+      "methodName": "uniformMatrix4x2fv",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method void akasha.gl.WebGL2RenderingContext::uniformMatrix4x2fv(akasha.gl.WebGLUniformLocation, boolean, double[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gl.WebGL2RenderingContext",
+      "classSimpleName": "WebGL2RenderingContext",
+      "elementKind": "method",
+      "methodName": "uniformMatrix4x2fv",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.gl.WebGL2RenderingContext::uniformMatrix4x3fv(akasha.gl.WebGLUniformLocation, boolean, double[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.gl.WebGL2RenderingContext",
+      "classSimpleName": "WebGL2RenderingContext",
+      "elementKind": "method",
+      "methodName": "uniformMatrix4x3fv",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method void akasha.gl.WebGL2RenderingContext::uniformMatrix4x3fv(akasha.gl.WebGLUniformLocation, boolean, double[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gl.WebGL2RenderingContext",
+      "classSimpleName": "WebGL2RenderingContext",
+      "elementKind": "method",
+      "methodName": "uniformMatrix4x3fv",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.gl.WebGL2RenderingContext::vertexAttrib1fv(int, double[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.gl.WebGL2RenderingContext",
+      "classSimpleName": "WebGL2RenderingContext",
+      "elementKind": "method",
+      "methodName": "vertexAttrib1fv",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method void akasha.gl.WebGL2RenderingContext::vertexAttrib1fv(int, double[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gl.WebGL2RenderingContext",
+      "classSimpleName": "WebGL2RenderingContext",
+      "elementKind": "method",
+      "methodName": "vertexAttrib1fv",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.gl.WebGL2RenderingContext::vertexAttrib2fv(int, double[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.gl.WebGL2RenderingContext",
+      "classSimpleName": "WebGL2RenderingContext",
+      "elementKind": "method",
+      "methodName": "vertexAttrib2fv",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method void akasha.gl.WebGL2RenderingContext::vertexAttrib2fv(int, double[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gl.WebGL2RenderingContext",
+      "classSimpleName": "WebGL2RenderingContext",
+      "elementKind": "method",
+      "methodName": "vertexAttrib2fv",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.gl.WebGL2RenderingContext::vertexAttrib3fv(int, double[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.gl.WebGL2RenderingContext",
+      "classSimpleName": "WebGL2RenderingContext",
+      "elementKind": "method",
+      "methodName": "vertexAttrib3fv",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method void akasha.gl.WebGL2RenderingContext::vertexAttrib3fv(int, double[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gl.WebGL2RenderingContext",
+      "classSimpleName": "WebGL2RenderingContext",
+      "elementKind": "method",
+      "methodName": "vertexAttrib3fv",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.gl.WebGL2RenderingContext::vertexAttrib4fv(int, double[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.gl.WebGL2RenderingContext",
+      "classSimpleName": "WebGL2RenderingContext",
+      "elementKind": "method",
+      "methodName": "vertexAttrib4fv",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method void akasha.gl.WebGL2RenderingContext::vertexAttrib4fv(int, double[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gl.WebGL2RenderingContext",
+      "classSimpleName": "WebGL2RenderingContext",
+      "elementKind": "method",
+      "methodName": "vertexAttrib4fv",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.gl.WebGL2RenderingContext::vertexAttribI4iv(int, double[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.gl.WebGL2RenderingContext",
+      "classSimpleName": "WebGL2RenderingContext",
+      "elementKind": "method",
+      "methodName": "vertexAttribI4iv",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method void akasha.gl.WebGL2RenderingContext::vertexAttribI4iv(int, double[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gl.WebGL2RenderingContext",
+      "classSimpleName": "WebGL2RenderingContext",
+      "elementKind": "method",
+      "methodName": "vertexAttribI4iv",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.gl.WebGL2RenderingContext::vertexAttribI4uiv(int, double[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.gl.WebGL2RenderingContext",
+      "classSimpleName": "WebGL2RenderingContext",
+      "elementKind": "method",
+      "methodName": "vertexAttribI4uiv",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method void akasha.gl.WebGL2RenderingContext::vertexAttribI4uiv(int, double[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gl.WebGL2RenderingContext",
+      "classSimpleName": "WebGL2RenderingContext",
+      "elementKind": "method",
+      "methodName": "vertexAttribI4uiv",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.gl.WebGLRenderingContext::uniform1fv(akasha.gl.WebGLUniformLocation, double[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.gl.WebGLRenderingContext",
+      "classSimpleName": "WebGLRenderingContext",
+      "elementKind": "method",
+      "methodName": "uniform1fv",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method void akasha.gl.WebGLRenderingContext::uniform1fv(akasha.gl.WebGLUniformLocation, double[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gl.WebGLRenderingContext",
+      "classSimpleName": "WebGLRenderingContext",
+      "elementKind": "method",
+      "methodName": "uniform1fv",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.gl.WebGLRenderingContext::uniform1iv(akasha.gl.WebGLUniformLocation, double[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.gl.WebGLRenderingContext",
+      "classSimpleName": "WebGLRenderingContext",
+      "elementKind": "method",
+      "methodName": "uniform1iv",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method void akasha.gl.WebGLRenderingContext::uniform1iv(akasha.gl.WebGLUniformLocation, double[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gl.WebGLRenderingContext",
+      "classSimpleName": "WebGLRenderingContext",
+      "elementKind": "method",
+      "methodName": "uniform1iv",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.gl.WebGLRenderingContext::uniform2fv(akasha.gl.WebGLUniformLocation, double[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.gl.WebGLRenderingContext",
+      "classSimpleName": "WebGLRenderingContext",
+      "elementKind": "method",
+      "methodName": "uniform2fv",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method void akasha.gl.WebGLRenderingContext::uniform2fv(akasha.gl.WebGLUniformLocation, double[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gl.WebGLRenderingContext",
+      "classSimpleName": "WebGLRenderingContext",
+      "elementKind": "method",
+      "methodName": "uniform2fv",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.gl.WebGLRenderingContext::uniform2iv(akasha.gl.WebGLUniformLocation, double[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.gl.WebGLRenderingContext",
+      "classSimpleName": "WebGLRenderingContext",
+      "elementKind": "method",
+      "methodName": "uniform2iv",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method void akasha.gl.WebGLRenderingContext::uniform2iv(akasha.gl.WebGLUniformLocation, double[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gl.WebGLRenderingContext",
+      "classSimpleName": "WebGLRenderingContext",
+      "elementKind": "method",
+      "methodName": "uniform2iv",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.gl.WebGLRenderingContext::uniform3fv(akasha.gl.WebGLUniformLocation, double[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.gl.WebGLRenderingContext",
+      "classSimpleName": "WebGLRenderingContext",
+      "elementKind": "method",
+      "methodName": "uniform3fv",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method void akasha.gl.WebGLRenderingContext::uniform3fv(akasha.gl.WebGLUniformLocation, double[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gl.WebGLRenderingContext",
+      "classSimpleName": "WebGLRenderingContext",
+      "elementKind": "method",
+      "methodName": "uniform3fv",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.gl.WebGLRenderingContext::uniform3iv(akasha.gl.WebGLUniformLocation, double[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.gl.WebGLRenderingContext",
+      "classSimpleName": "WebGLRenderingContext",
+      "elementKind": "method",
+      "methodName": "uniform3iv",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method void akasha.gl.WebGLRenderingContext::uniform3iv(akasha.gl.WebGLUniformLocation, double[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gl.WebGLRenderingContext",
+      "classSimpleName": "WebGLRenderingContext",
+      "elementKind": "method",
+      "methodName": "uniform3iv",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.gl.WebGLRenderingContext::uniform4fv(akasha.gl.WebGLUniformLocation, double[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.gl.WebGLRenderingContext",
+      "classSimpleName": "WebGLRenderingContext",
+      "elementKind": "method",
+      "methodName": "uniform4fv",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method void akasha.gl.WebGLRenderingContext::uniform4fv(akasha.gl.WebGLUniformLocation, double[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gl.WebGLRenderingContext",
+      "classSimpleName": "WebGLRenderingContext",
+      "elementKind": "method",
+      "methodName": "uniform4fv",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.gl.WebGLRenderingContext::uniform4iv(akasha.gl.WebGLUniformLocation, double[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.gl.WebGLRenderingContext",
+      "classSimpleName": "WebGLRenderingContext",
+      "elementKind": "method",
+      "methodName": "uniform4iv",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method void akasha.gl.WebGLRenderingContext::uniform4iv(akasha.gl.WebGLUniformLocation, double[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gl.WebGLRenderingContext",
+      "classSimpleName": "WebGLRenderingContext",
+      "elementKind": "method",
+      "methodName": "uniform4iv",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.gl.WebGLRenderingContext::uniformMatrix2fv(akasha.gl.WebGLUniformLocation, boolean, double[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.gl.WebGLRenderingContext",
+      "classSimpleName": "WebGLRenderingContext",
+      "elementKind": "method",
+      "methodName": "uniformMatrix2fv",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method void akasha.gl.WebGLRenderingContext::uniformMatrix2fv(akasha.gl.WebGLUniformLocation, boolean, double[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gl.WebGLRenderingContext",
+      "classSimpleName": "WebGLRenderingContext",
+      "elementKind": "method",
+      "methodName": "uniformMatrix2fv",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.gl.WebGLRenderingContext::uniformMatrix3fv(akasha.gl.WebGLUniformLocation, boolean, double[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.gl.WebGLRenderingContext",
+      "classSimpleName": "WebGLRenderingContext",
+      "elementKind": "method",
+      "methodName": "uniformMatrix3fv",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method void akasha.gl.WebGLRenderingContext::uniformMatrix3fv(akasha.gl.WebGLUniformLocation, boolean, double[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gl.WebGLRenderingContext",
+      "classSimpleName": "WebGLRenderingContext",
+      "elementKind": "method",
+      "methodName": "uniformMatrix3fv",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.gl.WebGLRenderingContext::uniformMatrix4fv(akasha.gl.WebGLUniformLocation, boolean, double[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.gl.WebGLRenderingContext",
+      "classSimpleName": "WebGLRenderingContext",
+      "elementKind": "method",
+      "methodName": "uniformMatrix4fv",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method void akasha.gl.WebGLRenderingContext::uniformMatrix4fv(akasha.gl.WebGLUniformLocation, boolean, double[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gl.WebGLRenderingContext",
+      "classSimpleName": "WebGLRenderingContext",
+      "elementKind": "method",
+      "methodName": "uniformMatrix4fv",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.gl.WebGLRenderingContext::vertexAttrib1fv(int, double[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.gl.WebGLRenderingContext",
+      "classSimpleName": "WebGLRenderingContext",
+      "elementKind": "method",
+      "methodName": "vertexAttrib1fv",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method void akasha.gl.WebGLRenderingContext::vertexAttrib1fv(int, double[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gl.WebGLRenderingContext",
+      "classSimpleName": "WebGLRenderingContext",
+      "elementKind": "method",
+      "methodName": "vertexAttrib1fv",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.gl.WebGLRenderingContext::vertexAttrib2fv(int, double[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.gl.WebGLRenderingContext",
+      "classSimpleName": "WebGLRenderingContext",
+      "elementKind": "method",
+      "methodName": "vertexAttrib2fv",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method void akasha.gl.WebGLRenderingContext::vertexAttrib2fv(int, double[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gl.WebGLRenderingContext",
+      "classSimpleName": "WebGLRenderingContext",
+      "elementKind": "method",
+      "methodName": "vertexAttrib2fv",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.gl.WebGLRenderingContext::vertexAttrib3fv(int, double[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.gl.WebGLRenderingContext",
+      "classSimpleName": "WebGLRenderingContext",
+      "elementKind": "method",
+      "methodName": "vertexAttrib3fv",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method void akasha.gl.WebGLRenderingContext::vertexAttrib3fv(int, double[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gl.WebGLRenderingContext",
+      "classSimpleName": "WebGLRenderingContext",
+      "elementKind": "method",
+      "methodName": "vertexAttrib3fv",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.gl.WebGLRenderingContext::vertexAttrib4fv(int, double[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.gl.WebGLRenderingContext",
+      "classSimpleName": "WebGLRenderingContext",
+      "elementKind": "method",
+      "methodName": "vertexAttrib4fv",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method void akasha.gl.WebGLRenderingContext::vertexAttrib4fv(int, double[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gl.WebGLRenderingContext",
+      "classSimpleName": "WebGLRenderingContext",
+      "elementKind": "method",
+      "methodName": "vertexAttrib4fv",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.gpu.GPUCommandEncoder::copyBufferToTexture(akasha.gpu.GPUImageCopyBuffer, akasha.gpu.GPUImageCopyTexture, double[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.gpu.GPUCommandEncoder",
+      "classSimpleName": "GPUCommandEncoder",
+      "elementKind": "method",
+      "methodName": "copyBufferToTexture",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method void akasha.gpu.GPUCommandEncoder::copyBufferToTexture(akasha.gpu.GPUImageCopyBuffer, akasha.gpu.GPUImageCopyTexture, double[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUCommandEncoder",
+      "classSimpleName": "GPUCommandEncoder",
+      "elementKind": "method",
+      "methodName": "copyBufferToTexture",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.gpu.GPUCommandEncoder::copyTextureToBuffer(akasha.gpu.GPUImageCopyTexture, akasha.gpu.GPUImageCopyBuffer, double[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.gpu.GPUCommandEncoder",
+      "classSimpleName": "GPUCommandEncoder",
+      "elementKind": "method",
+      "methodName": "copyTextureToBuffer",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method void akasha.gpu.GPUCommandEncoder::copyTextureToBuffer(akasha.gpu.GPUImageCopyTexture, akasha.gpu.GPUImageCopyBuffer, double[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUCommandEncoder",
+      "classSimpleName": "GPUCommandEncoder",
+      "elementKind": "method",
+      "methodName": "copyTextureToBuffer",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.gpu.GPUCommandEncoder::copyTextureToTexture(akasha.gpu.GPUImageCopyTexture, akasha.gpu.GPUImageCopyTexture, double[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.gpu.GPUCommandEncoder",
+      "classSimpleName": "GPUCommandEncoder",
+      "elementKind": "method",
+      "methodName": "copyTextureToTexture",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method void akasha.gpu.GPUCommandEncoder::copyTextureToTexture(akasha.gpu.GPUImageCopyTexture, akasha.gpu.GPUImageCopyTexture, double[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUCommandEncoder",
+      "classSimpleName": "GPUCommandEncoder",
+      "elementKind": "method",
+      "methodName": "copyTextureToTexture",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.gpu.GPUComputePassEncoder::setBindGroup(int, akasha.gpu.GPUBindGroup, double[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.gpu.GPUComputePassEncoder",
+      "classSimpleName": "GPUComputePassEncoder",
+      "elementKind": "method",
+      "methodName": "setBindGroup",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method void akasha.gpu.GPUComputePassEncoder::setBindGroup(int, akasha.gpu.GPUBindGroup, double[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUComputePassEncoder",
+      "classSimpleName": "GPUComputePassEncoder",
+      "elementKind": "method",
+      "methodName": "setBindGroup",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.gpu.GPUQueue::copyExternalImageToTexture(akasha.gpu.GPUImageCopyExternalImage, akasha.gpu.GPUImageCopyTextureTagged, double[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.gpu.GPUQueue",
+      "classSimpleName": "GPUQueue",
+      "elementKind": "method",
+      "methodName": "copyExternalImageToTexture",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method void akasha.gpu.GPUQueue::copyExternalImageToTexture(akasha.gpu.GPUImageCopyExternalImage, akasha.gpu.GPUImageCopyTextureTagged, double[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUQueue",
+      "classSimpleName": "GPUQueue",
+      "elementKind": "method",
+      "methodName": "copyExternalImageToTexture",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.gpu.GPUQueue::submit(akasha.gpu.GPUCommandBuffer[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.gpu.GPUQueue",
+      "classSimpleName": "GPUQueue",
+      "elementKind": "method",
+      "methodName": "submit",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method void akasha.gpu.GPUQueue::submit(akasha.gpu.GPUCommandBuffer[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUQueue",
+      "classSimpleName": "GPUQueue",
+      "elementKind": "method",
+      "methodName": "submit",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.gpu.GPUQueue::writeTexture(akasha.gpu.GPUImageCopyTexture, akasha.core.BufferSource, akasha.gpu.GPUImageDataLayout, double[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.gpu.GPUQueue",
+      "classSimpleName": "GPUQueue",
+      "elementKind": "method",
+      "methodName": "writeTexture",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method void akasha.gpu.GPUQueue::writeTexture(akasha.gpu.GPUImageCopyTexture, akasha.core.BufferSource, akasha.gpu.GPUImageDataLayout, double[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUQueue",
+      "classSimpleName": "GPUQueue",
+      "elementKind": "method",
+      "methodName": "writeTexture",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.gpu.GPURenderBundleEncoder::setBindGroup(int, akasha.gpu.GPUBindGroup, double[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.gpu.GPURenderBundleEncoder",
+      "classSimpleName": "GPURenderBundleEncoder",
+      "elementKind": "method",
+      "methodName": "setBindGroup",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method void akasha.gpu.GPURenderBundleEncoder::setBindGroup(int, akasha.gpu.GPUBindGroup, double[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURenderBundleEncoder",
+      "classSimpleName": "GPURenderBundleEncoder",
+      "elementKind": "method",
+      "methodName": "setBindGroup",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.gpu.GPURenderPassEncoder::executeBundles(akasha.gpu.GPURenderBundle[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.gpu.GPURenderPassEncoder",
+      "classSimpleName": "GPURenderPassEncoder",
+      "elementKind": "method",
+      "methodName": "executeBundles",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method void akasha.gpu.GPURenderPassEncoder::executeBundles(akasha.gpu.GPURenderBundle[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURenderPassEncoder",
+      "classSimpleName": "GPURenderPassEncoder",
+      "elementKind": "method",
+      "methodName": "executeBundles",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.gpu.GPURenderPassEncoder::setBindGroup(int, akasha.gpu.GPUBindGroup, double[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.gpu.GPURenderPassEncoder",
+      "classSimpleName": "GPURenderPassEncoder",
+      "elementKind": "method",
+      "methodName": "setBindGroup",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method void akasha.gpu.GPURenderPassEncoder::setBindGroup(int, akasha.gpu.GPUBindGroup, double[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURenderPassEncoder",
+      "classSimpleName": "GPURenderPassEncoder",
+      "elementKind": "method",
+      "methodName": "setBindGroup",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.gpu.GPURenderPassEncoder::setBlendConstant(double[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.gpu.GPURenderPassEncoder",
+      "classSimpleName": "GPURenderPassEncoder",
+      "elementKind": "method",
+      "methodName": "setBlendConstant",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method void akasha.gpu.GPURenderPassEncoder::setBlendConstant(double[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURenderPassEncoder",
+      "classSimpleName": "GPURenderPassEncoder",
+      "elementKind": "method",
+      "methodName": "setBlendConstant",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.rtc.RTCRtpTransceiver::setCodecPreferences(akasha.rtc.RTCRtpCodecCapability[])",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.rtc.RTCRtpTransceiver",
+      "classSimpleName": "RTCRtpTransceiver",
+      "elementKind": "method",
+      "methodName": "setCodecPreferences",
+      "package": "akasha.rtc"
+    }
+  },
+  {
+    "code": "java.method.nowFinal",
+    "description": "Method is now final.",
+    "element": "method void akasha.rtc.RTCRtpTransceiver::setCodecPreferences(akasha.rtc.RTCRtpCodecCapability[])",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.rtc.RTCRtpTransceiver",
+      "classSimpleName": "RTCRtpTransceiver",
+      "elementKind": "method",
+      "methodName": "setCodecPreferences",
+      "newModifiers": "public final",
+      "oldModifiers": "public native",
+      "package": "akasha.rtc"
     }
   }
 ]

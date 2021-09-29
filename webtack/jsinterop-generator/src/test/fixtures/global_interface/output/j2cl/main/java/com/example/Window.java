@@ -5,6 +5,7 @@ import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
@@ -50,6 +51,24 @@ public class Window extends EventTarget {
   @Nonnull
   public native Navigator navigator();
 
+  public native void postMessage(@DoNotAutobox @Nullable java.lang.Object message,
+      @Nonnull String targetOrigin, @Nonnull JsArray<Transferable> transfer);
+
+  @JsOverlay
+  public final void postMessage(@DoNotAutobox @Nullable final java.lang.Object message,
+      @Nonnull final String targetOrigin, @Nonnull final Transferable... transfer) {
+    _postMessage( message, targetOrigin, transfer );
+  }
+
+  @JsMethod(
+      name = "postMessage"
+  )
+  private native void _postMessage(@DoNotAutobox @Nullable java.lang.Object message,
+      @Nonnull String targetOrigin, @Nonnull Transferable[] transfer);
+
+  public native void postMessage(@DoNotAutobox @Nullable java.lang.Object message,
+      @Nonnull String targetOrigin);
+
   public native void scroll(double x, double y);
 
   public native void scroll(@Nonnull ScrollToOptions options);
@@ -59,15 +78,6 @@ public class Window extends EventTarget {
   @HasNoSideEffects
   @JsNonNull
   public native Object get(@Nonnull String name);
-
-  public native void postMessage(@DoNotAutobox @Nullable java.lang.Object message,
-      @Nonnull String targetOrigin, @Nonnull JsArray<Transferable> transfer);
-
-  public native void postMessage(@DoNotAutobox @Nullable java.lang.Object message,
-      @Nonnull String targetOrigin, @Nonnull Transferable[] transfer);
-
-  public native void postMessage(@DoNotAutobox @Nullable java.lang.Object message,
-      @Nonnull String targetOrigin);
 
   @JsOverlay
   public final void addDOMContentLoadedListener(@Nonnull final EventListener callback,

@@ -7,7 +7,9 @@ import com.biz.MyIDBIndexParameters;
 import com.biz.MyStringOrLongLongUnion;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -45,8 +47,18 @@ public class IDBObjectStore {
   @JsNonNull
   public native MyIDBIndex createIndex(@Nonnull String name, @Nonnull JsArray<String> keyPath);
 
+  @JsOverlay
   @JsNonNull
-  public native MyIDBIndex createIndex(@Nonnull String name, @Nonnull String[] keyPath);
+  public final MyIDBIndex createIndex(@Nonnull final String name,
+      @Nonnull final String... keyPath) {
+    return _createIndex( name, keyPath );
+  }
+
+  @JsMethod(
+      name = "createIndex"
+  )
+  @JsNonNull
+  private native MyIDBIndex _createIndex(@Nonnull String name, @Nonnull String[] keyPath);
 
   @JsNonNull
   public native MyIDBIndex createIndex2(@Nonnull String name, @Nonnull IDBIndexParameters2 options);

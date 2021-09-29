@@ -53,16 +53,6 @@ public final class WindowGlobal {
   @JsNonNull
   public static native Navigator navigator();
 
-  public static native void scroll(double x, double y);
-
-  public static native void scroll(@Nonnull ScrollToOptions options);
-
-  public static native void scroll();
-
-  @HasNoSideEffects
-  @JsNonNull
-  public static native Object get(@Nonnull String name);
-
   public static native void postMessage(@DoNotAutobox @Nullable java.lang.Object message,
       @Nonnull String targetOrigin, @Nonnull JsArray<Transferable> transfer);
 
@@ -80,6 +70,16 @@ public final class WindowGlobal {
 
   public static native void postMessage(@DoNotAutobox @Nullable java.lang.Object message,
       @Nonnull String targetOrigin);
+
+  public static native void scroll(double x, double y);
+
+  public static native void scroll(@Nonnull ScrollToOptions options);
+
+  public static native void scroll();
+
+  @HasNoSideEffects
+  @JsNonNull
+  public static native Object get(@Nonnull String name);
 
   @JsOverlay
   public static void addDOMContentLoadedListener(@Nonnull final EventListener callback,

@@ -27,22 +27,6 @@ public final class WindowTestCompile {
     return type.navigator();
   }
 
-  public static void scroll(final Window $instance, final double x, final double y) {
-    $instance.scroll( x, y );
-  }
-
-  public static void scroll(final Window $instance, final ScrollToOptions options) {
-    $instance.scroll( options );
-  }
-
-  public static void scroll(final Window $instance) {
-    $instance.scroll();
-  }
-
-  public static Object get(final Window $instance, final String name) {
-    return $instance.get( name );
-  }
-
   public static void postMessage(final Window $instance,
       @DoNotAutobox final java.lang.Object message, final String targetOrigin,
       final JsArray<Transferable> transfer) {
@@ -58,5 +42,21 @@ public final class WindowTestCompile {
   public static void postMessage(final Window $instance,
       @DoNotAutobox final java.lang.Object message, final String targetOrigin) {
     $instance.postMessage( message, targetOrigin );
+  }
+
+  public static void scroll(final Window $instance, final double x, final double y) {
+    $instance.scroll( x, y );
+  }
+
+  public static void scroll(final Window $instance, final ScrollToOptions options) {
+    $instance.scroll( options );
+  }
+
+  public static void scroll(final Window $instance) {
+    $instance.scroll();
+  }
+
+  public static Object get(final Window $instance, final String name) {
+    return $instance.get( name );
   }
 }

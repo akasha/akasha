@@ -43,13 +43,6 @@ public final class Console {
   public static native void clear();
 
   /**
-   * Outputs a warning message to the Web Console.
-   *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/console/warn">console.warn - MDN</a>
-   */
-  public static native void warn(@DoNotAutobox @Nullable Object... data);
-
-  /**
    * Last argument is optional and a varargs candidate
    */
   public static native void table(@DoNotAutobox @Nullable Object tabularData,
@@ -79,4 +72,11 @@ public final class Console {
    * Last argument is optional and a varargs candidate
    */
   public static native void table();
+
+  /**
+   * Outputs a warning message to the Web Console.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/console/warn">console.warn - MDN</a>
+   */
+  public static native void warn(@DoNotAutobox @Nullable Object... data);
 }

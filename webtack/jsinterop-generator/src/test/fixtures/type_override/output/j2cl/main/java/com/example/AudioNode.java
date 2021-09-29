@@ -21,7 +21,8 @@ public class AudioNode {
 
   @JsOverlay
   @JsNonNull
-  public final AudioNode connect(@Nonnull AudioNode destinationNode, int output, int input) {
+  public final AudioNode connect(@Nonnull final AudioNode destinationNode, final int output,
+      final int input) {
     return Js.uncheckedCast( _connect( destinationNode, output, input ) );
   }
 
@@ -34,7 +35,7 @@ public class AudioNode {
 
   @JsOverlay
   @JsNonNull
-  public final AudioNode connect(@Nonnull AudioNode destinationNode, int output) {
+  public final AudioNode connect(@Nonnull final AudioNode destinationNode, final int output) {
     return Js.uncheckedCast( _connect( destinationNode, output ) );
   }
 
@@ -46,7 +47,7 @@ public class AudioNode {
 
   @JsOverlay
   @JsNonNull
-  public final AudioNode connect(@Nonnull AudioNode destinationNode) {
+  public final AudioNode connect(@Nonnull final AudioNode destinationNode) {
     return Js.uncheckedCast( _connect( destinationNode ) );
   }
 
@@ -57,7 +58,7 @@ public class AudioNode {
   private native AudioNodeOrUndefinedUnion _connect(@Nonnull AudioNode destinationNode);
 
   @JsOverlay
-  public final void connect(@Nonnull AudioParam destinationParam, int output) {
+  public final void connect(@Nonnull final AudioParam destinationParam, final int output) {
     _connect( destinationParam, output );
   }
 
@@ -69,7 +70,7 @@ public class AudioNode {
       int output);
 
   @JsOverlay
-  public final void connect(@Nonnull AudioParam destinationParam) {
+  public final void connect(@Nonnull final AudioParam destinationParam) {
     _connect( destinationParam );
   }
 

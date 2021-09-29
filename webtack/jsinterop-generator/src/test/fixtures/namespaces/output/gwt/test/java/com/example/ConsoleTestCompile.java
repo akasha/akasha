@@ -17,10 +17,6 @@ public final class ConsoleTestCompile {
     Console.clear();
   }
 
-  public static void warn(@DoNotAutobox final Object[] data) {
-    Console.warn( data );
-  }
-
   public static void table(@DoNotAutobox final Object tabularData,
       final JsArray<String> properties) {
     Console.table( tabularData, properties );
@@ -36,5 +32,9 @@ public final class ConsoleTestCompile {
 
   public static void table() {
     Console.table();
+  }
+
+  public static void warn(@DoNotAutobox final Object[] data) {
+    Console.warn( data );
   }
 }

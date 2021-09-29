@@ -77,3 +77,5 @@ goog.require('com.example.Storage.$Overlay');
 goog.require('com.example.StorageTestCompile');
 goog.require('com.example.TxStorage.$Overlay');
 goog.require('com.example.TxStorageTestCompile');
+goog.require('com.example.VarargsType.$Overlay');
+goog.require('com.example.VarargsTypeTestCompile');

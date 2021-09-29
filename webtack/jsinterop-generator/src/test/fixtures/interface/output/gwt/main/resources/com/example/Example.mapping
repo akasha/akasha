@@ -41,4 +41,5 @@ SomeReadOnlySetLike=com.example.SomeReadOnlySetLike
 SomeWriteSetLike=com.example.SomeWriteSetLike
 SpeechRecognitionErrorEvent=com.example.SpeechRecognitionErrorEvent
 Storage=com.example.Storage
+VarargsType=com.example.VarargsType
 txStorage=com.example.TxStorage

@@ -44,17 +44,17 @@ function Window() {}
 /** @type {!Navigator} */ Window.prototype.navigator;
 /** @type {!string} */ Window.prototype.name;
 /**
+ * @param {!string} name
+ * @return {!Object}
+ */
+Window.prototype.get = function(name) {}
+/**
  * @param {*} message
  * @param {!string} targetOrigin
  * @param {!Array<!Transferable>=} transfer
  * @return {undefined}
  */
 Window.prototype.postMessage = function(message,targetOrigin,transfer) {}
-/**
- * @param {!string} name
- * @return {!Object}
- */
-Window.prototype.get = function(name) {}
 /**
  * @param {(!number|!ScrollToOptions)=} arg0
  * @param {!number=} arg1
@@ -153,17 +153,17 @@ function removeEventListener(type,callback,options) {}
  */
 function dispatchEvent(event) {}
 /**
+ * @param {!string} name
+ * @return {!Object}
+ */
+function get(name) {}
+/**
  * @param {*} message
  * @param {!string} targetOrigin
  * @param {!Array<!Transferable>=} transfer
  * @return {undefined}
  */
 function postMessage(message,targetOrigin,transfer) {}
-/**
- * @param {!string} name
- * @return {!Object}
- */
-function get(name) {}
 /**
  * @param {(!number|!ScrollToOptions)=} arg0
  * @param {!number=} arg1

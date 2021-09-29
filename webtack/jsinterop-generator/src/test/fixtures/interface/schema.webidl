@@ -342,6 +342,14 @@ interface Storage {
 };
 
 /**
+ * This tests auto convert to varargs in jsinterop binding.
+ */
+interface VarargsType {
+  static undefined myOperation1( sequence<DOMString> tokens );
+  undefined myOperation2( sequence<DOMString> tokens );
+};
+
+/**
  * This tests that lowercase name converted to uppercase when converted into java.
  */
 interface txStorage {
