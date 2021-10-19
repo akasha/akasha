@@ -1488,7 +1488,7 @@ final class JsinteropAction
     final ClassName className = containerClassName.nestedClass( "Builder" );
     final TypeSpec.Builder type =
       TypeSpec
-        .interfaceBuilder( "Builder" )
+        .interfaceBuilder( className.simpleName() )
         .addModifiers( Modifier.PUBLIC, Modifier.STATIC );
     writeGeneratedAnnotation( type );
     type.addAnnotation( AnnotationSpec
