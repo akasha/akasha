@@ -30,7 +30,6 @@ public interface PushPermissionDescriptor extends PermissionDescriptor {
   @JsProperty
   void setUserVisibleOnly3(boolean userVisibleOnly3);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

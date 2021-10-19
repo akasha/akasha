@@ -33,7 +33,6 @@ public interface Dictionary_requiredShortFrozenArrayValue {
   @JsProperty
   void setRequiredShortFrozenArrayValue(@JsNonNull JsArray<Double> requiredShortFrozenArrayValue);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

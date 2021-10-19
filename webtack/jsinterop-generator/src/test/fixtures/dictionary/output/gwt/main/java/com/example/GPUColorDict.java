@@ -60,7 +60,6 @@ public interface GPUColorDict {
   /**
    * Test to ensure that required members are not reordered.
    */
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

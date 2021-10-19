@@ -49,7 +49,6 @@ public interface Dictionary_requiredNullableSomeTypeSequenceValue {
     setRequiredNullableSomeTypeSequenceValue( Js.<JsArray<SomeType>>uncheckedCast( requiredNullableSomeTypeSequenceValue ) );
   }
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

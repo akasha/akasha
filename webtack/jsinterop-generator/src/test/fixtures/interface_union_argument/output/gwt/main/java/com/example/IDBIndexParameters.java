@@ -38,7 +38,6 @@ public interface IDBIndexParameters {
   @JsProperty
   void setUnique(boolean unique);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

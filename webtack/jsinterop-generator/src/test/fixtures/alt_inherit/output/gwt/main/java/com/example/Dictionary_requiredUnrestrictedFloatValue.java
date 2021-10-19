@@ -30,7 +30,6 @@ public interface Dictionary_requiredUnrestrictedFloatValue {
   @JsProperty
   void setRequiredUnrestrictedFloatValue(float requiredUnrestrictedFloatValue);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

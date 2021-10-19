@@ -32,7 +32,6 @@ public interface Dictionary_requiredDOMStringValue {
   @JsProperty
   void setRequiredDOMStringValue(@JsNonNull String requiredDOMStringValue);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

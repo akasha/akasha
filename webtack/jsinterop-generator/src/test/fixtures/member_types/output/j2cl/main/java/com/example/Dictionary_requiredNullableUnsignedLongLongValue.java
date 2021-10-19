@@ -35,7 +35,6 @@ public interface Dictionary_requiredNullableUnsignedLongLongValue {
   void setRequiredNullableUnsignedLongLongValue(
       @JsNullable Double requiredNullableUnsignedLongLongValue);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

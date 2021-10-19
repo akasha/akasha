@@ -30,7 +30,6 @@ public interface Dictionary_requiredBooleanValue {
   @JsProperty
   void setRequiredBooleanValue(boolean requiredBooleanValue);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

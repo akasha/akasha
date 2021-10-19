@@ -40,7 +40,6 @@ public interface MyDictionary {
   @JsProperty
   void setDescription(@JsNonNull String description);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

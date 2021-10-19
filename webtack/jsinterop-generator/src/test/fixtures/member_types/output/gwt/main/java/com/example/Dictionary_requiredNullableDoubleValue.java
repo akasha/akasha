@@ -33,7 +33,6 @@ public interface Dictionary_requiredNullableDoubleValue {
   @JsProperty
   void setRequiredNullableDoubleValue(@JsNullable Double requiredNullableDoubleValue);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

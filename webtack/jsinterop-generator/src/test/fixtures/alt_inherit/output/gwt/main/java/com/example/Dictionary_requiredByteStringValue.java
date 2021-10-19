@@ -32,7 +32,6 @@ public interface Dictionary_requiredByteStringValue {
   @JsProperty
   void setRequiredByteStringValue(@JsNonNull String requiredByteStringValue);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

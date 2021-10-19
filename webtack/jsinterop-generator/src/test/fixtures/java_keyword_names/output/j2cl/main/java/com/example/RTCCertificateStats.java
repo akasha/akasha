@@ -39,7 +39,6 @@ public interface RTCCertificateStats {
   @JsProperty
   void setIssuerCertificateId(@JsNonNull String issuerCertificateId);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

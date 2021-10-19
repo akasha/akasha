@@ -34,7 +34,6 @@ public interface Dictionary_requiredNullableBooleanValue {
   @JsProperty
   void setRequiredNullableBooleanValue(@JsNullable Boolean requiredNullableBooleanValue);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

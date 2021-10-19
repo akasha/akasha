@@ -37,7 +37,6 @@ public interface Sub1 extends Base {
     setOthers( Js.<JsArray<Base>>uncheckedCast( others ) );
   }
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

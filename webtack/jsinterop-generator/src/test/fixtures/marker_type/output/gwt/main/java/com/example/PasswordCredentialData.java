@@ -31,7 +31,6 @@ public interface PasswordCredentialData extends PasswordCredentialInit {
   @JsProperty
   void setIconURL(@JsNonNull String iconURL);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

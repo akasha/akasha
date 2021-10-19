@@ -38,7 +38,6 @@ public interface WaveShaperOptions {
   /**
    * Optional attribute is an enum
    */
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

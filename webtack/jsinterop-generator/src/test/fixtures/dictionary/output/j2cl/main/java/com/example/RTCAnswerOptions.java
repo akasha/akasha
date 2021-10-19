@@ -21,7 +21,6 @@ public interface RTCAnswerOptions extends RTCOfferAnswerOptions {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

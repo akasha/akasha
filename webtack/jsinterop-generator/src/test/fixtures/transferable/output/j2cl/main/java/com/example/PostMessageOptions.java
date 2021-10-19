@@ -36,7 +36,6 @@ public interface PostMessageOptions {
     setTransfer( Js.<JsArray<Object>>uncheckedCast( transfer ) );
   }
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

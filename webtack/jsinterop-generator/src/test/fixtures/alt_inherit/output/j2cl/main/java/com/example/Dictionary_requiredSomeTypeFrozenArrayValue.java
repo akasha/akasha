@@ -35,7 +35,6 @@ public interface Dictionary_requiredSomeTypeFrozenArrayValue {
   void setRequiredSomeTypeFrozenArrayValue(
       @JsNonNull JsArray<SomeType> requiredSomeTypeFrozenArrayValue);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

@@ -50,7 +50,6 @@ public interface XRSessionInit {
     setRequiredFeatures( Js.<JsArray<Any>>uncheckedCast( requiredFeatures ) );
   }
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

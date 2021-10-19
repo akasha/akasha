@@ -43,7 +43,6 @@ public interface GlobalDescriptor {
   @JsProperty
   void setMutable(boolean mutable);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

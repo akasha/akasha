@@ -57,7 +57,6 @@ public interface PermissionDescriptor {
   @JsProperty
   void setUserVisibleOnly2(boolean userVisibleOnly2);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

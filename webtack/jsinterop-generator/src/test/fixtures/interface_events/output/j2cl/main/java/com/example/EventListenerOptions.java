@@ -30,7 +30,6 @@ public interface EventListenerOptions {
   @JsProperty
   void setCapture(boolean capture);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

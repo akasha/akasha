@@ -38,7 +38,6 @@ public interface TxAuthGenericArg {
   /**
    * This tests that lowercase name converted to uppercase when converted into java.
    */
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

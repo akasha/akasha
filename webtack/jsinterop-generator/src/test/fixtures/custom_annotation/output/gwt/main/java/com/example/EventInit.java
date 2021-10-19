@@ -42,7 +42,6 @@ public interface EventInit {
   @JsProperty
   void setBubbles(@MyAnnotation boolean bubbles);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

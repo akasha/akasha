@@ -32,7 +32,6 @@ public interface PermissionDescriptor {
   @JsProperty
   void setName(@JsNonNull String name);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

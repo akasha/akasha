@@ -31,7 +31,6 @@ public interface ClipboardItemOptions {
   @JsProperty
   void setPresentationStyle(@JsNonNull String presentationStyle);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

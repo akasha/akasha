@@ -37,7 +37,6 @@ public interface Sub2 extends Sub1 {
     setSessions( Js.<JsArray<XRSessionInit>>uncheckedCast( sessions ) );
   }
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

@@ -45,7 +45,6 @@ public interface PromiseRejectionEventInit extends EventInit {
   @JsProperty
   void setReason(@DoNotAutobox @JsNullable Object reason);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

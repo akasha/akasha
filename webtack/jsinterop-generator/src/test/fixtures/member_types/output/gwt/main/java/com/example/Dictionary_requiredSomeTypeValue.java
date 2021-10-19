@@ -32,7 +32,6 @@ public interface Dictionary_requiredSomeTypeValue {
   @JsProperty
   void setRequiredSomeTypeValue(@JsNonNull SomeType requiredSomeTypeValue);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

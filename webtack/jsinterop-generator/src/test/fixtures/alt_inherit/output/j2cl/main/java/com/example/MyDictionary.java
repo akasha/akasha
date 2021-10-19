@@ -708,7 +708,6 @@ public interface MyDictionary {
   @JsProperty
   void setVoidPromiseValue(@JsNonNull JsPromise<Void> voidPromiseValue);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

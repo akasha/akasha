@@ -35,7 +35,6 @@ public interface Dictionary_requiredNullableSomeTypeFrozenArrayValue {
   void setRequiredNullableSomeTypeFrozenArrayValue(
       @JsNullable JsArray<SomeType> requiredNullableSomeTypeFrozenArrayValue);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

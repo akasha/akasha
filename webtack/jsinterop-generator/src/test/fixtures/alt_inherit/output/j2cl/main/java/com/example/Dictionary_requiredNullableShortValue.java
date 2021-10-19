@@ -33,7 +33,6 @@ public interface Dictionary_requiredNullableShortValue {
   @JsProperty
   void setRequiredNullableShortValue(@JsNullable Double requiredNullableShortValue);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

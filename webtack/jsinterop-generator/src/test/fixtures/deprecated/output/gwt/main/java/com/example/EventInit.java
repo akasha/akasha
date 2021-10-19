@@ -45,7 +45,6 @@ public interface EventInit {
   /**
    * @deprecated
    */
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

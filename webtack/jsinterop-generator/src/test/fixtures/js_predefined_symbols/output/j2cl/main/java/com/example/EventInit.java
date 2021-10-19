@@ -47,7 +47,6 @@ public interface EventInit {
   @JsProperty
   void setPropertyName2(@JsNonNull String propertyName2);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

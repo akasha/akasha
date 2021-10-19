@@ -30,7 +30,6 @@ public interface Dictionary_requiredShortValue {
   @JsProperty
   void setRequiredShortValue(short requiredShortValue);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

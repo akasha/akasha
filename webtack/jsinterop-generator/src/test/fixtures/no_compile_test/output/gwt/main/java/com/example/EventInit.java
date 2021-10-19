@@ -46,7 +46,6 @@ public interface EventInit {
   @JsProperty
   void setComposed(boolean composed);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

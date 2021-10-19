@@ -33,7 +33,6 @@ public interface Dictionary_requiredNullableByteValue {
   @JsProperty
   void setRequiredNullableByteValue(@JsNullable Double requiredNullableByteValue);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

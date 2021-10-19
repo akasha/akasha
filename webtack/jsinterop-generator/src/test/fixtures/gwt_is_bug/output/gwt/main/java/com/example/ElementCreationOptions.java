@@ -31,7 +31,6 @@ public interface ElementCreationOptions {
   @JsProperty
   void setIs(@JsNonNull String is);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

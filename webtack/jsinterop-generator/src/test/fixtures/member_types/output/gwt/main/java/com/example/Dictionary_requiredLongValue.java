@@ -30,7 +30,6 @@ public interface Dictionary_requiredLongValue {
   @JsProperty
   void setRequiredLongValue(int requiredLongValue);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

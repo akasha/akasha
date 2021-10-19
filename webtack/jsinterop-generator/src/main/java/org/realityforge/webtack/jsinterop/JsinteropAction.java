@@ -1490,7 +1490,6 @@ final class JsinteropAction
       TypeSpec
         .interfaceBuilder( className.simpleName() )
         .addModifiers( Modifier.PUBLIC, Modifier.STATIC );
-    writeGeneratedAnnotation( type );
     type.addAnnotation( AnnotationSpec
                           .builder( JsinteropTypes.JS_TYPE )
                           .addMember( "isNative", "true" )

@@ -33,7 +33,6 @@ public interface GPUTextureDescriptor {
   @JsProperty
   void setUsage(@GPUTextureUsageFlags @JsNonNull int usage);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

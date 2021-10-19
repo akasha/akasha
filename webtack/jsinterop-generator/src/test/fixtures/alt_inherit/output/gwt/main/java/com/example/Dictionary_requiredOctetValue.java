@@ -30,7 +30,6 @@ public interface Dictionary_requiredOctetValue {
   @JsProperty
   void setRequiredOctetValue(short requiredOctetValue);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

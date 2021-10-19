@@ -35,7 +35,6 @@ public interface OptionalAnyDict extends RequiredAnyDict {
   @JsProperty
   void setAnotherValue(@DoNotAutobox @JsNullable Object anotherValue);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

@@ -34,7 +34,6 @@ public interface Dictionary_requiredNullableUSVStringValue {
   @JsProperty
   void setRequiredNullableUSVStringValue(@JsNullable String requiredNullableUSVStringValue);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

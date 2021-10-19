@@ -38,7 +38,6 @@ public interface ScrollToOptions {
   @JsProperty
   void setTop(double top);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

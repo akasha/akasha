@@ -31,7 +31,6 @@ public interface OtherDict {
   @JsProperty
   void setValue(@JsNonNull JsPropertyMap<String> value);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

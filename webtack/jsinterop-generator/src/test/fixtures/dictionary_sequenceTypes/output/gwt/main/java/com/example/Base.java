@@ -37,7 +37,6 @@ public interface Base {
     setOptionalFeatures( Js.<JsArray<Any>>uncheckedCast( optionalFeatures ) );
   }
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

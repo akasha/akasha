@@ -133,7 +133,6 @@ public interface AllowedBluetoothDevice {
     setUuids( Js.<JsArray<StringOrOctetUnion>>uncheckedCast( uuids ) );
   }
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

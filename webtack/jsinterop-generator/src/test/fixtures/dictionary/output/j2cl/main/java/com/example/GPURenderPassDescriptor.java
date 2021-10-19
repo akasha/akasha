@@ -53,7 +53,6 @@ public interface GPURenderPassDescriptor {
   @JsProperty
   void setOcclusionQuerySet(@JsNonNull GPUQuerySet occlusionQuerySet);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

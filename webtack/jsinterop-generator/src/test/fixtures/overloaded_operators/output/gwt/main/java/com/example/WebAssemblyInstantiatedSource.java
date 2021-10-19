@@ -41,7 +41,6 @@ public interface WebAssemblyInstantiatedSource {
   @JsProperty
   void setModule(@JsNonNull Module module);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

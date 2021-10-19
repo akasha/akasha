@@ -30,7 +30,6 @@ public interface Dictionary_requiredFloatValue {
   @JsProperty
   void setRequiredFloatValue(float requiredFloatValue);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

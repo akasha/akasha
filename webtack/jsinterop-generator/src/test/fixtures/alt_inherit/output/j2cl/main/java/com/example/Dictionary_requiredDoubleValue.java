@@ -30,7 +30,6 @@ public interface Dictionary_requiredDoubleValue {
   @JsProperty
   void setRequiredDoubleValue(double requiredDoubleValue);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

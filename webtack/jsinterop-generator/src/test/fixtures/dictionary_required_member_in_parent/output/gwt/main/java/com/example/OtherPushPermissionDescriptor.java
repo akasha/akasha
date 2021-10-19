@@ -30,7 +30,6 @@ public interface OtherPushPermissionDescriptor extends PushPermissionDescriptor 
   @JsProperty
   void setSafe(boolean safe);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

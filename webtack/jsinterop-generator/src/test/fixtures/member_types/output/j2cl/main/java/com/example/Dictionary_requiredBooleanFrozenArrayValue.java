@@ -34,7 +34,6 @@ public interface Dictionary_requiredBooleanFrozenArrayValue {
   void setRequiredBooleanFrozenArrayValue(
       @JsNonNull JsArray<Boolean> requiredBooleanFrozenArrayValue);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

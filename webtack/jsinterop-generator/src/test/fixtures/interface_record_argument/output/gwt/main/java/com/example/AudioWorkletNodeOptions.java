@@ -119,7 +119,6 @@ public interface AudioWorkletNodeOptions {
   @JsProperty
   void setParameterData(@JsNonNull JsPropertyMap<Double> parameterData);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

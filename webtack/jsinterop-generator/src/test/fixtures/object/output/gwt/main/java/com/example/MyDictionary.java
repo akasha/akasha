@@ -51,7 +51,6 @@ public interface MyDictionary {
   @JsProperty
   void setObjectValue(@JsNonNull JsObject objectValue);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

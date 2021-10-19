@@ -47,7 +47,6 @@ public interface TransitionEventInit extends EventInit {
   @JsProperty
   void setPseudoElement(@JsNonNull String pseudoElement);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

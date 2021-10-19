@@ -33,7 +33,6 @@ public interface Dictionary_requiredNullableOctetValue {
   @JsProperty
   void setRequiredNullableOctetValue(@JsNullable Double requiredNullableOctetValue);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

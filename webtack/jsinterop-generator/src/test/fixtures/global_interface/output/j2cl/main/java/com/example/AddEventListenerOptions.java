@@ -38,7 +38,6 @@ public interface AddEventListenerOptions extends EventListenerOptions {
   @JsProperty
   void setPassive(boolean passive);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

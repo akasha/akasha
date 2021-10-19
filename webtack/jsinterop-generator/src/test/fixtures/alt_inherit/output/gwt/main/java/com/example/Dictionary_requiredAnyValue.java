@@ -35,7 +35,6 @@ public interface Dictionary_requiredAnyValue {
   @JsProperty
   void setRequiredAnyValue(@DoNotAutobox @JsNullable Object requiredAnyValue);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

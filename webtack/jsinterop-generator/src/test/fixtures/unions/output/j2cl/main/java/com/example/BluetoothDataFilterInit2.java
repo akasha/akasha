@@ -232,7 +232,6 @@ public interface BluetoothDataFilterInit2 {
     setMask( BufferSource.of( mask ) );
   }
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

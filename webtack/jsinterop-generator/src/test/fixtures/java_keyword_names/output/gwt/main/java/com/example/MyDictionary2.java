@@ -135,7 +135,6 @@ public interface MyDictionary2 {
   @JsProperty
   void setWait(@JsNonNull Object wait);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,

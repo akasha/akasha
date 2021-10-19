@@ -69,7 +69,6 @@ public interface StorageEventInit extends EventInit {
   @JsProperty
   void setUrl(@JsNonNull String url);
 
-  @Generated("org.realityforge.webtack")
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
