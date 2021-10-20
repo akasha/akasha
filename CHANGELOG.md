@@ -1,5 +1,7 @@
 # Change Log
 
+* Update the algorithm that "explodes" the types of operations in the jsinterop binding such that if an operation contains multiple arguments with a `sequence` IDL type, then either all `sequence` arguments are represented as java arrays or all `sequence` arguments are represented by `JsArray` and there is not a type explosion.
+
 ### Unreleased
 
 ### [v0.27](https://github.com/akasha/akasha/tree/v0.27) (2021-09-29) · [Full Changelog](https://github.com/spritz/spritz/compare/v0.26...v0.27) · [API Differences](https://akasha.github.io/akasha-java/api-diff/?key=akasha-java&old=0.26&new=0.27) · [Source Diff](https://github.com/akasha/akasha-java/compare/v0.26...v0.27)

@@ -16,17 +16,7 @@ public final class AllowedBluetoothDeviceTestCompile {
     return AllowedBluetoothDevice.create( allowedServices, requiredUuids );
   }
 
-  public static AllowedBluetoothDevice.Builder create(final String[] allowedServices,
-      final JsArray<StringOrLongLongUnion> requiredUuids) {
-    return AllowedBluetoothDevice.create( allowedServices, requiredUuids );
-  }
-
   public static AllowedBluetoothDevice.Builder create(final String allowedServices,
-      final StringOrLongLongUnion[] requiredUuids) {
-    return AllowedBluetoothDevice.create( allowedServices, requiredUuids );
-  }
-
-  public static AllowedBluetoothDevice.Builder create(final JsArray<String> allowedServices,
       final StringOrLongLongUnion[] requiredUuids) {
     return AllowedBluetoothDevice.create( allowedServices, requiredUuids );
   }

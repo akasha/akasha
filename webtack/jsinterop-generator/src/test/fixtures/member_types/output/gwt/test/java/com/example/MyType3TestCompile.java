@@ -54,16 +54,6 @@ public final class MyType3TestCompile {
   }
 
   public static JsArray<Any> anySequenceMethod(final MyType3 $instance, final Any[] v1,
-      final JsArray<Any> v2) {
-    return $instance.anySequenceMethod( v1, v2 );
-  }
-
-  public static JsArray<Any> anySequenceMethod(final MyType3 $instance, final JsArray<Any> v1,
-      final Any[] v2) {
-    return $instance.anySequenceMethod( v1, v2 );
-  }
-
-  public static JsArray<Any> anySequenceMethod(final MyType3 $instance, final Any[] v1,
       final Any[] v2) {
     return $instance.anySequenceMethod( v1, v2 );
   }
@@ -96,16 +86,6 @@ public final class MyType3TestCompile {
 
   public static JsArray<Boolean> booleanSequenceMethod(final MyType3 $instance,
       final JsArray<Boolean> v1, final JsArray<Boolean> v2) {
-    return $instance.booleanSequenceMethod( v1, v2 );
-  }
-
-  public static JsArray<Boolean> booleanSequenceMethod(final MyType3 $instance, final Boolean[] v1,
-      final JsArray<Boolean> v2) {
-    return $instance.booleanSequenceMethod( v1, v2 );
-  }
-
-  public static JsArray<Boolean> booleanSequenceMethod(final MyType3 $instance,
-      final JsArray<Boolean> v1, final Boolean[] v2) {
     return $instance.booleanSequenceMethod( v1, v2 );
   }
 
@@ -202,16 +182,6 @@ public final class MyType3TestCompile {
   }
 
   public static JsArray<Double> doubleSequenceMethod(final MyType3 $instance, final double[] v1,
-      final JsArray<Double> v2) {
-    return $instance.doubleSequenceMethod( v1, v2 );
-  }
-
-  public static JsArray<Double> doubleSequenceMethod(final MyType3 $instance,
-      final JsArray<Double> v1, final double[] v2) {
-    return $instance.doubleSequenceMethod( v1, v2 );
-  }
-
-  public static JsArray<Double> doubleSequenceMethod(final MyType3 $instance, final double[] v1,
       final double[] v2) {
     return $instance.doubleSequenceMethod( v1, v2 );
   }
@@ -245,16 +215,6 @@ public final class MyType3TestCompile {
 
   public static JsArray<Double> floatSequenceMethod(final MyType3 $instance,
       final JsArray<Double> v1, final JsArray<Double> v2) {
-    return $instance.floatSequenceMethod( v1, v2 );
-  }
-
-  public static JsArray<Double> floatSequenceMethod(final MyType3 $instance, final double[] v1,
-      final JsArray<Double> v2) {
-    return $instance.floatSequenceMethod( v1, v2 );
-  }
-
-  public static JsArray<Double> floatSequenceMethod(final MyType3 $instance,
-      final JsArray<Double> v1, final double[] v2) {
     return $instance.floatSequenceMethod( v1, v2 );
   }
 
@@ -333,16 +293,6 @@ public final class MyType3TestCompile {
   }
 
   public static JsArray<Boolean> nullableBooleanSequenceMethod(final MyType3 $instance,
-      final Boolean[] v1, final JsArray<Boolean> v2) {
-    return $instance.nullableBooleanSequenceMethod( v1, v2 );
-  }
-
-  public static JsArray<Boolean> nullableBooleanSequenceMethod(final MyType3 $instance,
-      final JsArray<Boolean> v1, final Boolean[] v2) {
-    return $instance.nullableBooleanSequenceMethod( v1, v2 );
-  }
-
-  public static JsArray<Boolean> nullableBooleanSequenceMethod(final MyType3 $instance,
       final Boolean[] v1, final Boolean[] v2) {
     return $instance.nullableBooleanSequenceMethod( v1, v2 );
   }
@@ -409,16 +359,6 @@ public final class MyType3TestCompile {
   }
 
   public static JsArray<Double> nullableDoubleSequenceMethod(final MyType3 $instance,
-      final double[] v1, final JsArray<Double> v2) {
-    return $instance.nullableDoubleSequenceMethod( v1, v2 );
-  }
-
-  public static JsArray<Double> nullableDoubleSequenceMethod(final MyType3 $instance,
-      final JsArray<Double> v1, final double[] v2) {
-    return $instance.nullableDoubleSequenceMethod( v1, v2 );
-  }
-
-  public static JsArray<Double> nullableDoubleSequenceMethod(final MyType3 $instance,
       final double[] v1, final double[] v2) {
     return $instance.nullableDoubleSequenceMethod( v1, v2 );
   }
@@ -454,16 +394,6 @@ public final class MyType3TestCompile {
 
   public static JsArray<Double> nullableFloatSequenceMethod(final MyType3 $instance,
       final JsArray<Double> v1, final JsArray<Double> v2) {
-    return $instance.nullableFloatSequenceMethod( v1, v2 );
-  }
-
-  public static JsArray<Double> nullableFloatSequenceMethod(final MyType3 $instance,
-      final double[] v1, final JsArray<Double> v2) {
-    return $instance.nullableFloatSequenceMethod( v1, v2 );
-  }
-
-  public static JsArray<Double> nullableFloatSequenceMethod(final MyType3 $instance,
-      final JsArray<Double> v1, final double[] v2) {
     return $instance.nullableFloatSequenceMethod( v1, v2 );
   }
 
@@ -553,16 +483,6 @@ public final class MyType3TestCompile {
   }
 
   public static JsArray<Double> nullableShortSequenceMethod(final MyType3 $instance,
-      final double[] v1, final JsArray<Double> v2) {
-    return $instance.nullableShortSequenceMethod( v1, v2 );
-  }
-
-  public static JsArray<Double> nullableShortSequenceMethod(final MyType3 $instance,
-      final JsArray<Double> v1, final double[] v2) {
-    return $instance.nullableShortSequenceMethod( v1, v2 );
-  }
-
-  public static JsArray<Double> nullableShortSequenceMethod(final MyType3 $instance,
       final double[] v1, final double[] v2) {
     return $instance.nullableShortSequenceMethod( v1, v2 );
   }
@@ -608,16 +528,6 @@ public final class MyType3TestCompile {
 
   public static JsArray<SomeType> nullableSomeTypeSequenceMethod(final MyType3 $instance,
       final JsArray<SomeType> v1, final JsArray<SomeType> v2) {
-    return $instance.nullableSomeTypeSequenceMethod( v1, v2 );
-  }
-
-  public static JsArray<SomeType> nullableSomeTypeSequenceMethod(final MyType3 $instance,
-      final SomeType[] v1, final JsArray<SomeType> v2) {
-    return $instance.nullableSomeTypeSequenceMethod( v1, v2 );
-  }
-
-  public static JsArray<SomeType> nullableSomeTypeSequenceMethod(final MyType3 $instance,
-      final JsArray<SomeType> v1, final SomeType[] v2) {
     return $instance.nullableSomeTypeSequenceMethod( v1, v2 );
   }
 
@@ -741,16 +651,6 @@ public final class MyType3TestCompile {
   }
 
   public static JsArray<Double> shortSequenceMethod(final MyType3 $instance, final double[] v1,
-      final JsArray<Double> v2) {
-    return $instance.shortSequenceMethod( v1, v2 );
-  }
-
-  public static JsArray<Double> shortSequenceMethod(final MyType3 $instance,
-      final JsArray<Double> v1, final double[] v2) {
-    return $instance.shortSequenceMethod( v1, v2 );
-  }
-
-  public static JsArray<Double> shortSequenceMethod(final MyType3 $instance, final double[] v1,
       final double[] v2) {
     return $instance.shortSequenceMethod( v1, v2 );
   }
@@ -795,16 +695,6 @@ public final class MyType3TestCompile {
 
   public static JsArray<SomeType> someTypeSequenceMethod(final MyType3 $instance,
       final JsArray<SomeType> v1, final JsArray<SomeType> v2) {
-    return $instance.someTypeSequenceMethod( v1, v2 );
-  }
-
-  public static JsArray<SomeType> someTypeSequenceMethod(final MyType3 $instance,
-      final SomeType[] v1, final JsArray<SomeType> v2) {
-    return $instance.someTypeSequenceMethod( v1, v2 );
-  }
-
-  public static JsArray<SomeType> someTypeSequenceMethod(final MyType3 $instance,
-      final JsArray<SomeType> v1, final SomeType[] v2) {
     return $instance.someTypeSequenceMethod( v1, v2 );
   }
 

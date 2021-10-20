@@ -1,0 +1,354 @@
+[
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.audio.IIRFilterNode akasha.audio.BaseAudioContext::createIIRFilter(akasha.lang.JsArray<java.lang.Double>, double[])",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.audio.BaseAudioContext",
+      "classSimpleName": "BaseAudioContext",
+      "elementKind": "method",
+      "methodName": "createIIRFilter",
+      "package": "akasha.audio"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.audio.IIRFilterNode akasha.audio.BaseAudioContext::createIIRFilter(double[], akasha.lang.JsArray<java.lang.Double>)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.audio.BaseAudioContext",
+      "classSimpleName": "BaseAudioContext",
+      "elementKind": "method",
+      "methodName": "createIIRFilter",
+      "package": "akasha.audio"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.audio.IIRFilterOptions.Builder akasha.audio.IIRFilterOptions::create(akasha.lang.JsArray<java.lang.Double>, double[])",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.audio.IIRFilterOptions",
+      "classSimpleName": "IIRFilterOptions",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.audio"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.audio.IIRFilterOptions.Builder akasha.audio.IIRFilterOptions::create(double[], akasha.lang.JsArray<java.lang.Double>)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.audio.IIRFilterOptions",
+      "classSimpleName": "IIRFilterOptions",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.audio"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.audio.PeriodicWave akasha.audio.BaseAudioContext::createPeriodicWave(akasha.lang.JsArray<java.lang.Double>, double[])",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.audio.BaseAudioContext",
+      "classSimpleName": "BaseAudioContext",
+      "elementKind": "method",
+      "methodName": "createPeriodicWave",
+      "package": "akasha.audio"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.audio.PeriodicWave akasha.audio.BaseAudioContext::createPeriodicWave(akasha.lang.JsArray<java.lang.Double>, double[], akasha.audio.PeriodicWaveConstraints)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.audio.BaseAudioContext",
+      "classSimpleName": "BaseAudioContext",
+      "elementKind": "method",
+      "methodName": "createPeriodicWave",
+      "package": "akasha.audio"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.audio.PeriodicWave akasha.audio.BaseAudioContext::createPeriodicWave(double[], akasha.lang.JsArray<java.lang.Double>)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.audio.BaseAudioContext",
+      "classSimpleName": "BaseAudioContext",
+      "elementKind": "method",
+      "methodName": "createPeriodicWave",
+      "package": "akasha.audio"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.audio.PeriodicWave akasha.audio.BaseAudioContext::createPeriodicWave(double[], akasha.lang.JsArray<java.lang.Double>, akasha.audio.PeriodicWaveConstraints)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.audio.BaseAudioContext",
+      "classSimpleName": "BaseAudioContext",
+      "elementKind": "method",
+      "methodName": "createPeriodicWave",
+      "package": "akasha.audio"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.bluetooth.AllowedBluetoothDevice.Builder akasha.bluetooth.AllowedBluetoothDevice::create(java.lang.String, boolean, akasha.lang.JsArray<java.lang.String>, double[])",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.bluetooth.AllowedBluetoothDevice",
+      "classSimpleName": "AllowedBluetoothDevice",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.bluetooth"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.bluetooth.AllowedBluetoothDevice.Builder akasha.bluetooth.AllowedBluetoothDevice::create(java.lang.String, boolean, java.lang.String[], akasha.lang.JsArray<java.lang.Double>)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.bluetooth.AllowedBluetoothDevice",
+      "classSimpleName": "AllowedBluetoothDevice",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.bluetooth"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.rtc.RTCRtpCapabilities.Builder akasha.rtc.RTCRtpCapabilities::create(akasha.lang.JsArray<akasha.rtc.RTCRtpCodecCapability>, akasha.rtc.RTCRtpHeaderExtensionCapability[])",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.rtc.RTCRtpCapabilities",
+      "classSimpleName": "RTCRtpCapabilities",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.rtc"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.rtc.RTCRtpCapabilities.Builder akasha.rtc.RTCRtpCapabilities::create(akasha.rtc.RTCRtpCodecCapability[], akasha.lang.JsArray<akasha.rtc.RTCRtpHeaderExtensionCapability>)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.rtc.RTCRtpCapabilities",
+      "classSimpleName": "RTCRtpCapabilities",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.rtc"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.rtc.RTCRtpParameters.Builder akasha.rtc.RTCRtpParameters::create(akasha.lang.JsArray<akasha.rtc.RTCRtpHeaderExtensionParameters>, akasha.rtc.RTCRtcpParameters, akasha.rtc.RTCRtpCodecParameters[])",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.rtc.RTCRtpParameters",
+      "classSimpleName": "RTCRtpParameters",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.rtc"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.rtc.RTCRtpParameters.Builder akasha.rtc.RTCRtpParameters::create(akasha.rtc.RTCRtpHeaderExtensionParameters[], akasha.rtc.RTCRtcpParameters, akasha.lang.JsArray<akasha.rtc.RTCRtpCodecParameters>)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.rtc.RTCRtpParameters",
+      "classSimpleName": "RTCRtpParameters",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.rtc"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.rtc.RTCRtpReceiveParameters.Builder akasha.rtc.RTCRtpReceiveParameters::create(akasha.lang.JsArray<akasha.rtc.RTCRtpHeaderExtensionParameters>, akasha.rtc.RTCRtcpParameters, akasha.rtc.RTCRtpCodecParameters[])",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.rtc.RTCRtpReceiveParameters",
+      "classSimpleName": "RTCRtpReceiveParameters",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.rtc"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.rtc.RTCRtpReceiveParameters.Builder akasha.rtc.RTCRtpReceiveParameters::create(akasha.rtc.RTCRtpHeaderExtensionParameters[], akasha.rtc.RTCRtcpParameters, akasha.lang.JsArray<akasha.rtc.RTCRtpCodecParameters>)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.rtc.RTCRtpReceiveParameters",
+      "classSimpleName": "RTCRtpReceiveParameters",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.rtc"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.rtc.RTCRtpSendParameters.Builder akasha.rtc.RTCRtpSendParameters::create(akasha.lang.JsArray<akasha.rtc.RTCRtpHeaderExtensionParameters>, akasha.rtc.RTCRtcpParameters, akasha.lang.JsArray<akasha.rtc.RTCRtpCodecParameters>, java.lang.String, akasha.rtc.RTCRtpEncodingParameters[])",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.rtc.RTCRtpSendParameters",
+      "classSimpleName": "RTCRtpSendParameters",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.rtc"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.rtc.RTCRtpSendParameters.Builder akasha.rtc.RTCRtpSendParameters::create(akasha.lang.JsArray<akasha.rtc.RTCRtpHeaderExtensionParameters>, akasha.rtc.RTCRtcpParameters, akasha.rtc.RTCRtpCodecParameters[], java.lang.String, akasha.lang.JsArray<akasha.rtc.RTCRtpEncodingParameters>)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.rtc.RTCRtpSendParameters",
+      "classSimpleName": "RTCRtpSendParameters",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.rtc"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.rtc.RTCRtpSendParameters.Builder akasha.rtc.RTCRtpSendParameters::create(akasha.lang.JsArray<akasha.rtc.RTCRtpHeaderExtensionParameters>, akasha.rtc.RTCRtcpParameters, akasha.rtc.RTCRtpCodecParameters[], java.lang.String, akasha.rtc.RTCRtpEncodingParameters[])",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.rtc.RTCRtpSendParameters",
+      "classSimpleName": "RTCRtpSendParameters",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.rtc"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.rtc.RTCRtpSendParameters.Builder akasha.rtc.RTCRtpSendParameters::create(akasha.rtc.RTCRtpHeaderExtensionParameters[], akasha.rtc.RTCRtcpParameters, akasha.lang.JsArray<akasha.rtc.RTCRtpCodecParameters>, java.lang.String, akasha.lang.JsArray<akasha.rtc.RTCRtpEncodingParameters>)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.rtc.RTCRtpSendParameters",
+      "classSimpleName": "RTCRtpSendParameters",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.rtc"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.rtc.RTCRtpSendParameters.Builder akasha.rtc.RTCRtpSendParameters::create(akasha.rtc.RTCRtpHeaderExtensionParameters[], akasha.rtc.RTCRtcpParameters, akasha.lang.JsArray<akasha.rtc.RTCRtpCodecParameters>, java.lang.String, akasha.rtc.RTCRtpEncodingParameters[])",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.rtc.RTCRtpSendParameters",
+      "classSimpleName": "RTCRtpSendParameters",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.rtc"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.rtc.RTCRtpSendParameters.Builder akasha.rtc.RTCRtpSendParameters::create(akasha.rtc.RTCRtpHeaderExtensionParameters[], akasha.rtc.RTCRtcpParameters, akasha.rtc.RTCRtpCodecParameters[], java.lang.String, akasha.lang.JsArray<akasha.rtc.RTCRtpEncodingParameters>)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.rtc.RTCRtpSendParameters",
+      "classSimpleName": "RTCRtpSendParameters",
+      "elementKind": "method",
+      "methodName": "create",
+      "package": "akasha.rtc"
+    }
+  }
+]

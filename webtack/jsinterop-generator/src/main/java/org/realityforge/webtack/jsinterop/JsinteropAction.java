@@ -1247,10 +1247,32 @@ final class JsinteropAction
   private List<List<TypedValue>> explodeTypeList( @Nonnull final List<Type> types )
   {
     final List<List<TypedValue>> results = new ArrayList<>();
+    final boolean needsJavaArrayVariant = explodeTypeList( types, results, false );
+    if ( needsJavaArrayVariant )
+    {
+      // Run the explode process again but converting any JsArrays into native java arrays
+      // and then select those variants that do include a JsArray
+      final List<List<TypedValue>> javaArrayVariants = new ArrayList<>();
+      explodeTypeList( types, javaArrayVariants, true );
+      javaArrayVariants
+        .stream()
+        .filter( v -> v.stream().anyMatch( TypedValue::isJavaArray ) )
+        .forEach( results::add );
+    }
+    return results;
+  }
+
+  private boolean explodeTypeList( @Nonnull final List<Type> types,
+                                   @Nonnull final List<List<TypedValue>> results,
+                                   final boolean useJavaArray )
+  {
+    boolean needsJavaArrayVariant = false;
     results.add( new ArrayList<>() );
     for ( final Type type : types )
     {
-      final List<TypedValue> itemTypes = explodeType( type );
+      final List<TypedValue> itemTypes = new ArrayList<>();
+      needsJavaArrayVariant |= explodeType( type, type, itemTypes, useJavaArray );
+
       if ( 1 == itemTypes.size() )
       {
         final TypedValue itemType = itemTypes.get( 0 );
@@ -1271,21 +1293,31 @@ final class JsinteropAction
         }
       }
     }
-    return results;
+    return needsJavaArrayVariant;
   }
 
   @Nonnull
   private List<TypedValue> explodeType( @Nonnull final Type type )
   {
     final List<TypedValue> values = new ArrayList<>();
-    explodeType( type, type, values );
+    final boolean needsJavaArrayVariant = explodeType( type, type, values, false );
+    if ( needsJavaArrayVariant )
+    {
+      // Run the explode process again but converting any JsArrays into native java arrays
+      // and then select those variants that do include a JsArray
+      final List<TypedValue> javaArrayVariant = new ArrayList<>();
+      explodeType( type, type, javaArrayVariant, true );
+      javaArrayVariant.stream().filter( TypedValue::isJavaArray ).forEach( values::add );
+    }
     return values;
   }
 
-  private void explodeType( @Nonnull final Type declaredType,
-                            @Nonnull final Type type,
-                            @Nonnull final List<TypedValue> values )
+  private boolean explodeType( @Nonnull final Type declaredType,
+                               @Nonnull final Type type,
+                               @Nonnull final List<TypedValue> values,
+                               final boolean useJavaArray )
   {
+    boolean needsJavaArrayVariant = false;
     final Kind kind = type.getKind();
     if ( Kind.TypeReference == type.getKind() )
     {
@@ -1305,12 +1337,12 @@ final class JsinteropAction
                                       false ) );
           if ( !isMarkerType( typedef ) )
           {
-            explodeType( declaredType, resolvedType, values );
+            needsJavaArrayVariant = explodeType( declaredType, resolvedType, values, useJavaArray );
           }
         }
         else
         {
-          explodeType( declaredType, resolvedType, values );
+          needsJavaArrayVariant = explodeType( declaredType, resolvedType, values, useJavaArray );
         }
       }
       else
@@ -1337,7 +1369,7 @@ final class JsinteropAction
       final UnionType unionType = (UnionType) type;
       for ( final Type memberType : unionType.getMemberTypes() )
       {
-        explodeType( declaredType, memberType, values );
+        needsJavaArrayVariant |= explodeType( declaredType, memberType, values, useJavaArray );
       }
     }
     else if ( Kind.Sequence == kind )
@@ -1345,11 +1377,22 @@ final class JsinteropAction
       final boolean nullable = getSchema().isNullable( type );
       final TypedValue.Nullability nullability =
         nullable ? TypedValue.Nullability.NULLABLE : TypedValue.Nullability.NONNULL;
-      values.add( new TypedValue( declaredType, type, toSequenceType( (SequenceType) type ), nullability, false ) );
-      if ( null == type.getIdentValue( ExtendedAttributes.SEQUENCE_TYPE ) )
+      final boolean isArrayType = null == type.getIdentValue( ExtendedAttributes.SEQUENCE_TYPE );
+      if ( !useJavaArray || !isArrayType )
       {
-        final TypeName arrayJavaType = asArrayType( getUnexpandedType( ( (SequenceType) type ).getItemType() ) );
-        values.add( new TypedValue( declaredType, type, arrayJavaType, nullability, false ) );
+        values.add( new TypedValue( declaredType, type, toSequenceType( (SequenceType) type ), nullability, false ) );
+      }
+      if ( isArrayType )
+      {
+        if ( useJavaArray )
+        {
+          final TypeName arrayJavaType = asArrayType( getUnexpandedType( ( (SequenceType) type ).getItemType() ) );
+          values.add( new TypedValue( declaredType, type, arrayJavaType, nullability, false ) );
+        }
+        else
+        {
+          needsJavaArrayVariant = true;
+        }
       }
     }
     else
@@ -1366,6 +1409,7 @@ final class JsinteropAction
         TypedValue.Nullability.NONNULL;
       values.add( new TypedValue( declaredType, type, javaType, nullability, false ) );
     }
+    return needsJavaArrayVariant;
   }
 
   private boolean isMarkerType( @Nonnull final Definition definition )
@@ -4141,7 +4185,7 @@ final class JsinteropAction
       testCallStatement.append( "$N" );
       testCallArgs.add( javaName( argument ) );
       final TypedValue typedValue = typeList.get( index++ );
-      generateArgument( argument, typedValue, true, overlayMethod );
+      generateArgument( argument, typedValue, overlayMethod );
       generateArgument( argument, typedValue, false, false, method, testMethod );
 
       if ( argumentCount == index && varargsMethod )
@@ -4157,7 +4201,8 @@ final class JsinteropAction
                                   .addMember( "value", "$S", "unchecked" )
                                   .build() );
         }
-      }    }
+      }
+    }
 
     if ( !arguments.isEmpty() )
     {
@@ -4405,7 +4450,7 @@ final class JsinteropAction
     final Type itemType = operation.getReturnType();
     emitReturnType( operation, itemType, method );
     final Argument argument = arguments.get( 0 );
-    generateArgument( argument, asTypedValue( argument.getType() ), true, method );
+    generateArgument( argument, asTypedValue( argument.getType() ), method );
     final Kind itemTypeKind = itemType.getKind();
     final boolean mustConvert =
       itemTypeKind.isPrimitive() && Kind.Double != itemTypeKind && Kind.UnrestrictedDouble != itemTypeKind;
@@ -4445,10 +4490,10 @@ final class JsinteropAction
     maybeAddJavadoc( operation, method );
     method.addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_OVERLAY ).build() );
     final Argument indexArgument = arguments.get( 0 );
-    generateArgument( indexArgument, asTypedValue( indexArgument.getType() ), true, method );
+    generateArgument( indexArgument, asTypedValue( indexArgument.getType() ), method );
 
     final Argument valueArgument = arguments.get( 1 );
-    generateArgument( valueArgument, asTypedValue( valueArgument.getType() ), true, method );
+    generateArgument( valueArgument, asTypedValue( valueArgument.getType() ), method );
 
     method.addStatement( "$T.<$T>cast( this ).setAt( $N, $N )",
                          JsinteropTypes.JS,
@@ -4477,7 +4522,7 @@ final class JsinteropAction
     final Type itemType = operation.getReturnType();
     emitReturnType( operation, itemType, method );
     final Argument argument = arguments.get( 0 );
-    generateArgument( argument, asTypedValue( argument.getType() ), true, method );
+    generateArgument( argument, asTypedValue( argument.getType() ), method );
     final Kind itemTypeKind = itemType.getKind();
     final boolean mustConvert =
       itemTypeKind.isPrimitive() && Kind.Double != itemTypeKind && Kind.UnrestrictedDouble != itemTypeKind;
@@ -4517,10 +4562,10 @@ final class JsinteropAction
     maybeAddJavadoc( operation, method );
     method.addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_OVERLAY ).build() );
     final Argument indexArgument = arguments.get( 0 );
-    generateArgument( indexArgument, asTypedValue( indexArgument.getType() ), true, method );
+    generateArgument( indexArgument, asTypedValue( indexArgument.getType() ), method );
 
     final Argument valueArgument = arguments.get( 1 );
-    generateArgument( valueArgument, asTypedValue( valueArgument.getType() ), true, method );
+    generateArgument( valueArgument, asTypedValue( valueArgument.getType() ), method );
 
     method.addStatement( "$T.<$T>cast( this ).set( $N, $N )",
                          JsinteropTypes.JS,
@@ -4547,7 +4592,7 @@ final class JsinteropAction
     maybeAddJavadoc( operation, method );
     method.addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_OVERLAY ).build() );
     final Argument argument = arguments.get( 0 );
-    generateArgument( argument, asTypedValue( argument.getType() ), true, method );
+    generateArgument( argument, asTypedValue( argument.getType() ), method );
     method.addStatement( "$T.<$T>cast( this ).delete( $N )",
                          JsinteropTypes.JS,
                          ParameterizedTypeName.get( JsinteropTypes.JS_PROPERTY_MAP,
@@ -4713,7 +4758,7 @@ final class JsinteropAction
     int index = 0;
     for ( final Argument argument : argumentList )
     {
-      generateArgument( argument, typeList.get( index++ ), true, method );
+      generateArgument( argument, typeList.get( index++ ), method );
     }
     if ( null != parentConstructor )
     {
@@ -4769,10 +4814,9 @@ final class JsinteropAction
 
   private void generateArgument( @Nonnull final Argument argument,
                                  @Nonnull final TypedValue typedValue,
-                                 final boolean isFinal,
                                  @Nonnull final MethodSpec.Builder method )
   {
-    generateArgument( argument, typedValue, isFinal, false, method, null );
+    generateArgument( argument, typedValue, true, false, method, null );
   }
 
   private void generateArgument( @Nonnull final Argument argument,

@@ -16,14 +16,6 @@ public final class VarargsTypeTestCompile {
     VarargsType.myOperation2( tokens1, tokens2 );
   }
 
-  public static void myOperation2(final String[] tokens1, final JsArray<String> tokens2) {
-    VarargsType.myOperation2( tokens1, tokens2 );
-  }
-
-  public static void myOperation2(final JsArray<String> tokens1, final String[] tokens2) {
-    VarargsType.myOperation2( tokens1, tokens2 );
-  }
-
   public static void myOperation2(final String[] tokens1, final String[] tokens2) {
     VarargsType.myOperation2( tokens1, tokens2 );
   }

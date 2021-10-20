@@ -54,14 +54,6 @@ public final class MyType4TestCompile {
     return MyType4.anySequenceMethod( v1, v2 );
   }
 
-  public static JsArray<Any> anySequenceMethod(final Any[] v1, final JsArray<Any> v2) {
-    return MyType4.anySequenceMethod( v1, v2 );
-  }
-
-  public static JsArray<Any> anySequenceMethod(final JsArray<Any> v1, final Any[] v2) {
-    return MyType4.anySequenceMethod( v1, v2 );
-  }
-
   public static JsArray<Any> anySequenceMethod(final Any[] v1, final Any[] v2) {
     return MyType4.anySequenceMethod( v1, v2 );
   }
@@ -93,16 +85,6 @@ public final class MyType4TestCompile {
 
   public static JsArray<Boolean> booleanSequenceMethod(final JsArray<Boolean> v1,
       final JsArray<Boolean> v2) {
-    return MyType4.booleanSequenceMethod( v1, v2 );
-  }
-
-  public static JsArray<Boolean> booleanSequenceMethod(final Boolean[] v1,
-      final JsArray<Boolean> v2) {
-    return MyType4.booleanSequenceMethod( v1, v2 );
-  }
-
-  public static JsArray<Boolean> booleanSequenceMethod(final JsArray<Boolean> v1,
-      final Boolean[] v2) {
     return MyType4.booleanSequenceMethod( v1, v2 );
   }
 
@@ -191,14 +173,6 @@ public final class MyType4TestCompile {
     return MyType4.doubleSequenceMethod( v1, v2 );
   }
 
-  public static JsArray<Double> doubleSequenceMethod(final double[] v1, final JsArray<Double> v2) {
-    return MyType4.doubleSequenceMethod( v1, v2 );
-  }
-
-  public static JsArray<Double> doubleSequenceMethod(final JsArray<Double> v1, final double[] v2) {
-    return MyType4.doubleSequenceMethod( v1, v2 );
-  }
-
   public static JsArray<Double> doubleSequenceMethod(final double[] v1, final double[] v2) {
     return MyType4.doubleSequenceMethod( v1, v2 );
   }
@@ -230,14 +204,6 @@ public final class MyType4TestCompile {
 
   public static JsArray<Double> floatSequenceMethod(final JsArray<Double> v1,
       final JsArray<Double> v2) {
-    return MyType4.floatSequenceMethod( v1, v2 );
-  }
-
-  public static JsArray<Double> floatSequenceMethod(final double[] v1, final JsArray<Double> v2) {
-    return MyType4.floatSequenceMethod( v1, v2 );
-  }
-
-  public static JsArray<Double> floatSequenceMethod(final JsArray<Double> v1, final double[] v2) {
     return MyType4.floatSequenceMethod( v1, v2 );
   }
 
@@ -311,16 +277,6 @@ public final class MyType4TestCompile {
   }
 
   public static JsArray<Boolean> nullableBooleanSequenceMethod(final Boolean[] v1,
-      final JsArray<Boolean> v2) {
-    return MyType4.nullableBooleanSequenceMethod( v1, v2 );
-  }
-
-  public static JsArray<Boolean> nullableBooleanSequenceMethod(final JsArray<Boolean> v1,
-      final Boolean[] v2) {
-    return MyType4.nullableBooleanSequenceMethod( v1, v2 );
-  }
-
-  public static JsArray<Boolean> nullableBooleanSequenceMethod(final Boolean[] v1,
       final Boolean[] v2) {
     return MyType4.nullableBooleanSequenceMethod( v1, v2 );
   }
@@ -379,16 +335,6 @@ public final class MyType4TestCompile {
     return MyType4.nullableDoubleSequenceMethod( v1, v2 );
   }
 
-  public static JsArray<Double> nullableDoubleSequenceMethod(final double[] v1,
-      final JsArray<Double> v2) {
-    return MyType4.nullableDoubleSequenceMethod( v1, v2 );
-  }
-
-  public static JsArray<Double> nullableDoubleSequenceMethod(final JsArray<Double> v1,
-      final double[] v2) {
-    return MyType4.nullableDoubleSequenceMethod( v1, v2 );
-  }
-
   public static JsArray<Double> nullableDoubleSequenceMethod(final double[] v1, final double[] v2) {
     return MyType4.nullableDoubleSequenceMethod( v1, v2 );
   }
@@ -420,16 +366,6 @@ public final class MyType4TestCompile {
 
   public static JsArray<Double> nullableFloatSequenceMethod(final JsArray<Double> v1,
       final JsArray<Double> v2) {
-    return MyType4.nullableFloatSequenceMethod( v1, v2 );
-  }
-
-  public static JsArray<Double> nullableFloatSequenceMethod(final double[] v1,
-      final JsArray<Double> v2) {
-    return MyType4.nullableFloatSequenceMethod( v1, v2 );
-  }
-
-  public static JsArray<Double> nullableFloatSequenceMethod(final JsArray<Double> v1,
-      final double[] v2) {
     return MyType4.nullableFloatSequenceMethod( v1, v2 );
   }
 
@@ -508,16 +444,6 @@ public final class MyType4TestCompile {
     return MyType4.nullableShortSequenceMethod( v1, v2 );
   }
 
-  public static JsArray<Double> nullableShortSequenceMethod(final double[] v1,
-      final JsArray<Double> v2) {
-    return MyType4.nullableShortSequenceMethod( v1, v2 );
-  }
-
-  public static JsArray<Double> nullableShortSequenceMethod(final JsArray<Double> v1,
-      final double[] v2) {
-    return MyType4.nullableShortSequenceMethod( v1, v2 );
-  }
-
   public static JsArray<Double> nullableShortSequenceMethod(final double[] v1, final double[] v2) {
     return MyType4.nullableShortSequenceMethod( v1, v2 );
   }
@@ -558,16 +484,6 @@ public final class MyType4TestCompile {
 
   public static JsArray<SomeType> nullableSomeTypeSequenceMethod(final JsArray<SomeType> v1,
       final JsArray<SomeType> v2) {
-    return MyType4.nullableSomeTypeSequenceMethod( v1, v2 );
-  }
-
-  public static JsArray<SomeType> nullableSomeTypeSequenceMethod(final SomeType[] v1,
-      final JsArray<SomeType> v2) {
-    return MyType4.nullableSomeTypeSequenceMethod( v1, v2 );
-  }
-
-  public static JsArray<SomeType> nullableSomeTypeSequenceMethod(final JsArray<SomeType> v1,
-      final SomeType[] v2) {
     return MyType4.nullableSomeTypeSequenceMethod( v1, v2 );
   }
 
@@ -679,14 +595,6 @@ public final class MyType4TestCompile {
     return MyType4.shortSequenceMethod( v1, v2 );
   }
 
-  public static JsArray<Double> shortSequenceMethod(final double[] v1, final JsArray<Double> v2) {
-    return MyType4.shortSequenceMethod( v1, v2 );
-  }
-
-  public static JsArray<Double> shortSequenceMethod(final JsArray<Double> v1, final double[] v2) {
-    return MyType4.shortSequenceMethod( v1, v2 );
-  }
-
   public static JsArray<Double> shortSequenceMethod(final double[] v1, final double[] v2) {
     return MyType4.shortSequenceMethod( v1, v2 );
   }
@@ -727,16 +635,6 @@ public final class MyType4TestCompile {
 
   public static JsArray<SomeType> someTypeSequenceMethod(final JsArray<SomeType> v1,
       final JsArray<SomeType> v2) {
-    return MyType4.someTypeSequenceMethod( v1, v2 );
-  }
-
-  public static JsArray<SomeType> someTypeSequenceMethod(final SomeType[] v1,
-      final JsArray<SomeType> v2) {
-    return MyType4.someTypeSequenceMethod( v1, v2 );
-  }
-
-  public static JsArray<SomeType> someTypeSequenceMethod(final JsArray<SomeType> v1,
-      final SomeType[] v2) {
     return MyType4.someTypeSequenceMethod( v1, v2 );
   }
 

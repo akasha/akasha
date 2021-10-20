@@ -60,12 +60,6 @@ public class MyType4 {
       @Nonnull JsArray<Any> v2);
 
   @JsNonNull
-  public static native JsArray<Any> anySequenceMethod(@Nonnull Any[] v1, @Nonnull JsArray<Any> v2);
-
-  @JsNonNull
-  public static native JsArray<Any> anySequenceMethod(@Nonnull JsArray<Any> v1, @Nonnull Any[] v2);
-
-  @JsNonNull
   public static native JsArray<Any> anySequenceMethod(@Nonnull Any[] v1, @Nonnull Any[] v2);
 
   @JsNonNull
@@ -88,14 +82,6 @@ public class MyType4 {
   @JsNonNull
   public static native JsArray<Boolean> booleanSequenceMethod(@Nonnull JsArray<Boolean> v1,
       @Nonnull JsArray<Boolean> v2);
-
-  @JsNonNull
-  public static native JsArray<Boolean> booleanSequenceMethod(@Nonnull Boolean[] v1,
-      @Nonnull JsArray<Boolean> v2);
-
-  @JsNonNull
-  public static native JsArray<Boolean> booleanSequenceMethod(@Nonnull JsArray<Boolean> v1,
-      @Nonnull Boolean[] v2);
 
   @JsNonNull
   public static native JsArray<Boolean> booleanSequenceMethod(@Nonnull Boolean[] v1,
@@ -163,14 +149,6 @@ public class MyType4 {
 
   @JsNonNull
   public static native JsArray<Double> doubleSequenceMethod(@Nonnull double[] v1,
-      @Nonnull JsArray<Double> v2);
-
-  @JsNonNull
-  public static native JsArray<Double> doubleSequenceMethod(@Nonnull JsArray<Double> v1,
-      @Nonnull double[] v2);
-
-  @JsNonNull
-  public static native JsArray<Double> doubleSequenceMethod(@Nonnull double[] v1,
       @Nonnull double[] v2);
 
   @JsNonNull
@@ -193,14 +171,6 @@ public class MyType4 {
   @JsNonNull
   public static native JsArray<Double> floatSequenceMethod(@Nonnull JsArray<Double> v1,
       @Nonnull JsArray<Double> v2);
-
-  @JsNonNull
-  public static native JsArray<Double> floatSequenceMethod(@Nonnull double[] v1,
-      @Nonnull JsArray<Double> v2);
-
-  @JsNonNull
-  public static native JsArray<Double> floatSequenceMethod(@Nonnull JsArray<Double> v1,
-      @Nonnull double[] v2);
 
   @JsNonNull
   public static native JsArray<Double> floatSequenceMethod(@Nonnull double[] v1,
@@ -256,14 +226,6 @@ public class MyType4 {
 
   @JsNullable
   public static native JsArray<Boolean> nullableBooleanSequenceMethod(@Nullable Boolean[] v1,
-      @Nullable JsArray<Boolean> v2);
-
-  @JsNullable
-  public static native JsArray<Boolean> nullableBooleanSequenceMethod(@Nullable JsArray<Boolean> v1,
-      @Nullable Boolean[] v2);
-
-  @JsNullable
-  public static native JsArray<Boolean> nullableBooleanSequenceMethod(@Nullable Boolean[] v1,
       @Nullable Boolean[] v2);
 
   @JsNullable
@@ -311,14 +273,6 @@ public class MyType4 {
 
   @JsNullable
   public static native JsArray<Double> nullableDoubleSequenceMethod(@Nullable double[] v1,
-      @Nullable JsArray<Double> v2);
-
-  @JsNullable
-  public static native JsArray<Double> nullableDoubleSequenceMethod(@Nullable JsArray<Double> v1,
-      @Nullable double[] v2);
-
-  @JsNullable
-  public static native JsArray<Double> nullableDoubleSequenceMethod(@Nullable double[] v1,
       @Nullable double[] v2);
 
   @JsNullable
@@ -343,14 +297,6 @@ public class MyType4 {
   @JsNullable
   public static native JsArray<Double> nullableFloatSequenceMethod(@Nullable JsArray<Double> v1,
       @Nullable JsArray<Double> v2);
-
-  @JsNullable
-  public static native JsArray<Double> nullableFloatSequenceMethod(@Nullable double[] v1,
-      @Nullable JsArray<Double> v2);
-
-  @JsNullable
-  public static native JsArray<Double> nullableFloatSequenceMethod(@Nullable JsArray<Double> v1,
-      @Nullable double[] v2);
 
   @JsNullable
   public static native JsArray<Double> nullableFloatSequenceMethod(@Nullable double[] v1,
@@ -412,14 +358,6 @@ public class MyType4 {
 
   @JsNullable
   public static native JsArray<Double> nullableShortSequenceMethod(@Nullable double[] v1,
-      @Nullable JsArray<Double> v2);
-
-  @JsNullable
-  public static native JsArray<Double> nullableShortSequenceMethod(@Nullable JsArray<Double> v1,
-      @Nullable double[] v2);
-
-  @JsNullable
-  public static native JsArray<Double> nullableShortSequenceMethod(@Nullable double[] v1,
       @Nullable double[] v2);
 
   @JsNullable
@@ -454,14 +392,6 @@ public class MyType4 {
   @JsNullable
   public static native JsArray<SomeType> nullableSomeTypeSequenceMethod(
       @Nullable JsArray<SomeType> v1, @Nullable JsArray<SomeType> v2);
-
-  @JsNullable
-  public static native JsArray<SomeType> nullableSomeTypeSequenceMethod(@Nullable SomeType[] v1,
-      @Nullable JsArray<SomeType> v2);
-
-  @JsNullable
-  public static native JsArray<SomeType> nullableSomeTypeSequenceMethod(
-      @Nullable JsArray<SomeType> v1, @Nullable SomeType[] v2);
 
   @JsNullable
   public static native JsArray<SomeType> nullableSomeTypeSequenceMethod(@Nullable SomeType[] v1,
@@ -547,14 +477,6 @@ public class MyType4 {
 
   @JsNonNull
   public static native JsArray<Double> shortSequenceMethod(@Nonnull double[] v1,
-      @Nonnull JsArray<Double> v2);
-
-  @JsNonNull
-  public static native JsArray<Double> shortSequenceMethod(@Nonnull JsArray<Double> v1,
-      @Nonnull double[] v2);
-
-  @JsNonNull
-  public static native JsArray<Double> shortSequenceMethod(@Nonnull double[] v1,
       @Nonnull double[] v2);
 
   @JsNonNull
@@ -586,14 +508,6 @@ public class MyType4 {
   @JsNonNull
   public static native JsArray<SomeType> someTypeSequenceMethod(@Nonnull JsArray<SomeType> v1,
       @Nonnull JsArray<SomeType> v2);
-
-  @JsNonNull
-  public static native JsArray<SomeType> someTypeSequenceMethod(@Nonnull SomeType[] v1,
-      @Nonnull JsArray<SomeType> v2);
-
-  @JsNonNull
-  public static native JsArray<SomeType> someTypeSequenceMethod(@Nonnull JsArray<SomeType> v1,
-      @Nonnull SomeType[] v2);
 
   @JsNonNull
   public static native JsArray<SomeType> someTypeSequenceMethod(@Nonnull SomeType[] v1,

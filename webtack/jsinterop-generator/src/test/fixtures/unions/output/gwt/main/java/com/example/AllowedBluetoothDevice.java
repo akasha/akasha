@@ -33,21 +33,7 @@ public interface AllowedBluetoothDevice {
 
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final String[] allowedServices,
-      @Nonnull final JsArray<StringOrLongLongUnion> requiredUuids) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).allowedServices( allowedServices ).requiredUuids( requiredUuids );
-  }
-
-  @JsOverlay
-  @Nonnull
   static Builder create(@Nonnull final String allowedServices,
-      @Nonnull final StringOrLongLongUnion... requiredUuids) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).allowedServices( allowedServices ).requiredUuids( requiredUuids );
-  }
-
-  @JsOverlay
-  @Nonnull
-  static Builder create(@Nonnull final JsArray<String> allowedServices,
       @Nonnull final StringOrLongLongUnion... requiredUuids) {
     return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).allowedServices( allowedServices ).requiredUuids( requiredUuids );
   }

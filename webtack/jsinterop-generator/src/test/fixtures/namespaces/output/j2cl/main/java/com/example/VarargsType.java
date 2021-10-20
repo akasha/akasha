@@ -35,21 +35,6 @@ public final class VarargsType {
   public static native void myOperation2(@Nonnull JsArray<String> tokens1,
       @Nonnull JsArray<String> tokens2);
 
-  public static native void myOperation2(@Nonnull String[] tokens1,
-      @Nonnull JsArray<String> tokens2);
-
-  @JsOverlay
-  public static final void myOperation2(@Nonnull final JsArray<String> tokens1,
-      @Nonnull final String... tokens2) {
-    _myOperation2( tokens1, tokens2 );
-  }
-
-  @JsMethod(
-      name = "myOperation2"
-  )
-  private static native void _myOperation2(@Nonnull JsArray<String> tokens1,
-      @Nonnull String[] tokens2);
-
   @JsOverlay
   public static final void myOperation2(@Nonnull final String[] tokens1,
       @Nonnull final String... tokens2) {
