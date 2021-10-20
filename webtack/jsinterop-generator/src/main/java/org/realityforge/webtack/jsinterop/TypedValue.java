@@ -1,5 +1,6 @@
 package org.realityforge.webtack.jsinterop;
 
+import com.squareup.javapoet.ArrayTypeName;
 import com.squareup.javapoet.TypeName;
 import java.util.Objects;
 import javax.annotation.Nonnull;
@@ -59,6 +60,11 @@ final class TypedValue
   TypeName getJavaType()
   {
     return _javaType;
+  }
+
+  boolean isJavaArray()
+  {
+    return getJavaType() instanceof ArrayTypeName;
   }
 
   @Nonnull
