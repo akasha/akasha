@@ -6,8 +6,8 @@ import javax.annotation.Generated;
 public final class EventInitTestCompile {
   static EventInit $typeReference$;
 
-  public static EventInit.Builder create() {
-    return EventInit.create();
+  public static EventInit.Builder of() {
+    return EventInit.of();
   }
 
   public static double elapsedTime(final EventInit $instance) {

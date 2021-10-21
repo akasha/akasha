@@ -20,16 +20,20 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredNullableFloatSequenceValue {
   @JsOverlay
   @Nonnull
-  static Builder requiredNullableFloatSequenceValue(
+  static Dictionary_requiredNullableFloatSequenceValue requiredNullableFloatSequenceValue(
       @Nullable final JsArray<Double> requiredNullableFloatSequenceValue) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredNullableFloatSequenceValue( requiredNullableFloatSequenceValue );
+    final Dictionary_requiredNullableFloatSequenceValue $dictionaryRequiredNullableFloatSequenceValue = Js.<Dictionary_requiredNullableFloatSequenceValue>uncheckedCast( JsPropertyMap.of() );
+    $dictionaryRequiredNullableFloatSequenceValue.setRequiredNullableFloatSequenceValue( requiredNullableFloatSequenceValue );
+    return Js.uncheckedCast( $dictionaryRequiredNullableFloatSequenceValue );
   }
 
   @JsOverlay
   @Nonnull
-  static Builder requiredNullableFloatSequenceValue(
+  static Dictionary_requiredNullableFloatSequenceValue requiredNullableFloatSequenceValue(
       @Nullable final double... requiredNullableFloatSequenceValue) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredNullableFloatSequenceValue( requiredNullableFloatSequenceValue );
+    final Dictionary_requiredNullableFloatSequenceValue $dictionaryRequiredNullableFloatSequenceValue = Js.<Dictionary_requiredNullableFloatSequenceValue>uncheckedCast( JsPropertyMap.of() );
+    $dictionaryRequiredNullableFloatSequenceValue.setRequiredNullableFloatSequenceValue( requiredNullableFloatSequenceValue );
+    return Js.uncheckedCast( $dictionaryRequiredNullableFloatSequenceValue );
   }
 
   @JsProperty(
@@ -46,28 +50,5 @@ public interface Dictionary_requiredNullableFloatSequenceValue {
   default void setRequiredNullableFloatSequenceValue(
       @Nullable final double... requiredNullableFloatSequenceValue) {
     setRequiredNullableFloatSequenceValue( Js.<JsArray<Double>>uncheckedCast( requiredNullableFloatSequenceValue ) );
-  }
-
-  @JsType(
-      isNative = true,
-      namespace = JsPackage.GLOBAL,
-      name = "Object"
-  )
-  interface Builder extends Dictionary_requiredNullableFloatSequenceValue {
-    @JsOverlay
-    @Nonnull
-    default Builder requiredNullableFloatSequenceValue(
-        @Nullable final JsArray<Double> requiredNullableFloatSequenceValue) {
-      setRequiredNullableFloatSequenceValue( requiredNullableFloatSequenceValue );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder requiredNullableFloatSequenceValue(
-        @Nullable final double... requiredNullableFloatSequenceValue) {
-      setRequiredNullableFloatSequenceValue( requiredNullableFloatSequenceValue );
-      return this;
-    }
   }
 }

@@ -7,8 +7,8 @@ import jsinterop.base.JsPropertyMap;
 public final class AudioWorkletNodeOptionsTestCompile {
   static AudioWorkletNodeOptions $typeReference$;
 
-  public static AudioWorkletNodeOptions.Builder create() {
-    return AudioWorkletNodeOptions.create();
+  public static AudioWorkletNodeOptions.Builder of() {
+    return AudioWorkletNodeOptions.of();
   }
 
   public static JsPropertyMap<Boolean> otherData1(final AudioWorkletNodeOptions $instance) {

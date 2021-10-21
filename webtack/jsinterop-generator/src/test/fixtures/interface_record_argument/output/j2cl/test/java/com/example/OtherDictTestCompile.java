@@ -7,8 +7,8 @@ import jsinterop.base.JsPropertyMap;
 public final class OtherDictTestCompile {
   static OtherDict $typeReference$;
 
-  public static OtherDict.Builder create() {
-    return OtherDict.create();
+  public static OtherDict.Builder of() {
+    return OtherDict.of();
   }
 
   public static JsPropertyMap<String> value(final OtherDict $instance) {

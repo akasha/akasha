@@ -7,8 +7,8 @@ import jsinterop.base.Any;
 public final class BaseTestCompile {
   static Base $typeReference$;
 
-  public static Base.Builder create() {
-    return Base.create();
+  public static Base.Builder of() {
+    return Base.of();
   }
 
   public static JsArray<Any> optionalFeatures(final Base $instance) {

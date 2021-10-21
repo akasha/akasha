@@ -21,7 +21,7 @@ import jsinterop.base.JsPropertyMap;
 public interface StorageEventInit extends EventInit {
   @JsOverlay
   @Nonnull
-  static Builder create() {
+  static Builder of() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -107,27 +107,6 @@ public interface StorageEventInit extends EventInit {
     @Nonnull
     default Builder url(@Nonnull final String url) {
       setUrl( url );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder bubbles(final boolean bubbles) {
-      setBubbles( bubbles );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder cancelable(final boolean cancelable) {
-      setCancelable( cancelable );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder composed(final boolean composed) {
-      setComposed( composed );
       return this;
     }
   }

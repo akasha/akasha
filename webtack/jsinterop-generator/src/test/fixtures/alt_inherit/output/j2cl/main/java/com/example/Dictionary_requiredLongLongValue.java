@@ -18,8 +18,10 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredLongLongValue {
   @JsOverlay
   @Nonnull
-  static Builder requiredLongLongValue(final int requiredLongLongValue) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredLongLongValue( requiredLongLongValue );
+  static Dictionary_requiredLongLongValue requiredLongLongValue(final int requiredLongLongValue) {
+    final Dictionary_requiredLongLongValue $dictionaryRequiredLongLongValue = Js.<Dictionary_requiredLongLongValue>uncheckedCast( JsPropertyMap.of() );
+    $dictionaryRequiredLongLongValue.setRequiredLongLongValue( requiredLongLongValue );
+    return Js.uncheckedCast( $dictionaryRequiredLongLongValue );
   }
 
   @JsProperty(
@@ -29,18 +31,4 @@ public interface Dictionary_requiredLongLongValue {
 
   @JsProperty
   void setRequiredLongLongValue(int requiredLongLongValue);
-
-  @JsType(
-      isNative = true,
-      namespace = JsPackage.GLOBAL,
-      name = "Dictionary_requiredLongLongValue"
-  )
-  interface Builder extends Dictionary_requiredLongLongValue {
-    @JsOverlay
-    @Nonnull
-    default Builder requiredLongLongValue(final int requiredLongLongValue) {
-      setRequiredLongLongValue( requiredLongLongValue );
-      return this;
-    }
-  }
 }

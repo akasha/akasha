@@ -6,8 +6,7 @@ import javax.annotation.Generated;
 public final class Dictionary_requiredShortValueTestCompile {
   static Dictionary_requiredShortValue $typeReference$;
 
-  public static Dictionary_requiredShortValue.Builder requiredShortValue(
-      final short requiredShortValue) {
+  public static Dictionary_requiredShortValue requiredShortValue(final short requiredShortValue) {
     return Dictionary_requiredShortValue.requiredShortValue( requiredShortValue );
   }
 
@@ -18,10 +17,5 @@ public final class Dictionary_requiredShortValueTestCompile {
   public static void setRequiredShortValue(final Dictionary_requiredShortValue $instance,
       short requiredShortValue) {
     $instance.setRequiredShortValue( requiredShortValue );
-  }
-
-  public static Dictionary_requiredShortValue.Builder requiredShortValue(
-      final Dictionary_requiredShortValue.Builder $instance, final short requiredShortValue) {
-    return $instance.requiredShortValue( requiredShortValue );
   }
 }

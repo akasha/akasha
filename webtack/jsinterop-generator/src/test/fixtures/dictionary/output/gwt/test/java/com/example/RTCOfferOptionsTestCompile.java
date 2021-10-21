@@ -6,8 +6,8 @@ import javax.annotation.Generated;
 public final class RTCOfferOptionsTestCompile {
   static RTCOfferOptions $typeReference$;
 
-  public static RTCOfferOptions.Builder create() {
-    return RTCOfferOptions.create();
+  public static RTCOfferOptions.Builder of() {
+    return RTCOfferOptions.of();
   }
 
   public static boolean iceRestart(final RTCOfferOptions $instance) {

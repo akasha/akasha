@@ -20,8 +20,11 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredNullableOctetValue {
   @JsOverlay
   @Nonnull
-  static Builder requiredNullableOctetValue(@Nullable final Double requiredNullableOctetValue) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredNullableOctetValue( requiredNullableOctetValue );
+  static Dictionary_requiredNullableOctetValue requiredNullableOctetValue(
+      @Nullable final Double requiredNullableOctetValue) {
+    final Dictionary_requiredNullableOctetValue $dictionaryRequiredNullableOctetValue = Js.<Dictionary_requiredNullableOctetValue>uncheckedCast( JsPropertyMap.of() );
+    $dictionaryRequiredNullableOctetValue.setRequiredNullableOctetValue( requiredNullableOctetValue );
+    return Js.uncheckedCast( $dictionaryRequiredNullableOctetValue );
   }
 
   @JsProperty(
@@ -32,18 +35,4 @@ public interface Dictionary_requiredNullableOctetValue {
 
   @JsProperty
   void setRequiredNullableOctetValue(@JsNullable Double requiredNullableOctetValue);
-
-  @JsType(
-      isNative = true,
-      namespace = JsPackage.GLOBAL,
-      name = "Dictionary_requiredNullableOctetValue"
-  )
-  interface Builder extends Dictionary_requiredNullableOctetValue {
-    @JsOverlay
-    @Nonnull
-    default Builder requiredNullableOctetValue(@Nullable final Double requiredNullableOctetValue) {
-      setRequiredNullableOctetValue( requiredNullableOctetValue );
-      return this;
-    }
-  }
 }

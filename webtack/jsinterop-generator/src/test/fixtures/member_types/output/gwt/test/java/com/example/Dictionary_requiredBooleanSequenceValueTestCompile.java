@@ -6,12 +6,12 @@ import javax.annotation.Generated;
 public final class Dictionary_requiredBooleanSequenceValueTestCompile {
   static Dictionary_requiredBooleanSequenceValue $typeReference$;
 
-  public static Dictionary_requiredBooleanSequenceValue.Builder requiredBooleanSequenceValue(
+  public static Dictionary_requiredBooleanSequenceValue requiredBooleanSequenceValue(
       final JsArray<Boolean> requiredBooleanSequenceValue) {
     return Dictionary_requiredBooleanSequenceValue.requiredBooleanSequenceValue( requiredBooleanSequenceValue );
   }
 
-  public static Dictionary_requiredBooleanSequenceValue.Builder requiredBooleanSequenceValue(
+  public static Dictionary_requiredBooleanSequenceValue requiredBooleanSequenceValue(
       final Boolean[] requiredBooleanSequenceValue) {
     return Dictionary_requiredBooleanSequenceValue.requiredBooleanSequenceValue( requiredBooleanSequenceValue );
   }
@@ -31,17 +31,5 @@ public final class Dictionary_requiredBooleanSequenceValueTestCompile {
       final Dictionary_requiredBooleanSequenceValue $instance,
       final Boolean[] requiredBooleanSequenceValue) {
     $instance.setRequiredBooleanSequenceValue( requiredBooleanSequenceValue );
-  }
-
-  public static Dictionary_requiredBooleanSequenceValue.Builder requiredBooleanSequenceValue(
-      final Dictionary_requiredBooleanSequenceValue.Builder $instance,
-      final JsArray<Boolean> requiredBooleanSequenceValue) {
-    return $instance.requiredBooleanSequenceValue( requiredBooleanSequenceValue );
-  }
-
-  public static Dictionary_requiredBooleanSequenceValue.Builder requiredBooleanSequenceValue(
-      final Dictionary_requiredBooleanSequenceValue.Builder $instance,
-      final Boolean[] requiredBooleanSequenceValue) {
-    return $instance.requiredBooleanSequenceValue( requiredBooleanSequenceValue );
   }
 }

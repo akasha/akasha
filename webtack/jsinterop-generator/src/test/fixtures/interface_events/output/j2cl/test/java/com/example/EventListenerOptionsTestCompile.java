@@ -6,8 +6,8 @@ import javax.annotation.Generated;
 public final class EventListenerOptionsTestCompile {
   static EventListenerOptions $typeReference$;
 
-  public static EventListenerOptions.Builder create() {
-    return EventListenerOptions.create();
+  public static EventListenerOptions.Builder of() {
+    return EventListenerOptions.of();
   }
 
   public static boolean capture(final EventListenerOptions $instance) {

@@ -19,15 +19,20 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredDoubleSequenceValue {
   @JsOverlay
   @Nonnull
-  static Builder requiredDoubleSequenceValue(
+  static Dictionary_requiredDoubleSequenceValue requiredDoubleSequenceValue(
       @Nonnull final JsArray<Double> requiredDoubleSequenceValue) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredDoubleSequenceValue( requiredDoubleSequenceValue );
+    final Dictionary_requiredDoubleSequenceValue $dictionaryRequiredDoubleSequenceValue = Js.<Dictionary_requiredDoubleSequenceValue>uncheckedCast( JsPropertyMap.of() );
+    $dictionaryRequiredDoubleSequenceValue.setRequiredDoubleSequenceValue( requiredDoubleSequenceValue );
+    return Js.uncheckedCast( $dictionaryRequiredDoubleSequenceValue );
   }
 
   @JsOverlay
   @Nonnull
-  static Builder requiredDoubleSequenceValue(@Nonnull final double... requiredDoubleSequenceValue) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredDoubleSequenceValue( requiredDoubleSequenceValue );
+  static Dictionary_requiredDoubleSequenceValue requiredDoubleSequenceValue(
+      @Nonnull final double... requiredDoubleSequenceValue) {
+    final Dictionary_requiredDoubleSequenceValue $dictionaryRequiredDoubleSequenceValue = Js.<Dictionary_requiredDoubleSequenceValue>uncheckedCast( JsPropertyMap.of() );
+    $dictionaryRequiredDoubleSequenceValue.setRequiredDoubleSequenceValue( requiredDoubleSequenceValue );
+    return Js.uncheckedCast( $dictionaryRequiredDoubleSequenceValue );
   }
 
   @JsProperty(
@@ -43,28 +48,5 @@ public interface Dictionary_requiredDoubleSequenceValue {
   default void setRequiredDoubleSequenceValue(
       @Nonnull final double... requiredDoubleSequenceValue) {
     setRequiredDoubleSequenceValue( Js.<JsArray<Double>>uncheckedCast( requiredDoubleSequenceValue ) );
-  }
-
-  @JsType(
-      isNative = true,
-      namespace = JsPackage.GLOBAL,
-      name = "Object"
-  )
-  interface Builder extends Dictionary_requiredDoubleSequenceValue {
-    @JsOverlay
-    @Nonnull
-    default Builder requiredDoubleSequenceValue(
-        @Nonnull final JsArray<Double> requiredDoubleSequenceValue) {
-      setRequiredDoubleSequenceValue( requiredDoubleSequenceValue );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder requiredDoubleSequenceValue(
-        @Nonnull final double... requiredDoubleSequenceValue) {
-      setRequiredDoubleSequenceValue( requiredDoubleSequenceValue );
-      return this;
-    }
   }
 }

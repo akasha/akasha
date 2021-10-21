@@ -7,12 +7,12 @@ import javax.annotation.Generated;
 public final class Dictionary_requiredNullableSomeTypeSequenceValueTestCompile {
   static Dictionary_requiredNullableSomeTypeSequenceValue $typeReference$;
 
-  public static Dictionary_requiredNullableSomeTypeSequenceValue.Builder requiredNullableSomeTypeSequenceValue(
+  public static Dictionary_requiredNullableSomeTypeSequenceValue requiredNullableSomeTypeSequenceValue(
       final JsArray<SomeType> requiredNullableSomeTypeSequenceValue) {
     return Dictionary_requiredNullableSomeTypeSequenceValue.requiredNullableSomeTypeSequenceValue( requiredNullableSomeTypeSequenceValue );
   }
 
-  public static Dictionary_requiredNullableSomeTypeSequenceValue.Builder requiredNullableSomeTypeSequenceValue(
+  public static Dictionary_requiredNullableSomeTypeSequenceValue requiredNullableSomeTypeSequenceValue(
       final SomeType[] requiredNullableSomeTypeSequenceValue) {
     return Dictionary_requiredNullableSomeTypeSequenceValue.requiredNullableSomeTypeSequenceValue( requiredNullableSomeTypeSequenceValue );
   }
@@ -32,17 +32,5 @@ public final class Dictionary_requiredNullableSomeTypeSequenceValueTestCompile {
       final Dictionary_requiredNullableSomeTypeSequenceValue $instance,
       final SomeType[] requiredNullableSomeTypeSequenceValue) {
     $instance.setRequiredNullableSomeTypeSequenceValue( requiredNullableSomeTypeSequenceValue );
-  }
-
-  public static Dictionary_requiredNullableSomeTypeSequenceValue.Builder requiredNullableSomeTypeSequenceValue(
-      final Dictionary_requiredNullableSomeTypeSequenceValue.Builder $instance,
-      final JsArray<SomeType> requiredNullableSomeTypeSequenceValue) {
-    return $instance.requiredNullableSomeTypeSequenceValue( requiredNullableSomeTypeSequenceValue );
-  }
-
-  public static Dictionary_requiredNullableSomeTypeSequenceValue.Builder requiredNullableSomeTypeSequenceValue(
-      final Dictionary_requiredNullableSomeTypeSequenceValue.Builder $instance,
-      final SomeType[] requiredNullableSomeTypeSequenceValue) {
-    return $instance.requiredNullableSomeTypeSequenceValue( requiredNullableSomeTypeSequenceValue );
   }
 }

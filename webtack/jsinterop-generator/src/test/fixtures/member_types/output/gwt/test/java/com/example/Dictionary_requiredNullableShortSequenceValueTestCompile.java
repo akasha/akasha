@@ -6,12 +6,12 @@ import javax.annotation.Generated;
 public final class Dictionary_requiredNullableShortSequenceValueTestCompile {
   static Dictionary_requiredNullableShortSequenceValue $typeReference$;
 
-  public static Dictionary_requiredNullableShortSequenceValue.Builder requiredNullableShortSequenceValue(
+  public static Dictionary_requiredNullableShortSequenceValue requiredNullableShortSequenceValue(
       final JsArray<Double> requiredNullableShortSequenceValue) {
     return Dictionary_requiredNullableShortSequenceValue.requiredNullableShortSequenceValue( requiredNullableShortSequenceValue );
   }
 
-  public static Dictionary_requiredNullableShortSequenceValue.Builder requiredNullableShortSequenceValue(
+  public static Dictionary_requiredNullableShortSequenceValue requiredNullableShortSequenceValue(
       final double[] requiredNullableShortSequenceValue) {
     return Dictionary_requiredNullableShortSequenceValue.requiredNullableShortSequenceValue( requiredNullableShortSequenceValue );
   }
@@ -31,17 +31,5 @@ public final class Dictionary_requiredNullableShortSequenceValueTestCompile {
       final Dictionary_requiredNullableShortSequenceValue $instance,
       final double[] requiredNullableShortSequenceValue) {
     $instance.setRequiredNullableShortSequenceValue( requiredNullableShortSequenceValue );
-  }
-
-  public static Dictionary_requiredNullableShortSequenceValue.Builder requiredNullableShortSequenceValue(
-      final Dictionary_requiredNullableShortSequenceValue.Builder $instance,
-      final JsArray<Double> requiredNullableShortSequenceValue) {
-    return $instance.requiredNullableShortSequenceValue( requiredNullableShortSequenceValue );
-  }
-
-  public static Dictionary_requiredNullableShortSequenceValue.Builder requiredNullableShortSequenceValue(
-      final Dictionary_requiredNullableShortSequenceValue.Builder $instance,
-      final double[] requiredNullableShortSequenceValue) {
-    return $instance.requiredNullableShortSequenceValue( requiredNullableShortSequenceValue );
   }
 }

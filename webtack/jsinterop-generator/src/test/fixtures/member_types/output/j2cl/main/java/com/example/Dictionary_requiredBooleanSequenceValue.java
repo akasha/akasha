@@ -19,16 +19,20 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredBooleanSequenceValue {
   @JsOverlay
   @Nonnull
-  static Builder requiredBooleanSequenceValue(
+  static Dictionary_requiredBooleanSequenceValue requiredBooleanSequenceValue(
       @Nonnull final JsArray<Boolean> requiredBooleanSequenceValue) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredBooleanSequenceValue( requiredBooleanSequenceValue );
+    final Dictionary_requiredBooleanSequenceValue $dictionaryRequiredBooleanSequenceValue = Js.<Dictionary_requiredBooleanSequenceValue>uncheckedCast( JsPropertyMap.of() );
+    $dictionaryRequiredBooleanSequenceValue.setRequiredBooleanSequenceValue( requiredBooleanSequenceValue );
+    return Js.uncheckedCast( $dictionaryRequiredBooleanSequenceValue );
   }
 
   @JsOverlay
   @Nonnull
-  static Builder requiredBooleanSequenceValue(
+  static Dictionary_requiredBooleanSequenceValue requiredBooleanSequenceValue(
       @Nonnull final Boolean... requiredBooleanSequenceValue) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredBooleanSequenceValue( requiredBooleanSequenceValue );
+    final Dictionary_requiredBooleanSequenceValue $dictionaryRequiredBooleanSequenceValue = Js.<Dictionary_requiredBooleanSequenceValue>uncheckedCast( JsPropertyMap.of() );
+    $dictionaryRequiredBooleanSequenceValue.setRequiredBooleanSequenceValue( requiredBooleanSequenceValue );
+    return Js.uncheckedCast( $dictionaryRequiredBooleanSequenceValue );
   }
 
   @JsProperty(
@@ -44,28 +48,5 @@ public interface Dictionary_requiredBooleanSequenceValue {
   default void setRequiredBooleanSequenceValue(
       @Nonnull final Boolean... requiredBooleanSequenceValue) {
     setRequiredBooleanSequenceValue( Js.<JsArray<Boolean>>uncheckedCast( requiredBooleanSequenceValue ) );
-  }
-
-  @JsType(
-      isNative = true,
-      namespace = JsPackage.GLOBAL,
-      name = "Dictionary_requiredBooleanSequenceValue"
-  )
-  interface Builder extends Dictionary_requiredBooleanSequenceValue {
-    @JsOverlay
-    @Nonnull
-    default Builder requiredBooleanSequenceValue(
-        @Nonnull final JsArray<Boolean> requiredBooleanSequenceValue) {
-      setRequiredBooleanSequenceValue( requiredBooleanSequenceValue );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder requiredBooleanSequenceValue(
-        @Nonnull final Boolean... requiredBooleanSequenceValue) {
-      setRequiredBooleanSequenceValue( requiredBooleanSequenceValue );
-      return this;
-    }
   }
 }

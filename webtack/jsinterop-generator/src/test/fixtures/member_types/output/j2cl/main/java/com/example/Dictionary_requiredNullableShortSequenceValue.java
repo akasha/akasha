@@ -20,16 +20,20 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredNullableShortSequenceValue {
   @JsOverlay
   @Nonnull
-  static Builder requiredNullableShortSequenceValue(
+  static Dictionary_requiredNullableShortSequenceValue requiredNullableShortSequenceValue(
       @Nullable final JsArray<Double> requiredNullableShortSequenceValue) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredNullableShortSequenceValue( requiredNullableShortSequenceValue );
+    final Dictionary_requiredNullableShortSequenceValue $dictionaryRequiredNullableShortSequenceValue = Js.<Dictionary_requiredNullableShortSequenceValue>uncheckedCast( JsPropertyMap.of() );
+    $dictionaryRequiredNullableShortSequenceValue.setRequiredNullableShortSequenceValue( requiredNullableShortSequenceValue );
+    return Js.uncheckedCast( $dictionaryRequiredNullableShortSequenceValue );
   }
 
   @JsOverlay
   @Nonnull
-  static Builder requiredNullableShortSequenceValue(
+  static Dictionary_requiredNullableShortSequenceValue requiredNullableShortSequenceValue(
       @Nullable final double... requiredNullableShortSequenceValue) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredNullableShortSequenceValue( requiredNullableShortSequenceValue );
+    final Dictionary_requiredNullableShortSequenceValue $dictionaryRequiredNullableShortSequenceValue = Js.<Dictionary_requiredNullableShortSequenceValue>uncheckedCast( JsPropertyMap.of() );
+    $dictionaryRequiredNullableShortSequenceValue.setRequiredNullableShortSequenceValue( requiredNullableShortSequenceValue );
+    return Js.uncheckedCast( $dictionaryRequiredNullableShortSequenceValue );
   }
 
   @JsProperty(
@@ -46,28 +50,5 @@ public interface Dictionary_requiredNullableShortSequenceValue {
   default void setRequiredNullableShortSequenceValue(
       @Nullable final double... requiredNullableShortSequenceValue) {
     setRequiredNullableShortSequenceValue( Js.<JsArray<Double>>uncheckedCast( requiredNullableShortSequenceValue ) );
-  }
-
-  @JsType(
-      isNative = true,
-      namespace = JsPackage.GLOBAL,
-      name = "Dictionary_requiredNullableShortSequenceValue"
-  )
-  interface Builder extends Dictionary_requiredNullableShortSequenceValue {
-    @JsOverlay
-    @Nonnull
-    default Builder requiredNullableShortSequenceValue(
-        @Nullable final JsArray<Double> requiredNullableShortSequenceValue) {
-      setRequiredNullableShortSequenceValue( requiredNullableShortSequenceValue );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder requiredNullableShortSequenceValue(
-        @Nullable final double... requiredNullableShortSequenceValue) {
-      setRequiredNullableShortSequenceValue( requiredNullableShortSequenceValue );
-      return this;
-    }
   }
 }

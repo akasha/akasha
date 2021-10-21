@@ -18,8 +18,10 @@ import jsinterop.base.JsPropertyMap;
 public interface PushPermissionDescriptor extends PermissionDescriptor {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final String name1, @Nonnull final String name2) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).name1( name1 ).name2( name2 );
+  static Step1 name1(@Nonnull final String name1) {
+    final Builder $pushPermissionDescriptor = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $pushPermissionDescriptor.setName1( name1 );
+    return Js.uncheckedCast( $pushPermissionDescriptor );
   }
 
   @JsProperty(
@@ -35,39 +37,25 @@ public interface PushPermissionDescriptor extends PermissionDescriptor {
       namespace = JsPackage.GLOBAL,
       name = "PushPermissionDescriptor"
   )
+  interface Step1 {
+    @JsOverlay
+    @Nonnull
+    default Builder name2(@Nonnull String name2) {
+      Js.<PushPermissionDescriptor>uncheckedCast( this ).setName2( name2 );
+      return Js.uncheckedCast( this );
+    }
+  }
+
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "PushPermissionDescriptor"
+  )
   interface Builder extends PushPermissionDescriptor {
     @JsOverlay
     @Nonnull
     default Builder userVisibleOnly3(final boolean userVisibleOnly3) {
       setUserVisibleOnly3( userVisibleOnly3 );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder name1(@Nonnull final String name1) {
-      setName1( name1 );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder name2(@Nonnull final String name2) {
-      setName2( name2 );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder userVisibleOnly1(final boolean userVisibleOnly1) {
-      setUserVisibleOnly1( userVisibleOnly1 );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder userVisibleOnly2(final boolean userVisibleOnly2) {
-      setUserVisibleOnly2( userVisibleOnly2 );
       return this;
     }
   }

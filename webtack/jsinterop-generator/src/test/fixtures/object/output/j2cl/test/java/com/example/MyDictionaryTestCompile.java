@@ -36,11 +36,6 @@ public final class MyDictionaryTestCompile {
     $instance.setObjectValue( objectValue );
   }
 
-  public static MyDictionary.Builder requiredObjectValue(final MyDictionary.Builder $instance,
-      final JsObject requiredObjectValue) {
-    return $instance.requiredObjectValue( requiredObjectValue );
-  }
-
   public static MyDictionary.Builder nullableObjectValue(final MyDictionary.Builder $instance,
       final JsObject nullableObjectValue) {
     return $instance.nullableObjectValue( nullableObjectValue );

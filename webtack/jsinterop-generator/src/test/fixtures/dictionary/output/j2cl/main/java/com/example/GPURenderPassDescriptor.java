@@ -21,13 +21,17 @@ public interface GPURenderPassDescriptor {
   @Nonnull
   static Builder colorAttachments(
       @Nonnull final JsArray<GPURenderPassColorAttachment> colorAttachments) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).colorAttachments( colorAttachments );
+    final Builder $gpuRenderPassDescriptor = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $gpuRenderPassDescriptor.setColorAttachments( colorAttachments );
+    return Js.uncheckedCast( $gpuRenderPassDescriptor );
   }
 
   @JsOverlay
   @Nonnull
   static Builder colorAttachments(@Nonnull final GPURenderPassColorAttachment... colorAttachments) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).colorAttachments( colorAttachments );
+    final Builder $gpuRenderPassDescriptor = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $gpuRenderPassDescriptor.setColorAttachments( colorAttachments );
+    return Js.uncheckedCast( $gpuRenderPassDescriptor );
   }
 
   @JsProperty(
@@ -59,22 +63,6 @@ public interface GPURenderPassDescriptor {
       name = "GPURenderPassDescriptor"
   )
   interface Builder extends GPURenderPassDescriptor {
-    @JsOverlay
-    @Nonnull
-    default Builder colorAttachments(
-        @Nonnull final JsArray<GPURenderPassColorAttachment> colorAttachments) {
-      setColorAttachments( colorAttachments );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder colorAttachments(
-        @Nonnull final GPURenderPassColorAttachment... colorAttachments) {
-      setColorAttachments( colorAttachments );
-      return this;
-    }
-
     @JsOverlay
     @Nonnull
     default Builder occlusionQuerySet(@Nonnull final GPUQuerySet occlusionQuerySet) {

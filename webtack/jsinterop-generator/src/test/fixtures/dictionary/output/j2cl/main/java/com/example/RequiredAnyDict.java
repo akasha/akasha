@@ -22,8 +22,10 @@ import jsinterop.base.JsPropertyMap;
 public interface RequiredAnyDict {
   @JsOverlay
   @Nonnull
-  static Builder someValue(@DoNotAutobox @Nullable final Object someValue) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).someValue( someValue );
+  static RequiredAnyDict someValue(@DoNotAutobox @Nullable final Object someValue) {
+    final RequiredAnyDict $requiredAnyDict = Js.<RequiredAnyDict>uncheckedCast( JsPropertyMap.of() );
+    $requiredAnyDict.setSomeValue( someValue );
+    return Js.uncheckedCast( $requiredAnyDict );
   }
 
   @JsProperty(
@@ -34,18 +36,4 @@ public interface RequiredAnyDict {
 
   @JsProperty
   void setSomeValue(@DoNotAutobox @JsNullable Object someValue);
-
-  @JsType(
-      isNative = true,
-      namespace = JsPackage.GLOBAL,
-      name = "RequiredAnyDict"
-  )
-  interface Builder extends RequiredAnyDict {
-    @JsOverlay
-    @Nonnull
-    default Builder someValue(@DoNotAutobox @Nullable final Object someValue) {
-      setSomeValue( someValue );
-      return this;
-    }
-  }
 }

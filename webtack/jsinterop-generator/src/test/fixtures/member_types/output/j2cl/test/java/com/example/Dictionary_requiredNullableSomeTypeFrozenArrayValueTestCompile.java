@@ -6,7 +6,7 @@ import javax.annotation.Generated;
 public final class Dictionary_requiredNullableSomeTypeFrozenArrayValueTestCompile {
   static Dictionary_requiredNullableSomeTypeFrozenArrayValue $typeReference$;
 
-  public static Dictionary_requiredNullableSomeTypeFrozenArrayValue.Builder requiredNullableSomeTypeFrozenArrayValue(
+  public static Dictionary_requiredNullableSomeTypeFrozenArrayValue requiredNullableSomeTypeFrozenArrayValue(
       final JsArray<SomeType> requiredNullableSomeTypeFrozenArrayValue) {
     return Dictionary_requiredNullableSomeTypeFrozenArrayValue.requiredNullableSomeTypeFrozenArrayValue( requiredNullableSomeTypeFrozenArrayValue );
   }
@@ -20,11 +20,5 @@ public final class Dictionary_requiredNullableSomeTypeFrozenArrayValueTestCompil
       final Dictionary_requiredNullableSomeTypeFrozenArrayValue $instance,
       JsArray<SomeType> requiredNullableSomeTypeFrozenArrayValue) {
     $instance.setRequiredNullableSomeTypeFrozenArrayValue( requiredNullableSomeTypeFrozenArrayValue );
-  }
-
-  public static Dictionary_requiredNullableSomeTypeFrozenArrayValue.Builder requiredNullableSomeTypeFrozenArrayValue(
-      final Dictionary_requiredNullableSomeTypeFrozenArrayValue.Builder $instance,
-      final JsArray<SomeType> requiredNullableSomeTypeFrozenArrayValue) {
-    return $instance.requiredNullableSomeTypeFrozenArrayValue( requiredNullableSomeTypeFrozenArrayValue );
   }
 }

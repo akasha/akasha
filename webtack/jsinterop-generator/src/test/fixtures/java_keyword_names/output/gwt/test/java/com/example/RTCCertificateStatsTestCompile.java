@@ -6,8 +6,8 @@ import javax.annotation.Generated;
 public final class RTCCertificateStatsTestCompile {
   static RTCCertificateStats $typeReference$;
 
-  public static RTCCertificateStats.Builder create() {
-    return RTCCertificateStats.create();
+  public static RTCCertificateStats.Builder of() {
+    return RTCCertificateStats.of();
   }
 
   public static String _isNot(final RTCCertificateStats $instance) {

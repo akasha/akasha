@@ -40,18 +40,6 @@ public final class GPURenderPassDescriptorTestCompile {
     $instance.setOcclusionQuerySet( occlusionQuerySet );
   }
 
-  public static GPURenderPassDescriptor.Builder colorAttachments(
-      final GPURenderPassDescriptor.Builder $instance,
-      final JsArray<GPURenderPassColorAttachment> colorAttachments) {
-    return $instance.colorAttachments( colorAttachments );
-  }
-
-  public static GPURenderPassDescriptor.Builder colorAttachments(
-      final GPURenderPassDescriptor.Builder $instance,
-      final GPURenderPassColorAttachment[] colorAttachments) {
-    return $instance.colorAttachments( colorAttachments );
-  }
-
   public static GPURenderPassDescriptor.Builder occlusionQuerySet(
       final GPURenderPassDescriptor.Builder $instance, final GPUQuerySet occlusionQuerySet) {
     return $instance.occlusionQuerySet( occlusionQuerySet );

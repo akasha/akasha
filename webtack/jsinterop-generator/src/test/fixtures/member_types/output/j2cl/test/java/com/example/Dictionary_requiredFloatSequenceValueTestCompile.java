@@ -6,12 +6,12 @@ import javax.annotation.Generated;
 public final class Dictionary_requiredFloatSequenceValueTestCompile {
   static Dictionary_requiredFloatSequenceValue $typeReference$;
 
-  public static Dictionary_requiredFloatSequenceValue.Builder requiredFloatSequenceValue(
+  public static Dictionary_requiredFloatSequenceValue requiredFloatSequenceValue(
       final JsArray<Double> requiredFloatSequenceValue) {
     return Dictionary_requiredFloatSequenceValue.requiredFloatSequenceValue( requiredFloatSequenceValue );
   }
 
-  public static Dictionary_requiredFloatSequenceValue.Builder requiredFloatSequenceValue(
+  public static Dictionary_requiredFloatSequenceValue requiredFloatSequenceValue(
       final double[] requiredFloatSequenceValue) {
     return Dictionary_requiredFloatSequenceValue.requiredFloatSequenceValue( requiredFloatSequenceValue );
   }
@@ -31,17 +31,5 @@ public final class Dictionary_requiredFloatSequenceValueTestCompile {
       final Dictionary_requiredFloatSequenceValue $instance,
       final double[] requiredFloatSequenceValue) {
     $instance.setRequiredFloatSequenceValue( requiredFloatSequenceValue );
-  }
-
-  public static Dictionary_requiredFloatSequenceValue.Builder requiredFloatSequenceValue(
-      final Dictionary_requiredFloatSequenceValue.Builder $instance,
-      final JsArray<Double> requiredFloatSequenceValue) {
-    return $instance.requiredFloatSequenceValue( requiredFloatSequenceValue );
-  }
-
-  public static Dictionary_requiredFloatSequenceValue.Builder requiredFloatSequenceValue(
-      final Dictionary_requiredFloatSequenceValue.Builder $instance,
-      final double[] requiredFloatSequenceValue) {
-    return $instance.requiredFloatSequenceValue( requiredFloatSequenceValue );
   }
 }

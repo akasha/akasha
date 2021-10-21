@@ -20,9 +20,11 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredNullableUnrestrictedDoubleValue {
   @JsOverlay
   @Nonnull
-  static Builder requiredNullableUnrestrictedDoubleValue(
+  static Dictionary_requiredNullableUnrestrictedDoubleValue requiredNullableUnrestrictedDoubleValue(
       @Nullable final Double requiredNullableUnrestrictedDoubleValue) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredNullableUnrestrictedDoubleValue( requiredNullableUnrestrictedDoubleValue );
+    final Dictionary_requiredNullableUnrestrictedDoubleValue $dictionaryRequiredNullableUnrestrictedDoubleValue = Js.<Dictionary_requiredNullableUnrestrictedDoubleValue>uncheckedCast( JsPropertyMap.of() );
+    $dictionaryRequiredNullableUnrestrictedDoubleValue.setRequiredNullableUnrestrictedDoubleValue( requiredNullableUnrestrictedDoubleValue );
+    return Js.uncheckedCast( $dictionaryRequiredNullableUnrestrictedDoubleValue );
   }
 
   @JsProperty(
@@ -34,19 +36,4 @@ public interface Dictionary_requiredNullableUnrestrictedDoubleValue {
   @JsProperty
   void setRequiredNullableUnrestrictedDoubleValue(
       @JsNullable Double requiredNullableUnrestrictedDoubleValue);
-
-  @JsType(
-      isNative = true,
-      namespace = JsPackage.GLOBAL,
-      name = "Dictionary_requiredNullableUnrestrictedDoubleValue"
-  )
-  interface Builder extends Dictionary_requiredNullableUnrestrictedDoubleValue {
-    @JsOverlay
-    @Nonnull
-    default Builder requiredNullableUnrestrictedDoubleValue(
-        @Nullable final Double requiredNullableUnrestrictedDoubleValue) {
-      setRequiredNullableUnrestrictedDoubleValue( requiredNullableUnrestrictedDoubleValue );
-      return this;
-    }
-  }
 }

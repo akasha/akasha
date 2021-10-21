@@ -18,8 +18,10 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredDoubleValue {
   @JsOverlay
   @Nonnull
-  static Builder requiredDoubleValue(final double requiredDoubleValue) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredDoubleValue( requiredDoubleValue );
+  static Dictionary_requiredDoubleValue requiredDoubleValue(final double requiredDoubleValue) {
+    final Dictionary_requiredDoubleValue $dictionaryRequiredDoubleValue = Js.<Dictionary_requiredDoubleValue>uncheckedCast( JsPropertyMap.of() );
+    $dictionaryRequiredDoubleValue.setRequiredDoubleValue( requiredDoubleValue );
+    return Js.uncheckedCast( $dictionaryRequiredDoubleValue );
   }
 
   @JsProperty(
@@ -29,18 +31,4 @@ public interface Dictionary_requiredDoubleValue {
 
   @JsProperty
   void setRequiredDoubleValue(double requiredDoubleValue);
-
-  @JsType(
-      isNative = true,
-      namespace = JsPackage.GLOBAL,
-      name = "Dictionary_requiredDoubleValue"
-  )
-  interface Builder extends Dictionary_requiredDoubleValue {
-    @JsOverlay
-    @Nonnull
-    default Builder requiredDoubleValue(final double requiredDoubleValue) {
-      setRequiredDoubleValue( requiredDoubleValue );
-      return this;
-    }
-  }
 }

@@ -7,12 +7,12 @@ import javax.annotation.Generated;
 public final class Dictionary_requiredDoubleSequenceValueTestCompile {
   static Dictionary_requiredDoubleSequenceValue $typeReference$;
 
-  public static Dictionary_requiredDoubleSequenceValue.Builder requiredDoubleSequenceValue(
+  public static Dictionary_requiredDoubleSequenceValue requiredDoubleSequenceValue(
       final JsArray<Double> requiredDoubleSequenceValue) {
     return Dictionary_requiredDoubleSequenceValue.requiredDoubleSequenceValue( requiredDoubleSequenceValue );
   }
 
-  public static Dictionary_requiredDoubleSequenceValue.Builder requiredDoubleSequenceValue(
+  public static Dictionary_requiredDoubleSequenceValue requiredDoubleSequenceValue(
       final double[] requiredDoubleSequenceValue) {
     return Dictionary_requiredDoubleSequenceValue.requiredDoubleSequenceValue( requiredDoubleSequenceValue );
   }
@@ -32,17 +32,5 @@ public final class Dictionary_requiredDoubleSequenceValueTestCompile {
       final Dictionary_requiredDoubleSequenceValue $instance,
       final double[] requiredDoubleSequenceValue) {
     $instance.setRequiredDoubleSequenceValue( requiredDoubleSequenceValue );
-  }
-
-  public static Dictionary_requiredDoubleSequenceValue.Builder requiredDoubleSequenceValue(
-      final Dictionary_requiredDoubleSequenceValue.Builder $instance,
-      final JsArray<Double> requiredDoubleSequenceValue) {
-    return $instance.requiredDoubleSequenceValue( requiredDoubleSequenceValue );
-  }
-
-  public static Dictionary_requiredDoubleSequenceValue.Builder requiredDoubleSequenceValue(
-      final Dictionary_requiredDoubleSequenceValue.Builder $instance,
-      final double[] requiredDoubleSequenceValue) {
-    return $instance.requiredDoubleSequenceValue( requiredDoubleSequenceValue );
   }
 }

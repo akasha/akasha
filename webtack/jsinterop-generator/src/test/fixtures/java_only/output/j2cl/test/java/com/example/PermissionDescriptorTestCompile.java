@@ -6,8 +6,8 @@ import javax.annotation.Generated;
 public final class PermissionDescriptorTestCompile {
   static PermissionDescriptor $typeReference$;
 
-  public static PermissionDescriptor.Builder create(final String name1, final String name2) {
-    return PermissionDescriptor.create( name1, name2 );
+  public static PermissionDescriptor.Step1 name1(final String name1) {
+    return PermissionDescriptor.name1( name1 );
   }
 
   public static String name1(final PermissionDescriptor $instance) {
@@ -42,16 +42,6 @@ public final class PermissionDescriptorTestCompile {
   public static void setUserVisibleOnly2(final PermissionDescriptor $instance,
       boolean userVisibleOnly2) {
     $instance.setUserVisibleOnly2( userVisibleOnly2 );
-  }
-
-  public static PermissionDescriptor.Builder name1(final PermissionDescriptor.Builder $instance,
-      final String name1) {
-    return $instance.name1( name1 );
-  }
-
-  public static PermissionDescriptor.Builder name2(final PermissionDescriptor.Builder $instance,
-      final String name2) {
-    return $instance.name2( name2 );
   }
 
   public static PermissionDescriptor.Builder userVisibleOnly1(

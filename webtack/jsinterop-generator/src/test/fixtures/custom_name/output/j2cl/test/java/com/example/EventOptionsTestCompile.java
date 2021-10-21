@@ -6,8 +6,8 @@ import javax.annotation.Generated;
 public final class EventOptionsTestCompile {
   static EventOptions $typeReference$;
 
-  public static EventOptions.Builder create() {
-    return EventOptions.create();
+  public static EventOptions.Builder of() {
+    return EventOptions.of();
   }
 
   public static boolean bubbles(final EventOptions $instance) {

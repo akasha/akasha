@@ -19,9 +19,11 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredSomeTypeFrozenArrayValue {
   @JsOverlay
   @Nonnull
-  static Builder requiredSomeTypeFrozenArrayValue(
+  static Dictionary_requiredSomeTypeFrozenArrayValue requiredSomeTypeFrozenArrayValue(
       @Nonnull final JsArray<SomeType> requiredSomeTypeFrozenArrayValue) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredSomeTypeFrozenArrayValue( requiredSomeTypeFrozenArrayValue );
+    final Dictionary_requiredSomeTypeFrozenArrayValue $dictionaryRequiredSomeTypeFrozenArrayValue = Js.<Dictionary_requiredSomeTypeFrozenArrayValue>uncheckedCast( JsPropertyMap.of() );
+    $dictionaryRequiredSomeTypeFrozenArrayValue.setRequiredSomeTypeFrozenArrayValue( requiredSomeTypeFrozenArrayValue );
+    return Js.uncheckedCast( $dictionaryRequiredSomeTypeFrozenArrayValue );
   }
 
   @JsProperty(
@@ -33,19 +35,4 @@ public interface Dictionary_requiredSomeTypeFrozenArrayValue {
   @JsProperty
   void setRequiredSomeTypeFrozenArrayValue(
       @JsNonNull JsArray<SomeType> requiredSomeTypeFrozenArrayValue);
-
-  @JsType(
-      isNative = true,
-      namespace = JsPackage.GLOBAL,
-      name = "Dictionary_requiredSomeTypeFrozenArrayValue"
-  )
-  interface Builder extends Dictionary_requiredSomeTypeFrozenArrayValue {
-    @JsOverlay
-    @Nonnull
-    default Builder requiredSomeTypeFrozenArrayValue(
-        @Nonnull final JsArray<SomeType> requiredSomeTypeFrozenArrayValue) {
-      setRequiredSomeTypeFrozenArrayValue( requiredSomeTypeFrozenArrayValue );
-      return this;
-    }
-  }
 }

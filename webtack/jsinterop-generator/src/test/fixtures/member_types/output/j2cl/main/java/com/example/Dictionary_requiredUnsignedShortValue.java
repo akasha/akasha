@@ -18,8 +18,11 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredUnsignedShortValue {
   @JsOverlay
   @Nonnull
-  static Builder requiredUnsignedShortValue(final int requiredUnsignedShortValue) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredUnsignedShortValue( requiredUnsignedShortValue );
+  static Dictionary_requiredUnsignedShortValue requiredUnsignedShortValue(
+      final int requiredUnsignedShortValue) {
+    final Dictionary_requiredUnsignedShortValue $dictionaryRequiredUnsignedShortValue = Js.<Dictionary_requiredUnsignedShortValue>uncheckedCast( JsPropertyMap.of() );
+    $dictionaryRequiredUnsignedShortValue.setRequiredUnsignedShortValue( requiredUnsignedShortValue );
+    return Js.uncheckedCast( $dictionaryRequiredUnsignedShortValue );
   }
 
   @JsProperty(
@@ -29,18 +32,4 @@ public interface Dictionary_requiredUnsignedShortValue {
 
   @JsProperty
   void setRequiredUnsignedShortValue(int requiredUnsignedShortValue);
-
-  @JsType(
-      isNative = true,
-      namespace = JsPackage.GLOBAL,
-      name = "Dictionary_requiredUnsignedShortValue"
-  )
-  interface Builder extends Dictionary_requiredUnsignedShortValue {
-    @JsOverlay
-    @Nonnull
-    default Builder requiredUnsignedShortValue(final int requiredUnsignedShortValue) {
-      setRequiredUnsignedShortValue( requiredUnsignedShortValue );
-      return this;
-    }
-  }
 }

@@ -20,16 +20,20 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredSomeTypeSequenceValue {
   @JsOverlay
   @Nonnull
-  static Builder requiredSomeTypeSequenceValue(
+  static Dictionary_requiredSomeTypeSequenceValue requiredSomeTypeSequenceValue(
       @Nonnull final JsArray<SomeType> requiredSomeTypeSequenceValue) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredSomeTypeSequenceValue( requiredSomeTypeSequenceValue );
+    final Dictionary_requiredSomeTypeSequenceValue $dictionaryRequiredSomeTypeSequenceValue = Js.<Dictionary_requiredSomeTypeSequenceValue>uncheckedCast( JsPropertyMap.of() );
+    $dictionaryRequiredSomeTypeSequenceValue.setRequiredSomeTypeSequenceValue( requiredSomeTypeSequenceValue );
+    return Js.uncheckedCast( $dictionaryRequiredSomeTypeSequenceValue );
   }
 
   @JsOverlay
   @Nonnull
-  static Builder requiredSomeTypeSequenceValue(
+  static Dictionary_requiredSomeTypeSequenceValue requiredSomeTypeSequenceValue(
       @Nonnull final SomeType... requiredSomeTypeSequenceValue) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredSomeTypeSequenceValue( requiredSomeTypeSequenceValue );
+    final Dictionary_requiredSomeTypeSequenceValue $dictionaryRequiredSomeTypeSequenceValue = Js.<Dictionary_requiredSomeTypeSequenceValue>uncheckedCast( JsPropertyMap.of() );
+    $dictionaryRequiredSomeTypeSequenceValue.setRequiredSomeTypeSequenceValue( requiredSomeTypeSequenceValue );
+    return Js.uncheckedCast( $dictionaryRequiredSomeTypeSequenceValue );
   }
 
   @JsProperty(
@@ -45,28 +49,5 @@ public interface Dictionary_requiredSomeTypeSequenceValue {
   default void setRequiredSomeTypeSequenceValue(
       @Nonnull final SomeType... requiredSomeTypeSequenceValue) {
     setRequiredSomeTypeSequenceValue( Js.<JsArray<SomeType>>uncheckedCast( requiredSomeTypeSequenceValue ) );
-  }
-
-  @JsType(
-      isNative = true,
-      namespace = JsPackage.GLOBAL,
-      name = "Object"
-  )
-  interface Builder extends Dictionary_requiredSomeTypeSequenceValue {
-    @JsOverlay
-    @Nonnull
-    default Builder requiredSomeTypeSequenceValue(
-        @Nonnull final JsArray<SomeType> requiredSomeTypeSequenceValue) {
-      setRequiredSomeTypeSequenceValue( requiredSomeTypeSequenceValue );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder requiredSomeTypeSequenceValue(
-        @Nonnull final SomeType... requiredSomeTypeSequenceValue) {
-      setRequiredSomeTypeSequenceValue( requiredSomeTypeSequenceValue );
-      return this;
-    }
   }
 }

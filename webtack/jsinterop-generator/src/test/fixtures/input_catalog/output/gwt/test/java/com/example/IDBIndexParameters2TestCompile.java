@@ -6,8 +6,8 @@ import javax.annotation.Generated;
 public final class IDBIndexParameters2TestCompile {
   static IDBIndexParameters2 $typeReference$;
 
-  public static IDBIndexParameters2.Builder create() {
-    return IDBIndexParameters2.create();
+  public static IDBIndexParameters2.Builder of() {
+    return IDBIndexParameters2.of();
   }
 
   public static boolean multiEntry(final IDBIndexParameters2 $instance) {

@@ -6,8 +6,8 @@ import javax.annotation.Generated;
 public final class WaveShaperOptionsTestCompile {
   static WaveShaperOptions $typeReference$;
 
-  public static WaveShaperOptions.Builder create() {
-    return WaveShaperOptions.create();
+  public static WaveShaperOptions.Builder of() {
+    return WaveShaperOptions.of();
   }
 
   public static String oversample(final WaveShaperOptions $instance) {

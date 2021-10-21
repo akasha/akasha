@@ -6,7 +6,7 @@ import javax.annotation.Generated;
 public final class Dictionary_requiredNullableDoubleValueTestCompile {
   static Dictionary_requiredNullableDoubleValue $typeReference$;
 
-  public static Dictionary_requiredNullableDoubleValue.Builder requiredNullableDoubleValue(
+  public static Dictionary_requiredNullableDoubleValue requiredNullableDoubleValue(
       final Double requiredNullableDoubleValue) {
     return Dictionary_requiredNullableDoubleValue.requiredNullableDoubleValue( requiredNullableDoubleValue );
   }
@@ -19,11 +19,5 @@ public final class Dictionary_requiredNullableDoubleValueTestCompile {
   public static void setRequiredNullableDoubleValue(
       final Dictionary_requiredNullableDoubleValue $instance, Double requiredNullableDoubleValue) {
     $instance.setRequiredNullableDoubleValue( requiredNullableDoubleValue );
-  }
-
-  public static Dictionary_requiredNullableDoubleValue.Builder requiredNullableDoubleValue(
-      final Dictionary_requiredNullableDoubleValue.Builder $instance,
-      final Double requiredNullableDoubleValue) {
-    return $instance.requiredNullableDoubleValue( requiredNullableDoubleValue );
   }
 }

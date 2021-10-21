@@ -20,9 +20,11 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredNullableBooleanValue {
   @JsOverlay
   @Nonnull
-  static Builder requiredNullableBooleanValue(
+  static Dictionary_requiredNullableBooleanValue requiredNullableBooleanValue(
       @Nullable final Boolean requiredNullableBooleanValue) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredNullableBooleanValue( requiredNullableBooleanValue );
+    final Dictionary_requiredNullableBooleanValue $dictionaryRequiredNullableBooleanValue = Js.<Dictionary_requiredNullableBooleanValue>uncheckedCast( JsPropertyMap.of() );
+    $dictionaryRequiredNullableBooleanValue.setRequiredNullableBooleanValue( requiredNullableBooleanValue );
+    return Js.uncheckedCast( $dictionaryRequiredNullableBooleanValue );
   }
 
   @JsProperty(
@@ -33,19 +35,4 @@ public interface Dictionary_requiredNullableBooleanValue {
 
   @JsProperty
   void setRequiredNullableBooleanValue(@JsNullable Boolean requiredNullableBooleanValue);
-
-  @JsType(
-      isNative = true,
-      namespace = JsPackage.GLOBAL,
-      name = "Object"
-  )
-  interface Builder extends Dictionary_requiredNullableBooleanValue {
-    @JsOverlay
-    @Nonnull
-    default Builder requiredNullableBooleanValue(
-        @Nullable final Boolean requiredNullableBooleanValue) {
-      setRequiredNullableBooleanValue( requiredNullableBooleanValue );
-      return this;
-    }
-  }
 }

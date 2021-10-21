@@ -20,16 +20,20 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredNullableSomeTypeSequenceValue {
   @JsOverlay
   @Nonnull
-  static Builder requiredNullableSomeTypeSequenceValue(
+  static Dictionary_requiredNullableSomeTypeSequenceValue requiredNullableSomeTypeSequenceValue(
       @Nullable final JsArray<SomeType> requiredNullableSomeTypeSequenceValue) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredNullableSomeTypeSequenceValue( requiredNullableSomeTypeSequenceValue );
+    final Dictionary_requiredNullableSomeTypeSequenceValue $dictionaryRequiredNullableSomeTypeSequenceValue = Js.<Dictionary_requiredNullableSomeTypeSequenceValue>uncheckedCast( JsPropertyMap.of() );
+    $dictionaryRequiredNullableSomeTypeSequenceValue.setRequiredNullableSomeTypeSequenceValue( requiredNullableSomeTypeSequenceValue );
+    return Js.uncheckedCast( $dictionaryRequiredNullableSomeTypeSequenceValue );
   }
 
   @JsOverlay
   @Nonnull
-  static Builder requiredNullableSomeTypeSequenceValue(
+  static Dictionary_requiredNullableSomeTypeSequenceValue requiredNullableSomeTypeSequenceValue(
       @Nullable final SomeType... requiredNullableSomeTypeSequenceValue) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredNullableSomeTypeSequenceValue( requiredNullableSomeTypeSequenceValue );
+    final Dictionary_requiredNullableSomeTypeSequenceValue $dictionaryRequiredNullableSomeTypeSequenceValue = Js.<Dictionary_requiredNullableSomeTypeSequenceValue>uncheckedCast( JsPropertyMap.of() );
+    $dictionaryRequiredNullableSomeTypeSequenceValue.setRequiredNullableSomeTypeSequenceValue( requiredNullableSomeTypeSequenceValue );
+    return Js.uncheckedCast( $dictionaryRequiredNullableSomeTypeSequenceValue );
   }
 
   @JsProperty(
@@ -46,28 +50,5 @@ public interface Dictionary_requiredNullableSomeTypeSequenceValue {
   default void setRequiredNullableSomeTypeSequenceValue(
       @Nullable final SomeType... requiredNullableSomeTypeSequenceValue) {
     setRequiredNullableSomeTypeSequenceValue( Js.<JsArray<SomeType>>uncheckedCast( requiredNullableSomeTypeSequenceValue ) );
-  }
-
-  @JsType(
-      isNative = true,
-      namespace = JsPackage.GLOBAL,
-      name = "Object"
-  )
-  interface Builder extends Dictionary_requiredNullableSomeTypeSequenceValue {
-    @JsOverlay
-    @Nonnull
-    default Builder requiredNullableSomeTypeSequenceValue(
-        @Nullable final JsArray<SomeType> requiredNullableSomeTypeSequenceValue) {
-      setRequiredNullableSomeTypeSequenceValue( requiredNullableSomeTypeSequenceValue );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder requiredNullableSomeTypeSequenceValue(
-        @Nullable final SomeType... requiredNullableSomeTypeSequenceValue) {
-      setRequiredNullableSomeTypeSequenceValue( requiredNullableSomeTypeSequenceValue );
-      return this;
-    }
   }
 }

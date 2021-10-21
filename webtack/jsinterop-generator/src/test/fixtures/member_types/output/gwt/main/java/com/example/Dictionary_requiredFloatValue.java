@@ -18,8 +18,10 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredFloatValue {
   @JsOverlay
   @Nonnull
-  static Builder requiredFloatValue(final float requiredFloatValue) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredFloatValue( requiredFloatValue );
+  static Dictionary_requiredFloatValue requiredFloatValue(final float requiredFloatValue) {
+    final Dictionary_requiredFloatValue $dictionaryRequiredFloatValue = Js.<Dictionary_requiredFloatValue>uncheckedCast( JsPropertyMap.of() );
+    $dictionaryRequiredFloatValue.setRequiredFloatValue( requiredFloatValue );
+    return Js.uncheckedCast( $dictionaryRequiredFloatValue );
   }
 
   @JsProperty(
@@ -29,18 +31,4 @@ public interface Dictionary_requiredFloatValue {
 
   @JsProperty
   void setRequiredFloatValue(float requiredFloatValue);
-
-  @JsType(
-      isNative = true,
-      namespace = JsPackage.GLOBAL,
-      name = "Object"
-  )
-  interface Builder extends Dictionary_requiredFloatValue {
-    @JsOverlay
-    @Nonnull
-    default Builder requiredFloatValue(final float requiredFloatValue) {
-      setRequiredFloatValue( requiredFloatValue );
-      return this;
-    }
-  }
 }

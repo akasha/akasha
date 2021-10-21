@@ -20,9 +20,11 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredNullableDOMStringValue {
   @JsOverlay
   @Nonnull
-  static Builder requiredNullableDOMStringValue(
+  static Dictionary_requiredNullableDOMStringValue requiredNullableDOMStringValue(
       @Nullable final String requiredNullableDOMStringValue) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredNullableDOMStringValue( requiredNullableDOMStringValue );
+    final Dictionary_requiredNullableDOMStringValue $dictionaryRequiredNullableDOMStringValue = Js.<Dictionary_requiredNullableDOMStringValue>uncheckedCast( JsPropertyMap.of() );
+    $dictionaryRequiredNullableDOMStringValue.setRequiredNullableDOMStringValue( requiredNullableDOMStringValue );
+    return Js.uncheckedCast( $dictionaryRequiredNullableDOMStringValue );
   }
 
   @JsProperty(
@@ -33,19 +35,4 @@ public interface Dictionary_requiredNullableDOMStringValue {
 
   @JsProperty
   void setRequiredNullableDOMStringValue(@JsNullable String requiredNullableDOMStringValue);
-
-  @JsType(
-      isNative = true,
-      namespace = JsPackage.GLOBAL,
-      name = "Dictionary_requiredNullableDOMStringValue"
-  )
-  interface Builder extends Dictionary_requiredNullableDOMStringValue {
-    @JsOverlay
-    @Nonnull
-    default Builder requiredNullableDOMStringValue(
-        @Nullable final String requiredNullableDOMStringValue) {
-      setRequiredNullableDOMStringValue( requiredNullableDOMStringValue );
-      return this;
-    }
-  }
 }

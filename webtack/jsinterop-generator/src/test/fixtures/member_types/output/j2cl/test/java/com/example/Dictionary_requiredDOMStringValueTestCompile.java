@@ -6,7 +6,7 @@ import javax.annotation.Generated;
 public final class Dictionary_requiredDOMStringValueTestCompile {
   static Dictionary_requiredDOMStringValue $typeReference$;
 
-  public static Dictionary_requiredDOMStringValue.Builder requiredDOMStringValue(
+  public static Dictionary_requiredDOMStringValue requiredDOMStringValue(
       final String requiredDOMStringValue) {
     return Dictionary_requiredDOMStringValue.requiredDOMStringValue( requiredDOMStringValue );
   }
@@ -18,11 +18,5 @@ public final class Dictionary_requiredDOMStringValueTestCompile {
   public static void setRequiredDOMStringValue(final Dictionary_requiredDOMStringValue $instance,
       String requiredDOMStringValue) {
     $instance.setRequiredDOMStringValue( requiredDOMStringValue );
-  }
-
-  public static Dictionary_requiredDOMStringValue.Builder requiredDOMStringValue(
-      final Dictionary_requiredDOMStringValue.Builder $instance,
-      final String requiredDOMStringValue) {
-    return $instance.requiredDOMStringValue( requiredDOMStringValue );
   }
 }

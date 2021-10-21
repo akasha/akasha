@@ -20,9 +20,11 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredNullableBooleanFrozenArrayValue {
   @JsOverlay
   @Nonnull
-  static Builder requiredNullableBooleanFrozenArrayValue(
+  static Dictionary_requiredNullableBooleanFrozenArrayValue requiredNullableBooleanFrozenArrayValue(
       @Nullable final JsArray<Boolean> requiredNullableBooleanFrozenArrayValue) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredNullableBooleanFrozenArrayValue( requiredNullableBooleanFrozenArrayValue );
+    final Dictionary_requiredNullableBooleanFrozenArrayValue $dictionaryRequiredNullableBooleanFrozenArrayValue = Js.<Dictionary_requiredNullableBooleanFrozenArrayValue>uncheckedCast( JsPropertyMap.of() );
+    $dictionaryRequiredNullableBooleanFrozenArrayValue.setRequiredNullableBooleanFrozenArrayValue( requiredNullableBooleanFrozenArrayValue );
+    return Js.uncheckedCast( $dictionaryRequiredNullableBooleanFrozenArrayValue );
   }
 
   @JsProperty(
@@ -34,19 +36,4 @@ public interface Dictionary_requiredNullableBooleanFrozenArrayValue {
   @JsProperty
   void setRequiredNullableBooleanFrozenArrayValue(
       @JsNullable JsArray<Boolean> requiredNullableBooleanFrozenArrayValue);
-
-  @JsType(
-      isNative = true,
-      namespace = JsPackage.GLOBAL,
-      name = "Object"
-  )
-  interface Builder extends Dictionary_requiredNullableBooleanFrozenArrayValue {
-    @JsOverlay
-    @Nonnull
-    default Builder requiredNullableBooleanFrozenArrayValue(
-        @Nullable final JsArray<Boolean> requiredNullableBooleanFrozenArrayValue) {
-      setRequiredNullableBooleanFrozenArrayValue( requiredNullableBooleanFrozenArrayValue );
-      return this;
-    }
-  }
 }

@@ -20,7 +20,9 @@ public interface MyDictionary {
   @JsOverlay
   @Nonnull
   static Builder name(@Nonnull final String name) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).name( name );
+    final Builder $myDictionary = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $myDictionary.setName( name );
+    return Js.uncheckedCast( $myDictionary );
   }
 
   @JsProperty(
@@ -46,13 +48,6 @@ public interface MyDictionary {
       name = "Object"
   )
   interface Builder extends MyDictionary {
-    @JsOverlay
-    @Nonnull
-    default Builder name(@Nonnull final String name) {
-      setName( name );
-      return this;
-    }
-
     @JsOverlay
     @Nonnull
     default Builder description(@Nonnull final String description) {

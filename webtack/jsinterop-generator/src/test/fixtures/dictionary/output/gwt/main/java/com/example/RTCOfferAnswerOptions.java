@@ -17,15 +17,7 @@ import jsinterop.base.JsPropertyMap;
 public interface RTCOfferAnswerOptions {
   @JsOverlay
   @Nonnull
-  static Builder create() {
+  static RTCOfferAnswerOptions of() {
     return Js.uncheckedCast( JsPropertyMap.of() );
-  }
-
-  @JsType(
-      isNative = true,
-      namespace = JsPackage.GLOBAL,
-      name = "Object"
-  )
-  interface Builder extends RTCOfferAnswerOptions {
   }
 }

@@ -6,8 +6,8 @@ import javax.annotation.Generated;
 public final class ClipboardItemOptionsTestCompile {
   static ClipboardItemOptions $typeReference$;
 
-  public static ClipboardItemOptions.Builder create() {
-    return ClipboardItemOptions.create();
+  public static ClipboardItemOptions.Builder of() {
+    return ClipboardItemOptions.of();
   }
 
   public static String presentationStyle(final ClipboardItemOptions $instance) {

@@ -6,12 +6,12 @@ import javax.annotation.Generated;
 public final class Dictionary_requiredSomeTypeSequenceValueTestCompile {
   static Dictionary_requiredSomeTypeSequenceValue $typeReference$;
 
-  public static Dictionary_requiredSomeTypeSequenceValue.Builder requiredSomeTypeSequenceValue(
+  public static Dictionary_requiredSomeTypeSequenceValue requiredSomeTypeSequenceValue(
       final JsArray<SomeType> requiredSomeTypeSequenceValue) {
     return Dictionary_requiredSomeTypeSequenceValue.requiredSomeTypeSequenceValue( requiredSomeTypeSequenceValue );
   }
 
-  public static Dictionary_requiredSomeTypeSequenceValue.Builder requiredSomeTypeSequenceValue(
+  public static Dictionary_requiredSomeTypeSequenceValue requiredSomeTypeSequenceValue(
       final SomeType[] requiredSomeTypeSequenceValue) {
     return Dictionary_requiredSomeTypeSequenceValue.requiredSomeTypeSequenceValue( requiredSomeTypeSequenceValue );
   }
@@ -31,17 +31,5 @@ public final class Dictionary_requiredSomeTypeSequenceValueTestCompile {
       final Dictionary_requiredSomeTypeSequenceValue $instance,
       final SomeType[] requiredSomeTypeSequenceValue) {
     $instance.setRequiredSomeTypeSequenceValue( requiredSomeTypeSequenceValue );
-  }
-
-  public static Dictionary_requiredSomeTypeSequenceValue.Builder requiredSomeTypeSequenceValue(
-      final Dictionary_requiredSomeTypeSequenceValue.Builder $instance,
-      final JsArray<SomeType> requiredSomeTypeSequenceValue) {
-    return $instance.requiredSomeTypeSequenceValue( requiredSomeTypeSequenceValue );
-  }
-
-  public static Dictionary_requiredSomeTypeSequenceValue.Builder requiredSomeTypeSequenceValue(
-      final Dictionary_requiredSomeTypeSequenceValue.Builder $instance,
-      final SomeType[] requiredSomeTypeSequenceValue) {
-    return $instance.requiredSomeTypeSequenceValue( requiredSomeTypeSequenceValue );
   }
 }

@@ -6,8 +6,8 @@ import javax.annotation.Generated;
 public final class PostMessageOptionsTestCompile {
   static PostMessageOptions $typeReference$;
 
-  public static PostMessageOptions.Builder create() {
-    return PostMessageOptions.create();
+  public static PostMessageOptions.Builder of() {
+    return PostMessageOptions.of();
   }
 
   public static JsArray<Object> transfer(final PostMessageOptions $instance) {

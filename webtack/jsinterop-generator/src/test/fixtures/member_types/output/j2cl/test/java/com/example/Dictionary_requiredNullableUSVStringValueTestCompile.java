@@ -6,7 +6,7 @@ import javax.annotation.Generated;
 public final class Dictionary_requiredNullableUSVStringValueTestCompile {
   static Dictionary_requiredNullableUSVStringValue $typeReference$;
 
-  public static Dictionary_requiredNullableUSVStringValue.Builder requiredNullableUSVStringValue(
+  public static Dictionary_requiredNullableUSVStringValue requiredNullableUSVStringValue(
       final String requiredNullableUSVStringValue) {
     return Dictionary_requiredNullableUSVStringValue.requiredNullableUSVStringValue( requiredNullableUSVStringValue );
   }
@@ -20,11 +20,5 @@ public final class Dictionary_requiredNullableUSVStringValueTestCompile {
       final Dictionary_requiredNullableUSVStringValue $instance,
       String requiredNullableUSVStringValue) {
     $instance.setRequiredNullableUSVStringValue( requiredNullableUSVStringValue );
-  }
-
-  public static Dictionary_requiredNullableUSVStringValue.Builder requiredNullableUSVStringValue(
-      final Dictionary_requiredNullableUSVStringValue.Builder $instance,
-      final String requiredNullableUSVStringValue) {
-    return $instance.requiredNullableUSVStringValue( requiredNullableUSVStringValue );
   }
 }

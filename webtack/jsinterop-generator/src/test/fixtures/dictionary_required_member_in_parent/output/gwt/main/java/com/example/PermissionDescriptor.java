@@ -19,8 +19,10 @@ import jsinterop.base.JsPropertyMap;
 public interface PermissionDescriptor {
   @JsOverlay
   @Nonnull
-  static Builder name(@Nonnull final String name) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).name( name );
+  static PermissionDescriptor name(@Nonnull final String name) {
+    final PermissionDescriptor $permissionDescriptor = Js.<PermissionDescriptor>uncheckedCast( JsPropertyMap.of() );
+    $permissionDescriptor.setName( name );
+    return Js.uncheckedCast( $permissionDescriptor );
   }
 
   @JsProperty(
@@ -31,18 +33,4 @@ public interface PermissionDescriptor {
 
   @JsProperty
   void setName(@JsNonNull String name);
-
-  @JsType(
-      isNative = true,
-      namespace = JsPackage.GLOBAL,
-      name = "Object"
-  )
-  interface Builder extends PermissionDescriptor {
-    @JsOverlay
-    @Nonnull
-    default Builder name(@Nonnull final String name) {
-      setName( name );
-      return this;
-    }
-  }
 }

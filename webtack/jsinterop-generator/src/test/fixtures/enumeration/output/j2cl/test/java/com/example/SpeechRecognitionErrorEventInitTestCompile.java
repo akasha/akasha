@@ -6,7 +6,7 @@ import javax.annotation.Generated;
 public final class SpeechRecognitionErrorEventInitTestCompile {
   static SpeechRecognitionErrorEventInit $typeReference$;
 
-  public static SpeechRecognitionErrorEventInit.Builder error(final String error) {
+  public static SpeechRecognitionErrorEventInit error(final String error) {
     return SpeechRecognitionErrorEventInit.error( error );
   }
 
@@ -16,10 +16,5 @@ public final class SpeechRecognitionErrorEventInitTestCompile {
 
   public static void setError(final SpeechRecognitionErrorEventInit $instance, String error) {
     $instance.setError( error );
-  }
-
-  public static SpeechRecognitionErrorEventInit.Builder error(
-      final SpeechRecognitionErrorEventInit.Builder $instance, final String error) {
-    return $instance.error( error );
   }
 }

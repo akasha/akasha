@@ -13,8 +13,8 @@ import jsinterop.base.JsPropertyMap;
 public final class MyDictionaryTestCompile {
   static MyDictionary $typeReference$;
 
-  public static MyDictionary.Builder create() {
-    return MyDictionary.create();
+  public static MyDictionary.Builder of() {
+    return MyDictionary.of();
   }
 
   public static Any anyValue(final MyDictionary $instance) {

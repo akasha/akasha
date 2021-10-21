@@ -6,7 +6,7 @@ import javax.annotation.Generated;
 public final class Dictionary_requiredNullableUnsignedShortValueTestCompile {
   static Dictionary_requiredNullableUnsignedShortValue $typeReference$;
 
-  public static Dictionary_requiredNullableUnsignedShortValue.Builder requiredNullableUnsignedShortValue(
+  public static Dictionary_requiredNullableUnsignedShortValue requiredNullableUnsignedShortValue(
       final Double requiredNullableUnsignedShortValue) {
     return Dictionary_requiredNullableUnsignedShortValue.requiredNullableUnsignedShortValue( requiredNullableUnsignedShortValue );
   }
@@ -20,11 +20,5 @@ public final class Dictionary_requiredNullableUnsignedShortValueTestCompile {
       final Dictionary_requiredNullableUnsignedShortValue $instance,
       Double requiredNullableUnsignedShortValue) {
     $instance.setRequiredNullableUnsignedShortValue( requiredNullableUnsignedShortValue );
-  }
-
-  public static Dictionary_requiredNullableUnsignedShortValue.Builder requiredNullableUnsignedShortValue(
-      final Dictionary_requiredNullableUnsignedShortValue.Builder $instance,
-      final Double requiredNullableUnsignedShortValue) {
-    return $instance.requiredNullableUnsignedShortValue( requiredNullableUnsignedShortValue );
   }
 }

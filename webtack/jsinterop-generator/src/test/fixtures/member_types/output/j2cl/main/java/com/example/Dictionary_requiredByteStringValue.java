@@ -19,8 +19,11 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredByteStringValue {
   @JsOverlay
   @Nonnull
-  static Builder requiredByteStringValue(@Nonnull final String requiredByteStringValue) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredByteStringValue( requiredByteStringValue );
+  static Dictionary_requiredByteStringValue requiredByteStringValue(
+      @Nonnull final String requiredByteStringValue) {
+    final Dictionary_requiredByteStringValue $dictionaryRequiredByteStringValue = Js.<Dictionary_requiredByteStringValue>uncheckedCast( JsPropertyMap.of() );
+    $dictionaryRequiredByteStringValue.setRequiredByteStringValue( requiredByteStringValue );
+    return Js.uncheckedCast( $dictionaryRequiredByteStringValue );
   }
 
   @JsProperty(
@@ -31,18 +34,4 @@ public interface Dictionary_requiredByteStringValue {
 
   @JsProperty
   void setRequiredByteStringValue(@JsNonNull String requiredByteStringValue);
-
-  @JsType(
-      isNative = true,
-      namespace = JsPackage.GLOBAL,
-      name = "Dictionary_requiredByteStringValue"
-  )
-  interface Builder extends Dictionary_requiredByteStringValue {
-    @JsOverlay
-    @Nonnull
-    default Builder requiredByteStringValue(@Nonnull final String requiredByteStringValue) {
-      setRequiredByteStringValue( requiredByteStringValue );
-      return this;
-    }
-  }
 }

@@ -22,8 +22,11 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredAnyValue {
   @JsOverlay
   @Nonnull
-  static Builder requiredAnyValue(@DoNotAutobox @Nullable final Object requiredAnyValue) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredAnyValue( requiredAnyValue );
+  static Dictionary_requiredAnyValue requiredAnyValue(
+      @DoNotAutobox @Nullable final Object requiredAnyValue) {
+    final Dictionary_requiredAnyValue $dictionaryRequiredAnyValue = Js.<Dictionary_requiredAnyValue>uncheckedCast( JsPropertyMap.of() );
+    $dictionaryRequiredAnyValue.setRequiredAnyValue( requiredAnyValue );
+    return Js.uncheckedCast( $dictionaryRequiredAnyValue );
   }
 
   @JsProperty(
@@ -34,18 +37,4 @@ public interface Dictionary_requiredAnyValue {
 
   @JsProperty
   void setRequiredAnyValue(@DoNotAutobox @JsNullable Object requiredAnyValue);
-
-  @JsType(
-      isNative = true,
-      namespace = JsPackage.GLOBAL,
-      name = "Dictionary_requiredAnyValue"
-  )
-  interface Builder extends Dictionary_requiredAnyValue {
-    @JsOverlay
-    @Nonnull
-    default Builder requiredAnyValue(@DoNotAutobox @Nullable final Object requiredAnyValue) {
-      setRequiredAnyValue( requiredAnyValue );
-      return this;
-    }
-  }
 }

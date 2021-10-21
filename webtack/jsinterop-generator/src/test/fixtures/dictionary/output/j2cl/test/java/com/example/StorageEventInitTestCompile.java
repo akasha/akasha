@@ -6,8 +6,8 @@ import javax.annotation.Generated;
 public final class StorageEventInitTestCompile {
   static StorageEventInit $typeReference$;
 
-  public static StorageEventInit.Builder create() {
-    return StorageEventInit.create();
+  public static StorageEventInit.Builder of() {
+    return StorageEventInit.of();
   }
 
   public static String key(final StorageEventInit $instance) {
@@ -73,20 +73,5 @@ public final class StorageEventInitTestCompile {
   public static StorageEventInit.Builder url(final StorageEventInit.Builder $instance,
       final String url) {
     return $instance.url( url );
-  }
-
-  public static StorageEventInit.Builder bubbles(final StorageEventInit.Builder $instance,
-      final boolean bubbles) {
-    return $instance.bubbles( bubbles );
-  }
-
-  public static StorageEventInit.Builder cancelable(final StorageEventInit.Builder $instance,
-      final boolean cancelable) {
-    return $instance.cancelable( cancelable );
-  }
-
-  public static StorageEventInit.Builder composed(final StorageEventInit.Builder $instance,
-      final boolean composed) {
-    return $instance.composed( composed );
   }
 }

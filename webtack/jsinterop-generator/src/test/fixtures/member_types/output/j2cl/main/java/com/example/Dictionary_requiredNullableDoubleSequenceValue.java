@@ -20,16 +20,20 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredNullableDoubleSequenceValue {
   @JsOverlay
   @Nonnull
-  static Builder requiredNullableDoubleSequenceValue(
+  static Dictionary_requiredNullableDoubleSequenceValue requiredNullableDoubleSequenceValue(
       @Nullable final JsArray<Double> requiredNullableDoubleSequenceValue) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredNullableDoubleSequenceValue( requiredNullableDoubleSequenceValue );
+    final Dictionary_requiredNullableDoubleSequenceValue $dictionaryRequiredNullableDoubleSequenceValue = Js.<Dictionary_requiredNullableDoubleSequenceValue>uncheckedCast( JsPropertyMap.of() );
+    $dictionaryRequiredNullableDoubleSequenceValue.setRequiredNullableDoubleSequenceValue( requiredNullableDoubleSequenceValue );
+    return Js.uncheckedCast( $dictionaryRequiredNullableDoubleSequenceValue );
   }
 
   @JsOverlay
   @Nonnull
-  static Builder requiredNullableDoubleSequenceValue(
+  static Dictionary_requiredNullableDoubleSequenceValue requiredNullableDoubleSequenceValue(
       @Nullable final double... requiredNullableDoubleSequenceValue) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredNullableDoubleSequenceValue( requiredNullableDoubleSequenceValue );
+    final Dictionary_requiredNullableDoubleSequenceValue $dictionaryRequiredNullableDoubleSequenceValue = Js.<Dictionary_requiredNullableDoubleSequenceValue>uncheckedCast( JsPropertyMap.of() );
+    $dictionaryRequiredNullableDoubleSequenceValue.setRequiredNullableDoubleSequenceValue( requiredNullableDoubleSequenceValue );
+    return Js.uncheckedCast( $dictionaryRequiredNullableDoubleSequenceValue );
   }
 
   @JsProperty(
@@ -46,28 +50,5 @@ public interface Dictionary_requiredNullableDoubleSequenceValue {
   default void setRequiredNullableDoubleSequenceValue(
       @Nullable final double... requiredNullableDoubleSequenceValue) {
     setRequiredNullableDoubleSequenceValue( Js.<JsArray<Double>>uncheckedCast( requiredNullableDoubleSequenceValue ) );
-  }
-
-  @JsType(
-      isNative = true,
-      namespace = JsPackage.GLOBAL,
-      name = "Dictionary_requiredNullableDoubleSequenceValue"
-  )
-  interface Builder extends Dictionary_requiredNullableDoubleSequenceValue {
-    @JsOverlay
-    @Nonnull
-    default Builder requiredNullableDoubleSequenceValue(
-        @Nullable final JsArray<Double> requiredNullableDoubleSequenceValue) {
-      setRequiredNullableDoubleSequenceValue( requiredNullableDoubleSequenceValue );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder requiredNullableDoubleSequenceValue(
-        @Nullable final double... requiredNullableDoubleSequenceValue) {
-      setRequiredNullableDoubleSequenceValue( requiredNullableDoubleSequenceValue );
-      return this;
-    }
   }
 }

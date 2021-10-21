@@ -27,11 +27,6 @@ public final class GlobalDescriptorTestCompile {
     $instance.setMutable( mutable );
   }
 
-  public static GlobalDescriptor.Builder value(final GlobalDescriptor.Builder $instance,
-      final Object value) {
-    return $instance.value( value );
-  }
-
   public static GlobalDescriptor.Builder mutable(final GlobalDescriptor.Builder $instance,
       final boolean mutable) {
     return $instance.mutable( mutable );

@@ -6,7 +6,7 @@ import javax.annotation.Generated;
 public final class Dictionary_requiredNullableOctetValueTestCompile {
   static Dictionary_requiredNullableOctetValue $typeReference$;
 
-  public static Dictionary_requiredNullableOctetValue.Builder requiredNullableOctetValue(
+  public static Dictionary_requiredNullableOctetValue requiredNullableOctetValue(
       final Double requiredNullableOctetValue) {
     return Dictionary_requiredNullableOctetValue.requiredNullableOctetValue( requiredNullableOctetValue );
   }
@@ -19,11 +19,5 @@ public final class Dictionary_requiredNullableOctetValueTestCompile {
   public static void setRequiredNullableOctetValue(
       final Dictionary_requiredNullableOctetValue $instance, Double requiredNullableOctetValue) {
     $instance.setRequiredNullableOctetValue( requiredNullableOctetValue );
-  }
-
-  public static Dictionary_requiredNullableOctetValue.Builder requiredNullableOctetValue(
-      final Dictionary_requiredNullableOctetValue.Builder $instance,
-      final Double requiredNullableOctetValue) {
-    return $instance.requiredNullableOctetValue( requiredNullableOctetValue );
   }
 }

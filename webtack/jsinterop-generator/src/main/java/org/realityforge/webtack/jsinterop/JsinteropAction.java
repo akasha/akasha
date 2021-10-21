@@ -1524,6 +1524,55 @@ final class JsinteropAction
     }
   }
 
+  private void generateDictionaryStep( @Nonnull final TypeSpec.Builder container,
+                                       @Nonnull final ClassName containerClassName,
+                                       @Nonnull final DictionaryDefinition definition,
+                                       @Nonnull final DictionaryMember member,
+                                       final int index,
+                                       final boolean last )
+  {
+    final ClassName className = containerClassName.nestedClass( "Step" + index );
+    final TypeSpec.Builder type =
+      TypeSpec
+        .interfaceBuilder( className.simpleName() )
+        .addModifiers( Modifier.PUBLIC, Modifier.STATIC );
+    addDictionaryJsType( definition, type );
+
+    for ( final TypedValue typedValue : explodeType( member.getType() ) )
+    {
+      generateDictionaryMemberSetterStep( type,
+                                          member,
+                                          typedValue,
+                                          containerClassName,
+                                          last ?
+                                          getDictionaryBuilderClass( definition, containerClassName ) :
+                                          containerClassName.nestedClass( "Step" + ( index + 1 ) ) );
+    }
+
+    container.addType( type.build() );
+  }
+
+  @Nonnull
+  private ClassName getDictionaryBuilderClass( @Nonnull final DictionaryDefinition definition,
+                                               @Nonnull final ClassName dictionaryClassName )
+  {
+    return getRequiredDictionaryMembers( definition ).size() != getDictionaryMembers(definition).size() ?
+           dictionaryClassName.nestedClass( "Builder" ) :
+           dictionaryClassName;
+  }
+
+  private void addDictionaryJsType( @Nonnull final DictionaryDefinition definition, final TypeSpec.Builder type )
+  {
+    type.addAnnotation( AnnotationSpec
+                          .builder( JsinteropTypes.JS_TYPE )
+                          .addMember( "isNative", "true" )
+                          .addMember( "namespace", "$T.GLOBAL", JsinteropTypes.JS_PACKAGE )
+                          .addMember( "name",
+                                      "$S",
+                                      OutputType.gwt == _outputType ? "Object" : JsUtil.toJsName( definition ) )
+                          .build() );
+  }
+
   private void generateDictionaryBuilder( @Nonnull final ClassName containerClassName,
                                           @Nonnull final DictionaryDefinition definition,
                                           @Nonnull final TypeSpec.Builder container,
@@ -1534,40 +1583,41 @@ final class JsinteropAction
       TypeSpec
         .interfaceBuilder( className.simpleName() )
         .addModifiers( Modifier.PUBLIC, Modifier.STATIC );
-    type.addAnnotation( AnnotationSpec
-                          .builder( JsinteropTypes.JS_TYPE )
-                          .addMember( "isNative", "true" )
-                          .addMember( "namespace", "$T.GLOBAL", JsinteropTypes.JS_PACKAGE )
-                          .addMember( "name",
-                                      "$S",
-                                      OutputType.gwt == _outputType ? "Object" : JsUtil.toJsName( definition ) )
-                          .build() );
+    addDictionaryJsType( definition, type );
     maybeAddCustomAnnotations( definition, type );
     maybeAddJavadoc( definition, type );
 
     type.addSuperinterface( lookupClassName( definition.getName() ) );
 
-    for ( final DictionaryMember member : definition.getMembers() )
+    final List<DictionaryMember> requiredMembers = getRequiredDictionaryMembers( definition );
+    final DictionaryMember firstRequiredMember = requiredMembers.isEmpty() ? null : requiredMembers.get( 0 );
+
+    DictionaryDefinition dictionary = definition;
+    while ( null != dictionary )
     {
-      for ( final TypedValue typedValue : explodeType( member.getType() ) )
-      {
-        generateDictionaryMemberSetterReturningThis( className, member, typedValue, type, testType );
-      }
-    }
-    DictionaryDefinition parent = definition.getSuperDictionary();
-    while ( null != parent )
-    {
-      for ( final DictionaryMember member : parent.getMembers() )
-      {
-        for ( final TypedValue memberType : explodeType( member.getType() ) )
-        {
-          generateDictionaryMemberSetterReturningThis( className, member, memberType, type, testType );
-        }
-      }
-      parent = parent.getSuperDictionary();
+      generateDictionaryMemberSettersReturningThis( dictionary, testType, className, type, firstRequiredMember );
+      dictionary = dictionary.getSuperDictionary();
     }
 
     container.addType( type.build() );
+  }
+
+  private void generateDictionaryMemberSettersReturningThis( @Nonnull final DictionaryDefinition definition,
+                                                             @Nonnull final TypeSpec.Builder testType,
+                                                             @Nonnull final ClassName className,
+                                                             @Nonnull final TypeSpec.Builder type,
+                                                             @Nullable final DictionaryMember firstRequiredMember )
+  {
+    for ( final DictionaryMember member : definition.getMembers() )
+    {
+      if ( member != firstRequiredMember && !member.isRequired() )
+      {
+        for ( final TypedValue typedValue : explodeType( member.getType() ) )
+        {
+          generateDictionaryMemberSetterReturningThis( className, member, typedValue, type, testType );
+        }
+      }
+    }
   }
 
   private void generateDictionary( @Nonnull final DictionaryDefinition definition )
@@ -1580,12 +1630,7 @@ final class JsinteropAction
         .interfaceBuilder( javaName )
         .addModifiers( Modifier.PUBLIC );
     writeGeneratedAnnotation( type );
-    type.addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_TYPE )
-                          .addMember( "isNative", "true" )
-                          .addMember( "namespace", "$T.GLOBAL", JsinteropTypes.JS_PACKAGE )
-                          .addMember( "name", "$S", OutputType.gwt == _outputType ? "Object" :
-                                                    JsUtil.toJsName( definition ) )
-                          .build() );
+    addDictionaryJsType( definition, type );
     maybeAddCustomAnnotations( definition, type );
     maybeAddJavadoc( definition, type );
 
@@ -1610,11 +1655,17 @@ final class JsinteropAction
     }
 
     final List<DictionaryMember> requiredMembers = getRequiredDictionaryMembers( definition );
-    final List<List<TypedValue>> explodedTypeList =
-      explodeTypeList( requiredMembers.stream().map( DictionaryMember::getType ).collect( Collectors.toList() ) );
-    for ( final List<TypedValue> argTypes : explodedTypeList )
+    if ( requiredMembers.isEmpty() )
     {
-      generateDictionaryCreateMethod( definition, requiredMembers, argTypes, type, testType );
+      generateDictionaryCreateMethod( definition, type, testType );
+    }
+    else
+    {
+      final DictionaryMember member = requiredMembers.get( 0 );
+      for ( final TypedValue argType : explodeType( member.getType() ) )
+      {
+        generateDictionaryChainCreateMethod( definition, member, requiredMembers.size() > 1, argType, type, testType );
+      }
     }
 
     final WebIDLSchema schema = getSchema();
@@ -1633,7 +1684,27 @@ final class JsinteropAction
         }
       }
     }
-    generateDictionaryBuilder( className, definition, type, testType );
+
+    int index = 1;
+    for ( final DictionaryMember requiredMember : requiredMembers )
+    {
+      // There is no "Step" interface for the first required member as defined by static method
+      if ( 1 != index )
+      {
+        generateDictionaryStep( type,
+                                className,
+                                definition,
+                                requiredMember,
+                                index - 1,
+                                index == requiredMembers.size() );
+      }
+      index++;
+    }
+
+    if ( requiredMembers.size() != getDictionaryMembers(definition).size() )
+    {
+      generateDictionaryBuilder( className, definition, type, testType );
+    }
 
     writeTopLevelType( definition.getName(), type );
 
@@ -1648,14 +1719,13 @@ final class JsinteropAction
   }
 
   private void generateDictionaryCreateMethod( @Nonnull final DictionaryDefinition dictionary,
-                                               @Nonnull final List<DictionaryMember> requiredMembers,
-                                               @Nonnull final List<TypedValue> types,
                                                @Nonnull final TypeSpec.Builder type,
                                                @Nonnull final TypeSpec.Builder testType )
   {
     final ClassName className = lookupClassName( dictionary.getName() );
-    final ClassName target = className.nestedClass( "Builder" );
-    final String methodName = 1 == requiredMembers.size() ? requiredMembers.get( 0 ).getName() : "create";
+    final ClassName target = getDictionaryBuilderClass( dictionary, className );
+
+    final String methodName = "of";
     final MethodSpec.Builder method =
       MethodSpec
         .methodBuilder( methodName )
@@ -1676,75 +1746,95 @@ final class JsinteropAction
       testMethod.addAnnotation( Deprecated.class );
     }
 
-    if ( requiredMembers.isEmpty() )
+    method.addStatement( "return $T.uncheckedCast( $T.of() )", JsinteropTypes.JS, JsinteropTypes.JS_PROPERTY_MAP );
+    testMethod.addStatement( "return $T.of()", className );
+
+    type.addMethod( method.build() );
+    testType.addMethod( testMethod.build() );
+  }
+
+  private void generateDictionaryChainCreateMethod( @Nonnull final DictionaryDefinition dictionary,
+                                                    @Nonnull final DictionaryMember initialRequiredMember,
+                                                    final boolean moreRequiredMembers,
+                                                    @Nonnull final TypedValue memberRequiredValue,
+                                                    @Nonnull final TypeSpec.Builder type,
+                                                    @Nonnull final TypeSpec.Builder testType )
+  {
+    assert !getRequiredDictionaryMembers( dictionary ).isEmpty();
+    final ClassName className = lookupClassName( dictionary.getName() );
+    final String methodName = initialRequiredMember.getName();
+    final ClassName initialType = getDictionaryBuilderClass( dictionary, className );
+    final ClassName target = moreRequiredMembers ? className.nestedClass( "Step1" ) : initialType;
+    final MethodSpec.Builder method =
+      MethodSpec
+        .methodBuilder( methodName )
+        .addAnnotation( JsinteropTypes.JS_OVERLAY )
+        .addAnnotation( BasicTypes.NONNULL )
+        .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+        .returns( target );
+
+    final MethodSpec.Builder testMethod =
+      MethodSpec
+        .methodBuilder( methodName )
+        .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+        .returns( target );
+
+    final DocumentationElement documentation = dictionary.getDocumentation();
+    if ( null != documentation && documentation.hasDeprecatedTag() )
     {
-      method.addStatement( "return $T.uncheckedCast( $T.of() )", JsinteropTypes.JS, JsinteropTypes.JS_PROPERTY_MAP );
-      testMethod.addStatement( "return $T.create()", className );
+      testMethod.addAnnotation( Deprecated.class );
     }
-    else
+    final String var = "$" + NamingUtil.camelCase( dictionary.getName() );
+
+    method.addStatement( "final $T $N = $T.<$T>uncheckedCast( $T.of() )",
+                         initialType,
+                         var,
+                         JsinteropTypes.JS,
+                         initialType,
+                         JsinteropTypes.JS_PROPERTY_MAP );
+
+    final StringBuilder testCallStatement = new StringBuilder();
+    final List<Object> testCallArgs = new ArrayList<>();
+
+    testCallStatement.append( "return $T.$N( " );
+    testCallArgs.add( className );
+    testCallArgs.add( methodName );
+
+    final String paramName = javaName( initialRequiredMember );
+    method.addStatement( "$N.$N( $N )", var, getMutatorName( initialRequiredMember ), paramName );
+    method.addStatement( "return $T.uncheckedCast( $N )", JsinteropTypes.JS, var );
+
+    final TypeName javaType = memberRequiredValue.getJavaType();
+    final ParameterSpec.Builder parameter = ParameterSpec.builder( javaType, paramName, Modifier.FINAL );
+    maybeAddCustomAnnotations( initialRequiredMember, parameter );
+    addMagicConstantAnnotationIfNeeded( initialRequiredMember.getType(), parameter );
+    addDoNotAutoboxAnnotation( memberRequiredValue, parameter );
+    addNullabilityAnnotation( memberRequiredValue, parameter );
+
+    if ( javaType instanceof ArrayTypeName )
     {
-      final List<Object> params = new ArrayList<>();
-      final StringBuilder sb = new StringBuilder();
-      sb.append( "return $T.<$T>uncheckedCast( $T.of() )" );
-      params.add( JsinteropTypes.JS );
-      params.add( target );
-      params.add( JsinteropTypes.JS_PROPERTY_MAP );
-
-      final StringBuilder testCallStatement = new StringBuilder();
-      final List<Object> testCallArgs = new ArrayList<>();
-
-      testCallStatement.append( "return $T.$N( " );
-      testCallArgs.add( className );
-      testCallArgs.add( methodName );
-
-      int index = 0;
-      for ( final DictionaryMember member : requiredMembers )
+      method.varargs();
+      final ArrayTypeName javaArrayType = (ArrayTypeName) javaType;
+      if ( javaArrayType.componentType instanceof ArrayTypeName ||
+           javaArrayType.componentType instanceof ParameterizedTypeName )
       {
-        if ( 0 != index )
-        {
-          testCallStatement.append( ", " );
-        }
-
-        final String paramName = javaName( member );
-        sb.append( ".$N( $N )" );
-        params.add( javaMethodName( member ) );
-        params.add( paramName );
-
-        final TypedValue memberType = types.get( index++ );
-        final TypeName javaType = memberType.getJavaType();
-        final ParameterSpec.Builder parameter = ParameterSpec.builder( javaType, paramName, Modifier.FINAL );
-        maybeAddCustomAnnotations( member, parameter );
-        addMagicConstantAnnotationIfNeeded( member.getType(), parameter );
-        addDoNotAutoboxAnnotation( memberType, parameter );
-        addNullabilityAnnotation( memberType, parameter );
-
-        if ( requiredMembers.size() == index && javaType instanceof ArrayTypeName )
-        {
-          method.varargs();
-          final ArrayTypeName javaArrayType = (ArrayTypeName) javaType;
-          if ( javaArrayType.componentType instanceof ArrayTypeName ||
-               javaArrayType.componentType instanceof ParameterizedTypeName )
-          {
-            method.addAnnotation( AnnotationSpec
-                                    .builder( SuppressWarnings.class )
-                                    .addMember( "value", "$S", "unchecked" )
-                                    .build() );
-          }
-        }
-
-        method.addParameter( parameter.build() );
-
-        final ParameterSpec.Builder testParameter =
-          ParameterSpec.builder( javaType, paramName, Modifier.FINAL );
-        testMethod.addParameter( testParameter.build() );
-        testCallStatement.append( "$N" );
-        testCallArgs.add( paramName );
+        method.addAnnotation( AnnotationSpec
+                                .builder( SuppressWarnings.class )
+                                .addMember( "value", "$S", "unchecked" )
+                                .build() );
       }
-      method.addStatement( sb.toString(), params.toArray() );
-
-      testCallStatement.append( " )" );
-      testMethod.addStatement( testCallStatement.toString(), testCallArgs.toArray() );
     }
+
+    method.addParameter( parameter.build() );
+
+    final ParameterSpec.Builder testParameter =
+      ParameterSpec.builder( javaType, paramName, Modifier.FINAL );
+    testMethod.addParameter( testParameter.build() );
+    testCallStatement.append( "$N" );
+    testCallArgs.add( paramName );
+
+    testCallStatement.append( " )" );
+    testMethod.addStatement( testCallStatement.toString(), testCallArgs.toArray() );
 
     type.addMethod( method.build() );
     testType.addMethod( testMethod.build() );
@@ -1768,6 +1858,27 @@ final class JsinteropAction
     }
 
     definition.getMembers().stream().filter( DictionaryMember::isRequired ).forEach( members::add );
+  }
+
+
+  @Nonnull
+  private List<DictionaryMember> getDictionaryMembers( @Nonnull final DictionaryDefinition definition )
+  {
+    final List<DictionaryMember> requiredMembers = new ArrayList<>();
+    collectDictionaryMembers( definition, requiredMembers );
+    return requiredMembers;
+  }
+
+  private void collectDictionaryMembers( @Nonnull final DictionaryDefinition definition,
+                                                 @Nonnull final List<DictionaryMember> members )
+  {
+    final String inherits = definition.getInherits();
+    if ( null != inherits )
+    {
+      collectDictionaryMembers( getSchema().getDictionaryByName( inherits ), members );
+    }
+
+    members.addAll( definition.getMembers() );
   }
 
   private void generateDictionaryMemberGetter( @Nonnull final ClassName className,
@@ -2022,6 +2133,53 @@ final class JsinteropAction
       testMethod.addAnnotation( Deprecated.class );
     }
     testType.addMethod( testMethod.build() );
+  }
+
+  private void generateDictionaryMemberSetterStep( @Nonnull final TypeSpec.Builder container,
+                                                   @Nonnull final DictionaryMember member,
+                                                   @Nonnull final TypedValue typedValue,
+                                                   @Nonnull final ClassName containerClassName,
+                                                   @Nonnull final ClassName nextStep )
+  {
+    final String javaName = javaMethodName( member );
+    final MethodSpec.Builder method =
+      MethodSpec
+        .methodBuilder( javaName )
+        .addModifiers( Modifier.PUBLIC, Modifier.DEFAULT )
+        .addAnnotation( JsinteropTypes.JS_OVERLAY )
+        .addAnnotation( BasicTypes.NONNULL )
+        .returns( nextStep );
+    final TypeName javaType = typedValue.getJavaType();
+    final String paramName = javaName( member );
+    final ParameterSpec.Builder parameter = ParameterSpec.builder( javaType, paramName );
+
+    maybeAddCustomAnnotations( member, parameter );
+    addMagicConstantAnnotationIfNeeded( member.getType(), parameter );
+    addDoNotAutoboxAnnotation( typedValue, parameter );
+    addNullabilityAnnotation( typedValue, parameter );
+
+    if ( javaType instanceof ArrayTypeName )
+    {
+      method.varargs();
+      final ArrayTypeName javaArrayType = (ArrayTypeName) javaType;
+      if ( javaArrayType.componentType instanceof ArrayTypeName ||
+           javaArrayType.componentType instanceof ParameterizedTypeName )
+      {
+        method.addAnnotation( AnnotationSpec
+                                .builder( SuppressWarnings.class )
+                                .addMember( "value", "$S", "unchecked" )
+                                .build() );
+      }
+    }
+    method.addParameter( parameter.build() );
+    method.addStatement( "$T.<$T>uncheckedCast( this ).$N( $N )",
+                         JsinteropTypes.JS,
+                         containerClassName,
+                         getMutatorName( member ),
+                         paramName );
+    method.addStatement( "return $T.uncheckedCast( this )", JsinteropTypes.JS );
+
+    container.addMethod( method.build() );
   }
 
   private void addNullabilityAnnotation( @Nonnull final TypedValue typedValue,

@@ -6,8 +6,7 @@ import javax.annotation.Generated;
 public final class Dictionary_requiredLongValueTestCompile {
   static Dictionary_requiredLongValue $typeReference$;
 
-  public static Dictionary_requiredLongValue.Builder requiredLongValue(
-      final int requiredLongValue) {
+  public static Dictionary_requiredLongValue requiredLongValue(final int requiredLongValue) {
     return Dictionary_requiredLongValue.requiredLongValue( requiredLongValue );
   }
 
@@ -18,10 +17,5 @@ public final class Dictionary_requiredLongValueTestCompile {
   public static void setRequiredLongValue(final Dictionary_requiredLongValue $instance,
       int requiredLongValue) {
     $instance.setRequiredLongValue( requiredLongValue );
-  }
-
-  public static Dictionary_requiredLongValue.Builder requiredLongValue(
-      final Dictionary_requiredLongValue.Builder $instance, final int requiredLongValue) {
-    return $instance.requiredLongValue( requiredLongValue );
   }
 }

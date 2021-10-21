@@ -6,8 +6,8 @@ import javax.annotation.Generated;
 public final class MyDictionary2TestCompile {
   static MyDictionary2 $typeReference$;
 
-  public static MyDictionary2.Builder create() {
-    return MyDictionary2.create();
+  public static MyDictionary2.Builder of() {
+    return MyDictionary2.of();
   }
 
   public static Object clone_(final MyDictionary2 $instance) {

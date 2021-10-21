@@ -7,8 +7,8 @@ import jsinterop.base.Any;
 public final class XRSessionInitTestCompile {
   static XRSessionInit $typeReference$;
 
-  public static XRSessionInit.Builder create() {
-    return XRSessionInit.create();
+  public static XRSessionInit.Builder of() {
+    return XRSessionInit.of();
   }
 
   public static JsArray<Any> optionalFeatures(final XRSessionInit $instance) {

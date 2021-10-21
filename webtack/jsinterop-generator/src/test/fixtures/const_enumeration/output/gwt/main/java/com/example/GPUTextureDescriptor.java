@@ -19,8 +19,10 @@ import jsinterop.base.JsPropertyMap;
 public interface GPUTextureDescriptor {
   @JsOverlay
   @Nonnull
-  static Builder usage(@GPUTextureUsageFlags final int usage) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).usage( usage );
+  static GPUTextureDescriptor usage(@GPUTextureUsageFlags final int usage) {
+    final GPUTextureDescriptor $gpuTextureDescriptor = Js.<GPUTextureDescriptor>uncheckedCast( JsPropertyMap.of() );
+    $gpuTextureDescriptor.setUsage( usage );
+    return Js.uncheckedCast( $gpuTextureDescriptor );
   }
 
   @JsProperty(
@@ -32,18 +34,4 @@ public interface GPUTextureDescriptor {
 
   @JsProperty
   void setUsage(@GPUTextureUsageFlags @JsNonNull int usage);
-
-  @JsType(
-      isNative = true,
-      namespace = JsPackage.GLOBAL,
-      name = "Object"
-  )
-  interface Builder extends GPUTextureDescriptor {
-    @JsOverlay
-    @Nonnull
-    default Builder usage(@GPUTextureUsageFlags final int usage) {
-      setUsage( usage );
-      return this;
-    }
-  }
 }

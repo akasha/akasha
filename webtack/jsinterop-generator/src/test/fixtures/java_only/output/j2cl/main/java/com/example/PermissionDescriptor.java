@@ -19,8 +19,10 @@ import jsinterop.base.JsPropertyMap;
 public interface PermissionDescriptor {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final String name1, @Nonnull final String name2) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).name1( name1 ).name2( name2 );
+  static Step1 name1(@Nonnull final String name1) {
+    final Builder $permissionDescriptor = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $permissionDescriptor.setName1( name1 );
+    return Js.uncheckedCast( $permissionDescriptor );
   }
 
   @JsProperty(
@@ -62,21 +64,21 @@ public interface PermissionDescriptor {
       namespace = JsPackage.GLOBAL,
       name = "PermissionDescriptor"
   )
+  interface Step1 {
+    @JsOverlay
+    @Nonnull
+    default Builder name2(@Nonnull String name2) {
+      Js.<PermissionDescriptor>uncheckedCast( this ).setName2( name2 );
+      return Js.uncheckedCast( this );
+    }
+  }
+
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "PermissionDescriptor"
+  )
   interface Builder extends PermissionDescriptor {
-    @JsOverlay
-    @Nonnull
-    default Builder name1(@Nonnull final String name1) {
-      setName1( name1 );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder name2(@Nonnull final String name2) {
-      setName2( name2 );
-      return this;
-    }
-
     @JsOverlay
     @Nonnull
     default Builder userVisibleOnly1(final boolean userVisibleOnly1) {

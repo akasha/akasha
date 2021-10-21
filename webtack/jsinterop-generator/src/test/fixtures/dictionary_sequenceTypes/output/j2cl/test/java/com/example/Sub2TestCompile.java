@@ -7,8 +7,8 @@ import jsinterop.base.Any;
 public final class Sub2TestCompile {
   static Sub2 $typeReference$;
 
-  public static Sub2.Builder create() {
-    return Sub2.create();
+  public static Sub2.Builder of() {
+    return Sub2.of();
   }
 
   public static JsArray<XRSessionInit> sessions(final Sub2 $instance) {
@@ -31,14 +31,6 @@ public final class Sub2TestCompile {
   public static Sub2.Builder sessions(final Sub2.Builder $instance,
       final XRSessionInit[] sessions) {
     return $instance.sessions( sessions );
-  }
-
-  public static Sub2.Builder others(final Sub2.Builder $instance, final JsArray<Base> others) {
-    return $instance.others( others );
-  }
-
-  public static Sub2.Builder others(final Sub2.Builder $instance, final Base[] others) {
-    return $instance.others( others );
   }
 
   public static Sub2.Builder optionalFeatures(final Sub2.Builder $instance,

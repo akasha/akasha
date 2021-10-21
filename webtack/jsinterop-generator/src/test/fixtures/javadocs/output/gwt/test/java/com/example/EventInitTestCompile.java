@@ -26,11 +26,6 @@ public final class EventInitTestCompile {
     $instance.setBubbles( bubbles );
   }
 
-  public static EventInit.Builder cancelable(final EventInit.Builder $instance,
-      final boolean cancelable) {
-    return $instance.cancelable( cancelable );
-  }
-
   public static EventInit.Builder bubbles(final EventInit.Builder $instance,
       final boolean bubbles) {
     return $instance.bubbles( bubbles );

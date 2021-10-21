@@ -18,8 +18,10 @@ import jsinterop.base.JsPropertyMap;
 public interface OtherPushPermissionDescriptor extends PushPermissionDescriptor {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final String name, final boolean safe) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).name( name ).safe( safe );
+  static Step1 name(@Nonnull final String name) {
+    final Builder $otherPushPermissionDescriptor = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $otherPushPermissionDescriptor.setName( name );
+    return Js.uncheckedCast( $otherPushPermissionDescriptor );
   }
 
   @JsProperty(
@@ -35,26 +37,20 @@ public interface OtherPushPermissionDescriptor extends PushPermissionDescriptor 
       namespace = JsPackage.GLOBAL,
       name = "Object"
   )
+  interface Step1 {
+    @JsOverlay
+    @Nonnull
+    default Builder safe(boolean safe) {
+      Js.<OtherPushPermissionDescriptor>uncheckedCast( this ).setSafe( safe );
+      return Js.uncheckedCast( this );
+    }
+  }
+
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
   interface Builder extends OtherPushPermissionDescriptor {
-    @JsOverlay
-    @Nonnull
-    default Builder safe(final boolean safe) {
-      setSafe( safe );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder userVisibleOnly(final boolean userVisibleOnly) {
-      setUserVisibleOnly( userVisibleOnly );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder name(@Nonnull final String name) {
-      setName( name );
-      return this;
-    }
   }
 }

@@ -7,7 +7,7 @@ import jsinterop.base.Any;
 public final class RequiredAnyDictTestCompile {
   static RequiredAnyDict $typeReference$;
 
-  public static RequiredAnyDict.Builder someValue(final Object someValue) {
+  public static RequiredAnyDict someValue(final Object someValue) {
     return RequiredAnyDict.someValue( someValue );
   }
 
@@ -17,10 +17,5 @@ public final class RequiredAnyDictTestCompile {
 
   public static void setSomeValue(final RequiredAnyDict $instance, Object someValue) {
     $instance.setSomeValue( someValue );
-  }
-
-  public static RequiredAnyDict.Builder someValue(final RequiredAnyDict.Builder $instance,
-      final Object someValue) {
-    return $instance.someValue( someValue );
   }
 }

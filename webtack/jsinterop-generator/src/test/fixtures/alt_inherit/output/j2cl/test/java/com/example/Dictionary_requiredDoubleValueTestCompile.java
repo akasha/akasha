@@ -6,7 +6,7 @@ import javax.annotation.Generated;
 public final class Dictionary_requiredDoubleValueTestCompile {
   static Dictionary_requiredDoubleValue $typeReference$;
 
-  public static Dictionary_requiredDoubleValue.Builder requiredDoubleValue(
+  public static Dictionary_requiredDoubleValue requiredDoubleValue(
       final double requiredDoubleValue) {
     return Dictionary_requiredDoubleValue.requiredDoubleValue( requiredDoubleValue );
   }
@@ -18,10 +18,5 @@ public final class Dictionary_requiredDoubleValueTestCompile {
   public static void setRequiredDoubleValue(final Dictionary_requiredDoubleValue $instance,
       double requiredDoubleValue) {
     $instance.setRequiredDoubleValue( requiredDoubleValue );
-  }
-
-  public static Dictionary_requiredDoubleValue.Builder requiredDoubleValue(
-      final Dictionary_requiredDoubleValue.Builder $instance, final double requiredDoubleValue) {
-    return $instance.requiredDoubleValue( requiredDoubleValue );
   }
 }

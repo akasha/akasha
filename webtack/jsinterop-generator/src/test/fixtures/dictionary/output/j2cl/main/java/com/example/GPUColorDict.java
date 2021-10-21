@@ -21,8 +21,10 @@ import jsinterop.base.JsPropertyMap;
 public interface GPUColorDict {
   @JsOverlay
   @Nonnull
-  static Builder create(final double r, final double g, final double b, final double a) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).r( r ).g( g ).b( b ).a( a );
+  static Step1 r(final double r) {
+    final GPUColorDict $gpuColorDict = Js.<GPUColorDict>uncheckedCast( JsPropertyMap.of() );
+    $gpuColorDict.setR( r );
+    return Js.uncheckedCast( $gpuColorDict );
   }
 
   @JsProperty(
@@ -57,41 +59,45 @@ public interface GPUColorDict {
   @JsProperty
   void setA(double a);
 
-  /**
-   * Test to ensure that required members are not reordered.
-   */
   @JsType(
       isNative = true,
       namespace = JsPackage.GLOBAL,
       name = "GPUColorDict"
   )
-  interface Builder extends GPUColorDict {
+  interface Step1 {
     @JsOverlay
     @Nonnull
-    default Builder r(final double r) {
-      setR( r );
-      return this;
+    default Step2 g(double g) {
+      Js.<GPUColorDict>uncheckedCast( this ).setG( g );
+      return Js.uncheckedCast( this );
     }
+  }
 
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "GPUColorDict"
+  )
+  interface Step2 {
     @JsOverlay
     @Nonnull
-    default Builder g(final double g) {
-      setG( g );
-      return this;
+    default Step3 b(double b) {
+      Js.<GPUColorDict>uncheckedCast( this ).setB( b );
+      return Js.uncheckedCast( this );
     }
+  }
 
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "GPUColorDict"
+  )
+  interface Step3 {
     @JsOverlay
     @Nonnull
-    default Builder b(final double b) {
-      setB( b );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder a(final double a) {
-      setA( a );
-      return this;
+    default GPUColorDict a(double a) {
+      Js.<GPUColorDict>uncheckedCast( this ).setA( a );
+      return Js.uncheckedCast( this );
     }
   }
 }

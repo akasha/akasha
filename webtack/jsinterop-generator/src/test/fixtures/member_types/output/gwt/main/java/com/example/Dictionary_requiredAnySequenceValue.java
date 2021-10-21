@@ -20,20 +20,10 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredAnySequenceValue {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final JsIterable<Any> requiredAnyIterableValue,
-      @Nonnull final JsIteratorIterable<Any> requiredAnyIteratorIterableValue,
-      @Nonnull final JsIterator<Any> requiredAnyIteratorValue,
-      @Nonnull final JsArray<Any> requiredAnySequenceValue) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredAnyIterableValue( requiredAnyIterableValue ).requiredAnyIteratorIterableValue( requiredAnyIteratorIterableValue ).requiredAnyIteratorValue( requiredAnyIteratorValue ).requiredAnySequenceValue( requiredAnySequenceValue );
-  }
-
-  @JsOverlay
-  @Nonnull
-  static Builder create(@Nonnull final JsIterable<Any> requiredAnyIterableValue,
-      @Nonnull final JsIteratorIterable<Any> requiredAnyIteratorIterableValue,
-      @Nonnull final JsIterator<Any> requiredAnyIteratorValue,
-      @Nonnull final Any... requiredAnySequenceValue) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredAnyIterableValue( requiredAnyIterableValue ).requiredAnyIteratorIterableValue( requiredAnyIteratorIterableValue ).requiredAnyIteratorValue( requiredAnyIteratorValue ).requiredAnySequenceValue( requiredAnySequenceValue );
+  static Step1 requiredAnyIterableValue(@Nonnull final JsIterable<Any> requiredAnyIterableValue) {
+    final Dictionary_requiredAnySequenceValue $dictionaryRequiredAnySequenceValue = Js.<Dictionary_requiredAnySequenceValue>uncheckedCast( JsPropertyMap.of() );
+    $dictionaryRequiredAnySequenceValue.setRequiredAnyIterableValue( requiredAnyIterableValue );
+    return Js.uncheckedCast( $dictionaryRequiredAnySequenceValue );
   }
 
   @JsProperty(
@@ -83,43 +73,50 @@ public interface Dictionary_requiredAnySequenceValue {
       namespace = JsPackage.GLOBAL,
       name = "Object"
   )
-  interface Builder extends Dictionary_requiredAnySequenceValue {
+  interface Step1 {
     @JsOverlay
     @Nonnull
-    default Builder requiredAnyIterableValue(
-        @Nonnull final JsIterable<Any> requiredAnyIterableValue) {
-      setRequiredAnyIterableValue( requiredAnyIterableValue );
-      return this;
+    default Step2 requiredAnyIteratorIterableValue(
+        @Nonnull JsIteratorIterable<Any> requiredAnyIteratorIterableValue) {
+      Js.<Dictionary_requiredAnySequenceValue>uncheckedCast( this ).setRequiredAnyIteratorIterableValue( requiredAnyIteratorIterableValue );
+      return Js.uncheckedCast( this );
+    }
+  }
+
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Step2 {
+    @JsOverlay
+    @Nonnull
+    default Step3 requiredAnyIteratorValue(@Nonnull JsIterator<Any> requiredAnyIteratorValue) {
+      Js.<Dictionary_requiredAnySequenceValue>uncheckedCast( this ).setRequiredAnyIteratorValue( requiredAnyIteratorValue );
+      return Js.uncheckedCast( this );
+    }
+  }
+
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Step3 {
+    @JsOverlay
+    @Nonnull
+    default Dictionary_requiredAnySequenceValue requiredAnySequenceValue(
+        @Nonnull JsArray<Any> requiredAnySequenceValue) {
+      Js.<Dictionary_requiredAnySequenceValue>uncheckedCast( this ).setRequiredAnySequenceValue( requiredAnySequenceValue );
+      return Js.uncheckedCast( this );
     }
 
     @JsOverlay
     @Nonnull
-    default Builder requiredAnyIteratorIterableValue(
-        @Nonnull final JsIteratorIterable<Any> requiredAnyIteratorIterableValue) {
-      setRequiredAnyIteratorIterableValue( requiredAnyIteratorIterableValue );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder requiredAnyIteratorValue(
-        @Nonnull final JsIterator<Any> requiredAnyIteratorValue) {
-      setRequiredAnyIteratorValue( requiredAnyIteratorValue );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder requiredAnySequenceValue(@Nonnull final JsArray<Any> requiredAnySequenceValue) {
-      setRequiredAnySequenceValue( requiredAnySequenceValue );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder requiredAnySequenceValue(@Nonnull final Any... requiredAnySequenceValue) {
-      setRequiredAnySequenceValue( requiredAnySequenceValue );
-      return this;
+    default Dictionary_requiredAnySequenceValue requiredAnySequenceValue(
+        @Nonnull Any... requiredAnySequenceValue) {
+      Js.<Dictionary_requiredAnySequenceValue>uncheckedCast( this ).setRequiredAnySequenceValue( requiredAnySequenceValue );
+      return Js.uncheckedCast( this );
     }
   }
 }

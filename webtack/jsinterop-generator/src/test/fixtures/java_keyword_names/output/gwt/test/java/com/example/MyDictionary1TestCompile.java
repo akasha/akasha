@@ -6,11 +6,8 @@ import javax.annotation.Generated;
 public final class MyDictionary1TestCompile {
   static MyDictionary1 $typeReference$;
 
-  public static MyDictionary1.Builder create(final Object clone, final Object default_,
-      final Object equals, final Object finalize, final Object getClass, final Object hashCode,
-      final Object is, final Object notify, final Object notifyAll, final Object private_,
-      final Object protected_, final Object public_, final Object toString, final Object wait) {
-    return MyDictionary1.create( clone, default_, equals, finalize, getClass, hashCode, is, notify, notifyAll, private_, protected_, public_, toString, wait );
+  public static MyDictionary1.Step1 clone(final Object clone) {
+    return MyDictionary1.clone( clone );
   }
 
   public static Object clone_(final MyDictionary1 $instance) {
@@ -123,74 +120,5 @@ public final class MyDictionary1TestCompile {
 
   public static void setWait(final MyDictionary1 $instance, Object wait) {
     $instance.setWait( wait );
-  }
-
-  public static MyDictionary1.Builder clone_(final MyDictionary1.Builder $instance,
-      final Object clone) {
-    return $instance.clone_( clone );
-  }
-
-  public static MyDictionary1.Builder default_(final MyDictionary1.Builder $instance,
-      final Object default_) {
-    return $instance.default_( default_ );
-  }
-
-  public static MyDictionary1.Builder equals_(final MyDictionary1.Builder $instance,
-      final Object equals) {
-    return $instance.equals_( equals );
-  }
-
-  public static MyDictionary1.Builder finalize_(final MyDictionary1.Builder $instance,
-      final Object finalize) {
-    return $instance.finalize_( finalize );
-  }
-
-  public static MyDictionary1.Builder getClass_(final MyDictionary1.Builder $instance,
-      final Object getClass) {
-    return $instance.getClass_( getClass );
-  }
-
-  public static MyDictionary1.Builder hashCode_(final MyDictionary1.Builder $instance,
-      final Object hashCode) {
-    return $instance.hashCode_( hashCode );
-  }
-
-  public static MyDictionary1.Builder is(final MyDictionary1.Builder $instance, final Object is) {
-    return $instance.is( is );
-  }
-
-  public static MyDictionary1.Builder notify_(final MyDictionary1.Builder $instance,
-      final Object notify) {
-    return $instance.notify_( notify );
-  }
-
-  public static MyDictionary1.Builder notifyAll_(final MyDictionary1.Builder $instance,
-      final Object notifyAll) {
-    return $instance.notifyAll_( notifyAll );
-  }
-
-  public static MyDictionary1.Builder private_(final MyDictionary1.Builder $instance,
-      final Object private_) {
-    return $instance.private_( private_ );
-  }
-
-  public static MyDictionary1.Builder protected_(final MyDictionary1.Builder $instance,
-      final Object protected_) {
-    return $instance.protected_( protected_ );
-  }
-
-  public static MyDictionary1.Builder public_(final MyDictionary1.Builder $instance,
-      final Object public_) {
-    return $instance.public_( public_ );
-  }
-
-  public static MyDictionary1.Builder toString_(final MyDictionary1.Builder $instance,
-      final Object toString) {
-    return $instance.toString_( toString );
-  }
-
-  public static MyDictionary1.Builder wait_(final MyDictionary1.Builder $instance,
-      final Object wait) {
-    return $instance.wait_( wait );
   }
 }

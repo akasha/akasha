@@ -6,7 +6,7 @@ import javax.annotation.Generated;
 public final class GPURenderPassColorAttachmentTestCompile {
   static GPURenderPassColorAttachment $typeReference$;
 
-  public static GPURenderPassColorAttachment.Builder create() {
-    return GPURenderPassColorAttachment.create();
+  public static GPURenderPassColorAttachment of() {
+    return GPURenderPassColorAttachment.of();
   }
 }

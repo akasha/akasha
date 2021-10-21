@@ -21,9 +21,11 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredNullableSomeTypeFrozenArrayValue {
   @JsOverlay
   @Nonnull
-  static Builder requiredNullableSomeTypeFrozenArrayValue(
+  static Dictionary_requiredNullableSomeTypeFrozenArrayValue requiredNullableSomeTypeFrozenArrayValue(
       @Nullable final JsArray<SomeType> requiredNullableSomeTypeFrozenArrayValue) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredNullableSomeTypeFrozenArrayValue( requiredNullableSomeTypeFrozenArrayValue );
+    final Dictionary_requiredNullableSomeTypeFrozenArrayValue $dictionaryRequiredNullableSomeTypeFrozenArrayValue = Js.<Dictionary_requiredNullableSomeTypeFrozenArrayValue>uncheckedCast( JsPropertyMap.of() );
+    $dictionaryRequiredNullableSomeTypeFrozenArrayValue.setRequiredNullableSomeTypeFrozenArrayValue( requiredNullableSomeTypeFrozenArrayValue );
+    return Js.uncheckedCast( $dictionaryRequiredNullableSomeTypeFrozenArrayValue );
   }
 
   @JsProperty(
@@ -35,19 +37,4 @@ public interface Dictionary_requiredNullableSomeTypeFrozenArrayValue {
   @JsProperty
   void setRequiredNullableSomeTypeFrozenArrayValue(
       @JsNullable JsArray<SomeType> requiredNullableSomeTypeFrozenArrayValue);
-
-  @JsType(
-      isNative = true,
-      namespace = JsPackage.GLOBAL,
-      name = "Dictionary_requiredNullableSomeTypeFrozenArrayValue"
-  )
-  interface Builder extends Dictionary_requiredNullableSomeTypeFrozenArrayValue {
-    @JsOverlay
-    @Nonnull
-    default Builder requiredNullableSomeTypeFrozenArrayValue(
-        @Nullable final JsArray<SomeType> requiredNullableSomeTypeFrozenArrayValue) {
-      setRequiredNullableSomeTypeFrozenArrayValue( requiredNullableSomeTypeFrozenArrayValue );
-      return this;
-    }
-  }
 }

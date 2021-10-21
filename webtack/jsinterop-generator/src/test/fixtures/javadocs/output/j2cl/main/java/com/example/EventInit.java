@@ -22,7 +22,9 @@ public interface EventInit {
   @JsOverlay
   @Nonnull
   static Builder cancelable(final boolean cancelable) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).cancelable( cancelable );
+    final Builder $eventInit = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $eventInit.setCancelable( cancelable );
+    return Js.uncheckedCast( $eventInit );
   }
 
   /**
@@ -62,16 +64,6 @@ public interface EventInit {
       name = "EventInit"
   )
   interface Builder extends EventInit {
-    /**
-     * Documentation for required member EventInit.cancelable.
-     */
-    @JsOverlay
-    @Nonnull
-    default Builder cancelable(final boolean cancelable) {
-      setCancelable( cancelable );
-      return this;
-    }
-
     /**
      * Documentation for member EventInit.bubbles.
      */

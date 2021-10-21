@@ -19,13 +19,10 @@ import jsinterop.base.JsPropertyMap;
 public interface MyDictionary1 {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final Object clone, @Nonnull final Object default_,
-      @Nonnull final Object equals, @Nonnull final Object finalize, @Nonnull final Object getClass,
-      @Nonnull final Object hashCode, @Nonnull final Object is, @Nonnull final Object notify,
-      @Nonnull final Object notifyAll, @Nonnull final Object private_,
-      @Nonnull final Object protected_, @Nonnull final Object public_,
-      @Nonnull final Object toString, @Nonnull final Object wait) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).clone_( clone ).default_( default_ ).equals_( equals ).finalize_( finalize ).getClass_( getClass ).hashCode_( hashCode ).is( is ).notify_( notify ).notifyAll_( notifyAll ).private_( private_ ).protected_( protected_ ).public_( public_ ).toString_( toString ).wait_( wait );
+  static Step1 clone(@Nonnull final Object clone) {
+    final MyDictionary1 $myDictionary1 = Js.<MyDictionary1>uncheckedCast( JsPropertyMap.of() );
+    $myDictionary1.setClone( clone );
+    return Js.uncheckedCast( $myDictionary1 );
   }
 
   @JsProperty(
@@ -159,103 +156,180 @@ public interface MyDictionary1 {
       namespace = JsPackage.GLOBAL,
       name = "MyDictionary1"
   )
-  interface Builder extends MyDictionary1 {
+  interface Step1 {
     @JsOverlay
     @Nonnull
-    default Builder clone_(@Nonnull final Object clone) {
-      setClone( clone );
-      return this;
+    default Step2 default_(@Nonnull Object default_) {
+      Js.<MyDictionary1>uncheckedCast( this ).setDefault( default_ );
+      return Js.uncheckedCast( this );
     }
+  }
 
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "MyDictionary1"
+  )
+  interface Step2 {
     @JsOverlay
     @Nonnull
-    default Builder default_(@Nonnull final Object default_) {
-      setDefault( default_ );
-      return this;
+    default Step3 equals_(@Nonnull Object equals) {
+      Js.<MyDictionary1>uncheckedCast( this ).setEquals( equals );
+      return Js.uncheckedCast( this );
     }
+  }
 
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "MyDictionary1"
+  )
+  interface Step3 {
     @JsOverlay
     @Nonnull
-    default Builder equals_(@Nonnull final Object equals) {
-      setEquals( equals );
-      return this;
+    default Step4 finalize_(@Nonnull Object finalize) {
+      Js.<MyDictionary1>uncheckedCast( this ).setFinalize( finalize );
+      return Js.uncheckedCast( this );
     }
+  }
 
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "MyDictionary1"
+  )
+  interface Step4 {
     @JsOverlay
     @Nonnull
-    default Builder finalize_(@Nonnull final Object finalize) {
-      setFinalize( finalize );
-      return this;
+    default Step5 getClass_(@Nonnull Object getClass) {
+      Js.<MyDictionary1>uncheckedCast( this ).setGetClass( getClass );
+      return Js.uncheckedCast( this );
     }
+  }
 
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "MyDictionary1"
+  )
+  interface Step5 {
     @JsOverlay
     @Nonnull
-    default Builder getClass_(@Nonnull final Object getClass) {
-      setGetClass( getClass );
-      return this;
+    default Step6 hashCode_(@Nonnull Object hashCode) {
+      Js.<MyDictionary1>uncheckedCast( this ).setHashCode( hashCode );
+      return Js.uncheckedCast( this );
     }
+  }
 
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "MyDictionary1"
+  )
+  interface Step6 {
     @JsOverlay
     @Nonnull
-    default Builder hashCode_(@Nonnull final Object hashCode) {
-      setHashCode( hashCode );
-      return this;
+    default Step7 is(@Nonnull Object is) {
+      Js.<MyDictionary1>uncheckedCast( this ).setIs( is );
+      return Js.uncheckedCast( this );
     }
+  }
 
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "MyDictionary1"
+  )
+  interface Step7 {
     @JsOverlay
     @Nonnull
-    default Builder is(@Nonnull final Object is) {
-      setIs( is );
-      return this;
+    default Step8 notify_(@Nonnull Object notify) {
+      Js.<MyDictionary1>uncheckedCast( this ).setNotify( notify );
+      return Js.uncheckedCast( this );
     }
+  }
 
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "MyDictionary1"
+  )
+  interface Step8 {
     @JsOverlay
     @Nonnull
-    default Builder notify_(@Nonnull final Object notify) {
-      setNotify( notify );
-      return this;
+    default Step9 notifyAll_(@Nonnull Object notifyAll) {
+      Js.<MyDictionary1>uncheckedCast( this ).setNotifyAll( notifyAll );
+      return Js.uncheckedCast( this );
     }
+  }
 
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "MyDictionary1"
+  )
+  interface Step9 {
     @JsOverlay
     @Nonnull
-    default Builder notifyAll_(@Nonnull final Object notifyAll) {
-      setNotifyAll( notifyAll );
-      return this;
+    default Step10 private_(@Nonnull Object private_) {
+      Js.<MyDictionary1>uncheckedCast( this ).setPrivate( private_ );
+      return Js.uncheckedCast( this );
     }
+  }
 
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "MyDictionary1"
+  )
+  interface Step10 {
     @JsOverlay
     @Nonnull
-    default Builder private_(@Nonnull final Object private_) {
-      setPrivate( private_ );
-      return this;
+    default Step11 protected_(@Nonnull Object protected_) {
+      Js.<MyDictionary1>uncheckedCast( this ).setProtected( protected_ );
+      return Js.uncheckedCast( this );
     }
+  }
 
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "MyDictionary1"
+  )
+  interface Step11 {
     @JsOverlay
     @Nonnull
-    default Builder protected_(@Nonnull final Object protected_) {
-      setProtected( protected_ );
-      return this;
+    default Step12 public_(@Nonnull Object public_) {
+      Js.<MyDictionary1>uncheckedCast( this ).setPublic( public_ );
+      return Js.uncheckedCast( this );
     }
+  }
 
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "MyDictionary1"
+  )
+  interface Step12 {
     @JsOverlay
     @Nonnull
-    default Builder public_(@Nonnull final Object public_) {
-      setPublic( public_ );
-      return this;
+    default Step13 toString_(@Nonnull Object toString) {
+      Js.<MyDictionary1>uncheckedCast( this ).setToString( toString );
+      return Js.uncheckedCast( this );
     }
+  }
 
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "MyDictionary1"
+  )
+  interface Step13 {
     @JsOverlay
     @Nonnull
-    default Builder toString_(@Nonnull final Object toString) {
-      setToString( toString );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder wait_(@Nonnull final Object wait) {
-      setWait( wait );
-      return this;
+    default MyDictionary1 wait_(@Nonnull Object wait) {
+      Js.<MyDictionary1>uncheckedCast( this ).setWait( wait );
+      return Js.uncheckedCast( this );
     }
   }
 }

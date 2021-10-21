@@ -6,7 +6,7 @@ import javax.annotation.Generated;
 public final class TxAuthGenericArgTestCompile {
   static TxAuthGenericArg $typeReference$;
 
-  public static TxAuthGenericArg.Builder contentType(final String contentType) {
+  public static TxAuthGenericArg contentType(final String contentType) {
     return TxAuthGenericArg.contentType( contentType );
   }
 
@@ -16,10 +16,5 @@ public final class TxAuthGenericArgTestCompile {
 
   public static void setContentType(final TxAuthGenericArg $instance, String contentType) {
     $instance.setContentType( contentType );
-  }
-
-  public static TxAuthGenericArg.Builder contentType(final TxAuthGenericArg.Builder $instance,
-      final String contentType) {
-    return $instance.contentType( contentType );
   }
 }

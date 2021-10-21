@@ -18,7 +18,7 @@ import jsinterop.base.JsPropertyMap;
 public interface RTCOfferOptions extends RTCOfferAnswerOptions {
   @JsOverlay
   @Nonnull
-  static Builder create() {
+  static Builder of() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 

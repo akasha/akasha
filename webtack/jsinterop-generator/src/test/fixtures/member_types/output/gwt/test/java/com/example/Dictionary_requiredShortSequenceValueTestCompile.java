@@ -6,12 +6,12 @@ import javax.annotation.Generated;
 public final class Dictionary_requiredShortSequenceValueTestCompile {
   static Dictionary_requiredShortSequenceValue $typeReference$;
 
-  public static Dictionary_requiredShortSequenceValue.Builder requiredShortSequenceValue(
+  public static Dictionary_requiredShortSequenceValue requiredShortSequenceValue(
       final JsArray<Double> requiredShortSequenceValue) {
     return Dictionary_requiredShortSequenceValue.requiredShortSequenceValue( requiredShortSequenceValue );
   }
 
-  public static Dictionary_requiredShortSequenceValue.Builder requiredShortSequenceValue(
+  public static Dictionary_requiredShortSequenceValue requiredShortSequenceValue(
       final double[] requiredShortSequenceValue) {
     return Dictionary_requiredShortSequenceValue.requiredShortSequenceValue( requiredShortSequenceValue );
   }
@@ -31,17 +31,5 @@ public final class Dictionary_requiredShortSequenceValueTestCompile {
       final Dictionary_requiredShortSequenceValue $instance,
       final double[] requiredShortSequenceValue) {
     $instance.setRequiredShortSequenceValue( requiredShortSequenceValue );
-  }
-
-  public static Dictionary_requiredShortSequenceValue.Builder requiredShortSequenceValue(
-      final Dictionary_requiredShortSequenceValue.Builder $instance,
-      final JsArray<Double> requiredShortSequenceValue) {
-    return $instance.requiredShortSequenceValue( requiredShortSequenceValue );
-  }
-
-  public static Dictionary_requiredShortSequenceValue.Builder requiredShortSequenceValue(
-      final Dictionary_requiredShortSequenceValue.Builder $instance,
-      final double[] requiredShortSequenceValue) {
-    return $instance.requiredShortSequenceValue( requiredShortSequenceValue );
   }
 }

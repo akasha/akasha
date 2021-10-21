@@ -6,7 +6,7 @@ import javax.annotation.Generated;
 public final class RTCAnswerOptionsTestCompile {
   static RTCAnswerOptions $typeReference$;
 
-  public static RTCAnswerOptions.Builder create() {
-    return RTCAnswerOptions.create();
+  public static RTCAnswerOptions of() {
+    return RTCAnswerOptions.of();
   }
 }

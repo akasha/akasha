@@ -6,7 +6,7 @@ import javax.annotation.Generated;
 public final class Dictionary_requiredUSVStringValueTestCompile {
   static Dictionary_requiredUSVStringValue $typeReference$;
 
-  public static Dictionary_requiredUSVStringValue.Builder requiredUSVStringValue(
+  public static Dictionary_requiredUSVStringValue requiredUSVStringValue(
       final String requiredUSVStringValue) {
     return Dictionary_requiredUSVStringValue.requiredUSVStringValue( requiredUSVStringValue );
   }
@@ -18,11 +18,5 @@ public final class Dictionary_requiredUSVStringValueTestCompile {
   public static void setRequiredUSVStringValue(final Dictionary_requiredUSVStringValue $instance,
       String requiredUSVStringValue) {
     $instance.setRequiredUSVStringValue( requiredUSVStringValue );
-  }
-
-  public static Dictionary_requiredUSVStringValue.Builder requiredUSVStringValue(
-      final Dictionary_requiredUSVStringValue.Builder $instance,
-      final String requiredUSVStringValue) {
-    return $instance.requiredUSVStringValue( requiredUSVStringValue );
   }
 }

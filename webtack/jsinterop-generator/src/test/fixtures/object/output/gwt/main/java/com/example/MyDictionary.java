@@ -22,7 +22,9 @@ public interface MyDictionary {
   @JsOverlay
   @Nonnull
   static Builder requiredObjectValue(@Nonnull final JsObject requiredObjectValue) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredObjectValue( requiredObjectValue );
+    final Builder $myDictionary = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $myDictionary.setRequiredObjectValue( requiredObjectValue );
+    return Js.uncheckedCast( $myDictionary );
   }
 
   @JsProperty(
@@ -57,13 +59,6 @@ public interface MyDictionary {
       name = "Object"
   )
   interface Builder extends MyDictionary {
-    @JsOverlay
-    @Nonnull
-    default Builder requiredObjectValue(@Nonnull final JsObject requiredObjectValue) {
-      setRequiredObjectValue( requiredObjectValue );
-      return this;
-    }
-
     @JsOverlay
     @Nonnull
     default Builder nullableObjectValue(@Nullable final JsObject nullableObjectValue) {

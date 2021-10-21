@@ -6,8 +6,8 @@ import javax.annotation.Generated;
 public final class ElementCreationOptionsTestCompile {
   static ElementCreationOptions $typeReference$;
 
-  public static ElementCreationOptions.Builder create() {
-    return ElementCreationOptions.create();
+  public static ElementCreationOptions.Builder of() {
+    return ElementCreationOptions.of();
   }
 
   public static String _is(final ElementCreationOptions $instance) {

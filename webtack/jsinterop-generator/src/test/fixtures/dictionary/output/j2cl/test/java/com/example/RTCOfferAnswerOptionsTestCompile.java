@@ -6,7 +6,7 @@ import javax.annotation.Generated;
 public final class RTCOfferAnswerOptionsTestCompile {
   static RTCOfferAnswerOptions $typeReference$;
 
-  public static RTCOfferAnswerOptions.Builder create() {
-    return RTCOfferAnswerOptions.create();
+  public static RTCOfferAnswerOptions of() {
+    return RTCOfferAnswerOptions.of();
   }
 }

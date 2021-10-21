@@ -20,8 +20,11 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredNullableLongValue {
   @JsOverlay
   @Nonnull
-  static Builder requiredNullableLongValue(@Nullable final Double requiredNullableLongValue) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredNullableLongValue( requiredNullableLongValue );
+  static Dictionary_requiredNullableLongValue requiredNullableLongValue(
+      @Nullable final Double requiredNullableLongValue) {
+    final Dictionary_requiredNullableLongValue $dictionaryRequiredNullableLongValue = Js.<Dictionary_requiredNullableLongValue>uncheckedCast( JsPropertyMap.of() );
+    $dictionaryRequiredNullableLongValue.setRequiredNullableLongValue( requiredNullableLongValue );
+    return Js.uncheckedCast( $dictionaryRequiredNullableLongValue );
   }
 
   @JsProperty(
@@ -32,18 +35,4 @@ public interface Dictionary_requiredNullableLongValue {
 
   @JsProperty
   void setRequiredNullableLongValue(@JsNullable Double requiredNullableLongValue);
-
-  @JsType(
-      isNative = true,
-      namespace = JsPackage.GLOBAL,
-      name = "Dictionary_requiredNullableLongValue"
-  )
-  interface Builder extends Dictionary_requiredNullableLongValue {
-    @JsOverlay
-    @Nonnull
-    default Builder requiredNullableLongValue(@Nullable final Double requiredNullableLongValue) {
-      setRequiredNullableLongValue( requiredNullableLongValue );
-      return this;
-    }
-  }
 }

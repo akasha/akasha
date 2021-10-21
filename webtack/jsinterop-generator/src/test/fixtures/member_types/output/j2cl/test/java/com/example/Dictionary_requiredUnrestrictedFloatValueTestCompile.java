@@ -6,7 +6,7 @@ import javax.annotation.Generated;
 public final class Dictionary_requiredUnrestrictedFloatValueTestCompile {
   static Dictionary_requiredUnrestrictedFloatValue $typeReference$;
 
-  public static Dictionary_requiredUnrestrictedFloatValue.Builder requiredUnrestrictedFloatValue(
+  public static Dictionary_requiredUnrestrictedFloatValue requiredUnrestrictedFloatValue(
       final float requiredUnrestrictedFloatValue) {
     return Dictionary_requiredUnrestrictedFloatValue.requiredUnrestrictedFloatValue( requiredUnrestrictedFloatValue );
   }
@@ -20,11 +20,5 @@ public final class Dictionary_requiredUnrestrictedFloatValueTestCompile {
       final Dictionary_requiredUnrestrictedFloatValue $instance,
       float requiredUnrestrictedFloatValue) {
     $instance.setRequiredUnrestrictedFloatValue( requiredUnrestrictedFloatValue );
-  }
-
-  public static Dictionary_requiredUnrestrictedFloatValue.Builder requiredUnrestrictedFloatValue(
-      final Dictionary_requiredUnrestrictedFloatValue.Builder $instance,
-      final float requiredUnrestrictedFloatValue) {
-    return $instance.requiredUnrestrictedFloatValue( requiredUnrestrictedFloatValue );
   }
 }

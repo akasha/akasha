@@ -26,10 +26,6 @@ public final class MyDictionaryTestCompile {
     $instance.setDescription( description );
   }
 
-  public static MyDictionary.Builder name(final MyDictionary.Builder $instance, final String name) {
-    return $instance.name( name );
-  }
-
   public static MyDictionary.Builder description(final MyDictionary.Builder $instance,
       final String description) {
     return $instance.description( description );

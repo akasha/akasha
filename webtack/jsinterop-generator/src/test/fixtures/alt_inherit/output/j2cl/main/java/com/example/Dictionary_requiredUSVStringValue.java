@@ -19,8 +19,11 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredUSVStringValue {
   @JsOverlay
   @Nonnull
-  static Builder requiredUSVStringValue(@Nonnull final String requiredUSVStringValue) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredUSVStringValue( requiredUSVStringValue );
+  static Dictionary_requiredUSVStringValue requiredUSVStringValue(
+      @Nonnull final String requiredUSVStringValue) {
+    final Dictionary_requiredUSVStringValue $dictionaryRequiredUSVStringValue = Js.<Dictionary_requiredUSVStringValue>uncheckedCast( JsPropertyMap.of() );
+    $dictionaryRequiredUSVStringValue.setRequiredUSVStringValue( requiredUSVStringValue );
+    return Js.uncheckedCast( $dictionaryRequiredUSVStringValue );
   }
 
   @JsProperty(
@@ -31,18 +34,4 @@ public interface Dictionary_requiredUSVStringValue {
 
   @JsProperty
   void setRequiredUSVStringValue(@JsNonNull String requiredUSVStringValue);
-
-  @JsType(
-      isNative = true,
-      namespace = JsPackage.GLOBAL,
-      name = "Dictionary_requiredUSVStringValue"
-  )
-  interface Builder extends Dictionary_requiredUSVStringValue {
-    @JsOverlay
-    @Nonnull
-    default Builder requiredUSVStringValue(@Nonnull final String requiredUSVStringValue) {
-      setRequiredUSVStringValue( requiredUSVStringValue );
-      return this;
-    }
-  }
 }

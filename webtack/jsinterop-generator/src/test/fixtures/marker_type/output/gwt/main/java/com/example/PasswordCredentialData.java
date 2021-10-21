@@ -19,7 +19,7 @@ import jsinterop.base.JsPropertyMap;
 public interface PasswordCredentialData extends PasswordCredentialInit {
   @JsOverlay
   @Nonnull
-  static Builder create() {
+  static Builder of() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 

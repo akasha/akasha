@@ -19,30 +19,26 @@ import jsinterop.base.JsPropertyMap;
 public interface AllowedBluetoothDevice {
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final String allowedServices,
-      @Nonnull final JsArray<StringOrLongLongUnion> requiredUuids) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).allowedServices( allowedServices ).requiredUuids( requiredUuids );
+  static Step1 allowedServices(@Nonnull final String allowedServices) {
+    final Builder $allowedBluetoothDevice = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $allowedBluetoothDevice.setAllowedServices( allowedServices );
+    return Js.uncheckedCast( $allowedBluetoothDevice );
   }
 
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final JsArray<String> allowedServices,
-      @Nonnull final JsArray<StringOrLongLongUnion> requiredUuids) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).allowedServices( allowedServices ).requiredUuids( requiredUuids );
+  static Step1 allowedServices(@Nonnull final JsArray<String> allowedServices) {
+    final Builder $allowedBluetoothDevice = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $allowedBluetoothDevice.setAllowedServices( allowedServices );
+    return Js.uncheckedCast( $allowedBluetoothDevice );
   }
 
   @JsOverlay
   @Nonnull
-  static Builder create(@Nonnull final String allowedServices,
-      @Nonnull final StringOrLongLongUnion... requiredUuids) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).allowedServices( allowedServices ).requiredUuids( requiredUuids );
-  }
-
-  @JsOverlay
-  @Nonnull
-  static Builder create(@Nonnull final String[] allowedServices,
-      @Nonnull final StringOrLongLongUnion... requiredUuids) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).allowedServices( allowedServices ).requiredUuids( requiredUuids );
+  static Step1 allowedServices(@Nonnull final String... allowedServices) {
+    final Builder $allowedBluetoothDevice = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $allowedBluetoothDevice.setAllowedServices( allowedServices );
+    return Js.uncheckedCast( $allowedBluetoothDevice );
   }
 
   @JsProperty(
@@ -124,42 +120,28 @@ public interface AllowedBluetoothDevice {
       namespace = JsPackage.GLOBAL,
       name = "Object"
   )
+  interface Step1 {
+    @JsOverlay
+    @Nonnull
+    default Builder requiredUuids(@Nonnull JsArray<StringOrLongLongUnion> requiredUuids) {
+      Js.<AllowedBluetoothDevice>uncheckedCast( this ).setRequiredUuids( requiredUuids );
+      return Js.uncheckedCast( this );
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder requiredUuids(@Nonnull StringOrLongLongUnion... requiredUuids) {
+      Js.<AllowedBluetoothDevice>uncheckedCast( this ).setRequiredUuids( requiredUuids );
+      return Js.uncheckedCast( this );
+    }
+  }
+
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
   interface Builder extends AllowedBluetoothDevice {
-    @JsOverlay
-    @Nonnull
-    default Builder allowedServices(@Nonnull final String allowedServices) {
-      setAllowedServices( allowedServices );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder allowedServices(@Nonnull final JsArray<String> allowedServices) {
-      setAllowedServices( allowedServices );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder allowedServices(@Nonnull final String... allowedServices) {
-      setAllowedServices( allowedServices );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder requiredUuids(@Nonnull final JsArray<StringOrLongLongUnion> requiredUuids) {
-      setRequiredUuids( requiredUuids );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder requiredUuids(@Nonnull final StringOrLongLongUnion... requiredUuids) {
-      setRequiredUuids( requiredUuids );
-      return this;
-    }
-
     @JsOverlay
     @Nonnull
     default Builder otherServices(@Nonnull final String otherServices) {

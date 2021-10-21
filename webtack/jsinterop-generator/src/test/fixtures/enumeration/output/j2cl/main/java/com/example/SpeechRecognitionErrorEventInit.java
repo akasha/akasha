@@ -22,8 +22,11 @@ import jsinterop.base.JsPropertyMap;
 public interface SpeechRecognitionErrorEventInit {
   @JsOverlay
   @Nonnull
-  static Builder error(@SpeechRecognitionErrorCode @Nonnull final String error) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).error( error );
+  static SpeechRecognitionErrorEventInit error(
+      @SpeechRecognitionErrorCode @Nonnull final String error) {
+    final SpeechRecognitionErrorEventInit $speechRecognitionErrorEventInit = Js.<SpeechRecognitionErrorEventInit>uncheckedCast( JsPropertyMap.of() );
+    $speechRecognitionErrorEventInit.setError( error );
+    return Js.uncheckedCast( $speechRecognitionErrorEventInit );
   }
 
   @JsProperty(
@@ -35,21 +38,4 @@ public interface SpeechRecognitionErrorEventInit {
 
   @JsProperty
   void setError(@SpeechRecognitionErrorCode @JsNonNull String error);
-
-  /**
-   * Required attribute is an enum
-   */
-  @JsType(
-      isNative = true,
-      namespace = JsPackage.GLOBAL,
-      name = "SpeechRecognitionErrorEventInit"
-  )
-  interface Builder extends SpeechRecognitionErrorEventInit {
-    @JsOverlay
-    @Nonnull
-    default Builder error(@SpeechRecognitionErrorCode @Nonnull final String error) {
-      setError( error );
-      return this;
-    }
-  }
 }

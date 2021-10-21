@@ -18,8 +18,10 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredBooleanValue {
   @JsOverlay
   @Nonnull
-  static Builder requiredBooleanValue(final boolean requiredBooleanValue) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredBooleanValue( requiredBooleanValue );
+  static Dictionary_requiredBooleanValue requiredBooleanValue(final boolean requiredBooleanValue) {
+    final Dictionary_requiredBooleanValue $dictionaryRequiredBooleanValue = Js.<Dictionary_requiredBooleanValue>uncheckedCast( JsPropertyMap.of() );
+    $dictionaryRequiredBooleanValue.setRequiredBooleanValue( requiredBooleanValue );
+    return Js.uncheckedCast( $dictionaryRequiredBooleanValue );
   }
 
   @JsProperty(
@@ -29,18 +31,4 @@ public interface Dictionary_requiredBooleanValue {
 
   @JsProperty
   void setRequiredBooleanValue(boolean requiredBooleanValue);
-
-  @JsType(
-      isNative = true,
-      namespace = JsPackage.GLOBAL,
-      name = "Dictionary_requiredBooleanValue"
-  )
-  interface Builder extends Dictionary_requiredBooleanValue {
-    @JsOverlay
-    @Nonnull
-    default Builder requiredBooleanValue(final boolean requiredBooleanValue) {
-      setRequiredBooleanValue( requiredBooleanValue );
-      return this;
-    }
-  }
 }

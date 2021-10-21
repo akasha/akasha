@@ -6,12 +6,12 @@ import javax.annotation.Generated;
 public final class Dictionary_requiredNullableDoubleSequenceValueTestCompile {
   static Dictionary_requiredNullableDoubleSequenceValue $typeReference$;
 
-  public static Dictionary_requiredNullableDoubleSequenceValue.Builder requiredNullableDoubleSequenceValue(
+  public static Dictionary_requiredNullableDoubleSequenceValue requiredNullableDoubleSequenceValue(
       final JsArray<Double> requiredNullableDoubleSequenceValue) {
     return Dictionary_requiredNullableDoubleSequenceValue.requiredNullableDoubleSequenceValue( requiredNullableDoubleSequenceValue );
   }
 
-  public static Dictionary_requiredNullableDoubleSequenceValue.Builder requiredNullableDoubleSequenceValue(
+  public static Dictionary_requiredNullableDoubleSequenceValue requiredNullableDoubleSequenceValue(
       final double[] requiredNullableDoubleSequenceValue) {
     return Dictionary_requiredNullableDoubleSequenceValue.requiredNullableDoubleSequenceValue( requiredNullableDoubleSequenceValue );
   }
@@ -31,17 +31,5 @@ public final class Dictionary_requiredNullableDoubleSequenceValueTestCompile {
       final Dictionary_requiredNullableDoubleSequenceValue $instance,
       final double[] requiredNullableDoubleSequenceValue) {
     $instance.setRequiredNullableDoubleSequenceValue( requiredNullableDoubleSequenceValue );
-  }
-
-  public static Dictionary_requiredNullableDoubleSequenceValue.Builder requiredNullableDoubleSequenceValue(
-      final Dictionary_requiredNullableDoubleSequenceValue.Builder $instance,
-      final JsArray<Double> requiredNullableDoubleSequenceValue) {
-    return $instance.requiredNullableDoubleSequenceValue( requiredNullableDoubleSequenceValue );
-  }
-
-  public static Dictionary_requiredNullableDoubleSequenceValue.Builder requiredNullableDoubleSequenceValue(
-      final Dictionary_requiredNullableDoubleSequenceValue.Builder $instance,
-      final double[] requiredNullableDoubleSequenceValue) {
-    return $instance.requiredNullableDoubleSequenceValue( requiredNullableDoubleSequenceValue );
   }
 }

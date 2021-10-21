@@ -17,15 +17,7 @@ import jsinterop.base.JsPropertyMap;
 public interface RTCAnswerOptions extends RTCOfferAnswerOptions {
   @JsOverlay
   @Nonnull
-  static Builder create() {
+  static RTCAnswerOptions of() {
     return Js.uncheckedCast( JsPropertyMap.of() );
-  }
-
-  @JsType(
-      isNative = true,
-      namespace = JsPackage.GLOBAL,
-      name = "RTCAnswerOptions"
-  )
-  interface Builder extends RTCAnswerOptions {
   }
 }

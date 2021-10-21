@@ -23,7 +23,9 @@ public interface GlobalDescriptor {
   @JsOverlay
   @Nonnull
   static Builder value(@DoNotAutobox @Nullable final Object value) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).value( value );
+    final Builder $globalDescriptor = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $globalDescriptor.setValue( value );
+    return Js.uncheckedCast( $globalDescriptor );
   }
 
   @JsProperty(
@@ -49,13 +51,6 @@ public interface GlobalDescriptor {
       name = "GlobalDescriptor"
   )
   interface Builder extends GlobalDescriptor {
-    @JsOverlay
-    @Nonnull
-    default Builder value(@DoNotAutobox @Nullable final Object value) {
-      setValue( value );
-      return this;
-    }
-
     @JsOverlay
     @Nonnull
     default Builder mutable(final boolean mutable) {

@@ -7,12 +7,12 @@ import javax.annotation.Generated;
 public final class Dictionary_requiredNullableBooleanSequenceValueTestCompile {
   static Dictionary_requiredNullableBooleanSequenceValue $typeReference$;
 
-  public static Dictionary_requiredNullableBooleanSequenceValue.Builder requiredNullableBooleanSequenceValue(
+  public static Dictionary_requiredNullableBooleanSequenceValue requiredNullableBooleanSequenceValue(
       final JsArray<Boolean> requiredNullableBooleanSequenceValue) {
     return Dictionary_requiredNullableBooleanSequenceValue.requiredNullableBooleanSequenceValue( requiredNullableBooleanSequenceValue );
   }
 
-  public static Dictionary_requiredNullableBooleanSequenceValue.Builder requiredNullableBooleanSequenceValue(
+  public static Dictionary_requiredNullableBooleanSequenceValue requiredNullableBooleanSequenceValue(
       final Boolean[] requiredNullableBooleanSequenceValue) {
     return Dictionary_requiredNullableBooleanSequenceValue.requiredNullableBooleanSequenceValue( requiredNullableBooleanSequenceValue );
   }
@@ -32,17 +32,5 @@ public final class Dictionary_requiredNullableBooleanSequenceValueTestCompile {
       final Dictionary_requiredNullableBooleanSequenceValue $instance,
       final Boolean[] requiredNullableBooleanSequenceValue) {
     $instance.setRequiredNullableBooleanSequenceValue( requiredNullableBooleanSequenceValue );
-  }
-
-  public static Dictionary_requiredNullableBooleanSequenceValue.Builder requiredNullableBooleanSequenceValue(
-      final Dictionary_requiredNullableBooleanSequenceValue.Builder $instance,
-      final JsArray<Boolean> requiredNullableBooleanSequenceValue) {
-    return $instance.requiredNullableBooleanSequenceValue( requiredNullableBooleanSequenceValue );
-  }
-
-  public static Dictionary_requiredNullableBooleanSequenceValue.Builder requiredNullableBooleanSequenceValue(
-      final Dictionary_requiredNullableBooleanSequenceValue.Builder $instance,
-      final Boolean[] requiredNullableBooleanSequenceValue) {
-    return $instance.requiredNullableBooleanSequenceValue( requiredNullableBooleanSequenceValue );
   }
 }

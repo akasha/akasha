@@ -20,9 +20,11 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredShortFrozenArrayValue {
   @JsOverlay
   @Nonnull
-  static Builder requiredShortFrozenArrayValue(
+  static Dictionary_requiredShortFrozenArrayValue requiredShortFrozenArrayValue(
       @Nonnull final JsArray<Double> requiredShortFrozenArrayValue) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredShortFrozenArrayValue( requiredShortFrozenArrayValue );
+    final Dictionary_requiredShortFrozenArrayValue $dictionaryRequiredShortFrozenArrayValue = Js.<Dictionary_requiredShortFrozenArrayValue>uncheckedCast( JsPropertyMap.of() );
+    $dictionaryRequiredShortFrozenArrayValue.setRequiredShortFrozenArrayValue( requiredShortFrozenArrayValue );
+    return Js.uncheckedCast( $dictionaryRequiredShortFrozenArrayValue );
   }
 
   @JsProperty(
@@ -33,19 +35,4 @@ public interface Dictionary_requiredShortFrozenArrayValue {
 
   @JsProperty
   void setRequiredShortFrozenArrayValue(@JsNonNull JsArray<Double> requiredShortFrozenArrayValue);
-
-  @JsType(
-      isNative = true,
-      namespace = JsPackage.GLOBAL,
-      name = "Object"
-  )
-  interface Builder extends Dictionary_requiredShortFrozenArrayValue {
-    @JsOverlay
-    @Nonnull
-    default Builder requiredShortFrozenArrayValue(
-        @Nonnull final JsArray<Double> requiredShortFrozenArrayValue) {
-      setRequiredShortFrozenArrayValue( requiredShortFrozenArrayValue );
-      return this;
-    }
-  }
 }

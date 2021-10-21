@@ -20,9 +20,11 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredFloatFrozenArrayValue {
   @JsOverlay
   @Nonnull
-  static Builder requiredFloatFrozenArrayValue(
+  static Dictionary_requiredFloatFrozenArrayValue requiredFloatFrozenArrayValue(
       @Nonnull final JsArray<Double> requiredFloatFrozenArrayValue) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredFloatFrozenArrayValue( requiredFloatFrozenArrayValue );
+    final Dictionary_requiredFloatFrozenArrayValue $dictionaryRequiredFloatFrozenArrayValue = Js.<Dictionary_requiredFloatFrozenArrayValue>uncheckedCast( JsPropertyMap.of() );
+    $dictionaryRequiredFloatFrozenArrayValue.setRequiredFloatFrozenArrayValue( requiredFloatFrozenArrayValue );
+    return Js.uncheckedCast( $dictionaryRequiredFloatFrozenArrayValue );
   }
 
   @JsProperty(
@@ -33,19 +35,4 @@ public interface Dictionary_requiredFloatFrozenArrayValue {
 
   @JsProperty
   void setRequiredFloatFrozenArrayValue(@JsNonNull JsArray<Double> requiredFloatFrozenArrayValue);
-
-  @JsType(
-      isNative = true,
-      namespace = JsPackage.GLOBAL,
-      name = "Object"
-  )
-  interface Builder extends Dictionary_requiredFloatFrozenArrayValue {
-    @JsOverlay
-    @Nonnull
-    default Builder requiredFloatFrozenArrayValue(
-        @Nonnull final JsArray<Double> requiredFloatFrozenArrayValue) {
-      setRequiredFloatFrozenArrayValue( requiredFloatFrozenArrayValue );
-      return this;
-    }
-  }
 }

@@ -6,9 +6,8 @@ import javax.annotation.Generated;
 public final class GPUColorDictTestCompile {
   static GPUColorDict $typeReference$;
 
-  public static GPUColorDict.Builder create(final double r, final double g, final double b,
-      final double a) {
-    return GPUColorDict.create( r, g, b, a );
+  public static GPUColorDict.Step1 r(final double r) {
+    return GPUColorDict.r( r );
   }
 
   public static double r(final GPUColorDict $instance) {
@@ -41,21 +40,5 @@ public final class GPUColorDictTestCompile {
 
   public static void setA(final GPUColorDict $instance, double a) {
     $instance.setA( a );
-  }
-
-  public static GPUColorDict.Builder r(final GPUColorDict.Builder $instance, final double r) {
-    return $instance.r( r );
-  }
-
-  public static GPUColorDict.Builder g(final GPUColorDict.Builder $instance, final double g) {
-    return $instance.g( g );
-  }
-
-  public static GPUColorDict.Builder b(final GPUColorDict.Builder $instance, final double b) {
-    return $instance.b( b );
-  }
-
-  public static GPUColorDict.Builder a(final GPUColorDict.Builder $instance, final double a) {
-    return $instance.a( a );
   }
 }

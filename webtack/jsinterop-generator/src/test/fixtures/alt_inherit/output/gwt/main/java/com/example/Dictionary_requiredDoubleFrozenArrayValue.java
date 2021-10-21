@@ -20,9 +20,11 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredDoubleFrozenArrayValue {
   @JsOverlay
   @Nonnull
-  static Builder requiredDoubleFrozenArrayValue(
+  static Dictionary_requiredDoubleFrozenArrayValue requiredDoubleFrozenArrayValue(
       @Nonnull final JsArray<Double> requiredDoubleFrozenArrayValue) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredDoubleFrozenArrayValue( requiredDoubleFrozenArrayValue );
+    final Dictionary_requiredDoubleFrozenArrayValue $dictionaryRequiredDoubleFrozenArrayValue = Js.<Dictionary_requiredDoubleFrozenArrayValue>uncheckedCast( JsPropertyMap.of() );
+    $dictionaryRequiredDoubleFrozenArrayValue.setRequiredDoubleFrozenArrayValue( requiredDoubleFrozenArrayValue );
+    return Js.uncheckedCast( $dictionaryRequiredDoubleFrozenArrayValue );
   }
 
   @JsProperty(
@@ -33,19 +35,4 @@ public interface Dictionary_requiredDoubleFrozenArrayValue {
 
   @JsProperty
   void setRequiredDoubleFrozenArrayValue(@JsNonNull JsArray<Double> requiredDoubleFrozenArrayValue);
-
-  @JsType(
-      isNative = true,
-      namespace = JsPackage.GLOBAL,
-      name = "Object"
-  )
-  interface Builder extends Dictionary_requiredDoubleFrozenArrayValue {
-    @JsOverlay
-    @Nonnull
-    default Builder requiredDoubleFrozenArrayValue(
-        @Nonnull final JsArray<Double> requiredDoubleFrozenArrayValue) {
-      setRequiredDoubleFrozenArrayValue( requiredDoubleFrozenArrayValue );
-      return this;
-    }
-  }
 }

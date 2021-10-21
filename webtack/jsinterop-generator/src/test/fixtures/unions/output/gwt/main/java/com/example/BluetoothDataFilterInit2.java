@@ -20,79 +20,105 @@ public interface BluetoothDataFilterInit2 {
   @JsOverlay
   @Nonnull
   static Builder dataPrefix(@Nonnull final BufferSource dataPrefix) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).dataPrefix( dataPrefix );
+    final Builder $bluetoothDataFilterInit2 = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $bluetoothDataFilterInit2.setDataPrefix( dataPrefix );
+    return Js.uncheckedCast( $bluetoothDataFilterInit2 );
   }
 
   @JsOverlay
   @Nonnull
   static Builder dataPrefix(@Nonnull final ArrayBufferView dataPrefix) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).dataPrefix( dataPrefix );
+    final Builder $bluetoothDataFilterInit2 = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $bluetoothDataFilterInit2.setDataPrefix( dataPrefix );
+    return Js.uncheckedCast( $bluetoothDataFilterInit2 );
   }
 
   @JsOverlay
   @Nonnull
   static Builder dataPrefix(@Nonnull final Int8Array dataPrefix) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).dataPrefix( dataPrefix );
+    final Builder $bluetoothDataFilterInit2 = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $bluetoothDataFilterInit2.setDataPrefix( dataPrefix );
+    return Js.uncheckedCast( $bluetoothDataFilterInit2 );
   }
 
   @JsOverlay
   @Nonnull
   static Builder dataPrefix(@Nonnull final Int16Array dataPrefix) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).dataPrefix( dataPrefix );
+    final Builder $bluetoothDataFilterInit2 = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $bluetoothDataFilterInit2.setDataPrefix( dataPrefix );
+    return Js.uncheckedCast( $bluetoothDataFilterInit2 );
   }
 
   @JsOverlay
   @Nonnull
   static Builder dataPrefix(@Nonnull final Int32Array dataPrefix) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).dataPrefix( dataPrefix );
+    final Builder $bluetoothDataFilterInit2 = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $bluetoothDataFilterInit2.setDataPrefix( dataPrefix );
+    return Js.uncheckedCast( $bluetoothDataFilterInit2 );
   }
 
   @JsOverlay
   @Nonnull
   static Builder dataPrefix(@Nonnull final Uint8Array dataPrefix) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).dataPrefix( dataPrefix );
+    final Builder $bluetoothDataFilterInit2 = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $bluetoothDataFilterInit2.setDataPrefix( dataPrefix );
+    return Js.uncheckedCast( $bluetoothDataFilterInit2 );
   }
 
   @JsOverlay
   @Nonnull
   static Builder dataPrefix(@Nonnull final Uint16Array dataPrefix) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).dataPrefix( dataPrefix );
+    final Builder $bluetoothDataFilterInit2 = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $bluetoothDataFilterInit2.setDataPrefix( dataPrefix );
+    return Js.uncheckedCast( $bluetoothDataFilterInit2 );
   }
 
   @JsOverlay
   @Nonnull
   static Builder dataPrefix(@Nonnull final Uint32Array dataPrefix) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).dataPrefix( dataPrefix );
+    final Builder $bluetoothDataFilterInit2 = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $bluetoothDataFilterInit2.setDataPrefix( dataPrefix );
+    return Js.uncheckedCast( $bluetoothDataFilterInit2 );
   }
 
   @JsOverlay
   @Nonnull
   static Builder dataPrefix(@Nonnull final Uint8ClampedArray dataPrefix) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).dataPrefix( dataPrefix );
+    final Builder $bluetoothDataFilterInit2 = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $bluetoothDataFilterInit2.setDataPrefix( dataPrefix );
+    return Js.uncheckedCast( $bluetoothDataFilterInit2 );
   }
 
   @JsOverlay
   @Nonnull
   static Builder dataPrefix(@Nonnull final Float32Array dataPrefix) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).dataPrefix( dataPrefix );
+    final Builder $bluetoothDataFilterInit2 = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $bluetoothDataFilterInit2.setDataPrefix( dataPrefix );
+    return Js.uncheckedCast( $bluetoothDataFilterInit2 );
   }
 
   @JsOverlay
   @Nonnull
   static Builder dataPrefix(@Nonnull final Float64Array dataPrefix) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).dataPrefix( dataPrefix );
+    final Builder $bluetoothDataFilterInit2 = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $bluetoothDataFilterInit2.setDataPrefix( dataPrefix );
+    return Js.uncheckedCast( $bluetoothDataFilterInit2 );
   }
 
   @JsOverlay
   @Nonnull
   static Builder dataPrefix(@Nonnull final DataView dataPrefix) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).dataPrefix( dataPrefix );
+    final Builder $bluetoothDataFilterInit2 = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $bluetoothDataFilterInit2.setDataPrefix( dataPrefix );
+    return Js.uncheckedCast( $bluetoothDataFilterInit2 );
   }
 
   @JsOverlay
   @Nonnull
   static Builder dataPrefix(@Nonnull final ArrayBuffer dataPrefix) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).dataPrefix( dataPrefix );
+    final Builder $bluetoothDataFilterInit2 = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $bluetoothDataFilterInit2.setDataPrefix( dataPrefix );
+    return Js.uncheckedCast( $bluetoothDataFilterInit2 );
   }
 
   @JsProperty(
@@ -238,97 +264,6 @@ public interface BluetoothDataFilterInit2 {
       name = "Object"
   )
   interface Builder extends BluetoothDataFilterInit2 {
-    @JsOverlay
-    @Nonnull
-    default Builder dataPrefix(@Nonnull final BufferSource dataPrefix) {
-      setDataPrefix( dataPrefix );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder dataPrefix(@Nonnull final ArrayBufferView dataPrefix) {
-      setDataPrefix( dataPrefix );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder dataPrefix(@Nonnull final Int8Array dataPrefix) {
-      setDataPrefix( dataPrefix );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder dataPrefix(@Nonnull final Int16Array dataPrefix) {
-      setDataPrefix( dataPrefix );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder dataPrefix(@Nonnull final Int32Array dataPrefix) {
-      setDataPrefix( dataPrefix );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder dataPrefix(@Nonnull final Uint8Array dataPrefix) {
-      setDataPrefix( dataPrefix );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder dataPrefix(@Nonnull final Uint16Array dataPrefix) {
-      setDataPrefix( dataPrefix );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder dataPrefix(@Nonnull final Uint32Array dataPrefix) {
-      setDataPrefix( dataPrefix );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder dataPrefix(@Nonnull final Uint8ClampedArray dataPrefix) {
-      setDataPrefix( dataPrefix );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder dataPrefix(@Nonnull final Float32Array dataPrefix) {
-      setDataPrefix( dataPrefix );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder dataPrefix(@Nonnull final Float64Array dataPrefix) {
-      setDataPrefix( dataPrefix );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder dataPrefix(@Nonnull final DataView dataPrefix) {
-      setDataPrefix( dataPrefix );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder dataPrefix(@Nonnull final ArrayBuffer dataPrefix) {
-      setDataPrefix( dataPrefix );
-      return this;
-    }
-
     @JsOverlay
     @Nonnull
     default Builder mask(@Nonnull final BufferSource mask) {

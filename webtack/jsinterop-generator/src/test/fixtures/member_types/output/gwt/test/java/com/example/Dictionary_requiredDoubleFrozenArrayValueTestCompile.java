@@ -6,7 +6,7 @@ import javax.annotation.Generated;
 public final class Dictionary_requiredDoubleFrozenArrayValueTestCompile {
   static Dictionary_requiredDoubleFrozenArrayValue $typeReference$;
 
-  public static Dictionary_requiredDoubleFrozenArrayValue.Builder requiredDoubleFrozenArrayValue(
+  public static Dictionary_requiredDoubleFrozenArrayValue requiredDoubleFrozenArrayValue(
       final JsArray<Double> requiredDoubleFrozenArrayValue) {
     return Dictionary_requiredDoubleFrozenArrayValue.requiredDoubleFrozenArrayValue( requiredDoubleFrozenArrayValue );
   }
@@ -20,11 +20,5 @@ public final class Dictionary_requiredDoubleFrozenArrayValueTestCompile {
       final Dictionary_requiredDoubleFrozenArrayValue $instance,
       JsArray<Double> requiredDoubleFrozenArrayValue) {
     $instance.setRequiredDoubleFrozenArrayValue( requiredDoubleFrozenArrayValue );
-  }
-
-  public static Dictionary_requiredDoubleFrozenArrayValue.Builder requiredDoubleFrozenArrayValue(
-      final Dictionary_requiredDoubleFrozenArrayValue.Builder $instance,
-      final JsArray<Double> requiredDoubleFrozenArrayValue) {
-    return $instance.requiredDoubleFrozenArrayValue( requiredDoubleFrozenArrayValue );
   }
 }

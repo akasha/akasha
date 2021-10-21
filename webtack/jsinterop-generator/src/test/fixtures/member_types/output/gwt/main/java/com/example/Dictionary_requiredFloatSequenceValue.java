@@ -19,15 +19,20 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredFloatSequenceValue {
   @JsOverlay
   @Nonnull
-  static Builder requiredFloatSequenceValue(
+  static Dictionary_requiredFloatSequenceValue requiredFloatSequenceValue(
       @Nonnull final JsArray<Double> requiredFloatSequenceValue) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredFloatSequenceValue( requiredFloatSequenceValue );
+    final Dictionary_requiredFloatSequenceValue $dictionaryRequiredFloatSequenceValue = Js.<Dictionary_requiredFloatSequenceValue>uncheckedCast( JsPropertyMap.of() );
+    $dictionaryRequiredFloatSequenceValue.setRequiredFloatSequenceValue( requiredFloatSequenceValue );
+    return Js.uncheckedCast( $dictionaryRequiredFloatSequenceValue );
   }
 
   @JsOverlay
   @Nonnull
-  static Builder requiredFloatSequenceValue(@Nonnull final double... requiredFloatSequenceValue) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredFloatSequenceValue( requiredFloatSequenceValue );
+  static Dictionary_requiredFloatSequenceValue requiredFloatSequenceValue(
+      @Nonnull final double... requiredFloatSequenceValue) {
+    final Dictionary_requiredFloatSequenceValue $dictionaryRequiredFloatSequenceValue = Js.<Dictionary_requiredFloatSequenceValue>uncheckedCast( JsPropertyMap.of() );
+    $dictionaryRequiredFloatSequenceValue.setRequiredFloatSequenceValue( requiredFloatSequenceValue );
+    return Js.uncheckedCast( $dictionaryRequiredFloatSequenceValue );
   }
 
   @JsProperty(
@@ -42,28 +47,5 @@ public interface Dictionary_requiredFloatSequenceValue {
   @JsOverlay
   default void setRequiredFloatSequenceValue(@Nonnull final double... requiredFloatSequenceValue) {
     setRequiredFloatSequenceValue( Js.<JsArray<Double>>uncheckedCast( requiredFloatSequenceValue ) );
-  }
-
-  @JsType(
-      isNative = true,
-      namespace = JsPackage.GLOBAL,
-      name = "Object"
-  )
-  interface Builder extends Dictionary_requiredFloatSequenceValue {
-    @JsOverlay
-    @Nonnull
-    default Builder requiredFloatSequenceValue(
-        @Nonnull final JsArray<Double> requiredFloatSequenceValue) {
-      setRequiredFloatSequenceValue( requiredFloatSequenceValue );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder requiredFloatSequenceValue(
-        @Nonnull final double... requiredFloatSequenceValue) {
-      setRequiredFloatSequenceValue( requiredFloatSequenceValue );
-      return this;
-    }
   }
 }

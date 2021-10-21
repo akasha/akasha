@@ -18,8 +18,11 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredUnrestrictedDoubleValue {
   @JsOverlay
   @Nonnull
-  static Builder requiredUnrestrictedDoubleValue(final double requiredUnrestrictedDoubleValue) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredUnrestrictedDoubleValue( requiredUnrestrictedDoubleValue );
+  static Dictionary_requiredUnrestrictedDoubleValue requiredUnrestrictedDoubleValue(
+      final double requiredUnrestrictedDoubleValue) {
+    final Dictionary_requiredUnrestrictedDoubleValue $dictionaryRequiredUnrestrictedDoubleValue = Js.<Dictionary_requiredUnrestrictedDoubleValue>uncheckedCast( JsPropertyMap.of() );
+    $dictionaryRequiredUnrestrictedDoubleValue.setRequiredUnrestrictedDoubleValue( requiredUnrestrictedDoubleValue );
+    return Js.uncheckedCast( $dictionaryRequiredUnrestrictedDoubleValue );
   }
 
   @JsProperty(
@@ -29,18 +32,4 @@ public interface Dictionary_requiredUnrestrictedDoubleValue {
 
   @JsProperty
   void setRequiredUnrestrictedDoubleValue(double requiredUnrestrictedDoubleValue);
-
-  @JsType(
-      isNative = true,
-      namespace = JsPackage.GLOBAL,
-      name = "Dictionary_requiredUnrestrictedDoubleValue"
-  )
-  interface Builder extends Dictionary_requiredUnrestrictedDoubleValue {
-    @JsOverlay
-    @Nonnull
-    default Builder requiredUnrestrictedDoubleValue(final double requiredUnrestrictedDoubleValue) {
-      setRequiredUnrestrictedDoubleValue( requiredUnrestrictedDoubleValue );
-      return this;
-    }
-  }
 }

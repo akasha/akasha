@@ -8,8 +8,8 @@ public final class EventInitTestCompile {
   static EventInit $typeReference$;
 
   @Deprecated
-  public static EventInit.Builder create() {
-    return EventInit.create();
+  public static EventInit.Builder of() {
+    return EventInit.of();
   }
 
   @Deprecated

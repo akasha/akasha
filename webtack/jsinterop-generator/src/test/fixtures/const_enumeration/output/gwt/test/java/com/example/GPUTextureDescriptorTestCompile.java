@@ -6,7 +6,7 @@ import javax.annotation.Generated;
 public final class GPUTextureDescriptorTestCompile {
   static GPUTextureDescriptor $typeReference$;
 
-  public static GPUTextureDescriptor.Builder usage(final int usage) {
+  public static GPUTextureDescriptor usage(final int usage) {
     return GPUTextureDescriptor.usage( usage );
   }
 
@@ -16,10 +16,5 @@ public final class GPUTextureDescriptorTestCompile {
 
   public static void setUsage(final GPUTextureDescriptor $instance, int usage) {
     $instance.setUsage( usage );
-  }
-
-  public static GPUTextureDescriptor.Builder usage(final GPUTextureDescriptor.Builder $instance,
-      final int usage) {
-    return $instance.usage( usage );
   }
 }

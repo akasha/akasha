@@ -11,18 +11,9 @@ import jsinterop.base.Any;
 public final class Dictionary_requiredAnySequenceValueTestCompile {
   static Dictionary_requiredAnySequenceValue $typeReference$;
 
-  public static Dictionary_requiredAnySequenceValue.Builder create(
-      final JsIterable<Any> requiredAnyIterableValue,
-      final JsIteratorIterable<Any> requiredAnyIteratorIterableValue,
-      final JsIterator<Any> requiredAnyIteratorValue, final JsArray<Any> requiredAnySequenceValue) {
-    return Dictionary_requiredAnySequenceValue.create( requiredAnyIterableValue, requiredAnyIteratorIterableValue, requiredAnyIteratorValue, requiredAnySequenceValue );
-  }
-
-  public static Dictionary_requiredAnySequenceValue.Builder create(
-      final JsIterable<Any> requiredAnyIterableValue,
-      final JsIteratorIterable<Any> requiredAnyIteratorIterableValue,
-      final JsIterator<Any> requiredAnyIteratorValue, final Any[] requiredAnySequenceValue) {
-    return Dictionary_requiredAnySequenceValue.create( requiredAnyIterableValue, requiredAnyIteratorIterableValue, requiredAnyIteratorValue, requiredAnySequenceValue );
+  public static Dictionary_requiredAnySequenceValue.Step1 requiredAnyIterableValue(
+      final JsIterable<Any> requiredAnyIterableValue) {
+    return Dictionary_requiredAnySequenceValue.requiredAnyIterableValue( requiredAnyIterableValue );
   }
 
   public static JsIterable<Any> requiredAnyIterableValue(
@@ -71,35 +62,5 @@ public final class Dictionary_requiredAnySequenceValueTestCompile {
   public static void setRequiredAnySequenceValue(
       final Dictionary_requiredAnySequenceValue $instance, final Any[] requiredAnySequenceValue) {
     $instance.setRequiredAnySequenceValue( requiredAnySequenceValue );
-  }
-
-  public static Dictionary_requiredAnySequenceValue.Builder requiredAnyIterableValue(
-      final Dictionary_requiredAnySequenceValue.Builder $instance,
-      final JsIterable<Any> requiredAnyIterableValue) {
-    return $instance.requiredAnyIterableValue( requiredAnyIterableValue );
-  }
-
-  public static Dictionary_requiredAnySequenceValue.Builder requiredAnyIteratorIterableValue(
-      final Dictionary_requiredAnySequenceValue.Builder $instance,
-      final JsIteratorIterable<Any> requiredAnyIteratorIterableValue) {
-    return $instance.requiredAnyIteratorIterableValue( requiredAnyIteratorIterableValue );
-  }
-
-  public static Dictionary_requiredAnySequenceValue.Builder requiredAnyIteratorValue(
-      final Dictionary_requiredAnySequenceValue.Builder $instance,
-      final JsIterator<Any> requiredAnyIteratorValue) {
-    return $instance.requiredAnyIteratorValue( requiredAnyIteratorValue );
-  }
-
-  public static Dictionary_requiredAnySequenceValue.Builder requiredAnySequenceValue(
-      final Dictionary_requiredAnySequenceValue.Builder $instance,
-      final JsArray<Any> requiredAnySequenceValue) {
-    return $instance.requiredAnySequenceValue( requiredAnySequenceValue );
-  }
-
-  public static Dictionary_requiredAnySequenceValue.Builder requiredAnySequenceValue(
-      final Dictionary_requiredAnySequenceValue.Builder $instance,
-      final Any[] requiredAnySequenceValue) {
-    return $instance.requiredAnySequenceValue( requiredAnySequenceValue );
   }
 }

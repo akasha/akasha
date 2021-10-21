@@ -22,8 +22,10 @@ import jsinterop.base.JsPropertyMap;
 public interface TxAuthGenericArg {
   @JsOverlay
   @Nonnull
-  static Builder contentType(@Nonnull final String contentType) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).contentType( contentType );
+  static TxAuthGenericArg contentType(@Nonnull final String contentType) {
+    final TxAuthGenericArg $txAuthGenericArg = Js.<TxAuthGenericArg>uncheckedCast( JsPropertyMap.of() );
+    $txAuthGenericArg.setContentType( contentType );
+    return Js.uncheckedCast( $txAuthGenericArg );
   }
 
   @JsProperty(
@@ -34,21 +36,4 @@ public interface TxAuthGenericArg {
 
   @JsProperty
   void setContentType(@JsNonNull String contentType);
-
-  /**
-   * This tests that lowercase name converted to uppercase when converted into java.
-   */
-  @JsType(
-      isNative = true,
-      namespace = JsPackage.GLOBAL,
-      name = "txAuthGenericArg"
-  )
-  interface Builder extends TxAuthGenericArg {
-    @JsOverlay
-    @Nonnull
-    default Builder contentType(@Nonnull final String contentType) {
-      setContentType( contentType );
-      return this;
-    }
-  }
 }

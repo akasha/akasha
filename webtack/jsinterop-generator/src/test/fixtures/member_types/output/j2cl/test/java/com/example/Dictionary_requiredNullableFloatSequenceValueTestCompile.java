@@ -6,12 +6,12 @@ import javax.annotation.Generated;
 public final class Dictionary_requiredNullableFloatSequenceValueTestCompile {
   static Dictionary_requiredNullableFloatSequenceValue $typeReference$;
 
-  public static Dictionary_requiredNullableFloatSequenceValue.Builder requiredNullableFloatSequenceValue(
+  public static Dictionary_requiredNullableFloatSequenceValue requiredNullableFloatSequenceValue(
       final JsArray<Double> requiredNullableFloatSequenceValue) {
     return Dictionary_requiredNullableFloatSequenceValue.requiredNullableFloatSequenceValue( requiredNullableFloatSequenceValue );
   }
 
-  public static Dictionary_requiredNullableFloatSequenceValue.Builder requiredNullableFloatSequenceValue(
+  public static Dictionary_requiredNullableFloatSequenceValue requiredNullableFloatSequenceValue(
       final double[] requiredNullableFloatSequenceValue) {
     return Dictionary_requiredNullableFloatSequenceValue.requiredNullableFloatSequenceValue( requiredNullableFloatSequenceValue );
   }
@@ -31,17 +31,5 @@ public final class Dictionary_requiredNullableFloatSequenceValueTestCompile {
       final Dictionary_requiredNullableFloatSequenceValue $instance,
       final double[] requiredNullableFloatSequenceValue) {
     $instance.setRequiredNullableFloatSequenceValue( requiredNullableFloatSequenceValue );
-  }
-
-  public static Dictionary_requiredNullableFloatSequenceValue.Builder requiredNullableFloatSequenceValue(
-      final Dictionary_requiredNullableFloatSequenceValue.Builder $instance,
-      final JsArray<Double> requiredNullableFloatSequenceValue) {
-    return $instance.requiredNullableFloatSequenceValue( requiredNullableFloatSequenceValue );
-  }
-
-  public static Dictionary_requiredNullableFloatSequenceValue.Builder requiredNullableFloatSequenceValue(
-      final Dictionary_requiredNullableFloatSequenceValue.Builder $instance,
-      final double[] requiredNullableFloatSequenceValue) {
-    return $instance.requiredNullableFloatSequenceValue( requiredNullableFloatSequenceValue );
   }
 }

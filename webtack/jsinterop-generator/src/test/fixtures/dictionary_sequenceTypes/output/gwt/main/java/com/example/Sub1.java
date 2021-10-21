@@ -7,7 +7,6 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-import jsinterop.base.Any;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
 
@@ -20,7 +19,7 @@ import jsinterop.base.JsPropertyMap;
 public interface Sub1 extends Base {
   @JsOverlay
   @Nonnull
-  static Builder create() {
+  static Builder of() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -54,20 +53,6 @@ public interface Sub1 extends Base {
     @Nonnull
     default Builder others(@Nonnull final Base... others) {
       setOthers( others );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder optionalFeatures(@Nonnull final JsArray<Any> optionalFeatures) {
-      setOptionalFeatures( optionalFeatures );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder optionalFeatures(@Nonnull final Any... optionalFeatures) {
-      setOptionalFeatures( optionalFeatures );
       return this;
     }
   }

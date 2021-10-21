@@ -20,7 +20,7 @@ import jsinterop.base.JsPropertyMap;
 public interface Sub2 extends Sub1 {
   @JsOverlay
   @Nonnull
-  static Builder create() {
+  static Builder of() {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
@@ -54,20 +54,6 @@ public interface Sub2 extends Sub1 {
     @Nonnull
     default Builder sessions(@Nonnull final XRSessionInit... sessions) {
       setSessions( sessions );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder others(@Nonnull final JsArray<Base> others) {
-      setOthers( others );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder others(@Nonnull final Base... others) {
-      setOthers( others );
       return this;
     }
 

@@ -21,16 +21,20 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredNullableBooleanSequenceValue {
   @JsOverlay
   @Nonnull
-  static Builder requiredNullableBooleanSequenceValue(
+  static Dictionary_requiredNullableBooleanSequenceValue requiredNullableBooleanSequenceValue(
       @Nullable final JsArray<Boolean> requiredNullableBooleanSequenceValue) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredNullableBooleanSequenceValue( requiredNullableBooleanSequenceValue );
+    final Dictionary_requiredNullableBooleanSequenceValue $dictionaryRequiredNullableBooleanSequenceValue = Js.<Dictionary_requiredNullableBooleanSequenceValue>uncheckedCast( JsPropertyMap.of() );
+    $dictionaryRequiredNullableBooleanSequenceValue.setRequiredNullableBooleanSequenceValue( requiredNullableBooleanSequenceValue );
+    return Js.uncheckedCast( $dictionaryRequiredNullableBooleanSequenceValue );
   }
 
   @JsOverlay
   @Nonnull
-  static Builder requiredNullableBooleanSequenceValue(
+  static Dictionary_requiredNullableBooleanSequenceValue requiredNullableBooleanSequenceValue(
       @Nullable final Boolean... requiredNullableBooleanSequenceValue) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredNullableBooleanSequenceValue( requiredNullableBooleanSequenceValue );
+    final Dictionary_requiredNullableBooleanSequenceValue $dictionaryRequiredNullableBooleanSequenceValue = Js.<Dictionary_requiredNullableBooleanSequenceValue>uncheckedCast( JsPropertyMap.of() );
+    $dictionaryRequiredNullableBooleanSequenceValue.setRequiredNullableBooleanSequenceValue( requiredNullableBooleanSequenceValue );
+    return Js.uncheckedCast( $dictionaryRequiredNullableBooleanSequenceValue );
   }
 
   @JsProperty(
@@ -47,28 +51,5 @@ public interface Dictionary_requiredNullableBooleanSequenceValue {
   default void setRequiredNullableBooleanSequenceValue(
       @Nullable final Boolean... requiredNullableBooleanSequenceValue) {
     setRequiredNullableBooleanSequenceValue( Js.<JsArray<Boolean>>uncheckedCast( requiredNullableBooleanSequenceValue ) );
-  }
-
-  @JsType(
-      isNative = true,
-      namespace = JsPackage.GLOBAL,
-      name = "Object"
-  )
-  interface Builder extends Dictionary_requiredNullableBooleanSequenceValue {
-    @JsOverlay
-    @Nonnull
-    default Builder requiredNullableBooleanSequenceValue(
-        @Nullable final JsArray<Boolean> requiredNullableBooleanSequenceValue) {
-      setRequiredNullableBooleanSequenceValue( requiredNullableBooleanSequenceValue );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder requiredNullableBooleanSequenceValue(
-        @Nullable final Boolean... requiredNullableBooleanSequenceValue) {
-      setRequiredNullableBooleanSequenceValue( requiredNullableBooleanSequenceValue );
-      return this;
-    }
   }
 }

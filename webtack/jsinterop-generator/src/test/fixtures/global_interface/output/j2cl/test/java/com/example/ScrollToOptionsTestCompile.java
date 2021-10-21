@@ -6,8 +6,8 @@ import javax.annotation.Generated;
 public final class ScrollToOptionsTestCompile {
   static ScrollToOptions $typeReference$;
 
-  public static ScrollToOptions.Builder create() {
-    return ScrollToOptions.create();
+  public static ScrollToOptions.Builder of() {
+    return ScrollToOptions.of();
   }
 
   public static double left(final ScrollToOptions $instance) {

@@ -24,7 +24,9 @@ public interface PromiseRejectionEventInit extends EventInit {
   @JsOverlay
   @Nonnull
   static Builder promise(@Nonnull final JsPromise<Any> promise) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).promise( promise );
+    final Builder $promiseRejectionEventInit = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
+    $promiseRejectionEventInit.setPromise( promise );
+    return Js.uncheckedCast( $promiseRejectionEventInit );
   }
 
   @JsProperty(
@@ -53,36 +55,8 @@ public interface PromiseRejectionEventInit extends EventInit {
   interface Builder extends PromiseRejectionEventInit {
     @JsOverlay
     @Nonnull
-    default Builder promise(@Nonnull final JsPromise<Any> promise) {
-      setPromise( promise );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
     default Builder reason(@DoNotAutobox @Nullable final Object reason) {
       setReason( reason );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder bubbles(final boolean bubbles) {
-      setBubbles( bubbles );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder cancelable(final boolean cancelable) {
-      setCancelable( cancelable );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder composed(final boolean composed) {
-      setComposed( composed );
       return this;
     }
   }

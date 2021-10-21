@@ -6,8 +6,8 @@ import javax.annotation.Generated;
 public final class TransitionEventInitTestCompile {
   static TransitionEventInit $typeReference$;
 
-  public static TransitionEventInit.Builder create() {
-    return TransitionEventInit.create();
+  public static TransitionEventInit.Builder of() {
+    return TransitionEventInit.of();
   }
 
   public static String propertyName3(final TransitionEventInit $instance) {
@@ -34,20 +34,5 @@ public final class TransitionEventInitTestCompile {
   public static TransitionEventInit.Builder pseudoElement(
       final TransitionEventInit.Builder $instance, final String pseudoElement) {
     return $instance.pseudoElement( pseudoElement );
-  }
-
-  public static TransitionEventInit.Builder elapsedTime(final TransitionEventInit.Builder $instance,
-      final double elapsedTime) {
-    return $instance.elapsedTime( elapsedTime );
-  }
-
-  public static TransitionEventInit.Builder propertyName(
-      final TransitionEventInit.Builder $instance, final String propertyName) {
-    return $instance.propertyName( propertyName );
-  }
-
-  public static TransitionEventInit.Builder propertyName2(
-      final TransitionEventInit.Builder $instance, final String propertyName2) {
-    return $instance.propertyName2( propertyName2 );
   }
 }

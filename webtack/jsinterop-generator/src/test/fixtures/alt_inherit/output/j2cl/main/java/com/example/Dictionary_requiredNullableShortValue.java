@@ -20,8 +20,11 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredNullableShortValue {
   @JsOverlay
   @Nonnull
-  static Builder requiredNullableShortValue(@Nullable final Double requiredNullableShortValue) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredNullableShortValue( requiredNullableShortValue );
+  static Dictionary_requiredNullableShortValue requiredNullableShortValue(
+      @Nullable final Double requiredNullableShortValue) {
+    final Dictionary_requiredNullableShortValue $dictionaryRequiredNullableShortValue = Js.<Dictionary_requiredNullableShortValue>uncheckedCast( JsPropertyMap.of() );
+    $dictionaryRequiredNullableShortValue.setRequiredNullableShortValue( requiredNullableShortValue );
+    return Js.uncheckedCast( $dictionaryRequiredNullableShortValue );
   }
 
   @JsProperty(
@@ -32,18 +35,4 @@ public interface Dictionary_requiredNullableShortValue {
 
   @JsProperty
   void setRequiredNullableShortValue(@JsNullable Double requiredNullableShortValue);
-
-  @JsType(
-      isNative = true,
-      namespace = JsPackage.GLOBAL,
-      name = "Dictionary_requiredNullableShortValue"
-  )
-  interface Builder extends Dictionary_requiredNullableShortValue {
-    @JsOverlay
-    @Nonnull
-    default Builder requiredNullableShortValue(@Nullable final Double requiredNullableShortValue) {
-      setRequiredNullableShortValue( requiredNullableShortValue );
-      return this;
-    }
-  }
 }

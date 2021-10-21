@@ -6,9 +6,8 @@ import javax.annotation.Generated;
 public final class OtherPushPermissionDescriptorTestCompile {
   static OtherPushPermissionDescriptor $typeReference$;
 
-  public static OtherPushPermissionDescriptor.Builder create(final String name,
-      final boolean safe) {
-    return OtherPushPermissionDescriptor.create( name, safe );
+  public static OtherPushPermissionDescriptor.Step1 name(final String name) {
+    return OtherPushPermissionDescriptor.name( name );
   }
 
   public static boolean safe(final OtherPushPermissionDescriptor $instance) {
@@ -17,20 +16,5 @@ public final class OtherPushPermissionDescriptorTestCompile {
 
   public static void setSafe(final OtherPushPermissionDescriptor $instance, boolean safe) {
     $instance.setSafe( safe );
-  }
-
-  public static OtherPushPermissionDescriptor.Builder safe(
-      final OtherPushPermissionDescriptor.Builder $instance, final boolean safe) {
-    return $instance.safe( safe );
-  }
-
-  public static OtherPushPermissionDescriptor.Builder userVisibleOnly(
-      final OtherPushPermissionDescriptor.Builder $instance, final boolean userVisibleOnly) {
-    return $instance.userVisibleOnly( userVisibleOnly );
-  }
-
-  public static OtherPushPermissionDescriptor.Builder name(
-      final OtherPushPermissionDescriptor.Builder $instance, final String name) {
-    return $instance.name( name );
   }
 }

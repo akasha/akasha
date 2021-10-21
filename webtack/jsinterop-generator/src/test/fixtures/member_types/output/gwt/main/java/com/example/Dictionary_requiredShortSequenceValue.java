@@ -19,15 +19,20 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredShortSequenceValue {
   @JsOverlay
   @Nonnull
-  static Builder requiredShortSequenceValue(
+  static Dictionary_requiredShortSequenceValue requiredShortSequenceValue(
       @Nonnull final JsArray<Double> requiredShortSequenceValue) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredShortSequenceValue( requiredShortSequenceValue );
+    final Dictionary_requiredShortSequenceValue $dictionaryRequiredShortSequenceValue = Js.<Dictionary_requiredShortSequenceValue>uncheckedCast( JsPropertyMap.of() );
+    $dictionaryRequiredShortSequenceValue.setRequiredShortSequenceValue( requiredShortSequenceValue );
+    return Js.uncheckedCast( $dictionaryRequiredShortSequenceValue );
   }
 
   @JsOverlay
   @Nonnull
-  static Builder requiredShortSequenceValue(@Nonnull final double... requiredShortSequenceValue) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredShortSequenceValue( requiredShortSequenceValue );
+  static Dictionary_requiredShortSequenceValue requiredShortSequenceValue(
+      @Nonnull final double... requiredShortSequenceValue) {
+    final Dictionary_requiredShortSequenceValue $dictionaryRequiredShortSequenceValue = Js.<Dictionary_requiredShortSequenceValue>uncheckedCast( JsPropertyMap.of() );
+    $dictionaryRequiredShortSequenceValue.setRequiredShortSequenceValue( requiredShortSequenceValue );
+    return Js.uncheckedCast( $dictionaryRequiredShortSequenceValue );
   }
 
   @JsProperty(
@@ -42,28 +47,5 @@ public interface Dictionary_requiredShortSequenceValue {
   @JsOverlay
   default void setRequiredShortSequenceValue(@Nonnull final double... requiredShortSequenceValue) {
     setRequiredShortSequenceValue( Js.<JsArray<Double>>uncheckedCast( requiredShortSequenceValue ) );
-  }
-
-  @JsType(
-      isNative = true,
-      namespace = JsPackage.GLOBAL,
-      name = "Object"
-  )
-  interface Builder extends Dictionary_requiredShortSequenceValue {
-    @JsOverlay
-    @Nonnull
-    default Builder requiredShortSequenceValue(
-        @Nonnull final JsArray<Double> requiredShortSequenceValue) {
-      setRequiredShortSequenceValue( requiredShortSequenceValue );
-      return this;
-    }
-
-    @JsOverlay
-    @Nonnull
-    default Builder requiredShortSequenceValue(
-        @Nonnull final double... requiredShortSequenceValue) {
-      setRequiredShortSequenceValue( requiredShortSequenceValue );
-      return this;
-    }
   }
 }

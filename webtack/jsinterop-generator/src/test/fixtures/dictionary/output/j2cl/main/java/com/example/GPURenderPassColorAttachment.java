@@ -17,15 +17,7 @@ import jsinterop.base.JsPropertyMap;
 public interface GPURenderPassColorAttachment {
   @JsOverlay
   @Nonnull
-  static Builder create() {
+  static GPURenderPassColorAttachment of() {
     return Js.uncheckedCast( JsPropertyMap.of() );
-  }
-
-  @JsType(
-      isNative = true,
-      namespace = JsPackage.GLOBAL,
-      name = "GPURenderPassColorAttachment"
-  )
-  interface Builder extends GPURenderPassColorAttachment {
   }
 }

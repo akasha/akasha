@@ -6,8 +6,8 @@ import javax.annotation.Generated;
 public final class PasswordCredentialDataTestCompile {
   static PasswordCredentialData $typeReference$;
 
-  public static PasswordCredentialData.Builder create() {
-    return PasswordCredentialData.create();
+  public static PasswordCredentialData.Builder of() {
+    return PasswordCredentialData.of();
   }
 
   public static String iconURL(final PasswordCredentialData $instance) {

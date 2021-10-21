@@ -6,7 +6,7 @@ import javax.annotation.Generated;
 public final class PermissionDescriptorTestCompile {
   static PermissionDescriptor $typeReference$;
 
-  public static PermissionDescriptor.Builder name(final String name) {
+  public static PermissionDescriptor name(final String name) {
     return PermissionDescriptor.name( name );
   }
 
@@ -16,10 +16,5 @@ public final class PermissionDescriptorTestCompile {
 
   public static void setName(final PermissionDescriptor $instance, String name) {
     $instance.setName( name );
-  }
-
-  public static PermissionDescriptor.Builder name(final PermissionDescriptor.Builder $instance,
-      final String name) {
-    return $instance.name( name );
   }
 }

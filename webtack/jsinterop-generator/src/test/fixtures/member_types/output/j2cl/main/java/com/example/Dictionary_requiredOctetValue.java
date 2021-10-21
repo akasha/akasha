@@ -18,8 +18,10 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredOctetValue {
   @JsOverlay
   @Nonnull
-  static Builder requiredOctetValue(final short requiredOctetValue) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredOctetValue( requiredOctetValue );
+  static Dictionary_requiredOctetValue requiredOctetValue(final short requiredOctetValue) {
+    final Dictionary_requiredOctetValue $dictionaryRequiredOctetValue = Js.<Dictionary_requiredOctetValue>uncheckedCast( JsPropertyMap.of() );
+    $dictionaryRequiredOctetValue.setRequiredOctetValue( requiredOctetValue );
+    return Js.uncheckedCast( $dictionaryRequiredOctetValue );
   }
 
   @JsProperty(
@@ -29,18 +31,4 @@ public interface Dictionary_requiredOctetValue {
 
   @JsProperty
   void setRequiredOctetValue(short requiredOctetValue);
-
-  @JsType(
-      isNative = true,
-      namespace = JsPackage.GLOBAL,
-      name = "Dictionary_requiredOctetValue"
-  )
-  interface Builder extends Dictionary_requiredOctetValue {
-    @JsOverlay
-    @Nonnull
-    default Builder requiredOctetValue(final short requiredOctetValue) {
-      setRequiredOctetValue( requiredOctetValue );
-      return this;
-    }
-  }
 }

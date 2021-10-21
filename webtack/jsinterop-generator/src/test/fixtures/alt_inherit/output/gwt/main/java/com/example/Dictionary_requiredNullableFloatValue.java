@@ -20,8 +20,11 @@ import jsinterop.base.JsPropertyMap;
 public interface Dictionary_requiredNullableFloatValue {
   @JsOverlay
   @Nonnull
-  static Builder requiredNullableFloatValue(@Nullable final Double requiredNullableFloatValue) {
-    return Js.<Builder>uncheckedCast( JsPropertyMap.of() ).requiredNullableFloatValue( requiredNullableFloatValue );
+  static Dictionary_requiredNullableFloatValue requiredNullableFloatValue(
+      @Nullable final Double requiredNullableFloatValue) {
+    final Dictionary_requiredNullableFloatValue $dictionaryRequiredNullableFloatValue = Js.<Dictionary_requiredNullableFloatValue>uncheckedCast( JsPropertyMap.of() );
+    $dictionaryRequiredNullableFloatValue.setRequiredNullableFloatValue( requiredNullableFloatValue );
+    return Js.uncheckedCast( $dictionaryRequiredNullableFloatValue );
   }
 
   @JsProperty(
@@ -32,18 +35,4 @@ public interface Dictionary_requiredNullableFloatValue {
 
   @JsProperty
   void setRequiredNullableFloatValue(@JsNullable Double requiredNullableFloatValue);
-
-  @JsType(
-      isNative = true,
-      namespace = JsPackage.GLOBAL,
-      name = "Object"
-  )
-  interface Builder extends Dictionary_requiredNullableFloatValue {
-    @JsOverlay
-    @Nonnull
-    default Builder requiredNullableFloatValue(@Nullable final Double requiredNullableFloatValue) {
-      setRequiredNullableFloatValue( requiredNullableFloatValue );
-      return this;
-    }
-  }
 }
