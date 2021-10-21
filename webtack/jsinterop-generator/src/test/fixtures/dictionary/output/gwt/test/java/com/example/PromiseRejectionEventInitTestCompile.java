@@ -31,4 +31,19 @@ public final class PromiseRejectionEventInitTestCompile {
       final PromiseRejectionEventInit.Builder $instance, final Object reason) {
     return $instance.reason( reason );
   }
+
+  public static PromiseRejectionEventInit.Builder bubbles(
+      final PromiseRejectionEventInit.Builder $instance, final boolean bubbles) {
+    return $instance.bubbles( bubbles );
+  }
+
+  public static PromiseRejectionEventInit.Builder cancelable(
+      final PromiseRejectionEventInit.Builder $instance, final boolean cancelable) {
+    return $instance.cancelable( cancelable );
+  }
+
+  public static PromiseRejectionEventInit.Builder composed(
+      final PromiseRejectionEventInit.Builder $instance, final boolean composed) {
+    return $instance.composed( composed );
+  }
 }

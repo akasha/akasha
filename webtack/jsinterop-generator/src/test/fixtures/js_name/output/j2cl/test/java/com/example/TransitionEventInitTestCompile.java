@@ -22,4 +22,14 @@ public final class TransitionEventInitTestCompile {
       final TransitionEventInit.Builder $instance, final String pseudoElement) {
     return $instance.pseudoElement( pseudoElement );
   }
+
+  public static TransitionEventInit.Builder elapsedTime(final TransitionEventInit.Builder $instance,
+      final double elapsedTime) {
+    return $instance.elapsedTime( elapsedTime );
+  }
+
+  public static TransitionEventInit.Builder propertyName(
+      final TransitionEventInit.Builder $instance, final String propertyName) {
+    return $instance.propertyName( propertyName );
+  }
 }

@@ -17,4 +17,9 @@ public final class OtherPushPermissionDescriptorTestCompile {
   public static void setSafe(final OtherPushPermissionDescriptor $instance, boolean safe) {
     $instance.setSafe( safe );
   }
+
+  public static OtherPushPermissionDescriptor.Builder userVisibleOnly(
+      final OtherPushPermissionDescriptor.Builder $instance, final boolean userVisibleOnly) {
+    return $instance.userVisibleOnly( userVisibleOnly );
+  }
 }

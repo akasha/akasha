@@ -35,4 +35,9 @@ public final class AddEventListenerOptionsTestCompile {
       final AddEventListenerOptions.Builder $instance, final boolean passive) {
     return $instance.passive( passive );
   }
+
+  public static AddEventListenerOptions.Builder capture(
+      final AddEventListenerOptions.Builder $instance, final boolean capture) {
+    return $instance.capture( capture );
+  }
 }

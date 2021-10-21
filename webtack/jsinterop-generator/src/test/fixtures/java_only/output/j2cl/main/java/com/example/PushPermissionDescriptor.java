@@ -58,5 +58,19 @@ public interface PushPermissionDescriptor extends PermissionDescriptor {
       setUserVisibleOnly3( userVisibleOnly3 );
       return this;
     }
+
+    @JsOverlay
+    @Nonnull
+    default Builder userVisibleOnly1(final boolean userVisibleOnly1) {
+      setUserVisibleOnly1( userVisibleOnly1 );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder userVisibleOnly2(final boolean userVisibleOnly2) {
+      setUserVisibleOnly2( userVisibleOnly2 );
+      return this;
+    }
   }
 }

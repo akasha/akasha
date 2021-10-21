@@ -23,4 +23,14 @@ public final class PushPermissionDescriptorTestCompile {
       final PushPermissionDescriptor.Builder $instance, final boolean userVisibleOnly3) {
     return $instance.userVisibleOnly3( userVisibleOnly3 );
   }
+
+  public static PushPermissionDescriptor.Builder userVisibleOnly1(
+      final PushPermissionDescriptor.Builder $instance, final boolean userVisibleOnly1) {
+    return $instance.userVisibleOnly1( userVisibleOnly1 );
+  }
+
+  public static PushPermissionDescriptor.Builder userVisibleOnly2(
+      final PushPermissionDescriptor.Builder $instance, final boolean userVisibleOnly2) {
+    return $instance.userVisibleOnly2( userVisibleOnly2 );
+  }
 }

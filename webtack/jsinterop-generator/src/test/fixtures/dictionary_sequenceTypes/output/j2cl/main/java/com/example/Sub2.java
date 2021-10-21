@@ -59,6 +59,20 @@ public interface Sub2 extends Sub1 {
 
     @JsOverlay
     @Nonnull
+    default Builder others(@Nonnull final JsArray<Base> others) {
+      setOthers( others );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder others(@Nonnull final Base... others) {
+      setOthers( others );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
     default Builder optionalFeatures(@Nonnull final JsArray<Any> optionalFeatures) {
       setOptionalFeatures( optionalFeatures );
       return this;

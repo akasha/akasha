@@ -33,6 +33,14 @@ public final class Sub2TestCompile {
     return $instance.sessions( sessions );
   }
 
+  public static Sub2.Builder others(final Sub2.Builder $instance, final JsArray<Base> others) {
+    return $instance.others( others );
+  }
+
+  public static Sub2.Builder others(final Sub2.Builder $instance, final Base[] others) {
+    return $instance.others( others );
+  }
+
   public static Sub2.Builder optionalFeatures(final Sub2.Builder $instance,
       final JsArray<Any> optionalFeatures) {
     return $instance.optionalFeatures( optionalFeatures );

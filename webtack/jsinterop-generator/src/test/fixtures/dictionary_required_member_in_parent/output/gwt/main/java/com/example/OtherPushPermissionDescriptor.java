@@ -52,5 +52,11 @@ public interface OtherPushPermissionDescriptor extends PushPermissionDescriptor 
       name = "Object"
   )
   interface Builder extends OtherPushPermissionDescriptor {
+    @JsOverlay
+    @Nonnull
+    default Builder userVisibleOnly(final boolean userVisibleOnly) {
+      setUserVisibleOnly( userVisibleOnly );
+      return this;
+    }
   }
 }

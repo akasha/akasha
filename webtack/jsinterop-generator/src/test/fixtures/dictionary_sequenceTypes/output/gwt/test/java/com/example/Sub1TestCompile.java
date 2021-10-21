@@ -1,6 +1,7 @@
 package com.example;
 
 import javax.annotation.Generated;
+import jsinterop.base.Any;
 
 @Generated("org.realityforge.webtack")
 public final class Sub1TestCompile {
@@ -28,5 +29,15 @@ public final class Sub1TestCompile {
 
   public static Sub1.Builder others(final Sub1.Builder $instance, final Base[] others) {
     return $instance.others( others );
+  }
+
+  public static Sub1.Builder optionalFeatures(final Sub1.Builder $instance,
+      final JsArray<Any> optionalFeatures) {
+    return $instance.optionalFeatures( optionalFeatures );
+  }
+
+  public static Sub1.Builder optionalFeatures(final Sub1.Builder $instance,
+      final Any[] optionalFeatures) {
+    return $instance.optionalFeatures( optionalFeatures );
   }
 }

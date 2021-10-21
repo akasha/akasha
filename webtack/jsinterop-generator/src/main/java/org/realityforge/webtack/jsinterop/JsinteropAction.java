@@ -443,7 +443,7 @@ final class JsinteropAction
         .collect( Collectors.joining( "\n" ) ) + "\n";
 
     writeResourceFile( getOutputDirectory().resolve( "test" ).resolve( "js" ),
-                       name + ".CompileTest.js",
+                       name + "CompileTest.js",
                        content.getBytes( StandardCharsets.UTF_8 ) );
   }
 

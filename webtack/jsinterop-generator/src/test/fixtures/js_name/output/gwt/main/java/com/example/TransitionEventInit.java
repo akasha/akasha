@@ -43,5 +43,19 @@ public interface TransitionEventInit extends EventInit {
       setPseudoElement( pseudoElement );
       return this;
     }
+
+    @JsOverlay
+    @Nonnull
+    default Builder elapsedTime(final double elapsedTime) {
+      setElapsedTime( elapsedTime );
+      return this;
+    }
+
+    @JsOverlay
+    @Nonnull
+    default Builder propertyName(@Nonnull final String propertyName) {
+      setPropertyName( propertyName );
+      return this;
+    }
   }
 }

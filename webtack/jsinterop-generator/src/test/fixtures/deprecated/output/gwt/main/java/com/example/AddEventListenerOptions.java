@@ -57,5 +57,12 @@ public interface AddEventListenerOptions extends EventListenerOptions {
       setPassive( passive );
       return this;
     }
+
+    @JsOverlay
+    @Nonnull
+    default Builder capture(final boolean capture) {
+      setCapture( capture );
+      return this;
+    }
   }
 }

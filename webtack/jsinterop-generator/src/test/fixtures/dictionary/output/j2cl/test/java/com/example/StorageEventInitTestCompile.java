@@ -74,4 +74,19 @@ public final class StorageEventInitTestCompile {
       final String url) {
     return $instance.url( url );
   }
+
+  public static StorageEventInit.Builder bubbles(final StorageEventInit.Builder $instance,
+      final boolean bubbles) {
+    return $instance.bubbles( bubbles );
+  }
+
+  public static StorageEventInit.Builder cancelable(final StorageEventInit.Builder $instance,
+      final boolean cancelable) {
+    return $instance.cancelable( cancelable );
+  }
+
+  public static StorageEventInit.Builder composed(final StorageEventInit.Builder $instance,
+      final boolean composed) {
+    return $instance.composed( composed );
+  }
 }

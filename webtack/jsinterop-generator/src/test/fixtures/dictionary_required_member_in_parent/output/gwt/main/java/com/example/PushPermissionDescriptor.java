@@ -18,8 +18,8 @@ import jsinterop.base.JsPropertyMap;
 public interface PushPermissionDescriptor extends PermissionDescriptor {
   @JsOverlay
   @Nonnull
-  static PushPermissionDescriptor name(@Nonnull final String name) {
-    final PushPermissionDescriptor $pushPermissionDescriptor = Js.<PushPermissionDescriptor>uncheckedCast( JsPropertyMap.of() );
+  static Builder name(@Nonnull final String name) {
+    final Builder $pushPermissionDescriptor = Js.<Builder>uncheckedCast( JsPropertyMap.of() );
     $pushPermissionDescriptor.setName( name );
     return Js.uncheckedCast( $pushPermissionDescriptor );
   }
@@ -31,4 +31,18 @@ public interface PushPermissionDescriptor extends PermissionDescriptor {
 
   @JsProperty
   void setUserVisibleOnly(boolean userVisibleOnly);
+
+  @JsType(
+      isNative = true,
+      namespace = JsPackage.GLOBAL,
+      name = "Object"
+  )
+  interface Builder extends PushPermissionDescriptor {
+    @JsOverlay
+    @Nonnull
+    default Builder userVisibleOnly(final boolean userVisibleOnly) {
+      setUserVisibleOnly( userVisibleOnly );
+      return this;
+    }
+  }
 }

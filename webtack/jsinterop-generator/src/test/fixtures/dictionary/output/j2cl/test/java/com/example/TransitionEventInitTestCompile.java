@@ -48,4 +48,19 @@ public final class TransitionEventInitTestCompile {
       final TransitionEventInit.Builder $instance, final String pseudoElement) {
     return $instance.pseudoElement( pseudoElement );
   }
+
+  public static TransitionEventInit.Builder bubbles(final TransitionEventInit.Builder $instance,
+      final boolean bubbles) {
+    return $instance.bubbles( bubbles );
+  }
+
+  public static TransitionEventInit.Builder cancelable(final TransitionEventInit.Builder $instance,
+      final boolean cancelable) {
+    return $instance.cancelable( cancelable );
+  }
+
+  public static TransitionEventInit.Builder composed(final TransitionEventInit.Builder $instance,
+      final boolean composed) {
+    return $instance.composed( composed );
+  }
 }
