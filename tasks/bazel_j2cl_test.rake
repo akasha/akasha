@@ -27,8 +27,10 @@ module Buildr
         write_bazelrc(bazel_workspace_dir)
         write_workspace(bazel_workspace_dir)
         FileUtils.cp test_module_file, "#{bazel_workspace_dir}/src.js"
+        FileUtils.mkdir "#{bazel_workspace_dir}/mysrc/"
+
         test_java_dirs.each do |test_java_dir|
-          FileUtils.cp_r test_java_dir, "#{bazel_workspace_dir}/mysrc/"
+          FileUtils.cp_r Dir["#{test_java_dir}/*"], "#{bazel_workspace_dir}/mysrc/"
         end
 
         closure_env = options[:closure_env] || 'CUSTOM'
