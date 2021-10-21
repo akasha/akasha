@@ -11,26 +11,23 @@ final class ElementCollection
   @Nonnull
   private final Map<String, Element> _elements = new HashMap<>();
 
-  @Nonnull
-  Element element( @Nonnull final String name,
-                   @Nonnull final String domInterface,
-                   @Nonnull final Set<String> classifications,
-                   @Nonnull final Set<String> permittedContent )
+  void element( @Nonnull final String name,
+                @Nonnull final String domInterface,
+                @Nonnull final Set<String> classifications,
+                @Nonnull final Set<String> permittedContent )
   {
-    return element( name, domInterface, classifications, permittedContent, true );
+    element( name, domInterface, classifications, permittedContent, true );
   }
 
-  @Nonnull
-  Element element( @Nonnull final String name,
-                   @Nonnull final String domInterface,
-                   @Nonnull final Set<String> classifications,
-                   @Nonnull final Set<String> permittedContent,
-                   final boolean supportsChildren )
+  void element( @Nonnull final String name,
+                @Nonnull final String domInterface,
+                @Nonnull final Set<String> classifications,
+                @Nonnull final Set<String> permittedContent,
+                final boolean supportsChildren )
   {
     assert !_elements.containsKey( name );
     final Element element = new Element( name, classifications, permittedContent, domInterface, supportsChildren );
     _elements.put( name, element );
-    return element;
   }
 
   @Nonnull
