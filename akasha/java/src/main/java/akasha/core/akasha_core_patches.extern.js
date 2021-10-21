@@ -4,7 +4,8 @@
  */
 
 /**
- * This type def is an alias because the type defined in the closure compiler externs does not match the underlying symbol name.
+ * This type def is an alias because the type defined in the closure compiler externs does not match the underlying
+ * symbol name.
  *
  * @typedef {JSONType}
  */
