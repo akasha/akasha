@@ -11,6 +11,7 @@ final class ElementCollection
   @Nonnull
   private final Map<String, Element> _elements = new HashMap<>();
 
+  @Nonnull
   Element element( @Nonnull final String name,
                    @Nonnull final String domInterface,
                    @Nonnull final Set<String> classifications,
@@ -19,6 +20,7 @@ final class ElementCollection
     return element( name, domInterface, classifications, permittedContent, true );
   }
 
+  @Nonnull
   Element element( @Nonnull final String name,
                    @Nonnull final String domInterface,
                    @Nonnull final Set<String> classifications,
