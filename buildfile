@@ -171,8 +171,8 @@ define 'akasha' do
     output_java_dir = "#{project._(:target, :generated)}/java/main/java"
     java_main_src_dir = file(output_java_dir => [input_java_dir]) do
       Dir["#{input_java_dir}/**/*.java"].each do |f|
-        output_filename = "#{output_java_dir}#{f.gsub(input_java_dir,'')}"
-        FileUtils.mkdir_p( File.dirname(output_filename))
+        output_filename = "#{output_java_dir}#{f.gsub(input_java_dir, '')}"
+        FileUtils.mkdir_p(File.dirname(output_filename))
         IO.write(output_filename, IO.read(f).gsub(/\/\/ GWT_ONLY /, ''))
       end
     end
@@ -181,8 +181,8 @@ define 'akasha' do
     output_test_dir = "#{project._(:target, :generated)}/java/test/java"
     java_test_src_dir = file(output_test_dir => [input_test_dir]) do
       Dir["#{input_java_dir}/**/*.java"].each do |f|
-        output_filename = "#{output_test_dir}#{f.gsub(input_test_dir,'')}"
-        FileUtils.mkdir_p( File.dirname(output_filename))
+        output_filename = "#{output_test_dir}#{f.gsub(input_test_dir, '')}"
+        FileUtils.mkdir_p(File.dirname(output_filename))
         IO.write(output_filename, IO.read(f).gsub(/\/\/ GWT_ONLY /, ''))
       end
     end
@@ -263,8 +263,8 @@ define 'akasha' do
     output_java_dir = "#{project._(:target, :generated)}/java/main/java"
     java_main_src_dir = file(output_java_dir => [input_java_dir]) do
       Dir["#{input_java_dir}/**/*.java"].each do |f|
-        output_filename = "#{output_java_dir}#{f.gsub(input_java_dir,'')}"
-        FileUtils.mkdir_p( File.dirname(output_filename))
+        output_filename = "#{output_java_dir}#{f.gsub(input_java_dir, '')}"
+        FileUtils.mkdir_p(File.dirname(output_filename))
         IO.write(output_filename, IO.read(f))
       end
     end
@@ -275,8 +275,8 @@ define 'akasha' do
       Dir["#{input_js_dir}/**/*.js"].each do |f|
         # akasha_patches.extern.js contains the externs required to integrate with base.js from closure
         next if f.end_with?('akasha_patches.extern.js')
-        output_filename = "#{output_js_dir}#{f.gsub(input_js_dir,'')}"
-        FileUtils.mkdir_p( File.dirname(output_filename))
+        output_filename = "#{output_js_dir}#{f.gsub(input_js_dir, '')}"
+        FileUtils.mkdir_p(File.dirname(output_filename))
         IO.write(output_filename, IO.read(f))
       end
     end
@@ -285,8 +285,8 @@ define 'akasha' do
     output_test_dir = "#{project._(:target, :generated)}/java/test/java"
     java_test_src_dir = file(output_test_dir => [input_test_dir]) do
       Dir["#{input_java_dir}/**/*.java"].each do |f|
-        output_filename = "#{output_test_dir}#{f.gsub(input_test_dir,'')}"
-        FileUtils.mkdir_p( File.dirname(output_filename))
+        output_filename = "#{output_test_dir}#{f.gsub(input_test_dir, '')}"
+        FileUtils.mkdir_p(File.dirname(output_filename))
         IO.write(output_filename, IO.read(f))
       end
     end
