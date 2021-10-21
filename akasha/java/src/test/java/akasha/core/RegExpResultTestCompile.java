@@ -4,6 +4,7 @@ import akasha.lang.JsArray;
 import akasha.lang.JsIterator;
 import jsinterop.base.JsPropertyMap;
 
+@SuppressWarnings( { "unused", "ConstantConditions" } )
 public final class RegExpResultTestCompile
 {
   static RegExpResult $typeReference$;

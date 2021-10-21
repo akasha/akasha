@@ -1,5 +1,6 @@
 package akasha.core;
 
+@SuppressWarnings( "unused" )
 public final class JsUtilTestCompile
 {
   static JsUtil $typeReference$;

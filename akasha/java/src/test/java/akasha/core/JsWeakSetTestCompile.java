@@ -2,6 +2,7 @@ package akasha.core;
 
 import akasha.lang.JsIterable;
 
+@SuppressWarnings( "unused" )
 public final class JsWeakSetTestCompile
 {
   static JsWeakSet<?> $typeReference$;

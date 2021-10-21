@@ -2,6 +2,7 @@ package akasha.core;
 
 import jsinterop.base.Any;
 
+@SuppressWarnings( "unused" )
 public final class ObjectPropertyEntryTestCompile
 {
   static ObjectPropertyEntry $typeReference$;

@@ -4,6 +4,7 @@ import akasha.lang.JsArray;
 import akasha.lang.JsIterable;
 import akasha.lang.JsIteratorIterable;
 
+@SuppressWarnings( "unused" )
 public final class JsSetTestCompile
 {
   static JsSet<?> $typeReference$;

@@ -1,5 +1,6 @@
 package akasha.core;
 
+@SuppressWarnings( "unused" )
 public final class SymbolTestCompile
 {
   static Symbol $typeReference$;
