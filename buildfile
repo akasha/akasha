@@ -333,15 +333,19 @@ define 'akasha' do
 
   Buildr::BazelJ2cl.define_bazel_j2cl_test(Buildr.project('akasha:j2cl'),
                                            [Buildr.project('akasha:j2cl')],
-                                           'akasha.AkashaCompileTest',
-                                           Buildr.project('akasha:j2cl')._(:target, :generated, 'webtack/test/js/akasha/Akasha.CompileTest.js'),
+                                           {
+                                             'akasha.AkashaCompileTest' => Buildr.project('akasha:j2cl')._(:target, :generated, 'webtack/test/js/akasha/AkashaCompileTest.js'),
+                                             'akasha.CustomAkashaCompileTest' => Buildr.project('akasha:j2cl')._('src/test/js/akasha/CustomAkashaCompileTest.js')
+                                           },
                                            [Buildr.project('akasha:j2cl')._(:target, :generated, 'webtack/test/java'), Buildr.project('akasha:j2cl')._(:source, :test, :java)],
                                            :javax_annotation => true)
 
   Buildr::BazelJ2cl.define_bazel_j2cl_test(Buildr.project('akasha:webgpu-j2cl'),
                                            [Buildr.project('akasha:webgpu-j2cl')],
-                                           'akasha.AkashaCompileTest',
-                                           Buildr.project('akasha:webgpu-j2cl')._(:target, :generated, 'webtack/test/js/akasha/Akasha.CompileTest.js'),
+                                           {
+                                             'akasha.AkashaCompileTest' => Buildr.project('akasha:webgpu-j2cl')._(:target, :generated, 'webtack/test/js/akasha/AkashaCompileTest.js'),
+                                             'akasha.CustomAkashaCompileTest' => Buildr.project('akasha:j2cl')._('src/test/js/akasha/CustomAkashaCompileTest.js')
+                                           },
                                            [Buildr.project('akasha:webgpu-j2cl')._(:target, :generated, 'webtack/test/java'), Buildr.project('akasha:j2cl')._(:source, :test, :java)],
                                            :javax_annotation => true,
                                            :additional_dependencies => [":elemental2_dom-j2cl"],

@@ -2,16 +2,16 @@ module Buildr
   class BazelJ2cl
     class << self
 
-      def define_bazel_j2cl_test(root_project, projects, test_module, test_module_file, test_java_dirs, options = {})
+      def define_bazel_j2cl_test(root_project, projects, test_modules, test_java_dirs, options = {})
         desc 'Verify that the specified packages can be compiled with J2CL'
         root_project.task(":#{root_project}:bazel_j2cl_test") do
-          perform_bazel_test(root_project, projects, test_module, test_module_file, test_java_dirs, options) if ENV['J2CL'].nil? || ENV['J2CL'] == root_project.name
+          perform_bazel_test(root_project, projects, test_modules, test_java_dirs, options) if ENV['J2CL'].nil? || ENV['J2CL'] == root_project.name
         end
       end
 
       private
 
-      def perform_bazel_test(root_project, projects, test_module, test_module_file, test_java_dirs, options)
+      def perform_bazel_test(root_project, projects, test_modules, test_java_dirs, options)
         packages = projects.collect { |p| p.packages }.flatten.select { |p| p.classifier.nil? }.sort.uniq
 
         depgen_cache_dir = root_project._(:target, :depgen_artifact_cache)
@@ -26,16 +26,21 @@ module Buildr
         FileUtils.mkdir_p bazel_workspace_dir
         write_bazelrc(bazel_workspace_dir)
         write_workspace(bazel_workspace_dir)
-        FileUtils.cp test_module_file, "#{bazel_workspace_dir}/src.js"
         FileUtils.mkdir "#{bazel_workspace_dir}/mysrc/"
 
         test_java_dirs.each do |test_java_dir|
           FileUtils.cp_r Dir["#{test_java_dir}/*"], "#{bazel_workspace_dir}/mysrc/"
         end
+        test_modules = test_modules.dup
+        test_modules.keys.each do |test_module_name|
+          target = "mysrc/#{test_module_name.gsub('.', '/')}.js"
+          FileUtils.cp test_modules[test_module_name], "#{bazel_workspace_dir}/#{target}"
+          test_modules[test_module_name] = target
+        end
 
         closure_env = options[:closure_env] || 'CUSTOM'
         artifact_key = root_project.to_s.gsub(/[:-]/, '_')
-        write_build(bazel_workspace_dir, artifact_key, closure_env, test_module, additional_dependencies)
+        write_build(bazel_workspace_dir, artifact_key, closure_env, test_modules, additional_dependencies)
         write_dependency_yml(bazel_workspace_dir, cache_dir, packages, options)
         write_dependency_bzl(bazel_workspace_dir, depgen_cache_dir)
 
@@ -86,7 +91,7 @@ http_archive(
 TEXT
       end
 
-      def write_build(dir, artifact_key, closure_env, test_module, additional_dependencies)
+      def write_build(dir, artifact_key, closure_env, test_modules, additional_dependencies)
         content = <<TEXT
 package(default_visibility = ["//visibility:public"])
 
@@ -112,9 +117,9 @@ j2cl_library(
     visibility = ["//visibility:private"],
     deps = [":javaemul_internal_annotations-j2cl", ":jsinterop_base-j2cl", ":#{artifact_key}-j2cl", #{additional_dependencies.collect{|d|"\"#{d}\""}.join(", ") + (additional_dependencies.empty? ? '' : ", ")}],
 )
-closure_js_library( name = "#{artifact_key}-closure", srcs = ["src.js"], deps = [":#{artifact_key}-j2cl", ":mysrc"], )
+closure_js_library( name = "#{artifact_key}-closure", srcs = [#{test_modules.values.collect{|m| "\"#{m}\""}.join(', ')}], deps = [":#{artifact_key}-j2cl", ":mysrc"], )
 
-j2cl_application( name = "#{artifact_key}-app", entry_points = ["#{test_module}"], extra_production_args = ["--env=#{closure_env}"], deps = [":#{artifact_key}-closure"], )
+j2cl_application( name = "#{artifact_key}-app", entry_points = [#{test_modules.keys.collect{|m| "\"#{m}\""}.join(', ')}], extra_production_args = ["--env=#{closure_env}"], deps = [":#{artifact_key}-closure"], )
 
 TEXT
         File.write("#{dir}/BUILD.bazel", content)
