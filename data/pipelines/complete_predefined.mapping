@@ -1,2 +1,12 @@
 ArrayBufferView=akasha.core.ArrayBufferView
+Float32Array=akasha.core.Float32Array
+Float64Array=akasha.core.Float64Array
+Int8Array=akasha.core.Int8Array
+Int16Array=akasha.core.Int16Array
+Int32Array=akasha.core.Int32Array
 ObjectPropertyEntry=akasha.core.ObjectPropertyEntry
+TypedArray=akasha.core.TypedArray
+Uint8Array=akasha.core.Uint8Array
+Uint8ClampedArray=akasha.core.Uint8ClampedArray
+Uint16Array=akasha.core.Uint16Array
+Uint32Array=akasha.core.Uint32Array
