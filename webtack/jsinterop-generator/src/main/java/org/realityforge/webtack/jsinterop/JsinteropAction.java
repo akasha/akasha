@@ -1556,7 +1556,7 @@ final class JsinteropAction
   private ClassName getDictionaryBuilderClass( @Nonnull final DictionaryDefinition definition,
                                                @Nonnull final ClassName dictionaryClassName )
   {
-    return getRequiredDictionaryMembers( definition ).size() != getDictionaryMembers(definition).size() ?
+    return getRequiredDictionaryMembers( definition ).size() != getDictionaryMembers( definition ).size() ?
            dictionaryClassName.nestedClass( "Builder" ) :
            dictionaryClassName;
   }
@@ -1701,7 +1701,7 @@ final class JsinteropAction
       index++;
     }
 
-    if ( requiredMembers.size() != getDictionaryMembers(definition).size() )
+    if ( requiredMembers.size() != getDictionaryMembers( definition ).size() )
     {
       generateDictionaryBuilder( className, definition, type, testType );
     }
@@ -1860,7 +1860,6 @@ final class JsinteropAction
     definition.getMembers().stream().filter( DictionaryMember::isRequired ).forEach( members::add );
   }
 
-
   @Nonnull
   private List<DictionaryMember> getDictionaryMembers( @Nonnull final DictionaryDefinition definition )
   {
@@ -1870,7 +1869,7 @@ final class JsinteropAction
   }
 
   private void collectDictionaryMembers( @Nonnull final DictionaryDefinition definition,
-                                                 @Nonnull final List<DictionaryMember> members )
+                                         @Nonnull final List<DictionaryMember> members )
   {
     final String inherits = definition.getInherits();
     if ( null != inherits )
