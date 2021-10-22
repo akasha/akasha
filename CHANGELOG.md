@@ -5,6 +5,7 @@
 * Add all the locally defined `*CompileTest` classes to the J2cl/closure compile test suite to ensure we do not regress type compatibility.
 * Update the `TypedArray` java class to use the closure type `TypedArray` for the j2cl output mode but retain the `?` type in gwt output mode. This is to ensure maximum compatibility with hand-written closure sources.
 * Patch the 3-argument `forEach` method on the `TypedArray` implementations to ensure that the type is compatible with current closure externs. The stricter typing present in the java binding is retained by adding a `@JsOverlay` method that retains the correct type.
+* Change the type of the parameter in the method `JsObject.isPrototypeOf(JsObject)` to match the closure externs.
 
 ### Unreleased
 

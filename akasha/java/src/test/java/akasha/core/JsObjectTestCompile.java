@@ -215,7 +215,7 @@ public final class JsObjectTestCompile
     return $instance.propertyIsEnumerable( prop );
   }
 
-  public static boolean isPrototypeOf( final JsObject $instance, final Object object )
+  public static boolean isPrototypeOf( final JsObject $instance, final JsObject object )
   {
     return $instance.isPrototypeOf( object );
   }
