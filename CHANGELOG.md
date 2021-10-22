@@ -2,18 +2,18 @@
 
 ### Unreleased
 
+### [v0.28](https://github.com/akasha/akasha/tree/v0.28) (2021-10-22) · [Full Changelog](https://github.com/spritz/spritz/compare/v0.27...v0.28) · [API Differences](https://akasha.github.io/akasha-java/api-diff/?key=akasha-java&old=0.27&new=0.28) · [Source Diff](https://github.com/akasha/akasha-java/compare/v0.27...v0.28)
+
+The release includes 761 non breaking API changes, 128 potentially breaking API changes and 840 breaking API changes.
+
+Changes in this release:
+
 * Update the algorithm that "explodes" the types of operations in the jsinterop binding such that if an operation contains multiple arguments with a `sequence` IDL type, then either all `sequence` arguments are represented as java arrays or all `sequence` arguments are represented by `JsArray` and there is not a type explosion.
 * Change the strategy used when constructing instances of a dictionary. Dictionaries with zero required members will have the static factory method renamed from `[Dictionary].create()` to `[Dictionary].of()` to align with existing patterns in the ecosystem. Dictionaries with required members will use method chaining to construct the dictionary and will no longer offer a multiple argument static `create(...)` method to construct the dictionary. Dictionaries with zero optional members will omit the `Builder` nested class.
 * Add all the locally defined `*CompileTest` classes to the J2cl/closure compile test suite to ensure we do not regress type compatibility.
 * Update the `TypedArray` java class to use the closure type `TypedArray` for the j2cl output mode but retain the `?` type in gwt output mode. This is to ensure maximum compatibility with hand-written closure sources.
 * Patch the 3-argument `forEach` method on the `TypedArray` implementations to ensure that the type is compatible with current closure externs. The stricter typing present in the java binding is retained by adding a `@JsOverlay` method that retains the correct type.
 * Change the type of the parameter in the method `JsObject.isPrototypeOf(JsObject)` to match the closure externs.
-
-### [v0.28](https://github.com/akasha/akasha/tree/v0.28) (2021-10-22) · [Full Changelog](https://github.com/spritz/spritz/compare/v0.27...v0.28) · [API Differences](https://akasha.github.io/akasha-java/api-diff/?key=akasha-java&old=0.27&new=0.28) · [Source Diff](https://github.com/akasha/akasha-java/compare/v0.27...v0.28)
-
-The release includes 761 non breaking API changes, 128 potentially breaking API changes and 840 breaking API changes.
-
-Changes in this release:
 
 ### [v0.27](https://github.com/akasha/akasha/tree/v0.27) (2021-09-29) · [Full Changelog](https://github.com/spritz/spritz/compare/v0.26...v0.27) · [API Differences](https://akasha.github.io/akasha-java/api-diff/?key=akasha-java&old=0.26&new=0.27) · [Source Diff](https://github.com/akasha/akasha-java/compare/v0.26...v0.27)
 
