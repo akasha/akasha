@@ -3,7 +3,6 @@ package akasha;
 import elemental2.dom.HTMLCanvasElement;
 import elemental2.dom.ImageBitmap;
 import elemental2.dom.OffscreenCanvas;
-import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
