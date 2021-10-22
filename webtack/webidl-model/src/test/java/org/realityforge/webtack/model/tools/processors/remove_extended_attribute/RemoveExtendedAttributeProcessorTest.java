@@ -27,6 +27,7 @@ public final class RemoveExtendedAttributeProcessorTest
                                 () -> createProcessor( "^GPUImageCopyExternalImageSource$",
                                                        "Synthetic" ) );
   }
+
   @Test
   public void update_geolocation_api()
     throws Exception

@@ -23,7 +23,7 @@ final class ConstEnumerationValidator
       Type valueType = null;
       for ( final ConstEnumerationValue value : definition.getValues() )
       {
-         ConstantMemberContainer type = schema.findInterfaceByName( value.getTypeName() );
+        ConstantMemberContainer type = schema.findInterfaceByName( value.getTypeName() );
         if ( null == type )
         {
           type = schema.findNamespaceByName( value.getTypeName() );

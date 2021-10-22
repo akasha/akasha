@@ -409,7 +409,7 @@ public abstract class AbstractJavaAction
           final ConstEnumerationValue value = definition.getValues().get( 0 );
           final String typeName = value.getTypeName();
           ConstantMemberContainer container = schema.findInterfaceByName( typeName );
-          if( null == container )
+          if ( null == container )
           {
             container = schema.getNamespaceByName( typeName );
           }
