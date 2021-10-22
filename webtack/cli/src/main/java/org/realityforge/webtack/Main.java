@@ -95,7 +95,7 @@ public final class Main
         {
           if ( logger.isLoggable( Level.INFO ) )
           {
-            logger.log( Level.INFO, "Cause: " + cause.toString() );
+            logger.log( Level.INFO, "Cause: " + cause );
             if ( logger.isLoggable( Level.FINE ) )
             {
               logger.log( Level.FINE, null, cause );
