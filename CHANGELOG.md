@@ -7,7 +7,11 @@
 * Patch the 3-argument `forEach` method on the `TypedArray` implementations to ensure that the type is compatible with current closure externs. The stricter typing present in the java binding is retained by adding a `@JsOverlay` method that retains the correct type.
 * Change the type of the parameter in the method `JsObject.isPrototypeOf(JsObject)` to match the closure externs.
 
-### Unreleased
+### [v0.28](https://github.com/akasha/akasha/tree/v0.28) (2021-10-22) · [Full Changelog](https://github.com/spritz/spritz/compare/v0.27...v0.28) · [API Differences](https://akasha.github.io/akasha-java/api-diff/?key=akasha-java&old=0.27&new=0.28) · [Source Diff](https://github.com/akasha/akasha-java/compare/v0.27...v0.28)
+
+The release includes 761 non breaking API changes, 128 potentially breaking API changes and 840 breaking API changes.
+
+Changes in this release:
 
 ### [v0.27](https://github.com/akasha/akasha/tree/v0.27) (2021-09-29) · [Full Changelog](https://github.com/spritz/spritz/compare/v0.26...v0.27) · [API Differences](https://akasha.github.io/akasha-java/api-diff/?key=akasha-java&old=0.26&new=0.27) · [Source Diff](https://github.com/akasha/akasha-java/compare/v0.26...v0.27)
 
