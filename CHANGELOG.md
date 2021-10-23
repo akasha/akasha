@@ -2,6 +2,7 @@
 
 ### Unreleased
 
+* Update the `org.realityforge.react4j` artifacts to version `0.185`.
 * Update the algorithm that "explodes" the types of operations in the jsinterop binding such that if an operation contains multiple arguments with a `sequence` IDL type, then either all `sequence` arguments are represented as java arrays or all `sequence` arguments are represented by `JsArray` and there is not a type explosion.
 * Change the strategy used when constructing instances of a dictionary. Dictionaries with zero required members will have the static factory method renamed from `[Dictionary].create()` to `[Dictionary].of()` to align with existing patterns in the ecosystem. Dictionaries with required members will use method chaining to construct the dictionary and will no longer offer a multiple argument static `create(...)` method to construct the dictionary. Dictionaries with zero optional members will omit the `Builder` nested class.
 * Add all the locally defined `*CompileTest` classes to the J2cl/closure compile test suite to ensure we do not regress type compatibility.
