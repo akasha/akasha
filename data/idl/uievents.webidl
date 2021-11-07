@@ -59,24 +59,27 @@ dictionary WheelEventInit : MouseEventInit {
   double deltaZ = 0.0;
 };
 
-[Constructor( DOMString type, optional CompositionEventInit eventInitDict ), Exposed=Window]
+[Exposed=Window]
 interface CompositionEvent : UIEvent {
   readonly attribute DOMString data;
+  constructor( DOMString type, optional CompositionEventInit eventInitDict = {} );
 };
 
-[Constructor( DOMString type, optional FocusEventInit eventInitDict ), Exposed=Window]
+[Exposed=Window]
 interface FocusEvent : UIEvent {
   readonly attribute EventTarget? relatedTarget;
+  constructor( DOMString type, optional FocusEventInit eventInitDict = {} );
 };
 
-[Constructor( DOMString type, optional InputEventInit eventInitDict ), Exposed=Window]
+[Exposed=Window]
 interface InputEvent : UIEvent {
   readonly attribute DOMString? data;
   readonly attribute DOMString inputType;
   readonly attribute boolean isComposing;
+  constructor( DOMString type, optional InputEventInit eventInitDict = {} );
 };
 
-[Constructor( DOMString type, optional KeyboardEventInit eventInitDict ), Exposed=Window]
+[Exposed=Window]
 interface KeyboardEvent : UIEvent {
   const unsigned long DOM_KEY_LOCATION_LEFT = 0x01;
   const unsigned long DOM_KEY_LOCATION_NUMPAD = 0x03;
@@ -91,10 +94,11 @@ interface KeyboardEvent : UIEvent {
   readonly attribute boolean metaKey;
   readonly attribute boolean repeat;
   readonly attribute boolean shiftKey;
+  constructor( DOMString type, optional KeyboardEventInit eventInitDict = {} );
   boolean getModifierState( DOMString keyArg );
 };
 
-[Constructor( DOMString type, optional MouseEventInit eventInitDict ), Exposed=Window]
+[Exposed=Window]
 interface MouseEvent : UIEvent {
   readonly attribute boolean altKey;
   readonly attribute short button;
@@ -107,16 +111,17 @@ interface MouseEvent : UIEvent {
   readonly attribute long screenX;
   readonly attribute long screenY;
   readonly attribute boolean shiftKey;
+  constructor( DOMString type, optional MouseEventInit eventInitDict = {} );
   boolean getModifierState( DOMString keyArg );
 };
 
-[Constructor( DOMString type, optional UIEventInit eventInitDict ), Exposed=Window]
 interface UIEvent : Event {
   readonly attribute long detail;
   readonly attribute Window? view;
+  constructor( DOMString type, optional UIEventInit eventInitDict = {} );
 };
 
-[Constructor( DOMString type, optional WheelEventInit eventInitDict ), Exposed=Window]
+[Exposed=Window]
 interface WheelEvent : MouseEvent {
   const unsigned long DOM_DELTA_LINE = 0x01;
   const unsigned long DOM_DELTA_PAGE = 0x02;
@@ -125,6 +130,7 @@ interface WheelEvent : MouseEvent {
   readonly attribute double deltaX;
   readonly attribute double deltaY;
   readonly attribute double deltaZ;
+  constructor( DOMString type, optional WheelEventInit eventInitDict = {} );
 };
 
 partial interface KeyboardEvent {
