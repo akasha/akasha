@@ -474,11 +474,11 @@ interface mixin CanvasTextDrawingStyles {
   attribute CanvasFontKerning fontKerning;
   attribute CanvasFontStretch fontStretch;
   attribute CanvasFontVariantCaps fontVariantCaps;
+  attribute double letterSpacing;
   attribute CanvasTextAlign textAlign;
   attribute CanvasTextBaseline textBaseline;
-  attribute double textLetterSpacing;
   attribute CanvasTextRendering textRendering;
-  attribute double textWordSpacing;
+  attribute double wordSpacing;
 };
 
 interface mixin CanvasTransform {
