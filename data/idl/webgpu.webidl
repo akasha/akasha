@@ -583,18 +583,18 @@ dictionary GPURenderBundleEncoderDescriptor : GPURenderPassLayout {
 
 dictionary GPURenderPassColorAttachment {
   required GPUTextureView view;
-  GPUTextureView resolveTarget;
   required ( GPULoadOp or GPUColor ) loadValue;
   required GPUStoreOp storeOp;
+  GPUTextureView resolveTarget;
 };
 
 dictionary GPURenderPassDepthStencilAttachment {
   required GPUTextureView view;
   required ( GPULoadOp or float ) depthLoadValue;
   required GPUStoreOp depthStoreOp;
-  boolean depthReadOnly = false;
   required ( GPULoadOp or GPUStencilValue ) stencilLoadValue;
   required GPUStoreOp stencilStoreOp;
+  boolean depthReadOnly = false;
   boolean stencilReadOnly = false;
 };
 
@@ -654,8 +654,8 @@ dictionary GPUStencilFaceState {
 };
 
 dictionary GPUStorageTextureBindingLayout {
-  GPUStorageTextureAccess access = "write-only";
   required GPUTextureFormat format;
+  GPUStorageTextureAccess access = "write-only";
   GPUTextureViewDimension viewDimension = "2d";
 };
 
@@ -667,11 +667,11 @@ dictionary GPUTextureBindingLayout {
 
 dictionary GPUTextureDescriptor : GPUObjectDescriptorBase {
   required GPUExtent3D size;
+  required GPUTextureFormat format;
+  required GPUTextureUsageFlags usage;
   GPUTextureDimension dimension = "2d";
   GPUIntegerCoordinate mipLevelCount = 1;
   GPUSize32 sampleCount = 1;
-  required GPUTextureFormat format;
-  required GPUTextureUsageFlags usage;
 };
 
 dictionary GPUTextureViewDescriptor : GPUObjectDescriptorBase {
@@ -696,8 +696,8 @@ dictionary GPUVertexAttribute {
 
 dictionary GPUVertexBufferLayout {
   required GPUSize64 arrayStride;
-  GPUVertexStepMode stepMode = "vertex";
   required sequence<GPUVertexAttribute> attributes;
+  GPUVertexStepMode stepMode = "vertex";
 };
 
 dictionary GPUVertexState : GPUProgrammableStage {
