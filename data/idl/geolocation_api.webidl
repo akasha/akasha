@@ -31,7 +31,7 @@ interface GeolocationCoordinates {
 [Exposed=Window, SecureContext]
 interface GeolocationPosition {
   readonly attribute GeolocationCoordinates coords;
-  readonly attribute DOMTimeStamp timestamp;
+  readonly attribute EpochTimeStamp timestamp;
 };
 
 [Exposed=Window]
