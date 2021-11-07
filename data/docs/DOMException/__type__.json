@@ -5,9 +5,9 @@
     "description": "The DOMException interface represents an abnormal event (called an exception) that occurs as a result of calling a method or accessing a property of a web API. This is how error conditions are described in web APIs.",
     "refs": [
         {
-            "name": "WebIDL Level 1",
-            "href": "https://heycam.github.io/webidl/#idl-DOMException",
-            "description": "(WebIDL 1) # idl-DOMException"
+            "name": "Web IDL Standard",
+            "href": "https://webidl.spec.whatwg.org/#idl-DOMException",
+            "description": "(Web IDL) # idl-DOMException"
         }
     ]
 }
