@@ -2,6 +2,8 @@
 
 ### Unreleased
 
+* Update the `High Resolution Time` spec to the `W3C Working Draft 12, October 2021` version. This should have no impact on the jsinterop binding but provides the `EpochTimeStamp` typedef in the generated closure externs.
+
 ### [v0.28](https://github.com/akasha/akasha/tree/v0.28) (2021-10-22) · [Full Changelog](https://github.com/spritz/spritz/compare/v0.27...v0.28) · [API Differences](https://akasha.github.io/akasha-java/api-diff/?key=akasha-java&old=0.27&new=0.28) · [Source Diff](https://github.com/akasha/akasha-java/compare/v0.27...v0.28)
 
 The release includes 761 non breaking API changes, 128 potentially breaking API changes and 840 breaking API changes.
