@@ -108,6 +108,7 @@ interface XRBoundedReferenceSpace : XRReferenceSpace {
 
 [SecureContext, Exposed=Window]
 interface XRFrame {
+  readonly attribute DOMHighResTimeStamp predictedDisplayTime;
   [SameObject]
   readonly attribute XRSession session;
   XRPose? getPose( XRSpace space, XRSpace baseSpace );
