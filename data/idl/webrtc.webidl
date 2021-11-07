@@ -151,7 +151,7 @@ dictionary RTCAnswerOptions : RTCOfferAnswerOptions {
 
 dictionary RTCCertificateExpiration {
   [EnforceRange]
-  DOMTimeStamp expires;
+  EpochTimeStamp expires;
 };
 
 dictionary RTCConfiguration {
@@ -353,7 +353,7 @@ partial dictionary RTCOfferOptions {
 
 [Exposed=Window, Serializable]
 interface RTCCertificate {
-  readonly attribute DOMTimeStamp expires;
+  readonly attribute EpochTimeStamp expires;
   sequence<RTCDtlsFingerprint> getFingerprints();
 };
 

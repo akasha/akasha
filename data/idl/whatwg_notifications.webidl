@@ -40,7 +40,7 @@ dictionary NotificationOptions {
   boolean requireInteraction = false;
   boolean silent = false;
   DOMString tag = "";
-  DOMTimeStamp timestamp;
+  EpochTimeStamp timestamp;
   VibratePattern vibrate;
 };
 
@@ -62,7 +62,7 @@ interface Notification : EventTarget {
   readonly attribute boolean requireInteraction;
   readonly attribute boolean silent;
   readonly attribute DOMString tag;
-  readonly attribute DOMTimeStamp timestamp;
+  readonly attribute EpochTimeStamp timestamp;
   readonly attribute DOMString title;
   [SameObject]
   readonly attribute FrozenArray<unsigned long> vibrate;

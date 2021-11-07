@@ -22,7 +22,7 @@ dictionary PushSubscriptionChangeEventInit : ExtendableEventInit {
 
 dictionary PushSubscriptionJSON {
   USVString endpoint;
-  DOMTimeStamp? expirationTime;
+  EpochTimeStamp? expirationTime = null;
   record<DOMString, USVString> keys;
 };
 
@@ -57,7 +57,7 @@ interface PushMessageData {
 [Exposed=(Window,Worker), SecureContext]
 interface PushSubscription {
   readonly attribute USVString endpoint;
-  readonly attribute DOMTimeStamp? expirationTime;
+  readonly attribute EpochTimeStamp? expirationTime;
   [SameObject]
   readonly attribute PushSubscriptionOptions options;
   ArrayBuffer? getKey( PushEncryptionKeyName name );
