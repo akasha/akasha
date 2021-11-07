@@ -56,6 +56,11 @@ enum GPUCompilationMessageType {
   "warning"
 };
 
+enum GPUComputePassTimestampLocation {
+  "beginning",
+  "end"
+};
+
 enum GPUCullMode {
   "back",
   "front",
@@ -72,11 +77,13 @@ enum GPUErrorFilter {
 };
 
 enum GPUFeatureName {
-  "depth-clamping",
+  "depth-clip-control",
   "depth24unorm-stencil8",
   "depth32float-stencil8",
   "pipeline-statistics-query",
+  "texture-compression-astc",
   "texture-compression-bc",
+  "texture-compression-etc2",
   "timestamp-query"
 };
 
@@ -130,6 +137,11 @@ enum GPUQueryType {
   "timestamp"
 };
 
+enum GPURenderPassTimestampLocation {
+  "beginning",
+  "end"
+};
+
 enum GPUSamplerBindingType {
   "comparison",
   "filtering",
@@ -169,6 +181,34 @@ enum GPUTextureDimension {
 };
 
 enum GPUTextureFormat {
+  "astc-10x10-unorm",
+  "astc-10x10-unorm-srgb",
+  "astc-10x5-unorm",
+  "astc-10x5-unorm-srgb",
+  "astc-10x6-unorm",
+  "astc-10x6-unorm-srgb",
+  "astc-10x8-unorm",
+  "astc-10x8-unorm-srgb",
+  "astc-12x10-unorm",
+  "astc-12x10-unorm-srgb",
+  "astc-12x12-unorm",
+  "astc-12x12-unorm-srgb",
+  "astc-4x4-unorm",
+  "astc-4x4-unorm-srgb",
+  "astc-5x4-unorm",
+  "astc-5x4-unorm-srgb",
+  "astc-5x5-unorm",
+  "astc-5x5-unorm-srgb",
+  "astc-6x5-unorm",
+  "astc-6x5-unorm-srgb",
+  "astc-6x6-unorm",
+  "astc-6x6-unorm-srgb",
+  "astc-8x5-unorm",
+  "astc-8x5-unorm-srgb",
+  "astc-8x6-unorm",
+  "astc-8x6-unorm-srgb",
+  "astc-8x8-unorm",
+  "astc-8x8-unorm-srgb",
   "bc1-rgba-unorm",
   "bc1-rgba-unorm-srgb",
   "bc2-rgba-unorm",
@@ -191,6 +231,16 @@ enum GPUTextureFormat {
   "depth24unorm-stencil8",
   "depth32float",
   "depth32float-stencil8",
+  "eac-r11snorm",
+  "eac-r11unorm",
+  "eac-rg11snorm",
+  "eac-rg11unorm",
+  "etc2-rgb8a1unorm",
+  "etc2-rgb8a1unorm-srgb",
+  "etc2-rgb8unorm",
+  "etc2-rgb8unorm-srgb",
+  "etc2-rgba8unorm",
+  "etc2-rgba8unorm-srgb",
   "r16float",
   "r16sint",
   "r16uint",
@@ -293,6 +343,8 @@ typedef ( sequence<double> or GPUColorDict ) GPUColor;
 
 typedef unsigned long GPUColorWriteFlags;
 
+typedef sequence<GPUComputePassTimestampWrite> GPUComputePassTimestampWrites;
+
 typedef long GPUDepthBias;
 
 typedef ( GPUOutOfMemoryError or GPUValidationError ) GPUError;
@@ -312,6 +364,8 @@ typedef ( sequence<GPUIntegerCoordinate> or GPUOrigin2DDict ) GPUOrigin2D;
 typedef ( sequence<GPUIntegerCoordinate> or GPUOrigin3DDict ) GPUOrigin3D;
 
 typedef double GPUPipelineConstantValue;
+
+typedef sequence<GPURenderPassTimestampWrite> GPURenderPassTimestampWrites;
 
 typedef unsigned long GPUSampleMask;
 
@@ -451,10 +505,16 @@ dictionary GPUCommandBufferDescriptor : GPUObjectDescriptorBase {
 };
 
 dictionary GPUCommandEncoderDescriptor : GPUObjectDescriptorBase {
-  boolean measureExecutionTime = false;
 };
 
 dictionary GPUComputePassDescriptor : GPUObjectDescriptorBase {
+  GPUComputePassTimestampWrites timestampWrites = [];
+};
+
+dictionary GPUComputePassTimestampWrite {
+  required GPUQuerySet querySet;
+  required GPUSize32 queryIndex;
+  required GPUComputePassTimestampLocation location;
 };
 
 dictionary GPUComputePipelineDescriptor : GPUPipelineDescriptorBase {
@@ -554,11 +614,11 @@ dictionary GPUPipelineLayoutDescriptor : GPUObjectDescriptorBase {
 };
 
 dictionary GPUPrimitiveState {
-  boolean clampDepth = false;
   GPUCullMode cullMode = "none";
   GPUFrontFace frontFace = "ccw";
   GPUIndexFormat stripIndexFormat;
   GPUPrimitiveTopology topology = "triangle-list";
+  boolean unclippedDepth = false;
 };
 
 dictionary GPUProgrammableStage {
@@ -602,12 +662,19 @@ dictionary GPURenderPassDescriptor : GPUObjectDescriptorBase {
   required sequence<GPURenderPassColorAttachment> colorAttachments;
   GPURenderPassDepthStencilAttachment depthStencilAttachment;
   GPUQuerySet occlusionQuerySet;
+  GPURenderPassTimestampWrites timestampWrites = [];
 };
 
 dictionary GPURenderPassLayout : GPUObjectDescriptorBase {
   required sequence<GPUTextureFormat> colorFormats;
   GPUTextureFormat depthStencilFormat;
   GPUSize32 sampleCount = 1;
+};
+
+dictionary GPURenderPassTimestampWrite {
+  required GPUQuerySet querySet;
+  required GPUSize32 queryIndex;
+  required GPURenderPassTimestampLocation location;
 };
 
 dictionary GPURenderPipelineDescriptor : GPUPipelineDescriptorBase {
@@ -778,7 +845,6 @@ interface GPUCanvasContext {
 
 [Exposed=(Window,DedicatedWorker), SecureContext]
 interface GPUCommandBuffer {
-  readonly attribute Promise<double> executionTime;
 };
 
 [Exposed=(Window,DedicatedWorker), SecureContext]
@@ -789,6 +855,7 @@ interface GPUCommandEncoder {
   undefined copyBufferToTexture( GPUImageCopyBuffer source, GPUImageCopyTexture destination, GPUExtent3D copySize );
   undefined copyTextureToBuffer( GPUImageCopyTexture source, GPUImageCopyBuffer destination, GPUExtent3D copySize );
   undefined copyTextureToTexture( GPUImageCopyTexture source, GPUImageCopyTexture destination, GPUExtent3D copySize );
+  undefined fillBuffer( GPUBuffer destination, GPUSize64 destinationOffset, GPUSize64 size );
   GPUCommandBuffer finish( optional GPUCommandBufferDescriptor descriptor = {} );
   undefined insertDebugMarker( USVString markerLabel );
   undefined popDebugGroup();
@@ -820,7 +887,6 @@ interface GPUComputePassEncoder {
   undefined endPass();
   undefined endPipelineStatisticsQuery();
   undefined setPipeline( GPUComputePipeline pipeline );
-  undefined writeTimestamp( GPUQuerySet querySet, GPUSize32 queryIndex );
 };
 
 [Exposed=(Window,DedicatedWorker), SecureContext]
@@ -907,7 +973,6 @@ interface GPURenderPassEncoder {
   undefined setScissorRect( GPUIntegerCoordinate x, GPUIntegerCoordinate y, GPUIntegerCoordinate width, GPUIntegerCoordinate height );
   undefined setStencilReference( GPUStencilValue reference );
   undefined setViewport( float x, float y, float width, float height, float minDepth, float maxDepth );
-  undefined writeTimestamp( GPUQuerySet querySet, GPUSize32 queryIndex );
 };
 
 [Exposed=(Window,DedicatedWorker), SecureContext]
