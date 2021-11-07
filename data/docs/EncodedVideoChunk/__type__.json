@@ -1,0 +1,13 @@
+{
+    "kind": "Type",
+    "name": "EncodedVideoChunk",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/EncodedVideoChunk",
+    "description": "The EncodedVideoChunk interface of the WebCodecs API represents a chunk of encoded video data.",
+    "refs": [
+        {
+            "name": "WebCodecs",
+            "href": "https://w3c.github.io/webcodecs/#encodedvideochunk-interface",
+            "description": "# encodedvideochunk-interface"
+        }
+    ]
+}

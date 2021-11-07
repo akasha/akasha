@@ -1,0 +1,13 @@
+{
+    "kind": "Type",
+    "name": "AudioDecoder",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioDecoder",
+    "description": "The AudioDecoder interface of the WebCodecs API decodes chunks of audio.",
+    "refs": [
+        {
+            "name": "WebCodecs",
+            "href": "https://w3c.github.io/webcodecs/#audiodecoder-interface",
+            "description": "# audiodecoder-interface"
+        }
+    ]
+}

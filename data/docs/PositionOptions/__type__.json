@@ -2,12 +2,12 @@
     "kind": "Type",
     "name": "PositionOptions",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PositionOptions",
-    "description": "The PositionOptions dictionary describes an object containing option properties to pass as a parameter of Geolocation.getCurrentPosition() and Geolocation.watchPosition().",
+    "description": "The Geolocation.getCurrentPosition() method is used to get the current position of the device.",
     "refs": [
         {
             "name": "Geolocation API Specification 2nd Edition",
-            "href": "https://w3c.github.io/geolocation-api/#position_options_interface",
-            "description": "# position_options_interface"
+            "href": "https://w3c.github.io/geolocation-api/#getcurrentposition-method",
+            "description": "# getcurrentposition-method"
         }
     ]
 }

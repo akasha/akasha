@@ -2,12 +2,12 @@
     "kind": "Type",
     "name": "ScrollToOptions",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/ScrollToOptions",
-    "description": "The ScrollToOptions dictionary of the CSSOM View spec contains properties specifying where an element should be scrolled to, and whether the scrolling should be smooth.",
+    "description": "The Window.scroll() method scrolls the window to a particular place in the document.",
     "refs": [
         {
             "name": "CSSOM View Module",
-            "href": "https://drafts.csswg.org/cssom-view/#dictdef-scrolltooptions",
-            "description": "(CSSOM View) # dictdef-scrolltooptions"
+            "href": "https://drafts.csswg.org/cssom-view/#dom-window-scroll",
+            "description": "(CSSOM View) # dom-window-scroll"
         }
     ]
 }

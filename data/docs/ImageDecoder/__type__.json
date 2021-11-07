@@ -1,0 +1,13 @@
+{
+    "kind": "Type",
+    "name": "ImageDecoder",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/ImageDecoder",
+    "description": "The ImageDecoder interface of the WebCodecs API provides a way to unpack and decode encoded image data.",
+    "refs": [
+        {
+            "name": "WebCodecs",
+            "href": "https://w3c.github.io/webcodecs/#imagedecoder-interface",
+            "description": "# imagedecoder-interface"
+        }
+    ]
+}

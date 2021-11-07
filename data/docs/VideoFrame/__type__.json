@@ -1,0 +1,13 @@
+{
+    "kind": "Type",
+    "name": "VideoFrame",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/VideoFrame",
+    "description": "The VideoFrame interface of the Web Codecs API represents a frame of a video.",
+    "refs": [
+        {
+            "name": "WebCodecs",
+            "href": "https://w3c.github.io/webcodecs/#videoframe-interface",
+            "description": "# videoframe-interface"
+        }
+    ]
+}

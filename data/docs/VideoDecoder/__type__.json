@@ -1,0 +1,13 @@
+{
+    "kind": "Type",
+    "name": "VideoDecoder",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/VideoDecoder",
+    "description": "The VideoDecoder interface of the WebCodecs API decodes chunks of video.",
+    "refs": [
+        {
+            "name": "WebCodecs",
+            "href": "https://w3c.github.io/webcodecs/#videodecoder-interface",
+            "description": "# videodecoder-interface"
+        }
+    ]
+}

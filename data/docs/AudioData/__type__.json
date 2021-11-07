@@ -1,0 +1,13 @@
+{
+    "kind": "Type",
+    "name": "AudioData",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioData",
+    "description": "The AudioData interface of the WebCodecs API represents an audio sample.",
+    "refs": [
+        {
+            "name": "WebCodecs",
+            "href": "https://w3c.github.io/webcodecs/#audiodata-interface",
+            "description": "# audiodata-interface"
+        }
+    ]
+}

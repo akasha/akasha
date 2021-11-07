@@ -1,0 +1,13 @@
+{
+    "kind": "Type",
+    "name": "EncodedAudioChunk",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/EncodedAudioChunk",
+    "description": "The EncodedAudioChunk interface of the WebCodecs API represents a chunk of encoded audio data.",
+    "refs": [
+        {
+            "name": "WebCodecs",
+            "href": "https://w3c.github.io/webcodecs/#encodedaudiochunk-interface",
+            "description": "# encodedaudiochunk-interface"
+        }
+    ]
+}

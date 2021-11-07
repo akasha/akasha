@@ -1,10 +1,10 @@
 {
     "name": "PositionOptions",
-    "lastModifiedAt": 1629769813000,
+    "lastModifiedAt": 1635904723000,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1629769813000
+            "lastModifiedAt": 1635904723000
         },
         {
             "name": "enableHighAccuracy",

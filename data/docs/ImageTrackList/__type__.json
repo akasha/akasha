@@ -1,0 +1,13 @@
+{
+    "kind": "Type",
+    "name": "ImageTrackList",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/ImageTrackList",
+    "description": "The ImageTrackList interface of the WebCodecs API represents a list of image tracks.",
+    "refs": [
+        {
+            "name": "WebCodecs",
+            "href": "https://w3c.github.io/webcodecs/#imagetracklist-interface",
+            "description": "# imagetracklist-interface"
+        }
+    ]
+}

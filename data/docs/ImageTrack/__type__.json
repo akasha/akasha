@@ -1,0 +1,13 @@
+{
+    "kind": "Type",
+    "name": "ImageTrack",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/ImageTrack",
+    "description": "The ImageTrack interface of the WebCodecs API represents an individual image track.",
+    "refs": [
+        {
+            "name": "WebCodecs",
+            "href": "https://w3c.github.io/webcodecs/#imagetrack-interface",
+            "description": "# imagetrack-interface"
+        }
+    ]
+}
