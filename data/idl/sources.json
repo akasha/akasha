@@ -35,7 +35,7 @@
         "lastModifiedTime": 1626681467000,
         "name": "common",
         "selector": "[data-level~=4.] ~ pre.idl",
-        "url": "https://heycam.github.io/webidl/"
+        "url": "https://webidl.spec.whatwg.org/"
     },
     {
         "lastModifiedTime": 0,
