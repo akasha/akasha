@@ -1,5 +1,7 @@
 typedef double DOMHighResTimeStamp;
 
+typedef unsigned long long EpochTimeStamp;
+
 partial interface mixin WindowOrWorkerGlobalScope {
   [Replaceable]
   readonly attribute Performance performance;
