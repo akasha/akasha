@@ -3,8 +3,8 @@ typedef sequence<Report> ReportList;
 callback ReportingObserverCallback = undefined ( sequence<Report> reports, ReportingObserver observer );
 
 dictionary GenerateTestReportParameters {
-  DOMString group = "default";
   required DOMString message;
+  DOMString group = "default";
 };
 
 dictionary ReportingObserverOptions {
