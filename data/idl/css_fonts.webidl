@@ -22,15 +22,12 @@ interface CSSFontFeatureValuesRule : CSSRule {
 
 [Exposed=Window]
 interface CSSFontPaletteValuesRule : CSSRule {
-  maplike<unsigned long, CSSOMString>;
-  attribute CSSOMString basePalette;
-  attribute CSSOMString fontFamily;
+  readonly attribute CSSOMString basePalette;
+  readonly attribute CSSOMString fontFamily;
+  readonly attribute CSSOMString name;
+  readonly attribute CSSOMString overrideColors;
 };
 
 partial interface CSSRule {
   const unsigned short FONT_FEATURE_VALUES_RULE = 14;
-};
-
-partial interface CSSRule {
-  const unsigned short FONT_PALETTE_VALUES_RULE = 15;
 };
