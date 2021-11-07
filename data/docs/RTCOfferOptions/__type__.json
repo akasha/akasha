@@ -2,12 +2,12 @@
     "kind": "Type",
     "name": "RTCOfferOptions",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCOfferOptions",
-    "description": "The RTCOfferOptions dictionary is used to provide optional settings when creating an RTCPeerConnection offer with the createOffer() method.",
+    "description": "The createOffer() method of the RTCPeerConnection interface initiates the creation of an SDP offer for the purpose of starting a new WebRTC connection to a remote peer. The SDP offer includes information about any MediaStreamTrack objects already attached to the WebRTC session, codec, and options supported by the browser, and any candidates already gathered by the ICE agent, for the purpose of being sent over the signaling channel to a potential peer to request a connection or to update the configuration of an existing connection.",
     "refs": [
         {
             "name": "WebRTC 1.0: Real-Time Communication Between Browsers",
-            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcofferoptions",
-            "description": "(WebRTC 1.0) # dom-rtcofferoptions"
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnection-createoffer",
+            "description": "(WebRTC 1.0) # dom-rtcpeerconnection-createoffer"
         }
     ]
 }

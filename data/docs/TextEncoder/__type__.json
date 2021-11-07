@@ -2,7 +2,7 @@
     "kind": "Type",
     "name": "TextEncoder",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/TextEncoder",
-    "description": "TextEncoder takes a stream of code points as input and emits a stream of UTF-8 bytes.",
+    "description": "The TextEncoder interface takes a stream of code points as input and emits a stream of UTF-8 bytes.",
     "refs": [
         {
             "name": "Encoding",

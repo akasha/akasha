@@ -2,12 +2,12 @@
     "kind": "Type",
     "name": "RTCRtpTransceiverInit",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpTransceiverInit",
-    "description": "The RTCRtpTransceiverInit dictionary is used when calling the WebRTC function RTCPeerConnection.addTransceiver() to provide configuration options for the new transceiver.",
+    "description": "The RTCPeerConnection method addTransceiver() creates a new RTCRtpTransceiver and adds it to the set of transceivers associated with the RTCPeerConnection. Each transceiver represents a bidirectional stream, with both an RTCRtpSender and an RTCRtpReceiver associated with it.",
     "refs": [
         {
             "name": "WebRTC 1.0: Real-Time Communication Between Browsers",
-            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcrtptransceiverinit",
-            "description": "(WebRTC 1.0) # dom-rtcrtptransceiverinit"
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnection-addtransceiver",
+            "description": "(WebRTC 1.0) # dom-rtcpeerconnection-addtransceiver"
         }
     ]
 }

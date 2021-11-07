@@ -1,10 +1,10 @@
 {
     "name": "RTCOfferOptions",
-    "lastModifiedAt": 1629769799000,
+    "lastModifiedAt": 1635904731000,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1629769799000
+            "lastModifiedAt": 1635904731000
         },
         {
             "name": "iceRestart",

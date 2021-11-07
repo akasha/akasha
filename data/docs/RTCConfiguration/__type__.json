@@ -2,12 +2,12 @@
     "kind": "Type",
     "name": "RTCConfiguration",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCConfiguration",
-    "description": "The RTCConfiguration dictionary is used to provide configuration options for an RTCPeerConnection. It may be passed into the constructor when instantiating a connection, or used with the RTCPeerConnection.getConfiguration() and RTCPeerConnection.setConfiguration() methods, which allow inspecting and changing the configuration while a connection is established.",
+    "description": "The RTCPeerConnection() constructor returns a newly-created RTCPeerConnection, which represents a connection between the local device and a remote peer.",
     "refs": [
         {
             "name": "WebRTC 1.0: Real-Time Communication Between Browsers",
-            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcconfiguration",
-            "description": "(WebRTC 1.0) # dom-rtcconfiguration"
+            "href": "https://w3c.github.io/webrtc-pc/#dom-peerconnection",
+            "description": "(WebRTC 1.0) # dom-peerconnection"
         }
     ]
 }
