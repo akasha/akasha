@@ -230,11 +230,6 @@
         "name": "navigation_timing_patch"
     },
     {
-        "lastModifiedTime": 1623896704000,
-        "name": "page_visibility",
-        "url": "https://w3c.github.io/page-visibility/"
-    },
-    {
         "lastModifiedTime": 1630351933000,
         "name": "performance_timeline",
         "url": "https://w3c.github.io/performance-timeline/"

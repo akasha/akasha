@@ -3,6 +3,7 @@
 ### Unreleased
 
 * Update the `High Resolution Time` spec to the `W3C Working Draft 12, October 2021` version. This should have no impact on the jsinterop binding but provides the `EpochTimeStamp` typedef in the generated closure externs.
+* Update the `HTML Living Standard` spec to the `5 November 2021` version. This incorporated the functionality that was previously defined as part of the `Page Visibility Level 2` specification which has been removed from the set of specifications ingested by the build process. This resulted in the enum `VisibilityState` being renamed to `DocumentVisibilityState` which resulted in code change in both the jsinterop and closure bindings.
 
 ### [v0.28](https://github.com/akasha/akasha/tree/v0.28) (2021-10-22) · [Full Changelog](https://github.com/spritz/spritz/compare/v0.27...v0.28) · [API Differences](https://akasha.github.io/akasha-java/api-diff/?key=akasha-java&old=0.27&new=0.28) · [Source Diff](https://github.com/akasha/akasha-java/compare/v0.27...v0.28)
 

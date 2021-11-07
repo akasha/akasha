@@ -103,6 +103,11 @@ enum DocumentReadyState {
   "loading"
 };
 
+enum DocumentVisibilityState {
+  "hidden",
+  "visible"
+};
+
 enum ImageOrientation {
   "flipY",
   "none"
@@ -2602,6 +2607,7 @@ partial interface Document {
   [SameObject]
   readonly attribute HTMLCollection forms;
   readonly attribute HTMLHeadElement? head;
+  readonly attribute boolean hidden;
   [SameObject]
   readonly attribute HTMLCollection images;
   readonly attribute DOMString lastModified;
@@ -2615,6 +2621,7 @@ partial interface Document {
   readonly attribute USVString referrer;
   [SameObject]
   readonly attribute HTMLCollection scripts;
+  readonly attribute DocumentVisibilityState visibilityState;
   [CEReactions]
   attribute HTMLElement? body;
   attribute USVString cookie;
@@ -2625,6 +2632,7 @@ partial interface Document {
   attribute USVString domain;
   [LegacyLenientThis]
   attribute EventHandler onreadystatechange;
+  attribute EventHandler onvisibilitychange;
   [CEReactions]
   attribute DOMString title;
   [CEReactions]
