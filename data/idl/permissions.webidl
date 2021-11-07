@@ -42,10 +42,6 @@ dictionary PermissionDescriptor {
   required PermissionName name;
 };
 
-dictionary PushPermissionDescriptor : PermissionDescriptor {
-  boolean userVisibleOnly = false;
-};
-
 [Exposed=(Window,Worker)]
 interface PermissionStatus : EventTarget {
   readonly attribute PermissionName name;

@@ -3,16 +3,14 @@ enum PushEncryptionKeyName {
   "p256dh"
 };
 
-enum PushPermissionState {
-  "denied",
-  "granted",
-  "prompt"
-};
-
 typedef ( BufferSource or USVString ) PushMessageDataInit;
 
 dictionary PushEventInit : ExtendableEventInit {
   PushMessageDataInit data;
+};
+
+dictionary PushPermissionDescriptor : PermissionDescriptor {
+  boolean userVisibleOnly = false;
 };
 
 dictionary PushSubscriptionChangeEventInit : ExtendableEventInit {
@@ -42,7 +40,7 @@ interface PushManager {
   [SameObject]
   static readonly attribute FrozenArray<DOMString> supportedContentEncodings;
   Promise<PushSubscription?> getSubscription();
-  Promise<PushPermissionState> permissionState( optional PushSubscriptionOptionsInit options = {} );
+  Promise<PermissionState> permissionState( optional PushSubscriptionOptionsInit options = {} );
   Promise<PushSubscription> subscribe( optional PushSubscriptionOptionsInit options = {} );
 };
 
