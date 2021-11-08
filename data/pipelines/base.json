@@ -121,6 +121,16 @@
       }
     },
     {
+      "name": "RenameType",
+      "description": "VisibilityState is the type referenced in the source spec and is the type referenced in other specs but whatwg decided to use DocumentVisibilityState...",
+      "sourceSelector": "name=whatwg_html",
+      "config": {
+        "expectedRenameCount": 1,
+        "namePattern": "^DocumentVisibilityState$",
+        "replacement": "VisibilityState"
+      }
+    },
+    {
       "name": "RemoveMember",
       "description": "We remove the trailing parameters to make it more java-esque",
       "sourceSelector": "name=whatwg_html",
