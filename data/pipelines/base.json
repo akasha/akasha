@@ -1040,17 +1040,6 @@
       }
     },
     {
-      "name": "RemoveMember",
-      "description": "the fileapi spec 'overrides' a operation on URL with a union of blob and the type defined in the mediasource spec. We re-add the blob variant in the fileapi_patch variant",
-      "sourceSelector": "name=fileapi",
-      "config": {
-        "expectedRemoveCount": 1,
-        "elementNamePattern": "^URL$",
-        "memberNamePattern": "^createObjectURL$",
-        "types": ["interface_type"]
-      }
-    },
-    {
       "name": "ChangeAttributeType",
       "sourceSelector": "name=fileapi",
       "config": {

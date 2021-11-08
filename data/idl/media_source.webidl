@@ -71,11 +71,6 @@ partial interface TextTrack {
   readonly attribute SourceBuffer? sourceBuffer;
 };
 
-[Exposed=Window]
-partial interface URL {
-  static DOMString createObjectURL( MediaSource mediaSource );
-};
-
 partial interface VideoTrack {
   readonly attribute SourceBuffer? sourceBuffer;
 };
