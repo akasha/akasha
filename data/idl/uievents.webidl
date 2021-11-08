@@ -115,6 +115,7 @@ interface MouseEvent : UIEvent {
   boolean getModifierState( DOMString keyArg );
 };
 
+[Exposed=Window]
 interface UIEvent : Event {
   readonly attribute long detail;
   readonly attribute Window? view;
