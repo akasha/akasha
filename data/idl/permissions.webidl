@@ -34,10 +34,6 @@ dictionary DevicePermissionDescriptor : PermissionDescriptor {
   DOMString deviceId;
 };
 
-dictionary MidiPermissionDescriptor : PermissionDescriptor {
-  boolean sysex = false;
-};
-
 dictionary PermissionDescriptor {
   required PermissionName name;
 };
