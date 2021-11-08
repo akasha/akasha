@@ -1,6 +1,10 @@
 # Change Log
 
-### Unreleased
+### [v0.29](https://github.com/akasha/akasha/tree/v0.29) (2021-11-08) · [Full Changelog](https://github.com/spritz/spritz/compare/v0.28...v0.29) · [API Differences](https://akasha.github.io/akasha-java/api-diff/?key=akasha-java&old=0.28&new=0.29) · [Source Diff](https://github.com/akasha/akasha-java/compare/v0.28...v0.29)
+
+The release includes 159 non breaking API changes, 9 potentially breaking API changes and 49 breaking API changes.
+
+Changes in this release:
 
 * Update the `High Resolution Time` spec to the `W3C Working Draft 12, October 2021` version. This should have no impact on the jsinterop binding but provides the `EpochTimeStamp` typedef in the generated closure externs.
 * Update the `HTML Living Standard` spec to the `5 November 2021` version. This incorporated the functionality that was previously defined as part of the `Page Visibility Level 2` specification which has been removed from the set of specifications ingested by the build process. The upgrade also changed the name of the attributes `textLetterSpacing` to `letterSpacing` and `textWordSpacing` to `wordSpacing` on the 2D rendering context types.
