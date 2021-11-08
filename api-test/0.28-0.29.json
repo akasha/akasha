@@ -30,6 +30,126 @@
     }
   },
   {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "@interface akasha.midi.MIDIPortConnectionState",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.midi.MIDIPortConnectionState",
+      "classSimpleName": "MIDIPortConnectionState",
+      "elementKind": "@interface",
+      "package": "akasha.midi"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "@interface akasha.midi.MIDIPortDeviceState",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.midi.MIDIPortDeviceState",
+      "classSimpleName": "MIDIPortDeviceState",
+      "elementKind": "@interface",
+      "package": "akasha.midi"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "@interface akasha.midi.MIDIPortType",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.midi.MIDIPortType",
+      "classSimpleName": "MIDIPortType",
+      "elementKind": "@interface",
+      "package": "akasha.midi"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "@interface akasha.usb.USBDirection",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.usb.USBDirection",
+      "classSimpleName": "USBDirection",
+      "elementKind": "@interface",
+      "package": "akasha.usb"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "@interface akasha.usb.USBEndpointType",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.usb.USBEndpointType",
+      "classSimpleName": "USBEndpointType",
+      "elementKind": "@interface",
+      "package": "akasha.usb"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "@interface akasha.usb.USBRecipient",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.usb.USBRecipient",
+      "classSimpleName": "USBRecipient",
+      "elementKind": "@interface",
+      "package": "akasha.usb"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "@interface akasha.usb.USBRequestType",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.usb.USBRequestType",
+      "classSimpleName": "USBRequestType",
+      "elementKind": "@interface",
+      "package": "akasha.usb"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "@interface akasha.usb.USBTransferStatus",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.usb.USBTransferStatus",
+      "classSimpleName": "USBTransferStatus",
+      "elementKind": "@interface",
+      "package": "akasha.usb"
+    }
+  },
+  {
     "code": "java.class.noLongerImplementsInterface",
     "description": "Class no longer implements interface 'akasha.lang.JsIterable<akasha.CSSFontPaletteValuesRule.Entry>'.",
     "element": "class akasha.CSSFontPaletteValuesRule",
@@ -73,6 +193,336 @@
       "classSimpleName": "Performance",
       "elementKind": "class",
       "package": "akasha"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.midi.MIDIAccess",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.midi.MIDIAccess",
+      "classSimpleName": "MIDIAccess",
+      "elementKind": "class",
+      "package": "akasha.midi"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.midi.MIDIConnectionEvent",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.midi.MIDIConnectionEvent",
+      "classSimpleName": "MIDIConnectionEvent",
+      "elementKind": "class",
+      "package": "akasha.midi"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.midi.MIDIInput",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.midi.MIDIInput",
+      "classSimpleName": "MIDIInput",
+      "elementKind": "class",
+      "package": "akasha.midi"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.midi.MIDIInputMap",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.midi.MIDIInputMap",
+      "classSimpleName": "MIDIInputMap",
+      "elementKind": "class",
+      "package": "akasha.midi"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.midi.MIDIMessageEvent",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.midi.MIDIMessageEvent",
+      "classSimpleName": "MIDIMessageEvent",
+      "elementKind": "class",
+      "package": "akasha.midi"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.midi.MIDIOutput",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.midi.MIDIOutput",
+      "classSimpleName": "MIDIOutput",
+      "elementKind": "class",
+      "package": "akasha.midi"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.midi.MIDIOutputMap",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.midi.MIDIOutputMap",
+      "classSimpleName": "MIDIOutputMap",
+      "elementKind": "class",
+      "package": "akasha.midi"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.midi.MIDIPort",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.midi.MIDIPort",
+      "classSimpleName": "MIDIPort",
+      "elementKind": "class",
+      "package": "akasha.midi"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.usb.USB",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.usb.USB",
+      "classSimpleName": "USB",
+      "elementKind": "class",
+      "package": "akasha.usb"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.usb.USBAlternateInterface",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.usb.USBAlternateInterface",
+      "classSimpleName": "USBAlternateInterface",
+      "elementKind": "class",
+      "package": "akasha.usb"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.usb.USBConfiguration",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.usb.USBConfiguration",
+      "classSimpleName": "USBConfiguration",
+      "elementKind": "class",
+      "package": "akasha.usb"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.usb.USBConnectionEvent",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.usb.USBConnectionEvent",
+      "classSimpleName": "USBConnectionEvent",
+      "elementKind": "class",
+      "package": "akasha.usb"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.usb.USBDevice",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.usb.USBDevice",
+      "classSimpleName": "USBDevice",
+      "elementKind": "class",
+      "package": "akasha.usb"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.usb.USBEndpoint",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.usb.USBEndpoint",
+      "classSimpleName": "USBEndpoint",
+      "elementKind": "class",
+      "package": "akasha.usb"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.usb.USBInTransferResult",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.usb.USBInTransferResult",
+      "classSimpleName": "USBInTransferResult",
+      "elementKind": "class",
+      "package": "akasha.usb"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.usb.USBInterface",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.usb.USBInterface",
+      "classSimpleName": "USBInterface",
+      "elementKind": "class",
+      "package": "akasha.usb"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.usb.USBIsochronousInTransferPacket",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.usb.USBIsochronousInTransferPacket",
+      "classSimpleName": "USBIsochronousInTransferPacket",
+      "elementKind": "class",
+      "package": "akasha.usb"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.usb.USBIsochronousInTransferResult",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.usb.USBIsochronousInTransferResult",
+      "classSimpleName": "USBIsochronousInTransferResult",
+      "elementKind": "class",
+      "package": "akasha.usb"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.usb.USBIsochronousOutTransferPacket",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.usb.USBIsochronousOutTransferPacket",
+      "classSimpleName": "USBIsochronousOutTransferPacket",
+      "elementKind": "class",
+      "package": "akasha.usb"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.usb.USBIsochronousOutTransferResult",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.usb.USBIsochronousOutTransferResult",
+      "classSimpleName": "USBIsochronousOutTransferResult",
+      "elementKind": "class",
+      "package": "akasha.usb"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.usb.USBOutTransferResult",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.usb.USBOutTransferResult",
+      "classSimpleName": "USBOutTransferResult",
+      "elementKind": "class",
+      "package": "akasha.usb"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.usb.USBPermissionResult",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.usb.USBPermissionResult",
+      "classSimpleName": "USBPermissionResult",
+      "elementKind": "class",
+      "package": "akasha.usb"
     }
   },
   {
@@ -826,6 +1276,171 @@
     }
   },
   {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.midi.MIDIConnectionEventInit",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.midi.MIDIConnectionEventInit",
+      "classSimpleName": "MIDIConnectionEventInit",
+      "elementKind": "interface",
+      "package": "akasha.midi"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.midi.MIDIMessageEventInit",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.midi.MIDIMessageEventInit",
+      "classSimpleName": "MIDIMessageEventInit",
+      "elementKind": "interface",
+      "package": "akasha.midi"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.midi.MIDIOptions",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.midi.MIDIOptions",
+      "classSimpleName": "MIDIOptions",
+      "elementKind": "interface",
+      "package": "akasha.midi"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.midi.MidiPermissionDescriptor",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.midi.MidiPermissionDescriptor",
+      "classSimpleName": "MidiPermissionDescriptor",
+      "elementKind": "interface",
+      "package": "akasha.midi"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.usb.AllowedUSBDevice",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.usb.AllowedUSBDevice",
+      "classSimpleName": "AllowedUSBDevice",
+      "elementKind": "interface",
+      "package": "akasha.usb"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.usb.USBConnectionEventInit",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.usb.USBConnectionEventInit",
+      "classSimpleName": "USBConnectionEventInit",
+      "elementKind": "interface",
+      "package": "akasha.usb"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.usb.USBControlTransferParameters",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.usb.USBControlTransferParameters",
+      "classSimpleName": "USBControlTransferParameters",
+      "elementKind": "interface",
+      "package": "akasha.usb"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.usb.USBDeviceFilter",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.usb.USBDeviceFilter",
+      "classSimpleName": "USBDeviceFilter",
+      "elementKind": "interface",
+      "package": "akasha.usb"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.usb.USBDeviceRequestOptions",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.usb.USBDeviceRequestOptions",
+      "classSimpleName": "USBDeviceRequestOptions",
+      "elementKind": "interface",
+      "package": "akasha.usb"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.usb.USBPermissionDescriptor",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.usb.USBPermissionDescriptor",
+      "classSimpleName": "USBPermissionDescriptor",
+      "elementKind": "interface",
+      "package": "akasha.usb"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.usb.USBPermissionStorage",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.usb.USBPermissionStorage",
+      "classSimpleName": "USBPermissionStorage",
+      "elementKind": "interface",
+      "package": "akasha.usb"
+    }
+  },
+  {
     "code": "java.method.defaultMethodAddedToInterface",
     "description": "A default method has been added to the interface.",
     "newElement": "method akasha.CompositionEventInit.Builder akasha.CompositionEventInit.Builder::which(int)",
@@ -1259,6 +1874,118 @@
       "elementKind": "method",
       "methodName": "timestampWrites",
       "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method akasha.promise.Promise<akasha.midi.MIDIAccess> akasha.Navigator::requestMIDIAccess()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.Navigator",
+      "classSimpleName": "Navigator",
+      "elementKind": "method",
+      "methodName": "requestMIDIAccess",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method akasha.promise.Promise<akasha.midi.MIDIAccess> akasha.Navigator::requestMIDIAccess(akasha.midi.MIDIOptions)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.Navigator",
+      "classSimpleName": "Navigator",
+      "elementKind": "method",
+      "methodName": "requestMIDIAccess",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method akasha.usb.USB akasha.Navigator::usb()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.Navigator",
+      "classSimpleName": "Navigator",
+      "elementKind": "method",
+      "methodName": "usb",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method akasha.usb.USB akasha.WorkerNavigator::usb()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.WorkerNavigator",
+      "classSimpleName": "WorkerNavigator",
+      "elementKind": "method",
+      "methodName": "usb",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.finalMethodAddedToNonFinalClass",
+    "description": "A final method has been added to an inheritable class.",
+    "newElement": "method boolean akasha.Navigator::isRequestMIDIAccessSupported()",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.Navigator",
+      "classSimpleName": "Navigator",
+      "elementKind": "method",
+      "methodName": "isRequestMIDIAccessSupported",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.finalMethodAddedToNonFinalClass",
+    "description": "A final method has been added to an inheritable class.",
+    "newElement": "method boolean akasha.Navigator::isUsbSupported()",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.Navigator",
+      "classSimpleName": "Navigator",
+      "elementKind": "method",
+      "methodName": "isUsbSupported",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.finalMethodAddedToNonFinalClass",
+    "description": "A final method has been added to an inheritable class.",
+    "newElement": "method boolean akasha.WorkerNavigator::isUsbSupported()",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.WorkerNavigator",
+      "classSimpleName": "WorkerNavigator",
+      "elementKind": "method",
+      "methodName": "isUsbSupported",
+      "package": "akasha"
     }
   },
   {
