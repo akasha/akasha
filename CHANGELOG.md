@@ -10,6 +10,7 @@
 * Update the `Accessible Rich Internet Applications (WAI-ARIA) 1.3` spec to the `W3C Editor's Draft 04 November 2021` version. This resulted in the aria attributes being correctly marked as nullable.
 * Update the `Push API` spec to the `W3C Working Draft 03 November 2021` version. This resulted in the operation `PushManager.permissionState(...)` operation return type changing to use the more common `PermissionState`.
 * Update the `UI Events` spec to the `W3C Working Draft, 20 October 2021` version. This resulted in the inclusion of the type `MutationEvent` and the operations: `CompositionEvent.initCompositionEvent(...)`, `KeyboardEvent.initKeyboardEvent(...)`, `MouseEvent.initMouseEvent(...)`, `UIEvent.initUIEvent(...)` and `UIEvent.initUIEvent(...)`.
+* Update the `Media Source Extensions` spec to the `W3C First Public Working Draft 30 September 2021` version. This resulted in the inclusion of the attribute `MediaSource.canConstructInDedicatedWorker` and the operation `MediaSource.changeType(...)`.
 
 ### [v0.28](https://github.com/akasha/akasha/tree/v0.28) (2021-10-22) · [Full Changelog](https://github.com/spritz/spritz/compare/v0.27...v0.28) · [API Differences](https://akasha.github.io/akasha-java/api-diff/?key=akasha-java&old=0.27&new=0.28) · [Source Diff](https://github.com/akasha/akasha-java/compare/v0.27...v0.28)
 

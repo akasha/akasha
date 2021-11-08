@@ -16,6 +16,7 @@ enum ReadyState {
 
 [Exposed=(Window,DedicatedWorker)]
 interface MediaSource : EventTarget {
+  static readonly attribute boolean canConstructInDedicatedWorker;
   readonly attribute SourceBufferList activeSourceBuffers;
   readonly attribute ReadyState readyState;
   readonly attribute SourceBufferList sourceBuffers;
@@ -50,6 +51,7 @@ interface SourceBuffer : EventTarget {
   attribute double timestampOffset;
   undefined abort();
   undefined appendBuffer( BufferSource data );
+  undefined changeType( DOMString type );
   undefined remove( double start, unrestricted double end );
 };
 
