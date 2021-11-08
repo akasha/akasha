@@ -71,6 +71,7 @@ partial interface TextTrack {
   readonly attribute SourceBuffer? sourceBuffer;
 };
 
+[Exposed=(Window,DedicatedWorker)]
 partial interface VideoTrack {
   readonly attribute SourceBuffer? sourceBuffer;
 };
