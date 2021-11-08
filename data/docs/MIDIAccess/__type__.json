@@ -1,0 +1,13 @@
+{
+    "kind": "Type",
+    "name": "MIDIAccess",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MIDIAccess",
+    "description": "The MIDIAccess interface of the Web MIDI API provides methods for listing MIDI input and output devices, and obtaining access to those devices.",
+    "refs": [
+        {
+            "name": "Web MIDI API",
+            "href": "https://webaudio.github.io/web-midi-api/#midiaccess-interface",
+            "description": "# midiaccess-interface"
+        }
+    ]
+}

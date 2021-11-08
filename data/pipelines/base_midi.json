@@ -1,0 +1,22 @@
+{
+  "stages": [
+    {
+      "name": "AddExtendedAttribute",
+      "sourceSelector": "name=web_midi_api",
+      "config": {
+        "namePattern": "^.*$",
+        "extendedAttribute": "JavaSubPackage=midi"
+      }
+    },
+    {
+      "name": "AddExtendedAttributeToMember",
+      "sourceSelector": "name=web_midi_api",
+      "config": {
+        "expectedAddCount": 1,
+        "elementNamePattern": "^Navigator$",
+        "memberNamePattern": "^requestMIDIAccess$",
+        "extendedAttribute": "OptionalSupport"
+      }
+    }
+  ]
+}

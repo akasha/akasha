@@ -384,6 +384,11 @@
         "url": "https://webbluetoothcg.github.io/web-bluetooth/"
     },
     {
+        "lastModifiedTime": 1635264198000,
+        "name": "web_midi_api",
+        "url": "https://webaudio.github.io/web-midi-api"
+    },
+    {
         "lastModifiedTime": 1634096842000,
         "name": "web_share",
         "url": "https://www.w3.org/TR/web-share/"

@@ -1,0 +1,13 @@
+{
+    "kind": "Type",
+    "name": "MIDIInput",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MIDIInput",
+    "description": "The MIDIInput interface of the Web MIDI API receives messages from a MIDI input port.",
+    "refs": [
+        {
+            "name": "Web MIDI API",
+            "href": "https://webaudio.github.io/web-midi-api/#midiinput-interface",
+            "description": "# midiinput-interface"
+        }
+    ]
+}

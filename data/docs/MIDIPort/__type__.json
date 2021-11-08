@@ -1,0 +1,13 @@
+{
+    "kind": "Type",
+    "name": "MIDIPort",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MIDIPort",
+    "description": "The MIDIPort interface of the Web MIDI API represents a MIDI input or output port.",
+    "refs": [
+        {
+            "name": "Web MIDI API",
+            "href": "https://webaudio.github.io/web-midi-api/#MIDIPort",
+            "description": "# MIDIPort"
+        }
+    ]
+}

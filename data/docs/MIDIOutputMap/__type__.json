@@ -1,0 +1,13 @@
+{
+    "kind": "Type",
+    "name": "MIDIOutputMap",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MIDIOutputMap",
+    "description": "The MIDIOutputMap read-only interface of the Web MIDI API provides a Map-like interface to the currently available MIDI output ports. Although it works like a map, because it is read-only, it does not contain clear(), delete(), or set() functions.",
+    "refs": [
+        {
+            "name": "Web MIDI API",
+            "href": "https://webaudio.github.io/web-midi-api/#midiinputmap-interface",
+            "description": "# midiinputmap-interface"
+        }
+    ]
+}
