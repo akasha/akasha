@@ -1,6 +1,6 @@
 {
   "sourceSelector": "!name=minimal_events !name=minimal_webgpu_integration",
-  "pre": ["base_webgpu", "base_common", "base_events", "base_typedarray", "base_bluetooth", "base_speech_api", "base_indexdb", "base_midi"],
+  "pre": ["base_webgpu", "base_common", "base_events", "base_typedarray", "base_bluetooth", "base_speech_api", "base_indexdb", "base_midi", "base_usb"],
   "stages": [
     {
       "name": "RemoveMember",

@@ -1,0 +1,13 @@
+{
+    "kind": "Type",
+    "name": "USBAlternateInterface",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/USBAlternateInterface",
+    "description": "The USBAlternateInterface interface of the WebUSB API provides information about a particular configuration of an interface provided by the USB device. An interface includes one or more alternate settings which can configure a set of endpoints based on the operating mode of the device.",
+    "refs": [
+        {
+            "name": "WebUSB API",
+            "href": "https://wicg.github.io/webusb/#usbalternateinterface",
+            "description": "# usbalternateinterface"
+        }
+    ]
+}

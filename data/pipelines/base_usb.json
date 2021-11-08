@@ -1,0 +1,22 @@
+{
+  "stages": [
+    {
+      "name": "AddExtendedAttribute",
+      "sourceSelector": "name=webusb",
+      "config": {
+        "namePattern": "^.*$",
+        "extendedAttribute": "JavaSubPackage=usb"
+      }
+    },
+    {
+      "name": "AddExtendedAttributeToMember",
+      "sourceSelector": "name=webusb",
+      "config": {
+        "expectedAddCount": 2,
+        "elementNamePattern": "^(Navigator|WorkerNavigator)$",
+        "memberNamePattern": "^usb$",
+        "extendedAttribute": "OptionalSupport"
+      }
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+    "kind": "Type",
+    "name": "USBConfiguration",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/USBConfiguration",
+    "description": "The USBConfiguration interface of the WebUSB API provides information about a particular configuration of a USB device and the interfaces that it supports.",
+    "refs": [
+        {
+            "name": "WebUSB API",
+            "href": "https://wicg.github.io/webusb/#configurations",
+            "description": "# configurations"
+        }
+    ]
+}

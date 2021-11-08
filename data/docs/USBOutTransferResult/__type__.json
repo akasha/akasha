@@ -1,0 +1,13 @@
+{
+    "kind": "Type",
+    "name": "USBOutTransferResult",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/USBOutTransferResult",
+    "description": "The USBOutTransferResult interface of the WebUSB API provides the result from a call to the transferOut() and controlTransferOut() methods of the USBDevice interface. It represents the result from requesting a transfer of data from the USB host to the USB device.",
+    "refs": [
+        {
+            "name": "WebUSB API",
+            "href": "https://wicg.github.io/webusb/#usbouttransferresult",
+            "description": "# usbouttransferresult"
+        }
+    ]
+}

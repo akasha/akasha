@@ -1,0 +1,13 @@
+{
+    "kind": "Type",
+    "name": "USBConnectionEvent",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/USBConnectionEvent",
+    "description": "The USBConnectionEvent interface of the WebUSB API is the event type passed to USB.onconnect and USB.ondisconnect when the user agent detects that a new USB device has been connected or disconnected.",
+    "refs": [
+        {
+            "name": "WebUSB API",
+            "href": "https://wicg.github.io/webusb/#usbconnectionevent",
+            "description": "# usbconnectionevent"
+        }
+    ]
+}

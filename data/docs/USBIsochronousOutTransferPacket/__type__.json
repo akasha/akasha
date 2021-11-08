@@ -1,0 +1,13 @@
+{
+    "kind": "Type",
+    "name": "USBIsochronousOutTransferPacket",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/USBIsochronousOutTransferPacket",
+    "description": "The USBIsochronousOutTransferPacket interface of the WebUSB API is part of the response from a call to the isochronousTransferOut() method of the USBDevice interface. It represents the status of an individual packet from a request to transfer data from the USB host to the USB device over an isochronous endpoint.",
+    "refs": [
+        {
+            "name": "WebUSB API",
+            "href": "https://wicg.github.io/webusb/#usbisochronousouttransferpacket",
+            "description": "# usbisochronousouttransferpacket"
+        }
+    ]
+}

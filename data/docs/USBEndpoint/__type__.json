@@ -1,0 +1,13 @@
+{
+    "kind": "Type",
+    "name": "USBEndpoint",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/USBEndpoint",
+    "description": "The USBEndpoint interface of the WebUSB API provides information about an endpoint provided by the USB device. An endpoint represents a unidirectional data stream into or out of a device.",
+    "refs": [
+        {
+            "name": "WebUSB API",
+            "href": "https://wicg.github.io/webusb/#endpoints",
+            "description": "# endpoints"
+        }
+    ]
+}

@@ -12,6 +12,7 @@
 * Update the `UI Events` spec to the `W3C Working Draft, 20 October 2021` version. This resulted in the inclusion of the type `MutationEvent` and the operations: `CompositionEvent.initCompositionEvent(...)`, `KeyboardEvent.initKeyboardEvent(...)`, `MouseEvent.initMouseEvent(...)`, `UIEvent.initUIEvent(...)` and `UIEvent.initUIEvent(...)`.
 * Update the `Media Source Extensions` spec to the `W3C First Public Working Draft 30 September 2021` version. This resulted in the inclusion of the attribute `MediaSource.canConstructInDedicatedWorker` and the operation `MediaSource.changeType(...)`.
 * Add the `Web MIDI API` spec version `W3C Editor's Draft 26 October 2021` version.
+* Add the `WebUSB API` spec version `Draft Community Group Report, 6 October 2021` version.
 
 ### [v0.28](https://github.com/akasha/akasha/tree/v0.28) (2021-10-22) · [Full Changelog](https://github.com/spritz/spritz/compare/v0.27...v0.28) · [API Differences](https://akasha.github.io/akasha-java/api-diff/?key=akasha-java&old=0.27&new=0.28) · [Source Diff](https://github.com/akasha/akasha-java/compare/v0.27...v0.28)
 

@@ -1,0 +1,13 @@
+{
+    "kind": "Type",
+    "name": "USBIsochronousInTransferResult",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/USBIsochronousInTransferResult",
+    "description": "The USBIsochronousInTransferResult interface of the WebUSB API provides the result from a call to the isochronousTransferIn() method of the USBDevice interface. It represents the result from requesting a transfer of data from the USB device to the USB host.",
+    "refs": [
+        {
+            "name": "WebUSB API",
+            "href": "https://wicg.github.io/webusb/#usbisochronousintransferresult",
+            "description": "# usbisochronousintransferresult"
+        }
+    ]
+}

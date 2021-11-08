@@ -1,0 +1,13 @@
+{
+    "kind": "Type",
+    "name": "USBInterface",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/USBInterface",
+    "description": "The USBInterface interface of the WebUSB API provides information about an interface provided by the USB device. An interface represents a feature of the device which implements a particular protocol and may contain endpoints for bidirectional communication.",
+    "refs": [
+        {
+            "name": "WebUSB API",
+            "href": "https://wicg.github.io/webusb/#usbinterface",
+            "description": "# usbinterface"
+        }
+    ]
+}

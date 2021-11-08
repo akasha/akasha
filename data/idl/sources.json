@@ -651,6 +651,11 @@
         "url": "https://w3c.github.io/webrtc-stats/"
     },
     {
+        "lastModifiedTime": 1633536437000,
+        "name": "webusb",
+        "url": "https://wicg.github.io/webusb/"
+    },
+    {
         "lastModifiedTime": 1554372319000,
         "name": "webvtt1",
         "url": "https://www.w3.org/TR/webvtt1/"

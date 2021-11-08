@@ -1,0 +1,13 @@
+{
+    "kind": "Type",
+    "name": "USBDevice",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/USBDevice",
+    "description": "The USBDevice interface of the WebUSB API provides access to metadata about a paired USB device and methods for controlling it.",
+    "refs": [
+        {
+            "name": "WebUSB API",
+            "href": "https://wicg.github.io/webusb/#device-usage",
+            "description": "# device-usage"
+        }
+    ]
+}
