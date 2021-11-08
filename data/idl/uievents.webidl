@@ -24,7 +24,7 @@ dictionary FocusEventInit : UIEventInit {
 };
 
 dictionary InputEventInit : UIEventInit {
-  DOMString? data = "";
+  DOMString? data = null;
   DOMString inputType = "";
   boolean isComposing = false;
 };
@@ -57,6 +57,15 @@ dictionary WheelEventInit : MouseEventInit {
   double deltaX = 0.0;
   double deltaY = 0.0;
   double deltaZ = 0.0;
+};
+
+partial dictionary KeyboardEventInit {
+  unsigned long charCode = 0;
+  unsigned long keyCode = 0;
+};
+
+partial dictionary UIEventInit {
+  unsigned long which = 0;
 };
 
 [Exposed=Window]
@@ -116,6 +125,19 @@ interface MouseEvent : UIEvent {
 };
 
 [Exposed=Window]
+interface MutationEvent : Event {
+  const unsigned short ADDITION = 2;
+  const unsigned short MODIFICATION = 1;
+  const unsigned short REMOVAL = 3;
+  readonly attribute unsigned short attrChange;
+  readonly attribute DOMString attrName;
+  readonly attribute DOMString newValue;
+  readonly attribute DOMString prevValue;
+  readonly attribute Node? relatedNode;
+  undefined initMutationEvent( DOMString typeArg, optional boolean bubblesArg = false, optional boolean cancelableArg = false, optional Node? relatedNodeArg = null, optional DOMString prevValueArg = "", optional DOMString newValueArg = "", optional DOMString attrNameArg = "", optional unsigned short attrChangeArg = 0 );
+};
+
+[Exposed=Window]
 interface UIEvent : Event {
   readonly attribute long detail;
   readonly attribute Window? view;
@@ -134,9 +156,25 @@ interface WheelEvent : MouseEvent {
   constructor( DOMString type, optional WheelEventInit eventInitDict = {} );
 };
 
+partial interface CompositionEvent {
+  undefined initCompositionEvent( DOMString typeArg, optional boolean bubblesArg = false, optional boolean cancelableArg = false, optional WindowProxy? viewArg = null, optional DOMString dataArg = "" );
+};
+
+partial interface KeyboardEvent {
+  undefined initKeyboardEvent( DOMString typeArg, optional boolean bubblesArg = false, optional boolean cancelableArg = false, optional Window? viewArg = null, optional DOMString keyArg = "", optional unsigned long locationArg = 0, optional boolean ctrlKey = false, optional boolean altKey = false, optional boolean shiftKey = false, optional boolean metaKey = false );
+};
+
 partial interface KeyboardEvent {
   readonly attribute unsigned long charCode;
   readonly attribute unsigned long keyCode;
+};
+
+partial interface MouseEvent {
+  undefined initMouseEvent( DOMString typeArg, optional boolean bubblesArg = false, optional boolean cancelableArg = false, optional Window? viewArg = null, optional long detailArg = 0, optional long screenXArg = 0, optional long screenYArg = 0, optional long clientXArg = 0, optional long clientYArg = 0, optional boolean ctrlKeyArg = false, optional boolean altKeyArg = false, optional boolean shiftKeyArg = false, optional boolean metaKeyArg = false, optional short buttonArg = 0, optional EventTarget? relatedTargetArg = null );
+};
+
+partial interface UIEvent {
+  undefined initUIEvent( DOMString typeArg, optional boolean bubblesArg = false, optional boolean cancelableArg = false, optional Window? viewArg = null, optional long detailArg = 0 );
 };
 
 partial interface UIEvent {

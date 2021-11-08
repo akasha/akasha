@@ -9,6 +9,7 @@
 * Update the `CSS Fonts Module Level 4` spec to the `Editor’s Draft, 3 November 2021` version. This resulted in support the `CSSFontPaletteValuesRule.basePalette` and `CSSFontPaletteValuesRule.fontFamily` attributes being made read-only as well as the replacement of maplike construct on the `CSSFontPaletteValuesRule` with explicit read only attributes `name` and `overrideColors`.
 * Update the `Accessible Rich Internet Applications (WAI-ARIA) 1.3` spec to the `W3C Editor's Draft 04 November 2021` version. This resulted in the aria attributes being correctly marked as nullable.
 * Update the `Push API` spec to the `W3C Working Draft 03 November 2021` version. This resulted in the operation `PushManager.permissionState(...)` operation return type changing to use the more common `PermissionState`.
+* Update the `UI Events` spec to the `W3C Working Draft, 20 October 2021` version. This resulted in the inclusion of the type `MutationEvent` and the operations: `CompositionEvent.initCompositionEvent(...)`, `KeyboardEvent.initKeyboardEvent(...)`, `MouseEvent.initMouseEvent(...)`, `UIEvent.initUIEvent(...)` and `UIEvent.initUIEvent(...)`.
 
 ### [v0.28](https://github.com/akasha/akasha/tree/v0.28) (2021-10-22) · [Full Changelog](https://github.com/spritz/spritz/compare/v0.27...v0.28) · [API Differences](https://akasha.github.io/akasha-java/api-diff/?key=akasha-java&old=0.27&new=0.28) · [Source Diff](https://github.com/akasha/akasha-java/compare/v0.27...v0.28)
 
