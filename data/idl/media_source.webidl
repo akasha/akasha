@@ -14,7 +14,7 @@ enum ReadyState {
   "open"
 };
 
-[Constructor]
+[Exposed=(Window,DedicatedWorker)]
 interface MediaSource : EventTarget {
   readonly attribute SourceBufferList activeSourceBuffers;
   readonly attribute ReadyState readyState;
@@ -24,13 +24,15 @@ interface MediaSource : EventTarget {
   attribute EventHandler onsourceended;
   attribute EventHandler onsourceopen;
   static boolean isTypeSupported( DOMString type );
+  constructor();
   SourceBuffer addSourceBuffer( DOMString type );
-  void clearLiveSeekableRange();
-  void endOfStream( optional EndOfStreamError error );
-  void removeSourceBuffer( SourceBuffer sourceBuffer );
-  void setLiveSeekableRange( double start, double end );
+  undefined clearLiveSeekableRange();
+  undefined endOfStream( optional EndOfStreamError error );
+  undefined removeSourceBuffer( SourceBuffer sourceBuffer );
+  undefined setLiveSeekableRange( double start, double end );
 };
 
+[Exposed=(Window,DedicatedWorker)]
 interface SourceBuffer : EventTarget {
   readonly attribute AudioTrackList audioTracks;
   readonly attribute TimeRanges buffered;
@@ -46,11 +48,12 @@ interface SourceBuffer : EventTarget {
   attribute EventHandler onupdateend;
   attribute EventHandler onupdatestart;
   attribute double timestampOffset;
-  void abort();
-  void appendBuffer( BufferSource data );
-  void remove( double start, unrestricted double end );
+  undefined abort();
+  undefined appendBuffer( BufferSource data );
+  undefined remove( double start, unrestricted double end );
 };
 
+[Exposed=(Window,DedicatedWorker)]
 interface SourceBufferList : EventTarget {
   readonly attribute unsigned long length;
   attribute EventHandler onaddsourcebuffer;
@@ -58,10 +61,12 @@ interface SourceBufferList : EventTarget {
   getter SourceBuffer ( unsigned long index );
 };
 
+[Exposed=(Window,DedicatedWorker)]
 partial interface AudioTrack {
   readonly attribute SourceBuffer? sourceBuffer;
 };
 
+[Exposed=(Window,DedicatedWorker)]
 partial interface TextTrack {
   readonly attribute SourceBuffer? sourceBuffer;
 };
