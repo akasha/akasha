@@ -1,0 +1,2744 @@
+[
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "@interface akasha.gpu.GPUComputePassTimestampLocation",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUComputePassTimestampLocation",
+      "classSimpleName": "GPUComputePassTimestampLocation",
+      "elementKind": "@interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "@interface akasha.gpu.GPURenderPassTimestampLocation",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURenderPassTimestampLocation",
+      "classSimpleName": "GPURenderPassTimestampLocation",
+      "elementKind": "@interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.noLongerImplementsInterface",
+    "description": "Class no longer implements interface 'akasha.lang.JsIterable<akasha.CSSFontPaletteValuesRule.Entry>'.",
+    "element": "class akasha.CSSFontPaletteValuesRule",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.CSSFontPaletteValuesRule",
+      "classSimpleName": "CSSFontPaletteValuesRule",
+      "elementKind": "class",
+      "interface": "akasha.lang.JsIterable<akasha.CSSFontPaletteValuesRule.Entry>",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.MutationEvent",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.MutationEvent",
+      "classSimpleName": "MutationEvent",
+      "elementKind": "class",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.Performance",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.Performance",
+      "classSimpleName": "Performance",
+      "elementKind": "class",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.field.added",
+    "description": "Field added to class.",
+    "newElement": "field akasha.CanvasRenderingContext2D.letterSpacing",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.CanvasRenderingContext2D",
+      "classSimpleName": "CanvasRenderingContext2D",
+      "elementKind": "field",
+      "fieldName": "letterSpacing",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.field.added",
+    "description": "Field added to class.",
+    "newElement": "field akasha.CanvasRenderingContext2D.wordSpacing",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.CanvasRenderingContext2D",
+      "classSimpleName": "CanvasRenderingContext2D",
+      "elementKind": "field",
+      "fieldName": "wordSpacing",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.field.added",
+    "description": "Field added to class.",
+    "newElement": "field akasha.OffscreenCanvasRenderingContext2D.letterSpacing",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.OffscreenCanvasRenderingContext2D",
+      "classSimpleName": "OffscreenCanvasRenderingContext2D",
+      "elementKind": "field",
+      "fieldName": "letterSpacing",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.field.added",
+    "description": "Field added to class.",
+    "newElement": "field akasha.OffscreenCanvasRenderingContext2D.wordSpacing",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.OffscreenCanvasRenderingContext2D",
+      "classSimpleName": "OffscreenCanvasRenderingContext2D",
+      "elementKind": "field",
+      "fieldName": "wordSpacing",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.field.addedStaticField",
+    "description": "Static field added to class.",
+    "newElement": "field akasha.gpu.GPUFeatureName.depth_clip_control",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUFeatureName",
+      "classSimpleName": "GPUFeatureName",
+      "elementKind": "field",
+      "fieldName": "depth_clip_control",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.field.addedStaticField",
+    "description": "Static field added to class.",
+    "newElement": "field akasha.gpu.GPUFeatureName.texture_compression_astc",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUFeatureName",
+      "classSimpleName": "GPUFeatureName",
+      "elementKind": "field",
+      "fieldName": "texture_compression_astc",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.field.addedStaticField",
+    "description": "Static field added to class.",
+    "newElement": "field akasha.gpu.GPUFeatureName.texture_compression_etc2",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUFeatureName",
+      "classSimpleName": "GPUFeatureName",
+      "elementKind": "field",
+      "fieldName": "texture_compression_etc2",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.field.addedStaticField",
+    "description": "Static field added to class.",
+    "newElement": "field akasha.gpu.GPUTextureFormat.astc_10x10_unorm",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUTextureFormat",
+      "classSimpleName": "GPUTextureFormat",
+      "elementKind": "field",
+      "fieldName": "astc_10x10_unorm",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.field.addedStaticField",
+    "description": "Static field added to class.",
+    "newElement": "field akasha.gpu.GPUTextureFormat.astc_10x10_unorm_srgb",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUTextureFormat",
+      "classSimpleName": "GPUTextureFormat",
+      "elementKind": "field",
+      "fieldName": "astc_10x10_unorm_srgb",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.field.addedStaticField",
+    "description": "Static field added to class.",
+    "newElement": "field akasha.gpu.GPUTextureFormat.astc_10x5_unorm",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUTextureFormat",
+      "classSimpleName": "GPUTextureFormat",
+      "elementKind": "field",
+      "fieldName": "astc_10x5_unorm",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.field.addedStaticField",
+    "description": "Static field added to class.",
+    "newElement": "field akasha.gpu.GPUTextureFormat.astc_10x5_unorm_srgb",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUTextureFormat",
+      "classSimpleName": "GPUTextureFormat",
+      "elementKind": "field",
+      "fieldName": "astc_10x5_unorm_srgb",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.field.addedStaticField",
+    "description": "Static field added to class.",
+    "newElement": "field akasha.gpu.GPUTextureFormat.astc_10x6_unorm",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUTextureFormat",
+      "classSimpleName": "GPUTextureFormat",
+      "elementKind": "field",
+      "fieldName": "astc_10x6_unorm",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.field.addedStaticField",
+    "description": "Static field added to class.",
+    "newElement": "field akasha.gpu.GPUTextureFormat.astc_10x6_unorm_srgb",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUTextureFormat",
+      "classSimpleName": "GPUTextureFormat",
+      "elementKind": "field",
+      "fieldName": "astc_10x6_unorm_srgb",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.field.addedStaticField",
+    "description": "Static field added to class.",
+    "newElement": "field akasha.gpu.GPUTextureFormat.astc_10x8_unorm",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUTextureFormat",
+      "classSimpleName": "GPUTextureFormat",
+      "elementKind": "field",
+      "fieldName": "astc_10x8_unorm",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.field.addedStaticField",
+    "description": "Static field added to class.",
+    "newElement": "field akasha.gpu.GPUTextureFormat.astc_10x8_unorm_srgb",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUTextureFormat",
+      "classSimpleName": "GPUTextureFormat",
+      "elementKind": "field",
+      "fieldName": "astc_10x8_unorm_srgb",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.field.addedStaticField",
+    "description": "Static field added to class.",
+    "newElement": "field akasha.gpu.GPUTextureFormat.astc_12x10_unorm",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUTextureFormat",
+      "classSimpleName": "GPUTextureFormat",
+      "elementKind": "field",
+      "fieldName": "astc_12x10_unorm",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.field.addedStaticField",
+    "description": "Static field added to class.",
+    "newElement": "field akasha.gpu.GPUTextureFormat.astc_12x10_unorm_srgb",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUTextureFormat",
+      "classSimpleName": "GPUTextureFormat",
+      "elementKind": "field",
+      "fieldName": "astc_12x10_unorm_srgb",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.field.addedStaticField",
+    "description": "Static field added to class.",
+    "newElement": "field akasha.gpu.GPUTextureFormat.astc_12x12_unorm",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUTextureFormat",
+      "classSimpleName": "GPUTextureFormat",
+      "elementKind": "field",
+      "fieldName": "astc_12x12_unorm",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.field.addedStaticField",
+    "description": "Static field added to class.",
+    "newElement": "field akasha.gpu.GPUTextureFormat.astc_12x12_unorm_srgb",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUTextureFormat",
+      "classSimpleName": "GPUTextureFormat",
+      "elementKind": "field",
+      "fieldName": "astc_12x12_unorm_srgb",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.field.addedStaticField",
+    "description": "Static field added to class.",
+    "newElement": "field akasha.gpu.GPUTextureFormat.astc_4x4_unorm",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUTextureFormat",
+      "classSimpleName": "GPUTextureFormat",
+      "elementKind": "field",
+      "fieldName": "astc_4x4_unorm",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.field.addedStaticField",
+    "description": "Static field added to class.",
+    "newElement": "field akasha.gpu.GPUTextureFormat.astc_4x4_unorm_srgb",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUTextureFormat",
+      "classSimpleName": "GPUTextureFormat",
+      "elementKind": "field",
+      "fieldName": "astc_4x4_unorm_srgb",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.field.addedStaticField",
+    "description": "Static field added to class.",
+    "newElement": "field akasha.gpu.GPUTextureFormat.astc_5x4_unorm",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUTextureFormat",
+      "classSimpleName": "GPUTextureFormat",
+      "elementKind": "field",
+      "fieldName": "astc_5x4_unorm",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.field.addedStaticField",
+    "description": "Static field added to class.",
+    "newElement": "field akasha.gpu.GPUTextureFormat.astc_5x4_unorm_srgb",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUTextureFormat",
+      "classSimpleName": "GPUTextureFormat",
+      "elementKind": "field",
+      "fieldName": "astc_5x4_unorm_srgb",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.field.addedStaticField",
+    "description": "Static field added to class.",
+    "newElement": "field akasha.gpu.GPUTextureFormat.astc_5x5_unorm",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUTextureFormat",
+      "classSimpleName": "GPUTextureFormat",
+      "elementKind": "field",
+      "fieldName": "astc_5x5_unorm",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.field.addedStaticField",
+    "description": "Static field added to class.",
+    "newElement": "field akasha.gpu.GPUTextureFormat.astc_5x5_unorm_srgb",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUTextureFormat",
+      "classSimpleName": "GPUTextureFormat",
+      "elementKind": "field",
+      "fieldName": "astc_5x5_unorm_srgb",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.field.addedStaticField",
+    "description": "Static field added to class.",
+    "newElement": "field akasha.gpu.GPUTextureFormat.astc_6x5_unorm",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUTextureFormat",
+      "classSimpleName": "GPUTextureFormat",
+      "elementKind": "field",
+      "fieldName": "astc_6x5_unorm",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.field.addedStaticField",
+    "description": "Static field added to class.",
+    "newElement": "field akasha.gpu.GPUTextureFormat.astc_6x5_unorm_srgb",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUTextureFormat",
+      "classSimpleName": "GPUTextureFormat",
+      "elementKind": "field",
+      "fieldName": "astc_6x5_unorm_srgb",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.field.addedStaticField",
+    "description": "Static field added to class.",
+    "newElement": "field akasha.gpu.GPUTextureFormat.astc_6x6_unorm",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUTextureFormat",
+      "classSimpleName": "GPUTextureFormat",
+      "elementKind": "field",
+      "fieldName": "astc_6x6_unorm",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.field.addedStaticField",
+    "description": "Static field added to class.",
+    "newElement": "field akasha.gpu.GPUTextureFormat.astc_6x6_unorm_srgb",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUTextureFormat",
+      "classSimpleName": "GPUTextureFormat",
+      "elementKind": "field",
+      "fieldName": "astc_6x6_unorm_srgb",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.field.addedStaticField",
+    "description": "Static field added to class.",
+    "newElement": "field akasha.gpu.GPUTextureFormat.astc_8x5_unorm",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUTextureFormat",
+      "classSimpleName": "GPUTextureFormat",
+      "elementKind": "field",
+      "fieldName": "astc_8x5_unorm",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.field.addedStaticField",
+    "description": "Static field added to class.",
+    "newElement": "field akasha.gpu.GPUTextureFormat.astc_8x5_unorm_srgb",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUTextureFormat",
+      "classSimpleName": "GPUTextureFormat",
+      "elementKind": "field",
+      "fieldName": "astc_8x5_unorm_srgb",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.field.addedStaticField",
+    "description": "Static field added to class.",
+    "newElement": "field akasha.gpu.GPUTextureFormat.astc_8x6_unorm",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUTextureFormat",
+      "classSimpleName": "GPUTextureFormat",
+      "elementKind": "field",
+      "fieldName": "astc_8x6_unorm",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.field.addedStaticField",
+    "description": "Static field added to class.",
+    "newElement": "field akasha.gpu.GPUTextureFormat.astc_8x6_unorm_srgb",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUTextureFormat",
+      "classSimpleName": "GPUTextureFormat",
+      "elementKind": "field",
+      "fieldName": "astc_8x6_unorm_srgb",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.field.addedStaticField",
+    "description": "Static field added to class.",
+    "newElement": "field akasha.gpu.GPUTextureFormat.astc_8x8_unorm",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUTextureFormat",
+      "classSimpleName": "GPUTextureFormat",
+      "elementKind": "field",
+      "fieldName": "astc_8x8_unorm",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.field.addedStaticField",
+    "description": "Static field added to class.",
+    "newElement": "field akasha.gpu.GPUTextureFormat.astc_8x8_unorm_srgb",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUTextureFormat",
+      "classSimpleName": "GPUTextureFormat",
+      "elementKind": "field",
+      "fieldName": "astc_8x8_unorm_srgb",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.field.addedStaticField",
+    "description": "Static field added to class.",
+    "newElement": "field akasha.gpu.GPUTextureFormat.eac_r11snorm",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUTextureFormat",
+      "classSimpleName": "GPUTextureFormat",
+      "elementKind": "field",
+      "fieldName": "eac_r11snorm",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.field.addedStaticField",
+    "description": "Static field added to class.",
+    "newElement": "field akasha.gpu.GPUTextureFormat.eac_r11unorm",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUTextureFormat",
+      "classSimpleName": "GPUTextureFormat",
+      "elementKind": "field",
+      "fieldName": "eac_r11unorm",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.field.addedStaticField",
+    "description": "Static field added to class.",
+    "newElement": "field akasha.gpu.GPUTextureFormat.eac_rg11snorm",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUTextureFormat",
+      "classSimpleName": "GPUTextureFormat",
+      "elementKind": "field",
+      "fieldName": "eac_rg11snorm",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.field.addedStaticField",
+    "description": "Static field added to class.",
+    "newElement": "field akasha.gpu.GPUTextureFormat.eac_rg11unorm",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUTextureFormat",
+      "classSimpleName": "GPUTextureFormat",
+      "elementKind": "field",
+      "fieldName": "eac_rg11unorm",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.field.addedStaticField",
+    "description": "Static field added to class.",
+    "newElement": "field akasha.gpu.GPUTextureFormat.etc2_rgb8a1unorm",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUTextureFormat",
+      "classSimpleName": "GPUTextureFormat",
+      "elementKind": "field",
+      "fieldName": "etc2_rgb8a1unorm",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.field.addedStaticField",
+    "description": "Static field added to class.",
+    "newElement": "field akasha.gpu.GPUTextureFormat.etc2_rgb8a1unorm_srgb",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUTextureFormat",
+      "classSimpleName": "GPUTextureFormat",
+      "elementKind": "field",
+      "fieldName": "etc2_rgb8a1unorm_srgb",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.field.addedStaticField",
+    "description": "Static field added to class.",
+    "newElement": "field akasha.gpu.GPUTextureFormat.etc2_rgb8unorm",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUTextureFormat",
+      "classSimpleName": "GPUTextureFormat",
+      "elementKind": "field",
+      "fieldName": "etc2_rgb8unorm",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.field.addedStaticField",
+    "description": "Static field added to class.",
+    "newElement": "field akasha.gpu.GPUTextureFormat.etc2_rgb8unorm_srgb",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUTextureFormat",
+      "classSimpleName": "GPUTextureFormat",
+      "elementKind": "field",
+      "fieldName": "etc2_rgb8unorm_srgb",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.field.addedStaticField",
+    "description": "Static field added to class.",
+    "newElement": "field akasha.gpu.GPUTextureFormat.etc2_rgba8unorm",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUTextureFormat",
+      "classSimpleName": "GPUTextureFormat",
+      "elementKind": "field",
+      "fieldName": "etc2_rgba8unorm",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.field.addedStaticField",
+    "description": "Static field added to class.",
+    "newElement": "field akasha.gpu.GPUTextureFormat.etc2_rgba8unorm_srgb",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUTextureFormat",
+      "classSimpleName": "GPUTextureFormat",
+      "elementKind": "field",
+      "fieldName": "etc2_rgba8unorm_srgb",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.gpu.GPUComputePassTimestampWrite",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUComputePassTimestampWrite",
+      "classSimpleName": "GPUComputePassTimestampWrite",
+      "elementKind": "interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.gpu.GPURenderPassTimestampWrite",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURenderPassTimestampWrite",
+      "classSimpleName": "GPURenderPassTimestampWrite",
+      "elementKind": "interface",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.defaultMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.CompositionEventInit.Builder akasha.CompositionEventInit.Builder::which(int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.CompositionEventInit.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "method",
+      "methodName": "which",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.defaultMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.DragEventInit.Builder akasha.DragEventInit.Builder::which(int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.DragEventInit.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "method",
+      "methodName": "which",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.defaultMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.EventModifierInit.Builder akasha.EventModifierInit.Builder::which(int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.EventModifierInit.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "method",
+      "methodName": "which",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.defaultMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.FocusEventInit.Builder akasha.FocusEventInit.Builder::which(int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.FocusEventInit.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "method",
+      "methodName": "which",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.defaultMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.InputEventInit.Builder akasha.InputEventInit.Builder::which(int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.InputEventInit.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "method",
+      "methodName": "which",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.defaultMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.KeyboardEventInit.Builder akasha.KeyboardEventInit.Builder::charCode(int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.KeyboardEventInit.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "method",
+      "methodName": "charCode",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.defaultMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.KeyboardEventInit.Builder akasha.KeyboardEventInit.Builder::keyCode(int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.KeyboardEventInit.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "method",
+      "methodName": "keyCode",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.defaultMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.KeyboardEventInit.Builder akasha.KeyboardEventInit.Builder::which(int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.KeyboardEventInit.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "method",
+      "methodName": "which",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.defaultMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.MouseEventInit.Builder akasha.MouseEventInit.Builder::which(int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.MouseEventInit.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "method",
+      "methodName": "which",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.returnTypeChanged",
+    "description": "The return type changed from 'akasha.perf.Performance' to  'akasha.Performance'.",
+    "newElement": "method akasha.Performance akasha.DedicatedWorkerGlobal::performance()",
+    "oldElement": "method akasha.perf.Performance akasha.DedicatedWorkerGlobal::performance()",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.DedicatedWorkerGlobal",
+      "classSimpleName": "DedicatedWorkerGlobal",
+      "elementKind": "method",
+      "methodName": "performance",
+      "newType": "akasha.Performance",
+      "oldType": "akasha.perf.Performance",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.returnTypeChanged",
+    "description": "The return type changed from 'akasha.perf.Performance' to  'akasha.Performance'.",
+    "newElement": "method akasha.Performance akasha.ServiceWorkerGlobal::performance()",
+    "oldElement": "method akasha.perf.Performance akasha.ServiceWorkerGlobal::performance()",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.ServiceWorkerGlobal",
+      "classSimpleName": "ServiceWorkerGlobal",
+      "elementKind": "method",
+      "methodName": "performance",
+      "newType": "akasha.Performance",
+      "oldType": "akasha.perf.Performance",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.returnTypeChanged",
+    "description": "The return type changed from 'akasha.perf.Performance' to  'akasha.Performance'.",
+    "newElement": "method akasha.Performance akasha.SharedWorkerGlobal::performance()",
+    "oldElement": "method akasha.perf.Performance akasha.SharedWorkerGlobal::performance()",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.SharedWorkerGlobal",
+      "classSimpleName": "SharedWorkerGlobal",
+      "elementKind": "method",
+      "methodName": "performance",
+      "newType": "akasha.Performance",
+      "oldType": "akasha.perf.Performance",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.returnTypeChanged",
+    "description": "The return type changed from 'akasha.perf.Performance' to  'akasha.Performance'.",
+    "newElement": "method akasha.Performance akasha.Window::performance()",
+    "oldElement": "method akasha.perf.Performance akasha.Window::performance()",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.Window",
+      "classSimpleName": "Window",
+      "elementKind": "method",
+      "methodName": "performance",
+      "newType": "akasha.Performance",
+      "oldType": "akasha.perf.Performance",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.returnTypeChanged",
+    "description": "The return type changed from 'akasha.perf.Performance' to  'akasha.Performance'.",
+    "newElement": "method akasha.Performance akasha.WindowGlobal::performance()",
+    "oldElement": "method akasha.perf.Performance akasha.WindowGlobal::performance()",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.WindowGlobal",
+      "classSimpleName": "WindowGlobal",
+      "elementKind": "method",
+      "methodName": "performance",
+      "newType": "akasha.Performance",
+      "oldType": "akasha.perf.Performance",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.returnTypeChanged",
+    "description": "The return type changed from 'akasha.perf.Performance' to  'akasha.Performance'.",
+    "newElement": "method akasha.Performance akasha.WorkerGlobalScope::performance()",
+    "oldElement": "method akasha.perf.Performance akasha.WorkerGlobalScope::performance()",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.WorkerGlobalScope",
+      "classSimpleName": "WorkerGlobalScope",
+      "elementKind": "method",
+      "methodName": "performance",
+      "newType": "akasha.Performance",
+      "oldType": "akasha.perf.Performance",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.defaultMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.PointerEventInit.Builder akasha.PointerEventInit.Builder::which(int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.PointerEventInit.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "method",
+      "methodName": "which",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.defaultMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.TouchEventInit.Builder akasha.TouchEventInit.Builder::which(int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.TouchEventInit.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "method",
+      "methodName": "which",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.defaultMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.UIEventInit.Builder akasha.UIEventInit.Builder::which(int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.UIEventInit.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "method",
+      "methodName": "which",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.defaultMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.WheelEventInit.Builder akasha.WheelEventInit.Builder::which(int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.WheelEventInit.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "method",
+      "methodName": "which",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.defaultMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.gpu.GPUComputePassDescriptor.Builder akasha.gpu.GPUComputePassDescriptor.Builder::timestampWrites(akasha.gpu.GPUComputePassTimestampWrite[])",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUComputePassDescriptor.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "method",
+      "methodName": "timestampWrites",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.defaultMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.gpu.GPUComputePassDescriptor.Builder akasha.gpu.GPUComputePassDescriptor.Builder::timestampWrites(akasha.lang.JsArray<akasha.gpu.GPUComputePassTimestampWrite>)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUComputePassDescriptor.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "method",
+      "methodName": "timestampWrites",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.defaultMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.gpu.GPUPrimitiveState.Builder akasha.gpu.GPUPrimitiveState.Builder::unclippedDepth(boolean)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUPrimitiveState.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "method",
+      "methodName": "unclippedDepth",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.defaultMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.gpu.GPURenderPassDescriptor.Builder akasha.gpu.GPURenderPassDescriptor.Builder::timestampWrites(akasha.gpu.GPURenderPassTimestampWrite[])",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURenderPassDescriptor.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "method",
+      "methodName": "timestampWrites",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.defaultMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.gpu.GPURenderPassDescriptor.Builder akasha.gpu.GPURenderPassDescriptor.Builder::timestampWrites(akasha.lang.JsArray<akasha.gpu.GPURenderPassTimestampWrite>)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURenderPassDescriptor.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "method",
+      "methodName": "timestampWrites",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.addedToInterface",
+    "description": "Method was added to an interface.",
+    "newElement": "method akasha.lang.JsArray<akasha.gpu.GPUComputePassTimestampWrite> akasha.gpu.GPUComputePassDescriptor::timestampWrites()",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "NON_BREAKING",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUComputePassDescriptor",
+      "classSimpleName": "GPUComputePassDescriptor",
+      "elementKind": "method",
+      "methodName": "timestampWrites",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.addedToInterface",
+    "description": "Method was added to an interface.",
+    "newElement": "method akasha.lang.JsArray<akasha.gpu.GPURenderPassTimestampWrite> akasha.gpu.GPURenderPassDescriptor::timestampWrites()",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "NON_BREAKING",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURenderPassDescriptor",
+      "classSimpleName": "GPURenderPassDescriptor",
+      "elementKind": "method",
+      "methodName": "timestampWrites",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.addedToInterface",
+    "description": "Method was added to an interface.",
+    "newElement": "method boolean akasha.gpu.GPUPrimitiveState::unclippedDepth()",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "NON_BREAKING",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUPrimitiveState",
+      "classSimpleName": "GPUPrimitiveState",
+      "elementKind": "method",
+      "methodName": "unclippedDepth",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method boolean akasha.media.MediaSource::canConstructInDedicatedWorker()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.media.MediaSource",
+      "classSimpleName": "MediaSource",
+      "elementKind": "method",
+      "methodName": "canConstructInDedicatedWorker",
+      "package": "akasha.media"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method double akasha.xr.XRFrame::predictedDisplayTime()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRFrame",
+      "classSimpleName": "XRFrame",
+      "elementKind": "method",
+      "methodName": "predictedDisplayTime",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.method.addedToInterface",
+    "description": "Method was added to an interface.",
+    "newElement": "method int akasha.KeyboardEventInit::charCode()",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "NON_BREAKING",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.KeyboardEventInit",
+      "classSimpleName": "KeyboardEventInit",
+      "elementKind": "method",
+      "methodName": "charCode",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.addedToInterface",
+    "description": "Method was added to an interface.",
+    "newElement": "method int akasha.KeyboardEventInit::keyCode()",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "NON_BREAKING",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.KeyboardEventInit",
+      "classSimpleName": "KeyboardEventInit",
+      "elementKind": "method",
+      "methodName": "keyCode",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.addedToInterface",
+    "description": "Method was added to an interface.",
+    "newElement": "method int akasha.UIEventInit::which()",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "NON_BREAKING",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.UIEventInit",
+      "classSimpleName": "UIEventInit",
+      "elementKind": "method",
+      "methodName": "which",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method java.lang.String akasha.CSSFontPaletteValuesRule::basePalette()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.CSSFontPaletteValuesRule",
+      "classSimpleName": "CSSFontPaletteValuesRule",
+      "elementKind": "method",
+      "methodName": "basePalette",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method java.lang.String akasha.CSSFontPaletteValuesRule::fontFamily()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.CSSFontPaletteValuesRule",
+      "classSimpleName": "CSSFontPaletteValuesRule",
+      "elementKind": "method",
+      "methodName": "fontFamily",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method java.lang.String akasha.CSSFontPaletteValuesRule::name()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.CSSFontPaletteValuesRule",
+      "classSimpleName": "CSSFontPaletteValuesRule",
+      "elementKind": "method",
+      "methodName": "name",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method java.lang.String akasha.CSSFontPaletteValuesRule::overrideColors()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.CSSFontPaletteValuesRule",
+      "classSimpleName": "CSSFontPaletteValuesRule",
+      "elementKind": "method",
+      "methodName": "overrideColors",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method void akasha.CompositionEvent::initCompositionEvent(java.lang.String)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.CompositionEvent",
+      "classSimpleName": "CompositionEvent",
+      "elementKind": "method",
+      "methodName": "initCompositionEvent",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method void akasha.CompositionEvent::initCompositionEvent(java.lang.String, boolean)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.CompositionEvent",
+      "classSimpleName": "CompositionEvent",
+      "elementKind": "method",
+      "methodName": "initCompositionEvent",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method void akasha.CompositionEvent::initCompositionEvent(java.lang.String, boolean, boolean)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.CompositionEvent",
+      "classSimpleName": "CompositionEvent",
+      "elementKind": "method",
+      "methodName": "initCompositionEvent",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method void akasha.CompositionEvent::initCompositionEvent(java.lang.String, boolean, boolean, akasha.Window)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.CompositionEvent",
+      "classSimpleName": "CompositionEvent",
+      "elementKind": "method",
+      "methodName": "initCompositionEvent",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method void akasha.CompositionEvent::initCompositionEvent(java.lang.String, boolean, boolean, akasha.Window, java.lang.String)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.CompositionEvent",
+      "classSimpleName": "CompositionEvent",
+      "elementKind": "method",
+      "methodName": "initCompositionEvent",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method void akasha.KeyboardEvent::initKeyboardEvent(java.lang.String)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.KeyboardEvent",
+      "classSimpleName": "KeyboardEvent",
+      "elementKind": "method",
+      "methodName": "initKeyboardEvent",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method void akasha.KeyboardEvent::initKeyboardEvent(java.lang.String, boolean)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.KeyboardEvent",
+      "classSimpleName": "KeyboardEvent",
+      "elementKind": "method",
+      "methodName": "initKeyboardEvent",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method void akasha.KeyboardEvent::initKeyboardEvent(java.lang.String, boolean, boolean)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.KeyboardEvent",
+      "classSimpleName": "KeyboardEvent",
+      "elementKind": "method",
+      "methodName": "initKeyboardEvent",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method void akasha.KeyboardEvent::initKeyboardEvent(java.lang.String, boolean, boolean, akasha.Window)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.KeyboardEvent",
+      "classSimpleName": "KeyboardEvent",
+      "elementKind": "method",
+      "methodName": "initKeyboardEvent",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method void akasha.KeyboardEvent::initKeyboardEvent(java.lang.String, boolean, boolean, akasha.Window, java.lang.String)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.KeyboardEvent",
+      "classSimpleName": "KeyboardEvent",
+      "elementKind": "method",
+      "methodName": "initKeyboardEvent",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method void akasha.KeyboardEvent::initKeyboardEvent(java.lang.String, boolean, boolean, akasha.Window, java.lang.String, int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.KeyboardEvent",
+      "classSimpleName": "KeyboardEvent",
+      "elementKind": "method",
+      "methodName": "initKeyboardEvent",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method void akasha.KeyboardEvent::initKeyboardEvent(java.lang.String, boolean, boolean, akasha.Window, java.lang.String, int, boolean)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.KeyboardEvent",
+      "classSimpleName": "KeyboardEvent",
+      "elementKind": "method",
+      "methodName": "initKeyboardEvent",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method void akasha.KeyboardEvent::initKeyboardEvent(java.lang.String, boolean, boolean, akasha.Window, java.lang.String, int, boolean, boolean)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.KeyboardEvent",
+      "classSimpleName": "KeyboardEvent",
+      "elementKind": "method",
+      "methodName": "initKeyboardEvent",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method void akasha.KeyboardEvent::initKeyboardEvent(java.lang.String, boolean, boolean, akasha.Window, java.lang.String, int, boolean, boolean, boolean)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.KeyboardEvent",
+      "classSimpleName": "KeyboardEvent",
+      "elementKind": "method",
+      "methodName": "initKeyboardEvent",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method void akasha.KeyboardEvent::initKeyboardEvent(java.lang.String, boolean, boolean, akasha.Window, java.lang.String, int, boolean, boolean, boolean, boolean)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.KeyboardEvent",
+      "classSimpleName": "KeyboardEvent",
+      "elementKind": "method",
+      "methodName": "initKeyboardEvent",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.addedToInterface",
+    "description": "Method was added to an interface.",
+    "newElement": "method void akasha.KeyboardEventInit::setCharCode(int)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "NON_BREAKING",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.KeyboardEventInit",
+      "classSimpleName": "KeyboardEventInit",
+      "elementKind": "method",
+      "methodName": "setCharCode",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.addedToInterface",
+    "description": "Method was added to an interface.",
+    "newElement": "method void akasha.KeyboardEventInit::setKeyCode(int)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "NON_BREAKING",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.KeyboardEventInit",
+      "classSimpleName": "KeyboardEventInit",
+      "elementKind": "method",
+      "methodName": "setKeyCode",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method void akasha.MouseEvent::initMouseEvent(java.lang.String)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.MouseEvent",
+      "classSimpleName": "MouseEvent",
+      "elementKind": "method",
+      "methodName": "initMouseEvent",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method void akasha.MouseEvent::initMouseEvent(java.lang.String, boolean)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.MouseEvent",
+      "classSimpleName": "MouseEvent",
+      "elementKind": "method",
+      "methodName": "initMouseEvent",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method void akasha.MouseEvent::initMouseEvent(java.lang.String, boolean, boolean)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.MouseEvent",
+      "classSimpleName": "MouseEvent",
+      "elementKind": "method",
+      "methodName": "initMouseEvent",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method void akasha.MouseEvent::initMouseEvent(java.lang.String, boolean, boolean, akasha.Window)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.MouseEvent",
+      "classSimpleName": "MouseEvent",
+      "elementKind": "method",
+      "methodName": "initMouseEvent",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method void akasha.MouseEvent::initMouseEvent(java.lang.String, boolean, boolean, akasha.Window, int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.MouseEvent",
+      "classSimpleName": "MouseEvent",
+      "elementKind": "method",
+      "methodName": "initMouseEvent",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method void akasha.MouseEvent::initMouseEvent(java.lang.String, boolean, boolean, akasha.Window, int, int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.MouseEvent",
+      "classSimpleName": "MouseEvent",
+      "elementKind": "method",
+      "methodName": "initMouseEvent",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method void akasha.MouseEvent::initMouseEvent(java.lang.String, boolean, boolean, akasha.Window, int, int, int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.MouseEvent",
+      "classSimpleName": "MouseEvent",
+      "elementKind": "method",
+      "methodName": "initMouseEvent",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method void akasha.MouseEvent::initMouseEvent(java.lang.String, boolean, boolean, akasha.Window, int, int, int, int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.MouseEvent",
+      "classSimpleName": "MouseEvent",
+      "elementKind": "method",
+      "methodName": "initMouseEvent",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method void akasha.MouseEvent::initMouseEvent(java.lang.String, boolean, boolean, akasha.Window, int, int, int, int, int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.MouseEvent",
+      "classSimpleName": "MouseEvent",
+      "elementKind": "method",
+      "methodName": "initMouseEvent",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method void akasha.MouseEvent::initMouseEvent(java.lang.String, boolean, boolean, akasha.Window, int, int, int, int, int, boolean)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.MouseEvent",
+      "classSimpleName": "MouseEvent",
+      "elementKind": "method",
+      "methodName": "initMouseEvent",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method void akasha.MouseEvent::initMouseEvent(java.lang.String, boolean, boolean, akasha.Window, int, int, int, int, int, boolean, boolean)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.MouseEvent",
+      "classSimpleName": "MouseEvent",
+      "elementKind": "method",
+      "methodName": "initMouseEvent",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method void akasha.MouseEvent::initMouseEvent(java.lang.String, boolean, boolean, akasha.Window, int, int, int, int, int, boolean, boolean, boolean)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.MouseEvent",
+      "classSimpleName": "MouseEvent",
+      "elementKind": "method",
+      "methodName": "initMouseEvent",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method void akasha.MouseEvent::initMouseEvent(java.lang.String, boolean, boolean, akasha.Window, int, int, int, int, int, boolean, boolean, boolean, boolean)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.MouseEvent",
+      "classSimpleName": "MouseEvent",
+      "elementKind": "method",
+      "methodName": "initMouseEvent",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method void akasha.MouseEvent::initMouseEvent(java.lang.String, boolean, boolean, akasha.Window, int, int, int, int, int, boolean, boolean, boolean, boolean, short)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.MouseEvent",
+      "classSimpleName": "MouseEvent",
+      "elementKind": "method",
+      "methodName": "initMouseEvent",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method void akasha.MouseEvent::initMouseEvent(java.lang.String, boolean, boolean, akasha.Window, int, int, int, int, int, boolean, boolean, boolean, boolean, short, akasha.EventTarget)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.MouseEvent",
+      "classSimpleName": "MouseEvent",
+      "elementKind": "method",
+      "methodName": "initMouseEvent",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method void akasha.UIEvent::initUIEvent(java.lang.String)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.UIEvent",
+      "classSimpleName": "UIEvent",
+      "elementKind": "method",
+      "methodName": "initUIEvent",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method void akasha.UIEvent::initUIEvent(java.lang.String, boolean)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.UIEvent",
+      "classSimpleName": "UIEvent",
+      "elementKind": "method",
+      "methodName": "initUIEvent",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method void akasha.UIEvent::initUIEvent(java.lang.String, boolean, boolean)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.UIEvent",
+      "classSimpleName": "UIEvent",
+      "elementKind": "method",
+      "methodName": "initUIEvent",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method void akasha.UIEvent::initUIEvent(java.lang.String, boolean, boolean, akasha.Window)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.UIEvent",
+      "classSimpleName": "UIEvent",
+      "elementKind": "method",
+      "methodName": "initUIEvent",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method void akasha.UIEvent::initUIEvent(java.lang.String, boolean, boolean, akasha.Window, int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.UIEvent",
+      "classSimpleName": "UIEvent",
+      "elementKind": "method",
+      "methodName": "initUIEvent",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.addedToInterface",
+    "description": "Method was added to an interface.",
+    "newElement": "method void akasha.UIEventInit::setWhich(int)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "NON_BREAKING",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.UIEventInit",
+      "classSimpleName": "UIEventInit",
+      "elementKind": "method",
+      "methodName": "setWhich",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method void akasha.gpu.GPUCommandEncoder::fillBuffer(akasha.gpu.GPUBuffer, int, int)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUCommandEncoder",
+      "classSimpleName": "GPUCommandEncoder",
+      "elementKind": "method",
+      "methodName": "fillBuffer",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.defaultMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method void akasha.gpu.GPUComputePassDescriptor::setTimestampWrites(akasha.gpu.GPUComputePassTimestampWrite[])",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUComputePassDescriptor",
+      "classSimpleName": "GPUComputePassDescriptor",
+      "elementKind": "method",
+      "methodName": "setTimestampWrites",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.addedToInterface",
+    "description": "Method was added to an interface.",
+    "newElement": "method void akasha.gpu.GPUComputePassDescriptor::setTimestampWrites(akasha.lang.JsArray<akasha.gpu.GPUComputePassTimestampWrite>)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "NON_BREAKING",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUComputePassDescriptor",
+      "classSimpleName": "GPUComputePassDescriptor",
+      "elementKind": "method",
+      "methodName": "setTimestampWrites",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.addedToInterface",
+    "description": "Method was added to an interface.",
+    "newElement": "method void akasha.gpu.GPUPrimitiveState::setUnclippedDepth(boolean)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "NON_BREAKING",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUPrimitiveState",
+      "classSimpleName": "GPUPrimitiveState",
+      "elementKind": "method",
+      "methodName": "setUnclippedDepth",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.defaultMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method void akasha.gpu.GPURenderPassDescriptor::setTimestampWrites(akasha.gpu.GPURenderPassTimestampWrite[])",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURenderPassDescriptor",
+      "classSimpleName": "GPURenderPassDescriptor",
+      "elementKind": "method",
+      "methodName": "setTimestampWrites",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.addedToInterface",
+    "description": "Method was added to an interface.",
+    "newElement": "method void akasha.gpu.GPURenderPassDescriptor::setTimestampWrites(akasha.lang.JsArray<akasha.gpu.GPURenderPassTimestampWrite>)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "NON_BREAKING",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURenderPassDescriptor",
+      "classSimpleName": "GPURenderPassDescriptor",
+      "elementKind": "method",
+      "methodName": "setTimestampWrites",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.visibilityIncreased",
+    "description": "visibility increased",
+    "element": "method void akasha.media.MediaSource::<init>()",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.media.MediaSource",
+      "classSimpleName": "MediaSource",
+      "elementKind": "constructor",
+      "methodName": "<init>",
+      "newVisibility": "public",
+      "oldVisibility": "protected",
+      "package": "akasha.media"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method void akasha.media.SourceBuffer::changeType(java.lang.String)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.media.SourceBuffer",
+      "classSimpleName": "SourceBuffer",
+      "elementKind": "method",
+      "methodName": "changeType",
+      "package": "akasha.media"
+    }
+  },
+  {
+    "code": "java.annotation.noLongerPresent",
+    "description": "Old API referenced the annotation type but the new API version no longer does.",
+    "oldElement": "@interface akasha.PushPermissionState",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "NON_BREAKING",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.PushPermissionState",
+      "classSimpleName": "PushPermissionState",
+      "elementKind": "@interface",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.class.removed",
+    "description": "Class was removed.",
+    "oldElement": "class akasha.CSSFontPaletteValuesRule.Entry",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.CSSFontPaletteValuesRule.Entry",
+      "classSimpleName": "Entry",
+      "elementKind": "class",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.class.removed",
+    "description": "Class was removed.",
+    "oldElement": "class akasha.perf.Performance",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.perf.Performance",
+      "classSimpleName": "Performance",
+      "elementKind": "class",
+      "package": "akasha.perf"
+    }
+  },
+  {
+    "code": "java.field.removed",
+    "description": "Field removed from class.",
+    "oldElement": "field akasha.CSSFontPaletteValuesRule.basePalette",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.CSSFontPaletteValuesRule",
+      "classSimpleName": "CSSFontPaletteValuesRule",
+      "elementKind": "field",
+      "fieldName": "basePalette",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.field.removed",
+    "description": "Field removed from class.",
+    "oldElement": "field akasha.CSSFontPaletteValuesRule.fontFamily",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.CSSFontPaletteValuesRule",
+      "classSimpleName": "CSSFontPaletteValuesRule",
+      "elementKind": "field",
+      "fieldName": "fontFamily",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.field.removedWithConstant",
+    "description": "Field with constant value has been removed.",
+    "oldElement": "field akasha.CSSRule.FONT_PALETTE_VALUES_RULE",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "NON_BREAKING",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.CSSRule",
+      "classSimpleName": "CSSRule",
+      "elementKind": "field",
+      "fieldName": "FONT_PALETTE_VALUES_RULE",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.field.removed",
+    "description": "Field removed from class.",
+    "oldElement": "field akasha.CanvasRenderingContext2D.textLetterSpacing",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.CanvasRenderingContext2D",
+      "classSimpleName": "CanvasRenderingContext2D",
+      "elementKind": "field",
+      "fieldName": "textLetterSpacing",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.field.removed",
+    "description": "Field removed from class.",
+    "oldElement": "field akasha.CanvasRenderingContext2D.textWordSpacing",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.CanvasRenderingContext2D",
+      "classSimpleName": "CanvasRenderingContext2D",
+      "elementKind": "field",
+      "fieldName": "textWordSpacing",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.field.removed",
+    "description": "Field removed from class.",
+    "oldElement": "field akasha.OffscreenCanvasRenderingContext2D.textLetterSpacing",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.OffscreenCanvasRenderingContext2D",
+      "classSimpleName": "OffscreenCanvasRenderingContext2D",
+      "elementKind": "field",
+      "fieldName": "textLetterSpacing",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.field.removed",
+    "description": "Field removed from class.",
+    "oldElement": "field akasha.OffscreenCanvasRenderingContext2D.textWordSpacing",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.OffscreenCanvasRenderingContext2D",
+      "classSimpleName": "OffscreenCanvasRenderingContext2D",
+      "elementKind": "field",
+      "fieldName": "textWordSpacing",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.field.removedWithConstant",
+    "description": "Field with constant value has been removed.",
+    "oldElement": "field akasha.gpu.GPUFeatureName.depth_clamping",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "NON_BREAKING",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUFeatureName",
+      "classSimpleName": "GPUFeatureName",
+      "elementKind": "field",
+      "fieldName": "depth_clamping",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.class.removed",
+    "description": "Class was removed.",
+    "oldElement": "interface akasha.CSSFontPaletteValuesRule.ForEachCallback",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.CSSFontPaletteValuesRule.ForEachCallback",
+      "classSimpleName": "ForEachCallback",
+      "elementKind": "interface",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.class.removed",
+    "description": "Class was removed.",
+    "oldElement": "interface akasha.CSSFontPaletteValuesRule.ForEachCallback2",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.CSSFontPaletteValuesRule.ForEachCallback2",
+      "classSimpleName": "ForEachCallback2",
+      "elementKind": "interface",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.class.removed",
+    "description": "Class was removed.",
+    "oldElement": "interface akasha.CSSFontPaletteValuesRule.ForEachCallback3",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.CSSFontPaletteValuesRule.ForEachCallback3",
+      "classSimpleName": "ForEachCallback3",
+      "elementKind": "interface",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.class.removed",
+    "description": "Class was removed.",
+    "oldElement": "interface akasha.MidiPermissionDescriptor",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.MidiPermissionDescriptor",
+      "classSimpleName": "MidiPermissionDescriptor",
+      "elementKind": "interface",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.gpu.GPUCommandEncoderDescriptor.Builder akasha.gpu.GPUCommandEncoderDescriptor.Builder::measureExecutionTime(boolean)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUCommandEncoderDescriptor.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "method",
+      "methodName": "measureExecutionTime",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.gpu.GPUPrimitiveState.Builder akasha.gpu.GPUPrimitiveState.Builder::clampDepth(boolean)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUPrimitiveState.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "method",
+      "methodName": "clampDepth",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.lang.JsIterator<akasha.CSSFontPaletteValuesRule.Entry> akasha.CSSFontPaletteValuesRule::entries()",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.CSSFontPaletteValuesRule",
+      "classSimpleName": "CSSFontPaletteValuesRule",
+      "elementKind": "method",
+      "methodName": "entries",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.lang.JsIterator<java.lang.Double> akasha.CSSFontPaletteValuesRule::keys()",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.CSSFontPaletteValuesRule",
+      "classSimpleName": "CSSFontPaletteValuesRule",
+      "elementKind": "method",
+      "methodName": "keys",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.lang.JsIterator<java.lang.String> akasha.CSSFontPaletteValuesRule::values()",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.CSSFontPaletteValuesRule",
+      "classSimpleName": "CSSFontPaletteValuesRule",
+      "elementKind": "method",
+      "methodName": "values",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method akasha.promise.Promise<java.lang.Double> akasha.gpu.GPUCommandBuffer::executionTime()",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUCommandBuffer",
+      "classSimpleName": "GPUCommandBuffer",
+      "elementKind": "method",
+      "methodName": "executionTime",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method boolean akasha.CSSFontPaletteValuesRule::delete(int)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.CSSFontPaletteValuesRule",
+      "classSimpleName": "CSSFontPaletteValuesRule",
+      "elementKind": "method",
+      "methodName": "delete",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method boolean akasha.CSSFontPaletteValuesRule::has(int)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.CSSFontPaletteValuesRule",
+      "classSimpleName": "CSSFontPaletteValuesRule",
+      "elementKind": "method",
+      "methodName": "has",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method boolean akasha.gpu.GPUCommandEncoderDescriptor::measureExecutionTime()",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUCommandEncoderDescriptor",
+      "classSimpleName": "GPUCommandEncoderDescriptor",
+      "elementKind": "method",
+      "methodName": "measureExecutionTime",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method boolean akasha.gpu.GPUPrimitiveState::clampDepth()",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUPrimitiveState",
+      "classSimpleName": "GPUPrimitiveState",
+      "elementKind": "method",
+      "methodName": "clampDepth",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method int akasha.CSSFontPaletteValuesRule::size()",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.CSSFontPaletteValuesRule",
+      "classSimpleName": "CSSFontPaletteValuesRule",
+      "elementKind": "method",
+      "methodName": "size",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method java.lang.String akasha.CSSFontPaletteValuesRule::get(int)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.CSSFontPaletteValuesRule",
+      "classSimpleName": "CSSFontPaletteValuesRule",
+      "elementKind": "method",
+      "methodName": "get",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method void akasha.CSSFontPaletteValuesRule::clear()",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.CSSFontPaletteValuesRule",
+      "classSimpleName": "CSSFontPaletteValuesRule",
+      "elementKind": "method",
+      "methodName": "clear",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method void akasha.CSSFontPaletteValuesRule::forEach(akasha.CSSFontPaletteValuesRule.ForEachCallback)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.CSSFontPaletteValuesRule",
+      "classSimpleName": "CSSFontPaletteValuesRule",
+      "elementKind": "method",
+      "methodName": "forEach",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method void akasha.CSSFontPaletteValuesRule::forEach(akasha.CSSFontPaletteValuesRule.ForEachCallback2)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.CSSFontPaletteValuesRule",
+      "classSimpleName": "CSSFontPaletteValuesRule",
+      "elementKind": "method",
+      "methodName": "forEach",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method void akasha.CSSFontPaletteValuesRule::forEach(akasha.CSSFontPaletteValuesRule.ForEachCallback3)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.CSSFontPaletteValuesRule",
+      "classSimpleName": "CSSFontPaletteValuesRule",
+      "elementKind": "method",
+      "methodName": "forEach",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method void akasha.CSSFontPaletteValuesRule::set(int, java.lang.String)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.CSSFontPaletteValuesRule",
+      "classSimpleName": "CSSFontPaletteValuesRule",
+      "elementKind": "method",
+      "methodName": "set",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method void akasha.gpu.GPUCommandEncoderDescriptor::setMeasureExecutionTime(boolean)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUCommandEncoderDescriptor",
+      "classSimpleName": "GPUCommandEncoderDescriptor",
+      "elementKind": "method",
+      "methodName": "setMeasureExecutionTime",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method void akasha.gpu.GPUComputePassEncoder::writeTimestamp(akasha.gpu.GPUQuerySet, int)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUComputePassEncoder",
+      "classSimpleName": "GPUComputePassEncoder",
+      "elementKind": "method",
+      "methodName": "writeTimestamp",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method void akasha.gpu.GPUPrimitiveState::setClampDepth(boolean)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPUPrimitiveState",
+      "classSimpleName": "GPUPrimitiveState",
+      "elementKind": "method",
+      "methodName": "setClampDepth",
+      "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.removed",
+    "description": "Method was removed.",
+    "oldElement": "method void akasha.gpu.GPURenderPassEncoder::writeTimestamp(akasha.gpu.GPUQuerySet, int)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gpu.GPURenderPassEncoder",
+      "classSimpleName": "GPURenderPassEncoder",
+      "elementKind": "method",
+      "methodName": "writeTimestamp",
+      "package": "akasha.gpu"
+    }
+  }
+]
