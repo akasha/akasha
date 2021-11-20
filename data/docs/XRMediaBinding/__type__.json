@@ -1,0 +1,6 @@
+{
+    "kind": "Type",
+    "name": "XRMediaBinding",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRMediaBinding",
+    "description": "The XRMediaBinding interface is used to create layers that display the content of an HTMLVideoElement."
+}

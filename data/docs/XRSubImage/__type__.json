@@ -1,0 +1,6 @@
+{
+    "kind": "Type",
+    "name": "XRSubImage",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRSubImage",
+    "description": "The XRSubImage interface of the WebXR Device API represents what viewport of the GPU texture to use for rendering."
+}

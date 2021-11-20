@@ -1,0 +1,6 @@
+{
+    "kind": "Type",
+    "name": "XRLayerEvent",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRLayerEvent",
+    "description": "The XRLayerEvent interface of the WebXR Device API is the event type for events related to a change of state of an XRLayer object. These events occur, for example, when the layer needs to be redrawn."
+}

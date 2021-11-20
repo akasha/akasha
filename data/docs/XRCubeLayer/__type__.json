@@ -1,0 +1,6 @@
+{
+    "kind": "Type",
+    "name": "XRCubeLayer",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRCubeLayer",
+    "description": "The XRCubeLayer interface of the WebXR Device API is a layer that renders directly from a cubemap and projects it onto the inside faces of a cube."
+}

@@ -686,6 +686,11 @@
         "url": "https://immersive-web.github.io/hit-test"
     },
     {
+        "lastModifiedTime": 1629820809000,
+        "name": "webxr_layers",
+        "url": "https://www.w3.org/TR/webxrlayers-1/"
+    },
+    {
         "lastModifiedTime": 1634564498000,
         "name": "whatwg_compat",
         "url": "https://compat.spec.whatwg.org/"

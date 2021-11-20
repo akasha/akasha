@@ -1,0 +1,6 @@
+{
+    "kind": "Type",
+    "name": "XRCompositionLayer",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRCompositionLayer",
+    "description": "The XRCompositionLayer interface of the WebXR Device API is a base class that defines a set of common properties and behaviors for WebXR layer types. It is not constructable on its own."
+}

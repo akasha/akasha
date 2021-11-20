@@ -1,0 +1,13 @@
+{
+    "kind": "Type",
+    "name": "XRWebGLBinding",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLBinding",
+    "description": "The XRWebGLBinding interface is used to create layers that have a GPU backend.",
+    "refs": [
+        {
+            "name": "WebXR Layers API Level 1",
+            "href": "https://immersive-web.github.io/layers/#XRWebGLBindingtype",
+            "description": "(WebXR Layers API 1) # XRWebGLBindingtype"
+        }
+    ]
+}

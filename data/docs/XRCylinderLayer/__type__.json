@@ -1,0 +1,6 @@
+{
+    "kind": "Type",
+    "name": "XRCylinderLayer",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRCylinderLayer",
+    "description": "The XRCylinderLayer interface of the WebXR Device API is a layer that takes up a curved rectangular space in the virtual environment. Only the front of the layer is visible."
+}

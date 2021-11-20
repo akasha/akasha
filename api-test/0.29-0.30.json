@@ -62,6 +62,96 @@
   {
     "code": "java.class.added",
     "description": "Class was added.",
+    "newElement": "@interface akasha.xr.XRLayerLayout",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRLayerLayout",
+      "classSimpleName": "XRLayerLayout",
+      "elementKind": "@interface",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "@interface akasha.xr.XRTextureType",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRTextureType",
+      "classSimpleName": "XRTextureType",
+      "elementKind": "@interface",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.xr.XRCompositionLayer",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRCompositionLayer",
+      "classSimpleName": "XRCompositionLayer",
+      "elementKind": "class",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.xr.XRCubeLayer",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRCubeLayer",
+      "classSimpleName": "XRCubeLayer",
+      "elementKind": "class",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.xr.XRCylinderLayer",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRCylinderLayer",
+      "classSimpleName": "XRCylinderLayer",
+      "elementKind": "class",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.xr.XREquirectLayer",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XREquirectLayer",
+      "classSimpleName": "XREquirectLayer",
+      "elementKind": "class",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
     "newElement": "class akasha.xr.XRHitTestResult",
     "classification": {
       "SOURCE": "NON_BREAKING",
@@ -92,6 +182,66 @@
   {
     "code": "java.class.added",
     "description": "Class was added.",
+    "newElement": "class akasha.xr.XRLayerEvent",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRLayerEvent",
+      "classSimpleName": "XRLayerEvent",
+      "elementKind": "class",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.xr.XRMediaBinding",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRMediaBinding",
+      "classSimpleName": "XRMediaBinding",
+      "elementKind": "class",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.xr.XRProjectionLayer",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRProjectionLayer",
+      "classSimpleName": "XRProjectionLayer",
+      "elementKind": "class",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.xr.XRQuadLayer",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRQuadLayer",
+      "classSimpleName": "XRQuadLayer",
+      "elementKind": "class",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
     "newElement": "class akasha.xr.XRRay",
     "classification": {
       "SOURCE": "NON_BREAKING",
@@ -100,6 +250,21 @@
     "attachments": {
       "classQualifiedName": "akasha.xr.XRRay",
       "classSimpleName": "XRRay",
+      "elementKind": "class",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.xr.XRSubImage",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRSubImage",
+      "classSimpleName": "XRSubImage",
       "elementKind": "class",
       "package": "akasha.xr"
     }
@@ -130,6 +295,36 @@
     "attachments": {
       "classQualifiedName": "akasha.xr.XRTransientInputHitTestSource",
       "classSimpleName": "XRTransientInputHitTestSource",
+      "elementKind": "class",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.xr.XRWebGLBinding",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRWebGLBinding",
+      "classSimpleName": "XRWebGLBinding",
+      "elementKind": "class",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.xr.XRWebGLSubImage",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRWebGLSubImage",
+      "classSimpleName": "XRWebGLSubImage",
       "elementKind": "class",
       "package": "akasha.xr"
     }
@@ -217,6 +412,36 @@
   {
     "code": "java.class.added",
     "description": "Class was added.",
+    "newElement": "interface akasha.xr.XRCubeLayerInit",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRCubeLayerInit",
+      "classSimpleName": "XRCubeLayerInit",
+      "elementKind": "interface",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.xr.XRCylinderLayerInit",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRCylinderLayerInit",
+      "classSimpleName": "XRCylinderLayerInit",
+      "elementKind": "interface",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
     "newElement": "interface akasha.xr.XRDOMOverlayInit",
     "classification": {
       "SOURCE": "NON_BREAKING",
@@ -247,6 +472,21 @@
   {
     "code": "java.class.added",
     "description": "Class was added.",
+    "newElement": "interface akasha.xr.XREquirectLayerInit",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XREquirectLayerInit",
+      "classSimpleName": "XREquirectLayerInit",
+      "elementKind": "interface",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
     "newElement": "interface akasha.xr.XRHitTestOptionsInit",
     "classification": {
       "SOURCE": "NON_BREAKING",
@@ -255,6 +495,126 @@
     "attachments": {
       "classQualifiedName": "akasha.xr.XRHitTestOptionsInit",
       "classSimpleName": "XRHitTestOptionsInit",
+      "elementKind": "interface",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.xr.XRLayerEventInit",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRLayerEventInit",
+      "classSimpleName": "XRLayerEventInit",
+      "elementKind": "interface",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.xr.XRLayerInit",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRLayerInit",
+      "classSimpleName": "XRLayerInit",
+      "elementKind": "interface",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.xr.XRMediaCylinderLayerInit",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRMediaCylinderLayerInit",
+      "classSimpleName": "XRMediaCylinderLayerInit",
+      "elementKind": "interface",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.xr.XRMediaEquirectLayerInit",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRMediaEquirectLayerInit",
+      "classSimpleName": "XRMediaEquirectLayerInit",
+      "elementKind": "interface",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.xr.XRMediaLayerInit",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRMediaLayerInit",
+      "classSimpleName": "XRMediaLayerInit",
+      "elementKind": "interface",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.xr.XRMediaQuadLayerInit",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRMediaQuadLayerInit",
+      "classSimpleName": "XRMediaQuadLayerInit",
+      "elementKind": "interface",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.xr.XRProjectionLayerInit",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRProjectionLayerInit",
+      "classSimpleName": "XRProjectionLayerInit",
+      "elementKind": "interface",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.xr.XRQuadLayerInit",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRQuadLayerInit",
+      "classSimpleName": "XRQuadLayerInit",
       "elementKind": "interface",
       "package": "akasha.xr"
     }
@@ -318,6 +678,22 @@
       "classSimpleName": "XRFrame",
       "elementKind": "method",
       "methodName": "getHitTestResults",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method akasha.lang.JsArray<akasha.xr.XRLayer> akasha.xr.XRRenderState::layers()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRRenderState",
+      "classSimpleName": "XRRenderState",
+      "elementKind": "method",
+      "methodName": "layers",
       "package": "akasha.xr"
     }
   },
@@ -463,6 +839,22 @@
       "classSimpleName": "XRInputSource",
       "elementKind": "method",
       "methodName": "isGamepadSupported",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.method.finalMethodAddedToNonFinalClass",
+    "description": "A final method has been added to an inheritable class.",
+    "newElement": "method boolean akasha.xr.XRRenderState::isLayersSupported()",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRRenderState",
+      "classSimpleName": "XRRenderState",
+      "elementKind": "method",
+      "methodName": "isLayersSupported",
       "package": "akasha.xr"
     }
   },

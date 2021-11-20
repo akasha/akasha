@@ -332,6 +332,16 @@
     },
     {
       "name": "AddExtendedAttributeToMember",
+      "sourceSelector": "name=webxr_layers",
+      "config": {
+        "expectedAddCount": 1,
+        "elementNamePattern": "^XRRenderState$",
+        "memberNamePattern": "^layers$",
+        "extendedAttribute": "OptionalSupport"
+      }
+    },
+    {
+      "name": "AddExtendedAttributeToMember",
       "sourceSelector": "name=webxr_ar_module_1",
       "config": {
         "expectedAddCount": 1,
