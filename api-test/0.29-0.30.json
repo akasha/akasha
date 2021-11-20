@@ -30,6 +30,38 @@
     }
   },
   {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method akasha.Gamepad akasha.xr.XRInputSource::gamepad()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRInputSource",
+      "classSimpleName": "XRInputSource",
+      "elementKind": "method",
+      "methodName": "gamepad",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.method.finalMethodAddedToNonFinalClass",
+    "description": "A final method has been added to an inheritable class.",
+    "newElement": "method boolean akasha.xr.XRInputSource::isGamepadSupported()",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRInputSource",
+      "classSimpleName": "XRInputSource",
+      "elementKind": "method",
+      "methodName": "isGamepadSupported",
+      "package": "akasha.xr"
+    }
+  },
+  {
     "code": "java.method.finalMethodAddedToNonFinalClass",
     "description": "A final method has been added to an inheritable class.",
     "newElement": "method boolean akasha.xr.XRSession::isEnvironmentBlendModeSupported()",

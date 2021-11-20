@@ -272,6 +272,16 @@
     },
     {
       "name": "AddExtendedAttributeToMember",
+      "sourceSelector": "name=webxr_gamepads_module_1",
+      "config": {
+        "expectedAddCount": 1,
+        "elementNamePattern": "^XRInputSource$",
+        "memberNamePattern": "^gamepad$",
+        "extendedAttribute": "OptionalSupport"
+      }
+    },
+    {
+      "name": "AddExtendedAttributeToMember",
       "sourceSelector": "name=webxr_ar_module_1",
       "config": {
         "expectedAddCount": 1,
