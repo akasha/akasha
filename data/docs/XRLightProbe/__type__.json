@@ -1,0 +1,13 @@
+{
+    "kind": "Type",
+    "name": "XRLightProbe",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRLightProbe",
+    "description": "The XRLightProbe interface of the WebXR Device API contains lighting information at a given point in the user's environment. You can get an XRLighting object using the XRSession.requestLightProbe() method.",
+    "refs": [
+        {
+            "name": "WebXR Lighting Estimation API Level 1",
+            "href": "https://immersive-web.github.io/lighting-estimation/#xrlightprobe-interface",
+            "description": "(WebXR Lighting Estimation API 1) # xrlightprobe-interface"
+        }
+    ]
+}

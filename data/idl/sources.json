@@ -706,6 +706,11 @@
         "url": "https://www.w3.org/TR/webxrlayers-1/"
     },
     {
+        "lastModifiedTime": 1636029535000,
+        "name": "webxr_lighting_estimation",
+        "url": "https://immersive-web.github.io/lighting-estimation/"
+    },
+    {
         "lastModifiedTime": 1634564498000,
         "name": "whatwg_compat",
         "url": "https://compat.spec.whatwg.org/"

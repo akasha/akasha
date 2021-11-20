@@ -412,6 +412,36 @@
     },
     {
       "name": "AddExtendedAttributeToMember",
+      "sourceSelector": "name=webxr_lighting_estimation",
+      "config": {
+        "expectedAddCount": 1,
+        "elementNamePattern": "^XRFrame$",
+        "memberNamePattern": "^getLightEstimate$",
+        "extendedAttribute": "OptionalSupport"
+      }
+    },
+    {
+      "name": "AddExtendedAttributeToMember",
+      "sourceSelector": "name=webxr_lighting_estimation",
+      "config": {
+        "expectedAddCount": 2,
+        "elementNamePattern": "^XRSession$",
+        "memberNamePattern": "^(preferredReflectionFormat|requestLightProbe)$",
+        "extendedAttribute": "OptionalSupport"
+      }
+    },
+    {
+      "name": "AddExtendedAttributeToMember",
+      "sourceSelector": "name=webxr_lighting_estimation",
+      "config": {
+        "expectedAddCount": 1,
+        "elementNamePattern": "^XRWebGLBinding$",
+        "memberNamePattern": "^getReflectionCubeMap$",
+        "extendedAttribute": "OptionalSupport"
+      }
+    },
+    {
+      "name": "AddExtendedAttributeToMember",
       "sourceSelector": "name=webxr_ar_module_1",
       "config": {
         "expectedAddCount": 1,
