@@ -1,0 +1,6 @@
+{
+    "kind": "Type",
+    "name": "XRJointPose",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRJointPose",
+    "description": "The XRJointPose interface is an XRPose with additional information about the size of the skeleton joint it represents."
+}

@@ -681,6 +681,11 @@
         "url": "https://www.w3.org/TR/webxr-gamepads-module-1/"
     },
     {
+        "lastModifiedTime": 1629821223000,
+        "name": "webxr_hand_input",
+        "url": "https://www.w3.org/TR/webxr-hand-input-1/"
+    },
+    {
         "lastModifiedTime": 1633016590000,
         "name": "webxr_hit_test",
         "url": "https://immersive-web.github.io/hit-test"

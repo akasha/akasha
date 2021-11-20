@@ -1,0 +1,6 @@
+{
+    "kind": "Type",
+    "name": "XRHand",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRHand",
+    "description": "The XRHand interface is pair iterator (an ordered map) with the key being the hand joints and the value being an XRJointSpace."
+}

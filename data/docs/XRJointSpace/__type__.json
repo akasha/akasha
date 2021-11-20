@@ -1,0 +1,6 @@
+{
+    "kind": "Type",
+    "name": "XRJointSpace",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRJointSpace",
+    "description": "The XRJointSpace interface is an XRSpace and represents the position and orientation of an XRHand joint."
+}

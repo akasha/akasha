@@ -342,6 +342,26 @@
     },
     {
       "name": "AddExtendedAttributeToMember",
+      "sourceSelector": "name=webxr_hand_input",
+      "config": {
+        "expectedAddCount": 3,
+        "elementNamePattern": "^XRFrame$",
+        "memberNamePattern": "^(fillJointRadii|fillPoses|getJointPose)$",
+        "extendedAttribute": "OptionalSupport"
+      }
+    },
+    {
+      "name": "AddExtendedAttributeToMember",
+      "sourceSelector": "name=webxr_hand_input",
+      "config": {
+        "expectedAddCount": 1,
+        "elementNamePattern": "^XRInputSource$",
+        "memberNamePattern": "^hand$",
+        "extendedAttribute": "OptionalSupport"
+      }
+    },
+    {
+      "name": "AddExtendedAttributeToMember",
       "sourceSelector": "name=webxr_ar_module_1",
       "config": {
         "expectedAddCount": 1,

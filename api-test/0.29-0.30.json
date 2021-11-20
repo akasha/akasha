@@ -32,6 +32,21 @@
   {
     "code": "java.class.added",
     "description": "Class was added.",
+    "newElement": "@interface akasha.xr.XRHandJoint",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRHandJoint",
+      "classSimpleName": "XRHandJoint",
+      "elementKind": "@interface",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
     "newElement": "@interface akasha.xr.XRHitTestTrackableType",
     "classification": {
       "SOURCE": "NON_BREAKING",
@@ -152,6 +167,21 @@
   {
     "code": "java.class.added",
     "description": "Class was added.",
+    "newElement": "class akasha.xr.XRHand",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRHand",
+      "classSimpleName": "XRHand",
+      "elementKind": "class",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
     "newElement": "class akasha.xr.XRHitTestResult",
     "classification": {
       "SOURCE": "NON_BREAKING",
@@ -175,6 +205,36 @@
     "attachments": {
       "classQualifiedName": "akasha.xr.XRHitTestSource",
       "classSimpleName": "XRHitTestSource",
+      "elementKind": "class",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.xr.XRJointPose",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRJointPose",
+      "classSimpleName": "XRJointPose",
+      "elementKind": "class",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.xr.XRJointSpace",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRJointSpace",
+      "classSimpleName": "XRJointSpace",
       "elementKind": "class",
       "package": "akasha.xr"
     }
@@ -779,6 +839,38 @@
     }
   },
   {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method akasha.xr.XRHand akasha.xr.XRInputSource::hand()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRInputSource",
+      "classSimpleName": "XRInputSource",
+      "elementKind": "method",
+      "methodName": "hand",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method akasha.xr.XRJointPose akasha.xr.XRFrame::getJointPose(akasha.xr.XRJointSpace, akasha.xr.XRSpace)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRFrame",
+      "classSimpleName": "XRFrame",
+      "elementKind": "method",
+      "methodName": "getJointPose",
+      "package": "akasha.xr"
+    }
+  },
+  {
     "code": "java.method.defaultMethodAddedToInterface",
     "description": "A default method has been added to the interface.",
     "newElement": "method akasha.xr.XRSessionInit.Builder akasha.xr.XRSessionInit.Builder::domOverlay(akasha.xr.XRDOMOverlayInit)",
@@ -791,6 +883,102 @@
       "classSimpleName": "Builder",
       "elementKind": "method",
       "methodName": "domOverlay",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method boolean akasha.xr.XRFrame::fillJointRadii(akasha.lang.JsArray<akasha.xr.XRJointSpace>, akasha.core.Float32Array)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRFrame",
+      "classSimpleName": "XRFrame",
+      "elementKind": "method",
+      "methodName": "fillJointRadii",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method boolean akasha.xr.XRFrame::fillJointRadii(akasha.xr.XRJointSpace[], akasha.core.Float32Array)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRFrame",
+      "classSimpleName": "XRFrame",
+      "elementKind": "method",
+      "methodName": "fillJointRadii",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method boolean akasha.xr.XRFrame::fillPoses(akasha.lang.JsArray<akasha.xr.XRSpace>, akasha.xr.XRSpace, akasha.core.Float32Array)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRFrame",
+      "classSimpleName": "XRFrame",
+      "elementKind": "method",
+      "methodName": "fillPoses",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method boolean akasha.xr.XRFrame::fillPoses(akasha.xr.XRSpace[], akasha.xr.XRSpace, akasha.core.Float32Array)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRFrame",
+      "classSimpleName": "XRFrame",
+      "elementKind": "method",
+      "methodName": "fillPoses",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.method.finalMethodAddedToNonFinalClass",
+    "description": "A final method has been added to an inheritable class.",
+    "newElement": "method boolean akasha.xr.XRFrame::isFillJointRadiiSupported()",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRFrame",
+      "classSimpleName": "XRFrame",
+      "elementKind": "method",
+      "methodName": "isFillJointRadiiSupported",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.method.finalMethodAddedToNonFinalClass",
+    "description": "A final method has been added to an inheritable class.",
+    "newElement": "method boolean akasha.xr.XRFrame::isFillPosesSupported()",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRFrame",
+      "classSimpleName": "XRFrame",
+      "elementKind": "method",
+      "methodName": "isFillPosesSupported",
       "package": "akasha.xr"
     }
   },
@@ -829,6 +1017,22 @@
   {
     "code": "java.method.finalMethodAddedToNonFinalClass",
     "description": "A final method has been added to an inheritable class.",
+    "newElement": "method boolean akasha.xr.XRFrame::isGetJointPoseSupported()",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRFrame",
+      "classSimpleName": "XRFrame",
+      "elementKind": "method",
+      "methodName": "isGetJointPoseSupported",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.method.finalMethodAddedToNonFinalClass",
+    "description": "A final method has been added to an inheritable class.",
     "newElement": "method boolean akasha.xr.XRInputSource::isGamepadSupported()",
     "classification": {
       "SOURCE": "POTENTIALLY_BREAKING",
@@ -839,6 +1043,22 @@
       "classSimpleName": "XRInputSource",
       "elementKind": "method",
       "methodName": "isGamepadSupported",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.method.finalMethodAddedToNonFinalClass",
+    "description": "A final method has been added to an inheritable class.",
+    "newElement": "method boolean akasha.xr.XRInputSource::isHandSupported()",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRInputSource",
+      "classSimpleName": "XRInputSource",
+      "elementKind": "method",
+      "methodName": "isHandSupported",
       "package": "akasha.xr"
     }
   },
