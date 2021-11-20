@@ -2,12 +2,12 @@
     "kind": "Type",
     "name": "PublicKeyCredentialCreationOptions",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialCreationOptions",
-    "description": "The PublicKeyCredentialCreationOptions dictionary of the Web Authentication API holds options passed to navigators.credentials.create() in order to create a PublicKeyCredential.",
+    "description": "The create() method of the CredentialsContainer interface returns a Promise that resolves with a new Credential instance based on the provided options, or null if no Credential object can be created.",
     "refs": [
         {
-            "name": "Web Authentication: An API for accessing Public Key Credentials - Level 3",
-            "href": "https://w3c.github.io/webauthn/#dictdef-publickeycredentialcreationoptions",
-            "description": "(Web Authentication) # dictdef-publickeycredentialcreationoptions"
+            "name": "Credential Management Level 1",
+            "href": "https://w3c.github.io/webappsec-credential-management/#dom-credentialscontainer-create",
+            "description": "(Credential Management 1) # dom-credentialscontainer-create"
         }
     ]
 }

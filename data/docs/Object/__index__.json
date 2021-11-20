@@ -1,6 +1,6 @@
 {
     "name": "Object",
-    "lastModifiedAt": 1629769824000,
+    "lastModifiedAt": 1637027261000,
     "entries": [
         {
             "name": "__defineGetter__",
@@ -48,7 +48,7 @@
         },
         {
             "name": "entries",
-            "lastModifiedAt": 1629769824000
+            "lastModifiedAt": 1637027261000
         },
         {
             "name": "freeze",

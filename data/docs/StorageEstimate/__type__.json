@@ -2,12 +2,12 @@
     "kind": "Type",
     "name": "StorageEstimate",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/StorageEstimate",
-    "description": "The StorageEstimate dictionary is used by the StorageManager to provide estimates of the size of a site's or application's data store and how much of it is in use. The estimate() method returns an object that conforms to this dictionary when its Promise resolves.",
+    "description": "The estimate() method of the StorageManager interface asks the Storage Manager for how much storage the current origin takes up (usage), and how much space is available (quota).",
     "refs": [
         {
             "name": "Storage Standard",
-            "href": "https://storage.spec.whatwg.org/#dictdef-storageestimate",
-            "description": "(Storage) # dictdef-storageestimate"
+            "href": "https://storage.spec.whatwg.org/#ref-for-dom-storagemanager-estimate",
+            "description": "(Storage) # ref-for-dom-storagemanager-estimate"
         }
     ]
 }

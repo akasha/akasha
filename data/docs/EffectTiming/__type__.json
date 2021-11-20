@@ -2,12 +2,12 @@
     "kind": "Type",
     "name": "EffectTiming",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/EffectTiming",
-    "description": "The EffectTiming dictionary, part of the Web Animations API, is used by Element.animate(), and KeyframeEffect() to describe timing properties for animation effects. These properties are all optional, although without setting a duration the animation will not play.",
+    "description": "The KeyframeEffect() constructor of the Web Animations API returns a new KeyframeEffect object instance, and also allows you to clone an existing keyframe effect object instance.",
     "refs": [
         {
             "name": "Web Animations Level 2",
-            "href": "https://drafts.csswg.org/web-animations/#the-effecttiming-dictionaries",
-            "description": "(Web Animations 2) # the-effecttiming-dictionaries"
+            "href": "https://drafts.csswg.org/web-animations/#dom-keyframeeffect-keyframeeffect",
+            "description": "(Web Animations 2) # dom-keyframeeffect-keyframeeffect"
         }
     ]
 }

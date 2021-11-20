@@ -2,7 +2,7 @@
     "kind": "Type",
     "name": "CDATASection",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/CDATASection",
-    "description": "The CDATASection interface represents a CDATA section that can be used within XML to include extended portions of unescaped text. The symbols &lt; and &amp; don&rsquo;t need escaping as they normally do when inside a CDATA section.",
+    "description": "The CDATASection interface represents a CDATA section that can be used within XML to include extended portions of unescaped text. When inside a CDATA section, the symbols &lt; and &amp; don't need escaping as they normally do.",
     "refs": [
         {
             "name": "DOM Standard",

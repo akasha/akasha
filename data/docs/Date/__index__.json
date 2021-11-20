@@ -1,6 +1,6 @@
 {
     "name": "Date",
-    "lastModifiedAt": 1629769823000,
+    "lastModifiedAt": 1637113939000,
     "entries": [
         {
             "name": "UTC",
@@ -180,7 +180,7 @@
         },
         {
             "name": "toLocaleDateString",
-            "lastModifiedAt": 1629769823000
+            "lastModifiedAt": 1637113939000
         },
         {
             "name": "toLocaleString",

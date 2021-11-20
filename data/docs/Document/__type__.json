@@ -25,11 +25,6 @@
             "description": "# extensions-to-the-document-interface"
         },
         {
-            "name": "Page Visibility Level 2",
-            "href": "https://w3c.github.io/page-visibility/#extensions-to-the-document-interface",
-            "description": "(Page Visibility 2) # extensions-to-the-document-interface"
-        },
-        {
             "name": "Selection API",
             "href": "https://w3c.github.io/selection-api/#extensions-to-document-interface",
             "description": "# extensions-to-document-interface"

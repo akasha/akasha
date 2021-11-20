@@ -1,10 +1,10 @@
 {
     "name": "MediaKeySystemConfiguration",
-    "lastModifiedAt": 1629769822000,
+    "lastModifiedAt": 1637027280000,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1629769822000
+            "lastModifiedAt": 1637027280000
         },
         {
             "name": "audioCapabilities",
