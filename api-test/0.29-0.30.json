@@ -2,31 +2,63 @@
   {
     "code": "java.class.added",
     "description": "Class was added.",
-    "newElement": "@interface akasha.XREnvironmentBlendMode",
+    "newElement": "@interface akasha.xr.XREnvironmentBlendMode",
     "classification": {
       "SOURCE": "NON_BREAKING",
       "BINARY": "NON_BREAKING"
     },
     "attachments": {
-      "classQualifiedName": "akasha.XREnvironmentBlendMode",
+      "classQualifiedName": "akasha.xr.XREnvironmentBlendMode",
       "classSimpleName": "XREnvironmentBlendMode",
       "elementKind": "@interface",
-      "package": "akasha"
+      "package": "akasha.xr"
     }
   },
   {
     "code": "java.class.added",
     "description": "Class was added.",
-    "newElement": "@interface akasha.XRInteractionMode",
+    "newElement": "@interface akasha.xr.XRInteractionMode",
     "classification": {
       "SOURCE": "NON_BREAKING",
       "BINARY": "NON_BREAKING"
     },
     "attachments": {
-      "classQualifiedName": "akasha.XRInteractionMode",
+      "classQualifiedName": "akasha.xr.XRInteractionMode",
       "classSimpleName": "XRInteractionMode",
       "elementKind": "@interface",
-      "package": "akasha"
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.method.finalMethodAddedToNonFinalClass",
+    "description": "A final method has been added to an inheritable class.",
+    "newElement": "method boolean akasha.xr.XRSession::isEnvironmentBlendModeSupported()",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRSession",
+      "classSimpleName": "XRSession",
+      "elementKind": "method",
+      "methodName": "isEnvironmentBlendModeSupported",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.method.finalMethodAddedToNonFinalClass",
+    "description": "A final method has been added to an inheritable class.",
+    "newElement": "method boolean akasha.xr.XRSession::isInteractionModeSupported()",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRSession",
+      "classSimpleName": "XRSession",
+      "elementKind": "method",
+      "methodName": "isInteractionModeSupported",
+      "package": "akasha.xr"
     }
   },
   {
@@ -42,6 +74,22 @@
       "classSimpleName": "XRView",
       "elementKind": "method",
       "methodName": "isFirstPersonObserver",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.method.finalMethodAddedToNonFinalClass",
+    "description": "A final method has been added to an inheritable class.",
+    "newElement": "method boolean akasha.xr.XRView::isIsFirstPersonObserverSupported()",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRView",
+      "classSimpleName": "XRView",
+      "elementKind": "method",
+      "methodName": "isIsFirstPersonObserverSupported",
       "package": "akasha.xr"
     }
   },

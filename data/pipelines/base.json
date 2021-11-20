@@ -272,6 +272,36 @@
     },
     {
       "name": "AddExtendedAttributeToMember",
+      "sourceSelector": "name=webxr_ar_module_1",
+      "config": {
+        "expectedAddCount": 1,
+        "elementNamePattern": "^XRSession$",
+        "memberNamePattern": "^environmentBlendMode$",
+        "extendedAttribute": "OptionalSupport"
+      }
+    },
+    {
+      "name": "AddExtendedAttributeToMember",
+      "sourceSelector": "name=webxr_ar_module_1",
+      "config": {
+        "expectedAddCount": 1,
+        "elementNamePattern": "^XRSession$",
+        "memberNamePattern": "^interactionMode$",
+        "extendedAttribute": "OptionalSupport"
+      }
+    },
+    {
+      "name": "AddExtendedAttributeToMember",
+      "sourceSelector": "name=webxr_ar_module_1",
+      "config": {
+        "expectedAddCount": 1,
+        "elementNamePattern": "^XRView$",
+        "memberNamePattern": "^isFirstPersonObserver$",
+        "extendedAttribute": "OptionalSupport"
+      }
+    },
+    {
+      "name": "AddExtendedAttributeToMember",
       "sourceSelector": "name=whatwg_html",
       "config": {
         "expectedAddCount": 1,
@@ -422,7 +452,7 @@
     {
       "name": "AddExtendedAttribute",
       "description": "Package up the xr specific specs into a separate package",
-      "sourceSelector": "name=webxr",
+      "sourceSelector": "name=webxr.*",
       "config": {
         "namePattern": "^.*$",
         "extendedAttribute": "JavaSubPackage=xr"
