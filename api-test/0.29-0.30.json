@@ -2,6 +2,21 @@
   {
     "code": "java.class.added",
     "description": "Class was added.",
+    "newElement": "@interface akasha.xr.XRDOMOverlayType",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRDOMOverlayType",
+      "classSimpleName": "XRDOMOverlayType",
+      "elementKind": "@interface",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
     "newElement": "@interface akasha.xr.XREnvironmentBlendMode",
     "classification": {
       "SOURCE": "NON_BREAKING",
@@ -116,6 +131,116 @@
       "classQualifiedName": "akasha.xr.XRTransientInputHitTestSource",
       "classSimpleName": "XRTransientInputHitTestSource",
       "elementKind": "class",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.field.added",
+    "description": "Field added to class.",
+    "newElement": "field akasha.Document.onbeforexrselect",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.Document",
+      "classSimpleName": "Document",
+      "elementKind": "field",
+      "fieldName": "onbeforexrselect",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.field.added",
+    "description": "Field added to class.",
+    "newElement": "field akasha.HTMLElement.onbeforexrselect",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.HTMLElement",
+      "classSimpleName": "HTMLElement",
+      "elementKind": "field",
+      "fieldName": "onbeforexrselect",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.field.added",
+    "description": "Field added to class.",
+    "newElement": "field akasha.Window.onbeforexrselect",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.Window",
+      "classSimpleName": "Window",
+      "elementKind": "field",
+      "fieldName": "onbeforexrselect",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.field.addedStaticField",
+    "description": "Static field added to class.",
+    "newElement": "field akasha.WindowGlobal.onbeforexrselect",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.WindowGlobal",
+      "classSimpleName": "WindowGlobal",
+      "elementKind": "field",
+      "fieldName": "onbeforexrselect",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.field.added",
+    "description": "Field added to class.",
+    "newElement": "field akasha.svg.SVGElement.onbeforexrselect",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.svg.SVGElement",
+      "classSimpleName": "SVGElement",
+      "elementKind": "field",
+      "fieldName": "onbeforexrselect",
+      "package": "akasha.svg"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.xr.XRDOMOverlayInit",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRDOMOverlayInit",
+      "classSimpleName": "XRDOMOverlayInit",
+      "elementKind": "interface",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.xr.XRDOMOverlayState",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRDOMOverlayState",
+      "classSimpleName": "XRDOMOverlayState",
+      "elementKind": "interface",
       "package": "akasha.xr"
     }
   },
@@ -245,6 +370,55 @@
     }
   },
   {
+    "code": "java.method.addedToInterface",
+    "description": "Method was added to an interface.",
+    "newElement": "method akasha.xr.XRDOMOverlayInit akasha.xr.XRSessionInit::domOverlay()",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "NON_BREAKING",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRSessionInit",
+      "classSimpleName": "XRSessionInit",
+      "elementKind": "method",
+      "methodName": "domOverlay",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method akasha.xr.XRDOMOverlayState akasha.xr.XRSession::domOverlayState()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRSession",
+      "classSimpleName": "XRSession",
+      "elementKind": "method",
+      "methodName": "domOverlayState",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.method.defaultMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.xr.XRSessionInit.Builder akasha.xr.XRSessionInit.Builder::domOverlay(akasha.xr.XRDOMOverlayInit)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRSessionInit.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "method",
+      "methodName": "domOverlay",
+      "package": "akasha.xr"
+    }
+  },
+  {
     "code": "java.method.finalMethodAddedToNonFinalClass",
     "description": "A final method has been added to an inheritable class.",
     "newElement": "method boolean akasha.xr.XRFrame::isGetHitTestResultsForTransientInputSupported()",
@@ -289,6 +463,22 @@
       "classSimpleName": "XRInputSource",
       "elementKind": "method",
       "methodName": "isGamepadSupported",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.method.finalMethodAddedToNonFinalClass",
+    "description": "A final method has been added to an inheritable class.",
+    "newElement": "method boolean akasha.xr.XRSession::isDomOverlayStateSupported()",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRSession",
+      "classSimpleName": "XRSession",
+      "elementKind": "method",
+      "methodName": "isDomOverlayStateSupported",
       "package": "akasha.xr"
     }
   },
@@ -417,6 +607,23 @@
       "classSimpleName": "XRSession",
       "elementKind": "method",
       "methodName": "interactionMode",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.method.addedToInterface",
+    "description": "Method was added to an interface.",
+    "newElement": "method void akasha.xr.XRSessionInit::setDomOverlay(akasha.xr.XRDOMOverlayInit)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "NON_BREAKING",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRSessionInit",
+      "classSimpleName": "XRSessionInit",
+      "elementKind": "method",
+      "methodName": "setDomOverlay",
       "package": "akasha.xr"
     }
   }

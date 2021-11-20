@@ -671,6 +671,11 @@
         "url": "https://www.w3.org/TR/webxr-ar-module-1/"
     },
     {
+        "lastModifiedTime": 1630349636000,
+        "name": "webxr_dom_overlays",
+        "url": "https://immersive-web.github.io/dom-overlays/"
+    },
+    {
         "lastModifiedTime": 1629820680000,
         "name": "webxr_gamepads_module_1",
         "url": "https://www.w3.org/TR/webxr-gamepads-module-1/"
