@@ -1,0 +1,13 @@
+{
+    "kind": "Type",
+    "name": "XRHitTestSource",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRHitTestSource",
+    "description": "The XRHitTestSource interface of the WebXR Device API handles hit test subscriptions. You can get an XRHitTestSource object by using the XRSession.requestHitTestSource() method.",
+    "refs": [
+        {
+            "name": "WebXR Hit Test Module",
+            "href": "https://immersive-web.github.io/hit-test/#hit-test-source-interface",
+            "description": "(WebXR Hit Test) # hit-test-source-interface"
+        }
+    ]
+}

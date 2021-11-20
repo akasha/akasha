@@ -1,0 +1,13 @@
+{
+    "kind": "Type",
+    "name": "XRTransientInputHitTestResult",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRTransientInputHitTestResult",
+    "description": "The XRTransientInputHitTestResult interface of the WebXR Device API contains an array of results of a hit test for transient input, grouped by input source.",
+    "refs": [
+        {
+            "name": "WebXR Hit Test Module",
+            "href": "https://immersive-web.github.io/hit-test/#xr-transient-input-hit-test-result-interface",
+            "description": "(WebXR Hit Test) # xr-transient-input-hit-test-result-interface"
+        }
+    ]
+}

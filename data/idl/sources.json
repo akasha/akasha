@@ -676,6 +676,11 @@
         "url": "https://www.w3.org/TR/webxr-gamepads-module-1/"
     },
     {
+        "lastModifiedTime": 1633016590000,
+        "name": "webxr_hit_test",
+        "url": "https://immersive-web.github.io/hit-test"
+    },
+    {
         "lastModifiedTime": 1634564498000,
         "name": "whatwg_compat",
         "url": "https://compat.spec.whatwg.org/"

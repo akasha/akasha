@@ -1,0 +1,13 @@
+{
+    "kind": "Type",
+    "name": "XRTransientInputHitTestSource",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRTransientInputHitTestSource",
+    "description": "The XRTransientInputHitTestSource interface of the WebXR Device API handles transient input hit test subscriptions. You can get an XRTransientInputHitTestSource object by calling the XRSession.requestHitTestSourceForTransientInput().",
+    "refs": [
+        {
+            "name": "WebXR Hit Test Module",
+            "href": "https://immersive-web.github.io/hit-test/#transient-input-hit-test-source-interface",
+            "description": "(WebXR Hit Test) # transient-input-hit-test-source-interface"
+        }
+    ]
+}

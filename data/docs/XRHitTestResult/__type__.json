@@ -1,0 +1,13 @@
+{
+    "kind": "Type",
+    "name": "XRHitTestResult",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRHitTestResult",
+    "description": "The XRHitTestResult interface of the WebXR Device API contains a single result of a hit test. You can get an array of XRHitTestResult objects for a frame by calling XRFrame.getHitTestResults().",
+    "refs": [
+        {
+            "name": "WebXR Hit Test Module",
+            "href": "https://immersive-web.github.io/hit-test/#xr-hit-test-result-interface",
+            "description": "(WebXR Hit Test) # xr-hit-test-result-interface"
+        }
+    ]
+}

@@ -282,6 +282,26 @@
     },
     {
       "name": "AddExtendedAttributeToMember",
+      "sourceSelector": "name=webxr_hit_test",
+      "config": {
+        "expectedAddCount": 2,
+        "elementNamePattern": "^XRFrame$",
+        "memberNamePattern": "^(getHitTestResults|getHitTestResultsForTransientInput)$",
+        "extendedAttribute": "OptionalSupport"
+      }
+    },
+    {
+      "name": "AddExtendedAttributeToMember",
+      "sourceSelector": "name=webxr_hit_test",
+      "config": {
+        "expectedAddCount": 2,
+        "elementNamePattern": "^XRSession$",
+        "memberNamePattern": "^(requestHitTestSource|requestHitTestSourceForTransientInput)$",
+        "extendedAttribute": "OptionalSupport"
+      }
+    },
+    {
+      "name": "AddExtendedAttributeToMember",
       "sourceSelector": "name=webxr_ar_module_1",
       "config": {
         "expectedAddCount": 1,

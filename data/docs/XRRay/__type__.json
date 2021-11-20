@@ -1,0 +1,13 @@
+{
+    "kind": "Type",
+    "name": "XRRay",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRRay",
+    "description": "The XRRay interface of the WebXR Device API is a geometric ray described by an origin point and a direction vector.",
+    "refs": [
+        {
+            "name": "WebXR Hit Test Module",
+            "href": "https://immersive-web.github.io/hit-test/#xrray-interface",
+            "description": "(WebXR Hit Test) # xrray-interface"
+        }
+    ]
+}

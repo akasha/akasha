@@ -17,6 +17,21 @@
   {
     "code": "java.class.added",
     "description": "Class was added.",
+    "newElement": "@interface akasha.xr.XRHitTestTrackableType",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRHitTestTrackableType",
+      "classSimpleName": "XRHitTestTrackableType",
+      "elementKind": "@interface",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
     "newElement": "@interface akasha.xr.XRInteractionMode",
     "classification": {
       "SOURCE": "NON_BREAKING",
@@ -26,6 +41,126 @@
       "classQualifiedName": "akasha.xr.XRInteractionMode",
       "classSimpleName": "XRInteractionMode",
       "elementKind": "@interface",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.xr.XRHitTestResult",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRHitTestResult",
+      "classSimpleName": "XRHitTestResult",
+      "elementKind": "class",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.xr.XRHitTestSource",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRHitTestSource",
+      "classSimpleName": "XRHitTestSource",
+      "elementKind": "class",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.xr.XRRay",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRRay",
+      "classSimpleName": "XRRay",
+      "elementKind": "class",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.xr.XRTransientInputHitTestResult",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRTransientInputHitTestResult",
+      "classSimpleName": "XRTransientInputHitTestResult",
+      "elementKind": "class",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.xr.XRTransientInputHitTestSource",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRTransientInputHitTestSource",
+      "classSimpleName": "XRTransientInputHitTestSource",
+      "elementKind": "class",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.xr.XRHitTestOptionsInit",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRHitTestOptionsInit",
+      "classSimpleName": "XRHitTestOptionsInit",
+      "elementKind": "interface",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.xr.XRRayDirectionInit",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRRayDirectionInit",
+      "classSimpleName": "XRRayDirectionInit",
+      "elementKind": "interface",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.xr.XRTransientInputHitTestOptionsInit",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRTransientInputHitTestOptionsInit",
+      "classSimpleName": "XRTransientInputHitTestOptionsInit",
+      "elementKind": "interface",
       "package": "akasha.xr"
     }
   },
@@ -42,6 +177,102 @@
       "classSimpleName": "XRInputSource",
       "elementKind": "method",
       "methodName": "gamepad",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method akasha.lang.JsArray<akasha.xr.XRHitTestResult> akasha.xr.XRFrame::getHitTestResults(akasha.xr.XRHitTestSource)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRFrame",
+      "classSimpleName": "XRFrame",
+      "elementKind": "method",
+      "methodName": "getHitTestResults",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method akasha.lang.JsArray<akasha.xr.XRTransientInputHitTestResult> akasha.xr.XRFrame::getHitTestResultsForTransientInput(akasha.xr.XRTransientInputHitTestSource)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRFrame",
+      "classSimpleName": "XRFrame",
+      "elementKind": "method",
+      "methodName": "getHitTestResultsForTransientInput",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method akasha.promise.Promise<akasha.xr.XRHitTestSource> akasha.xr.XRSession::requestHitTestSource(akasha.xr.XRHitTestOptionsInit)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRSession",
+      "classSimpleName": "XRSession",
+      "elementKind": "method",
+      "methodName": "requestHitTestSource",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method akasha.promise.Promise<akasha.xr.XRTransientInputHitTestSource> akasha.xr.XRSession::requestHitTestSourceForTransientInput(akasha.xr.XRTransientInputHitTestOptionsInit)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRSession",
+      "classSimpleName": "XRSession",
+      "elementKind": "method",
+      "methodName": "requestHitTestSourceForTransientInput",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.method.finalMethodAddedToNonFinalClass",
+    "description": "A final method has been added to an inheritable class.",
+    "newElement": "method boolean akasha.xr.XRFrame::isGetHitTestResultsForTransientInputSupported()",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRFrame",
+      "classSimpleName": "XRFrame",
+      "elementKind": "method",
+      "methodName": "isGetHitTestResultsForTransientInputSupported",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.method.finalMethodAddedToNonFinalClass",
+    "description": "A final method has been added to an inheritable class.",
+    "newElement": "method boolean akasha.xr.XRFrame::isGetHitTestResultsSupported()",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRFrame",
+      "classSimpleName": "XRFrame",
+      "elementKind": "method",
+      "methodName": "isGetHitTestResultsSupported",
       "package": "akasha.xr"
     }
   },
@@ -90,6 +321,38 @@
       "classSimpleName": "XRSession",
       "elementKind": "method",
       "methodName": "isInteractionModeSupported",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.method.finalMethodAddedToNonFinalClass",
+    "description": "A final method has been added to an inheritable class.",
+    "newElement": "method boolean akasha.xr.XRSession::isRequestHitTestSourceForTransientInputSupported()",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRSession",
+      "classSimpleName": "XRSession",
+      "elementKind": "method",
+      "methodName": "isRequestHitTestSourceForTransientInputSupported",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.method.finalMethodAddedToNonFinalClass",
+    "description": "A final method has been added to an inheritable class.",
+    "newElement": "method boolean akasha.xr.XRSession::isRequestHitTestSourceSupported()",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRSession",
+      "classSimpleName": "XRSession",
+      "elementKind": "method",
+      "methodName": "isRequestHitTestSourceSupported",
       "package": "akasha.xr"
     }
   },
