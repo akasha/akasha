@@ -1,0 +1,13 @@
+{
+    "kind": "Type",
+    "name": "XRDepthInformation",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRDepthInformation",
+    "description": "The XRDepthInformation interface contains information about the distance from the user&rsquo;s device to the real-world geometry in the user&rsquo;s environment.",
+    "refs": [
+        {
+            "name": "WebXR Depth Sensing Module",
+            "href": "https://immersive-web.github.io/depth-sensing/#xrdepthinformation",
+            "description": "(WebXR Depth Sensing) # xrdepthinformation"
+        }
+    ]
+}

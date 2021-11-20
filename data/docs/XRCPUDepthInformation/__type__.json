@@ -1,0 +1,13 @@
+{
+    "kind": "Type",
+    "name": "XRCPUDepthInformation",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRCPUDepthInformation",
+    "description": "The XRCPUDepthInformation interface contains depth information from the CPU (returned by XRFrame.getDepthInformation()).",
+    "refs": [
+        {
+            "name": "WebXR Depth Sensing Module",
+            "href": "https://immersive-web.github.io/depth-sensing/#xr-cpu-depth-info-section",
+            "description": "(WebXR Depth Sensing) # xr-cpu-depth-info-section"
+        }
+    ]
+}

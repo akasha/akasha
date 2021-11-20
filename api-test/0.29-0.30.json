@@ -17,6 +17,36 @@
   {
     "code": "java.class.added",
     "description": "Class was added.",
+    "newElement": "@interface akasha.xr.XRDepthDataFormat",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRDepthDataFormat",
+      "classSimpleName": "XRDepthDataFormat",
+      "elementKind": "@interface",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "@interface akasha.xr.XRDepthUsage",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRDepthUsage",
+      "classSimpleName": "XRDepthUsage",
+      "elementKind": "@interface",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
     "newElement": "@interface akasha.xr.XREnvironmentBlendMode",
     "classification": {
       "SOURCE": "NON_BREAKING",
@@ -137,6 +167,21 @@
   {
     "code": "java.class.added",
     "description": "Class was added.",
+    "newElement": "class akasha.xr.XRCPUDepthInformation",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRCPUDepthInformation",
+      "classSimpleName": "XRCPUDepthInformation",
+      "elementKind": "class",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
     "newElement": "class akasha.xr.XRCompositionLayer",
     "classification": {
       "SOURCE": "NON_BREAKING",
@@ -175,6 +220,21 @@
     "attachments": {
       "classQualifiedName": "akasha.xr.XRCylinderLayer",
       "classSimpleName": "XRCylinderLayer",
+      "elementKind": "class",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.xr.XRDepthInformation",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRDepthInformation",
+      "classSimpleName": "XRDepthInformation",
       "elementKind": "class",
       "package": "akasha.xr"
     }
@@ -407,6 +467,21 @@
   {
     "code": "java.class.added",
     "description": "Class was added.",
+    "newElement": "class akasha.xr.XRWebGLDepthInformation",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRWebGLDepthInformation",
+      "classSimpleName": "XRWebGLDepthInformation",
+      "elementKind": "class",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
     "newElement": "class akasha.xr.XRWebGLSubImage",
     "classification": {
       "SOURCE": "NON_BREAKING",
@@ -555,6 +630,21 @@
     "attachments": {
       "classQualifiedName": "akasha.xr.XRDOMOverlayState",
       "classSimpleName": "XRDOMOverlayState",
+      "elementKind": "interface",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.xr.XRDepthStateInit",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRDepthStateInit",
+      "classSimpleName": "XRDepthStateInit",
       "elementKind": "interface",
       "package": "akasha.xr"
     }
@@ -868,6 +958,22 @@
     }
   },
   {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method akasha.xr.XRCPUDepthInformation akasha.xr.XRFrame::getDepthInformation(akasha.xr.XRView)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRFrame",
+      "classSimpleName": "XRFrame",
+      "elementKind": "method",
+      "methodName": "getDepthInformation",
+      "package": "akasha.xr"
+    }
+  },
+  {
     "code": "java.method.addedToInterface",
     "description": "Method was added to an interface.",
     "newElement": "method akasha.xr.XRDOMOverlayInit akasha.xr.XRSessionInit::domOverlay()",
@@ -901,6 +1007,23 @@
     }
   },
   {
+    "code": "java.method.addedToInterface",
+    "description": "Method was added to an interface.",
+    "newElement": "method akasha.xr.XRDepthStateInit akasha.xr.XRSessionInit::depthSensing()",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "NON_BREAKING",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRSessionInit",
+      "classSimpleName": "XRSessionInit",
+      "elementKind": "method",
+      "methodName": "depthSensing",
+      "package": "akasha.xr"
+    }
+  },
+  {
     "code": "java.method.added",
     "description": "Method was added.",
     "newElement": "method akasha.xr.XRHand akasha.xr.XRInputSource::hand()",
@@ -929,6 +1052,22 @@
       "classSimpleName": "XRFrame",
       "elementKind": "method",
       "methodName": "getJointPose",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.method.defaultMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.xr.XRSessionInit.Builder akasha.xr.XRSessionInit.Builder::depthSensing(akasha.xr.XRDepthStateInit)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRSessionInit.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "method",
+      "methodName": "depthSensing",
       "package": "akasha.xr"
     }
   },
@@ -1063,6 +1202,22 @@
   {
     "code": "java.method.finalMethodAddedToNonFinalClass",
     "description": "A final method has been added to an inheritable class.",
+    "newElement": "method boolean akasha.xr.XRFrame::isGetDepthInformationSupported()",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRFrame",
+      "classSimpleName": "XRFrame",
+      "elementKind": "method",
+      "methodName": "isGetDepthInformationSupported",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.method.finalMethodAddedToNonFinalClass",
+    "description": "A final method has been added to an inheritable class.",
     "newElement": "method boolean akasha.xr.XRFrame::isGetHitTestResultsForTransientInputSupported()",
     "classification": {
       "SOURCE": "POTENTIALLY_BREAKING",
@@ -1169,6 +1324,38 @@
       "classSimpleName": "XRRenderState",
       "elementKind": "method",
       "methodName": "isLayersSupported",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.method.finalMethodAddedToNonFinalClass",
+    "description": "A final method has been added to an inheritable class.",
+    "newElement": "method boolean akasha.xr.XRSession::isDepthDataFormatSupported()",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRSession",
+      "classSimpleName": "XRSession",
+      "elementKind": "method",
+      "methodName": "isDepthDataFormatSupported",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.method.finalMethodAddedToNonFinalClass",
+    "description": "A final method has been added to an inheritable class.",
+    "newElement": "method boolean akasha.xr.XRSession::isDepthUsageSupported()",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRSession",
+      "classSimpleName": "XRSession",
+      "elementKind": "method",
+      "methodName": "isDepthUsageSupported",
       "package": "akasha.xr"
     }
   },
@@ -1287,6 +1474,38 @@
   {
     "code": "java.method.added",
     "description": "Method was added.",
+    "newElement": "method java.lang.String akasha.xr.XRSession::depthDataFormat()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRSession",
+      "classSimpleName": "XRSession",
+      "elementKind": "method",
+      "methodName": "depthDataFormat",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method java.lang.String akasha.xr.XRSession::depthUsage()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRSession",
+      "classSimpleName": "XRSession",
+      "elementKind": "method",
+      "methodName": "depthUsage",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
     "newElement": "method java.lang.String akasha.xr.XRSession::environmentBlendMode()",
     "classification": {
       "SOURCE": "NON_BREAKING",
@@ -1313,6 +1532,23 @@
       "classSimpleName": "XRSession",
       "elementKind": "method",
       "methodName": "interactionMode",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.method.addedToInterface",
+    "description": "Method was added to an interface.",
+    "newElement": "method void akasha.xr.XRSessionInit::setDepthSensing(akasha.xr.XRDepthStateInit)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "NON_BREAKING",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRSessionInit",
+      "classSimpleName": "XRSessionInit",
+      "elementKind": "method",
+      "methodName": "setDepthSensing",
       "package": "akasha.xr"
     }
   },

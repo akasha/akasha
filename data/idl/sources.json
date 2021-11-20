@@ -676,6 +676,11 @@
         "url": "https://www.w3.org/TR/webxr-ar-module-1/"
     },
     {
+        "lastModifiedTime": 1633022746000,
+        "name": "webxr_depth_sensing",
+        "url": "https://immersive-web.github.io/depth-sensing/"
+    },
+    {
         "lastModifiedTime": 1630349636000,
         "name": "webxr_dom_overlays",
         "url": "https://immersive-web.github.io/dom-overlays/"

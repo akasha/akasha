@@ -1,0 +1,13 @@
+{
+    "kind": "Type",
+    "name": "XRWebGLDepthInformation",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLDepthInformation",
+    "description": "The XRWebGLDepthInformation interface contains depth information from the GPU/WebGL (returned by XRWebGLBinding.getDepthInformation()).",
+    "refs": [
+        {
+            "name": "WebXR Depth Sensing Module",
+            "href": "https://immersive-web.github.io/depth-sensing/#xrwebgldepthinformation",
+            "description": "(WebXR Depth Sensing) # xrwebgldepthinformation"
+        }
+    ]
+}

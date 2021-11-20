@@ -382,6 +382,36 @@
     },
     {
       "name": "AddExtendedAttributeToMember",
+      "sourceSelector": "name=webxr_depth_sensing",
+      "config": {
+        "expectedAddCount": 1,
+        "elementNamePattern": "^XRFrame$",
+        "memberNamePattern": "^getDepthInformation$",
+        "extendedAttribute": "OptionalSupport"
+      }
+    },
+    {
+      "name": "AddExtendedAttributeToMember",
+      "sourceSelector": "name=webxr_depth_sensing",
+      "config": {
+        "expectedAddCount": 2,
+        "elementNamePattern": "^XRSession$",
+        "memberNamePattern": "^(depthDataFormat|depthUsage)$",
+        "extendedAttribute": "OptionalSupport"
+      }
+    },
+    {
+      "name": "AddExtendedAttributeToMember",
+      "sourceSelector": "name=webxr_depth_sensing",
+      "config": {
+        "expectedAddCount": 1,
+        "elementNamePattern": "^XRWebGLBinding$",
+        "memberNamePattern": "^getDepthInformation$",
+        "extendedAttribute": "OptionalSupport"
+      }
+    },
+    {
+      "name": "AddExtendedAttributeToMember",
       "sourceSelector": "name=webxr_ar_module_1",
       "config": {
         "expectedAddCount": 1,
