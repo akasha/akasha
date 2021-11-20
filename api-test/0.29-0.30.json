@@ -1,0 +1,80 @@
+[
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "@interface akasha.XREnvironmentBlendMode",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.XREnvironmentBlendMode",
+      "classSimpleName": "XREnvironmentBlendMode",
+      "elementKind": "@interface",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "@interface akasha.XRInteractionMode",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.XRInteractionMode",
+      "classSimpleName": "XRInteractionMode",
+      "elementKind": "@interface",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method boolean akasha.xr.XRView::isFirstPersonObserver()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRView",
+      "classSimpleName": "XRView",
+      "elementKind": "method",
+      "methodName": "isFirstPersonObserver",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method java.lang.String akasha.xr.XRSession::environmentBlendMode()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRSession",
+      "classSimpleName": "XRSession",
+      "elementKind": "method",
+      "methodName": "environmentBlendMode",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method java.lang.String akasha.xr.XRSession::interactionMode()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRSession",
+      "classSimpleName": "XRSession",
+      "elementKind": "method",
+      "methodName": "interactionMode",
+      "package": "akasha.xr"
+    }
+  }
+]

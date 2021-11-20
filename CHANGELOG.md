@@ -2,6 +2,8 @@
 
 ### Unreleased
 
+* Add the `WebXR Augmented Reality Module - Level 1` spec version `W3C Working Draft, 24 August 2021` version.
+
 ### [v0.29](https://github.com/akasha/akasha/tree/v0.29) (2021-11-08) · [Full Changelog](https://github.com/spritz/spritz/compare/v0.28...v0.29) · [API Differences](https://akasha.github.io/akasha-java/api-diff/?key=akasha-java&old=0.28&new=0.29) · [Source Diff](https://github.com/akasha/akasha-java/compare/v0.28...v0.29)
 
 The release includes 159 non breaking API changes, 9 potentially breaking API changes and 49 breaking API changes.

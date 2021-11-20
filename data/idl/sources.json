@@ -666,6 +666,11 @@
         "url": "https://www.w3.org/TR/webxr/"
     },
     {
+        "lastModifiedTime": 1629820427000,
+        "name": "webxr_ar_module_1",
+        "url": "https://www.w3.org/TR/webxr-ar-module-1/"
+    },
+    {
         "lastModifiedTime": 1634564498000,
         "name": "whatwg_compat",
         "url": "https://compat.spec.whatwg.org/"
