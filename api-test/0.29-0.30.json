@@ -107,6 +107,36 @@
   {
     "code": "java.class.added",
     "description": "Class was added.",
+    "newElement": "class akasha.xr.XRAnchor",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRAnchor",
+      "classSimpleName": "XRAnchor",
+      "elementKind": "class",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.xr.XRAnchorSet",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRAnchorSet",
+      "classSimpleName": "XRAnchorSet",
+      "elementKind": "class",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
     "newElement": "class akasha.xr.XRCompositionLayer",
     "classification": {
       "SOURCE": "NON_BREAKING",
@@ -776,6 +806,22 @@
   {
     "code": "java.method.added",
     "description": "Method was added.",
+    "newElement": "method akasha.promise.Promise<akasha.xr.XRAnchor> akasha.xr.XRFrame::createAnchor(akasha.xr.XRRigidTransform, akasha.xr.XRSpace)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRFrame",
+      "classSimpleName": "XRFrame",
+      "elementKind": "method",
+      "methodName": "createAnchor",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
     "newElement": "method akasha.promise.Promise<akasha.xr.XRHitTestSource> akasha.xr.XRSession::requestHitTestSource(akasha.xr.XRHitTestOptionsInit)",
     "classification": {
       "SOURCE": "NON_BREAKING",
@@ -802,6 +848,22 @@
       "classSimpleName": "XRSession",
       "elementKind": "method",
       "methodName": "requestHitTestSourceForTransientInput",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method akasha.xr.XRAnchorSet akasha.xr.XRFrame::trackedAnchors()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRFrame",
+      "classSimpleName": "XRFrame",
+      "elementKind": "method",
+      "methodName": "trackedAnchors",
       "package": "akasha.xr"
     }
   },
@@ -953,6 +1015,22 @@
   {
     "code": "java.method.finalMethodAddedToNonFinalClass",
     "description": "A final method has been added to an inheritable class.",
+    "newElement": "method boolean akasha.xr.XRFrame::isCreateAnchorSupported()",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRFrame",
+      "classSimpleName": "XRFrame",
+      "elementKind": "method",
+      "methodName": "isCreateAnchorSupported",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.method.finalMethodAddedToNonFinalClass",
+    "description": "A final method has been added to an inheritable class.",
     "newElement": "method boolean akasha.xr.XRFrame::isFillJointRadiiSupported()",
     "classification": {
       "SOURCE": "POTENTIALLY_BREAKING",
@@ -1027,6 +1105,22 @@
       "classSimpleName": "XRFrame",
       "elementKind": "method",
       "methodName": "isGetJointPoseSupported",
+      "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.method.finalMethodAddedToNonFinalClass",
+    "description": "A final method has been added to an inheritable class.",
+    "newElement": "method boolean akasha.xr.XRFrame::isTrackedAnchorsSupported()",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.xr.XRFrame",
+      "classSimpleName": "XRFrame",
+      "elementKind": "method",
+      "methodName": "isTrackedAnchorsSupported",
       "package": "akasha.xr"
     }
   },

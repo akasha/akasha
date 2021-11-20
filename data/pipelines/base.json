@@ -362,6 +362,26 @@
     },
     {
       "name": "AddExtendedAttributeToMember",
+      "sourceSelector": "name=webxr_anchors",
+      "config": {
+        "expectedAddCount": 2,
+        "elementNamePattern": "^XRFrame$",
+        "memberNamePattern": "^(createAnchor|trackedAnchors)$",
+        "extendedAttribute": "OptionalSupport"
+      }
+    },
+    {
+      "name": "AddExtendedAttributeToMember",
+      "sourceSelector": "name=webxr_anchors",
+      "config": {
+        "expectedAddCount": 1,
+        "elementNamePattern": "^XRHitTestResult$",
+        "memberNamePattern": "^createAnchor$",
+        "extendedAttribute": "OptionalSupport"
+      }
+    },
+    {
+      "name": "AddExtendedAttributeToMember",
       "sourceSelector": "name=webxr_ar_module_1",
       "config": {
         "expectedAddCount": 1,

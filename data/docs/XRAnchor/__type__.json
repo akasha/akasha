@@ -1,0 +1,13 @@
+{
+    "kind": "Type",
+    "name": "XRAnchor",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRAnchor",
+    "description": "The XRAnchor interface creates anchors which keep track of the pose that is fixed relative to the real world. With anchors, you can specify poses in the world that need to be updated to correctly reflect the evolving understanding of the world, such that the poses remain aligned with the same place in the physical world. That helps to build an illusion that the placed objects are really present in the user&rsquo;s environment.",
+    "refs": [
+        {
+            "name": "WebXR Anchors Module",
+            "href": "https://immersive-web.github.io/anchors/#xr-anchor",
+            "description": "(WebXR Anchors) # xr-anchor"
+        }
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "kind": "Type",
+    "name": "XRAnchorSet",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRAnchorSet",
+    "description": "The XRAnchorSet interface exposes a collection of anchors. It is returned by XRFrame.trackedAnchors and is a Set-like object.",
+    "refs": [
+        {
+            "name": "WebXR Anchors Module",
+            "href": "https://immersive-web.github.io/anchors/#xranchorset",
+            "description": "(WebXR Anchors) # xranchorset"
+        }
+    ]
+}

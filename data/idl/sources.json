@@ -666,6 +666,11 @@
         "url": "https://www.w3.org/TR/webxr/"
     },
     {
+        "lastModifiedTime": 1633022893000,
+        "name": "webxr_anchors",
+        "url": "https://immersive-web.github.io/anchors/"
+    },
+    {
         "lastModifiedTime": 1629820427000,
         "name": "webxr_ar_module_1",
         "url": "https://www.w3.org/TR/webxr-ar-module-1/"
