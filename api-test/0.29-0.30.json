@@ -2,6 +2,51 @@
   {
     "code": "java.class.added",
     "description": "Class was added.",
+    "newElement": "@interface akasha.gl.SamplerMagnificationFilter",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gl.SamplerMagnificationFilter",
+      "classSimpleName": "SamplerMagnificationFilter",
+      "elementKind": "@interface",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "@interface akasha.gl.SamplerMinificationFilter",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gl.SamplerMinificationFilter",
+      "classSimpleName": "SamplerMinificationFilter",
+      "elementKind": "@interface",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "@interface akasha.gl.SamplerWrapMode",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gl.SamplerWrapMode",
+      "classSimpleName": "SamplerWrapMode",
+      "elementKind": "@interface",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
     "newElement": "@interface akasha.xr.XRDOMOverlayType",
     "classification": {
       "SOURCE": "NON_BREAKING",
@@ -1739,6 +1784,54 @@
       "elementKind": "method",
       "methodName": "setDomOverlay",
       "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.annotation.noLongerPresent",
+    "description": "Old API referenced the annotation type but the new API version no longer does.",
+    "oldElement": "@interface akasha.gl.TextureMagnificationFilter",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "NON_BREAKING",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gl.TextureMagnificationFilter",
+      "classSimpleName": "TextureMagnificationFilter",
+      "elementKind": "@interface",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.annotation.noLongerPresent",
+    "description": "Old API referenced the annotation type but the new API version no longer does.",
+    "oldElement": "@interface akasha.gl.TextureMinificationFilter",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "NON_BREAKING",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gl.TextureMinificationFilter",
+      "classSimpleName": "TextureMinificationFilter",
+      "elementKind": "@interface",
+      "package": "akasha.gl"
+    }
+  },
+  {
+    "code": "java.annotation.noLongerPresent",
+    "description": "Old API referenced the annotation type but the new API version no longer does.",
+    "oldElement": "@interface akasha.gl.TextureWrapMode",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "NON_BREAKING",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.gl.TextureWrapMode",
+      "classSimpleName": "TextureWrapMode",
+      "elementKind": "@interface",
+      "package": "akasha.gl"
     }
   }
 ]

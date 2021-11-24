@@ -322,18 +322,18 @@ const enum Winding {
   WebGL2RenderingContext.CCW
 };
 
-const enum TextureWrapMode {
+const enum SamplerWrapMode {
   WebGL2RenderingContext.REPEAT,
   WebGL2RenderingContext.CLAMP_TO_EDGE,
   WebGL2RenderingContext.MIRRORED_REPEAT
 };
 
-const enum TextureMagnificationFilter {
+const enum SamplerMagnificationFilter {
   WebGL2RenderingContext.LINEAR,
   WebGL2RenderingContext.NEAREST
 };
 
-const enum TextureMinificationFilter {
+const enum SamplerMinificationFilter {
   WebGL2RenderingContext.LINEAR,
   WebGL2RenderingContext.NEAREST,
   WebGL2RenderingContext.NEAREST_MIPMAP_NEAREST,

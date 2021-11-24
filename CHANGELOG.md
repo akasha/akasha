@@ -11,6 +11,9 @@
 * Add the `WebXR Anchors Module` spec version `Editor’s Draft, 30 September 2021` version.
 * Add the `WebXR Depth Sensing Module` spec version `Editor’s Draft, 30 September 2021` version.
 * Add the `WebXR Lighting Estimation API Level 1` spec version `Editor’s Draft, 4 November 2021` version.
+* Rename the `TextureMagnificationFilter` annotation to `SamplerMagnificationFilter`.
+* Rename the `TextureMinificationFilter` annotation to `SamplerMinificationFilter`.
+* Rename the `TextureWrapMode` annotation to `SamplerWrapMode`.
 
 ### [v0.29](https://github.com/akasha/akasha/tree/v0.29) (2021-11-08) · [Full Changelog](https://github.com/spritz/spritz/compare/v0.28...v0.29) · [API Differences](https://akasha.github.io/akasha-java/api-diff/?key=akasha-java&old=0.28&new=0.29) · [Source Diff](https://github.com/akasha/akasha-java/compare/v0.28...v0.29)
 
