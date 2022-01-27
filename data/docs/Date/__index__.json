@@ -1,6 +1,6 @@
 {
     "name": "Date",
-    "lastModifiedAt": 1637113939000,
+    "lastModifiedAt": 1643249064000,
     "entries": [
         {
             "name": "UTC",
@@ -68,7 +68,7 @@
         },
         {
             "name": "getUTCMilliseconds",
-            "lastModifiedAt": 1629769823000
+            "lastModifiedAt": 1643249064000
         },
         {
             "name": "getUTCMinutes",

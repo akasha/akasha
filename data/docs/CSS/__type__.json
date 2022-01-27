@@ -5,9 +5,9 @@
     "description": "The CSS interface holds useful CSS-related methods. No objects with this interface are implemented: it contains only static methods and is therefore a utilitarian interface.",
     "refs": [
         {
-            "name": "CSS Conditional Rules Module Level 3",
-            "href": "https://drafts.csswg.org/css-conditional/#the-css-interface",
-            "description": "(CSS Conditional 3) # the-css-interface"
+            "name": "CSS Object Model (CSSOM)",
+            "href": "https://drafts.csswg.org/cssom/#namespacedef-css",
+            "description": "(CSSOM) # namespacedef-css"
         }
     ]
 }

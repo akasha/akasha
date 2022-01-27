@@ -5,9 +5,9 @@
     "description": "PerformanceMark is an abstract interface for PerformanceEntry objects with an entryType of &quot;mark&quot;. Entries of this type are created by calling performance.mark() to add a named DOMHighResTimeStamp (the mark) to the browser's performance timeline.",
     "refs": [
         {
-            "name": "User Timing Level 2",
+            "name": "User Timing",
             "href": "https://w3c.github.io/user-timing/#performancemark",
-            "description": "(User Timing 2) # performancemark"
+            "description": "# performancemark"
         }
     ]
 }

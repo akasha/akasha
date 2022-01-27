@@ -5,9 +5,9 @@
     "description": "The PerformanceObserver interface is used to observe performance measurement events and be notified of new performance entries as they are recorded in the browser's performance timeline.",
     "refs": [
         {
-            "name": "Performance Timeline Level 2",
+            "name": "Performance Timeline",
             "href": "https://w3c.github.io/performance-timeline/#dom-performanceobserver",
-            "description": "(Performance Timeline 2) # dom-performanceobserver"
+            "description": "# dom-performanceobserver"
         }
     ]
 }

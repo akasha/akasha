@@ -1,10 +1,10 @@
 {
     "name": "PerformanceEntry",
-    "lastModifiedAt": 1629769805000,
+    "lastModifiedAt": 1643249016000,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1629769805000
+            "lastModifiedAt": 1643249016000
         },
         {
             "name": "duration",

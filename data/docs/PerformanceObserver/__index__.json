@@ -1,6 +1,6 @@
 {
     "name": "PerformanceObserver",
-    "lastModifiedAt": 1629769800000,
+    "lastModifiedAt": 1643249036000,
     "entries": [
         {
             "name": "PerformanceObserver",
@@ -8,7 +8,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1629769800000
+            "lastModifiedAt": 1643249036000
         },
         {
             "name": "disconnect",

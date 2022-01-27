@@ -1,6 +1,6 @@
 {
     "name": "RTCPeerConnectionIceEvent",
-    "lastModifiedAt": 1629769803000,
+    "lastModifiedAt": 1643249024000,
     "entries": [
         {
             "name": "RTCPeerConnectionIceEvent",
@@ -8,7 +8,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1629769803000
+            "lastModifiedAt": 1643249024000
         },
         {
             "name": "candidate",

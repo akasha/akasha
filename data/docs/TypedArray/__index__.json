@@ -1,10 +1,10 @@
 {
     "name": "TypedArray",
-    "lastModifiedAt": 1629769827000,
+    "lastModifiedAt": 1643249061000,
     "entries": [
         {
             "name": "BYTES_PER_ELEMENT",
-            "lastModifiedAt": 1629769827000
+            "lastModifiedAt": 1643249061000
         },
         {
             "name": "__type__",

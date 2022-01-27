@@ -1,6 +1,6 @@
 {
     "name": "Math",
-    "lastModifiedAt": 1629769824000,
+    "lastModifiedAt": 1643249061000,
     "entries": [
         {
             "name": "E",
@@ -36,7 +36,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1629769824000
+            "lastModifiedAt": 1643249061000
         },
         {
             "name": "abs",

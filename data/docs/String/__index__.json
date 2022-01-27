@@ -1,6 +1,6 @@
 {
     "name": "String",
-    "lastModifiedAt": 1629769826000,
+    "lastModifiedAt": 1643249064000,
     "entries": [
         {
             "name": "__type__",
@@ -36,7 +36,7 @@
         },
         {
             "name": "codePointAt",
-            "lastModifiedAt": 1629769826000
+            "lastModifiedAt": 1643249064000
         },
         {
             "name": "concat",
@@ -196,7 +196,7 @@
         },
         {
             "name": "trim",
-            "lastModifiedAt": 1629769825000
+            "lastModifiedAt": 1643249064000
         },
         {
             "name": "trimEnd",

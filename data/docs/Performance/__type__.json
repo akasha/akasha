@@ -10,9 +10,9 @@
             "description": "# sec-performance"
         },
         {
-            "name": "Performance Timeline Level 2",
+            "name": "Performance Timeline",
             "href": "https://w3c.github.io/performance-timeline/#extensions-to-the-performance-interface",
-            "description": "(Performance Timeline 2) # extensions-to-the-performance-interface"
+            "description": "# extensions-to-the-performance-interface"
         },
         {
             "name": "Resource Timing Level 2",
@@ -20,9 +20,9 @@
             "description": "(Resource Timing 2) # sec-extensions-performance-interface"
         },
         {
-            "name": "User Timing Level 2",
+            "name": "User Timing",
             "href": "https://w3c.github.io/user-timing/#extensions-performance-interface",
-            "description": "(User Timing 2) # extensions-performance-interface"
+            "description": "# extensions-performance-interface"
         }
     ]
 }

@@ -5,9 +5,9 @@
     "description": "The CSSFontFaceRule interface represents an @font-face at-rule.",
     "refs": [
         {
-            "name": "CSS Fonts Module Level 5",
+            "name": "CSS Fonts Module Level 4",
             "href": "https://drafts.csswg.org/css-fonts/#om-fontface",
-            "description": "(CSS Fonts 5) # om-fontface"
+            "description": "(CSS Fonts 4) # om-fontface"
         }
     ]
 }

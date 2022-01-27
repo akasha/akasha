@@ -2,7 +2,7 @@
     "kind": "Type",
     "name": "HTMLTableColElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableColElement",
-    "description": "The HTMLTableColElement interface provides special properties (beyond the HTMLElement interface it also has available to it inheritance) for manipulating single or grouped table column elements.",
+    "description": "The HTMLTableColElement interface provides properties for manipulating single or grouped table column elements.",
     "refs": [
         {
             "name": "HTML Standard",

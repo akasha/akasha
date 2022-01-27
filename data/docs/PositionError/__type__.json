@@ -5,7 +5,7 @@
     "description": "The GeolocationPositionError interface represents the reason of an error occurring when using the geolocating device.",
     "refs": [
         {
-            "name": "Geolocation API Specification 2nd Edition",
+            "name": "Geolocation API",
             "href": "https://w3c.github.io/geolocation-api/#position_error_interface",
             "description": "# position_error_interface"
         }

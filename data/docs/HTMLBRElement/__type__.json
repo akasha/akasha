@@ -2,7 +2,7 @@
     "kind": "Type",
     "name": "HTMLBRElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLBRElement",
-    "description": "The HTMLBRElement interface represents a HTML line break element (&lt;br&gt;). It inherits from HTMLElement.",
+    "description": "The HTMLBRElement interface represents an HTML line break element (&lt;br&gt;). It inherits from HTMLElement.",
     "refs": [
         {
             "name": "HTML Standard",

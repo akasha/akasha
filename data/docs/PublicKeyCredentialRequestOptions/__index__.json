@@ -1,10 +1,10 @@
 {
     "name": "PublicKeyCredentialRequestOptions",
-    "lastModifiedAt": 1629769803000,
+    "lastModifiedAt": 1643249034000,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1629769803000
+            "lastModifiedAt": 1643249034000
         },
         {
             "name": "allowCredentials",

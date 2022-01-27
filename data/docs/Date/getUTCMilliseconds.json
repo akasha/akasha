@@ -2,7 +2,7 @@
     "kind": "Method",
     "name": "Date.getUTCMilliseconds",
     "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getUTCMilliseconds",
-    "description": "The getUTCMilliseconds() method returns the milliseconds portion of the time object's value.",
+    "description": "The getUTCMilliseconds() method returns the milliseconds portion of the time object's value according to universal time.",
     "refs": [
         {
             "name": "ECMAScript Language Specification",

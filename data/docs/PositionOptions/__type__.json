@@ -5,7 +5,7 @@
     "description": "The Geolocation.getCurrentPosition() method is used to get the current position of the device.",
     "refs": [
         {
-            "name": "Geolocation API Specification 2nd Edition",
+            "name": "Geolocation API",
             "href": "https://w3c.github.io/geolocation-api/#getcurrentposition-method",
             "description": "# getcurrentposition-method"
         }
