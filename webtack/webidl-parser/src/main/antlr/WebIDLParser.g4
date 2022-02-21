@@ -24,7 +24,6 @@
 // - Remove SYMBOL kind as now the type is defined WebIDL
 // - Change constMemberType to accept constant values of string types
 // - Removed the bufferRelatedType rule as we now define the types in WebIDL
-// - Added constMember as an alternative of namespaceMember so that namespaces can define constants
 // - Added constMemberName rule so constant names can be the same value as some other grammar tokens such as NaN
 parser grammar WebIDLParser;
 
@@ -396,8 +395,8 @@ namespaceMembers
 
 namespaceMember
   : regularOperation
-  | constMember
   | READONLY attributeRest
+  | constMember
 ;
 
 dictionary
@@ -913,6 +912,7 @@ NamespaceMembers ::
 NamespaceMember ::
     RegularOperation
     readonly AttributeRest
+    Const
 
 Dictionary ::
     dictionary identifier Inheritance { DictionaryMembers } ;
