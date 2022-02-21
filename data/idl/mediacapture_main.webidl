@@ -33,6 +33,10 @@ callback NavigatorUserMediaErrorCallback = undefined ( DOMException error );
 
 callback NavigatorUserMediaSuccessCallback = undefined ( MediaStream stream );
 
+dictionary CameraDevicePermissionDescriptor : DevicePermissionDescriptor {
+  boolean panTiltZoom = false;
+};
+
 dictionary ConstrainBooleanParameters {
   boolean exact;
   boolean ideal;

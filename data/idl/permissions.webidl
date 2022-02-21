@@ -26,10 +26,6 @@ enum PermissionState {
   "prompt"
 };
 
-dictionary CameraDevicePermissionDescriptor : DevicePermissionDescriptor {
-  boolean panTiltZoom = false;
-};
-
 dictionary DevicePermissionDescriptor : PermissionDescriptor {
   DOMString deviceId;
 };
