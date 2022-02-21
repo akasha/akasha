@@ -2,6 +2,36 @@
   {
     "code": "java.class.added",
     "description": "Class was added.",
+    "newElement": "@interface akasha.FileSystemHandleKind",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.FileSystemHandleKind",
+      "classSimpleName": "FileSystemHandleKind",
+      "elementKind": "@interface",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "@interface akasha.WriteCommandType",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.WriteCommandType",
+      "classSimpleName": "WriteCommandType",
+      "elementKind": "@interface",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
     "newElement": "@interface akasha.gl.SamplerMagnificationFilter",
     "classification": {
       "SOURCE": "NON_BREAKING",
@@ -205,6 +235,66 @@
     "attachments": {
       "classQualifiedName": "akasha.CanvasFilter",
       "classSimpleName": "CanvasFilter",
+      "elementKind": "class",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.FileSystemDirectoryHandle",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.FileSystemDirectoryHandle",
+      "classSimpleName": "FileSystemDirectoryHandle",
+      "elementKind": "class",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.FileSystemFileHandle",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.FileSystemFileHandle",
+      "classSimpleName": "FileSystemFileHandle",
+      "elementKind": "class",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.FileSystemHandle",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.FileSystemHandle",
+      "classSimpleName": "FileSystemHandle",
+      "elementKind": "class",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.FileSystemWritableFileStream",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.FileSystemWritableFileStream",
+      "classSimpleName": "FileSystemWritableFileStream",
       "elementKind": "class",
       "package": "akasha"
     }
@@ -1212,6 +1302,36 @@
   {
     "code": "java.class.added",
     "description": "Class was added.",
+    "newElement": "interface akasha.ArrayBufferViewOrUndefinedUnion",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.ArrayBufferViewOrUndefinedUnion",
+      "classSimpleName": "ArrayBufferViewOrUndefinedUnion",
+      "elementKind": "interface",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.BufferSourceOrBlobOrStringUnion",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.BufferSourceOrBlobOrStringUnion",
+      "classSimpleName": "BufferSourceOrBlobOrStringUnion",
+      "elementKind": "interface",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
     "newElement": "interface akasha.ElementOrCSSPseudoElementUnion",
     "classification": {
       "SOURCE": "NON_BREAKING",
@@ -1220,6 +1340,81 @@
     "attachments": {
       "classQualifiedName": "akasha.ElementOrCSSPseudoElementUnion",
       "classSimpleName": "ElementOrCSSPseudoElementUnion",
+      "elementKind": "interface",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.FileSystemCreateWritableOptions",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.FileSystemCreateWritableOptions",
+      "classSimpleName": "FileSystemCreateWritableOptions",
+      "elementKind": "interface",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.FileSystemGetDirectoryOptions",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.FileSystemGetDirectoryOptions",
+      "classSimpleName": "FileSystemGetDirectoryOptions",
+      "elementKind": "interface",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.FileSystemGetFileOptions",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.FileSystemGetFileOptions",
+      "classSimpleName": "FileSystemGetFileOptions",
+      "elementKind": "interface",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.FileSystemRemoveOptions",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.FileSystemRemoveOptions",
+      "classSimpleName": "FileSystemRemoveOptions",
+      "elementKind": "interface",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.FileSystemWriteChunkType",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.FileSystemWriteChunkType",
+      "classSimpleName": "FileSystemWriteChunkType",
       "elementKind": "interface",
       "package": "akasha"
     }
@@ -1265,6 +1460,21 @@
     "attachments": {
       "classQualifiedName": "akasha.StringOrUndefinedUnion",
       "classSimpleName": "StringOrUndefinedUnion",
+      "elementKind": "interface",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "interface akasha.WriteParams",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.WriteParams",
+      "classSimpleName": "WriteParams",
       "elementKind": "interface",
       "package": "akasha"
     }
@@ -1619,6 +1829,41 @@
   {
     "code": "java.method.added",
     "description": "Method was added.",
+    "newElement": "method akasha.AbortSignal akasha.WritableStreamDefaultController::signal()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.WritableStreamDefaultController",
+      "classSimpleName": "WritableStreamDefaultController",
+      "elementKind": "method",
+      "methodName": "signal",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.returnTypeChanged",
+    "description": "The return type changed from 'akasha.core.ArrayBufferView' to  'akasha.ArrayBufferViewOrUndefinedUnion'.",
+    "newElement": "method akasha.ArrayBufferViewOrUndefinedUnion akasha.ReadableStreamBYOBReadResult::value()",
+    "oldElement": "method akasha.core.ArrayBufferView akasha.ReadableStreamBYOBReadResult::value()",
+    "classification": {
+      "SOURCE": "POTENTIALLY_BREAKING",
+      "BINARY": "BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.ReadableStreamBYOBReadResult",
+      "classSimpleName": "ReadableStreamBYOBReadResult",
+      "elementKind": "method",
+      "methodName": "value",
+      "newType": "akasha.ArrayBufferViewOrUndefinedUnion",
+      "oldType": "akasha.core.ArrayBufferView",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
     "newElement": "method akasha.CSSPseudoElement akasha.CSSPseudoElement::pseudo(java.lang.String)",
     "classification": {
       "SOURCE": "NON_BREAKING",
@@ -1710,6 +1955,22 @@
       "elementKind": "method",
       "methodName": "gamepad",
       "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.method.defaultMethodAddedToInterface",
+    "description": "A default method has been added to the interface.",
+    "newElement": "method akasha.ReadableStreamBYOBReadResult.Builder akasha.ReadableStreamBYOBReadResult.Builder::value(akasha.ArrayBufferViewOrUndefinedUnion)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.ReadableStreamBYOBReadResult.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "method",
+      "methodName": "value",
+      "package": "akasha"
     }
   },
   {
@@ -2100,6 +2361,22 @@
       "elementKind": "method",
       "methodName": "viewFormats",
       "package": "akasha.gpu"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method akasha.promise.Promise<akasha.FileSystemDirectoryHandle> akasha.StorageManager::getDirectory()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.StorageManager",
+      "classSimpleName": "StorageManager",
+      "elementKind": "method",
+      "methodName": "getDirectory",
+      "package": "akasha"
     }
   },
   {
@@ -4345,6 +4622,135 @@
   {
     "code": "java.method.addedToInterface",
     "description": "Method was added to an interface.",
+    "newElement": "method void akasha.ReadableStreamBYOBReadResult::setValue(akasha.ArrayBufferViewOrUndefinedUnion)",
+    "classification": {
+      "SOURCE": "BREAKING",
+      "BINARY": "NON_BREAKING",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.ReadableStreamBYOBReadResult",
+      "classSimpleName": "ReadableStreamBYOBReadResult",
+      "elementKind": "method",
+      "methodName": "setValue",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.ReadableStreamBYOBReadResult::setValue(akasha.core.ArrayBufferView) @ akasha.ReadableStreamBYOBReadResult.Builder",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.ReadableStreamBYOBReadResult.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "method",
+      "methodName": "setValue",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.annotation.removed",
+    "description": "Element no longer annotated with 'jsinterop.annotations.JsProperty'.",
+    "element": "method void akasha.ReadableStreamBYOBReadResult::setValue(akasha.core.ArrayBufferView) @ akasha.ReadableStreamBYOBReadResult.Builder",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsProperty",
+      "annotationType": "jsinterop.annotations.JsProperty",
+      "classQualifiedName": "akasha.ReadableStreamBYOBReadResult.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "method",
+      "methodName": "setValue",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'jsinterop.annotations.JsOverlay'.",
+    "element": "method void akasha.ReadableStreamBYOBReadResult::setValue(akasha.core.ArrayBufferView)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOverlay",
+      "annotationType": "jsinterop.annotations.JsOverlay",
+      "classQualifiedName": "akasha.ReadableStreamBYOBReadResult",
+      "classSimpleName": "ReadableStreamBYOBReadResult",
+      "elementKind": "method",
+      "methodName": "setValue",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.annotation.removed",
+    "description": "Element no longer annotated with 'jsinterop.annotations.JsProperty'.",
+    "element": "method void akasha.ReadableStreamBYOBReadResult::setValue(akasha.core.ArrayBufferView)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsProperty",
+      "annotationType": "jsinterop.annotations.JsProperty",
+      "classQualifiedName": "akasha.ReadableStreamBYOBReadResult",
+      "classSimpleName": "ReadableStreamBYOBReadResult",
+      "elementKind": "method",
+      "methodName": "setValue",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.noLongerAbstract",
+    "description": "Method no longer abstract",
+    "element": "method void akasha.ReadableStreamBYOBReadResult::setValue(akasha.core.ArrayBufferView)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.ReadableStreamBYOBReadResult",
+      "classSimpleName": "ReadableStreamBYOBReadResult",
+      "elementKind": "method",
+      "methodName": "setValue",
+      "newModifiers": "public default",
+      "oldModifiers": "public abstract",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.nowDefault",
+    "description": "Method has the default implementation in the interface now.",
+    "element": "method void akasha.ReadableStreamBYOBReadResult::setValue(akasha.core.ArrayBufferView)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.ReadableStreamBYOBReadResult",
+      "classSimpleName": "ReadableStreamBYOBReadResult",
+      "elementKind": "method",
+      "methodName": "setValue",
+      "newModifiers": "public default",
+      "oldModifiers": "public abstract",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.addedToInterface",
+    "description": "Method was added to an interface.",
     "newElement": "method void akasha.gpu.GPUCanvasConfiguration::setViewFormats(akasha.lang.JsArray<java.lang.String>)",
     "classification": {
       "SOURCE": "BREAKING",
@@ -6583,6 +6989,26 @@
     }
   },
   {
+    "code": "java.annotation.removed",
+    "description": "Element no longer annotated with 'jsinterop.annotations.JsOptional'.",
+    "element": "parameter double akasha.QueuingStrategySize::onInvoke(===java.lang.Object===)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@jsinterop.annotations.JsOptional",
+      "annotationType": "jsinterop.annotations.JsOptional",
+      "classQualifiedName": "akasha.QueuingStrategySize",
+      "classSimpleName": "QueuingStrategySize",
+      "elementKind": "parameter",
+      "methodName": "onInvoke",
+      "package": "akasha",
+      "parameterIndex": "0"
+    }
+  },
+  {
     "code": "java.method.parameterTypeChanged",
     "description": "The type of the parameter changed from 'int' to 'double'.",
     "newElement": "parameter void akasha.MouseEventInit::setMovementX(===double===)",
@@ -6918,6 +7344,46 @@
       "classSimpleName": "PermissionDescriptor",
       "elementKind": "parameter",
       "methodName": "setName",
+      "package": "akasha",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'javax.annotation.Nonnull'.",
+    "element": "parameter void akasha.ReadableStreamBYOBReadResult::setValue(===akasha.core.ArrayBufferView===) @ akasha.ReadableStreamBYOBReadResult.Builder",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@javax.annotation.Nonnull",
+      "annotationType": "javax.annotation.Nonnull",
+      "classQualifiedName": "akasha.ReadableStreamBYOBReadResult.Builder",
+      "classSimpleName": "Builder",
+      "elementKind": "parameter",
+      "methodName": "setValue",
+      "package": "akasha",
+      "parameterIndex": "0"
+    }
+  },
+  {
+    "code": "java.annotation.added",
+    "description": "Element newly annotated with 'javax.annotation.Nonnull'.",
+    "element": "parameter void akasha.ReadableStreamBYOBReadResult::setValue(===akasha.core.ArrayBufferView===)",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT",
+      "SEMANTIC": "POTENTIALLY_BREAKING"
+    },
+    "attachments": {
+      "annotation": "@javax.annotation.Nonnull",
+      "annotationType": "javax.annotation.Nonnull",
+      "classQualifiedName": "akasha.ReadableStreamBYOBReadResult",
+      "classSimpleName": "ReadableStreamBYOBReadResult",
+      "elementKind": "parameter",
+      "methodName": "setValue",
       "package": "akasha",
       "parameterIndex": "0"
     }
