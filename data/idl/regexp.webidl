@@ -18,7 +18,7 @@ interface RegExp {
 
   boolean test( DOMString text );
 
-  stringifier DOMString toString();
+  DOMString toString();
 };
 
 [JavaSubPackage=core, LegacyNoInterfaceObject]

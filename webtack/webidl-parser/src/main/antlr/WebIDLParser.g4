@@ -343,7 +343,6 @@ stringifier
 
 stringifierRest
   : optionalReadOnly attributeRest
-  | regularOperation
   | SEMI_COLON
 ;
 
@@ -866,7 +865,6 @@ Stringifier ::
 
 StringifierRest ::
     OptionalReadOnly AttributeRest
-    RegularOperation
     ;
 
 StaticMember ::

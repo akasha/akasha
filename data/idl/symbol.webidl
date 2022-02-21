@@ -22,5 +22,5 @@ interface Symbol {
   static Symbol for( DOMString key );
   static DOMString keyFor( Symbol symbol );
 
-  stringifier DOMString toString();
+  DOMString toString();
 };

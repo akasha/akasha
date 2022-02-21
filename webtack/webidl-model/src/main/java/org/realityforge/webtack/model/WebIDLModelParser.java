@@ -825,26 +825,14 @@ public final class WebIDLModelParser
     }
     else
     {
-      final WebIDLParser.RegularOperationContext regularOperationContext = stringifierRestContext.regularOperation();
-      if ( null != regularOperationContext )
-      {
-        return parse( regularOperationContext,
-                      OperationMember.Kind.STRINGIFIER,
-                      documentation,
-                      extendedAttributes,
-                      startPosition );
-      }
-      else
-      {
-        final List<SourceInterval> sourceLocations = parseSourceIntervals( startPosition, ctx );
-        return new OperationMember( OperationMember.Kind.STRINGIFIER,
-                                    null,
-                                    Collections.emptyList(),
-                                    new Type( Kind.DOMString, Collections.emptyList(), false, sourceLocations ),
-                                    documentation,
-                                    extendedAttributes,
-                                    sourceLocations );
-      }
+      final List<SourceInterval> sourceLocations = parseSourceIntervals( startPosition, ctx );
+      return new OperationMember( OperationMember.Kind.STRINGIFIER,
+                                  null,
+                                  Collections.emptyList(),
+                                  new Type( Kind.DOMString, Collections.emptyList(), false, sourceLocations ),
+                                  documentation,
+                                  extendedAttributes,
+                                  sourceLocations );
     }
   }
 

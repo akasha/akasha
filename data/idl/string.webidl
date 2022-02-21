@@ -43,5 +43,5 @@ interface String {
   DOMString trimRight();
   DOMString trimStart();
   DOMString valueOf();
-  stringifier DOMString toString();
+  DOMString toString();
 };

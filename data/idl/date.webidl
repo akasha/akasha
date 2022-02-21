@@ -106,5 +106,5 @@ interface Date {
 
   Timestamp valueOf();
 
-  stringifier DOMString toString();
+  DOMString toString();
 };
