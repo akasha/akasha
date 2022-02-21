@@ -22,18 +22,18 @@ interface mixin TextEncoderCommon {
   readonly attribute DOMString encoding;
 };
 
-[Exposed=(Window,Worker)]
+[Exposed=*]
 interface TextDecoder {
   constructor( optional DOMString label = "utf-8", optional TextDecoderOptions options = {} );
   USVString decode( optional [AllowShared] BufferSource input, optional TextDecodeOptions options = {} );
 };
 
-[Exposed=(Window,Worker)]
+[Exposed=*]
 interface TextDecoderStream {
   constructor( optional DOMString label = "utf-8", optional TextDecoderOptions options = {} );
 };
 
-[Exposed=(Window,Worker)]
+[Exposed=*]
 interface TextEncoder {
   constructor();
   [NewObject]
@@ -41,7 +41,7 @@ interface TextEncoder {
   TextEncoderEncodeIntoResult encodeInto( USVString source, [AllowShared] Uint8Array destination );
 };
 
-[Exposed=(Window,Worker)]
+[Exposed=*]
 interface TextEncoderStream {
   constructor();
 };

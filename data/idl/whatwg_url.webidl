@@ -1,4 +1,4 @@
-[Exposed=(Window,Worker), LegacyWindowAlias=webkitURL]
+[Exposed=*, LegacyWindowAlias=webkitURL]
 interface URL {
   readonly attribute USVString origin;
   [SameObject]
@@ -17,7 +17,7 @@ interface URL {
   USVString toJSON();
 };
 
-[Exposed=(Window,Worker)]
+[Exposed=*]
 interface URLSearchParams {
   iterable<USVString, USVString>;
   constructor( optional ( sequence<sequence<USVString>> or record<USVString, USVString> or USVString ) init = "" );

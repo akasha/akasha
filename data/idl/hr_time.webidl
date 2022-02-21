@@ -7,7 +7,7 @@ partial interface mixin WindowOrWorkerGlobalScope {
   readonly attribute Performance performance;
 };
 
-[Exposed=(Window,Worker)]
+[Exposed=*]
 interface Performance : EventTarget {
   readonly attribute DOMHighResTimeStamp timeOrigin;
   DOMHighResTimeStamp now();
