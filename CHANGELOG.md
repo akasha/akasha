@@ -2,6 +2,7 @@
 
 ### Unreleased
 
+* Update the `org.realityforge.react4j` artifacts to version `0.187`.
 * Add the `WebXR Augmented Reality Module - Level 1` spec version `W3C Working Draft, 24 August 2021` version.
 * Add the `WebXR Gamepads Module - Level 1` spec version `W3C Working Draft, 24 August 2021` version.
 * Add the `WebXR Hit Test Module` spec version `Editor’s Draft, 30 September 2021` version.
