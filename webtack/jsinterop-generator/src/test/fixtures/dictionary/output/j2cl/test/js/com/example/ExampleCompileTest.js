@@ -1,4 +1,7 @@
 goog.module('com.example.ExampleCompileTest');
+goog.require('com.example.ArrayBufferView.$Overlay');
+goog.require('com.example.ArrayBufferViewOrUndefinedUnionTestCompile');
+goog.require('com.example.ArrayBufferViewTestCompile');
 goog.require('com.example.EventInit.$Overlay');
 goog.require('com.example.EventInitTestCompile');
 goog.require('com.example.GPUColorDict.$Overlay');
@@ -19,6 +22,8 @@ goog.require('com.example.RTCOfferAnswerOptions.$Overlay');
 goog.require('com.example.RTCOfferAnswerOptionsTestCompile');
 goog.require('com.example.RTCOfferOptions.$Overlay');
 goog.require('com.example.RTCOfferOptionsTestCompile');
+goog.require('com.example.ReadableStreamBYOBReadResult.$Overlay');
+goog.require('com.example.ReadableStreamBYOBReadResultTestCompile');
 goog.require('com.example.RequiredAnyDict.$Overlay');
 goog.require('com.example.RequiredAnyDictTestCompile');
 goog.require('com.example.Storage.$Overlay');

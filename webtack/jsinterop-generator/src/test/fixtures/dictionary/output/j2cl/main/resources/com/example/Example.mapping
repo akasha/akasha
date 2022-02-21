@@ -1,3 +1,5 @@
+ArrayBufferView=com.example.ArrayBufferView
+ArrayBufferViewOrUndefinedUnion=com.example.ArrayBufferViewOrUndefinedUnion
 EventInit=com.example.EventInit
 GPUColorDict=com.example.GPUColorDict
 GPUQuerySet=com.example.GPUQuerySet
@@ -9,6 +11,7 @@ PromiseRejectionEventInit=com.example.PromiseRejectionEventInit
 RTCAnswerOptions=com.example.RTCAnswerOptions
 RTCOfferAnswerOptions=com.example.RTCOfferAnswerOptions
 RTCOfferOptions=com.example.RTCOfferOptions
+ReadableStreamBYOBReadResult=com.example.ReadableStreamBYOBReadResult
 RequiredAnyDict=com.example.RequiredAnyDict
 Sequence=com.example.JsArray
 Storage=com.example.Storage

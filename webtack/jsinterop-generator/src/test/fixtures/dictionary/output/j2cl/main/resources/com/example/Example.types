@@ -1,3 +1,4 @@
+ArrayBufferViewOrUndefinedUnion
 EventInit
 GPUColorDict
 GPUQuerySet
@@ -8,6 +9,7 @@ PromiseRejectionEventInit
 RTCAnswerOptions
 RTCOfferAnswerOptions
 RTCOfferOptions
+ReadableStreamBYOBReadResult
 RequiredAnyDict
 Storage
 StorageEventInit

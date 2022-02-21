@@ -1614,7 +1614,10 @@ final class JsinteropAction
       {
         for ( final TypedValue typedValue : explodeType( member.getType() ) )
         {
-          generateDictionaryMemberSetterReturningThis( className, member, typedValue, type, testType );
+          if ( Kind.Void != typedValue.getType().getKind() )
+          {
+            generateDictionaryMemberSetterReturningThis( className, member, typedValue, type, testType );
+          }
         }
       }
     }
@@ -1678,7 +1681,9 @@ final class JsinteropAction
       generateDictionaryMemberSetter( className, member, actualType, javaType, type, testType );
       for ( final TypedValue typedValue : explodeType( member.getType() ) )
       {
-        if ( Kind.Any != actualType.getKind() && !javaType.equals( typedValue.getJavaType() ) )
+        if ( Kind.Any != actualType.getKind() &&
+             Kind.Void != typedValue.getType().getKind() &&
+             !javaType.equals( typedValue.getJavaType() ) )
         {
           generateDictionaryMemberOverlaySetter( className, member, typedValue, type, testType );
         }
