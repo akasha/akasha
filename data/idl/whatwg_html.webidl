@@ -171,6 +171,8 @@ enum WorkerType {
   "module"
 };
 
+typedef record<DOMString, any> CanvasFilterInput;
+
 typedef ( HTMLOrSVGImageElement or HTMLVideoElement or HTMLCanvasElement or ImageBitmap or OffscreenCanvas or VideoFrame ) CanvasImageSource;
 
 typedef EventHandlerNonNull? EventHandler;
@@ -392,7 +394,7 @@ interface mixin CanvasFillStrokeStyles {
 };
 
 interface mixin CanvasFilters {
-  attribute DOMString filter;
+  attribute ( DOMString or CanvasFilter ) filter;
 };
 
 interface mixin CanvasImageData {
@@ -418,7 +420,7 @@ interface mixin CanvasPath {
   undefined moveTo( unrestricted double x, unrestricted double y );
   undefined quadraticCurveTo( unrestricted double cpx, unrestricted double cpy, unrestricted double x, unrestricted double y );
   undefined rect( unrestricted double x, unrestricted double y, unrestricted double w, unrestricted double h );
-  undefined roundRect( unrestricted double x, unrestricted double y, unrestricted double w, unrestricted double h, sequence<( unrestricted double or DOMPointInit )> radii );
+  undefined roundRect( unrestricted double x, unrestricted double y, unrestricted double w, unrestricted double h, ( unrestricted double or DOMPointInit or sequence<( unrestricted double or DOMPointInit )> ) radii );
 };
 
 interface mixin CanvasPathDrawingStyles {
@@ -463,11 +465,11 @@ interface mixin CanvasTextDrawingStyles {
   attribute CanvasFontKerning fontKerning;
   attribute CanvasFontStretch fontStretch;
   attribute CanvasFontVariantCaps fontVariantCaps;
-  attribute double letterSpacing;
+  attribute DOMString letterSpacing;
   attribute CanvasTextAlign textAlign;
   attribute CanvasTextBaseline textBaseline;
   attribute CanvasTextRendering textRendering;
-  attribute double wordSpacing;
+  attribute DOMString wordSpacing;
 };
 
 interface mixin CanvasTransform {
@@ -692,8 +694,8 @@ interface mixin WindowOrWorkerGlobalScope {
   readonly attribute USVString origin;
   ByteString atob( DOMString data );
   DOMString btoa( DOMString data );
-  undefined clearInterval( optional long handle = 0 );
-  undefined clearTimeout( optional long handle = 0 );
+  undefined clearInterval( optional long id = 0 );
+  undefined clearTimeout( optional long id = 0 );
   Promise<ImageBitmap> createImageBitmap( ImageBitmapSource image, optional ImageBitmapOptions options = {} );
   Promise<ImageBitmap> createImageBitmap( ImageBitmapSource image, long sx, long sy, long sw, long sh, optional ImageBitmapOptions options = {} );
   undefined queueMicrotask( VoidFunction callback );
@@ -755,6 +757,11 @@ interface BroadcastChannel : EventTarget {
   constructor( DOMString name );
   undefined close();
   undefined postMessage( any message );
+};
+
+[Exposed=(Window,Worker,PaintWorklet)]
+interface CanvasFilter {
+  constructor( optional ( CanvasFilterInput or sequence<CanvasFilterInput> ) filters );
 };
 
 [Exposed=(Window,Worker)]
@@ -1425,6 +1432,7 @@ interface HTMLInputElement : HTMLElement {
   undefined setRangeText( DOMString replacement );
   undefined setRangeText( DOMString replacement, unsigned long start, unsigned long end, optional SelectionMode selectionMode = "preserve" );
   undefined setSelectionRange( unsigned long start, unsigned long end, optional DOMString direction );
+  undefined showPicker();
   undefined stepDown( optional long n = 1 );
   undefined stepUp( optional long n = 1 );
 };
@@ -1456,6 +1464,8 @@ interface HTMLLegendElement : HTMLElement {
 
 [Exposed=Window]
 interface HTMLLinkElement : HTMLElement {
+  [SameObject, PutForwards=value]
+  readonly attribute DOMTokenList blocking;
   [SameObject, PutForwards=value]
   readonly attribute DOMTokenList relList;
   [SameObject, PutForwards=value]
@@ -1788,6 +1798,8 @@ interface HTMLQuoteElement : HTMLElement {
 
 [Exposed=Window]
 interface HTMLScriptElement : HTMLElement {
+  [SameObject, PutForwards=value]
+  readonly attribute DOMTokenList blocking;
   [CEReactions]
   attribute boolean async;
   [CEReactions]
@@ -1895,6 +1907,8 @@ interface HTMLSpanElement : HTMLElement {
 
 [Exposed=Window]
 interface HTMLStyleElement : HTMLElement {
+  [SameObject, PutForwards=value]
+  readonly attribute DOMTokenList blocking;
   [CEReactions]
   attribute DOMString media;
   [HTMLConstructor]

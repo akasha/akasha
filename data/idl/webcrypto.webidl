@@ -187,6 +187,8 @@ interface Crypto {
   [SecureContext]
   readonly attribute SubtleCrypto subtle;
   ArrayBufferView getRandomValues( ArrayBufferView array );
+  [SecureContext]
+  DOMString randomUUID();
 };
 
 [SecureContext, Exposed=(Window,Worker), Serializable]
