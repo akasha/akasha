@@ -1,0 +1,13 @@
+{
+    "kind": "Type",
+    "name": "DecompressionStream",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DecompressionStream",
+    "description": "The DecompressionStream interface of the Compression Streams API is an API for decompressing a stream of data.",
+    "refs": [
+        {
+            "name": "Compression Streams",
+            "href": "https://wicg.github.io/compression/#decompression-stream",
+            "description": "# decompression-stream"
+        }
+    ]
+}

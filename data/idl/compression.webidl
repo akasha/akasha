@@ -1,9 +1,9 @@
-[Exposed=(Window,Worker)]
+[Exposed=*]
 interface CompressionStream {
   constructor( DOMString format );
 };
 
-[Exposed=(Window,Worker)]
+[Exposed=*]
 interface DecompressionStream {
   constructor( DOMString format );
 };
