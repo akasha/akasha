@@ -343,6 +343,7 @@ stringifier
 
 stringifierRest
   : optionalReadOnly attributeRest
+  | regularOperation
   | SEMI_COLON
 ;
 
@@ -865,6 +866,8 @@ Stringifier ::
 
 StringifierRest ::
     OptionalReadOnly AttributeRest
+    // The next rule was kept as DOMMatrixReadOnly defined by geometry_1 still uses it
+    RegularOperation
     ;
 
 StaticMember ::
