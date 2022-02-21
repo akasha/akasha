@@ -1847,7 +1847,7 @@
     {
       "name": "NameAnonymousUnions",
       "config": {
-        "expectedChangeCount": 28
+        "expectedChangeCount": 27
       }
     },
     {
@@ -1872,8 +1872,8 @@
       "name": "AddExtendedAttribute",
       "description": "After NameAnonymousUnions runs we move one of the synthesized unions to correct sub-package",
       "config": {
-        "expectedAddCount": 4,
-        "namePattern": "^(GPULoadOpOrFloatUnion|GPUDeviceLostReasonOrUndefinedUnion|GPULoadOpOrGPUColorUnion|GPULoadOpOrGPUStencilValueUnion)$",
+        "expectedAddCount": 1,
+        "namePattern": "^GPUDeviceLostReasonOrUndefinedUnion$",
         "extendedAttribute": "JavaSubPackage=gpu"
       }
     },
@@ -1881,8 +1881,8 @@
       "name": "AddExtendedAttribute",
       "description": "Mark API as experimental",
       "config": {
-        "expectedAddCount": 4,
-        "namePattern": "^(GPULoadOpOrFloatUnion|GPUDeviceLostReasonOrUndefinedUnion|GPULoadOpOrGPUColorUnion|GPULoadOpOrGPUStencilValueUnion)$",
+        "expectedAddCount": 1,
+        "namePattern": "^GPUDeviceLostReasonOrUndefinedUnion$",
         "extendedAttribute": "JavaAnnotation=\"org.jetbrains.annotations.ApiStatus.Experimental\""
       }
     },

@@ -19,6 +19,7 @@
 * Update the `Permissions` spec to the `W3C Working Draft 15 February 2022` version. This version removed the `PermissionName` enum and replaced permission name with an arbitrary string and re-added the (unused) `PermissionSetParameters`.
 * Update the `DOM Living Standard` spec to the `8 February 2022` version. This version added the `reason` attribute to `AbortSignal` as well as adding `AbortSignal.throwIfAborted()` and `AbortSignal.timeout(...)`.
 * Remove explicit overrides of `toString()` method in the following WebIDL types as the operation is inherited from `Object`: `Boolean`, `Date`, `RegExp`, `String`, `Symbol`, `ArrayBufferViewImpl` and `DataView`.
+* Update the `WebGPU` spec to the `W3C Working Draft, 18 February 2022` version.
 
 ### [v0.29](https://github.com/akasha/akasha/tree/v0.29) (2021-11-08) · [Full Changelog](https://github.com/spritz/spritz/compare/v0.28...v0.29) · [API Differences](https://akasha.github.io/akasha-java/api-diff/?key=akasha-java&old=0.28&new=0.29) · [Source Diff](https://github.com/akasha/akasha-java/compare/v0.28...v0.29)
 
