@@ -1,8 +1,6 @@
 package com.example;
 
 import javax.annotation.Generated;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -17,16 +15,4 @@ public class JsNumber {
   }
 
   public native double valueOf();
-
-  @JsMethod(
-      name = "toString"
-  )
-  @JsNonNull
-  public native String toString_(int radix);
-
-  @JsMethod(
-      name = "toString"
-  )
-  @JsNonNull
-  public native String toString_();
 }
