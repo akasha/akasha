@@ -146,7 +146,7 @@ public final class WebIDLModelParser
                              Collections.unmodifiableMap( partialMixins ),
                              Collections.unmodifiableMap( partialNamespaces ),
                              Collections.unmodifiableMap( typedefs ),
-                             Collections.unmodifiableList( Collections.singletonList( parseSourceInterval( ctx ) ) ),
+                             Collections.singletonList( parseSourceInterval( ctx ) ),
                              tags );
   }
 
