@@ -667,6 +667,21 @@
   {
     "code": "java.class.added",
     "description": "Class was added.",
+    "newElement": "interface akasha.ElementOrCSSPseudoElementUnion",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.ElementOrCSSPseudoElementUnion",
+      "classSimpleName": "ElementOrCSSPseudoElementUnion",
+      "elementKind": "interface",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
     "newElement": "interface akasha.xr.XRCubeLayerInit",
     "classification": {
       "SOURCE": "NON_BREAKING",
@@ -932,6 +947,38 @@
       "classSimpleName": "XRTransientInputHitTestOptionsInit",
       "elementKind": "interface",
       "package": "akasha.xr"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method akasha.CSSPseudoElement akasha.CSSPseudoElement::pseudo(java.lang.String)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.CSSPseudoElement",
+      "classSimpleName": "CSSPseudoElement",
+      "elementKind": "method",
+      "methodName": "pseudo",
+      "package": "akasha"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method akasha.ElementOrCSSPseudoElementUnion akasha.CSSPseudoElement::parent()",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.CSSPseudoElement",
+      "classSimpleName": "CSSPseudoElement",
+      "elementKind": "method",
+      "methodName": "parent",
+      "package": "akasha"
     }
   },
   {

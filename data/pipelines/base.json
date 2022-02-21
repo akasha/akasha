@@ -1847,7 +1847,7 @@
     {
       "name": "NameAnonymousUnions",
       "config": {
-        "expectedChangeCount": 27
+        "expectedChangeCount": 28
       }
     },
     {
