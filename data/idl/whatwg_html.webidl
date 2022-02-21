@@ -871,7 +871,7 @@ interface ElementInternals {
   undefined setValidity( optional ValidityStateFlags flags = {}, optional DOMString message, optional HTMLElement anchor );
 };
 
-[Exposed=(Window,Worker)]
+[Exposed=*]
 interface ErrorEvent : Event {
   readonly attribute unsigned long colno;
   readonly attribute any error;
