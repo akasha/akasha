@@ -24,6 +24,7 @@
 // - Change constMemberType to accept constant values of string types
 // - Removed the bufferRelatedType rule as we now define the types in WebIDL
 // - Added constMemberName rule so constant names can be the same value as some other grammar tokens such as NaN
+// - Removed support for bigint, BigInt64Array and BigUint64Array as a plan has yet to be established on how to move forward with these in j2cl/GWT
 parser grammar WebIDLParser;
 
 options { tokenVocab=WebIDLLexer; }
