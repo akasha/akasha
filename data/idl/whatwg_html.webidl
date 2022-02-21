@@ -2308,7 +2308,7 @@ interface PopStateEvent : Event {
   constructor( DOMString type, optional PopStateEventInit eventInitDict = {} );
 };
 
-[Exposed=(Window,Worker)]
+[Exposed=*]
 interface PromiseRejectionEvent : Event {
   readonly attribute Promise<any> promise;
   readonly attribute any reason;
