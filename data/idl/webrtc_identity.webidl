@@ -58,12 +58,12 @@ interface RTCIdentityAssertion {
   constructor( DOMString idp, DOMString name );
 };
 
-[Global, Exposed=RTCIdentityProviderGlobalScope]
+[Global=(Worker,RTCIdentityProvider), Exposed=RTCIdentityProvider]
 interface RTCIdentityProviderGlobalScope : WorkerGlobalScope {
   readonly attribute RTCIdentityProviderRegistrar rtcIdentityProvider;
 };
 
-[Exposed=RTCIdentityProviderGlobalScope]
+[Exposed=RTCIdentityProvider]
 interface RTCIdentityProviderRegistrar {
   undefined register( RTCIdentityProvider idp );
 };
