@@ -26,10 +26,6 @@ enum PermissionState {
   "prompt"
 };
 
-dictionary DevicePermissionDescriptor : PermissionDescriptor {
-  DOMString deviceId;
-};
-
 dictionary PermissionDescriptor {
   required PermissionName name;
 };

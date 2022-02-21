@@ -59,6 +59,10 @@ dictionary ConstrainULongRange : ULongRange {
   unsigned long ideal;
 };
 
+dictionary DevicePermissionDescriptor : PermissionDescriptor {
+  DOMString deviceId;
+};
+
 dictionary DoubleRange {
   double max;
   double min;
