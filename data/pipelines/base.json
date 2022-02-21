@@ -568,6 +568,16 @@
       }
     },
     {
+      "name": "RemoveExtendedAttribute",
+      "description": "Remove the JavaSubPackage added in the previous pass as union return type to comply with j2cl type system is package access atm",
+      "sourceSelector": "name=webrtc.*",
+      "config": {
+        "expectedRemoveCount": 1,
+        "namePattern": "^RTCIdentityProviderGlobalScope$",
+        "extendedAttribute": "JavaSubPackage=rtc"
+      }
+    },
+    {
       "name": "AddExtendedAttribute",
       "sourceSelector": "name=clipboard_apis",
       "config": {
