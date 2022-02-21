@@ -324,7 +324,7 @@ interface AudioData {
 
 [Exposed=(Window,DedicatedWorker), SecureContext]
 interface AudioDecoder {
-  readonly attribute long decodeQueueSize;
+  readonly attribute unsigned long decodeQueueSize;
   readonly attribute CodecState state;
   static Promise<AudioDecoderSupport> isConfigSupported( AudioDecoderConfig config );
   constructor( AudioDecoderInit init );
@@ -337,7 +337,7 @@ interface AudioDecoder {
 
 [Exposed=(Window,DedicatedWorker), SecureContext]
 interface AudioEncoder {
-  readonly attribute long encodeQueueSize;
+  readonly attribute unsigned long encodeQueueSize;
   readonly attribute CodecState state;
   static Promise<AudioEncoderSupport> isConfigSupported( AudioEncoderConfig config );
   constructor( AudioEncoderInit init );
@@ -373,6 +373,7 @@ interface ImageDecoder {
   readonly attribute boolean complete;
   readonly attribute Promise<undefined> completed;
   readonly attribute ImageTrackList tracks;
+  readonly attribute DOMString type;
   static Promise<boolean> isTypeSupported( DOMString type );
   constructor( ImageDecoderInit init );
   undefined close();
@@ -383,9 +384,7 @@ interface ImageDecoder {
 [Exposed=(Window,DedicatedWorker)]
 interface ImageTrack : EventTarget {
   readonly attribute boolean animated;
-  [EnforceRange]
   readonly attribute unsigned long frameCount;
-  [EnforceRange]
   readonly attribute unrestricted float repetitionCount;
   attribute EventHandler onchange;
   attribute boolean selected;
@@ -393,10 +392,8 @@ interface ImageTrack : EventTarget {
 
 [Exposed=(Window,DedicatedWorker)]
 interface ImageTrackList {
-  [EnforceRange]
   readonly attribute unsigned long length;
   readonly attribute Promise<undefined> ready;
-  [EnforceRange]
   readonly attribute long selectedIndex;
   readonly attribute ImageTrack? selectedTrack;
   getter ImageTrack ( unsigned long index );
@@ -415,7 +412,7 @@ interface VideoColorSpace {
 
 [Exposed=(Window,DedicatedWorker), SecureContext]
 interface VideoDecoder {
-  readonly attribute long decodeQueueSize;
+  readonly attribute unsigned long decodeQueueSize;
   readonly attribute CodecState state;
   static Promise<VideoDecoderSupport> isConfigSupported( VideoDecoderConfig config );
   constructor( VideoDecoderInit init );
@@ -428,9 +425,9 @@ interface VideoDecoder {
 
 [Exposed=(Window,DedicatedWorker), SecureContext]
 interface VideoEncoder {
-  readonly attribute long encodeQueueSize;
+  readonly attribute unsigned long encodeQueueSize;
   readonly attribute CodecState state;
-  static Promise<boolean> isConfigSupported( VideoEncoderConfig config );
+  static Promise<VideoEncoderSupport> isConfigSupported( VideoEncoderConfig config );
   constructor( VideoEncoderInit init );
   undefined close();
   undefined configure( VideoEncoderConfig config );
