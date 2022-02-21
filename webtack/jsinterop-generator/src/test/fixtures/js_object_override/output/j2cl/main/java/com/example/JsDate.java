@@ -16,11 +16,11 @@ public class JsDate {
   protected JsDate() {
   }
 
-  public native double valueOf();
-
   @JsMethod(
       name = "toString"
   )
   @JsNonNull
   public native String toString_();
+
+  public native double valueOf();
 }

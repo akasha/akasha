@@ -6,11 +6,11 @@ import javax.annotation.Generated;
 public final class MyDateTestCompile {
   static MyDate $typeReference$;
 
-  public static double valueOf(final MyDate $instance) {
-    return $instance.valueOf();
-  }
-
   public static String toString_(final MyDate $instance) {
     return $instance.toString_();
+  }
+
+  public static double valueOf(final MyDate $instance) {
+    return $instance.valueOf();
   }
 }

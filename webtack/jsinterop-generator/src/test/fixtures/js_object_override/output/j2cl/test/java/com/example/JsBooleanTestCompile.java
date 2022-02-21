@@ -6,11 +6,11 @@ import javax.annotation.Generated;
 public final class JsBooleanTestCompile {
   static JsBoolean $typeReference$;
 
-  public static boolean valueOf(final JsBoolean $instance) {
-    return $instance.valueOf();
-  }
-
   public static String toString_(final JsBoolean $instance) {
     return $instance.toString_();
+  }
+
+  public static boolean valueOf(final JsBoolean $instance) {
+    return $instance.valueOf();
   }
 }
