@@ -61,23 +61,24 @@ dictionary RTCAudioSourceStats : RTCMediaSourceStats {
 };
 
 dictionary RTCCertificateStats : RTCStats {
-  required DOMString base64Certificate;
   required DOMString fingerprint;
   required DOMString fingerprintAlgorithm;
+  required DOMString base64Certificate;
   DOMString issuerCertificateId;
 };
 
 dictionary RTCCodecStats : RTCStats {
+  required unsigned long payloadType;
+  required DOMString transportId;
+  required DOMString mimeType;
   unsigned long channels;
   unsigned long clockRate;
   RTCCodecType codecType;
-  required DOMString mimeType;
-  required unsigned long payloadType;
   DOMString sdpFmtpLine;
-  required DOMString transportId;
 };
 
 dictionary RTCDataChannelStats : RTCStats {
+  required RTCDataChannelState state;
   unsigned long long bytesReceived;
   unsigned long long bytesSent;
   unsigned short dataChannelIdentifier;
@@ -85,10 +86,13 @@ dictionary RTCDataChannelStats : RTCStats {
   unsigned long messagesReceived;
   unsigned long messagesSent;
   DOMString protocol;
-  required RTCDataChannelState state;
 };
 
 dictionary RTCIceCandidatePairStats : RTCStats {
+  required DOMString transportId;
+  required DOMString localCandidateId;
+  required DOMString remoteCandidateId;
+  required RTCStatsIceCandidatePairState state;
   double availableIncomingBitrate;
   double availableOutgoingBitrate;
   unsigned long long bytesDiscardedOnSend;
@@ -104,12 +108,10 @@ dictionary RTCIceCandidatePairStats : RTCStats {
   DOMHighResTimeStamp lastPacketSentTimestamp;
   DOMHighResTimeStamp lastRequestTimestamp;
   DOMHighResTimeStamp lastResponseTimestamp;
-  required DOMString localCandidateId;
   boolean nominated;
   unsigned long packetsDiscardedOnSend;
   unsigned long long packetsReceived;
   unsigned long long packetsSent;
-  required DOMString remoteCandidateId;
   unsigned long long requestBytesSent;
   unsigned long long requestsReceived;
   unsigned long long requestsSent;
@@ -118,32 +120,31 @@ dictionary RTCIceCandidatePairStats : RTCStats {
   unsigned long long responsesSent;
   unsigned long long retransmissionsReceived;
   unsigned long long retransmissionsSent;
-  required RTCStatsIceCandidatePairState state;
   double totalRoundTripTime;
-  required DOMString transportId;
 };
 
 dictionary RTCIceCandidateStats : RTCStats {
-  DOMString? address;
+  required DOMString transportId;
   required RTCIceCandidateType candidateType;
+  DOMString? address;
   long port;
   long priority;
   DOMString protocol;
   DOMString relayProtocol;
-  required DOMString transportId;
   DOMString url;
 };
 
 dictionary RTCIceServerStats : RTCStats {
+  required DOMString url;
   long port;
   DOMString relayProtocol;
   unsigned long totalRequestsSent;
   unsigned long totalResponsesReceived;
   double totalRoundTripTime;
-  required DOMString url;
 };
 
 dictionary RTCInboundRtpStreamStats : RTCReceivedRtpStreamStats {
+  required DOMString receiverId;
   double audioLevel;
   double averageRtcpInterval;
   unsigned long long bytesReceived;
@@ -172,7 +173,6 @@ dictionary RTCInboundRtpStreamStats : RTCReceivedRtpStreamStats {
   record<USVString, unsigned long long> perDscpPacketsReceived;
   unsigned long pliCount;
   unsigned long long qpSum;
-  required DOMString receiverId;
   DOMString remoteId;
   unsigned long long removedSamplesForAcceleration;
   unsigned long long samplesDecodedWithCelt;
@@ -191,15 +191,15 @@ dictionary RTCInboundRtpStreamStats : RTCReceivedRtpStreamStats {
 };
 
 dictionary RTCMediaHandlerStats : RTCStats {
-  boolean ended;
   required DOMString kind;
+  boolean ended;
   DOMString trackIdentifier;
 };
 
 dictionary RTCMediaSourceStats : RTCStats {
+  required DOMString trackIdentifier;
   required DOMString kind;
   boolean relayedSource;
-  required DOMString trackIdentifier;
 };
 
 dictionary RTCMediaStreamStats : RTCStats {
@@ -301,23 +301,23 @@ dictionary RTCRemoteOutboundRtpStreamStats : RTCSentRtpStreamStats {
 };
 
 dictionary RTCRtpContributingSourceStats : RTCStats {
-  double audioLevel;
   required unsigned long contributorSsrc;
   required DOMString inboundRtpStreamId;
+  double audioLevel;
   unsigned long packetsContributedTo;
 };
 
 dictionary RTCRtpStreamStats : RTCStats {
-  DOMString codecId;
-  required DOMString kind;
   required unsigned long ssrc;
+  required DOMString kind;
+  DOMString codecId;
   DOMString transportId;
 };
 
 dictionary RTCRtpTransceiverStats : RTCStats {
-  DOMString mid;
-  required DOMString receiverId;
   required DOMString senderId;
+  required DOMString receiverId;
+  DOMString mid;
 };
 
 dictionary RTCSctpTransportStats : RTCStats {
@@ -341,16 +341,16 @@ dictionary RTCSentRtpStreamStats : RTCRtpStreamStats {
 };
 
 dictionary RTCStats {
-  required DOMString id;
   required DOMHighResTimeStamp timestamp;
   required RTCStatsType type;
+  required DOMString id;
 };
 
 dictionary RTCTransportStats : RTCStats {
+  required RTCDtlsTransportState dtlsState;
   unsigned long long bytesReceived;
   unsigned long long bytesSent;
   DOMString dtlsCipher;
-  required RTCDtlsTransportState dtlsState;
   DOMString iceLocalUsernameFragment;
   RTCIceRole iceRole;
   RTCIceTransportState iceState;
