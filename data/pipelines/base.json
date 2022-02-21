@@ -867,7 +867,7 @@
     },
     {
       "name": "ChangeAttributeType",
-      "sourceSelector": "name=whatwg_html",
+      "sourceSelector": "name=whatwg_websockets",
       "config": {
         "expectedRemoveCount": 1,
         "elementNamePattern": "^WebSocket$",
