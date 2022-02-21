@@ -18,8 +18,7 @@
 // - We have also added a JAVADOC comment parsing in a separate lexer island that contains documentation for the webidl
 //   element in a javadoc-esque format. This is only allowed in specific places in the grammar which is NOT spec compliant
 //   but as we are not using this as a general parser, this should not be an issue.
-// - Retained the `void` return type to maintain compatibility with the majority of WebIDL that have not followed
-//   the crazyness associated with chasing crazy spec changes to remove void.
+// - Retained the `void` return type to maintain compatibility with the several specifications that have yet to be updated WebIDL.
 // - Added OR to operationNameKeyword rule to support operations named or (Used when defining ECMA's Atomics.or())
 // - Remove SYMBOL kind as now the type is defined WebIDL
 // - Change constMemberType to accept constant values of string types
