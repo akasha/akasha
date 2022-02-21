@@ -309,10 +309,6 @@
         "url": "https://wicg.github.io/speech-api/"
     },
     {
-        "lastModifiedTime": 1601582653000,
-        "name": "streams"
-    },
-    {
         "lastModifiedTime": 0,
         "name": "string"
     },
@@ -771,6 +767,11 @@
         "lastModifiedTime": 1644602354000,
         "name": "whatwg_storage",
         "url": "https://storage.spec.whatwg.org/"
+    },
+    {
+        "lastModifiedTime": 1644448210000,
+        "name": "whatwg_streams",
+        "not_the_url": "https://streams.spec.whatwg.org/"
     },
     {
         "lastModifiedTime": 1644603568000,

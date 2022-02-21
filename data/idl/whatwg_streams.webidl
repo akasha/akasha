@@ -1,9 +1,4 @@
-// Extracted from https://streams.spec.whatwg.org/ but manually patched as below
-// The streams are a WIP and require changes to WebIDL spec it seems.
-//
-// See https://github.com/heycam/webidl/issues/445
-
-[Exposed=(Window,Worker,Worklet), Transferable]
+[Exposed=*, Transferable]
 interface ReadableStream {
   constructor(optional object underlyingSource, optional QueuingStrategy strategy = {});
 
@@ -16,7 +11,7 @@ interface ReadableStream {
   sequence<ReadableStream> tee();
 
   // Removed an optional parameter here as it is not valid WebIDL atm and comment out as unsupported
-  // async iterable<any>;
+  // async iterable<any>(optional ReadableStreamIteratorOptions options = {});
 };
 
 typedef (ReadableStreamDefaultReader or ReadableStreamBYOBReader) ReadableStreamReader;
@@ -65,7 +60,7 @@ interface mixin ReadableStreamGenericReader {
   Promise<undefined> cancel(optional any reason);
 };
 
-[Exposed=(Window,Worker,Worklet)]
+[Exposed=*]
 interface ReadableStreamDefaultReader {
   constructor(ReadableStream stream);
 
@@ -75,11 +70,11 @@ interface ReadableStreamDefaultReader {
 ReadableStreamDefaultReader includes ReadableStreamGenericReader;
 
 dictionary ReadableStreamDefaultReadResult {
- any value;
- boolean done;
+  any value;
+  boolean done;
 };
 
-[Exposed=(Window,Worker,Worklet)]
+[Exposed=*]
 interface ReadableStreamBYOBReader {
   constructor(ReadableStream stream);
 
@@ -89,11 +84,11 @@ interface ReadableStreamBYOBReader {
 ReadableStreamBYOBReader includes ReadableStreamGenericReader;
 
 dictionary ReadableStreamBYOBReadResult {
- ArrayBufferView value;
- boolean done;
+  (ArrayBufferView or undefined) value;
+  boolean done;
 };
 
-[Exposed=(Window,Worker,Worklet)]
+[Exposed=*]
 interface ReadableStreamDefaultController {
   readonly attribute unrestricted double? desiredSize;
 
@@ -102,7 +97,7 @@ interface ReadableStreamDefaultController {
   undefined error(optional any e);
 };
 
-[Exposed=(Window,Worker,Worklet)]
+[Exposed=*]
 interface ReadableByteStreamController {
   readonly attribute ReadableStreamBYOBRequest? byobRequest;
   readonly attribute unrestricted double? desiredSize;
@@ -112,7 +107,7 @@ interface ReadableByteStreamController {
   undefined error(optional any e);
 };
 
-[Exposed=(Window,Worker,Worklet)]
+[Exposed=*]
 interface ReadableStreamBYOBRequest {
   readonly attribute ArrayBufferView? view;
 
@@ -120,7 +115,7 @@ interface ReadableStreamBYOBRequest {
   undefined respondWithNewView(ArrayBufferView view);
 };
 
-[Exposed=(Window,Worker,Worklet), Transferable]
+[Exposed=*, Transferable]
 interface WritableStream {
   constructor(optional object underlyingSink, optional QueuingStrategy strategy = {});
 
@@ -144,7 +139,7 @@ callback UnderlyingSinkWriteCallback = Promise<undefined> (any chunk, WritableSt
 callback UnderlyingSinkCloseCallback = Promise<undefined> ();
 callback UnderlyingSinkAbortCallback = Promise<undefined> (optional any reason);
 
-[Exposed=(Window,Worker,Worklet)]
+[Exposed=*]
 interface WritableStreamDefaultWriter {
   constructor(WritableStream stream);
 
@@ -158,12 +153,13 @@ interface WritableStreamDefaultWriter {
   Promise<undefined> write(optional any chunk);
 };
 
-[Exposed=(Window,Worker,Worklet)]
+[Exposed=*]
 interface WritableStreamDefaultController {
+  readonly attribute AbortSignal signal;
   undefined error(optional any e);
 };
 
-[Exposed=(Window,Worker,Worklet), Transferable]
+[Exposed=*, Transferable]
 interface TransformStream {
   constructor(optional object transformer,
               optional QueuingStrategy writableStrategy = {},
@@ -185,7 +181,7 @@ callback TransformerStartCallback = any (TransformStreamDefaultController contro
 callback TransformerFlushCallback = Promise<undefined> (TransformStreamDefaultController controller);
 callback TransformerTransformCallback = Promise<undefined> (any chunk, TransformStreamDefaultController controller);
 
-[Exposed=(Window,Worker,Worklet)]
+[Exposed=*]
 interface TransformStreamDefaultController {
   readonly attribute unrestricted double? desiredSize;
 
@@ -199,13 +195,13 @@ dictionary QueuingStrategy {
   QueuingStrategySize size;
 };
 
-callback QueuingStrategySize = unrestricted double (optional any chunk);
+callback QueuingStrategySize = unrestricted double (any chunk);
 
 dictionary QueuingStrategyInit {
   required unrestricted double highWaterMark;
 };
 
-[Exposed=(Window,Worker,Worklet)]
+[Exposed=*]
 interface ByteLengthQueuingStrategy {
   constructor(QueuingStrategyInit init);
 
@@ -213,7 +209,7 @@ interface ByteLengthQueuingStrategy {
   readonly attribute Function size;
 };
 
-[Exposed=(Window,Worker,Worklet)]
+[Exposed=*]
 interface CountQueuingStrategy {
   constructor(QueuingStrategyInit init);
 
