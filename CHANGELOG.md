@@ -15,7 +15,7 @@
 * Rename the `TextureMagnificationFilter` annotation to `SamplerMagnificationFilter`.
 * Rename the `TextureMinificationFilter` annotation to `SamplerMinificationFilter`.
 * Rename the `TextureWrapMode` annotation to `SamplerWrapMode`.
-* Update the `CSS Pseudo-Elements Module Level 4` spec to the `Editor’s Draft, 30 January 2022` version. This the attribute CSSPseudoElement.parent and the operation `CSSPseudoElement.pseudo( CSSOMString type )`.
+* Update the `CSS Pseudo-Elements Module Level 4` spec to the `Editor’s Draft, 30 January 2022` version. This added the attribute `CSSPseudoElement.parent` and the operation `CSSPseudoElement.pseudo( CSSOMString type )`.
 * Remove explicit overrides of `toString()` method in the following WebIDL types as the operation is inherited from `Object`: `Boolean`, `Date`, `RegExp`, `String`, `Symbol`, `ArrayBufferViewImpl` and `DataView`.
 
 ### [v0.29](https://github.com/akasha/akasha/tree/v0.29) (2021-11-08) · [Full Changelog](https://github.com/spritz/spritz/compare/v0.28...v0.29) · [API Differences](https://akasha.github.io/akasha-java/api-diff/?key=akasha-java&old=0.28&new=0.29) · [Source Diff](https://github.com/akasha/akasha-java/compare/v0.28...v0.29)
