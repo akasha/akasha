@@ -152,9 +152,13 @@ interface AbortController {
 [Exposed=*]
 interface AbortSignal : EventTarget {
   readonly attribute boolean aborted;
+  readonly attribute any reason;
   attribute EventHandler onabort;
   [NewObject]
-  static AbortSignal abort();
+  static AbortSignal abort( optional any reason );
+  [Exposed=(Window,Worker), NewObject]
+  static AbortSignal timeout( [EnforceRange] unsigned long long milliseconds );
+  undefined throwIfAborted();
 };
 
 [Exposed=Window]
