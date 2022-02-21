@@ -994,6 +994,7 @@ PrimitiveType ::
     UnsignedIntegerType
     UnrestrictedFloatType
     undefined
+    // Void is retained as several specifications still use this construct
     void
     boolean
     byte
@@ -1116,6 +1117,7 @@ Other ::
     true
     unsigned
     undefined
+    // Void is retained as several specifications still use this construct
     void
     ArgumentNameKeyword
     BufferRelatedType
