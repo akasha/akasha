@@ -147,8 +147,7 @@ public final class ExtendedAttribute
   }
 
   @Nonnull
-  public static ExtendedAttribute createIdentList( @Nonnull final String name,
-                                                   @Nonnull final List<String> identList )
+  public static ExtendedAttribute createIdentList( @Nonnull final String name, @Nonnull final List<String> identList )
   {
     return createIdentList( name, identList, Collections.emptyList() );
   }
