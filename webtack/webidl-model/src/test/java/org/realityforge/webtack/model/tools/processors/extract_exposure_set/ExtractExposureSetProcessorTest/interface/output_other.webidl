@@ -6,6 +6,12 @@ interface InterfaceC {
 interface InterfaceD {
 };
 
+[Exposed=*]
+interface MyGPU {
+  readonly attribute DOMString version;
+  undefined myMethod();
+};
+
 partial interface PartialInterfaceC {
   readonly attribute DOMString v1;
   undefined myMethod();

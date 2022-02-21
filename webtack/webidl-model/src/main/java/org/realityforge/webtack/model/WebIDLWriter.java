@@ -305,6 +305,11 @@ public final class WebIDLWriter
     {
       writer.write( extendedAttribute.getName() );
     }
+    else if ( ExtendedAttribute.Kind.WILDCARD == kind )
+    {
+      writer.write( extendedAttribute.getName() );
+      writer.write( "=*" );
+    }
     else if ( ExtendedAttribute.Kind.ARG_LIST == kind )
     {
       writer.write( extendedAttribute.getArgListName() );

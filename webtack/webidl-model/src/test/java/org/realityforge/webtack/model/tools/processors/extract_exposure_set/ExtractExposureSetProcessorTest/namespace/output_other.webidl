@@ -6,6 +6,11 @@ namespace NamespaceC {
 namespace NamespaceD {
 };
 
+[Exposed=*]
+namespace NamespaceE {
+  readonly attribute DOMString sharedVar;
+};
+
 partial namespace PartialNamespaceC {
   readonly attribute DOMString v1;
   undefined myMethod();
@@ -13,4 +18,9 @@ partial namespace PartialNamespaceC {
 
 partial namespace PartialNamespaceD {
   undefined sharedMethod();
+};
+
+[Exposed=*]
+partial namespace PartialNamespaceE {
+  readonly attribute DOMString sharedVar;
 };

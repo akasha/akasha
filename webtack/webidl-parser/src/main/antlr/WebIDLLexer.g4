@@ -55,6 +55,7 @@ USV_STRING : 'USVString';
 PROMISE : 'Promise';
 RECORD : 'record';
 QUESTION_MARK : '?';
+WILDCARD : '*' ;
 
 OPEN_BRACE : '{';
 CLOSE_BRACE : '}';

@@ -126,6 +126,45 @@ public final class ExtendedAttributeTest
   }
 
   @Test
+  public void WILDCARD()
+  {
+    final String name = randomString();
+    final ExtendedAttribute extendedAttribute = ExtendedAttribute.createWildcard( name );
+    assertEquals( extendedAttribute.getName(), name );
+    assertEquals( extendedAttribute.getKind(), ExtendedAttribute.Kind.WILDCARD );
+    assertThrows( IllegalStateException.class,
+                  "Invoked getIdent() on extended attribute named '" + name + "' but attribute is of kind WILDCARD",
+                  extendedAttribute::getIdent );
+    assertThrows( IllegalStateException.class,
+                  "Invoked getValue() on extended attribute named '" + name + "' but attribute is of kind WILDCARD",
+                  extendedAttribute::getValue );
+    assertThrows( IllegalStateException.class,
+                  "Invoked getIdentList() on extended attribute named '" + name + "' but attribute is of kind WILDCARD",
+                  extendedAttribute::getIdentList );
+    assertThrows( IllegalStateException.class,
+                  "Invoked getIdentListName() on extended attribute named '" + name + "' but " +
+                  "attribute is of kind WILDCARD",
+                  extendedAttribute::getIdentListName );
+    assertThrows( IllegalStateException.class,
+                  "Invoked getArgListName() on extended attribute named '" + name + "' but " +
+                  "attribute is of kind WILDCARD",
+                  extendedAttribute::getArgListName );
+    assertThrows( IllegalStateException.class,
+                  "Invoked getArgList() on extended attribute named '" + name + "' but " +
+                  "attribute is of kind WILDCARD",
+                  extendedAttribute::getArgList );
+  }
+
+  @Test
+  public void WILDCARD_parse()
+    throws Exception
+  {
+    final ExtendedAttribute extendedAttribute = parse( "Exposed=*" );
+    assertEquals( extendedAttribute.getName(), "Exposed" );
+    assertEquals( extendedAttribute.getKind(), ExtendedAttribute.Kind.WILDCARD );
+  }
+
+  @Test
   public void IDENT_LIST()
   {
     final String name = randomString();

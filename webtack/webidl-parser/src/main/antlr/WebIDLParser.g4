@@ -1,6 +1,7 @@
 // This grammar was initially based on the grammar in the Web IDL Editor’s Draft, 13 March 2020.
 // The grammar has been expanded to include some elements from the Web IDL Editor’s Draft, 24 September 2020
 // while still maintaining compatibility with the vast majority of IDL in the wild.
+// The grammar has been partiall updated to conform with the Living Standard update on 24 January 2022 sourced from https://webidl.spec.whatwg.org/
 
 // changes from the spec:
 // - Added `webIDL` wrapper type to simplify parsing a single unit.
@@ -571,6 +572,7 @@ extendedAttributes
 extendedAttribute
   : extendedAttributeNoArgs
   | extendedAttributeArgList
+  | extendedAttributeWildcard
   | extendedAttributeNamedString
   | extendedAttributeIdent
   | extendedAttributeIdentList
@@ -593,6 +595,10 @@ extendedAttributeNoArgs
 
 extendedAttributeArgList
   : IDENTIFIER OPEN_BRACKET argumentList CLOSE_BRACKET
+;
+
+extendedAttributeWildcard
+  : IDENTIFIER EQUALS WILDCARD
 ;
 
 extendedAttributeNamedString
@@ -1081,6 +1087,7 @@ Other ::
     =
     >
     ?
+    *
     ByteString
     DOMString
     FrozenArray
@@ -1131,6 +1138,9 @@ ExtendedAttributeArgList ::
 
 ExtendedAttributeIdent ::
     identifier = identifier
+
+ExtendedAttributeWildcard ::
+    identifier = *
 
 ExtendedAttributeIdentList ::
     identifier = ( IdentifierList )

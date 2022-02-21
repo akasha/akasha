@@ -121,11 +121,16 @@ final class ExtractExposureSetProcessor
   {
     for ( final ExtendedAttribute a : extendedAttributes )
     {
-      if ( ExtendedAttribute.Kind.IDENT == a.getKind() && a.getName().equals( "Exposed" ) )
+      final ExtendedAttribute.Kind kind = a.getKind();
+      if ( ExtendedAttribute.Kind.IDENT == kind && a.getName().equals( "Exposed" ) )
       {
         return a.getIdent().equals( _globalInterface );
       }
-      else if ( ExtendedAttribute.Kind.IDENT_LIST == a.getKind() && a.getName().equals( "Exposed" ) )
+      else if ( ExtendedAttribute.Kind.WILDCARD == kind && a.getName().equals( "Exposed" ) )
+      {
+        return true;
+      }
+      else if ( ExtendedAttribute.Kind.IDENT_LIST == kind && a.getName().equals( "Exposed" ) )
       {
         return a.getIdentList().contains( _globalInterface );
       }

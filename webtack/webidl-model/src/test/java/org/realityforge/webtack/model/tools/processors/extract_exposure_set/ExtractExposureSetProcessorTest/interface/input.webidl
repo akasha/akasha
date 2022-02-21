@@ -33,6 +33,12 @@ interface InterfaceD {
   readonly attribute DOMString v1;
 };
 
+[Exposed=*]
+interface MyGPU {
+  readonly attribute DOMString version;
+  undefined myMethod();
+};
+
 [Exposed=(Window,Worker)]
 partial interface PartialInterfaceA {
   const unsigned short VAL_SHARED = 7;

@@ -21,6 +21,7 @@ public final class ExtendedAttribute
   public enum Kind
   {
     NO_ARGS,
+    WILDCARD,
     // ARG_LIST has no specs other implement it
     ARG_LIST,
     NAMED_ARG_LIST,
@@ -71,6 +72,27 @@ public final class ExtendedAttribute
   {
     return new ExtendedAttribute( Objects.requireNonNull( name ),
                                   Kind.NO_ARGS,
+                                  null,
+                                  null,
+                                  null,
+                                  null,
+                                  null,
+                                  null,
+                                  sourceLocations );
+  }
+
+  @Nonnull
+  public static ExtendedAttribute createWildcard( @Nonnull final String name )
+  {
+    return createWildcard( name, Collections.emptyList() );
+  }
+
+  @Nonnull
+  public static ExtendedAttribute createWildcard( @Nonnull final String name,
+                                                  @Nonnull final List<SourceInterval> sourceLocations )
+  {
+    return new ExtendedAttribute( Objects.requireNonNull( name ),
+                                  Kind.WILDCARD,
                                   null,
                                   null,
                                   null,
@@ -233,6 +255,7 @@ public final class ExtendedAttribute
                 Kind.NO_ARGS,
                 Kind.NAMED_ARG_LIST,
                 Kind.IDENT,
+                Kind.WILDCARD,
                 Kind.IDENT_LIST,
                 Kind.NAMED_IDENT_LIST,
                 Kind.NAMED_STRING );

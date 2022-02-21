@@ -14,6 +14,12 @@ interface mixin MixinD {
   attribute DOMString v1;
 };
 
+[Exposed=*]
+interface mixin MyGPU {
+  readonly attribute DOMString version;
+  undefined myMethod();
+};
+
 [Exposed=(Window,Worker)]
 partial interface mixin PartialMixinA {
   attribute DOMString sharedVar;
