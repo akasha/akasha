@@ -1720,6 +1720,101 @@
     }
   },
   {
+    "code": "java.method.movedToSuperClass",
+    "description": "The method used to be declared in class 'akasha.core.DataView' but is now declared in superclass 'akasha.core.JsObject'.",
+    "newElement": "method java.lang.String akasha.core.JsObject::toString_() @ akasha.core.DataView",
+    "oldElement": "method java.lang.String akasha.core.DataView::toString_()",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.DataView",
+      "classSimpleName": "DataView",
+      "elementKind": "method",
+      "methodName": "toString_",
+      "newClass": "akasha.core.JsObject",
+      "oldClass": "akasha.core.DataView",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.movedToSuperClass",
+    "description": "The method used to be declared in class 'akasha.core.JsBoolean' but is now declared in superclass 'akasha.core.JsObject'.",
+    "newElement": "method java.lang.String akasha.core.JsObject::toString_() @ akasha.core.JsBoolean",
+    "oldElement": "method java.lang.String akasha.core.JsBoolean::toString_()",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.JsBoolean",
+      "classSimpleName": "JsBoolean",
+      "elementKind": "method",
+      "methodName": "toString_",
+      "newClass": "akasha.core.JsObject",
+      "oldClass": "akasha.core.JsBoolean",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.movedToSuperClass",
+    "description": "The method used to be declared in class 'akasha.core.JsDate' but is now declared in superclass 'akasha.core.JsObject'.",
+    "newElement": "method java.lang.String akasha.core.JsObject::toString_() @ akasha.core.JsDate",
+    "oldElement": "method java.lang.String akasha.core.JsDate::toString_()",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.JsDate",
+      "classSimpleName": "JsDate",
+      "elementKind": "method",
+      "methodName": "toString_",
+      "newClass": "akasha.core.JsObject",
+      "oldClass": "akasha.core.JsDate",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.movedToSuperClass",
+    "description": "The method used to be declared in class 'akasha.core.JsString' but is now declared in superclass 'akasha.core.JsObject'.",
+    "newElement": "method java.lang.String akasha.core.JsObject::toString_() @ akasha.core.JsString",
+    "oldElement": "method java.lang.String akasha.core.JsString::toString_()",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.JsString",
+      "classSimpleName": "JsString",
+      "elementKind": "method",
+      "methodName": "toString_",
+      "newClass": "akasha.core.JsObject",
+      "oldClass": "akasha.core.JsString",
+      "package": "akasha.core"
+    }
+  },
+  {
+    "code": "java.method.movedToSuperClass",
+    "description": "The method used to be declared in class 'akasha.core.RegExp' but is now declared in superclass 'akasha.core.JsObject'.",
+    "newElement": "method java.lang.String akasha.core.JsObject::toString_() @ akasha.core.RegExp",
+    "oldElement": "method java.lang.String akasha.core.RegExp::toString_()",
+    "classification": {
+      "SOURCE": "EQUIVALENT",
+      "BINARY": "EQUIVALENT"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.core.RegExp",
+      "classSimpleName": "RegExp",
+      "elementKind": "method",
+      "methodName": "toString_",
+      "newClass": "akasha.core.JsObject",
+      "oldClass": "akasha.core.RegExp",
+      "package": "akasha.core"
+    }
+  },
+  {
     "code": "java.method.added",
     "description": "Method was added.",
     "newElement": "method java.lang.String akasha.xr.XRSession::depthDataFormat()",

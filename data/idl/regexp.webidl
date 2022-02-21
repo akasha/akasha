@@ -17,8 +17,6 @@ interface RegExp {
   RegExpResult? exec( DOMString text );
 
   boolean test( DOMString text );
-
-  DOMString toString();
 };
 
 [JavaSubPackage=core, LegacyNoInterfaceObject]

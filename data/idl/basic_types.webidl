@@ -3,8 +3,6 @@ interface Boolean {
   constructor( optional any value );
 
   boolean valueOf();
-
-  DOMString toString();
 };
 
 [JavaName=JsNumber]

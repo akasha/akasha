@@ -102,7 +102,6 @@ interface mixin ArrayBufferViewImpl {
   readonly attribute unsigned long byteOffset;
   readonly attribute unsigned long byteLength;
   readonly attribute unsigned long length;
-  DOMString toString();
 };
 
 /**
@@ -652,7 +651,6 @@ interface DataView {
   readonly attribute ArrayBuffer buffer;
   readonly attribute unsigned long byteOffset;
   readonly attribute unsigned long byteLength;
-  DOMString toString();
 
   // Gets the value of the given type at the specified byte offset
   // from the start of the view. There is no alignment constraint;

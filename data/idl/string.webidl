@@ -43,5 +43,4 @@ interface String {
   DOMString trimRight();
   DOMString trimStart();
   DOMString valueOf();
-  DOMString toString();
 };
