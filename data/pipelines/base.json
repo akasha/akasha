@@ -706,7 +706,7 @@
     {
       "name": "AddExtendedAttribute",
       "description": "Add MarkerType to make conversion between types easier",
-      "sourceSelector": "name=streams",
+      "sourceSelector": "name=whatwg_streams",
       "config": {
         "expectedAddCount": 2,
         "namePattern": "^(ReadableStreamReader|ReadableStreamController)$",
