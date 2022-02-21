@@ -7,7 +7,7 @@
         {
             "name": "WebXR Hit Test Module",
             "href": "https://immersive-web.github.io/hit-test/#xr-transient-input-hit-test-result-interface",
-            "description": "(WebXR Hit Test) # xr-transient-input-hit-test-result-interface"
+            "description": "# xr-transient-input-hit-test-result-interface"
         }
     ]
 }

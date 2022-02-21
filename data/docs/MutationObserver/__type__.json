@@ -7,7 +7,7 @@
         {
             "name": "DOM Standard",
             "href": "https://dom.spec.whatwg.org/#interface-mutationobserver",
-            "description": "(DOM) # interface-mutationobserver"
+            "description": "# interface-mutationobserver"
         }
     ]
 }

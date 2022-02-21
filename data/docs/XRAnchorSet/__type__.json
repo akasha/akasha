@@ -7,7 +7,7 @@
         {
             "name": "WebXR Anchors Module",
             "href": "https://immersive-web.github.io/anchors/#xranchorset",
-            "description": "(WebXR Anchors) # xranchorset"
+            "description": "# xranchorset"
         }
     ]
 }

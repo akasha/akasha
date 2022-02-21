@@ -7,7 +7,7 @@
         {
             "name": "ECMAScript Language Specification",
             "href": "https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-native-error-types-used-in-this-standard-rangeerror",
-            "description": "(ECMAScript) # sec-native-error-types-used-in-this-standard-rangeerror"
+            "description": "# sec-native-error-types-used-in-this-standard-rangeerror"
         }
     ]
 }

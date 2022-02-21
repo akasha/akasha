@@ -7,12 +7,12 @@
         {
             "name": "ECMAScript Language Specification",
             "href": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-date.prototype.tolocalestring",
-            "description": "(ECMAScript) # sec-date.prototype.tolocalestring"
+            "description": "# sec-date.prototype.tolocalestring"
         },
         {
             "name": "ECMAScript Internationalization API Specification",
             "href": "https://tc39.es/ecma402/#sup-date.prototype.tolocalestring",
-            "description": "(ECMAScript Internationalization API) # sup-date.prototype.tolocalestring"
+            "description": "# sup-date.prototype.tolocalestring"
         }
     ]
 }

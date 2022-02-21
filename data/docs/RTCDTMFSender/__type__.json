@@ -7,7 +7,7 @@
         {
             "name": "WebRTC 1.0: Real-Time Communication Between Browsers",
             "href": "https://w3c.github.io/webrtc-pc/#rtcdtmfsender",
-            "description": "(WebRTC 1.0) # rtcdtmfsender"
+            "description": "# rtcdtmfsender"
         }
     ]
 }

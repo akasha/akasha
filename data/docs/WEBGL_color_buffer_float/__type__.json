@@ -6,8 +6,7 @@
     "refs": [
         {
             "name": "WebGL WEBGL_color_buffer_float Extension Specification",
-            "href": "https://www.khronos.org/registry/webgl/extensions/WEBGL_color_buffer_float/",
-            "description": "(WebGL WEBGL_color_buffer_float Extension)"
+            "href": "https://www.khronos.org/registry/webgl/extensions/WEBGL_color_buffer_float/"
         }
     ]
 }

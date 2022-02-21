@@ -7,7 +7,7 @@
         {
             "name": "HTML Standard",
             "href": "https://html.spec.whatwg.org/multipage/webstorage.html#the-storageevent-interface",
-            "description": "(HTML) # the-storageevent-interface"
+            "description": "# the-storageevent-interface"
         }
     ]
 }

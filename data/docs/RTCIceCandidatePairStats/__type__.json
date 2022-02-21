@@ -7,7 +7,7 @@
         {
             "name": "Identifiers for WebRTC's Statistics API",
             "href": "https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats",
-            "description": "(WebRTC Statistics) # dom-rtcicecandidatepairstats"
+            "description": "# dom-rtcicecandidatepairstats"
         }
     ]
 }

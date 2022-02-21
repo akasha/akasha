@@ -7,7 +7,7 @@
         {
             "name": "HTML Standard",
             "href": "https://html.spec.whatwg.org/multipage/grouping-content.html#htmldivelement",
-            "description": "(HTML) # htmldivelement"
+            "description": "# htmldivelement"
         }
     ]
 }

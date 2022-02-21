@@ -2,12 +2,12 @@
     "kind": "Method",
     "name": "TypedArray.toLocaleString",
     "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/toLocaleString",
-    "description": "The toLocaleString() method returns a string representing the elements of the typed array. The elements are converted to strings and are separated by a locale-specific string (such as a comma &ldquo;,&rdquo;). This method has the same algorithm as Array.prototype.toLocaleString() and, as the typed array elements are numbers, the same algorithm as Number.prototype.toLocaleString() applies for each element. TypedArray is one of the typed array types here.",
+    "description": "The toLocaleString() method returns a string representing the elements of the typed array. The elements are converted to strings and are separated by a locale-specific string (such as a comma &quot;,&quot;). This method has the same algorithm as Array.prototype.toLocaleString() and, as the typed array elements are numbers, the same algorithm as Number.prototype.toLocaleString() applies for each element. TypedArray is one of the typed array types here.",
     "refs": [
         {
             "name": "ECMAScript Language Specification",
             "href": "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.tolocalestring",
-            "description": "(ECMAScript) # sec-%typedarray%.prototype.tolocalestring"
+            "description": "# sec-%typedarray%.prototype.tolocalestring"
         }
     ]
 }

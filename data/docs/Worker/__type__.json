@@ -7,7 +7,7 @@
         {
             "name": "HTML Standard",
             "href": "https://html.spec.whatwg.org/multipage/workers.html#dedicated-workers-and-the-worker-interface",
-            "description": "(HTML) # dedicated-workers-and-the-worker-interface"
+            "description": "# dedicated-workers-and-the-worker-interface"
         }
     ]
 }

@@ -7,7 +7,7 @@
         {
             "name": "Resource Timing Level 2",
             "href": "https://w3c.github.io/resource-timing/#resources-included-in-the-performanceresourcetiming-interface",
-            "description": "(Resource Timing 2) # resources-included-in-the-performanceresourcetiming-interface"
+            "description": "# resources-included-in-the-performanceresourcetiming-interface"
         }
     ]
 }

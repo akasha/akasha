@@ -6,8 +6,7 @@
     "refs": [
         {
             "name": "WebGL OVR_multiview2 Extension Specification",
-            "href": "https://www.khronos.org/registry/webgl/extensions/OVR_multiview2/",
-            "description": "(WebGL OVR_multiview2 Extension)"
+            "href": "https://www.khronos.org/registry/webgl/extensions/OVR_multiview2/"
         }
     ]
 }

@@ -1,6 +1,6 @@
 {
     "name": "RTCSessionDescription",
-    "lastModifiedAt": 1629769791000,
+    "lastModifiedAt": 1645062573000,
     "entries": [
         {
             "name": "RTCSessionDescription",
@@ -8,7 +8,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1629769791000
+            "lastModifiedAt": 1645062573000
         },
         {
             "name": "sdp",

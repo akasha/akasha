@@ -7,7 +7,7 @@
         {
             "name": "ECMAScript Language Specification",
             "href": "https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-object.prototype.propertyisenumerable",
-            "description": "(ECMAScript) # sec-object.prototype.propertyisenumerable"
+            "description": "# sec-object.prototype.propertyisenumerable"
         }
     ]
 }

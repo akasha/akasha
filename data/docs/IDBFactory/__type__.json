@@ -7,7 +7,7 @@
         {
             "name": "Indexed Database API 3.0",
             "href": "https://w3c.github.io/IndexedDB/#factory-interface",
-            "description": "(Indexed DB 3.0) # factory-interface"
+            "description": "# factory-interface"
         }
     ]
 }

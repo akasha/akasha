@@ -7,7 +7,7 @@
         {
             "name": "Web IDL Standard",
             "href": "https://webidl.spec.whatwg.org/#idl-DOMException",
-            "description": "(Web IDL) # idl-DOMException"
+            "description": "# idl-DOMException"
         }
     ]
 }

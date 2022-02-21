@@ -1,6 +1,6 @@
 {
     "name": "Uint8ClampedArray",
-    "lastModifiedAt": 1629769823000,
+    "lastModifiedAt": 1645233110000,
     "entries": [
         {
             "name": "Uint8ClampedArray",
@@ -8,7 +8,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1629769823000
+            "lastModifiedAt": 1645233110000
         }
     ]
 }

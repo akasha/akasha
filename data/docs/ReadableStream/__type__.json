@@ -7,7 +7,7 @@
         {
             "name": "Streams Standard",
             "href": "https://streams.spec.whatwg.org/#rs-class",
-            "description": "(Streams) # rs-class"
+            "description": "# rs-class"
         }
     ]
 }

@@ -7,7 +7,7 @@
         {
             "name": "DOM Standard",
             "href": "https://dom.spec.whatwg.org/#interface-range",
-            "description": "(DOM) # interface-range"
+            "description": "# interface-range"
         },
         {
             "name": "DOM Parsing and Serialization",
@@ -17,7 +17,7 @@
         {
             "name": "CSSOM View Module",
             "href": "https://drafts.csswg.org/cssom-view/#extensions-to-the-range-interface",
-            "description": "(CSSOM View) # extensions-to-the-range-interface"
+            "description": "# extensions-to-the-range-interface"
         }
     ]
 }

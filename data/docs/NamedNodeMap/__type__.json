@@ -7,7 +7,7 @@
         {
             "name": "DOM Standard",
             "href": "https://dom.spec.whatwg.org/#interface-namednodemap",
-            "description": "(DOM) # interface-namednodemap"
+            "description": "# interface-namednodemap"
         }
     ]
 }

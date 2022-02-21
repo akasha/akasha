@@ -7,7 +7,7 @@
         {
             "name": "ECMAScript Language Specification",
             "href": "https://tc39.es/ecma262/multipage/additional-ecmascript-features-for-web-browsers.html#sec-additional-properties-of-the-object.prototype-object",
-            "description": "(ECMAScript) # sec-additional-properties-of-the-object.prototype-object"
+            "description": "# sec-additional-properties-of-the-object.prototype-object"
         }
     ]
 }

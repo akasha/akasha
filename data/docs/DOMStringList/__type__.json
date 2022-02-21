@@ -7,7 +7,7 @@
         {
             "name": "HTML Standard",
             "href": "https://html.spec.whatwg.org/multipage/common-dom-interfaces.html#the-domstringlist-interface",
-            "description": "(HTML) # the-domstringlist-interface"
+            "description": "# the-domstringlist-interface"
         }
     ]
 }

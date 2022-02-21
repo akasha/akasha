@@ -7,7 +7,7 @@
         {
             "name": "Storage Standard",
             "href": "https://storage.spec.whatwg.org/#storagemanager",
-            "description": "(Storage) # storagemanager"
+            "description": "# storagemanager"
         }
     ]
 }

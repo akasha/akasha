@@ -7,17 +7,17 @@
         {
             "name": "DOM Standard",
             "href": "https://dom.spec.whatwg.org/#interface-document",
-            "description": "(DOM) # interface-document"
+            "description": "# interface-document"
         },
         {
             "name": "HTML Standard",
             "href": "https://html.spec.whatwg.org/multipage/dom.html#the-document-object",
-            "description": "(HTML) # the-document-object"
+            "description": "# the-document-object"
         },
         {
             "name": "CSSOM View Module",
             "href": "https://drafts.csswg.org/cssom-view/#extensions-to-the-document-interface",
-            "description": "(CSSOM View) # extensions-to-the-document-interface"
+            "description": "# extensions-to-the-document-interface"
         },
         {
             "name": "Pointer Lock 2.0",

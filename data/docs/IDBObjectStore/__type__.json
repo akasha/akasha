@@ -7,7 +7,7 @@
         {
             "name": "Indexed Database API 3.0",
             "href": "https://w3c.github.io/IndexedDB/#object-store-interface",
-            "description": "(Indexed DB 3.0) # object-store-interface"
+            "description": "# object-store-interface"
         }
     ]
 }

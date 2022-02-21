@@ -7,7 +7,7 @@
         {
             "name": "DOM Standard",
             "href": "https://dom.spec.whatwg.org/#interface-cdatasection",
-            "description": "(DOM) # interface-cdatasection"
+            "description": "# interface-cdatasection"
         }
     ]
 }

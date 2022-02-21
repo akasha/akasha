@@ -7,7 +7,7 @@
         {
             "name": "ECMAScript Language Specification",
             "href": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-number.isnan",
-            "description": "(ECMAScript) # sec-number.isnan"
+            "description": "# sec-number.isnan"
         }
     ]
 }

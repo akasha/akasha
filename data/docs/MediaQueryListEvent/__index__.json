@@ -1,6 +1,6 @@
 {
     "name": "MediaQueryListEvent",
-    "lastModifiedAt": 1629769791000,
+    "lastModifiedAt": 1645062559000,
     "entries": [
         {
             "name": "MediaQueryListEvent",
@@ -8,7 +8,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1629769791000
+            "lastModifiedAt": 1645062559000
         },
         {
             "name": "matches",

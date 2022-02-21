@@ -6,8 +6,7 @@
     "refs": [
         {
             "name": "WebGL ANGLE_instanced_arrays Khronos Ratified Extension Specification",
-            "href": "https://www.khronos.org/registry/webgl/extensions/ANGLE_instanced_arrays/",
-            "description": "(WebGL ANGLE_instanced_arrays Khronos Ratified Extension)"
+            "href": "https://www.khronos.org/registry/webgl/extensions/ANGLE_instanced_arrays/"
         }
     ]
 }

@@ -7,7 +7,7 @@
         {
             "name": "HTML Standard",
             "href": "https://html.spec.whatwg.org/multipage/window-object.html#the-window-object",
-            "description": "(HTML) # the-window-object"
+            "description": "# the-window-object"
         }
     ]
 }

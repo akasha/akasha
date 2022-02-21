@@ -7,7 +7,7 @@
         {
             "name": "ECMAScript Language Specification",
             "href": "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-properties-of-the-typedarray-constructors",
-            "description": "(ECMAScript) # sec-properties-of-the-typedarray-constructors"
+            "description": "# sec-properties-of-the-typedarray-constructors"
         }
     ]
 }

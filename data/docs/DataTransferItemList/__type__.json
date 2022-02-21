@@ -7,7 +7,7 @@
         {
             "name": "HTML Standard",
             "href": "https://html.spec.whatwg.org/multipage/dnd.html#the-datatransferitemlist-interface",
-            "description": "(HTML) # the-datatransferitemlist-interface"
+            "description": "# the-datatransferitemlist-interface"
         }
     ]
 }

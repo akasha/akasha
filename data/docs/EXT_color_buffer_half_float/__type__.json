@@ -6,8 +6,7 @@
     "refs": [
         {
             "name": "WebGL EXT_color_buffer_half_float Extension Specification",
-            "href": "https://www.khronos.org/registry/webgl/extensions/EXT_color_buffer_half_float/",
-            "description": "(WebGL EXT_color_buffer_half_float Extension)"
+            "href": "https://www.khronos.org/registry/webgl/extensions/EXT_color_buffer_half_float/"
         }
     ]
 }

@@ -7,7 +7,7 @@
         {
             "name": "Indexed Database API 3.0",
             "href": "https://w3c.github.io/IndexedDB/#index-interface",
-            "description": "(Indexed DB 3.0) # index-interface"
+            "description": "# index-interface"
         }
     ]
 }

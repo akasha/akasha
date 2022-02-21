@@ -7,7 +7,7 @@
         {
             "name": "CSS Counter Styles Level 3",
             "href": "https://drafts.csswg.org/css-counter-styles/#the-csscounterstylerule-interface",
-            "description": "(CSS Counter Styles 3) # the-csscounterstylerule-interface"
+            "description": "# the-csscounterstylerule-interface"
         }
     ]
 }

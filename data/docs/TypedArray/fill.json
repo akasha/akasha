@@ -7,7 +7,7 @@
         {
             "name": "ECMAScript Language Specification",
             "href": "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.fill",
-            "description": "(ECMAScript) # sec-%typedarray%.prototype.fill"
+            "description": "# sec-%typedarray%.prototype.fill"
         }
     ]
 }

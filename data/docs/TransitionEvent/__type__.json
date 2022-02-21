@@ -7,7 +7,7 @@
         {
             "name": "CSS Transitions Level 2",
             "href": "https://drafts.csswg.org/css-transitions/#interface-transitionevent",
-            "description": "(CSS Transitions 2) # interface-transitionevent"
+            "description": "# interface-transitionevent"
         }
     ]
 }

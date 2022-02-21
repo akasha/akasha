@@ -7,7 +7,7 @@
         {
             "name": "ECMAScript Language Specification",
             "href": "https://tc39.es/ecma262/multipage/structured-data.html#sec-arraybuffer-objects",
-            "description": "(ECMAScript) # sec-arraybuffer-objects"
+            "description": "# sec-arraybuffer-objects"
         }
     ]
 }

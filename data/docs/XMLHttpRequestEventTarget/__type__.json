@@ -2,12 +2,12 @@
     "kind": "Type",
     "name": "XMLHttpRequestEventTarget",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequestEventTarget",
-    "description": "XMLHttpRequestEventTarget is the interface that describes the event handlers you can implement in an object that will handle events for an XMLHttpRequest.",
+    "description": "XMLHttpRequestEventTarget is the interface that describes the event handlers shared on XMLHttpRequest and XMLHttpRequestUpload.",
     "refs": [
         {
             "name": "XMLHttpRequest Standard",
             "href": "https://xhr.spec.whatwg.org/#xmlhttprequesteventtarget",
-            "description": "(XMLHttpRequest) # xmlhttprequesteventtarget"
+            "description": "# xmlhttprequesteventtarget"
         }
     ]
 }

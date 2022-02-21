@@ -2,12 +2,12 @@
     "kind": "Type",
     "name": "Math",
     "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math",
-    "description": "Math is a built-in object that has properties and methods for mathematical constants and functions. It&rsquo;s not a function object.",
+    "description": "Math is a built-in object that has properties and methods for mathematical constants and functions. It's not a function object.",
     "refs": [
         {
             "name": "ECMAScript Language Specification",
             "href": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-math-object",
-            "description": "(ECMAScript) # sec-math-object"
+            "description": "# sec-math-object"
         }
     ]
 }

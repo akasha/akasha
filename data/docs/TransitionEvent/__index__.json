@@ -1,6 +1,6 @@
 {
     "name": "TransitionEvent",
-    "lastModifiedAt": 1629769787000,
+    "lastModifiedAt": 1645062585000,
     "entries": [
         {
             "name": "TransitionEvent",
@@ -8,7 +8,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1629769787000
+            "lastModifiedAt": 1645062585000
         },
         {
             "name": "elapsedTime",

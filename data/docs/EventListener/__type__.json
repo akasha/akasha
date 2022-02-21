@@ -7,7 +7,7 @@
         {
             "name": "DOM Standard",
             "href": "https://dom.spec.whatwg.org/#callbackdef-eventlistener",
-            "description": "(DOM) # callbackdef-eventlistener"
+            "description": "# callbackdef-eventlistener"
         }
     ]
 }

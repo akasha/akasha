@@ -7,7 +7,7 @@
         {
             "name": "ECMAScript Language Specification",
             "href": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-date.prototype.setutcmilliseconds",
-            "description": "(ECMAScript) # sec-date.prototype.setutcmilliseconds"
+            "description": "# sec-date.prototype.setutcmilliseconds"
         }
     ]
 }

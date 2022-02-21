@@ -1,10 +1,10 @@
 {
     "name": "AnimationTimeline",
-    "lastModifiedAt": 1629769781000,
+    "lastModifiedAt": 1645062593000,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1629769781000
+            "lastModifiedAt": 1645062593000
         },
         {
             "name": "currentTime",

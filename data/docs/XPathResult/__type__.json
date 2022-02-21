@@ -7,7 +7,7 @@
         {
             "name": "DOM Standard",
             "href": "https://dom.spec.whatwg.org/#interface-xpathresult",
-            "description": "(DOM) # interface-xpathresult"
+            "description": "# interface-xpathresult"
         }
     ]
 }

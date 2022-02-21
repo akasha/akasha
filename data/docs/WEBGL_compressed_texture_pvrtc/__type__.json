@@ -6,8 +6,7 @@
     "refs": [
         {
             "name": "WebGL WEBGL_compressed_texture_pvrtc Extension Specification",
-            "href": "https://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_pvrtc/",
-            "description": "(WebGL WEBGL_compressed_texture_pvrtc Extension)"
+            "href": "https://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_pvrtc/"
         }
     ]
 }

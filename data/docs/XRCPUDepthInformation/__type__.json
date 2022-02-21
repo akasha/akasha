@@ -7,7 +7,7 @@
         {
             "name": "WebXR Depth Sensing Module",
             "href": "https://immersive-web.github.io/depth-sensing/#xr-cpu-depth-info-section",
-            "description": "(WebXR Depth Sensing) # xr-cpu-depth-info-section"
+            "description": "# xr-cpu-depth-info-section"
         }
     ]
 }

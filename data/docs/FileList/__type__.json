@@ -12,7 +12,7 @@
         {
             "name": "HTML Standard",
             "href": "https://html.spec.whatwg.org/multipage/input.html#dom-input-files-dev",
-            "description": "(HTML) # dom-input-files-dev"
+            "description": "# dom-input-files-dev"
         }
     ]
 }

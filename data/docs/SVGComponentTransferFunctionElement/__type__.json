@@ -7,7 +7,7 @@
         {
             "name": "Filter Effects Module Level 2",
             "href": "https://drafts.fxtf.org/filter-effects/#InterfaceSVGComponentTransferFunctionElement",
-            "description": "(Filter Effects 2) # InterfaceSVGComponentTransferFunctionElement"
+            "description": "# InterfaceSVGComponentTransferFunctionElement"
         }
     ]
 }

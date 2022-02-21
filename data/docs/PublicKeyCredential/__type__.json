@@ -7,7 +7,7 @@
         {
             "name": "Web Authentication: An API for accessing Public Key Credentials - Level 3",
             "href": "https://w3c.github.io/webauthn/#iface-pkcredential",
-            "description": "(Web Authentication) # iface-pkcredential"
+            "description": "# iface-pkcredential"
         }
     ]
 }

@@ -7,7 +7,7 @@
         {
             "name": "HTML Standard",
             "href": "https://html.spec.whatwg.org/multipage/canvas.html#canvasgradient",
-            "description": "(HTML) # canvasgradient"
+            "description": "# canvasgradient"
         }
     ]
 }

@@ -2,12 +2,12 @@
     "kind": "Method",
     "name": "String.raw",
     "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/raw",
-    "description": "The static String.raw() method is a tag function of template literals. This is similar to the r prefix in Python, or the @ prefix in C# for string literals. (But it is not identical; see explanations in this issue.) It's used to get the raw string form of template literals, that is, substitutions (e.g. ${foo}) are processed, but escapes (e.g. \\n) are not.",
+    "description": "The static String.raw() method is a tag function of template literals. This is similar to the r prefix in Python, or the @ prefix in C# for string literals. It's used to get the raw string form of template literals, that is, substitutions (e.g. ${foo}) are processed, but escapes (e.g. \\n) are not.",
     "refs": [
         {
             "name": "ECMAScript Language Specification",
             "href": "https://tc39.es/ecma262/multipage/text-processing.html#sec-string.raw",
-            "description": "(ECMAScript) # sec-string.raw"
+            "description": "# sec-string.raw"
         }
     ]
 }

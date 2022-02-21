@@ -7,7 +7,7 @@
         {
             "name": "DOM Standard",
             "href": "https://dom.spec.whatwg.org/#interface-nodeiterator",
-            "description": "(DOM) # interface-nodeiterator"
+            "description": "# interface-nodeiterator"
         }
     ]
 }

@@ -7,7 +7,7 @@
         {
             "name": "Identifiers for WebRTC's Statistics API",
             "href": "https://w3c.github.io/webrtc-stats/#remoteoutboundrtpstats-dict*",
-            "description": "(WebRTC Statistics) # remoteoutboundrtpstats-dict*"
+            "description": "# remoteoutboundrtpstats-dict*"
         }
     ]
 }

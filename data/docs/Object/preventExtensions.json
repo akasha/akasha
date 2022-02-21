@@ -7,7 +7,7 @@
         {
             "name": "ECMAScript Language Specification",
             "href": "https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-object.preventextensions",
-            "description": "(ECMAScript) # sec-object.preventextensions"
+            "description": "# sec-object.preventextensions"
         }
     ]
 }

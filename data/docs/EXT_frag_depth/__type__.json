@@ -6,8 +6,7 @@
     "refs": [
         {
             "name": "WebGL EXT_frag_depth Khronos Ratified Extension Specification",
-            "href": "https://www.khronos.org/registry/webgl/extensions/EXT_frag_depth/",
-            "description": "(WebGL EXT_frag_depth Khronos Ratified Extension)"
+            "href": "https://www.khronos.org/registry/webgl/extensions/EXT_frag_depth/"
         }
     ]
 }

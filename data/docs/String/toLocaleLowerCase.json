@@ -7,12 +7,12 @@
         {
             "name": "ECMAScript Language Specification",
             "href": "https://tc39.es/ecma262/multipage/text-processing.html#sec-string.prototype.tolocalelowercase",
-            "description": "(ECMAScript) # sec-string.prototype.tolocalelowercase"
+            "description": "# sec-string.prototype.tolocalelowercase"
         },
         {
             "name": "ECMAScript Internationalization API Specification",
             "href": "https://tc39.es/ecma402/#sup-string.prototype.tolocalelowercase",
-            "description": "(ECMAScript Internationalization API) # sup-string.prototype.tolocalelowercase"
+            "description": "# sup-string.prototype.tolocalelowercase"
         }
     ]
 }

@@ -7,7 +7,7 @@
         {
             "name": "ECMAScript Language Specification",
             "href": "https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-boolean-objects",
-            "description": "(ECMAScript) # sec-boolean-objects"
+            "description": "# sec-boolean-objects"
         }
     ]
 }

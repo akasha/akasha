@@ -7,7 +7,7 @@
         {
             "name": "DOM Standard",
             "href": "https://dom.spec.whatwg.org/#interface-element",
-            "description": "(DOM) # interface-element"
+            "description": "# interface-element"
         },
         {
             "name": "Pointer Events",
@@ -22,7 +22,7 @@
         {
             "name": "Fullscreen API Standard",
             "href": "https://fullscreen.spec.whatwg.org/#api",
-            "description": "(Fullscreen API) # api"
+            "description": "# api"
         },
         {
             "name": "DOM Parsing and Serialization",
@@ -32,7 +32,7 @@
         {
             "name": "CSSOM View Module",
             "href": "https://drafts.csswg.org/cssom-view/#extension-to-the-element-interface",
-            "description": "(CSSOM View) # extension-to-the-element-interface"
+            "description": "# extension-to-the-element-interface"
         }
     ]
 }

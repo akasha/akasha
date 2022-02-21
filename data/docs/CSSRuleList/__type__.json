@@ -7,7 +7,7 @@
         {
             "name": "CSS Object Model (CSSOM)",
             "href": "https://drafts.csswg.org/cssom/#the-cssrulelist-interface",
-            "description": "(CSSOM) # the-cssrulelist-interface"
+            "description": "# the-cssrulelist-interface"
         }
     ]
 }

@@ -7,7 +7,7 @@
         {
             "name": "ECMAScript Language Specification",
             "href": "https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-symbol.keyfor",
-            "description": "(ECMAScript) # sec-symbol.keyfor"
+            "description": "# sec-symbol.keyfor"
         }
     ]
 }

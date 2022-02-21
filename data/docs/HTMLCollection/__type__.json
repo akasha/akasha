@@ -7,7 +7,7 @@
         {
             "name": "DOM Standard",
             "href": "https://dom.spec.whatwg.org/#interface-htmlcollection",
-            "description": "(DOM) # interface-htmlcollection"
+            "description": "# interface-htmlcollection"
         }
     ]
 }

@@ -7,7 +7,7 @@
         {
             "name": "HTML Standard",
             "href": "https://html.spec.whatwg.org/multipage/browsing-the-web.html#the-popstateevent-interface",
-            "description": "(HTML) # the-popstateevent-interface"
+            "description": "# the-popstateevent-interface"
         }
     ]
 }

@@ -7,7 +7,7 @@
         {
             "name": "CSS Pseudo-Elements Module Level 4",
             "href": "https://drafts.csswg.org/css-pseudo/#CSSPseudoElement-interface",
-            "description": "(CSS Pseudo-Elements 4) # CSSPseudoElement-interface"
+            "description": "# CSSPseudoElement-interface"
         }
     ]
 }

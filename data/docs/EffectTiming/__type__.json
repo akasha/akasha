@@ -5,9 +5,9 @@
     "description": "The KeyframeEffect() constructor of the Web Animations API returns a new KeyframeEffect object instance, and also allows you to clone an existing keyframe effect object instance.",
     "refs": [
         {
-            "name": "Web Animations Level 2",
-            "href": "https://drafts.csswg.org/web-animations/#dom-keyframeeffect-keyframeeffect",
-            "description": "(Web Animations 2) # dom-keyframeeffect-keyframeeffect"
+            "name": "Web Animations",
+            "href": "https://drafts.csswg.org/web-animations-1/#dom-keyframeeffect-keyframeeffect",
+            "description": "# dom-keyframeeffect-keyframeeffect"
         }
     ]
 }

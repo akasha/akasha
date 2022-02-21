@@ -1,6 +1,6 @@
 {
     "name": "DOMMatrix",
-    "lastModifiedAt": 1629769781000,
+    "lastModifiedAt": 1645233127000,
     "entries": [
         {
             "name": "DOMMatrix",
@@ -8,7 +8,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1629769781000
+            "lastModifiedAt": 1645233127000
         }
     ]
 }

@@ -7,7 +7,7 @@
         {
             "name": "ECMAScript Language Specification",
             "href": "https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-symbol.isconcatspreadable",
-            "description": "(ECMAScript) # sec-symbol.isconcatspreadable"
+            "description": "# sec-symbol.isconcatspreadable"
         }
     ]
 }

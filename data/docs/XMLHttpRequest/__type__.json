@@ -7,7 +7,7 @@
         {
             "name": "XMLHttpRequest Standard",
             "href": "https://xhr.spec.whatwg.org/#interface-xmlhttprequest",
-            "description": "(XMLHttpRequest) # interface-xmlhttprequest"
+            "description": "# interface-xmlhttprequest"
         }
     ]
 }

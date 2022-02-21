@@ -1,6 +1,6 @@
 {
     "name": "Symbol",
-    "lastModifiedAt": 1629769826000,
+    "lastModifiedAt": 1645062540000,
     "entries": [
         {
             "name": "Symbol",
@@ -8,63 +8,63 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1629769826000
+            "lastModifiedAt": 1645233110000
         },
         {
             "name": "asyncIterator",
-            "lastModifiedAt": 1629769826000
+            "lastModifiedAt": 1645233110000
         },
         {
             "name": "description",
-            "lastModifiedAt": 1629769826000
+            "lastModifiedAt": 1645062540000
         },
         {
             "name": "hasInstance",
-            "lastModifiedAt": 1629769826000
+            "lastModifiedAt": 1645233110000
         },
         {
             "name": "isConcatSpreadable",
-            "lastModifiedAt": 1629769826000
+            "lastModifiedAt": 1645062540000
         },
         {
             "name": "iterator",
-            "lastModifiedAt": 1629769826000
+            "lastModifiedAt": 1645233110000
         },
         {
             "name": "keyFor",
-            "lastModifiedAt": 1629769826000
+            "lastModifiedAt": 1645062540000
         },
         {
             "name": "match",
-            "lastModifiedAt": 1629769826000
+            "lastModifiedAt": 1645062540000
         },
         {
             "name": "matchAll",
-            "lastModifiedAt": 1629769826000
+            "lastModifiedAt": 1645062540000
         },
         {
             "name": "prototype",
-            "lastModifiedAt": 1629769826000
+            "lastModifiedAt": 1645233110000
         },
         {
             "name": "replace",
-            "lastModifiedAt": 1629769826000
+            "lastModifiedAt": 1645062540000
         },
         {
             "name": "search",
-            "lastModifiedAt": 1629769826000
+            "lastModifiedAt": 1645062540000
         },
         {
             "name": "species",
-            "lastModifiedAt": 1629769826000
+            "lastModifiedAt": 1645062540000
         },
         {
             "name": "split",
-            "lastModifiedAt": 1629769826000
+            "lastModifiedAt": 1645062540000
         },
         {
             "name": "toPrimitive",
-            "lastModifiedAt": 1629769826000
+            "lastModifiedAt": 1645062540000
         },
         {
             "name": "toSource",
@@ -72,19 +72,19 @@
         },
         {
             "name": "toString",
-            "lastModifiedAt": 1629769826000
+            "lastModifiedAt": 1645062540000
         },
         {
             "name": "toStringTag",
-            "lastModifiedAt": 1629769826000
+            "lastModifiedAt": 1645062540000
         },
         {
             "name": "unscopables",
-            "lastModifiedAt": 1629769826000
+            "lastModifiedAt": 1645233110000
         },
         {
             "name": "valueOf",
-            "lastModifiedAt": 1629769826000
+            "lastModifiedAt": 1645062540000
         }
     ]
 }

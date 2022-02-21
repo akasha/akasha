@@ -7,7 +7,7 @@
         {
             "name": "HTML Standard",
             "href": "https://html.spec.whatwg.org/multipage/common-dom-interfaces.html#the-htmloptionscollection-interface",
-            "description": "(HTML) # the-htmloptionscollection-interface"
+            "description": "# the-htmloptionscollection-interface"
         }
     ]
 }
