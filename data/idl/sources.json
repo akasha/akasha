@@ -744,6 +744,11 @@
         "name": "whatwg_formcontrols_patch"
     },
     {
+        "lastModifiedTime": 1643907718000,
+        "name": "whatwg_fs",
+        "url": "https://fs.spec.whatwg.org/"
+    },
+    {
         "lastModifiedTime": 1642442613000,
         "name": "whatwg_fullscreen",
         "url": "https://fullscreen.spec.whatwg.org/"

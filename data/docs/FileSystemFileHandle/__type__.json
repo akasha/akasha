@@ -1,0 +1,13 @@
+{
+    "kind": "Type",
+    "name": "FileSystemFileHandle",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/FileSystemFileHandle",
+    "description": "The FileSystemFileHandle interface of the File System Access API represents a handle to a file system entry. The interface is accessed through the window.showOpenFilePicker() method.",
+    "refs": [
+        {
+            "name": "File System Access",
+            "href": "https://wicg.github.io/file-system-access/#api-filesystemfilehandle",
+            "description": "# api-filesystemfilehandle"
+        }
+    ]
+}

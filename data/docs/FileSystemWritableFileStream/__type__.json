@@ -1,0 +1,13 @@
+{
+    "kind": "Type",
+    "name": "FileSystemWritableFileStream",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/FileSystemWritableFileStream",
+    "description": "The FileSystemWritableFileStream interface of the File System Access API is a WritableStream object with additional convenience methods, which operates on a single file on disk. The interface is accessed through the FileSystemFileHandle.createWritable() method.",
+    "refs": [
+        {
+            "name": "File System Access",
+            "href": "https://wicg.github.io/file-system-access/#api-filesystemwritablefilestream",
+            "description": "# api-filesystemwritablefilestream"
+        }
+    ]
+}
