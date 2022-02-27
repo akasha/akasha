@@ -7,7 +7,7 @@
         {
             "name": "HTML Standard",
             "href": "https://html.spec.whatwg.org/multipage/webappapis.html#the-errorevent-interface",
-            "description": "(HTML) # the-errorevent-interface"
+            "description": "# the-errorevent-interface"
         }
     ]
 }

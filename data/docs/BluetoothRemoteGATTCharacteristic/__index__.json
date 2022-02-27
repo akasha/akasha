@@ -1,10 +1,10 @@
 {
     "name": "BluetoothRemoteGATTCharacteristic",
-    "lastModifiedAt": 1629769794000,
+    "lastModifiedAt": 1645233124000,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1629769794000
+            "lastModifiedAt": 1645233124000
         },
         {
             "name": "characteristicvaluechanged_event",

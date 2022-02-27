@@ -7,7 +7,7 @@
         {
             "name": "DOM Standard",
             "href": "https://dom.spec.whatwg.org/#interface-AbortSignal",
-            "description": "(DOM) # interface-AbortSignal"
+            "description": "# interface-AbortSignal"
         }
     ]
 }

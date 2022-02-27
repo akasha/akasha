@@ -7,7 +7,7 @@
         {
             "name": "HTML Standard",
             "href": "https://html.spec.whatwg.org/multipage/media.html#audiotracklist-and-videotracklist-objects",
-            "description": "(HTML) # audiotracklist-and-videotracklist-objects"
+            "description": "# audiotracklist-and-videotracklist-objects"
         }
     ]
 }

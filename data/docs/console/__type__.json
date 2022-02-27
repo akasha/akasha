@@ -7,7 +7,7 @@
         {
             "name": "Console Standard",
             "href": "https://console.spec.whatwg.org/#console-namespace",
-            "description": "(Console) # console-namespace"
+            "description": "# console-namespace"
         }
     ]
 }

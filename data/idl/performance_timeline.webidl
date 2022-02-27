@@ -12,7 +12,7 @@ dictionary PerformanceObserverInit {
   DOMString type;
 };
 
-[Exposed=(Window,Worker)]
+[Exposed=*]
 interface PerformanceEntry {
   readonly attribute DOMHighResTimeStamp duration;
   readonly attribute DOMString entryType;
@@ -22,7 +22,7 @@ interface PerformanceEntry {
   object toJSON();
 };
 
-[Exposed=(Window,Worker)]
+[Exposed=*]
 interface PerformanceObserver {
   [SameObject]
   static readonly attribute FrozenArray<DOMString> supportedEntryTypes;
@@ -32,7 +32,7 @@ interface PerformanceObserver {
   PerformanceEntryList takeRecords();
 };
 
-[Exposed=(Window,Worker)]
+[Exposed=*]
 interface PerformanceObserverEntryList {
   PerformanceEntryList getEntries();
   PerformanceEntryList getEntriesByName( DOMString name, optional DOMString type );

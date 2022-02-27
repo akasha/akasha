@@ -7,7 +7,7 @@
         {
             "name": "DOM Standard",
             "href": "https://dom.spec.whatwg.org/#interface-nodefilter",
-            "description": "(DOM) # interface-nodefilter"
+            "description": "# interface-nodefilter"
         }
     ]
 }

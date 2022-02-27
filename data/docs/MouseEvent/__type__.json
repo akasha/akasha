@@ -12,7 +12,7 @@
         {
             "name": "CSSOM View Module",
             "href": "https://drafts.csswg.org/cssom-view/#extensions-to-the-mouseevent-interface",
-            "description": "(CSSOM View) # extensions-to-the-mouseevent-interface"
+            "description": "# extensions-to-the-mouseevent-interface"
         },
         {
             "name": "Pointer Lock 2.0",

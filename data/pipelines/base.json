@@ -568,6 +568,16 @@
       }
     },
     {
+      "name": "RemoveExtendedAttribute",
+      "description": "Remove the JavaSubPackage added in the previous pass as union return type to comply with j2cl type system is package access atm",
+      "sourceSelector": "name=webrtc.*",
+      "config": {
+        "expectedRemoveCount": 1,
+        "namePattern": "^RTCIdentityProviderGlobalScope$",
+        "extendedAttribute": "JavaSubPackage=rtc"
+      }
+    },
+    {
       "name": "AddExtendedAttribute",
       "sourceSelector": "name=clipboard_apis",
       "config": {
@@ -696,7 +706,7 @@
     {
       "name": "AddExtendedAttribute",
       "description": "Add MarkerType to make conversion between types easier",
-      "sourceSelector": "name=streams",
+      "sourceSelector": "name=whatwg_streams",
       "config": {
         "expectedAddCount": 2,
         "namePattern": "^(ReadableStreamReader|ReadableStreamController)$",
@@ -867,7 +877,7 @@
     },
     {
       "name": "ChangeAttributeType",
-      "sourceSelector": "name=whatwg_html",
+      "sourceSelector": "name=whatwg_websockets",
       "config": {
         "expectedRemoveCount": 1,
         "elementNamePattern": "^WebSocket$",
@@ -1847,7 +1857,7 @@
     {
       "name": "NameAnonymousUnions",
       "config": {
-        "expectedChangeCount": 27
+        "expectedChangeCount": 29
       }
     },
     {
@@ -1872,8 +1882,8 @@
       "name": "AddExtendedAttribute",
       "description": "After NameAnonymousUnions runs we move one of the synthesized unions to correct sub-package",
       "config": {
-        "expectedAddCount": 4,
-        "namePattern": "^(GPULoadOpOrFloatUnion|GPUDeviceLostReasonOrUndefinedUnion|GPULoadOpOrGPUColorUnion|GPULoadOpOrGPUStencilValueUnion)$",
+        "expectedAddCount": 1,
+        "namePattern": "^GPUDeviceLostReasonOrUndefinedUnion$",
         "extendedAttribute": "JavaSubPackage=gpu"
       }
     },
@@ -1881,8 +1891,8 @@
       "name": "AddExtendedAttribute",
       "description": "Mark API as experimental",
       "config": {
-        "expectedAddCount": 4,
-        "namePattern": "^(GPULoadOpOrFloatUnion|GPUDeviceLostReasonOrUndefinedUnion|GPULoadOpOrGPUColorUnion|GPULoadOpOrGPUStencilValueUnion)$",
+        "expectedAddCount": 1,
+        "namePattern": "^GPUDeviceLostReasonOrUndefinedUnion$",
         "extendedAttribute": "JavaAnnotation=\"org.jetbrains.annotations.ApiStatus.Experimental\""
       }
     },

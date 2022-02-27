@@ -2,7 +2,7 @@ interface SpeechSynthesis {
   readonly attribute boolean paused;
   readonly attribute boolean pending;
   readonly attribute boolean speaking;
-  stringifier undefined customToString();
+  stringifier;
 };
 
 /**

@@ -7,7 +7,7 @@
         {
             "name": "HTML Standard",
             "href": "https://html.spec.whatwg.org/multipage/media.html#the-trackevent-interface",
-            "description": "(HTML) # the-trackevent-interface"
+            "description": "# the-trackevent-interface"
         }
     ]
 }

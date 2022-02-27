@@ -7,7 +7,7 @@
         {
             "name": "ECMAScript Language Specification",
             "href": "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-typedarray.bytes_per_element",
-            "description": "(ECMAScript) # sec-typedarray.bytes_per_element"
+            "description": "# sec-typedarray.bytes_per_element"
         }
     ]
 }

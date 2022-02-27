@@ -7,7 +7,7 @@
         {
             "name": "WebRTC 1.0: Real-Time Communication Between Browsers",
             "href": "https://w3c.github.io/webrtc-pc/#rtcrtptransceiver-interface",
-            "description": "(WebRTC 1.0) # rtcrtptransceiver-interface"
+            "description": "# rtcrtptransceiver-interface"
         }
     ]
 }

@@ -3,8 +3,6 @@ interface Boolean {
   constructor( optional any value );
 
   boolean valueOf();
-
-  stringifier DOMString toString();
 };
 
 [JavaName=JsNumber]
@@ -49,7 +47,7 @@ interface Number {
 
   DOMString toPrecision(optional long precision);
 
-  stringifier DOMString toString( optional long radix );
+  DOMString toString( optional long radix );
 
   unrestricted double valueOf();
 };
@@ -111,5 +109,5 @@ interface Object {
   [JavaName=valueOf_]
   any valueOf();
 
-  stringifier DOMString toString();
+  DOMString toString();
 };

@@ -1,8 +1,3 @@
-enum BinaryType {
-  "arraybuffer",
-  "blob"
-};
-
 enum CanPlayTypeResult {
   "",
   "maybe",
@@ -176,6 +171,8 @@ enum WorkerType {
   "module"
 };
 
+typedef record<DOMString, any> CanvasFilterInput;
+
 typedef ( HTMLOrSVGImageElement or HTMLVideoElement or HTMLCanvasElement or ImageBitmap or OffscreenCanvas or VideoFrame ) CanvasImageSource;
 
 typedef EventHandlerNonNull? EventHandler;
@@ -226,12 +223,6 @@ dictionary CanvasRenderingContext2DSettings {
   PredefinedColorSpace colorSpace = "srgb";
   boolean desynchronized = false;
   boolean willReadFrequently = false;
-};
-
-dictionary CloseEventInit : EventInit {
-  unsigned short code = 0;
-  USVString reason = "";
-  boolean wasClean = false;
 };
 
 dictionary DragEventInit : MouseEventInit {
@@ -403,7 +394,7 @@ interface mixin CanvasFillStrokeStyles {
 };
 
 interface mixin CanvasFilters {
-  attribute DOMString filter;
+  attribute ( DOMString or CanvasFilter ) filter;
 };
 
 interface mixin CanvasImageData {
@@ -429,7 +420,7 @@ interface mixin CanvasPath {
   undefined moveTo( unrestricted double x, unrestricted double y );
   undefined quadraticCurveTo( unrestricted double cpx, unrestricted double cpy, unrestricted double x, unrestricted double y );
   undefined rect( unrestricted double x, unrestricted double y, unrestricted double w, unrestricted double h );
-  undefined roundRect( unrestricted double x, unrestricted double y, unrestricted double w, unrestricted double h, sequence<( unrestricted double or DOMPointInit )> radii );
+  undefined roundRect( unrestricted double x, unrestricted double y, unrestricted double w, unrestricted double h, ( unrestricted double or DOMPointInit or sequence<( unrestricted double or DOMPointInit )> ) radii );
 };
 
 interface mixin CanvasPathDrawingStyles {
@@ -474,11 +465,11 @@ interface mixin CanvasTextDrawingStyles {
   attribute CanvasFontKerning fontKerning;
   attribute CanvasFontStretch fontStretch;
   attribute CanvasFontVariantCaps fontVariantCaps;
-  attribute double letterSpacing;
+  attribute DOMString letterSpacing;
   attribute CanvasTextAlign textAlign;
   attribute CanvasTextBaseline textBaseline;
   attribute CanvasTextRendering textRendering;
-  attribute double wordSpacing;
+  attribute DOMString wordSpacing;
 };
 
 interface mixin CanvasTransform {
@@ -703,8 +694,8 @@ interface mixin WindowOrWorkerGlobalScope {
   readonly attribute USVString origin;
   ByteString atob( DOMString data );
   DOMString btoa( DOMString data );
-  undefined clearInterval( optional long handle = 0 );
-  undefined clearTimeout( optional long handle = 0 );
+  undefined clearInterval( optional long id = 0 );
+  undefined clearTimeout( optional long id = 0 );
   Promise<ImageBitmap> createImageBitmap( ImageBitmapSource image, optional ImageBitmapOptions options = {} );
   Promise<ImageBitmap> createImageBitmap( ImageBitmapSource image, long sx, long sy, long sw, long sh, optional ImageBitmapOptions options = {} );
   undefined queueMicrotask( VoidFunction callback );
@@ -768,6 +759,11 @@ interface BroadcastChannel : EventTarget {
   undefined postMessage( any message );
 };
 
+[Exposed=(Window,Worker,PaintWorklet)]
+interface CanvasFilter {
+  constructor( optional ( CanvasFilterInput or sequence<CanvasFilterInput> ) filters );
+};
+
 [Exposed=(Window,Worker)]
 interface CanvasGradient {
   undefined addColorStop( double offset, DOMString color );
@@ -782,14 +778,6 @@ interface CanvasPattern {
 interface CanvasRenderingContext2D {
   readonly attribute HTMLCanvasElement canvas;
   CanvasRenderingContext2DSettings getContextAttributes();
-};
-
-[Exposed=(Window,Worker)]
-interface CloseEvent : Event {
-  readonly attribute unsigned short code;
-  readonly attribute USVString reason;
-  readonly attribute boolean wasClean;
-  constructor( DOMString type, optional CloseEventInit eventInitDict = {} );
 };
 
 [Exposed=Window]
@@ -890,7 +878,7 @@ interface ElementInternals {
   undefined setValidity( optional ValidityStateFlags flags = {}, optional DOMString message, optional HTMLElement anchor );
 };
 
-[Exposed=(Window,Worker)]
+[Exposed=*]
 interface ErrorEvent : Event {
   readonly attribute unsigned long colno;
   readonly attribute any error;
@@ -1444,6 +1432,7 @@ interface HTMLInputElement : HTMLElement {
   undefined setRangeText( DOMString replacement );
   undefined setRangeText( DOMString replacement, unsigned long start, unsigned long end, optional SelectionMode selectionMode = "preserve" );
   undefined setSelectionRange( unsigned long start, unsigned long end, optional DOMString direction );
+  undefined showPicker();
   undefined stepDown( optional long n = 1 );
   undefined stepUp( optional long n = 1 );
 };
@@ -1475,6 +1464,8 @@ interface HTMLLegendElement : HTMLElement {
 
 [Exposed=Window]
 interface HTMLLinkElement : HTMLElement {
+  [SameObject, PutForwards=value]
+  readonly attribute DOMTokenList blocking;
   [SameObject, PutForwards=value]
   readonly attribute DOMTokenList relList;
   [SameObject, PutForwards=value]
@@ -1807,6 +1798,8 @@ interface HTMLQuoteElement : HTMLElement {
 
 [Exposed=Window]
 interface HTMLScriptElement : HTMLElement {
+  [SameObject, PutForwards=value]
+  readonly attribute DOMTokenList blocking;
   [CEReactions]
   attribute boolean async;
   [CEReactions]
@@ -1914,6 +1907,8 @@ interface HTMLSpanElement : HTMLElement {
 
 [Exposed=Window]
 interface HTMLStyleElement : HTMLElement {
+  [SameObject, PutForwards=value]
+  readonly attribute DOMTokenList blocking;
   [CEReactions]
   attribute DOMString media;
   [HTMLConstructor]
@@ -2308,7 +2303,7 @@ interface PopStateEvent : Event {
   constructor( DOMString type, optional PopStateEventInit eventInitDict = {} );
 };
 
-[Exposed=(Window,Worker)]
+[Exposed=*]
 interface PromiseRejectionEvent : Event {
   readonly attribute Promise<any> promise;
   readonly attribute any reason;
@@ -2466,30 +2461,6 @@ interface VideoTrackList : EventTarget {
   attribute EventHandler onremovetrack;
   VideoTrack? getTrackById( DOMString id );
   getter VideoTrack ( unsigned long index );
-};
-
-[Exposed=(Window,Worker)]
-interface WebSocket : EventTarget {
-  const unsigned short CLOSED = 3;
-  const unsigned short CLOSING = 2;
-  const unsigned short CONNECTING = 0;
-  const unsigned short OPEN = 1;
-  readonly attribute unsigned long long bufferedAmount;
-  readonly attribute DOMString extensions;
-  readonly attribute DOMString protocol;
-  readonly attribute unsigned short readyState;
-  readonly attribute USVString url;
-  attribute BinaryType binaryType;
-  attribute EventHandler onclose;
-  attribute EventHandler onerror;
-  attribute EventHandler onmessage;
-  attribute EventHandler onopen;
-  constructor( USVString url, optional ( DOMString or sequence<DOMString> ) protocols = [] );
-  undefined close( optional [Clamp] unsigned short code, optional USVString reason );
-  undefined send( USVString data );
-  undefined send( Blob data );
-  undefined send( ArrayBuffer data );
-  undefined send( ArrayBufferView data );
 };
 
 [Global=Window, Exposed=Window, LegacyUnenumerableNamedProperties]

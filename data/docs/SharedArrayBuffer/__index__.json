@@ -1,6 +1,6 @@
 {
     "name": "SharedArrayBuffer",
-    "lastModifiedAt": 1629769825000,
+    "lastModifiedAt": 1645062540000,
     "entries": [
         {
             "name": "SharedArrayBuffer",
@@ -8,15 +8,15 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1629769825000
+            "lastModifiedAt": 1645233110000
         },
         {
             "name": "byteLength",
-            "lastModifiedAt": 1629769825000
+            "lastModifiedAt": 1645062540000
         },
         {
             "name": "slice",
-            "lastModifiedAt": 1629769825000
+            "lastModifiedAt": 1645062540000
         }
     ]
 }

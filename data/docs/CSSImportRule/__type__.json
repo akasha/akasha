@@ -7,7 +7,7 @@
         {
             "name": "CSS Object Model (CSSOM)",
             "href": "https://drafts.csswg.org/cssom/#the-cssimportrule-interface",
-            "description": "(CSSOM) # the-cssimportrule-interface"
+            "description": "# the-cssimportrule-interface"
         }
     ]
 }

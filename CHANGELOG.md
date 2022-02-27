@@ -2,7 +2,15 @@
 
 ### Unreleased
 
+### [v0.30](https://github.com/akasha/akasha/tree/v0.30) (2022-02-22) · [Full Changelog](https://github.com/spritz/spritz/compare/v0.29...v0.30) · [API Differences](https://akasha.github.io/akasha-java/api-diff/?key=akasha-java&old=0.29&new=0.30) · [Source Diff](https://github.com/akasha/akasha-java/compare/v0.29...v0.30)
+
+The release includes 203 non breaking API changes, 40 potentially breaking API changes and 141 breaking API changes.
+
+Changes in this release:
+
+* Update the `org.realityforge.react4j` artifacts to version `0.187`.
 * Add the `WebXR Augmented Reality Module - Level 1` spec version `W3C Working Draft, 24 August 2021` version.
+* Add the `File System Living Standard` spec version `3 February 2022` version.
 * Add the `WebXR Gamepads Module - Level 1` spec version `W3C Working Draft, 24 August 2021` version.
 * Add the `WebXR Hit Test Module` spec version `Editor’s Draft, 30 September 2021` version.
 * Add the `WebXR DOM Overlays Module` spec version `Editor’s Draft, 30 August 2021` version.
@@ -14,6 +22,13 @@
 * Rename the `TextureMagnificationFilter` annotation to `SamplerMagnificationFilter`.
 * Rename the `TextureMinificationFilter` annotation to `SamplerMinificationFilter`.
 * Rename the `TextureWrapMode` annotation to `SamplerWrapMode`.
+* Update the `CSS Pseudo-Elements Module Level 4` spec to the `Editor’s Draft, 30 January 2022` version. This added the attribute `CSSPseudoElement.parent` and the operation `CSSPseudoElement.pseudo( CSSOMString type )`.
+* Update the `Permissions` spec to the `W3C Working Draft 15 February 2022` version. This version removed the `PermissionName` enum and replaced permission name with an arbitrary string and re-added the (unused) `PermissionSetParameters`.
+* Update the `DOM Living Standard` spec to the `8 February 2022` version. This version added the `reason` attribute to `AbortSignal` as well as adding `AbortSignal.throwIfAborted()` and `AbortSignal.timeout(...)`.
+* Remove explicit overrides of `toString()` method in the following WebIDL types as the operation is inherited from `Object`: `Boolean`, `Date`, `RegExp`, `String`, `Symbol`, `ArrayBufferViewImpl` and `DataView`.
+* Update the `WebGPU` spec to the `W3C Working Draft, 18 February 2022` version.
+* Update the `WebCodecs` spec to the `W3C Working Draft, 16 February 2022` version. This resulted in tightening of several types.
+* Update the `Pointer Lock 2.0` spec to the `W3C Working Draft 17 November 2021` version.
 
 ### [v0.29](https://github.com/akasha/akasha/tree/v0.29) (2021-11-08) · [Full Changelog](https://github.com/spritz/spritz/compare/v0.28...v0.29) · [API Differences](https://akasha.github.io/akasha-java/api-diff/?key=akasha-java&old=0.28&new=0.29) · [Source Diff](https://github.com/akasha/akasha-java/compare/v0.28...v0.29)
 

@@ -7,7 +7,7 @@
         {
             "name": "WebXR Lighting Estimation API Level 1",
             "href": "https://immersive-web.github.io/lighting-estimation/#xrlightestimate-interface",
-            "description": "(WebXR Lighting Estimation API 1) # xrlightestimate-interface"
+            "description": "# xrlightestimate-interface"
         }
     ]
 }

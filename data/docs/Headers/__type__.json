@@ -7,7 +7,7 @@
         {
             "name": "Fetch Standard",
             "href": "https://fetch.spec.whatwg.org/#headers-class",
-            "description": "(Fetch) # headers-class"
+            "description": "# headers-class"
         }
     ]
 }

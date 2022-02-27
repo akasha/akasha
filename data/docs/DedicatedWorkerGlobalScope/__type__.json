@@ -7,7 +7,7 @@
         {
             "name": "HTML Standard",
             "href": "https://html.spec.whatwg.org/multipage/workers.html#dedicated-workers-and-the-dedicatedworkerglobalscope-interface",
-            "description": "(HTML) # dedicated-workers-and-the-dedicatedworkerglobalscope-interface"
+            "description": "# dedicated-workers-and-the-dedicatedworkerglobalscope-interface"
         }
     ]
 }

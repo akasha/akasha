@@ -1,6 +1,6 @@
 {
     "name": "InputEvent",
-    "lastModifiedAt": 1629769801000,
+    "lastModifiedAt": 1645062589000,
     "entries": [
         {
             "name": "InputEvent",
@@ -8,7 +8,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1629769801000
+            "lastModifiedAt": 1645062589000
         },
         {
             "name": "data",

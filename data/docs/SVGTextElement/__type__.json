@@ -7,7 +7,7 @@
         {
             "name": "Scalable Vector Graphics (SVG) 1.1 (Second Edition)",
             "href": "https://svgwg.org/svg2-draft/text.html#InterfaceSVGTextElement",
-            "description": "(SVG) # InterfaceSVGTextElement"
+            "description": "# InterfaceSVGTextElement"
         }
     ]
 }

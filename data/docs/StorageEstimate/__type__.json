@@ -7,7 +7,7 @@
         {
             "name": "Storage Standard",
             "href": "https://storage.spec.whatwg.org/#ref-for-dom-storagemanager-estimate",
-            "description": "(Storage) # ref-for-dom-storagemanager-estimate"
+            "description": "# ref-for-dom-storagemanager-estimate"
         }
     ]
 }

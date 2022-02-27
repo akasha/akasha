@@ -7,7 +7,7 @@
         {
             "name": "ECMAScript Language Specification",
             "href": "https://tc39.es/ecma262/multipage/text-processing.html#sec-string.prototype.trim",
-            "description": "(ECMAScript) # sec-string.prototype.trim"
+            "description": "# sec-string.prototype.trim"
         }
     ]
 }

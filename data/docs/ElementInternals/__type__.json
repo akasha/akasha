@@ -7,7 +7,7 @@
         {
             "name": "HTML Standard",
             "href": "https://html.spec.whatwg.org/multipage/custom-elements.html#the-elementinternals-interface",
-            "description": "(HTML) # the-elementinternals-interface"
+            "description": "# the-elementinternals-interface"
         }
     ]
 }

@@ -7,7 +7,7 @@
         {
             "name": "HTML Standard",
             "href": "https://html.spec.whatwg.org/multipage/grouping-content.html#htmlolistelement",
-            "description": "(HTML) # htmlolistelement"
+            "description": "# htmlolistelement"
         }
     ]
 }

@@ -7,7 +7,7 @@
         {
             "name": "ECMAScript Language Specification",
             "href": "https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-symbol.asynciterator",
-            "description": "(ECMAScript) # sec-symbol.asynciterator"
+            "description": "# sec-symbol.asynciterator"
         }
     ]
 }

@@ -88,9 +88,3 @@ function MyNumber() {}
  * @override
  */
 MyNumber.prototype.valueOf = function() {}
-/**
- * @param {!number=} radix
- * @return {!string}
- * @override
- */
-MyNumber.prototype.toString = function(radix) {}

@@ -212,10 +212,6 @@ function MyThing() {}
 function SpeechRecognitionErrorEvent(type) {}
 /** @type {!string} */ SpeechRecognitionErrorEvent.prototype.message;
 /**
- * @return {!string}
- */
-SpeechRecognitionErrorEvent.prototype.messageDescription = function() {}
-/**
  * @constructor
  * @param {!string} type
  * @param {!EventInit=} eventInitDict

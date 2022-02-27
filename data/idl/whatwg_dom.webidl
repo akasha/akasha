@@ -141,20 +141,24 @@ interface mixin XPathEvaluatorBase {
   XPathResult evaluate( DOMString expression, Node contextNode, optional XPathNSResolver? resolver = null, optional unsigned short type = 0, optional XPathResult? result = null );
 };
 
-[Exposed=(Window,Worker)]
+[Exposed=*]
 interface AbortController {
   [SameObject]
   readonly attribute AbortSignal signal;
   constructor();
-  undefined abort();
+  undefined abort( optional any reason );
 };
 
-[Exposed=(Window,Worker)]
+[Exposed=*]
 interface AbortSignal : EventTarget {
   readonly attribute boolean aborted;
+  readonly attribute any reason;
   attribute EventHandler onabort;
   [NewObject]
-  static AbortSignal abort();
+  static AbortSignal abort( optional any reason );
+  [Exposed=(Window,Worker), NewObject]
+  static AbortSignal timeout( [EnforceRange] unsigned long long milliseconds );
+  undefined throwIfAborted();
 };
 
 [Exposed=Window]
@@ -198,7 +202,7 @@ interface Comment : CharacterData {
   constructor( optional DOMString data = "" );
 };
 
-[Exposed=(Window,Worker)]
+[Exposed=*]
 interface CustomEvent : Event {
   readonly attribute any detail;
   constructor( DOMString type, optional CustomEventInit eventInitDict = {} );
@@ -349,7 +353,7 @@ interface Element : Node {
   boolean webkitMatchesSelector( DOMString selectors );
 };
 
-[Exposed=(Window,Worker,AudioWorklet)]
+[Exposed=*]
 interface Event {
   const unsigned short AT_TARGET = 2;
   const unsigned short BUBBLING_PHASE = 3;
@@ -377,7 +381,7 @@ interface Event {
   undefined stopPropagation();
 };
 
-[Exposed=(Window,Worker,AudioWorklet)]
+[Exposed=*]
 interface EventTarget {
   constructor();
   undefined addEventListener( DOMString type, EventListener? callback, optional ( AddEventListenerOptions or boolean ) options = {} );

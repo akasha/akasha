@@ -7,7 +7,7 @@
         {
             "name": "HTML Standard",
             "href": "https://html.spec.whatwg.org/multipage/workers.html#the-workernavigator-object",
-            "description": "(HTML) # the-workernavigator-object"
+            "description": "# the-workernavigator-object"
         }
     ]
 }

@@ -16,11 +16,11 @@ public class JsBoolean {
   protected JsBoolean() {
   }
 
-  public native boolean valueOf();
-
   @JsMethod(
       name = "toString"
   )
   @JsNonNull
   public native String toString_();
+
+  public native boolean valueOf();
 }

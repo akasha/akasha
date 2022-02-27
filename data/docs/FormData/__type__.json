@@ -7,7 +7,7 @@
         {
             "name": "XMLHttpRequest Standard",
             "href": "https://xhr.spec.whatwg.org/#interface-formdata",
-            "description": "(XMLHttpRequest) # interface-formdata"
+            "description": "# interface-formdata"
         }
     ]
 }

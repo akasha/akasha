@@ -6,8 +6,7 @@
     "refs": [
         {
             "name": "WebGL WEBGL_compressed_texture_s3tc_srgb Extension Specification",
-            "href": "https://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_s3tc_srgb/",
-            "description": "(WebGL WEBGL_compressed_texture_s3tc_srgb Extension)"
+            "href": "https://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_s3tc_srgb/"
         }
     ]
 }

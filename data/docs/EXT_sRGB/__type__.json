@@ -6,8 +6,7 @@
     "refs": [
         {
             "name": "WebGL EXT_sRGB Extension Specification",
-            "href": "https://www.khronos.org/registry/webgl/extensions/EXT_sRGB/",
-            "description": "(WebGL EXT_sRGB Extension)"
+            "href": "https://www.khronos.org/registry/webgl/extensions/EXT_sRGB/"
         }
     ]
 }

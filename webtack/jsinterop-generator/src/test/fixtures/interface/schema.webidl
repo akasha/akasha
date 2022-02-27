@@ -329,7 +329,7 @@ interface SomeWriteSetLike {
 interface SpeechRecognitionErrorEvent : Event {
   readonly attribute DOMString message;
   constructor( DOMString type );
-  stringifier DOMString messageDescription();
+  stringifier;
 };
 
 interface Storage {

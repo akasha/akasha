@@ -7,7 +7,7 @@
         {
             "name": "Filter Effects Module Level 2",
             "href": "https://drafts.fxtf.org/filter-effects/#InterfaceSVGFESpotLightElement",
-            "description": "(Filter Effects 2) # InterfaceSVGFESpotLightElement"
+            "description": "# InterfaceSVGFESpotLightElement"
         }
     ]
 }

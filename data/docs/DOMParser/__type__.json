@@ -7,7 +7,7 @@
         {
             "name": "HTML Standard",
             "href": "https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html#dom-parsing-and-serialization",
-            "description": "(HTML) # dom-parsing-and-serialization"
+            "description": "# dom-parsing-and-serialization"
         }
     ]
 }

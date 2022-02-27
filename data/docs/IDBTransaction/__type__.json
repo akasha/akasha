@@ -7,7 +7,7 @@
         {
             "name": "Indexed Database API 3.0",
             "href": "https://w3c.github.io/IndexedDB/#transaction",
-            "description": "(Indexed DB 3.0) # transaction"
+            "description": "# transaction"
         }
     ]
 }

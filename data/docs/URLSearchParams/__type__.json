@@ -7,7 +7,7 @@
         {
             "name": "URL Standard",
             "href": "https://url.spec.whatwg.org/#urlsearchparams",
-            "description": "(URL) # urlsearchparams"
+            "description": "# urlsearchparams"
         }
     ]
 }

@@ -7,7 +7,7 @@
         {
             "name": "ECMAScript Language Specification",
             "href": "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-get-%25typedarray%25.prototype.byteoffset",
-            "description": "(ECMAScript) # sec-get-%typedarray%.prototype.byteoffset"
+            "description": "# sec-get-%typedarray%.prototype.byteoffset"
         }
     ]
 }

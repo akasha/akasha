@@ -228,10 +228,6 @@ function AnonymousNamedAccessorsLong() {}
 function SpeechRecognitionErrorEvent(type) {}
 /** @type {!string} */ SpeechRecognitionErrorEvent.prototype.message;
 /**
- * @return {!string}
- */
-SpeechRecognitionErrorEvent.prototype.messageDescription = function() {}
-/**
  * @constructor
  * @private
  * @nosideeffects

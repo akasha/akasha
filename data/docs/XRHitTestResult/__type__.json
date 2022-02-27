@@ -7,7 +7,7 @@
         {
             "name": "WebXR Hit Test Module",
             "href": "https://immersive-web.github.io/hit-test/#xr-hit-test-result-interface",
-            "description": "(WebXR Hit Test) # xr-hit-test-result-interface"
+            "description": "# xr-hit-test-result-interface"
         }
     ]
 }

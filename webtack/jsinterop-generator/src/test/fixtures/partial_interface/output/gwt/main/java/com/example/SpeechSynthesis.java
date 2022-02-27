@@ -29,6 +29,4 @@ public class SpeechSynthesis {
       name = "speaking"
   )
   public native boolean speaking();
-
-  public native void customToString();
 }

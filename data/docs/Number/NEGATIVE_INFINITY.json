@@ -7,7 +7,7 @@
         {
             "name": "ECMAScript Language Specification",
             "href": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-number.negative_infinity",
-            "description": "(ECMAScript) # sec-number.negative_infinity"
+            "description": "# sec-number.negative_infinity"
         }
     ]
 }

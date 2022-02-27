@@ -7,7 +7,7 @@
         {
             "name": "CSS Object Model (CSSOM)",
             "href": "https://drafts.csswg.org/cssom/#the-csspagerule-interface",
-            "description": "(CSSOM) # the-csspagerule-interface"
+            "description": "# the-csspagerule-interface"
         }
     ]
 }

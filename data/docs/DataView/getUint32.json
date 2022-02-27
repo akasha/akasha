@@ -7,7 +7,7 @@
         {
             "name": "ECMAScript Language Specification",
             "href": "https://tc39.es/ecma262/multipage/structured-data.html#sec-dataview.prototype.getuint32",
-            "description": "(ECMAScript) # sec-dataview.prototype.getuint32"
+            "description": "# sec-dataview.prototype.getuint32"
         }
     ]
 }

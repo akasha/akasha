@@ -17,7 +17,7 @@
         {
             "name": "Resource Timing Level 2",
             "href": "https://w3c.github.io/resource-timing/#sec-extensions-performance-interface",
-            "description": "(Resource Timing 2) # sec-extensions-performance-interface"
+            "description": "# sec-extensions-performance-interface"
         },
         {
             "name": "User Timing",

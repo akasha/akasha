@@ -7,7 +7,7 @@
         {
             "name": "DOM Standard",
             "href": "https://dom.spec.whatwg.org/#interface-abstractrange",
-            "description": "(DOM) # interface-abstractrange"
+            "description": "# interface-abstractrange"
         }
     ]
 }

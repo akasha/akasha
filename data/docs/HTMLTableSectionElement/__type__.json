@@ -7,7 +7,7 @@
         {
             "name": "HTML Standard",
             "href": "https://html.spec.whatwg.org/multipage/tables.html#htmltablesectionelement",
-            "description": "(HTML) # htmltablesectionelement"
+            "description": "# htmltablesectionelement"
         }
     ]
 }

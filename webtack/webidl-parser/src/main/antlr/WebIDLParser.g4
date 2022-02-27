@@ -1,6 +1,7 @@
 // This grammar was initially based on the grammar in the Web IDL Editor’s Draft, 13 March 2020.
 // The grammar has been expanded to include some elements from the Web IDL Editor’s Draft, 24 September 2020
 // while still maintaining compatibility with the vast majority of IDL in the wild.
+// The grammar has been partiall updated to conform with the Living Standard update on 24 January 2022 sourced from https://webidl.spec.whatwg.org/
 
 // changes from the spec:
 // - Added `webIDL` wrapper type to simplify parsing a single unit.
@@ -12,19 +13,18 @@
 //   are defined by ExtendedAttributeNoArgs, ExtendedAttributeArgList, ExtendedAttributeIdent,
 //   ExtendedAttributeIdentList, ExtendedAttributeNamedArgList in the original spec. This change also meant that
 //   unused rules such as "other", "extendedAttributeRest", "extendedAttributeInner" and "otherOrComma" could be removed
-//   Also added support for extended attribtues that have a name and a string value and a named ident list
+//   Also added support for extended attributes that have a name and a string value and a named ident list
 // - Supported extended attribute on enumeration values
 // - We have also added a JAVADOC comment parsing in a separate lexer island that contains documentation for the webidl
 //   element in a javadoc-esque format. This is only allowed in specific places in the grammar which is NOT spec compliant
 //   but as we are not using this as a general parser, this should not be an issue.
-// - Retained the `void` return type to maintain compatibility with the majority of WebIDL that have not followed
-//   the crazyness associated with chasing crazy spec changes to remove void.
+// - Retained the `void` return type to maintain compatibility with the several specifications that have yet to be updated WebIDL.
 // - Added OR to operationNameKeyword rule to support operations named or (Used when defining ECMA's Atomics.or())
 // - Remove SYMBOL kind as now the type is defined WebIDL
 // - Change constMemberType to accept constant values of string types
 // - Removed the bufferRelatedType rule as we now define the types in WebIDL
-// - Added constMember as an alternative of namespaceMember so that namespaces can define constants
 // - Added constMemberName rule so constant names can be the same value as some other grammar tokens such as NaN
+// - Removed support for bigint, BigInt64Array and BigUint64Array as a plan has yet to be established on how to move forward with these in j2cl/GWT
 parser grammar WebIDLParser;
 
 options { tokenVocab=WebIDLLexer; }
@@ -395,8 +395,8 @@ namespaceMembers
 
 namespaceMember
   : regularOperation
-  | constMember
   | READONLY attributeRest
+  | constMember
 ;
 
 dictionary
@@ -571,6 +571,7 @@ extendedAttributes
 extendedAttribute
   : extendedAttributeNoArgs
   | extendedAttributeArgList
+  | extendedAttributeWildcard
   | extendedAttributeNamedString
   | extendedAttributeIdent
   | extendedAttributeIdentList
@@ -593,6 +594,10 @@ extendedAttributeNoArgs
 
 extendedAttributeArgList
   : IDENTIFIER OPEN_BRACKET argumentList CLOSE_BRACKET
+;
+
+extendedAttributeWildcard
+  : IDENTIFIER EQUALS WILDCARD
 ;
 
 extendedAttributeNamedString
@@ -860,6 +865,7 @@ Stringifier ::
 
 StringifierRest ::
     OptionalReadOnly AttributeRest
+    // The next rule was kept as DOMMatrixReadOnly defined by geometry_1 still uses it
     RegularOperation
     ;
 
@@ -906,6 +912,7 @@ NamespaceMembers ::
 NamespaceMember ::
     RegularOperation
     readonly AttributeRest
+    Const
 
 Dictionary ::
     dictionary identifier Inheritance { DictionaryMembers } ;
@@ -987,6 +994,7 @@ PrimitiveType ::
     UnsignedIntegerType
     UnrestrictedFloatType
     undefined
+    // Void is retained as several specifications still use this construct
     void
     boolean
     byte
@@ -1081,6 +1089,7 @@ Other ::
     =
     >
     ?
+    *
     ByteString
     DOMString
     FrozenArray
@@ -1108,6 +1117,7 @@ Other ::
     true
     unsigned
     undefined
+    // Void is retained as several specifications still use this construct
     void
     ArgumentNameKeyword
     BufferRelatedType
@@ -1131,6 +1141,9 @@ ExtendedAttributeArgList ::
 
 ExtendedAttributeIdent ::
     identifier = identifier
+
+ExtendedAttributeWildcard ::
+    identifier = *
 
 ExtendedAttributeIdentList ::
     identifier = ( IdentifierList )

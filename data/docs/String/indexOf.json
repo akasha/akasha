@@ -2,12 +2,12 @@
     "kind": "Method",
     "name": "String.indexOf",
     "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf",
-    "description": "The indexOf() method returns the index within the calling String object of the first occurrence of the specified value, starting the search at fromIndex. Returns -1 if the value is not found.",
+    "description": "The indexOf() method, given one argument: a substring to search for, searches the entire calling string, and returns the index of the first occurrence of the specified substring. Given a second argument: a number, the method returns the first occurrence of the specified substring at an index greater than or equal to the specified number.",
     "refs": [
         {
             "name": "ECMAScript Language Specification",
             "href": "https://tc39.es/ecma262/multipage/text-processing.html#sec-string.prototype.indexof",
-            "description": "(ECMAScript) # sec-string.prototype.indexof"
+            "description": "# sec-string.prototype.indexof"
         }
     ]
 }

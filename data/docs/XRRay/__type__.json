@@ -7,7 +7,7 @@
         {
             "name": "WebXR Hit Test Module",
             "href": "https://immersive-web.github.io/hit-test/#xrray-interface",
-            "description": "(WebXR Hit Test) # xrray-interface"
+            "description": "# xrray-interface"
         }
     ]
 }

@@ -5,6 +5,12 @@ interface mixin MixinC {
 interface mixin MixinD {
 };
 
+[Exposed=*]
+interface mixin MyGPU {
+  readonly attribute DOMString version;
+  undefined myMethod();
+};
+
 partial interface mixin PartialMixinC {
   attribute DOMString v1;
 };

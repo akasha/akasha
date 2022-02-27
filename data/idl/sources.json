@@ -1,6 +1,6 @@
 [
     {
-        "lastModifiedTime": 1636050780000,
+        "lastModifiedTime": 1644926034000,
         "name": "aria",
         "url": "https://w3c.github.io/aria/"
     },
@@ -9,7 +9,7 @@
         "name": "atomics"
     },
     {
-        "lastModifiedTime": 1629795521000,
+        "lastModifiedTime": 1636751218000,
         "name": "background_sync",
         "url": "https://wicg.github.io/background-sync/spec/"
     },
@@ -32,7 +32,7 @@
         "name": "closure_compiler_patch"
     },
     {
-        "lastModifiedTime": 1626681467000,
+        "lastModifiedTime": 1643031652000,
         "name": "common",
         "selector": "[data-level~=4.] ~ pre.idl",
         "url": "https://webidl.spec.whatwg.org/"
@@ -42,7 +42,7 @@
         "name": "common_patch"
     },
     {
-        "lastModifiedTime": 1617223351000,
+        "lastModifiedTime": 1642560762000,
         "name": "compression",
         "url": "https://wicg.github.io/compression/"
     },
@@ -52,37 +52,37 @@
         "url": "https://www.w3.org/TR/credential-management-1/"
     },
     {
-        "lastModifiedTime": 1636280100000,
+        "lastModifiedTime": 1645407193000,
         "name": "css_animations_1",
         "url": "https://drafts.csswg.org/css-animations/"
     },
     {
-        "lastModifiedTime": 1636280171000,
+        "lastModifiedTime": 1645407432000,
         "name": "css_conditional_3",
         "url": "https://drafts.csswg.org/css-conditional-3/"
     },
     {
-        "lastModifiedTime": 1636280199000,
+        "lastModifiedTime": 1645407471000,
         "name": "css_counter_styles_3",
         "url": "https://drafts.csswg.org/css-counter-styles-3/"
     },
     {
-        "lastModifiedTime": 1636280249000,
+        "lastModifiedTime": 1645407547000,
         "name": "css_fonts",
         "url": "https://drafts.csswg.org/css-fonts-4/"
     },
     {
-        "lastModifiedTime": 1636280591000,
+        "lastModifiedTime": 1645408788000,
         "name": "css_masking_1",
         "url": "https://drafts.fxtf.org/css-masking-1/"
     },
     {
-        "lastModifiedTime": 1636280356000,
+        "lastModifiedTime": 1645407720000,
         "name": "css_pseudo_4",
         "url": "https://drafts.csswg.org/css-pseudo-4"
     },
     {
-        "lastModifiedTime": 1636280461000,
+        "lastModifiedTime": 1645407863000,
         "name": "css_transitions",
         "url": "https://drafts.csswg.org/css-transitions/"
     },
@@ -96,7 +96,7 @@
         "name": "cssom_patch"
     },
     {
-        "lastModifiedTime": 1636280536000,
+        "lastModifiedTime": 1645407965000,
         "name": "cssom_view",
         "url": "https://drafts.csswg.org/cssom-view/"
     },
@@ -138,17 +138,17 @@
         "url": "https://www.w3.org/TR/filter-effects-1/"
     },
     {
-        "lastModifiedTime": 1628129099000,
+        "lastModifiedTime": 1644540228000,
         "name": "gamepad",
         "url": "https://www.w3.org/TR/gamepad/"
     },
     {
-        "lastModifiedTime": 1628129045000,
+        "lastModifiedTime": 1644540186000,
         "name": "gamepad_extensions",
         "url": "https://w3c.github.io/gamepad/extensions.html"
     },
     {
-        "lastModifiedTime": 1635983154000,
+        "lastModifiedTime": 1645402888000,
         "name": "geolocation_api",
         "url": "https://www.w3.org/TR/geolocation-API/"
     },
@@ -198,12 +198,12 @@
         "url": "https://w3c.github.io/media-playback-quality"
     },
     {
-        "lastModifiedTime": 1632900683000,
+        "lastModifiedTime": 1645090550000,
         "name": "media_source",
         "url": "https://www.w3.org/TR/media-source/"
     },
     {
-        "lastModifiedTime": 1635144531000,
+        "lastModifiedTime": 1644505927000,
         "name": "mediacapture_main",
         "url": "https://w3c.github.io/mediacapture-main/"
     },
@@ -221,7 +221,7 @@
         "name": "minimal_webgpu_integration"
     },
     {
-        "lastModifiedTime": 1632740766000,
+        "lastModifiedTime": 1643813752000,
         "name": "navigation_timing",
         "url": "https://w3c.github.io/navigation-timing/"
     },
@@ -230,12 +230,12 @@
         "name": "navigation_timing_patch"
     },
     {
-        "lastModifiedTime": 1631540505000,
+        "lastModifiedTime": 1643640524000,
         "name": "performance_timeline",
         "url": "https://w3c.github.io/performance-timeline/"
     },
     {
-        "lastModifiedTime": 1635456498000,
+        "lastModifiedTime": 1644938709000,
         "name": "permissions",
         "url": "https://www.w3.org/TR/permissions/"
     },
@@ -245,7 +245,7 @@
         "url": "https://www.w3.org/TR/pointerevents2/"
     },
     {
-        "lastModifiedTime": 1566971805000,
+        "lastModifiedTime": 1637122815000,
         "name": "pointerlock_2",
         "url": "https://www.w3.org/TR/pointerlock-2/"
     },
@@ -264,7 +264,7 @@
         "url": "https://w3c.github.io/reporting/"
     },
     {
-        "lastModifiedTime": 1623915120000,
+        "lastModifiedTime": 1642428086000,
         "name": "requestidlecallback",
         "url": "https://w3c.github.io/requestidlecallback/"
     },
@@ -274,12 +274,12 @@
         "url": "https://www.w3.org/TR/resize-observer/"
     },
     {
-        "lastModifiedTime": 1633351451000,
+        "lastModifiedTime": 1643301440000,
         "name": "resource_timing",
         "url": "https://w3c.github.io/resource-timing/"
     },
     {
-        "lastModifiedTime": 1636071354000,
+        "lastModifiedTime": 1643903438000,
         "name": "screen_capture",
         "url": "https://w3c.github.io/mediacapture-screen-share/"
     },
@@ -289,7 +289,7 @@
         "url": "https://www.w3.org/TR/screen-orientation/"
     },
     {
-        "lastModifiedTime": 1633591318000,
+        "lastModifiedTime": 1643216023000,
         "name": "screen_wake_lock",
         "url": "https://w3c.github.io/screen-wake-lock"
     },
@@ -307,10 +307,6 @@
         "lastModifiedTime": 1597781452000,
         "name": "speech_api",
         "url": "https://wicg.github.io/speech-api/"
-    },
-    {
-        "lastModifiedTime": 1601582653000,
-        "name": "streams"
     },
     {
         "lastModifiedTime": 0,
@@ -374,12 +370,12 @@
         "url": "https://www.w3.org/TR/web-animations-1/"
     },
     {
-        "lastModifiedTime": 1632868494000,
+        "lastModifiedTime": 1644860767000,
         "name": "web_audio_api",
         "url": "https://webaudio.github.io/web-audio-api/"
     },
     {
-        "lastModifiedTime": 1630568964000,
+        "lastModifiedTime": 1638215159000,
         "name": "web_bluetooth",
         "url": "https://webbluetoothcg.github.io/web-bluetooth/"
     },
@@ -389,12 +385,12 @@
         "url": "https://webaudio.github.io/web-midi-api"
     },
     {
-        "lastModifiedTime": 1634096842000,
+        "lastModifiedTime": 1637585381000,
         "name": "web_share",
         "url": "https://www.w3.org/TR/web-share/"
     },
     {
-        "lastModifiedTime": 1634556317000,
+        "lastModifiedTime": 1643151247000,
         "name": "webappsec_csp",
         "url": "https://w3c.github.io/webappsec-csp/"
     },
@@ -404,12 +400,12 @@
         "url": "https://www.w3.org/TR/webauthn/"
     },
     {
-        "lastModifiedTime": 1634695212000,
+        "lastModifiedTime": 1645054270000,
         "name": "webcodecs",
         "url": "https://www.w3.org/TR/webcodecs/"
     },
     {
-        "lastModifiedTime": 1635223780000,
+        "lastModifiedTime": 1643222401000,
         "name": "webcrypto",
         "url": "https://w3c.github.io/webcrypto/"
     },
@@ -433,142 +429,142 @@
         "name": "webgl2_patch"
     },
     {
-        "lastModifiedTime": 1634003206000,
+        "lastModifiedTime": 1644947553000,
         "name": "webgl_angle_instanced_arrays",
         "url": "https://www.khronos.org/registry/webgl/extensions/ANGLE_instanced_arrays/"
     },
     {
-        "lastModifiedTime": 1634003206000,
+        "lastModifiedTime": 1644947554000,
         "name": "webgl_color_buffer_float",
         "url": "https://www.khronos.org/registry/webgl/extensions/WEBGL_color_buffer_float/"
     },
     {
-        "lastModifiedTime": 1634003206000,
+        "lastModifiedTime": 1644947554000,
         "name": "webgl_compressed_texture_astc",
         "url": "https://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_astc/"
     },
     {
-        "lastModifiedTime": 1634003206000,
+        "lastModifiedTime": 1644947554000,
         "name": "webgl_compressed_texture_etc",
         "url": "https://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_etc/"
     },
     {
-        "lastModifiedTime": 1634003206000,
+        "lastModifiedTime": 1644947554000,
         "name": "webgl_compressed_texture_etc1",
         "url": "https://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_etc1/"
     },
     {
-        "lastModifiedTime": 1634003206000,
+        "lastModifiedTime": 1644947554000,
         "name": "webgl_compressed_texture_pvrtc",
         "url": "https://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_pvrtc/"
     },
     {
-        "lastModifiedTime": 1634003206000,
+        "lastModifiedTime": 1644947554000,
         "name": "webgl_compressed_texture_s3tc",
         "url": "https://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_s3tc/"
     },
     {
-        "lastModifiedTime": 1634003207000,
+        "lastModifiedTime": 1644947554000,
         "name": "webgl_compressed_texture_s3tc_srgb",
         "url": "https://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_s3tc_srgb/"
     },
     {
-        "lastModifiedTime": 1634003207000,
+        "lastModifiedTime": 1644947554000,
         "name": "webgl_debug_renderer_info",
         "url": "https://www.khronos.org/registry/webgl/extensions/WEBGL_debug_renderer_info/"
     },
     {
-        "lastModifiedTime": 1634003207000,
+        "lastModifiedTime": 1644947554000,
         "name": "webgl_debug_shaders",
         "url": "https://www.khronos.org/registry/webgl/extensions/WEBGL_debug_shaders/"
     },
     {
-        "lastModifiedTime": 1634003207000,
+        "lastModifiedTime": 1644947554000,
         "name": "webgl_depth_texture",
         "url": "https://www.khronos.org/registry/webgl/extensions/WEBGL_depth_texture/"
     },
     {
-        "lastModifiedTime": 1634003207000,
+        "lastModifiedTime": 1644947554000,
         "name": "webgl_draw_buffers",
         "url": "https://www.khronos.org/registry/webgl/extensions/WEBGL_draw_buffers/"
     },
     {
-        "lastModifiedTime": 1634003206000,
+        "lastModifiedTime": 1644947553000,
         "name": "webgl_ext_blend_minmax",
         "url": "https://www.khronos.org/registry/webgl/extensions/EXT_blend_minmax/"
     },
     {
-        "lastModifiedTime": 1634003206000,
+        "lastModifiedTime": 1644947553000,
         "name": "webgl_ext_color_buffer_float",
         "url": "https://www.khronos.org/registry/webgl/extensions/EXT_color_buffer_float/"
     },
     {
-        "lastModifiedTime": 1634003206000,
+        "lastModifiedTime": 1644947553000,
         "name": "webgl_ext_color_buffer_half_float",
         "url": "https://www.khronos.org/registry/webgl/extensions/EXT_color_buffer_half_float/"
     },
     {
-        "lastModifiedTime": 1634003206000,
+        "lastModifiedTime": 1644947553000,
         "name": "webgl_ext_disjoint_timer_query",
         "url": "https://www.khronos.org/registry/webgl/extensions/EXT_disjoint_timer_query/"
     },
     {
-        "lastModifiedTime": 1634003206000,
+        "lastModifiedTime": 1644947553000,
         "name": "webgl_ext_disjoint_timer_query_webgl2",
         "url": "https://www.khronos.org/registry/webgl/extensions/EXT_disjoint_timer_query_webgl2/"
     },
     {
-        "lastModifiedTime": 1634003206000,
+        "lastModifiedTime": 1644947553000,
         "name": "webgl_ext_float_blend",
         "url": "https://www.khronos.org/registry/webgl/extensions/EXT_float_blend/"
     },
     {
-        "lastModifiedTime": 1634003206000,
+        "lastModifiedTime": 1644947553000,
         "name": "webgl_ext_frag_depth",
         "url": "https://www.khronos.org/registry/webgl/extensions/EXT_frag_depth/"
     },
     {
-        "lastModifiedTime": 1634003206000,
+        "lastModifiedTime": 1644947553000,
         "name": "webgl_ext_shader_texture_lod",
         "url": "https://www.khronos.org/registry/webgl/extensions/EXT_shader_texture_lod/"
     },
     {
-        "lastModifiedTime": 1634003206000,
+        "lastModifiedTime": 1644947553000,
         "name": "webgl_ext_srgb",
         "url": "https://www.khronos.org/registry/webgl/extensions/EXT_sRGB/"
     },
     {
-        "lastModifiedTime": 1634003206000,
+        "lastModifiedTime": 1644947553000,
         "name": "webgl_ext_texture_compression_bptc",
         "url": "https://www.khronos.org/registry/webgl/extensions/EXT_texture_compression_bptc/"
     },
     {
-        "lastModifiedTime": 1634003206000,
+        "lastModifiedTime": 1644947553000,
         "name": "webgl_ext_texture_compression_rgtc",
         "url": "https://www.khronos.org/registry/webgl/extensions/EXT_texture_compression_rgtc/"
     },
     {
-        "lastModifiedTime": 1634003206000,
+        "lastModifiedTime": 1644947553000,
         "name": "webgl_ext_texture_filter_anisotropic",
         "url": "https://www.khronos.org/registry/webgl/extensions/EXT_texture_filter_anisotropic/"
     },
     {
-        "lastModifiedTime": 1634003206000,
+        "lastModifiedTime": 1644947553000,
         "name": "webgl_ext_texture_norm16",
         "url": "https://www.khronos.org/registry/webgl/extensions/EXT_texture_norm16/"
     },
     {
-        "lastModifiedTime": 1634003206000,
+        "lastModifiedTime": 1644947553000,
         "name": "webgl_khr_parallel_shader_compile",
         "url": "https://www.khronos.org/registry/webgl/extensions/KHR_parallel_shader_compile/"
     },
     {
-        "lastModifiedTime": 1634003207000,
+        "lastModifiedTime": 1644947554000,
         "name": "webgl_lose_context",
         "url": "https://www.khronos.org/registry/webgl/extensions/WEBGL_lose_context/"
     },
     {
-        "lastModifiedTime": 1634003207000,
+        "lastModifiedTime": 1644947554000,
         "name": "webgl_multi_draw",
         "url": "https://www.khronos.org/registry/webgl/extensions/WEBGL_multi_draw/"
     },
@@ -577,52 +573,52 @@
         "name": "webgl_oculus_multiview"
     },
     {
-        "lastModifiedTime": 1634003206000,
+        "lastModifiedTime": 1644947553000,
         "name": "webgl_oes_element_index_uint",
         "url": "https://www.khronos.org/registry/webgl/extensions/OES_element_index_uint/"
     },
     {
-        "lastModifiedTime": 1634003206000,
+        "lastModifiedTime": 1644947553000,
         "name": "webgl_oes_fbo_render_mipmap",
         "url": "https://www.khronos.org/registry/webgl/extensions/OES_fbo_render_mipmap/"
     },
     {
-        "lastModifiedTime": 1634003206000,
+        "lastModifiedTime": 1644947553000,
         "name": "webgl_oes_standard_derivatives",
         "url": "https://www.khronos.org/registry/webgl/extensions/OES_standard_derivatives/"
     },
     {
-        "lastModifiedTime": 1634003206000,
+        "lastModifiedTime": 1644947553000,
         "name": "webgl_oes_texture_float",
         "url": "https://www.khronos.org/registry/webgl/extensions/OES_texture_float/"
     },
     {
-        "lastModifiedTime": 1634003206000,
+        "lastModifiedTime": 1644947554000,
         "name": "webgl_oes_texture_float_linear",
         "url": "https://www.khronos.org/registry/webgl/extensions/OES_texture_float_linear/"
     },
     {
-        "lastModifiedTime": 1634003206000,
+        "lastModifiedTime": 1644947554000,
         "name": "webgl_oes_texture_half_float",
         "url": "https://www.khronos.org/registry/webgl/extensions/OES_texture_half_float/"
     },
     {
-        "lastModifiedTime": 1634003206000,
+        "lastModifiedTime": 1644947554000,
         "name": "webgl_oes_texture_half_float_linear",
         "url": "https://www.khronos.org/registry/webgl/extensions/OES_texture_half_float_linear/"
     },
     {
-        "lastModifiedTime": 1634003206000,
+        "lastModifiedTime": 1644947554000,
         "name": "webgl_oes_vertex_array_object",
         "url": "https://www.khronos.org/registry/webgl/extensions/OES_vertex_array_object/"
     },
     {
-        "lastModifiedTime": 1634003206000,
+        "lastModifiedTime": 1644947554000,
         "name": "webgl_ovr_multiview2",
         "url": "https://www.khronos.org/registry/webgl/extensions/OVR_multiview2/"
     },
     {
-        "lastModifiedTime": 1635811951000,
+        "lastModifiedTime": 1645216472000,
         "name": "webgpu",
         "url": "https://www.w3.org/TR/webgpu/"
     },
@@ -631,12 +627,12 @@
         "name": "webgpu_patch"
     },
     {
-        "lastModifiedTime": 1636040654000,
+        "lastModifiedTime": 1644305962000,
         "name": "webrtc",
         "url": "https://w3c.github.io/webrtc-pc/"
     },
     {
-        "lastModifiedTime": 1626358363000,
+        "lastModifiedTime": 1643881903000,
         "name": "webrtc_identity",
         "url": "https://w3c.github.io/webrtc-identity/"
     },
@@ -646,12 +642,12 @@
         "url": "https://w3c.github.io/webrtc-priority/"
     },
     {
-        "lastModifiedTime": 1626376594000,
+        "lastModifiedTime": 1645134525000,
         "name": "webrtc_stats",
         "url": "https://w3c.github.io/webrtc-stats/"
     },
     {
-        "lastModifiedTime": 1633536437000,
+        "lastModifiedTime": 1642718192000,
         "name": "webusb",
         "url": "https://wicg.github.io/webusb/"
     },
@@ -661,7 +657,7 @@
         "url": "https://www.w3.org/TR/webvtt1/"
     },
     {
-        "lastModifiedTime": 1635276855000,
+        "lastModifiedTime": 1644358313000,
         "name": "webxr",
         "url": "https://www.w3.org/TR/webxr/"
     },
@@ -671,27 +667,27 @@
         "url": "https://immersive-web.github.io/anchors/"
     },
     {
-        "lastModifiedTime": 1629820427000,
+        "lastModifiedTime": 1643924419000,
         "name": "webxr_ar_module_1",
         "url": "https://www.w3.org/TR/webxr-ar-module-1/"
     },
     {
-        "lastModifiedTime": 1633022746000,
+        "lastModifiedTime": 1644888403000,
         "name": "webxr_depth_sensing",
         "url": "https://immersive-web.github.io/depth-sensing/"
     },
     {
-        "lastModifiedTime": 1630349636000,
+        "lastModifiedTime": 1644953999000,
         "name": "webxr_dom_overlays",
         "url": "https://immersive-web.github.io/dom-overlays/"
     },
     {
-        "lastModifiedTime": 1629820680000,
+        "lastModifiedTime": 1643901067000,
         "name": "webxr_gamepads_module_1",
         "url": "https://www.w3.org/TR/webxr-gamepads-module-1/"
     },
     {
-        "lastModifiedTime": 1629821223000,
+        "lastModifiedTime": 1641418972000,
         "name": "webxr_hand_input",
         "url": "https://www.w3.org/TR/webxr-hand-input-1/"
     },
@@ -701,7 +697,7 @@
         "url": "https://immersive-web.github.io/hit-test"
     },
     {
-        "lastModifiedTime": 1629820809000,
+        "lastModifiedTime": 1641419609000,
         "name": "webxr_layers",
         "url": "https://www.w3.org/TR/webxrlayers-1/"
     },
@@ -711,7 +707,7 @@
         "url": "https://immersive-web.github.io/lighting-estimation/"
     },
     {
-        "lastModifiedTime": 1634564498000,
+        "lastModifiedTime": 1644965552000,
         "name": "whatwg_compat",
         "url": "https://compat.spec.whatwg.org/"
     },
@@ -721,7 +717,7 @@
         "url": "https://console.spec.whatwg.org/"
     },
     {
-        "lastModifiedTime": 1634546077000,
+        "lastModifiedTime": 1644316894000,
         "name": "whatwg_dom",
         "url": "https://dom.spec.whatwg.org/"
     },
@@ -730,12 +726,12 @@
         "name": "whatwg_dom_patch"
     },
     {
-        "lastModifiedTime": 1632750188000,
+        "lastModifiedTime": 1643034361000,
         "name": "whatwg_encoding",
         "url": "https://encoding.spec.whatwg.org/"
     },
     {
-        "lastModifiedTime": 1635962261000,
+        "lastModifiedTime": 1644586928000,
         "name": "whatwg_fetch",
         "url": "https://fetch.spec.whatwg.org/"
     },
@@ -744,12 +740,17 @@
         "name": "whatwg_formcontrols_patch"
     },
     {
-        "lastModifiedTime": 1626712266000,
+        "lastModifiedTime": 1643907718000,
+        "name": "whatwg_fs",
+        "url": "https://fs.spec.whatwg.org/"
+    },
+    {
+        "lastModifiedTime": 1642442613000,
         "name": "whatwg_fullscreen",
         "url": "https://fullscreen.spec.whatwg.org/"
     },
     {
-        "lastModifiedTime": 1636123453000,
+        "lastModifiedTime": 1645204296000,
         "name": "whatwg_html",
         "url": "https://html.spec.whatwg.org/"
     },
@@ -758,22 +759,32 @@
         "name": "whatwg_html_patch"
     },
     {
-        "lastModifiedTime": 1634827545000,
+        "lastModifiedTime": 1642442033000,
         "name": "whatwg_notifications",
         "url": "https://notifications.spec.whatwg.org/"
     },
     {
-        "lastModifiedTime": 1629097545000,
+        "lastModifiedTime": 1644602354000,
         "name": "whatwg_storage",
         "url": "https://storage.spec.whatwg.org/"
     },
     {
-        "lastModifiedTime": 1635176819000,
+        "lastModifiedTime": 1644448210000,
+        "name": "whatwg_streams",
+        "not_the_url": "https://streams.spec.whatwg.org/"
+    },
+    {
+        "lastModifiedTime": 1644603568000,
         "name": "whatwg_url",
         "url": "https://url.spec.whatwg.org/"
     },
     {
-        "lastModifiedTime": 1635259733000,
+        "lastModifiedTime": 1645198719000,
+        "name": "whatwg_websockets",
+        "url": "https://websockets.spec.whatwg.org/"
+    },
+    {
+        "lastModifiedTime": 1644583718000,
         "name": "whatwg_xhr",
         "url": "https://xhr.spec.whatwg.org/"
     },

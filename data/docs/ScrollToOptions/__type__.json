@@ -7,7 +7,7 @@
         {
             "name": "CSSOM View Module",
             "href": "https://drafts.csswg.org/cssom-view/#dom-window-scroll",
-            "description": "(CSSOM View) # dom-window-scroll"
+            "description": "# dom-window-scroll"
         }
     ]
 }

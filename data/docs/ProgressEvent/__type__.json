@@ -7,7 +7,7 @@
         {
             "name": "XMLHttpRequest Standard",
             "href": "https://xhr.spec.whatwg.org/#interface-progressevent",
-            "description": "(XMLHttpRequest) # interface-progressevent"
+            "description": "# interface-progressevent"
         }
     ]
 }

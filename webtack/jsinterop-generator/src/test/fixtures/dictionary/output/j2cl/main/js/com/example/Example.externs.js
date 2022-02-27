@@ -43,6 +43,10 @@ var txAuthGenericArg;
  */
 var GPURenderPassColorAttachment;
 /**
+ * @typedef {{done:(!boolean|undefined),value:(!ArrayBufferViewOrUndefinedUnion|undefined)}}
+ */
+var ReadableStreamBYOBReadResult;
+/**
  * @typedef {{someValue:*}}
  */
 var RequiredAnyDict;
@@ -92,3 +96,7 @@ Storage.prototype.key = function(index) {}
  * @nosideeffects
  */
 function GPUQuerySet() {}
+/**
+ * @typedef {(!ArrayBufferView|undefined)}
+ */
+var ArrayBufferViewOrUndefinedUnion;

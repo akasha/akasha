@@ -1,6 +1,6 @@
 {
     "name": "DeviceMotionEvent",
-    "lastModifiedAt": 1629769787000,
+    "lastModifiedAt": 1645233120000,
     "entries": [
         {
             "name": "DeviceMotionEvent",
@@ -8,7 +8,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1629769787000
+            "lastModifiedAt": 1645233120000
         },
         {
             "name": "acceleration",

@@ -9,8 +9,4 @@ public final class SpeechRecognitionErrorEventTestCompile {
   public static String message(final SpeechRecognitionErrorEvent type) {
     return type.message();
   }
-
-  public static String messageDescription(final SpeechRecognitionErrorEvent $instance) {
-    return $instance.messageDescription();
-  }
 }

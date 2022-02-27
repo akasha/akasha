@@ -7,7 +7,7 @@
         {
             "name": "CSS Object Model (CSSOM)",
             "href": "https://drafts.csswg.org/cssom/#the-medialist-interface",
-            "description": "(CSSOM) # the-medialist-interface"
+            "description": "# the-medialist-interface"
         }
     ]
 }

@@ -7,7 +7,7 @@
         {
             "name": "Content Security Policy Level 3",
             "href": "https://w3c.github.io/webappsec-csp/#report-violation",
-            "description": "(Content Security Policy 3) # report-violation"
+            "description": "# report-violation"
         }
     ]
 }

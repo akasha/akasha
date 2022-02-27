@@ -7,7 +7,7 @@
         {
             "name": "HTML Standard",
             "href": "https://html.spec.whatwg.org/multipage/obsolete.html#mimetype",
-            "description": "(HTML) # mimetype"
+            "description": "# mimetype"
         }
     ]
 }

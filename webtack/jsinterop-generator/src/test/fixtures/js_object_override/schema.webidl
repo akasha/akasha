@@ -2,40 +2,40 @@ typedef double Timestamp;
 
 [JavaName=JsBoolean]
 interface Boolean {
+  DOMString toString();
   boolean valueOf();
-  stringifier DOMString toString();
 };
 
 [JavaName=JsDate]
 interface Date {
+  DOMString toString();
   Timestamp valueOf();
-  stringifier DOMString toString();
 };
 
 interface MyBoolean {
+  DOMString toString();
   boolean valueOf();
-  stringifier DOMString toString();
 };
 
 interface MyDate {
+  DOMString toString();
   Timestamp valueOf();
-  stringifier DOMString toString();
 };
 
 interface MyNumber {
   unrestricted double valueOf();
-  stringifier DOMString toString( optional long radix );
+  stringifier;
 };
 
 interface MyString {
+  DOMString toString();
   DOMString valueOf();
-  stringifier DOMString toString();
 };
 
 [JavaName=JsNumber]
 interface Number {
   unrestricted double valueOf();
-  stringifier DOMString toString( optional long radix );
+  stringifier;
 };
 
 interface ReportBody {
@@ -45,8 +45,8 @@ interface ReportBody {
 
 [JavaName=JsString]
 interface String {
+  DOMString toString();
   DOMString valueOf();
-  stringifier DOMString toString();
 };
 
 interface WebAssemblyGlobal {

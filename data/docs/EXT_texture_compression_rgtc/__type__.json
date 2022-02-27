@@ -6,8 +6,7 @@
     "refs": [
         {
             "name": "WebGL EXT_texture_compression_rgtc Extension Specification",
-            "href": "https://www.khronos.org/registry/webgl/extensions/EXT_texture_compression_rgtc/",
-            "description": "(WebGL EXT_texture_compression_rgtc Extension)"
+            "href": "https://www.khronos.org/registry/webgl/extensions/EXT_texture_compression_rgtc/"
         }
     ]
 }

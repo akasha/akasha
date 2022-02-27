@@ -7,7 +7,7 @@
         {
             "name": "HTML Standard",
             "href": "https://html.spec.whatwg.org/multipage/web-messaging.html#message-channels",
-            "description": "(HTML) # message-channels"
+            "description": "# message-channels"
         }
     ]
 }

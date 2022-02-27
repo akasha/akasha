@@ -1,6 +1,6 @@
 {
     "name": "DocumentFragment",
-    "lastModifiedAt": 1629769814000,
+    "lastModifiedAt": 1645233118000,
     "entries": [
         {
             "name": "DocumentFragment",
@@ -8,7 +8,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1629769814000
+            "lastModifiedAt": 1645233118000
         },
         {
             "name": "childElementCount",

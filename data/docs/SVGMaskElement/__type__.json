@@ -7,7 +7,7 @@
         {
             "name": "CSS Masking Module Level 1",
             "href": "https://drafts.fxtf.org/css-masking/#InterfaceSVGMaskElement",
-            "description": "(CSS Masking 1) # InterfaceSVGMaskElement"
+            "description": "# InterfaceSVGMaskElement"
         }
     ]
 }

@@ -7,7 +7,7 @@
         {
             "name": "HTML Standard",
             "href": "https://html.spec.whatwg.org/multipage/web-messaging.html#message-ports",
-            "description": "(HTML) # message-ports"
+            "description": "# message-ports"
         }
     ]
 }

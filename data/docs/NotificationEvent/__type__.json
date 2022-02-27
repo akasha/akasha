@@ -7,7 +7,7 @@
         {
             "name": "Notifications API Standard",
             "href": "https://notifications.spec.whatwg.org/#notificationevent",
-            "description": "(Notifications API) # notificationevent"
+            "description": "# notificationevent"
         }
     ]
 }

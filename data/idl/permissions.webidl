@@ -1,46 +1,22 @@
-enum PermissionName {
-  "accelerometer",
-  "ambient-light-sensor",
-  "background-fetch",
-  "background-sync",
-  "bluetooth",
-  "camera",
-  "display-capture",
-  "geolocation",
-  "gyroscope",
-  "magnetometer",
-  "microphone",
-  "midi",
-  "nfc",
-  "notifications",
-  "persistent-storage",
-  "push",
-  "screen-wake-lock",
-  "speaker-selection",
-  "xr-spatial-tracking"
-};
-
 enum PermissionState {
   "denied",
   "granted",
   "prompt"
 };
 
-dictionary CameraDevicePermissionDescriptor : DevicePermissionDescriptor {
-  boolean panTiltZoom = false;
-};
-
-dictionary DevicePermissionDescriptor : PermissionDescriptor {
-  DOMString deviceId;
-};
-
 dictionary PermissionDescriptor {
-  required PermissionName name;
+  required DOMString name;
+};
+
+dictionary PermissionSetParameters {
+  required PermissionDescriptor descriptor;
+  required PermissionState state;
+  boolean oneRealm = false;
 };
 
 [Exposed=(Window,Worker)]
 interface PermissionStatus : EventTarget {
-  readonly attribute PermissionName name;
+  readonly attribute DOMString name;
   readonly attribute PermissionState state;
   attribute EventHandler onchange;
 };

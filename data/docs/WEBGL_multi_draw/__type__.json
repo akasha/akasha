@@ -6,8 +6,7 @@
     "refs": [
         {
             "name": "WebGL WEBGL_multi_draw Extension Specification",
-            "href": "https://www.khronos.org/registry/webgl/extensions/WEBGL_multi_draw/",
-            "description": "(WebGL WEBGL_multi_draw Extension)"
+            "href": "https://www.khronos.org/registry/webgl/extensions/WEBGL_multi_draw/"
         }
     ]
 }

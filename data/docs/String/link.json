@@ -7,7 +7,7 @@
         {
             "name": "ECMAScript Language Specification",
             "href": "https://tc39.es/ecma262/multipage/additional-ecmascript-features-for-web-browsers.html#sec-string.prototype.link",
-            "description": "(ECMAScript) # sec-string.prototype.link"
+            "description": "# sec-string.prototype.link"
         }
     ]
 }

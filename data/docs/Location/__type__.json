@@ -7,7 +7,7 @@
         {
             "name": "HTML Standard",
             "href": "https://html.spec.whatwg.org/multipage/history.html#the-location-interface",
-            "description": "(HTML) # the-location-interface"
+            "description": "# the-location-interface"
         }
     ]
 }

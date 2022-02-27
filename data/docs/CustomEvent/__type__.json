@@ -7,7 +7,7 @@
         {
             "name": "DOM Standard",
             "href": "https://dom.spec.whatwg.org/#interface-customevent",
-            "description": "(DOM) # interface-customevent"
+            "description": "# interface-customevent"
         }
     ]
 }

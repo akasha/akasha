@@ -7,7 +7,7 @@
         {
             "name": "ECMAScript Language Specification",
             "href": "https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-symbol.search",
-            "description": "(ECMAScript) # sec-symbol.search"
+            "description": "# sec-symbol.search"
         }
     ]
 }

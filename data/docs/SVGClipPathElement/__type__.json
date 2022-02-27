@@ -7,7 +7,7 @@
         {
             "name": "CSS Masking Module Level 1",
             "href": "https://drafts.fxtf.org/css-masking/#InterfaceSVGClipPathElement",
-            "description": "(CSS Masking 1) # InterfaceSVGClipPathElement"
+            "description": "# InterfaceSVGClipPathElement"
         }
     ]
 }

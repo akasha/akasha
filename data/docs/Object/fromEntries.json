@@ -7,7 +7,7 @@
         {
             "name": "ECMAScript Language Specification",
             "href": "https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-object.fromentries",
-            "description": "(ECMAScript) # sec-object.fromentries"
+            "description": "# sec-object.fromentries"
         }
     ]
 }

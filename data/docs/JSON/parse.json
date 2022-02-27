@@ -7,7 +7,7 @@
         {
             "name": "ECMAScript Language Specification",
             "href": "https://tc39.es/ecma262/multipage/structured-data.html#sec-json.parse",
-            "description": "(ECMAScript) # sec-json.parse"
+            "description": "# sec-json.parse"
         }
     ]
 }

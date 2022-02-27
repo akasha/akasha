@@ -7,7 +7,7 @@
         {
             "name": "DOM Standard",
             "href": "https://dom.spec.whatwg.org/#interface-staticrange",
-            "description": "(DOM) # interface-staticrange"
+            "description": "# interface-staticrange"
         }
     ]
 }

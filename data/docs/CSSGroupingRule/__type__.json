@@ -7,7 +7,7 @@
         {
             "name": "CSS Object Model (CSSOM)",
             "href": "https://drafts.csswg.org/cssom/#the-cssgroupingrule-interface",
-            "description": "(CSSOM) # the-cssgroupingrule-interface"
+            "description": "# the-cssgroupingrule-interface"
         }
     ]
 }

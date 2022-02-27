@@ -7,7 +7,7 @@
         {
             "name": "ECMAScript Language Specification",
             "href": "https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-math.log2",
-            "description": "(ECMAScript) # sec-math.log2"
+            "description": "# sec-math.log2"
         }
     ]
 }

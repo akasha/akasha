@@ -7,7 +7,7 @@
         {
             "name": "HTML Standard",
             "href": "https://html.spec.whatwg.org/multipage/custom-elements.html#custom-elements-api",
-            "description": "(HTML) # custom-elements-api"
+            "description": "# custom-elements-api"
         }
     ]
 }

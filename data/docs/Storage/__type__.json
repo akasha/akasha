@@ -7,7 +7,7 @@
         {
             "name": "HTML Standard",
             "href": "https://html.spec.whatwg.org/multipage/webstorage.html#storage",
-            "description": "(HTML) # storage"
+            "description": "# storage"
         }
     ]
 }

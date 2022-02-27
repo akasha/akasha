@@ -7,7 +7,7 @@
         {
             "name": "HTML Standard",
             "href": "https://html.spec.whatwg.org/multipage/sections.html#htmlheadingelement",
-            "description": "(HTML) # htmlheadingelement"
+            "description": "# htmlheadingelement"
         }
     ]
 }

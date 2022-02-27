@@ -7,7 +7,7 @@
         {
             "name": "WebRTC 1.0: Real-Time Communication Between Browsers",
             "href": "https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnection-createanswer",
-            "description": "(WebRTC 1.0) # dom-rtcpeerconnection-createanswer"
+            "description": "# dom-rtcpeerconnection-createanswer"
         }
     ]
 }

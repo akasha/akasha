@@ -7,7 +7,7 @@
         {
             "name": "CSS Object Model (CSSOM)",
             "href": "https://drafts.csswg.org/cssom/#the-cssstylesheet-interface",
-            "description": "(CSSOM) # the-cssstylesheet-interface"
+            "description": "# the-cssstylesheet-interface"
         }
     ]
 }

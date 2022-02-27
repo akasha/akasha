@@ -16,12 +16,12 @@ public class MyString {
   protected MyString() {
   }
 
-  @JsNonNull
-  public native String valueOf();
-
   @JsMethod(
       name = "toString"
   )
   @JsNonNull
   public native String toString_();
+
+  @JsNonNull
+  public native String valueOf();
 }

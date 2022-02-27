@@ -1,0 +1,13 @@
+{
+    "kind": "Type",
+    "name": "FileSystemDirectoryHandle",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/FileSystemDirectoryHandle",
+    "description": "The FileSystemDirectoryHandle interface of the File System Access API provides a handle to a file system directory. The interface is accessed via the window.showDirectoryPicker() method.",
+    "refs": [
+        {
+            "name": "File System Access",
+            "href": "https://wicg.github.io/file-system-access/#api-filesystemdirectoryhandle",
+            "description": "# api-filesystemdirectoryhandle"
+        }
+    ]
+}

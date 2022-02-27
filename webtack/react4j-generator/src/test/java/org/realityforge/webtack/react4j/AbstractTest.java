@@ -252,6 +252,7 @@ public abstract class AbstractTest
     assertEquals( exitCode, 0 );
   }
 
+  @SuppressWarnings( "SameParameterValue" )
   @Nonnull
   private List<Path> collectFilesWithExtension( @Nonnull final String extension, @Nonnull final Path... dirs )
     throws IOException

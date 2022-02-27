@@ -7,7 +7,7 @@
         {
             "name": "ECMAScript Language Specification",
             "href": "https://tc39.es/ecma262/multipage/additional-ecmascript-features-for-web-browsers.html#sec-object.prototype.__lookupSetter__",
-            "description": "(ECMAScript) # sec-object.prototype.__lookupSetter__"
+            "description": "# sec-object.prototype.__lookupSetter__"
         }
     ]
 }

@@ -1,6 +1,6 @@
 partial dictionary MouseEventInit {
-  long movementX = 0;
-  long movementY = 0;
+  double movementX = 0;
+  double movementY = 0;
 };
 
 partial interface mixin DocumentOrShadowRoot {
@@ -10,14 +10,14 @@ partial interface mixin DocumentOrShadowRoot {
 partial interface Document {
   attribute EventHandler onpointerlockchange;
   attribute EventHandler onpointerlockerror;
-  void exitPointerLock();
+  undefined exitPointerLock();
 };
 
 partial interface Element {
-  void requestPointerLock();
+  undefined requestPointerLock();
 };
 
 partial interface MouseEvent {
-  readonly attribute long movementX;
-  readonly attribute long movementY;
+  readonly attribute double movementX;
+  readonly attribute double movementY;
 };

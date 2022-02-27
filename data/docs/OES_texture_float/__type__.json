@@ -6,8 +6,7 @@
     "refs": [
         {
             "name": "WebGL OES_texture_float Khronos Ratified Extension Specification",
-            "href": "https://www.khronos.org/registry/webgl/extensions/OES_texture_float/",
-            "description": "(WebGL OES_texture_float Khronos Ratified Extension)"
+            "href": "https://www.khronos.org/registry/webgl/extensions/OES_texture_float/"
         }
     ]
 }

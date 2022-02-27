@@ -7,7 +7,7 @@
         {
             "name": "WebRTC 1.0: Real-Time Communication Between Browsers",
             "href": "https://w3c.github.io/webrtc-pc/#dom-rtctrackevent",
-            "description": "(WebRTC 1.0) # dom-rtctrackevent"
+            "description": "# dom-rtctrackevent"
         }
     ]
 }

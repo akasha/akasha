@@ -7,7 +7,7 @@
         {
             "name": "HTML Standard",
             "href": "https://html.spec.whatwg.org/multipage/canvas.html#the-offscreencanvas-interface",
-            "description": "(HTML) # the-offscreencanvas-interface"
+            "description": "# the-offscreencanvas-interface"
         }
     ]
 }

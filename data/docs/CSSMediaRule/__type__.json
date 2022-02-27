@@ -6,8 +6,8 @@
     "refs": [
         {
             "name": "CSS Conditional Rules Module Level 3",
-            "href": "https://drafts.csswg.org/css-conditional/#the-cssmediarule-interface",
-            "description": "(CSS Conditional 3) # the-cssmediarule-interface"
+            "href": "https://drafts.csswg.org/css-conditional-3/#the-cssmediarule-interface",
+            "description": "# the-cssmediarule-interface"
         }
     ]
 }

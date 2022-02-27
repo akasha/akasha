@@ -7,7 +7,7 @@
         {
             "name": "CSS Fonts Module Level 4",
             "href": "https://drafts.csswg.org/css-fonts/#om-fontface",
-            "description": "(CSS Fonts 4) # om-fontface"
+            "description": "# om-fontface"
         }
     ]
 }

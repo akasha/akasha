@@ -1,6 +1,6 @@
 {
     "name": "NotificationEvent",
-    "lastModifiedAt": 1629769814000,
+    "lastModifiedAt": 1645062578000,
     "entries": [
         {
             "name": "NotificationEvent",
@@ -8,7 +8,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1629769814000
+            "lastModifiedAt": 1645062578000
         },
         {
             "name": "action",

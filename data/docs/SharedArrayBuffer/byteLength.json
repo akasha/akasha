@@ -7,7 +7,7 @@
         {
             "name": "ECMAScript Language Specification",
             "href": "https://tc39.es/ecma262/multipage/structured-data.html#sec-get-sharedarraybuffer.prototype.bytelength",
-            "description": "(ECMAScript) # sec-get-sharedarraybuffer.prototype.bytelength"
+            "description": "# sec-get-sharedarraybuffer.prototype.bytelength"
         }
     ]
 }

@@ -1,0 +1,13 @@
+{
+    "kind": "Type",
+    "name": "CompressionStream",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/CompressionStream",
+    "description": "The CompressionStream interface of the Compression Streams API is an API for compressing a stream of data.",
+    "refs": [
+        {
+            "name": "Compression Streams",
+            "href": "https://wicg.github.io/compression/#compression-stream",
+            "description": "# compression-stream"
+        }
+    ]
+}

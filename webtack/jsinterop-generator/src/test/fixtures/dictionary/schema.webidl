@@ -41,6 +41,11 @@ dictionary RTCOfferOptions : RTCOfferAnswerOptions {
   boolean iceRestart = false;
 };
 
+dictionary ReadableStreamBYOBReadResult {
+  boolean done;
+  ( ArrayBufferView or undefined ) value;
+};
+
 dictionary RequiredAnyDict {
   required any someValue;
 };
@@ -64,6 +69,9 @@ dictionary TransitionEventInit : EventInit {
  */
 dictionary txAuthGenericArg {
   required USVString contentType;
+};
+
+interface ArrayBufferView {
 };
 
 interface GPUQuerySet {

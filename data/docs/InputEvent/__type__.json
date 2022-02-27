@@ -7,7 +7,7 @@
         {
             "name": "Input Events Level 2",
             "href": "https://w3c.github.io/input-events/#interface-InputEvent",
-            "description": "(Input Events 2) # interface-InputEvent"
+            "description": "# interface-InputEvent"
         },
         {
             "name": "UI Events",

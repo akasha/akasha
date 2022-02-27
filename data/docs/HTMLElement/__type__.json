@@ -7,7 +7,7 @@
         {
             "name": "HTML Standard",
             "href": "https://html.spec.whatwg.org/multipage/dom.html#htmlelement",
-            "description": "(HTML) # htmlelement"
+            "description": "# htmlelement"
         }
     ]
 }

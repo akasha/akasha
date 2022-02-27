@@ -7,7 +7,7 @@
         {
             "name": "HTML Standard",
             "href": "https://html.spec.whatwg.org/multipage/history.html#the-history-interface",
-            "description": "(HTML) # the-history-interface"
+            "description": "# the-history-interface"
         }
     ]
 }

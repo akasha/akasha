@@ -7,7 +7,7 @@
         {
             "name": "HTML Standard",
             "href": "https://html.spec.whatwg.org/multipage/embedded-content.html#htmlsourceelement",
-            "description": "(HTML) # htmlsourceelement"
+            "description": "# htmlsourceelement"
         }
     ]
 }

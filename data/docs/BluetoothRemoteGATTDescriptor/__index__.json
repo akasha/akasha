@@ -1,10 +1,10 @@
 {
     "name": "BluetoothRemoteGATTDescriptor",
-    "lastModifiedAt": 1629769819000,
+    "lastModifiedAt": 1645233124000,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1629769819000
+            "lastModifiedAt": 1645233124000
         },
         {
             "name": "characteristic",

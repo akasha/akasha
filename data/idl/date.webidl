@@ -105,6 +105,4 @@ interface Date {
   DOMString toUTCString();
 
   Timestamp valueOf();
-
-  stringifier DOMString toString();
 };

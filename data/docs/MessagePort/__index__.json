@@ -1,10 +1,10 @@
 {
     "name": "MessagePort",
-    "lastModifiedAt": 1629769795000,
+    "lastModifiedAt": 1645062558000,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1629769795000
+            "lastModifiedAt": 1645062558000
         },
         {
             "name": "close",

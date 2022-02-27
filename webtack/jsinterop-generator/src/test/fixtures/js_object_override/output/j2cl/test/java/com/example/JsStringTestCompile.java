@@ -6,11 +6,11 @@ import javax.annotation.Generated;
 public final class JsStringTestCompile {
   static JsString $typeReference$;
 
-  public static String valueOf(final JsString $instance) {
-    return $instance.valueOf();
-  }
-
   public static String toString_(final JsString $instance) {
     return $instance.toString_();
+  }
+
+  public static String valueOf(final JsString $instance) {
+    return $instance.valueOf();
   }
 }

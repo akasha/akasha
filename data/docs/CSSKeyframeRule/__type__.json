@@ -7,7 +7,7 @@
         {
             "name": "CSS Animations Level 2",
             "href": "https://drafts.csswg.org/css-animations/#interface-csskeyframerule",
-            "description": "(CSS Animations 2) # interface-csskeyframerule"
+            "description": "# interface-csskeyframerule"
         }
     ]
 }

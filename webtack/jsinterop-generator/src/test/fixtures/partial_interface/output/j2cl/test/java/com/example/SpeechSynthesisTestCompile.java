@@ -17,8 +17,4 @@ public final class SpeechSynthesisTestCompile {
   public static boolean speaking(final SpeechSynthesis type) {
     return type.speaking();
   }
-
-  public static void customToString(final SpeechSynthesis $instance) {
-    $instance.customToString();
-  }
 }

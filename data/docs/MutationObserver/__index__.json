@@ -1,6 +1,6 @@
 {
     "name": "MutationObserver",
-    "lastModifiedAt": 1629769799000,
+    "lastModifiedAt": 1645233130000,
     "entries": [
         {
             "name": "MutationObserver",
@@ -8,7 +8,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1629769799000
+            "lastModifiedAt": 1645233130000
         },
         {
             "name": "disconnect",

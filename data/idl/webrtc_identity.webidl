@@ -14,8 +14,8 @@ callback GenerateAssertionCallback = Promise<RTCIdentityAssertionResult> ( DOMSt
 callback ValidateAssertionCallback = Promise<RTCIdentityValidationResult> ( DOMString assertion, DOMString origin );
 
 dictionary RTCIdentityAssertionResult {
-  required DOMString assertion;
   required RTCIdentityProviderDetails idp;
+  required DOMString assertion;
 };
 
 dictionary RTCIdentityProvider {
@@ -35,8 +35,8 @@ dictionary RTCIdentityProviderOptions {
 };
 
 dictionary RTCIdentityValidationResult {
-  required DOMString contents;
   required DOMString identity;
+  required DOMString contents;
 };
 
 partial dictionary MediaStreamConstraints {
@@ -58,12 +58,12 @@ interface RTCIdentityAssertion {
   constructor( DOMString idp, DOMString name );
 };
 
-[Global, Exposed=RTCIdentityProviderGlobalScope]
+[Global=(Worker,RTCIdentityProvider), Exposed=RTCIdentityProvider]
 interface RTCIdentityProviderGlobalScope : WorkerGlobalScope {
   readonly attribute RTCIdentityProviderRegistrar rtcIdentityProvider;
 };
 
-[Exposed=RTCIdentityProviderGlobalScope]
+[Exposed=RTCIdentityProvider]
 interface RTCIdentityProviderRegistrar {
   undefined register( RTCIdentityProvider idp );
 };

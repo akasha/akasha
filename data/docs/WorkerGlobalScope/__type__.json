@@ -7,7 +7,7 @@
         {
             "name": "HTML Standard",
             "href": "https://html.spec.whatwg.org/multipage/workers.html#the-workerglobalscope-common-interface",
-            "description": "(HTML) # the-workerglobalscope-common-interface"
+            "description": "# the-workerglobalscope-common-interface"
         }
     ]
 }

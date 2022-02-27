@@ -168,6 +168,7 @@ interface XRSubImage {
 [Exposed=Window]
 interface XRWebGLBinding {
   readonly attribute double nativeProjectionScaleFactor;
+  readonly attribute boolean usesDepthValues;
   constructor( XRSession session, XRWebGLRenderingContext context );
   XRCubeLayer createCubeLayer( optional XRCubeLayerInit init = {} );
   XRCylinderLayer createCylinderLayer( optional XRCylinderLayerInit init = {} );

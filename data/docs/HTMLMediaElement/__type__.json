@@ -7,7 +7,7 @@
         {
             "name": "HTML Standard",
             "href": "https://html.spec.whatwg.org/multipage/media.html#htmlmediaelement",
-            "description": "(HTML) # htmlmediaelement"
+            "description": "# htmlmediaelement"
         }
     ]
 }

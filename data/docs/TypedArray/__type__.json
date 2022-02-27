@@ -7,7 +7,7 @@
         {
             "name": "ECMAScript Language Specification",
             "href": "https://tc39.es/ecma262/multipage/indexed-collections.html#sec-typedarray-objects",
-            "description": "(ECMAScript) # sec-typedarray-objects"
+            "description": "# sec-typedarray-objects"
         }
     ]
 }

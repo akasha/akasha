@@ -151,17 +151,17 @@ dictionary RTCAnswerOptions : RTCOfferAnswerOptions {
 
 dictionary RTCCertificateExpiration {
   [EnforceRange]
-  EpochTimeStamp expires;
+  unsigned long long expires;
 };
 
 dictionary RTCConfiguration {
-  RTCBundlePolicy bundlePolicy;
-  sequence<RTCCertificate> certificates;
+  RTCBundlePolicy bundlePolicy = "balanced";
+  sequence<RTCCertificate> certificates = [];
   [EnforceRange]
   octet iceCandidatePoolSize = 0;
-  sequence<RTCIceServer> iceServers;
-  RTCIceTransportPolicy iceTransportPolicy;
-  RTCRtcpMuxPolicy rtcpMuxPolicy;
+  sequence<RTCIceServer> iceServers = [];
+  RTCIceTransportPolicy iceTransportPolicy = "all";
+  RTCRtcpMuxPolicy rtcpMuxPolicy = "require";
 };
 
 dictionary RTCDTMFToneChangeEventInit : EventInit {

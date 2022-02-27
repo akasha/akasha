@@ -22,6 +22,11 @@ namespace NamespaceC {
 namespace NamespaceD {
 };
 
+[Exposed=*]
+namespace NamespaceE {
+  readonly attribute DOMString sharedVar;
+};
+
 [Exposed=(Window,Worker)]
 partial namespace PartialNamespaceA {
   readonly attribute DOMString sharedVar;
@@ -47,4 +52,9 @@ partial namespace PartialNamespaceD {
   undefined sharedMethod();
   [Exposed=Window]
   undefined windowMethod();
+};
+
+[Exposed=*]
+partial namespace PartialNamespaceE {
+  readonly attribute DOMString sharedVar;
 };

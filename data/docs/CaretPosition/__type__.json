@@ -7,7 +7,7 @@
         {
             "name": "CSSOM View Module",
             "href": "https://drafts.csswg.org/cssom-view/#caret-position",
-            "description": "(CSSOM View) # caret-position"
+            "description": "# caret-position"
         }
     ]
 }
