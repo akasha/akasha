@@ -104,7 +104,7 @@ load("@com_google_j2cl//build_defs:rules.bzl", "j2cl_import", "j2cl_application"
 
 load("@io_bazel_rules_closure//closure:defs.bzl", "closure_js_library")
 
-j2cl_import( name = "javaemul_internal_annotations-j2cl", jar = "@org_gwtproject_gwt//user:gwt-javaemul-internal-annotations", )
+j2cl_import( name = "javaemul_internal_annotations-j2cl", jar = "@com_google_j2cl//jre/java:javaemul_internal_annotations", )
 
 load("//:dependencies.bzl", "generate_targets")
 
