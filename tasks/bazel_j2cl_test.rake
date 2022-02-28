@@ -82,7 +82,7 @@ load("//:dependencies.bzl", "generate_workspace_rules")
 generate_workspace_rules()
 
 # Required for jsinterop-base dependencies
-_JSINTEROP_BASE_VERSION = "a2b98ca84a4daa04d69d90dce49bc74108ad733c"
+_JSINTEROP_BASE_VERSION = "4c08eea0ba9b419ec7a7abbf3b5db3187cb84ed8"
 http_archive(
     name = "com_google_jsinterop_base",
     strip_prefix = "jsinterop-base-%s" % _JSINTEROP_BASE_VERSION,
