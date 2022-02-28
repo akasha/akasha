@@ -8,6 +8,21 @@ public final class PromiseTestCompile
 {
   static Promise<?> $typeReference$;
 
+  public static <V> Promise<JsArray<AllSettledResult<V>>> allSettled( final Promise<? extends V>... promises )
+  {
+    return Promise.allSettled( promises );
+  }
+
+  public static <V> Promise<JsArray<AllSettledResult<V>>> allSettled( final JsIterable<Promise<? extends V>> promises )
+  {
+    return Promise.allSettled( promises );
+  }
+
+  public static <V> Promise<JsArray<V>> all( final Promise<? extends V>... promises )
+  {
+    return Promise.all( promises );
+  }
+
   public static <V> Promise<JsArray<V>> all( final JsIterable<Promise<? extends V>> promises )
   {
     return Promise.all( promises );

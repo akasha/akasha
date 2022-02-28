@@ -1,0 +1,49 @@
+[
+  {
+    "code": "java.class.added",
+    "description": "Class was added.",
+    "newElement": "class akasha.promise.AllSettledResult<T extends java.lang.Object>",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.promise.AllSettledResult",
+      "classSimpleName": "AllSettledResult",
+      "elementKind": "class",
+      "package": "akasha.promise"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method <V> akasha.promise.Promise<akasha.lang.JsArray<akasha.promise.AllSettledResult<V>>> akasha.promise.Promise<T>::allSettled(akasha.lang.JsIterable<akasha.promise.Promise<? extends V>>)",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.promise.Promise",
+      "classSimpleName": "Promise",
+      "elementKind": "method",
+      "methodName": "allSettled",
+      "package": "akasha.promise"
+    }
+  },
+  {
+    "code": "java.method.added",
+    "description": "Method was added.",
+    "newElement": "method <V> akasha.promise.Promise<akasha.lang.JsArray<akasha.promise.AllSettledResult<V>>> akasha.promise.Promise<T>::allSettled(akasha.promise.Promise<? extends V>[])",
+    "classification": {
+      "SOURCE": "NON_BREAKING",
+      "BINARY": "NON_BREAKING"
+    },
+    "attachments": {
+      "classQualifiedName": "akasha.promise.Promise",
+      "classSimpleName": "Promise",
+      "elementKind": "method",
+      "methodName": "allSettled",
+      "package": "akasha.promise"
+    }
+  }
+]

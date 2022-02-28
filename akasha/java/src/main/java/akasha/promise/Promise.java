@@ -36,6 +36,52 @@ import jsinterop.annotations.JsType;
 public class Promise<T>
 {
   /**
+   * The Promise.allSettled() method returns a promise that resolves after all of the given promises
+   * have either fulfilled or rejected, with an array of objects that each describes the outcome of
+   * each promise.
+   *
+   * <p>It is typically used when you have multiple asynchronous tasks that are not dependent on one
+   * another to complete successfully, or you'd always like to know the result of each promise.</p>
+   *
+   * <p>In comparison, the Promise returned by Promise.all() may be more appropriate if the tasks are
+   * dependent on each other / if you'd like to immediately reject upon any of them rejecting.</p>
+   *
+   * @param promises the promises.
+   * @param <V>      the component type of the promise returned.
+   * @return the result promise.
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/allSettled">Promise.allSettled - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-promise.allsettled">Promise.allSettled() - ECMA</a>
+   */
+  @SafeVarargs
+  @Nonnull
+  @JsOverlay
+  @SuppressWarnings( "varargs" )
+  public static <V> Promise<JsArray<AllSettledResult<V>>> allSettled( @Nonnull final Promise<? extends V>... promises )
+  {
+    return allSettled( JsArray.of( promises ) );
+  }
+
+  /**
+   * The Promise.allSettled() method returns a promise that resolves after all of the given promises
+   * have either fulfilled or rejected, with an array of objects that each describes the outcome of
+   * each promise.
+   *
+   * <p>It is typically used when you have multiple asynchronous tasks that are not dependent on one
+   * another to complete successfully, or you'd always like to know the result of each promise.</p>
+   *
+   * <p>In comparison, the Promise returned by Promise.all() may be more appropriate if the tasks are
+   * dependent on each other / if you'd like to immediately reject upon any of them rejecting.</p>
+   *
+   * @param promises the promises.
+   * @param <V>      the component type of the promise results.
+   * @return the result promise.
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/allSettled">Promise.allSettled - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-promise.allsettled">Promise.allSettled() - ECMA</a>
+   */
+  @Nonnull
+  public static native <V> Promise<JsArray<AllSettledResult<V>>> allSettled( @Nonnull JsIterable<Promise<? extends V>> promises );
+
+  /**
    * The Promise.all() method takes an iterable of promises as an input, and returns a single Promise
    * that resolves to an array of the results of the input promises. This returned promise will resolve
    * when all of the input promises have resolved, or if the input iterable contains no promises. It
