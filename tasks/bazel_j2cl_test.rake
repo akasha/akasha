@@ -19,6 +19,7 @@ module Buildr
         bazel_workspace_dir = root_project._(:target, :bazel_workspace)
 
         additional_dependencies = options[:additional_dependencies] || []
+        additional_dependencies += ['javax_annotation-j2cl'] if options[:javax_annotation]
 
         install_artifacts_into_local_cache(cache_dir, projects)
 
