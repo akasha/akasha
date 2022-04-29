@@ -2,6 +2,8 @@
 
 ### Unreleased
 
+* Update the `org.realityforge.react4j` artifacts to version `0.189`.
+
 ### [v0.31](https://github.com/akasha/akasha/tree/v0.31) (2022-02-28) · [Full Changelog](https://github.com/spritz/spritz/compare/v0.30...v0.31) · [API Differences](https://akasha.github.io/akasha-java/api-diff/?key=akasha-java&old=0.30&new=0.31) · [Source Diff](https://github.com/akasha/akasha-java/compare/v0.30...v0.31)
 
 The release includes 3 non breaking API changes.
