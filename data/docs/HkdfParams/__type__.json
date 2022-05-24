@@ -2,5 +2,12 @@
     "kind": "Type",
     "name": "HkdfParams",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HkdfParams",
-    "description": "A DOMString. This should be set to HKDF."
+    "description": "A string. This should be set to HKDF.",
+    "refs": [
+        {
+            "name": "Web Cryptography API",
+            "href": "https://w3c.github.io/webcrypto/#dfn-HkdfParams",
+            "description": "# dfn-HkdfParams"
+        }
+    ]
 }

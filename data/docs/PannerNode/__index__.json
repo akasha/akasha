@@ -1,6 +1,6 @@
 {
     "name": "PannerNode",
-    "lastModifiedAt": 1629769800000,
+    "lastModifiedAt": 1653268182000,
     "entries": [
         {
             "name": "PannerNode",
@@ -8,7 +8,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1629769800000
+            "lastModifiedAt": 1653268182000
         },
         {
             "name": "coneInnerAngle",

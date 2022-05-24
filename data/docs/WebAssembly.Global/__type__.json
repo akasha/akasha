@@ -5,7 +5,7 @@
     "description": "A WebAssembly.Global object represents a global variable instance, accessible from both JavaScript and importable/exportable across one or more WebAssembly.Module instances. This allows dynamic linking of multiple modules.",
     "refs": [
         {
-            "name": "WebAssembly JavaScript Interface",
+            "name": "WebAssembly JavaScript Interface: Exception Handling",
             "href": "https://webassembly.github.io/spec/js-api/#globals",
             "description": "# globals"
         }

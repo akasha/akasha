@@ -6,7 +6,7 @@
     "refs": [
         {
             "name": "HTML Standard",
-            "href": "https://html.spec.whatwg.org/multipage/iframe-embed-object.html#htmlparamelement",
+            "href": "https://html.spec.whatwg.org/multipage/obsolete.html#htmlparamelement",
             "description": "# htmlparamelement"
         }
     ]

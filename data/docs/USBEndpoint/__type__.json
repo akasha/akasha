@@ -6,8 +6,8 @@
     "refs": [
         {
             "name": "WebUSB API",
-            "href": "https://wicg.github.io/webusb/#endpoints",
-            "description": "# endpoints"
+            "href": "https://wicg.github.io/webusb/#usbendpoint-interface",
+            "description": "# usbendpoint-interface"
         }
     ]
 }

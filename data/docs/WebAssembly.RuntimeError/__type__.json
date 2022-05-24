@@ -5,7 +5,7 @@
     "description": "The WebAssembly.RuntimeError object is the error type that is thrown whenever WebAssembly specifies a trap.",
     "refs": [
         {
-            "name": "WebAssembly JavaScript Interface",
+            "name": "WebAssembly JavaScript Interface: Exception Handling",
             "href": "https://webassembly.github.io/spec/js-api/#exceptiondef-runtimeerror",
             "description": "# exceptiondef-runtimeerror"
         },

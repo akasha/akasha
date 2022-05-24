@@ -2,7 +2,7 @@
     "kind": "Type",
     "name": "PannerNode",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PannerNode",
-    "description": "The PannerNode interface represents the position and behavior of an audio source signal in space. It is an AudioNode audio-processing module describing its position with right-hand Cartesian coordinates, its movement using a velocity vector and its directionality using a directionality cone.",
+    "description": "The PannerNode interface defines an audio-processing object that represents the location, direction, and behavior of an audio source signal in a simulated physical space. This AudioNode uses right-hand Cartesian coordinates to describe the source's position as a vector and its orientation as a 3D directional cone.",
     "refs": [
         {
             "name": "Web Audio API",

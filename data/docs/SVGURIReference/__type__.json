@@ -2,5 +2,67 @@
     "kind": "Type",
     "name": "SVGURIReference",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGURIReference",
-    "description": "The href attribute defines a link to a resource as a reference URL. The exact meaning of that link depends on the context of each element using it."
+    "description": "The href attribute defines a link to a resource as a reference URL. The exact meaning of that link depends on the context of each element using it.",
+    "refs": [
+        {
+            "name": "Filter Effects Module Level 2",
+            "href": "https://drafts.fxtf.org/filter-effects/#element-attrdef-feimage-href",
+            "description": "# element-attrdef-feimage-href"
+        },
+        {
+            "name": "SVG Animations Level 2",
+            "href": "https://svgwg.org/specs/animations/#DiscardElementHrefAttribute",
+            "description": "# DiscardElementHrefAttribute"
+        },
+        {
+            "name": "SVG Animations Level 2",
+            "href": "https://svgwg.org/specs/animations/#HrefAttribute",
+            "description": "# HrefAttribute"
+        },
+        {
+            "name": "SVG Animations Level 2",
+            "href": "https://svgwg.org/specs/animations/#MPathElementHrefAttribute",
+            "description": "# MPathElementHrefAttribute"
+        },
+        {
+            "name": "Scalable Vector Graphics (SVG) 1.1 (Second Edition)",
+            "href": "https://svgwg.org/svg2-draft/embedded.html#ImageElementHrefAttribute",
+            "description": "# ImageElementHrefAttribute"
+        },
+        {
+            "name": "Scalable Vector Graphics (SVG) 1.1 (Second Edition)",
+            "href": "https://svgwg.org/svg2-draft/linking.html#AElementHrefAttribute",
+            "description": "# AElementHrefAttribute"
+        },
+        {
+            "name": "Scalable Vector Graphics (SVG) 1.1 (Second Edition)",
+            "href": "https://svgwg.org/svg2-draft/pservers.html#LinearGradientElementHrefAttribute",
+            "description": "# LinearGradientElementHrefAttribute"
+        },
+        {
+            "name": "Scalable Vector Graphics (SVG) 1.1 (Second Edition)",
+            "href": "https://svgwg.org/svg2-draft/pservers.html#PatternElementHrefAttribute",
+            "description": "# PatternElementHrefAttribute"
+        },
+        {
+            "name": "Scalable Vector Graphics (SVG) 1.1 (Second Edition)",
+            "href": "https://svgwg.org/svg2-draft/pservers.html#RadialGradientElementHrefAttribute",
+            "description": "# RadialGradientElementHrefAttribute"
+        },
+        {
+            "name": "Scalable Vector Graphics (SVG) 1.1 (Second Edition)",
+            "href": "https://svgwg.org/svg2-draft/interact.html#ScriptElementHrefAttribute",
+            "description": "# ScriptElementHrefAttribute"
+        },
+        {
+            "name": "Scalable Vector Graphics (SVG) 1.1 (Second Edition)",
+            "href": "https://svgwg.org/svg2-draft/struct.html#UseElementHrefAttribute",
+            "description": "# UseElementHrefAttribute"
+        },
+        {
+            "name": "Scalable Vector Graphics (SVG) 1.1 (Second Edition)",
+            "href": "https://svgwg.org/svg2-draft/text.html#TextPathElementHrefAttribute",
+            "description": "# TextPathElementHrefAttribute"
+        }
+    ]
 }

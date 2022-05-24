@@ -2,7 +2,7 @@
     "kind": "Type",
     "name": "PopStateEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PopStateEvent",
-    "description": "PopStateEvent is an event handler for the popstate event on the window.",
+    "description": "PopStateEvent is an interface for the popstate event.",
     "refs": [
         {
             "name": "HTML Standard",

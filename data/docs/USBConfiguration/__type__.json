@@ -6,8 +6,8 @@
     "refs": [
         {
             "name": "WebUSB API",
-            "href": "https://wicg.github.io/webusb/#configurations",
-            "description": "# configurations"
+            "href": "https://wicg.github.io/webusb/#usbconfiguration-interface",
+            "description": "# usbconfiguration-interface"
         }
     ]
 }

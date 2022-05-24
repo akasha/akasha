@@ -5,7 +5,7 @@
     "description": "The WebAssembly.CompileError object indicates an error during WebAssembly decoding or validation.",
     "refs": [
         {
-            "name": "WebAssembly JavaScript Interface",
+            "name": "WebAssembly JavaScript Interface: Exception Handling",
             "href": "https://webassembly.github.io/spec/js-api/#exceptiondef-compileerror",
             "description": "# exceptiondef-compileerror"
         },

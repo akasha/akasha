@@ -2,12 +2,12 @@
     "kind": "Type",
     "name": "EventListener",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/EventListener",
-    "description": "The EventListener interface represents an object that can handle an event dispatched by an EventTarget object.",
+    "description": "The addEventListener() method of the EventTarget interface sets up a function that will be called whenever the specified event is delivered to the target.",
     "refs": [
         {
             "name": "DOM Standard",
-            "href": "https://dom.spec.whatwg.org/#callbackdef-eventlistener",
-            "description": "# callbackdef-eventlistener"
+            "href": "https://dom.spec.whatwg.org/#ref-for-dom-eventtarget-addeventlistener%E2%91%A2",
+            "description": "# ref-for-dom-eventtarget-addeventlistener③"
         }
     ]
 }

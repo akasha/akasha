@@ -2,5 +2,12 @@
     "kind": "Type",
     "name": "RsaHashedImportParams",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RsaHashedImportParams",
-    "description": "The RsaHashedImportParams dictionary of the Web Crypto API represents the object that should be passed as the algorithm parameter into SubtleCrypto.importKey() or SubtleCrypto.unwrapKey(), when importing any RSA-based key pair: that is, when the algorithm is identified as any of RSASSA-PKCS1-v1_5, RSA-PSS, or RSA-OAEP."
+    "description": "The RsaHashedImportParams dictionary of the Web Crypto API represents the object that should be passed as the algorithm parameter into SubtleCrypto.importKey() or SubtleCrypto.unwrapKey(), when importing any RSA-based key pair: that is, when the algorithm is identified as any of RSASSA-PKCS1-v1_5, RSA-PSS, or RSA-OAEP.",
+    "refs": [
+        {
+            "name": "Web Cryptography API",
+            "href": "https://w3c.github.io/webcrypto/#dfn-RsaHashedImportParams",
+            "description": "# dfn-RsaHashedImportParams"
+        }
+    ]
 }

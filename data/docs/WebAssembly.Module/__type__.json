@@ -5,7 +5,7 @@
     "description": "A WebAssembly.Module object contains stateless WebAssembly code that has already been compiled by the browser &mdash; this can be efficiently shared with Workers, and instantiated multiple times.",
     "refs": [
         {
-            "name": "WebAssembly JavaScript Interface",
+            "name": "WebAssembly JavaScript Interface: Exception Handling",
             "href": "https://webassembly.github.io/spec/js-api/#modules",
             "description": "# modules"
         }

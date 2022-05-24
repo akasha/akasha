@@ -2,5 +2,12 @@
     "kind": "Type",
     "name": "EcKeyImportParams",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/EcKeyImportParams",
-    "description": "A DOMString. This should be set to ECDSA or ECDH, depending on the algorithm you want to use."
+    "description": "A string. This should be set to ECDSA or ECDH, depending on the algorithm you want to use.",
+    "refs": [
+        {
+            "name": "Web Cryptography API",
+            "href": "https://w3c.github.io/webcrypto/#dfn-EcKeyImportParams",
+            "description": "# dfn-EcKeyImportParams"
+        }
+    ]
 }

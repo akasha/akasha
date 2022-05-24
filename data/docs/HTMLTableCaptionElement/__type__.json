@@ -2,7 +2,7 @@
     "kind": "Type",
     "name": "HTMLTableCaptionElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableCaptionElement",
-    "description": "The HTMLTableCaptionElement interface special properties (beyond the regular HTMLElement interface it also has available to it by inheritance) for manipulating table caption elements.",
+    "description": "The HTMLTableCaptionElement interface provides special properties (beyond the regular HTMLElement interface it also has available to it by inheritance) for manipulating table caption elements.",
     "refs": [
         {
             "name": "HTML Standard",

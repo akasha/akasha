@@ -1,6 +1,6 @@
 {
     "name": "DeviceOrientationEvent",
-    "lastModifiedAt": 1645233119000,
+    "lastModifiedAt": 1653268190000,
     "entries": [
         {
             "name": "DeviceOrientationEvent",
@@ -8,7 +8,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1645233119000
+            "lastModifiedAt": 1653268190000
         },
         {
             "name": "absolute",

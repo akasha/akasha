@@ -2,5 +2,12 @@
     "kind": "Type",
     "name": "RsaPssParams",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RsaPssParams",
-    "description": "The RsaPssParams dictionary of the Web Crypto API represents the object that should be passed as the algorithm parameter into SubtleCrypto.sign() or SubtleCrypto.verify(), when using the RSA-PSS algorithm."
+    "description": "The RsaPssParams dictionary of the Web Crypto API represents the object that should be passed as the algorithm parameter into SubtleCrypto.sign() or SubtleCrypto.verify(), when using the RSA-PSS algorithm.",
+    "refs": [
+        {
+            "name": "Web Cryptography API",
+            "href": "https://w3c.github.io/webcrypto/#dfn-RsaPssParams",
+            "description": "# dfn-RsaPssParams"
+        }
+    ]
 }

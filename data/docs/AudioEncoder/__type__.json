@@ -2,7 +2,7 @@
     "kind": "Type",
     "name": "AudioEncoder",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioEncoder",
-    "description": "The AudioEncoder interface of the WebCodecs API encodes AudioData objects.",
+    "description": "Creates a new AudioEncoder object.",
     "refs": [
         {
             "name": "WebCodecs",

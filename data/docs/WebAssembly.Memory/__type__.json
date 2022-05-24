@@ -5,7 +5,7 @@
     "description": "The WebAssembly.Memory object is a resizable ArrayBuffer or SharedArrayBuffer that holds the raw bytes of memory accessed by a WebAssembly Instance.",
     "refs": [
         {
-            "name": "WebAssembly JavaScript Interface",
+            "name": "WebAssembly JavaScript Interface: Exception Handling",
             "href": "https://webassembly.github.io/spec/js-api/#memories",
             "description": "# memories"
         }

@@ -2,7 +2,7 @@
     "kind": "Type",
     "name": "MediaQueryListEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaQueryListEvent",
-    "description": "The MediaQueryListEvent object stores information on the changes that have happened to a MediaQueryList object &mdash; instances are available as the event object on a function referenced by a MediaQueryList.onchange property or MediaQueryList.addListener() call.",
+    "description": "The MediaQueryListEvent object stores information on the changes that have happened to a MediaQueryList object &mdash; instances are available as the event object on a function referenced by a change event.",
     "refs": [
         {
             "name": "CSSOM View Module",

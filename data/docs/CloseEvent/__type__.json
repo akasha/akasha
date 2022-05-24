@@ -5,8 +5,8 @@
     "description": "A CloseEvent is sent to clients using WebSockets when the connection is closed. This is delivered to the listener indicated by the WebSocket object's onclose attribute.",
     "refs": [
         {
-            "name": "HTML Standard",
-            "href": "https://html.spec.whatwg.org/multipage/web-sockets.html#the-closeevent-interface",
+            "name": "WebSockets Standard",
+            "href": "https://websockets.spec.whatwg.org/#the-closeevent-interface",
             "description": "# the-closeevent-interface"
         }
     ]

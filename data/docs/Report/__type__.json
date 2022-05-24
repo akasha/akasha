@@ -2,5 +2,12 @@
     "kind": "Type",
     "name": "Report",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Report",
-    "description": "The Report interface of the Reporting API represents a single report."
+    "description": "The Report interface of the Reporting API represents a single report.",
+    "refs": [
+        {
+            "name": "Reporting API",
+            "href": "https://w3c.github.io/reporting/#dom-report",
+            "description": "# dom-report"
+        }
+    ]
 }

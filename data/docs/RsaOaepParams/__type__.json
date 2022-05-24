@@ -2,5 +2,12 @@
     "kind": "Type",
     "name": "RsaOaepParams",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RsaOaepParams",
-    "description": "The RsaOaepParams dictionary of the Web Crypto API represents the object that should be passed as the algorithm parameter into SubtleCrypto.encrypt(), SubtleCrypto.decrypt(), SubtleCrypto.wrapKey(), or SubtleCrypto.unwrapKey(), when using the RSA_OAEP algorithm."
+    "description": "The RsaOaepParams dictionary of the Web Crypto API represents the object that should be passed as the algorithm parameter into SubtleCrypto.encrypt(), SubtleCrypto.decrypt(), SubtleCrypto.wrapKey(), or SubtleCrypto.unwrapKey(), when using the RSA_OAEP algorithm.",
+    "refs": [
+        {
+            "name": "Web Cryptography API",
+            "href": "https://w3c.github.io/webcrypto/#dfn-RsaOaepParams",
+            "description": "# dfn-RsaOaepParams"
+        }
+    ]
 }

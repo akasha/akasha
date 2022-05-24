@@ -2,12 +2,12 @@
     "kind": "Type",
     "name": "NodeFilter",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/NodeFilter",
-    "description": "A NodeFilter interface represents an object used to filter the nodes in a NodeIterator or TreeWalker. A NodeFilter knows nothing about the document or traversing nodes; it only knows how to evaluate a single node against the provided filter.",
+    "description": "Returns a new NodeIterator object.",
     "refs": [
         {
             "name": "DOM Standard",
-            "href": "https://dom.spec.whatwg.org/#interface-nodefilter",
-            "description": "# interface-nodefilter"
+            "href": "https://dom.spec.whatwg.org/#dom-document-createnodeiterator",
+            "description": "# dom-document-createnodeiterator"
         }
     ]
 }

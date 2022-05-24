@@ -2,7 +2,7 @@
     "kind": "Type",
     "name": "VideoEncoder",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/VideoEncoder",
-    "description": "The VideoEncoder interface of the WebCodecs API encodes VideoFrame objects.",
+    "description": "Creates a new VideoEncoder object.",
     "refs": [
         {
             "name": "WebCodecs",

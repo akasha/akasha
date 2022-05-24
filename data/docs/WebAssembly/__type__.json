@@ -5,7 +5,7 @@
     "description": "The WebAssembly JavaScript object acts as the namespace for all WebAssembly-related functionality.",
     "refs": [
         {
-            "name": "WebAssembly JavaScript Interface",
+            "name": "WebAssembly JavaScript Interface: Exception Handling",
             "href": "https://webassembly.github.io/spec/js-api/#webassembly-namespace",
             "description": "# webassembly-namespace"
         }
