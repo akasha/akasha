@@ -135,6 +135,7 @@ interface BluetoothDevice : EventTarget {
   readonly attribute DOMString id;
   readonly attribute DOMString? name;
   readonly attribute boolean watchingAdvertisements;
+  Promise<undefined> forget();
   Promise<undefined> watchAdvertisements( optional WatchAdvertisementsOptions options = {} );
 };
 

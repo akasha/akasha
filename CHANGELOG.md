@@ -3,6 +3,7 @@
 ### Unreleased
 
 * Add the `Web Audio API` spec version `Editor’s Draft, 3 May 2022` version.
+* Update the `Web Bluetooth` spec to the `Draft Community Group Report, 13 April 2022` version. This added the  `BluetoothDevice.forget()` operation.
 
 ### [v0.31](https://github.com/akasha/akasha/tree/v0.31) (2022-02-28) · [Full Changelog](https://github.com/spritz/spritz/compare/v0.30...v0.31) · [API Differences](https://akasha.github.io/akasha-java/api-diff/?key=akasha-java&old=0.30&new=0.31) · [Source Diff](https://github.com/akasha/akasha-java/compare/v0.30...v0.31)
 
