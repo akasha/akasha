@@ -117,6 +117,17 @@ dictionary AudioProcessingEventInit : EventInit {
   required AudioBuffer outputBuffer;
 };
 
+dictionary AudioRenderCapacityEventInit : EventInit {
+  double averageLoad = 0;
+  double peakLoad = 0;
+  double timestamp = 0;
+  double underrunRatio = 0;
+};
+
+dictionary AudioRenderCapacityOptions {
+  double updateInterval = 1;
+};
+
 dictionary AudioTimestamp {
   double contextTime;
   DOMHighResTimeStamp performanceTime;
@@ -283,6 +294,8 @@ interface AudioBufferSourceNode : AudioScheduledSourceNode {
 interface AudioContext : BaseAudioContext {
   readonly attribute double baseLatency;
   readonly attribute double outputLatency;
+  [SecureContext]
+  readonly attribute AudioRenderCapacity renderCapacity;
   constructor( optional AudioContextOptions contextOptions = {} );
   Promise<undefined> close();
   MediaElementAudioSourceNode createMediaElementSource( HTMLMediaElement mediaElement );
@@ -360,6 +373,22 @@ interface AudioProcessingEvent : Event {
   readonly attribute AudioBuffer outputBuffer;
   readonly attribute double playbackTime;
   constructor( DOMString type, AudioProcessingEventInit eventInitDict );
+};
+
+[Exposed=Window]
+interface AudioRenderCapacity : EventTarget {
+  attribute EventHandler onupdate;
+  undefined start( optional AudioRenderCapacityOptions options = {} );
+  undefined stop();
+};
+
+[Exposed=Window]
+interface AudioRenderCapacityEvent : Event {
+  readonly attribute double averageLoad;
+  readonly attribute double peakLoad;
+  readonly attribute double timestamp;
+  readonly attribute double underrunRatio;
+  constructor( DOMString type, optional AudioRenderCapacityEventInit eventInitDict = {} );
 };
 
 [Exposed=Window]
