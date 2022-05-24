@@ -64,6 +64,7 @@ interface TouchEvent : UIEvent {
   readonly attribute TouchList targetTouches;
   readonly attribute TouchList touches;
   constructor( DOMString type, optional TouchEventInit eventInitDict = {} );
+  getter boolean getModifierState( DOMString keyArg );
 };
 
 [Exposed=Window]
