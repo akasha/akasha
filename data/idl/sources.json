@@ -198,12 +198,12 @@
         "url": "https://w3c.github.io/media-playback-quality"
     },
     {
-        "lastModifiedTime": 1645090550000,
+        "lastModifiedTime": 1652983757000,
         "name": "media_source",
         "url": "https://www.w3.org/TR/media-source/"
     },
     {
-        "lastModifiedTime": 1644505927000,
+        "lastModifiedTime": 1653301271000,
         "name": "mediacapture_main",
         "url": "https://w3c.github.io/mediacapture-main/"
     },
@@ -221,7 +221,7 @@
         "name": "minimal_webgpu_integration"
     },
     {
-        "lastModifiedTime": 1643813752000,
+        "lastModifiedTime": 1646896988000,
         "name": "navigation_timing",
         "url": "https://w3c.github.io/navigation-timing/"
     },
@@ -235,7 +235,7 @@
         "url": "https://w3c.github.io/performance-timeline/"
     },
     {
-        "lastModifiedTime": 1644938709000,
+        "lastModifiedTime": 1652106911000,
         "name": "permissions",
         "url": "https://www.w3.org/TR/permissions/"
     },
@@ -250,7 +250,7 @@
         "url": "https://www.w3.org/TR/pointerlock-2/"
     },
     {
-        "lastModifiedTime": 1635981906000,
+        "lastModifiedTime": 1648022977000,
         "name": "push_api",
         "url": "https://www.w3.org/TR/push-api/"
     },
@@ -259,12 +259,12 @@
         "name": "regexp"
     },
     {
-        "lastModifiedTime": 1635522217000,
+        "lastModifiedTime": 1649170566000,
         "name": "reporting",
         "url": "https://w3c.github.io/reporting/"
     },
     {
-        "lastModifiedTime": 1642428086000,
+        "lastModifiedTime": 1651224709000,
         "name": "requestidlecallback",
         "url": "https://w3c.github.io/requestidlecallback/"
     },
@@ -274,12 +274,12 @@
         "url": "https://www.w3.org/TR/resize-observer/"
     },
     {
-        "lastModifiedTime": 1643301440000,
+        "lastModifiedTime": 1649851138000,
         "name": "resource_timing",
         "url": "https://w3c.github.io/resource-timing/"
     },
     {
-        "lastModifiedTime": 1643903438000,
+        "lastModifiedTime": 1652972159000,
         "name": "screen_capture",
         "url": "https://w3c.github.io/mediacapture-screen-share/"
     },
@@ -289,7 +289,7 @@
         "url": "https://www.w3.org/TR/screen-orientation/"
     },
     {
-        "lastModifiedTime": 1643216023000,
+        "lastModifiedTime": 1652184621000,
         "name": "screen_wake_lock",
         "url": "https://w3c.github.io/screen-wake-lock"
     },
@@ -299,7 +299,7 @@
         "url": "https://www.w3.org/TR/selection-api/"
     },
     {
-        "lastModifiedTime": 1627897963000,
+        "lastModifiedTime": 1651062849000,
         "name": "serviceworker",
         "url": "https://w3c.github.io/ServiceWorker/"
     },
@@ -322,7 +322,7 @@
         "name": "symbol"
     },
     {
-        "lastModifiedTime": 1569311451000,
+        "lastModifiedTime": 1652203451000,
         "name": "touch_events",
         "url": "https://w3c.github.io/touch-events/"
     },
@@ -350,7 +350,7 @@
         "url": "https://w3c.github.io/vibration/"
     },
     {
-        "lastModifiedTime": 1632746705000,
+        "lastModifiedTime": 1653076877000,
         "name": "visual_viewport",
         "url": "https://wicg.github.io/visual-viewport/"
     },
@@ -370,12 +370,12 @@
         "url": "https://www.w3.org/TR/web-animations-1/"
     },
     {
-        "lastModifiedTime": 1644860767000,
+        "lastModifiedTime": 1651588307000,
         "name": "web_audio_api",
         "url": "https://webaudio.github.io/web-audio-api/"
     },
     {
-        "lastModifiedTime": 1638215159000,
+        "lastModifiedTime": 1649886442000,
         "name": "web_bluetooth",
         "url": "https://webbluetoothcg.github.io/web-bluetooth/"
     },
@@ -385,12 +385,12 @@
         "url": "https://webaudio.github.io/web-midi-api"
     },
     {
-        "lastModifiedTime": 1637585381000,
+        "lastModifiedTime": 1647472866000,
         "name": "web_share",
         "url": "https://www.w3.org/TR/web-share/"
     },
     {
-        "lastModifiedTime": 1643151247000,
+        "lastModifiedTime": 1651556118000,
         "name": "webappsec_csp",
         "url": "https://w3c.github.io/webappsec-csp/"
     },
@@ -400,12 +400,12 @@
         "url": "https://www.w3.org/TR/webauthn/"
     },
     {
-        "lastModifiedTime": 1645054270000,
+        "lastModifiedTime": 1651669407000,
         "name": "webcodecs",
         "url": "https://www.w3.org/TR/webcodecs/"
     },
     {
-        "lastModifiedTime": 1643222401000,
+        "lastModifiedTime": 1648739791000,
         "name": "webcrypto",
         "url": "https://w3c.github.io/webcrypto/"
     },
