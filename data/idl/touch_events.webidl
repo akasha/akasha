@@ -10,12 +10,13 @@ dictionary TouchEventInit : EventModifierInit {
 };
 
 dictionary TouchInit {
+  required long identifier;
+  required EventTarget target;
   double altitudeAngle = 0;
   double azimuthAngle = 0;
   double clientX = 0;
   double clientY = 0;
   float force = 0;
-  required long identifier;
   double pageX = 0;
   double pageY = 0;
   float radiusX = 0;
@@ -23,7 +24,6 @@ dictionary TouchInit {
   float rotationAngle = 0;
   double screenX = 0;
   double screenY = 0;
-  required EventTarget target;
   TouchType touchType = "direct";
 };
 
