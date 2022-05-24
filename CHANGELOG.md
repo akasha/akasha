@@ -2,7 +2,7 @@
 
 ### Unreleased
 
-* Add the `Web Audio API` spec version `Editor’s Draft, 3 May 2022` version.
+* Update the `Web Audio API` spec to the `Editor’s Draft, 3 May 2022` version.
 * Update the `Screen Capture` spec to the `W3C Editor's Draft 19 May 2022` version.
 * Update the `Web Bluetooth` spec to the `Draft Community Group Report, 13 April 2022` version. This added the  `BluetoothDevice.forget()` operation.
 * Update the `Touch Events - Level 2` spec to the `Draft Community Group Report 10 May 2022` version. This added the  `TouchEvent.getModifierState()` operation.
