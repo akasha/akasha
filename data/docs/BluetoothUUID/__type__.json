@@ -1,0 +1,13 @@
+{
+    "kind": "Type",
+    "name": "BluetoothUUID",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothUUID",
+    "description": "The BluetoothUUID interface of the Web Bluetooth API provides a way to look up Universally Unique Identifier (UUID) values by name in the registry maintained by the Bluetooth SIG.",
+    "refs": [
+        {
+            "name": "Web Bluetooth",
+            "href": "https://webbluetoothcg.github.io/web-bluetooth/#bluetoothuuid",
+            "description": "# bluetoothuuid"
+        }
+    ]
+}
