@@ -29,8 +29,13 @@ interface MediaSource : EventTarget {
   SourceBuffer addSourceBuffer( DOMString type );
   undefined clearLiveSeekableRange();
   undefined endOfStream( optional EndOfStreamError error );
+  MediaSourceHandle getHandle();
   undefined removeSourceBuffer( SourceBuffer sourceBuffer );
   undefined setLiveSeekableRange( double start, double end );
+};
+
+[Exposed=(Window,DedicatedWorker)]
+interface MediaSourceHandle {
 };
 
 [Exposed=(Window,DedicatedWorker)]
