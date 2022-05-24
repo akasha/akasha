@@ -8,6 +8,7 @@
 * Update the `Touch Events - Level 2` spec to the `Draft Community Group Report 10 May 2022` version. This added the  `TouchEvent.getModifierState()` operation.
 * Update the `Media Source Extensions` spec to the `W3C Working Draft 19 May 2022` version. This added the  `MediaSource.getHandle()` operation.
 * Update the `Navigation Timing Level 2` spec to the `W3C Editor's Draft 10 March 2022` version. This changed the name of the type `NavigationType` to `NavigationTimingType`.
+* Update the `org.realityforge.react4j` artifacts to version `0.191`.
 
 ### [v0.31](https://github.com/akasha/akasha/tree/v0.31) (2022-02-28) · [Full Changelog](https://github.com/spritz/spritz/compare/v0.30...v0.31) · [API Differences](https://akasha.github.io/akasha-java/api-diff/?key=akasha-java&old=0.30&new=0.31) · [Source Diff](https://github.com/akasha/akasha-java/compare/v0.30...v0.31)
 
