@@ -5,7 +5,7 @@ partial namespace CSS {
 
 [Exposed=Window]
 interface CSSConditionRule : CSSGroupingRule {
-  attribute CSSOMString conditionText;
+  readonly attribute CSSOMString conditionText;
 };
 
 [Exposed=Window]

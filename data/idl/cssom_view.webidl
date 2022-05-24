@@ -10,6 +10,12 @@ enum ScrollLogicalPosition {
   "start"
 };
 
+dictionary IsVisibleOptions {
+  boolean checkInert = false;
+  boolean checkOpacity = false;
+  boolean checkVisibilityCSS = false;
+};
+
 dictionary MediaQueryListEventInit : EventInit {
   boolean matches = false;
   CSSOMString media = "";
@@ -89,6 +95,7 @@ partial interface Element {
   [NewObject]
   DOMRect getBoundingClientRect();
   DOMRectList getClientRects();
+  boolean isVisible( optional IsVisibleOptions options = {} );
   undefined scroll( optional ScrollToOptions options = {} );
   undefined scroll( unrestricted double x, unrestricted double y );
   undefined scrollBy( optional ScrollToOptions options = {} );
