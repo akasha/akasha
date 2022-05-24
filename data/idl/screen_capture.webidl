@@ -5,14 +5,25 @@ enum CursorCaptureConstraint {
 };
 
 enum DisplayCaptureSurfaceType {
-  "application",
   "browser",
   "monitor",
   "window"
 };
 
+enum SelfCapturePreferenceEnum {
+  "exclude",
+  "include"
+};
+
+enum SystemAudioPreferenceEnum {
+  "exclude",
+  "include"
+};
+
 dictionary DisplayMediaStreamConstraints {
   ( boolean or MediaTrackConstraints ) audio = false;
+  SelfCapturePreferenceEnum selfBrowserSurface;
+  SystemAudioPreferenceEnum systemAudio;
   ( boolean or MediaTrackConstraints ) video = true;
 };
 
