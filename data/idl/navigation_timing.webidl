@@ -1,4 +1,4 @@
-enum NavigationType {
+enum NavigationTimingType {
   "back_forward",
   "navigate",
   "prerender",
@@ -26,7 +26,7 @@ interface PerformanceNavigationTiming : PerformanceResourceTiming {
   readonly attribute DOMHighResTimeStamp loadEventEnd;
   readonly attribute DOMHighResTimeStamp loadEventStart;
   readonly attribute unsigned short redirectCount;
-  readonly attribute NavigationType type;
+  readonly attribute NavigationTimingType type;
   readonly attribute DOMHighResTimeStamp unloadEventEnd;
   readonly attribute DOMHighResTimeStamp unloadEventStart;
   [Default]
