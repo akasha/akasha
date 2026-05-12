@@ -41,7 +41,6 @@ Buildr::ReleaseTool.define_release_task do |t|
                     :api_diff_website => 'https://akasha.github.io/akasha-java/api-diff/?key=akasha-java&')
   t.patch_maven_version_in_readme
   t.tag_project
-  t.stage_release(:release_to => { :url => 'https://stocksoftware.jfrog.io/stocksoftware/staging', :username => ENV['STAGING_USERNAME'], :password => ENV['STAGING_PASSWORD'] })
   t.stage('MavenCentralPublish', 'Publish archive to Maven Central') do
     sh "bundle exec buildr upload_to_maven_central source:publish_and_tag api_diff:publish PRODUCT_VERSION=#{ENV['PRODUCT_VERSION']}#{ENV['TEST'].nil? ? '' : " TEST=#{ENV['TEST']}"}#{Buildr.application.options.trace ? ' --trace' : ''}"
   end
