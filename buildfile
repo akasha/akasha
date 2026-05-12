@@ -160,7 +160,6 @@ define 'akasha' do
 
   desc 'Akasha Java Browser API for GWT'
   define 'gwt', :base_dir => "#{WORKSPACE_DIR}/akasha/gwt" do
-    java_test_src_dir = "#{WORKSPACE_DIR}/akasha/java/src/test/java"
     src_dir = file("#{project._(:target, :generated)}/webtack/main/java" => ['data:run_gwt_complete_pipeline'])
     test_src_dir = file("#{project._(:target, :generated)}/webtack/test/java" => ['data:run_gwt_complete_pipeline'])
 
