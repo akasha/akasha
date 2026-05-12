@@ -1,6 +1,5 @@
 package com.example;
 
-import javax.annotation.Nonnull;
 import javax.annotation.processing.Generated;
 import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
@@ -17,7 +16,7 @@ public class DOMMatrixReadOnly {
   }
 
   @JsNonNull
-  public static native DOMMatrixReadOnly fromMatrix(@Nonnull Object other);
+  public static native DOMMatrixReadOnly fromMatrix(@JsNonNull Object other);
 
   @JsNonNull
   public static native DOMMatrixReadOnly fromMatrix();

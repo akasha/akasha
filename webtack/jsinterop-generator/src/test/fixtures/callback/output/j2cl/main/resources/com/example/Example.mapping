@@ -1,2 +1,3 @@
+CallbackOptions=com.example.CallbackOptions
 Event=com.example.Event
 txEventHandler=com.example.TxEventHandler

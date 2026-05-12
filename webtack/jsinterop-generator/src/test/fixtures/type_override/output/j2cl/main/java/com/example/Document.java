@@ -1,6 +1,5 @@
 package com.example;
 
-import javax.annotation.Nonnull;
 import javax.annotation.processing.Generated;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsNonNull;
@@ -22,7 +21,7 @@ public class Document {
 
   @JsOverlay
   @JsNonNull
-  public final Document open(@Nonnull final String unused1, @Nonnull final String unused2) {
+  public final Document open(final @JsNonNull String unused1, final @JsNonNull String unused2) {
     return Js.uncheckedCast( _open( unused1, unused2 ) );
   }
 
@@ -30,11 +29,11 @@ public class Document {
       name = "open"
   )
   @JsNonNull
-  private native DocumentOrWindowUnion _open(@Nonnull String unused1, @Nonnull String unused2);
+  private native DocumentOrWindowUnion _open(@JsNonNull String unused1, @JsNonNull String unused2);
 
   @JsOverlay
   @JsNonNull
-  public final Document open(@Nonnull final String unused1) {
+  public final Document open(final @JsNonNull String unused1) {
     return Js.uncheckedCast( _open( unused1 ) );
   }
 
@@ -42,7 +41,7 @@ public class Document {
       name = "open"
   )
   @JsNonNull
-  private native DocumentOrWindowUnion _open(@Nonnull String unused1);
+  private native DocumentOrWindowUnion _open(@JsNonNull String unused1);
 
   @JsOverlay
   @JsNonNull
@@ -58,8 +57,8 @@ public class Document {
 
   @JsOverlay
   @JsNullable
-  public final Window open(@Nonnull final String url, @Nonnull final String name,
-      @Nonnull final String features) {
+  public final Window open(final @JsNonNull String url, final @JsNonNull String name,
+      final @JsNonNull String features) {
     return Js.uncheckedCast( _open( url, name, features ) );
   }
 
@@ -67,6 +66,6 @@ public class Document {
       name = "open"
   )
   @JsNullable
-  private native DocumentOrWindowUnion _open(@Nonnull String url, @Nonnull String name,
-      @Nonnull String features);
+  private native DocumentOrWindowUnion _open(@JsNonNull String url, @JsNonNull String name,
+      @JsNonNull String features);
 }

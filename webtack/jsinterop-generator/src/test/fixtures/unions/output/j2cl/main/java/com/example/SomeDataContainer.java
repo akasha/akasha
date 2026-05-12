@@ -1,6 +1,5 @@
 package com.example;
 
-import javax.annotation.Nonnull;
 import javax.annotation.processing.Generated;
 import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
@@ -13,48 +12,48 @@ import jsinterop.annotations.JsType;
     name = "SomeDataContainer"
 )
 public class SomeDataContainer {
-  public SomeDataContainer(@Nonnull final BufferSource data) {
+  public SomeDataContainer(final @JsNonNull BufferSource data) {
   }
 
-  public SomeDataContainer(@Nonnull final ArrayBufferView data) {
+  public SomeDataContainer(final @JsNonNull ArrayBufferView data) {
   }
 
-  public SomeDataContainer(@Nonnull final Int8Array data) {
+  public SomeDataContainer(final @JsNonNull Int8Array data) {
   }
 
-  public SomeDataContainer(@Nonnull final Int16Array data) {
+  public SomeDataContainer(final @JsNonNull Int16Array data) {
   }
 
-  public SomeDataContainer(@Nonnull final Int32Array data) {
+  public SomeDataContainer(final @JsNonNull Int32Array data) {
   }
 
-  public SomeDataContainer(@Nonnull final Uint8Array data) {
+  public SomeDataContainer(final @JsNonNull Uint8Array data) {
   }
 
-  public SomeDataContainer(@Nonnull final Uint16Array data) {
+  public SomeDataContainer(final @JsNonNull Uint16Array data) {
   }
 
-  public SomeDataContainer(@Nonnull final Uint32Array data) {
+  public SomeDataContainer(final @JsNonNull Uint32Array data) {
   }
 
-  public SomeDataContainer(@Nonnull final Uint8ClampedArray data) {
+  public SomeDataContainer(final @JsNonNull Uint8ClampedArray data) {
   }
 
-  public SomeDataContainer(@Nonnull final Float32Array data) {
+  public SomeDataContainer(final @JsNonNull Float32Array data) {
   }
 
-  public SomeDataContainer(@Nonnull final Float64Array data) {
+  public SomeDataContainer(final @JsNonNull Float64Array data) {
   }
 
-  public SomeDataContainer(@Nonnull final DataView data) {
+  public SomeDataContainer(final @JsNonNull DataView data) {
   }
 
-  public SomeDataContainer(@Nonnull final ArrayBuffer data) {
+  public SomeDataContainer(final @JsNonNull ArrayBuffer data) {
   }
 
-  public static native void myStaticMethodWithUnionArg(@Nonnull BluetoothDescriptorUUID name);
+  public static native void myStaticMethodWithUnionArg(@JsNonNull BluetoothDescriptorUUID name);
 
-  public static native void myStaticMethodWithUnionArg(@Nonnull String name);
+  public static native void myStaticMethodWithUnionArg(@JsNonNull String name);
 
   public static native void myStaticMethodWithUnionArg(int name);
 

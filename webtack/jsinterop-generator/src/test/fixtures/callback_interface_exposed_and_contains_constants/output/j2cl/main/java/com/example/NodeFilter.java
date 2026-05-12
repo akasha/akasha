@@ -1,7 +1,7 @@
 package com.example;
 
-import javax.annotation.Nonnull;
 import javax.annotation.processing.Generated;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
@@ -62,5 +62,5 @@ public interface NodeFilter {
   @JsOverlay
   int SHOW_TEXT = 0x4;
 
-  int acceptNode(@Nonnull Node node);
+  int acceptNode(@JsNonNull Node node);
 }

@@ -3,8 +3,8 @@ package com.example;
 import akasha.MyAnnotation;
 import akasha.MyAnnotation2;
 import akasha.MyAnnotation3;
-import javax.annotation.Nonnull;
 import javax.annotation.processing.Generated;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -18,5 +18,5 @@ import jsinterop.annotations.JsType;
 @MyAnnotation
 public interface EventListener {
   @MyAnnotation3
-  void handleEvent(@MyAnnotation2 @Nonnull Event event);
+  void handleEvent(@MyAnnotation2 @JsNonNull Event event);
 }

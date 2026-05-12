@@ -1,7 +1,7 @@
 package com.example;
 
-import javax.annotation.Nonnull;
 import javax.annotation.processing.Generated;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -15,10 +15,10 @@ public class EventTarget {
   protected EventTarget() {
   }
 
-  public native void removeEventListener(@Nonnull String type,
-      @Nonnull EventListenerOptions options);
+  public native void removeEventListener(@JsNonNull String type,
+      @JsNonNull EventListenerOptions options);
 
-  public native void removeEventListener(@Nonnull String type, boolean options);
+  public native void removeEventListener(@JsNonNull String type, boolean options);
 
-  public native void removeEventListener(@Nonnull String type);
+  public native void removeEventListener(@JsNonNull String type);
 }

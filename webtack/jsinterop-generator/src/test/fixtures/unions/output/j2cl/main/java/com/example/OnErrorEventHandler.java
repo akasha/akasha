@@ -1,10 +1,9 @@
 package com.example;
 
 import javaemul.internal.annotations.DoNotAutobox;
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 import javax.annotation.processing.Generated;
 import jsinterop.annotations.JsFunction;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOptional;
 import jsinterop.base.Any;
@@ -14,7 +13,7 @@ import jsinterop.base.Any;
 @FunctionalInterface
 public interface OnErrorEventHandler {
   @JsNullable
-  Any onInvoke(@Nonnull EventOrStringUnion event, @Nonnull @JsOptional String source,
-      @Nonnull @JsOptional Double lineno, @Nonnull @JsOptional Double colno,
-      @DoNotAutobox @Nullable @JsOptional Object error);
+  Any onInvoke(@JsNonNull EventOrStringUnion event, @JsOptional @JsNullable String source,
+      @JsOptional @JsNullable Double lineno, @JsOptional @JsNullable Double colno,
+      @DoNotAutobox @JsOptional @JsNullable Object error);
 }

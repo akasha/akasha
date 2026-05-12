@@ -2,6 +2,7 @@ package com.example;
 
 import javax.annotation.Nonnull;
 import javax.annotation.processing.Generated;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -13,7 +14,7 @@ import jsinterop.annotations.JsType;
     name = "SpeechRecognitionErrorEvent"
 )
 public class SpeechRecognitionErrorEvent extends Event {
-  public SpeechRecognitionErrorEvent(@Nonnull final String type) {
+  public SpeechRecognitionErrorEvent(final @JsNonNull String type) {
     super( null );
   }
 

@@ -1,6 +1,5 @@
 package com.example;
 
-import javax.annotation.Nonnull;
 import javax.annotation.processing.Generated;
 import jsinterop.annotations.JsFunction;
 import jsinterop.annotations.JsNonNull;
@@ -14,5 +13,5 @@ import jsinterop.annotations.JsNonNull;
 public interface SomeCallbackHandler {
   @SpeechRecognitionErrorCode
   @JsNonNull
-  String onInvoke(@TxMode @Nonnull String blah);
+  String onInvoke(@TxMode @JsNonNull String blah);
 }

@@ -826,17 +826,21 @@ final class JsinteropAction
                                    .build() );
     }
 
+    final TypedValue.Nullability nullability =
+      schema.isNullable( attributeType ) ? TypedValue.Nullability.NULLABLE :
+      !actualType.getKind().isPrimitive() ? TypedValue.Nullability.NONNULL :
+      TypedValue.Nullability.NA;
+    final TypeName writeParameterType =
+      addJsNullabilityAnnotation( toTypeName( attribute.getType() ), nullability );
     final ParameterSpec.Builder writeParameter =
-      ParameterSpec.builder( toTypeName( attribute.getType() ), "value", Modifier.FINAL );
+      ParameterSpec.builder( writeParameterType, "value", Modifier.FINAL );
     if ( schema.isNullable( attributeType ) )
     {
       readMethod.addAnnotation( JsinteropTypes.JS_NULLABLE );
-      writeParameter.addAnnotation( JsinteropTypes.JS_NULLABLE );
     }
     else if ( !actualType.getKind().isPrimitive() )
     {
       readMethod.addAnnotation( JsinteropTypes.JS_NONNULL );
-      writeParameter.addAnnotation( JsinteropTypes.JS_NONNULL );
     }
     final Kind kind = attribute.getType().getKind();
     if ( requireOverlay && Kind.TypeReference != kind )
@@ -1949,8 +1953,14 @@ final class JsinteropAction
         .addAnnotation( JsinteropTypes.JS_PROPERTY );
     maybeAddJavadoc( member, method );
     final boolean isAny = Kind.Any == actualType.getKind();
+    final TypedValue.Nullability nullability =
+      getSchema().isNullable( member.getType() ) ? TypedValue.Nullability.NULLABLE :
+      !actualType.getKind().isPrimitive() ? TypedValue.Nullability.NONNULL :
+      TypedValue.Nullability.NA;
+    final TypeName parameterType =
+      addJsNullabilityAnnotation( isAny ? TypeName.OBJECT : javaType, nullability );
     final ParameterSpec.Builder parameter =
-      ParameterSpec.builder( isAny ? TypeName.OBJECT : javaType, javaName( member ) );
+      ParameterSpec.builder( parameterType, javaName( member ) );
     if ( isAny )
     {
       parameter.addAnnotation( JsinteropTypes.DO_NOT_AUTOBOX );
@@ -1958,14 +1968,6 @@ final class JsinteropAction
     maybeAddCustomAnnotations( member, parameter );
     addMagicConstantAnnotationIfNeeded( member.getType(), parameter );
 
-    if ( getSchema().isNullable( member.getType() ) )
-    {
-      parameter.addAnnotation( JsinteropTypes.JS_NULLABLE );
-    }
-    else if ( !actualType.getKind().isPrimitive() )
-    {
-      parameter.addAnnotation( JsinteropTypes.JS_NONNULL );
-    }
     method.addParameter( parameter.build() );
     type.addMethod( method.build() );
 
@@ -2200,6 +2202,31 @@ final class JsinteropAction
     }
   }
 
+  @Nonnull
+  private TypeName addJsNullabilityAnnotation( @Nonnull final TypedValue typedValue,
+                                               @Nonnull final TypeName type )
+  {
+    return addJsNullabilityAnnotation( type, typedValue.getNullability() );
+  }
+
+  @Nonnull
+  private TypeName addJsNullabilityAnnotation( @Nonnull final TypeName type,
+                                               @Nonnull final TypedValue.Nullability nullability )
+  {
+    if ( TypedValue.Nullability.NULLABLE == nullability )
+    {
+      return type.annotated( AnnotationSpec.builder( JsinteropTypes.JS_NULLABLE ).build() );
+    }
+    else if ( TypedValue.Nullability.NONNULL == nullability )
+    {
+      return type.annotated( AnnotationSpec.builder( JsinteropTypes.JS_NONNULL ).build() );
+    }
+    else
+    {
+      return type;
+    }
+  }
+
   private void addDoNotAutoboxAnnotation( @Nonnull final TypedValue typedValue,
                                           @Nonnull final ParameterSpec.Builder parameter )
   {
@@ -2356,9 +2383,10 @@ final class JsinteropAction
     else
     {
       final TypeName javaType = toTypeName( resolveType, supportJsOptional );
+      final boolean nullable = schema.isNullable( type ) || supportJsOptional;
       final TypedValue.Nullability nullability =
         javaType.isPrimitive() ? TypedValue.Nullability.NA :
-        schema.isNullable( type ) ? TypedValue.Nullability.NULLABLE :
+        nullable ? TypedValue.Nullability.NULLABLE :
         TypedValue.Nullability.NONNULL;
       return new TypedValue( type, resolveType, javaType, nullability, false );
     }
@@ -2423,7 +2451,7 @@ final class JsinteropAction
   @Nonnull
   private List<TypedValue> asTypedValuesList( @Nonnull final List<Argument> arguments )
   {
-    return arguments.stream().map( a -> asTypedValue( a.getType() ) ).collect( Collectors.toList() );
+    return arguments.stream().map( a -> asTypedValue( a.getType(), a.isOptional() ) ).collect( Collectors.toList() );
   }
 
   private void generatePartialInterface( @Nonnull final PartialInterfaceDefinition definition )
@@ -4990,9 +5018,11 @@ final class JsinteropAction
   {
     final Type actualType = getSchema().resolveType( argument.getType() );
     final TypeName type = typedValue.getJavaType();
+    final TypeName jsType = addJsNullabilityAnnotation( typedValue, type );
     final String argumentName = javaName( argument );
     final TypeName argumentType = argument.isVariadic() ? asArrayType( type ) : type;
-    final ParameterSpec.Builder parameter = ParameterSpec.builder( argumentType, argumentName );
+    final TypeName jsArgumentType = argument.isVariadic() ? asArrayType( jsType ) : jsType;
+    final ParameterSpec.Builder parameter = ParameterSpec.builder( jsArgumentType, argumentName );
     final ParameterSpec.Builder testParameter =
       null != testMethod ? ParameterSpec.builder( argumentType, argumentName ).addModifiers( Modifier.FINAL ) : null;
     if ( isFinal )
@@ -5002,7 +5032,6 @@ final class JsinteropAction
     maybeAddCustomAnnotations( argument, parameter );
     addMagicConstantAnnotationIfNeeded( actualType, parameter );
     addDoNotAutoboxAnnotation( typedValue, parameter );
-    addNullabilityAnnotation( typedValue, parameter );
     if ( applyJsOptional && argument.isOptional() )
     {
       parameter.addAnnotation( JsinteropTypes.JS_OPTIONAL );

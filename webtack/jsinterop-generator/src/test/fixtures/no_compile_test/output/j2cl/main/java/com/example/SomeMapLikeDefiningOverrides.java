@@ -23,9 +23,9 @@ public class SomeMapLikeDefiningOverrides implements JsIterable<SomeMapLikeDefin
 
   public native void clear();
 
-  public native boolean delete(@Nonnull String key);
+  public native boolean delete(@JsNonNull String key);
 
-  public native void set(@Nonnull String key, int value);
+  public native void set(@JsNonNull String key, int value);
 
   @JsProperty(
       name = "size"

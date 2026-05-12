@@ -1,7 +1,7 @@
 package com.example;
 
-import javax.annotation.Nonnull;
 import javax.annotation.processing.Generated;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
@@ -23,12 +23,12 @@ public class AnonymousNamedAccessorsFloat {
   }
 
   @JsOverlay
-  public final float get(@Nonnull final String name) {
+  public final float get(final @JsNonNull String name) {
     return Js.<JsPropertyMap<Any>>cast( this ).get( name ).asFloat();
   }
 
   @JsOverlay
-  public final void set(@Nonnull final String name, final float value) {
+  public final void set(final @JsNonNull String name, final float value) {
     Js.<JsPropertyMap<Float>>cast( this ).set( name, value );
   }
 }

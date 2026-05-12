@@ -33,7 +33,7 @@ public final class ServiceWorkerGlobalScopeGlobal {
   @JsProperty(
       name = "onmessage"
   )
-  public static native void setOnmessage(@JsNullable final ExtendableMessageEventHandler value);
+  public static native void setOnmessage(final @JsNullable ExtendableMessageEventHandler value);
 
   @JsOverlay
   public static final WorkerLocation location() {

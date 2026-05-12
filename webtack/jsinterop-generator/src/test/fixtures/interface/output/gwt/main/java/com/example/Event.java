@@ -38,10 +38,10 @@ public class Event {
 
   public boolean returnValue;
 
-  public Event(@Nonnull final String type, @Nonnull final EventInit eventInitDict) {
+  public Event(final @JsNonNull String type, final @JsNonNull EventInit eventInitDict) {
   }
 
-  public Event(@Nonnull final String type) {
+  public Event(final @JsNonNull String type) {
   }
 
   @JsProperty(
@@ -107,7 +107,7 @@ public class Event {
   @JsNonNull
   public native JsPromise<Any> anyInReturnedPromise();
 
-  public native void anyParameter(@DoNotAutobox @Nullable Object value);
+  public native void anyParameter(@DoNotAutobox @JsNullable Object value);
 
   @JsNullable
   public native Any anyReturning();
@@ -115,11 +115,11 @@ public class Event {
   @JsNonNull
   public native JsArray<EventTarget> composedPath();
 
-  public native void initEvent(@Nonnull String type, boolean bubbles, boolean cancelable);
+  public native void initEvent(@JsNonNull String type, boolean bubbles, boolean cancelable);
 
-  public native void initEvent(@Nonnull String type, boolean bubbles);
+  public native void initEvent(@JsNonNull String type, boolean bubbles);
 
-  public native void initEvent(@Nonnull String type);
+  public native void initEvent(@JsNonNull String type);
 
   public native void preventDefault();
 

@@ -3,9 +3,13 @@
  * @externs
  */
 /**
- * @typedef {function(!Event): undefined}
+ * @typedef {function(!Event,!string=,!CallbackOptions=): undefined}
  */
 var txEventHandler;
+/**
+ * @typedef {{label:(!string|undefined)}}
+ */
+var CallbackOptions;
 /**
  * @constructor
  * @private

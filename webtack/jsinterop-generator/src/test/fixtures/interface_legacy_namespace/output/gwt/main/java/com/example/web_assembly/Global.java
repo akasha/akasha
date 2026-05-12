@@ -2,9 +2,8 @@ package com.example.web_assembly;
 
 import com.example.GlobalDescriptor;
 import javaemul.internal.annotations.DoNotAutobox;
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 import javax.annotation.processing.Generated;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
@@ -20,11 +19,11 @@ public class Global {
   @JsNullable
   public Any value;
 
-  public Global(@Nonnull final GlobalDescriptor descriptor,
-      @DoNotAutobox @Nullable final Object v) {
+  public Global(final @JsNonNull GlobalDescriptor descriptor,
+      @DoNotAutobox final @JsNullable Object v) {
   }
 
-  public Global(@Nonnull final GlobalDescriptor descriptor) {
+  public Global(final @JsNonNull GlobalDescriptor descriptor) {
   }
 
   @JsNullable

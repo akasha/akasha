@@ -1,13 +1,13 @@
 package com.example;
 
-import javax.annotation.Nonnull;
 import javax.annotation.processing.Generated;
 import jsinterop.annotations.JsFunction;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOptional;
 
 @Generated("org.realityforge.webtack")
 @JsFunction
 @FunctionalInterface
 public interface OnBufferSourceHandler {
-  void onInvoke(@Nonnull @JsOptional BufferSource buffer);
+  void onInvoke(@JsOptional @JsNullable BufferSource buffer);
 }

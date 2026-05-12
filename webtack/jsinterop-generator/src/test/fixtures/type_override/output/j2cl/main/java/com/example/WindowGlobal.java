@@ -55,7 +55,7 @@ public final class WindowGlobal {
   @JsProperty(
       name = "onmessage"
   )
-  public static native void setOnmessage(@JsNullable final MessageEventHandler value);
+  public static native void setOnmessage(final @JsNullable MessageEventHandler value);
 
   @JsOverlay
   public static final Window self() {

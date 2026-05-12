@@ -1,7 +1,7 @@
 package com.example;
 
-import javax.annotation.Nonnull;
 import javax.annotation.processing.Generated;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import jsinterop.base.JsPropertyMap;
@@ -13,10 +13,10 @@ import jsinterop.base.JsPropertyMap;
     name = "ClipboardItem"
 )
 public class ClipboardItem {
-  public ClipboardItem(@Nonnull final JsPropertyMap<ClipboardItemData> items,
-      @Nonnull final ClipboardItemOptions options) {
+  public ClipboardItem(final @JsNonNull JsPropertyMap<ClipboardItemData> items,
+      final @JsNonNull ClipboardItemOptions options) {
   }
 
-  public ClipboardItem(@Nonnull final JsPropertyMap<ClipboardItemData> items) {
+  public ClipboardItem(final @JsNonNull JsPropertyMap<ClipboardItemData> items) {
   }
 }

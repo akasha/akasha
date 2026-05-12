@@ -1,7 +1,6 @@
 package com.example;
 
 import javaemul.internal.annotations.HasNoSideEffects;
-import javax.annotation.Nonnull;
 import javax.annotation.processing.Generated;
 import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
@@ -19,7 +18,7 @@ public final class Global {
 
   @HasNoSideEffects
   @JsNonNull
-  public static native String escape(@Nonnull String str);
+  public static native String escape(@JsNonNull String str);
 
   @HasNoSideEffects
   public static native boolean isFinite(double num);
@@ -27,8 +26,8 @@ public final class Global {
   @HasNoSideEffects
   public static native boolean isNaN(double value);
 
-  public static native int parseInt(@Nonnull String string, int radix);
+  public static native int parseInt(@JsNonNull String string, int radix);
 
   @JsNonNull
-  public static native String unescape(@Nonnull String str);
+  public static native String unescape(@JsNonNull String str);
 }

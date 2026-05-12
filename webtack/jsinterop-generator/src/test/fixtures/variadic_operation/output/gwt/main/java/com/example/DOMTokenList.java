@@ -1,7 +1,7 @@
 package com.example;
 
-import javax.annotation.Nonnull;
 import javax.annotation.processing.Generated;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -15,9 +15,9 @@ public class DOMTokenList {
   protected DOMTokenList() {
   }
 
-  public native void add(@Nonnull String... tokens);
+  public native void add(@JsNonNull String... tokens);
 
-  public native boolean contains(@Nonnull String token);
+  public native boolean contains(@JsNonNull String token);
 
-  public native void remove(@Nonnull String... tokens);
+  public native void remove(@JsNonNull String... tokens);
 }

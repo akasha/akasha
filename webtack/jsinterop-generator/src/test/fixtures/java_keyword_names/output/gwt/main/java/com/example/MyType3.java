@@ -1,8 +1,8 @@
 package com.example;
 
-import javax.annotation.Nonnull;
 import javax.annotation.processing.Generated;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -19,62 +19,62 @@ public class MyType3 {
   @JsMethod(
       name = "clone"
   )
-  public static native void clone_(@Nonnull Object clone);
+  public static native void clone_(@JsNonNull Object clone);
 
   @JsMethod(
       name = "default"
   )
-  public static native void default_(@Nonnull Object default_);
+  public static native void default_(@JsNonNull Object default_);
 
   @JsMethod(
       name = "equals"
   )
-  public static native void equals_(@Nonnull Object equals);
+  public static native void equals_(@JsNonNull Object equals);
 
   @JsMethod(
       name = "finalize"
   )
-  public static native void finalize_(@Nonnull Object finalize);
+  public static native void finalize_(@JsNonNull Object finalize);
 
   @JsMethod(
       name = "getClass"
   )
-  public static native void getClass_(@Nonnull Object getClass);
+  public static native void getClass_(@JsNonNull Object getClass);
 
   @JsMethod(
       name = "hashCode"
   )
-  public static native void hashCode_(@Nonnull Object hashCode);
+  public static native void hashCode_(@JsNonNull Object hashCode);
 
-  public static native void is(@Nonnull Object is);
+  public static native void is(@JsNonNull Object is);
 
   @JsMethod(
       name = "notify"
   )
-  public static native void notify_(@Nonnull Object notify);
+  public static native void notify_(@JsNonNull Object notify);
 
   @JsMethod(
       name = "notifyAll"
   )
-  public static native void notifyAll_(@Nonnull Object notifyAll);
+  public static native void notifyAll_(@JsNonNull Object notifyAll);
 
   @JsMethod(
       name = "private"
   )
-  public static native void private_(@Nonnull Object private_);
+  public static native void private_(@JsNonNull Object private_);
 
   @JsMethod(
       name = "protected"
   )
-  public static native void protected_(@Nonnull Object protected_);
+  public static native void protected_(@JsNonNull Object protected_);
 
   @JsMethod(
       name = "public"
   )
-  public static native void public_(@Nonnull Object public_);
+  public static native void public_(@JsNonNull Object public_);
 
   @JsMethod(
       name = "wait"
   )
-  public static native void wait_(@Nonnull Object wait);
+  public static native void wait_(@JsNonNull Object wait);
 }

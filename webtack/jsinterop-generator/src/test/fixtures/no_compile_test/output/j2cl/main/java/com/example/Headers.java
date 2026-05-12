@@ -23,16 +23,16 @@ public class Headers implements JsIterable<Headers.Entry> {
   protected Headers() {
   }
 
-  public native void append(@Nonnull String name, @Nonnull String value);
+  public native void append(@JsNonNull String name, @JsNonNull String value);
 
-  public native void delete(@Nonnull String name);
+  public native void delete(@JsNonNull String name);
 
   @JsNullable
-  public native String get(@Nonnull String name);
+  public native String get(@JsNonNull String name);
 
-  public native boolean has(@Nonnull String name);
+  public native boolean has(@JsNonNull String name);
 
-  public native void set(@Nonnull String name, @Nonnull String value);
+  public native void set(@JsNonNull String name, @JsNonNull String value);
 
   @HasNoSideEffects
   @JsNonNull

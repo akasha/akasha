@@ -2,7 +2,6 @@ package com.example;
 
 import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 import javax.annotation.processing.Generated;
 import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsPackage;
@@ -40,7 +39,7 @@ public class Window extends EventTarget {
   /**
    * Operation also appears in SharedWorker scope with same typing
    */
-  public native int requestAnimationFrame(@DoNotAutobox @Nullable Object callback);
+  public native int requestAnimationFrame(@DoNotAutobox @JsNullable Object callback);
 
   /**
    * Operation also appears in SharedWorker scope with different typing

@@ -2,8 +2,8 @@ package com.example;
 
 import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 import javax.annotation.processing.Generated;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -40,10 +40,10 @@ public class SharedWorkerGlobalScope extends WorkerGlobalScope {
   /**
    * Operation also appears in Window scope with same typing
    */
-  public native int requestAnimationFrame(@DoNotAutobox @Nullable Object callback);
+  public native int requestAnimationFrame(@DoNotAutobox @JsNullable Object callback);
 
   /**
    * Operation also appears in Window scope with different typing
    */
-  public native int requestAnimationFrame2(@Nonnull String callbackId);
+  public native int requestAnimationFrame2(@JsNonNull String callbackId);
 }

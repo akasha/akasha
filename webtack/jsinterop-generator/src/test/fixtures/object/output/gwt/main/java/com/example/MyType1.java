@@ -36,14 +36,14 @@ public class MyType1 {
   public static native JsObject staticReadonlyObjectValue();
 
   @JsNonNull
-  public static native JsObject staticOjectMethod(@Nonnull JsObject v1, @Nonnull JsObject v2);
+  public static native JsObject staticOjectMethod(@JsNonNull JsObject v1, @JsNonNull JsObject v2);
 
   @JsNonNull
-  public static native JsObject staticOjectMethod(@Nonnull JsObject v1);
+  public static native JsObject staticOjectMethod(@JsNonNull JsObject v1);
 
   @JsNonNull
-  public native JsObject objectMethod(@Nonnull JsObject v1, @Nonnull JsObject v2);
+  public native JsObject objectMethod(@JsNonNull JsObject v1, @JsNonNull JsObject v2);
 
   @JsNonNull
-  public native JsObject objectMethod(@Nonnull JsObject v1);
+  public native JsObject objectMethod(@JsNonNull JsObject v1);
 }

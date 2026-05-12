@@ -1,8 +1,8 @@
 package com.example;
 
-import javax.annotation.Nonnull;
 import javax.annotation.processing.Generated;
 import jsinterop.annotations.JsFunction;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOptional;
 
 /**
@@ -15,5 +15,5 @@ import jsinterop.annotations.JsOptional;
 @JsFunction
 @FunctionalInterface
 public interface OnActionHandler {
-  void onInvoke(@Nonnull @JsOptional String type);
+  void onInvoke(@JsOptional @JsNullable String type);
 }

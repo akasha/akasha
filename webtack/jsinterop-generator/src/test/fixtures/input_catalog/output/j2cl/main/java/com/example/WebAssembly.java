@@ -1,8 +1,8 @@
 package com.example;
 
 import com.biz.MyActiveMode;
-import javax.annotation.Nonnull;
 import javax.annotation.processing.Generated;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -16,6 +16,6 @@ public final class WebAssembly {
   private WebAssembly() {
   }
 
-  public static native boolean validate(@TxMode @Nonnull String txMode,
-      @MyActiveMode @Nonnull String mode);
+  public static native boolean validate(@TxMode @JsNonNull String txMode,
+      @MyActiveMode @JsNonNull String mode);
 }

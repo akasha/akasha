@@ -1,6 +1,5 @@
 package com.example;
 
-import javax.annotation.Nonnull;
 import javax.annotation.processing.Generated;
 import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
@@ -24,17 +23,17 @@ public class DOMStringMap {
 
   @JsOverlay
   @JsNonNull
-  public final String get(@Nonnull final String name) {
+  public final String get(final @JsNonNull String name) {
     return Js.<JsPropertyMap<String>>cast( this ).get( name );
   }
 
   @JsOverlay
-  public final void set(@Nonnull final String name, @Nonnull final String value) {
+  public final void set(final @JsNonNull String name, final @JsNonNull String value) {
     Js.<JsPropertyMap<String>>cast( this ).set( name, value );
   }
 
   @JsOverlay
-  public final void delete(@Nonnull final String name) {
+  public final void delete(final @JsNonNull String name) {
     Js.<JsPropertyMap<?>>cast( this ).delete( name );
   }
 }

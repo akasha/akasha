@@ -1,10 +1,10 @@
 package com.example;
 
 import javaemul.internal.annotations.DoNotAutobox;
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 import javax.annotation.processing.Generated;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
@@ -28,7 +28,7 @@ public final class Console {
   @JsMethod(
       name = "assert"
   )
-  public static native void assert_(boolean condition, @DoNotAutobox @Nullable Object... data);
+  public static native void assert_(boolean condition, @DoNotAutobox @JsNullable Object... data);
 
   @JsMethod(
       name = "assert"
@@ -45,28 +45,28 @@ public final class Console {
   /**
    * Last argument is optional and a varargs candidate
    */
-  public static native void table(@DoNotAutobox @Nullable Object tabularData,
-      @Nonnull JsArray<String> properties);
+  public static native void table(@DoNotAutobox @JsNullable Object tabularData,
+      @JsNonNull JsArray<String> properties);
 
   /**
    * Last argument is optional and a varargs candidate
    */
   @JsOverlay
-  public static final void table(@DoNotAutobox @Nullable final Object tabularData,
-      @Nonnull final String... properties) {
+  public static final void table(@DoNotAutobox final @JsNullable Object tabularData,
+      final String @JsNonNull ... properties) {
     _table( tabularData, properties );
   }
 
   @JsMethod(
       name = "table"
   )
-  private static native void _table(@DoNotAutobox @Nullable Object tabularData,
-      @Nonnull String[] properties);
+  private static native void _table(@DoNotAutobox @JsNullable Object tabularData,
+      String @JsNonNull [] properties);
 
   /**
    * Last argument is optional and a varargs candidate
    */
-  public static native void table(@DoNotAutobox @Nullable Object tabularData);
+  public static native void table(@DoNotAutobox @JsNullable Object tabularData);
 
   /**
    * Last argument is optional and a varargs candidate
@@ -78,5 +78,5 @@ public final class Console {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/console/warn">console.warn - MDN</a>
    */
-  public static native void warn(@DoNotAutobox @Nullable Object... data);
+  public static native void warn(@DoNotAutobox @JsNullable Object... data);
 }

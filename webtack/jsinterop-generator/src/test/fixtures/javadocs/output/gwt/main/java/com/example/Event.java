@@ -1,6 +1,5 @@
 package com.example;
 
-import javax.annotation.Nonnull;
 import javax.annotation.processing.Generated;
 import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
@@ -42,7 +41,7 @@ public class Event {
    *
    * @see <a href="http://example.com/API/Event/Event">Event.Event - MDN</a>
    */
-  public Event(@Nonnull final String type, @Nonnull final EventInit eventInitDict) {
+  public Event(final @JsNonNull String type, final @JsNonNull EventInit eventInitDict) {
   }
 
   /**
@@ -50,7 +49,7 @@ public class Event {
    *
    * @see <a href="http://example.com/API/Event/Event">Event.Event - MDN</a>
    */
-  public Event(@Nonnull final String type) {
+  public Event(final @JsNonNull String type) {
   }
 
   /**
@@ -71,7 +70,7 @@ public class Event {
    * @see <a href="http://example.com/API/Event/filterGlobalEvent">Event.filterGlobalEvent - MDN</a>
    */
   @JsNonNull
-  public static native Event filterGlobalEvent(@Nonnull String type);
+  public static native Event filterGlobalEvent(@JsNonNull String type);
 
   /**
    * Documentation for Event.composedPath.

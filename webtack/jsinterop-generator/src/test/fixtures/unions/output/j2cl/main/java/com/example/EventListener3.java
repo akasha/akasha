@@ -1,7 +1,7 @@
 package com.example;
 
-import javax.annotation.Nonnull;
 import javax.annotation.processing.Generated;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -13,5 +13,5 @@ import jsinterop.annotations.JsType;
 )
 @FunctionalInterface
 public interface EventListener3 {
-  void handleServiceUuid(@Nonnull BluetoothServiceUUID event);
+  void handleServiceUuid(@JsNonNull BluetoothServiceUUID event);
 }

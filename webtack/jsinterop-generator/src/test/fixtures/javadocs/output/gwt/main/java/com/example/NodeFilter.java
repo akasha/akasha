@@ -1,7 +1,7 @@
 package com.example;
 
-import javax.annotation.Nonnull;
 import javax.annotation.processing.Generated;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
@@ -33,5 +33,5 @@ public interface NodeFilter {
    * @return the code.
    * @see <a href="http://example.com/API/NodeFilter/acceptNode">NodeFilter.acceptNode - MDN</a>
    */
-  int acceptNode(@Nonnull Node node);
+  int acceptNode(@JsNonNull Node node);
 }

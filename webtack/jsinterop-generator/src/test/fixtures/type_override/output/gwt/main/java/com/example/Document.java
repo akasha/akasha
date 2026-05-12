@@ -1,6 +1,5 @@
 package com.example;
 
-import javax.annotation.Nonnull;
 import javax.annotation.processing.Generated;
 import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsNullable;
@@ -18,14 +17,15 @@ public class Document {
   }
 
   @JsNonNull
-  public native Document open(@Nonnull String unused1, @Nonnull String unused2);
+  public native Document open(@JsNonNull String unused1, @JsNonNull String unused2);
 
   @JsNonNull
-  public native Document open(@Nonnull String unused1);
+  public native Document open(@JsNonNull String unused1);
 
   @JsNonNull
   public native Document open();
 
   @JsNullable
-  public native Window open(@Nonnull String url, @Nonnull String name, @Nonnull String features);
+  public native Window open(@JsNonNull String url, @JsNonNull String name,
+      @JsNonNull String features);
 }

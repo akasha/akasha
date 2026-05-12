@@ -1,7 +1,7 @@
 package com.example;
 
-import javax.annotation.Nonnull;
 import javax.annotation.processing.Generated;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -15,5 +15,5 @@ public class EventTarget {
   public EventTarget() {
   }
 
-  public native boolean dispatchEvent(@Nonnull Event event);
+  public native boolean dispatchEvent(@JsNonNull Event event);
 }

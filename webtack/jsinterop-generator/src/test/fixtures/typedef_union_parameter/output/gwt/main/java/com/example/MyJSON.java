@@ -1,10 +1,9 @@
 package com.example;
 
 import javaemul.internal.annotations.DoNotAutobox;
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 import javax.annotation.processing.Generated;
 import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -19,15 +18,15 @@ public class MyJSON {
   }
 
   @JsNonNull
-  public native String stringify(@DoNotAutobox @Nullable Object value,
-      @Nullable StringifySpaceUnionType space);
+  public native String stringify(@DoNotAutobox @JsNullable Object value,
+      @JsNullable StringifySpaceUnionType space);
 
   @JsNonNull
-  public native String stringify(@DoNotAutobox @Nullable Object value, @Nonnull String space);
+  public native String stringify(@DoNotAutobox @JsNullable Object value, @JsNonNull String space);
 
   @JsNonNull
-  public native String stringify(@DoNotAutobox @Nullable Object value, int space);
+  public native String stringify(@DoNotAutobox @JsNullable Object value, int space);
 
   @JsNonNull
-  public native String stringify(@DoNotAutobox @Nullable Object value);
+  public native String stringify(@DoNotAutobox @JsNullable Object value);
 }

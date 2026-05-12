@@ -1,6 +1,5 @@
 package com.example;
 
-import javax.annotation.Nonnull;
 import javax.annotation.processing.Generated;
 import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
@@ -13,13 +12,13 @@ import jsinterop.annotations.JsType;
     name = "SomeInterface"
 )
 public class SomeInterface {
-  public SomeInterface(@Nonnull final String serviceUuid) {
+  public SomeInterface(final @JsNonNull String serviceUuid) {
   }
 
   public SomeInterface(final int serviceUuid) {
   }
 
-  public static native void myStaticMethodWithUnionArg(@Nonnull String serviceUuid);
+  public static native void myStaticMethodWithUnionArg(@JsNonNull String serviceUuid);
 
   public static native void myStaticMethodWithUnionArg(int serviceUuid);
 

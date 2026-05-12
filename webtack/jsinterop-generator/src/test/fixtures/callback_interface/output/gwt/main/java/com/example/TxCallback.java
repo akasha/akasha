@@ -1,7 +1,8 @@
 package com.example;
 
-import javax.annotation.Nonnull;
 import javax.annotation.processing.Generated;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -16,5 +17,6 @@ import jsinterop.annotations.JsType;
 )
 @FunctionalInterface
 public interface TxCallback {
-  void handleEvent(@Nonnull Event event);
+  void handleEvent(@JsNonNull Event event, @JsNullable String source,
+      @JsNullable CallbackOptions metadata);
 }

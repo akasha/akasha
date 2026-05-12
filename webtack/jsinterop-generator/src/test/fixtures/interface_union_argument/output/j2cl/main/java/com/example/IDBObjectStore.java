@@ -1,6 +1,5 @@
 package com.example;
 
-import javax.annotation.Nonnull;
 import javax.annotation.processing.Generated;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsNonNull;
@@ -25,26 +24,27 @@ public class IDBObjectStore {
   public native boolean autoIncrement();
 
   @JsNonNull
-  public native IDBIndex createIndex(@Nonnull String name, @Nonnull String keyPath,
-      @Nonnull IDBIndexParameters options);
+  public native IDBIndex createIndex(@JsNonNull String name, @JsNonNull String keyPath,
+      @JsNonNull IDBIndexParameters options);
 
   @JsNonNull
-  public native IDBIndex createIndex(@Nonnull String name, @Nonnull JsArray<String> keyPath,
-      @Nonnull IDBIndexParameters options);
+  public native IDBIndex createIndex(@JsNonNull String name, @JsNonNull JsArray<String> keyPath,
+      @JsNonNull IDBIndexParameters options);
 
   @JsNonNull
-  public native IDBIndex createIndex(@Nonnull String name, @Nonnull String[] keyPath,
-      @Nonnull IDBIndexParameters options);
+  public native IDBIndex createIndex(@JsNonNull String name, String @JsNonNull [] keyPath,
+      @JsNonNull IDBIndexParameters options);
 
   @JsNonNull
-  public native IDBIndex createIndex(@Nonnull String name, @Nonnull String keyPath);
+  public native IDBIndex createIndex(@JsNonNull String name, @JsNonNull String keyPath);
 
   @JsNonNull
-  public native IDBIndex createIndex(@Nonnull String name, @Nonnull JsArray<String> keyPath);
+  public native IDBIndex createIndex(@JsNonNull String name, @JsNonNull JsArray<String> keyPath);
 
   @JsOverlay
   @JsNonNull
-  public final IDBIndex createIndex(@Nonnull final String name, @Nonnull final String... keyPath) {
+  public final IDBIndex createIndex(final @JsNonNull String name,
+      final String @JsNonNull ... keyPath) {
     return _createIndex( name, keyPath );
   }
 
@@ -52,5 +52,5 @@ public class IDBObjectStore {
       name = "createIndex"
   )
   @JsNonNull
-  private native IDBIndex _createIndex(@Nonnull String name, @Nonnull String[] keyPath);
+  private native IDBIndex _createIndex(@JsNonNull String name, String @JsNonNull [] keyPath);
 }

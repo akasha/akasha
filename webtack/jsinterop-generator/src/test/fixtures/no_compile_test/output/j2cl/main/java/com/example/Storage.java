@@ -1,8 +1,8 @@
 package com.example;
 
 import javaemul.internal.annotations.HasNoSideEffects;
-import javax.annotation.Nonnull;
 import javax.annotation.processing.Generated;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -30,9 +30,9 @@ public class Storage {
 
   @HasNoSideEffects
   @JsNullable
-  public native String getItem(@Nonnull String key);
+  public native String getItem(@JsNonNull String key);
 
-  public native void setItem(@Nonnull String key, @Nonnull String value);
+  public native void setItem(@JsNonNull String key, @JsNonNull String value);
 
-  public native void removeItem(@Nonnull String key);
+  public native void removeItem(@JsNonNull String key);
 }

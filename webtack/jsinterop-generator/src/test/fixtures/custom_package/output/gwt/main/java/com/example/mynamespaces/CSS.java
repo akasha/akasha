@@ -1,6 +1,5 @@
 package com.example.mynamespaces;
 
-import javax.annotation.Nonnull;
 import javax.annotation.processing.Generated;
 import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
@@ -17,5 +16,5 @@ public final class CSS {
   }
 
   @JsNonNull
-  public static native String escape(@Nonnull String ident);
+  public static native String escape(@JsNonNull String ident);
 }

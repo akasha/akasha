@@ -1,8 +1,8 @@
 package com.example;
 
-import javax.annotation.Nonnull;
 import javax.annotation.processing.Generated;
 import jsinterop.annotations.JsFunction;
+import jsinterop.annotations.JsNonNull;
 
 /**
  * Handle events of type SpeechSynthesisEvent
@@ -11,5 +11,5 @@ import jsinterop.annotations.JsFunction;
 @JsFunction
 @FunctionalInterface
 public interface SpeechSynthesisEventHandler {
-  void onInvoke(@Nonnull SpeechSynthesisEvent event);
+  void onInvoke(@JsNonNull SpeechSynthesisEvent event);
 }

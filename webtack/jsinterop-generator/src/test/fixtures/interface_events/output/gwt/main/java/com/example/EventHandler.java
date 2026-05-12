@@ -1,8 +1,8 @@
 package com.example;
 
-import javax.annotation.Nonnull;
 import javax.annotation.processing.Generated;
 import jsinterop.annotations.JsFunction;
+import jsinterop.annotations.JsNonNull;
 
 /**
  * This is event handler documentation.
@@ -13,5 +13,5 @@ import jsinterop.annotations.JsFunction;
 @JsFunction
 @FunctionalInterface
 public interface EventHandler {
-  void onInvoke(@Nonnull Event event);
+  void onInvoke(@JsNonNull Event event);
 }

@@ -1,7 +1,7 @@
 package com.example;
 
-import javax.annotation.Nonnull;
 import javax.annotation.processing.Generated;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -20,5 +20,5 @@ public class Other {
 
   public native void castSpell(double x, double y);
 
-  public native void castSpell(@Nonnull Point location);
+  public native void castSpell(@JsNonNull Point location);
 }

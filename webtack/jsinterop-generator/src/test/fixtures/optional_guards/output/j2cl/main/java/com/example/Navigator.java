@@ -3,6 +3,7 @@ package com.example;
 import javax.annotation.Nonnull;
 import javax.annotation.processing.Generated;
 import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
@@ -32,7 +33,7 @@ public final class Navigator {
   /**
    * This method is exploded into multiple methods. However we should only have one feature detection method created.
    */
-  public native boolean vibrate(@Nonnull VibratePattern pattern);
+  public native boolean vibrate(@JsNonNull VibratePattern pattern);
 
   /**
    * This method is exploded into multiple methods. However we should only have one feature detection method created.
@@ -42,18 +43,18 @@ public final class Navigator {
   /**
    * This method is exploded into multiple methods. However we should only have one feature detection method created.
    */
-  public native boolean vibrate(@Nonnull JsArray<Double> pattern);
+  public native boolean vibrate(@JsNonNull JsArray<Double> pattern);
 
   /**
    * This method is exploded into multiple methods. However we should only have one feature detection method created.
    */
   @JsOverlay
-  public final boolean vibrate(@Nonnull final double... pattern) {
+  public final boolean vibrate(final double @JsNonNull ... pattern) {
     return _vibrate( pattern );
   }
 
   @JsMethod(
       name = "vibrate"
   )
-  private native boolean _vibrate(@Nonnull double[] pattern);
+  private native boolean _vibrate(double @JsNonNull [] pattern);
 }

@@ -3,10 +3,10 @@ package com.example;
 import javaemul.internal.annotations.DoNotAutobox;
 import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 import javax.annotation.processing.Generated;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -51,33 +51,33 @@ public class Window extends EventTarget {
   @Nonnull
   public native Navigator navigator();
 
-  public native void postMessage(@DoNotAutobox @Nullable java.lang.Object message,
-      @Nonnull String targetOrigin, @Nonnull JsArray<Transferable2> transfer);
+  public native void postMessage(@DoNotAutobox java.lang. @JsNullable Object message,
+      @JsNonNull String targetOrigin, @JsNonNull JsArray<Transferable2> transfer);
 
   @JsOverlay
-  public final void postMessage(@DoNotAutobox @Nullable final java.lang.Object message,
-      @Nonnull final String targetOrigin, @Nonnull final Transferable2... transfer) {
+  public final void postMessage(@DoNotAutobox final java.lang. @JsNullable Object message,
+      final @JsNonNull String targetOrigin, final Transferable2 @JsNonNull ... transfer) {
     _postMessage( message, targetOrigin, transfer );
   }
 
   @JsMethod(
       name = "postMessage"
   )
-  private native void _postMessage(@DoNotAutobox @Nullable java.lang.Object message,
-      @Nonnull String targetOrigin, @Nonnull Transferable2[] transfer);
+  private native void _postMessage(@DoNotAutobox java.lang. @JsNullable Object message,
+      @JsNonNull String targetOrigin, Transferable2 @JsNonNull [] transfer);
 
-  public native void postMessage(@DoNotAutobox @Nullable java.lang.Object message,
-      @Nonnull String targetOrigin);
+  public native void postMessage(@DoNotAutobox java.lang. @JsNullable Object message,
+      @JsNonNull String targetOrigin);
 
   public native void scroll(double x, double y);
 
-  public native void scroll(@Nonnull ScrollToOptions options);
+  public native void scroll(@JsNonNull ScrollToOptions options);
 
   public native void scroll();
 
   @HasNoSideEffects
   @JsNonNull
-  public native Object get(@Nonnull String name);
+  public native Object get(@JsNonNull String name);
 
   @JsOverlay
   public final void addDOMContentLoadedListener(@Nonnull final EventListener callback,

@@ -1,7 +1,7 @@
 package com.example;
 
-import javax.annotation.Nonnull;
 import javax.annotation.processing.Generated;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import jsinterop.base.JsPropertyMap;
@@ -13,7 +13,7 @@ import jsinterop.base.JsPropertyMap;
     name = "Headers"
 )
 public class Headers {
-  public Headers(@Nonnull final JsPropertyMap<String> headers) {
+  public Headers(final @JsNonNull JsPropertyMap<String> headers) {
   }
 
   public Headers() {

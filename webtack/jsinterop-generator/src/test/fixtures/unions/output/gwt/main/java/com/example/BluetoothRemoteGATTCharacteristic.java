@@ -1,6 +1,5 @@
 package com.example;
 
-import javax.annotation.Nonnull;
 import javax.annotation.processing.Generated;
 import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
@@ -17,119 +16,119 @@ public class BluetoothRemoteGATTCharacteristic extends EventTarget {
   }
 
   @JsNonNull
-  public native JsPromise<Void> writeValue(@Nonnull BufferSource value);
+  public native JsPromise<Void> writeValue(@JsNonNull BufferSource value);
 
   @JsNonNull
-  public native JsPromise<Void> writeValue(@Nonnull ArrayBufferView value);
+  public native JsPromise<Void> writeValue(@JsNonNull ArrayBufferView value);
 
   @JsNonNull
-  public native JsPromise<Void> writeValue(@Nonnull Int8Array value);
+  public native JsPromise<Void> writeValue(@JsNonNull Int8Array value);
 
   @JsNonNull
-  public native JsPromise<Void> writeValue(@Nonnull Int16Array value);
+  public native JsPromise<Void> writeValue(@JsNonNull Int16Array value);
 
   @JsNonNull
-  public native JsPromise<Void> writeValue(@Nonnull Int32Array value);
+  public native JsPromise<Void> writeValue(@JsNonNull Int32Array value);
 
   @JsNonNull
-  public native JsPromise<Void> writeValue(@Nonnull Uint8Array value);
+  public native JsPromise<Void> writeValue(@JsNonNull Uint8Array value);
 
   @JsNonNull
-  public native JsPromise<Void> writeValue(@Nonnull Uint16Array value);
+  public native JsPromise<Void> writeValue(@JsNonNull Uint16Array value);
 
   @JsNonNull
-  public native JsPromise<Void> writeValue(@Nonnull Uint32Array value);
+  public native JsPromise<Void> writeValue(@JsNonNull Uint32Array value);
 
   @JsNonNull
-  public native JsPromise<Void> writeValue(@Nonnull Uint8ClampedArray value);
+  public native JsPromise<Void> writeValue(@JsNonNull Uint8ClampedArray value);
 
   @JsNonNull
-  public native JsPromise<Void> writeValue(@Nonnull Float32Array value);
+  public native JsPromise<Void> writeValue(@JsNonNull Float32Array value);
 
   @JsNonNull
-  public native JsPromise<Void> writeValue(@Nonnull Float64Array value);
+  public native JsPromise<Void> writeValue(@JsNonNull Float64Array value);
 
   @JsNonNull
-  public native JsPromise<Void> writeValue(@Nonnull DataView value);
+  public native JsPromise<Void> writeValue(@JsNonNull DataView value);
 
   @JsNonNull
-  public native JsPromise<Void> writeValue(@Nonnull ArrayBuffer value);
+  public native JsPromise<Void> writeValue(@JsNonNull ArrayBuffer value);
 
   @JsNonNull
-  public native JsPromise<Void> writeValueWithResponse(@Nonnull BufferSource value);
+  public native JsPromise<Void> writeValueWithResponse(@JsNonNull BufferSource value);
 
   @JsNonNull
-  public native JsPromise<Void> writeValueWithResponse(@Nonnull ArrayBufferView value);
+  public native JsPromise<Void> writeValueWithResponse(@JsNonNull ArrayBufferView value);
 
   @JsNonNull
-  public native JsPromise<Void> writeValueWithResponse(@Nonnull Int8Array value);
+  public native JsPromise<Void> writeValueWithResponse(@JsNonNull Int8Array value);
 
   @JsNonNull
-  public native JsPromise<Void> writeValueWithResponse(@Nonnull Int16Array value);
+  public native JsPromise<Void> writeValueWithResponse(@JsNonNull Int16Array value);
 
   @JsNonNull
-  public native JsPromise<Void> writeValueWithResponse(@Nonnull Int32Array value);
+  public native JsPromise<Void> writeValueWithResponse(@JsNonNull Int32Array value);
 
   @JsNonNull
-  public native JsPromise<Void> writeValueWithResponse(@Nonnull Uint8Array value);
+  public native JsPromise<Void> writeValueWithResponse(@JsNonNull Uint8Array value);
 
   @JsNonNull
-  public native JsPromise<Void> writeValueWithResponse(@Nonnull Uint16Array value);
+  public native JsPromise<Void> writeValueWithResponse(@JsNonNull Uint16Array value);
 
   @JsNonNull
-  public native JsPromise<Void> writeValueWithResponse(@Nonnull Uint32Array value);
+  public native JsPromise<Void> writeValueWithResponse(@JsNonNull Uint32Array value);
 
   @JsNonNull
-  public native JsPromise<Void> writeValueWithResponse(@Nonnull Uint8ClampedArray value);
+  public native JsPromise<Void> writeValueWithResponse(@JsNonNull Uint8ClampedArray value);
 
   @JsNonNull
-  public native JsPromise<Void> writeValueWithResponse(@Nonnull Float32Array value);
+  public native JsPromise<Void> writeValueWithResponse(@JsNonNull Float32Array value);
 
   @JsNonNull
-  public native JsPromise<Void> writeValueWithResponse(@Nonnull Float64Array value);
+  public native JsPromise<Void> writeValueWithResponse(@JsNonNull Float64Array value);
 
   @JsNonNull
-  public native JsPromise<Void> writeValueWithResponse(@Nonnull DataView value);
+  public native JsPromise<Void> writeValueWithResponse(@JsNonNull DataView value);
 
   @JsNonNull
-  public native JsPromise<Void> writeValueWithResponse(@Nonnull ArrayBuffer value);
+  public native JsPromise<Void> writeValueWithResponse(@JsNonNull ArrayBuffer value);
 
   @JsNonNull
-  public native JsPromise<Void> writeValueWithoutResponse(@Nonnull BufferSource value);
+  public native JsPromise<Void> writeValueWithoutResponse(@JsNonNull BufferSource value);
 
   @JsNonNull
-  public native JsPromise<Void> writeValueWithoutResponse(@Nonnull ArrayBufferView value);
+  public native JsPromise<Void> writeValueWithoutResponse(@JsNonNull ArrayBufferView value);
 
   @JsNonNull
-  public native JsPromise<Void> writeValueWithoutResponse(@Nonnull Int8Array value);
+  public native JsPromise<Void> writeValueWithoutResponse(@JsNonNull Int8Array value);
 
   @JsNonNull
-  public native JsPromise<Void> writeValueWithoutResponse(@Nonnull Int16Array value);
+  public native JsPromise<Void> writeValueWithoutResponse(@JsNonNull Int16Array value);
 
   @JsNonNull
-  public native JsPromise<Void> writeValueWithoutResponse(@Nonnull Int32Array value);
+  public native JsPromise<Void> writeValueWithoutResponse(@JsNonNull Int32Array value);
 
   @JsNonNull
-  public native JsPromise<Void> writeValueWithoutResponse(@Nonnull Uint8Array value);
+  public native JsPromise<Void> writeValueWithoutResponse(@JsNonNull Uint8Array value);
 
   @JsNonNull
-  public native JsPromise<Void> writeValueWithoutResponse(@Nonnull Uint16Array value);
+  public native JsPromise<Void> writeValueWithoutResponse(@JsNonNull Uint16Array value);
 
   @JsNonNull
-  public native JsPromise<Void> writeValueWithoutResponse(@Nonnull Uint32Array value);
+  public native JsPromise<Void> writeValueWithoutResponse(@JsNonNull Uint32Array value);
 
   @JsNonNull
-  public native JsPromise<Void> writeValueWithoutResponse(@Nonnull Uint8ClampedArray value);
+  public native JsPromise<Void> writeValueWithoutResponse(@JsNonNull Uint8ClampedArray value);
 
   @JsNonNull
-  public native JsPromise<Void> writeValueWithoutResponse(@Nonnull Float32Array value);
+  public native JsPromise<Void> writeValueWithoutResponse(@JsNonNull Float32Array value);
 
   @JsNonNull
-  public native JsPromise<Void> writeValueWithoutResponse(@Nonnull Float64Array value);
+  public native JsPromise<Void> writeValueWithoutResponse(@JsNonNull Float64Array value);
 
   @JsNonNull
-  public native JsPromise<Void> writeValueWithoutResponse(@Nonnull DataView value);
+  public native JsPromise<Void> writeValueWithoutResponse(@JsNonNull DataView value);
 
   @JsNonNull
-  public native JsPromise<Void> writeValueWithoutResponse(@Nonnull ArrayBuffer value);
+  public native JsPromise<Void> writeValueWithoutResponse(@JsNonNull ArrayBuffer value);
 }

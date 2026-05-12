@@ -1,6 +1,5 @@
 package com.example;
 
-import javax.annotation.Nullable;
 import javax.annotation.processing.Generated;
 import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsPackage;
@@ -15,5 +14,5 @@ import jsinterop.annotations.JsType;
 @FunctionalInterface
 public interface XPathNSResolver {
   @JsNullable
-  String lookupNamespaceURI(@Nullable String prefix);
+  String lookupNamespaceURI(@JsNullable String prefix);
 }

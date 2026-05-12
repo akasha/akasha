@@ -1,7 +1,7 @@
 package com.example;
 
-import javax.annotation.Nonnull;
 import javax.annotation.processing.Generated;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
@@ -13,10 +13,10 @@ import jsinterop.annotations.JsType;
     name = "SomeServiceContainer"
 )
 public class SomeServiceContainer {
-  public SomeServiceContainer(@Nonnull final BluetoothServiceUUID service) {
+  public SomeServiceContainer(final @JsNonNull BluetoothServiceUUID service) {
   }
 
-  public SomeServiceContainer(@Nonnull final String service) {
+  public SomeServiceContainer(final @JsNonNull String service) {
   }
 
   public SomeServiceContainer(final int service) {
@@ -25,9 +25,9 @@ public class SomeServiceContainer {
   public SomeServiceContainer() {
   }
 
-  public static native void myStaticMethodWithUnionArg(@Nonnull BluetoothDescriptorUUID name);
+  public static native void myStaticMethodWithUnionArg(@JsNonNull BluetoothDescriptorUUID name);
 
-  public static native void myStaticMethodWithUnionArg(@Nonnull String name);
+  public static native void myStaticMethodWithUnionArg(@JsNonNull String name);
 
   public static native void myStaticMethodWithUnionArg(int name);
 

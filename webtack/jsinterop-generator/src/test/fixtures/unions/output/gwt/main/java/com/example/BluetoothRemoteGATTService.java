@@ -1,6 +1,5 @@
 package com.example;
 
-import javax.annotation.Nonnull;
 import javax.annotation.processing.Generated;
 import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
@@ -18,21 +17,21 @@ public class BluetoothRemoteGATTService extends EventTarget {
 
   @JsNonNull
   public native JsPromise<BluetoothRemoteGATTService> getIncludedService(
-      @Nonnull BluetoothServiceUUID service);
+      @JsNonNull BluetoothServiceUUID service);
 
   @JsNonNull
-  public native JsPromise<BluetoothRemoteGATTService> getIncludedService(@Nonnull String service);
+  public native JsPromise<BluetoothRemoteGATTService> getIncludedService(@JsNonNull String service);
 
   @JsNonNull
   public native JsPromise<BluetoothRemoteGATTService> getIncludedService(int service);
 
   @JsNonNull
   public native JsPromise<JsArray<BluetoothRemoteGATTService>> getIncludedServices(
-      @Nonnull BluetoothServiceUUID service);
+      @JsNonNull BluetoothServiceUUID service);
 
   @JsNonNull
   public native JsPromise<JsArray<BluetoothRemoteGATTService>> getIncludedServices(
-      @Nonnull String service);
+      @JsNonNull String service);
 
   @JsNonNull
   public native JsPromise<JsArray<BluetoothRemoteGATTService>> getIncludedServices(int service);

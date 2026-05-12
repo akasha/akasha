@@ -1,7 +1,7 @@
 package com.example;
 
-import javax.annotation.Nonnull;
 import javax.annotation.processing.Generated;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
@@ -23,17 +23,17 @@ public class AnonymousNamedAccessorsUnsignedLong {
   }
 
   @JsOverlay
-  public final int get(@Nonnull final String name) {
+  public final int get(final @JsNonNull String name) {
     return Js.<JsPropertyMap<Any>>cast( this ).get( name ).asInt();
   }
 
   @JsOverlay
-  public final void set(@Nonnull final String name, final int value) {
+  public final void set(final @JsNonNull String name, final int value) {
     Js.<JsPropertyMap<Integer>>cast( this ).set( name, value );
   }
 
   @JsOverlay
-  public final void delete(@Nonnull final String name) {
+  public final void delete(final @JsNonNull String name) {
     Js.<JsPropertyMap<?>>cast( this ).delete( name );
   }
 }

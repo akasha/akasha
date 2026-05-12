@@ -3,10 +3,10 @@ package com.example;
 import javaemul.internal.annotations.DoNotAutobox;
 import javaemul.internal.annotations.HasNoSideEffects;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 import javax.annotation.processing.Generated;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -54,33 +54,33 @@ public final class WindowGlobal {
   @JsNonNull
   public static native Navigator navigator();
 
-  public static native void postMessage(@DoNotAutobox @Nullable java.lang.Object message,
-      @Nonnull String targetOrigin, @Nonnull JsArray<Transferable2> transfer);
+  public static native void postMessage(@DoNotAutobox java.lang. @JsNullable Object message,
+      @JsNonNull String targetOrigin, @JsNonNull JsArray<Transferable2> transfer);
 
   @JsOverlay
-  public static final void postMessage(@DoNotAutobox @Nullable final java.lang.Object message,
-      @Nonnull final String targetOrigin, @Nonnull final Transferable2... transfer) {
+  public static final void postMessage(@DoNotAutobox final java.lang. @JsNullable Object message,
+      final @JsNonNull String targetOrigin, final Transferable2 @JsNonNull ... transfer) {
     _postMessage( message, targetOrigin, transfer );
   }
 
   @JsMethod(
       name = "postMessage"
   )
-  private static native void _postMessage(@DoNotAutobox @Nullable java.lang.Object message,
-      @Nonnull String targetOrigin, @Nonnull Transferable2[] transfer);
+  private static native void _postMessage(@DoNotAutobox java.lang. @JsNullable Object message,
+      @JsNonNull String targetOrigin, Transferable2 @JsNonNull [] transfer);
 
-  public static native void postMessage(@DoNotAutobox @Nullable java.lang.Object message,
-      @Nonnull String targetOrigin);
+  public static native void postMessage(@DoNotAutobox java.lang. @JsNullable Object message,
+      @JsNonNull String targetOrigin);
 
   public static native void scroll(double x, double y);
 
-  public static native void scroll(@Nonnull ScrollToOptions options);
+  public static native void scroll(@JsNonNull ScrollToOptions options);
 
   public static native void scroll();
 
   @HasNoSideEffects
   @JsNonNull
-  public static native Object get(@Nonnull String name);
+  public static native Object get(@JsNonNull String name);
 
   @JsOverlay
   public static void addDOMContentLoadedListener(@Nonnull final EventListener callback,
@@ -155,45 +155,45 @@ public final class WindowGlobal {
   )
   public static native boolean open();
 
-  public static native void addEventListener(@Nonnull String type, @Nullable EventListener callback,
-      @Nonnull AddEventListenerOptions options);
+  public static native void addEventListener(@JsNonNull String type,
+      @JsNullable EventListener callback, @JsNonNull AddEventListenerOptions options);
 
-  public static native void addEventListener(@Nonnull String type, @Nullable EventListener callback,
-      boolean options);
+  public static native void addEventListener(@JsNonNull String type,
+      @JsNullable EventListener callback, boolean options);
 
-  public static native void addEventListener(@Nonnull String type,
-      @Nullable EventListener callback);
+  public static native void addEventListener(@JsNonNull String type,
+      @JsNullable EventListener callback);
 
   /**
    * Dispatches an Event at the specified EventTarget, (synchronously) invoking the affected EventListeners in the appropriate order. The normal event processing rules (including the capturing and optional bubbling phase) also apply to events dispatched manually with dispatchEvent().
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/dispatchEvent">EventTarget.dispatchEvent - MDN</a>
    */
-  public static native boolean dispatchEvent(@Nonnull Event event);
+  public static native boolean dispatchEvent(@JsNonNull Event event);
 
   /**
    * The EventTarget.removeEventListener() method removes from the EventTarget an event listener previously registered with EventTarget.addEventListener(). The event listener to be removed is identified using a combination of the event type, the event listener function itself, and various optional options that may affect the matching process; see Matching event listeners for removal
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/removeEventListener">EventTarget.removeEventListener - MDN</a>
    */
-  public static native void removeEventListener(@Nonnull String type,
-      @Nullable EventListener callback, @Nonnull EventListenerOptions options);
+  public static native void removeEventListener(@JsNonNull String type,
+      @JsNullable EventListener callback, @JsNonNull EventListenerOptions options);
 
   /**
    * The EventTarget.removeEventListener() method removes from the EventTarget an event listener previously registered with EventTarget.addEventListener(). The event listener to be removed is identified using a combination of the event type, the event listener function itself, and various optional options that may affect the matching process; see Matching event listeners for removal
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/removeEventListener">EventTarget.removeEventListener - MDN</a>
    */
-  public static native void removeEventListener(@Nonnull String type,
-      @Nullable EventListener callback, boolean options);
+  public static native void removeEventListener(@JsNonNull String type,
+      @JsNullable EventListener callback, boolean options);
 
   /**
    * The EventTarget.removeEventListener() method removes from the EventTarget an event listener previously registered with EventTarget.addEventListener(). The event listener to be removed is identified using a combination of the event type, the event listener function itself, and various optional options that may affect the matching process; see Matching event listeners for removal
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/removeEventListener">EventTarget.removeEventListener - MDN</a>
    */
-  public static native void removeEventListener(@Nonnull String type,
-      @Nullable EventListener callback);
+  public static native void removeEventListener(@JsNonNull String type,
+      @JsNullable EventListener callback);
 
   @JsOverlay
   public static void addBingListener(@Nonnull final EventListener callback,

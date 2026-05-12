@@ -1,8 +1,8 @@
 package com.example;
 
-import javax.annotation.Nonnull;
 import javax.annotation.processing.Generated;
 import jsinterop.annotations.JsFunction;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsNullable;
 import jsinterop.base.Any;
 
@@ -11,5 +11,5 @@ import jsinterop.base.Any;
 @FunctionalInterface
 public interface OnBleeEventHandler {
   @JsNullable
-  Any onInvoke(@Nonnull String event);
+  Any onInvoke(@JsNonNull String event);
 }

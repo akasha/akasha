@@ -1,7 +1,6 @@
 package com.example;
 
 import javaemul.internal.annotations.DoNotAutobox;
-import javax.annotation.Nullable;
 import javax.annotation.processing.Generated;
 import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsNullable;
@@ -39,7 +38,7 @@ public final class WindowGlobal {
   /**
    * Operation also appears in SharedWorker scope with same typing
    */
-  public static native int requestAnimationFrame(@DoNotAutobox @Nullable Object callback);
+  public static native int requestAnimationFrame(@DoNotAutobox @JsNullable Object callback);
 
   /**
    * Operation also appears in SharedWorker scope with different typing

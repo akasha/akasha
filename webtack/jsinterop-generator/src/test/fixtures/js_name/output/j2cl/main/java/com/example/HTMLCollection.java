@@ -1,8 +1,8 @@
 package com.example;
 
 import javaemul.internal.annotations.HasNoSideEffects;
-import javax.annotation.Nonnull;
 import javax.annotation.processing.Generated;
+import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -29,5 +29,5 @@ public class HTMLCollection {
 
   @HasNoSideEffects
   @JsNullable
-  public native Element namedItem(@Nonnull String name);
+  public native Element namedItem(@JsNonNull String name);
 }

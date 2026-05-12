@@ -1,6 +1,5 @@
 package com.example;
 
-import javax.annotation.Nonnull;
 import javax.annotation.processing.Generated;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsNonNull;
@@ -21,7 +20,7 @@ public class AudioNode {
 
   @JsOverlay
   @JsNonNull
-  public final AudioNode connect(@Nonnull final AudioNode destinationNode, final int output,
+  public final AudioNode connect(final @JsNonNull AudioNode destinationNode, final int output,
       final int input) {
     return Js.uncheckedCast( _connect( destinationNode, output, input ) );
   }
@@ -30,12 +29,12 @@ public class AudioNode {
       name = "connect"
   )
   @JsNonNull
-  private native AudioNodeOrUndefinedUnion _connect(@Nonnull AudioNode destinationNode, int output,
-      int input);
+  private native AudioNodeOrUndefinedUnion _connect(@JsNonNull AudioNode destinationNode,
+      int output, int input);
 
   @JsOverlay
   @JsNonNull
-  public final AudioNode connect(@Nonnull final AudioNode destinationNode, final int output) {
+  public final AudioNode connect(final @JsNonNull AudioNode destinationNode, final int output) {
     return Js.uncheckedCast( _connect( destinationNode, output ) );
   }
 
@@ -43,11 +42,12 @@ public class AudioNode {
       name = "connect"
   )
   @JsNonNull
-  private native AudioNodeOrUndefinedUnion _connect(@Nonnull AudioNode destinationNode, int output);
+  private native AudioNodeOrUndefinedUnion _connect(@JsNonNull AudioNode destinationNode,
+      int output);
 
   @JsOverlay
   @JsNonNull
-  public final AudioNode connect(@Nonnull final AudioNode destinationNode) {
+  public final AudioNode connect(final @JsNonNull AudioNode destinationNode) {
     return Js.uncheckedCast( _connect( destinationNode ) );
   }
 
@@ -55,10 +55,10 @@ public class AudioNode {
       name = "connect"
   )
   @JsNonNull
-  private native AudioNodeOrUndefinedUnion _connect(@Nonnull AudioNode destinationNode);
+  private native AudioNodeOrUndefinedUnion _connect(@JsNonNull AudioNode destinationNode);
 
   @JsOverlay
-  public final void connect(@Nonnull final AudioParam destinationParam, final int output) {
+  public final void connect(final @JsNonNull AudioParam destinationParam, final int output) {
     _connect( destinationParam, output );
   }
 
@@ -66,11 +66,11 @@ public class AudioNode {
       name = "connect"
   )
   @JsNonNull
-  private native AudioNodeOrUndefinedUnion _connect(@Nonnull AudioParam destinationParam,
+  private native AudioNodeOrUndefinedUnion _connect(@JsNonNull AudioParam destinationParam,
       int output);
 
   @JsOverlay
-  public final void connect(@Nonnull final AudioParam destinationParam) {
+  public final void connect(final @JsNonNull AudioParam destinationParam) {
     _connect( destinationParam );
   }
 
@@ -78,5 +78,5 @@ public class AudioNode {
       name = "connect"
   )
   @JsNonNull
-  private native AudioNodeOrUndefinedUnion _connect(@Nonnull AudioParam destinationParam);
+  private native AudioNodeOrUndefinedUnion _connect(@JsNonNull AudioParam destinationParam);
 }

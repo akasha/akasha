@@ -1,6 +1,5 @@
 package com.example;
 
-import javax.annotation.Nullable;
 import javax.annotation.processing.Generated;
 import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsOverlay;
@@ -29,7 +28,7 @@ public class MyThingCollection {
   }
 
   @JsOverlay
-  public final void setAt(final int index, @Nullable final MyThing option) {
+  public final void setAt(final int index, final @JsNullable MyThing option) {
     Js.<JsArrayLike<MyThing>>cast( this ).setAt( index, option );
   }
 }

@@ -1,8 +1,10 @@
 package com.example;
 
-import javax.annotation.Nonnull;
 import javax.annotation.processing.Generated;
 import jsinterop.annotations.JsFunction;
+import jsinterop.annotations.JsNonNull;
+import jsinterop.annotations.JsNullable;
+import jsinterop.annotations.JsOptional;
 
 /**
  * This tests that lowercase name converted to uppercase when converted into java.
@@ -11,5 +13,6 @@ import jsinterop.annotations.JsFunction;
 @JsFunction
 @FunctionalInterface
 public interface TxEventHandler {
-  void onInvoke(@Nonnull Event event);
+  void onInvoke(@JsNonNull Event event, @JsOptional @JsNullable String source,
+      @JsOptional @JsNullable CallbackOptions metadata);
 }
