@@ -1,6 +1,5 @@
 # Akasha: Evergreen Browser API
 
-[![Build Status](https://api.travis-ci.com/akasha/akasha.svg?branch=master)](http://travis-ci.com/akasha/akasha)
 
 ## What is Akasha?
 
