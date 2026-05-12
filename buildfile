@@ -2,8 +2,6 @@ require 'buildr/git_auto_version'
 require 'buildr/gpg'
 require 'buildr/single_intermediate_layout'
 require 'buildr/top_level_generate_dir'
-require 'buildr/jacoco'
-
 Buildr::MavenCentral.define_publish_tasks(:profile_name => 'org.realityforge', :username => 'realityforge')
 
 JSONB_DEPS = [:jsonb_api, :yasson, :javax_json]
