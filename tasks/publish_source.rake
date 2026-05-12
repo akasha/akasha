@@ -9,9 +9,6 @@ task 'source:commit' do
 
   origin_url = 'https://github.com/akasha/akasha-java.git'
 
-  travis_build_number = ENV['TRAVIS_BUILD_NUMBER']
-  origin_url = origin_url.gsub('https://github.com/', 'git@github.com:') if travis_build_number
-
   rm_rf REMOTE_REPOSITORY
 
   sh "git clone -b master --depth 1 #{origin_url} #{REMOTE_REPOSITORY}"
@@ -55,7 +52,7 @@ end
 
 def get_head_tag_if_any
   version = `git describe --exact-match --tags 2>&1`
-  if 0 == $?.exitstatus && version =~ /^v[0-9]/ && (ENV['TRAVIS_BUILD_ID'].nil? || ENV['TRAVIS_TAG'].to_s != '')
+  if 0 == $?.exitstatus && version =~ /^v[0-9]/
     version.strip
   else
     nil
