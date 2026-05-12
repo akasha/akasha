@@ -14,10 +14,12 @@ JSINTEROP_DEPS = [
   :jsinterop_base
 ]
 
+REACT4J_GENERATOR_ENABLED = false
+
 REACT4J_DEPS = [
-  :react4j_core,
-  :react4j_dom
-] + JSINTEROP_DEPS
+                 :react4j_core,
+                 :react4j_dom
+               ] + JSINTEROP_DEPS
 
 desc 'Akasha: Fetch and process WebIDL to generate Source Code'
 define 'akasha' do
@@ -103,27 +105,29 @@ define 'akasha' do
       end
     end
 
-    define 'react4j-generator' do
-      compile.with project('webidl-model').package(:jar),
-                   project('webidl-model').compile.dependencies
+    if REACT4J_GENERATOR_ENABLED
+      define 'react4j-generator' do
+        compile.with project('webidl-model').package(:jar),
+                     project('webidl-model').compile.dependencies
 
-      test.using :testng
-      test.options[:properties] = {
-        'webtack.react4j-generator.gwtc' => ENV['GWT'] == 'no' ? 'false' : 'true',
-        'webtack.react4j-generator.fixture_dir' => _('src/test/fixtures'),
-        'webtack.react4j-generator.fixture.libs' => "#{REACT4J_DEPS.collect { |a| artifact(a).to_s }.join(':')}:#{artifact(:gwt_user)}",
-        'webtack.react4j-generator.gwt_dev.libs' => "#{Buildr::GWT.dependencies.collect { |d| artifact(d).to_s }.join(':')}"
-      }
-      test.options[:java_args] = %w(-ea)
-      test.compile.with :gir
-      test.compile.enhance do |d|
-        REACT4J_DEPS.collect { |a| artifact(a).invoke }
-        Buildr::GWT.dependencies.collect { |a| artifact(a).invoke }
-      end
+        test.using :testng
+        test.options[:properties] = {
+          'webtack.react4j-generator.gwtc' => ENV['GWT'] == 'no' ? 'false' : 'true',
+          'webtack.react4j-generator.fixture_dir' => _('src/test/fixtures'),
+          'webtack.react4j-generator.fixture.libs' => "#{REACT4J_DEPS.collect { |a| artifact(a).to_s }.join(':')}:#{artifact(:gwt_user)}",
+          'webtack.react4j-generator.gwt_dev.libs' => "#{Buildr::GWT.dependencies.collect { |d| artifact(d).to_s }.join(':')}"
+        }
+        test.options[:java_args] = %w(-ea)
+        test.compile.with :gir
+        test.compile.enhance do |d|
+          REACT4J_DEPS.collect { |a| artifact(a).invoke }
+          Buildr::GWT.dependencies.collect { |a| artifact(a).invoke }
+        end
 
-      package(:jar, :classifier => 'all').tap do |jar|
-        [:javapoet].collect { |dep| Buildr.artifact(dep) }.each do |d|
-          jar.merge(d)
+        package(:jar, :classifier => 'all').tap do |jar|
+          [:javapoet].collect { |dep| Buildr.artifact(dep) }.each do |d|
+            jar.merge(d)
+          end
         end
       end
     end
@@ -136,9 +140,11 @@ define 'akasha' do
                    project('webidl-model').compile.dependencies,
                    project('jsinterop-generator').package(:jar),
                    project('jsinterop-generator').compile.dependencies,
-                   project('react4j-generator').package(:jar),
-                   project('react4j-generator').compile.dependencies,
                    PACKAGED_DEPS
+      if REACT4J_GENERATOR_ENABLED
+        compile.with project('react4j-generator').package(:jar),
+                     project('react4j-generator').compile.dependencies
+      end
 
       package(:jar)
       package(:jar, :classifier => 'all').tap do |jar|
@@ -358,9 +364,11 @@ define 'akasha' do
                                :module => 'jsinterop-generator',
                                :jvm_args => "-ea -Dwebtack.output_fixture_data=true -Dwebtack.jsinterop-generator.fixture_dir=src/test/fixtures -Dwebtack.jsinterop-generator.gwtc=false -Dwebtack.jsinterop-generator.closure.jar=#{artifact(:closure_compiler)} -Dwebtack.jsinterop-generator.closure_compile=true -Dwebtack.jsinterop-generator.fixture.libs=#{JSINTEROP_DEPS.collect { |a| artifact(a).to_s }.join(':')}:#{artifact(:gwt_user)} -Dwebtack.jsinterop-generator.gwt_dev.libs=#{Buildr::GWT.dependencies.collect { |d| artifact(d).to_s }.join(':')}")
 
-  ipr.add_testng_configuration('react4j-generator',
-                               :module => 'react4j-generator',
-                               :jvm_args => "-ea -Dwebtack.output_fixture_data=true -Dwebtack.react4j-generator.fixture_dir=src/test/fixtures -Dwebtack.react4j-generator.gwtc=false -Dwebtack.react4j-generator.fixture.libs=#{REACT4J_DEPS.collect { |a| artifact(a).to_s }.join(':')}:#{artifact(:gwt_user)} -Dwebtack.react4j-generator.gwt_dev.libs=#{Buildr::GWT.dependencies.collect { |d| artifact(d).to_s }.join(':')}")
+  if REACT4J_GENERATOR_ENABLED
+    ipr.add_testng_configuration('react4j-generator',
+                                 :module => 'react4j-generator',
+                                 :jvm_args => "-ea -Dwebtack.output_fixture_data=true -Dwebtack.react4j-generator.fixture_dir=src/test/fixtures -Dwebtack.react4j-generator.gwtc=false -Dwebtack.react4j-generator.fixture.libs=#{[REACT4J_DEPS.collect { |a| artifact(a).to_s }, project()].join(':')}:#{artifact(:gwt_user)} -Dwebtack.react4j-generator.gwt_dev.libs=#{Buildr::GWT.dependencies.collect { |d| artifact(d).to_s }.join(':')}")
+  end
 
   ipr.add_java_configuration(project('webtack:cli'), 'org.realityforge.webtack.Main', :name => 'Run - j2cl_complete', :dir => 'file://$PROJECT_DIR$', :args => '-d data run j2cl_complete')
 
@@ -383,7 +391,7 @@ desc 'Generate source artifacts'
 task('generate:all').enhance([file(File.expand_path("#{File.dirname(__FILE__)}/webtack/webidl-parser/generated/antlr/main/java"))])
 
 Buildr.projects.each do |project|
-  unless %w(akasha:gwt akasha:j2cl akasha:webgpu-j2cl).include?(project.name)
+  unless %w(akasha:gwt akasha:j2cl).include?(project.name)
     project.task('install').actions.clear
     project.task('upload').actions.clear
   end

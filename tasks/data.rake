@@ -7,12 +7,17 @@ def run_webtack(args)
   jsinterop_pkg = project('akasha:webtack:jsinterop-generator').package(:jar, :classifier => 'all')
   jsinterop_pkg.invoke
 
-  react4j_pkg = project('akasha:webtack:react4j-generator').package(:jar, :classifier => 'all')
-  react4j_pkg.invoke
+  cp = "#{pkg}:#{jsinterop_pkg}"
+
+  if REACT4J_GENERATOR_ENABLED
+    react4j_pkg = project('akasha:webtack:react4j-generator').package(:jar, :classifier => 'all')
+    react4j_pkg.invoke
+    cp = "#{cp}:#{react4j_pkg}"
+  end
 
   actual_args = []
   actual_args << '-cp'
-  actual_args << "#{pkg}:#{jsinterop_pkg}:#{react4j_pkg}"
+  actual_args << cp
   actual_args << 'org.realityforge.webtack.Main'
   actual_args += args
 
