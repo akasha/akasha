@@ -1,6 +1,5 @@
 require 'buildr/git_auto_version'
 require 'buildr/gpg'
-require 'buildr/gwt'
 require 'buildr/single_intermediate_layout'
 require 'buildr/top_level_generate_dir'
 require 'buildr/jacoco'
@@ -89,7 +88,7 @@ define 'akasha' do
         'webtack.jsinterop-generator.closure_compile' => ENV['CLOSURE'] == 'no' ? 'false' : 'true',
         'webtack.jsinterop-generator.fixture_dir' => _('src/test/fixtures'),
         'webtack.jsinterop-generator.fixture.libs' => "#{JSINTEROP_DEPS.collect { |a| artifact(a).to_s }.join(':')}:#{artifact(:gwt_user)}",
-        'webtack.jsinterop-generator.gwt_dev.libs' => "#{Buildr::GWT.dependencies('2.9.0').collect { |d| artifact(d).to_s }.join(':')}",
+        'webtack.jsinterop-generator.gwt_dev.libs' => "#{Buildr::GWT.dependencies.collect { |d| artifact(d).to_s }.join(':')}",
         'webtack.jsinterop-generator.closure.jar' => artifact(:closure_compiler).to_s
       }
       test.options[:java_args] = %w(-ea)
@@ -117,14 +116,14 @@ define 'akasha' do
         'webtack.react4j-generator.gwtc' => ENV['GWT'] == 'no' ? 'false' : 'true',
         'webtack.react4j-generator.fixture_dir' => _('src/test/fixtures'),
         'webtack.react4j-generator.fixture.libs' => "#{REACT4J_DEPS.collect { |a| artifact(a).to_s }.join(':')}:#{artifact(:gwt_user)}",
-        'webtack.react4j-generator.gwt_dev.libs' => "#{Buildr::GWT.dependencies('2.9.0').collect { |d| artifact(d).to_s }.join(':')}"
+        'webtack.react4j-generator.gwt_dev.libs' => "#{Buildr::GWT.dependencies.collect { |d| artifact(d).to_s }.join(':')}"
       }
       test.options[:java_args] = %w(-ea)
       test.compile.with :gir,
                         Buildr::Util.tools_jar
       test.compile.enhance do |d|
         REACT4J_DEPS.collect { |a| artifact(a).invoke }
-        Buildr::GWT.dependencies('2.9.0').collect { |a| artifact(a).invoke }
+        Buildr::GWT.dependencies.collect { |a| artifact(a).invoke }
       end
 
       package(:jar, :classifier => 'all').tap do |jar|
@@ -363,11 +362,11 @@ define 'akasha' do
 
   ipr.add_testng_configuration('jsinterop-generator',
                                :module => 'jsinterop-generator',
-                               :jvm_args => "-ea -Dwebtack.output_fixture_data=true -Dwebtack.jsinterop-generator.fixture_dir=src/test/fixtures -Dwebtack.jsinterop-generator.gwtc=false -Dwebtack.jsinterop-generator.closure.jar=#{artifact(:closure_compiler)} -Dwebtack.jsinterop-generator.closure_compile=true -Dwebtack.jsinterop-generator.fixture.libs=#{JSINTEROP_DEPS.collect { |a| artifact(a).to_s }.join(':')}:#{artifact(:gwt_user)} -Dwebtack.jsinterop-generator.gwt_dev.libs=#{Buildr::GWT.dependencies('2.9.0').collect { |d| artifact(d).to_s }.join(':')}")
+                               :jvm_args => "-ea -Dwebtack.output_fixture_data=true -Dwebtack.jsinterop-generator.fixture_dir=src/test/fixtures -Dwebtack.jsinterop-generator.gwtc=false -Dwebtack.jsinterop-generator.closure.jar=#{artifact(:closure_compiler)} -Dwebtack.jsinterop-generator.closure_compile=true -Dwebtack.jsinterop-generator.fixture.libs=#{JSINTEROP_DEPS.collect { |a| artifact(a).to_s }.join(':')}:#{artifact(:gwt_user)} -Dwebtack.jsinterop-generator.gwt_dev.libs=#{Buildr::GWT.dependencies.collect { |d| artifact(d).to_s }.join(':')}")
 
   ipr.add_testng_configuration('react4j-generator',
                                :module => 'react4j-generator',
-                               :jvm_args => "-ea -Dwebtack.output_fixture_data=true -Dwebtack.react4j-generator.fixture_dir=src/test/fixtures -Dwebtack.react4j-generator.gwtc=false -Dwebtack.react4j-generator.fixture.libs=#{REACT4J_DEPS.collect { |a| artifact(a).to_s }.join(':')}:#{artifact(:gwt_user)} -Dwebtack.react4j-generator.gwt_dev.libs=#{Buildr::GWT.dependencies('2.9.0').collect { |d| artifact(d).to_s }.join(':')}")
+                               :jvm_args => "-ea -Dwebtack.output_fixture_data=true -Dwebtack.react4j-generator.fixture_dir=src/test/fixtures -Dwebtack.react4j-generator.gwtc=false -Dwebtack.react4j-generator.fixture.libs=#{REACT4J_DEPS.collect { |a| artifact(a).to_s }.join(':')}:#{artifact(:gwt_user)} -Dwebtack.react4j-generator.gwt_dev.libs=#{Buildr::GWT.dependencies.collect { |d| artifact(d).to_s }.join(':')}")
 
   ipr.add_java_configuration(project('webtack:cli'), 'org.realityforge.webtack.Main', :name => 'Run - j2cl_complete', :dir => 'file://$PROJECT_DIR$', :args => '-d data run j2cl_complete')
 
