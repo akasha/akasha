@@ -24,8 +24,8 @@ artifacts:
   gwt_user: org.gwtproject:gwt-user:jar:2.11.0
   gwt_dev: org.gwtproject:gwt-dev:jar:2.11.0
 
-  react4j_core: org.realityforge.react4j:react4j-core:jar:0.202
-  react4j_dom: org.realityforge.react4j:react4j-dom:jar:0.202
+  react4j_core: org.realityforge.react4j:react4j-core:jar:0.223
+  react4j_dom: org.realityforge.react4j:react4j-dom:jar:0.223
 
   closure_compiler: com.google.javascript:closure-compiler:jar:v20210302
 
