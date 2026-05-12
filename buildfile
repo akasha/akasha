@@ -264,7 +264,7 @@ define 'akasha' do
 
     input_js_dir = "#{WORKSPACE_DIR}/akasha/java/src/main/java"
     output_js_dir = "#{project._(:target, :generated)}/java/main/js"
-    js_main_src_dir = file(output_js_dir => [input_js_dir]) do
+    file(output_js_dir => [input_js_dir]) do
       Dir["#{input_js_dir}/**/*.js"].each do |f|
         # akasha_patches.extern.js contains the externs required to integrate with base.js from closure
         next if f.end_with?('akasha_patches.extern.js')
