@@ -11,6 +11,7 @@ import org.testng.annotations.Test;
 public final class FixtureTest
   extends AbstractTest
 {
+  @Nonnull
   @DataProvider( name = "fixtureTests" )
   public Object[][] fixtureTests()
     throws IOException
