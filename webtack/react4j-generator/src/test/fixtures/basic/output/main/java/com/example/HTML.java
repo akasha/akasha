@@ -1,9 +1,9 @@
 package com.example;
 
 import java.util.stream.Stream;
-import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import javax.annotation.processing.Generated;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
 import react4j.ReactElement;
