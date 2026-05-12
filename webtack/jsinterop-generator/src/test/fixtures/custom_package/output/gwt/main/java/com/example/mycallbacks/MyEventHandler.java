@@ -1,8 +1,8 @@
 package com.example.mycallbacks;
 
 import com.example.myinterfaces.Event;
-import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import javax.annotation.processing.Generated;
 import jsinterop.annotations.JsFunction;
 
 @Generated("org.realityforge.webtack")

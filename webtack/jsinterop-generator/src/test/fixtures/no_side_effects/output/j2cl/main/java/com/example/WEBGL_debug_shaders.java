@@ -1,7 +1,7 @@
 package com.example;
 
 import javaemul.internal.annotations.HasNoSideEffects;
-import javax.annotation.Generated;
+import javax.annotation.processing.Generated;
 import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;

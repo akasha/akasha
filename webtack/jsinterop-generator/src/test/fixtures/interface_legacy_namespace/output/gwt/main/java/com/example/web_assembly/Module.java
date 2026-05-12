@@ -1,6 +1,6 @@
 package com.example.web_assembly;
 
-import javax.annotation.Generated;
+import javax.annotation.processing.Generated;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 

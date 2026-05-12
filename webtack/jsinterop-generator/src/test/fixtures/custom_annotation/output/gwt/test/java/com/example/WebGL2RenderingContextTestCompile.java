@@ -1,6 +1,6 @@
 package com.example;
 
-import javax.annotation.Generated;
+import javax.annotation.processing.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class WebGL2RenderingContextTestCompile {

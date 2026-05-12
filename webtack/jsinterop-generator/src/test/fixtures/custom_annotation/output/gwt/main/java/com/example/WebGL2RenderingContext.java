@@ -2,8 +2,8 @@ package com.example;
 
 import akasha.MyAnnotation;
 import akasha.gl.GLSL;
-import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import javax.annotation.processing.Generated;
 import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;

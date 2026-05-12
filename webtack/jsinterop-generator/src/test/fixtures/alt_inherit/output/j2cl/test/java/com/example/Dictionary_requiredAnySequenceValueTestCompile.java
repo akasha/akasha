@@ -4,7 +4,7 @@ import com.other.JsArray;
 import com.other.JsIterable;
 import com.other.JsIterator;
 import com.other.JsIteratorIterable;
-import javax.annotation.Generated;
+import javax.annotation.processing.Generated;
 import jsinterop.base.Any;
 
 @Generated("org.realityforge.webtack")

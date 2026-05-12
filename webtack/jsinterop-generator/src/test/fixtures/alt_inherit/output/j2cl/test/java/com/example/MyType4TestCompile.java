@@ -6,7 +6,7 @@ import com.other.JsIterator;
 import com.other.JsIteratorIterable;
 import com.other.JsPromise;
 import javaemul.internal.annotations.DoNotAutobox;
-import javax.annotation.Generated;
+import javax.annotation.processing.Generated;
 import jsinterop.base.Any;
 import jsinterop.base.JsPropertyMap;
 

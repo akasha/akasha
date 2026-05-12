@@ -1,6 +1,6 @@
 package com.example;
 
-import javax.annotation.Generated;
+import javax.annotation.processing.Generated;
 import jsinterop.base.JsPropertyMap;
 
 @Generated("org.realityforge.webtack")

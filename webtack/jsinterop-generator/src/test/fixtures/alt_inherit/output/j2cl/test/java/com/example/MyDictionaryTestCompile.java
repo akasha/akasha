@@ -5,7 +5,7 @@ import com.other.JsIterable;
 import com.other.JsIterator;
 import com.other.JsIteratorIterable;
 import com.other.JsPromise;
-import javax.annotation.Generated;
+import javax.annotation.processing.Generated;
 import jsinterop.base.Any;
 import jsinterop.base.JsPropertyMap;
 

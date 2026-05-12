@@ -1,7 +1,7 @@
 package com.example.mycallbacks;
 
 import com.example.myinterfaces.Event;
-import javax.annotation.Generated;
+import javax.annotation.processing.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class MyEventHandlerTestCompile {

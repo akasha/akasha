@@ -3,8 +3,8 @@ package com.example;
 import akasha.MyAnnotation;
 import akasha.MyAnnotation2;
 import akasha.MyAnnotation3;
-import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import javax.annotation.processing.Generated;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 

@@ -1,6 +1,6 @@
 package com.example;
 
-import javax.annotation.Generated;
+import javax.annotation.processing.Generated;
 import jsinterop.annotations.JsNonNull;
 import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsPackage;

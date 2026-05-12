@@ -1,7 +1,7 @@
 package com.example;
 
 import com.other.JsArray;
-import javax.annotation.Generated;
+import javax.annotation.processing.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class Dictionary_requiredFloatSequenceValueTestCompile {

@@ -2,8 +2,8 @@ package com.example;
 
 import akasha.MyAnnotation;
 import akasha.MyAnnotation2;
-import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import javax.annotation.processing.Generated;
 import jsinterop.annotations.JsFunction;
 
 @Generated("org.realityforge.webtack")

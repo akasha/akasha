@@ -1,8 +1,8 @@
 package com.example.mycallbackinterfaces;
 
 import com.example.myinterfaces.Event;
-import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import javax.annotation.processing.Generated;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 

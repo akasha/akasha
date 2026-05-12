@@ -1,8 +1,8 @@
 package com.example;
 
 import com.biz.MyActiveMode;
-import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import javax.annotation.processing.Generated;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 

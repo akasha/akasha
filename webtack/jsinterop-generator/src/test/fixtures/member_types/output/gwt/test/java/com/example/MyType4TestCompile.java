@@ -1,7 +1,7 @@
 package com.example;
 
 import javaemul.internal.annotations.DoNotAutobox;
-import javax.annotation.Generated;
+import javax.annotation.processing.Generated;
 import jsinterop.base.Any;
 import jsinterop.base.JsPropertyMap;
 

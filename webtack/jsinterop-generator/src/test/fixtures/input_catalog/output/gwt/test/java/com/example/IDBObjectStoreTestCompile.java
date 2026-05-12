@@ -5,7 +5,7 @@ import com.biz.MyEventListener;
 import com.biz.MyIDBIndex;
 import com.biz.MyIDBIndexParameters;
 import com.biz.MyStringOrLongLongUnion;
-import javax.annotation.Generated;
+import javax.annotation.processing.Generated;
 
 @Generated("org.realityforge.webtack")
 public final class IDBObjectStoreTestCompile {

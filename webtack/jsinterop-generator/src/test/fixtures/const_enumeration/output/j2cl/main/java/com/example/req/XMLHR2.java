@@ -1,6 +1,6 @@
 package com.example.req;
 
-import javax.annotation.Generated;
+import javax.annotation.processing.Generated;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;

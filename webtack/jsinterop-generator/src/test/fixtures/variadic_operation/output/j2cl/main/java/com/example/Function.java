@@ -1,8 +1,8 @@
 package com.example;
 
 import javaemul.internal.annotations.DoNotAutobox;
-import javax.annotation.Generated;
 import javax.annotation.Nullable;
+import javax.annotation.processing.Generated;
 import jsinterop.annotations.JsFunction;
 import jsinterop.annotations.JsNullable;
 import jsinterop.base.Any;

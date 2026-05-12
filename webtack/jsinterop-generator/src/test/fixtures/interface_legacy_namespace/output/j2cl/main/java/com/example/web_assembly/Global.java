@@ -2,9 +2,9 @@ package com.example.web_assembly;
 
 import com.example.GlobalDescriptor;
 import javaemul.internal.annotations.DoNotAutobox;
-import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import javax.annotation.processing.Generated;
 import jsinterop.annotations.JsNullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;

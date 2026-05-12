@@ -1,8 +1,8 @@
 package com.example.myenumerations;
 
 import java.lang.annotation.Documented;
-import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import javax.annotation.processing.Generated;
 import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")

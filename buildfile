@@ -22,8 +22,8 @@ REACT4J_DEPS = [
 desc 'Akasha: Fetch and process WebIDL to generate Source Code'
 define 'akasha' do
   project.group = 'org.realityforge.akasha'
-  compile.options.source = '1.8'
-  compile.options.target = '1.8'
+  compile.options.source = '17'
+  compile.options.target = '17'
   compile.options.lint = 'all,-serial'
   project.compile.options.warnings = true
   project.compile.options.other = %w(-Werror -Xmaxerrs 10000 -Xmaxwarns 10000)
