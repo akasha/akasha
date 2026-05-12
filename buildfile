@@ -89,8 +89,7 @@ define 'akasha' do
         'webtack.jsinterop-generator.closure.jar' => artifact(:closure_compiler).to_s
       }
       test.options[:java_args] = %w(-ea)
-      test.compile.with :gir,
-                        Buildr::Util.tools_jar
+      test.compile.with :gir
       test.compile.enhance do |d|
         artifact(:closure_compiler).invoke
         JSINTEROP_DEPS.collect { |a| artifact(a).invoke }
@@ -116,8 +115,7 @@ define 'akasha' do
         'webtack.react4j-generator.gwt_dev.libs' => "#{Buildr::GWT.dependencies.collect { |d| artifact(d).to_s }.join(':')}"
       }
       test.options[:java_args] = %w(-ea)
-      test.compile.with :gir,
-                        Buildr::Util.tools_jar
+      test.compile.with :gir
       test.compile.enhance do |d|
         REACT4J_DEPS.collect { |a| artifact(a).invoke }
         Buildr::GWT.dependencies.collect { |a| artifact(a).invoke }
