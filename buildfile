@@ -95,7 +95,7 @@ define 'akasha' do
       test.compile.enhance do |d|
         artifact(:closure_compiler).invoke
         JSINTEROP_DEPS.collect { |a| artifact(a).invoke }
-        Buildr::GWT.dependencies('2.9.0').collect { |a| artifact(a).invoke }
+        Buildr::GWT.dependencies.collect { |a| artifact(a).invoke }
       end
 
       package(:jar, :classifier => 'all').tap do |jar|
