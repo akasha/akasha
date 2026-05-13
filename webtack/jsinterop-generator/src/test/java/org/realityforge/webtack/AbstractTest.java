@@ -275,14 +275,14 @@ public abstract class AbstractTest
       jsFiles.addAll( collectFilesWithExtension( ".js", inputJsDirectory )
                         .stream()
                         .filter( f -> !f.toString().endsWith( ".externs.fragment.js" ) )
-                        .collect( Collectors.toList() ) );
+                        .toList() );
     }
     if ( Files.exists( commonInputJsDirectory ) )
     {
       jsFiles.addAll( collectFilesWithExtension( ".js", commonInputJsDirectory )
                         .stream()
                         .filter( f -> !f.toString().endsWith( ".externs.fragment.js" ) )
-                        .collect( Collectors.toList() ) );
+                        .toList() );
     }
     return jsFiles;
   }
