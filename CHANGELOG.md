@@ -1,6 +1,10 @@
 # Change Log
 
-### Unreleased
+### [v0.32](https://github.com/akasha/akasha/tree/v0.32) (2026-05-13) · [Full Changelog](https://github.com/akasha/akasha/compare/v0.31...v0.32) · [API Differences](https://akasha.github.io/akasha-java/api-diff/?key=akasha-java&old=0.31&new=0.32) · [Source Diff](https://github.com/akasha/akasha-java/compare/v0.31...v0.32)
+
+The release includes 18 non breaking API changes and 7 breaking API changes.
+
+Changes in this release:
 
 * Update the `org.realityforge.javax.annotation` artifact to version `1.1.1`.
 * Update the `Web Audio API` spec to the `Editor’s Draft, 3 May 2022` version.
