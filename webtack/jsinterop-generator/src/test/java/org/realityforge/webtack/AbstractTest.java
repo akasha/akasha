@@ -7,7 +7,6 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Reader;
-import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -87,13 +86,6 @@ public abstract class AbstractTest
     assertTrue( Files.exists( file ), " File " + file + " should exist" );
   }
 
-  @Nonnull
-  private String getFileContentsAsString( @Nonnull final Path file )
-    throws IOException
-  {
-    return new String( Files.readAllBytes( file ), StandardCharsets.UTF_8 );
-  }
-
   protected final boolean writeOutputFixtures()
   {
     return "true".equals( System.getProperty( "webtack.output_fixture_data" ) );
@@ -118,8 +110,8 @@ public abstract class AbstractTest
       FileUtil.write( fixtureFile, Files.readAllBytes( file ) );
     }
     assertFileExists( fixtureFile );
-    final String actualContents = getFileContentsAsString( file );
-    final String expectedContents = getFileContentsAsString( fixtureFile );
+    final String actualContents = Files.readString( file );
+    final String expectedContents = Files.readString( fixtureFile );
     assertEquals( actualContents, expectedContents, "File " + file + " should match fixture file " + fixtureFile );
   }
 
