@@ -30,7 +30,7 @@ the following dependency:
 <dependency>
   <groupId>org.realityforge.akasha</groupId>
   <artifactId>akasha-gwt</artifactId>
-  <version>0.31</version>
+  <version>0.32</version>
 </dependency>
 ```
 
@@ -54,7 +54,7 @@ the following dependency:
 <dependency>
   <groupId>org.realityforge.akasha</groupId>
   <artifactId>akasha-j2cl</artifactId>
-  <version>0.31</version>
+  <version>0.32</version>
 </dependency>
 ```
 
