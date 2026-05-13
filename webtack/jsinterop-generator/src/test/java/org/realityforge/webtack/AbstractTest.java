@@ -425,11 +425,13 @@ public abstract class AbstractTest
     throws Exception
   {
     FileUtil.write( output.resolve( "com" ).resolve( "example" ).resolve( "MyModule.gwt.xml" ),
-                    "<module>\n" +
-                    "  <inherits name=\"com.google.gwt.user.User\"/>\n" +
-                    "  <source path=''/>\n" +
-                    "  <collapse-all-properties/>\n" +
-                    "</module>\n" );
+                    """
+                      <module>
+                        <inherits name="com.google.gwt.user.User"/>
+                        <source path=''/>
+                        <collapse-all-properties/>
+                      </module>
+                      """ );
     classpathEntries.add( output );
     classpathEntries.addAll( gwtDevLibs() );
     final List<String> gwtClasspath =
