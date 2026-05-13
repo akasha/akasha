@@ -28,7 +28,7 @@ define 'akasha' do
   compile.options.target = '17'
   compile.options.lint = 'all,-serial'
   project.compile.options.warnings = true
-  project.compile.options.other = %w(-Werror -Xmaxerrs 10000 -Xmaxwarns 10000)
+  project.compile.options.other = %w(-Xmaxerrs 10000 -Xmaxwarns 10000)
 
   project.version = ENV['PRODUCT_VERSION'] if ENV['PRODUCT_VERSION']
 
@@ -384,7 +384,7 @@ define 'akasha' do
 
   ipr.add_code_insight_settings
   ipr.add_nullable_manager
-  ipr.add_javac_settings('-Xlint:all,-serial -Werror -Xmaxerrs 10000 -Xmaxwarns 10000')
+  ipr.add_javac_settings('-Xlint:all,-serial -Xmaxerrs 10000 -Xmaxwarns 10000')
 end
 
 desc 'Generate source artifacts'

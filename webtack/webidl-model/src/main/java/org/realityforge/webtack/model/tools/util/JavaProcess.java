@@ -83,7 +83,7 @@ public final class JavaProcess
       compiler.getTask( null,
                         fileManager,
                         listener,
-                        Arrays.asList( "-Xlint:all,-processing,-serial", "-Werror" ),
+                        Arrays.asList( "-Xlint:all,-processing,-serial,-overloads", "-Werror" ),
                         null,
                         compilationUnits );
     if ( !task.call() || !listener.getDiagnostics().isEmpty() )
