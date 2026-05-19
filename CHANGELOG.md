@@ -1,5 +1,7 @@
 # Change Log
 
+### Unreleased
+
 ### [v0.33](https://github.com/akasha/akasha/tree/v0.33) (2026-05-19) · [Full Changelog](https://github.com/akasha/akasha/compare/v0.32...v0.33) · [Source Diff](https://github.com/akasha/akasha-java/compare/v0.32...v0.33)
 
 Changes in this release:
