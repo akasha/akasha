@@ -1,6 +1,8 @@
 # Change Log
 
-### Unreleased
+### [v0.33](https://github.com/akasha/akasha/tree/v0.33) (2026-05-19) · [Full Changelog](https://github.com/akasha/akasha/compare/v0.32...v0.33) · [Source Diff](https://github.com/akasha/akasha-java/compare/v0.32...v0.33)
+
+Changes in this release:
 
 ### [v0.32](https://github.com/akasha/akasha/tree/v0.32) (2026-05-13) · [Full Changelog](https://github.com/akasha/akasha/compare/v0.31...v0.32) · [API Differences](https://akasha.github.io/akasha-java/api-diff/?key=akasha-java&old=0.31&new=0.32) · [Source Diff](https://github.com/akasha/akasha-java/compare/v0.31...v0.32)
 
