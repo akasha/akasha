@@ -1,6 +1,8 @@
 # Change Log
 
-### Unreleased
+### [v0.34](https://github.com/akasha/akasha/tree/v0.34) (2026-07-17) · [Full Changelog](https://github.com/akasha/akasha/compare/v0.33...v0.34) · [Source Diff](https://github.com/akasha/akasha-java/compare/v0.33...v0.34)
+
+Changes in this release:
 
 * Fix J2CL source artifacts so feature-detection defines are registered with J2CL without generating invalid `.native.js` companions for native `@JsType` types.
 
