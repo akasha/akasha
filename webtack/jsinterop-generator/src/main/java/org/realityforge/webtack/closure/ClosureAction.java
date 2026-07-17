@@ -237,11 +237,11 @@ final class ClosureAction
     final StringBuffer sb = new StringBuffer();
     for ( final InterfaceDefinition definition : getSchema().getInterfaces() )
     {
-      writeNativeJsIfRequired( sb, definition, definition.getAttributes(), definition.getOperations() );
+      writeOptionalSupportDefines( sb, definition, definition.getAttributes(), definition.getOperations() );
     }
     for ( final PartialInterfaceDefinition definition : getSchema().getPartialInterfaces() )
     {
-      writeNativeJsIfRequired( sb, definition, definition.getAttributes(), definition.getOperations() );
+      writeOptionalSupportDefines( sb, definition, definition.getAttributes(), definition.getOperations() );
     }
     if ( 0 != sb.length() )
     {
@@ -254,6 +254,7 @@ final class ClosureAction
         // Declare a goog var if required. Hopefully not required when used in building apps, just tests.
         writer.write( "/**\n * @suppress {lintChecks}\n * @const\n */\nvar goog = goog || {};\n" );
         writer.write( "goog.provide('" + baseName + "');\n" );
+        writer.write( "goog.require('jre');\n" );
         writer.write( sb.toString() );
       }
     }
@@ -311,13 +312,11 @@ final class ClosureAction
     writeOperations( writer, null, operations, false, name -> false );
   }
 
-  private void writeNativeJsIfRequired( @Nonnull final StringBuffer defines,
-                                        @Nonnull final NamedDefinition definition,
-                                        @Nonnull final List<AttributeMember> attributes,
-                                        @Nonnull final List<OperationMember> operations )
-    throws IOException
+  private void writeOptionalSupportDefines( @Nonnull final StringBuffer defines,
+                                            @Nonnull final NamedDefinition definition,
+                                            @Nonnull final List<AttributeMember> attributes,
+                                            @Nonnull final List<OperationMember> operations )
   {
-    boolean requiresNativeJs = false;
     for ( final AttributeMember attribute : attributes )
     {
       if ( attribute.isNoArgsExtendedAttributePresent( ExtendedAttributes.OPTIONAL_SUPPORT ) ||
@@ -330,7 +329,7 @@ final class ClosureAction
         defines.append( " = goog.define('" );
         defines.append( name );
         defines.append( "', 'detect');\n" );
-        requiresNativeJs = true;
+        writeSystemPropertyRegistration( defines, name );
       }
     }
     for ( final OperationMember operation : operations )
@@ -347,20 +346,18 @@ final class ClosureAction
         defines.append( " = goog.define('" );
         defines.append( name );
         defines.append( "', 'detect');\n" );
-        requiresNativeJs = true;
+        writeSystemPropertyRegistration( defines, name );
       }
     }
-    if ( requiresNativeJs )
-    {
-      final String javaType = deriveJavaType( definition, "", "" );
-      final String nativeJs = javaType.replaceAll( "\\.", File.separator ) + ".native.js";
-      try ( final Writer writer = openWriter( getMainJsDirectory().resolve( nativeJs ) ) )
-      {
-        writer.write( "/**\n * @fileoverview\n * @suppress {lintChecks}\n */\n" );
-        writer.write( "/** @suppress {extraRequire} */\n" );
-        writer.write( "goog.require('" + getBaseName() + "');\n" );
-      }
-    }
+  }
+
+  private void writeSystemPropertyRegistration( @Nonnull final StringBuffer defines, @Nonnull final String name )
+  {
+    defines.append( "jre.addSystemPropertyFromGoogDefine('" );
+    defines.append( name );
+    defines.append( "', " );
+    defines.append( name );
+    defines.append( ");\n" );
   }
 
   private boolean isNotExcluded( @Nonnull final AttributedNode node )
