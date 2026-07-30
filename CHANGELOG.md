@@ -1,6 +1,8 @@
 # Change Log
 
-### Unreleased
+### [v0.35](https://github.com/akasha/akasha/tree/v0.35) (2026-07-30) · [Full Changelog](https://github.com/akasha/akasha/compare/v0.34...v0.35) · [Source Diff](https://github.com/akasha/akasha-java/compare/v0.34...v0.35)
+
+Changes in this release:
 
 * Upgrade the validated Closure Compiler version to `v20260330`. Building and validating Akasha now requires JDK 21,
   while published Java artifacts retain Java 17 source and classfile compatibility.
