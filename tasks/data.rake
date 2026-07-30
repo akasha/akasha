@@ -24,10 +24,7 @@ def run_webtack(args)
   Java::Commands.java actual_args
 end
 
-def run_closure_compile(input_js, output_js)
-  input_js = "#{WORKSPACE_DIR}/akasha/java/generated/webtack/main/js/akasha/Akasha.externs.js"
-  output_js = "#{WORKSPACE_DIR}/target/akasha_java/tmp/output.js"
-
+def run_closure_compile(input_js_files, output_js)
   a = artifact(:closure_compiler)
   a.invoke
 
@@ -43,7 +40,7 @@ def run_closure_compile(input_js, output_js)
   args << '--inject_libraries' << 'false'
   args << '--js_output_file' << output_js
   args << '--jscomp_error' << "'*'"
-  args << input_js
+  args += input_js_files
 
   sh args.join(' ')
 end
@@ -87,7 +84,9 @@ task 'data:run_j2cl_complete_pipeline' do
     run_webtack(%w(--verbose -d data run j2cl_complete))
   end
 
-  run_closure_compile("#{WORKSPACE_DIR}/akasha/java/generated/webtack/main/js/akasha/Akasha.externs.js",
+  generated_extern = "#{WORKSPACE_DIR}/akasha/java/generated/webtack/main/js/akasha/Akasha.externs.js"
+  packaged_externs = Dir["#{WORKSPACE_DIR}/akasha/java/src/main/java/**/*.extern{,s}.js"].sort
+  run_closure_compile([generated_extern] + packaged_externs,
                       "#{WORKSPACE_DIR}/target/akasha_j2cl/tmp/output.js")
 end
 
