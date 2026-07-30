@@ -60,9 +60,11 @@ the following dependency:
 
 The closure compiler is shipped with a set of externs that do not align 100% with the externs produced by the Akasha
 project. Thus it is necessary to pass the arguments `-env CUSTOM` when running the closure compiler. It is also
-necessary to add the closure externs shipped as part of the `akasha-java` artifact. These are included in the artifact
-with the extension `*.externs.js`. The exact way that these build steps are specified will depend upon the underlying
-tool but a simple example using Bazel is available at https://github.com/react4j/react4j-todomvc/tree/raw_bazel_j2cl
+necessary to add the closure externs shipped as part of the `akasha-j2cl` artifact. These are included in the artifact
+with the extensions `*.extern.js` and `*.externs.js`. Akasha validates these externs with Closure Compiler `v20260330`.
+Older compiler versions are unsupported and compatibility with newer, untested versions is not guaranteed. The exact
+way that these build steps are specified will depend upon the underlying tool but a simple example using Bazel is
+available at https://github.com/react4j/react4j-todomvc/tree/raw_bazel_j2cl
 
 ### Java Integration
 
@@ -172,7 +174,8 @@ a time where it is suitable for adoption in a broader context.
 
 The project was released as open source so others could benefit from the project. We are thankful for any
 contributions from the community. A [Code of Conduct](CODE_OF_CONDUCT.md) has been put in place and
-a [Contributing](CONTRIBUTING.md) document is under development.
+a [Contributing](CONTRIBUTING.md) document is under development. Building and validating Akasha requires JDK 21,
+while the published Java artifacts retain Java 17 source and classfile compatibility.
 
 # License
 
