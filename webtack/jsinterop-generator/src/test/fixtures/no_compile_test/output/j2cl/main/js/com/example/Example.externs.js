@@ -36,6 +36,7 @@ DOMTokenList.prototype.values = function() {}
 DOMTokenList.prototype.entries = function() {};
 /**
  * @return {!Iterator<!Array<!number|!string>>}
+ * @override
  * @nosideeffects
  */
 DOMTokenList.prototype[Symbol.iterator] = function() {};
@@ -114,6 +115,7 @@ SomeOtherType.prototype.values = function() {}
 SomeOtherType.prototype.entries = function() {};
 /**
  * @return {!Iterator<!Array<!number|!number>>}
+ * @override
  * @nosideeffects
  */
 SomeOtherType.prototype[Symbol.iterator] = function() {};
@@ -189,6 +191,7 @@ Headers.prototype.values = function() {}
 Headers.prototype.entries = function() {};
 /**
  * @return {!Iterator<!Array<!string|!string>>}
+ * @override
  * @nosideeffects
  */
 Headers.prototype[Symbol.iterator] = function() {};
@@ -342,6 +345,7 @@ SomeMapLikeDefiningOverrides.prototype.values = function() {}
 SomeMapLikeDefiningOverrides.prototype.entries = function() {};
 /**
  * @return {!Iterator<!Array<!string|!number>>}
+ * @override
  * @nosideeffects
  */
 SomeMapLikeDefiningOverrides.prototype[Symbol.iterator] = function() {};

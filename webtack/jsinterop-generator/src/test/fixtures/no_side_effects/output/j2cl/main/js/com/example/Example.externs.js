@@ -69,6 +69,7 @@ CSSFontPaletteValuesRule.prototype.values = function() {}
 CSSFontPaletteValuesRule.prototype.entries = function() {};
 /**
  * @return {!Iterator<!Array<!number|!string>>}
+ * @override
  * @nosideeffects
  */
 CSSFontPaletteValuesRule.prototype[Symbol.iterator] = function() {};
@@ -130,6 +131,7 @@ FakeRegExpGroups.prototype.values = function() {}
 FakeRegExpGroups.prototype.entries = function() {};
 /**
  * @return {!Iterator<!Array<!string|!string>>}
+ * @override
  * @nosideeffects
  */
 FakeRegExpGroups.prototype[Symbol.iterator] = function() {};
@@ -196,6 +198,7 @@ FakeRegExpResult.prototype.values = function() {}
 FakeRegExpResult.prototype.entries = function() {};
 /**
  * @return {!Iterator<!Array<!number|!string>>}
+ * @override
  * @nosideeffects
  */
 FakeRegExpResult.prototype[Symbol.iterator] = function() {};
