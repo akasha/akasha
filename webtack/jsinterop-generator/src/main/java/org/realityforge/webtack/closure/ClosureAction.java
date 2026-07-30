@@ -890,6 +890,7 @@ final class ClosureAction
     writer.write( "|" );
     writeType( writer, valueType );
     writer.write( ">>}\n" );
+    writer.write( " * @override\n" );
     writer.write( " * @nosideeffects\n" );
     writer.write( " */\n" );
     writer.write( jsType + ".prototype[Symbol.iterator] = function() {};\n" );
@@ -1037,6 +1038,7 @@ final class ClosureAction
     writer.write( "|" );
     writeType( writer, valueType );
     writer.write( ">>}\n" );
+    writer.write( " * @override\n" );
     writer.write( " * @nosideeffects\n" );
     writer.write( " */\n" );
     writer.write( type + ".prototype[Symbol.iterator] = function() {};\n" );

@@ -2,6 +2,13 @@
 
 ### Unreleased
 
+* Upgrade the validated Closure Compiler version to `v20260330`. Building and validating Akasha now requires JDK 21,
+  while published Java artifacts retain Java 17 source and classfile compatibility.
+* Update the generated browser externs for modern Closure Compiler core externs by omitting `AggregateError`, removing
+  the obsolete `Promise.any` patch, and marking iterable and maplike `Symbol.iterator` implementations as overrides.
+* Validate the complete packaged Akasha extern set under Closure Compiler's `CUSTOM` environment with all diagnostics
+  treated as errors.
+
 ### [v0.34](https://github.com/akasha/akasha/tree/v0.34) (2026-07-17) · [Full Changelog](https://github.com/akasha/akasha/compare/v0.33...v0.34) · [Source Diff](https://github.com/akasha/akasha-java/compare/v0.33...v0.34)
 
 Changes in this release:
