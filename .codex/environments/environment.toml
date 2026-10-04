@@ -1,0 +1,18 @@
+version = 1
+name = "akasha"
+
+[setup]
+script = ""
+
+[cleanup]
+script = '''
+for workspace in target/akasha_j2cl/bazel_workspace target/akasha_webgpu-j2cl/bazel_workspace; do
+  if [ -f "$workspace/WORKSPACE" ]; then
+    (
+      cd "$workspace" || exit 1
+      bazel clean --expunge_async
+      bazel shutdown
+    )
+  fi
+done
+'''
